@@ -1,44 +1,9 @@
 /** Хөнгөн hash router: `#/vocab/ada066edfd?level=N5&tab=examples` */
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { parseHash, type Route } from "./routes";
 
-export interface Route {
-  name: string;
-  params: string[];
-  query: Record<string, string>;
-  hash: string;
-}
-
-export function parseHash(hash = window.location.hash): Route {
-  // Хуучин линкүүд бүхэл query-г кодлосон байж магадгүй (жишээ: `#/grammar%3Flevel%3DN2`).
-  // `?` эсвэл `%3F`-ээр path/query-г тусгаарлаад, query-г бүтнээр нь декодлоно.
-  const raw = hash.replace(/^#\/?/, "");
-  const sep = raw.match(/\?|%3F/i);
-  let pathPart = raw;
-  let queryPart: string | undefined;
-  if (sep && sep.index !== undefined) {
-    pathPart = raw.slice(0, sep.index);
-    queryPart = raw.slice(sep.index + sep[0].length);
-    try { queryPart = decodeURIComponent(queryPart); } catch { /* хэвээр нь */ }
-  }
-  const segments = pathPart.split("/").filter(Boolean).map((s) => {
-    try { return decodeURIComponent(s); } catch { return s; }
-  });
-  const query: Record<string, string> = {};
-  new URLSearchParams(queryPart ?? "").forEach((v, k) => { query[k] = v; });
-  return { name: segments[0] ?? "home", params: segments.slice(1), query, hash };
-}
-
-/**
- * `href("vocab?level=N2")` → `#/vocab?level=N2`.
- * Нэрийн `?query` хэсгийг кодлохгүй — өмнө нь `%3F` болж хуудас олдохгүй болдог байсан.
- */
-export function href(name: string, ...rest: (string | number | undefined)[]) {
-  const qIdx = name.indexOf("?");
-  const path = qIdx >= 0 ? name.slice(0, qIdx) : name;
-  const query = qIdx >= 0 ? name.slice(qIdx + 1) : "";
-  const parts = [path, ...rest.filter((x) => x !== undefined && x !== "")].map((s) => encodeURIComponent(String(s)));
-  return `#/${parts.join("/")}${query ? `?${query}` : ""}`;
-}
+export { href, parseHash, routeArg, routeLevel } from "./routes";
+export type { Route } from "./routes";
 
 export function navigate(to: string, opts: { replace?: boolean; keepScroll?: boolean } = {}) {
   const target = to.startsWith("#") ? to : `#/${to}`;

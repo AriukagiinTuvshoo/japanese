@@ -72,7 +72,11 @@ export function SearchPalette({ onClose }: { onClose: () => void }) {
   useEffect(() => setCursor(0), [q, filter]);
 
   const open = (h: Hit) => {
-    navigate(`${h.kind === "v" ? "vocab" : h.kind === "k" ? "kanji" : "grammar"}/${h.id}`);
+    // Дүрмийн хайлтаас орохдоо түвшинг (level) дамжуулна.
+    const to = h.kind === "g"
+      ? `grammar/${h.id}?level=${h.lvl}`
+      : `${h.kind === "v" ? "vocab" : "kanji"}/${h.id}`;
+    navigate(to);
     onClose();
   };
 

@@ -13,6 +13,7 @@
     "data:build": "node scripts/build-data.mjs",
     "data:validate": "node scripts/validate-data.mjs",
     "data:all": "npm run data:fetch && npm run data:build && npm run data:validate",
+    "test:routes": "node scripts/test-routes.mjs",
     "server": "node server/index.mjs"
   },
   "dependencies": {

@@ -100,7 +100,7 @@ function GrammarCard({ g, done, onToggle }: { g: Grammar; done: boolean; onToggl
   return (
     <div className={cn("card-flat p-4 transition hover:-translate-y-0.5 hover:border-shu-300", done && "border-matcha-200 bg-matcha-50/40")}>
       <div className="flex items-start gap-3">
-        <a href={href("grammar", g.id)} className="min-w-0 flex-1">
+        <a href={href(`grammar?level=${g.lvl}`, g.id)} className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2">
             <span className="font-jp text-[1.15rem] font-bold text-sumi-900">{grammarLabel(g.p)}</span>
             <LevelBadge level={g.lvl} size="sm" />
