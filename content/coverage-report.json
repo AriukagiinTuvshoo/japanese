@@ -134,7 +134,7 @@
       "grammar": {
         "entries": 123,
         "missingMeanings": 0,
-        "missingExamples": 107,
+        "missingExamples": 77,
         "missingForms": 0,
         "unclassified": 0,
         "invalidCategories": 0,
@@ -181,7 +181,7 @@
   },
   "totals": {
     "missingMeanings": 62,
-    "missingExamples": 13368,
+    "missingExamples": 13338,
     "missingForms": 0,
     "unclassified": 2035,
     "invalidCategories": 0,

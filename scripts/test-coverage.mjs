@@ -216,7 +216,7 @@ for(const file of fs.readdirSync('content/mn/batches').filter(f=>/^2026-10-09-n2
    const xs=e.ex.filter(x=>x.ja===ja);assert.equal(xs.length,1);assert.equal(xs[0].en,v.en);assert.equal(xs[0].mn,v.mn);assert.equal(xs[0].mn_provenance,b.provenance.id);assert.ok(validMn(v.mn));count++;
   }
  }
- assert.equal(count,kind==='grammar'&&file.endsWith('-3.json')?10:kind==='vocab'&&file.endsWith('-5.json')?9:40);
+ assert.equal(count,kind==='grammar'&&file.endsWith('-4.json')?30:kind==='grammar'&&file.endsWith('-3.json')?10:kind==='vocab'&&file.endsWith('-5.json')?9:40);
 }
 const progressTopics=read('content/mn/batches/2026-10-09-topics-progress-1.json');
 for(const kind of ['kanji','vocab']) {

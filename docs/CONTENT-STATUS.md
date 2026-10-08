@@ -13,7 +13,7 @@ Baseline `6cf8ca1`: 7,170 missing meanings. Current batches add 7,108 net meanin
 | N1 | 31 | 31 | 0 |
 | Total | 31 | 31 | 0 |
 
-Remaining: **62 meanings, 13,368 examples** (13,015 vocabulary + 353 N2/N1 grammar), **0 formations, 2,035 unclassified entries, 0 missing new-batch provenance records; 6,503 unchanged legacy/unreviewed meanings of unknown authorship (documented, not release-blocking), 10 unresolved source issues**. Invalid categories and mislabeled MN: zero. Measures overlap; do not sum as distinct entries.
+Remaining: **62 meanings, 13,338 examples** (13,015 vocabulary + 323 N2/N1 grammar), **0 formations, 2,035 unclassified entries, 0 missing new-batch provenance records; 6,503 unchanged legacy/unreviewed meanings of unknown authorship (documented, not release-blocking), 10 unresolved source issues**. Invalid categories and mislabeled MN: zero. Measures overlap; do not sum as distinct entries.
 
 N5 vocabulary/kanji and N4 kanji are fully classified. Categories support multiple topics, including relationships. Explicit semantic override evidence is maintained in `content/categories/provenance.json`. Unmatched entries remain visibly filterable, not hidden in a catch-all. Source warnings retain original Japanese/English and block release. Existing drafts and new translations still need accuracy review. Page-wide bilingual localization audit remains incomplete, notably Admin.
 
@@ -129,3 +129,5 @@ Shared Spinner/ErrorBox defaults now use selected profile language (covers Admin
 External reference attempt: retrieved JMdict distributor release metadata version 3.6.2+20261005200550, but dictionary asset download failed EOF at restricted release-assets.githubusercontent.com. No entry-level external evidence obtained; exact attempt URL/version/failure recorded in docs/audits/2026-10-09-dictionary-attempt.json. All 62 missing meanings and ten source warnings unchanged; internal comparisons not presented as verification.
 
 Actual PR checks at head 4dd3095: regression PASS (8m55s), complete-content FAIL (18s), Vercel preview PASS. These are previous-head checks, not approval of this new commit. Draft/open status retained; no merge or production release. Full page localization, backend-derived diagnostics, complete bilingual state matrix, remaining corpus/categories, and independent human review still block release.
+
+Additional same-turn batch: 30 more source-guarded N2 grammar sentences applied, coverage/regression/retention/typecheck/data/build passed. Standalone strict gate exit 1: 62 meanings / 13338 examples / 2035 unclassified / 10 conflicts; separate diff check exit 0. Total current-turn addition 289 sentences. Prior progress commit 0eaae1a checks were pending when inspected; no new-head CI approval claimed.
