@@ -50,7 +50,7 @@ export default function Dictionary({ q: initial }: { q?: string }) {
 
     const v: { w: string; r: string; mn: string; lvl: string; id: string; s: number }[] = [];
     const k: { w: string; r: string; mn: string; lvl: string; id: string; s: number }[] = [];
-    const g: { w: string; r: string; mn: string; lvl: string; id: string; s: number }[] = [];
+    const g: { w: string; r: string; mn: string; en: string; hasMn: boolean; lvl: string; id: string; s: number }[] = [];
 
     for (const [w, r, mn, lvl, tier, id] of index.v) {
       const s = Math.max(
@@ -65,9 +65,10 @@ export default function Dictionary({ q: initial }: { q?: string }) {
       if (s > 6) k.push({ w: ch, r: on, mn, lvl, id: ch, s });
     }
     for (const gr of grammar) {
-      const mn = gr.mn ?? (Array.isArray(gr.en) ? gr.en.join("; ") : String(gr.en ?? ""));
+      const en = Array.isArray(gr.en) ? gr.en.join("; ") : String(gr.en ?? "");
+      const mn = gr.mn ?? en;
       const s2 = match(gr.p.replace(/[〜~]/g, ""), mn, gr.p, 1) + 4;
-      if (s2 > 4) g.push({ w: gr.p, r: gr.lvl, mn, lvl: gr.lvl, id: gr.id, s: s2 });
+      if (s2 > 4) g.push({ w: gr.p, r: gr.lvl, mn: gr.mn ?? "", en, hasMn: !!gr.mn, lvl: gr.lvl, id: gr.id, s: s2 });
     }
 
     const sort = (a: { s: number }, b: { s: number }) => b.s - a.s;
@@ -190,8 +191,15 @@ export default function Dictionary({ q: initial }: { q?: string }) {
                     <a href={href("grammar", gr.id)} className="flex flex-wrap items-center gap-3 py-3">
                       <span className="font-jp text-[16px] font-bold">{gr.w}</span>
                       <span className="min-w-0 flex-1 truncate text-[13px] text-sumi-700">
-                        {gr.mn || <span className="text-sumi-400">{t.pendingNoteLower}</span>}
+                        {language === "en"
+                          ? (gr.en || <span className="text-sumi-400">{MN_PENDING}</span>)
+                          : (gr.hasMn
+                            ? gr.mn
+                            : <span className="italic text-sumi-400">{MN_PENDING}</span>)}
                       </span>
+                      {language === "mn" && !gr.hasMn && gr.en && (
+                        <span className="shrink-0 text-[11px] text-sumi-400">{t.enLabel} {gr.en}</span>
+                      )}
                       <LevelBadge level={gr.lvl as never} size="sm" />
                     </a>
                   </li>

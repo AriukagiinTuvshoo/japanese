@@ -7,7 +7,7 @@
  */
 import { LEVEL_META } from "../data/levels";
 import type { Language } from "./i18n";
-import { MN_PENDING } from "./i18n";
+import { MN_PENDING, grammarEn } from "./i18n";
 import type { Grammar, Kanji, Level, Vocab } from "./types";
 import { LEVELS } from "./types";
 import { pick, shuffle } from "./data";
@@ -212,18 +212,27 @@ function kanjiQuestion(k: Kanji, pool: Kanji[], mode: QuizMode, language: Langua
 /* ─────────────── Дүрэм → асуулт ─────────────── */
 function grammarQuestion(g: Grammar, pool: Grammar[], language: Language = "mn"): Question | null {
   const clean = (s: string) => s.replace(/[〜~]/g, "");
-  const others = distractors(pool, (x) => x.id === g.id, 3, (x) => x.mn ?? (Array.isArray(x.en) ? x.en[0] : String(x.en ?? "")));
+  /** Active-language meaning: EN → English; MN → Mongolian (skip items with no MN). */
+  const meaning = (x: Grammar): string =>
+    language === "en" ? grammarEn(x) : (x.mn ?? "");
+  // In MN mode, skip grammar items that have no MN translation
+  if (language === "mn" && !g.mn) return null;
+  if (!meaning(g)) return null;
+
+  // Distractor pool: only items with the needed translation
+  const distractorPool = language === "mn"
+    ? pool.filter((x) => x.mn)
+    : pool;
+  const others = distractors(distractorPool, (x) => x.id === g.id, 3, meaning);
   if (others.length < 3) return null;
 
-  const mnOf = (x: Grammar) => x.mn ?? (Array.isArray(x.en) ? x.en.join("; ") : String(x.en ?? ""));
-  if (!mnOf(g)) return null;
-
   const opts = shuffle([g, ...others], rnd);
+  const meaningOf = (x: Grammar) => meaning(x);
   return {
     id: `g-${g.id}`, kind: "grammar", level: g.lvl, section: SECTION_LABEL[language]["Дүрэм"] ?? "Дүрэм",
     prompt: g.p, promptSub: PROMPT_SUB[language]["Энэ дүрмийн утга аль вэ?"] ?? "Энэ дүрмийн утга аль вэ?",
-    options: opts.map(mnOf), answer: opts.indexOf(g),
-    explain: `${clean(g.p)} — ${mnOf(g)}${g.note ? `\n${g.note}` : ""}`,
+    options: opts.map(meaningOf), answer: opts.indexOf(g),
+    explain: `${clean(g.p)} — ${meaningOf(g)}${g.note ? `\n${g.note}` : ""}`,
     example: g.ex[0]?.ja ? { ja: g.ex[0].fg ?? g.ex[0].ja, en: g.ex[0].en, mn: g.ex[0].mn ?? undefined } : undefined,
   };
 }
@@ -419,12 +428,12 @@ export const EXAM_BLUEPRINTS: Record<Level, ExamBlueprint> = {
   },
 };
 
-export function buildExam(bp: ExamBlueprint, data: { vocab: Vocab[]; kanji: Kanji[]; grammar: Grammar[] }) {
+export function buildExam(bp: ExamBlueprint, data: { vocab: Vocab[]; kanji: Kanji[]; grammar: Grammar[] }, language: Language = "mn") {
   return bp.sections.map((sec) => {
     const per = Math.ceil(sec.count / sec.modes.length);
     const questions: Question[] = [];
     for (const m of sec.modes) {
-      const set = buildQuiz({ mode: m, level: bp.level, count: per }, data);
+      const set = buildQuiz({ mode: m, level: bp.level, count: per, lang: language }, data);
       questions.push(...set.questions);
     }
     return { section: sec, questions: shuffle(questions, rnd).slice(0, sec.count) };

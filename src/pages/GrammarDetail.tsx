@@ -5,7 +5,7 @@ import { loadGrammar } from "../lib/data";
 import type { Grammar, Level } from "../lib/types";
 import { grammarLabel, LEVEL_LABEL, stripFurigana } from "../lib/text";
 import { Button, Card, Chip, Empty, Furigana, LevelBadge, SectionTitle, SpeakButton, Spinner, Tabs } from "../components/ui";
-import { MN_PENDING, ui } from "../lib/i18n";
+import { MN_PENDING, grammarEn, grammarMnMissing, ui } from "../lib/i18n";
 
 export default function GrammarDetail({ id }: { id: string }) {
   const { doc, actions } = useStore();
@@ -64,7 +64,7 @@ export default function GrammarDetail({ id }: { id: string }) {
           <p className="mt-4 text-[1.15rem] font-bold leading-relaxed text-sumi-900">{g.mn}</p>
         ) : (
           <p className="mt-4 text-[1.1rem] font-semibold text-sumi-500">
-            {language === "en" ? en : (en || MN_PENDING)}
+            {language === "en" ? (en || MN_PENDING) : <span className="italic">{MN_PENDING}</span>}
           </p>
         )}
         {g.note && (
@@ -140,7 +140,7 @@ export default function GrammarDetail({ id }: { id: string }) {
                     {e.ja && <SpeakButton text={stripFurigana(e.ja)} />}
                   </div>
                   {language === "mn" && e.mn && <p className="mt-2 text-[13.5px] font-semibold text-sumi-800">{t.mnColon} {e.mn}</p>}
-                  {e.en && <p className="mt-1 text-[12.5px] text-sumi-500">{e.en}</p>}
+                  {e.en && <p className="mt-1 text-[12.5px] text-sumi-500">{language === "mn" ? <>{t.enLabel} {e.en}</> : e.en}</p>}
                 </li>
               ))}
             </ul>
@@ -160,8 +160,15 @@ export default function GrammarDetail({ id }: { id: string }) {
                     <LevelBadge level={s.lvl} size="sm" />
                   </div>
                   <p className="mt-1.5 line-clamp-2 text-[12.5px] leading-relaxed text-sumi-700">
-                    {language === "en" ? ((Array.isArray(s.en) ? s.en.join("; ") : String(s.en ?? "")) || s.mn) : (s.mn ?? (Array.isArray(s.en) ? s.en.join("; ") : String(s.en ?? "")))}
+                    {language === "en"
+                      ? (grammarEn(s) || s.mn || MN_PENDING)
+                      : (s.mn || <span className="italic text-sumi-400">{MN_PENDING}</span>)}
                   </p>
+                  {language === "mn" && grammarMnMissing(s) && grammarEn(s) && (
+                    <p className="mt-0.5 line-clamp-1 text-[11px] text-sumi-400">
+                      {t.enLabel} {grammarEn(s)}
+                    </p>
+                  )}
                 </a>
               ))}
             </div>

@@ -25,6 +25,7 @@ export default function Quiz() {
   const [count, setCount] = useState(15);
   const [set_, setSet] = useState<QuizSet | null>(null);
   const [loading, setLoading] = useState(false);
+  const [emptyMsg, setEmptyMsg] = useState<string | null>(null);
 
   const weakKinds = useMemo(() => {
     const m = new Map<string, { c: number; t: number }>();
@@ -37,12 +38,20 @@ export default function Quiz() {
 
   const start = async (m: QuizMode) => {
     setLoading(true);
+    setEmptyMsg(null);
     const data = await loadFullData();
     const result = buildQuiz(
       { mode: m, level, count: m === "mistakes" ? Math.max(5, doc.mistakes.length) : count, lang: language },
       { vocab: data.vocab, kanji: data.kanji, grammar: data.grammar, weakKinds, mistakeIds: doc.mistakes.map((x) => x.id) },
     );
-    if (!result.questions.length) { setLoading(false); return; }
+    if (!result.questions.length) {
+      setLoading(false);
+      // Determine if this is a grammar-MN mode with no MN translations
+      if ((m === "grammar-mn" || m === "grammar-use" || m === "mixed") && language === "mn") {
+        setEmptyMsg(t.grammarMnInsufficient);
+      }
+      return;
+    }
     setSet(result);
     set({ mode: m });
     setLoading(false);
@@ -136,6 +145,11 @@ export default function Quiz() {
         ))}
       </div>
 
+      {emptyMsg && (
+        <div className="card rounded-2xl border border-kin-200 bg-kin-50/60 p-5 text-[13.5px] leading-relaxed text-kin-700">
+          <span className="mr-2 text-[16px]">⚠️</span>{emptyMsg}
+        </div>
+      )}
       {loading && <Spinner label={t.genQ2} lang={language} />}
 
       <Card className="bg-sumi-900 text-washi-50">
