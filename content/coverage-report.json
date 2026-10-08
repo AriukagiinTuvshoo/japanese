@@ -157,10 +157,10 @@
       },
       "kanji": {
         "entries": 1646,
-        "missingMeanings": 546,
+        "missingMeanings": 426,
         "missingExamples": 0,
         "missingForms": 0,
-        "unclassified": 444,
+        "unclassified": 351,
         "invalidCategories": 0,
         "missingProvenance": 0,
         "mislabeledMn": 0,
@@ -180,10 +180,10 @@
     }
   },
   "totals": {
-    "missingMeanings": 1057,
+    "missingMeanings": 937,
     "missingExamples": 14407,
     "missingForms": 0,
-    "unclassified": 2713,
+    "unclassified": 2620,
     "invalidCategories": 0,
     "missingProvenance": 0,
     "mislabeledMn": 0,
