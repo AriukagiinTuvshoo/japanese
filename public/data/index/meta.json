@@ -1,0 +1,107 @@
+{
+  "version": "3.0.0",
+  "builtAt": "2026-10-07T16:37:57.863Z",
+  "levels": [
+    "N5",
+    "N4",
+    "N3",
+    "N2",
+    "N1"
+  ],
+  "counts": {
+    "vocab": 10461,
+    "kanji": 2686,
+    "grammar": 526,
+    "strokes": 2686,
+    "vocabMnCurated": 0,
+    "byLevel": {
+      "vocab": {
+        "N5": 1074,
+        "N4": 1080,
+        "N3": 2279,
+        "N2": 2338,
+        "N1": 3690
+      },
+      "kanji": {
+        "N5": 84,
+        "N4": 169,
+        "N3": 387,
+        "N2": 400,
+        "N1": 1646
+      },
+      "grammar": {
+        "N5": 81,
+        "N4": 98,
+        "N3": 101,
+        "N2": 123,
+        "N1": 123
+      },
+      "vocabMn": {
+        "N5": 0,
+        "N4": 0,
+        "N3": 0,
+        "N2": 0,
+        "N1": 0
+      }
+    }
+  },
+  "content": {
+    "listeningLessons": 0,
+    "readingPassages": 0,
+    "kanjiMnemonics": 0,
+    "grammarExplained": 0,
+    "glossaryTerms": 0
+  },
+  "sources": [],
+  "openjlpt": {
+    "name": "OpenJLPT",
+    "version": "0.3.0",
+    "license": "CC-BY-SA-4.0",
+    "homepage": "https://github.com/evanclan/OpenJLPT",
+    "counts": {
+      "vocab": {
+        "N5": 674,
+        "N4": 630,
+        "N3": 1659,
+        "N2": 1778,
+        "N1": 3070,
+        "total": 7811
+      },
+      "kanji": {
+        "N5": 84,
+        "N4": 169,
+        "N3": 387,
+        "N2": 398,
+        "N1": 1345,
+        "total": 2383
+      },
+      "grammar": {
+        "N5": 81,
+        "N4": 98,
+        "N3": 101,
+        "N2": 123,
+        "N1": 123,
+        "total": 526
+      }
+    },
+    "vocab_with_examples": 7245,
+    "sources": {
+      "waller": {
+        "url": "https://www.tanos.co.uk/jlpt/",
+        "license": "CC BY",
+        "snapshot": "sources/waller/"
+      },
+      "jmdict": {
+        "created": "2026-09-29"
+      },
+      "kanjidic2": {
+        "database_version": "2026-272",
+        "created": "2026-09-29"
+      },
+      "tatoeba": {
+        "url": "https://tatoeba.org",
+        "license": "CC BY 2.0 FR"
+      }
+    }
+  }
+}
