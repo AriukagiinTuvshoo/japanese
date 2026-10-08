@@ -10,7 +10,14 @@ export interface Route {
 
 export function parseHash(hash = window.location.hash): Route {
   const raw = hash.replace(/^#\/?/, "");
-  const [pathPart, queryPart] = raw.split("?");
+  const sep = raw.match(/\?|%3F/i);
+  let pathPart = raw;
+  let queryPart: string | undefined;
+  if (sep && sep.index !== undefined) {
+    pathPart = raw.slice(0, sep.index);
+    queryPart = raw.slice(sep.index + sep[0].length);
+    try { queryPart = decodeURIComponent(queryPart); } catch { /* хэвээр нь */ }
+  }
   const segments = pathPart.split("/").filter(Boolean).map(decodeURIComponent);
   const query: Record<string, string> = {};
   new URLSearchParams(queryPart ?? "").forEach((v, k) => { query[k] = v; });
