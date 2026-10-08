@@ -6,7 +6,7 @@ import { loadVocab } from "../lib/data";
 import type { Level, PosType, Vocab } from "../lib/types";
 import { LEVELS } from "../lib/types";
 import { LEVEL_LABEL, MQ_LABEL, TYPE_LABEL, toRomaji } from "../lib/text";
-import { topicLabel, vocabMeaning, vocabTopic, type VocabTopic } from "../lib/i18n";
+import { topicLabel, ui, vocabMeaning, vocabTopic, type VocabTopic } from "../lib/i18n";
 import { cardStage, dueCards, retrievability } from "../lib/srs";
 import {
   Bar, Button, Card, Chip, Empty, Input, Pager, Select, SpeakButton, Spinner, Tabs,
@@ -20,6 +20,7 @@ export default function Vocabulary() {
   const { query, set } = useQuery();
   const { doc } = useStore();
   const language = doc.profile.language ?? "mn";
+  const t = ui[language];
   const level = (query.level as Level) || (doc.profile.current === "zero" ? doc.profile.target : doc.profile.current);
   const tab = (query.tab as string) || "browse";
 
@@ -92,26 +93,26 @@ export default function Vocabulary() {
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <p className="font-jp text-[11.5px] tracking-[0.3em] text-shu-500">単語帳</p>
-          <h1 className="mt-1 text-[1.7rem] font-extrabold leading-tight tracking-tight sm:text-[2rem]">Үгийн сан</h1>
+          <h1 className="mt-1 text-[1.7rem] font-extrabold leading-tight tracking-tight sm:text-[2rem]">{t.vocab}</h1>
           <p className="mt-1.5 text-[13.5px] text-sumi-500">
-            {LEVEL_LABEL[level]} ({level}) · {words ? `${words.length.toLocaleString()} үг` : "…"}
-            {levelDue > 0 && <> · <span className="font-bold text-shu-600">{levelDue} давтах</span></>}
+            {LEVEL_LABEL[language][level]} ({level}) · {words ? `${words.length.toLocaleString()} ${t.wordsUnit}` : "…"}
+            {levelDue > 0 && <> · <span className="font-bold text-shu-600">{levelDue} {t.toReview}</span></>}
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
-          <Button variant="outline" onClick={() => navigate(`review?level=${level}`)}>復 Давталт</Button>
-          <Button onClick={() => set({ tab: "learn" })}>語 Суралцах</Button>
+          <Button variant="outline" onClick={() => navigate(`review?level=${level}`)}>復 {t.reviewBtn}</Button>
+          <Button onClick={() => set({ tab: "learn" })}>語 {t.learnBtn}</Button>
         </div>
       </div>
 
       <Tabs
         value={tab}
-        onChange={(t) => set({ tab: t })}
+        onChange={(v) => set({ tab: v })}
         items={[
-          { id: "browse", label: "Жагсаалт", icon: "一", badge: filtered.length || undefined },
-          { id: "learn", label: "Суралцах горим", icon: "学" },
-          { id: "network", label: "Үгийн сүлжээ", icon: "網" },
-          { id: "stats", label: "Статистик", icon: "統" },
+          { id: "browse", label: t.listTab, icon: "一", badge: filtered.length || undefined },
+          { id: "learn", label: t.learnTab, icon: "学" },
+          { id: "network", label: t.networkTab, icon: "網" },
+          { id: "stats", label: t.statsTab, icon: "統" },
         ]}
       />
 
@@ -125,26 +126,26 @@ export default function Vocabulary() {
         <>
           <Card className="p-4">
             <div className="flex flex-wrap items-center gap-2">
-              <Input value={q} onChange={(v) => { setQ(v); setPage(1); }} placeholder="Хайх — ханз, кана, ромажи, монгол, англи…" icon="🔎" className="min-w-[220px] flex-1" />
+              <Input value={q} onChange={(v) => { setQ(v); setPage(1); }} placeholder={t.searchIn} icon="🔎" className="min-w-[220px] flex-1" />
               <Select
                 value={sort}
                 onChange={(v) => setSort(v)}
                 options={[
-                  { id: "level", label: "Эх дараалал" },
-                  { id: "kana", label: "А-Я (кана)" },
-                  { id: "random", label: "Санамсаргүй" },
+                  { id: "level", label: t.sortSource },
+                  { id: "kana", label: t.sortKana },
+                  { id: "random", label: t.sortRandom },
                 ]}
               />
               <Select
                 value={state}
                 onChange={(v) => { setState(v); setPage(1); }}
                 options={[
-                  { id: "all", label: "Бүх төлөв" },
-                  { id: "new", label: "Шинэ" },
-                  { id: "learning", label: "Суралцаж байна" },
-                  { id: "review", label: "Давталт" },
-                  { id: "mastered", label: "Эзэмшсэн" },
-                  { id: "fav", label: "★ Дуртай" },
+                  { id: "all", label: t.stateAll },
+                  { id: "new", label: t.stateNew },
+                  { id: "learning", label: t.stateLearning },
+                  { id: "review", label: t.stateReview },
+                  { id: "mastered", label: t.stateMastered },
+                  { id: "fav", label: t.stateFav },
                 ]}
               />
             </div>
@@ -155,23 +156,23 @@ export default function Vocabulary() {
                 className={cn("shrink-0 rounded-lg px-2.5 py-1.5 text-[12px] font-bold transition",
                   type === "all" ? "bg-sumi-900 text-washi-50" : "bg-sumi-900/5 text-sumi-600 hover:text-sumi-900")}
               >
-                Бүгд {words?.length ?? 0}
+                {t.all} {words?.length ?? 0}
               </button>
-              {(Object.keys(TYPE_LABEL) as PosType[]).filter((t) => typeCounts[t]).map((t) => (
+              {(Object.keys(TYPE_LABEL[language]) as PosType[]).filter((k) => typeCounts[k]).map((k) => (
                 <button
-                  key={t}
-                  onClick={() => { setType(t); setPage(1); }}
+                  key={k}
+                  onClick={() => { setType(k); setPage(1); }}
                   className={cn("shrink-0 rounded-lg px-2.5 py-1.5 text-[12px] font-bold transition",
-                    type === t ? "bg-sumi-900 text-washi-50" : "bg-sumi-900/5 text-sumi-600 hover:text-sumi-900")}
+                    type === k ? "bg-sumi-900 text-washi-50" : "bg-sumi-900/5 text-sumi-600 hover:text-sumi-900")}
                 >
-                  {TYPE_LABEL[t]} <span className="tabnum opacity-60">{typeCounts[t]}</span>
+                  {TYPE_LABEL[language][k]} <span className="tabnum opacity-60">{typeCounts[k]}</span>
                 </button>
               ))}
             </div>
-            <div className="no-scrollbar mt-3 flex gap-1.5 overflow-x-auto border-t border-sumi-900/8 pt-3" aria-label={language === "mn" ? "Сэдвээр шүүх" : "Filter by topic"}>
+            <div className="no-scrollbar mt-3 flex gap-1.5 overflow-x-auto border-t border-sumi-900/8 pt-3" aria-label={t.filterByTopic}>
               <button onClick={() => { setTopic("all"); setPage(1); }}
                 className={cn("shrink-0 rounded-lg px-2.5 py-1.5 text-[12px] font-bold transition", topic === "all" ? "bg-shu-500 text-white" : "bg-shu-50 text-shu-700")}>
-                {language === "mn" ? "Бүх сэдэв" : "All topics"}
+                {t.allTopics}
               </button>
               {(Object.keys(topicLabel[language]) as VocabTopic[]).filter((key) => topicCounts[key]).map((key) => (
                 <button key={key} onClick={() => { setTopic(key); setPage(1); }}
@@ -182,10 +183,10 @@ export default function Vocabulary() {
             </div>
           </Card>
 
-          {!words && <Spinner label="Үгийн сан ачаалж байна…" />}
+          {!words && <Spinner label={t.loadingVocab} />}
 
           {words && shown.length === 0 && (
-            <Empty icon="無" title="Илэрц олдсонгүй" sub="Хайлтын нөхцөлийг өөрчлөөд дахин оролдоно уу." />
+            <Empty icon="無" title={t.noResults} sub={t.noResultsSub} />
           )}
 
           {shown.length > 0 && (
@@ -195,7 +196,7 @@ export default function Vocabulary() {
           )}
 
           <Pager page={page} pages={pages} onPage={setPage} />
-          {pages > 1 && <p className="text-center text-[12px] text-sumi-400">Нийт {filtered.length.toLocaleString()} үг · {PER_PAGE} үг/хуудас</p>}
+          {pages > 1 && <p className="text-center text-[12px] text-sumi-400">{t.totalWords(filtered.length.toLocaleString())}</p>}
         </>
       )}
     </div>
@@ -205,10 +206,11 @@ export default function Vocabulary() {
 export function WordRow({ v }: { v: Vocab }) {
   const { doc, actions } = useStore();
   const language = doc.profile.language ?? "mn";
+  const t = ui[language];
   const card = doc.srs[v.id];
   const stage = cardStage(card);
   const fav = doc.favorites.includes(v.id);
-  const mq = MQ_LABEL[v.mq];
+  const mq = MQ_LABEL[language][v.mq];
 
   return (
     <div className="card-flat group relative flex items-start gap-3 p-3.5 transition hover:-translate-y-0.5 hover:border-shu-300">
@@ -221,24 +223,24 @@ export function WordRow({ v }: { v: Vocab }) {
           <span className={!v.mn?.length && language === "mn" ? "text-kin-600" : undefined}>{vocabMeaning(v, language)}</span>
         </p>
         <div className="mt-2 flex flex-wrap items-center gap-1.5">
-          <Chip tone="sumi" className="!px-1.5 !py-0.5 !text-[10px]">{TYPE_LABEL[v.t]}</Chip>
+          <Chip tone="sumi" className="!px-1.5 !py-0.5 !text-[10px]">{TYPE_LABEL[language][v.t]}</Chip>
           <span className={cn("inline-flex items-center gap-1 rounded-full px-1.5 py-0.5 text-[10px] font-bold",
             stage.tone === "matcha" ? "bg-matcha-50 text-matcha-600"
               : stage.tone === "ai" ? "bg-ai-50 text-ai-600"
                 : stage.tone === "kin" ? "bg-kin-50 text-kin-600" : "bg-sumi-900/5 text-sumi-500")}>
-            {stage.mn}
+            {language === "en" ? stage.en : stage.mn}
           </span>
-          {v.tier !== "jlpt" && <Chip tone="kin" className="!px-1.5 !py-0.5 !text-[10px]" title="JLPT-ийн албан жагсаалтад байхгүй, өргөтгөсөн сан">өргөтгөсөн</Chip>}
+          {v.tier !== "jlpt" && <Chip tone="kin" className="!px-1.5 !py-0.5 !text-[10px]" title={t.extendedTip}>{t.extended}</Chip>}
         </div>
       </a>
 
       <div className="flex shrink-0 flex-col items-end gap-1.5">
-        <SpeakButton text={v.w} className="!h-7 !w-7" />
+        <SpeakButton text={v.w} className="!h-7 !w-7" lang={language} />
         <button
           onClick={() => actions.toggleFavorite(v.id)}
           className={cn("grid h-7 w-7 place-items-center rounded-lg border text-[13px] transition",
             fav ? "border-kin-200 bg-kin-50 text-kin-500" : "border-sumi-900/10 bg-white/70 text-sumi-300 hover:text-kin-500")}
-          title="Дуртайд нэмэх"
+          title={t.favAdd}
         >
           ★
         </button>
@@ -246,7 +248,7 @@ export function WordRow({ v }: { v: Vocab }) {
           <button
             onClick={() => actions.grade(v.id, 2, { isNew: true })}
             className="grid h-7 w-7 place-items-center rounded-lg border border-sumi-900/10 bg-white/70 text-[13px] text-sumi-400 transition hover:border-matcha-400 hover:text-matcha-600"
-            title="SRS-д нэмэх"
+            title={t.srsAdd}
           >
             +
           </button>
@@ -265,6 +267,8 @@ export function WordRow({ v }: { v: Vocab }) {
 
 function LevelStats({ words }: { words: Vocab[] }) {
   const { doc } = useStore();
+  const language = doc.profile.language ?? "mn";
+  const t = ui[language];
   const stats = useMemo(() => {
     let fresh = 0, learning = 0, review = 0, mastered = 0, mature = 0;
     let mnCurated = 0, mnAuto = 0, mnNone = 0;
@@ -287,13 +291,13 @@ function LevelStats({ words }: { words: Vocab[] }) {
   return (
     <div className="grid gap-5 lg:grid-cols-2">
       <Card>
-        <p className="text-[13.5px] font-extrabold">Сургалтын төлөв</p>
+        <p className="text-[13.5px] font-extrabold">{t.studyStatus}</p>
         <div className="mt-4 space-y-3.5">
           {[
-            { l: "Шинэ (хараагүй)", v: stats.fresh, tone: "sumi" as const },
-            { l: "Суралцаж байна", v: stats.learning, tone: "kin" as const },
-            { l: "Давталтын шатанд", v: stats.review, tone: "ai" as const },
-            { l: "Эзэмшсэн", v: stats.mastered, tone: "matcha" as const },
+            { l: t.freshRow, v: stats.fresh, tone: "sumi" as const },
+            { l: t.learningRow, v: stats.learning, tone: "kin" as const },
+            { l: t.reviewRow, v: stats.review, tone: "ai" as const },
+            { l: t.masteredRow, v: stats.mastered, tone: "matcha" as const },
           ].map((r) => (
             <div key={r.l}>
               <div className="flex items-baseline justify-between">
@@ -305,21 +309,20 @@ function LevelStats({ words }: { words: Vocab[] }) {
           ))}
         </div>
         <div className="mt-5 rounded-xl bg-sumi-900/4 px-3.5 py-3 text-[12.5px] text-sumi-600">
-          Энэ түвшний дундаж сэргээх магадлал: <strong className="font-mono tabnum">{Math.round(stats.retention * 100)}%</strong>
+          {t.avgRet} <strong className="font-mono tabnum">{Math.round(stats.retention * 100)}%</strong>
         </div>
       </Card>
 
       <Card>
-        <p className="text-[13.5px] font-extrabold">Монгол орчуулгын төлөв</p>
+        <p className="text-[13.5px] font-extrabold">{t.mnStatusTitle}</p>
         <p className="mt-1 text-[12.5px] leading-relaxed text-sumi-500">
-          Контентын бодлого: орчуулга бүр эх сурвалжтай. Хянагдаагүй орчуулга нь
-          утгын санал болгож, англи эх сурвалжтай хамт харагдана.
+          {t.mnPolicy}
         </p>
         <div className="mt-4 space-y-3">
           {[
-            { l: "✓ Хүн хянасан", v: stats.mnCurated, tone: "matcha" as const },
-            { l: "◐ Авто / ханзнаас", v: stats.mnAuto, tone: "kin" as const },
-            { l: "○ Орчуулга хүлээж байна", v: stats.mnNone, tone: "sumi" as const },
+            { l: t.rowCurated, v: stats.mnCurated, tone: "matcha" as const },
+            { l: t.rowAuto, v: stats.mnAuto, tone: "kin" as const },
+            { l: t.rowNone, v: stats.mnNone, tone: "sumi" as const },
           ].map((r) => (
             <div key={r.l}>
               <div className="flex items-baseline justify-between">
@@ -331,8 +334,7 @@ function LevelStats({ words }: { words: Vocab[] }) {
           ))}
         </div>
         <div className="mt-5 rounded-xl border border-ai-100 bg-ai-50/60 px-3.5 py-3 text-[12.5px] leading-relaxed text-ai-700">
-          Орчуулгыг сайжруулахыг хүсвэл <a href={href("admin")} className="font-bold underline underline-offset-4">контент удирдлага</a> хэсэгт
-          хяналтын дараалалд нэмэгдэнэ. Хянасан орчуулга бүр бүх хэрэглэгчид харагдана.
+          {t.improvePre}<a href={href("admin")} className="font-bold underline underline-offset-4">{t.improveLink}</a>{t.improvePost}
         </div>
       </Card>
     </div>
@@ -342,6 +344,8 @@ function LevelStats({ words }: { words: Vocab[] }) {
 /** Түвшний бүх үгийг SRS-д бөөнөөр нэмэх. */
 export function BulkAdd({ words, level }: { words: Vocab[]; level: Level }) {
   const { actions, doc } = useStore();
+  const language = doc.profile.language ?? "mn";
+  const t = ui[language];
   const missing = words.filter((w) => !doc.srs[w.id]);
   return (
     <Button
@@ -354,7 +358,7 @@ export function BulkAdd({ words, level }: { words: Vocab[]; level: Level }) {
         navigate(`review?level=${level}`);
       }}
     >
-      + {Math.min(missing.length, doc.profile.newPerDay * 3)} үгийг SRS-д нэмэх
+      {t.bulkAdd(Math.min(missing.length, doc.profile.newPerDay * 3))}
     </Button>
   );
 }

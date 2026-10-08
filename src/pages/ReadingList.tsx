@@ -5,10 +5,13 @@ import { READING } from "../lib/data";
 import type { Level } from "../lib/types";
 import { LEVEL_LABEL } from "../lib/text";
 import { Button, Card, Chip, Empty, Input, LevelBadge, Spinner } from "../components/ui";
+import { ui } from "../lib/i18n";
 
 export default function ReadingList() {
   const { query, set } = useQuery();
   const { doc } = useStore();
+  const language = doc.profile.language ?? "mn";
+  const t = ui[language];
   const level = (query.level as Level) || "N3";
   const [q, setQ] = useState("");
 
@@ -28,25 +31,25 @@ export default function ReadingList() {
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <p className="font-jp text-[11.5px] tracking-[0.3em] text-shu-500">読解</p>
-          <h1 className="mt-1 text-[1.7rem] font-extrabold leading-tight tracking-tight sm:text-[2rem]">Уншлагын студи</h1>
+          <h1 className="mt-1 text-[1.7rem] font-extrabold leading-tight tracking-tight sm:text-[2rem]">{t.readingStudio}</h1>
           <p className="mt-1.5 text-[13.5px] text-sumi-500">
-            {LEVEL_LABEL[level]} ({level}) · {list.length} хичээл · {done.filter((id) => list.some((r) => r.id === id)).length} дуусгасан
+            {LEVEL_LABEL[language][level]} ({level}) · {list.length} {t.lessonsUnit} · {done.filter((id) => list.some((r) => r.id === id)).length} {t.doneUnit}
           </p>
         </div>
         <div className="flex gap-2">
           <Button variant={query.all === "1" ? "primary" : "outline"} onClick={() => set({ all: query.all === "1" ? "" : "1" })}>
-            {query.all === "1" ? "Бүх түвшин" : "Зөвхөн энэ түвшин"}
+            {query.all === "1" ? t.allLevelsBtn : t.thisLevelBtn}
           </Button>
         </div>
       </div>
 
       <Card className="p-4">
-        <Input value={q} onChange={setQ} placeholder="Гарчиг, сэдэв, текстээс хайх…" icon="🔎" className="max-w-md" />
+        <Input value={q} onChange={setQ} placeholder={t.readingSearchPh} icon="🔎" className="max-w-md" />
       </Card>
 
       {list.length === 0 && (
-        <Empty icon="読" title="Уншлагын хичээл олдсонгүй"
-          sub="Энэ түвшинд хичээл хараахан нэмэгдээгүй. «Бүх түвшин» сонгож үзээрэй." />
+        <Empty icon="読" title={t.noLessons}
+          sub={t.noLessonsSub} />
       )}
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -69,8 +72,8 @@ export default function ReadingList() {
               </p>
               <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-sumi-900/8 pt-3 text-[11.5px] text-sumi-400">
                 <Chip tone="sumi">{r.topic}</Chip>
-                <span>{r.minutes} мин</span>
-                <span className="ml-auto">{r.questions.length} асуулт</span>
+                <span>{r.minutes} {t.minutes}</span>
+                <span className="ml-auto">{t.questionsN(r.questions.length)}</span>
               </div>
             </a>
           );

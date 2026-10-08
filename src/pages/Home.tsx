@@ -7,9 +7,12 @@ import type { DataMeta, Level } from "../lib/types";
 import { LEVEL_LABEL, todayKey, dayOffset } from "../lib/text";
 import { dueCards, memoryStats, reviewHistory, type Card as SrsCard } from "../lib/srs";
 import { Bar, Button, Card, Chip, LevelBadge, Ring, SectionTitle, Spinner, Stat } from "../components/ui";
+import { ui, type Language } from "../lib/i18n";
 
 export default function Home() {
   const { doc, today, streak, levelInfo, nextAchievement } = useStore();
+  const language: Language = doc.profile.language ?? "mn";
+  const t = ui[language];
   const [data, setData] = useState<DataMeta | null>(null);
   const level: Level = doc.profile.current === "zero" ? doc.profile.target : doc.profile.current;
 
@@ -26,14 +29,14 @@ export default function Home() {
   const mission = useMemo(() => {
     const scale = goal / 30;
     return [
-      { id: "vocab", icon: "語", label: "Үг", jp: "単語", target: Math.max(5, Math.round(20 * scale)), unit: "үг", done: today.newCards, to: `vocab?level=${level}&tab=learn` },
-      { id: "review", icon: "復", label: "Давталт", jp: "復習", target: Math.max(5, Math.round(15 * scale)), unit: "карт", done: today.reviews, to: "review", urgent: due.length },
-      { id: "kanji", icon: "漢", label: "Ханз", jp: "漢字", target: Math.max(3, Math.round(10 * scale)), unit: "ханз", done: Object.values(doc.writing).filter((w) => todayKey(new Date(w.at)) === todayKey()).length, to: `kanji?level=${level}` },
-      { id: "grammar", icon: "文", label: "Дүрэм", jp: "文法", target: Math.max(2, Math.round(4 * scale)), unit: "дүрэм", done: doc.grammarDone.length, to: `grammar?level=${level}` },
-      { id: "reading", icon: "読", label: "Уншлага", jp: "読解", target: 1, unit: "хичээл", done: doc.readingDone.length, to: `reading?level=${level}` },
-      { id: "listening", icon: "聴", label: "Сонсгол", jp: "聴解", target: 1, unit: "хичээл", done: doc.listeningDone.length, to: `listening?level=${level}` },
+      { id: "vocab", icon: "語", label: t.wordSg, jp: "単語", target: Math.max(5, Math.round(20 * scale)), unit: t.wordSg.toLowerCase(), done: today.newCards, to: `vocab?level=${level}&tab=learn` },
+      { id: "review", icon: "復", label: t.reviewN, jp: "復習", target: Math.max(5, Math.round(15 * scale)), unit: t.cardUnit, done: today.reviews, to: "review", urgent: due.length },
+      { id: "kanji", icon: "漢", label: t.kanji, jp: "漢字", target: Math.max(3, Math.round(10 * scale)), unit: t.kanji.toLowerCase(), done: Object.values(doc.writing).filter((w) => todayKey(new Date(w.at)) === todayKey()).length, to: `kanji?level=${level}` },
+      { id: "grammar", icon: "文", label: t.grammar, jp: "文法", target: Math.max(2, Math.round(4 * scale)), unit: t.grammar.toLowerCase(), done: doc.grammarDone.length, to: `grammar?level=${level}` },
+      { id: "reading", icon: "読", label: t.reading, jp: "読解", target: 1, unit: t.lessonUnit, done: doc.readingDone.length, to: `reading?level=${level}` },
+      { id: "listening", icon: "聴", label: t.listening, jp: "聴解", target: 1, unit: t.lessonUnit, done: doc.listeningDone.length, to: `listening?level=${level}` },
     ];
-  }, [goal, today, due.length, doc.writing, doc.grammarDone, doc.readingDone, doc.listeningDone, level]);
+  }, [goal, today, due.length, doc.writing, doc.grammarDone, doc.readingDone, doc.listeningDone, level, language]);
 
   const missionTotal = mission.reduce((a, m) => a + m.target, 0);
   const missionDone = mission.reduce((a, m) => a + Math.min(m.target, m.done), 0);
@@ -75,10 +78,10 @@ export default function Home() {
 
   const greeting = (() => {
     const h = new Date().getHours();
-    if (h < 5) return "Сайн шөнө";
-    if (h < 12) return "Өглөөний мэнд";
-    if (h < 18) return "Сайн байна уу";
-    return "Оройн мэнд";
+    if (h < 5) return t.greetNight;
+    if (h < 12) return t.greetMorning;
+    if (h < 18) return t.greetDay;
+    return t.greetEvening;
   })();
 
   const nextLesson = useMemo(() => {
@@ -107,17 +110,17 @@ export default function Home() {
             {greeting}{doc.profile.name ? `, ${doc.profile.name}` : ""}
           </h1>
           <p className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-[13px] text-sumi-500">
-            <span>{LEVEL_LABEL[level]} ({level}) · {LEVEL_JP_LABEL(level)}</span>
+            <span>{LEVEL_LABEL[language][level]} ({level}) · {LEVEL_JP_LABEL(level)}</span>
             <span className="h-1 w-1 rounded-full bg-sumi-300" />
-            <span>{streak} өдрийн цуваа</span>
+            <span>{t.streakN(streak)}</span>
             <span className="h-1 w-1 rounded-full bg-sumi-300" />
-            <span className="tabnum">Түвшин {levelInfo.level} · {doc.xp.toLocaleString()} оноо</span>
+            <span className="tabnum">{t.level} {levelInfo.level} · {doc.xp.toLocaleString()} {t.pointsUnit2}</span>
           </p>
         </div>
         <div className="flex items-center gap-2">
-          <Button variant="outline" size="md" onClick={() => navigate("placement")}>測 Түвшин тогтоох</Button>
+          <Button variant="outline" size="md" onClick={() => navigate("placement")}>測 {t.q3}</Button>
           <Button size="md" onClick={() => navigate(due.length ? "review" : `vocab?level=${level}&tab=learn`)}>
-            {due.length ? `復 Давтах (${due.length})` : "語 Суралцаж эхлэх"}
+            {due.length ? t.reviewNBtn(due.length) : t.startLearning}
           </Button>
         </div>
       </div>
@@ -126,13 +129,13 @@ export default function Home() {
       {doc.xp === 0 && doc.activity && Object.keys(doc.activity).length === 0 && (
         <Card className="p-6">
           <p className="font-jp text-[10.5px] tracking-[0.28em] text-sumi-400">はじめよう</p>
-          <h2 className="mt-0.5 text-[1.2rem] font-extrabold">Эхний 5 минут</h2>
-          <p className="mt-1.5 text-[13.5px] text-sumi-500">Нэвтрэх шаардлагагүй. Доорх алхмуудаас нэгийг сонгож шууд эхэлнэ үү.</p>
+          <h2 className="mt-0.5 text-[1.2rem] font-extrabold">{t.firstMinutes}</h2>
+          <p className="mt-1.5 text-[13.5px] text-sumi-500">{t.noLoginNeeded}</p>
           <div className="mt-4 grid gap-3 sm:grid-cols-3">
             {[
-              { k: "語", t: "5 үг давтах", d: "N5 · асуулт 5", to: "quiz?mode=vocab-jp-mn&level=N5" },
-              { k: "漢", t: "Ханз бичих", d: "Зурах дараалал шалгана", to: "write?level=N5" },
-              { k: "測", t: "Түвшнээ тогтоох", d: "Ойролцоогоор 5 минут", to: "placement" },
+              { k: "語", t: t.q1, d: t.q1d, to: "quiz?mode=vocab-jp-mn&level=N5" },
+              { k: "漢", t: t.q2, d: t.q2d, to: "write?level=N5" },
+              { k: "測", t: t.q3, d: t.q3d, to: "placement" },
             ].map((o) => (
               <button
                 key={o.to}
@@ -157,10 +160,10 @@ export default function Home() {
             <div className="flex items-center justify-between gap-3">
               <div>
                 <p className="font-jp text-[10.5px] tracking-[0.28em] text-sumi-400">今日のミッション</p>
-                <h2 className="mt-0.5 text-[1.25rem] font-extrabold">Өнөөдрийн зорилго</h2>
+                <h2 className="mt-0.5 text-[1.25rem] font-extrabold">{t.missionTitle}</h2>
               </div>
               <Chip tone={missionDone >= missionTotal ? "matcha" : "kin"}>
-                {missionDone >= missionTotal ? "✓ Бүрэн биеллээ" : `~${estimated} мин үлдсэн`}
+                {missionDone >= missionTotal ? t.missionDone : t.missionLeft(estimated)}
               </Chip>
             </div>
 
@@ -178,7 +181,7 @@ export default function Home() {
                         <span className="flex items-baseline gap-2">
                           <span className="text-[13.5px] font-bold text-sumi-800">{m.label}</span>
                           <span className="font-jp text-[10.5px] text-sumi-400">{m.jp}</span>
-                          {m.urgent ? <Chip tone="shu" className="ml-1">{m.urgent} хугацаа хэтэрсэн</Chip> : null}
+                          {m.urgent ? <Chip tone="shu" className="ml-1">{t.overdueChip(m.urgent)}</Chip> : null}
                         </span>
                       </span>
                       <span className="shrink-0 font-mono text-[12.5px] font-bold tabnum text-sumi-500">
@@ -203,16 +206,16 @@ export default function Home() {
                 </div>
               </Ring>
               <div className="min-w-0">
-                <p className="text-[13px] font-bold">{missionDone}/{missionTotal} даалгавар</p>
-                <p className="mt-1 text-[11.5px] text-washi-400">{today.min} мин · {today.xp} оноо өнөөдөр</p>
+                <p className="text-[13px] font-bold">{missionDone}/{missionTotal} {t.taskCardN(0).replace("0 ", "")}</p>
+                <p className="mt-1 text-[11.5px] text-washi-400">{t.todayStat(today.min, today.xp)}</p>
               </div>
             </div>
 
             <div className="mt-5 space-y-2.5 border-t border-white/10 pt-4">
               {[
-                { l: "Эзэмшсэн", v: mem.mastered, tone: "matcha" },
-                { l: "Давталт шаардлагатай", v: due.length, tone: "shu" },
-                { l: "Суралцаж байгаа", v: mem.learning, tone: "kin" },
+                { l: t.masteredStat, v: mem.mastered, tone: "matcha" },
+                { l: t.dueStat, v: due.length, tone: "shu" },
+                { l: t.learningStat, v: mem.learning, tone: "kin" },
               ].map((x) => (
                 <div key={x.l} className="flex items-center justify-between text-[12.5px]">
                   <span className="text-washi-300">{x.l}</span>
@@ -242,8 +245,8 @@ export default function Home() {
         <Card className="lg:col-span-2">
           <SectionTitle
             jp="続きから"
-            title="Үргэлжлүүлэн суралцах"
-            right={<a href={href("review")} className="text-[12.5px] font-bold text-ai-600 underline underline-offset-4">SRS давталт →</a>}
+            title={t.continueTitle}
+            right={<a href={href("review")} className="text-[12.5px] font-bold text-ai-600 underline underline-offset-4">{t.srsLink}</a>}
           />
           <div className="grid gap-3 sm:grid-cols-2">
             {resume && <ResumeCard id={resume.id} />}
@@ -253,7 +256,7 @@ export default function Home() {
                 k="読"
                 tone="ai"
                 title={nextReading.titleJp}
-                sub={`${nextReading.title} · ${nextReading.minutes} мин`}
+                sub={`${nextReading.title} · ${nextReading.minutes} ${t.minutes}`}
                 badge={nextReading.level}
               />
             )}
@@ -263,7 +266,7 @@ export default function Home() {
                 k="聴"
                 tone="murasaki"
                 title={nextLesson.title}
-                sub={`${nextLesson.channel} · ${nextLesson.minutes} мин`}
+                sub={`${nextLesson.channel} · ${nextLesson.minutes} ${t.minutes}`}
                 badge={nextLesson.level}
               />
             )}
@@ -271,32 +274,32 @@ export default function Home() {
               to="write"
               k="筆"
               tone="shu"
-              title="Ханз бичих дасгал"
-              sub={`${Object.keys(doc.writing).length} ханз бичсэн`}
+              title={t.writeTask}
+              sub={t.writeTaskSub(Object.keys(doc.writing).length)}
             />
           </div>
         </Card>
 
         <Card>
-          <SectionTitle jp="分析" title="Сурах хэв маяг" />
+          <SectionTitle jp="分析" title={t.styleTitle} />
           <div className="space-y-4">
             <div>
               <div className="flex items-baseline justify-between">
-                <span className="text-[13px] font-bold text-sumi-700">Санах ойн тогтвортой байдал</span>
+                <span className="text-[13px] font-bold text-sumi-700">{t.memoryStability}</span>
                 <span className="font-mono text-[12.5px] font-bold tabnum text-sumi-500">{Math.round(mem.retention * 100)}%</span>
               </div>
               <Bar value={mem.retention} tone="ai" className="mt-2" />
             </div>
             <div>
               <div className="flex items-baseline justify-between">
-                <span className="text-[13px] font-bold text-sumi-700">Давталтын нарийвчлал</span>
+                <span className="text-[13px] font-bold text-sumi-700">{t.reviewAccuracy}</span>
                 <span className="font-mono text-[12.5px] font-bold tabnum text-sumi-500">{Math.round(mem.accuracy * 100)}%</span>
               </div>
               <Bar value={mem.accuracy} tone="matcha" className="mt-2" />
             </div>
             <div>
               <div className="flex items-baseline justify-between">
-                <span className="text-[13px] font-bold text-sumi-700">Итгэлтэй байдал</span>
+                <span className="text-[13px] font-bold text-sumi-700">{t.confidenceRow}</span>
                 <span className="font-mono text-[12.5px] font-bold tabnum text-sumi-500">{Math.round(mem.confidence * 100)}%</span>
               </div>
               <Bar value={mem.confidence} tone="murasaki" className="mt-2" />
@@ -304,10 +307,10 @@ export default function Home() {
           </div>
           <p className="mt-4 border-t border-sumi-900/8 pt-3 text-[11.5px] leading-relaxed text-sumi-500">
             {due.length > 0
-              ? `⚠️ ${due.length} картыг дахин үзэх хэрэгтэй.`
+              ? t.dueWarn(due.length)
               : mem.reviews > 0
-                ? "✓ Одоогоор хугацаа хэтэрсэн карт алга. Шинэ үг нэмэхэд тохиромжтой."
-                : "Эхлээд хэдэн үг сурч, SRS системийг эхлүүлье."}
+                ? t.noDue
+                : t.getStarted}
           </p>
         </Card>
       </div>
@@ -317,9 +320,9 @@ export default function Home() {
         <Card>
           <SectionTitle
             jp="弱点"
-            title="Сул талууд"
-            sub="Сүүлийн 20 дасгалын дүнгээс автоматаар илрүүлэв."
-            right={<a href={href("progress")} className="text-[12.5px] font-bold text-ai-600 underline underline-offset-4">Дэлгэрэнгүй →</a>}
+            title={t.weakTitle}
+            sub={t.weakSub}
+            right={<a href={href("progress")} className="text-[12.5px] font-bold text-ai-600 underline underline-offset-4">{t.detailsLink}</a>}
           />
           <div className="grid gap-3 sm:grid-cols-3">
             {weak.map((w) => (
@@ -329,7 +332,7 @@ export default function Home() {
                   {Math.round(w.pct * 100)}%
                 </p>
                 <Bar value={w.pct} tone={w.pct < 0.5 ? "shu" : w.pct < 0.7 ? "kin" : "matcha"} className="mt-2.5" height={5} />
-                <Button size="sm" variant="outline" className="mt-3 w-full" onClick={() => navigate("quiz?mode=weak")}>Дасгал хийх</Button>
+                <Button size="sm" variant="outline" className="mt-3 w-full" onClick={() => navigate("quiz?mode=weak")}>{t.drillBtn}</Button>
               </div>
             ))}
           </div>
@@ -341,20 +344,20 @@ export default function Home() {
         <Card>
           <SectionTitle
             jp="学習計画"
-            title={`${cur.level} — ${cur.days} өдрийн төлөвлөгөө`}
+            title={t.planTitle(cur.level, cur.days)}
             sub={curPlan.summary}
-            right={<a href={href("plan")} className="text-[12.5px] font-bold text-ai-600 underline underline-offset-4">Төлөвлөгөө →</a>}
+            right={<a href={href("plan")} className="text-[12.5px] font-bold text-ai-600 underline underline-offset-4">{t.planLink}</a>}
           />
           <div className="grid gap-4 sm:grid-cols-3">
-            <Stat label="Өнөөдөр" value={`${curDay}-р өдөр`} sub={`/ ${cur.days}`} icon="日" />
-            <Stat label="Дуусгасан" value={curDone} sub={`${Math.round((curDone / cur.days) * 100)}%`} icon="✓" tone="matcha" />
-            <Stat label="Хоцролт" value={behind > 0 ? `${behind} өдөр` : "Алга" } sub={behind > 0 ? "төлөвлөгөө тохируулна" : "цагт явж байна"} icon="⚡" tone={behind > 0 ? "shu" : "matcha"} />
+            <Stat label={t.today} value={t.dayN(curDay)} sub={`/ ${cur.days}`} icon="日" />
+            <Stat label={t.doneStat} value={curDone} sub={`${Math.round((curDone / cur.days) * 100)}%`} icon="✓" tone="matcha" />
+            <Stat label={t.behindStat} value={behind > 0 ? `${behind} ${t.days}` : t.none2} sub={behind > 0 ? t.replanSub : t.onTrackSub} icon="⚡" tone={behind > 0 ? "shu" : "matcha"} />
           </div>
           <Bar value={curDone / cur.days} tone="shu" className="mt-4" height={8} />
           {behind > 0 && (
             <p className="mt-3 rounded-xl bg-shu-50 px-3.5 py-2.5 text-[12.5px] font-bold text-shu-700">
-              ⚠️ Та {behind} өдөр хоцорсон байна. Өнөөдөр ~{Math.min(180, 30 + behind * 12)} мин суралцаж гүйцээрэй —
-              эсвэл <a href={href("plan")} className="underline underline-offset-4">төлөвлөгөөгөө дахин тохируулна уу</a>.
+              {t.behindWarnPre(behind, Math.min(180, 30 + behind * 12))}
+              <a href={href("plan")} className="underline underline-offset-4">{t.behindWarnLink}</a>.
             </p>
           )}
         </Card>
@@ -363,13 +366,12 @@ export default function Home() {
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
               <p className="font-jp text-[10.5px] tracking-[0.28em] text-washi-400">学習計画</p>
-              <h3 className="mt-1 text-[1.25rem] font-extrabold">Төлөвлөгөө үүсгэх үү?</h3>
+              <h3 className="mt-1 text-[1.25rem] font-extrabold">{t.planCta}</h3>
               <p className="mt-1.5 max-w-xl text-[13px] leading-relaxed text-washi-300">
-                Зорилтот түвшин, шалгалтын огноог оруулбал өдөр бүрийн ажлыг
-                автоматаар хуваарилж, хоцролтыг нөхөх тохируулга хийнэ.
+                {t.planCtaBody}
               </p>
             </div>
-            <Button variant="primary" size="lg" onClick={() => navigate("plan")}>計 Төлөвлөгөө үүсгэх</Button>
+            <Button variant="primary" size="lg" onClick={() => navigate("plan")}>{t.createPlanBtn}</Button>
           </div>
         </Card>
       )}
@@ -378,8 +380,8 @@ export default function Home() {
       <Card>
         <SectionTitle
           jp="学習記録"
-          title="Суралцсан өдрүүд"
-          sub={`Сүүлийн 20 долоо хоног · нийт ${Object.values(doc.activity).filter((d) => d.xp > 0).length} идэвхтэй өдөр`}
+          title={t.heatmapTitle}
+          sub={t.heatmapSub(Object.values(doc.activity).filter((d) => d.xp > 0).length)}
         />
         <div className="flex gap-[3px] overflow-x-auto pb-1">
           {Array.from({ length: 20 }, (_, w) => (
@@ -387,7 +389,7 @@ export default function Home() {
               {heat.slice(w * 7, w * 7 + 7).map((c) => (
                 <span
                   key={c.key}
-                  title={`${c.key} · ${c.xp} оноо`}
+                  title={`${c.key} · ${c.xp} ${t.pointsUnit2}`}
                   className={cn("h-[13px] w-[13px] shrink-0 rounded-[3px]",
                     c.xp === 0 ? "bg-sumi-900/8"
                       : c.xp < 40 ? "bg-matcha-200"
@@ -400,26 +402,26 @@ export default function Home() {
           ))}
         </div>
         <div className="mt-3 flex items-center gap-2 text-[11px] text-sumi-400">
-          <span>Бага</span>
+          <span>{t.less}</span>
           {["bg-sumi-900/8", "bg-matcha-200", "bg-matcha-400", "bg-matcha-500", "bg-matcha-600"].map((c) => (
             <span key={c} className={cn("h-3 w-3 rounded-[3px]", c)} />
           ))}
-          <span>Их</span>
-          <span className="ml-auto tabnum">{history.reduce((a, h) => a + h.n, 0).toLocaleString()} давталт (түүхээс)</span>
+          <span>{t.more}</span>
+          <span className="ml-auto tabnum">{t.reviewsFromHistory(history.reduce((a, h) => a + h.n, 0).toLocaleString())}</span>
         </div>
       </Card>
 
       {/* ── эх сурвалж ── */}
       {data && (
         <div className="grid gap-4 sm:grid-cols-4">
-          <Stat label="Үгийн сан" value={data.counts.vocab.toLocaleString()} sub="N5 → N1" icon="語" tone="shu" />
-          <Stat label="Ханз" value={data.counts.kanji.toLocaleString()} sub={`${data.counts.strokes.toLocaleString()} бичих дараалалтай`} icon="漢" tone="ai" />
-          <Stat label="Дүрэм" value={data.counts.grammar} sub="Монгол тайлбартай" icon="文" tone="murasaki" />
-          <Stat label="Уншлага · Сонсгол" value={`${READING.length} · ${LISTENING.length}`} sub="Монгол хэл дээр" icon="読" tone="matcha" />
+          <Stat label={t.vocab} value={data.counts.vocab.toLocaleString()} sub="N5 → N1" icon="語" tone="shu" />
+          <Stat label={t.kanji} value={data.counts.kanji.toLocaleString()} sub={t.strokesSubStat(data.counts.strokes.toLocaleString())} icon="漢" tone="ai" />
+          <Stat label={t.grammar} value={data.counts.grammar} sub={t.mnTranslated} icon="文" tone="murasaki" />
+          <Stat label={t.readingListeningStat} value={`${READING.length} · ${LISTENING.length}`} sub={t.inMongolian} icon="読" tone="matcha" />
         </div>
       )}
 
-      {!data && <Spinner label="Өгөгдлийн сан ачаалж байна…" />}
+      {!data && <Spinner label={t.dataLoading} lang={language} />}
     </div>
   );
 }
@@ -428,6 +430,8 @@ const LEVEL_JP_LABEL = (l: Level) => ({ N5: "入門", N4: "基礎", N3: "中級"
 
 function ResumeCard({ id }: { id: string }) {
   const { doc, actions } = useStore();
+  const language = doc.profile.language ?? "mn";
+  const t = ui[language];
   const [word, setWord] = useState<{ w: string; r: string; mn: string[] | null; en: string[] } | null>(null);
 
   useEffect(() => {
@@ -446,16 +450,16 @@ function ResumeCard({ id }: { id: string }) {
     <div className="card-flat flex flex-col justify-between p-4">
       <div>
         <div className="flex items-center gap-2">
-          <Chip tone="kin">↻ Сүүлд үзсэн</Chip>
-          {card && <Chip tone="sumi">{Math.round(card.st)} хоног тогтвортой</Chip>}
+          <Chip tone="kin">{t.recentlyViewed}</Chip>
+          {card && <Chip tone="sumi">{t.stableDaysChip(Math.round(card.st))}</Chip>}
         </div>
         <p className="mt-3 font-jp text-[2rem] font-bold leading-none text-sumi-900">{word.w}</p>
         <p className="mt-1.5 font-jp text-[13px] text-sumi-500">{word.r}</p>
-        <p className="mt-2 line-clamp-2 text-[13px] text-sumi-700">{word.mn?.join(", ") ?? word.en.join("; ")}</p>
+        <p className="mt-2 line-clamp-2 text-[13px] text-sumi-700">{language === "en" ? (word.en.join("; ") || word.mn?.join(", ")) : (word.mn?.join(", ") || word.en.join("; "))}</p>
       </div>
       <div className="mt-4 flex gap-2">
-        <Button size="sm" className="flex-1" onClick={() => actions.grade(id, 2)}>✓ Мэднэ</Button>
-        <Button size="sm" variant="outline" className="flex-1" onClick={() => actions.grade(id, 0)}>✕ Дахин</Button>
+        <Button size="sm" className="flex-1" onClick={() => actions.grade(id, 2)}>{t.knowBtn}</Button>
+        <Button size="sm" variant="outline" className="flex-1" onClick={() => actions.grade(id, 0)}>{t.againBtn}</Button>
       </div>
     </div>
   );

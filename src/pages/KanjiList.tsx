@@ -7,6 +7,7 @@ import type { Kanji, Level, StrokeMap } from "../lib/types";
 import { LEVEL_LABEL, MQ_LABEL } from "../lib/text";
 import { cardStage } from "../lib/srs";
 import { Button, Card, Empty, Input, LevelBadge, Pager, Select, Spinner, Tabs } from "../components/ui";
+import { ui } from "../lib/i18n";
 import { KanjiStudy } from "../components/KanjiStudy";
 
 const PER_PAGE = 84;
@@ -14,6 +15,8 @@ const PER_PAGE = 84;
 export default function KanjiList() {
   const { query, set } = useQuery();
   const { doc } = useStore();
+  const language = doc.profile.language ?? "mn";
+  const t = ui[language];
   const level = (query.level as Level) || (doc.profile.current === "zero" ? doc.profile.target : doc.profile.current);
   const tab = (query.tab as string) || "browse";
 
@@ -60,31 +63,30 @@ export default function KanjiList() {
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <p className="font-jp text-[11.5px] tracking-[0.3em] text-shu-500">漢字帳</p>
-          <h1 className="mt-1 text-[1.7rem] font-extrabold leading-tight tracking-tight sm:text-[2rem]">Ханз</h1>
+          <h1 className="mt-1 text-[1.7rem] font-extrabold leading-tight tracking-tight sm:text-[2rem]">{t.kanji}</h1>
           <p className="mt-1.5 text-[13.5px] text-sumi-500">
-            {LEVEL_LABEL[level]} ({level}) · {items ? `${items.length} ханз` : "…"} · {learned} судалсан
+            {LEVEL_LABEL[language][level]} ({level}) · {items ? t.kanjiCountN(items.length) : "…"} · {learned} {t.studiedUnit}
           </p>
         </div>
         <div className="flex gap-2">
-          <Button variant="outline" onClick={() => set({ tab: "write" })}>筆 Бичих дасгал</Button>
-          <Button onClick={() => set({ tab: "study" })}>学 Суралцах</Button>
+          <Button variant="outline" onClick={() => set({ tab: "write" })}>筆 {t.writeTab}</Button>
+          <Button onClick={() => set({ tab: "study" })}>学 {t.studyBtn2}</Button>
         </div>
       </div>
 
       <Tabs value={tab} onChange={(t) => set({ tab: t })}
         items={[
-          { id: "browse", label: "Жагсаалт", icon: "一", badge: filtered.length || undefined },
-          { id: "study", label: "Суралцах сесс", icon: "学" },
-          { id: "write", label: "Бичих дасгал", icon: "筆" },
+          { id: "browse", label: t.listTab, icon: "一", badge: filtered.length || undefined },
+          { id: "study", label: t.studySessionTab, icon: "学" },
+          { id: "write", label: t.writeTab, icon: "筆" },
         ]} />
 
       {tab === "study" && <KanjiStudy level={level} items={items ?? []} strokes={strokes ?? {}} />}
       {tab === "write" && (
         <Card>
-          <p className="text-[13.5px] font-extrabold">Бичих дасгал</p>
+          <p className="text-[13.5px] font-extrabold">{t.writeTab}</p>
           <p className="mt-1.5 text-[13px] leading-relaxed text-sumi-500">
-            Аль нэг ханзыг сонгоод бичиж эхлээрэй. Бичих дасгалын хуудас нь зурлагын тоо,
-            дараалал, хэлбэрийг үнэлж оноо өгнө.
+            {t.writePitchBody}
           </p>
           <div className="mt-4 grid grid-cols-6 gap-1.5 sm:grid-cols-12">
             {(items ?? []).slice(0, 96).map((k) => (
@@ -101,7 +103,7 @@ export default function KanjiList() {
         <>
           <Card className="p-4">
             <div className="flex flex-wrap items-center gap-2">
-              <Input value={q} onChange={(v) => { setQ(v); setPage(1); }} placeholder="Ханз, уншлага, утга…" icon="🔎" className="min-w-[200px] flex-1" />
+              <Input value={q} onChange={(v) => { setQ(v); setPage(1); }} placeholder={t.kanjiSearchPh} icon="🔎" className="min-w-[200px] flex-1" />
               <Select value={sort} onChange={setSort}
                 options={[{ id: "freq", label: "Давтамжаар" }, { id: "stroke", label: "Зурлагаар" }, { id: "grade", label: "Ангиар" }, { id: "level", label: "Түвшнээр" }]} />
             </div>
@@ -110,7 +112,7 @@ export default function KanjiList() {
                 <button onClick={() => { setRad("all"); setPage(1); }}
                   className={cn("shrink-0 rounded-lg px-2.5 py-1.5 text-[12px] font-bold transition",
                     rad === "all" ? "bg-sumi-900 text-washi-50" : "bg-sumi-900/5 text-sumi-600")}>
-                  Бүх радикал
+                  {t.allRadicals}
                 </button>
                 {radicals.map(([r, c]) => (
                   <button key={r} onClick={() => { setRad(r); setPage(1); }}
@@ -124,8 +126,8 @@ export default function KanjiList() {
             )}
           </Card>
 
-          {!items && <Spinner label="Ханз ачаалж байна…" />}
-          {items && pageItems.length === 0 && <Empty icon="無" title="Илэрц олдсонгүй" />}
+          {!items && <Spinner label={t.loadingKanji} lang={language} />}
+          {items && pageItems.length === 0 && <Empty icon="無" title={t.noHits} />}
 
           {pageItems.length > 0 && (
             <div className="grid gap-2.5 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
@@ -134,7 +136,7 @@ export default function KanjiList() {
           )}
 
           <Pager page={page} pages={pages} onPage={setPage} />
-          {pages > 1 && <p className="text-center text-[12px] text-sumi-400">Нийт {filtered.length} ханз · {PER_PAGE} ханз/хуудас</p>}
+          {pages > 1 && <p className="text-center text-[12px] text-sumi-400">{t.kanjiCountN(filtered.length)} · {t.kanjiPerPage(PER_PAGE)}</p>}
         </>
       )}
     </div>
@@ -143,9 +145,10 @@ export default function KanjiList() {
 
 function KanjiTile({ k }: { k: Kanji }) {
   const { doc } = useStore();
+  const language = doc.profile.language ?? "mn";
   const card = doc.srs[k.k];
   const stage = cardStage(card);
-  const mq = MQ_LABEL[k.mq];
+  const mq = MQ_LABEL[language][k.mq];
   return (
     <a href={href("kanji", k.k)} className="card-flat group relative flex flex-col p-3.5 transition hover:-translate-y-0.5 hover:border-shu-300">
       <div className="flex items-start justify-between">
@@ -155,14 +158,14 @@ function KanjiTile({ k }: { k: Kanji }) {
           <span className="font-mono text-[10px] text-sumi-400">{k.s}画</span>
         </div>
       </div>
-      <p className="mt-2.5 line-clamp-1 text-[12.5px] font-bold text-sumi-800">{k.mn.join(", ") || k.en.join(", ")}</p>
+      <p className="mt-2.5 line-clamp-1 text-[12.5px] font-bold text-sumi-800">{language === "en" ? (k.en.join(", ") || k.mn.join(", ")) : (k.mn.join(", ") || k.en.join(", "))}</p>
       <p className="mt-1 line-clamp-1 font-jp text-[11px] text-sumi-400">
         {k.on.slice(0, 2).join("・")}{k.kun.length ? ` / ${k.kun.slice(0, 2).join("・")}` : ""}
       </p>
       <div className="mt-2.5 flex items-center gap-1.5">
         <span className={cn("h-1.5 w-1.5 rounded-full",
           stage.tone === "matcha" ? "bg-matcha-500" : stage.tone === "ai" ? "bg-ai-500" : stage.tone === "kin" ? "bg-kin-400" : "bg-sumi-300")} />
-        <span className="text-[10.5px] font-bold text-sumi-500">{stage.mn}</span>
+        <span className="text-[10.5px] font-bold text-sumi-500">{language === "en" ? stage.en : stage.mn}</span>
         {mq.tone !== "matcha" && <span className="ml-auto text-[10px] text-sumi-300" title={mq.text}>◐</span>}
       </div>
     </a>

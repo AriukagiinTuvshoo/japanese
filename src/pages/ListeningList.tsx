@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { href, useQuery } from "../lib/router";
 import { useStore } from "../lib/store";
+import { ui } from "../lib/i18n";
 import { LISTENING } from "../lib/data";
 import type { Level } from "../lib/types";
 import { Button, Card, Chip, Empty, Input, LevelBadge } from "../components/ui";
@@ -8,6 +9,8 @@ import { Button, Card, Chip, Empty, Input, LevelBadge } from "../components/ui";
 export default function ListeningList() {
   const { query, set } = useQuery();
   const { doc } = useStore();
+  const language = doc.profile.language ?? "mn";
+  const t = ui[language];
   const level = (query.level as Level) || "N5";
   const [q, setQ] = useState("");
 
@@ -25,28 +28,26 @@ export default function ListeningList() {
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <p className="font-jp text-[11.5px] tracking-[0.3em] text-shu-500">聴解</p>
-          <h1 className="mt-1 text-[1.7rem] font-extrabold leading-tight tracking-tight sm:text-[2rem]">Сонсголын сан</h1>
+          <h1 className="mt-1 text-[1.7rem] font-extrabold leading-tight tracking-tight sm:text-[2rem]">{t.listeningLib}</h1>
           <p className="mt-1.5 text-[13.5px] text-sumi-500">
-            YouTube дээрх эзэн нь зөвшөөрсөн сувгууд · {list.length} хичээл · {doc.listeningDone.length} дуусгасан
+            {t.listeningSub(list.length, doc.listeningDone.length)}
           </p>
         </div>
         <Button variant={query.all === "1" ? "primary" : "outline"} onClick={() => set({ all: query.all === "1" ? "" : "1" })}>
-          {query.all === "1" ? "Бүх түвшин" : "Бүх түвшин харах"}
+          {t.allLevelsShow}
         </Button>
       </div>
 
       <Card className="p-4">
-        <Input value={q} onChange={setQ} placeholder="Гарчиг, суваг, сэдэв…" icon="🔎" className="max-w-md" />
+        <Input value={q} onChange={setQ} placeholder={t.listenSearchPh} icon="🔎" className="max-w-md" />
         <p className="mt-3 rounded-xl bg-ai-50/70 px-3.5 py-2.5 text-[12px] leading-relaxed text-ai-700">
-          ℹ️ Бид YouTube-ийн контентыг татаж авахгүй, хуулахгүй. Зөвхөн албан ёсны embed
-          тоглуулагчийг ашиглаж, дээр нь монгол тайлбар, үгийн сан, асуулт нэмж
-          сургалтын хичээл болгоно. Видео эздийн эрх бүрэн хадгалагдана.
+          {t.ytNote}
         </p>
       </Card>
 
       {list.length === 0 && (
-        <Empty icon="聴" title="Хичээл олдсонгүй"
-          sub="Энэ түвшинд хичээл хараахан нэмэгдээгүй. «Бүх түвшин» сонгож үзээрэй." />
+        <Empty icon="聴" title={t.lessonNotFound}
+          sub={t.noLessonsThisLevel} />
       )}
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -66,7 +67,7 @@ export default function ListeningList() {
                   <span className="grid h-12 w-12 place-items-center rounded-full bg-shu-500/95 text-[18px] text-white shadow-lg">▶</span>
                 </span>
                 <span className="absolute bottom-2 right-2 rounded-md bg-sumi-950/80 px-1.5 py-0.5 font-mono text-[10.5px] font-bold text-white">
-                  {l.minutes} мин
+                  {l.minutes} {t.minutes}
                 </span>
                 {isDone && <span className="absolute left-2 top-2 rounded-md bg-matcha-500 px-1.5 py-0.5 text-[10.5px] font-bold text-white">✓</span>}
               </div>

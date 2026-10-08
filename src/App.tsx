@@ -2,7 +2,9 @@ import { Suspense, lazy, useEffect } from "react";
 import Shell from "./components/Shell";
 import { StoreProvider } from "./lib/store";
 import { useRoute } from "./lib/router";
+import { useStore } from "./lib/store";
 import { Spinner } from "./components/ui";
+import { ui } from "./lib/i18n";
 
 const Home = lazy(() => import("./pages/Home"));
 const Vocabulary = lazy(() => import("./pages/Vocabulary"));
@@ -65,12 +67,14 @@ function Router() {
 }
 
 function NotFound({ name }: { name: string }) {
+  const { doc } = useStore();
+  const t = ui[doc.profile.language ?? "mn"];
   return (
     <div className="grid place-items-center py-24 text-center">
       <span className="font-mincho text-[4rem] font-bold text-sumi-900/10">無</span>
-      <h1 className="mt-3 text-[1.5rem] font-extrabold">Хуудас олдсонгүй</h1>
+      <h1 className="mt-3 text-[1.5rem] font-extrabold">{t.notFound}</h1>
       <p className="mt-1.5 font-mono text-[12.5px] text-sumi-500">#/{name}</p>
-      <a href="#/home" className="mt-5 rounded-xl bg-shu-500 px-5 py-2.5 text-[13.5px] font-bold text-white">Нүүр хуудас →</a>
+      <a href="#/home" className="mt-5 rounded-xl bg-shu-500 px-5 py-2.5 text-[13.5px] font-bold text-white">{t.homeLink}</a>
     </div>
   );
 }

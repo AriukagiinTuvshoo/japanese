@@ -6,7 +6,7 @@ import { loadFullData } from "../lib/data";
 import type { Vocab } from "../lib/types";
 import { MQ_LABEL, TYPE_LABEL, LEVEL_LABEL, stripFurigana, toRomaji } from "../lib/text";
 import { GRADES, cardStage, previewIntervals, retrievability } from "../lib/srs";
-import { MN_PENDING } from "../lib/i18n";
+import { MN_PENDING, ui } from "../lib/i18n";
 import {
   Bar, Button, Card, Chip, Empty, Furigana, LevelBadge, SectionTitle, SpeakButton, Spinner, Tabs, speak,
 } from "../components/ui";
@@ -14,6 +14,7 @@ import {
 export default function WordDetail({ id }: { id: string }) {
   const { doc, actions } = useStore();
   const language = doc.profile.language ?? "mn";
+  const t = ui[language];
   const [data, setData] = useState<Awaited<ReturnType<typeof loadFullData>> | null>(null);
   const [tab, setTab] = useState<"overview" | "examples" | "network" | "source">("overview");
   const [mnemonic, setMnemonic] = useState("");
@@ -29,8 +30,8 @@ export default function WordDetail({ id }: { id: string }) {
   const v: Vocab | undefined = data?.byId.get(id);
   const card = doc.srs[id];
   const stage = cardStage(card);
-  const previews = useMemo(() => previewIntervals(card), [card]);
-  const mq = v ? MQ_LABEL[v.mq] : null;
+  const previews = useMemo(() => previewIntervals(card, language), [card, language]);
+  const mq = v ? MQ_LABEL[language][v.mq] : null;
   const fav = doc.favorites.includes(id);
 
   const related = useMemo(() => {
@@ -49,9 +50,9 @@ export default function WordDetail({ id }: { id: string }) {
     return (
       <Empty
         icon="無"
-        title="Ийм үг олдсонгүй"
+        title={t.wordNotFound}
         sub={`ID: ${id}`}
-        action={<Button onClick={() => navigate("vocab")}>← Үгийн сан руу</Button>}
+        action={<Button onClick={() => navigate("vocab")}>{t.backToVocab}</Button>}
       />
     );
   }
@@ -59,14 +60,14 @@ export default function WordDetail({ id }: { id: string }) {
   return (
     <div className="space-y-6">
       <div className="flex flex-wrap items-center gap-2">
-        <Button size="sm" variant="ghost" onClick={() => navigate(`vocab?level=${v.lvl}`)}>← Үгийн сан</Button>
-        <span className="text-[12px] text-sumi-400">{LEVEL_LABEL[v.lvl]} ({v.lvl})</span>
+        <Button size="sm" variant="ghost" onClick={() => navigate(`vocab?level=${v.lvl}`)}>{t.backToVocab}</Button>
+        <span className="text-[12px] text-sumi-400">{LEVEL_LABEL[language][v.lvl]} ({v.lvl})</span>
         <div className="ml-auto flex flex-wrap gap-2">
           <Button size="sm" variant={fav ? "soft" : "outline"} onClick={() => actions.toggleFavorite(v.id)}>
-            {fav ? "★ Дуртайд" : "☆ Дуртайд нэмэх"}
+            {fav ? t.favIn : t.favAdd2}
           </Button>
-          <Button size="sm" variant="outline" onClick={() => navigate(`write?level=${v.lvl}`)}>✍️ Бичих дасгал</Button>
-          <Button size="sm" onClick={() => navigate(`review?level=${v.lvl}`)}>復 Давтлага</Button>
+          <Button size="sm" variant="outline" onClick={() => navigate(`write?level=${v.lvl}`)}>{t.writePractice}</Button>
+          <Button size="sm" onClick={() => navigate(`review?level=${v.lvl}`)}>{t.review2}</Button>
         </div>
       </div>
 
@@ -76,10 +77,10 @@ export default function WordDetail({ id }: { id: string }) {
           <div className="p-6 sm:p-8">
             <div className="flex flex-wrap items-center gap-2">
               <LevelBadge level={v.lvl} />
-              <Chip tone="sumi">{TYPE_LABEL[v.t]}</Chip>
-              {v.tier !== "jlpt" && <Chip tone="kin">Өргөтгөсөн сан</Chip>}
-              {v.pos.includes("vt") && <Chip tone="shu">他動詞 — төлөөний үйл үг</Chip>}
-              {v.pos.includes("vi") && <Chip tone="ai">自動詞 — эсрэг төлөөний</Chip>}
+              <Chip tone="sumi">{TYPE_LABEL[language][v.t]}</Chip>
+              {v.tier !== "jlpt" && <Chip tone="kin">{t.extChip}</Chip>}
+              {v.pos.includes("vt") && <Chip tone="shu">{t.vtChip}</Chip>}
+              {v.pos.includes("vi") && <Chip tone="ai">{t.viChip}</Chip>}
             </div>
 
             <div className="mt-5 flex flex-wrap items-end gap-5">
@@ -94,13 +95,13 @@ export default function WordDetail({ id }: { id: string }) {
                   variant="outline" size="md"
                   onClick={() => speak(v.w, Math.max(0.5, doc.profile.rate - 0.3))}
                 >
-                  🐢 Удаан
+                  {t.slow}
                 </Button>
               </div>
             </div>
 
             <div className="mt-6 border-t border-sumi-900/8 pt-5">
-              <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-sumi-400">Утга</p>
+              <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-sumi-400">{t.meaningLabel}</p>
               {language === "en" ? (
                 <p className="mt-2 text-[1.1rem] font-bold text-sumi-900">{v.en.join("; ")}</p>
               ) : v.mn?.length ? (
@@ -116,11 +117,11 @@ export default function WordDetail({ id }: { id: string }) {
               <div className="mt-3 flex flex-wrap items-center gap-2">
                 <Chip tone={mq?.tone ?? "sumi"}>{mq?.text}</Chip>
                 {v.mn?.length ? (
-                  <span className="text-[12px] text-sumi-500">Англи эх сурвалж: {v.en.join("; ")}</span>
+                  <span className="text-[12px] text-sumi-500">{t.enSrcRow} {v.en.join("; ")}</span>
                 ) : (
                   <span className="text-[12px] text-sumi-500">
-                    Монгол орчуулга хараахан хянагдаагүй —{" "}
-                    <a href={href("admin")} className="font-bold text-ai-600 underline underline-offset-4">орчуулах</a>
+                    {t.mnPendingAdmin}
+                    <a href={href("admin")} className="font-bold text-ai-600 underline underline-offset-4">{t.translateLink}</a>
                   </span>
                 )}
               </div>
@@ -128,7 +129,7 @@ export default function WordDetail({ id }: { id: string }) {
 
             {v.kd.length > 0 && (
               <div className="mt-6 border-t border-sumi-900/8 pt-5">
-                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-sumi-400">Бүрдүүлэгч ханз</p>
+                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-sumi-400">{t.composingKanji}</p>
                 <div className="mt-2.5 flex flex-wrap gap-2">
                   {v.kd.map((ch) => {
                     const k = data.kanjiByChar.get(ch);
@@ -137,7 +138,7 @@ export default function WordDetail({ id }: { id: string }) {
                         <span className="font-mincho text-[26px] font-bold leading-none text-sumi-900">{ch}</span>
                         <span className="min-w-0">
                           <span className="block text-[12.5px] font-bold text-sumi-800">
-                            {k?.mn?.join(", ") || k?.en.join(", ") || "—"}
+                            {language === "en" ? (k?.en.join(", ") || k?.mn?.join(", ") || "—") : (k?.mn?.join(", ") || k?.en.join(", ") || "—")}
                           </span>
                           <span className="block text-[10.5px] text-sumi-400">
                             音 {k?.on.slice(0, 2).join("・") || "—"} · 訓 {k?.kun.slice(0, 2).join("・") || "—"}
@@ -154,13 +155,13 @@ export default function WordDetail({ id }: { id: string }) {
           {/* ── SRS самбар ── */}
           <div className="border-t border-sumi-900/8 bg-sumi-900/[0.03] p-6 lg:border-l lg:border-t-0">
             <p className="font-jp text-[10.5px] tracking-[0.28em] text-sumi-400">記憶</p>
-            <h3 className="mt-1 text-[1.05rem] font-extrabold">Санах ойн төлөв</h3>
+            <h3 className="mt-1 text-[1.05rem] font-extrabold">{t.memoryState}</h3>
 
             <div className="mt-4 rounded-xl border border-sumi-900/10 bg-white/70 p-4">
               <div className="flex items-center justify-between">
                 <span className={cn("text-[13px] font-extrabold",
                   stage.tone === "matcha" ? "text-matcha-600" : stage.tone === "ai" ? "text-ai-600" : stage.tone === "kin" ? "text-kin-600" : "text-sumi-500")}>
-                  {stage.mn}
+                  {language === "en" ? stage.en : stage.mn}
                 </span>
                 <span className="font-mono text-[12px] font-bold tabnum text-sumi-500">
                   {card ? `${Math.round(retrievability(card) * 100)}%` : "—"}
@@ -170,10 +171,10 @@ export default function WordDetail({ id }: { id: string }) {
 
               <div className="mt-3.5 grid grid-cols-2 gap-2 text-[11.5px]">
                 {[
-                  { l: "Давталт", v: card?.n ?? 0 },
-                  { l: "Алдсан", v: card?.l ?? 0 },
-                  { l: "Тогтвортой", v: card ? `${card.st.toFixed(1)} хон` : "—" },
-                  { l: "Хүндрэл", v: card ? card.df.toFixed(1) : "—" },
+                  { l: t.reviewsStat, v: card?.n ?? 0 },
+                  { l: t.lapsesStat, v: card?.l ?? 0 },
+                  { l: t.stabilityStat, v: card ? `${card.st.toFixed(1)} ${t.daysUnit2}` : "—" },
+                  { l: t.difficultyStat, v: card ? card.df.toFixed(1) : "—" },
                 ].map((x) => (
                   <div key={x.l} className="rounded-lg bg-sumi-900/4 px-2.5 py-2">
                     <p className="text-[10px] font-bold uppercase tracking-wide text-sumi-400">{x.l}</p>
@@ -184,7 +185,7 @@ export default function WordDetail({ id }: { id: string }) {
             </div>
 
             <p className="mt-4 text-[11.5px] font-bold uppercase tracking-wide text-sumi-400">
-              {card ? "Дахин давтахдаа үнэл" : "SRS-д нэмэх"}
+              {card ? t.rateAgain : t.addSrs2}
             </p>
             <div className="mt-2 grid grid-cols-2 gap-2">
               {GRADES.map((g, i) => (
@@ -197,23 +198,23 @@ export default function WordDetail({ id }: { id: string }) {
                         : g.tone === "matcha" ? "border-matcha-100 bg-matcha-50 hover:border-matcha-400"
                           : "border-ai-100 bg-ai-50 hover:border-ai-400")}
                 >
-                  <span className="block text-[12.5px] font-extrabold">{g.mn}</span>
+                  <span className="block text-[12.5px] font-extrabold">{language === "en" ? g.en : g.mn}</span>
                   <span className="mt-0.5 block font-mono text-[10px] text-sumi-500">{previews[i]?.label}</span>
                 </button>
               ))}
             </div>
 
             <div className="mt-5 border-t border-sumi-900/8 pt-4">
-              <p className="text-[11.5px] font-bold text-sumi-600">🧠 Миний мнемоник</p>
+              <p className="text-[11.5px] font-bold text-sumi-600">{t.myMnemonic}</p>
               <textarea
                 value={mnemonic}
                 onChange={(e) => setMnemonic(e.target.value)}
                 onBlur={() => actions.setMnemonic(v.id, mnemonic)}
                 rows={3}
-                placeholder="Санахад туслах өөрийн төсөөлөл, холбоос…"
+                placeholder={t.mnemonicPlaceholder}
                 className="mt-2 w-full resize-none rounded-xl border border-sumi-900/12 bg-white px-3 py-2.5 text-[12.5px] leading-relaxed outline-none focus:border-shu-400"
               />
-              <p className="mt-1.5 text-[11px] text-sumi-400">Автоматаар хадгалагдана · SRS давталтад харагдана.</p>
+              <p className="mt-1.5 text-[11px] text-sumi-400">{t.mnemonicNote}</p>
             </div>
           </div>
         </div>
@@ -224,50 +225,47 @@ export default function WordDetail({ id }: { id: string }) {
         value={tab}
         onChange={setTab}
         items={[
-          { id: "overview", label: "Тойм", icon: "要" },
-          { id: "examples", label: `Жишээ өгүүлбэр`, icon: "例", badge: v.ex.length || undefined },
-          { id: "network", label: "Холбоотой үгс", icon: "網", badge: related.length || undefined },
-          { id: "source", label: "Эх сурвалж", icon: "元" },
+          { id: "overview", label: t.overviewTab, icon: "要" },
+          { id: "examples", label: t.examplesTab, icon: "例", badge: v.ex.length || undefined },
+          { id: "network", label: t.relatedTab, icon: "網", badge: related.length || undefined },
+          { id: "source", label: t.sourceTab, icon: "元" },
         ]}
       />
 
       {tab === "overview" && (
         <div className="grid gap-5 lg:grid-cols-2">
           <Card>
-            <SectionTitle jp="使い方" title="Хэрэглээ" />
+            <SectionTitle jp="使い方" title={t.usage} />
             <div className="space-y-4">
-              <Info l="Үгийн төрөл" v={TYPE_LABEL[v.t]} />
-              <Info l="JMdict POS" v={v.pos.join(", ") || "—"} />
-              <Info l="Түвшин" v={`${v.lvl} — ${LEVEL_LABEL[v.lvl]}`} />
-              <Info l="Төрөл" v={v.tier === "jlpt" ? "JLPT-ийн албан жагсаалт" : v.tier === "ext-example" ? "Өргөтгөсөн — JLPT жишээ өгүүлбэрт гарсан" : "Өргөтгөсөн — давтамжаар эрэмбэлсэн"} />
-              <Info l="Ханзны тоо" v={`${v.kd.length}`} />
+              <Info l={t.posType} v={TYPE_LABEL[language][v.t]} />
+              <Info l={t.posJmdict} v={v.pos.join(", ") || "—"} />
+              <Info l={t.levelRow} v={`${v.lvl} — ${LEVEL_LABEL[language][v.lvl]}`} />
+              <Info l={t.tierRow} v={v.tier === "jlpt" ? t.tierJlpt : v.tier === "ext-example" ? t.tierExample : t.tierFreq} />
+              <Info l={t.kanjiCount} v={`${v.kd.length}`} />
             </div>
           </Card>
           <Card>
-            <SectionTitle jp="発音" title="Дуудлага" />
+            <SectionTitle jp="発音" title={t.pronunciation} />
             <div className="space-y-3">
-              <Info l="Хирагана" v={v.r} />
-              <Info l="Ромажи" v={v.rm || toRomaji(v.r)} />
-              <Info l="Катакана" v={v.r.replace(/[\u3041-\u3096]/g, (c) => String.fromCharCode(c.charCodeAt(0) + 0x60))} />
+              <Info l={t.hiraganaRow} v={v.r} />
+              <Info l={t.romajiRow} v={v.rm || toRomaji(v.r)} />
+              <Info l={t.katakanaRow} v={v.r.replace(/[\u3041-\u3096]/g, (c) => String.fromCharCode(c.charCodeAt(0) + 0x60))} />
             </div>
             <div className="mt-4 flex flex-wrap gap-2">
-              <Button size="sm" variant="outline" onClick={() => speak(v.w, 1)}>🔊 Хэвийн</Button>
-              <Button size="sm" variant="outline" onClick={() => speak(v.w, 0.6)}>🐢 Удаан</Button>
-              <Button size="sm" variant="outline" onClick={() => speak(v.w, 1.2)}>⏩ Хурдан</Button>
+              <Button size="sm" variant="outline" onClick={() => speak(v.w, 1)}>{t.normal}</Button>
+              <Button size="sm" variant="outline" onClick={() => speak(v.w, 0.6)}>{t.slow}</Button>
+              <Button size="sm" variant="outline" onClick={() => speak(v.w, 1.2)}>{t.fast}</Button>
             </div>
-            <p className="mt-4 text-[11.5px] leading-relaxed text-sumi-400">
-              Дуудлага нь хөтчийн япон хэлний дуу хоолойгоор (Web Speech API) үүснэ.
-              Хэрэв 🔊 дарахад чимээ гарахгүй бол төхөөрөмж дээр япон хэлний хоолой суулгаагүй байна.
-            </p>
+            <p className="mt-4 text-[11.5px] leading-relaxed text-sumi-400">{t.ttsNote}</p>
           </Card>
         </div>
       )}
 
       {tab === "examples" && (
         <Card>
-          <SectionTitle jp="例文" title="Жишээ өгүүлбэр" sub="Эх сурвалж: Tatoeba (CC BY 2.0 FR) — OpenJLPT-аар дамжин." />
+          <SectionTitle jp="例文" title={t.examplesTab} sub={t.examplesSource} />
           {v.ex.length === 0 ? (
-            <Empty icon="例" title="Жишээ байхгүй" sub="Энэ үг өргөтгөсөн санд байгаа тул жишээ өгүүлбэр хараахан холбогдоогүй." />
+            <Empty icon="例" title={t.noExamples} sub={t.noExamplesSub} />
           ) : (
             <ul className="space-y-3">
               {v.ex.map((e, i) => (
@@ -276,14 +274,14 @@ export default function WordDetail({ id }: { id: string }) {
                     <Furigana text={e.fg ?? e.ja} show={doc.profile.furigana} className="flex-1 text-[16px] font-semibold leading-relaxed text-sumi-900" />
                     <SpeakButton text={stripFurigana(e.ja)} />
                   </div>
+                  {language === "mn" && e.mn && <p className="mt-2 text-[13px] text-sumi-600">{e.mn}</p>}
                   {e.en && <p className="mt-2 text-[13px] text-sumi-600">{e.en}</p>}
                   <p className="mt-2 text-[11px] text-sumi-400">
-                    {e.mn
-                      ? <>Монгол: {e.mn}</>
-                      : <>
-                          Монгол орчуулга хараахан байхгүй ·{" "}
-                          <a href={href("admin")} className="font-bold text-ai-600 underline underline-offset-4">нэмэх</a>
-                        </>}
+                    {language === "mn"
+                      ? (e.mn
+                        ? <>{t.mnLabel}: {e.mn}</>
+                        : <>{t.mnMissing}<a href={href("admin")} className="font-bold text-ai-600 underline underline-offset-4">{t.add}</a></>)
+                      : null}
                     {e.ts ? ` · Tatoeba #${e.ts}` : ""}
                   </p>
                 </li>
@@ -297,18 +295,18 @@ export default function WordDetail({ id }: { id: string }) {
         <Card>
           <SectionTitle
             jp="関連語"
-            title="Холбоотой үгс"
-            sub={v.kd.length ? `«${v.kd.join("」「")}» ханзыг агуулсан үгс` : "Ханзгүй үг"}
+            title={t.relatedTab}
+            sub={v.kd.length ? t.relatedSub(v.kd.join("」「")) : t.noKanjiWord}
           />
           {related.length === 0 ? (
-            <Empty icon="網" title="Холбоотой үг олдсонгүй" />
+            <Empty icon="網" title={t.relatedNotFound} />
           ) : (
             <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
               {related.map((w) => (
                 <a key={w.id} href={href("vocab", w.id)} className="card-flat flex items-center gap-3 px-3.5 py-3 transition hover:-translate-y-0.5 hover:border-shu-300">
                   <span className="font-jp text-[15.5px] font-bold text-sumi-900">{w.w}</span>
                   <span className="min-w-0 flex-1">
-                    <span className="block truncate text-[12.5px] text-sumi-700">{w.mn?.join(", ") ?? w.en.join("; ")}</span>
+                    <span className="block truncate text-[12.5px] text-sumi-700">{language === "en" ? (w.en.join("; ") || w.mn?.join(", ")) : (w.mn?.join(", ") || w.en.join("; "))}</span>
                     <span className="block font-jp text-[10.5px] text-sumi-400">{w.r}</span>
                   </span>
                   <LevelBadge level={w.lvl} size="sm" />
@@ -321,18 +319,18 @@ export default function WordDetail({ id }: { id: string }) {
 
       {tab === "source" && (
         <Card>
-          <SectionTitle jp="出典" title="Эх сурвалж ба лиценз" sub="Контент бүр хаанаас ирснийг мэдэх боломжтой." />
+          <SectionTitle jp="出典" title={t.sourceLicense} sub={t.sourceLicenseSub} />
           <div className="space-y-3">
-            <Info l="Эх сан" v={v.src === "openjlpt" ? "OpenJLPT (JLPT N5–N1)" : "JMdict (jamdict-data)"} />
-            <Info l="Эх ID" v={v.sid} />
-            <Info l="Лиценз" v={v.src === "openjlpt" ? "CC-BY-SA-4.0" : "CC-BY-SA-4.0 (JMdict)"} />
-            <Info l="Түвшин тогтоосон" v={v.tier === "jlpt" ? "JLPT-ийн албан жагсаалт" : "Ханзны түвшнээс гаргасан (derived)"} />
-            <Info l="Орчуулгын төлөв" v={mq?.text ?? "—"} />
-            <Info l="Жишээ өгүүлбэр" v={v.ex.length ? "Tatoeba (CC BY 2.0 FR)" : "—"} />
+            <Info l={t.srcPool} v={v.src === "openjlpt" ? "OpenJLPT (JLPT N5–N1)" : "JMdict (jamdict-data)"} />
+            <Info l={t.srcId} v={v.sid} />
+            <Info l={t.license} v={v.src === "openjlpt" ? "CC-BY-SA-4.0" : "CC-BY-SA-4.0 (JMdict)"} />
+            <Info l={t.levelBy} v={v.tier === "jlpt" ? t.levelByJlpt : t.levelByDerived} />
+            <Info l={t.transStatus} v={mq?.text ?? "—"} />
+            <Info l={t.examplesRow} v={v.ex.length ? "Tatoeba (CC BY 2.0 FR)" : "—"} />
           </div>
           <div className="mt-5 flex flex-wrap gap-2">
-            <a href={href("about")} className="text-[12.5px] font-bold text-ai-600 underline underline-offset-4">Бүх эх сурвалж харах →</a>
-            <a href={href("admin")} className="text-[12.5px] font-bold text-shu-600 underline underline-offset-4">Орчуулга засах →</a>
+            <a href={href("about")} className="text-[12.5px] font-bold text-ai-600 underline underline-offset-4">{t.viewAllSources}</a>
+            <a href={href("admin")} className="text-[12.5px] font-bold text-shu-600 underline underline-offset-4">{t.fixTranslation}</a>
           </div>
         </Card>
       )}

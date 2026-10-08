@@ -193,8 +193,8 @@ export function Furigana({
 
 /* ─────────────── Модал ─────────────── */
 export function Modal({
-  children, onClose, title, wide, footer,
-}: { children: ReactNode; onClose?: () => void; title?: string; wide?: boolean; footer?: ReactNode }) {
+  children, onClose, title, wide, footer, lang = "mn",
+}: { children: ReactNode; onClose?: () => void; title?: string; wide?: boolean; footer?: ReactNode; lang?: "mn" | "en" }) {
   useEffect(() => {
     const k = (e: KeyboardEvent) => { if (e.key === "Escape") onClose?.(); };
     window.addEventListener("keydown", k);
@@ -224,7 +224,7 @@ export function Modal({
           <div className="flex shrink-0 items-center justify-between border-b border-sumi-900/10 px-6 py-4">
             <h2 className="text-[1.15rem] font-extrabold">{title}</h2>
             {onClose && (
-              <button onClick={onClose} aria-label="Хаах" className="grid h-8 w-8 place-items-center rounded-lg bg-sumi-900/6 text-sumi-600 hover:bg-sumi-900/10">✕</button>
+              <button onClick={onClose} aria-label={lang === "en" ? "Close" : "Хаах"} className="grid h-8 w-8 place-items-center rounded-lg bg-sumi-900/6 text-sumi-600 hover:bg-sumi-900/10">✕</button>
             )}
           </div>
         )}
@@ -274,21 +274,21 @@ export function Empty({ icon = "空", title, sub, action }: { icon?: string; tit
   );
 }
 
-export function Spinner({ label }: { label?: string }) {
+export function Spinner({ label, lang = "mn" }: { label?: string; lang?: "mn" | "en" }) {
   return (
     <div className="flex items-center justify-center gap-3 py-14 text-sumi-500">
       <span className="h-5 w-5 animate-spin rounded-full border-2 border-sumi-900/15 border-t-shu-500" />
-      <span className="text-[13px] font-bold">{label ?? "Ачаалж байна…"}</span>
+      <span className="text-[13px] font-bold">{label ?? (lang === "en" ? "Loading…" : "Ачаалж байна…")}</span>
     </div>
   );
 }
 
-export function ErrorBox({ error, retry }: { error: unknown; retry?: () => void }) {
+export function ErrorBox({ error, retry, lang = "mn" }: { error: unknown; retry?: () => void; lang?: "mn" | "en" }) {
   return (
     <div className="rounded-2xl border border-shu-100 bg-shu-50/60 p-5">
-      <p className="text-[14px] font-extrabold text-shu-700">Ачаалахад алдаа гарлаа</p>
+      <p className="text-[14px] font-extrabold text-shu-700">{lang === "en" ? "Failed to load" : "Ачаалахад алдаа гарлаа"}</p>
       <p className="mt-1 font-mono text-[12px] text-shu-600">{String((error as Error)?.message ?? error)}</p>
-      {retry && <Button variant="outline" size="sm" className="mt-3" onClick={retry}>Дахин оролдох</Button>}
+      {retry && <Button variant="outline" size="sm" className="mt-3" onClick={retry}>{lang === "en" ? "Try again" : "Дахин оролдох"}</Button>}
     </div>
   );
 }
@@ -387,8 +387,8 @@ export function Pager({
 
 /* ─────────────── Аудио товч ─────────────── */
 export function SpeakButton({
-  text, rate = 1, className, label,
-}: { text: string; rate?: number; className?: string; label?: string }) {
+  text, rate = 1, className, label, lang = "mn",
+}: { text: string; rate?: number; className?: string; label?: string; lang?: "mn" | "en" }) {
   const [on, setOn] = useState(false);
   return (
     <button
@@ -399,8 +399,8 @@ export function SpeakButton({
         e.stopPropagation();
         speak(text, rate);
       }}
-      title="Сонсох"
-      aria-label={`${text} дуудлагыг сонсох`}
+      title={lang === "en" ? "Listen" : "Сонсох"}
+      aria-label={lang === "en" ? `Listen to ${text}` : `${text} дуудлагыг сонсох`}
       className={cn(
         "grid h-8 w-8 shrink-0 place-items-center rounded-lg border border-sumi-900/10 bg-white/80 text-[14px] transition",
         "hover:border-ai-400 hover:text-ai-600",

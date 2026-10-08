@@ -5,6 +5,7 @@ import { useStore } from "../lib/store";
 import { loadFullData, shuffle } from "../lib/data";
 import { GRADES, dueCards, memoryStats, previewIntervals, retrievability, type Grade } from "../lib/srs";
 import { MQ_LABEL, TYPE_LABEL, stripFurigana } from "../lib/text";
+import { MN_PENDING, ui, type Language } from "../lib/i18n";
 import type { Kanji, Level, Vocab } from "../lib/types";
 import {
   Bar, Button, Card, Chip, Furigana, LevelBadge, Ring, SectionTitle, SpeakButton, speak,
@@ -29,6 +30,8 @@ export interface SessionItem {
 /* ─────────────── Тохиргоо ─────────────── */
 export function SessionSetup({ kind = "vocab", level }: { kind?: SessionKind; level: Level }) {
   const { doc } = useStore();
+  const language = doc.profile.language ?? "mn";
+  const t = ui[language];
   const [direction, setDirection] = useState<Direction>("jp-mn");
   const [count, setCount] = useState(20);
   const [onlyDue, setOnlyDue] = useState(false);
@@ -50,26 +53,26 @@ export function SessionSetup({ kind = "vocab", level }: { kind?: SessionKind; le
       const pool = data.vocabByLevel[level];
       const fresh = shuffle(pool.filter((v) => !doc.srs[v.id])).slice(0, onlyDue ? 0 : studied);
       const due = pool.filter((v) => srsDue.has(v.id)).slice(0, count);
-      items.push(...due.map((v) => vocabToItem(v, "jp-mn")), ...fresh.map((v) => vocabToItem(v, "jp-mn")));
+      items.push(...due.map((v) => vocabToItem(v, "jp-mn", language)), ...fresh.map((v) => vocabToItem(v, "jp-mn", language)));
     }
     if (useKanji) {
       const pool = data.kanjiByLevel[level];
       const fresh = shuffle(pool.filter((k) => !doc.srs[k.k])).slice(0, onlyDue ? 0 : Math.max(3, Math.round(studied / 2)));
       const due = pool.filter((k) => srsDue.has(k.k)).slice(0, count);
-      items.push(...due.map((k) => kanjiToItem(k, "jp-mn")), ...fresh.map((k) => kanjiToItem(k, "jp-mn")));
+      items.push(...due.map((k) => kanjiToItem(k, "jp-mn", language)), ...fresh.map((k) => kanjiToItem(k, "jp-mn", language)));
     }
 
     if (!items.length) {
       const pool = useVocab ? data.vocabByLevel[level] : data.kanjiByLevel[level];
       items = useVocab
-        ? shuffle(pool as Vocab[]).slice(0, count).map((v) => vocabToItem(v, "jp-mn"))
-        : shuffle(pool as Kanji[]).slice(0, count).map((k) => kanjiToItem(k, "jp-mn"));
+        ? shuffle(pool as Vocab[]).slice(0, count).map((v) => vocabToItem(v, "jp-mn", language))
+        : shuffle(pool as Kanji[]).slice(0, count).map((k) => kanjiToItem(k, "jp-mn", language));
     }
 
     items = shuffle(items).slice(0, count).map((it) => ({ ...it, ...flip(it, direction) }));
     setRun(items);
     setLoading(false);
-  }, [kind, level, doc.srs, doc.profile.newPerDay, count, onlyDue, direction]);
+  }, [kind, level, doc.srs, doc.profile.newPerDay, count, onlyDue, direction, language]);
 
   if (run) {
     return (
@@ -86,19 +89,19 @@ export function SessionSetup({ kind = "vocab", level }: { kind?: SessionKind; le
     <Card>
       <SectionTitle
         jp="学習セッション"
-        title="Суралцах сесс"
-        sub="SRS нь таны санах ойн хүчийг тооцож, давтах хугацааг өөрөө товлоно."
+        title={t.sessionTitle}
+        sub={t.sessionSub}
       />
       <div className="grid gap-5 lg:grid-cols-[1fr_280px]">
         <div className="space-y-5">
           <div>
-            <p className="text-[12.5px] font-bold text-sumi-700">Чиглэл</p>
+            <p className="text-[12.5px] font-bold text-sumi-700">{t.directionLabel}</p>
             <div className="mt-2 grid gap-2 sm:grid-cols-2">
               {([
-                { id: "jp-mn", t: "Япон → Монгол", d: "Үгийг хараад утгыг сана", k: "日蒙" },
-                { id: "mn-jp", t: "Монгол → Япон", d: "Утгаас үгийг сана", k: "蒙日" },
-                { id: "listen", t: "Сонсгол", d: "Сонсоод утгыг ол", k: "聴" },
-                { id: "write", t: "Унших", d: "Ханзны уншлагыг хэл", k: "読" },
+                { id: "jp-mn", title: t.dirJpMn, d: t.dirJpMnD, k: "日蒙" },
+                { id: "mn-jp", title: t.dirMnJp, d: t.dirMnJpD, k: "蒙日" },
+                { id: "listen", title: t.dirListen, d: t.dirListenD, k: "聴" },
+                { id: "write", title: t.dirRead, d: t.dirReadD, k: "読" },
               ] as const).map((o) => (
                 <button
                   key={o.id}
@@ -108,7 +111,7 @@ export function SessionSetup({ kind = "vocab", level }: { kind?: SessionKind; le
                 >
                   <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-sumi-900 font-mincho text-[14px] font-bold text-washi-50">{o.k}</span>
                   <span className="min-w-0">
-                    <span className="block text-[13px] font-bold text-sumi-900">{o.t}</span>
+                    <span className="block text-[13px] font-bold text-sumi-900">{o.title}</span>
                     <span className="block text-[11.5px] text-sumi-500">{o.d}</span>
                   </span>
                 </button>
@@ -118,7 +121,7 @@ export function SessionSetup({ kind = "vocab", level }: { kind?: SessionKind; le
 
           <div className="grid gap-4 sm:grid-cols-2">
             <label className="block">
-              <span className="text-[12.5px] font-bold text-sumi-700">Картын тоо: <span className="font-mono tabnum">{count}</span></span>
+              <span className="text-[12.5px] font-bold text-sumi-700">{t.cardCount} <span className="font-mono tabnum">{count}</span></span>
               <input type="range" min={5} max={80} step={5} value={count} onChange={(e) => setCount(Number(e.target.value))} className="mt-2 w-full" />
             </label>
             <div className="flex items-end">
@@ -128,8 +131,8 @@ export function SessionSetup({ kind = "vocab", level }: { kind?: SessionKind; le
                   onlyDue ? "border-ai-400 bg-ai-50" : "border-sumi-900/10 bg-white/70")}
               >
                 <span>
-                  <span className="block text-[12.5px] font-bold text-sumi-800">Зөвхөн давталт</span>
-                  <span className="block text-[11px] text-sumi-500">Шинэ карт нэмэхгүй</span>
+                  <span className="block text-[12.5px] font-bold text-sumi-800">{t.onlyDue}</span>
+                  <span className="block text-[11px] text-sumi-500">{t.onlyDueSub}</span>
                 </span>
                 <span className={cn("relative h-6 w-10 shrink-0 rounded-full transition", onlyDue ? "bg-ai-500" : "bg-sumi-900/20")}>
                   <span className={cn("absolute top-1 h-4 w-4 rounded-full bg-white transition-all", onlyDue ? "left-5" : "left-1")} />
@@ -140,18 +143,18 @@ export function SessionSetup({ kind = "vocab", level }: { kind?: SessionKind; le
         </div>
 
         <div className="rounded-2xl border border-sumi-900/10 bg-white/60 p-4">
-          <p className="text-[12.5px] font-bold text-sumi-700">Одоогийн байдал</p>
+          <p className="text-[12.5px] font-bold text-sumi-700">{t.currentStatus}</p>
           <div className="mt-3 space-y-2 text-[12.5px] text-sumi-600">
-            <Row l="Давтах хугацаа хэтэрсэн" v={dueCards(doc.srs).length} tone="shu" />
-            <Row l="Шинэ карт" v={Object.values(doc.srs).filter((c) => c.ph === "new").length} tone="sumi" />
-            <Row l="Суралцаж байна" v={Object.values(doc.srs).filter((c) => c.ph === "learning" || c.ph === "relearn").length} tone="kin" />
-            <Row l="Түвшин" v={level} tone="ai" />
+            <Row l={t.overdueRow} v={dueCards(doc.srs).length} tone="shu" />
+            <Row l={t.newCardsRow} v={Object.values(doc.srs).filter((c) => c.ph === "new").length} tone="sumi" />
+            <Row l={t.stateLearning} v={Object.values(doc.srs).filter((c) => c.ph === "learning" || c.ph === "relearn").length} tone="kin" />
+            <Row l={t.level} v={level} tone="ai" />
           </div>
           <Button className="mt-4 w-full" size="lg" onClick={start} disabled={loading}>
-            {loading ? "Бэлтгэж байна…" : "▶ Эхлэх"}
+            {loading ? t.preparing : t.startBtn}
           </Button>
           <p className="mt-3 text-[11px] leading-relaxed text-sumi-400">
-            Карт бүрийн дараагийн давталт нь таны хариултын хурд, зөв эсэхээс тооцогдоно.
+            {t.intervalNote}
           </p>
         </div>
       </div>
@@ -181,6 +184,8 @@ export function Session({
   onFinish?: (r: { total: number; again: number; minutes: number }) => void;
 }) {
   const { doc, actions } = useStore();
+  const language = doc.profile.language ?? "mn";
+  const t = ui[language];
   const [idx, setIdx] = useState(0);
   const [revealed, setRevealed] = useState(false);
   const [stats, setStats] = useState({ again: 0, hard: 0, good: 0, easy: 0 });
@@ -189,7 +194,7 @@ export function Session({
 
   const item = items[idx];
   const card = item ? doc.srs[item.id] : undefined;
-  const previews = useMemo(() => previewIntervals(card), [card]);
+  const previews = useMemo(() => previewIntervals(card, language), [card, language]);
 
   const grade = useCallback((g: Grade) => {
     if (!item) return;
@@ -216,8 +221,8 @@ export function Session({
 
   useEffect(() => {
     if (item?.audio && direction === "listen") {
-      const t = setTimeout(() => speak(item.audio!, doc.profile.rate), 300);
-      return () => clearTimeout(t);
+      const timer = setTimeout(() => speak(item.audio!, doc.profile.rate), 300);
+      return () => clearTimeout(timer);
     }
   }, [item, direction, doc.profile.rate]);
 
@@ -229,8 +234,8 @@ export function Session({
     return (
       <Card className="mx-auto max-w-xl text-center">
         <span className="font-mincho text-[3rem] font-bold text-matcha-500">完</span>
-        <h2 className="mt-2 text-[1.5rem] font-extrabold">Сесс дууслаа</h2>
-        <p className="mt-1.5 text-[13.5px] text-sumi-500">{total} карт · {Math.max(1, Math.round((Date.now() - started) / 60000))} минут</p>
+        <h2 className="mt-2 text-[1.5rem] font-extrabold">{t.sessionDone}</h2>
+        <p className="mt-1.5 text-[13.5px] text-sumi-500">{total} {t.cardsUnit} · {Math.max(1, Math.round((Date.now() - started) / 60000))} {t.minutes}</p>
         <div className="mt-5 flex justify-center">
           <Ring value={acc} size={96} stroke={8} tone={acc > 0.8 ? "matcha" : acc > 0.5 ? "kin" : "shu"}>
             <span className="font-mono text-[1.2rem] font-extrabold tabnum">{Math.round(acc * 100)}%</span>
@@ -239,27 +244,27 @@ export function Session({
         <div className="mt-5 grid grid-cols-4 gap-2">
           {GRADES.map((g) => (
             <div key={g.g} className="card-flat px-2 py-3">
-              <p className="text-[11px] font-bold text-sumi-500">{g.mn}</p>
+              <p className="text-[11px] font-bold text-sumi-500">{language === "en" ? g.en : g.mn}</p>
               <p className="mt-1 font-mono text-[16px] font-extrabold tabnum">{stats[["again", "hard", "good", "easy"][g.g] as "again"]}</p>
             </div>
           ))}
         </div>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
-          <Button onClick={onExit}>↺ Дахин</Button>
-          <Button variant="outline" onClick={() => navigate("progress")}>Ахиц харах</Button>
-          <Button variant="ghost" onClick={() => navigate("home")}>Нүүр</Button>
+          <Button onClick={onExit}>{t.retry2}</Button>
+          <Button variant="outline" onClick={() => navigate("progress")}>{t.viewProgress}</Button>
+          <Button variant="ghost" onClick={() => navigate("home")}>{t.homeShort}</Button>
         </div>
       </Card>
     );
   }
 
   const backText = item.back;
-  const mq = item.word && "mq" in item.word ? MQ_LABEL[(item.word as Vocab).mq] : null;
+  const mq = item.word && "mq" in item.word ? MQ_LABEL[language][(item.word as Vocab).mq] : null;
 
   return (
     <div className="mx-auto max-w-2xl">
       <div className="mb-3 flex items-center gap-3">
-        <Button size="sm" variant="ghost" onClick={onExit}>← Гарах</Button>
+        <Button size="sm" variant="ghost" onClick={onExit}>{t.exitBtn}</Button>
         <div className="min-w-0 flex-1">
           <Bar value={idx / items.length} tone="ai" height={5} />
         </div>
@@ -270,12 +275,12 @@ export function Session({
         <div className="flex items-center justify-between gap-2">
           <div className="flex items-center gap-2">
             <LevelBadge level={item.level} size="sm" />
-            <Chip tone="sumi">{item.kind === "kanji" ? "Ханз" : "Үг"}</Chip>
-            {item.word && "t" in item.word && <Chip tone="sumi">{TYPE_LABEL[(item.word as Vocab).t]}</Chip>}
+            <Chip tone="sumi">{item.kind === "kanji" ? t.kanji : t.wordSg}</Chip>
+            {item.word && "t" in item.word && <Chip tone="sumi">{TYPE_LABEL[language][(item.word as Vocab).t]}</Chip>}
           </div>
           {card && (
             <Chip tone={retrievability(card) > 0.8 ? "matcha" : retrievability(card) > 0.5 ? "kin" : "shu"}>
-              санах {Math.round(retrievability(card) * 100)}%
+              {t.recallChip} {Math.round(retrievability(card) * 100)}%
             </Chip>
           )}
         </div>
@@ -304,7 +309,7 @@ export function Session({
 
         {!revealed ? (
           <div className="mt-8 flex justify-center">
-            <Button size="lg" onClick={() => setRevealed(true)} autoFocus>Хариултыг харах</Button>
+            <Button size="lg" onClick={() => setRevealed(true)} autoFocus>{t.revealBtn}</Button>
           </div>
         ) : (
           <div className="mt-6 animate-fade border-t border-sumi-900/8 pt-5">
@@ -314,7 +319,7 @@ export function Session({
             {item.extra && <p className="mt-2 text-center text-[13px] text-sumi-500">{item.extra}</p>}
             {mq && mq.tone !== "matcha" && (
               <p className="mt-2 text-center text-[11.5px] font-bold text-kin-600">
-                {mq.text} — <span className="text-sumi-400">эх сурвалж: англи</span>
+                {mq.text} — <span className="text-sumi-400">{t.srcEnNote}</span>
               </p>
             )}
 
@@ -322,16 +327,16 @@ export function Session({
               <div key={i} className="mt-4 rounded-xl bg-sumi-900/[0.035] px-4 py-3">
                 <div className="flex items-start gap-3">
                   <Furigana text={ex.fg ?? ex.ja} show={doc.profile.furigana} className="flex-1 text-[14.5px] font-semibold text-sumi-900" />
-                  <SpeakButton text={stripFurigana(ex.ja)} />
+                  <SpeakButton text={stripFurigana(ex.ja)} lang={language} />
                 </div>
-                {(ex.mn || ex.en) && <p className="mt-1.5 text-[12.5px] text-sumi-600">{ex.mn ?? ex.en}</p>}
+                {(ex.mn || ex.en) && <p className="mt-1.5 text-[12.5px] text-sumi-600">{language === "en" ? ex.en ?? ex.mn : ex.mn ?? ex.en}</p>}
               </div>
             ))}
 
             {item.kind === "kanji" && (
               <div className="mt-4 text-center">
                 <a href={href("write", item.id)} className="text-[12.5px] font-bold text-ai-600 underline underline-offset-4">
-                  ✍️ Энэ ханзыг бичиж дадлагажих →
+                  {t.practiceKanji}
                 </a>
               </div>
             )}
@@ -351,7 +356,7 @@ export function Session({
                 >
                   <span className={cn("block text-[13.5px] font-extrabold",
                     g.tone === "shu" ? "text-shu-700" : g.tone === "kin" ? "text-kin-600" : g.tone === "matcha" ? "text-matcha-600" : "text-ai-600")}>
-                    {g.mn}
+                    {language === "en" ? g.en : g.mn}
                   </span>
                   <span className="mt-0.5 block font-mono text-[10.5px] text-sumi-500">{previews[i]?.label}</span>
                   <span className="mt-0.5 block font-mono text-[9.5px] text-sumi-300">{i + 1}</span>
@@ -363,7 +368,7 @@ export function Session({
       </Card>
 
       <p className="mt-3 text-center text-[11.5px] text-sumi-400">
-        <kbd className="font-mono">Space</kbd> хариулт харах · <kbd className="font-mono">1–4</kbd> үнэлэх · <kbd className="font-mono">Esc</kbd> гарах
+        <kbd className="font-mono">Space</kbd> {t.kbReveal} · <kbd className="font-mono">1–4</kbd> {t.kbRate} · <kbd className="font-mono">Esc</kbd> {t.kbExit}
       </p>
     </div>
   );
@@ -376,30 +381,37 @@ const flip = (it: SessionItem, d: Direction): Partial<SessionItem> => {
 };
 
 /* ─────────────── Хөрвүүлэлт ─────────────── */
-export function vocabToItem(v: Vocab, _d: Direction): SessionItem {
+export function vocabToItem(v: Vocab, _d: Direction, language: Language = "mn"): SessionItem {
   return {
     id: v.id,
     kind: "vocab",
     level: v.lvl,
     front: v.w,
     reading: v.r,
-    back: v.mn ?? v.en,
-    extra: v.mn ? v.en.join("; ") : undefined,
+    back: language === "en"
+      ? (v.en.length ? v.en : v.mn ?? [MN_PENDING])
+      : (v.mn?.length ? v.mn : [MN_PENDING]),
+    extra: language === "en" ? undefined : v.en.join("; "),
     audio: v.w,
     examples: v.ex.map((e) => ({ ja: e.ja, fg: e.fg, mn: e.mn ?? undefined, en: e.en })),
     word: v,
   };
 }
 
-export function kanjiToItem(k: Kanji, _d: Direction): SessionItem {
+export function kanjiToItem(k: Kanji, _d: Direction, language: Language = "mn"): SessionItem {
+  const back = language === "en"
+    ? (k.en.length ? k.en : k.mn)
+    : (k.mn.length ? k.mn : (k.en.length ? k.en : [MN_PENDING]));
   return {
     id: k.k,
     kind: "kanji",
     level: k.lvl,
     front: k.k,
     reading: [...k.on.slice(0, 2), ...k.kun.slice(0, 2)].join("・"),
-    back: k.mn.length ? k.mn : k.en,
-    extra: `${k.s ?? "?"} зурлага${k.mn.length ? ` · ${k.en.join(", ")}` : ""}`,
+    back,
+    extra: language === "en"
+      ? `${k.s ?? "?"} ${"strokes"}${k.en.length ? ` · ${k.en.join(", ")}` : ""}`
+      : `${k.s ?? "?"} зурлага${k.mn.length ? ` · ${k.en.join(", ")}` : ""}`,
     audio: k.k,
     word: k,
   };
@@ -408,16 +420,18 @@ export function kanjiToItem(k: Kanji, _d: Direction): SessionItem {
 /* ─────────────── Тойм самбар ─────────────── */
 export function MemoryPanel() {
   const { doc } = useStore();
+  const language = doc.profile.language ?? "mn";
+  const t = ui[language];
   const mem = useMemo(() => memoryStats(doc.srs), [doc.srs]);
   return (
     <Card>
-      <SectionTitle jp="記憶" title="Санах ойн шинжилгээ" />
+      <SectionTitle jp="記憶" title={t.memoryTitle} />
       <div className="grid gap-4 sm:grid-cols-2">
         {[
-          { l: "Нийт давталт", v: mem.reviews.toLocaleString(), s: `${mem.lapses} удаа мартсан` },
-          { l: "Нарийвчлал", v: `${Math.round(mem.accuracy * 100)}%`, s: "сүүлийн 12 хариултаас" },
-          { l: "Сэргээх магадлал", v: `${Math.round(mem.retention * 100)}%`, s: "одоогийн дундаж" },
-          { l: "Мартах хурд", v: `${Math.round(mem.forgettingRate * 100)}%`, s: "доогуур нь дээр" },
+          { l: t.totalReviewsRow, v: mem.reviews.toLocaleString(), s: t.lapsesSub(mem.lapses) },
+          { l: t.accuracyRow, v: `${Math.round(mem.accuracy * 100)}%`, s: t.accSub },
+          { l: t.retentionRow, v: `${Math.round(mem.retention * 100)}%`, s: t.retSub },
+          { l: t.forgettingRow, v: `${Math.round(mem.forgettingRate * 100)}%`, s: t.fSub },
         ].map((x) => (
           <div key={x.l} className="card-flat px-4 py-3.5">
             <p className="text-[11.5px] font-bold uppercase tracking-wide text-sumi-400">{x.l}</p>
@@ -427,8 +441,7 @@ export function MemoryPanel() {
         ))}
       </div>
       <p className="mt-4 rounded-xl bg-sumi-900/4 px-3.5 py-3 text-[12.5px] leading-relaxed text-sumi-600">
-        Систем нь <strong>{doc.mistakes.length}</strong> алдааг бүртгэсэн байна.
-        Дараагийн сессэд эдгээрийг түлхүү давтана.
+        {t.mistakesNote(doc.mistakes.length)}
       </p>
     </Card>
   );

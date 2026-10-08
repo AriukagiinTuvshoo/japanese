@@ -16,11 +16,11 @@
 
 export type Grade = 0 | 1 | 2 | 3;
 
-export const GRADES: { g: Grade; mn: string; jp: string; tone: string }[] = [
-  { g: 0, mn: "Дахин", jp: "もう一度", tone: "shu" },
-  { g: 1, mn: "Хүнд", jp: "難しい", tone: "kin" },
-  { g: 2, mn: "Хэвийн", jp: "できた", tone: "matcha" },
-  { g: 3, mn: "Амархан", jp: "簡単", tone: "ai" },
+export const GRADES: { g: Grade; mn: string; en: string; jp: string; tone: string }[] = [
+  { g: 0, mn: "Дахин", en: "Again", jp: "もう一度", tone: "shu" },
+  { g: 1, mn: "Хүнд", en: "Hard", jp: "難しい", tone: "kin" },
+  { g: 2, mn: "Хэвийн", en: "Good", jp: "できた", tone: "matcha" },
+  { g: 3, mn: "Амархан", en: "Easy", jp: "簡単", tone: "ai" },
 ];
 
 export interface Card {
@@ -126,21 +126,21 @@ export function schedule(prev: Card | undefined, g: Grade): Card {
 }
 
 /** Хүний ойлгох хэлбэрээр дараагийн давталт. */
-export function intervalLabel(c: Card) {
+export function intervalLabel(c: Card, language: "mn" | "en" = "mn") {
   const ms = c.due - Date.now();
-  if (ms <= 0) return "одоо";
+  if (ms <= 0) return language === "en" ? "now" : "одоо";
   const min = ms / MIN;
-  if (min < 60) return `${Math.round(min)} мин`;
+  if (min < 60) return language === "en" ? `${Math.round(min)} min` : `${Math.round(min)} мин`;
   const d = ms / DAY;
-  if (d < 1) return `${Math.round(d * 24)} цаг`;
-  if (d < 30) return `${Math.round(d)} өдөр`;
-  if (d < 365) return `${(d / 30).toFixed(1)} сар`;
-  return `${(d / 365).toFixed(1)} жил`;
+  if (d < 1) return language === "en" ? `${Math.round(d * 24)} h` : `${Math.round(d * 24)} цаг`;
+  if (d < 30) return language === "en" ? `${Math.round(d)} d` : `${Math.round(d)} өдөр`;
+  if (d < 365) return language === "en" ? `${(d / 30).toFixed(1)} mo` : `${(d / 30).toFixed(1)} сар`;
+  return language === "en" ? `${(d / 365).toFixed(1)} y` : `${(d / 365).toFixed(1)} жил`;
 }
 
 /** Хэрэглэгчид дараагийн үнэлгээ бүрт ямар интервал гарахыг урьдчилан харуулна. */
-export function previewIntervals(prev: Card | undefined) {
-  return ([0, 1, 2, 3] as Grade[]).map((g) => ({ g, label: intervalLabel(schedule(prev, g)) }));
+export function previewIntervals(prev: Card | undefined, language: "mn" | "en" = "mn") {
+  return ([0, 1, 2, 3] as Grade[]).map((g) => ({ g, label: intervalLabel(schedule(prev, g), language) }));
 }
 
 /* ─────────────── Санах ойн шинжилгээ ─────────────── */
@@ -192,11 +192,11 @@ export function memoryStats(srs: Record<string, Card>): MemoryStats {
 }
 
 /** Сургалтын төлөв — SRS-ийн 4 шат. */
-export function cardStage(c: Card | undefined): { id: string; mn: string; tone: string; pct: number } {
-  if (!c || c.ph === "new") return { id: "new", mn: "Шинэ", tone: "sumi", pct: 8 };
-  if (c.ph === "learning" || c.ph === "relearn") return { id: "learning", mn: "Суралцаж байна", tone: "kin", pct: 35 };
-  if (c.st >= 21 && c.streak >= 3) return { id: "mastered", mn: "Эзэмшсэн", tone: "matcha", pct: 100 };
-  return { id: "review", mn: "Давталт", tone: "ai", pct: 68 };
+export function cardStage(c: Card | undefined): { id: string; mn: string; en: string; tone: string; pct: number } {
+  if (!c || c.ph === "new") return { id: "new", mn: "Шинэ", en: "New", tone: "sumi", pct: 8 };
+  if (c.ph === "learning" || c.ph === "relearn") return { id: "learning", mn: "Суралцаж байна", en: "Learning", tone: "kin", pct: 35 };
+  if (c.st >= 21 && c.streak >= 3) return { id: "mastered", mn: "Эзэмшсэн", en: "Mastered", tone: "matcha", pct: 100 };
+  return { id: "review", mn: "Давталт", en: "Review", tone: "ai", pct: 68 };
 }
 
 /** Хугацааны муж дахь давталтын тоо — графикт. */

@@ -6,11 +6,14 @@ import type { Kanji, Level, Vocab } from "../lib/types";
 import { dueCards, memoryStats } from "../lib/srs";
 import { Empty, Spinner, Tabs } from "../components/ui";
 import { Session, vocabToItem, kanjiToItem, type SessionItem } from "../components/Session";
+import { ui } from "../lib/i18n";
 
 type Mode = "due" | "weak" | "new" | "fav" | "mistakes";
 
 export default function Review() {
   const { doc } = useStore();
+  const language = doc.profile.language ?? "mn";
+  const t = ui[language];
   const { query, set } = useQuery();
   const mode = (query.mode as Mode) || "due";
   const [items, setItems] = useState<SessionItem[] | null>(null);
@@ -25,8 +28,8 @@ export default function Review() {
     loadFullData().then((data) => {
       if (!alive) return;
       const out: SessionItem[] = [];
-      const pushVocab = (v: Vocab) => out.push(vocabToItem(v, "jp-mn"));
-      const pushKanji = (k: Kanji) => out.push(kanjiToItem(k, "jp-mn"));
+      const pushVocab = (v: Vocab) => out.push(vocabToItem(v, "jp-mn", language));
+      const pushKanji = (k: Kanji) => out.push(kanjiToItem(k, "jp-mn", language));
 
       if (mode === "due") {
         for (const [id] of due) {
@@ -68,14 +71,14 @@ export default function Review() {
       setItems(out.slice(0, limit));
     });
     return () => { alive = false; };
-  }, [mode, due, doc.srs, doc.favorites, doc.mistakes, limit, query.level, doc.profile.current, doc.profile.target]);
+  }, [mode, due, doc.srs, doc.favorites, doc.mistakes, limit, query.level, doc.profile.current, doc.profile.target, language]);
 
   const modes: { id: Mode; label: string; badge?: number }[] = [
-    { id: "due", label: "Хугацаа хэтэрсэн", badge: due.length },
-    { id: "weak", label: "Сул карт" },
-    { id: "new", label: "Шинэ үг" },
-    { id: "fav", label: "Дуртай", badge: doc.favorites.length },
-    { id: "mistakes", label: "Алдааны дэвтэр", badge: doc.mistakes.length },
+    { id: "due", label: t.dueTab, badge: due.length },
+    { id: "weak", label: t.weakTab },
+    { id: "new", label: t.newTab },
+    { id: "fav", label: t.favTab, badge: doc.favorites.length },
+    { id: "mistakes", label: t.mistakesTab, badge: doc.mistakes.length },
   ];
 
   return (
@@ -83,19 +86,19 @@ export default function Review() {
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <p className="font-jp text-[11.5px] tracking-[0.3em] text-shu-500">間隔反復</p>
-          <h1 className="mt-1 text-[1.7rem] font-extrabold leading-tight tracking-tight sm:text-[2rem]">Давталт (SRS)</h1>
+          <h1 className="mt-1 text-[1.7rem] font-extrabold leading-tight tracking-tight sm:text-[2rem]">{t.reviewShort} (SRS)</h1>
           <p className="mt-1.5 text-[13.5px] text-sumi-500">
-            FSRS-д суурилсан хуваарь · {due.length} карт хугацаа хэтэрсэн · нийт {Object.keys(doc.srs).length.toLocaleString()} карт
+            {t.reviewSub(due.length, Object.keys(doc.srs).length.toLocaleString())}
           </p>
         </div>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-4">
         {[
-          { l: "Хугацаа хэтэрсэн", v: due.length, tone: "shu" as const },
-          { l: "Өнөөдөр давтсан", v: Object.values(doc.srs).filter((c) => c.last >= new Date().setHours(0, 0, 0, 0)).length, tone: "matcha" as const },
-          { l: "Эзэмшсэн", v: mem.mastered, tone: "ai" as const },
-          { l: "Нийт давталт", v: mem.reviews, tone: "kin" as const },
+          { l: t.dueTab, v: due.length, tone: "shu" as const },
+          { l: t.todayReviewed, v: Object.values(doc.srs).filter((c) => c.last >= new Date().setHours(0, 0, 0, 0)).length, tone: "matcha" as const },
+          { l: t.masteredStat, v: mem.mastered, tone: "ai" as const },
+          { l: t.totalReviewsStat, v: mem.reviews, tone: "kin" as const },
         ].map((x) => (
           <div key={x.l} className="card-flat px-4 py-3.5">
             <p className="text-[11.5px] font-bold uppercase tracking-wide text-sumi-400">{x.l}</p>
@@ -109,23 +112,23 @@ export default function Review() {
 
       <div className="flex flex-wrap items-center gap-3">
         <label className="flex items-center gap-3 text-[12.5px] font-bold text-sumi-600">
-          Сессийн хязгаар
+          {t.sessionLimit}
           <input type="range" min={10} max={100} step={5} value={limit} onChange={(e) => setLimit(Number(e.target.value))} className="w-40" />
           <span className="font-mono tabnum">{limit}</span>
         </label>
       </div>
 
-      {!items && <Spinner label="Картуудыг бэлтгэж байна…" />}
+      {!items && <Spinner label={t.preparingCards} lang={language} />}
 
       {items && items.length === 0 && (
         <Empty
           icon="空"
-          title={mode === "due" ? "Одоогоор давтах карт алга 🎉" : "Карт олдсонгүй"}
+          title={mode === "due" ? t.emptyDue : t.emptyCards}
           sub={mode === "due"
-            ? "Бүх карт хуваарийн дагуу байна. Шинэ үг сурч эхлэхэд тохиромжтой."
-            : mode === "fav" ? "Үг эсвэл ханз дээр ★ дарж дуртайд нэмээрэй."
-            : mode === "mistakes" ? "Дасгал хийж эхлэхэд алдаанууд энд хуримтлагдана."
-            : "Энэ горимд карт үүсээгүй байна."}
+            ? t.emptyDueSub
+            : mode === "fav" ? t.emptyFavSub
+            : mode === "mistakes" ? t.emptyMistSub
+            : t.emptyOther}
         />
       )}
 

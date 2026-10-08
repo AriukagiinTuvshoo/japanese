@@ -4,6 +4,8 @@ import { href } from "../lib/router";
 import { loadFullData } from "../lib/data";
 import type { Kanji, Level, Vocab } from "../lib/types";
 import { Card, Chip, LevelBadge, SectionTitle, Spinner, SpeakButton } from "./ui";
+import { useStore } from "../lib/store";
+import { ui } from "../lib/i18n";
 
 /**
  * ҮГИЙН СҮЛЖЭЭ — үгийг ганцаар биш, ханзнаас нь холбож сурах.
@@ -11,6 +13,9 @@ import { Card, Chip, LevelBadge, SectionTitle, Spinner, SpeakButton } from "./ui
  * холбоосоор харуулна.
  */
 export function WordNetwork({ level }: { level: Level }) {
+  const { doc } = useStore();
+  const language = doc.profile.language ?? "mn";
+  const t = ui[language];
   const [data, setData] = useState<Awaited<ReturnType<typeof loadFullData>> | null>(null);
   const [center, setCenter] = useState<string | null>(null);
   const [query, setQuery] = useState("");
@@ -126,7 +131,7 @@ export function WordNetwork({ level }: { level: Level }) {
         {model && (
           <div className="border-t border-sumi-900/8 p-5">
             <p className="text-[12.5px] font-bold text-sumi-700">
-              <span className="font-jp text-[16px]">{center}</span> агуулсан үгс ({model.words.length})
+              {center && t.wordsWithTitle2(center, model.words.length)}
             </p>
             <div className="mt-3 grid gap-2 sm:grid-cols-2">
               {model.words.map((w) => (
@@ -142,11 +147,11 @@ export function WordNetwork({ level }: { level: Level }) {
       </Card>
 
       <Card>
-        <p className="text-[13px] font-extrabold">Ханз сонгох</p>
+        <p className="text-[13px] font-extrabold">{t.kanjiPickTitle}</p>
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Ханз эсвэл утга…"
+          placeholder={t.kanjiOrMeaningPh}
           className="mt-2.5 h-10 w-full rounded-xl border border-sumi-900/12 bg-white px-3 text-[13px] font-semibold outline-none focus:border-shu-400"
         />
         <div className="mt-3 grid grid-cols-6 gap-1.5">
@@ -167,17 +172,17 @@ export function WordNetwork({ level }: { level: Level }) {
               <span className="font-mincho text-[2.4rem] font-bold leading-none">{center}</span>
               <div className="min-w-0">
                 <p className="text-[13px] font-bold">{model.kanji.mn.join(", ") || model.kanji.en.join(", ")}</p>
-                <p className="mt-0.5 text-[11.5px] text-sumi-500">{model.kanji.s} зурлага · {model.kanji.lvl}</p>
+                <p className="mt-0.5 text-[11.5px] text-sumi-500">{t.strokesSub2(model.kanji.s ?? 0, "")} · {model.kanji.lvl}</p>
               </div>
-              <SpeakButton text={center} className="ml-auto" />
+              <SpeakButton text={center ?? ""} className="ml-auto" />
             </div>
             <div className="mt-3 flex flex-wrap gap-1.5">
               {model.kanji.on.slice(0, 3).map((r) => <Chip key={`on${r}`} tone="shu">音 {r}</Chip>)}
               {model.kanji.kun.slice(0, 3).map((r) => <Chip key={`kun${r}`} tone="ai">訓 {r}</Chip>)}
             </div>
             <div className="mt-4 flex flex-wrap gap-2">
-              <a href={href("kanji", center)} className="text-[12.5px] font-bold text-ai-600 underline underline-offset-4">Ханзны дэлгэрэнгүй →</a>
-              <a href={href("write", center)} className="text-[12.5px] font-bold text-shu-600 underline underline-offset-4">Бичиж дадлагажих →</a>
+              <a href={href("kanji", center)} className="text-[12.5px] font-bold text-ai-600 underline underline-offset-4">{t.kanjiDetailLink}</a>
+              <a href={href("write", center)} className="text-[12.5px] font-bold text-shu-600 underline underline-offset-4">{t.writePracticeLink}</a>
             </div>
           </div>
         )}

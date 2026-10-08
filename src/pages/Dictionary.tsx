@@ -6,12 +6,15 @@ import { loadSearchIndex, loadGrammar } from "../lib/data";
 import type { Grammar, SearchIndex } from "../lib/types";
 import { romajiToKana, toHiragana, toRomaji, TYPE_LABEL } from "../lib/text";
 import { Button, Card, Chip, Empty, Furigana, Input, LevelBadge, SpeakButton, Spinner, Tabs } from "../components/ui";
+import { MN_PENDING, ui } from "../lib/i18n";
 
 type Dir = "jp-mn" | "mn-jp" | "romaji";
 type Kind = "all" | "v" | "k" | "g";
 
 export default function Dictionary({ q: initial }: { q?: string }) {
   const { doc, actions } = useStore();
+  const language = doc.profile.language ?? "mn";
+  const t = ui[language];
   const { query, set } = useQuery();
   const [index, setIndex] = useState<SearchIndex | null>(null);
   const [grammar, setGrammar] = useState<Grammar[]>([]);
@@ -81,17 +84,17 @@ export default function Dictionary({ q: initial }: { q?: string }) {
     <div className="space-y-6">
       <div>
         <p className="font-jp text-[11.5px] tracking-[0.3em] text-shu-500">辞書</p>
-        <h1 className="mt-1 text-[1.7rem] font-extrabold leading-tight tracking-tight sm:text-[2rem]">Толь бичиг</h1>
+        <h1 className="mt-1 text-[1.7rem] font-extrabold leading-tight tracking-tight sm:text-[2rem]">{t.dictTitle}</h1>
         <p className="mt-1.5 text-[13.5px] text-sumi-500">
-          Хоёр чиглэлт хайлт — япон, ромажи, монгол, англи. {index ? `${index.v.length.toLocaleString()} үг · ${index.k.length.toLocaleString()} ханз · ${grammar.length} дүрэм` : "…"}
+          {t.dictSubPre}{index ? t.indexCounts(index.v.length.toLocaleString(), index.k.length.toLocaleString(), grammar.length.toLocaleString()) : "…"}
         </p>
       </div>
 
       <Card className="p-5">
         <Tabs value={dir} onChange={setDir} items={[
-          { id: "jp-mn", label: "Япон → Монгол", icon: "日" },
-          { id: "mn-jp", label: "Монгол → Япон", icon: "蒙" },
-          { id: "romaji", label: "Ромажи", icon: "Aa" },
+          { id: "jp-mn", label: t.dirJpMnTab, icon: "日" },
+          { id: "mn-jp", label: t.dirMnJpTab, icon: "蒙" },
+          { id: "romaji", label: t.dirRomajiTab, icon: "Aa" },
         ]} />
 
         <Input
@@ -99,8 +102,8 @@ export default function Dictionary({ q: initial }: { q?: string }) {
           onChange={(v) => { setQ(v); set({ q: v || undefined }); }}
           autoFocus
           placeholder={
-            dir === "jp-mn" ? "食べる · たべる · 電車…"
-              : dir === "mn-jp" ? "идэх · галт тэрэг · бэлтгэл…"
+            dir === "jp-mn" ? t.phJp
+              : dir === "mn-jp" ? t.phMn
                 : "taberu · densha · kanji…"
           }
           icon="🔎"
@@ -108,31 +111,30 @@ export default function Dictionary({ q: initial }: { q?: string }) {
         />
 
         <div className="mt-3 flex flex-wrap gap-1.5">
-          {([["all", "Бүгд"], ["v", "Үг"], ["k", "Ханз"], ["g", "Дүрэм"]] as const).map(([id, label]) => (
+          {([["all", t.allF], ["v", t.wordSg], ["k", t.kanji], ["g", t.grammar]] as const).map(([id, label]) => (
             <button key={id} onClick={() => { setKind(id); set({ kind: id }); }}
               className={cn("rounded-lg px-2.5 py-1.5 text-[12px] font-bold transition",
                 kind === id ? "bg-sumi-900 text-washi-50" : "bg-sumi-900/5 text-sumi-600 hover:text-sumi-900")}>
               {label}
             </button>
           ))}
-          {total > 0 && <Chip tone="ai" className="ml-auto">{total} илэрц</Chip>}
+          {total > 0 && <Chip tone="ai" className="ml-auto">{t.hitsN(total)}</Chip>}
         </div>
 
         <p className="mt-3 text-[11.5px] text-sumi-400">
-          Ромажиар ч хайж болно — <span className="font-mono">tabemono</span> гэж бичихэд «食べ物» олдоно.
-          Түвшин, утга, уншлага, англи утга бүгдээс хайна.
+          {t.romajiHint}
         </p>
       </Card>
 
-      {!index && <Spinner label="Толь ачаалж байна…" />}
-      {index && !q.trim() && <Empty icon="辞" title="Хайлт хийнэ үү" sub="Япон, ромажи, монгол эсвэл англи хэлээр бичээрэй." />}
-      {index && q.trim() && total === 0 && <Empty icon="無" title="Илэрц олдсонгүй" sub="Өөр төрлийн бичиглэлээр оролдоно уу." />}
+      {!index && <Spinner label={t.dictLoading} lang={language} />}
+      {index && !q.trim() && <Empty icon="辞" title={t.searchPromptTitle} sub={t.searchPromptSub} />}
+      {index && q.trim() && total === 0 && <Empty icon="無" title={t.noHits} sub={t.noResultsSub2} />}
 
       {results && (
         <>
           {kind !== "k" && kind !== "g" && results.vocab.length > 0 && (
             <Card>
-              <p className="text-[12px] font-bold uppercase tracking-[0.2em] text-sumi-400">Үг · {results.vocab.length}</p>
+              <p className="text-[12px] font-bold uppercase tracking-[0.2em] text-sumi-400">{t.hitsWord(results.vocab.length)}</p>
               <ul className="mt-3 divide-y divide-sumi-900/8">
                 {results.vocab.map((v) => {
                   const has = !!doc.srs[v.id];
@@ -143,7 +145,7 @@ export default function Dictionary({ q: initial }: { q?: string }) {
                         <span className="shrink-0 font-jp text-[12.5px] text-sumi-500">{v.r}</span>
                         <span className="min-w-0 flex-1 truncate text-[13px] text-sumi-700"
                           style={{ color: v.mn ? undefined : "#9b968c" }}>
-                          {v.mn || "орчуулга хүлээж байна"}
+                          {language === "en" ? (v.mn || MN_PENDING) : (v.mn || MN_PENDING)}
                         </span>
                       </a>
                       <LevelBadge level={v.lvl as never} size="sm" />
@@ -151,7 +153,7 @@ export default function Dictionary({ q: initial }: { q?: string }) {
                       <button onClick={() => actions.grade(v.id, 2, { isNew: !has })}
                         className={cn("grid h-7 w-7 place-items-center rounded-lg border text-[13px] transition",
                           has ? "border-matcha-200 bg-matcha-50 text-matcha-600" : "border-sumi-900/10 bg-white/70 text-sumi-400 hover:border-matcha-400")}
-                        title={has ? "SRS-д бий" : "SRS-д нэмэх"}>
+                        title={has ? t.srsHas : t.srsAdd}>
                         {has ? "✓" : "+"}
                       </button>
                     </li>
@@ -163,7 +165,7 @@ export default function Dictionary({ q: initial }: { q?: string }) {
 
           {kind !== "v" && kind !== "g" && results.kanji.length > 0 && (
             <Card>
-              <p className="text-[12px] font-bold uppercase tracking-[0.2em] text-sumi-400">Ханз · {results.kanji.length}</p>
+              <p className="text-[12px] font-bold uppercase tracking-[0.2em] text-sumi-400">{t.hitsKanji(results.kanji.length)}</p>
               <div className="mt-3 grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
                 {results.kanji.map((kk) => (
                   <a key={kk.id} href={href("kanji", kk.id)} className="card-flat flex items-center gap-3 p-3.5 transition hover:-translate-y-0.5 hover:border-shu-300">
@@ -181,14 +183,14 @@ export default function Dictionary({ q: initial }: { q?: string }) {
 
           {kind !== "v" && kind !== "k" && results.grammar.length > 0 && (
             <Card>
-              <p className="text-[12px] font-bold uppercase tracking-[0.2em] text-sumi-400">Дүрэм · {results.grammar.length}</p>
+              <p className="text-[12px] font-bold uppercase tracking-[0.2em] text-sumi-400">{t.hitsGrammar(results.grammar.length)}</p>
               <ul className="mt-3 divide-y divide-sumi-900/8">
                 {results.grammar.map((gr) => (
                   <li key={gr.id}>
                     <a href={href("grammar", gr.id)} className="flex flex-wrap items-center gap-3 py-3">
                       <span className="font-jp text-[16px] font-bold">{gr.w}</span>
                       <span className="min-w-0 flex-1 truncate text-[13px] text-sumi-700">
-                        {gr.mn || <span className="text-sumi-400">тайлбар хүлээж байна</span>}
+                        {gr.mn || <span className="text-sumi-400">{t.pendingNoteLower}</span>}
                       </span>
                       <LevelBadge level={gr.lvl as never} size="sm" />
                     </a>
@@ -199,9 +201,9 @@ export default function Dictionary({ q: initial }: { q?: string }) {
           )}
 
           <Card>
-            <p className="text-[13px] font-extrabold">Уншлага дасгал</p>
+            <p className="text-[13px] font-extrabold">{t.readingDrill}</p>
             <p className="mt-1 text-[12.5px] text-sumi-500">
-              «{q}» гэсэн үг агуулсан жишээ өгүүлбэрүүд:
+              {t.readingDrillSub(q)}
             </p>
             <ul className="mt-3 space-y-2">
               {results.vocab.slice(0, 3).map((v) => (
@@ -219,18 +221,18 @@ export default function Dictionary({ q: initial }: { q?: string }) {
         <div className="flex flex-wrap items-center gap-4">
           <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white/10 font-mincho text-[19px] font-bold">語</span>
           <div className="min-w-0 flex-1">
-            <p className="text-[13.5px] font-extrabold">Үгийн сүлжээгээр сурах</p>
+            <p className="text-[13.5px] font-extrabold">{t.networkPitch}</p>
             <p className="mt-0.5 text-[12.5px] text-washi-300">
-              Ханз → үг → холбоотой үг. Нэг ханзаас бүхэл бүлэг үг цээжлэх хамгийн хурдан арга.
+              {t.networkPitchSub}
             </p>
           </div>
-          <Button onClick={() => { window.location.hash = "#/vocab?tab=network"; }}>語 Сүлжээ нээх</Button>
+          <Button onClick={() => { window.location.hash = "#/vocab?tab=network"; }}>{t.openNetwork}</Button>
         </div>
       </Card>
 
       <p className="text-center text-[11.5px] text-sumi-400">
-        Толь нь OpenJLPT (CC-BY-SA-4.0) болон JMdict өгөгдөлд суурилна.{" "}
-        <a href={href("about")} className="font-bold text-ai-600 underline underline-offset-4">Эх сурвалж →</a>
+        {t.dictFooter}{" "}
+        <a href={href("about")} className="font-bold text-ai-600 underline underline-offset-4">{t.sourcesLink}</a>
       </p>
     </div>
   );

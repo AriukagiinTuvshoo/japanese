@@ -19,12 +19,12 @@ interface NavItem {
   badge?: number;
 }
 
-export const MOBILE_TABS: { id: string; to: string; k: string; label: string }[] = [
-  { id: "home", to: "home", k: "家", label: "Нүүр" },
-  { id: "vocab", to: "vocab", k: "語", label: "Сурах" },
-  { id: "quiz", to: "quiz", k: "題", label: "Дасгал" },
-  { id: "dict", to: "dict", k: "辞", label: "Толь" },
-  { id: "account", to: "account", k: "人", label: "Би" },
+export const MOBILE_TABS: { id: string; to: string; k: string; key: "mobileHome" | "mobileLearn" | "mobilePractice" | "mobileDict" | "mobileMe" }[] = [
+  { id: "home", to: "home", k: "家", key: "mobileHome" },
+  { id: "vocab", to: "vocab", k: "語", key: "mobileLearn" },
+  { id: "quiz", to: "quiz", k: "題", key: "mobilePractice" },
+  { id: "dict", to: "dict", k: "辞", key: "mobileDict" },
+  { id: "account", to: "account", k: "人", key: "mobileMe" },
 ];
 
 export default function Shell({ children }: { children: ReactNode }) {
@@ -149,7 +149,7 @@ export default function Shell({ children }: { children: ReactNode }) {
             const base = ["vocab", "kanji", "grammar", "reading", "listening", "quiz", "write", "mock"].includes(route.name) ? route.name : "vocab";
             navigate(`${base}?level=${l}`, { keepScroll: true });
           }}
-          title={`${l} — ${LEVEL_LABEL[l]}`}
+          title={`${l} — ${LEVEL_LABEL[language][l]}`}
           className={cn(
             "h-7 rounded-lg px-2 font-mono text-[11.5px] font-extrabold transition",
             route.query.level === l ? "bg-sumi-900 text-washi-50" : "text-sumi-500 hover:text-sumi-900",
@@ -173,11 +173,11 @@ export default function Shell({ children }: { children: ReactNode }) {
             <span className="font-mono text-[11px] font-bold text-washi-50 tabnum">{Math.min(99, Math.round(goalPct * 100))}%</span>
           </Ring>
           <div className="min-w-0 flex-1">
-            <p className="text-[12px] font-bold text-washi-100">Өнөөдөр {today.min}/{doc.profile.dailyGoal} мин</p>
+            <p className="text-[12px] font-bold text-washi-100">{t.today} {today.min}/{doc.profile.dailyGoal} {t.minutes}</p>
             <p className="mt-1 flex items-center gap-2 text-[11.5px] text-washi-400">
-              <span>{streak} өдөр</span>
+              <span>{streak} {t.days}</span>
               <span className="h-1 w-1 rounded-full bg-washi-500" />
-              <span className="tabnum">Түвшин {levelInfo.level} · {doc.xp} оноо</span>
+              <span className="tabnum">{t.level} {levelInfo.level} · {doc.xp} {t.points}</span>
             </p>
           </div>
         </div>
@@ -189,7 +189,7 @@ export default function Shell({ children }: { children: ReactNode }) {
           className="relative mt-6 flex items-center gap-3 rounded-xl px-3 py-2.5 text-left text-[13px] font-bold text-washi-400 transition-colors hover:bg-white/[0.06] hover:text-washi-50"
         >
           <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-white/[0.06] font-mincho text-[16px]">設</span>
-          <span className="truncate">{doc.profile.name || "Зочин"} · Тохиргоо</span>
+          <span className="truncate">{doc.profile.name || t.guest} · {t.settings}</span>
         </button>
       </aside>
 
@@ -198,8 +198,8 @@ export default function Shell({ children }: { children: ReactNode }) {
         <div className="flex h-16 items-center gap-3 px-4">
           {Brand}
           <div className="ml-auto flex items-center gap-2">
-            <button onClick={() => setSearch(true)} aria-label="Хайлт" className="grid h-10 w-10 place-items-center rounded-xl bg-white/10 text-washi-50">🔎</button>
-            <button onClick={() => setMenu(true)} aria-label="Цэс" className="grid h-10 w-10 place-items-center rounded-xl bg-white/10 text-washi-50">
+            <button onClick={() => setSearch(true)} aria-label={t.searchTitle} className="grid h-10 w-10 place-items-center rounded-xl bg-white/10 text-washi-50">🔎</button>
+            <button onClick={() => setMenu(true)} aria-label={t.menu} className="grid h-10 w-10 place-items-center rounded-xl bg-white/10 text-washi-50">
               <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M4 7h16M4 12h16M4 17h10" /></svg>
             </button>
           </div>
@@ -218,7 +218,7 @@ export default function Shell({ children }: { children: ReactNode }) {
         )}>
           <div className="mb-5 flex items-center justify-between px-2">
             {Brand}
-            <button onClick={() => setMenu(false)} className="grid h-9 w-9 place-items-center rounded-lg bg-white/10 text-washi-50" aria-label="Хаах">✕</button>
+            <button onClick={() => setMenu(false)} className="grid h-9 w-9 place-items-center rounded-lg bg-white/10 text-washi-50" aria-label={t.close}>✕</button>
           </div>
           <div className="mb-5 flex gap-2 px-2">{LevelSwitcher}{LanguageSwitcher}</div>
           {SideNav}
@@ -232,13 +232,13 @@ export default function Shell({ children }: { children: ReactNode }) {
             onClick={() => setSearch(true)}
             className="flex h-10 flex-1 max-w-md items-center gap-2.5 rounded-xl border border-sumi-900/10 bg-white/70 px-3.5 text-left text-[13px] font-semibold text-sumi-400 transition hover:border-sumi-900/20 hover:bg-white"
           >
-            🔎 Хайлт — япон, ромажи, монгол…
+            🔎 {t.search}
             <kbd className="ml-auto rounded-md border border-sumi-900/12 bg-white px-1.5 py-0.5 font-mono text-[10px] font-bold text-sumi-500">⌘K</kbd>
           </button>
           <div className="ml-auto flex items-center gap-2">
             {LanguageSwitcher}
             {LevelSwitcher}
-            <Chip tone="shu" className="gap-1.5">{streak} өдөр</Chip>
+            <Chip tone="shu" className="gap-1.5">{streak} {t.days}</Chip>
             <button
               onClick={() => setAccountOpen(true)}
               className="flex items-center gap-2 rounded-xl border border-sumi-900/10 bg-white/70 py-1.5 pl-1.5 pr-3 transition hover:bg-white"
@@ -246,7 +246,7 @@ export default function Shell({ children }: { children: ReactNode }) {
               <span className="grid h-7 w-7 place-items-center rounded-lg bg-sumi-900 font-mono text-[11px] font-bold text-washi-50 tabnum">
                 {levelInfo.level}
               </span>
-              <span className="max-w-[120px] truncate text-[12.5px] font-bold">{doc.profile.name || "Зочин"}</span>
+              <span className="max-w-[120px] truncate text-[12.5px] font-bold">{doc.profile.name || t.guest}</span>
             </button>
           </div>
         </div>
@@ -265,17 +265,17 @@ export default function Shell({ children }: { children: ReactNode }) {
       {/* ── Mobile bottom bar ── */}
       <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-sumi-900/10 bg-washi-50/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-lg lg:hidden">
         <div className="grid grid-cols-5">
-          {MOBILE_TABS.map((t) => {
-            const on = route.name === t.id || (t.id === "vocab" && ["kanji", "grammar", "reading", "listening", "write", "kana"].includes(route.name));
+          {MOBILE_TABS.map((tab) => {
+            const on = route.name === tab.id || (tab.id === "vocab" && ["kanji", "grammar", "reading", "listening", "write", "kana"].includes(route.name));
             return (
-              <a key={t.id} href={href(t.to)} className="relative flex flex-col items-center gap-0.5 py-2.5">
+              <a key={tab.id} href={href(tab.to)} className="relative flex flex-col items-center gap-0.5 py-2.5">
                 <span className={cn("relative font-mincho text-[19px] font-bold leading-none transition-colors", on ? "text-shu-500" : "text-sumi-500")}>
-                  {t.k}
-                  {t.id === "vocab" && due > 0 && (
+                  {tab.k}
+                  {tab.id === "vocab" && due > 0 && (
                     <span className="absolute -right-2.5 -top-1 grid h-4 min-w-4 place-items-center rounded-full bg-shu-500 px-1 font-mono text-[9px] font-bold text-white tabnum">{due}</span>
                   )}
                 </span>
-                <span className={cn("text-[10px] font-bold", on ? "text-sumi-900" : "text-sumi-500")}>{t.label}</span>
+                <span className={cn("text-[10px] font-bold", on ? "text-sumi-900" : "text-sumi-500")}>{t[tab.key]}</span>
                 {on && <span className="absolute top-0 h-0.5 w-8 rounded-full bg-shu-500" />}
               </a>
             );
@@ -299,6 +299,8 @@ export default function Shell({ children }: { children: ReactNode }) {
 
 function Onboarding({ onDone }: { onDone: () => void }) {
   const { doc, actions } = useStore();
+  const language = doc.profile.language ?? "mn";
+  const t = ui[language];
   const [step, setStep] = useState(0);
   const [name, setName] = useState(doc.profile.name);
   const [goal, setGoal] = useState(doc.profile.dailyGoal);
@@ -313,10 +315,9 @@ function Onboarding({ onDone }: { onDone: () => void }) {
         <div className="relative overflow-hidden bg-sumi-900 px-7 pb-7 pt-8 text-washi-50">
           <div className="seigaiha pointer-events-none absolute inset-0 text-white/[0.05]" />
           <p className="relative font-jp text-[12.5px] tracking-[0.3em] text-washi-400">ようこそ</p>
-          <h2 className="relative mt-2 text-[1.7rem] font-extrabold leading-tight">Nihongo Dōjō-д тавтай морил</h2>
+          <h2 className="relative mt-2 text-[1.7rem] font-extrabold leading-tight">{t.onboardWelcome}</h2>
           <p className="relative mt-2.5 text-[13.5px] leading-relaxed text-washi-300">
-            10,461 үг, 2,686 ханз, 526 дүрэм — монгол хэл дээрх тайлбартай.
-            Дараагийн хэдэн алхмаар тохируулъя.
+            {t.onboardIntro}
           </p>
           <div className="relative mt-4 flex gap-1.5">
             {[0, 1, 2].map((i) => (
@@ -328,12 +329,12 @@ function Onboarding({ onDone }: { onDone: () => void }) {
         <div className="space-y-5 px-7 py-6">
           {step === 0 && (
             <label className="block">
-              <span className="text-[12.5px] font-bold text-sumi-700">Таны нэр</span>
+              <span className="text-[12.5px] font-bold text-sumi-700">{t.yourName}</span>
               <input
                 autoFocus
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                placeholder="Жишээ: Төвшин"
+                placeholder={t.namePlaceholder}
                 className="mt-1.5 h-12 w-full rounded-xl border border-sumi-900/15 bg-white px-4 text-[15px] font-semibold outline-none transition focus:border-shu-500 focus:ring-4 focus:ring-shu-500/10"
               />
             </label>
@@ -341,7 +342,7 @@ function Onboarding({ onDone }: { onDone: () => void }) {
 
           {step === 1 && (
             <div>
-              <p className="text-[12.5px] font-bold text-sumi-700">Зорилтот түвшин</p>
+              <p className="text-[12.5px] font-bold text-sumi-700">{t.targetLevel}</p>
               <div className="mt-2 grid grid-cols-5 gap-2">
                 {LEVELS.map((l) => (
                   <button
@@ -353,11 +354,11 @@ function Onboarding({ onDone }: { onDone: () => void }) {
                     )}
                   >
                     <span className="block font-mono text-[15px] font-extrabold">{l}</span>
-                    <span className="mt-0.5 block text-[10px] font-bold leading-tight">{LEVEL_LABEL[l]}</span>
+                    <span className="mt-0.5 block text-[10px] font-bold leading-tight">{LEVEL_LABEL[language][l]}</span>
                   </button>
                 ))}
               </div>
-              <p className="mt-4 text-[12.5px] font-bold text-sumi-700">Өдөрт хэдэн минут?</p>
+              <p className="mt-4 text-[12.5px] font-bold text-sumi-700">{t.minutesPerDay}</p>
               <div className="mt-2 grid grid-cols-4 gap-2">
                 {[15, 30, 45, 60].map((m) => (
                   <button
@@ -369,7 +370,7 @@ function Onboarding({ onDone }: { onDone: () => void }) {
                     )}
                   >
                     <span className="block text-[18px] font-extrabold tabnum">{m}</span>
-                    <span className="text-[10.5px] font-bold">мин</span>
+                    <span className="text-[10.5px] font-bold">{t.minutes}</span>
                   </button>
                 ))}
               </div>
@@ -378,11 +379,11 @@ function Onboarding({ onDone }: { onDone: () => void }) {
 
           {step === 2 && (
             <div className="space-y-2.5">
-              <p className="text-[13px] leading-relaxed text-sumi-600">Хаанаас эхлэхээ сонгоно уу:</p>
+              <p className="text-[13px] leading-relaxed text-sumi-600">{t.startFrom}</p>
               {[
-                { id: "kana", k: "あ", t: "Тэгээс эхэлнэ", d: "Хирагана, катакана — суурь бүрэн", to: "kana" },
-                { id: "placement", k: "測", t: "Түвшнээ тогтоох", d: "40 асуулттай тест — одоогийн түвшнээ мэд", to: "placement" },
-                { id: "vocab", k: "語", t: "Шууд суралцах", d: `${target} үгийн сангаас эхлэх`, to: `vocab?level=${target}` },
+                { id: "kana", k: "あ", title: t.optKanaT, d: t.optKanaD, to: "kana" },
+                { id: "placement", k: "測", title: t.optPlaceT, d: t.optPlaceD, to: "placement" },
+                { id: "vocab", k: "語", title: t.optVocabT, d: t.optVocabD(target), to: `vocab?level=${target}` },
               ].map((o) => (
                 <button
                   key={o.id}
@@ -395,7 +396,7 @@ function Onboarding({ onDone }: { onDone: () => void }) {
                 >
                   <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-sumi-900 font-mincho text-[20px] font-bold text-washi-50">{o.k}</span>
                   <span className="min-w-0">
-                    <span className="block text-[14.5px] font-extrabold text-sumi-900">{o.t}</span>
+                    <span className="block text-[14.5px] font-extrabold text-sumi-900">{o.title}</span>
                     <span className="block text-[12.5px] text-sumi-500">{o.d}</span>
                   </span>
                   <span className="ml-auto text-sumi-300">→</span>
@@ -406,13 +407,13 @@ function Onboarding({ onDone }: { onDone: () => void }) {
 
           <div className="flex items-center justify-between pt-1">
             {step > 0 ? (
-              <Button variant="ghost" size="sm" onClick={() => setStep(step - 1)}>← Буцах</Button>
+              <Button variant="ghost" size="sm" onClick={() => setStep(step - 1)}>{t.back}</Button>
             ) : (
-              <Button variant="ghost" size="sm" onClick={() => { save(); onDone(); }}>Алгасах</Button>
+              <Button variant="ghost" size="sm" onClick={() => { save(); onDone(); }}>{t.skip}</Button>
             )}
             {step < 2 && (
               <Button size="md" onClick={() => { save(); setStep(step + 1); }}>
-                Үргэлжлүүлэх →
+                {t.cont}
               </Button>
             )}
           </div>
