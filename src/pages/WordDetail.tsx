@@ -45,7 +45,7 @@ export default function WordDetail({ id }: { id: string }) {
     return [...out.values()].sort((a, b) => a.lvl.localeCompare(b.lvl)).slice(0, 12);
   }, [data, v]);
 
-  if (!data) return <Spinner label="Үг ачаалж байна…" />;
+  if (!data) return <Spinner label={t.loadingVocab} lang={language} />;
   if (!v) {
     return (
       <Empty
@@ -70,6 +70,8 @@ export default function WordDetail({ id }: { id: string }) {
           <Button size="sm" onClick={() => navigate(`review?level=${v.lvl}`)}>{t.review2}</Button>
         </div>
       </div>
+
+      {v.source_issue && <p role="alert" className="rounded-xl bg-kin-50 p-4 text-sm text-kin-700">{t.sourceReviewWarning}</p>}
 
       {/* ── үндсэн карт ── */}
       <Card className="overflow-hidden p-0">

@@ -116,6 +116,8 @@ export default function KanjiDetail({ char }: { char: string }) {
         </div>
       </Card>
 
+      {k.source_issue && <p role="alert" className="rounded-xl bg-kin-50 p-4 text-sm text-kin-700">{t.sourceReviewWarning}</p>}
+
       <Tabs value={tab} onChange={setTab} items={TABS.map((tb) => ({ ...tb, label: t[TAB_KEYS[tb.id]], badge: tb.id === "words" ? words.length || undefined : undefined }))} />
 
       {tab === "overview" && (

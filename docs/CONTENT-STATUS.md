@@ -1,35 +1,35 @@
 # MN/EN completion status — 2026-10-08
 
-**Incomplete. Do not merge or claim production completion.**
+**Incomplete. PR #12 must remain draft and unmerged. No production completion is claimed.**
 
-Baseline `6cf8ca1` (current main at session start) matches the supplied audit: 7,170 missing meanings. This batch adds 100 N5 vocabulary meanings, 100 N1 kanji meanings, 98 N4 grammar meanings and 28 grammar example translations. These are AI-authored, independently unreviewed translations, not human-curated content.
+Baseline `6cf8ca1`: 7,170 missing meanings. Current batches add 1,004 meanings, all 526 grammar formation translations and 837 N5–N3 grammar example translations. AI-authored, independently unreviewed; coverage is not semantic approval.
 
-Remaining meanings:
-
-| Level | Vocabulary | Kanji | Grammar |
+| Level | Missing vocabulary meanings | Missing kanji meanings | Missing grammar meanings |
 |---|---:|---:|---:|
-| N5 | 259 | 0 | 0 |
+| N5 | 0 | 0 | 0 |
 | N4 | 450 | 0 | 0 |
-| N3 | 620 | 0 | 101 |
-| N2 | 560 | 0 | 123 |
-| N1 | 3,090 | 1,546 | 123 |
-| Total | 4,979 | 1,546 | 347 |
+| N3 | 620 | 0 | 0 |
+| N2 | 560 | 0 | 0 |
+| N1 | 3,090 | 1,446 | 0 |
+| Total | 4,720 | 1,446 | 0 |
 
-Additional release gaps: 15,216 untranslated examples (13,718 vocabulary + 1,498 grammar), 522 untranslated formation explanations, 5,389 entries unclassified by topic, and 6,503 existing translations without maintained per-entry provenance. These measures overlap; do not sum them as distinct entries. Topic rules are multi-label suggestions and need semantic review; unmatched entries deliberately receive no catch-all. Every existing draft also needs accuracy review. Page-wide localization audit is not complete (notably Admin remains hardcoded Mongolian).
+Remaining: **6,166 meanings, 14,407 examples** (13,718 vocabulary + 689 N2/N1 grammar), **0 formations, 4,891 unclassified entries, 6,503 missing provenance records, 5 unresolved source issues**. Invalid categories and mislabeled MN: zero. Measures overlap; do not sum as distinct entries.
 
-## Validators
+N5 vocabulary/kanji and N4 kanji are fully classified. Categories support multiple topics, including relationships. Explicit semantic override evidence is maintained in `content/categories/provenance.json`. Unmatched entries remain visibly filterable, not hidden in a catch-all. Source warnings retain original Japanese/English and block release. Existing drafts and new translations still need accuracy review. Page-wide bilingual localization audit remains incomplete, notably Admin.
 
-- `npm run data:validate`: legacy structural validator, preserved.
-- `npm run coverage:report`: writes maintained summary `content/coverage-report.json` and ignored detailed `.cache/coverage-issues.json`.
-- `npm run coverage:validate`: exits nonzero for any missing meaning/example/formation, unclassified entry, invalid category, missing provenance or mislabeled MN.
-- `npm test`: route and coverage-validator regression tests.
-- `npm run test:browser`: real Chromium bilingual grammar/category smoke test; not a comprehensive page audit.
-- CI `complete-content` deliberately fails until the product meets coverage requirements. Do not weaken the check to merge this draft.
+## Validation
 
-## Concrete verification blockers
+- `npm run data:validate`: preserved structural validator.
+- `npm run coverage:report`: maintained summary and ignored detailed issues.
+- `npm run coverage:validate`: intentionally nonzero until every required coverage measure is zero, including unresolved source issues. Never weaken to merge.
+- `npm test`: routes, coverage, grammar helpers and source-retention regressions.
+- Source-retention regression verifies all 13,673 baseline entries and original source fields/examples/strokes/drafts. Formatting-related deletion counts do not establish data loss. Vocabulary `j1693050` 五十 is correctly translated `тавь` with a persistent assertion.
+- `npm run test:browser`: exhaustive MN/EN grammar detail/forms/examples plus topic controls. Prior N5/N4 run passed 179 rules and 534 examples in both languages. Expanded N5–N3 run passed: 280 rules/formations and 837 examples in each language, plus vocabulary/kanji topic filters.
 
-Local Chromium could not start: `/tmp/chromium: error while loading shared libraries: libnspr4.so`. Sandbox outbound network allows GitHub/npm/PyPI only, preventing normal OS package installation and access to Vercel production. HTTPS to the current production deployment returned curl error 35 (`SSL_ERROR_SYSCALL`). No actual live-site MN/EN verification has passed. GitHub deployment status reports the existing main deployment completed successfully; that is not a browser verification of these changes.
+Local typecheck, structural validation, tests and frontend build passed during continuation. Repeat after final changes. Full source rebuild has not run because source caches are absent; guarded batches reapply after upstream generation.
 
-Typecheck, structural data validation, production frontend build, and route/coverage regression checks pass locally. The source-data rebuild was not executed: cached upstream source archives are absent. The batch application is wired after upstream data builds to prevent loss of new translations.
+## Remaining work and blockers
 
-Remaining content authoring is unfinished, not blocked by a technical translation API. Do not represent this batch as the full requested scope. Merge and production deployment remain intentionally withheld because completeness and browser checks have not passed.
+Remaining content authoring is unfinished, not blocked by a translation API. Independent semantic review and full visible-page localization remain outstanding. Strict completeness deliberately blocks CI/release.
+
+Chromium's missing NSS/NSPR libraries were resolved using bundled dependencies. Sandbox outbound access is restricted to GitHub/npm/PyPI. Production HTTPS previously returned curl error 35 (`SSL_ERROR_SYSCALL`); no actual live MN/EN verification has passed. A successful old deployment status is not verification of these continuation changes. Merge, Vercel Production READY confirmation, and live verification remain withheld until the actual completion gate passes.

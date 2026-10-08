@@ -26,6 +26,7 @@ export interface Example {
 }
 
 export interface Vocab {
+  source_issue?: string;
   id: string;
   w: string;
   r: string;
@@ -52,6 +53,7 @@ export interface KanjiWord {
 }
 
 export interface Kanji {
+  source_issue?: string;
   k: string;
   lvl: Level;
   lvlSrc: "jlpt" | "derived";
@@ -84,6 +86,7 @@ export interface Grammar {
   en: string[] | string;
   mn: string | null;
   note: string | null;
+  note_en?: string | null;
   form: string | null;
   form_mn?: string | null;
   jlpt: Level;

@@ -2,7 +2,7 @@ import fs from "node:fs";
 import assert from "node:assert/strict";
 
 const read = p => JSON.parse(fs.readFileSync(p, "utf8"));
-const write = (p, value) => fs.writeFileSync(p, JSON.stringify(value) + "\n");
+const write = (p, value) => fs.writeFileSync(p, JSON.stringify(value, null, p.endsWith("-draft.json") ? 1 : p.endsWith("meta.json") ? 2 : undefined) + "\n");
 const levels = ["n5", "n4", "n3", "n2", "n1"];
 const batches = fs.readdirSync("content/mn/batches").filter(f => f.endsWith(".json")).sort().map(f => read(`content/mn/batches/${f}`));
 const provenance = batches.map(b => b.provenance);
@@ -16,18 +16,29 @@ for (const batch of batches) {
     for (const [id, translation] of Object.entries(batch[kind] ?? {})) {
       const entry = entries.find(e => (kind === "kanji" ? e.k : e.id) === id);
       assert.ok(entry, `Unknown ${kind} key ${id}`);
+      if (translation.expected) for (const [field, expected] of Object.entries(translation.expected)) {
+        assert.deepEqual(entry[field], expected, `Source mismatch ${kind}/${id}/${field}`);
+      }
       const meanings = Array.isArray(translation.mn) ? translation.mn : [translation.mn];
-      assert.ok(meanings.length && meanings.every(m => typeof m === "string" && /[А-Яа-яӨөҮү]/.test(m)), `Invalid MN: ${id}`);
-      entry.mn = kind === "grammar" ? meanings.join("; ") : meanings;
-      entry.mn_provenance = batch.provenance.id;
-      if (kind !== "grammar") entry.mq = "draft";
-      if (translation.note) entry.note = translation.note;
-      if (translation.formMn) entry.form_mn = translation.formMn;
-      for (const [i, mn] of (translation.examples ?? []).entries()) {
-        assert.ok(entry.ex?.[i], `Unknown example ${id}/${i}`);
+      if (translation.mn !== undefined) {
+        assert.ok(meanings.length && meanings.every(m => typeof m === "string" && /[А-Яа-яӨөҮү]/.test(m)), `Invalid MN: ${kind}/${id}`);
+        entry.mn = kind === "grammar" ? meanings.join("; ") : meanings;
+        entry.mn_provenance = batch.provenance.id;
+        if (kind !== "grammar") entry.mq = "draft";
+      }
+      if (translation.sourceNote) entry.source_issue = translation.sourceNote;
+      if (translation.note) {entry.note = translation.note; entry.note_provenance = batch.provenance.id;}
+      if (translation.noteEn) entry.note_en = translation.noteEn;
+      if (translation.formMn) {entry.form_mn = translation.formMn; entry.form_mn_provenance = batch.provenance.id;}
+      assert.ok(!Array.isArray(translation.examples), `Examples must be keyed by Japanese sentence: ${id}`);
+      for (const [ja, value] of Object.entries(translation.examples ?? {})) {
+        const example = entry.ex?.find(e => e.ja === ja);
+        assert.ok(example, `Unknown Japanese example ${id}/${ja}`);
+        const mn = typeof value === "string" ? value : value.mn;
+        if (typeof value === "object") assert.equal(example.en, value.en, `Example English drift ${id}/${ja}`);
         assert.ok(/[А-Яа-яӨөҮү]/.test(mn));
-        entry.ex[i].mn = mn;
-        entry.ex[i].mn_provenance = batch.provenance.id;
+        example.mn = mn;
+        example.mn_provenance = batch.provenance.id;
       }
       applied++;
     }

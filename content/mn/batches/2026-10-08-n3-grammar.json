@@ -1,0 +1,2337 @@
+{
+  "provenance": {
+    "id": "mn-n3-grammar-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian meanings, formation explanations and examples cross-checked against Japanese and retained English. Stable rule IDs, sentence keys and source guards included. Independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/grammar/n3.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "grammar": {
+    "wake-da": {
+      "mn": "Баримт, нөхцөлөөс учрыг нь ойлгож дүгнэх: аргагүй ... юм байна; тийм учраас ...; тэгэхээр ... гэсэн үг.",
+      "expected": {
+        "p": "〜わけだ",
+        "en": "no wonder; that's why; it follows that",
+        "form": "Verb-plain / i-Adj / na-Adj + な / Noun + という + わけだ"
+      },
+      "formMn": "Үйл үгийн энгийн хэлбэр / い-тэмдэг нэр + わけだ; な-тэмдэг нэр + な + わけだ; нэр үг + という + わけだ.",
+      "examples": {
+        "三年も中国に住んでいたんですか。だから中国語が上手なわけですね。": {
+          "en": "You lived in China for three years? That's why your Chinese is so good.",
+          "mn": "Хятадад бүтэн гурван жил амьдарсан юм уу? Тийм болохоор хятад хэл чинь сайн юм байна."
+        },
+        "窓が全部開いている。どうりで寒いわけだ。": {
+          "en": "All the windows are open. No wonder it's cold.",
+          "mn": "Бүх цонх онгорхой байна. Аргагүй л хүйтэн байгаа юм байна."
+        },
+        "この本は三百ページだから、一日に二十ページ読めば、十五日で読み終わるわけだ。": {
+          "en": "This book has 300 pages, so if I read twenty pages a day, that means I'll finish it in fifteen days.",
+          "mn": "Энэ ном гурван зуун хуудастай болохоор өдөрт хорин хуудас уншвал арван тав хоногт дуусгах нь ээ."
+        }
+      }
+    },
+    "wake-de-wa-nai": {
+      "mn": "Бүрэн үгүйсгэхгүйгээр хязгаарлах: ... гэсэн үг биш; заавал ... биш; ... гэж байгаа юм биш.",
+      "expected": {
+        "p": "〜わけではない",
+        "en": "it doesn't mean that; it's not that; not necessarily",
+        "form": "Verb-plain / i-Adj / na-Adj + な / Noun + という + わけではない"
+      },
+      "formMn": "Үйл үгийн энгийн хэлбэр / い-тэмдэг нэр + わけではない; な-тэмдэг нэр + な + わけではない; нэр үг + という + わけではない.",
+      "examples": {
+        "料理が嫌いなわけではないが、毎日作る時間がない。": {
+          "en": "It's not that I dislike cooking, but I don't have time to cook every day.",
+          "mn": "Хоол хийх дургүй гэсэн үг биш ч өдөр бүр хийх зав байдаггүй."
+        },
+        "値段が高ければおいしいというわけではない。": {
+          "en": "Just because something is expensive doesn't mean it tastes good.",
+          "mn": "Үнэ өндөр байлаа гээд амттай гэсэн үг биш."
+        },
+        "全然分からないわけではありませんが、もう少しゆっくり話していただけますか。": {
+          "en": "It's not that I don't understand at all, but could you speak a little more slowly?",
+          "mn": "Огт ойлгохгүй байгаа юм биш, гэхдээ арай удаан ярьж өгч болох уу?"
+        }
+      }
+    },
+    "wake-ga-nai": {
+      "mn": "Огт боломжгүй гэж итгэлтэй үгүйсгэх: ... байх ямар ч боломжгүй; ... гэж байхгүй.",
+      "expected": {
+        "p": "〜わけがない",
+        "en": "there's no way that; cannot possibly",
+        "form": "Verb-plain / i-Adj / na-Adj + な / Noun + の + わけがない"
+      },
+      "formMn": "Үйл үгийн энгийн хэлбэр / い-тэмдэг нэр + わけがない; な-тэмдэг нэр + な + わけがない; нэр үг + の + わけがない.",
+      "examples": {
+        "こんなに練習したんだから、負けるわけがない。": {
+          "en": "We've practiced this hard, so there's no way we'll lose.",
+          "mn": "Ингэтлээ бэлтгэл хийсэн болохоор ялагдана гэж байхгүй."
+        },
+        "あんなにまじめな人が、約束を忘れるわけがありません。": {
+          "en": "There's no way someone that conscientious would forget a promise.",
+          "mn": "Тийм хариуцлагатай хүн амлалтаа мартана гэж байхгүй."
+        },
+        "一日で漢字を百個覚えるなんて、できるわけがないよ。": {
+          "en": "Learn a hundred kanji in one day? There's no way you can do that.",
+          "mn": "Нэг өдөрт зуун ханз цээжилнэ гэж үү? Тэгж чадна гэж байхгүй шүү."
+        }
+      }
+    },
+    "wake-ni-wa-ikanai": {
+      "mn": "Нийгэм, ёс суртахуун, үүрэг хариуцлагаас шалтгаалан хийж болохгүй байх: ...-ж болохгүй; ...-х аргагүй. ないわけにはいかない нь хийхээс зайлсхийж болохгүйг заана.",
+      "expected": {
+        "p": "〜わけにはいかない",
+        "en": "can't afford to; can't very well; must not (for social or moral reasons)",
+        "form": "Verb-dict / Verb-nai + わけにはいかない"
+      },
+      "formMn": "Үйл үгийн толь бичгийн хэлбэр + わけにはいかない: хийж болохгүй; ない-хэлбэр + わけにはいかない: хийхгүй байж болохгүй.",
+      "examples": {
+        "明日は大事な会議があるから、休むわけにはいかない。": {
+          "en": "There's an important meeting tomorrow, so I can't afford to take the day off.",
+          "mn": "Маргааш чухал хуралтай тул чөлөө авч болохгүй."
+        },
+        "友達に頼まれたことだから、断るわけにはいかなかった。": {
+          "en": "It was a favor my friend had asked, so I couldn't very well say no.",
+          "mn": "Найзын гуйсан зүйл байсан болохоор татгалзаж болохгүй байсан."
+        },
+        "招待されたのだから、パーティーに行かないわけにはいかない。": {
+          "en": "I was invited, so I can't not go to the party.",
+          "mn": "Уригдсан юм чинь үдэшлэгт очихгүй байж болохгүй."
+        }
+      }
+    },
+    "mono-da": {
+      "mn": "Ерөнхий жам, ёс, өмнөх дадал эсвэл гүн мэдрэмж: угаасаа ... байдаг; ...-х ёстой; урьд ...-даг байлаа; ямар ... юм бэ!",
+      "expected": {
+        "p": "〜ものだ",
+        "en": "it's natural that; one should; used to (nostalgia); how ...! (deep feeling)",
+        "form": "Verb-dict / Verb-ta / i-Adj / na-Adj + な + ものだ"
+      },
+      "formMn": "Үйл үгийн толь бичгийн, た-хэлбэр / い-тэмдэг нэр + ものだ; な-тэмдэг нэр + な + ものだ. Дурсамжид よく〜たものだ хэлбэр түгээмэл.",
+      "examples": {
+        "子どものころは、この川でよく泳いだものだ。": {
+          "en": "When I was a child, I used to swim in this river a lot.",
+          "mn": "Хүүхэд байхдаа энэ голд их сэлдэг байж билээ."
+        },
+        "新しい環境に慣れるには、時間がかかるものだ。": {
+          "en": "It naturally takes time to get used to a new environment.",
+          "mn": "Шинэ орчинд дасахад угаасаа хугацаа ордог."
+        },
+        "目上の人には敬語を使うものだ。": {
+          "en": "You're supposed to use honorific language with your superiors.",
+          "mn": "Дээд хүнд хүндэтгэлийн хэлээр хандах ёстой."
+        }
+      }
+    },
+    "mono-de-wa-nai": {
+      "mn": "Зохисгүй үйлдлийг ерөнхий зарчим болгон хориглох: ...-х ёсгүй; ...-ж болохгүй.",
+      "expected": {
+        "p": "〜ものではない",
+        "en": "one shouldn't; it's not right to",
+        "form": "Verb-dict + ものではない"
+      },
+      "formMn": "Үйл үгийн толь бичгийн хэлбэр + ものではない. Ерөнхий ёс, зохистой байдлаар хориглоно.",
+      "examples": {
+        "人の失敗を笑うものではない。": {
+          "en": "You shouldn't laugh at other people's mistakes.",
+          "mn": "Бусдын алдааг шоолж болохгүй."
+        },
+        "出された食べ物を残すものじゃないよ。": {
+          "en": "You shouldn't leave food that's been served to you.",
+          "mn": "Өгсөн хоолыг үлдээх ёсгүй шүү."
+        },
+        "夜遅くに人の家に電話をかけるものではありません。": {
+          "en": "One shouldn't phone someone's home late at night.",
+          "mn": "Шөнө орой хүний гэр рүү залгах ёсгүй."
+        }
+      }
+    },
+    "mono-mon": {
+      "mn": "Энгийн ярианд шалтаг, өөрийн тайлбарыг хэлэх: ... болохоор шүү дээ; ... юм чинь.",
+      "expected": {
+        "p": "〜もの / 〜もん",
+        "en": "because (casual excuse or self-justification)",
+        "form": "Sentence + もの / もん"
+      },
+      "formMn": "Өгүүлбэрийн төгсгөл + もの / もん. Ярианы тайлбар, шалтаг хэлэх өнгөтэй; албан хүсэлтэд тохиромжгүй байж болно.",
+      "examples": {
+        "「どうして食べないの？」「だって、ピーマン嫌いなんだもん。」": {
+          "en": "'Why aren't you eating?' 'Because I hate green peppers!'",
+          "mn": "“Яагаад идэхгүй байгаа юм?” “Амтат чинжүүнд дургүй юм чинь!”"
+        },
+        "一人で行けるよ。もう子どもじゃないもん。": {
+          "en": "I can go by myself. I'm not a kid anymore!",
+          "mn": "Би ганцаараа явж чадна аа. Одоо хүүхэд биш юм чинь."
+        },
+        "ケーキ、全部食べちゃった。だって、すごくおいしかったんだもん。": {
+          "en": "I ate the whole cake. Well, it was just so good!",
+          "mn": "Бялууг бүгдийг нь идчихсэн. Яах вэ дээ, их амттай байсан юм чинь."
+        }
+      }
+    },
+    "mono-dakara-mono-de": {
+      "mn": "Нөхцөл байдлын учир, шалтаг тайлбарлах: ... болохоор; ... учраас.",
+      "expected": {
+        "p": "〜ものだから / 〜もので",
+        "en": "because; since (explaining or excusing a situation)",
+        "form": "Verb-plain / i-Adj / na-Adj + な / Noun + な + ものだから / もので"
+      },
+      "formMn": "Үйл үгийн энгийн хэлбэр / い-тэмдэг нэр + ものだから / もので; な-тэмдэг нэр / нэр үг + な + ものだから / もので.",
+      "examples": {
+        "道がすごく混んでいたものだから、約束の時間に間に合わなかった。": {
+          "en": "The roads were really crowded, so I couldn't make it on time.",
+          "mn": "Зам маш их түгжирсэн болохоор товлосон цагтаа амжаагүй."
+        },
+        "すみません、急いでいたもので、書類を持ってくるのを忘れてしまいました。": {
+          "en": "I'm sorry, I was in such a hurry that I forgot to bring the documents.",
+          "mn": "Уучлаарай, яарч байсан болохоор баримтаа авч ирэхээ мартчихсан."
+        },
+        "初めての海外旅行だったものだから、見るものすべてが珍しかった。": {
+          "en": "It was my first trip abroad, so everything I saw seemed new.",
+          "mn": "Анхны гадаад аялал байсан болохоор харсан бүхэн сонин санагдсан."
+        }
+      }
+    },
+    "koto-da": {
+      "mn": "Тухайн нөхцөлд хэрэгтэй зөвлөгөө өгөх: ...-х нь зүйтэй; ...-хгүй байх нь дээр.",
+      "expected": {
+        "p": "〜ことだ",
+        "en": "should; the best thing is to (advice)",
+        "form": "Verb-dict / Verb-nai + ことだ"
+      },
+      "formMn": "Үйл үгийн толь бичгийн хэлбэр / ない-хэлбэр + ことだ. Зөвлөгөө хэлэхэд хэрэглэнэ.",
+      "examples": {
+        "日本語が上手になりたいなら、毎日少しずつでも話すことだ。": {
+          "en": "If you want to get good at Japanese, you should speak it every day, even just a little.",
+          "mn": "Япон хэлээ сайжруулмаар байвал өдөр бүр бага ч гэсэн ярих хэрэгтэй."
+        },
+        "風邪を早く治したければ、無理をしないでゆっくり休むことです。": {
+          "en": "If you want to get over your cold quickly, the best thing is not to push yourself and to rest well.",
+          "mn": "Ханиадаа хурдан эдгээмээр байвал өөрийгөө хүчлэхгүй, сайн амрах хэрэгтэй."
+        },
+        "人の話は最後までよく聞くことだ。": {
+          "en": "You should always listen carefully to what people say, right to the end.",
+          "mn": "Хүний яриаг дуустал нь сайн сонсох хэрэгтэй."
+        }
+      }
+    },
+    "koto-wa-nai": {
+      "mn": "Хийх шаардлагагүйг хэлэх: ...-х хэрэггүй; заавал ...-х албагүй.",
+      "expected": {
+        "p": "〜ことはない",
+        "en": "there's no need to; don't have to",
+        "form": "Verb-dict + ことはない"
+      },
+      "formMn": "Үйл үгийн толь бичгийн хэлбэр + ことはない. Хийх шаардлагагүй гэсэн утгатай; боломжгүй гэсэн үг биш.",
+      "examples": {
+        "簡単な手術ですから、そんなに心配することはありませんよ。": {
+          "en": "It's a simple operation, so there's no need to worry so much.",
+          "mn": "Энгийн мэс засал тул тэгтлээ санаа зовох хэрэггүй шүү."
+        },
+        "駅までは歩いて五分だから、タクシーを使うことはない。": {
+          "en": "The station is a five-minute walk, so there's no need to take a taxi.",
+          "mn": "Буудал хүртэл таван минут алхах болохоор такси хэрэглэх шаардлагагүй."
+        },
+        "一回失敗したくらいで、あきらめることはないよ。": {
+          "en": "There's no need to give up just because you failed once.",
+          "mn": "Ганц удаа бүтэлгүйтлээ гээд бууж өгөх хэрэггүй шүү."
+        }
+      }
+    },
+    "koto-ni-shite-iru": {
+      "mn": "Өөрөө тогтмол мөрдөх дадал, дүрэмтэй байх: ...-ж байхаар шийдсэн; ...-даг заншилтай.",
+      "expected": {
+        "p": "〜ことにしている",
+        "en": "make it a rule to; make a point of",
+        "form": "Verb-dict / Verb-nai + ことにしている"
+      },
+      "formMn": "Үйл үгийн толь бичгийн хэлбэр / ない-хэлбэр + ことにしている.",
+      "examples": {
+        "健康のために、週に三回はジムに通うことにしている。": {
+          "en": "For my health, I make it a rule to go to the gym at least three times a week.",
+          "mn": "Эрүүл мэндийнхээ төлөө долоо хоногт дор хаяж гурван удаа фитнест явж байхаар шийдсэн."
+        },
+        "夜十時以降は、スマホを見ないことにしています。": {
+          "en": "I make a point of not looking at my phone after 10 p.m.",
+          "mn": "Орой арван цагаас хойш утсаа харахгүй байхаар шийдсэн."
+        },
+        "父は、給料日には家族を外食に連れていくことにしている。": {
+          "en": "My dad makes a point of taking the family out to eat on payday.",
+          "mn": "Аав цалин буух өдөр гэр бүлийнхнээ гадуур хооллохоор авч явдаг заншилтай."
+        }
+      }
+    },
+    "koto-ni-natte-iru": {
+      "mn": "Дүрэм, тохиролцоо, тогтсон хуваарь: ...-хаар тогтсон; ...-х ёстой байдаг.",
+      "expected": {
+        "p": "〜ことになっている",
+        "en": "it has been arranged that; it's the rule that; be supposed to",
+        "form": "Verb-dict / Verb-nai + ことになっている"
+      },
+      "formMn": "Үйл үгийн толь бичгийн хэлбэр / ない-хэлбэр + ことになっている.",
+      "examples": {
+        "この寮では、夜十一時までに戻ることになっている。": {
+          "en": "In this dorm, you're supposed to be back by 11 p.m.",
+          "mn": "Энэ дотуур байранд орой арван нэгэн цаг гэхэд буцаж ирэх дүрэмтэй."
+        },
+        "来月から大阪の支社で働くことになっています。": {
+          "en": "It's been arranged that I'll work at the Osaka branch from next month.",
+          "mn": "Ирэх сараас Осакагийн салбарт ажиллахаар тохирсон."
+        },
+        "図書館の中では、飲み物を飲んではいけないことになっている。": {
+          "en": "The rules say you can't have drinks inside the library.",
+          "mn": "Номын сан дотор юм ууж болохгүй гэсэн дүрэмтэй."
+        }
+      }
+    },
+    "koto-instruction": {
+      "mn": "Бичгээр өгсөн дүрэм, заавар: ...-х; ...-хгүй байх; ...-х ёстой.",
+      "expected": {
+        "p": "〜こと（instruction）",
+        "en": "must; do (written rule or instruction)",
+        "form": "Verb-dict / Verb-nai + こと"
+      },
+      "formMn": "Үйл үгийн толь бичгийн хэлбэр / ない-хэлбэр + こと. Бичгээр өгсөн зааврын төгсгөлд хэрэглэнэ.",
+      "examples": {
+        "レポートは、来週の金曜日までに提出すること。": {
+          "en": "Reports must be submitted by next Friday.",
+          "mn": "Тайланг ирэх долоо хоногийн баасан гараг гэхэд өгөх."
+        },
+        "図書館の本に、線を引かないこと。": {
+          "en": "Do not draw lines in library books.",
+          "mn": "Номын сангийн номонд зураас татахгүй байх."
+        },
+        "試験中は、スマホの電源を切っておくこと。": {
+          "en": "Keep your phone switched off during the exam.",
+          "mn": "Шалгалтын үеэр утсаа унтраасан байх."
+        }
+      }
+    },
+    "you-ni-iu-you-ni-tanomu": {
+      "mn": "Бусдын тушаал, хүсэлтийг дамжуулах: ...-хыг хэлэх; ...-ж өгөхийг хүсэх.",
+      "expected": {
+        "p": "〜ように言う / 〜ように頼む",
+        "en": "tell someone to do; ask someone to do (reported command or request)",
+        "form": "Verb-dict / Verb-nai + ように言う / ように頼む"
+      },
+      "formMn": "Үйл үгийн толь бичгийн хэлбэр / ない-хэлбэр + ように言う / ように頼む. Хэнд хэлснийг に-ээр зааж болно.",
+      "examples": {
+        "医者に、お酒を飲みすぎないように言われた。": {
+          "en": "My doctor told me not to drink too much.",
+          "mn": "Эмч надад архи хэт их уухгүй байхыг хэлсэн."
+        },
+        "隣の部屋の人に、夜は音楽の音を小さくするように頼んだ。": {
+          "en": "I asked the person next door to turn their music down at night.",
+          "mn": "Хажуугийн өрөөний хүнээс шөнийн цагаар хөгжмөө багасгахыг хүссэн."
+        },
+        "山下さんに、明日の会議に遅れないように伝えてください。": {
+          "en": "Please tell Ms. Yamashita not to be late for tomorrow's meeting.",
+          "mn": "Ямашитад маргаашийн хуралд хоцрохгүй байхыг дамжуулаарай."
+        }
+      }
+    },
+    "you-to-suru": {
+      "mn": "Үйлдэл хийх гэж оролдох эсвэл яг эхлэхийн өмнө байх: ...-х гэж оролдох; ...-х гэж байх.",
+      "expected": {
+        "p": "〜ようとする",
+        "en": "try to; attempt to; be about to",
+        "form": "Verb-volitional + とする"
+      },
+      "formMn": "Үйл үгийн хүсэл, уриалгын хэлбэр + とする. Жишээ: 行こうとする, 食べようとする.",
+      "examples": {
+        "ドアを開けようとしたが、鍵がかかっていて開かなかった。": {
+          "en": "I tried to open the door, but it was locked and wouldn't open.",
+          "mn": "Хаалга онгойлгох гэж оролдсон ч цоожтой байсан тул онгойгоогүй."
+        },
+        "家を出ようとしたとき、急に雨が降り出した。": {
+          "en": "Just as I was about to leave the house, it suddenly started to rain.",
+          "mn": "Гэрээсээ гарах гэж байтал гэнэт бороо орж эхэлсэн."
+        },
+        "弟は何度注意しても、部屋を片付けようとしない。": {
+          "en": "No matter how many times I tell him, my younger brother won't even try to tidy his room.",
+          "mn": "Хэчнээн сануулсан ч эрэгтэй дүү өрөөгөө цэгцлэхийг оролддог ч үгүй."
+        }
+      }
+    },
+    "sou-ni-nai-sou-mo-nai": {
+      "mn": "Болох шинжгүй гэж таамаглах: ...-хгүй бололтой; ...-х шинжгүй.",
+      "expected": {
+        "p": "〜そうにない / 〜そうもない",
+        "en": "unlikely to; doesn't look like it will",
+        "form": "Verb-stem + そうにない / そうもない"
+      },
+      "formMn": "Үйл үгийн ます-гүй үндэс + そうにない / そうもない.",
+      "examples": {
+        "この雨は、夕方までやみそうにない。": {
+          "en": "This rain doesn't look like it will stop before evening.",
+          "mn": "Энэ бороо орой болтол зогсох шинжгүй байна."
+        },
+        "仕事が多すぎて、今日中には終わりそうもない。": {
+          "en": "I have way too much work; it doesn't look like I'll finish today.",
+          "mn": "Ажил хэт их тул өнөөдөртөө дуусахгүй бололтой."
+        },
+        "こんなにたくさんの料理、二人では食べきれそうにないね。": {
+          "en": "It doesn't look like the two of us will be able to finish all this food.",
+          "mn": "Ийм их хоолыг хоёулаа барахгүй бололтой шүү."
+        }
+      }
+    },
+    "ippou-da": {
+      "mn": "Өөрчлөлт нэг чиглэлд тасралтгүй өрнөх: улам ...-саар байх; ...-х нь нэмэгдсээр байх.",
+      "expected": {
+        "p": "〜一方だ",
+        "en": "keep on -ing; more and more (change in one direction)",
+        "form": "Verb-dict + 一方だ"
+      },
+      "formMn": "Өөрчлөлт заасан үйл үгийн толь бичгийн хэлбэр + 一方だ. Нэг чиглэлд үргэлжилж буй өөрчлөлтөд хэрэглэнэ.",
+      "examples": {
+        "この町の人口は、減る一方だ。": {
+          "en": "This town's population just keeps on shrinking.",
+          "mn": "Энэ хотын хүн ам цөөрсөөр л байна."
+        },
+        "物価は上がる一方なのに、給料は全然上がらない。": {
+          "en": "Prices keep going up and up, yet my salary doesn't rise at all.",
+          "mn": "Үнэ өссөөр байхад цалин огт нэмэгдэхгүй байна."
+        },
+        "勉強をさぼっていたら、成績は下がる一方だった。": {
+          "en": "Since I kept skipping my studies, my grades just kept dropping.",
+          "mn": "Хичээлээ давталгүй залхуураад байтал дүн буурсаар байсан."
+        }
+      }
+    },
+    "ippou-de": {
+      "mn": "Хоёр тал, зэрэгцээ байдлыг харьцуулах: ... байхад нөгөө талаар ...; үүний зэрэгцээ ... .",
+      "expected": {
+        "p": "〜一方で",
+        "en": "while; on the other hand; at the same time",
+        "form": "Verb-plain / i-Adj / na-Adj + な / Noun + である + 一方で"
+      },
+      "formMn": "Үйл үгийн энгийн хэлбэр / い-тэмдэг нэр + 一方で; な-тэмдэг нэр + な + 一方で; нэр үг + である + 一方で.",
+      "examples": {
+        "インターネットは便利な一方で、危険な面もある。": {
+          "en": "The internet is convenient, but on the other hand it has its dangers.",
+          "mn": "Интернэт тохиромжтой боловч нөгөө талаар аюултай тал ч бий."
+        },
+        "この会社は給料が高い一方で、休みがとても少ない。": {
+          "en": "This company pays well, but on the other hand there are very few days off.",
+          "mn": "Энэ компани өндөр цалинтай боловч амралтын өдөр маш цөөн."
+        },
+        "彼女は会社で働く一方で、夜は大学院に通っている。": {
+          "en": "While working at a company, she also attends graduate school in the evenings.",
+          "mn": "Тэр компанид ажиллахын хажуугаар орой ахисан түвшний сургуульд суралцдаг."
+        }
+      }
+    },
+    "ni-taishite": {
+      "mn": "Хэнд, юунд хандаж буйг эсвэл эсрэгцүүллийг заах: ...-д хандаж; ...-ын эсрэг; ...-тай харьцуулахад.",
+      "expected": {
+        "p": "〜に対して",
+        "en": "toward; against; in contrast to",
+        "form": "Noun + に対して / Noun + に対する + Noun / Verb-plain / i-Adj / na-Adj + な + のに対して"
+      },
+      "formMn": "Нэр үг + に対して; дараах нэр үгийг тодотговол нэр үг + に対する + нэр үг. Эсрэгцүүлэхэд үйл үгийн энгийн хэлбэр / い-тэмдэг нэр + のに対して; な-тэмдэг нэр + な + のに対して.",
+      "examples": {
+        "お客様に対して、そんな言い方をしてはいけない。": {
+          "en": "You mustn't speak like that to a customer.",
+          "mn": "Үйлчлүүлэгчтэй тэгж ярьж болохгүй."
+        },
+        "新しい税金に対する反対の声が高まっている。": {
+          "en": "Opposition to the new tax is growing.",
+          "mn": "Шинэ татварыг эсэргүүцэх дуу хоолой нэмэгдэж байна."
+        },
+        "東京は晴れているのに対して、大阪は朝から大雨だ。": {
+          "en": "Whereas it's sunny in Tokyo, it's been pouring in Osaka since morning.",
+          "mn": "Токиод цэлмэг байхад Осакад өглөөнөөс хойш аадар бороо орж байна."
+        }
+      }
+    },
+    "ni-tsuite": {
+      "mn": "Яриа, бодол, судалгааны сэдэв: ...-ын тухай; ...-тай холбоотой.",
+      "expected": {
+        "p": "〜について",
+        "en": "about; concerning; regarding",
+        "form": "Noun + について / Noun + についての + Noun"
+      },
+      "formMn": "Нэр үг + について; нэр үг тодотгоход нэр үг + についての + нэр үг.",
+      "examples": {
+        "今日の授業では、日本の食文化について話し合いました。": {
+          "en": "In today's class, we discussed Japanese food culture.",
+          "mn": "Өнөөдрийн хичээлээр Японы хоолны соёлын тухай ярилцсан."
+        },
+        "新しい商品についての質問は、こちらのメールアドレスまでお送りください。": {
+          "en": "Please send any questions about the new product to this email address.",
+          "mn": "Шинэ бүтээгдэхүүний талаарх асуултаа энэ цахим шуудангийн хаягаар илгээнэ үү."
+        },
+        "その事件について、警察はまだ何も発表していない。": {
+          "en": "The police haven't announced anything about the incident yet.",
+          "mn": "Тэр хэргийн талаар цагдаа хараахан юу ч мэдэгдээгүй."
+        }
+      }
+    },
+    "ni-yotte-ni-yoru": {
+      "mn": "Үйлдэгч, арга хэрэгсэл, шалтгаан эсвэл ялгаатай нөхцөл: ...-аар; ...-ын улмаас; ...-аас хамааран.",
+      "expected": {
+        "p": "〜によって / 〜による",
+        "en": "by (agent); by means of; due to; depending on",
+        "form": "Noun + によって / Noun + による + Noun"
+      },
+      "formMn": "Нэр үг + によって; нэр үг тодотгоход нэр үг + による + нэр үг. Үйлдэгч, шалтгаан, арга, хамаарал гэсэн утгыг нөхцөлөөс ялгана.",
+      "examples": {
+        "この橋は、有名な建築家によって設計された。": {
+          "en": "This bridge was designed by a famous architect.",
+          "mn": "Энэ гүүрийг алдартай архитектор зурагласан."
+        },
+        "台風による被害は、まだ正確には分かっていない。": {
+          "en": "The full extent of the damage caused by the typhoon is still unknown.",
+          "mn": "Хар салхины учруулсан хохирол яг хэд болох нь хараахан тодорхойгүй."
+        },
+        "国によって、食事のマナーはずいぶん違う。": {
+          "en": "Table manners differ quite a lot from country to country.",
+          "mn": "Хооллох ёс улс орон бүрд нэлээд ялгаатай."
+        }
+      }
+    },
+    "ni-yoru-to-ni-yoreba": {
+      "mn": "Мэдээллийн эх сурвалжийг заах: ...-ын хэлснээр; ...-ын мэдээлснээр; ...-аас үзэхэд.",
+      "expected": {
+        "p": "〜によると / 〜によれば",
+        "en": "according to",
+        "form": "Noun + によると / Noun + によれば"
+      },
+      "formMn": "Мэдээллийн эх сурвалж заасан нэр үг + によると / によれば.",
+      "examples": {
+        "天気予報によると、週末は大雪になるそうだ。": {
+          "en": "According to the weather forecast, there's going to be heavy snow this weekend.",
+          "mn": "Цаг агаарын мэдээгээр амралтын өдрөөр их цас орох гэнэ."
+        },
+        "ニュースによれば、事故の原因はまだ分かっていないらしい。": {
+          "en": "According to the news, the cause of the accident still isn't known.",
+          "mn": "Мэдээгээр бол ослын шалтгаан хараахан тодроогүй бололтой."
+        },
+        "姉の話によると、あのレストランは予約がないと入れないということだ。": {
+          "en": "According to my sister, you can't get into that restaurant without a reservation.",
+          "mn": "Эгчийн хэлснээр тэр ресторанд захиалгагүй бол орох боломжгүй гэнэ."
+        }
+      }
+    },
+    "bakari-de-naku": {
+      "mn": "Нэг зүйлээр хязгаарлагдахгүйг нэмэн хэлэх: зөвхөн ... төдийгүй ... бас.",
+      "expected": {
+        "p": "〜ばかりでなく",
+        "en": "not only ... but also",
+        "form": "Verb-plain / i-Adj / na-Adj + な / Noun + ばかりでなく"
+      },
+      "formMn": "Үйл үгийн энгийн хэлбэр / い-тэмдэг нэр / нэр үг + ばかりでなく; な-тэмдэг нэр + な + ばかりでなく.",
+      "examples": {
+        "この映画は子どもばかりでなく、大人も楽しめる。": {
+          "en": "Not only children but adults too can enjoy this film.",
+          "mn": "Энэ киног хүүхдүүд төдийгүй томчууд ч үзээд таашаал авч болно."
+        },
+        "新しいスマホは画面が大きいばかりでなく、電池も長持ちする。": {
+          "en": "The new smartphone not only has a big screen, its battery lasts a long time too.",
+          "mn": "Шинэ утас дэлгэц томтой төдийгүй цэнэг нь ч удаан барьдаг."
+        },
+        "運動は体にいいばかりでなく、ストレスを減らす効果もある。": {
+          "en": "Exercise is not only good for your body, it also helps reduce stress.",
+          "mn": "Дасгал бие махбодод сайн төдийгүй стресс багасгах нөлөөтэй."
+        }
+      }
+    },
+    "dake-de-naku": {
+      "mn": "Нэмэлт шинж, үйлдэл хэлэх: ... төдийгүй ... мөн.",
+      "expected": {
+        "p": "〜だけでなく",
+        "en": "not only ... but also",
+        "form": "Verb-plain / i-Adj / na-Adj + な / Noun + だけでなく"
+      },
+      "formMn": "Үйл үгийн энгийн хэлбэр / い-тэмдэг нэр / нэр үг + だけでなく; な-тэмдэг нэр + な + だけでなく.",
+      "examples": {
+        "この店は料理がおいしいだけでなく、値段も安い。": {
+          "en": "This restaurant not only has delicious food, it's cheap too.",
+          "mn": "Энэ газрын хоол амттай төдийгүй үнэ нь ч хямд."
+        },
+        "地震の後、水だけでなく電気も止まってしまった。": {
+          "en": "After the earthquake, not only the water but also the electricity was cut off.",
+          "mn": "Газар хөдлөлтийн дараа ус төдийгүй цахилгаан ч тасарсан."
+        },
+        "彼女は歌が上手なだけでなく、自分で曲も作っている。": {
+          "en": "She not only sings well but also writes her own songs.",
+          "mn": "Тэр эмэгтэй сайн дуулдаг төдийгүй өөрөө ая зохиодог."
+        }
+      }
+    },
+    "mo-ba-mo": {
+      "mn": "Хоёр шинж эсвэл зүйл зэрэг байгааг хэлэх: ... ч бий, ... ч бий; ... ч, ... ч.",
+      "expected": {
+        "p": "〜も〜ば〜も",
+        "en": "both ... and ...; not only ... but also",
+        "form": "Noun + も + Verb-ba + Noun + も / Noun + も + i-Adj stem + ければ + Noun + も"
+      },
+      "formMn": "Нэр үг + も + үйл үгийн ば-хэлбэр + нэр үг + も; эсвэл нэр үг + も + い-тэмдэг нэрийн い-гүй үндэс + ければ + нэр үг + も. Хоёр шинжийг хамтад нь хэлнэ.",
+      "examples": {
+        "彼女は歌も歌えば、ピアノも弾く。": {
+          "en": "She both sings and plays the piano.",
+          "mn": "Тэр эмэгтэй дуулдаг ч, төгөлдөр хуур тоглодог ч."
+        },
+        "この町には、海もあれば山もある。": {
+          "en": "This town has both the sea and the mountains.",
+          "mn": "Энэ хотод далай ч бий, уул ч бий."
+        },
+        "人生には、いいときもあれば悪いときもある。": {
+          "en": "In life there are good times and there are bad times.",
+          "mn": "Амьдралд сайн үе ч бий, муу үе ч бий."
+        }
+      }
+    },
+    "rashii-typical-of": {
+      "mn": "Тухайн хүн, зүйлд зохицсон хэв шинж: ... шиг; жинхэнэ ...-д тохирох; ...-ын шинжтэй.",
+      "expected": {
+        "p": "〜らしい（typical of）",
+        "en": "typical of; befitting; truly like",
+        "form": "Noun + らしい"
+      },
+      "formMn": "Нэр үг + らしい. い-тэмдэг нэр шиг хувирна: らしく, らしくない. Дам мэдээний らしい-гаас ялгана.",
+      "examples": {
+        "今日は春らしい暖かい一日だった。": {
+          "en": "Today was a warm, truly spring-like day.",
+          "mn": "Өнөөдөр яг хаврынх шиг дулаахан өдөр байлаа."
+        },
+        "文句ばかり言うなんて、君らしくないね。": {
+          "en": "Complaining all the time isn't like you.",
+          "mn": "Үргэлж гомдоллоод байх чинь чам шиг биш шүү."
+        },
+        "もっと学生らしい服装で来てください。": {
+          "en": "Please come dressed in a way more appropriate for a student.",
+          "mn": "Сурагчид илүү тохирох хувцастай ирээрэй."
+        }
+      }
+    },
+    "ppoi": {
+      "mn": "Ярианы хэлэнд төсөөтэй шинж эсвэл амархан илрэх хандлага: ...-рхуу; ... шиг; ...-х гээд байдаг.",
+      "expected": {
+        "p": "〜っぽい",
+        "en": "-ish; -like; tends to (casual)",
+        "form": "Noun / Verb-stem / i-Adj stem + っぽい"
+      },
+      "formMn": "Нэр үг / үйл үгийн ます-гүй үндэс / тохирох い-тэмдэг нэрийн い-гүй үндэс + っぽい. Бүх үгт дур мэдэн залгахгүй.",
+      "examples": {
+        "この服はちょっと子どもっぽいから、別のにしよう。": {
+          "en": "This outfit is a bit childish, so let's go with a different one.",
+          "mn": "Энэ хувцас жаахан хүүхдийнх шиг болохоор өөрийг сонгоё."
+        },
+        "最近忘れっぽくなって、困っている。": {
+          "en": "I've become forgetful lately, and it's a problem.",
+          "mn": "Сүүлийн үед мартамхай болоод хэцүү байна."
+        },
+        "あの白っぽいビルが、新しい市役所です。": {
+          "en": "That whitish building is the new city hall.",
+          "mn": "Тэр цагаандуу барилга шинэ хотын захиргаа."
+        }
+      }
+    },
+    "teki": {
+      "mn": "Нэр үгээс шинж, чиглэл заасан хэллэг үүсгэх: ...-ын шинжтэй; ...-ын хувьд; ... маягаар.",
+      "expected": {
+        "p": "〜的",
+        "en": "-ic; -al; in terms of",
+        "form": "Noun + 的な + Noun / Noun + 的に"
+      },
+      "formMn": "Нэр үг + 的な + нэр үг; үйлдлийг тодотговол нэр үг + 的に.",
+      "examples": {
+        "日本の伝統的な料理を食べてみたい。": {
+          "en": "I'd like to try traditional Japanese food.",
+          "mn": "Японы уламжлалт хоолыг идэж үзмээр байна."
+        },
+        "この問題は、経済的な理由で解決が難しい。": {
+          "en": "This problem is hard to solve for economic reasons.",
+          "mn": "Энэ асуудлыг эдийн засгийн шалтгаанаар шийдэхэд хэцүү."
+        },
+        "個人的には、この案に賛成です。": {
+          "en": "Personally, I'm in favor of this plan.",
+          "mn": "Хувьдаа би энэ саналыг дэмжиж байна."
+        }
+      }
+    },
+    "you-na-you-ni-like": {
+      "mn": "Адилтгах эсвэл жишээ татах: ... шиг; ...-тай адил; ... мэт.",
+      "expected": {
+        "p": "〜ような / 〜ように（like）",
+        "en": "like; as; such as",
+        "form": "Verb-plain / Noun + の + ような / ように"
+      },
+      "formMn": "Үйл үгийн энгийн хэлбэр + ような / ように; нэр үг + の + ような / ように. ような нь нэр үгийг, ように нь үйлдэл эсвэл шинжийг тодотгоно.",
+      "examples": {
+        "私も、あなたのような優しい看護師になりたいです。": {
+          "en": "I want to become a kind nurse like you, too.",
+          "mn": "Би ч бас тан шиг сайхан сэтгэлтэй сувилагч болмоор байна."
+        },
+        "先生が言ったように、この文法はテストによく出る。": {
+          "en": "As the teacher said, this grammar point often comes up on tests.",
+          "mn": "Багшийн хэлсэнчлэн энэ дүрэм шалгалтад байнга гардаг."
+        },
+        "東京のような大きな都市では、家賃がとても高い。": {
+          "en": "In big cities such as Tokyo, rent is very high.",
+          "mn": "Токио шиг том хотод байрны түрээс маш өндөр."
+        }
+      }
+    },
+    "marude-you-da": {
+      "mn": "Тод адилтгал: яг л ... шиг; ... мэт санагдах.",
+      "expected": {
+        "p": "まるで〜ようだ",
+        "en": "just like; as if",
+        "form": "まるで + Verb-plain / Noun + の + ようだ"
+      },
+      "formMn": "まるで + үйл үгийн энгийн хэлбэр + ようだ; нэр үгтэй бол まるで + нэр үг + の + ようだ.",
+      "examples": {
+        "この部屋は広くて明るくて、まるでホテルのようだ。": {
+          "en": "This room is so big and bright, it's just like a hotel.",
+          "mn": "Энэ өрөө уужим, гэрэлтэй, яг л зочид буудал шиг."
+        },
+        "久しぶりに会った友達は、まるで別人のように変わっていた。": {
+          "en": "My friend, whom I hadn't seen in ages, had changed so much she seemed like a different person.",
+          "mn": "Удаан уулзаагүй найз маань танихын аргагүй өөрчлөгдөж, яг л өөр хүн шиг болсон байсан."
+        },
+        "三月なのに、今日はまるで真夏のように暑い。": {
+          "en": "It's only March, but today it's as hot as midsummer.",
+          "mn": "Гуравдугаар сар байхад өнөөдөр яг зуны ид халуун үе шиг халуун байна."
+        }
+      }
+    },
+    "ni-chigai-nai": {
+      "mn": "Баримтаас ихээхэн итгэлтэй таамаглах: ... гарцаагүй; ... нь лавтай.",
+      "expected": {
+        "p": "〜に違いない",
+        "en": "must be; surely; no doubt",
+        "form": "Verb-plain / i-Adj / na-Adj / Noun + に違いない"
+      },
+      "formMn": "Үйл үгийн энгийн хэлбэр / い-тэмдэг нэр / な-тэмдэг нэр / нэр үг + に違いない. Одоо цагийн батлах нэр үг, な-тэмдэг нэрийн だ-г хасна.",
+      "examples": {
+        "隣の家は何日も電気が消えている。家族で旅行に出かけたに違いない。": {
+          "en": "The lights next door have been off for days. The family must have gone on a trip.",
+          "mn": "Хажуу айлын гэрэл олон хоног асаагүй. Гэр бүлээрээ аялалд явсан нь гарцаагүй."
+        },
+        "こんなに人が並んでいるんだから、この店のラーメンはおいしいに違いない。": {
+          "en": "With this many people in line, the ramen here must be good.",
+          "mn": "Ийм олон хүн дугаарлаж байгаа болохоор энэ газрын рамен амттай нь гарцаагүй."
+        },
+        "この手紙の字は、父の字に違いない。": {
+          "en": "The handwriting on this letter is surely my father's.",
+          "mn": "Энэ захидлын бичиг аавынх мөн нь гарцаагүй."
+        }
+      }
+    },
+    "ni-kimatte-iru": {
+      "mn": "Өгүүлэгчийн хүчтэй итгэл, мэдээжийн дүгнэлт: мэдээж ...; ... байх нь тодорхой.",
+      "expected": {
+        "p": "〜に決まっている",
+        "en": "certainly; is bound to; of course",
+        "form": "Verb-plain / i-Adj / na-Adj / Noun + に決まっている"
+      },
+      "formMn": "Үйл үгийн энгийн хэлбэр / い-тэмдэг нэр / な-тэмдэг нэр / нэр үг + に決まっている. Одоо цагийн батлах だ-г хасна.",
+      "examples": {
+        "練習もしないで試合に出たら、負けるに決まっている。": {
+          "en": "If you play the match without practicing, you're bound to lose.",
+          "mn": "Бэлтгэл ч хийхгүй тэмцээнд орвол ялагдах нь тодорхой."
+        },
+        "一人で富士山に登るなんて、お母さんが心配するに決まってるでしょう。": {
+          "en": "Climbing Mt. Fuji alone? Of course your mother's going to worry.",
+          "mn": "Фүжи ууланд ганцаараа авирна гэж үү? Ээж чинь мэдээж санаа зовно шүү дээ."
+        },
+        "そんなうまい話、うそに決まっているよ。": {
+          "en": "A deal that good? It's got to be a lie.",
+          "mn": "Тийм сайхан санал бол худал нь тодорхой шүү."
+        }
+      }
+    },
+    "ki-ga-suru": {
+      "mn": "Субъектив мэдрэмж, зөн совин: ... юм шиг санагдах; ... гэсэн мэдрэмж төрөх.",
+      "expected": {
+        "p": "〜気がする",
+        "en": "have a feeling that; feel like",
+        "form": "Verb-plain / i-Adj / na-Adj + な + 気がする / Verb-plain / Noun + の + ような + 気がする"
+      },
+      "formMn": "Үйл үгийн энгийн хэлбэр / い-тэмдэг нэр + 気がする; な-тэмдэг нэр + な + 気がする. Мөн үйл үгийн энгийн хэлбэр + ような気がする; нэр үг + の + ような気がする.",
+      "examples": {
+        "この人とは、どこかで会ったことがある気がする。": {
+          "en": "I feel like I've met this person somewhere before.",
+          "mn": "Энэ хүнтэй өмнө нь хаа нэгтээ уулзаж байсан юм шиг санагдаж байна."
+        },
+        "今日は何か、いいことがありそうな気がする。": {
+          "en": "I have a feeling something good is going to happen today.",
+          "mn": "Өнөөдөр ямар нэг сайн зүйл болох юм шиг санагдаж байна."
+        },
+        "ドアの鍵をかけ忘れたような気がして、家に戻った。": {
+          "en": "I had a feeling I'd forgotten to lock the door, so I went back home.",
+          "mn": "Хаалгаа түгжихээ мартсан юм шиг санагдаад гэртээ буцсан."
+        }
+      }
+    },
+    "zu-ni": {
+      "mn": "Нэг үйлдлийг хийхгүйгээр нөгөөг хийх: ...-лгүй; ...-хгүйгээр.",
+      "expected": {
+        "p": "〜ずに",
+        "en": "without doing",
+        "form": "Verb-nai stem + ずに"
+      },
+      "formMn": "Үйл үгийн ない-гүй үндэс + ずに. Онцгой: する → せずに. Жишээ: 食べずに, 行かずに.",
+      "examples": {
+        "けさは朝ご飯を食べずに家を出た。": {
+          "en": "This morning I left home without eating breakfast.",
+          "mn": "Өнөө өглөө өглөөний хоол идэлгүй гэрээсээ гарсан."
+        },
+        "辞書を使わずに、この新聞記事が読めますか。": {
+          "en": "Can you read this newspaper article without using a dictionary?",
+          "mn": "Толь бичиг ашиглахгүйгээр энэ сонины нийтлэлийг уншиж чадах уу?"
+        },
+        "彼は誰にも相談せずに、会社を辞めてしまった。": {
+          "en": "He quit the company without consulting anyone.",
+          "mn": "Тэр хэнтэй ч зөвлөлдөлгүй ажлаасаа гарчихсан."
+        }
+      }
+    },
+    "mama": {
+      "mn": "Төлөв өөрчлөгдөөгүй хэвээр байх: ... хэвээр; ... чигээрээ; ...-сан чигээрээ.",
+      "expected": {
+        "p": "〜まま",
+        "en": "as it is; unchanged; while still (in a state)",
+        "form": "Verb-ta / Verb-nai / i-Adj / na-Adj + な / Noun + の + まま"
+      },
+      "formMn": "Үйл үгийн た / ない-хэлбэр, い-тэмдэг нэр + まま; な-тэмдэг нэр + な + まま; нэр үг + の + まま.",
+      "examples": {
+        "エアコンをつけたまま寝てしまい、風邪をひいた。": {
+          "en": "I fell asleep with the air conditioner on and caught a cold.",
+          "mn": "Агааржуулагчаа асаалттай чигээр нь унтаад ханиад хүрсэн."
+        },
+        "この町は、私が子どもだったころのままだ。": {
+          "en": "This town is just as it was when I was a child.",
+          "mn": "Энэ хот намайг хүүхэд байхад ямар байсан тэр хэвээрээ."
+        },
+        "靴のまま部屋に入らないでください。": {
+          "en": "Please don't come into the room with your shoes on.",
+          "mn": "Гуталтайгаа өрөөнд битгий ороорой."
+        }
+      }
+    },
+    "uchi-ni": {
+      "mn": "Нөхцөл өөрчлөгдөхөөс өмнө хийх эсвэл үйл явцын дунд өөрчлөлт гарах: ... байхдаа; ...-хаас өмнө; ...-ж байх явцад.",
+      "expected": {
+        "p": "〜うちに",
+        "en": "while (before it changes); before it's too late; in the course of",
+        "form": "Verb-dict / Verb-te + いる / Verb-nai / i-Adj / na-Adj + な / Noun + の + うちに"
+      },
+      "formMn": "Үйл үгийн толь бичгийн, ている, ない-хэлбэр / い-тэмдэг нэр + うちに; な-тэмдэг нэр + な + うちに; нэр үг + の + うちに.",
+      "examples": {
+        "若いうちに、いろいろな国を旅行したほうがいい。": {
+          "en": "You should travel to lots of countries while you're young.",
+          "mn": "Залуу байхдаа олон орноор аялсан нь дээр."
+        },
+        "スープが冷めないうちに、どうぞ召し上がってください。": {
+          "en": "Please have your soup before it gets cold.",
+          "mn": "Шөлөө хөрөхөөс өмнө зооглоно уу."
+        },
+        "音楽を聞いているうちに、いつの間にか眠ってしまった。": {
+          "en": "While I was listening to music, I fell asleep before I knew it.",
+          "mn": "Хөгжим сонсож байгаад нэг мэдэхэд унтчихсан."
+        }
+      }
+    },
+    "tokoro-ni-tokoro-e-tokoro-o": {
+      "mn": "Үйлдлийн яг тэр мөчид өөр явдал тохиолдох: яг ...-х гэж байхад; ...-ж байхад; ...-магц.",
+      "expected": {
+        "p": "〜ところに / 〜ところへ / 〜ところを",
+        "en": "just when; at the moment (someone arrives or something interrupts)",
+        "form": "Verb-dict / Verb-te + いる / Verb-ta + ところに / ところへ / ところを"
+      },
+      "formMn": "Үйл үгийн толь бичгийн, ている, た-хэлбэр + ところに / ところへ / ところを. Дараах үйл үг, тухайн оролцооноос холбоосыг сонгоно.",
+      "examples": {
+        "出かけようとしているところに、友達から電話がかかってきた。": {
+          "en": "Just as I was about to go out, a friend called.",
+          "mn": "Гарах гэж байтал найзаас утас ирсэн."
+        },
+        "みんなで君の話をしているところへ、ちょうど君が来た。": {
+          "en": "Just as we were all talking about you, you showed up.",
+          "mn": "Бид бүгд чиний тухай ярьж байтал яг чи хүрээд ирсэн."
+        },
+        "授業中にスマホを見ているところを、先生に見られてしまった。": {
+          "en": "The teacher caught me looking at my phone during class.",
+          "mn": "Хичээлийн үеэр утсаа харж байгаад багшид баригдчихсан."
+        }
+      }
+    },
+    "ba-hodo": {
+      "mn": "Хоёр өөрчлөлт хамт өсөх: ... тусам улам ...; хэдий чинээ ... төдий чинээ ... .",
+      "expected": {
+        "p": "〜ば〜ほど",
+        "en": "the more ... the more",
+        "form": "Verb-ba + Verb-dict + ほど / i-Adj stem + ければ + i-Adj + ほど / na-Adj + なら + na-Adj + な + ほど"
+      },
+      "formMn": "Ижил үйл үгийн ば-хэлбэр + толь бичгийн хэлбэр + ほど; い-тэмдэг нэрийн い-гүй үндэс + ければ + тэр тэмдэг нэр + ほど; な-тэмдэг нэр + なら + тэр тэмдэг нэр + な + ほど.",
+      "examples": {
+        "日本語は、勉強すればするほど面白くなる。": {
+          "en": "The more you study Japanese, the more interesting it gets.",
+          "mn": "Япон хэлийг сурах тусам улам сонирхолтой болдог."
+        },
+        "スマホの画面は大きければ大きいほど見やすいが、持ち歩くのは大変だ。": {
+          "en": "The bigger a phone screen, the easier it is to see, but it's a pain to carry around.",
+          "mn": "Утасны дэлгэц том байх тусам харахад амар боловч авч явахад төвөгтэй."
+        },
+        "部屋が静かなら静かなほど、よく眠れる。": {
+          "en": "The quieter the room, the better I sleep.",
+          "mn": "Өрөө нам гүм байх тусам сайн унтдаг."
+        }
+      }
+    },
+    "hodo": {
+      "mn": "Түвшин, хэмжээг адилтган онцлох: ... хэмжээнд; ... болтол; ...-хуйц.",
+      "expected": {
+        "p": "〜ほど",
+        "en": "to the extent that; so ... that",
+        "form": "Verb-plain / i-Adj / na-Adj + な / Noun + ほど"
+      },
+      "formMn": "Үйл үгийн энгийн хэлбэр / い-тэмдэг нэр / нэр үг + ほど; な-тэмдэг нэр + な + ほど.",
+      "examples": {
+        "昨日は、立っていられないほど疲れていた。": {
+          "en": "Yesterday I was so tired I could hardly stand.",
+          "mn": "Өчигдөр зогсож ч чадахааргүй их ядарсан байсан."
+        },
+        "試験に合格したと聞いて、涙が出るほどうれしかった。": {
+          "en": "When I heard I'd passed the exam, I was so happy I cried.",
+          "mn": "Шалгалтдаа тэнцсэнээ сонсоод нулимс гарахуйц баярласан."
+        },
+        "このあたりは、夜になると怖いほど静かだ。": {
+          "en": "At night this area gets so quiet it's scary.",
+          "mn": "Энэ хавь шөнө болохоор аймаар нам гүм болдог."
+        }
+      }
+    },
+    "kurai-gurai-extent": {
+      "mn": "Хэмжээ, зэргийг жишээгээр онцлох эсвэл хамгийн бага шаардлага хэлэх: ...-хуйц; ... болтол; ядаж ... .",
+      "expected": {
+        "p": "〜くらい / 〜ぐらい（extent）",
+        "en": "to the extent that; so ... that; at least (something minimal)",
+        "form": "Verb-plain / i-Adj / na-Adj + な / Noun + くらい"
+      },
+      "formMn": "Үйл үгийн энгийн хэлбэр / い-тэмдэг нэр / нэр үг + くらい / ぐらい; な-тэмдэг нэр + な + くらい / ぐらい.",
+      "examples": {
+        "おなかが痛くて、歩けないくらいだった。": {
+          "en": "My stomach hurt so much I could barely walk.",
+          "mn": "Гэдэс маш их өвдөөд алхаж ч чадахааргүй байсан."
+        },
+        "隣の部屋の音楽がうるさくて、自分の声も聞こえないぐらいだ。": {
+          "en": "The music next door is so loud I can't even hear my own voice.",
+          "mn": "Хажуугийн өрөөний хөгжим өөрийн дууг ч сонсохооргүй чанга байна."
+        },
+        "自分の部屋ぐらい、自分で掃除しなさい。": {
+          "en": "At least clean your own room yourself.",
+          "mn": "Ядаж өөрийнхөө өрөөг өөрөө цэвэрлэ."
+        }
+      }
+    },
+    "sae": {
+      "mn": "Санаанд оромгүй эсвэл туйлын жишээ: ... ч гэсэн; бүр ... хүртэл.",
+      "expected": {
+        "p": "〜さえ",
+        "en": "even",
+        "form": "Noun + さえ / Noun + でさえ / Noun + にさえ"
+      },
+      "formMn": "Нэр үг + さえ. Зарим нөхцөлд でさえ, にさえ хэлбэртэй. Хэтэрхий энгийн эсвэл туйлын жишээг онцлоно.",
+      "examples": {
+        "忙しくて、昼ご飯を食べる時間さえなかった。": {
+          "en": "I was so busy I didn't even have time to eat lunch.",
+          "mn": "Завгүй байсан болохоор өдрийн хоол идэх зав ч байгаагүй."
+        },
+        "こんな簡単な問題は、小学生でさえ解ける。": {
+          "en": "Even an elementary school student could solve such an easy problem.",
+          "mn": "Ийм амархан бодлогыг бага ангийн хүүхэд ч бодож чадна."
+        },
+        "彼女は親友にさえ本当のことを話さなかった。": {
+          "en": "She didn't tell the truth even to her best friend.",
+          "mn": "Тэр эмэгтэй хамгийн сайн найздаа ч үнэнийг хэлээгүй."
+        }
+      }
+    },
+    "sae-ba": {
+      "mn": "Нэг л нөхцөл биелэхэд хангалттай байх: зөвхөн ... байхад л; ... л бол.",
+      "expected": {
+        "p": "〜さえ〜ば",
+        "en": "if only; as long as; provided that",
+        "form": "Noun + さえ + Verb-ba / Verb-stem + さえ + すれば / Verb-te + さえ + いれば"
+      },
+      "formMn": "Нэр үг + さえ + үйл үгийн ば-хэлбэр; үйл үгийн ます-гүй үндэс + さえすれば; て-хэлбэр + さえいれば.",
+      "examples": {
+        "このアプリさえあれば、どこでも日本語の勉強ができる。": {
+          "en": "As long as you have this app, you can study Japanese anywhere.",
+          "mn": "Энэ апп л байвал хаана ч япон хэлээ үзэж болно."
+        },
+        "時間さえあれば、もっと旅行に行きたいんですが。": {
+          "en": "If only I had the time, I'd love to travel more.",
+          "mn": "Зав л байвал илүү их аялмаар байна л даа."
+        },
+        "薬を飲んで寝てさえいれば、すぐに治りますよ。": {
+          "en": "As long as you take your medicine and stay in bed, you'll be better in no time.",
+          "mn": "Эмээ уугаад хэвтэж амрахад л удахгүй эдгэнэ шүү."
+        }
+      }
+    },
+    "koso": {
+      "mn": "Тодруулан хүчтэй онцлох: яг ... л; чухам ...; ... өөрөө.",
+      "expected": {
+        "p": "〜こそ",
+        "en": "precisely; it is ... that; (strong emphasis)",
+        "form": "Noun + こそ"
+      },
+      "formMn": "Нэр үг + こそ. Өмнөх зүйлийг хүчтэй онцолж, бусдаас ялгана.",
+      "examples": {
+        "「いつもありがとう。」「いえ、こちらこそ。」": {
+          "en": "'Thanks for everything.' 'No, thank you!'",
+          "mn": "“Бүх зүйлд үргэлж баярлалаа.” “Үгүй ээ, харин ч би танд баярлалаа.”"
+        },
+        "今年こそ、たばこをやめるつもりだ。": {
+          "en": "This year, for sure, I'm going to quit smoking.",
+          "mn": "Энэ жил л тамхинаас гарахаар бодож байгаа."
+        },
+        "毎日の小さな努力こそが、大きな成功につながる。": {
+          "en": "It's precisely small daily efforts that lead to great success.",
+          "mn": "Өдөр бүрийн багахан хичээл зүтгэл л их амжилтад хүргэдэг."
+        }
+      }
+    },
+    "to-shite": {
+      "mn": "Үүрэг, байр суурь, чанарыг заах: ...-ын хувьд; ... болж; ...-ын үүргээр.",
+      "expected": {
+        "p": "〜として",
+        "en": "as; in the role or capacity of",
+        "form": "Noun + として / Noun + としての + Noun"
+      },
+      "formMn": "Нэр үг + として; нэр үг тодотговол нэр үг + としての + нэр үг.",
+      "examples": {
+        "兄は、エンジニアとしてアメリカの会社で働いている。": {
+          "en": "My older brother works as an engineer at an American company.",
+          "mn": "Ах Америкийн компанид инженерээр ажилладаг."
+        },
+        "この町は、温泉地として有名です。": {
+          "en": "This town is famous as a hot-spring resort.",
+          "mn": "Энэ хот рашаан сувиллын газар гэдгээрээ алдартай."
+        },
+        "社会人としての責任を持って行動してください。": {
+          "en": "Please act with the responsibility expected of a working adult.",
+          "mn": "Нийгмийн бие даасан гишүүний хариуцлагатайгаар үйлдээрэй."
+        }
+      }
+    },
+    "ni-totte": {
+      "mn": "Хэн нэгний өнцөг, үнэлгээ: ...-ын хувьд; ...-д бол.",
+      "expected": {
+        "p": "〜にとって",
+        "en": "for; to (from the standpoint of)",
+        "form": "Noun + にとって / Noun + にとっての + Noun"
+      },
+      "formMn": "Хүн, бүлэг заасан нэр үг + にとって; нэр үг тодотговол にとっての + нэр үг.",
+      "examples": {
+        "私にとって、家族は何よりも大切なものです。": {
+          "en": "To me, family is more important than anything.",
+          "mn": "Миний хувьд гэр бүл бүхнээс чухал."
+        },
+        "このあたりの坂道は、お年寄りにとってはかなり大変だ。": {
+          "en": "The slopes around here are quite tough for elderly people.",
+          "mn": "Энэ хавийн өгсүүр замууд ахмад настнуудад нэлээд хэцүү."
+        },
+        "留学は、彼にとっていい経験になったようだ。": {
+          "en": "Studying abroad seems to have been a good experience for him.",
+          "mn": "Гадаадад сурах нь түүнд сайн туршлага болсон бололтой."
+        }
+      }
+    },
+    "ni-shite-wa": {
+      "mn": "Хүлээлттэй зөрсөн шинж: ... гэхэд; ...-тай харьцуулахад санаандгүйгээр ... .",
+      "expected": {
+        "p": "〜にしては",
+        "en": "for (considering it's); unexpectedly for",
+        "form": "Verb-plain / Noun + にしては"
+      },
+      "formMn": "Үйл үгийн энгийн хэлбэр / нэр үг + にしては.",
+      "examples": {
+        "初めて作ったにしては、このケーキはよくできている。": {
+          "en": "For a first attempt, this cake turned out really well.",
+          "mn": "Анх удаа хийсэн гэхэд энэ бялуу сайн болжээ."
+        },
+        "彼は小学生にしては、ずいぶん難しい言葉を知っている。": {
+          "en": "For an elementary school kid, he knows some pretty difficult words.",
+          "mn": "Бага ангийн хүүхэд гэхэд тэр нэлээд хэцүү үг мэддэг."
+        },
+        "十月にしては、今日はずいぶん暑いね。": {
+          "en": "It's pretty hot today for October.",
+          "mn": "Аравдугаар сар гэхэд өнөөдөр их халуун байна шүү."
+        }
+      }
+    },
+    "ni-shite-mo": {
+      "mn": "Нөхцөлийг зөвшөөрсөн ч дүгнэлтийг хадгалах: ... байсан ч; ... гэж үзсэн ч.",
+      "expected": {
+        "p": "〜にしても",
+        "en": "even if; even considering; granted that",
+        "form": "Verb-plain / Noun + にしても"
+      },
+      "formMn": "Үйл үгийн энгийн хэлбэр / нэр үг + にしても.",
+      "examples": {
+        "忙しかったにしても、電話一本ぐらいできたでしょう。": {
+          "en": "Even if you were busy, you could at least have made one phone call.",
+          "mn": "Завгүй байсан ч ядаж нэг удаа залгаж болох байсан биз дээ."
+        },
+        "冗談にしても、そんな言い方はひどいよ。": {
+          "en": "Even if it was a joke, that was a terrible thing to say.",
+          "mn": "Тоглоом байсан ч тэгж хэлсэн нь дэндүү муухай шүү."
+        },
+        "引っ越すにしても、来年の春以降になると思います。": {
+          "en": "Even if we do move, I think it'll be after next spring.",
+          "mn": "Нүүсэн ч ирэх хавраас хойш болох байх гэж бодож байна."
+        }
+      }
+    },
+    "ni-kanshite-ni-kansuru": {
+      "mn": "Сэдэв, хамаарлыг заах албан хэллэг: ...-ын талаар; ...-тай холбоотой.",
+      "expected": {
+        "p": "〜に関して / 〜に関する",
+        "en": "regarding; concerning; related to",
+        "form": "Noun + に関して / Noun + に関する + Noun"
+      },
+      "formMn": "Нэр үг + に関して; нэр үг тодотговол нэр үг + に関する + нэр үг.",
+      "examples": {
+        "新しいサービスに関してご質問がある方は、受付までどうぞ。": {
+          "en": "Anyone with questions regarding the new service, please come to the reception desk.",
+          "mn": "Шинэ үйлчилгээний талаар асуулттай хүн хүлээн авах хэсэгт хандана уу."
+        },
+        "彼は日本の歴史に関する本をたくさん持っている。": {
+          "en": "He owns a lot of books on Japanese history.",
+          "mn": "Түүнд Японы түүхтэй холбоотой олон ном бий."
+        },
+        "事故の原因に関しては、現在調査中です。": {
+          "en": "The cause of the accident is currently under investigation.",
+          "mn": "Ослын шалтгааныг одоо шалгаж байна."
+        }
+      }
+    },
+    "ni-kurabete": {
+      "mn": "Харьцуулах: ...-тай харьцуулахад; ...-аас.",
+      "expected": {
+        "p": "〜に比べて",
+        "en": "compared to; in comparison with",
+        "form": "Noun + に比べて / Verb-dict + のに比べて"
+      },
+      "formMn": "Нэр үг + に比べて; үйлдлийг харьцуулбал үйл үгийн толь бичгийн хэлбэр + のに比べて.",
+      "examples": {
+        "今年の夏は、去年に比べてずいぶん涼しい。": {
+          "en": "This summer is much cooler compared to last year.",
+          "mn": "Энэ зун өнгөрсөн жилтэй харьцуулахад нэлээд сэрүүн."
+        },
+        "都会に比べて、田舎は家賃が安い。": {
+          "en": "Compared to the city, rent in the countryside is cheap.",
+          "mn": "Хоттой харьцуулахад хөдөө байрны түрээс хямд."
+        },
+        "電車で行くのに比べて、車で行くと三十分ほど長くかかる。": {
+          "en": "Compared to going by train, driving takes about thirty minutes longer.",
+          "mn": "Галт тэргээр явахаас машинаар явбал гуч орчим минутаар удаан."
+        }
+      }
+    },
+    "ni-kawatte": {
+      "mn": "Орлон хийх эсвэл төлөөлөх: ...-ын оронд; ...-ыг төлөөлөн.",
+      "expected": {
+        "p": "〜に代わって",
+        "en": "instead of; on behalf of; replacing",
+        "form": "Noun + に代わって / Noun + に代わり"
+      },
+      "formMn": "Орлуулж буй хүн, зүйл заасан нэр үг + に代わって / に代わり.",
+      "examples": {
+        "入院中の社長に代わって、副社長があいさつをした。": {
+          "en": "The vice president gave the speech on behalf of the president, who is in hospital.",
+          "mn": "Эмнэлэгт хэвтэж буй захирлыг төлөөлөн дэд захирал мэндчилгээ дэвшүүлсэн."
+        },
+        "最近は、紙の新聞に代わって、スマホでニュースを読む人が増えている。": {
+          "en": "More and more people these days read the news on their phones instead of in paper newspapers.",
+          "mn": "Сүүлийн үед цаасан сонины оронд утсаараа мэдээ уншдаг хүн олширч байна."
+        },
+        "父に代わって、私が町内会の会議に出席しました。": {
+          "en": "I attended the neighborhood association meeting in place of my father.",
+          "mn": "Аавынхаа оронд хорооллын оршин суугчдын холбооны хуралд суусан."
+        }
+      }
+    },
+    "kawari-ni": {
+      "mn": "Орлуулах, нөхөх эсвэл солилцох: ...-ын оронд; ...-ы хариуд; ...-ыг нөхөж.",
+      "expected": {
+        "p": "〜代わりに",
+        "en": "instead of; in exchange for; to make up for",
+        "form": "Verb-plain / i-Adj / na-Adj + な / Noun + の + 代わりに"
+      },
+      "formMn": "Үйл үгийн энгийн хэлбэр / い-тэмдэг нэр + 代わりに; な-тэмдэг нэр + な + 代わりに; нэр үг + の + 代わりに.",
+      "examples": {
+        "今日は外で食べる代わりに、家でカレーを作った。": {
+          "en": "Instead of eating out today, I made curry at home.",
+          "mn": "Өнөөдөр гадуур хооллохын оронд гэртээ карри хийсэн."
+        },
+        "友達に英語を教える代わりに、ギターを教えてもらっている。": {
+          "en": "In exchange for teaching my friend English, I'm getting guitar lessons.",
+          "mn": "Найздаа англи хэл заасныхаа хариуд гитар заалгаж байгаа."
+        },
+        "このアパートは駅から遠い代わりに、家賃が安い。": {
+          "en": "This apartment is far from the station, but to make up for it, the rent is cheap.",
+          "mn": "Энэ байр буудлаас хол ч түрээс нь хямд."
+        }
+      }
+    },
+    "ni-shitagatte": {
+      "mn": "Дүрэм, зааврыг дагах эсвэл өөрчлөлттэй хамт өөрчлөгдөх: ...-ын дагуу; ... тусам.",
+      "expected": {
+        "p": "〜に従って",
+        "en": "in accordance with; following; as ... (so ...)",
+        "form": "Noun + に従って / Verb-dict + に従って"
+      },
+      "formMn": "Нэр үг / үйл үгийн толь бичгийн хэлбэр + に従って.",
+      "examples": {
+        "係の人の指示に従って、落ち着いて避難してください。": {
+          "en": "Please evacuate calmly, following the staff's instructions.",
+          "mn": "Ажилтны зааврыг дагаж тайван нүүн шилжинэ үү."
+        },
+        "高く登るに従って、気温が下がっていった。": {
+          "en": "The higher we climbed, the lower the temperature dropped.",
+          "mn": "Өндөрт авирах тусам агаарын хэм буурсан."
+        },
+        "町が大きくなるに従って、交通の問題も増えてきた。": {
+          "en": "As the town grew, traffic problems increased too.",
+          "mn": "Хот томрохын хэрээр замын хөдөлгөөний асуудал ч нэмэгдсэн."
+        }
+      }
+    },
+    "ni-tsurete": {
+      "mn": "Нэг өөрчлөлтийг даган нөгөө нь өөрчлөгдөх: ... тусам; ...-тай зэрэгцэн.",
+      "expected": {
+        "p": "〜につれて",
+        "en": "as (one thing changes, another changes too)",
+        "form": "Verb-dict / Noun + につれて"
+      },
+      "formMn": "Үйл үгийн толь бичгийн хэлбэр / нэр үг + につれて.",
+      "examples": {
+        "年をとるにつれて、朝早く目が覚めるようになった。": {
+          "en": "As I've gotten older, I've started waking up early in the morning.",
+          "mn": "Нас ахих тусам өглөө эрт сэрдэг болсон."
+        },
+        "日本での生活に慣れるにつれて、友達も増えていった。": {
+          "en": "As I got used to life in Japan, I made more and more friends.",
+          "mn": "Япон дахь амьдралдаа дасахын хэрээр найз нөхөд ч олширсон."
+        },
+        "時間がたつにつれて、その事故のことは忘れられていった。": {
+          "en": "As time passed, the accident was gradually forgotten.",
+          "mn": "Цаг хугацаа өнгөрөхийн хэрээр тэр ослыг мартаж эхэлсэн."
+        }
+      }
+    },
+    "to-tomo-ni": {
+      "mn": "Хамтрах эсвэл зэрэгцэн өөрчлөгдөх: ...-тай хамт; ...-тай зэрэг; ... болохын хэрээр.",
+      "expected": {
+        "p": "〜とともに",
+        "en": "together with; along with; as; at the same time as",
+        "form": "Noun + とともに / Verb-dict + とともに"
+      },
+      "formMn": "Нэр үг / үйл үгийн толь бичгийн хэлбэр + とともに.",
+      "examples": {
+        "社長は、社員とともに新しい工場の完成を喜んだ。": {
+          "en": "The company president celebrated the completion of the new factory together with the staff.",
+          "mn": "Захирал ажилчидтайгаа хамт шинэ үйлдвэр ашиглалтад орсонд баярласан."
+        },
+        "経済の発展とともに、人々の生活も大きく変わった。": {
+          "en": "Along with economic development, people's lives changed greatly too.",
+          "mn": "Эдийн засаг хөгжихийн хамт хүмүүсийн амьдрал ч их өөрчлөгдсөн."
+        },
+        "ベルが鳴るとともに、学生たちは教室を飛び出した。": {
+          "en": "The moment the bell rang, the students rushed out of the classroom.",
+          "mn": "Хонх дуугарахтай зэрэг сурагчид ангиас гүйлдэн гарсан."
+        }
+      }
+    },
+    "tabi-ni": {
+      "mn": "Тухайн үйл явдал бүрт давтагдах: ... бүрд; ...-х болгонд.",
+      "expected": {
+        "p": "〜たびに",
+        "en": "every time; whenever",
+        "form": "Verb-dict / Noun + の + たびに"
+      },
+      "formMn": "Үйл үгийн толь бичгийн хэлбэр + たびに; нэр үг + の + たびに.",
+      "examples": {
+        "この写真を見るたびに、大学時代を思い出す。": {
+          "en": "Every time I look at this photo, I remember my university days.",
+          "mn": "Энэ зургийг харах бүрдээ оюутан үеэ санадаг."
+        },
+        "姉は出張のたびに、お土産を買ってきてくれる。": {
+          "en": "My older sister brings me a souvenir every time she goes on a business trip.",
+          "mn": "Эгч томилолтоор явах бүрдээ надад бэлэг авчирдаг."
+        },
+        "この川は、大雨が降るたびにあふれて、道が通れなくなる。": {
+          "en": "Every time there's heavy rain, this river overflows and the road becomes impassable.",
+          "mn": "Их бороо орох бүрд энэ гол үерлэж, замаар явах боломжгүй болдог."
+        }
+      }
+    },
+    "goto-ni": {
+      "mn": "Тус бүр, давтамж, завсрыг заах: ... бүр; ... тутамд; ...-х болгонд.",
+      "expected": {
+        "p": "〜ごとに",
+        "en": "every; each; at intervals of",
+        "form": "Noun + ごとに / Verb-dict + ごとに"
+      },
+      "formMn": "Нэр үг / үйл үгийн толь бичгийн хэлбэр + ごとに.",
+      "examples": {
+        "このバスは十五分ごとに出ています。": {
+          "en": "This bus leaves every fifteen minutes.",
+          "mn": "Энэ автобус арван таван минут тутамд хөдөлдөг."
+        },
+        "季節ごとに、店の飾りが変わる。": {
+          "en": "The shop's decorations change with each season.",
+          "mn": "Дэлгүүрийн чимэглэл улирал бүр өөрчлөгддөг."
+        },
+        "一回使うごとにポイントがたまるカードです。": {
+          "en": "It's a card that earns you points every time you use it.",
+          "mn": "Ашиглах болгонд оноо хуримтлагддаг карт юм."
+        }
+      }
+    },
+    "saichuu-ni": {
+      "mn": "Үйлдлийн яг ид дунд: ...-ж байх үед; ...-ын яг дундуур.",
+      "expected": {
+        "p": "〜最中に",
+        "en": "right in the middle of; while (busy with)",
+        "form": "Verb-te + いる / Noun + の + 最中に"
+      },
+      "formMn": "Үйл үгийн ている-хэлбэр + 最中に; нэр үг + の + 最中に.",
+      "examples": {
+        "大事な会議の最中に、携帯電話が鳴ってしまった。": {
+          "en": "My cell phone went off right in the middle of an important meeting.",
+          "mn": "Чухал хурлын яг дундуур гар утас дуугарчихсан."
+        },
+        "料理をしている最中に、停電になった。": {
+          "en": "The power went out right in the middle of my cooking.",
+          "mn": "Хоол хийж байтал цахилгаан тасарсан."
+        },
+        "今、試験の最中だから、廊下では静かにしてください。": {
+          "en": "An exam is in progress right now, so please be quiet in the hallway.",
+          "mn": "Одоо шалгалт болж байгаа тул хонгилд чимээгүй байна уу."
+        }
+      }
+    },
+    "tsuide-ni": {
+      "mn": "Гол үйлдлийг хийх далимд нэмэлт үйлдэл хийх: ...-х далимд; ...-ж байхдаа бас.",
+      "expected": {
+        "p": "〜ついでに",
+        "en": "while (at it); on the occasion of; since one is doing it anyway",
+        "form": "Verb-dict / Verb-ta / Noun + の + ついでに"
+      },
+      "formMn": "Үйл үгийн толь бичгийн эсвэл た-хэлбэр + ついでに; нэр үг + の + ついでに.",
+      "examples": {
+        "郵便局へ行くついでに、この手紙も出してきてくれる？": {
+          "en": "Since you're going to the post office, could you mail this letter too?",
+          "mn": "Шуудан орох далимдаа энэ захидлыг ч явуулаад өгөх үү?"
+        },
+        "京都へ出張したついでに、昔の友達に会ってきた。": {
+          "en": "While I was on a business trip to Kyoto, I took the chance to see an old friend.",
+          "mn": "Киотод томилолтоор очих далимдаа хуучны найзтайгаа уулзсан."
+        },
+        "買い物のついでに、図書館に本を返した。": {
+          "en": "I returned some books to the library while I was out shopping.",
+          "mn": "Дэлгүүр хэсэх далимдаа номын санд номоо буцааж өгсөн."
+        }
+      }
+    },
+    "okage-de": {
+      "mn": "Сайн үр дүнгийн шалтгааныг талархан хэлэх: ...-ын ачаар; ...-сан учраас.",
+      "expected": {
+        "p": "〜おかげで",
+        "en": "thanks to; because of (good result)",
+        "form": "Verb-plain / i-Adj / na-Adj + な / Noun + の + おかげで"
+      },
+      "formMn": "Үйл үгийн энгийн хэлбэр / い-тэмдэг нэр + おかげで; な-тэмдэг нэр + な + おかげで; нэр үг + の + おかげで.",
+      "examples": {
+        "先輩が手伝ってくれたおかげで、仕事が早く終わった。": {
+          "en": "Thanks to my senior colleague's help, the work was finished early.",
+          "mn": "Ахлах ажилтан тусалсны ачаар ажил эрт дууссан."
+        },
+        "薬が効いたおかげで、熱が下がった。": {
+          "en": "Thanks to the medicine, my fever went down.",
+          "mn": "Эм үйлчилсний ачаар халуун буурсан."
+        },
+        "駅が近いおかげで、雨の日も楽に通勤できる。": {
+          "en": "Because the station is close by, commuting is easy even on rainy days.",
+          "mn": "Буудал ойрхон болохоор бороотой өдөр ч ажилдаа явахад амар."
+        }
+      }
+    },
+    "sei-de": {
+      "mn": "Муу үр дүнгийн шалтгаан, бурууг заах: ...-аас болж; ...-ын гайгаар.",
+      "expected": {
+        "p": "〜せいで",
+        "en": "because of; due to (bad result, blame)",
+        "form": "Verb-plain / i-Adj / na-Adj + な / Noun + の + せいで"
+      },
+      "formMn": "Үйл үгийн энгийн хэлбэр / い-тэмдэг нэр + せいで; な-тэмдэг нэр + な + せいで; нэр үг + の + せいで.",
+      "examples": {
+        "電車が遅れたせいで、面接に遅刻してしまった。": {
+          "en": "Because the train was delayed, I was late for my interview.",
+          "mn": "Галт тэрэг саатсанаас болж ярилцлагадаа хоцорчихсон."
+        },
+        "夜中に犬がうるさかったせいで、ほとんど眠れなかった。": {
+          "en": "Because the dog was so noisy in the middle of the night, I could barely sleep.",
+          "mn": "Шөнө нохой шуугиснаас болж бараг унтаж чадаагүй."
+        },
+        "私が道を間違えたせいで、みんなを待たせてしまった。": {
+          "en": "Because I took a wrong turn, I kept everyone waiting.",
+          "mn": "Би замаа андуурснаас болж бүгдийг хүлээлгэчихсэн."
+        }
+      }
+    },
+    "ta-totan-ta-totan-ni": {
+      "mn": "Үйлдэл дуусмагц санаандгүй явдал болох: ...-магц; яг ...-сан даруйд.",
+      "expected": {
+        "p": "〜たとたん / 〜たとたんに",
+        "en": "the moment; just as (something unexpected happens)",
+        "form": "Verb-ta + とたん / とたんに"
+      },
+      "formMn": "Үйл үгийн た-хэлбэр + とたん / とたんに. Дараах хэсэгт ихэвчлэн санаандгүй явдал орно.",
+      "examples": {
+        "立ち上がったとたんに、めまいがした。": {
+          "en": "The moment I stood up, I felt dizzy.",
+          "mn": "Босмогц толгой эргэсэн."
+        },
+        "家を出たとたん、雨が降り出した。": {
+          "en": "Just as I stepped out of the house, it started to rain.",
+          "mn": "Гэрээс гарангуутаа бороотой таарсан."
+        },
+        "その歌手がステージに現れたとたん、会場から大きな拍手が起こった。": {
+          "en": "The moment the singer appeared on stage, the audience burst into applause.",
+          "mn": "Тэр дуучин тайзан дээр гармагц танхимаас нижигнэсэн алга ташилт сонсогдсон."
+        }
+      }
+    },
+    "tara-ta": {
+      "mn": "Нэг үйлдлийн дараа өөр байдал олж мэдэх: ...-хад ... байлаа; ...-тал ... .",
+      "expected": {
+        "p": "〜たら〜た",
+        "en": "when I did A, (I found that) B; upon doing, I discovered",
+        "form": "Verb-ta + ら ... Verb-ta"
+      },
+      "formMn": "Үйл үгийн た-хэлбэр + ら, дараа нь өөр үйл үгийн өнгөрсөн цагийн хэлбэр. Бодитоор хийсний дараа олж мэдсэн үр дүнг хэлнэ.",
+      "examples": {
+        "窓を開けたら、外は一面の雪だった。": {
+          "en": "When I opened the window, everything outside was covered in snow.",
+          "mn": "Цонх онгойлготол гадаа тэр чигээрээ цасанд хучигдсан байв."
+        },
+        "久しぶりに実家に帰ったら、近所に大きなマンションが建っていた。": {
+          "en": "When I went back to my parents' place for the first time in ages, I found a big apartment building had gone up nearby.",
+          "mn": "Удаан хугацааны дараа аав ээжийндээ харьтал ойролцоо нь том орон сууц баригдсан байв."
+        },
+        "かばんの中を探してみたら、なくしたと思っていた鍵が出てきた。": {
+          "en": "When I searched my bag, the key I thought I'd lost turned up.",
+          "mn": "Цүнхээ хайж үзтэл гээсэн гэж бодсон түлхүүр гарч ирсэн."
+        }
+      }
+    },
+    "tatte-datte": {
+      "mn": "Ярианы хэлэнд нөхцөл өөрчлөгдсөн ч үр дүн хэвээр байх: ...-сэн ч; хэчнээн ... байсан ч.",
+      "expected": {
+        "p": "〜たって / 〜だって",
+        "en": "even if; no matter (casual)",
+        "form": "Verb-ta + って / i-Adj-ku + たって / na-Adj / Noun + だって"
+      },
+      "formMn": "Үйл үгийн た-хэлбэр + って; い-тэмдэг нэрийн い-гүй үндэс + くたって; な-тэмдэг нэр / нэр үг + だって. Жишээ: 行ったって, 高くたって.",
+      "examples": {
+        "今から急いだって、もう間に合わないよ。": {
+          "en": "Even if you hurry now, you won't make it.",
+          "mn": "Одооноос яарсан ч амжихгүй шүү."
+        },
+        "高くたって、欲しいものは欲しい。": {
+          "en": "Even if it's expensive, I want what I want.",
+          "mn": "Үнэтэй байсан ч хүссэн юмаа хүсэж л байна."
+        },
+        "いくら便利だって、使い方が分からなければ意味がない。": {
+          "en": "No matter how convenient it is, it's pointless if you don't know how to use it.",
+          "mn": "Хэчнээн тохиромжтой байсан ч яаж ашиглахаа мэдэхгүй бол утгагүй."
+        }
+      }
+    },
+    "nai-koto-wa-nai": {
+      "mn": "Хязгаарлагдмал боломжийг давхар үгүйсгэлээр зөвшөөрөх: ...-хгүй гэсэн үг биш; ...-ж болохгүй биш; боломжгүй биш.",
+      "expected": {
+        "p": "〜ないことはない",
+        "en": "it's not that ... not; can if necessary; not impossible",
+        "form": "Verb-nai / i-Adj-ku + ない / na-Adj + でない + ことはない"
+      },
+      "formMn": "Үгүйсгэсэн үйл үг эсвэл тэмдэг нэр + ことはない. Жишээ: 行けないことはない, 高くないことはない, 静かでないことはない.",
+      "examples": {
+        "辛い料理は食べられないことはないけど、あまり好きじゃない。": {
+          "en": "It's not that I can't eat spicy food, but I don't really like it.",
+          "mn": "Халуун ногоотой хоол идэж чадахгүй биш ч нэг их дуртай биш."
+        },
+        "今から急げば、間に合わないことはないと思う。": {
+          "en": "If we hurry now, I think we can just about make it.",
+          "mn": "Одооноос яарвал амжихгүй ч биш гэж бодож байна."
+        },
+        "この服、少し派手だけど、似合わないことはないよ。": {
+          "en": "This outfit is a bit flashy, but it's not as if it doesn't suit you.",
+          "mn": "Энэ хувцас жаахан содон ч чамд зохихгүй биш шүү."
+        }
+      }
+    },
+    "te-shou-ga-nai-te-shikata-ga-nai": {
+      "mn": "Сэтгэл хөдлөл, төлөвийг маш хүчтэй, тэвчих аргагүй гэж хэлэх: ...-аад байж суух аргагүй; дэндүү ...; маш ... .",
+      "expected": {
+        "p": "〜てしょうがない / 〜てしかたがない",
+        "en": "extremely; can't help (feeling); unbearably",
+        "form": "Verb-te / i-Adj-ku + て / na-Adj + で + しょうがない / しかたがない"
+      },
+      "formMn": "Үйл үгийн て-хэлбэр / い-тэмдэг нэрийн くて-хэлбэр / な-тэмдэг нэр + で + しょうがない / しかたがない.",
+      "examples": {
+        "昨日あまり寝ていないので、眠くてしょうがない。": {
+          "en": "I barely slept last night, so I'm terribly sleepy.",
+          "mn": "Өчигдөр сайн унтаагүй болохоор нойр хүрээд болохгүй байна."
+        },
+        "来週の旅行が楽しみでしかたがない。": {
+          "en": "I'm so excited about next week's trip I can hardly wait.",
+          "mn": "Ирэх долоо хоногийн аяллыг тэсэн ядан хүлээж байна."
+        },
+        "一人暮らしを始めたばかりのころは、家族のことが気になってしかたがなかった。": {
+          "en": "When I'd just started living alone, I couldn't stop worrying about my family.",
+          "mn": "Ганцаараа амьдарч эхэлсэн үедээ гэр бүлийнхэндээ санаа зовохоо больж чаддаггүй байсан."
+        }
+      }
+    },
+    "te-tamaranai": {
+      "mn": "Мэдрэмж, хүсэл маш хүчтэй байх: ...-аад тэсэхийн аргагүй; ...-хыг маш их хүсэх.",
+      "expected": {
+        "p": "〜てたまらない",
+        "en": "unbearably; dying to; extremely (feeling)",
+        "form": "Verb-te / i-Adj-ku + て / na-Adj + で + たまらない"
+      },
+      "formMn": "Үйл үгийн て-хэлбэр / い-тэмдэг нэрийн くて-хэлбэр / な-тэмдэг нэр + で + たまらない.",
+      "examples": {
+        "この部屋はエアコンがなくて、暑くてたまらない。": {
+          "en": "This room has no air conditioning; it's unbearably hot.",
+          "mn": "Энэ өрөө агааржуулагчгүй, тэсэхийн аргагүй халуун."
+        },
+        "三年ぶりに国の家族に会えるので、うれしくてたまらない。": {
+          "en": "I'm going to see my family back home for the first time in three years, and I'm overjoyed.",
+          "mn": "Гурван жилийн дараа эх орон дахь гэр бүлийнхэнтэйгээ уулзах гэж байгаа болохоор хөл газар хүрэхгүй баяртай байна."
+        },
+        "試合に負けたのが悔しくてたまらなかった。": {
+          "en": "I was terribly frustrated that we lost the match.",
+          "mn": "Тэмцээнд ялагдсандаа тэсэхийн аргагүй хор шар хөдөлсөн."
+        }
+      }
+    },
+    "te-hajimete": {
+      "mn": "Үйлдэл болсон хойно л ойлгох, боломж бүрдэх: ...-сны дараа л; ...-ж байж сая.",
+      "expected": {
+        "p": "〜てはじめて",
+        "en": "only after; not until",
+        "form": "Verb-te + はじめて"
+      },
+      "formMn": "Үйл үгийн て-хэлбэр + はじめて. Дараах өгүүлбэрт тэр үед л ойлгосон эсвэл боломжтой болсон үр дүн орно.",
+      "examples": {
+        "病気になってはじめて、健康のありがたさが分かった。": {
+          "en": "It was only after I got sick that I appreciated how precious good health is.",
+          "mn": "Өвдсөн хойноо л эрүүл байхын үнэ цэнийг ойлгосон."
+        },
+        "一人で暮らしてはじめて、親の苦労が分かった。": {
+          "en": "Only after living alone did I understand how hard my parents had worked.",
+          "mn": "Ганцаараа амьдарч байж л эцэг эхийнхээ зовлонг ойлгосон."
+        },
+        "実際に使ってみてはじめて、この機械の便利さに気づいた。": {
+          "en": "It wasn't until I actually tried it that I realized how handy this machine is.",
+          "mn": "Өөрөө хэрэглэж үзээд л энэ машин ямар тохиромжтойг мэдсэн."
+        }
+      }
+    },
+    "te-bakari-iru": {
+      "mn": "Нэг үйлдлийг байнга хийдгийг шүүмжлэх: дандаа ...-ж байх; ...-хаас өөр юм хийхгүй байх.",
+      "expected": {
+        "p": "〜てばかりいる",
+        "en": "do nothing but; keep on doing (critical)",
+        "form": "Verb-te + ばかりいる"
+      },
+      "formMn": "Үйл үгийн て-хэлбэр + ばかりいる. Нэг үйлдэл давамгайлж буйг ихэвчлэн шүүмжилнэ.",
+      "examples": {
+        "弟は休みの日、ゲームをしてばかりいる。": {
+          "en": "On his days off, my younger brother does nothing but play games.",
+          "mn": "Эрэгтэй дүү амралтын өдөр дандаа тоглоом тоглодог."
+        },
+        "泣いてばかりいないで、どうしたのか話してごらん。": {
+          "en": "Stop crying and tell me what happened.",
+          "mn": "Уйлаад л байлгүй юу болсныг яриад үз."
+        },
+        "休みの間、寝てばかりいたら、かえって疲れてしまった。": {
+          "en": "I did nothing but sleep during the break, and it actually made me more tired.",
+          "mn": "Амралтаараа унтаад л байсан чинь харин ч улам ядарчихсан."
+        }
+      }
+    },
+    "ba-ii": {
+      "mn": "Хангалттай нөхцөл, зөвлөгөө эсвэл хүсэл: ...-вал болно; ...-х л хэрэгтэй; ...-вал сайнсан.",
+      "expected": {
+        "p": "〜ばいい",
+        "en": "should; all you need to do is; I hope (with のに/けど: I wish)",
+        "form": "Verb-ba + いい / i-Adj stem + ければ + いい"
+      },
+      "formMn": "Үйл үгийн ば-хэлбэр + いい; い-тэмдэг нэрийн い-гүй үндэс + ければいい.",
+      "examples": {
+        "「この書類、どこに出せばいいですか。」「二階の受付に出してください。」": {
+          "en": "'Where should I hand in this form?' 'Please take it to the reception desk on the second floor.'",
+          "mn": "“Энэ баримтыг хаана өгөх вэ?” “Хоёрдугаар давхрын хүлээн авах хэсэгт өгөөрэй.”"
+        },
+        "分からないことがあったら、遠慮しないで私に聞けばいいよ。": {
+          "en": "If there's anything you don't understand, just ask me. Don't be shy.",
+          "mn": "Ойлгохгүй зүйл байвал санаа зоволгүй надаас асуухад л болно."
+        },
+        "明日、雨が降らなければいいんだけど。": {
+          "en": "I hope it doesn't rain tomorrow.",
+          "mn": "Маргааш бороо орохгүй бол сайнсан."
+        }
+      }
+    },
+    "baai-wa": {
+      "mn": "Тухайн нөхцөл, тохиолдолд: ... тохиолдолд; хэрэв ... бол.",
+      "expected": {
+        "p": "〜場合（は）",
+        "en": "in the case of; if; in the event that",
+        "form": "Verb-plain / i-Adj / na-Adj + な / Noun + の + 場合（は）"
+      },
+      "formMn": "Үйл үгийн энгийн хэлбэр / い-тэмдэг нэр + 場合（は）; な-тэмдэг нэр + な + 場合（は）; нэр үг + の + 場合（は）.",
+      "examples": {
+        "雨の場合は、試合は中止になります。": {
+          "en": "In case of rain, the game will be canceled.",
+          "mn": "Бороотой тохиолдолд тэмцээн цуцлагдана."
+        },
+        "カードをなくした場合は、すぐに銀行に連絡してください。": {
+          "en": "If you lose your card, contact the bank immediately.",
+          "mn": "Картаа гээвэл банк руу шууд холбоо барина уу."
+        },
+        "予約の時間に遅れる場合は、お電話でお知らせください。": {
+          "en": "If you are going to be late for your appointment, please let us know by phone.",
+          "mn": "Захиалсан цагтаа хоцрох бол утсаар мэдэгдэнэ үү."
+        }
+      }
+    },
+    "to-sureba-to-shitara": {
+      "mn": "Таамаг нөхцөл тавих: хэрэв ... гэж үзвэл; ... бол гэж бодвол.",
+      "expected": {
+        "p": "〜とすれば / 〜としたら",
+        "en": "if; supposing that; assuming",
+        "form": "Verb-plain / i-Adj / na-Adj + だ / Noun + だ + とすれば / としたら"
+      },
+      "formMn": "Энгийн хэлбэрийн өгүүлбэр + とすれば / としたら. Одоо цагийн батлах な-тэмдэг нэр, нэр үгт だ-г хадгална.",
+      "examples": {
+        "もし宝くじで一億円当たったとしたら、何に使いますか。": {
+          "en": "If you won 100 million yen in the lottery, what would you spend it on?",
+          "mn": "Хэрэв сугалаанаас зуун сая иен хожвол юунд зарцуулах вэ?"
+        },
+        "今から出発するとすれば、向こうに着くのは夜の九時ごろになる。": {
+          "en": "If we set off now, we'll get there at around nine at night.",
+          "mn": "Одоо хөдөлбөл тэнд орой есөн цагийн үед хүрнэ."
+        },
+        "彼の話が本当だとしたら、大変なことになる。": {
+          "en": "If what he says is true, we're in serious trouble.",
+          "mn": "Түүний хэлсэн үнэн бол их хэрэг болно."
+        }
+      }
+    },
+    "to-shite-mo": {
+      "mn": "Таамаг нөхцөл биелсэн ч өөр дүгнэлт хэвээр байх: ... гэж үзсэн ч; ... байсан ч.",
+      "expected": {
+        "p": "〜としても",
+        "en": "even if; even supposing",
+        "form": "Verb-plain / i-Adj / na-Adj + だ / Noun + だ + としても"
+      },
+      "formMn": "Энгийн хэлбэрийн өгүүлбэр + としても. Нэр үг, な-тэмдэг нэрийн одоо цагийн батлах хэлбэрт だ залгана.",
+      "examples": {
+        "親に反対されたとしても、私は留学するつもりだ。": {
+          "en": "Even if my parents are against it, I intend to study abroad.",
+          "mn": "Эцэг эх эсэргүүцсэн ч би гадаадад сурах бодолтой."
+        },
+        "今からタクシーに乗ったとしても、九時の飛行機には間に合わないだろう。": {
+          "en": "Even if we took a taxi now, we probably wouldn't make the nine o'clock flight.",
+          "mn": "Одоо таксинд суусан ч есөн цагийн онгоцонд амжихгүй байх."
+        },
+        "それが本当だとしても、ほかの人に話すべきではない。": {
+          "en": "Even if that's true, you shouldn't tell anyone else.",
+          "mn": "Тэр үнэн байсан ч бусдад ярих ёсгүй."
+        }
+      }
+    },
+    "toka-hearsay": {
+      "mn": "Баттай бус сонссон мэдээлэл дамжуулах: ... гэсэн сурагтай; ... гэж сонссон.",
+      "expected": {
+        "p": "〜とか（hearsay）",
+        "en": "I heard something like; apparently",
+        "form": "Sentence + とか"
+      },
+      "formMn": "Сонссон мэдээллийн өгүүлбэр + とか. Дам мэдээ нь тодорхой бус, бүрэн батлаагүй өнгөтэй.",
+      "examples": {
+        "駅前の本屋、今月で閉店するとか。寂しくなりますね。": {
+          "en": "I hear the bookstore by the station is closing at the end of this month. It'll be sad to see it go.",
+          "mn": "Буудлын өмнөх номын дэлгүүр энэ сарын сүүлээр хаагдах сурагтай. Үгүйлэгдэх нь дээ."
+        },
+        "今年の冬は、例年より寒くなるとかいう話だよ。": {
+          "en": "Word is that this winter is going to be colder than usual.",
+          "mn": "Энэ өвөл ердийнхөөс хүйтэн болно гэсэн сурагтай шүү."
+        },
+        "部長は今日、熱があるとかで休んでいます。": {
+          "en": "The department manager is off today; something about having a fever.",
+          "mn": "Хэлтсийн дарга өнөөдөр халуурсан ч гэл үү, чөлөөтэй байгаа."
+        }
+      }
+    },
+    "tte": {
+      "mn": "Ярианы эшлэл, дам мэдээ эсвэл сэдэв: ... гэж; ... гэнэ; ... гэдэг нь; ...-ын тухайд.",
+      "expected": {
+        "p": "〜って",
+        "en": "(casual quotation) says that; I heard; as for; what is",
+        "form": "Sentence + って / Noun + って"
+      },
+      "formMn": "Өгүүлбэр + って: ярианы эшлэл; нэр үг + って: сэдэв, нэршлийг асуух эсвэл тайлбарлах. Утгыг нөхцөлөөс ялгана.",
+      "examples": {
+        "彼女、今日は来られないって。": {
+          "en": "She says she can't come today.",
+          "mn": "Тэр эмэгтэй өнөөдөр ирж чадахгүй гэнэ."
+        },
+        "駅前に新しいカフェができたんだって。行ってみない？": {
+          "en": "Apparently a new café opened by the station. Want to go check it out?",
+          "mn": "Буудлын өмнө шинэ кафе нээгдсэн гэнэ. Очоод үзэх үү?"
+        },
+        "「ふろしき」って何ですか。": {
+          "en": "What's a furoshiki?",
+          "mn": "“Фүрошики” гэж юу вэ?"
+        }
+      }
+    },
+    "to-iu-koto-da": {
+      "mn": "Мэдээлэл дамжуулах эсвэл утга дүгнэх: ... гэнэ; ... гэсэн үг; өөрөөр хэлбэл ... .",
+      "expected": {
+        "p": "〜ということだ",
+        "en": "I heard that; it means that; in other words",
+        "form": "Sentence + ということだ"
+      },
+      "formMn": "Мэдээлэл эсвэл дүгнэлт заасан өгүүлбэр + ということだ.",
+      "examples": {
+        "駅員さんの話では、事故のため電車は一時間ほど止まるということです。": {
+          "en": "According to the station attendant, trains will be stopped for about an hour because of an accident.",
+          "mn": "Буудлын ажилтны хэлснээр ослоос болж галт тэрэг нэг цаг орчим зогсоно гэнэ."
+        },
+        "「申し込みは明日までです。」「じゃあ、今日中に書類を準備しなければならないということですね。」": {
+          "en": "'Applications close tomorrow.' 'So that means I have to get my documents ready today, right?'",
+          "mn": "“Өргөдөл маргааш хүртэл авна.” “Тэгвэл өнөөдөртөө баримтаа бэлдэх хэрэгтэй гэсэн үг байна, тийм ээ?”"
+        },
+        "全員が賛成したということは、この計画で進めてもいいということだ。": {
+          "en": "Everyone agreeing means we can go ahead with this plan.",
+          "mn": "Бүгд дэмжсэн гэдэг нь энэ төлөвлөгөөгөөр үргэлжлүүлж болно гэсэн үг."
+        }
+      }
+    },
+    "to-iu-no-wa": {
+      "mn": "Нэршил, агуулга эсвэл шалтгаан тайлбарлах: ... гэдэг нь; ... гэсэн үг бол; ...-ын учир нь.",
+      "expected": {
+        "p": "〜というのは",
+        "en": "what is meant by ... is; ... means; the reason is",
+        "form": "Noun / Sentence + というのは"
+      },
+      "formMn": "Нэр үг / өгүүлбэр + というのは, дараа нь тодорхойлолт эсвэл тайлбар орно.",
+      "examples": {
+        "「割り勘」というのは、食事代などをみんなで同じ金額ずつ払うことです。": {
+          "en": "'Warikan' means everyone paying the same share of a meal or other bill.",
+          "mn": "“Варикан” гэдэг нь хоолны тооцоо зэрэг зардлыг бүгд ижил хэмжээгээр хувааж төлөхийг хэлнэ."
+        },
+        "一人で海外に住むというのは、思ったより大変なことだ。": {
+          "en": "Living abroad on your own is harder than you'd think.",
+          "mn": "Гадаадад ганцаараа амьдарна гэдэг бодсоноос хэцүү зүйл."
+        },
+        "来週の旅行には行けなくなった。というのは、急に出張が入ったからだ。": {
+          "en": "I can't go on next week's trip after all. That's because a business trip suddenly came up.",
+          "mn": "Ирэх долоо хоногийн аялалд явж чадахгүй болчихлоо. Учир нь гэнэт томилолт гарсан."
+        }
+      }
+    },
+    "to-iu-yori": {
+      "mn": "Өмнөх тодорхойлолтыг засаж илүү тохирохыг хэлэх: ... гэхээсээ илүү ...; ... гэхээс ... .",
+      "expected": {
+        "p": "〜というより",
+        "en": "rather than; not so much A as B",
+        "form": "Verb-plain / i-Adj / na-Adj / Noun + というより"
+      },
+      "formMn": "Үйл үгийн энгийн хэлбэр / い-тэмдэг нэр / な-тэмдэг нэр / нэр үг + というより. Дараагийн хэсэгт илүү тохирох тодорхойлолт өгнө.",
+      "examples": {
+        "今日は涼しいというより、寒いくらいだ。": {
+          "en": "Today it's not so much cool as almost cold.",
+          "mn": "Өнөөдөр сэрүүхэн гэхээсээ бараг хүйтэн байна."
+        },
+        "彼女は友達というより、家族のような存在だ。": {
+          "en": "She's less a friend than something like family to me.",
+          "mn": "Тэр миний хувьд найз гэхээсээ гэр бүлийн хүн шиг."
+        },
+        "それは意見というより、ただの文句だよ。": {
+          "en": "That's not so much an opinion as just a complaint.",
+          "mn": "Наадах чинь санал гэхээсээ зүгээр л гомдол шүү."
+        }
+      }
+    },
+    "wari-ni-wari-ni-wa": {
+      "mn": "Хэмжээ, нөхцөлтэй нь харьцуулахад санаандгүй шинж: ... гэхэд; ...-тайгаа харьцуулахад.",
+      "expected": {
+        "p": "〜わりに / 〜わりには",
+        "en": "considering; for (unexpectedly)",
+        "form": "Verb-plain / i-Adj / na-Adj + な / Noun + の + わりに"
+      },
+      "formMn": "Үйл үгийн энгийн хэлбэр / い-тэмдэг нэр + わりに（は）; な-тэмдэг нэр + な + わりに（は）; нэр үг + の + わりに（は）.",
+      "examples": {
+        "この店は値段のわりに、量が多くておいしい。": {
+          "en": "For the price, this restaurant gives you big, tasty portions.",
+          "mn": "Энэ газар үнэтэйгээ харьцуулахад хоол нь их, амттай."
+        },
+        "兄はよく食べるわりには、全然太らない。": {
+          "en": "Considering how much he eats, my older brother never gains weight.",
+          "mn": "Ах их иддэг хэрнээ огт таргалдаггүй."
+        },
+        "このホテルは駅から近いわりに、静かでよく眠れた。": {
+          "en": "Considering how close it is to the station, the hotel was quiet and I slept well.",
+          "mn": "Энэ буудал өртөөнд ойрхон гэхэд чимээгүй байсан тул сайн унтсан."
+        }
+      }
+    },
+    "kuse-ni": {
+      "mn": "Бусдыг буруутган, шүүмжлэн эсрэгцүүлэх: ... байж; ... мөртлөө.",
+      "expected": {
+        "p": "〜くせに",
+        "en": "even though; despite (critical, reproachful)",
+        "form": "Verb-plain / i-Adj / na-Adj + な / Noun + の + くせに"
+      },
+      "formMn": "Үйл үгийн энгийн хэлбэр / い-тэмдэг нэр + くせに; な-тэмдэг нэр + な + くせに; нэр үг + の + くせに. Буруутгасан өнгөтэй тул харилцаагаа анхаарна.",
+      "examples": {
+        "自分では何もしないくせに、人の仕事には文句ばかり言う。": {
+          "en": "He never does anything himself, yet he's always complaining about other people's work.",
+          "mn": "Өөрөө юу ч хийдэггүй байж бусдын ажлыг үргэлж шүүмжилдэг."
+        },
+        "知っているくせに、どうして教えてくれなかったの？": {
+          "en": "You knew all along, so why didn't you tell me?",
+          "mn": "Мэдэж байсан байж яагаад надад хэлээгүй юм?"
+        },
+        "弟は体が大きいくせに、小さな虫をこわがる。": {
+          "en": "My younger brother is so big, and yet he's scared of tiny bugs.",
+          "mn": "Эрэгтэй дүү том биетэй байж өчүүхэн шавжнаас айдаг."
+        }
+      }
+    },
+    "kara-ni-kakete": {
+      "mn": "Хугацаа эсвэл газрын хүрээ, зааг ойролцоо байх: ...-аас ... хүртэл; ...-аас ...-ыг хамран.",
+      "expected": {
+        "p": "〜から〜にかけて",
+        "en": "from ... through; over (a period or area)",
+        "form": "Noun + から + Noun + にかけて"
+      },
+      "formMn": "Эхлэх хугацаа эсвэл газар + から + төгсөх хугацаа эсвэл газар + にかけて. Зааг нь ойролцоо өргөн хүрээ заана.",
+      "examples": {
+        "今夜から明日の朝にかけて、強い雨が降るでしょう。": {
+          "en": "Heavy rain is expected from tonight through tomorrow morning.",
+          "mn": "Өнөө шөнөөс маргааш өглөө хүртэл хүчтэй бороо орох байх."
+        },
+        "関東から東北にかけての広い地域で、強い揺れが観測された。": {
+          "en": "Strong shaking was recorded over a wide area from Kanto to Tohoku.",
+          "mn": "Кантогоос Тоохокү хүртэлх өргөн нутагт хүчтэй чичирхийлэл бүртгэгдсэн."
+        },
+        "この花は、三月から四月にかけてきれいに咲く。": {
+          "en": "This flower blooms beautifully from March through April.",
+          "mn": "Энэ цэцэг гуравдугаар сараас дөрөвдүгээр сар хүртэл сайхан цэцэглэдэг."
+        }
+      }
+    },
+    "buri": {
+      "mn": "Тодорхой хугацааны дараа анх удаа хийх эсвэл үйлдлийн арга төрх: ... хугацааны дараа дахин; ...-х байдал.",
+      "expected": {
+        "p": "〜ぶり",
+        "en": "for the first time in (a period); manner, way of doing",
+        "form": "Noun + ぶり / Verb-stem + ぶり"
+      },
+      "formMn": "Хугацааны нэр үг + ぶり: удаан хугацааны дараах үйлдэл; үйл үгийн ます-гүй үндэс + ぶり: хийх арга, байдал.",
+      "examples": {
+        "五年ぶりに高校の友達に会って、話が止まらなかった。": {
+          "en": "I saw my high school friends for the first time in five years, and we couldn't stop talking.",
+          "mn": "Таван жилийн дараа ахлах сургуулийн найзуудтайгаа уулзаад яриа тасраагүй."
+        },
+        "久しぶりですね。お元気でしたか。": {
+          "en": "It's been a long time. How have you been?",
+          "mn": "Удаан уулзсангүй шүү. Сайн байсан уу?"
+        },
+        "新入社員の仕事ぶりを見て、部長は安心したようだ。": {
+          "en": "The manager seemed relieved after seeing how the new employee works.",
+          "mn": "Шинэ ажилтны ажиллах байдлыг хараад даргын санаа амарсан бололтой."
+        }
+      }
+    },
+    "kke": {
+      "mn": "Өмнөх мэдээллээ санах гэж асуух: ... бил үү?; ... байсан билүү?",
+      "expected": {
+        "p": "〜っけ",
+        "en": "was it?; did I?; (trying to recall)",
+        "form": "Verb-ta / Noun + だ / Noun + だった + っけ"
+      },
+      "formMn": "Үйл үгийн た-хэлбэр / нэр үг + だ / нэр үг + だった + っけ. Өмнө мэдэж байсан зүйлээ санах гэж асууна.",
+      "examples": {
+        "あれ、会議って何時からだっけ？": {
+          "en": "Wait, what time does the meeting start again?",
+          "mn": "Нээрээ, хурал хэдэн цагаас билээ?"
+        },
+        "すみません、お名前、何とおっしゃいましたっけ。": {
+          "en": "I'm sorry, what did you say your name was?",
+          "mn": "Уучлаарай, та нэрээ хэн гэсэн билээ?"
+        },
+        "子どものころ、よくこの公園で遊んだっけ。": {
+          "en": "I used to play in this park a lot as a kid, didn't I.",
+          "mn": "Хүүхэд байхдаа энэ цэцэрлэгт хүрээлэнд их тоглодог байж билээ."
+        }
+      }
+    },
+    "masu-you-ni": {
+      "mn": "Хүсэл, ерөөл, залбирал: ...-аасай; ... болоосой; ...-хгүй байгаасай.",
+      "expected": {
+        "p": "〜ますように",
+        "en": "I hope; may (wish, prayer)",
+        "form": "Verb-stem + ますように / Verb-stem + ませんように"
+      },
+      "formMn": "Үйл үгийн ます-гүй үндэс + ますように / ませんように. Ерөөл, залбирал илэрхийлнэ.",
+      "examples": {
+        "試験に合格できますように。": {
+          "en": "I hope I pass the exam.",
+          "mn": "Шалгалтдаа тэнцэж чадаасай."
+        },
+        "明日の遠足、雨が降りませんように。": {
+          "en": "Please don't let it rain on tomorrow's school outing.",
+          "mn": "Маргаашийн сургуулийн аяллаар бороо битгий ороосой."
+        },
+        "家族みんなが元気で過ごせますように。": {
+          "en": "May everyone in my family stay healthy.",
+          "mn": "Гэр бүлийнхэн минь бүгд эрүүл энх байгаасай."
+        }
+      }
+    },
+    "furi-o-suru": {
+      "mn": "Дүр эсгэх: ...-сан дүр үзүүлэх; ... юм шиг царайлж жүжиглэх.",
+      "expected": {
+        "p": "〜ふりをする",
+        "en": "pretend to; act as if",
+        "form": "Verb-plain / i-Adj / na-Adj + な / Noun + の + ふりをする"
+      },
+      "formMn": "Үйл үгийн энгийн хэлбэр / い-тэмдэг нэр + ふりをする; な-тэмдэг нэр + な + ふりをする; нэр үг + の + ふりをする.",
+      "examples": {
+        "母に呼ばれたが、聞こえないふりをしてゲームを続けた。": {
+          "en": "My mother called me, but I pretended not to hear and kept playing my game.",
+          "mn": "Ээж дуудсан ч сонсоогүй дүр эсгээд тоглоомоо үргэлжлүүлсэн."
+        },
+        "彼は本当は知っているのに、知らないふりをしている。": {
+          "en": "He actually knows, but he's pretending not to.",
+          "mn": "Тэр үнэндээ мэдэж байгаа мөртлөө мэдэхгүй царайлж байна."
+        },
+        "電車の中で、寝たふりをして席を譲らない人がいる。": {
+          "en": "Some people on the train pretend to be asleep so they don't have to give up their seats.",
+          "mn": "Галт тэргэнд унтаж буй дүр үзүүлээд суудлаа тавьж өгдөггүй хүн бий."
+        }
+      }
+    },
+    "muki-muke": {
+      "mn": "向き: ...-д тохиромжтой; 向け: ...-д зориулж бүтээсэн, чиглүүлсэн.",
+      "expected": {
+        "p": "〜向き / 〜向け",
+        "en": "suitable for / aimed at; intended for",
+        "form": "Noun + 向き / Noun + 向け"
+      },
+      "formMn": "Нэр үг + 向き / 向け. Дараах нэр үгийг тодотговол 向きの / 向けの; үйлдэлтэй холбовол 向けに гэх мэт хэлбэр хэрэглэнэ.",
+      "examples": {
+        "この料理は作り方が簡単なので、初心者向きだ。": {
+          "en": "This dish is easy to make, so it's well suited to beginners.",
+          "mn": "Энэ хоол хийхэд амархан тул анхлан суралцагчдад тохиромжтой."
+        },
+        "この雑誌は、若い女性向けに作られている。": {
+          "en": "This magazine is made for young women.",
+          "mn": "Энэ сэтгүүлийг залуу эмэгтэйчүүдэд зориулж хийдэг."
+        },
+        "子ども向けの番組だが、大人が見ても十分楽しめる。": {
+          "en": "It's a program aimed at children, but adults can enjoy it too.",
+          "mn": "Хүүхдэд зориулсан нэвтрүүлэг ч томчууд үзээд хангалттай таашаал авч болно."
+        }
+      }
+    },
+    "gachi": {
+      "mn": "Ихэвчлэн сөрөг давтагдах хандлага: ...-х нь элбэг; ...-х гээд байдаг; ...-д өртөмтгий.",
+      "expected": {
+        "p": "〜がち",
+        "en": "tend to; be prone to; often",
+        "form": "Verb-stem / Noun + がち"
+      },
+      "formMn": "Үйл үгийн ます-гүй үндэс / нэр үг + がち. Жишээ: 忘れがち, 病気がち.",
+      "examples": {
+        "冬になると、つい家にこもりがちになる。": {
+          "en": "When winter comes, I tend to stay cooped up at home.",
+          "mn": "Өвөл болохоор өөрийн эрхгүй гэртээ бүгэх гээд байдаг."
+        },
+        "娘は小さいころ病気がちだったが、今はとても元気だ。": {
+          "en": "My daughter was often sick when she was little, but now she's very healthy.",
+          "mn": "Охин маань багадаа өвчлөмтгий байсан ч одоо маш эрүүл."
+        },
+        "一人暮らしだと、野菜が不足しがちです。": {
+          "en": "When you live alone, you tend not to get enough vegetables.",
+          "mn": "Ганцаараа амьдрахад ногоо дутуу идэх хандлагатай."
+        }
+      }
+    },
+    "gimi": {
+      "mn": "Төлөв, шинж бага зэрэг илрэх: бага зэрэг ...; ... маягтай; ... шинжтэй.",
+      "expected": {
+        "p": "〜気味",
+        "en": "a touch of; slightly; somewhat (in that condition)",
+        "form": "Noun / Verb-stem + 気味"
+      },
+      "formMn": "Нэр үг / үйл үгийн ます-гүй үндэс + 気味（ぎみ）.",
+      "examples": {
+        "少し風邪気味なので、今日は早めに帰ります。": {
+          "en": "I have a bit of a cold, so I'll head home early today.",
+          "mn": "Жаахан ханиадтай шинжтэй тул өнөөдөр эрт харина."
+        },
+        "最近、仕事が忙しくて疲れ気味だ。": {
+          "en": "Work has been busy lately, and I'm feeling a little worn out.",
+          "mn": "Сүүлийн үед ажил завгүй болохоор жаахан ядарсан байдалтай байна."
+        },
+        "人手が足りず、工事は予定より遅れ気味だ。": {
+          "en": "They're short-handed, so the construction is running a little behind schedule.",
+          "mn": "Ажиллах хүч дутуугаас барилга хуваариасаа бага зэрэг хоцорч байна."
+        }
+      }
+    },
+    "darake": {
+      "mn": "Ихэвчлэн таагүй зүйлээр дүүрэн, бүрхэгдсэн байх: ...-аар дүүрэн; ... болсон; ...-д бүрхэгдсэн.",
+      "expected": {
+        "p": "〜だらけ",
+        "en": "full of; covered with; riddled with",
+        "form": "Noun + だらけ"
+      },
+      "formMn": "Нэр үг + だらけ. Таагүй зүйл олон, бүх газраар байгааг заах нь түгээмэл.",
+      "examples": {
+        "子どもたちは、泥だらけになって帰ってきた。": {
+          "en": "The children came home covered in mud.",
+          "mn": "Хүүхдүүд шавар шавхай болсон юмнууд ирсэн."
+        },
+        "急いで書いたレポートは、間違いだらけだった。": {
+          "en": "The report I wrote in a hurry was full of mistakes.",
+          "mn": "Яарч бичсэн тайлан алдаа дүүрэн байв."
+        },
+        "引っ越したばかりで、部屋はまだ段ボールだらけだ。": {
+          "en": "I've just moved, so my place is still full of cardboard boxes.",
+          "mn": "Дөнгөж нүүсэн болохоор өрөө цаасан хайрцгаар дүүрэн хэвээр байна."
+        }
+      }
+    },
+    "kiru-kirenai": {
+      "mn": "切る: үйлдлийг бүрэн гүйцээх; 切れない: бүгдийг нь хийж дуусгаж чадахгүй байх.",
+      "expected": {
+        "p": "〜切る / 〜切れない",
+        "en": "do completely; finish / can't finish; too many to",
+        "form": "Verb-stem + 切る / Verb-stem + 切れない"
+      },
+      "formMn": "Үйл үгийн ます-гүй үндэс + 切る / 切れない. Жишээ: 読み切る / 食べ切れない.",
+      "examples": {
+        "三時間かけて、長い小説を最後まで読み切った。": {
+          "en": "It took three hours, but I read the long novel right to the end.",
+          "mn": "Гурван цаг зарцуулж урт романыг дуустал нь уншсан."
+        },
+        "注文しすぎて、料理を食べ切れなかった。": {
+          "en": "We ordered too much and couldn't finish all the food.",
+          "mn": "Хэт их захиалсан тул хоолоо бүгдийг нь идэж бараагүй."
+        },
+        "山の上では、数え切れないほどの星が見えた。": {
+          "en": "From the mountaintop we could see more stars than we could count.",
+          "mn": "Уулын оройгоос тоолж баршгүй олон од харагдсан."
+        }
+      }
+    },
+    "kakeru": {
+      "mn": "Үйлдэл эхэлсэн ч дуусаагүй эсвэл эхлэхийн өмнө байх: дутуу ...-сан; ...-ж эхлэх; ...-х гэж байх.",
+      "expected": {
+        "p": "〜かける",
+        "en": "half-done; start to; be about to",
+        "form": "Verb-stem + かける / Verb-stem + かけの + Noun"
+      },
+      "formMn": "Үйл үгийн ます-гүй үндэс + かける; нэр үг тодотговол ます-гүй үндэс + かけの + нэр үг.",
+      "examples": {
+        "読みかけの本が、机の上に置いてある。": {
+          "en": "There's a half-read book on the desk.",
+          "mn": "Дутуу уншсан ном ширээн дээр тавиатай байна."
+        },
+        "彼女は何か言いかけたが、そのまま黙ってしまった。": {
+          "en": "She started to say something, but then fell silent.",
+          "mn": "Тэр эмэгтэй юм хэлэх гэж эхэлснээ чимээгүй болсон."
+        },
+        "この花は枯れかけていたが、水をやったら元気になった。": {
+          "en": "This flower was starting to wilt, but it perked up after I watered it.",
+          "mn": "Энэ цэцэг гандаж эхэлсэн байсан ч услаад сэргэсэн."
+        }
+      }
+    },
+    "au": {
+      "mn": "Харилцан эсвэл хамт үйлдэх: бие биедээ ...-х; хамт ...-х.",
+      "expected": {
+        "p": "〜合う",
+        "en": "do to each other; do together",
+        "form": "Verb-stem + 合う"
+      },
+      "formMn": "Үйл үгийн ます-гүй үндэс + 合う. Жишээ: 話し合う, 助け合う.",
+      "examples": {
+        "困ったときは、お互いに助け合いましょう。": {
+          "en": "Let's help each other out when things get tough.",
+          "mn": "Хэцүү үед бие биедээ тусалцгаая."
+        },
+        "旅行の計画について、家族で話し合った。": {
+          "en": "We talked over the travel plans as a family.",
+          "mn": "Аяллын төлөвлөгөөний тухай гэр бүлээрээ ярилцсан."
+        },
+        "優勝が決まると、選手たちは抱き合って喜んだ。": {
+          "en": "When their victory was confirmed, the players hugged each other in joy.",
+          "mn": "Түрүүлсэн нь тодорхой болмогц тамирчид тэврэлдэн баярласан."
+        }
+      }
+    },
+    "naosu": {
+      "mn": "Засах, сайжруулахын тулд дахин хийх: дахин ...-х; ...-ж засах.",
+      "expected": {
+        "p": "〜直す",
+        "en": "redo; do over again (to fix or improve)",
+        "form": "Verb-stem + 直す"
+      },
+      "formMn": "Үйл үгийн ます-гүй үндэс + 直す. Жишээ: 書き直す, やり直す.",
+      "examples": {
+        "名前を間違えたので、書類を書き直した。": {
+          "en": "I got the name wrong, so I rewrote the document.",
+          "mn": "Нэрийг буруу бичсэн тул баримтыг дахин бичсэн."
+        },
+        "すみません、電波が悪いので、あとでかけ直します。": {
+          "en": "Sorry, the signal's bad, so I'll call you back later.",
+          "mn": "Уучлаарай, сүлжээ муу байна, дараа буцааж залгая."
+        },
+        "一度はあきらめた夢だが、もう一度考え直してみることにした。": {
+          "en": "It's a dream I once gave up on, but I've decided to reconsider it.",
+          "mn": "Нэгэнт орхисон мөрөөдөл байсан ч дахин бодож үзэхээр шийдсэн."
+        }
+      }
+    },
+    "zurai": {
+      "mn": "Үйлдэл хийхэд сэтгэл, биеийн хувьд хэцүү эсвэл тухгүй байх: ...-хад хэцүү; ...-хад эвгүй.",
+      "expected": {
+        "p": "〜づらい",
+        "en": "hard to; difficult or uncomfortable to",
+        "form": "Verb-stem + づらい"
+      },
+      "formMn": "Үйл үгийн ます-гүй үндэс + づらい. Сэтгэл, биеийн хүндрэлтэй хийхийг заана.",
+      "examples": {
+        "この靴は少し小さくて、歩きづらい。": {
+          "en": "These shoes are a bit small, so they're hard to walk in.",
+          "mn": "Энэ гутал жаахан жижиг болохоор алхахад эвгүй."
+        },
+        "先輩にお金を貸してほしいとは、ちょっと言いづらい。": {
+          "en": "It's a bit awkward to ask a senior colleague to lend me money.",
+          "mn": "Ахлах ажилтнаас мөнгө зээлээч гэж хэлэхэд жаахан эвгүй."
+        },
+        "字が小さくて読みづらいので、もう少し大きくしてもらえますか。": {
+          "en": "The text is too small to read comfortably. Could you make it a bit bigger?",
+          "mn": "Үсэг жижиг учраас уншихад хэцүү байна. Жаахан томруулж өгөх үү?"
+        }
+      }
+    },
+    "beki-da-beki-de-wa-nai": {
+      "mn": "Ёс, үүрэг, зохистой үйлдлийн зөвлөгөө: ...-х ёстой; ...-х нь зүйтэй; ...-х ёсгүй.",
+      "expected": {
+        "p": "〜べきだ / 〜べきではない",
+        "en": "should; ought to / should not",
+        "form": "Verb-dict + べきだ / Verb-dict + べきではない"
+      },
+      "formMn": "Үйл үгийн толь бичгийн хэлбэр + べきだ / べきではない. する нь するべき эсвэл すべき болж болно.",
+      "examples": {
+        "自分が悪いと思ったら、すぐに謝るべきだ。": {
+          "en": "If you think you were in the wrong, you should apologize right away.",
+          "mn": "Өөрийгөө буруутай гэж бодвол шууд уучлал гуйх ёстой."
+        },
+        "環境のために、私たちはもっとエネルギーを大切に使うべきだ。": {
+          "en": "For the sake of the environment, we should use energy more carefully.",
+          "mn": "Байгаль орчныхоо төлөө эрчим хүчийг илүү хэмнэлттэй хэрэглэх хэрэгтэй."
+        },
+        "病院の中では、大きな声で話すべきではない。": {
+          "en": "You shouldn't talk loudly inside a hospital.",
+          "mn": "Эмнэлэг дотор чанга ярих ёсгүй."
+        }
+      }
+    },
+    "hodo-wa-nai": {
+      "mn": "Юу ч түүн шиг тэр шинжтэй биш гэж онцлох: ... шиг ... зүйл байхгүй; ...-аас илүү ... гэж үгүй.",
+      "expected": {
+        "p": "〜ほど〜はない",
+        "en": "nothing is as ... as; there's no ... like",
+        "form": "Noun + ほど + i-Adj / na-Adj + な + Noun + はない"
+      },
+      "formMn": "Нэр үг + ほど + い-тэмдэг нэр эсвэл な-тэмдэг нэр + な + нэр үг + はない. Өмнөх нэр үгтэй тэнцэх зүйл үгүйг онцолно.",
+      "examples": {
+        "仕事の後に飲む冷たいビールほどおいしいものはない。": {
+          "en": "Nothing tastes as good as an ice-cold beer after work.",
+          "mn": "Ажлын дараа уух хүйтэн шар айраг шиг амттай юм байхгүй."
+        },
+        "この町で、あの店ほど安くておいしいラーメン屋はない。": {
+          "en": "There's no ramen shop in this town as cheap and tasty as that one.",
+          "mn": "Энэ хотод тэр газар шиг хямд, амттай рамены газар байхгүй."
+        },
+        "健康ほど大切なものはないと、病気になって気づいた。": {
+          "en": "When I got sick, I realized that nothing is as important as good health.",
+          "mn": "Өвдсөн хойноо эрүүл мэнд шиг чухал зүйл үгүйг ойлгосон."
+        }
+      }
+    },
+    "shika-nai-no-choice": {
+      "mn": "Өөр сонголтгүй байх: ...-хаас өөр аргагүй; ...-х л үлдсэн.",
+      "expected": {
+        "p": "〜しかない",
+        "en": "have no choice but to; can only",
+        "form": "Verb-dict + しかない"
+      },
+      "formMn": "Үйл үгийн толь бичгийн хэлбэр + しかない. Өөр сонголтгүй хийхээс өөр аргагүйг хэлнэ.",
+      "examples": {
+        "終電に乗り遅れたから、タクシーで帰るしかない。": {
+          "en": "I missed the last train, so I have no choice but to take a taxi home.",
+          "mn": "Сүүлийн галт тэрэгнээс хоцорсон тул таксигаар харихаас өөр аргагүй."
+        },
+        "誰も手伝ってくれないなら、一人でやるしかない。": {
+          "en": "If nobody will help me, I'll just have to do it myself.",
+          "mn": "Хэн ч туслахгүй бол ганцаараа хийхээс өөр аргагүй."
+        },
+        "ここまで来たら、もう最後まで頑張るしかないね。": {
+          "en": "Now that we've come this far, all we can do is give it our all to the end.",
+          "mn": "Энд хүртэл ирсэн хойно эцсээ хүртэл хичээх л үлдлээ шүү."
+        }
+      }
+    },
+    "made-even": {
+      "mn": "Ердийн хэмжээнээс давсан туйлын жишээг нэмэх: ... хүртэл; бүр ... ч.",
+      "expected": {
+        "p": "〜まで（even）",
+        "en": "even (an extreme case)",
+        "form": "Noun + まで / Noun + にまで"
+      },
+      "formMn": "Нэр үг + まで / にまで. Туйлын жишээг хүртэл хамруулна; хугацааны хязгаарын まで-тай утгаар нь ялгана.",
+      "examples": {
+        "最近は、小学生までスマホを持っている。": {
+          "en": "These days even elementary school kids have smartphones.",
+          "mn": "Сүүлийн үед бага ангийн хүүхдүүд хүртэл ухаалаг утастай."
+        },
+        "親友にまでうそをつかれて、とてもショックだった。": {
+          "en": "I was really shocked that even my best friend lied to me.",
+          "mn": "Хамгийн сайн найздаа хүртэл хууртагдаад их цочирдсон."
+        },
+        "雨だけでなく、風まで強くなってきた。": {
+          "en": "It's not just the rain; now even the wind is getting stronger.",
+          "mn": "Зөвхөн бороо ч биш, салхи хүртэл ширүүсэж эхэлсэн."
+        }
+      }
+    },
+    "tokoro-datta": {
+      "mn": "Болох шахсан ч болоогүй үйл явдал: ...-х шахсан; арай л ...-чихсангүй.",
+      "expected": {
+        "p": "〜ところだった",
+        "en": "almost; nearly (but didn't)",
+        "form": "Verb-dict + ところだった"
+      },
+      "formMn": "Үйл үгийн толь бичгийн хэлбэр + ところだった. Бодитоор болоогүй, болох шахсан явдлыг хэлнэ.",
+      "examples": {
+        "考え事をしていて、もう少しで車にひかれるところだった。": {
+          "en": "I was lost in thought and nearly got hit by a car.",
+          "mn": "Юм бодож яваад машинд мөргүүлэх шахсан."
+        },
+        "目覚ましが鳴らなくて、危うく飛行機に乗り遅れるところだった。": {
+          "en": "My alarm didn't go off, and I very nearly missed my flight.",
+          "mn": "Сэрүүлэг дуугараагүй тул онгоцноосоо арай л хоцорчихсонгүй."
+        },
+        "君が教えてくれなかったら、大事な書類を出し忘れるところだったよ。": {
+          "en": "If you hadn't reminded me, I would have forgotten to hand in the important documents.",
+          "mn": "Чи сануулаагүй бол чухал баримтаа өгөхөө мартах шахсан шүү."
+        }
+      }
+    },
+    "kara-to-itte": {
+      "mn": "Нэг шалтгаанаар дүгнэлтийг заавал зөвшөөрөхгүй байх: ... гээд л ... гэсэн үг биш; зөвхөн ... учраас ... гэж болохгүй.",
+      "expected": {
+        "p": "〜からといって",
+        "en": "just because (... doesn't mean); simply because",
+        "form": "Sentence + からといって"
+      },
+      "formMn": "Энгийн хэлбэрийн өгүүлбэр + からといって. Дараа нь хэт ерөнхий дүгнэлтийг няцаана.",
+      "examples": {
+        "日本人だからといって、みんなが敬語を正しく使えるわけではない。": {
+          "en": "Just because someone is Japanese doesn't mean they can use keigo correctly.",
+          "mn": "Япон хүн гээд бүгд хүндэтгэлийн хэлийг зөв хэрэглэж чадна гэсэн үг биш."
+        },
+        "忙しいからといって、朝ご飯を食べないのは体によくない。": {
+          "en": "Skipping breakfast just because you're busy isn't good for you.",
+          "mn": "Завгүй гээд өглөөний хоол идэхгүй байх нь биед сайн биш."
+        },
+        "一回負けたからといって、あきらめる必要はない。": {
+          "en": "There's no need to give up just because you lost once.",
+          "mn": "Нэг удаа ялагдлаа гээд бууж өгөх шаардлагагүй."
+        }
+      }
+    },
+    "toori-ni-doori-ni": {
+      "mn": "Заавар, загвар, болсон үйл явдалтай яг адил хийх: ...-ын дагуу; ... шиг нь; ... ёсоор.",
+      "expected": {
+        "p": "〜とおりに / 〜どおりに",
+        "en": "as; in the way that; exactly as",
+        "form": "Verb-dict / Verb-ta / Noun + の + とおりに / Noun + どおりに"
+      },
+      "formMn": "Үйл үгийн толь бичгийн эсвэл た-хэлбэр + とおりに; нэр үг + の + とおりに; нэр үг + どおりに.",
+      "examples": {
+        "説明書に書いてあるとおりに組み立てたのに、うまく動かない。": {
+          "en": "I put it together exactly as the manual says, but it doesn't work properly.",
+          "mn": "Зааварт бичсэн ёсоор угсарсан атал сайн ажиллахгүй байна."
+        },
+        "先生が言ったとおり、試験には去年と似た問題が出た。": {
+          "en": "Just as the teacher said, questions similar to last year's came up on the exam.",
+          "mn": "Багшийн хэлсэнчлэн шалгалтад өнгөрсөн жилийнхтэй төстэй бодлого гарсан."
+        },
+        "工事は予定どおりに進んでいる。": {
+          "en": "The construction is going according to schedule.",
+          "mn": "Барилгын ажил төлөвлөсний дагуу явж байна."
+        }
+      }
+    },
+    "nanka-nante": {
+      "mn": "Жишээ татах, үл тоох, өөрийгөө даруухан хэлэх эсвэл гайхах: ... мэтийн; ... шиг юм; ... гэж үү!; ... гэхээр гайхмаар.",
+      "expected": {
+        "p": "〜なんか / 〜なんて",
+        "en": "things like; the likes of (dismissive or humble); how ...! (surprise)",
+        "form": "Noun + なんか / Noun + なんて / Sentence + なんて"
+      },
+      "formMn": "Нэр үг + なんか / なんて; өгүүлбэр + なんて. Үл тоосон, даруухан эсвэл гайхсан өнгийг нөхцөлөөс ялгана.",
+      "examples": {
+        "私なんか、まだまだ初心者です。": {
+          "en": "Someone like me is still just a beginner.",
+          "mn": "Над шиг хүн бол одоо ч анхлан суралцагч шүү дээ."
+        },
+        "幽霊なんて、いるわけがないよ。": {
+          "en": "Ghosts? There's no way they exist.",
+          "mn": "Сүнс мэтийн юм байдаг гэж байхгүй шүү."
+        },
+        "あの二人が結婚するなんて、びっくりした。": {
+          "en": "Those two are getting married? I was so surprised!",
+          "mn": "Тэр хоёр гэрлэнэ гэхээр их гайхсан."
+        }
+      }
+    }
+  }
+}

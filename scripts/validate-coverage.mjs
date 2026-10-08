@@ -23,15 +23,16 @@ export function auditCoverage() {
   const groupIds = new Set(taxonomy.groups.map(g => g.id));
   const issues = [];
   const byLevel = {};
-  const totals = { missingMeanings: 0, missingExamples: 0, missingForms: 0, unclassified: 0, invalidCategories: 0, missingProvenance: 0, mislabeledMn: 0 };
+  const totals = { missingMeanings: 0, missingExamples: 0, missingForms: 0, unclassified: 0, invalidCategories: 0, missingProvenance: 0, mislabeledMn: 0, unresolvedSourceIssues: 0 };
   for (const level of ["N5", "N4", "N3", "N2", "N1"]) {
     byLevel[level] = {};
     for (const kind of ["vocab", "kanji", "grammar"]) {
       const entries = read(`public/data/${kind}/${level.toLowerCase()}.json`);
-      const counts = { entries: entries.length, missingMeanings: 0, missingExamples: 0, missingForms: 0, unclassified: 0, invalidCategories: 0, missingProvenance: 0, mislabeledMn: 0 };
+      const counts = { entries: entries.length, missingMeanings: 0, missingExamples: 0, missingForms: 0, unclassified: 0, invalidCategories: 0, missingProvenance: 0, mislabeledMn: 0, unresolvedSourceIssues: 0 };
       for (const e of entries) {
         const id = kind === "kanji" ? e.k : e.id;
         const issue = (field, detail) => { counts[field]++; totals[field]++; issues.push({ kind, level, id, field, detail }); };
+        if (e.source_issue) issue("unresolvedSourceIssues", e.source_issue);
         if (!validMeaning(e)) issue("missingMeanings", "Missing, invalid or placeholder Mongolian meaning");
         if (validMeaning(e) && (!e.mn_provenance || !provenance.has(e.mn_provenance))) issue("missingProvenance", "Translation has no maintained batch provenance");
         for (const [i, example] of (e.ex ?? []).entries()) {

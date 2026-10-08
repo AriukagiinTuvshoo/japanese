@@ -53,7 +53,7 @@ export default function Vocabulary() {
       );
     }
     if (type !== "all") out = out.filter((v) => v.t === type);
-    if (topic !== "all") out = out.filter((v) => entryTopics(v).includes(topic));
+    if (topic !== "all") out = out.filter((v) => (topic === "unclassified" ? entryTopics(v).length === 0 : entryTopics(v).includes(topic)));
     if (state !== "all") {
       out = out.filter((v) => {
         if (state === "fav") return doc.favorites.includes(v.id);
@@ -175,8 +175,13 @@ export default function Vocabulary() {
                 className={cn("shrink-0 rounded-lg px-2.5 py-1.5 text-[12px] font-bold transition", topic === "all" ? "bg-shu-500 text-white" : "bg-shu-50 text-shu-700")}>
                 {t.allTopics}
               </button>
+              {(words ?? []).some(e => entryTopics(e).length === 0) && (
+                <button aria-pressed={topic === "unclassified"} onClick={() => { setTopic("unclassified"); setPage(1); }} className="shrink-0 rounded-lg bg-kin-50 px-3 py-2 text-xs font-bold text-kin-700">
+                  {t.unclassifiedTopic} {(words ?? []).filter(e => entryTopics(e).length === 0).length}
+                </button>
+              )}
               {(Object.keys(topicLabel[language]) as Topic[]).filter((key) => topicCounts[key]).map((key) => (
-                <button key={key} onClick={() => { setTopic(key); setPage(1); }}
+                <button key={key} aria-pressed={topic === key} onClick={() => { setTopic(key); setPage(1); }}
                   className={cn("shrink-0 rounded-lg px-2.5 py-1.5 text-[12px] font-bold transition", topic === key ? "bg-shu-500 text-white" : "bg-sumi-900/5 text-sumi-600 hover:text-sumi-900")}>
                   {topicLabel[language][key]} <span className="tabnum opacity-60">{topicCounts[key]}</span>
                 </button>

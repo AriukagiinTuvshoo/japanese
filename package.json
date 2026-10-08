@@ -20,7 +20,8 @@
     "translations:apply": "node scripts/apply-translation-batches.mjs",
     "test:browser": "node scripts/test-browser.mjs",
     "test:coverage": "node scripts/test-coverage.mjs",
-    "test": "npm run test:routes && npm run test:coverage"
+    "test": "npm run test:routes && npm run test:coverage && npm run test:retention && node scripts/test-grammar-mn-pending.mjs",
+    "test:retention": "node scripts/test-source-retention.mjs"
   },
   "dependencies": {
     "clsx": "2.1.1",

@@ -55,7 +55,7 @@ export default function KanjiList() {
     const n = q.trim().toLowerCase();
     if (n) out = out.filter((k) => k.k === n || k.on.some((r) => r.includes(n)) || k.kun.some((r) => r.includes(n)) ||
       k.en.some((e) => e.toLowerCase().includes(n)) || k.mn.some((m) => m.toLowerCase().includes(n)));
-    if (topic !== "all") out = out.filter(k => entryTopics(k).includes(topic));
+    if (topic !== "all") out = out.filter(k => (topic === "unclassified" ? entryTopics(k).length === 0 : entryTopics(k).includes(topic)));
     if (rad !== "all") out = out.filter((k) => k.rad === rad);
     if (sort === "stroke") out = out.slice().sort((a, b) => (a.s ?? 99) - (b.s ?? 99));
     else if (sort === "grade") out = out.slice().sort((a, b) => (a.g ?? 99) - (b.g ?? 99));
@@ -118,6 +118,11 @@ export default function KanjiList() {
             </div>
             <div className="no-scrollbar mt-3 flex gap-1.5 overflow-x-auto" aria-label={t.filterByTopic}>
               <button aria-pressed={topic === "all"} onClick={() => { setTopic("all"); setPage(1); }} className="shrink-0 rounded-lg bg-shu-50 px-3 py-2 text-xs font-bold">{t.allTopics}</button>
+              {(items ?? []).some(e => entryTopics(e).length === 0) && (
+                <button aria-pressed={topic === "unclassified"} onClick={() => { setTopic("unclassified"); setPage(1); }} className="shrink-0 rounded-lg bg-kin-50 px-3 py-2 text-xs font-bold text-kin-700">
+                  {t.unclassifiedTopic} {(items ?? []).filter(e => entryTopics(e).length === 0).length}
+                </button>
+              )}
               {Object.keys(topicLabel[language]).filter(key => topicCounts[key]).map(key => (
                 <button key={key} aria-pressed={topic === key} onClick={() => { setTopic(key); setPage(1); }}
                   className={cn("shrink-0 rounded-lg px-3 py-2 text-xs font-bold", topic === key ? "bg-shu-500 text-white" : "bg-sumi-900/5 text-sumi-600")}>

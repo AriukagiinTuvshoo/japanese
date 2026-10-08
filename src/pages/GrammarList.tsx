@@ -102,7 +102,7 @@ function GrammarCard({ g, done, onToggle }: { g: Grammar; done: boolean; onToggl
       <div className="flex items-start gap-3">
         <a href={href(`grammar?level=${g.lvl}`, g.id)} className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="font-jp text-[1.15rem] font-bold text-sumi-900">{grammarLabel(g.p)}</span>
+            <span className="font-jp text-[1.15rem] font-bold text-sumi-900">{grammarLabel(g.p, language)}</span>
             <LevelBadge level={g.lvl} size="sm" />
             {done && <Chip tone="matcha">{t.seenChip}</Chip>}
           </div>

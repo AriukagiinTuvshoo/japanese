@@ -17,6 +17,7 @@ export default function GrammarDetail({ id, level }: { id: string; level?: Level
   useEffect(() => {
     let cancelled = false;
     setItems(null);
+    setTab("detail");
     (async () => {
       const order: Level[] = ["N5", "N4", "N3", "N2", "N1"];
       const hinted = level ? [level, ...order.filter((l) => l !== level)] : order;
@@ -43,6 +44,7 @@ export default function GrammarDetail({ id, level }: { id: string; level?: Level
   if (!items) return <Spinner label={t.loadingGrammar} lang={language} />;
   if (!g) return <Empty icon="無" title={t.grammarNotFound} sub={id} action={<Button onClick={() => navigate("grammar")}>← {t.grammar}</Button>} />;
 
+  const note = language === "mn" ? g.note : g.note_en;
   const en = Array.isArray(g.en) ? g.en.join("; ") : String(g.en ?? "");
 
   return (
@@ -72,10 +74,10 @@ export default function GrammarDetail({ id, level }: { id: string; level?: Level
             <span className="italic">{MN_PENDING}</span>
           </p>
         )}
-        {language === "mn" && g.note && (
+        {note && (
           <div className="mt-4 rounded-2xl border border-ai-100 bg-ai-50/60 p-4">
             <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-ai-600">{t.nuance}</p>
-            <p className="mt-2 whitespace-pre-line text-[13.5px] leading-relaxed text-ai-700">{g.note}</p>
+            <p className="mt-2 whitespace-pre-line text-[13.5px] leading-relaxed text-ai-700">{note}</p>
           </div>
         )}
         {!g.mn && en && (
@@ -120,8 +122,8 @@ export default function GrammarDetail({ id, level }: { id: string; level?: Level
 
           <Card>
             <SectionTitle jp="よくある間違い" title={t.commonMistakes} />
-            {language === "mn" && g.note ? (
-              <p className="text-[13.5px] leading-relaxed text-sumi-700">{g.note}</p>
+            {note ? (
+              <p className="text-[13.5px] leading-relaxed text-sumi-700">{note}</p>
             ) : (
               <p className="text-[13px] text-sumi-500">
                 {t.mistakesMissingPre}
