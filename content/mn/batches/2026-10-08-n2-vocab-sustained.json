@@ -1,0 +1,1032 @@
+{
+  "provenance": {
+    "id": "mn-n2-vocab-sustained-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit topics cross-checked individually against retained Japanese headwords/readings and English glosses, including alternate dictionary readings. Independently unreviewed.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n2.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j1241320": {
+      "mn": [
+        "тэнцүү хуваалт"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "均分",
+        "r": "きんぶん",
+        "en": [
+          "equal division"
+        ]
+      }
+    },
+    "j1503730": {
+      "mn": [
+        "салбар станц",
+        "салбар алба"
+      ],
+      "topics": [
+        "work",
+        "places"
+      ],
+      "expected": {
+        "w": "分署",
+        "r": "ぶんしょ",
+        "en": [
+          "substation",
+          "branch office"
+        ]
+      }
+    },
+    "j2841851": {
+      "mn": [
+        "намын түүх",
+        "намын гишүүн байсан хугацааны түүх"
+      ],
+      "topics": [
+        "society",
+        "time"
+      ],
+      "expected": {
+        "w": "党歴",
+        "r": "とうれき",
+        "en": [
+          "party history (political)",
+          "one's history as a party member"
+        ]
+      }
+    },
+    "j2832812": {
+      "mn": [
+        "бүрэн ойлгох",
+        "бүхнийг мэдэх"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "丸分り",
+        "r": "まるわかり",
+        "en": [
+          "understanding completely",
+          "understanding all there is to know"
+        ]
+      }
+    },
+    "j1503960": {
+      "mn": [
+        "хуваарилсан дүн",
+        "оруулах хувь"
+      ],
+      "topics": [
+        "work",
+        "quantity"
+      ],
+      "expected": {
+        "w": "分担額",
+        "r": "ぶんたんがく",
+        "en": [
+          "amount allotted",
+          "contribution"
+        ]
+      }
+    },
+    "j1742430": {
+      "mn": [
+        "намаас дээгүүр",
+        "олон намын",
+        "хоёр намын"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "超党派",
+        "r": "ちょうとうは",
+        "en": [
+          "suprapartisan",
+          "multiparty",
+          "bipartisan"
+        ]
+      }
+    },
+    "j1803740": {
+      "mn": [
+        "шилжүүлэн суулгахаар ургамлын үндсийг хуваах"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "根分け",
+        "r": "ねわけ",
+        "en": [
+          "dividing a plant's roots for transplanting"
+        ]
+      }
+    },
+    "j1703500": {
+      "mn": [
+        "намын дүрэм",
+        "намын журам"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "党則",
+        "r": "とうそく",
+        "en": [
+          "party rules",
+          "party regulations"
+        ]
+      }
+    },
+    "j2524320": {
+      "mn": [
+        "Минна но Тоо буюу Таны нам"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "みんなの党",
+        "r": "みんなのとう",
+        "en": [
+          "Your Party (a Japanese political party)"
+        ]
+      }
+    },
+    "j1654260": {
+      "mn": [
+        "намын улс төрийн тактик"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "党略",
+        "r": "とうりゃく",
+        "en": [
+          "party politics (tactics)"
+        ]
+      }
+    },
+    "j1654250": {
+      "mn": [
+        "намын сахилга"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "党紀",
+        "r": "とうき",
+        "en": [
+          "party discipline"
+        ]
+      }
+    },
+    "j1802550": {
+      "mn": [
+        "улс төрийн намаас урвах буюу гарах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "脱党",
+        "r": "だっとう",
+        "en": [
+          "defection from or leaving a (political) party"
+        ]
+      }
+    },
+    "j1503540": {
+      "mn": [
+        "чандарын нэг хэсэг"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "分骨",
+        "r": "ぶんこつ",
+        "en": [
+          "part of a person's ashes"
+        ]
+      }
+    },
+    "j1401730": {
+      "mn": [
+        "дээд захирагч",
+        "ерөнхий жанжин",
+        "Тайванийн ерөнхийлөгч"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "総統",
+        "r": "そうとう",
+        "en": [
+          "supreme ruler",
+          "generalissimo",
+          "president (of Taiwan)"
+        ]
+      }
+    },
+    "j1503320": {
+      "mn": [
+        "хувьсах гүйдлийн ороомог"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "分巻",
+        "r": "ぶんまき",
+        "en": [
+          "alternating-current winding"
+        ]
+      }
+    },
+    "j1196700": {
+      "mn": [
+        "миний нам",
+        "манай нам"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "我党",
+        "r": "わがとう",
+        "en": [
+          "my party",
+          "our party"
+        ]
+      }
+    },
+    "j2386580": {
+      "mn": [
+        "давтамж бууруулагч",
+        "давтамж хуваагч"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "分周器",
+        "r": "ぶんしゅうき",
+        "en": [
+          "frequency demultiplier",
+          "frequency divider"
+        ]
+      }
+    },
+    "j1401860": {
+      "mn": [
+        "айлын хамгийн том хүүхэд",
+        "ууган хүүхэд"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "総領",
+        "r": "そうりょう",
+        "en": [
+          "eldest child",
+          "oldest child",
+          "first-born child"
+        ]
+      }
+    },
+    "j1503510": {
+      "mn": [
+        "овортой",
+        "нүсэр",
+        "зузаан"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "分厚い",
+        "r": "ぶあつい",
+        "en": [
+          "bulky",
+          "massive",
+          "thick"
+        ]
+      }
+    },
+    "j1504150": {
+      "mn": [
+        "агшин"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "分秒",
+        "r": "ふんびょう",
+        "en": [
+          "moment"
+        ]
+      }
+    },
+    "j1654290": {
+      "mn": [
+        "намын гишүүнчлэл",
+        "намын бүртгэл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "党籍",
+        "r": "とうせき",
+        "en": [
+          "party membership",
+          "party register"
+        ]
+      }
+    },
+    "j1592150": {
+      "mn": [
+        "өчүүхэн",
+        "ялихгүй",
+        "ач холбогдолгүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "区々",
+        "r": "くく",
+        "en": [
+          "petty",
+          "trivial",
+          "insignificant"
+        ]
+      }
+    },
+    "j1713090": {
+      "mn": [
+        "алтны сорьц",
+        "цэвэршилт"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "純分",
+        "r": "じゅんぶん",
+        "en": [
+          "fineness or purity (of gold)"
+        ]
+      }
+    },
+    "j2681030": {
+      "mn": [
+        "туйлшрал арилгах"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "脱分極",
+        "r": "だつぶんきょく",
+        "en": [
+          "depolarization",
+          "depolarisation"
+        ]
+      }
+    },
+    "j2726060": {
+      "mn": [
+        "бай",
+        "объект",
+        "зорилго"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "準的",
+        "r": "じゅんてき",
+        "en": [
+          "target",
+          "object",
+          "aim"
+        ]
+      }
+    },
+    "j2711280": {
+      "mn": [
+        "тархалтын нутаг",
+        "тархах хүрээ",
+        "тархалтын бүс"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "分布域",
+        "r": "ぶんぷいき",
+        "en": [
+          "area of distribution",
+          "distribution range",
+          "distribution region"
+        ]
+      }
+    },
+    "j1496900": {
+      "mn": [
+        "Токио Хоккайдоос бусад Японы мужууд"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "府県",
+        "r": "ふけん",
+        "en": [
+          "prefectures (of Japan, excl. Tokyo and Hokkaido)"
+        ]
+      }
+    },
+    "j1401670": {
+      "mn": [
+        "бүх гишүүд",
+        "бүх цэрэг"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "総勢",
+        "r": "そうぜい",
+        "en": [
+          "all members",
+          "whole army"
+        ]
+      }
+    },
+    "j2529730": {
+      "mn": [
+        "тоног төхөөрөмж",
+        "суурилуулалт",
+        "байгууламж"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "設え",
+        "r": "しつらえ",
+        "en": [
+          "equipment",
+          "installation",
+          "facilities"
+        ]
+      }
+    },
+    "j2692330": {
+      "mn": [
+        "тоног төхөөрөмж",
+        "суурилуулалт",
+        "байгууламж"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "設い",
+        "r": "しつらい",
+        "en": [
+          "equipment",
+          "installation",
+          "facilities"
+        ]
+      }
+    },
+    "j1554700": {
+      "mn": [
+        "тоон хэмжээний",
+        "тоо хэмжээнд хамаарах"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "量的",
+        "r": "りょうてき",
+        "en": [
+          "quantitative",
+          "concerning the quantity"
+        ]
+      }
+    },
+    "j2814750": {
+      "mn": [
+        "гамма тархалт"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "γ分布",
+        "r": "ガンマぶんぷ",
+        "en": [
+          "gamma distribution"
+        ]
+      }
+    },
+    "j2827532": {
+      "mn": [
+        "тьюдентийн тархалт"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "ｔ分布",
+        "r": "ティーぶんぷ",
+        "en": [
+          "t-distribution"
+        ]
+      }
+    },
+    "j2827544": {
+      "mn": [
+        "Фишерийн тархалт"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "Ｆ分布",
+        "r": "エフぶんぷ",
+        "en": [
+          "F-distribution"
+        ]
+      }
+    },
+    "j1689260": {
+      "mn": [
+        "тусад нь татвар ногдуулах"
+      ],
+      "topics": [
+        "work",
+        "society"
+      ],
+      "expected": {
+        "w": "分離課税",
+        "r": "ぶんりかぜい",
+        "en": [
+          "separate taxation"
+        ]
+      }
+    },
+    "j1622190": {
+      "mn": [
+        "газрын нэгж талбарыг хуваах"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "分筆",
+        "r": "ぶんぴつ",
+        "en": [
+          "subdivision of a lot"
+        ]
+      }
+    },
+    "j1401580": {
+      "mn": [
+        "байгууллагын ерөнхийлөгч",
+        "ерөнхий захирал",
+        "төв банкны ерөнхийлөгч"
+      ],
+      "topics": [
+        "people",
+        "work"
+      ],
+      "expected": {
+        "w": "総裁",
+        "r": "そうさい",
+        "en": [
+          "president (of an organization)",
+          "director general",
+          "governor (of a central bank)"
+        ]
+      }
+    },
+    "j1504180": {
+      "mn": [
+        "зөгийн бүл салгах",
+        "зөгий сүрэглэх",
+        "эзэмшил хуваах"
+      ],
+      "topics": [
+        "nature",
+        "society"
+      ],
+      "expected": {
+        "w": "分封",
+        "r": "ぶんぽう",
+        "en": [
+          "hiving off",
+          "swarming",
+          "dividing a fief"
+        ]
+      }
+    },
+    "j1178870": {
+      "mn": [
+        "давс",
+        "давсны агууламж"
+      ],
+      "topics": [
+        "food"
+      ],
+      "expected": {
+        "w": "塩分",
+        "r": "えんぶん",
+        "en": [
+          "salt",
+          "salt content"
+        ]
+      }
+    },
+    "j1306920": {
+      "mn": [
+        "түүхэн",
+        "түүхийн"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "史的",
+        "r": "してき",
+        "en": [
+          "historic",
+          "historical"
+        ]
+      }
+    },
+    "j1401630": {
+      "mn": [
+        "бүх бие"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "総身",
+        "r": "そうみ",
+        "en": [
+          "one's whole body"
+        ]
+      }
+    },
+    "j1703490": {
+      "mn": [
+        "намын мөрийн хөтөлбөр",
+        "намын зарчим"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "党是",
+        "r": "とうぜ",
+        "en": [
+          "party platform",
+          "party principles"
+        ]
+      }
+    },
+    "j1204940": {
+      "mn": [
+        "муж бүр",
+        "бүх муж"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "各県",
+        "r": "かくけん",
+        "en": [
+          "each prefecture",
+          "all prefectures"
+        ]
+      }
+    },
+    "j1630800": {
+      "mn": [
+        "мужийн нөхцөл байдал",
+        "мужийн нөөц хүчин чадал"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "県勢",
+        "r": "けんせい",
+        "en": [
+          "prefectural strengths (conditions, resources)"
+        ]
+      }
+    },
+    "j2076490": {
+      "mn": [
+        "засвар",
+        "өөрчилсөн төлөвлөгөө"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "改案",
+        "r": "かいあん",
+        "en": [
+          "revision",
+          "modified plan"
+        ]
+      }
+    },
+    "j1703530": {
+      "mn": [
+        "намын фракц",
+        "намын бүлэглэл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "党閥",
+        "r": "とうばつ",
+        "en": [
+          "party faction",
+          "party clique"
+        ]
+      }
+    },
+    "j1244150": {
+      "mn": [
+        "орон нутгийн прокурор"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "区検",
+        "r": "くけん",
+        "en": [
+          "local prosecutor"
+        ]
+      }
+    },
+    "j1820560": {
+      "mn": [
+        "төрсөн нутгийн хүмүүс"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "郷党",
+        "r": "きょうとう",
+        "en": [
+          "people from one's hometown"
+        ]
+      }
+    },
+    "j2001230": {
+      "mn": [
+        "нам бус сонгогчид",
+        "тогтсон намгүй сонгогчид",
+        "сонголтоо өөрчилдөг сонгогчид"
+      ],
+      "topics": [
+        "society",
+        "people"
+      ],
+      "expected": {
+        "w": "無党派層",
+        "r": "むとうはそう",
+        "en": [
+          "unaffiliated voters",
+          "floating voters",
+          "swinging voters"
+        ]
+      }
+    },
+    "j1708710": {
+      "mn": [
+        "гамшиг бүрэн нөмрөх",
+        "бүхэлд нь хамрах",
+        "бүхнийг хамарсан ялалт"
+      ],
+      "topics": [
+        "nature",
+        "society"
+      ],
+      "expected": {
+        "w": "総なめ",
+        "r": "そうなめ",
+        "en": [
+          "sweeping over (e.g. of a natural disaster)",
+          "engulfing",
+          "sweeping victory"
+        ]
+      }
+    },
+    "j2011980": {
+      "mn": [
+        "ерөнхийдөө",
+        "нийтэд нь",
+        "бүхэлдээ"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "総じて",
+        "r": "そうじて",
+        "en": [
+          "in general",
+          "generally",
+          "as a whole"
+        ]
+      }
+    },
+    "j2795480": {
+      "mn": [
+        "баримтын бүх ханзанд фүригана тавьсан"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "総ルビ",
+        "r": "そうルビ",
+        "en": [
+          "having furigana on all kanji in a document"
+        ]
+      }
+    },
+    "j1731770": {
+      "mn": [
+        "дүрслэн хэлсэн",
+        "шилжсэн утгатай"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "比喩的",
+        "r": "ひゆてき",
+        "en": [
+          "figurative"
+        ]
+      }
+    },
+    "j1874040": {
+      "mn": [
+        "мужийн татвар"
+      ],
+      "topics": [
+        "work",
+        "society"
+      ],
+      "expected": {
+        "w": "県税",
+        "r": "けんぜい",
+        "en": [
+          "prefectural tax"
+        ]
+      }
+    },
+    "j1627250": {
+      "mn": [
+        "хуучинсаг ба шинэчлэгч үзэл",
+        "консерватив ба реформч хүмүүс"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "保革",
+        "r": "ほかく",
+        "en": [
+          "conservatism and progressivism",
+          "conservatives and reformists"
+        ]
+      }
+    },
+    "j2808890": {
+      "mn": [
+        "тоног төхөөрөмж хасах",
+        "хэмжээг багасгах",
+        "зэрэг бууруулах"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "減設",
+        "r": "げんせつ",
+        "en": [
+          "removal (of equipment, facilities, etc.)",
+          "scaling back",
+          "downgrading"
+        ]
+      }
+    },
+    "j2019680": {
+      "mn": [
+        "ачаа барааг өөр өөр газар хуваан хүргэх"
+      ],
+      "topics": [
+        "work",
+        "places"
+      ],
+      "expected": {
+        "w": "分荷",
+        "r": "ぶんか",
+        "en": [
+          "divided delivery of cargo, etc. (to different places)"
+        ]
+      }
+    },
+    "j1293030": {
+      "mn": [
+        "дахин байгуулах",
+        "дахин зохион байгуулах"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "再設",
+        "r": "さいせつ",
+        "en": [
+          "re-establishment",
+          "reorganization",
+          "reorganisation"
+        ]
+      }
+    },
+    "j1401510": {
+      "mn": [
+        "нийт нийлбэр",
+        "нийт дүн"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "総額",
+        "r": "そうがく",
+        "en": [
+          "sum total",
+          "total amount"
+        ]
+      }
+    },
+    "j1401530": {
+      "mn": [
+        "ерөнхий байцаагч",
+        "комиссар"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "総監",
+        "r": "そうかん",
+        "en": [
+          "inspector general",
+          "commissioner"
+        ]
+      }
+    }
+  }
+}

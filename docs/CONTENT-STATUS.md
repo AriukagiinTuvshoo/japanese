@@ -2,18 +2,18 @@
 
 **Incomplete. PR #12 must remain draft and unmerged. No production completion is claimed.**
 
-Baseline `6cf8ca1`: 7,170 missing meanings. Current batches add 2,024 meanings, all 526 grammar formation translations and 837 N5–N3 grammar example translations. AI-authored, independently unreviewed; coverage is not semantic approval.
+Baseline `6cf8ca1`: 7,170 missing meanings. Current batches add 2,324 meanings, all 526 grammar formation translations and 837 N5–N3 grammar example translations. AI-authored, independently unreviewed; coverage is not semantic approval.
 
 | Level | Missing vocabulary meanings | Missing kanji meanings | Missing grammar meanings |
 |---|---:|---:|---:|
 | N5 | 0 | 0 | 0 |
-| N4 | 210 | 0 | 0 |
-| N3 | 440 | 0 | 0 |
-| N2 | 380 | 0 | 0 |
-| N1 | 2,910 | 1,206 | 0 |
-| Total | 3,940 | 1,206 | 0 |
+| N4 | 150 | 0 | 0 |
+| N3 | 380 | 0 | 0 |
+| N2 | 320 | 0 | 0 |
+| N1 | 2,850 | 1,146 | 0 |
+| Total | 3,700 | 1,146 | 0 |
 
-Remaining: **5,146 meanings, 14,407 examples** (13,718 vocabulary + 689 N2/N1 grammar), **0 formations, 4,406 unclassified entries, 0 missing new-batch provenance records; 6,503 unchanged legacy/unreviewed meanings of unknown authorship (documented, not release-blocking), 5 unresolved source issues**. Invalid categories and mislabeled MN: zero. Measures overlap; do not sum as distinct entries.
+Remaining: **4,846 meanings, 14,407 examples** (13,718 vocabulary + 689 N2/N1 grammar), **0 formations, 4,259 unclassified entries, 0 missing new-batch provenance records; 6,503 unchanged legacy/unreviewed meanings of unknown authorship (documented, not release-blocking), 5 unresolved source issues**. Invalid categories and mislabeled MN: zero. Measures overlap; do not sum as distinct entries.
 
 N5 vocabulary/kanji and N4 kanji are fully classified. Categories support multiple topics, including relationships. Explicit semantic override evidence is maintained in `content/categories/provenance.json`. Unmatched entries remain visibly filterable, not hidden in a catch-all. Source warnings retain original Japanese/English and block release. Existing drafts and new translations still need accuracy review. Page-wide bilingual localization audit remains incomplete, notably Admin.
 
@@ -40,4 +40,6 @@ Continuation added five 60-entry stable-ID/source-guarded batches (N4/N3/N2 voca
 
 Latest group: another five 60-entry guarded batches (300 meanings), 146 fewer unclassified entries. Coverage recalculated after the N4/N3/N2 group and again after the N1 vocabulary/kanji group. No catch-all assigned. Five existing source warnings preserved.
 
-Another five 60-entry guarded batches applied and tested. A legitimate dictionary sense containing the placeholder-detection phrase was rewritten naturally without weakening the validator. Missing meanings 5,146; unclassified 4,406; all five source issues intact.
+Another five 60-entry guarded batches applied and tested. A legitimate dictionary sense containing the placeholder-detection phrase was rewritten naturally without weakening the validator. Missing meanings 4,846; unclassified 4,259; all five source issues intact.
+
+Sustained continuation: five additional 60-entry guarded meaning/topic batches; strict coverage recalculated after each individual batch. All five source issues preserved and blocking. Category evidence manifest refreshed for all overrides. Lightweight checks passed; browser/production deferred.
