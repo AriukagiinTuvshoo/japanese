@@ -7,7 +7,7 @@
       "vocab": {
         "entries": 1074,
         "missingMeanings": 0,
-        "missingExamples": 1320,
+        "missingExamples": 1280,
         "missingForms": 0,
         "unclassified": 0,
         "invalidCategories": 0,
@@ -157,10 +157,10 @@
       },
       "kanji": {
         "entries": 1646,
-        "missingMeanings": 126,
+        "missingMeanings": 31,
         "missingExamples": 0,
         "missingForms": 0,
-        "unclassified": 156,
+        "unclassified": 93,
         "invalidCategories": 0,
         "missingProvenance": 0,
         "mislabeledMn": 0,
@@ -180,10 +180,10 @@
     }
   },
   "totals": {
-    "missingMeanings": 157,
-    "missingExamples": 14407,
+    "missingMeanings": 62,
+    "missingExamples": 14367,
     "missingForms": 0,
-    "unclassified": 2228,
+    "unclassified": 2165,
     "invalidCategories": 0,
     "missingProvenance": 0,
     "mislabeledMn": 0,

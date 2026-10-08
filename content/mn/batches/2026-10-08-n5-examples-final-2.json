@@ -1,0 +1,206 @@
+{
+  "provenance": {
+    "id": "mn-n5-example-final-2-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian examples, exact Japanese sentence keys and retained English guards; headword and reading guards. Independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n5.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "d46ae79a26": {
+      "expected": {
+        "w": "朝",
+        "r": "あさ",
+        "en": [
+          "morning"
+        ]
+      },
+      "examples": {
+        "朝のラッシュは今がピークだ。": {
+          "en": "The morning rush is at its peak now.",
+          "mn": "Өглөөний оргил цагийн ачаалал яг одоо хамгийн их байна."
+        },
+        "ジョージは朝にたくさんのチーズを食べた。": {
+          "en": "George had a lot of cheese for breakfast.",
+          "mn": "Жорж өглөө их бяслаг идсэн."
+        }
+      }
+    },
+    "98bc6f72ae": {
+      "expected": {
+        "w": "朝ごはん",
+        "r": "あさごはん",
+        "en": [
+          "breakfast"
+        ]
+      },
+      "examples": {
+        "朝ごはんにはなにがよろしいですか。": {
+          "en": "What would you like for breakfast?",
+          "mn": "Өглөөний хоолонд юу идмээр байна вэ?"
+        },
+        "朝ご飯に何を食べますか。": {
+          "en": "What do you usually have for breakfast?",
+          "mn": "Та өглөөний хоолонд юу иддэг вэ?"
+        }
+      }
+    },
+    "b3b4041c52": {
+      "expected": {
+        "w": "あさって",
+        "r": "あさって",
+        "en": [
+          "day after tomorrow"
+        ]
+      },
+      "examples": {
+        "あさって彼にここへ来てもらうつもりです。": {
+          "en": "I will have him come here the day after tomorrow.",
+          "mn": "Би түүнийг нөгөөдөр энд ирүүлэх бодолтой байна."
+        },
+        "あさって、時間がありませんか。": {
+          "en": "Do you have time the day after tomorrow?",
+          "mn": "Нөгөөдөр танд зав гарах уу?"
+        }
+      }
+    },
+    "27df3d5802": {
+      "expected": {
+        "w": "足",
+        "r": "あし",
+        "en": [
+          "foot",
+          "leg"
+        ]
+      },
+      "examples": {
+        "また足がしびれた。": {
+          "en": "My foot's asleep again!",
+          "mn": "Хөл дахиад бадайрчихлаа."
+        },
+        "ヘビを見て足がすくんでしまった。": {
+          "en": "I froze at the sight of the snake.",
+          "mn": "Могойг хараад айсандаа хөл хөдөлсөнгүй."
+        }
+      }
+    },
+    "115ec83476": {
+      "expected": {
+        "w": "明日",
+        "r": "あした",
+        "en": [
+          "tomorrow"
+        ]
+      },
+      "examples": {
+        "あしたは一日中ひまです。": {
+          "en": "I'll be free all day tomorrow.",
+          "mn": "Маргааш би өдөржин завтай."
+        },
+        "明日はピクニックに行くつもりだ。": {
+          "en": "I am going on a picnic tomorrow.",
+          "mn": "Маргааш зугаалгаар явах бодолтой байна."
+        }
+      }
+    },
+    "bee501faf0": {
+      "expected": {
+        "w": "あそこ",
+        "r": "あそこ",
+        "en": [
+          "over there"
+        ]
+      },
+      "examples": {
+        "先生、アソコがかゆいんです。": {
+          "en": "Doctor, I've got an itch in my crotch.",
+          "mn": "Эмч ээ, цавь загатнаад байна."
+        },
+        "あそこのスポーツカーを見なさい。": {
+          "en": "Look at the sports car over there.",
+          "mn": "Тэнд байгаа спорт машиныг хар."
+        }
+      }
+    },
+    "2d55571300": {
+      "expected": {
+        "w": "遊ぶ",
+        "r": "あそぶ",
+        "en": [
+          "to play",
+          "to make a visit"
+        ]
+      },
+      "examples": {
+        "ビルはよく一人でおもちゃで遊ぶ。": {
+          "en": "Bill often plays with toys by himself.",
+          "mn": "Билл ихэвчлэн ганцаараа тоглоомоороо тоглодог."
+        },
+        "けっしてここで遊んではいけない。": {
+          "en": "Never play here.",
+          "mn": "Энд огт тоглож болохгүй."
+        }
+      }
+    },
+    "f665c2128a": {
+      "expected": {
+        "w": "暖かい",
+        "r": "あたたかい",
+        "en": [
+          "warm"
+        ]
+      },
+      "examples": {
+        "だんだん暖かくなります。": {
+          "en": "It will get warmer and warmer.",
+          "mn": "Аажмаар дулаарна."
+        },
+        "日毎にだんだん暖かくなっている。": {
+          "en": "It is getting warmer and warmer day by day.",
+          "mn": "Өдөр ирэх тусам аажмаар дулаарч байна."
+        }
+      }
+    },
+    "b62cb9ce4c": {
+      "expected": {
+        "w": "頭",
+        "r": "あたま",
+        "en": [
+          "head"
+        ]
+      },
+      "examples": {
+        "アリスは頭に花をさしています。": {
+          "en": "Alice has a flower in her hair.",
+          "mn": "Алис үсэндээ цэцэг хавчуулсан байна."
+        },
+        "ジルはかわいいだけでなく頭もよい。": {
+          "en": "Jill is smart as well as pretty.",
+          "mn": "Жилл хөөрхөн төдийгүй ухаантай."
+        }
+      }
+    },
+    "8ae27e3b51": {
+      "expected": {
+        "w": "新しい",
+        "r": "あたらしい",
+        "en": [
+          "new"
+        ]
+      },
+      "examples": {
+        "先生は新しい車が気に入っている。": {
+          "en": "Our teacher likes his new car.",
+          "mn": "Багш шинэ машиндаа дуртай."
+        },
+        "新しいレストランが出来たそうだ。": {
+          "en": "It is said that a new restaurant was constructed.",
+          "mn": "Шинэ ресторан баригдсан гэнэ."
+        }
+      }
+    }
+  }
+}

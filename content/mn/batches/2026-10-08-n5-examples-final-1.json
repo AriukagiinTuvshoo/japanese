@@ -1,0 +1,205 @@
+{
+  "provenance": {
+    "id": "mn-n5-example-final-1-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian examples, exact Japanese sentence keys and retained English guards; headword and reading guards. Independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n5.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "ada066edfd": {
+      "expected": {
+        "w": "会う",
+        "r": "あう",
+        "en": [
+          "to meet"
+        ]
+      },
+      "examples": {
+        "もうスミスさんに会われましたね。": {
+          "en": "You've met Mr. Smith already, haven't you?",
+          "mn": "Та Смит гуайтай аль хэдийн уулзсан, тийм үү?"
+        },
+        "じゃあパーティーで会いましょう。": {
+          "en": "See you at the party.",
+          "mn": "Тэгвэл үдэшлэг дээр уулзъя."
+        }
+      }
+    },
+    "ebec658463": {
+      "expected": {
+        "w": "青",
+        "r": "あお",
+        "en": [
+          "blue"
+        ]
+      },
+      "examples": {
+        "信号が青に変わったわよ。": {
+          "en": "The traffic light turned green.",
+          "mn": "Гэрлэн дохио ногоон болчихлоо."
+        },
+        "夏の通学服は白と青のチェックです。": {
+          "en": "My summer school dress is blue and white checkered.",
+          "mn": "Миний зуны сургуулийн дүрэмт хувцас цагаан, хөх дөрвөлжин хээтэй."
+        }
+      }
+    },
+    "51a671ec17": {
+      "expected": {
+        "w": "青い",
+        "r": "あおい",
+        "en": [
+          "blue"
+        ]
+      },
+      "examples": {
+        "お前はまだ「青い」な。": {
+          "en": "You're still green.",
+          "mn": "Чи одоо ч туршлагагүй байна даа."
+        },
+        "なぜ空が青いか知っているか。": {
+          "en": "Do you know why the sky is blue?",
+          "mn": "Тэнгэр яагаад хөх байдгийг мэдэх үү?"
+        }
+      }
+    },
+    "2dacb910b2": {
+      "expected": {
+        "w": "赤",
+        "r": "あか",
+        "en": [
+          "red"
+        ]
+      },
+      "examples": {
+        "赤インクで書いてはいけない。": {
+          "en": "Don't write in red ink.",
+          "mn": "Улаан бэхээр бичиж болохгүй."
+        },
+        "その家は赤レンガづくりです。": {
+          "en": "The house is built of red bricks.",
+          "mn": "Тэр байшинг улаан тоосгоор барьсан."
+        }
+      }
+    },
+    "44ba38cf8b": {
+      "expected": {
+        "w": "赤い",
+        "r": "あかい",
+        "en": [
+          "red"
+        ]
+      },
+      "examples": {
+        "彼女は赤いスカートをはいていた。": {
+          "en": "She was wearing a red skirt.",
+          "mn": "Тэр эмэгтэй улаан банзал өмссөн байсан."
+        },
+        "赤いものもあれば白いのもある。": {
+          "en": "Some are red and others are white.",
+          "mn": "Зарим нь улаан, зарим нь цагаан."
+        }
+      }
+    },
+    "91987ae840": {
+      "expected": {
+        "w": "明るい",
+        "r": "あかるい",
+        "en": [
+          "bright"
+        ]
+      },
+      "examples": {
+        "外はだんだん明るくなっていく。": {
+          "en": "It is getting lighter outside.",
+          "mn": "Гадаа аажмаар гэрэлтэй болж байна."
+        },
+        "ダイヤは明るく光った。": {
+          "en": "The diamond shone brightly.",
+          "mn": "Алмаз хурц гялалзав."
+        }
+      }
+    },
+    "8dc7006bda": {
+      "expected": {
+        "w": "秋",
+        "r": "あき",
+        "en": [
+          "autumn"
+        ]
+      },
+      "examples": {
+        "秋はもうすぐそこまで来ている。": {
+          "en": "Autumn is just around the corner.",
+          "mn": "Намар тун удахгүй ирнэ."
+        },
+        "さわやかな秋となりました。": {
+          "en": "Cool fall is here.",
+          "mn": "Сэрүүн таатай намар ирлээ."
+        }
+      }
+    },
+    "fc3bc1e6f1": {
+      "expected": {
+        "w": "開く",
+        "r": "あく",
+        "en": [
+          "to open",
+          "to become open"
+        ]
+      },
+      "examples": {
+        "ぐいと押すとドアは開いた。": {
+          "en": "The door yielded to a strong push.",
+          "mn": "Хүчтэй түлхэхэд хаалга онгойв."
+        },
+        "ドアはどうしても開かなかった。": {
+          "en": "The door would not open.",
+          "mn": "Хаалга яагаад ч онгойсонгүй."
+        }
+      }
+    },
+    "321963ed35": {
+      "expected": {
+        "w": "開ける",
+        "r": "あける",
+        "en": [
+          "to open"
+        ]
+      },
+      "examples": {
+        "ドアはジムによって開けられます。": {
+          "en": "The door is opened by Jim.",
+          "mn": "Хаалгыг Жим онгойлгоно."
+        },
+        "だれかこのドアを開けてください。": {
+          "en": "Somebody, open this door, please.",
+          "mn": "Хэн нэг нь энэ хаалгыг онгойлгоод өгөөч."
+        }
+      }
+    },
+    "9661cbac61": {
+      "expected": {
+        "w": "上げる",
+        "r": "あげる",
+        "en": [
+          "to give"
+        ]
+      },
+      "examples": {
+        "左手を上げなさい。": {
+          "en": "Raise your left hand.",
+          "mn": "Зүүн гараа өргө."
+        },
+        "彼はスピードを上げた。": {
+          "en": "He accelerated.",
+          "mn": "Тэр хурдаа нэмэв."
+        }
+      }
+    }
+  }
+}

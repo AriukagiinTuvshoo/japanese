@@ -50,11 +50,11 @@ assert.ok(!read('content/categories/overrides.json').vocab.e05bb17edd);
 
 // Persist-round source guards and category evidence are exact, not count-only checks.
 const categoryEvidence = read('content/categories/provenance.json');
-for (const file of fs.readdirSync('content/mn/batches').filter(f => /^2026-10-08-n1-(vocab|kanji)-(persist|sustain|close|advance|finish|remainder)-\d+\.json$/.test(f))) {
+for (const file of fs.readdirSync('content/mn/batches').filter(f => /^2026-10-08-n1-(vocab|kanji)-(persist|sustain|close|advance|finish|remainder|final)-\d+\.json$/.test(f))) {
   const batch = read(`content/mn/batches/${file}`);
   const kind = batch.vocab ? 'vocab' : 'kanji';
   const records = batch[kind];
-  assert.equal(Object.keys(records).length, 60, `${file}: exact batch size`);
+  assert.equal(Object.keys(records).length, file === '2026-10-08-n1-kanji-final-2.json' ? 35 : 60, `${file}: exact batch size`);
   assert.equal(batch.provenance.reviewStatus, 'unreviewed');
   const data = read(`public/data/${kind}/n1.json`);
   for (const [id, record] of Object.entries(records)) {
@@ -78,3 +78,30 @@ assert.deepEqual(tenThousandBatch.mn, ['арван мянга']);
 assert.ok(tenThousandBatch.mn.every(validMn));
 assert.deepEqual(read('public/data/kanji/n1.json').find(e => e.k === '萬').mn, tenThousandBatch.mn);
 assert.equal(validMn('10,000'), false, 'Bare number must not qualify as Mongolian');
+
+// Sentence-keyed example batches guard both source languages and applied provenance.
+for (const file of ['2026-10-08-n5-examples-final-1.json','2026-10-08-n5-examples-final-2.json']) {
+ const batch = read(`content/mn/batches/${file}`);
+ const data = read('public/data/vocab/n5.json');
+ let count = 0;
+ for (const [id, record] of Object.entries(batch.vocab)) {
+  const entry = data.find(e => e.id === id);
+  for (const [field, expected] of Object.entries(record.expected)) assert.deepEqual(entry[field], expected);
+  for (const [ja, value] of Object.entries(record.examples)) {
+   const example = entry.ex.find(e => e.ja === ja);
+   assert.equal(example.en, value.en);
+   assert.equal(example.mn, value.mn);
+   assert.equal(example.mn_provenance, batch.provenance.id);
+   assert.ok(validMn(value.mn)); count++;
+  }
+ }
+ assert.equal(count, 20);
+}
+const conflictAudit = read('content/mn/source-conflict-audit-2026-10-08.json');
+assert.equal(conflictAudit.records.length, 10);
+for (const record of conflictAudit.records) {
+ const data = read(`public/data/${record.kind}/${record.level}.json`);
+ const entry = data.find(e => (record.kind === 'vocab' ? e.id : e.k) === record.key);
+ for (const [field, expected] of Object.entries(record.expected)) assert.deepEqual(entry[field], expected);
+ assert.equal(entry.source_issue, record.existingWarning);
+}
