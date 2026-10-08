@@ -1,0 +1,358 @@
+{
+  "provenance": {
+    "id": "mn-n2-vocab-middle-e-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit topics cross-checked individually against retained Japanese headwords/readings and English glosses, including alternate dictionary readings. Independently unreviewed.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n2.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j1319040": {
+      "mn": [
+        "Кагошима муж"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "鹿児島県",
+        "r": "かごしまけん",
+        "en": [
+          "Kagoshima prefecture (Kyushu)"
+        ]
+      }
+    },
+    "j1631460": {
+      "mn": [
+        "уурхайн бүс",
+        "уурхайн талбай"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "鉱区",
+        "r": "こうく",
+        "en": [
+          "mining area",
+          "mine lot"
+        ]
+      }
+    },
+    "j1652220": {
+      "mn": [
+        "ан амьтны дархан газар",
+        "амьтны хамгаалалтын бүс"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "禁漁区",
+        "r": "きんりょうく",
+        "en": [
+          "game preserve",
+          "wildlife sanctuary"
+        ]
+      }
+    },
+    "j1593620": {
+      "mn": [
+        "байнга",
+        "олонтоо"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "再々",
+        "r": "さいさい",
+        "en": [
+          "often",
+          "frequently"
+        ]
+      }
+    },
+    "j1619230": {
+      "mn": [
+        "тулгаж шалгах",
+        "лавлагаагаар шалгах",
+        "баталгаажуулах"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "照査",
+        "r": "しょうさ",
+        "en": [
+          "checking against (up)",
+          "examining by reference",
+          "verification"
+        ]
+      }
+    },
+    "j2725800": {
+      "mn": [
+        "яаран",
+        "хурдан",
+        "шаламгай"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "快快的",
+        "r": "カイカイデ",
+        "en": [
+          "hurriedly",
+          "rapidly",
+          "swiftly"
+        ]
+      }
+    },
+    "j1784930": {
+      "mn": [
+        "арьс идээлэх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "製革",
+        "r": "せいかく",
+        "en": [
+          "tanning"
+        ]
+      }
+    },
+    "j1530350": {
+      "mn": [
+        "гаалийн татваргүй",
+        "татваргүй"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "無税",
+        "r": "むぜい",
+        "en": [
+          "duty-free",
+          "tax-free"
+        ]
+      }
+    },
+    "j2087080": {
+      "mn": [
+        "арьсан оосор",
+        "сур",
+        "уяа"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "革ひも",
+        "r": "かわひも",
+        "en": [
+          "leather strap",
+          "thong",
+          "leash"
+        ]
+      }
+    },
+    "j2765920": {
+      "mn": [
+        "самүрайн бүлэг"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "武士団",
+        "r": "ぶしだん",
+        "en": [
+          "group of samurai"
+        ]
+      }
+    },
+    "j2710320": {
+      "mn": [
+        "хэт авиан үзлэг",
+        "эхографийн шинжилгээ"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "エコー検査",
+        "r": "エコーけんさ",
+        "en": [
+          "ultrasound scan",
+          "echographic examination"
+        ]
+      }
+    },
+    "j2844363": {
+      "mn": [
+        "дахин үзлэг",
+        "дахин шалгалт",
+        "дахин үнэлгээ"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "再検",
+        "r": "さいけん",
+        "en": [
+          "re-examination",
+          "reinspection",
+          "reappraisal"
+        ]
+      }
+    },
+    "j2652430": {
+      "mn": [
+        "оношлох үзлэг",
+        "шинжилгээ"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "診査",
+        "r": "しんさ",
+        "en": [
+          "diagnostic examination",
+          "exploration"
+        ]
+      }
+    },
+    "j2730940": {
+      "mn": [
+        "маоист бүлэг"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "毛派",
+        "r": "もうは",
+        "en": [
+          "Maoist group"
+        ]
+      }
+    },
+    "j1205060": {
+      "mn": [
+        "яам бүр"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "各省",
+        "r": "かくしょう",
+        "en": [
+          "each ministry"
+        ]
+      }
+    },
+    "j2833283": {
+      "mn": [
+        "Чин улсын үед идэвхтэй байсан орон нутгийн сайн дурын цэрэг"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "団練",
+        "r": "だんれん",
+        "en": [
+          "type of local militia most active during the Qing dynasty"
+        ]
+      }
+    },
+    "j2701810": {
+      "mn": [
+        "суурь материал",
+        "үндсэн материал",
+        "матриц"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "基材",
+        "r": "きざい",
+        "en": [
+          "substrate",
+          "base material",
+          "matrix"
+        ]
+      }
+    },
+    "j1263160": {
+      "mn": [
+        "дүн бууруулах",
+        "багасгах",
+        "хасалт"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "減額",
+        "r": "げんがく",
+        "en": [
+          "reduction",
+          "diminution",
+          "abatement"
+        ]
+      }
+    },
+    "j1249150": {
+      "mn": [
+        "цэргийн хууль",
+        "байлдааны дүрэм",
+        "цэргийн сахилга"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "軍律",
+        "r": "ぐんりつ",
+        "en": [
+          "martial law",
+          "articles of war",
+          "military disciple"
+        ]
+      }
+    },
+    "j2725780": {
+      "mn": [
+        "өнцөгтэй",
+        "хурц өнцөгт",
+        "шовх"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "鋭角的",
+        "r": "えいかくてき",
+        "en": [
+          "angular",
+          "angular-shaped",
+          "sharp-pointed"
+        ]
+      }
+    }
+  }
+}

@@ -34,3 +34,5 @@ try {
   assert.ok(auditCoverage().totals.missingProvenance > 0, 'Changed legacy text must require new provenance');
 } finally { fs.writeFileSync(legacyPath, originalLegacyData); }
 assert.equal(report.legacyUnreviewed, 6503);
+
+for (const lv of ["N3","N2"]) assert.equal(report.byLevel[lv].vocab.missingMeanings,0);

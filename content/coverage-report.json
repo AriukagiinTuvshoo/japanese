@@ -76,10 +76,10 @@
     "N3": {
       "vocab": {
         "entries": 2279,
-        "missingMeanings": 320,
+        "missingMeanings": 0,
         "missingExamples": 3218,
         "missingForms": 0,
-        "unclassified": 728,
+        "unclassified": 591,
         "invalidCategories": 0,
         "missingProvenance": 0,
         "mislabeledMn": 0,
@@ -111,10 +111,10 @@
     "N2": {
       "vocab": {
         "entries": 2338,
-        "missingMeanings": 260,
+        "missingMeanings": 0,
         "missingExamples": 3094,
         "missingForms": 0,
-        "unclassified": 703,
+        "unclassified": 582,
         "invalidCategories": 0,
         "missingProvenance": 0,
         "mislabeledMn": 0,
@@ -180,10 +180,10 @@
     }
   },
   "totals": {
-    "missingMeanings": 4396,
+    "missingMeanings": 3816,
     "missingExamples": 14407,
     "missingForms": 0,
-    "unclassified": 4055,
+    "unclassified": 3797,
     "invalidCategories": 0,
     "missingProvenance": 0,
     "mislabeledMn": 0,

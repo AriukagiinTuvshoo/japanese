@@ -1,0 +1,1079 @@
+{
+  "provenance": {
+    "id": "mn-n3-vocab-middle-e-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit topics cross-checked individually against retained Japanese headwords/readings and English glosses, including alternate dictionary readings. Independently unreviewed.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n3.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j1383150": {
+      "mn": [
+        "хариуцлага",
+        "үүрэг",
+        "буруутгал"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "責め",
+        "r": "せめ",
+        "en": [
+          "responsibility",
+          "liability",
+          "blame"
+        ]
+      }
+    },
+    "j2081030": {
+      "mn": [
+        "оршин байх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "存する",
+        "r": "そんする",
+        "en": [
+          "to exist"
+        ]
+      }
+    },
+    "j1637130": {
+      "mn": [
+        "хүсээгүй хувьцааг зарах шилжүүлэх",
+        "муу зээлийг далдлах"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "飛ばし",
+        "r": "とばし",
+        "en": [
+          "selling or divesting in unwanted stocks",
+          "hiding bad loans"
+        ]
+      }
+    },
+    "j2248530": {
+      "mn": [
+        "тэг",
+        "хоосон орон",
+        "өө"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "飛んで",
+        "r": "とんで",
+        "en": [
+          "zero",
+          "naught",
+          "oh"
+        ]
+      }
+    },
+    "j1578540": {
+      "mn": [
+        "үйлчлүүлэгч",
+        "захиалагч",
+        "байнгын хэрэглэгч"
+      ],
+      "topics": [
+        "people",
+        "work"
+      ],
+      "expected": {
+        "w": "顧客",
+        "r": "こきゃく",
+        "en": [
+          "customer",
+          "client",
+          "patron"
+        ]
+      }
+    },
+    "j2709260": {
+      "mn": [
+        "уламжлалт морины уралдаан"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "競馬",
+        "r": "くらべうま",
+        "en": [
+          "traditional horse-racing"
+        ]
+      }
+    },
+    "j1331230": {
+      "mn": [
+        "болгоомжтой",
+        "нягт",
+        "нарийн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "周到",
+        "r": "しゅうとう",
+        "en": [
+          "careful",
+          "thorough",
+          "meticulous"
+        ]
+      }
+    },
+    "j2134420": {
+      "mn": [
+        "хийж өгнө үү"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "給え",
+        "r": "たまえ",
+        "en": [
+          "please ..."
+        ]
+      }
+    },
+    "j2727320": {
+      "mn": [
+        "төгсгөл",
+        "дуусах"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "完了",
+        "r": "ワンラ",
+        "en": [
+          "end",
+          "completion"
+        ]
+      }
+    },
+    "j1217390": {
+      "mn": [
+        "хаданд авирах"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "岩登り",
+        "r": "いわのぼり",
+        "en": [
+          "rock climbing"
+        ]
+      }
+    },
+    "j1952740": {
+      "mn": [
+        "зан байдал",
+        "ааш",
+        "биеэ авч явах байдал"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "振舞",
+        "r": "ふるまい",
+        "en": [
+          "behavior",
+          "behaviour",
+          "conduct"
+        ]
+      }
+    },
+    "j1345630": {
+      "mn": [
+        "бусад",
+        "хасаж тооцоод"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "除いて",
+        "r": "のぞいて",
+        "en": [
+          "except",
+          "save"
+        ]
+      }
+    },
+    "j2412700": {
+      "mn": [
+        "хуваах",
+        "арилгах",
+        "хасах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "除する",
+        "r": "じょする",
+        "en": [
+          "to divide (by)",
+          "to remove",
+          "to exclude"
+        ]
+      }
+    },
+    "j1484300": {
+      "mn": [
+        "тарган байдал",
+        "таргалалт",
+        "хэт таргалалт"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "肥満",
+        "r": "ひまん",
+        "en": [
+          "corpulence",
+          "fatness",
+          "obesity"
+        ]
+      }
+    },
+    "j1598060": {
+      "mn": [
+        "дэлгэрэнгүй",
+        "маш нягт",
+        "бүрэн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "具に",
+        "r": "つぶさに",
+        "en": [
+          "in detail",
+          "with great care",
+          "completely"
+        ]
+      }
+    },
+    "j1299190": {
+      "mn": [
+        "олноор дайрах",
+        "бөөнөөр цутгах",
+        "асар их урсгал"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "殺到",
+        "r": "さっとう",
+        "en": [
+          "rush",
+          "flood",
+          "deluge"
+        ]
+      }
+    },
+    "j1218370": {
+      "mn": [
+        "арай гэж",
+        "арайхийн",
+        "бараг"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "危うく",
+        "r": "あやうく",
+        "en": [
+          "barely",
+          "narrowly",
+          "almost"
+        ]
+      }
+    },
+    "j1345730": {
+      "mn": [
+        "хог ургамал зулгаах"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "除草",
+        "r": "じょそう",
+        "en": [
+          "weeding"
+        ]
+      }
+    },
+    "j2408840": {
+      "mn": [
+        "хайрлах"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "愛す",
+        "r": "あいす",
+        "en": [
+          "to love"
+        ]
+      }
+    },
+    "j2107510": {
+      "mn": [
+        "хангах",
+        "нийлүүлэх",
+        "олгох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "給する",
+        "r": "きゅうする",
+        "en": [
+          "to provide",
+          "to supply",
+          "to furnish"
+        ]
+      }
+    },
+    "j1000420": {
+      "mn": [
+        "тэр",
+        "тэдгээр",
+        "тухайн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "彼の",
+        "r": "あの",
+        "en": [
+          "that",
+          "those",
+          "the"
+        ]
+      }
+    },
+    "j1436140": {
+      "mn": [
+        "цэцэрлэг",
+        "хүрээлэн"
+      ],
+      "topics": [
+        "places",
+        "nature"
+      ],
+      "expected": {
+        "w": "庭園",
+        "r": "ていえん",
+        "en": [
+          "garden",
+          "park"
+        ]
+      }
+    },
+    "j1527110": {
+      "mn": [
+        "одоо ч",
+        "хараахан",
+        "ердөө"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "未だ",
+        "r": "まだ",
+        "en": [
+          "still",
+          "as yet",
+          "only"
+        ]
+      }
+    },
+    "j1330430": {
+      "mn": [
+        "эрэлт ба нийлүүлэлт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "需給",
+        "r": "じゅきゅう",
+        "en": [
+          "supply and demand"
+        ]
+      }
+    },
+    "j2512440": {
+      "mn": [
+        "хүлээн авах",
+        "угтах",
+        "тосож очих"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "お迎え",
+        "r": "おむかえ",
+        "en": [
+          "receiving",
+          "welcoming",
+          "going to meet"
+        ]
+      }
+    },
+    "j1404180": {
+      "mn": [
+        "шууд",
+        "тэр газар дээр нь",
+        "бэлтгэлгүйгээр"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "即座",
+        "r": "そくざ",
+        "en": [
+          "immediate",
+          "right there on the spot",
+          "impromptu"
+        ]
+      }
+    },
+    "j1619740": {
+      "mn": [
+        "уулын оргилд авирах",
+        "оргилд хүрэх"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "登頂",
+        "r": "とうちょう",
+        "en": [
+          "climbing to the summit",
+          "summiting"
+        ]
+      }
+    },
+    "j1956920": {
+      "mn": [
+        "бүжиглэх",
+        "бүжиг"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "舞い",
+        "r": "まい",
+        "en": [
+          "dancing",
+          "dance"
+        ]
+      }
+    },
+    "j1280850": {
+      "mn": [
+        "боомилж алах",
+        "боомилох"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "絞殺",
+        "r": "こうさつ",
+        "en": [
+          "strangulation",
+          "strangling"
+        ]
+      }
+    },
+    "j2657100": {
+      "mn": [
+        "хүүхдийн тоглоомын газар",
+        "хүрээлэн"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "遊園",
+        "r": "ゆうえん",
+        "en": [
+          "playground (for children)",
+          "park"
+        ]
+      }
+    },
+    "j1556620": {
+      "mn": [
+        "жихүүн байдал",
+        "хүйтэн"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "冷え",
+        "r": "ひえ",
+        "en": [
+          "chilliness",
+          "coldness"
+        ]
+      }
+    },
+    "j1602200": {
+      "mn": [
+        "хүйтэн",
+        "сэрүүн",
+        "хөргөсөн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "冷や",
+        "r": "ひや",
+        "en": [
+          "cold",
+          "cool",
+          "chilled"
+        ]
+      }
+    },
+    "j1002030": {
+      "mn": [
+        "бөхийх",
+        "ёслон мэхийх"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "お辞儀",
+        "r": "おじぎ",
+        "en": [
+          "bow",
+          "bowing"
+        ]
+      }
+    },
+    "j1219550": {
+      "mn": [
+        "го шоги шатрын сүүлчийн нүүдэл",
+        "төгсгөлийн үе",
+        "цугларалт"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "寄せ",
+        "r": "よせ",
+        "en": [
+          "last moves (in go, shogi, or chess)",
+          "endgame",
+          "gathering"
+        ]
+      }
+    },
+    "j2081070": {
+      "mn": [
+        "ойроос барилдан түлхэх",
+        "хандлагатай байх",
+        "ойр байх"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "寄り",
+        "r": "より",
+        "en": [
+          "pushing back one's opponent while locked in close quarters",
+          "having a tendency towards",
+          "being close to"
+        ]
+      }
+    },
+    "j2078750": {
+      "mn": [
+        "багтсан",
+        "оролцуулсан"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "込み",
+        "r": "こみ",
+        "en": [
+          "including",
+          "inclusive of"
+        ]
+      }
+    },
+    "j1527140": {
+      "mn": [
+        "одоо ч",
+        "өнөө хүртэл"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "未だに",
+        "r": "いまだに",
+        "en": [
+          "still",
+          "even now",
+          "to this day"
+        ]
+      }
+    },
+    "j1512450": {
+      "mn": [
+        "тав тух",
+        "ашиг тус",
+        "ашиг"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "便益",
+        "r": "べんえき",
+        "en": [
+          "convenience",
+          "benefit",
+          "profit"
+        ]
+      }
+    },
+    "j2202100": {
+      "mn": [
+        "эргүүлэх",
+        "буцаах",
+        "хариу бэлэг"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "返し",
+        "r": "かえし",
+        "en": [
+          "reversal",
+          "return",
+          "return gift"
+        ]
+      }
+    },
+    "j2634880": {
+      "mn": [
+        "хөмрүүлэх",
+        "эргүүлэх",
+        "хариу"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "返り",
+        "r": "かえり",
+        "en": [
+          "turning over",
+          "flipping over",
+          "reply"
+        ]
+      }
+    },
+    "j1401920": {
+      "mn": [
+        "өвсний үндэс",
+        "нүднээс далд газар",
+        "анхан шатны олон нийт"
+      ],
+      "topics": [
+        "nature",
+        "society"
+      ],
+      "expected": {
+        "w": "草の根",
+        "r": "くさのね",
+        "en": [
+          "roots of grass",
+          "places hidden from sight",
+          "grassroots (e.g. of a political party)"
+        ]
+      }
+    },
+    "j1628240": {
+      "mn": [
+        "настай эмэгтэй"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "老婦",
+        "r": "ろうふ",
+        "en": [
+          "old woman"
+        ]
+      }
+    },
+    "j1150660": {
+      "mn": [
+        "ивээл",
+        "дэмжлэг",
+        "таалал"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "愛顧",
+        "r": "あいこ",
+        "en": [
+          "patronage",
+          "favour",
+          "favor"
+        ]
+      }
+    },
+    "j1544470": {
+      "mn": [
+        "салхи намдсаны дараах долгион",
+        "дараах нөлөө",
+        "үр дагавар"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "余波",
+        "r": "よは",
+        "en": [
+          "waves that remain after the wind has subsided",
+          "after-effect",
+          "aftermath"
+        ]
+      }
+    },
+    "j1345740": {
+      "mn": [
+        "хог ургамал устгагч"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "除草剤",
+        "r": "じょそうざい",
+        "en": [
+          "herbicide"
+        ]
+      }
+    },
+    "j1602240": {
+      "mn": [
+        "хүйтэн",
+        "жихүүн",
+        "сэрүүн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "冷やか",
+        "r": "ひややか",
+        "en": [
+          "cold",
+          "chilly",
+          "cool"
+        ]
+      }
+    },
+    "j1592530": {
+      "mn": [
+        "флюоресценц",
+        "гэрэл цацруулах үзэгдэл"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "蛍光",
+        "r": "けいこう",
+        "en": [
+          "fluorescence"
+        ]
+      }
+    },
+    "j2010190": {
+      "mn": [
+        "эвхдэг ор",
+        "давхар ор"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "簡易ベッド",
+        "r": "かんいベッド",
+        "en": [
+          "cot",
+          "bunk"
+        ]
+      }
+    },
+    "j1548390": {
+      "mn": [
+        "найдах",
+        "хамаарах"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "頼り",
+        "r": "たより",
+        "en": [
+          "reliance",
+          "dependence"
+        ]
+      }
+    },
+    "j2825976": {
+      "mn": [
+        "найдаж",
+        "түшиглэж",
+        "хамаарч"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "頼み",
+        "r": "だのみ",
+        "en": [
+          "depending on",
+          "dependent upon",
+          "relying on"
+        ]
+      }
+    },
+    "j1772430": {
+      "mn": [
+        "эмэгтэй хүний сайн зан чанар"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "婦徳",
+        "r": "ふとく",
+        "en": [
+          "woman's virtues"
+        ]
+      }
+    },
+    "j1232860": {
+      "mn": [
+        "өршөөл",
+        "уучлал",
+        "чөлөөлөлт"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "許し",
+        "r": "ゆるし",
+        "en": [
+          "pardon",
+          "forgiveness",
+          "exemption"
+        ]
+      }
+    },
+    "j1519450": {
+      "mn": [
+        "харгис захирагч",
+        "дарангуйлагч"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "暴君",
+        "r": "ぼうくん",
+        "en": [
+          "tyrant",
+          "despot"
+        ]
+      }
+    },
+    "j1556640": {
+      "mn": [
+        "их хүйтрэх",
+        "хүйтэн чангарах",
+        "бие жихүүцэх"
+      ],
+      "topics": [
+        "nature",
+        "body"
+      ],
+      "expected": {
+        "w": "冷え込む",
+        "r": "ひえこむ",
+        "en": [
+          "to get (much) colder",
+          "to deepen (cold)",
+          "to feel cold (of the body)"
+        ]
+      }
+    },
+    "j2009330": {
+      "mn": [
+        "орхих",
+        "хасах",
+        "алгасах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "抜き",
+        "r": "ぬき",
+        "en": [
+          "leaving out",
+          "omitting",
+          "skipping"
+        ]
+      }
+    },
+    "j2841555": {
+      "mn": [
+        "орхигдсон зүйл",
+        "эндэгдэл",
+        "алдаа"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "抜け",
+        "r": "ぬけ",
+        "en": [
+          "omission",
+          "slip",
+          "error"
+        ]
+      }
+    },
+    "j1552690": {
+      "mn": [
+        "хадгалан үлдээх",
+        "дөчин таван хэмийн өнцөг"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "留め",
+        "r": "とめ",
+        "en": [
+          "remaining (e.g. poste-restante)",
+          "forty-five degree angle"
+        ]
+      }
+    },
+    "j1435070": {
+      "mn": [
+        "зогсолт",
+        "саатал"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "停留",
+        "r": "ていりゅう",
+        "en": [
+          "stop",
+          "halt"
+        ]
+      }
+    },
+    "j1200130": {
+      "mn": [
+        "тухтай байдал"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "快適さ",
+        "r": "かいてきさ",
+        "en": [
+          "amenity"
+        ]
+      }
+    },
+    "j1524440": {
+      "mn": [
+        "мансууруулах бодис",
+        "хар тамхи"
+      ],
+      "topics": [
+        "body",
+        "society"
+      ],
+      "expected": {
+        "w": "麻薬",
+        "r": "まやく",
+        "en": [
+          "narcotic",
+          "drug",
+          "dope"
+        ]
+      }
+    }
+  }
+}
