@@ -51,7 +51,7 @@ export default function About() {
                     {s.name}
                   </a>
                   <p className="mt-0.5 text-[12.5px] text-sumi-500">{t.licenseLabel} {s.license}</p>
-                  {language === "mn" && s.note && <p className="mt-0.5 text-[12.5px] text-sumi-500">{s.note}</p>}
+                  {(language === "mn" ? s.note : s.note_en) && <p className="mt-0.5 text-[12.5px] text-sumi-500">{language === "mn" ? s.note : s.note_en}</p>}
                 </li>
               ))}
             </ul>

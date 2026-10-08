@@ -33,7 +33,8 @@ try {
       await page.goto('http://127.0.0.1:4176/#/grammar/te-ageru?level=N4');
       await page.getByRole('heading',{name:'〜てあげる',exact:true}).waitFor();
       assert.ok((await page.locator('body').innerText()).includes(language === 'mn' ? 'Хэн нэгэнд тус' : 'do something for someone'));
-      for (const level of ['n5','n4','n3']) {
+      let checkedRules=0, checkedExamples=0;
+      for (const level of ['n5','n4','n3','n2','n1']) {
         const rules = JSON.parse(fs.readFileSync(`public/data/grammar/${level}.json`));
         for (const g of rules) {
           await page.goto(`http://127.0.0.1:4176/#/grammar/${g.id}?level=${level.toUpperCase()}`,{waitUntil:'domcontentloaded'});
@@ -41,16 +42,21 @@ try {
           await page.waitForFunction(text => document.body.innerText.includes(text), form);
           await page.getByRole('button',{name:new RegExp(ui[language].examplesTab2)}).click();
           const body = await page.locator('body').innerText();
-          for (const ex of g.ex) assert.ok(body.includes(language === 'mn' ? ex.mn : ex.en), `${language}/${g.id}: example`);
+          for (const ex of g.ex) {
+            const translation=language==='mn'?ex.mn:ex.en;
+            assert.ok(translation,`${language}/${level}/${g.id}: translation must exist`);
+            assert.ok(body.includes(translation), `${language}/${level}/${g.id}: example`);checkedExamples++;
+          }
+          checkedRules++;
         }
-        console.log(`${language}/${level}: ${rules.length} grammar records checked`);
+        console.log(`${language}/${level}: ${rules.length} grammar details/forms and ${rules.reduce((n,g)=>n+g.ex.length,0)} examples checked`);
       }
       await page.goto('http://127.0.0.1:4176/#/kanji?level=N1');
       const topic = page.getByRole('button',{name:language==='mn' ? /Хайр · харилцаа/ : /Love & relationships/}).first();
       await topic.waitFor();await topic.click();assert.equal(await topic.getAttribute('aria-pressed'),'true');
       await page.goto('http://127.0.0.1:4176/#/vocab?level=N5');
       await page.getByRole('button',{name:language==='mn' ? /Хайр · харилцаа/ : /Love & relationships/}).first().waitFor();
-      assert.deepEqual(errors,[]);await page.close();console.log(`${language}: 280 N5/N4/N3 grammar details/forms and 837 example translations plus vocabulary/kanji topic filters passed`);
+      assert.deepEqual(errors,[]);await page.close();console.log(`${language}: ${checkedRules} N5–N1 grammar details/forms and ${checkedExamples} example translations plus vocabulary/kanji topic filters passed`);
     } finally {await browser.close();}
   }
 } finally {server.kill();}

@@ -111,6 +111,7 @@ export interface SourceRecord {
   url: string;
   license: string;
   note: string;
+  note_en?: string;
   retrievedAt: string;
 }
 

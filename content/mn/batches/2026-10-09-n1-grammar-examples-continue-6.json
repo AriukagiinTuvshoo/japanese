@@ -1,0 +1,286 @@
+{
+  "provenance": {
+    "id": "mn-n1-grammar-examples-continue-6-2026-10-09",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian compared with exact Japanese and retained English; stable record and headword/pattern guards; independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/grammar/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "grammar": {
+    "tada-nomi": {
+      "expected": {
+        "p": "ただ〜のみ",
+        "en": "only; just; nothing but"
+      },
+      "examples": {
+        "今はただ、手術の成功を祈るのみだ。": {
+          "en": "All we can do now is pray that the operation succeeds.",
+          "mn": "Одоо бидэнд хагалгааг амжилттай болоосой гэж залбирахаас өөр хийх зүйл алга."
+        },
+        "やるべきことはすべてやった。あとはただ結果を待つのみだ。": {
+          "en": "I've done everything I should. All that's left is to wait for the results.",
+          "mn": "Хийх ёстой бүхнээ хийсэн. Одоо үр дүнг нь хүлээх л үлдлээ."
+        },
+        "この洞窟に入ることを許されたのは、ただ調査隊の隊員のみであった。": {
+          "en": "Only members of the research team were allowed to enter this cave.",
+          "mn": "Энэ агуйд зөвхөн судалгааны багийн гишүүдийг орохыг зөвшөөрсөн байв."
+        }
+      }
+    },
+    "dano-dano": {
+      "expected": {
+        "p": "〜だの〜だの",
+        "en": "things like A and B (complaining list)"
+      },
+      "examples": {
+        "息子は、野菜は苦いだの肉は硬いだのと文句ばかり言って、なかなか食べない。": {
+          "en": "My son keeps complaining that the vegetables are bitter, the meat is tough and so on, and hardly eats.",
+          "mn": "Хүү маань ногоо гашуун, мах хатуу гэх мэтээр байнга гомдоллож, бараг юм иддэггүй."
+        },
+        "部屋の中は、古い雑誌だの壊れた家電だので足の踏み場もない。": {
+          "en": "The room is so full of old magazines, broken appliances and whatnot that there's nowhere to step.",
+          "mn": "Өрөө хуучин сэтгүүл, эвдэрсэн цахилгаан хэрэгсэл зэрэг юмсаар дүүрч, гишгэх ч зайгүй болжээ."
+        },
+        "彼女は、疲れただの眠いだのと言って、なかなか宿題を始めない。": {
+          "en": "Going on about being tired, being sleepy and so on, she just won't start her homework.",
+          "mn": "Тэр ядарлаа, нойр хүрлээ гэж үглэсээр гэрийн даалгавраа ер эхлэхгүй юм."
+        }
+      }
+    },
+    "te-habakaranai": {
+      "expected": {
+        "p": "〜てはばからない",
+        "en": "not hesitate to; openly (say, declare)"
+      },
+      "examples": {
+        "彼は自分こそが業界一の技術者だと公言してはばからない。": {
+          "en": "He openly declares that he is the best engineer in the industry.",
+          "mn": "Тэр өөрийгөө энэ салбарын хамгийн шилдэг инженер гэж ичих ч үгүй олны өмнө зарладаг."
+        },
+        "その評論家は、現政権の政策を失敗だと断言してはばからない。": {
+          "en": "That critic doesn't hesitate to call the current government's policies a failure.",
+          "mn": "Тэр шүүмжлэгч одоогийн засгийн газрын бодлогыг бүтэлгүйтсэн гэж эргэлзэлгүй хэлдэг."
+        },
+        "監督は、このチームは必ず優勝すると言ってはばからなかった。": {
+          "en": "The manager didn't hesitate to say that this team would definitely win the championship.",
+          "mn": "Дасгалжуулагч энэ баг заавал аварга болно гэж итгэлтэйгээр мэдэгдсэн."
+        }
+      }
+    },
+    "tomo-arou": {
+      "expected": {
+        "p": "〜ともあろう",
+        "en": "of all people; someone (of such standing) as"
+      },
+      "examples": {
+        "警察官ともあろう者が、飲酒運転で捕まるとは。": {
+          "en": "To think that a police officer, of all people, would be caught drunk driving!",
+          "mn": "Цагдаа хүн байж согтуугаар жолоо бариад баригдана гэдэг чинь юу вэ!"
+        },
+        "一流ホテルともあろうものが、こんな初歩的なミスをするなんて信じられない。": {
+          "en": "I can't believe a first-class hotel, of all places, would make such an elementary mistake.",
+          "mn": "Нэгдүгээр зэрэглэлийн зочид буудал байж ийм наад захын алдаа гаргана гэдэгт итгэмээргүй юм."
+        },
+        "大臣ともあろう人が、記者の質問から逃げるべきではない。": {
+          "en": "Someone who is a government minister should not run away from reporters' questions.",
+          "mn": "Сайд хүн байж сэтгүүлчдийн асуултаас зугтах ёсгүй."
+        }
+      }
+    },
+    "ni-kakotsukete": {
+      "expected": {
+        "p": "〜にかこつけて",
+        "en": "using (something) as an excuse or pretext"
+      },
+      "examples": {
+        "彼は出張にかこつけて、地方の温泉を巡っているらしい。": {
+          "en": "Apparently he's been using business trips as an excuse to tour hot springs around the country.",
+          "mn": "Тэр албан томилолтыг шалтаг болгон орон нутгийн халуун рашаануудаар аялдаг бололтой."
+        },
+        "体調不良にかこつけて、面倒な会議を欠席した。": {
+          "en": "I used feeling unwell as an excuse to skip a tiresome meeting.",
+          "mn": "Бие муу байгаагаар шалтаглан төвөгтэй хуралд суусангүй."
+        },
+        "子どもの誕生日にかこつけて、自分が食べたかったケーキを買ってきた。": {
+          "en": "Using my child's birthday as an excuse, I bought the cake I had wanted to eat myself.",
+          "mn": "Хүүхдийнхээ төрсөн өдрөөр шалтаглан өөрийн идэхийг хүссэн бялууг авч ирлээ."
+        }
+      }
+    },
+    "ni-iwasereba": {
+      "expected": {
+        "p": "〜に言わせれば",
+        "en": "if you ask (someone); in (someone's) opinion"
+      },
+      "examples": {
+        "祖母に言わせれば、最近の若者は我慢が足りないそうだ。": {
+          "en": "According to my grandmother, young people these days lack patience.",
+          "mn": "Эмээгийн хэлснээр өнөөгийн залуус тэвчээр муутай гэнэ."
+        },
+        "専門家に言わせれば、この程度の揺れで建物が倒れることはまずないという。": {
+          "en": "If you ask the experts, a building is very unlikely to collapse from shaking of this level.",
+          "mn": "Мэргэжилтнүүдийн үзэж байгаагаар ийм хэмжээний чичиргээнд барилга нурах магадлал бараг үгүй аж."
+        },
+        "私に言わせれば、あの映画は評判ほど面白くない。": {
+          "en": "If you ask me, that movie isn't as good as everyone says.",
+          "mn": "Миний бодлоор тэр кино хүмүүсийн магтаад байгаа шиг тийм ч сонирхолтой биш."
+        }
+      }
+    },
+    "ni-kamakete": {
+      "expected": {
+        "p": "〜にかまけて",
+        "en": "being too wrapped up in (to attend to other things)"
+      },
+      "examples": {
+        "仕事にかまけて、家族と過ごす時間をおろそかにしてしまった。": {
+          "en": "Wrapped up in work, I neglected the time I should have spent with my family.",
+          "mn": "Ажилдаа хэт улайраад гэр бүлтэйгээ өнгөрүүлэх цагаа үл хайхран орхижээ."
+        },
+        "新しいゲームにかまけて、試験勉強がまったく進んでいない。": {
+          "en": "I've been so absorbed in a new game that I've made no progress studying for the exam.",
+          "mn": "Шинэ тоглоомдоо хэт автаад шалгалтын бэлтгэл маань огт урагшлахгүй байна."
+        },
+        "育児にかまけて、自分の健康診断を何年も受けていなかった。": {
+          "en": "Caught up in raising my kids, I hadn't had a health checkup for years.",
+          "mn": "Хүүхдээ өсгөх ажилд дарагдаад өөрөө олон жил эрүүл мэндийн үзлэгт ороогүй байлаа."
+        }
+      }
+    },
+    "kai-mo-naku": {
+      "expected": {
+        "p": "〜かいもなく",
+        "en": "despite (efforts); to no avail"
+      },
+      "examples": {
+        "家族の懸命な看病のかいもなく、祖父は静かに息を引き取った。": {
+          "en": "Despite the family's devoted care, my grandfather passed away peacefully.",
+          "mn": "Гэр бүлийнхэн нь бүх чадлаараа асарч сувилсан ч өвөө минь тайван амьсгал хураалаа."
+        },
+        "必死に練習したかいもなく、一回戦で敗退してしまった。": {
+          "en": "For all our desperate practice, we were knocked out in the first round.",
+          "mn": "Хэчнээн шаргуу бэлтгэл хийсэн ч эхний шатанд л хасагдчихлаа."
+        },
+        "早起きして並んだかいもなく、目当ての限定品は目の前で売り切れた。": {
+          "en": "Even though I got up early to line up, the limited item I wanted sold out right in front of me.",
+          "mn": "Эрт босож дугаарласны хэрэг гарсангүй, авахыг хүссэн хязгаарлагдмал тоотой бараа маань яг миний өмнө дуусчихлаа."
+        }
+      }
+    },
+    "kitte-no": {
+      "expected": {
+        "p": "〜きっての",
+        "en": "the most ... in; the best in"
+      },
+      "examples": {
+        "彼女は社内きっての切れ者として知られている。": {
+          "en": "She is known as the sharpest mind in the company.",
+          "mn": "Түүнийг компанийнхаа хамгийн сэргэлэн, чадварлаг хүн гэдгээр нь мэддэг."
+        },
+        "この旅館は、温泉街きっての老舗だ。": {
+          "en": "This inn is the most venerable establishment in the hot spring town.",
+          "mn": "Энэ дэн буудал бол халуун рашаант хотын хамгийн эртний, нэр хүндтэй газар юм."
+        },
+        "学年きっての秀才と言われた兄も、社会に出てからは苦労している。": {
+          "en": "My brother, once called the brightest student in his year, has struggled since starting work.",
+          "mn": "Ангийнхаа хамгийн гарамгай сурагч гэгдэж байсан ах маань ч ажил амьдралд хөл тавьснаасаа хойш бэрхшээлтэй тулгарч байна."
+        }
+      }
+    },
+    "zu-tomo": {
+      "expected": {
+        "p": "〜ずとも",
+        "en": "even without; without having to"
+      },
+      "examples": {
+        "わざわざ言わずとも、彼なら状況を察してくれるだろう。": {
+          "en": "Even without my spelling it out, he'll probably grasp the situation.",
+          "mn": "Заавал хэлж тайлбарлахгүй байсан ч тэр нөхцөл байдлыг ойлгох байх."
+        },
+        "これくらいの距離なら、車を使わずとも歩いて行ける。": {
+          "en": "At this distance, you can walk there without taking the car.",
+          "mn": "Иймхэн зайд бол машин хэрэглэлгүй явган очиж болно."
+        },
+        "急がずとも、会議にはまだ十分間に合いますよ。": {
+          "en": "Even if we don't hurry, we'll still be in plenty of time for the meeting.",
+          "mn": "Яарахгүй байсан ч хуралдаа хангалттай эрт очно шүү."
+        }
+      }
+    },
+    "to-wa-ie": {
+      "expected": {
+        "p": "〜とはいえ",
+        "en": "although; even though; that said"
+      },
+      "examples": {
+        "春とはいえ、朝晩はまだ冷え込む。": {
+          "en": "Although it's spring, mornings and evenings are still cold.",
+          "mn": "Хавар болсон ч өглөө, оройдоо хүйтэн хэвээр байна."
+        },
+        "締め切りまで一か月あるとはいえ、そろそろ準備を始めたほうがいい。": {
+          "en": "Even though there's a month until the deadline, you'd better start preparing soon.",
+          "mn": "Эцсийн хугацаа хүртэл нэг сар байгаа ч одооноос бэлтгэлээ эхэлсэн нь дээр."
+        },
+        "景気は回復傾向にある。とはいえ、中小企業の経営は依然として厳しい。": {
+          "en": "The economy is on a recovery trend. That said, small and medium-sized businesses are still struggling.",
+          "mn": "Эдийн засаг сэргэх хандлагатай байна. Гэсэн ч жижиг, дунд аж ахуйн нэгжүүдийн үйл ажиллагаа хүнд хэвээр байна."
+        }
+      }
+    },
+    "beku-shite": {
+      "expected": {
+        "p": "〜べくして",
+        "en": "as was bound to happen; inevitably"
+      },
+      "examples": {
+        "安全点検を怠っていたのだから、あの事故は起こるべくして起こったと言える。": {
+          "en": "Since safety inspections had been neglected, you could say that accident was bound to happen.",
+          "mn": "Аюулгүй байдлын шалгалтыг орхигдуулж байсан болохоор тэр осол гарах нь гарцаагүй байжээ гэж хэлж болно."
+        },
+        "誰よりも練習を重ねてきた彼女は、勝つべくして勝ったのだ。": {
+          "en": "Having practiced harder than anyone, she won, just as she was bound to.",
+          "mn": "Хэнээс ч илүү давтан бэлтгэл хийсэн болохоор тэр ялах ёсоороо л ялсан юм."
+        },
+        "もともと無理のある計画だったので、失敗すべくして失敗した。": {
+          "en": "It was an unrealistic plan from the start, so it failed as it was bound to.",
+          "mn": "Анхнаасаа хэрэгжүүлэх боломж муутай төлөвлөгөө байсан тул бүтэлгүйтэх нь гарцаагүй байж."
+        }
+      }
+    },
+    "jimiru-jimita": {
+      "expected": {
+        "p": "〜じみる / 〜じみた",
+        "en": "smack of; seem like (in a bad way); -ish"
+      },
+      "examples": {
+        "いい大人が、そんな子どもじみた言い訳をするものではない。": {
+          "en": "A grown adult shouldn't make such childish excuses.",
+          "mn": "Насанд хүрсэн хүн байж тийм хүүхэд шиг шалтаг хэлэх ёсгүй."
+        },
+        "彼の話はどこか説教じみていて、素直に聞く気になれない。": {
+          "en": "The way he talks is somehow preachy, so I can't bring myself to listen with an open mind.",
+          "mn": "Түүний яриа нэг л сургаал айлдаж байгаа мэт тул чин сэтгэлээсээ сонсмоор санагддаггүй."
+        },
+        "彼はまだ二十代なのに、年寄りじみたことばかり言う。": {
+          "en": "He's still in his twenties, yet he talks like an old man.",
+          "mn": "Тэр дөнгөж хорин хэдтэй атлаа хөгшин хүн шиг л юм ярьдаг."
+        }
+      }
+    },
+    "gurumi": {
+      "expected": {
+        "p": "〜ぐるみ",
+        "en": "including all; the whole (group) together"
+      },
+      "examples": {
+        "隣の家とは、家族ぐるみで付き合っている。": {
+          "en": "Our whole family is close with the family next door.",
+          "mn": "Манайх хөрш айлынхантайгаа гэр бүлээрээ дотно харилцаатай."
+        }
+      }
+    }
+  }
+}

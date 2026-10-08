@@ -59562,6 +59562,231 @@
           "quantity"
         ],
         "reading": "あんまり"
+      },
+      "79169045a2": {
+        "ja": "アイデア",
+        "en": [
+          "idea"
+        ],
+        "topics": [
+          "learning"
+        ],
+        "reading": "アイデア"
+      },
+      "f4f844d9b9": {
+        "ja": "アクセント",
+        "en": [
+          "accent"
+        ],
+        "topics": [
+          "learning"
+        ],
+        "reading": "アクセント"
+      },
+      "817ab81f5e": {
+        "ja": "明け方",
+        "en": [
+          "dawn"
+        ],
+        "topics": [
+          "time"
+        ],
+        "reading": "あけがた"
+      },
+      "c6ff7af051": {
+        "ja": "足跡",
+        "en": [
+          "footprints"
+        ],
+        "topics": [
+          "places"
+        ],
+        "reading": "あしあと"
+      },
+      "d3825b176d": {
+        "ja": "宛名",
+        "en": [
+          "address",
+          "direction"
+        ],
+        "topics": [
+          "places",
+          "learning"
+        ],
+        "reading": "あてな"
+      },
+      "cab6203141": {
+        "ja": "脂",
+        "en": [
+          "fat",
+          "tallow",
+          "lard"
+        ],
+        "topics": [
+          "food",
+          "body"
+        ],
+        "reading": "あぶら"
+      },
+      "3741d0a778": {
+        "ja": "あらすじ",
+        "en": [
+          "outline",
+          "summary"
+        ],
+        "topics": [
+          "learning",
+          "arts"
+        ],
+        "reading": "あらすじ"
+      },
+      "96370a1ce3": {
+        "ja": "案外",
+        "en": [
+          "unexpectedly"
+        ],
+        "topics": [
+          "descriptions"
+        ],
+        "reading": "あんがい"
+      },
+      "02304543b5": {
+        "ja": "アンテナ",
+        "en": [
+          "antenna"
+        ],
+        "topics": [
+          "technology"
+        ],
+        "reading": "アンテナ"
+      },
+      "9711352afe": {
+        "ja": "意義",
+        "en": [
+          "meaning",
+          "significance"
+        ],
+        "topics": [
+          "learning"
+        ],
+        "reading": "いぎ"
+      },
+      "363c73e228": {
+        "ja": "幾分",
+        "en": [
+          "somewhat"
+        ],
+        "topics": [
+          "quantity"
+        ],
+        "reading": "いくぶん"
+      },
+      "e73024b2eb": {
+        "ja": "以後",
+        "en": [
+          "after this",
+          "from now on",
+          "hereafter"
+        ],
+        "topics": [
+          "time"
+        ],
+        "reading": "いご"
+      },
+      "f485f00a3a": {
+        "ja": "以降",
+        "en": [
+          "on and after",
+          "hereafter",
+          "thereafter"
+        ],
+        "topics": [
+          "time"
+        ],
+        "reading": "いこう"
+      },
+      "99ff21adbb": {
+        "ja": "一応",
+        "en": [
+          "once",
+          "tentatively",
+          "in outline"
+        ],
+        "topics": [
+          "time",
+          "learning"
+        ],
+        "reading": "いちおう"
+      },
+      "28ba375980": {
+        "ja": "一段と",
+        "en": [
+          "greater",
+          "more",
+          "further"
+        ],
+        "topics": [
+          "quantity"
+        ],
+        "reading": "いちだんと"
+      },
+      "b1205d9b83": {
+        "ja": "一斉",
+        "en": [
+          "simultaneous",
+          "all at once"
+        ],
+        "topics": [
+          "time"
+        ],
+        "reading": "いっせい"
+      },
+      "2fac4509a1": {
+        "ja": "緯度",
+        "en": [
+          "latitude (nav.)"
+        ],
+        "topics": [
+          "places",
+          "quantity"
+        ],
+        "reading": "いど"
+      },
+      "8ca2ab5e1d": {
+        "ja": "従姉妹",
+        "en": [
+          "cousin (female)"
+        ],
+        "topics": [
+          "people",
+          "relationships"
+        ],
+        "reading": "いとこ"
+      },
+      "17c46940e9": {
+        "ja": "いよいよ",
+        "en": [
+          "more and more",
+          "all the more",
+          "increasingly"
+        ],
+        "topics": [
+          "quantity",
+          "time"
+        ],
+        "reading": "いよいよ"
+      },
+      "c1294618e7": {
+        "ja": "入れ物",
+        "en": [
+          "container",
+          "case",
+          "receptacle"
+        ],
+        "topics": [
+          "daily"
+        ],
+        "reading": "いれもの"
       }
     },
     "kanji": {
@@ -88318,6 +88543,401 @@
         ],
         "kun": [
           "かたど.る"
+        ]
+      },
+      "成": {
+        "ja": "成",
+        "en": [
+          "Turn Into",
+          "Become",
+          "Get"
+        ],
+        "topics": [
+          "actions"
+        ],
+        "on": [
+          "せい",
+          "じょう"
+        ],
+        "kun": [
+          "な.る",
+          "な.す",
+          "-な.す"
+        ]
+      },
+      "都": {
+        "ja": "都",
+        "en": [
+          "Metropolis",
+          "Capital",
+          "All"
+        ],
+        "topics": [
+          "places",
+          "quantity"
+        ],
+        "on": [
+          "と",
+          "つ"
+        ],
+        "kun": [
+          "みやこ"
+        ]
+      },
+      "和": {
+        "ja": "和",
+        "en": [
+          "Harmony",
+          "Japanese Style",
+          "Peace"
+        ],
+        "topics": [
+          "relationships",
+          "society"
+        ],
+        "on": [
+          "わ",
+          "お",
+          "か"
+        ],
+        "kun": [
+          "やわ.らぐ",
+          "やわ.らげる",
+          "なご.む",
+          "なご.やか"
+        ]
+      },
+      "平": {
+        "ja": "平",
+        "en": [
+          "Even",
+          "Flat",
+          "Peace"
+        ],
+        "topics": [
+          "descriptions",
+          "society"
+        ],
+        "on": [
+          "へい",
+          "びょう",
+          "ひょう"
+        ],
+        "kun": [
+          "たい.ら",
+          "-だいら",
+          "ひら",
+          "ひら-"
+        ]
+      },
+      "加": {
+        "ja": "加",
+        "en": [
+          "Add",
+          "Addition",
+          "Increase"
+        ],
+        "topics": [
+          "quantity",
+          "actions"
+        ],
+        "on": [
+          "か"
+        ],
+        "kun": [
+          "くわ.える",
+          "くわ.わる"
+        ]
+      },
+      "続": {
+        "ja": "続",
+        "en": [
+          "Continue",
+          "Series",
+          "Sequel"
+        ],
+        "topics": [
+          "time",
+          "actions"
+        ],
+        "on": [
+          "ぞく",
+          "しょく",
+          "こう"
+        ],
+        "kun": [
+          "つづ.く",
+          "つづ.ける",
+          "つぐ.ない"
+        ]
+      },
+      "進": {
+        "ja": "進",
+        "en": [
+          "Advance",
+          "Proceed",
+          "Progress"
+        ],
+        "topics": [
+          "actions"
+        ],
+        "on": [
+          "しん"
+        ],
+        "kun": [
+          "すす.む",
+          "すす.める"
+        ]
+      },
+      "記": {
+        "ja": "記",
+        "en": [
+          "Scribe",
+          "Account",
+          "Narrative"
+        ],
+        "topics": [
+          "learning"
+        ],
+        "on": [
+          "き"
+        ],
+        "kun": [
+          "しる.す"
+        ]
+      },
+      "支": {
+        "ja": "支",
+        "en": [
+          "Branch",
+          "Support",
+          "Sustain"
+        ],
+        "topics": [
+          "relationships",
+          "actions"
+        ],
+        "on": [
+          "し"
+        ],
+        "kun": [
+          "ささ.える",
+          "つか.える",
+          "か.う"
+        ]
+      },
+      "点": {
+        "ja": "点",
+        "en": [
+          "Spot",
+          "Point",
+          "Mark"
+        ],
+        "topics": [
+          "quantity",
+          "places"
+        ],
+        "on": [
+          "てん"
+        ],
+        "kun": [
+          "つ.ける",
+          "つ.く",
+          "た.てる",
+          "さ.す"
+        ]
+      },
+      "報": {
+        "ja": "報",
+        "en": [
+          "Report",
+          "News",
+          "Reward"
+        ],
+        "topics": [
+          "learning",
+          "work"
+        ],
+        "on": [
+          "ほう"
+        ],
+        "kun": [
+          "むく.いる"
+        ]
+      },
+      "済": {
+        "ja": "済",
+        "en": [
+          "Settle (debt, Etc.)",
+          "Relieve (burden)",
+          "Finish"
+        ],
+        "topics": [
+          "work",
+          "actions"
+        ],
+        "on": [
+          "さい",
+          "せい"
+        ],
+        "kun": [
+          "す.む",
+          "-ず.み",
+          "-ずみ",
+          "す.まない"
+        ]
+      },
+      "活": {
+        "ja": "活",
+        "en": [
+          "Lively",
+          "Resuscitation",
+          "Being Helped"
+        ],
+        "topics": [
+          "body",
+          "descriptions"
+        ],
+        "on": [
+          "かつ"
+        ],
+        "kun": [
+          "い.きる",
+          "い.かす",
+          "い.ける"
+        ]
+      },
+      "原": {
+        "ja": "原",
+        "en": [
+          "Meadow",
+          "Original",
+          "Primitive"
+        ],
+        "topics": [
+          "nature",
+          "descriptions"
+        ],
+        "on": [
+          "げん"
+        ],
+        "kun": [
+          "はら"
+        ]
+      },
+      "共": {
+        "ja": "共",
+        "en": [
+          "Together",
+          "Both",
+          "Neither"
+        ],
+        "topics": [
+          "relationships",
+          "quantity"
+        ],
+        "on": [
+          "きょう"
+        ],
+        "kun": [
+          "とも",
+          "とも.に",
+          "-ども"
+        ]
+      },
+      "得": {
+        "ja": "得",
+        "en": [
+          "Gain",
+          "Get",
+          "Find"
+        ],
+        "topics": [
+          "actions"
+        ],
+        "on": [
+          "とく"
+        ],
+        "kun": [
+          "え.る",
+          "う.る"
+        ]
+      },
+      "解": {
+        "ja": "解",
+        "en": [
+          "Unravel",
+          "Notes",
+          "Key"
+        ],
+        "topics": [
+          "learning",
+          "actions"
+        ],
+        "on": [
+          "かい",
+          "げ"
+        ],
+        "kun": [
+          "と.く",
+          "と.かす",
+          "と.ける",
+          "ほど.く"
+        ]
+      },
+      "交": {
+        "ja": "交",
+        "en": [
+          "Mingle",
+          "Mixing",
+          "Association"
+        ],
+        "topics": [
+          "relationships",
+          "actions"
+        ],
+        "on": [
+          "こう"
+        ],
+        "kun": [
+          "まじ.わる",
+          "まじ.える",
+          "ま.じる",
+          "まじ.る"
+        ]
+      },
+      "資": {
+        "ja": "資",
+        "en": [
+          "Assets",
+          "Resources",
+          "Capital"
+        ],
+        "topics": [
+          "work"
+        ],
+        "on": [
+          "し"
+        ],
+        "kun": []
+      },
+      "予": {
+        "ja": "予",
+        "en": [
+          "Beforehand",
+          "Previous",
+          "Myself"
+        ],
+        "topics": [
+          "time",
+          "people"
+        ],
+        "on": [
+          "よ",
+          "しゃ"
+        ],
+        "kun": [
+          "あらかじ.め"
         ]
       }
     }

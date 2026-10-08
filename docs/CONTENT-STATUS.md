@@ -1,8 +1,8 @@
-# MN/EN completion status — 2026-10-08
+# MN/EN completion status — 2026-10-09
 
 **Incomplete. PR #12 must remain draft and unmerged. No production completion is claimed.**
 
-Baseline `6cf8ca1`: 7,170 missing meanings. Current batches add 7,108 net meanings, all 526 grammar formation translations and 837 N5–N3 grammar example translations and 514 vocabulary example translations plus 6 N2 grammar example translations. AI-authored, independently unreviewed; coverage is not semantic approval.
+Baseline `6cf8ca1`: 7,170 missing meanings. Current batches add 7,108 net meanings and all 526 grammar formation translations. All **1,526 grammar examples across N5–N1** now have Mongolian text, plus **554 vocabulary example translations** added during continuation. New content is AI-authored and independently unreviewed; coverage and browser rendering are not semantic approval.
 
 | Level | Missing vocabulary meanings | Missing kanji meanings | Missing grammar meanings |
 |---|---:|---:|---:|
@@ -13,7 +13,7 @@ Baseline `6cf8ca1`: 7,170 missing meanings. Current batches add 7,108 net meanin
 | N1 | 31 | 31 | 0 |
 | Total | 31 | 31 | 0 |
 
-Remaining: **62 meanings, 13,338 examples** (13,015 vocabulary + 323 N2/N1 grammar), **0 formations, 2,035 unclassified entries, 0 missing new-batch provenance records; 6,503 unchanged legacy/unreviewed meanings of unknown authorship (documented, not release-blocking), 10 unresolved source issues**. Invalid categories and mislabeled MN: zero. Measures overlap; do not sum as distinct entries.
+Remaining: **62 meanings, 12,975 vocabulary examples, 0 grammar examples, 0 formations, 1,995 unclassified entries, 0 missing new-batch provenance records; 6,503 unchanged legacy/unreviewed meanings of unknown authorship (documented, not release-blocking), 10 unresolved source issues**. Invalid categories and mislabeled MN: zero. Measures overlap; do not sum as distinct entries.
 
 N5 vocabulary/kanji and N4 kanji are fully classified. Categories support multiple topics, including relationships. Explicit semantic override evidence is maintained in `content/categories/provenance.json`. Unmatched entries remain visibly filterable, not hidden in a catch-all. Source warnings retain original Japanese/English and block release. Existing drafts and new translations still need accuracy review. Page-wide bilingual localization audit remains incomplete, notably Admin.
 
@@ -131,3 +131,20 @@ External reference attempt: retrieved JMdict distributor release metadata versio
 Actual PR checks at head 4dd3095: regression PASS (8m55s), complete-content FAIL (18s), Vercel preview PASS. These are previous-head checks, not approval of this new commit. Draft/open status retained; no merge or production release. Full page localization, backend-derived diagnostics, complete bilingual state matrix, remaining corpus/categories, and independent human review still block release.
 
 Additional same-turn batch: 30 more source-guarded N2 grammar sentences applied, coverage/regression/retention/typecheck/data/build passed. Standalone strict gate exit 1: 62 meanings / 13338 examples / 2035 unclassified / 10 conflicts; separate diff check exit 0. Total current-turn addition 289 sentences. Prior progress commit 0eaae1a checks were pending when inspected; no new-head CI approval claimed.
+
+
+## October 9 continued content, external evidence and full grammar matrix
+
+Starting tested head `02af15725ba2ea8b08a899fcd5afa063396157c0`, branch `arena/b35ad51c-japanese`, worktree had uncommitted continuation content. Actual GitHub checks for that exact head: both regression jobs SUCCESS; both complete-content jobs FAILURE specifically at `npm run coverage:validate`; Vercel preview SUCCESS. Job metadata was accessible, but full CI log download failed EOF on restricted `results-receiver.actions.githubusercontent.com` (earlier blob-storage host also blocked). Do not substitute those previous-head checks for the continuation commit.
+
+Added **363 exact-source example translations** since 02af157: 77 N2 grammar, 246 N1 grammar and 20 vocabulary sentences each in N1/N2. Nine grammar batches (40/37, then 40/40/40/40/20/40/26) and two 20-sentence vocabulary batches preserve IDs, Japanese/English, readings and provenance. Typecheck/data/routes/coverage/retention/build passed after EACH batch. Coverage after each: **13,298 → 13,261 → 13,221 → 13,181 → 13,141 → 13,101 → 13,081 → 13,041 → 13,015 → 12,995 → 12,975**. Initial count at 02af157 was 13,338. The first seven batches did not individually execute the standalone strict gate (cadence deviation); final two grammar and both vocabulary batches did and recorded exit 1. No linguistic review claimed.
+
+The evidence-backed topic batch contains exactly **40 assignments (20 N3 kanji + 20 N2 vocabulary)**, not 43 as mistakenly stated in interim notes. All were previously unclassified; measured total **2,035 → 1,995**, no estimated decrement. Unique guards and manifest source/reading/English evidence are regression-tested. The suspect 佚 entry was deliberately not assigned.
+
+Genuine external dictionary access succeeded through PyPI: pinned `jamdict-data` 1.5, declared compilation 2021-04-17, artifact SHA-256 and entry-level evidence in `docs/audits/2026-10-09-dictionary-evidence.json`; reproducible read-only script `scripts/audit-dictionary.py`. All 62 withheld meanings and ten warnings audited (67 distinct entries due to overlap), **zero active corrections**. Snapshot challenges categorical warnings for 気品/aroma, 悪い/にくい, ファン/fun, フォーム/foam, 中身/あてみ. It repeats several suspect extended-vocabulary and kanji glosses, but is the SAME artifact used by this repository's JMdict pipeline—not independent modern verification. Its metadata lacks a JMdict lexical date and reports KANJIDIC2 April 2008. No current authoritative-direct or independent modern reference/human adjudication obtained. Preserve originals and blockers rather than claim repeated historical data verifies them. Prior failed current-upstream download remains recorded, but “no external entry evidence at all” is now superseded.
+
+Corrected attribution for the actual bundled dictionary license **CC-BY-SA-3.0** (package MIT), distinguished from the adaptation label CC-BY-SA-4.0. Full packaged license retained in `docs/licenses/jamdict-data-1.5-dictionaries.md`. About now displays all five source descriptions in English as well as Mongolian; static-metadata browser assertions cover both languages. No baseline Japanese/English/readings/examples/audio/strokes/drafts removed. Strict gate remains untouched.
+
+Browser validation is recorded separately in `docs/audits/2026-10-09-validation.md`. One expanded run returned exit 1 after completing all MN grammar levels and timing out at kanji topic controls: a rebuild occurred during that active run, potentially invalidating lazy asset URLs. No pass claimed for that run. The unchanged-build repeat completed with exit 0 in BOTH languages: 526 grammar records/formations and 1,526 examples each; no test timeout increased or assertion disabled. Admin mock-state tests pass both languages; About source descriptions use real static metadata. These tests do not validate actual backend authorization/mutation or production.
+
+PR stays draft/open/unmerged/unreleased. Remaining vocabulary examples/topics/meanings, source-warning adjudication, full visible-page/state MN/EN audit, independent semantic review, real backend/auth and live production verification still block release. No queued follow-up features started.

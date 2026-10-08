@@ -1,0 +1,286 @@
+{
+  "provenance": {
+    "id": "mn-n1-grammar-examples-continue-3-2026-10-09",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian compared with exact Japanese and retained English; stable record and headword/pattern guards; independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/grammar/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "grammar": {
+    "ni-kataku-nai": {
+      "expected": {
+        "p": "〜に難くない",
+        "en": "it's not hard to (imagine, understand)"
+      },
+      "examples": {
+        "当時の彼がどれほど追い詰められていたかは、察するに難くない。": {
+          "en": "It's easy to guess how cornered he must have felt at the time.",
+          "mn": "Тэр үед түүнийг хэчнээн мухардсаныг таахад хэцүү биш."
+        },
+        "この条件で工事を強行すれば、事故が起きることは予想に難くない。": {
+          "en": "If construction is forced through under these conditions, it's easy to foresee an accident.",
+          "mn": "Ийм нөхцөлд барилгын ажлыг хүчээр үргэлжлүүлбэл осол гарахыг таамаглахад хэцүү биш."
+        }
+      }
+    },
+    "ni-shite": {
+      "expected": {
+        "p": "〜にして",
+        "en": "only (at/with); even for; being both A and B"
+      },
+      "examples": {
+        "彼女は四十歳にして、初めて小説を書き上げた。": {
+          "en": "She finished writing her first novel only at the age of forty.",
+          "mn": "Тэр дөчин насандаа л анхны романаа бичиж дуусгасан."
+        },
+        "このような精密な作業は、熟練の職人にしてはじめて可能になる。": {
+          "en": "Precision work like this is only possible in the hands of a seasoned craftsman.",
+          "mn": "Ийм нарийн ажлыг туршлагатай урчин л хийж чадна."
+        },
+        "彼は医師にして作家でもあり、多方面で活躍している。": {
+          "en": "He is both a doctor and a writer, and is active in many fields.",
+          "mn": "Тэр эмч бөгөөд зохиолч, олон салбарт ажилладаг."
+        }
+      }
+    },
+    "ni-sokushite": {
+      "expected": {
+        "p": "〜に即して",
+        "en": "in accordance with; based on (the facts, actual conditions)"
+      },
+      "examples": {
+        "規則を機械的に当てはめるのではなく、実情に即して判断すべきだ。": {
+          "en": "Rather than applying the rules mechanically, you should judge according to the actual circumstances.",
+          "mn": "Дүрмийг механикаар хэрэглэхгүй, бодит нөхцөлд нийцүүлэн шийдэх хэрэгтэй."
+        },
+        "本書は、実際の職場の場面に即した会話例を数多く取り上げている。": {
+          "en": "This book features many sample conversations based on real workplace situations.",
+          "mn": "Энэ номд ажлын бодит нөхцөлд нийцсэн олон ярианы жишээ бий."
+        },
+        "事実に即して報道することが、記者の最低限の責任である。": {
+          "en": "Reporting in line with the facts is a journalist's most basic responsibility.",
+          "mn": "Баримтад нийцүүлэн мэдээлэх нь сэтгүүлчийн наад захын үүрэг."
+        }
+      }
+    },
+    "ni-taeru-ni-taenai": {
+      "expected": {
+        "p": "〜に堪える / 〜に堪えない",
+        "en": "be worth (doing); unbearable to (see, hear); (feel) deeply"
+      },
+      "examples": {
+        "この作品は、大人の鑑賞にも十分堪える完成度の高いアニメだ。": {
+          "en": "This is a polished anime that stands up well to viewing by adults too.",
+          "mn": "Энэ бол томчууд үзэхэд ч хангалттай чанартай анимэ."
+        },
+        "被災地の惨状は、見るに堪えないものだった。": {
+          "en": "The devastation in the disaster zone was unbearable to look at.",
+          "mn": "Гамшигт нутгийн сүйрэл харахад тэвчихийн аргагүй байлаа."
+        },
+        "皆様から温かいご支援をいただき、感謝に堪えません。": {
+          "en": "I am deeply grateful for the warm support you have all given me.",
+          "mn": "Та бүхний халуун дэмжлэгт гүнээ талархаж байна."
+        }
+      }
+    },
+    "ni-taru": {
+      "expected": {
+        "p": "〜に足る",
+        "en": "worthy of; sufficient to"
+      },
+      "examples": {
+        "彼は、部下からも取引先からも信頼に足る人物だと評価されている。": {
+          "en": "He is regarded by subordinates and clients alike as someone worthy of trust.",
+          "mn": "Ажилтнууд, харилцагчид аль аль нь түүнийг итгэл даах хүн гэж үнэлдэг."
+        },
+        "残念ながら、その主張を裏付けるに足る証拠は見つかっていない。": {
+          "en": "Unfortunately, no evidence sufficient to support that claim has been found.",
+          "mn": "Харамсалтай нь тэр мэдэгдлийг батлах хангалттай нотолгоо олдоогүй."
+        },
+        "取るに足らないうわさなど、気にする必要はない。": {
+          "en": "There's no need to worry about trivial rumors.",
+          "mn": "Өчүүхэн цуу ярианд санаа зовох хэрэггүй."
+        }
+      }
+    },
+    "ni-todomarazu": {
+      "expected": {
+        "p": "〜にとどまらず",
+        "en": "not limited to; not stopping at; going beyond"
+      },
+      "examples": {
+        "感染症の影響は一国にとどまらず、世界経済全体に及んだ。": {
+          "en": "The impact of the epidemic was not confined to one country; it spread to the entire world economy.",
+          "mn": "Халдварын нөлөө нэг улсаар хязгаарлагдалгүй дэлхийн эдийн засгийг бүхэлд нь хамарсан."
+        },
+        "この運動は一時的なブームにとどまらず、社会の意識を大きく変えた。": {
+          "en": "This movement was more than a passing fad; it greatly changed society's awareness.",
+          "mn": "Энэ хөдөлгөөн түр зуурын сонирхол төдий бус, нийгмийн ойлголтыг ихээр өөрчилсөн."
+        },
+        "彼の研究は、学問の世界にとどまらず、産業界からも注目を集めている。": {
+          "en": "His research is drawing attention not only in academia but from industry as well.",
+          "mn": "Түүний судалгаа эрдэм шинжилгээний хүрээнээс гадна үйлдвэрлэлийн салбарын анхаарлыг татаж байна."
+        }
+      }
+    },
+    "ni-hikikae": {
+      "expected": {
+        "p": "〜にひきかえ",
+        "en": "in contrast to; unlike"
+      },
+      "examples": {
+        "しっかり者の姉にひきかえ、妹はのんびり屋でいつも忘れ物ばかりしている。": {
+          "en": "Unlike her dependable older sister, the younger one is easygoing and always forgetting things.",
+          "mn": "Найдвартай эгчээсээ ялгаатай нь дүү нь тайван зантай, байнга юмаа мартдаг."
+        },
+        "去年の猛暑にひきかえ、今年の夏はずいぶん過ごしやすい。": {
+          "en": "In contrast to last year's scorching heat, this summer has been quite comfortable.",
+          "mn": "Өнгөрсөн жилийн аагим халуунаас ялгаатай нь энэ зун амьдрахад тун таатай."
+        },
+        "兄が勉強熱心なのにひきかえ、弟は漫画ばかり読んでいる。": {
+          "en": "While the older brother is studious, the younger one does nothing but read manga.",
+          "mn": "Ах нь шаргуу суралцдаг байхад дүү нь манга л уншаад байдаг."
+        }
+      }
+    },
+    "ni-mo-mashite": {
+      "expected": {
+        "p": "〜にもまして",
+        "en": "even more than; above all"
+      },
+      "examples": {
+        "今年の夏は、例年にもまして暑さが厳しい。": {
+          "en": "The heat this summer is even more severe than usual.",
+          "mn": "Энэ зун ердийнхөөс ч илүү халуун байна."
+        },
+        "合格の知らせは、何にもましてうれしかった。": {
+          "en": "The news that I'd passed made me happier than anything.",
+          "mn": "Тэнцсэн тухай мэдээ юу юунаас илүү баярлуулсан."
+        },
+        "前回にもまして、今回の選挙は投票率の低さが目立った。": {
+          "en": "Even more than last time, this election stood out for its low turnout.",
+          "mn": "Энэ сонгуульд өмнөхөөс ч илүү бага ирц анзаарагдсан."
+        }
+      }
+    },
+    "no-itari": {
+      "expected": {
+        "p": "〜の至り",
+        "en": "utmost; the height of (in set phrases)"
+      },
+      "examples": {
+        "このような席でご挨拶させていただけるとは、光栄の至りでございます。": {
+          "en": "It is the greatest honor to be able to address you on such an occasion.",
+          "mn": "Ийм арга хэмжээнд мэндчилгээ хэлэх боломж олдсон нь туйлын нэр төрийн хэрэг."
+        },
+        "学生時代に派手な髪型をしていたのは、若気の至りだった。": {
+          "en": "My flashy hairstyle in my student days was just youthful folly.",
+          "mn": "Оюутан байхдаа содон үс засалттай явсан нь залуугийн омголон зан байжээ."
+        },
+        "皆様にご迷惑をおかけし、誠に恐縮の至りです。": {
+          "en": "I am truly sorry for having caused you all such trouble.",
+          "mn": "Та бүхэнд төвөг удсандаа үнэхээр хүлцэл өчье."
+        }
+      }
+    },
+    "nomi-narazu": {
+      "expected": {
+        "p": "〜のみならず",
+        "en": "not only ... but also"
+      },
+      "examples": {
+        "この問題は日本のみならず、多くの先進国が抱える課題である。": {
+          "en": "This issue is a challenge faced not only by Japan but by many developed countries.",
+          "mn": "Энэ асуудал Японд төдийгүй олон хөгжингүй оронд тулгарч байна."
+        },
+        "彼女は優れた研究者であるのみならず、学生の指導にも熱心だ。": {
+          "en": "She is not only an excellent researcher but also dedicated to mentoring students.",
+          "mn": "Тэр сайн судлаач төдийгүй оюутнуудыг чиглүүлэхэд чин сэтгэлээсээ ханддаг."
+        },
+        "震災は建物を破壊したのみならず、住民の暮らしそのものを奪った。": {
+          "en": "The earthquake not only destroyed buildings but took away the residents' very way of life.",
+          "mn": "Газар хөдлөлт барилгуудыг нураагаад зогсохгүй оршин суугчдын амьдралын хэв маягийг үгүй хийсэн."
+        }
+      }
+    },
+    "wa-oroka": {
+      "expected": {
+        "p": "〜はおろか",
+        "en": "let alone; not to mention"
+      },
+      "examples": {
+        "足を骨折してしまい、走ることはおろか、歩くことさえままならない。": {
+          "en": "I broke my leg, so I can barely even walk, let alone run.",
+          "mn": "Хөл хугарсан тул гүйх нь байтугай алхах ч амаргүй."
+        },
+        "祖父は海外はおろか、東京にも行ったことがない。": {
+          "en": "My grandfather has never even been to Tokyo, let alone abroad.",
+          "mn": "Өвөө гадаадад байтугай Токиод ч очиж үзээгүй."
+        },
+        "給料日前で、外食はおろか、コンビニの弁当を買う余裕もない。": {
+          "en": "It's right before payday, so I can't even afford a convenience-store bento, let alone eat out.",
+          "mn": "Цалин буухын өмнө тул гадуур хооллох нь байтугай дэлгүүрийн бэлэн хоол авах мөнгөгүй."
+        }
+      }
+    },
+    "ba-koso": {
+      "expected": {
+        "p": "〜ばこそ",
+        "en": "precisely because; only because"
+      },
+      "examples": {
+        "君の将来を思えばこそ、厳しいことを言うのだ。": {
+          "en": "It's precisely because I care about your future that I'm being so strict with you.",
+          "mn": "Чиний ирээдүйд санаа тавьдаг учраас л хатуу хэлж байна."
+        },
+        "健康であればこそ、好きな仕事にも打ち込める。": {
+          "en": "It's only because you are healthy that you can throw yourself into the work you love.",
+          "mn": "Эрүүл байж л дуртай ажилдаа бүх сэтгэлээ зориулж чадна."
+        },
+        "信頼していればこそ、この大役を彼女に任せたのです。": {
+          "en": "It's precisely because I trust her that I entrusted her with this important role.",
+          "mn": "Түүнд итгэдэг учраас л энэ чухал үүргийг даалгасан."
+        }
+      }
+    },
+    "ba-sore-made-da": {
+      "expected": {
+        "p": "〜ばそれまでだ",
+        "en": "if ..., that's the end of it; it's all for nothing if"
+      },
+      "examples": {
+        "どんなに高価な機械でも、壊れてしまえばそれまでだ。": {
+          "en": "No matter how expensive a machine is, once it breaks, that's the end of it.",
+          "mn": "Хэчнээн үнэтэй машин байсан ч эвдэрчихвэл ингээд л дуусна."
+        },
+        "いくら準備をしても、本番で緊張して何も言えなければそれまでだ。": {
+          "en": "However much you prepare, if you freeze up and can't say anything on the day, it's all for nothing.",
+          "mn": "Хэчнээн бэлдсэн ч яг үед нь сандарч юу ч хэлж чадахгүй бол бүх зүйл үргүй."
+        },
+        "運が悪かったと言ってしまえばそれまでだが、防げた事故だったのではないか。": {
+          "en": "You could just call it bad luck and leave it at that, but wasn't this an accident that could have been prevented?",
+          "mn": "Азгүй байсан гээд орхиж болох ч сэргийлж болох осол байсан юм биш үү?"
+        }
+      }
+    },
+    "bekarazu-bekarazaru": {
+      "expected": {
+        "p": "〜べからず / 〜べからざる",
+        "en": "must not; do not (on signs); (before a noun) must not be"
+      },
+      "examples": {
+        "境内の池のほとりには、「魚にえさを与えるべからず」と書かれた立て札がある。": {
+          "en": "By the pond in the temple grounds stands a sign that reads, 'Do not feed the fish.'",
+          "mn": "Сүмийн хашаан дахь цөөрмийн эрэгт «Загас хооллохыг хориглоно» гэсэн самбар бий."
+        },
+        "彼の発言は、公職にある者として許すべからざるものだ。": {
+          "en": "His remarks are unforgivable for someone holding public office.",
+          "mn": "Түүний үг төрийн алба хашдаг хүний хувьд уучилшгүй."
+        }
+      }
+    }
+  }
+}

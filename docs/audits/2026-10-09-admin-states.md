@@ -14,3 +14,5 @@ Both language test runs passed. These are mock API state tests, not production a
 Shared loading/error widgets now inherit selected language when callers omit it. Explicit localized caller labels remain preserved. Native JSON parser exception text is no longer exposed as the UI-authored import syntax message.
 
 No confirmed visible Arena/demo artifact was removed; prior substring scan found ordinary input placeholder attributes. No study features removed.
+
+Continuation: About populated metadata now renders all five source descriptions in BOTH languages, including the actual jamdict-data 1.5 CC-BY-SA-3.0 dictionary license (MIT package). Both sets of static-metadata browser assertions passed; the Admin endpoint tests remain mocks. See the full captured output in `2026-10-09-validation.md`.

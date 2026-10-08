@@ -1,0 +1,286 @@
+{
+  "provenance": {
+    "id": "mn-n1-grammar-examples-continue-1-2026-10-09",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian compared with exact Japanese and retained English; stable record and headword/pattern guards; independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/grammar/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "grammar": {
+    "te-shikaru-beki-da": {
+      "expected": {
+        "p": "〜てしかるべきだ",
+        "en": "ought to; it would only be natural to"
+      },
+      "examples": {
+        "子どもの安全にかかわる問題なのだから、もっと早く対策が講じられてしかるべきだった。": {
+          "en": "Since it concerns children's safety, measures should have been taken much sooner.",
+          "mn": "Хүүхдийн аюулгүй байдалтай холбоотой тул арга хэмжээг хавьгүй эрт авах ёстой байсан."
+        }
+      }
+    },
+    "de-wa-aru-mai-shi": {
+      "expected": {
+        "p": "〜ではあるまいし",
+        "en": "it's not as if (one were); since (one) is not"
+      },
+      "examples": {
+        "子どもではあるまいし、自分のことくらい自分で決めなさい。": {
+          "en": "You're not a child, so make your own decisions about yourself.",
+          "mn": "Чи хүүхэд биш болохоор өөрийн асуудлаа өөрөө шийд."
+        },
+        "一生会えなくなるわけではあるまいし、そんなに泣かないで。": {
+          "en": "It's not as if we'll never see each other again, so don't cry like that.",
+          "mn": "Насан туршдаа уулзахгүй болох гэж байгаа биш тул ингэж их битгий уйл."
+        },
+        "神様じゃあるまいし、未来のことなんか分かるわけがないよ。": {
+          "en": "I'm not God, so there's no way I could know the future.",
+          "mn": "Би бурхан биш болохоор ирээдүйг мэдэх аргагүй."
+        }
+      }
+    },
+    "temae": {
+      "expected": {
+        "p": "〜手前",
+        "en": "since (considering how it looks to others); out of consideration for"
+      },
+      "examples": {
+        "部下の手前、上司の私が弱音を吐くことはできなかった。": {
+          "en": "In front of my subordinates, I couldn't let myself complain as their boss.",
+          "mn": "Ажилтнуудынхаа өмнө дарга би сул үг хэлж болохгүй байлаа."
+        },
+        "必ず合格すると宣言した手前、今さら受験をやめるとは言えない。": {
+          "en": "Having declared I would definitely pass, I can hardly say now that I'm giving up the exam.",
+          "mn": "Заавал тэнцэнэ гэж хэлчихсэн тул одоо шалгалтаас татгалзана гэж хэлж чадахгүй."
+        },
+        "子どもたちに約束を守れと言っている手前、親が約束を破るわけにはいかない。": {
+          "en": "Since we tell our kids to keep their promises, we parents can't break ours.",
+          "mn": "Хүүхдүүддээ амлалтаа биелүүл гэж хэлдэг тул эцэг эх өөрсдөө амлалтаа зөрчиж болохгүй."
+        }
+      }
+    },
+    "te-mo-sashitsukae-nai": {
+      "expected": {
+        "p": "〜てもさしつかえない",
+        "en": "it's all right to; there's no problem if"
+      },
+      "examples": {
+        "書類は鉛筆で記入してもさしつかえありません。": {
+          "en": "You may fill in the form in pencil.",
+          "mn": "Баримтыг харандаагаар бөглөж болно."
+        },
+        "急ぎの件でなければ、お返事は来週になってもさしつかえない。": {
+          "en": "If it isn't urgent, it's fine if the reply comes next week.",
+          "mn": "Яаралтай биш бол хариуг ирэх долоо хоногт өгсөн ч болно."
+        },
+        "応募資格は特にありませんので、未経験の方でもさしつかえありません。": {
+          "en": "There are no particular requirements, so applicants with no experience are welcome.",
+          "mn": "Тусгай шаардлагагүй тул туршлагагүй хүн ч хүсэлт гаргаж болно."
+        }
+      }
+    },
+    "to-atte": {
+      "expected": {
+        "p": "〜とあって",
+        "en": "because (of a special situation); as it is"
+      },
+      "examples": {
+        "三連休の初日とあって、高速道路はどこも大渋滞だった。": {
+          "en": "It being the first day of a three-day weekend, the expressways were jammed everywhere.",
+          "mn": "Гурван өдрийн амралтын эхний өдөр тул хурдны замууд хаа сайгүй түгжирсэн."
+        },
+        "人気俳優が来店するとあって、店の前には早朝から長い行列ができた。": {
+          "en": "With a popular actor coming to the store, a long line formed out front from early morning.",
+          "mn": "Алдарт жүжигчин ирэх тул өглөө эртнээс дэлгүүрийн өмнө урт дараалал үүссэн."
+        },
+        "十年ぶりの再会とあって、二人は夜遅くまで語り合った。": {
+          "en": "As it was their first reunion in ten years, the two talked late into the night.",
+          "mn": "Арван жилийн дараа дахин уулзсан тул хоёул шөнө орой болтол ярилцсан."
+        }
+      }
+    },
+    "to-areba": {
+      "expected": {
+        "p": "〜とあれば",
+        "en": "if it's (for); if (such a special case) is so"
+      },
+      "examples": {
+        "子どもの命を救うためとあれば、どんな犠牲も惜しまない。": {
+          "en": "If it's to save my child's life, I'll spare no sacrifice.",
+          "mn": "Хүүхдийнхээ амийг аврахын төлөө бол ямар ч золиосоос буцахгүй."
+        },
+        "社長直々の頼みとあれば、断るわけにはいかない。": {
+          "en": "If it's a request from the president himself, I can't refuse.",
+          "mn": "Захирал өөрөө хүссэн бол татгалзаж болохгүй."
+        },
+        "好きな作家のサイン会とあれば、多少遠くても行かずにはいられない。": {
+          "en": "If it's a book signing by my favorite author, I can't not go, even if it's a bit far.",
+          "mn": "Дуртай зохиолчийн гарын үсгийн уулзалт бол жаахан хол байсан ч очихгүй байж чадахгүй."
+        }
+      }
+    },
+    "to-ii-to-ii": {
+      "expected": {
+        "p": "〜といい〜といい",
+        "en": "both A and B; in terms of A as well as B"
+      },
+      "examples": {
+        "この旅館は、料理といい接客といい、申し分ない。": {
+          "en": "This inn is flawless, both in its food and its service.",
+          "mn": "Энэ буудлын хоол ч, үйлчилгээ ч өөгүй."
+        },
+        "色といい形といい、この器は私の好みにぴったりだ。": {
+          "en": "In color and shape alike, this bowl is exactly to my taste.",
+          "mn": "Өнгө ч, хэлбэр ч энэ аяга миний сонирхолд яг таарна."
+        },
+        "兄といい弟といい、あの家の息子たちはどうしてこうも時間にルーズなのだろう。": {
+          "en": "The older brother and the younger one both — why are that family's sons so careless about time?",
+          "mn": "Ах нь ч, дүү нь ч тэр айлын хөвгүүд яагаад ингэж цаг барьдаггүй юм бол?"
+        }
+      }
+    },
+    "to-itta-tokoro-da": {
+      "expected": {
+        "p": "〜といったところだ",
+        "en": "at most; about; more or less"
+      },
+      "examples": {
+        "私の料理の腕前は、せいぜいカレーが作れるといったところだ。": {
+          "en": "My cooking skills amount to making curry, at best.",
+          "mn": "Миний хоол хийх чадвар сайндаа л карри хийх хэмжээнд."
+        },
+        "通勤時間は、ドアからドアまで三十分といったところです。": {
+          "en": "My commute is about thirty minutes door to door.",
+          "mn": "Ажилдаа явах хугацаа хаалганаас хаалга хүртэл гучин минут орчим."
+        },
+        "今年の売り上げは、ほぼ昨年並みといったところだ。": {
+          "en": "This year's sales are more or less on par with last year's.",
+          "mn": "Энэ жилийн борлуулалт бараг өнгөрсөн жилийнхтэй адил."
+        }
+      }
+    },
+    "to-iedomo": {
+      "expected": {
+        "p": "〜といえども",
+        "en": "even though; even (someone like)"
+      },
+      "examples": {
+        "子どもといえども、一人の人間として尊重されなければならない。": {
+          "en": "Children too must be respected as individuals.",
+          "mn": "Хүүхдийг ч бие даасан хүн гэж хүндэтгэх ёстой."
+        },
+        "いかなる権力者といえども、法の上に立つことは許されない。": {
+          "en": "No one, however powerful, may stand above the law.",
+          "mn": "Хэчнээн эрх мэдэлтэй ч хэн ч хуулиас дээгүүр байж болохгүй."
+        },
+        "経験豊かなベテランといえども、この天候での登山は危険だ。": {
+          "en": "Even for an experienced veteran, climbing in this weather is dangerous.",
+          "mn": "Туршлагатай хүн ч ийм цаг агаарт ууланд авирах аюултай."
+        }
+      }
+    },
+    "to-ittara-nai": {
+      "expected": {
+        "p": "〜といったらない",
+        "en": "indescribably; extremely; beyond words"
+      },
+      "examples": {
+        "決勝戦で一点差で負けたときの悔しさといったらなかった。": {
+          "en": "The frustration of losing the final by a single point was beyond words.",
+          "mn": "Шигшээд ганц оноогоор хожигдсон харамсал үгээр хэлэхийн аргагүй байлаа."
+        },
+        "新しい部屋から見る夜景の美しさといったらない。": {
+          "en": "The night view from my new apartment is indescribably beautiful.",
+          "mn": "Шинэ байрнаас харагдах шөнийн үзэмж хэлэхийн аргагүй үзэсгэлэнтэй."
+        },
+        "あの人の話は同じことの繰り返しで、退屈といったらない。": {
+          "en": "His talks just repeat the same thing over and over — they're unbelievably boring.",
+          "mn": "Тэр хүн нэг юмаа давтан ярьдаг тул үнэхээр уйтгартай."
+        }
+      }
+    },
+    "to-kitara": {
+      "expected": {
+        "p": "〜ときたら",
+        "en": "when it comes to; as for (complaint)"
+      },
+      "examples": {
+        "うちの夫ときたら、休みの日は一日中ソファでごろごろしている。": {
+          "en": "As for my husband, he lazes around on the sofa all day on his days off.",
+          "mn": "Манай нөхөр амралтын өдөр өдөржин буйдан дээр хэвтдэг."
+        },
+        "最近のテレビ番組ときたら、どの局も似たような内容ばかりだ。": {
+          "en": "TV programs these days — every channel shows the same kind of thing.",
+          "mn": "Одоогийн зурагтын нэвтрүүлэг гэхэд суваг болгон ижилхэн юм гаргадаг."
+        },
+        "このパソコンときたら、肝心なときに限って固まってしまう。": {
+          "en": "This computer always freezes right when I need it most.",
+          "mn": "Энэ компьютер яг чухал үед л гацчихдаг."
+        }
+      }
+    },
+    "to-shita-tokoro-de-ni-shita-tokoro-de": {
+      "expected": {
+        "p": "〜としたところで / 〜にしたところで",
+        "en": "even if; even supposing; even for (someone)"
+      },
+      "examples": {
+        "今から急いだとしたところで、最終電車には間に合わないだろう。": {
+          "en": "Even if we hurried now, we probably wouldn't make the last train.",
+          "mn": "Одоо яарлаа ч сүүлчийн галт тэргэнд амжихгүй байх."
+        },
+        "部長にしたところで、この問題の解決策を持っているわけではない。": {
+          "en": "Even the department manager doesn't have a solution to this problem.",
+          "mn": "Хэлтсийн дарга ч энэ асуудлын шийдэлтэй байгаа биш."
+        },
+        "仮に予算が倍になったとしたところで、人手が足りなければ計画は進まない。": {
+          "en": "Even supposing the budget were doubled, the plan wouldn't move forward without enough staff.",
+          "mn": "Төсөв хоёр дахин өссөн ч хүн хүрэлцэхгүй бол төлөвлөгөө урагшлахгүй."
+        }
+      }
+    },
+    "to-wa": {
+      "expected": {
+        "p": "〜とは",
+        "en": "(to think) that ...!; I'm surprised that"
+      },
+      "examples": {
+        "あの真面目な彼が、会社の金に手をつけていたとは。": {
+          "en": "To think that someone as serious as him had been dipping into company money!",
+          "mn": "Тийм нухацтай хүн компанийн мөнгөнд гар хүрсэн гэж бодохоор!"
+        },
+        "十年ぶりに訪れた故郷が、これほど様変わりしているとは思いもしなかった。": {
+          "en": "I never imagined my hometown would have changed so much when I visited after ten years.",
+          "mn": "Арван жилийн дараа нутагтаа очиход ийм их өөрчлөгдсөн байна гэж бодсонгүй."
+        },
+        "初めて出場した大会でいきなり優勝するとは、本人も驚いているに違いない。": {
+          "en": "Winning the very first tournament she entered — she must be surprised herself.",
+          "mn": "Анх оролцсон тэмцээндээ шууд түрүүлсэн тул өөрөө ч гайхсан байх."
+        }
+      }
+    },
+    "to-bakari-ni": {
+      "expected": {
+        "p": "〜とばかりに",
+        "en": "as if to say"
+      },
+      "examples": {
+        "店員は「早く帰れ」とばかりに、私たちのテーブルを片付け始めた。": {
+          "en": "The waiter began clearing our table as if to say, 'Hurry up and leave.'",
+          "mn": "Зөөгч «хурдан яв» гэсэн мэт манай ширээг хурааж эхэлсэн."
+        },
+        "相手のミスを見て、彼はここぞとばかりに攻め込んだ。": {
+          "en": "Seeing his opponent's mistake, he went on the attack as if to say, 'Now's my chance.'",
+          "mn": "Өрсөлдөгчийн алдааг хараад тэр «яг боломж» гэсэн мэт довтолсон."
+        },
+        "息子は待ってましたとばかりに、誕生日プレゼントの包みを開けた。": {
+          "en": "My son tore open his birthday present as if he'd been waiting for this very moment.",
+          "mn": "Хүү яг энэ мөчийг хүлээсэн мэт төрсөн өдрийн бэлгийн боодлоо задласан."
+        }
+      }
+    }
+  }
+}

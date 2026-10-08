@@ -234,3 +234,73 @@ for(const r of read('content/mn/example-source-audit-2026-10-09.json').records) 
  for(const [f,v] of Object.entries(r.expected))assert.deepEqual(e[f],v);
  const x=e.ex.find(x=>x.ja===r.ja);assert.equal(x.en,r.en);assert.ok(!x.mn);
 }
+
+// October 9 continued corpus: exact source fields, unique sentence keys, applied text/provenance.
+for (const file of fs.readdirSync('content/mn/batches').filter(f => /^2026-10-09-n[12]-grammar-examples-continue-\d+\.json$/.test(f))) {
+ const batch=read(`content/mn/batches/${file}`),level=file.match(/-n([12])-/)[1];let count=0;
+ const data=read(`public/data/grammar/n${level}.json`);
+ for(const [id,record] of Object.entries(batch.grammar)) {
+  const entry=data.find(e=>e.id===id);assert.ok(entry,`${file}/${id}`);
+  assert.deepEqual(Object.keys(record.expected).sort(),['en','p']);
+  for(const [field,value] of Object.entries(record.expected))assert.deepEqual(entry[field],value);
+  for(const [ja,value] of Object.entries(record.examples)) {
+   const examples=entry.ex.filter(ex=>ex.ja===ja);assert.equal(examples.length,1);
+   assert.equal(examples[0].en,value.en);assert.equal(examples[0].mn,value.mn);
+   assert.equal(examples[0].mn_provenance,batch.provenance.id);assert.ok(validMn(value.mn));count++;
+  }
+ }
+ assert.equal(count,level==='2'&&file.endsWith('-2.json')?37:level==='1'&&file.endsWith('-5.json')?20:level==='1'&&file.endsWith('-7.json')?26:40);
+ assert.equal(batch.provenance.reviewStatus,'unreviewed');
+}
+
+const continueTopics = read('content/mn/batches/2026-10-09-topics-continue-1.json');
+for (const kind of ['kanji','vocab']) {
+ assert.equal(Object.keys(continueTopics[kind]).length,20);
+ for (const [id,record] of Object.entries(continueTopics[kind])) {
+  const entry=read(`public/data/${kind}/${kind==='kanji'?'n3':'n2'}.json`).find(e=>(kind==='kanji'?e.k:e.id)===id);
+  assert.ok(entry);assert.deepEqual(Object.keys(record.expected).sort(),kind==='kanji'?['en','k','kun','on']:['en','r','w']);
+  for(const [field,value] of Object.entries(record.expected))assert.deepEqual(entry[field],value);
+  const evidence=read('content/categories/provenance.json').entries[kind][id];
+  assert.deepEqual(evidence.topics,record.topics);assert.deepEqual(evidence.en,entry.en);assert.equal(evidence.ja,kind==='kanji'?entry.k:entry.w);
+  if(kind==='vocab')assert.equal(evidence.reading,entry.r);else for(const f of ['on','kun'])assert.deepEqual(evidence[f],entry[f]);
+  assert.deepEqual(read('content/categories/overrides.json')[kind][id],record.topics);
+ }
+}
+assert.equal(continueTopics.provenance.reviewStatus,'unreviewed');
+
+// External evidence is reproducible and guarded, not a release/linguistic pass.
+const dictionaryAudit=read('docs/audits/2026-10-09-dictionary-evidence.json');
+assert.deepEqual(dictionaryAudit.counts,{missingMeaningsAudited:62,sourceWarningsAudited:10,uniqueRecords:67,activeCorrections:0});
+assert.equal(dictionaryAudit.source.packageVersion,'1.5');
+assert.equal(dictionaryAudit.source.dictionaryLicense,'CC-BY-SA-3.0');
+assert.equal(dictionaryAudit.source.artifactSha256,'a4247dd9bb3148ab17c1b32fc56d7a7f1c35293b0d6ff2838c811f896d13f415');
+assert.equal(new Set(dictionaryAudit.records.map(r=>`${r.kind}/${r.level}/${r.key}`)).size,67);
+for(const r of dictionaryAudit.records) {
+ const e=read(`public/data/${r.kind}/${r.level}.json`).find(e=>(r.kind==='kanji'?e.k:e.id)===r.key);
+ assert.ok(e);for(const [f,v] of Object.entries(r.expected))assert.deepEqual(e[f],v);
+ assert.equal(e.source_issue??null,r.existingWarning);if(r.missingMeaning)assert.ok(!e.mn?.length);
+ assert.equal(r.artifactUrl,dictionaryAudit.source.artifactUrl);
+ assert.equal(r.dictionaryLicense,dictionaryAudit.source.dictionaryLicense);
+ assert.match(r.decision,/blocked/);
+}
+const aromaEvidence=dictionaryAudit.records.find(r=>r.key==='e05bb17edd');
+assert.ok(aromaEvidence.exactHeadwordReadingCandidates.some(c=>c.entrySeq===1222540&&c.senses.some(s=>s.englishGlosses.includes('aroma'))));
+const bundledDictionary=read('public/data/index/meta.json').sources.find(s=>s.id==='jmdict');
+assert.match(bundledDictionary.license,/CC-BY-SA-3\.0/);
+for(const s of read('public/data/index/meta.json').sources) assert.ok(s.note_en,'English source description');
+
+for(const level of ['n1','n2']) {
+ const batch=read(`content/mn/batches/2026-10-09-${level}-vocab-examples-continue-1.json`);let count=0;
+ for(const [id,record] of Object.entries(batch.vocab)) {
+  const e=read(`public/data/vocab/${level}.json`).find(e=>e.id===id);
+  assert.ok(e);assert.deepEqual(Object.keys(record.expected).sort(),['en','r','w']);
+  for(const [f,v] of Object.entries(record.expected))assert.deepEqual(e[f],v);
+  for(const [ja,x] of Object.entries(record.examples)) {
+   const matches=e.ex.filter(e=>e.ja===ja);assert.equal(matches.length,1);
+   assert.equal(matches[0].en,x.en);assert.equal(matches[0].mn,x.mn);
+   assert.equal(matches[0].mn_provenance,batch.provenance.id);assert.ok(validMn(x.mn));count++;
+  }
+ }
+ assert.equal(count,20);assert.equal(batch.provenance.reviewStatus,'unreviewed');
+}
+for(const level of ['N5','N4','N3','N2','N1'])assert.equal(report.byLevel[level].grammar.missingExamples,0);

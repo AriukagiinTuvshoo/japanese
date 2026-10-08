@@ -84,13 +84,54 @@ const meta = read("public/data/index/meta.json");
 for (const kind of ["vocab", "kanji"]) meta.counts[`${kind}Draft`] = Object.values(data[kind]).flat().filter(e => e.mq === "draft").length;
 // Preserve existing sources; restore missing attribution from the documented source pipeline.
 const sourceRecords = [
-  { id: "openjlpt", name: "OpenJLPT — evanclan and contributors", url: "https://github.com/evanclan/OpenJLPT", license: "CC-BY-SA-4.0", note: "JLPT үг, ханз, дүрэм ба жишээ. Монгол орчуулгууд нь өөрчилсөн бүтээл; CC-BY-SA-4.0 нөхцөлтэй." },
-  { id: "kanji-data", name: "kanji-data — David Luz Gouveia and contributors", url: "https://github.com/davidluzgouveia/kanji-data", license: "MIT", note: "Ханзны уншлага, утга, түвшин, давтамж." },
-  { id: "kanjivg", name: "KanjiVG — Ulrich Apel and contributors", url: "https://github.com/KanjiVG/kanjivg", license: "CC-BY-SA-3.0", note: "Бичих дарааллын вектор өгөгдөл; эх лицензийг хэвээр хадгална." },
-  { id: "jmdict", name: "JMdict — EDRDG contributors (jamdict-data package)", url: "https://github.com/neocl/jamdict", license: "CC-BY-SA-4.0 (dictionary); MIT (package)", note: "Өргөтгөсөн япон–англи үгийн сан. Монгол өөрчилсөн орчуулга: CC-BY-SA-4.0." },
-  { id: "mn-translations", name: "Mongolian translation batches — provenance and review status", url: "https://github.com/AriukagiinTuvshoo/japanese/tree/main/content/mn", license: "CC-BY-SA-4.0", note: "Шинэ орчуулгын гарал, огноо, хяналтын төлөвийг багц бүрд бүртгэнэ. Хуучин орчуулгын зохиогч, хяналтын мэдээлэл бүрэн бус." },
+  {
+    "id": "openjlpt",
+    "name": "OpenJLPT — evanclan and contributors",
+    "url": "https://github.com/evanclan/OpenJLPT",
+    "license": "CC-BY-SA-4.0",
+    "note": "JLPT үг, ханз, дүрэм ба жишээ. Монгол орчуулгууд нь өөрчилсөн бүтээл; CC-BY-SA-4.0 нөхцөлтэй.",
+    "note_en": "JLPT vocabulary, kanji, grammar and examples. Added Mongolian translations are adaptations under CC-BY-SA-4.0."
+  },
+  {
+    "id": "kanji-data",
+    "name": "kanji-data — David Luz Gouveia and contributors",
+    "url": "https://github.com/davidluzgouveia/kanji-data",
+    "license": "MIT",
+    "note": "Ханзны уншлага, утга, түвшин, давтамж.",
+    "note_en": "Kanji readings, meanings, levels and frequency. Original MIT attribution retained."
+  },
+  {
+    "id": "kanjivg",
+    "name": "KanjiVG — Ulrich Apel and contributors",
+    "url": "https://github.com/KanjiVG/kanjivg",
+    "license": "CC-BY-SA-3.0",
+    "note": "Бичих дарааллын вектор өгөгдөл; эх лицензийг хэвээр хадгална.",
+    "note_en": "Stroke-order vector data; original CC-BY-SA-3.0 license retained."
+  },
+  {
+    "id": "jmdict",
+    "name": "JMdict — James William Breen and EDRDG contributors (jamdict-data 1.5)",
+    "url": "https://pypi.org/project/jamdict-data/1.5/",
+    "license": "CC-BY-SA-3.0 (bundled dictionaries); MIT (package)",
+    "note": "Өргөтгөсөн япон–англи үгийн сан: jamdict-data 1.5 (2021-04-17-нд эмхэтгэсэн). Багц дахь толь: CC-BY-SA-3.0; программын багц: MIT. Нэмсэн монгол өөрчилсөн орчуулга CC-BY-SA-4.0 гэж тэмдэглэгдсэн; эх лиценз ба орчуулгын гарал үүслийг хадгалсан.",
+    "note_en": "Extended Japanese–English vocabulary from jamdict-data 1.5 (compiled 2021-04-17). Bundled dictionaries: CC-BY-SA-3.0; package: MIT. Added Mongolian adaptations are labeled CC-BY-SA-4.0; see the preserved dictionary license and content provenance."
+  },
+  {
+    "id": "mn-translations",
+    "name": "Mongolian translation batches — provenance and review status",
+    "url": "https://github.com/AriukagiinTuvshoo/japanese/tree/main/content/mn",
+    "license": "CC-BY-SA-4.0",
+    "note": "Шинэ орчуулгын гарал, огноо, хяналтын төлөвийг багц бүрд бүртгэнэ. Хуучин орчуулгын зохиогч, хяналтын мэдээлэл бүрэн бус.",
+    "note_en": "New translation batches record origin, date and review status. Legacy authorship is unknown; AI drafts are not independently reviewed."
+  }
 ];
 meta.sources ??= [];
-for (const source of sourceRecords) if (!meta.sources.some(s => s.id === source.id)) meta.sources.push(source);
+// Correct maintained attribution from the pinned artifact, preserving unrelated
+// sources and retrieval metadata. Source licenses are not adaptation licenses.
+for (const source of sourceRecords) {
+  const existing = meta.sources.find(s => s.id === source.id);
+  if (existing) Object.assign(existing, source);
+  else meta.sources.push(source);
+}
 write("public/data/index/meta.json", meta);
 console.log(`Applied ${applied} translation records; preserved Japanese, English, readings and examples.`);

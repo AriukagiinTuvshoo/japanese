@@ -97,6 +97,12 @@ try {
   const metaDeadline=Date.now()+10000;
   while(!metaRelease && Date.now()<metaDeadline) await new Promise(resolve=>setImmediate(resolve));
   assert.ok(metaRelease);mode='normal';metaRelease();
+  const sources=JSON.parse(fs.readFileSync('public/data/index/meta.json')).sources;
+  for(const source of sources) {
+   await page.getByText(language==='mn'?source.note:source.note_en,{exact:true}).waitFor();
+  }
+  await page.getByText('CC-BY-SA-3.0 (bundled dictionaries); MIT (package)',{exact:false}).waitFor();
+  console.log(`About ${language}: all ${sources.length} source descriptions and pinned dictionary attribution passed (real static metadata).`);
   mode='meta-error';await page.reload();
   await page.getByText(language==='en'?'Failed to load':'Ачаалахад алдаа гарлаа',{exact:true}).waitFor();
   assert.deepEqual(errors,[]);await page.close();console.log(`Admin ${language}: overview/queue loading/error/retry/empty/populated, import validation/error/busy/success passed (mock API).`);

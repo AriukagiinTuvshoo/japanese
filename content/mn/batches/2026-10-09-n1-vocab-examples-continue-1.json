@@ -1,0 +1,229 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-examples-continue-1-2026-10-09",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian compared with exact Japanese and retained English; stable record and headword/pattern guards; independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "1cf257772e": {
+      "expected": {
+        "w": "嗚呼",
+        "r": "ああ",
+        "en": [
+          "Ah!",
+          "Oh!",
+          "Alas!"
+        ]
+      },
+      "examples": {
+        "ああ、もしかして名前を呼ばれるのが恥ずかしいって？": {
+          "en": "Ah, could it be you're embarrassed to be called by your first name?",
+          "mn": "Аан, чамайг нэрээр чинь дуудахыг ичмээр санагдаад байгаа юм биш биз?"
+        },
+        "ああ飛行機が離陸する。": {
+          "en": "Look! There's a plane taking off.",
+          "mn": "Аа, онгоц хөөрч байна!"
+        }
+      }
+    },
+    "f9d361f995": {
+      "expected": {
+        "w": "相",
+        "r": "あい",
+        "en": [
+          "together",
+          "mutually",
+          "fellow"
+        ]
+      },
+      "examples": {
+        "彼の思想は時勢と相いれなかった。": {
+          "en": "His ideas were out of harmony with the times.",
+          "mn": "Түүний үзэл бодол тухайн цаг үеийнхтэй нийцдэггүй байв."
+        },
+        "彼はすぐに相づちを打った。": {
+          "en": "He made a quick response.",
+          "mn": "Тэр даруй толгой дохин зөвшөөрчээ."
+        }
+      }
+    },
+    "49167c4c88": {
+      "expected": {
+        "w": "愛想",
+        "r": "あいそ",
+        "en": [
+          "civility",
+          "courtesy",
+          "compliments"
+        ]
+      },
+      "examples": {
+        "彼女はとても愛想のよい隣人だ。": {
+          "en": "She is a most gracious neighbor.",
+          "mn": "Тэр эмэгтэй их найрсаг хөрш юм."
+        },
+        "いいお子様たちだと愛想を言う。": {
+          "en": "Say nice things about a person's children.",
+          "mn": "Хүүхдүүд нь сайн хүүхдүүд юм гэж эелдэгээр магтах."
+        }
+      }
+    },
+    "5e01def051": {
+      "expected": {
+        "w": "愛憎",
+        "r": "あいぞう",
+        "en": [
+          "love and hate",
+          "likes and dislikes"
+        ]
+      },
+      "examples": {
+        "フロイトは、親子間の愛憎関係をエディプス・コンプレックスとして展開しました。": {
+          "en": "Freud developed the love-hate relationship between parents and child as the Oedipus complex.",
+          "mn": "Фройд эцэг эх, хүүхдийн хоорондох хайр, үзэн ядалтын харилцааг Эдипийн цогцолбор хэмээн тайлбарласан."
+        }
+      }
+    },
+    "6f6edac49d": {
+      "expected": {
+        "w": "相対",
+        "r": "あいたい",
+        "en": [
+          "confrontation",
+          "facing",
+          "between ourselves"
+        ]
+      },
+      "examples": {
+        "このため、会談の席の配置では米国と相対して座る場所を求めた。": {
+          "en": "So they sought a place such that the conference seating would have them facing the Americans.",
+          "mn": "Иймээс тэд хэлэлцээний суудлыг зохион байгуулахдаа Америкийн талтай өөд өөдөөсөө харж суух байр хүссэн."
+        }
+      }
+    },
+    "3a407bbc0b": {
+      "expected": {
+        "w": "間柄",
+        "r": "あいだがら",
+        "en": [
+          "relation(ship)"
+        ]
+      },
+      "examples": {
+        "君と彼とはどういう間柄なのだ。": {
+          "en": "What's your relation with him?",
+          "mn": "Чи тэр хүнтэй ямар холбоотой юм бэ?"
+        },
+        "彼らは近所の人と良い間柄にある。": {
+          "en": "They have been on good terms with their neighbours.",
+          "mn": "Тэд хөршүүдтэйгээ сайн харилцаатай байдаг."
+        }
+      }
+    },
+    "f7da525529": {
+      "expected": {
+        "w": "合間",
+        "r": "あいま",
+        "en": [
+          "interval"
+        ]
+      },
+      "examples": {
+        "勉強の合間に私はテレビをみた。": {
+          "en": "I watched television during a break in my studies.",
+          "mn": "Хичээлийнхээ завсарлагаар би зурагт үзсэн."
+        },
+        "私は仕事の合間によく漫画を読みます。": {
+          "en": "I often read manga in my spare moments at work.",
+          "mn": "Би ажлынхаа зав зайгаар манга унших нь элбэг."
+        }
+      }
+    },
+    "69bb692c2b": {
+      "expected": {
+        "w": "敢えて",
+        "r": "あえて",
+        "en": [
+          "dare (to do)",
+          "challenge (to do)"
+        ]
+      },
+      "examples": {
+        "あえて彼の意見を支持した。": {
+          "en": "I dared to support his opinion.",
+          "mn": "Би зориг гарган түүний саналыг дэмжсэн."
+        },
+        "私は危険を犯して敢えてソニーの株を５００株買った。": {
+          "en": "I went out on a limb and bought 500 shares of Sony stock.",
+          "mn": "Би эрсдэл хүлээж Сони компанийн таван зуун ширхэг хувьцаа авсан."
+        }
+      }
+    },
+    "568d94afad": {
+      "expected": {
+        "w": "仰ぐ",
+        "r": "あおぐ",
+        "en": [
+          "to look up (to)",
+          "to respect",
+          "to depend on"
+        ]
+      },
+      "examples": {
+        "私は何事にも彼の指導を仰ぐ。": {
+          "en": "I look to him for direction in everything.",
+          "mn": "Би аливаа зүйлд түүнээс заавар зөвлөгөө авдаг."
+        },
+        "彼は天を仰いだ。": {
+          "en": "He looked up at the sky.",
+          "mn": "Тэр тэнгэр өөд харав."
+        }
+      }
+    },
+    "3b72fad905": {
+      "expected": {
+        "w": "垢",
+        "r": "あか",
+        "en": [
+          "dirt",
+          "filth"
+        ]
+      },
+      "examples": {
+        "いつもあかだらけで、食事も満足に与えられていない様子でした。": {
+          "en": "He was always filthy and looked like he wasn't given enough food.",
+          "mn": "Тэр үргэлж хир буртагтай, хангалттай хоол өгдөггүй бололтой харагддаг байлаа."
+        },
+        "あの子はあかだらけだ。": {
+          "en": "The child is dirty.",
+          "mn": "Тэр хүүхэд хир буртаг болсон байна."
+        }
+      }
+    },
+    "ddb83d9881": {
+      "expected": {
+        "w": "証",
+        "r": "あかし",
+        "en": [
+          "proof",
+          "evidence"
+        ]
+      },
+      "examples": {
+        "しかし、あなた方は私たちの証を受け入れません。": {
+          "en": "But still you people do not accept our testimony.",
+          "mn": "Гэвч та нар бидний гэрчлэлийг хүлээн авахгүй байна."
+        },
+        "この人は光についてあかしするために来た。": {
+          "en": "He came as a witness to testify concerning that light.",
+          "mn": "Энэ хүн тэр гэрлийн тухай гэрчлэхээр ирсэн."
+        }
+      }
+    }
+  }
+}
