@@ -1,3 +1,4 @@
+import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { validMn, topicsFor, auditCoverage } from './validate-coverage.mjs';
@@ -20,3 +21,16 @@ assert.equal(report.byLevel.N5.kanji.unclassified,0);
 assert.equal(report.byLevel.N3.grammar.missingMeanings,0);
 
 for (const lv of ["N2","N1"]) for (const field of ["missingMeanings","missingForms"]) assert.equal(report.byLevel[lv].grammar[field],0);
+
+// Legacy exemption is exact-content only; it cannot excuse new derived text.
+const legacyPath = 'public/data/vocab/n4.json';
+const originalLegacyData = fs.readFileSync(legacyPath, 'utf8');
+try {
+  const entries = JSON.parse(originalLegacyData);
+  const legacyEntry = entries.find(e => e.mn?.length && !e.mn_provenance);
+  assert.ok(legacyEntry);
+  legacyEntry.mn = ['шинээр өөрчилсөн утга'];
+  fs.writeFileSync(legacyPath, JSON.stringify(entries));
+  assert.ok(auditCoverage().totals.missingProvenance > 0, 'Changed legacy text must require new provenance');
+} finally { fs.writeFileSync(legacyPath, originalLegacyData); }
+assert.equal(report.legacyUnreviewed, 6503);

@@ -8,6 +8,7 @@ const batches = fs.readdirSync("content/mn/batches").filter(f => f.endsWith(".js
 const provenance = batches.map(b => b.provenance);
 const data = Object.fromEntries(["vocab", "kanji", "grammar"].map(kind => [kind, Object.fromEntries(levels.map(l => [l, read(`public/data/${kind}/${l}.json`)]))]));
 let applied = 0;
+const categoryOverrides = read("content/categories/overrides.json");
 for (const batch of batches) {
   assert.equal(batch.provenance.license, "CC-BY-SA-4.0");
   assert.ok(batch.provenance.source && batch.provenance.sourceSnapshot && batch.provenance.method);
@@ -25,6 +26,10 @@ for (const batch of batches) {
         entry.mn = kind === "grammar" ? meanings.join("; ") : meanings;
         entry.mn_provenance = batch.provenance.id;
         if (kind !== "grammar") entry.mq = "draft";
+      }
+      if (translation.topics) {
+        assert.ok(kind !== "grammar" && Array.isArray(translation.topics) && translation.topics.length);
+        categoryOverrides[kind][id] = translation.topics;
       }
       if (translation.sourceNote) entry.source_issue = translation.sourceNote;
       if (translation.note) {entry.note = translation.note; entry.note_provenance = batch.provenance.id;}
@@ -44,6 +49,7 @@ for (const batch of batches) {
     }
   }
 }
+write("content/categories/overrides.json", categoryOverrides);
 // Related words must never store English in a field called mn. Resolve by word + reading.
 const words = new Map(Object.values(data.vocab).flat().map(v => [`${v.w}|${v.r}`, v]));
 for (const list of Object.values(data.kanji)) for (const kanji of list) for (const word of kanji.w ?? []) {

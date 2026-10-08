@@ -1,5 +1,7 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
+  "legacyUnreviewed": 6503,
+  "legacyBaseline": "6cf8ca1c7de24604773fff977e1af9dd37189ac8",
   "byLevel": {
     "N5": {
       "vocab": {
@@ -9,7 +11,7 @@
         "missingForms": 0,
         "unclassified": 0,
         "invalidCategories": 0,
-        "missingProvenance": 715,
+        "missingProvenance": 0,
         "mislabeledMn": 0,
         "unresolvedSourceIssues": 3
       },
@@ -20,7 +22,7 @@
         "missingForms": 0,
         "unclassified": 0,
         "invalidCategories": 0,
-        "missingProvenance": 84,
+        "missingProvenance": 0,
         "mislabeledMn": 0,
         "unresolvedSourceIssues": 0
       },
@@ -31,7 +33,7 @@
         "missingForms": 0,
         "unclassified": 0,
         "invalidCategories": 0,
-        "missingProvenance": 81,
+        "missingProvenance": 0,
         "mislabeledMn": 0,
         "unresolvedSourceIssues": 0
       }
@@ -39,12 +41,12 @@
     "N4": {
       "vocab": {
         "entries": 1080,
-        "missingMeanings": 450,
+        "missingMeanings": 390,
         "missingExamples": 1238,
         "missingForms": 0,
-        "unclassified": 396,
+        "unclassified": 372,
         "invalidCategories": 0,
-        "missingProvenance": 630,
+        "missingProvenance": 0,
         "mislabeledMn": 0,
         "unresolvedSourceIssues": 0
       },
@@ -55,7 +57,7 @@
         "missingForms": 0,
         "unclassified": 0,
         "invalidCategories": 0,
-        "missingProvenance": 169,
+        "missingProvenance": 0,
         "mislabeledMn": 0,
         "unresolvedSourceIssues": 0
       },
@@ -79,7 +81,7 @@
         "missingForms": 0,
         "unclassified": 827,
         "invalidCategories": 0,
-        "missingProvenance": 1659,
+        "missingProvenance": 0,
         "mislabeledMn": 0,
         "unresolvedSourceIssues": 0
       },
@@ -90,7 +92,7 @@
         "missingForms": 0,
         "unclassified": 229,
         "invalidCategories": 0,
-        "missingProvenance": 387,
+        "missingProvenance": 0,
         "mislabeledMn": 0,
         "unresolvedSourceIssues": 0
       },
@@ -114,7 +116,7 @@
         "missingForms": 0,
         "unclassified": 835,
         "invalidCategories": 0,
-        "missingProvenance": 1778,
+        "missingProvenance": 0,
         "mislabeledMn": 0,
         "unresolvedSourceIssues": 0
       },
@@ -125,7 +127,7 @@
         "missingForms": 0,
         "unclassified": 248,
         "invalidCategories": 0,
-        "missingProvenance": 400,
+        "missingProvenance": 0,
         "mislabeledMn": 0,
         "unresolvedSourceIssues": 0
       },
@@ -149,16 +151,16 @@
         "missingForms": 0,
         "unclassified": 1259,
         "invalidCategories": 0,
-        "missingProvenance": 600,
+        "missingProvenance": 0,
         "mislabeledMn": 0,
         "unresolvedSourceIssues": 0
       },
       "kanji": {
         "entries": 1646,
-        "missingMeanings": 1446,
+        "missingMeanings": 1386,
         "missingExamples": 0,
         "missingForms": 0,
-        "unclassified": 1097,
+        "unclassified": 1048,
         "invalidCategories": 0,
         "missingProvenance": 0,
         "mislabeledMn": 0,
@@ -178,12 +180,12 @@
     }
   },
   "totals": {
-    "missingMeanings": 6166,
+    "missingMeanings": 6046,
     "missingExamples": 14407,
     "missingForms": 0,
-    "unclassified": 4891,
+    "unclassified": 4818,
     "invalidCategories": 0,
-    "missingProvenance": 6503,
+    "missingProvenance": 0,
     "mislabeledMn": 0,
     "unresolvedSourceIssues": 5
   }

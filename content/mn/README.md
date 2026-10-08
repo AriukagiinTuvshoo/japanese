@@ -9,3 +9,5 @@ The 2026-10-08 batches were AI-authored by the Arena coding assistant. **No inde
 Category taxonomy rules and overrides live in `content/categories/`. Rules use whole-word matching, allow multiple groups, and never hide unclassified entries under “Other”. Override keys are stable vocabulary IDs or kanji characters. Validate appropriateness manually as well as structurally.
 
 See `docs/CONTENT-STATUS.md` and `content/coverage-report.json` for exact remaining work.
+
+`legacy-baseline.json` records exact baseline translations, not invented provenance. Unknown authorship stays legacy/unreviewed. Only unchanged baseline text is exempt from new-batch provenance checks; modifications and new supporting translations require provenance. The 6,503-record baseline gap remains documented.

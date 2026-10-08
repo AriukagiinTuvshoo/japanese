@@ -20,6 +20,8 @@ export function auditCoverage() {
   const taxonomy = read("content/categories/taxonomy.json");
   const overrides = read("content/categories/overrides.json");
   const provenance = new Set(read("public/data/index/translations.json").map(p => p.id));
+  const legacy = read("content/mn/legacy-baseline.json");
+  let legacyUnreviewed = 0;
   const groupIds = new Set(taxonomy.groups.map(g => g.id));
   const issues = [];
   const byLevel = {};
@@ -34,7 +36,17 @@ export function auditCoverage() {
         const issue = (field, detail) => { counts[field]++; totals[field]++; issues.push({ kind, level, id, field, detail }); };
         if (e.source_issue) issue("unresolvedSourceIssues", e.source_issue);
         if (!validMeaning(e)) issue("missingMeanings", "Missing, invalid or placeholder Mongolian meaning");
-        if (validMeaning(e) && (!e.mn_provenance || !provenance.has(e.mn_provenance))) issue("missingProvenance", "Translation has no maintained batch provenance");
+        const baseline = legacy.entries[`${kind}/${level.toLowerCase()}`]?.[id];
+        const unchangedLegacy = baseline && JSON.stringify(baseline.mn) === JSON.stringify(e.mn);
+        if (validMeaning(e) && (!e.mn_provenance || !provenance.has(e.mn_provenance))) {
+          if (!e.mn_provenance && unchangedLegacy) legacyUnreviewed++;
+          else issue("missingProvenance", "New/changed translation has no maintained batch provenance");
+        }
+        const checkDerived = (value, tag, original, detail) => {
+          if (validMn(value) && ((!tag && value !== original) || (tag && !provenance.has(tag)))) issue("missingProvenance", detail);
+        };
+        checkDerived(e.form_mn, e.form_mn_provenance, baseline?.form_mn, "New/changed formation lacks provenance");
+        for (const example of e.ex ?? []) checkDerived(example.mn, example.mn_provenance, baseline?.ex?.find(x => x.ja === example.ja)?.mn, "New/changed example lacks provenance");
         for (const [i, example] of (e.ex ?? []).entries()) {
           if (example.en && !validMn(example.mn)) issue("missingExamples", `ex[${i}]`);
         }
@@ -50,7 +62,7 @@ export function auditCoverage() {
       byLevel[level][kind] = counts;
     }
   }
-  return { schemaVersion: 1, byLevel, totals, issues };
+  return { schemaVersion: 2, legacyUnreviewed, legacyBaseline: legacy.baselineCommit, byLevel, totals, issues };
 }
 
 if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
