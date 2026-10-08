@@ -1,0 +1,1090 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-persist-1-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses cross-checked against exact Japanese spelling, reading and retained English; explicit semantic topic assignments. Independent human review outstanding; suspect sources withheld.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "621681c86d": {
+      "mn": [
+        "ёс заншил",
+        "зан үйл",
+        "бэлгийн үйлчилгээ"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "風俗",
+        "r": "ふうぞく",
+        "en": [
+          "manners",
+          "customs",
+          "sex service"
+        ]
+      }
+    },
+    "10b8b07120": {
+      "mn": [
+        "түрийтэй гутал"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "ブーツ",
+        "r": "ブーツ",
+        "en": [
+          "boots"
+        ]
+      }
+    },
+    "41d4fc2b08": {
+      "mn": [
+        "нутгийн байгалийн онцлог",
+        "газрын тогтоц",
+        "уур амьсгал"
+      ],
+      "topics": [
+        "nature",
+        "places"
+      ],
+      "expected": {
+        "w": "風土",
+        "r": "ふうど",
+        "en": [
+          "natural features",
+          "topography",
+          "climate"
+        ]
+      }
+    },
+    "484b3552ce": {
+      "mn": [
+        "огцом дэлгэрэх үзэгдэл",
+        "эрчимтэй өсөлт"
+      ],
+      "topics": [
+        "work",
+        "society"
+      ],
+      "expected": {
+        "w": "ブーム",
+        "r": "ブーム",
+        "en": [
+          "boom"
+        ]
+      }
+    },
+    "afaaa117eb": {
+      "mn": [
+        "гатлага онгоц"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "フェリー",
+        "r": "フェリー",
+        "en": [
+          "ferry"
+        ]
+      }
+    },
+    "fd04af50fd": {
+      "mn": [
+        "доод албан тушаалтан",
+        "захирагдах ажилтан"
+      ],
+      "topics": [
+        "people",
+        "work"
+      ],
+      "expected": {
+        "w": "部下",
+        "r": "ぶか",
+        "en": [
+          "subordinate person"
+        ]
+      }
+    },
+    "fc498a2e83": {
+      "mn": [
+        "зайлшгүй хэрэгтэй",
+        "орлуулшгүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "不可欠",
+        "r": "ふかけつ",
+        "en": [
+          "indispensable",
+          "essential"
+        ]
+      }
+    },
+    "37209bb11e": {
+      "mn": [
+        "хэт томдсон",
+        "сул өргөн"
+      ],
+      "topics": [
+        "daily",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "ぶかぶか",
+        "r": "ぶかぶか",
+        "en": [
+          "too big",
+          "baggy"
+        ]
+      }
+    },
+    "40770ec448": {
+      "mn": [
+        "гүнзгийрүүлэх",
+        "нэмэгдүүлэх",
+        "эрчимжүүлэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "深める",
+        "r": "ふかめる",
+        "en": [
+          "to deepen",
+          "to heighten",
+          "to intensify"
+        ]
+      }
+    },
+    "4426ad2212": {
+      "mn": [
+        "муу ёрын",
+        "муу зүйл зөгнөсөн",
+        "азгүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "不吉",
+        "r": "ふきつ",
+        "en": [
+          "ominous",
+          "sinister",
+          "bad luck"
+        ]
+      }
+    },
+    "e1c0f62e13": {
+      "mn": [
+        "эдийн засгийн уналт",
+        "хямрал",
+        "бууралт"
+      ],
+      "topics": [
+        "work",
+        "society"
+      ],
+      "expected": {
+        "w": "不況",
+        "r": "ふきょう",
+        "en": [
+          "recession",
+          "depression",
+          "slump"
+        ]
+      }
+    },
+    "3626ea1d71": {
+      "mn": [
+        "аяга таваг арчих алчуур",
+        "гал тогооны алчуур"
+      ],
+      "topics": [
+        "daily",
+        "food"
+      ],
+      "expected": {
+        "w": "布巾",
+        "r": "ふきん",
+        "en": [
+          "tea-towel",
+          "dish cloth"
+        ]
+      }
+    },
+    "3951ae3c0c": {
+      "mn": [
+        "аз буян",
+        "сайн хувь тавилан"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "福",
+        "r": "ふく",
+        "en": [
+          "good fortune"
+        ]
+      }
+    },
+    "6c9f684168": {
+      "mn": [
+        "нийлмэл",
+        "цогц"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "複合",
+        "r": "ふくごう",
+        "en": [
+          "composite",
+          "complex"
+        ]
+      }
+    },
+    "a45caec8b5": {
+      "mn": [
+        "нийгмийн халамж",
+        "сайн сайхан байдал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "福祉",
+        "r": "ふくし",
+        "en": [
+          "welfare",
+          "well-being"
+        ]
+      }
+    },
+    "07145cdc5b": {
+      "mn": [
+        "баг",
+        "нүүрний халхавч",
+        "дүрээ нуух зүйл"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "覆面",
+        "r": "ふくめん",
+        "en": [
+          "mask",
+          "veil",
+          "disguise"
+        ]
+      }
+    },
+    "5a2eb94f94": {
+      "mn": [
+        "уурлах",
+        "тунирхах",
+        "тэлж хөөх"
+      ],
+      "topics": [
+        "feelings",
+        "actions"
+      ],
+      "expected": {
+        "w": "膨れる",
+        "r": "ふくれる",
+        "en": [
+          "to get cross",
+          "to get sulky",
+          "to swell (out)"
+        ]
+      }
+    },
+    "1bbd2517e0": {
+      "mn": [
+        "бизнесийн уналт",
+        "хүнд үе",
+        "эдийн засгийн хямрал"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "不景気",
+        "r": "ふけいき",
+        "en": [
+          "business recession",
+          "hard times",
+          "depression"
+        ]
+      }
+    },
+    "d0acb6f006": {
+      "mn": [
+        "хөгшрөх"
+      ],
+      "topics": [
+        "body",
+        "actions"
+      ],
+      "expected": {
+        "w": "老ける",
+        "r": "ふける",
+        "en": [
+          "to age"
+        ]
+      }
+    },
+    "ffcf0345e3": {
+      "mn": [
+        "баян хүн",
+        "саятан"
+      ],
+      "topics": [
+        "people",
+        "work"
+      ],
+      "expected": {
+        "w": "富豪",
+        "r": "ふごう",
+        "en": [
+          "wealthy person",
+          "millionaire"
+        ]
+      }
+    },
+    "069d11eed6": {
+      "mn": [
+        "зарлиг",
+        "захирамж",
+        "нийтэд зарлах мэдэгдэл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "布告",
+        "r": "ふこく",
+        "en": [
+          "edict",
+          "ordinance",
+          "proclamation"
+        ]
+      }
+    },
+    "89a29c6889": {
+      "mn": [
+        "дуут дохио",
+        "дохионы төхөөрөмж"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "ブザー",
+        "r": "ブザー",
+        "en": [
+          "buzzer"
+        ]
+      }
+    },
+    "f80f3a3afd": {
+      "mn": [
+        "өр",
+        "өр төлбөр"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "負債",
+        "r": "ふさい",
+        "en": [
+          "debt",
+          "liabilities"
+        ]
+      }
+    },
+    "20c6eaa724": {
+      "mn": [
+        "эзгүй байх",
+        "байхгүй байх"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "不在",
+        "r": "ふざい",
+        "en": [
+          "absence"
+        ]
+      }
+    },
+    "e1f751b05f": {
+      "mn": [
+        "тохирсон",
+        "зохистой"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "相応しい",
+        "r": "ふさわしい",
+        "en": [
+          "appropriate"
+        ]
+      }
+    },
+    "ddc46fb610": {
+      "mn": [
+        "жигд бус байдал",
+        "улиралдаа тохироогүй цаг агаар"
+      ],
+      "topics": [
+        "descriptions",
+        "nature"
+      ],
+      "expected": {
+        "w": "不順",
+        "r": "ふじゅん",
+        "en": [
+          "irregularity",
+          "unseasonableness"
+        ]
+      }
+    },
+    "4731a01f1c": {
+      "mn": [
+        "гэмтэл",
+        "шарх"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "負傷",
+        "r": "ふしょう",
+        "en": [
+          "injury",
+          "wound"
+        ]
+      }
+    },
+    "acbafa1c75": {
+      "mn": [
+        "доромжлол",
+        "үл хүндэтгэх",
+        "басамжлал"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "侮辱",
+        "r": "ぶじょく",
+        "en": [
+          "insult",
+          "contempt",
+          "slight"
+        ]
+      }
+    },
+    "91e50c07de": {
+      "mn": [
+        "ойлгомжгүй байдал",
+        "сэжиг",
+        "эргэлзээ"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "不審",
+        "r": "ふしん",
+        "en": [
+          "incomplete understanding",
+          "doubt",
+          "question"
+        ]
+      }
+    },
+    "f478815aa4": {
+      "mn": [
+        "идэвхгүй байдал",
+        "уналт",
+        "доройтол"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "不振",
+        "r": "ふしん",
+        "en": [
+          "dullness",
+          "depression",
+          "slump"
+        ]
+      }
+    },
+    "0226b9bd74": {
+      "mn": [
+        "зэвсэг",
+        "зэвсэглэл",
+        "зэвсэглэсэн"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "武装",
+        "r": "ぶそう",
+        "en": [
+          "arms",
+          "armament",
+          "armed"
+        ]
+      }
+    },
+    "6f8b6b1121": {
+      "mn": [
+        "хавсарсан",
+        "харьяалагдсан",
+        "холбоотой"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "付属",
+        "r": "ふぞく",
+        "en": [
+          "attached",
+          "belonging",
+          "affiliated"
+        ]
+      }
+    },
+    "ea12ba0789": {
+      "mn": [
+        "дарамт",
+        "төлбөр",
+        "хариуцлага"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "負担",
+        "r": "ふたん",
+        "en": [
+          "burden",
+          "charge",
+          "responsibility"
+        ]
+      }
+    },
+    "f73bb800e0": {
+      "mn": [
+        "толбо",
+        "жижиг толбо",
+        "алаг хээ"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "斑",
+        "r": "ぶち",
+        "en": [
+          "spots",
+          "speckles",
+          "mottles"
+        ]
+      }
+    },
+    "969a3774bd": {
+      "mn": [
+        "муу байдал",
+        "хэлцэл бүтэлгүйтэх",
+        "санал зөрөх"
+      ],
+      "topics": [
+        "body",
+        "work"
+      ],
+      "expected": {
+        "w": "不調",
+        "r": "ふちょう",
+        "en": [
+          "bad condition",
+          "not to work out (ie a deal)",
+          "disagreement"
+        ]
+      }
+    },
+    "7911dfc293": {
+      "mn": [
+        "Францын",
+        "франц (仏蘭西 гэсэн нэрийн товчлол)"
+      ],
+      "topics": [
+        "places",
+        "learning"
+      ],
+      "expected": {
+        "w": "仏",
+        "r": "ふつ",
+        "en": [
+          "French"
+        ]
+      }
+    },
+    "05e2d4d19d": {
+      "mn": [
+        "сэргэн мандах",
+        "дахин сэргээх"
+      ],
+      "topics": [
+        "arts",
+        "society"
+      ],
+      "expected": {
+        "w": "復活",
+        "r": "ふっかつ",
+        "en": [
+          "revival (e.g. musical)",
+          "restoration"
+        ]
+      }
+    },
+    "def523b3e8": {
+      "mn": [
+        "олон нийтийн маргаантай хэлэлцүүлэг",
+        "шүүмжлэл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "物議",
+        "r": "ぶつぎ",
+        "en": [
+          "public discussion (criticism)"
+        ]
+      }
+    },
+    "d73957716e": {
+      "mn": [
+        "хэвийн байдалд сэргээх",
+        "буцаан засах",
+        "нөхөн сэргээх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "復旧",
+        "r": "ふっきゅう",
+        "en": [
+          "restoration",
+          "restitution",
+          "rehabilitation"
+        ]
+      }
+    },
+    "bee440edd5": {
+      "mn": [
+        "сэргэн мандалт",
+        "дахин цэцэглэх",
+        "сэргээн босголт"
+      ],
+      "topics": [
+        "society",
+        "work"
+      ],
+      "expected": {
+        "w": "復興",
+        "r": "ふっこう",
+        "en": [
+          "revival",
+          "renaissance",
+          "reconstruction"
+        ]
+      }
+    },
+    "1986f292d9": {
+      "mn": [
+        "бараа",
+        "хэрэгцээт материал"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "物資",
+        "r": "ぶっし",
+        "en": [
+          "goods",
+          "materials"
+        ]
+      }
+    },
+    "66748b6cfa": {
+      "mn": [
+        "Буддын дүр",
+        "Буддын баримал"
+      ],
+      "topics": [
+        "society",
+        "arts"
+      ],
+      "expected": {
+        "w": "仏像",
+        "r": "ぶつぞう",
+        "en": [
+          "Buddhist image (statue)"
+        ]
+      }
+    },
+    "16434bd461": {
+      "mn": [
+        "биет",
+        "эд зүйл"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "物体",
+        "r": "ぶったい",
+        "en": [
+          "body",
+          "object"
+        ]
+      }
+    },
+    "81dd8f026d": {
+      "mn": [
+        "буцлах",
+        "оргилон буцлах"
+      ],
+      "topics": [
+        "food",
+        "nature"
+      ],
+      "expected": {
+        "w": "沸騰",
+        "r": "ふっとう",
+        "en": [
+          "boiling",
+          "seething"
+        ]
+      }
+    },
+    "1523ebeef5": {
+      "mn": [
+        "шударга бус",
+        "зохисгүй",
+        "үндэслэлгүй"
+      ],
+      "topics": [
+        "society",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "不当",
+        "r": "ふとう",
+        "en": [
+          "injustice",
+          "impropriety",
+          "unreasonableness"
+        ]
+      }
+    },
+    "c1bdf75397": {
+      "mn": [
+        "үл хөдлөх хөрөнгө"
+      ],
+      "topics": [
+        "work",
+        "places"
+      ],
+      "expected": {
+        "w": "不動産",
+        "r": "ふどうさん",
+        "en": [
+          "real estate"
+        ]
+      }
+    },
+    "55f4daa66e": {
+      "mn": [
+        "аюулгүй",
+        "гэм осолгүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "無難",
+        "r": "ぶなん",
+        "en": [
+          "safety",
+          "security"
+        ]
+      }
+    },
+    "281d9aa72f": {
+      "mn": [
+        "шинээр томилогдсон ажилдаа очих"
+      ],
+      "topics": [
+        "work",
+        "places"
+      ],
+      "expected": {
+        "w": "赴任",
+        "r": "ふにん",
+        "en": [
+          "(proceeding to) new appointment"
+        ]
+      }
+    },
+    "946014cf8a": {
+      "mn": [
+        "ялзрал",
+        "ёс суртахууны доройтол"
+      ],
+      "topics": [
+        "nature",
+        "society"
+      ],
+      "expected": {
+        "w": "腐敗",
+        "r": "ふはい",
+        "en": [
+          "decay",
+          "depravity"
+        ]
+      }
+    },
+    "077604c438": {
+      "mn": [
+        "муу нэр хүнд",
+        "ичгүүрт нэр",
+        "олонд таалагдахгүй байх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "不評",
+        "r": "ふひょう",
+        "en": [
+          "bad reputation",
+          "disgrace",
+          "unpopularity"
+        ]
+      }
+    },
+    "2e2b2bb861": {
+      "mn": [
+        "өрөвдөлтэй байдал",
+        "энэрэх сэтгэл"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "不憫",
+        "r": "ふびん",
+        "en": [
+          "pity",
+          "compassion"
+        ]
+      }
+    },
+    "393877926f": {
+      "mn": [
+        "сэтгэл дундуур байдал",
+        "дургүйцэл",
+        "эс зөвшөөрөх"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "不服",
+        "r": "ふふく",
+        "en": [
+          "dissatisfaction",
+          "discontent",
+          "disapproval"
+        ]
+      }
+    },
+    "f6810ec488": {
+      "mn": [
+        "нийтлэг чанар",
+        "хаа сайгүй байх",
+        "бүхнийг хамрах"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "普遍",
+        "r": "ふへん",
+        "en": [
+          "universality",
+          "ubiquity",
+          "omnipresence"
+        ]
+      }
+    },
+    "772d057f4c": {
+      "mn": [
+        "үндэслэх",
+        "эх үндэс болгох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "踏まえる",
+        "r": "ふまえる",
+        "en": [
+          "to be based on",
+          "to have origin in"
+        ]
+      }
+    },
+    "856da87e15": {
+      "mn": [
+        "захидал",
+        "бичвэр"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "文",
+        "r": "ふみ",
+        "en": [
+          "letter",
+          "writings"
+        ]
+      }
+    },
+    "4302df1674": {
+      "mn": [
+        "тодорхойгүй",
+        "мэдэгдэхгүй",
+        "бүдэг"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "不明",
+        "r": "ふめい",
+        "en": [
+          "unknown",
+          "obscure",
+          "indistinct"
+        ]
+      }
+    },
+    "651eb5c20b": {
+      "mn": [
+        "салбар",
+        "бүлэг",
+        "ангилал"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "部門",
+        "r": "ぶもん",
+        "en": [
+          "class",
+          "group",
+          "category"
+        ]
+      }
+    },
+    "61145dbc05": {
+      "mn": [
+        "тэжээн тэтгэх",
+        "амьжиргааг нь даах"
+      ],
+      "topics": [
+        "people",
+        "work"
+      ],
+      "expected": {
+        "w": "扶養",
+        "r": "ふよう",
+        "en": [
+          "support",
+          "maintenance"
+        ]
+      }
+    },
+    "2eff177d9a": {
+      "mn": [
+        "сул унжин савлах",
+        "ганхах",
+        "нааш цааш савлах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "ぶらぶら",
+        "r": "ぶらぶら",
+        "en": [
+          "dangle heavily",
+          "swing",
+          "sway to and fro"
+        ]
+      }
+    },
+    "471e8a709b": {
+      "mn": [
+        "дүр эсгэлт",
+        "дүр үзүүлэх",
+        "харагдах байдал"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "振り",
+        "r": "ふり",
+        "en": [
+          "pretence",
+          "show",
+          "appearance"
+        ]
+      }
+    }
+  }
+}

@@ -47,3 +47,27 @@ const withdrawal = read('content/mn/batches/2026-10-08-n1-vocab-six-3.json').voc
 assert.deepEqual(withdrawal.withdrawnMn, ['анхилуун үнэр']);
 assert.equal(withdrawal.mn, undefined);
 assert.ok(!read('content/categories/overrides.json').vocab.e05bb17edd);
+
+// Persist-round source guards and category evidence are exact, not count-only checks.
+const categoryEvidence = read('content/categories/provenance.json');
+for (const file of fs.readdirSync('content/mn/batches').filter(f => /^2026-10-08-n1-(vocab|kanji)-persist-\d+\.json$/.test(f))) {
+  const batch = read(`content/mn/batches/${file}`);
+  const kind = batch.vocab ? 'vocab' : 'kanji';
+  const records = batch[kind];
+  assert.equal(Object.keys(records).length, 60, `${file}: exact batch size`);
+  assert.equal(batch.provenance.reviewStatus, 'unreviewed');
+  const data = read(`public/data/${kind}/n1.json`);
+  for (const [id, record] of Object.entries(records)) {
+    const entry = data.find(e => (kind === 'vocab' ? e.id : e.k) === id);
+    assert.ok(entry, `${file}/${id}: stable key`);
+    assert.deepEqual(Object.keys(record.expected).sort(), (kind === 'vocab' ? ['w','r','en'] : ['k','on','kun','en']).sort());
+    for (const [field, expected] of Object.entries(record.expected)) assert.deepEqual(entry[field], expected, `${id}/${field}: source retained`);
+    assert.deepEqual(entry.mn, record.mn, `${id}: applied sense`);
+    const evidence = categoryEvidence.entries[kind][id];
+    assert.deepEqual(evidence.topics, record.topics, `${id}: auditable topics`);
+    assert.deepEqual(evidence.en, entry.en);
+    assert.equal(evidence.ja, kind === 'vocab' ? entry.w : entry.k);
+    if (kind === 'vocab') assert.equal(evidence.reading, entry.r);
+    else for (const field of ['on','kun']) assert.deepEqual(evidence[field], entry[field]);
+  }
+}
