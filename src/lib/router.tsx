@@ -80,15 +80,24 @@ export function useGo() {
   return useCallback((to: string) => navigate(to), []);
 }
 
-export const titleFor = (r: Route): { title: string; sub?: string } => {
-  const map: Record<string, string> = {
-    home: "Нүүр", vocab: "Үгийн сан", review: "Давталт", kanji: "Ханз", write: "Бичих дасгал",
-    grammar: "Дүрэм", reading: "Уншлага", listening: "Сонсгол", quiz: "Дасгал", mock: "Жишиг шалгалт",
-    exam: "Шалгалтын үр дүн", dict: "Толь бичиг", plan: "Төлөвлөгөө", placement: "Түвшин тогтоох",
-    progress: "Ахиц", achievements: "Амжилт", account: "Аккаунт", admin: "Удирдлага", kana: "Кана",
-    about: "Тухай",
+export const titleFor = (r: Route, language: "mn" | "en" = "mn"): { title: string; sub?: string } => {
+  const map: Record<"mn" | "en", Record<string, string>> = {
+    mn: {
+      home: "Нүүр", vocab: "Үгийн сан", review: "Давталт", kanji: "Ханз", write: "Бичих дасгал",
+      grammar: "Дүрэм", reading: "Уншлага", listening: "Сонсгол", quiz: "Дасгал", mock: "Жишиг шалгалт",
+      exam: "Шалгалтын үр дүн", dict: "Толь бичиг", plan: "Төлөвлөгөө", placement: "Түвшин тогтоох",
+      progress: "Ахиц", achievements: "Амжилт", account: "Аккаунт", admin: "Удирдлага", kana: "Кана",
+      about: "Тухай",
+    },
+    en: {
+      home: "Dashboard", vocab: "Vocabulary", review: "Review", kanji: "Kanji", write: "Writing practice",
+      grammar: "Grammar", reading: "Reading", listening: "Listening", quiz: "Practice tests", mock: "JLPT mock exam",
+      exam: "Exam results", dict: "Dictionary", plan: "My plan", placement: "Placement test",
+      progress: "Progress", achievements: "Achievements", account: "Account", admin: "Content management", kana: "Kana",
+      about: "About",
+    },
   };
-  return { title: map[r.name] ?? "Nihongo Dōjō" };
+  return { title: map[language][r.name] ?? "Nihongo Dōjō" };
 };
 
 export function useIsActive() {

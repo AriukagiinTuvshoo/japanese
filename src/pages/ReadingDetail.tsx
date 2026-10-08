@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { cn } from "../utils/cn";
 import { navigate } from "../lib/router";
 import { useStore } from "../lib/store";
+import { ui } from "../lib/i18n";
 import { passageById } from "../lib/data";
 import { stripFurigana } from "../lib/text";
 import { XRayText } from "../components/XRayText";
@@ -9,6 +10,8 @@ import { Bar, Button, Card, Chip, Empty, LevelBadge, SectionTitle, SpeakButton, 
 
 export default function ReadingDetail({ id }: { id: string }) {
   const { doc, actions } = useStore();
+  const language = doc.profile.language ?? "mn";
+  const t = ui[language];
   const passage = passageById(id);
   const [tab, setTab] = useState<"text" | "questions" | "vocab">("text");
   const [answers, setAnswers] = useState<(number | null)[]>([]);
@@ -24,7 +27,7 @@ export default function ReadingDetail({ id }: { id: string }) {
   );
 
   if (!passage) {
-    return <Empty icon="読" title="Хичээл олдсонгүй" sub={id} action={<Button onClick={() => navigate("reading")}>← Уншлага</Button>} />;
+    return <Empty icon="読" title={t.lessonNotFound} sub={id} action={<Button onClick={() => navigate("reading")}>{t.backReading}</Button>} />;
   }
 
   const isDone = doc.readingDone.includes(id);
@@ -32,15 +35,15 @@ export default function ReadingDetail({ id }: { id: string }) {
   return (
     <div className="space-y-6">
       <div className="flex flex-wrap items-center gap-2">
-        <Button size="sm" variant="ghost" onClick={() => navigate(`reading?level=${passage.level}`)}>← Уншлага</Button>
+        <Button size="sm" variant="ghost" onClick={() => navigate(`reading?level=${passage.level}`)}>{t.backReading}</Button>
         <LevelBadge level={passage.level} size="sm" />
         <Chip tone="sumi">{passage.topic}</Chip>
-        <span className="text-[12px] text-sumi-400">{passage.minutes} мин</span>
+        <span className="text-[12px] text-sumi-400">{passage.minutes} {t.minutes}</span>
         <div className="ml-auto flex gap-2">
-          <Button size="sm" variant="outline" onClick={() => setShowMn((v) => !v)}>{showMn ? "Монгол нуух" : "Монгол харуулах"}</Button>
+          <Button size="sm" variant="outline" onClick={() => setShowMn((v) => !v)}>{showMn ? t.hideMnBtn : t.showMnBtn}</Button>
           {isDone
-            ? <Button size="sm" variant="soft">✓ Дуусгасан</Button>
-            : <Button size="sm" onClick={() => actions.markReading(id)}>✓ Дуусгах</Button>}
+            ? <Button size="sm" variant="soft">{t.doneBtn}</Button>
+            : <Button size="sm" onClick={() => actions.markReading(id)}>{t.markDone}</Button>}
         </div>
       </div>
 
@@ -60,7 +63,7 @@ export default function ReadingDetail({ id }: { id: string }) {
         <Card className="p-0">
           <div className="flex items-center justify-between border-b border-sumi-900/8 px-5 py-3">
             <p className="text-[12px] font-bold text-sumi-500">
-              Үг дээр дарж утгыг харна уу · «SRS-д нэмэх» товчоор давталтад оруулна
+              {t.tapWordHint}
             </p>
             <SpeakButton text={passage.body.map(stripFurigana).join("。")} className="!h-8 !w-8" />
           </div>
@@ -72,14 +75,14 @@ export default function ReadingDetail({ id }: { id: string }) {
             ))}
           </div>
           {passage.source && (
-            <p className="border-t border-sumi-900/8 px-6 py-3 text-[11.5px] text-sumi-400">Эх сурвалж: {passage.source}</p>
+            <p className="border-t border-sumi-900/8 px-6 py-3 text-[11.5px] text-sumi-400">{t.srcPre} {passage.source}</p>
           )}
         </Card>
       )}
 
       {tab === "questions" && (
         <Card>
-          <SectionTitle jp="質問" title="Асуултууд" sub="Текстийг дахин уншиж болно — «Текст» таб руу буцна уу." />
+          <SectionTitle jp="質問" title={t.questionsTitle2} sub={t.questionsSub2} />
           <div className="space-y-5">
             {passage.questions.map((q, qi) => (
               <div key={qi} className="rounded-2xl border border-sumi-900/10 bg-white/60 p-4">
@@ -117,14 +120,14 @@ export default function ReadingDetail({ id }: { id: string }) {
 
           <div className="mt-5 flex flex-wrap items-center gap-3">
             {!revealed ? (
-              <Button onClick={() => setRevealed(true)} disabled={answers.every((a) => a === null)}>✓ Хариултаа шалгах</Button>
+              <Button onClick={() => setRevealed(true)} disabled={answers.every((a) => a === null)}>{t.checkAnswers}</Button>
             ) : (
               <>
                 <Chip tone={correct === passage.questions.length ? "matcha" : correct / passage.questions.length > 0.6 ? "kin" : "shu"}>
-                  {correct} / {passage.questions.length} зөв
+                  {t.correctN(correct, passage.questions.length)}
                 </Chip>
-                <Button variant="outline" onClick={() => { setAnswers(passage.questions.map(() => null)); setRevealed(false); }}>↺ Дахин</Button>
-                {!isDone && <Button onClick={() => actions.markReading(id)}>✓ Хичээл дуусгах</Button>}
+                <Button variant="outline" onClick={() => { setAnswers(passage.questions.map(() => null)); setRevealed(false); }}>{t.retake}</Button>
+                {!isDone && <Button onClick={() => actions.markReading(id)}>{t.finishLesson}</Button>}
               </>
             )}
           </div>
@@ -132,7 +135,7 @@ export default function ReadingDetail({ id }: { id: string }) {
             <div className="mt-4">
               <Bar value={correct / passage.questions.length} tone={correct / passage.questions.length > 0.6 ? "matcha" : "kin"} />
               <p className="mt-2 text-[11.5px] text-sumi-400">
-                Зарцуулсан хугацаа: {Math.max(1, Math.round((Date.now() - startRef.current) / 60000))} мин
+                {t.spentLabel} {Math.max(1, Math.round((Date.now() - startRef.current) / 60000))} {t.minutes}
               </p>
             </div>
           )}
@@ -141,7 +144,7 @@ export default function ReadingDetail({ id }: { id: string }) {
 
       {tab === "vocab" && (
         <Card>
-          <SectionTitle jp="語彙" title="Энэ хичээлийн үгс" sub="Дарж SRS-д нэмээрэй." />
+          <SectionTitle jp="語彙" title={t.lessonVocab} sub={t.tapToSrs} />
           <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
             {passage.glossary.map((g, i) => (
               <div key={i} className="card-flat flex items-center gap-3 px-3.5 py-3">

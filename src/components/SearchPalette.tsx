@@ -5,17 +5,18 @@ import { navigate } from "../lib/router";
 import { romajiToKana, toHiragana } from "../lib/text";
 import type { SearchIndex } from "../lib/types";
 import { Chip, LevelBadge, Spinner } from "./ui";
+import { useStore } from "../lib/store";
+import { ui } from "../lib/i18n";
 
 type Kind = "v" | "k" | "g";
 interface Hit { kind: Kind; main: string; sub: string; mn: string; lvl: string; id: string; score: number }
 
-const KIND_META: Record<Kind, { label: string; k: string; to: (id: string) => string }> = {
-  v: { label: "Үг", k: "語", to: (id) => `vocab/${id}` },
-  k: { label: "Ханз", k: "漢", to: (id) => `kanji/${id}` },
-  g: { label: "Дүрэм", k: "文", to: (id) => `grammar/${id}` },
-};
+const KIND_KEY: Record<Kind, "wordSg" | "kanji" | "grammar"> = { v: "wordSg", k: "kanji", g: "grammar" };
 
 export function SearchPalette({ onClose }: { onClose: () => void }) {
+  const { doc } = useStore();
+  const language = doc.profile.language ?? "mn";
+  const t = ui[language];
   const [index, setIndex] = useState<SearchIndex | null>(null);
   const [q, setQ] = useState("");
   const [cursor, setCursor] = useState(0);
@@ -56,12 +57,12 @@ export function SearchPalette({ onClose }: { onClose: () => void }) {
     }
     for (const [ch, on, mn, lvl, strokes] of index.k) {
       const s = score(ch, mn, ch);
-      if (s > 0) out.push({ kind: "k", main: ch, sub: `${strokes} зурлага${on ? ` · ${on}` : ""}`, mn, lvl, id: ch, score: s + 8 });
+      if (s > 0) out.push({ kind: "k", main: ch, sub: t.strokesSub2(strokes, on), mn, lvl, id: ch, score: s + 8 });
     }
     for (const [p, mn, lvl, id] of index.g) {
       const p2 = p.replace(/[〜~]/g, "");
       const s = score(p2, mn, p2) || score(p, mn, p);
-      if (s > 0) out.push({ kind: "g", main: p, sub: "дүрэм", mn, lvl, id, score: s + 4 });
+      if (s > 0) out.push({ kind: "g", main: p, sub: t.grammarSub, mn, lvl, id, score: s + 4 });
     }
 
     const filtered = filter === "all" ? out : out.filter((h) => h.kind === filter);
@@ -71,7 +72,7 @@ export function SearchPalette({ onClose }: { onClose: () => void }) {
   useEffect(() => setCursor(0), [q, filter]);
 
   const open = (h: Hit) => {
-    navigate(KIND_META[h.kind].to(h.id));
+    navigate(`${h.kind === "v" ? "vocab" : h.kind === "k" ? "kanji" : "grammar"}/${h.id}`);
     onClose();
   };
 
@@ -103,7 +104,7 @@ export function SearchPalette({ onClose }: { onClose: () => void }) {
             value={q}
             onChange={(e) => setQ(e.target.value)}
             onKeyDown={onKey}
-            placeholder="Япон, ромажи (taberu), монгол, англи…"
+            placeholder={t.searchPh}
             className="h-8 flex-1 bg-transparent text-[15px] font-semibold outline-none placeholder:font-medium placeholder:text-sumi-400"
           />
           <div className="flex gap-1">
@@ -116,7 +117,7 @@ export function SearchPalette({ onClose }: { onClose: () => void }) {
                   filter === f ? "bg-sumi-900 text-washi-50" : "bg-sumi-900/6 text-sumi-500 hover:text-sumi-800",
                 )}
               >
-                {f === "all" ? "Бүгд" : KIND_META[f].label}
+                {f === "all" ? t.allF : t[KIND_KEY[f]]}
               </button>
             ))}
           </div>
@@ -124,20 +125,20 @@ export function SearchPalette({ onClose }: { onClose: () => void }) {
         </div>
 
         <div className="max-h-[58vh] overflow-y-auto">
-          {!index && <Spinner label="Хайлтын индекс ачаалж байна…" />}
+          {!index && <Spinner label={t.loadingSearch} lang={language} />}
           {index && !q && (
             <div className="px-5 py-6">
-              <p className="text-[12px] font-bold uppercase tracking-wider text-sumi-400">Хурдан шилжих</p>
+              <p className="text-[12px] font-bold uppercase tracking-wider text-sumi-400">{t.quickJump}</p>
               <div className="mt-3 grid gap-1.5 sm:grid-cols-2">
                 {[
-                  { to: "vocab", k: "語", t: "Үгийн сан" },
-                  { to: "kanji", k: "漢", t: "Ханз" },
-                  { to: "write", k: "筆", t: "Бичих дасгал" },
-                  { to: "grammar", k: "文", t: "Дүрэм" },
-                  { to: "reading", k: "読", t: "Уншлага" },
-                  { to: "listening", k: "聴", t: "Сонсгол" },
-                  { to: "review", k: "復", t: "Давталт" },
-                  { to: "mock", k: "試", t: "Жишиг шалгалт" },
+                  { to: "vocab", k: "語", t: t.vocab },
+                  { to: "kanji", k: "漢", t: t.kanji },
+                  { to: "write", k: "筆", t: t.writeTab },
+                  { to: "grammar", k: "文", t: t.grammar },
+                  { to: "reading", k: "読", t: t.readingShort },
+                  { to: "listening", k: "聴", t: t.listeningShort },
+                  { to: "review", k: "復", t: t.reviewShort },
+                  { to: "mock", k: "試", t: t.mockShort },
                 ].map((s) => (
                   <button
                     key={s.to}
@@ -155,8 +156,8 @@ export function SearchPalette({ onClose }: { onClose: () => void }) {
           {index && q && hits.length === 0 && (
             <div className="grid place-items-center px-6 py-14 text-center">
               <span className="font-mincho text-[2.2rem] font-bold text-sumi-900/12">無</span>
-              <p className="mt-2 text-[14px] font-extrabold text-sumi-700">Илэрц олдсонгүй</p>
-              <p className="mt-1 text-[12.5px] text-sumi-500">Ромажиар ч хайж болно — жишээ нь <span className="font-mono">tabemono</span></p>
+              <p className="mt-2 text-[14px] font-extrabold text-sumi-700">{t.noHits}</p>
+              <p className="mt-1 text-[12.5px] text-sumi-500">{t.noHitsSub} <span className="font-mono">tabemono</span></p>
             </div>
           )}
 
@@ -164,7 +165,7 @@ export function SearchPalette({ onClose }: { onClose: () => void }) {
             grouped[kind]?.length ? (
               <div key={kind} className="border-b border-sumi-900/6 last:border-0">
                 <p className="sticky top-0 z-10 bg-washi-100/90 px-5 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-sumi-400 backdrop-blur">
-                  {KIND_META[kind].label} · {grouped[kind].length}
+                  {t[KIND_KEY[kind]]} · {grouped[kind].length}
                 </p>
                 <ul>
                   {grouped[kind].map((h) => {
@@ -199,10 +200,10 @@ export function SearchPalette({ onClose }: { onClose: () => void }) {
         </div>
 
         <div className="flex items-center gap-3 border-t border-sumi-900/10 bg-white/50 px-5 py-2.5 text-[11px] text-sumi-400">
-          <span><kbd className="font-mono">↑↓</kbd> сонгох</span>
-          <span><kbd className="font-mono">↵</kbd> нээх</span>
+          <span><kbd className="font-mono">↑↓</kbd> {t.choose}</span>
+          <span><kbd className="font-mono">↵</kbd> {t.open2}</span>
           <Chip tone="sumi" className="ml-auto">
-            {index ? `${index.v.length.toLocaleString()} үг · ${index.k.length.toLocaleString()} ханз · ${index.g.length} дүрэм` : "…"}
+            {index ? t.indexCounts(index.v.length.toLocaleString(), index.k.length.toLocaleString(), index.g.length.toLocaleString()) : "…"}
           </Chip>
         </div>
       </div>

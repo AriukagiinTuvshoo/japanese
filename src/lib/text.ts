@@ -1,6 +1,7 @@
 /** Япон хэлний текст, кана, фуриганатай ажиллах туслах функцууд. */
 
 import type { Level } from "./types";
+import type { Language } from "./i18n";
 
 export const HIRA_START = 0x3041;
 export const KATA_START = 0x30a1;
@@ -26,8 +27,9 @@ const GRAMMAR_LABELS: Record<string, string> = {
   approximately: "ойролцоо хэмжээ",
 };
 
-/** Дүрмийн pattern дотор үлдсэн англи тайлбар шошгыг монголоор харуулна. */
-export function grammarLabel(pattern: string) {
+/** Дүрмийн pattern дотор үлдсэн англи тайлбар шошгыг монголоор харуулна (en горимд англиар нь үлдээнэ). */
+export function grammarLabel(pattern: string, language: Language = "mn") {
+  if (language === "en") return pattern;
   return pattern.replace(/[（(]([^）)]+)[）)]/g, (whole, label: string) => {
     const translated = GRAMMAR_LABELS[label.trim().toLowerCase()];
     return translated ? `（${translated}）` : whole;
@@ -180,9 +182,18 @@ export function dayOffset(key: string, days: number) {
 }
 
 /** Хүн уншихад ойлгомжтой хугацаа. */
-export function relTime(ts: number) {
+export function relTime(ts: number, language: Language = "mn") {
   const diff = Date.now() - ts;
   const min = Math.round(diff / 60000);
+  if (language === "en") {
+    if (min < 1) return "just now";
+    if (min < 60) return `${min} min ago`;
+    const he = Math.round(min / 60);
+    if (he < 24) return `${he} h ago`;
+    const de = Math.round(he / 24);
+    if (de < 30) return `${de} d ago`;
+    return new Date(ts).toLocaleDateString("en-US");
+  }
   if (min < 1) return "сая";
   if (min < 60) return `${min} мин өмнө`;
   const h = Math.round(min / 60);
@@ -192,39 +203,71 @@ export function relTime(ts: number) {
   return new Date(ts).toLocaleDateString("mn-MN");
 }
 
-export function fmtDate(ts: number) {
-  return new Date(ts).toLocaleDateString("mn-MN", { year: "numeric", month: "long", day: "numeric" });
+export function fmtDate(ts: number, language: Language = "mn") {
+  return new Date(ts).toLocaleDateString(language === "en" ? "en-US" : "mn-MN", { year: "numeric", month: "long", day: "numeric" });
 }
 
-export const LEVEL_LABEL: Record<Level, string> = {
-  N5: "Суурь",
-  N4: "Дунд-суурь",
-  N3: "Дунд",
-  N2: "Дунд-дээд",
-  N1: "Дээд",
+export const LEVEL_LABEL: Record<Language, Record<Level, string>> = {
+  mn: {
+    N5: "Суурь",
+    N4: "Дунд-суурь",
+    N3: "Дунд",
+    N2: "Дунд-дээд",
+    N1: "Дээд",
+  },
+  en: {
+    N5: "Beginner",
+    N4: "Elementary",
+    N3: "Intermediate",
+    N2: "Upper intermediate",
+    N1: "Advanced",
+  },
 };
 
 export const LEVEL_JP: Record<Level, string> = { N5: "入門", N4: "基礎", N3: "中級", N2: "上級", N1: "最上級" };
 
-export const TYPE_LABEL: Record<string, string> = {
-  v: "Үйл үг",
-  i: "и-тэмдэг",
-  na: "на-тэмдэг",
-  adj: "Тэмдэг үг",
-  adv: "Дайвар",
-  exp: "Хэллэг",
-  pn: "Төлөөний үг",
-  ctr: "Тоолуур",
-  n: "Нэр үг",
-  other: "—",
+export const TYPE_LABEL: Record<Language, Record<string, string>> = {
+  mn: {
+    v: "Үйл үг",
+    i: "и-тэмдэг",
+    na: "на-тэмдэг",
+    adj: "Тэмдэг үг",
+    adv: "Дайвар",
+    exp: "Хэллэг",
+    pn: "Төлөөний үг",
+    ctr: "Тоолуур",
+    n: "Нэр үг",
+    other: "—",
+  },
+  en: {
+    v: "Verb",
+    i: "i-adjective",
+    na: "na-adjective",
+    adj: "Adjective",
+    adv: "Adverb",
+    exp: "Expression",
+    pn: "Pronoun",
+    ctr: "Counter",
+    n: "Noun",
+    other: "—",
+  },
 };
 
-export const MQ_LABEL: Record<string, { text: string; tone: "matcha" | "kin" | "ai" | "sumi" }> = {
-  curated: { text: "Хянасан", tone: "matcha" },
-  draft: { text: "Драфт · хянагдаагүй", tone: "kin" },
-  auto: { text: "Авто санал", tone: "kin" },
-  derived: { text: "Ханзнаас", tone: "kin" },
-  none: { text: "Орчуулга хүлээж байна", tone: "sumi" },
+export const MQ_LABEL: Record<Language, Record<string, { text: string; tone: "matcha" | "kin" | "ai" | "sumi" }>> = {
+  mn: {
+    curated: { text: "Хянасан", tone: "matcha" },
+    draft: { text: "Драфт · хянагдаагүй", tone: "kin" },
+    auto: { text: "Авто санал", tone: "kin" },
+    derived: { text: "Ханзнаас", tone: "kin" },
+    none: { text: "Орчуулга хүлээгдэж байна", tone: "sumi" },
+  },
+  en: {
+    curated: { text: "Reviewed", tone: "matcha" },
+    draft: { text: "Draft · unreviewed", tone: "kin" },
+    auto: { text: "Auto suggestion", tone: "kin" },
+    derived: { text: "From kanji", tone: "kin" },
+    none: { text: "Translation pending", tone: "sumi" },
+  },
 };
 
 /** Түвшний тохирох POS / төрөл. */

@@ -8,6 +8,7 @@ import { LEVELS } from "../lib/types";
 import { LEVEL_LABEL, TYPE_LABEL } from "../lib/text";
 import { shuffle } from "../lib/data";
 import { Bar, Button, Card, Chip, LevelBadge, Ring, SectionTitle, Spinner } from "../components/ui";
+import { ui } from "../lib/i18n";
 
 interface PQ {
   id: string; level: Level; prompt: string; kind: "vocab" | "kanji" | "grammar";
@@ -16,6 +17,8 @@ interface PQ {
 
 export default function Placement() {
   const { actions, doc } = useStore();
+  const language = doc.profile.language ?? "mn";
+  const t = ui[language];
   const [stage, setStage] = useState<"intro" | "run" | "result">("intro");
   const [qs, setQs] = useState<PQ[]>([]);
   const [idx, setIdx] = useState(0);
@@ -36,22 +39,22 @@ export default function Placement() {
         const others = shuffle(data.vocabByLevel[l].filter((x) => x.id !== w.id && (x.mn?.length || x.en.length))).slice(0, 3);
         const opts = shuffle([w, ...others]);
         out.push({
-          id: w.id, level: l, kind: "vocab", prompt: w.w, options: opts.map((o) => o.mn?.[0] ?? o.en[0]),
-          answer: opts.indexOf(w), explain: `${w.w}（${w.r}） = ${w.mn?.join(", ") ?? w.en.join("; ")}`,
+          id: w.id, level: l, kind: "vocab", prompt: w.w, options: opts.map((o) => language === "en" ? (o.en[0] ?? o.mn?.[0] ?? "") : (o.mn?.[0] ?? o.en[0])),
+          answer: opts.indexOf(w), explain: `${w.w}（${w.r}） = ${language === "en" ? w.en.join("; ") : (w.mn?.join(", ") ?? w.en.join("; "))}`,
         });
       }
       for (const c of k) {
         const others = shuffle(data.kanjiByLevel[l].filter((x) => x.k !== c.k)).slice(0, 3);
         const opts = shuffle([c, ...others]);
         out.push({
-          id: c.k, level: l, kind: "kanji", prompt: c.k, options: opts.map((o) => o.mn[0] ?? o.en[0] ?? o.k),
-          answer: opts.indexOf(c), explain: `${c.k} = ${c.mn.join(", ") || c.en.join(", ")}`,
+          id: c.k, level: l, kind: "kanji", prompt: c.k, options: opts.map((o) => (language === "en" ? (o.en[0] ?? o.mn[0] ?? o.k) : (o.mn[0] ?? o.en[0] ?? o.k))),
+          answer: opts.indexOf(c), explain: `${c.k} = ${language === "en" ? (c.en.join(", ") || c.mn.join(", ")) : (c.mn.join(", ") || c.en.join(", "))}`,
         });
       }
       for (const gr of g) {
         const others = shuffle(data.grammarByLevel[l].filter((x) => x.id !== gr.id && (x.mn || x.en))).slice(0, 3);
         const opts = shuffle([gr, ...others]);
-        const mnOf = (x: typeof gr) => x.mn ?? (Array.isArray(x.en) ? x.en.join("; ") : String(x.en ?? ""));
+        const mnOf = (x: typeof gr) => language === "en" ? ((Array.isArray(x.en) ? x.en.join("; ") : String(x.en ?? "")) || x.mn || "") : (x.mn ?? (Array.isArray(x.en) ? x.en.join("; ") : String(x.en ?? "")));
         out.push({
           id: gr.id, level: l, kind: "grammar", prompt: gr.p, options: opts.map(mnOf),
           answer: opts.indexOf(gr), explain: `${gr.p} — ${mnOf(gr)}`,
@@ -107,7 +110,7 @@ export default function Placement() {
       <div className="mx-auto max-w-3xl space-y-5">
         <div className="text-center">
           <p className="font-jp text-[11.5px] tracking-[0.3em] text-shu-500">判定</p>
-          <h1 className="mt-1 text-[1.8rem] font-extrabold">Таны түвшин</h1>
+          <h1 className="mt-1 text-[1.8rem] font-extrabold">{t.yourLevel}</h1>
         </div>
 
         <Card>
@@ -119,17 +122,17 @@ export default function Placement() {
               </div>
             </Ring>
             <div className="min-w-0 flex-1">
-              <p className="text-[12px] font-bold uppercase tracking-wider text-sumi-400">Тооцоолсон түвшин</p>
+              <p className="text-[12px] font-bold uppercase tracking-wider text-sumi-400">{t.computedLevel}</p>
               <p className="mt-1 flex items-center gap-3">
                 <span className="font-mono text-[2.4rem] font-extrabold leading-none">
-                  {overall === "zero" ? "Эхлэгч" : overall}
+                  {overall === "zero" ? t.beginnerWord : overall}
                 </span>
                 {overall !== "zero" && <LevelBadge level={overall as Level} />}
               </p>
               <p className="mt-2 text-[13px] leading-relaxed text-sumi-600">
                 {overall === "zero"
-                  ? "Кана, үндсэн үгнээс эхлэх нь зүйтэй. Хирагана → катакана → N5 үгсийн дараалал зөвлөж байна."
-                  : `${LEVEL_LABEL[overall as Level]} түвшин. Энэ түвшний үг, ханз, дүрмийг бэхжүүлээд дараагийн түвшинд шилжихэд бэлэн болно.`}
+                  ? t.zeroAdvice
+                  : t.levelAdvice(LEVEL_LABEL[language][overall as Level])}
               </p>
             </div>
           </div>
@@ -143,13 +146,13 @@ export default function Placement() {
               return (
                 <div key={k} className="card-flat p-4">
                   <p className="text-[12px] font-bold uppercase tracking-wide text-sumi-400">
-                    {k === "vocab" ? "Үгийн сан" : k === "kanji" ? "Ханз" : "Дүрэм"}
+                    {k === "vocab" ? t.vocab : k === "kanji" ? t.kanji : t.grammar}
                   </p>
                   <p className="mt-1.5 flex items-center gap-2">
                     <span className="font-mono text-[1.5rem] font-extrabold leading-none">{l ?? "—"}</span>
                     {l && <LevelBadge level={l} size="sm" />}
                   </p>
-                  <p className="mt-2 font-mono text-[11.5px] tabnum text-sumi-500">{corr}/{total} зөв</p>
+                  <p className="mt-2 font-mono text-[11.5px] tabnum text-sumi-500">{t.correct2N(corr, total)}</p>
                   <Bar value={corr / Math.max(1, total)} tone="ai" className="mt-2" height={5} />
                 </div>
               );
@@ -157,17 +160,17 @@ export default function Placement() {
           </div>
 
           <div className="mt-6 rounded-2xl border border-ai-100 bg-ai-50/60 p-4">
-            <p className="text-[13.5px] font-extrabold text-ai-700">Эхлэх цэг</p>
+            <p className="text-[13.5px] font-extrabold text-ai-700">{t.startPoint}</p>
             <ul className="mt-2 space-y-1.5 text-[13px] text-ai-700">
               {(["vocab", "kanji", "grammar"] as const).map((k) => {
                 const l = detail[k];
                 if (!l) return null;
                 return (
                   <li key={k}>
-                    → {l} түвшний {k === "vocab" ? "үгийн сан" : k === "kanji" ? "ханз" : "дүрэм"}{" "}
+                    {t.startAtLevel(l, k === "vocab" ? t.vocab.toLowerCase() : k === "kanji" ? t.kanji.toLowerCase() : t.grammar.toLowerCase())}{" "}
                     <a href={`#/${k === "vocab" ? "vocab" : k === "kanji" ? "kanji" : "grammar"}?level=${l}`}
                       className="font-bold underline underline-offset-4">
-                      эндээс эхлэх
+                      {t.startHere}
                     </a>
                   </li>
                 );
@@ -176,18 +179,18 @@ export default function Placement() {
           </div>
 
           <div className="mt-5 flex flex-wrap gap-2">
-            <Button onClick={() => navigate(`plan`)}>計 Төлөвлөгөө үүсгэх</Button>
-            <Button variant="outline" onClick={() => { setStage("intro"); setQs([]); }}>↺ Дахин өгөх</Button>
-            <Button variant="ghost" onClick={() => navigate("home")}>Нүүр</Button>
+            <Button onClick={() => navigate(`plan`)}>{t.createPlanBtn}</Button>
+            <Button variant="outline" onClick={() => { setStage("intro"); setQs([]); }}>{t.retakeBtn}</Button>
+            <Button variant="ghost" onClick={() => navigate("home")}>{t.homeShort}</Button>
           </div>
         </Card>
 
         <Card>
-          <SectionTitle jp="解答" title="Хариултын дүн" sub="Түвшин бүрээр зөв хариулсан хувь." />
+          <SectionTitle jp="解答" title={t.answerBreakdown} sub={t.answerBreakdownSub} />
           <div className="space-y-4">
             {(["vocab", "kanji", "grammar"] as const).map((k) => (
               <div key={k}>
-                <p className="text-[12.5px] font-bold text-sumi-700">{k === "vocab" ? "Үгийн сан" : k === "kanji" ? "Ханз" : "Дүрэм"}</p>
+                <p className="text-[12.5px] font-bold text-sumi-700">{k === "vocab" ? t.vocab : k === "kanji" ? t.kanji : t.grammar}</p>
                 <div className="mt-2 grid grid-cols-5 gap-1.5">
                   {LEVELS.map((l) => {
                     const r = byKind[k]?.perLevel[l];
@@ -217,13 +220,13 @@ export default function Placement() {
         <div className="mb-4 flex items-center gap-3">
           <span className="font-mono text-[12px] font-bold tabnum text-sumi-500">{idx + 1} / {qs.length}</span>
           <Bar value={idx / qs.length} tone="shu" height={5} />
-          <Chip tone="sumi">{TYPE_LABEL[q.kind === "vocab" ? "n" : q.kind === "kanji" ? "other" : "exp"]}</Chip>
+          <Chip tone="sumi">{TYPE_LABEL[language][q.kind === "vocab" ? "n" : q.kind === "kanji" ? "other" : "exp"]}</Chip>
         </div>
 
         <Card className="p-6">
           <div className="flex items-center gap-2">
             <LevelBadge level={q.level} size="sm" />
-            <Chip tone="ai">{q.kind === "vocab" ? "Үгийн сан" : q.kind === "kanji" ? "Ханз" : "Дүрэм"}</Chip>
+            <Chip tone="ai">{q.kind === "vocab" ? t.vocab : q.kind === "kanji" ? t.kanji : t.grammar}</Chip>
           </div>
           <p className={cn("mt-5 font-jp font-bold", q.prompt.length <= 3 ? "text-[3rem]" : q.prompt.length <= 12 ? "text-[1.8rem]" : "text-[1.2rem]")}>
             {q.prompt}
@@ -248,7 +251,7 @@ export default function Placement() {
           {picked !== null && (
             <p className={cn("mt-4 rounded-xl px-3.5 py-2.5 text-[12.5px] font-bold",
               isCorrect ? "bg-matcha-50 text-matcha-600" : "bg-shu-50 text-shu-700")}>
-              {isCorrect ? "✓ Зөв" : "✕ Буруу"} — {q.explain}
+              {isCorrect ? `✓ ${t.correct2}` : `✕ ${t.wrong2}`} — {q.explain}
             </p>
           )}
 
@@ -262,13 +265,13 @@ export default function Placement() {
                 if (idx + 1 >= qs.length) finish();
                 else setIdx(idx + 1);
               }}>
-                {idx + 1 >= qs.length ? "Дүнг харах →" : "Дараагийн →"}
+                {idx + 1 >= qs.length ? t.showResult : t.nextBtn}
               </Button>
             )}
-            {picked === null && <p className="text-[12.5px] text-sumi-400">Хариултаа сонгоно уу</p>}
+            {picked === null && <p className="text-[12.5px] text-sumi-400">{t.chooseAnswer2}</p>}
             {picked !== null && idx + 1 < qs.length && (
               <Button variant="ghost" size="sm" className="ml-auto" onClick={() => { const n = answers.slice(); n[idx] = picked; setAnswers(n); setPicked(null); finish(); }}>
-                Дуусгах
+                {t.finishShort}
               </Button>
             )}
           </div>
@@ -281,29 +284,27 @@ export default function Placement() {
     <div className="mx-auto max-w-2xl space-y-5">
       <div>
         <p className="font-jp text-[11.5px] tracking-[0.3em] text-shu-500">レベル判定</p>
-        <h1 className="mt-1 text-[1.8rem] font-extrabold">Түвшин тогтоох тест</h1>
+        <h1 className="mt-1 text-[1.8rem] font-extrabold">{t.placementHero}</h1>
       </div>
       <Card>
         <p className="text-[14px] leading-relaxed text-sumi-700">
-          Та ямар түвшинд байгаагаа мэдэхгүй юу? 45 асуулттай энэ тест нь N5-аас N1 хүртэлх
-          бүх түвшнээс асуулт тавьж, <strong>үг, ханз, дүрэм</strong> тус бүрээр таны
-          түвшинг тооцоолно.
+          {t.placementIntro}
         </p>
         <ul className="mt-4 space-y-2 text-[13px] text-sumi-600">
-          <li>• Бүх асуулт бодит өгөгдлийн сангаас — 10,461 үг, 2,686 ханз, 526 дүрэм</li>
-          <li>• Хугацааны хязгааргүй, дунджаар 10–15 минут</li>
-          <li>• Дуусахад эхлэх цэгийг тодорхой зааж өгнө</li>
+          <li>{t.placementB1}</li>
+          <li>{t.placementB2}</li>
+          <li>{t.placementB3}</li>
         </ul>
         <div className="mt-5 flex flex-wrap gap-2">
-          <Button size="lg" onClick={start} disabled={loading}>{loading ? "Бэлтгэж байна…" : "▶ Тест эхлэх"}</Button>
+          <Button size="lg" onClick={start} disabled={loading}>{loading ? t.preparing : t.startTest}</Button>
           <Button variant="ghost" size="lg" onClick={() => {
             actions.setPlacement("zero", {});
             navigate("kana");
           }}>
-            Канаас эхлэх
+            {t.startFromKana}
           </Button>
         </div>
-        {loading && <Spinner label="Асуулт үүсгэж байна…" />}
+        {loading && <Spinner label={t.genQ2} lang={language} />}
       </Card>
     </div>
   );

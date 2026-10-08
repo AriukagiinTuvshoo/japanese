@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { cn } from "../utils/cn";
 import { href, navigate } from "../lib/router";
 import { useStore } from "../lib/store";
+import { ui } from "../lib/i18n";
 import { lessonById } from "../lib/data";
 import type { ListeningLesson } from "../lib/types";
 import { FALLBACK_LESSONS } from "../data/listening-fallback";
@@ -11,6 +12,8 @@ import { XRayText } from "../components/XRayText";
 
 export default function ListeningDetail({ id }: { id: string }) {
   const { doc, actions } = useStore();
+  const language = doc.profile.language ?? "mn";
+  const t = ui[language];
   const lesson: ListeningLesson | undefined = lessonById(id) ?? FALLBACK_LESSONS.find((l) => l.id === id);
   const [tab, setTab] = useState<"lesson" | "transcript" | "questions" | "shadow">("lesson");
   const [answers, setAnswers] = useState<(number | null)[]>([]);
@@ -31,7 +34,7 @@ export default function ListeningDetail({ id }: { id: string }) {
   }, []);
 
   if (!lesson) {
-    return <Empty icon="聴" title="Хичээл олдсонгүй" sub={id} action={<Button onClick={() => navigate("listening")}>← Сонсгол</Button>} />;
+    return <Empty icon="聴" title={t.lessonNotFound} sub={id} action={<Button onClick={() => navigate("listening")}>{t.backListening}</Button>} />;
   }
 
   const correct = lesson.questions.reduce((a, q, i) => a + (answers[i] === q.a ? 1 : 0), 0);
@@ -40,10 +43,10 @@ export default function ListeningDetail({ id }: { id: string }) {
   return (
     <div className="space-y-6">
       <div className="flex flex-wrap items-center gap-2">
-        <Button size="sm" variant="ghost" onClick={() => navigate(`listening?level=${lesson.level}`)}>← Сонсгол</Button>
+        <Button size="sm" variant="ghost" onClick={() => navigate(`listening?level=${lesson.level}`)}>{t.backListening}</Button>
         <LevelBadge level={lesson.level} size="sm" />
         <Chip tone="sumi">{lesson.topic}</Chip>
-        <span className="text-[12px] text-sumi-400">{lesson.minutes} мин</span>
+        <span className="text-[12px] text-sumi-400">{lesson.minutes} {t.minutes}</span>
         <div className="ml-auto flex gap-2">
           {isDone ? <Button size="sm" variant="soft">✓ Дуусгасан</Button>
             : <Button size="sm" onClick={() => actions.markListening(id)}>✓ Дуусгах</Button>}
@@ -71,7 +74,7 @@ export default function ListeningDetail({ id }: { id: string }) {
                   className="h-full w-full"
                 />
               ) : (
-                <div className="grid h-full place-items-center text-[13px] text-washi-300">Видео ачаалж байна…</div>
+                <div className="grid h-full place-items-center text-[13px] text-washi-300">{t.videoLoading}</div>
               )}
             </div>
             <div className="flex flex-wrap items-center gap-3 border-t border-sumi-900/8 px-4 py-3">
@@ -85,7 +88,7 @@ export default function ListeningDetail({ id }: { id: string }) {
                 ))}
               </div>
               <span className="text-[11.5px] text-sumi-400">
-                Хурд нь YouTube тоглуулагчийн доод самбараас ⚙ → Playback speed-ээр солино
+                {t.speedNote}
               </span>
               <a href={`https://www.youtube.com/watch?v=${lesson.youtubeId}`} target="_blank" rel="noreferrer noopener"
                 className="ml-auto text-[12px] font-bold text-ai-600 underline underline-offset-4">
@@ -117,7 +120,7 @@ export default function ListeningDetail({ id }: { id: string }) {
                         window.speechSynthesis.speak(u);
                       }}
                       className="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-lg border border-sumi-900/10 bg-white/70 text-[12px] text-sumi-500 hover:border-ai-400 hover:text-ai-600"
-                      title="Энэ мөрийг уншиж өгөх">
+                      title={t.readAloud}>
                       🔊
                     </button>
                     <div className="min-w-0 flex-1">
@@ -134,8 +137,8 @@ export default function ListeningDetail({ id }: { id: string }) {
 
           {tab === "questions" && (
             <Card>
-              <SectionTitle jp="質問" title="Ойлголтын асуултууд" />
-              {lesson.questions.length === 0 ? <Empty icon="問" title="Асуулт хараахан байхгүй" /> : (
+              <SectionTitle jp="質問" title={t.compQuestions} />
+              {lesson.questions.length === 0 ? <Empty icon="問" title={t.noQuestions} /> : (
                 <>
                   <div className="space-y-5">
                     {lesson.questions.map((q, qi) => (
@@ -170,12 +173,12 @@ export default function ListeningDetail({ id }: { id: string }) {
                   </div>
                   <div className="mt-5 flex flex-wrap items-center gap-3">
                     {!revealed ? (
-                      <Button onClick={() => setRevealed(true)} disabled={answers.every((a) => a === null)}>✓ Шалгах</Button>
+                      <Button onClick={() => setRevealed(true)} disabled={answers.every((a) => a === null)}>{t.checkBtn}</Button>
                     ) : (
                       <>
-                        <Chip tone={correct === lesson.questions.length ? "matcha" : "kin"}>{correct}/{lesson.questions.length} зөв</Chip>
-                        <Button variant="outline" onClick={() => { setAnswers(lesson.questions.map(() => null)); setRevealed(false); }}>↺ Дахин</Button>
-                        {!isDone && <Button onClick={() => actions.markListening(id)}>✓ Хичээл дуусгах</Button>}
+                        <Chip tone={correct === lesson.questions.length ? "matcha" : "kin"}>{t.correctN(correct, lesson.questions.length)}</Chip>
+                        <Button variant="outline" onClick={() => { setAnswers(lesson.questions.map(() => null)); setRevealed(false); }}>{t.retake}</Button>
+                        {!isDone && <Button onClick={() => actions.markListening(id)}>{t.finishLesson}</Button>}
                       </>
                     )}
                   </div>
@@ -194,7 +197,7 @@ export default function ListeningDetail({ id }: { id: string }) {
                 ))}
               </div>
               <div className="mt-5 rounded-2xl border border-ai-100 bg-ai-50/60 p-4 text-[12.5px] leading-relaxed text-ai-700">
-                <p className="font-bold">Хэрхэн дагах вэ</p>
+                <p className="font-bold">{t.howToShadow}</p>
                 <ol className="mt-2 list-inside list-decimal space-y-1">
                   <li>Дээрх 🔊 товчоор мөр бүрийг сонсоод, дуугаа оруулах 💬 товчоор давтан хэл</li>
                   <li>Хөтөч микрофоныг асуух болно — зөвшөөрнө үү</li>
@@ -207,7 +210,7 @@ export default function ListeningDetail({ id }: { id: string }) {
 
           {tab === "lesson" && (
             <Card>
-              <SectionTitle jp="この動画について" title="Хичээлийн тухай" />
+              <SectionTitle jp="この動画について" title={t.aboutLesson} />
               <p className="text-[13.5px] leading-relaxed text-sumi-600">
                 {lesson.channel} сувгийн видеог ашиглан {lesson.level} түвшний сонсголын дасгал.
                 Транскрипт, үгийн сан, асуултууд нь бидний боловсруулсан нэмэлт сургалтын материал —
@@ -228,7 +231,7 @@ export default function ListeningDetail({ id }: { id: string }) {
               {lesson.channelUrl && (
                 <a href={lesson.channelUrl} target="_blank" rel="noreferrer noopener"
                   className="mt-4 inline-block text-[12.5px] font-bold text-ai-600 underline underline-offset-4">
-                  Сувгийг үзэх ↗
+                  {t.viewChannel}
                 </a>
               )}
             </Card>
@@ -238,8 +241,8 @@ export default function ListeningDetail({ id }: { id: string }) {
         {/* ── хажуугийн самбар ── */}
         <div className="space-y-5">
           <Card>
-            <p className="text-[13px] font-extrabold">Энэ хичээлийн үгс</p>
-            <p className="mt-1 text-[11.5px] text-sumi-500">Дарж SRS-д нэмээрэй.</p>
+            <p className="text-[13px] font-extrabold">{t.lessonWords}</p>
+            <p className="mt-1 text-[11.5px] text-sumi-500">{t.tapToSrs}</p>
             <div className="mt-3 space-y-2">
               {lesson.vocab.map((v, i) => {
                 const inSrs = Object.values(doc.srs).length > 0;
@@ -259,16 +262,16 @@ export default function ListeningDetail({ id }: { id: string }) {
           </Card>
 
           <Card>
-            <p className="text-[13px] font-extrabold">Дараагийн алхам</p>
+            <p className="text-[13px] font-extrabold">{t.nextSteps}</p>
             <div className="mt-3 space-y-2">
               <a href={href("quiz", { mode: "vocab-listen", level: lesson.level } as never)} className="block text-[12.5px] font-bold text-ai-600 underline underline-offset-4">
-                🎧 Сонсголын дасгал хийх →
+                {t.listeningDrillLink}
               </a>
               <a href={href("reading", undefined)} className="block text-[12.5px] font-bold text-ai-600 underline underline-offset-4">
-                📖 Уншлагын хичээл →
+                {t.readingLessonLink}
               </a>
               <a href={href("listening")} className="block text-[12.5px] font-bold text-ai-600 underline underline-offset-4">
-                🎬 Бусад сонсголын хичээл →
+                {t.moreListeningLink}
               </a>
             </div>
           </Card>
@@ -279,6 +282,8 @@ export default function ListeningDetail({ id }: { id: string }) {
 }
 
 function ShadowRow({ text, index }: { text: string; index: number }) {
+  const { doc } = useStore();
+  const t = ui[doc.profile.language ?? "mn"];
   const [recording, setRecording] = useState(false);
   const [audioUrl, setAudioUrl] = useState<string | null>(null);
   const [error, setError] = useState("");
@@ -301,7 +306,7 @@ function ShadowRow({ text, index }: { text: string; index: number }) {
       mr.start();
       setRecording(true);
     } catch {
-      setError("Микрофон ашиглах зөвшөөрөл олдсонгүй.");
+      setError(t.micDenied);
     }
   };
 
@@ -314,11 +319,11 @@ function ShadowRow({ text, index }: { text: string; index: number }) {
         <p className="min-w-0 flex-1 font-jp text-[14.5px] font-semibold">{text}</p>
       </div>
       <div className="mt-2.5 flex flex-wrap items-center gap-2">
-        <SpeakButton text={text} className="!h-7 !w-auto !px-2.5" label="🔊 Сонсох" />
+        <SpeakButton text={text} className="!h-7 !w-auto !px-2.5" label={t.listen} />
         {!recording ? (
-          <Button size="sm" variant="outline" onClick={start}>💬 Бичих</Button>
+          <Button size="sm" variant="outline" onClick={start}>{t.recordBtn}</Button>
         ) : (
-          <Button size="sm" variant="danger" onClick={stop} className="animate-pulse">■ Зогсоох</Button>
+          <Button size="sm" variant="danger" onClick={stop} className="animate-pulse">{t.stopBtn}</Button>
         )}
         {audioUrl && <audio src={audioUrl} controls className="h-8 max-w-[190px]" />}
         {error && <span className="text-[11.5px] font-bold text-shu-600">{error}</span>}

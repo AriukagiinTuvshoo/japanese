@@ -172,6 +172,26 @@ if (search) {
   if (search.g?.length !== grammarCount) err(`search.g ${search.g?.length} ≠ grammar ${grammarCount}`);
 }
 
+// --- UI i18n: EN block must contain zero Cyrillic ---------------------------------
+const I18N = path.join(ROOT, "src/lib/i18n.ts");
+try {
+  const src = (await import("node:fs")).readFileSync(I18N, "utf-8");
+  const enStart = src.indexOf('export const ui = {');
+  const blocks = [];
+  // split top-level `mn: { ... }` / `en: { ... }` blocks inside ui
+  const enBlock = src.match(/\n  en: \{[\s\S]*?\n  \},/);
+  if (enBlock) {
+    const lines = enBlock[0].split("\n");
+    lines.forEach((ln, i) => {
+      if (CYRILLIC.test(ln)) err(`i18n EN блок кирилл агуулсан (мөр ${i + 1}): ${ln.trim().slice(0, 80)}`);
+    });
+  } else {
+    err("i18n EN блок олдсонгүй");
+  }
+} catch (e) {
+  err(`i18n.ts уншиж чадсангүй: ${e}`);
+}
+
 // --- Report -------------------------------------------------------------------------
 console.log(`vocab ${allVocab.length} (draft ${draftVocab.length}), kanji ${allKanji.length} (draft ${draftKanji.length}), grammar ${grammarCount}`);
 for (const w of warnings.slice(0, 30)) console.log("  WARN ", w);

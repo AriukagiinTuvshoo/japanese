@@ -6,6 +6,8 @@
  * буруу хариултыг мөн адил бодит өгөгдлөөс гаргана.
  */
 import { LEVEL_META } from "../data/levels";
+import type { Language } from "./i18n";
+import { MN_PENDING } from "./i18n";
 import type { Grammar, Kanji, Level, Vocab } from "./types";
 import { LEVELS } from "./types";
 import { pick, shuffle } from "./data";
@@ -36,20 +38,47 @@ export type QuizMode =
   | "reading" | "listening"
   | "mixed" | "weak" | "mistakes";
 
-export const QUIZ_MODES: { id: QuizMode; label: string; desc: string; icon: string; tone: "shu" | "ai" | "matcha" | "kin" | "murasaki" }[] = [
-  { id: "vocab-jp-mn", label: "Япон → Монгол", desc: "Үгийн утгыг таа", icon: "語", tone: "shu" },
-  { id: "vocab-mn-jp", label: "Монгол → Япон", desc: "Утгаас үгийг сана", icon: "蒙", tone: "ai" },
-  { id: "vocab-read", label: "Уншлага", desc: "Ханзны уншлагыг сонго", icon: "音", tone: "kin" },
-  { id: "vocab-listen", label: "Сонсгол", desc: "Дуудлагыг сонсоод таа", icon: "聴", tone: "murasaki" },
-  { id: "vocab-fill", label: "Өгүүлбэр бөглөх", desc: "Жишээн дэх дутуу үг", icon: "文", tone: "matcha" },
-  { id: "kanji-mn", label: "Ханзны утга", desc: "Ханзны утгыг таа", icon: "漢", tone: "shu" },
-  { id: "kanji-read", label: "Ханзны уншлага", desc: "Он/кун уншлага", icon: "読", tone: "ai" },
-  { id: "kanji-stroke", label: "Зурлагын тоо", desc: "Хэдэн зурлагатай вэ", icon: "筆", tone: "kin" },
-  { id: "grammar-mn", label: "Дүрмийн утга", desc: "Дүрмийн утгыг таа", icon: "文", tone: "murasaki" },
-  { id: "grammar-use", label: "Дүрэм хэрэглээ", desc: "Зөв өгүүлбэрийг сонго", icon: "用", tone: "matcha" },
-  { id: "mixed", label: "Холимог", desc: "Бүх төрлөөс хольж", icon: "混", tone: "shu" },
-  { id: "weak", label: "Сул тал", desc: "Алдаж буй зүйлсээ давт", icon: "弱", tone: "shu" },
-  { id: "mistakes", label: "Алдааны дэвтэр", desc: "Алдсан асуултуудаа", icon: "誤", tone: "kin" },
+/** Асуултын хэсэг, дэд гарчгийн хоёр хэлний шошго (энгийн текст өгөгдөл дээр суурилна). */
+export const SECTION_LABEL: Record<Language, Record<string, string>> = {
+  mn: { "Үгийн сан": "Үгийн сан", "Уншлага": "Уншлага", "Сонсгол": "Сонсгол", "Өгүүлбэр бөглөх": "Өгүүлбэр бөглөх", "Ханз": "Ханз", "Дүрэм": "Дүрэм" },
+  en: { "Үгийн сан": "Vocabulary", "Уншлага": "Reading", "Сонсгол": "Listening", "Өгүүлбэр бөглөх": "Fill the blank", "Ханз": "Kanji", "Дүрэм": "Grammar" },
+};
+
+export const PROMPT_SUB: Record<Language, Record<string, string>> = {
+  mn: {
+    "Энэ утгатай япон үг аль вэ?": "Энэ утгатай япон үг аль вэ?",
+    "Хэрхэн унших вэ?": "Хэрхэн унших вэ?",
+    "Дутуу үгийг бөглө": "Дутуу үгийг бөглө",
+    "Хэдэн зурлагатай вэ?": "Хэдэн зурлагатай вэ?",
+    "Уншлагыг сонго": "Уншлагыг сонго",
+    "Утгыг сонго": "Утгыг сонго",
+    "Энэ дүрмийн утга аль вэ?": "Энэ дүрмийн утга аль вэ?",
+  },
+  en: {
+    "Энэ утгатай япон үг аль вэ?": "Which Japanese word has this meaning?",
+    "Хэрхэн унших вэ?": "How is it read?",
+    "Дутуу үгийг бөглө": "Fill in the missing word",
+    "Хэдэн зурлагатай вэ?": "How many strokes?",
+    "Уншлагыг сонго": "Choose the reading",
+    "Утгыг сонго": "Choose the meaning",
+    "Энэ дүрмийн утга аль вэ?": "What does this pattern mean?",
+  },
+};
+
+export const QUIZ_MODES: { id: QuizMode; label: string; desc: string; labelEn: string; descEn: string; icon: string; tone: "shu" | "ai" | "matcha" | "kin" | "murasaki" }[] = [
+  { id: "vocab-jp-mn", label: "Япон → Монгол", desc: "Үгийн утгыг таа", labelEn: "Japanese → English", descEn: "Pick the word meaning", icon: "語", tone: "shu" },
+  { id: "vocab-mn-jp", label: "Монгол → Япон", desc: "Утгаас үгийг сана", labelEn: "English → Japanese", descEn: "Recall the word from its meaning", icon: "蒙", tone: "ai" },
+  { id: "vocab-read", label: "Уншлага", desc: "Ханзны уншлагыг сонго", labelEn: "Reading", descEn: "Choose the correct reading", icon: "音", tone: "kin" },
+  { id: "vocab-listen", label: "Сонсгол", desc: "Дуудлагыг сонсоод таа", labelEn: "Listening", descEn: "Listen and pick the meaning", icon: "聴", tone: "murasaki" },
+  { id: "vocab-fill", label: "Өгүүлбэр бөглөх", desc: "Жишээн дэх дутуу үг", labelEn: "Fill the blank", descEn: "Complete the example sentence", icon: "文", tone: "matcha" },
+  { id: "kanji-mn", label: "Ханзны утга", desc: "Ханзны утгыг таа", labelEn: "Kanji meaning", descEn: "Pick the kanji meaning", icon: "漢", tone: "shu" },
+  { id: "kanji-read", label: "Ханзны уншлага", desc: "Он/кун уншлага", labelEn: "Kanji reading", descEn: "On/kun reading", icon: "読", tone: "ai" },
+  { id: "kanji-stroke", label: "Зурлагын тоо", desc: "Хэдэн зурлагатай вэ", labelEn: "Stroke count", descEn: "How many strokes", icon: "筆", tone: "kin" },
+  { id: "grammar-mn", label: "Дүрмийн утга", desc: "Дүрмийн утгыг таа", labelEn: "Grammar meaning", descEn: "Pick the pattern meaning", icon: "文", tone: "murasaki" },
+  { id: "grammar-use", label: "Дүрэм хэрэглээ", desc: "Зөв өгүүлбэрийг сонго", labelEn: "Grammar usage", descEn: "Pick the correct sentence", icon: "用", tone: "matcha" },
+  { id: "mixed", label: "Холимог", desc: "Бүх төрлөөс хольж", labelEn: "Mixed", descEn: "All kinds combined", icon: "混", tone: "shu" },
+  { id: "weak", label: "Сул тал", desc: "Алдаж буй зүйлсээ давт", labelEn: "Weak points", descEn: "Drill what you miss", icon: "弱", tone: "shu" },
+  { id: "mistakes", label: "Алдааны дэвтэр", desc: "Алдсан асуултуудаа", labelEn: "Mistake log", descEn: "The ones you got wrong", icon: "誤", tone: "kin" },
 ];
 
 const opt = (v: Vocab) => v.mn?.[0] ?? v.en[0];
@@ -77,7 +106,10 @@ function poolFor<T extends { lvl: Level }>(all: T[], lvl: Level, span = 1): T[] 
 }
 
 /* ─────────────── Үг → асуулт ─────────────── */
-function vocabQuestion(v: Vocab, pool: Vocab[], mode: QuizMode): Question | null {
+function vocabQuestion(v: Vocab, pool: Vocab[], mode: QuizMode, language: Language = "mn"): Question | null {
+  const meaning = (x: Vocab) => (language === "en" ? x.en.join("; ") : x.mn?.length ? x.mn.join(", ") : MN_PENDING);
+  const sect = (m: string) => SECTION_LABEL[language][m] ?? m;
+  const sub = (m: string) => PROMPT_SUB[language][m] ?? m;
   const others = distractors(pool, (x) => x.id === v.id, 3, opt);
   if (others.length < 3) return null;
   const opts = shuffle([v, ...others], rnd);
@@ -87,10 +119,10 @@ function vocabQuestion(v: Vocab, pool: Vocab[], mode: QuizMode): Question | null
       if (!v.mn?.[0] && !v.en[0]) return null;
       const answer = opts.indexOf(v);
       return {
-        id: `v-jm-${v.id}`, kind: "vocab", level: v.lvl, section: "Үгийн сан",
+        id: `v-jm-${v.id}`, kind: "vocab", level: v.lvl, section: sect("Үгийн сан"),
         prompt: v.w, promptSub: v.r, refId: v.id,
-        options: opts.map(opt), answer,
-        explain: `${v.w}（${v.r}） = ${v.mn?.join(", ") ?? v.en.join("; ")}`,
+        options: opts.map(language === "en" ? (o) => o.en.join("; ") : opt), answer,
+        explain: `${v.w}（${v.r}） = ${meaning(v)}`,
         example: v.ex[0] ? { ja: v.ex[0].fg ?? v.ex[0].ja, en: v.ex[0].en, mn: v.ex[0].mn ?? undefined } : undefined,
       };
     }
@@ -98,8 +130,8 @@ function vocabQuestion(v: Vocab, pool: Vocab[], mode: QuizMode): Question | null
       const mn = opt(v);
       if (!mn) return null;
       return {
-        id: `v-mj-${v.id}`, kind: "vocab", level: v.lvl, section: "Үгийн сан",
-        prompt: mn, promptSub: "Энэ утгатай япон үг аль вэ?", refId: v.id,
+        id: `v-mj-${v.id}`, kind: "vocab", level: v.lvl, section: sect("Үгийн сан"),
+        prompt: mn, promptSub: sub("Энэ утгатай япон үг аль вэ?"), refId: v.id,
         options: opts.map((o) => o.w), answer: opts.indexOf(v),
         explain: `${mn} → ${v.w}（${v.r}）`,
       };
@@ -107,18 +139,18 @@ function vocabQuestion(v: Vocab, pool: Vocab[], mode: QuizMode): Question | null
     case "vocab-read": {
       if (!v.kd.length) return null; // зөвхөн кана үгэнд уншлага таах нь утгагүй
       return {
-        id: `v-rd-${v.id}`, kind: "vocab", level: v.lvl, section: "Уншлага",
-        prompt: v.w, promptSub: "Хэрхэн унших вэ?", refId: v.id,
+        id: `v-rd-${v.id}`, kind: "vocab", level: v.lvl, section: sect("Уншлага"),
+        prompt: v.w, promptSub: sub("Хэрхэн унших вэ?"), refId: v.id,
         options: opts.map((o) => o.r), answer: opts.indexOf(v),
-        explain: `${v.w} → ${v.r}　（${opt(v)}）`,
+        explain: `${v.w} → ${v.r}　（${language === "en" ? v.en.join("; ") : opt(v)}）`,
       };
     }
     case "vocab-listen": {
       return {
-        id: `v-ls-${v.id}`, kind: "vocab", level: v.lvl, section: "Сонсгол",
+        id: `v-ls-${v.id}`, kind: "vocab", level: v.lvl, section: sect("Сонсгол"),
         prompt: "🔊", promptSub: v.r, refId: v.id, audio: v.w,
-        options: opts.map(opt), answer: opts.indexOf(v),
-        explain: `${v.w}（${v.r}） = ${v.mn?.join(", ") ?? v.en.join("; ")}`,
+        options: opts.map(language === "en" ? (o) => o.en.join("; ") : opt), answer: opts.indexOf(v),
+        explain: `${v.w}（${v.r}） = ${meaning(v)}`,
       };
     }
     default:
@@ -127,23 +159,23 @@ function vocabQuestion(v: Vocab, pool: Vocab[], mode: QuizMode): Question | null
 }
 
 /** `{漢字|かんじ}` markup-д тулгуурлан өгүүлбэрээс үг хасна. */
-function fillBlank(v: Vocab): Question | null {
+function fillBlank(v: Vocab, language: Language = "mn"): Question | null {
   const ex = v.ex.find((e) => e.fg && e.fg.includes(v.w));
   const plain = v.ex.find((e) => e.ja.includes(v.w));
   const sentence = ex?.fg ?? plain?.ja;
   if (!sentence || !sentence.includes(v.w)) return null;
   const hidden = sentence.replaceAll(v.w, "＿＿＿");
   return {
-    id: `v-fb-${v.id}`, kind: "vocab", level: v.lvl, section: "Өгүүлбэр бөглөх",
-    prompt: hidden, promptSub: "Дутуу үгийг бөглө", refId: v.id,
+    id: `v-fb-${v.id}`, kind: "vocab", level: v.lvl, section: SECTION_LABEL[language]["Өгүүлбэр бөглөх"] ?? "Өгүүлбэр бөглөх",
+    prompt: hidden, promptSub: PROMPT_SUB[language]["Дутуу үгийг бөглө"] ?? "Дутуу үгийг бөглө", refId: v.id,
     options: [], answer: 0,
-    explain: `${v.w}（${v.r}） = ${v.mn?.join(", ") ?? v.en.join("; ")}`,
+    explain: `${v.w}（${v.r}） = ${language === "en" ? v.en.join("; ") : v.mn?.join(", ") ?? v.en.join("; ")}`,
     example: { ja: sentence, en: ex?.en ?? plain?.en, mn: ex?.mn ?? plain?.mn ?? undefined },
   };
 }
 
 /* ─────────────── Ханз → асуулт ─────────────── */
-function kanjiQuestion(k: Kanji, pool: Kanji[], mode: QuizMode): Question | null {
+function kanjiQuestion(k: Kanji, pool: Kanji[], mode: QuizMode, language: Language = "mn"): Question | null {
   if (mode === "kanji-stroke") {
     if (!k.s) return null;
     const values = new Set([k.s]);
@@ -153,31 +185,32 @@ function kanjiQuestion(k: Kanji, pool: Kanji[], mode: QuizMode): Question | null
     if (values.size < 3) return null;
     const opts = shuffle([...values], rnd);
     return {
-      id: `k-st-${k.k}`, kind: "kanji", level: k.lvl, section: "Ханз",
-      prompt: k.k, promptSub: "Хэдэн зурлагатай вэ?", refKanji: k.k,
+      id: `k-st-${k.k}`, kind: "kanji", level: k.lvl, section: SECTION_LABEL[language]["Ханз"] ?? "Ханз",
+      prompt: k.k, promptSub: PROMPT_SUB[language]["Хэдэн зурлагатай вэ?"] ?? "Хэдэн зурлагатай вэ?", refKanji: k.k,
       options: opts.map((n) => `${n}`), answer: opts.indexOf(k.s),
       explain: `${k.k} — ${k.s} зурлага${k.mn[0] ? ` · ${k.mn[0]}` : ""}`,
     };
   }
 
-  const others = distractors(pool, (x) => x.k === k.k, 3, (x) => mode === "kanji-read" ? (x.on[0] ?? x.kun[0] ?? x.k) : (x.mn[0] ?? x.en[0] ?? x.k));
+  const kMeaning = (x: Kanji) => (language === "en" ? (x.en[0] ?? x.mn[0] ?? x.k) : (x.mn[0] ?? x.en[0] ?? x.k));
+  const others = distractors(pool, (x) => x.k === k.k, 3, (x) => mode === "kanji-read" ? (x.on[0] ?? x.kun[0] ?? x.k) : kMeaning(x));
   if (others.length < 3) return null;
   const opts = shuffle([k, ...others], rnd);
   const isRead = mode === "kanji-read";
 
   return {
-    id: `k-${isRead ? "rd" : "mn"}-${k.k}`, kind: "kanji", level: k.lvl, section: "Ханз",
-    prompt: k.k, promptSub: isRead ? "Уншлагыг сонго" : "Утгыг сонго", refKanji: k.k,
-    options: opts.map((o) => isRead ? (o.on[0] ?? o.kun[0] ?? o.k) : (o.mn[0] ?? o.en[0] ?? o.k)),
+    id: `k-${isRead ? "rd" : "mn"}-${k.k}`, kind: "kanji", level: k.lvl, section: SECTION_LABEL[language]["Ханз"] ?? "Ханз",
+    prompt: k.k, promptSub: isRead ? (PROMPT_SUB[language]["Уншлагыг сонго"] ?? "Уншлагыг сонго") : (PROMPT_SUB[language]["Утгыг сонго"] ?? "Утгыг сонго"), refKanji: k.k,
+    options: opts.map((o) => isRead ? (o.on[0] ?? o.kun[0] ?? o.k) : kMeaning(o)),
     answer: opts.indexOf(k),
     explain: isRead
       ? `${k.k} — 音: ${k.on.join("・") || "—"}　訓: ${k.kun.join("・") || "—"}`
-      : `${k.k} = ${k.mn.join(", ") || k.en.join(", ")}`,
+      : `${k.k} = ${language === "en" ? (k.en.join(", ") || k.mn.join(", ")) : (k.mn.join(", ") || k.en.join(", "))}`,
   };
 }
 
 /* ─────────────── Дүрэм → асуулт ─────────────── */
-function grammarQuestion(g: Grammar, pool: Grammar[]): Question | null {
+function grammarQuestion(g: Grammar, pool: Grammar[], language: Language = "mn"): Question | null {
   const clean = (s: string) => s.replace(/[〜~]/g, "");
   const others = distractors(pool, (x) => x.id === g.id, 3, (x) => x.mn ?? (Array.isArray(x.en) ? x.en[0] : String(x.en ?? "")));
   if (others.length < 3) return null;
@@ -187,8 +220,8 @@ function grammarQuestion(g: Grammar, pool: Grammar[]): Question | null {
 
   const opts = shuffle([g, ...others], rnd);
   return {
-    id: `g-${g.id}`, kind: "grammar", level: g.lvl, section: "Дүрэм",
-    prompt: g.p, promptSub: "Энэ дүрмийн утга аль вэ?",
+    id: `g-${g.id}`, kind: "grammar", level: g.lvl, section: SECTION_LABEL[language]["Дүрэм"] ?? "Дүрэм",
+    prompt: g.p, promptSub: PROMPT_SUB[language]["Энэ дүрмийн утга аль вэ?"] ?? "Энэ дүрмийн утга аль вэ?",
     options: opts.map(mnOf), answer: opts.indexOf(g),
     explain: `${clean(g.p)} — ${mnOf(g)}${g.note ? `\n${g.note}` : ""}`,
     example: g.ex[0]?.ja ? { ja: g.ex[0].fg ?? g.ex[0].ja, en: g.ex[0].en, mn: g.ex[0].mn ?? undefined } : undefined,
@@ -204,6 +237,8 @@ export interface QuizRequest {
   restrictIds?: string[];
   /** Сул төрлүүд — жин нэмэгдэнэ. */
   weights?: Partial<Record<string, number>>;
+  /** Асуултын текстийн хэл (UI хэлтэй таарна). */
+  lang?: Language;
 }
 
 export interface QuizSet {
@@ -217,6 +252,7 @@ export function buildQuiz(
   data: { vocab: Vocab[]; kanji: Kanji[]; grammar: Grammar[]; weakKinds?: string[]; mistakeIds?: string[] },
 ): QuizSet {
   const { mode, level, count } = req;
+  const language: Language = req.lang ?? "mn";
   const vPool = poolFor(data.vocab, level);
   const kPool = poolFor(data.kanji, level);
   const gPool = poolFor(data.grammar, level);
@@ -246,7 +282,7 @@ export function buildQuiz(
       case "vocab-listen":
         for (const v of pickVocab(per * 2)) {
           if (out.filter((q) => q.kind === "vocab").length >= per + out.length - out.filter((q) => q.kind === "vocab").length) break;
-          push(vocabQuestion(v, vPool, m));
+          push(vocabQuestion(v, vPool, m, language));
           if (out.length >= per) break;
         }
         break;
@@ -254,7 +290,7 @@ export function buildQuiz(
         const withEx = vPool.filter((v) => v.ex.length && v.w.length > 1);
         for (const v of pick(withEx, per * 3)) {
           if (out.length >= per) break;
-          const q = fillBlank(v);
+          const q = fillBlank(v, language);
           if (q) q.options = shuffle([v.w, ...distractors(vPool, (x) => x.id === v.id, 3, (x) => x.w).map((x) => x.w)], rnd);
           if (q) { q.answer = q.options.indexOf(v.w); push(q); }
         }
@@ -265,14 +301,14 @@ export function buildQuiz(
       case "kanji-stroke":
         for (const k of pick(kPool, per * 2)) {
           if (out.length >= per) break;
-          push(kanjiQuestion(k, kPool, m));
+          push(kanjiQuestion(k, kPool, m, language));
         }
         break;
       case "grammar-mn":
       case "grammar-use":
         for (const g of pick(gPool, per * 2)) {
           if (out.length >= per) break;
-          push(grammarQuestion(g, gPool));
+          push(grammarQuestion(g, gPool, language));
         }
         break;
       default:
@@ -288,11 +324,11 @@ export function buildQuiz(
     out = [];
     for (const id of data.mistakeIds.slice(0, count)) {
       const v = byId.get(id);
-      if (v) { push(vocabQuestion(v, vPool, "vocab-jp-mn")); continue; }
+      if (v) { push(vocabQuestion(v, vPool, "vocab-jp-mn", language)); continue; }
       const k = byKanji.get(id);
-      if (k) { push(kanjiQuestion(k, kPool, "kanji-mn")); continue; }
+      if (k) { push(kanjiQuestion(k, kPool, "kanji-mn", language)); continue; }
       const g = byG.get(id);
-      if (g) push(grammarQuestion(g, gPool));
+      if (g) push(grammarQuestion(g, gPool, language));
     }
   }
 
@@ -308,6 +344,7 @@ export function buildQuiz(
 export interface ExamSection {
   id: string;
   name: string;
+  nameEn: string;
   jp: string;
   count: number;
   minutes: number;
@@ -318,10 +355,12 @@ export interface ExamSection {
 export interface ExamBlueprint {
   level: Level;
   title: string;
+  titleEn: string;
   minutes: number;
   sections: ExamSection[];
   passTotal: number;
   note: string;
+  noteEn: string;
 }
 
 /**
@@ -331,47 +370,52 @@ export interface ExamBlueprint {
  */
 export const EXAM_BLUEPRINTS: Record<Level, ExamBlueprint> = {
   N5: {
-    level: "N5", title: "N5 жишиг шалгалт", minutes: 35, passTotal: 80,
+    level: "N5", title: "N5 жишиг шалгалт", titleEn: "N5 mock exam", minutes: 35, passTotal: 80,
     sections: [
-      { id: "lang", name: "Хэлний мэдлэг · Уншлага", jp: "言語知識・読解", count: 20, minutes: 20, modes: ["vocab-jp-mn", "vocab-read", "kanji-mn", "grammar-mn"], max: 120 },
-      { id: "listen", name: "Сонсгол", jp: "聴解", count: 10, minutes: 15, modes: ["vocab-listen"], max: 60 },
+      { id: "lang", name: "Хэлний мэдлэг · Уншлага", nameEn: "Language Knowledge · Reading", jp: "言語知識・読解", count: 20, minutes: 20, modes: ["vocab-jp-mn", "vocab-read", "kanji-mn", "grammar-mn"], max: 120 },
+      { id: "listen", name: "Сонсгол", nameEn: "Listening", jp: "聴解", count: 10, minutes: 15, modes: ["vocab-listen"], max: 60 },
     ],
     note: "N5-д 800 орчим үг, 100 ханз шаардлагатай.",
+    noteEn: "N5 requires about 800 words and 100 kanji.",
   },
   N4: {
-    level: "N4", title: "N4 жишиг шалгалт", minutes: 50, passTotal: 90,
+    level: "N4", title: "N4 жишиг шалгалт", titleEn: "N4 mock exam", minutes: 50, passTotal: 90,
     sections: [
-      { id: "lang", name: "Хэлний мэдлэг · Уншлага", jp: "言語知識・読解", count: 24, minutes: 30, modes: ["vocab-jp-mn", "vocab-read", "vocab-fill", "grammar-mn"], max: 120 },
-      { id: "listen", name: "Сонсгол", jp: "聴解", count: 12, minutes: 20, modes: ["vocab-listen"], max: 60 },
+      { id: "lang", name: "Хэлний мэдлэг · Уншлага", nameEn: "Language Knowledge · Reading", jp: "言語知識・読解", count: 24, minutes: 30, modes: ["vocab-jp-mn", "vocab-read", "vocab-fill", "grammar-mn"], max: 120 },
+      { id: "listen", name: "Сонсгол", nameEn: "Listening", jp: "聴解", count: 12, minutes: 20, modes: ["vocab-listen"], max: 60 },
     ],
     note: "N4-д 1,500 орчим үг, 300 ханз шаардлагатай.",
+    noteEn: "N4 requires about 1,500 words and 300 kanji.",
   },
   N3: {
-    level: "N3", title: "N3 жишиг шалгалт", minutes: 70, passTotal: 95,
+    level: "N3", title: "N3 жишиг шалгалт", titleEn: "N3 mock exam", minutes: 70, passTotal: 95,
     sections: [
-      { id: "lang", name: "Хэлний мэдлэг", jp: "言語知識", count: 18, minutes: 25, modes: ["vocab-jp-mn", "vocab-read", "kanji-read", "grammar-mn"], max: 60 },
-      { id: "read", name: "Уншлага", jp: "読解", count: 10, minutes: 25, modes: ["vocab-fill", "grammar-mn"], max: 60 },
-      { id: "listen", name: "Сонсгол", jp: "聴解", count: 12, minutes: 20, modes: ["vocab-listen"], max: 60 },
+      { id: "lang", name: "Хэлний мэдлэг", nameEn: "Language Knowledge", jp: "言語知識", count: 18, minutes: 25, modes: ["vocab-jp-mn", "vocab-read", "kanji-read", "grammar-mn"], max: 60 },
+      { id: "read", name: "Уншлага", nameEn: "Reading", jp: "読解", count: 10, minutes: 25, modes: ["vocab-fill", "grammar-mn"], max: 60 },
+      { id: "listen", name: "Сонсгол", nameEn: "Listening", jp: "聴解", count: 12, minutes: 20, modes: ["vocab-listen"], max: 60 },
     ],
     note: "N3-д 3,750 орчим үг, 650 ханз шаардлагатай. Оноо бүр 60-аас дээш байх ёстой.",
+    noteEn: "N3 requires about 3,750 words and 650 kanji. Every section needs 60+ points.",
   },
   N2: {
-    level: "N2", title: "N2 жишиг шалгалт", minutes: 85, passTotal: 90,
+    level: "N2", title: "N2 жишиг шалгалт", titleEn: "N2 mock exam", minutes: 85, passTotal: 90,
     sections: [
-      { id: "lang", name: "Хэлний мэдлэг", jp: "言語知識", count: 20, minutes: 30, modes: ["vocab-jp-mn", "vocab-read", "kanji-read", "grammar-mn"], max: 60 },
-      { id: "read", name: "Уншлага", jp: "読解", count: 12, minutes: 30, modes: ["vocab-fill", "grammar-mn"], max: 60 },
-      { id: "listen", name: "Сонсгол", jp: "聴解", count: 12, minutes: 25, modes: ["vocab-listen"], max: 60 },
+      { id: "lang", name: "Хэлний мэдлэг", nameEn: "Language Knowledge", jp: "言語知識", count: 20, minutes: 30, modes: ["vocab-jp-mn", "vocab-read", "kanji-read", "grammar-mn"], max: 60 },
+      { id: "read", name: "Уншлага", nameEn: "Reading", jp: "読解", count: 12, minutes: 30, modes: ["vocab-fill", "grammar-mn"], max: 60 },
+      { id: "listen", name: "Сонсгол", nameEn: "Listening", jp: "聴解", count: 12, minutes: 25, modes: ["vocab-listen"], max: 60 },
     ],
     note: "N2 бол Японы ихэнх компанид шаарддаг түвшин.",
+    noteEn: "N2 is the level most companies in Japan require.",
   },
   N1: {
-    level: "N1", title: "N1 жишиг шалгалт", minutes: 95, passTotal: 100,
+    level: "N1", title: "N1 жишиг шалгалт", titleEn: "N1 mock exam", minutes: 95, passTotal: 100,
     sections: [
-      { id: "lang", name: "Хэлний мэдлэг", jp: "言語知識", count: 22, minutes: 35, modes: ["vocab-jp-mn", "vocab-read", "kanji-read", "grammar-mn"], max: 60 },
-      { id: "read", name: "Уншлага", jp: "読解", count: 14, minutes: 35, modes: ["vocab-fill", "grammar-mn"], max: 60 },
-      { id: "listen", name: "Сонсгол", jp: "聴解", count: 12, minutes: 25, modes: ["vocab-listen"], max: 60 },
+      { id: "lang", name: "Хэлний мэдлэг", nameEn: "Language Knowledge", jp: "言語知識", count: 22, minutes: 35, modes: ["vocab-jp-mn", "vocab-read", "kanji-read", "grammar-mn"], max: 60 },
+      { id: "read", name: "Уншлага", nameEn: "Reading", jp: "読解", count: 14, minutes: 35, modes: ["vocab-fill", "grammar-mn"], max: 60 },
+      { id: "listen", name: "Сонсгол", nameEn: "Listening", jp: "聴解", count: 12, minutes: 25, modes: ["vocab-listen"], max: 60 },
     ],
     note: "N1 нь сонин, эссэ, хийсвэр сэдвийн текстийг бүрэн ойлгох түвшин.",
+    noteEn: "N1 means fully understanding newspapers, essays and abstract texts.",
   },
 };
 

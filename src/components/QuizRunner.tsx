@@ -6,6 +6,7 @@ import type { Question } from "../lib/study";
 import { Bar, Button, Chip, Furigana, LevelBadge, Ring } from "./ui";
 import { speak } from "./ui";
 import { relTime } from "../lib/text";
+import { ui } from "../lib/i18n";
 
 export interface QuizResult {
   correct: number;
@@ -38,6 +39,8 @@ export function QuizRunner({
   onClose?: () => void;
 }) {
   const { actions, doc } = useStore();
+  const language = doc.profile.language ?? "mn";
+  const t = ui[language];
   const [idx, setIdx] = useState(0);
   const [picked, setPicked] = useState<number | null>(null);
   const [answers, setAnswers] = useState<(number | null)[]>(() => questions.map(() => null));
@@ -150,9 +153,9 @@ export function QuizRunner({
     return (
       <div className="grid place-items-center rounded-2xl border border-dashed border-sumi-900/15 bg-white/40 px-6 py-14 text-center">
         <span className="font-mincho text-[2.4rem] font-bold text-sumi-900/12">無</span>
-        <p className="mt-2 text-[14px] font-extrabold text-sumi-700">Энэ түвшинд асуулт үүсгэх хангалттай контент алга</p>
-        <p className="mt-1 text-[12.5px] text-sumi-500">Өөр түвшин эсвэл өөр төрлийн дасгал сонгоно уу.</p>
-        {onClose && <Button className="mt-4" onClick={onClose}>← Буцах</Button>}
+        <p className="mt-2 text-[14px] font-extrabold text-sumi-700">{t.emptyQTitle}</p>
+        <p className="mt-1 text-[12.5px] text-sumi-500">{t.emptyQSub}</p>
+        {onClose && <Button className="mt-4" onClick={onClose}>{t.backBtn}</Button>}
       </div>
     );
   }
@@ -187,16 +190,16 @@ export function QuizRunner({
           <div className="flex items-center gap-2">
             <LevelBadge level={q.level} size="sm" />
             <Chip tone="sumi">{options.sectionLabel?.(q) ?? q.section}</Chip>
-            {q.kind === "grammar" && <Chip tone="murasaki">Дүрэм</Chip>}
+            {q.kind === "grammar" && <Chip tone="murasaki">{t.grammarChip}</Chip>}
           </div>
           <p className="mt-1.5 font-mono text-[12px] font-bold tabnum text-sumi-500">
-            Асуулт {idx + 1} / {total}
-            {stats.answered > 0 && <> · Зөв {stats.correct}</>}
+            {t.questionN} {idx + 1} / {total}
+            {stats.answered > 0 && <> · {t.correctShort} {stats.correct}</>}
           </p>
         </div>
         {left !== null && <Timer seconds={left} />}
         <div className="flex items-center gap-2">
-          {onClose && <Button size="sm" variant="ghost" onClick={onClose}>Гарах</Button>}
+          {onClose && <Button size="sm" variant="ghost" onClick={onClose}>{t.exitShort}</Button>}
         </div>
       </div>
       <Bar value={(idx + (picked !== null ? 1 : 0)) / total} tone="ai" height={5} />
@@ -208,7 +211,7 @@ export function QuizRunner({
             <button
               onClick={() => speak(q.audio!, doc.profile.rate)}
               className="grid h-16 w-16 shrink-0 place-items-center rounded-2xl bg-ai-50 text-[26px] text-ai-600 transition hover:bg-ai-100"
-              aria-label="Дахин сонсох"
+              aria-label={t.listenAgain}
             >
               🔊
             </button>
@@ -225,7 +228,7 @@ export function QuizRunner({
             {q.promptSub && <p className="mt-1.5 text-[13px] font-bold text-sumi-500">{q.promptSub}</p>}
           </div>
           {q.audio && (
-            <Button size="sm" variant="ghost" onClick={() => speak(q.audio!, Math.max(0.6, doc.profile.rate - 0.25))}>🐢 Удаан</Button>
+            <Button size="sm" variant="ghost" onClick={() => speak(q.audio!, Math.max(0.6, doc.profile.rate - 0.25))}>{t.slowBtn}</Button>
           )}
         </div>
 
@@ -265,17 +268,17 @@ export function QuizRunner({
         {showReveal && (
           <div className={cn("mt-5 animate-pop rounded-2xl border p-4", isCorrect ? "border-matcha-200 bg-matcha-50" : "border-shu-200 bg-shu-50")}>
             <p className={cn("text-[14px] font-extrabold", isCorrect ? "text-matcha-600" : "text-shu-700")}>
-              {isCorrect ? "✓ Зөв!" : "✕ Буруу"}
+              {isCorrect ? `✓ ${t.correct2}` : `✕ ${t.wrong2}`}
             </p>
             {q.explain && (
               <p className="mt-2 whitespace-pre-line text-[13.5px] leading-relaxed text-sumi-700">{q.explain}</p>
             )}
             {q.example?.ja && (
               <div className="mt-3 border-t border-sumi-900/8 pt-3">
-                <p className="text-[11px] font-bold uppercase tracking-wide text-sumi-400">Жишээ</p>
+                <p className="text-[11px] font-bold uppercase tracking-wide text-sumi-400">{t.exampleLabel}</p>
                 <p className="mt-1"><Furigana text={q.example.ja} className="text-[15px] font-semibold text-sumi-900" /></p>
                 {(q.example.mn || q.example.en) && (
-                  <p className="mt-1 text-[13px] text-sumi-600">{q.example.mn ?? q.example.en}</p>
+                  <p className="mt-1 text-[13px] text-sumi-600">{language === "en" ? q.example.en ?? q.example.mn : q.example.mn ?? q.example.en}</p>
                 )}
               </div>
             )}
@@ -284,7 +287,7 @@ export function QuizRunner({
                 href={href(q.refKanji ? "kanji" : "vocab", q.refKanji ?? q.refId!)}
                 className="mt-3 inline-block text-[12.5px] font-bold text-ai-600 underline underline-offset-4"
               >
-                {q.refKanji ? "Ханзны дэлгэрэнгүй →" : "Үгийн дэлгэрэнгүй →"}
+                {q.refKanji ? t.kanjiDetailLink : t.wordDetailLink}
               </a>
             )}
           </div>
@@ -293,16 +296,16 @@ export function QuizRunner({
         <div className="mt-5 flex items-center gap-3">
           {picked !== null ? (
             <Button size="lg" onClick={() => advance()} className="flex-1 sm:flex-none">
-              {idx + 1 >= total ? "Дуусгах →" : "Дараагийн →"}
+              {idx + 1 >= total ? t.finishBtn2 : t.nextBtn}
             </Button>
           ) : (
-            <p className="text-[12.5px] text-sumi-400">Хариултаа сонгоно уу · гарын 1–4 товч ч болно</p>
+            <p className="text-[12.5px] text-sumi-400">{t.chooseAnswer}</p>
           )}
           {picked === null && idx + 1 < total && (
-            <Button variant="ghost" size="sm" className="ml-auto" onClick={() => advance(-1)}>Алгасах</Button>
+            <Button variant="ghost" size="sm" className="ml-auto" onClick={() => advance(-1)}>{t.skipBtn}</Button>
           )}
           {picked !== null && idx + 1 < total && (
-            <Button variant="ghost" size="sm" className="ml-auto" onClick={() => finish(answers.slice())}>Дуусгах</Button>
+            <Button variant="ghost" size="sm" className="ml-auto" onClick={() => finish(answers.slice())}>{t.finishShort}</Button>
           )}
         </div>
       </div>
@@ -337,6 +340,9 @@ export function ResultView({
   nextLabel?: string;
   title?: string;
 }) {
+  const { doc } = useStore();
+  const language = doc.profile.language ?? "mn";
+  const t = ui[language];
   const correct = questions.reduce((a, q, i) => a + (answers[i] === q.answer ? 1 : 0), 0);
   const total = questions.length;
   const pct = total ? correct / total : 0;
@@ -362,18 +368,16 @@ export function ResultView({
           <Ring value={pct} size={110} stroke={9} tone={pct >= 0.6 ? "matcha" : pct >= 0.4 ? "kin" : "shu"}>
             <div className="text-center">
               <p className="font-mono text-[1.7rem] font-extrabold leading-none tabnum text-sumi-900">{Math.round(pct * 100)}%</p>
-              <p className="mt-0.5 text-[10.5px] font-bold text-sumi-400">оноо</p>
+              <p className="mt-0.5 text-[10.5px] font-bold text-sumi-400">{t.pointsUnit}</p>
             </div>
           </Ring>
           <div className="min-w-0 flex-1">
             <p className="font-jp text-[11px] tracking-[0.3em] text-sumi-400">結果</p>
-            <h2 className="mt-1 text-[1.5rem] font-extrabold">{title ?? "Дасгалын үр дүн"}</h2>
+            <h2 className="mt-1 text-[1.5rem] font-extrabold">{title ?? t.resultTitle}</h2>
             <p className="mt-2 text-[13.5px] text-sumi-600">
-              <span className="font-mono font-bold tabnum">{correct}</span> / {total} зөв · {minutes} минут
+              {t.resultOf(correct, total, minutes)}
             </p>
-            <p className="mt-1 text-[12px] text-sumi-400">
-              Энэ нь дасгалын үнэлгээ — JLPT-ийн албан ёсны оноо биш.
-            </p>
+            <p className="mt-1 text-[12px] text-sumi-400">{t.practiceScoreNote}</p>
           </div>
         </div>
 
@@ -391,29 +395,27 @@ export function ResultView({
 
         {weakest && weakest.pct < 0.7 && (
           <div className="mt-6 rounded-2xl border border-kin-200 bg-kin-50 p-4">
-            <p className="text-[13.5px] font-extrabold text-kin-600">Сул хэсэг: {weakest.name}</p>
-            <p className="mt-1 text-[12.5px] leading-relaxed text-sumi-600">
-              Энэ хэсэгт {Math.round(weakest.pct * 100)}% авсан. Дараах дасгалыг санал болгож байна:
-            </p>
+            <p className="text-[13.5px] font-extrabold text-kin-600">{t.weakest(weakest.name)}</p>
+            <p className="mt-1 text-[12.5px] leading-relaxed text-sumi-600">{t.weakestSub(Math.round(weakest.pct * 100))}</p>
             <div className="mt-3 flex flex-wrap gap-2">
-              <Button size="sm" variant="outline" onClick={() => navigate(`quiz?mode=mixed&level=${questions[0]?.level ?? "N5"}`)}>Холимог дасгал</Button>
-              <Button size="sm" variant="outline" onClick={() => navigate("review")}>SRS давталт</Button>
-              <Button size="sm" variant="outline" onClick={() => navigate("mistakes")}>Алдааны дэвтэр</Button>
+              <Button size="sm" variant="outline" onClick={() => navigate(`quiz?mode=mixed&level=${questions[0]?.level ?? "N5"}`)}>{t.mixedDrill}</Button>
+              <Button size="sm" variant="outline" onClick={() => navigate("review")}>{t.srsReviewBtn}</Button>
+              <Button size="sm" variant="outline" onClick={() => navigate("mistakes")}>{t.mistakesBtn}</Button>
             </div>
           </div>
         )}
 
         <div className="mt-6 flex flex-wrap gap-2">
-          <Button onClick={onRetry}>↺ Дахин хийх</Button>
-          {onNext && <Button variant="outline" onClick={onNext}>{nextLabel ?? "Дараагийн хэсэг →"}</Button>}
-          {onClose && <Button variant="ghost" onClick={onClose}>Гарах</Button>}
-          <Button variant="ghost" className="ml-auto" onClick={() => navigate("progress")}>Ахиц харах →</Button>
+          <Button onClick={onRetry}>{t.retryBtn}</Button>
+          {onNext && <Button variant="outline" onClick={onNext}>{nextLabel ?? t.nextSectionBtn}</Button>}
+          {onClose && <Button variant="ghost" onClick={onClose}>{t.exitShort}</Button>}
+          <Button variant="ghost" className="ml-auto" onClick={() => navigate("progress")}>{t.viewProgressBtn}</Button>
         </div>
       </div>
 
       {wrong.length > 0 && (
         <div className="card p-5">
-          <p className="text-[13.5px] font-extrabold text-sumi-900">Алдсан асуултууд ({wrong.length})</p>
+          <p className="text-[13.5px] font-extrabold text-sumi-900">{t.wrongTitle(wrong.length)}</p>
           <ul className="mt-3 divide-y divide-sumi-900/8">
             {wrong.map((q) => {
               const i = questions.indexOf(q);
@@ -425,19 +427,19 @@ export function ResultView({
                       <p className="font-jp text-[15px] font-bold text-sumi-900">{q.prompt}</p>
                       {q.promptSub && <p className="text-[12px] text-sumi-500">{q.promptSub}</p>}
                       <p className="mt-1 text-[12.5px] text-sumi-600">
-                        Зөв: <span className="font-bold text-matcha-600">{q.options[q.answer] ?? "—"}</span>
-                        {answers[i] !== null && <> · Таны хариулт: <span className="font-bold text-shu-600">{q.options[answers[i] as number] ?? "—"}</span></>}
-                        {answers[i] === null && <> · Хариулаагүй</>}
+                        {t.correctLabel} <span className="font-bold text-matcha-600">{q.options[q.answer] ?? "—"}</span>
+                        {answers[i] !== null && <> · {t.yourAnswerLabel} <span className="font-bold text-shu-600">{q.options[answers[i] as number] ?? "—"}</span></>}
+                        {answers[i] === null && <> · {t.unanswered}</>}
                       </p>
                     </div>
-                    <span className="shrink-0 text-[11px] text-sumi-400">{relTime(Date.now())}</span>
+                    <span className="shrink-0 text-[11px] text-sumi-400">{relTime(Date.now(), language)}</span>
                   </div>
                 </li>
               );
             })}
           </ul>
           <p className="mt-3 text-[12px] text-sumi-500">
-            Эдгээр нь <a href={href("mistakes")} className="font-bold text-ai-600 underline underline-offset-4">алдааны дэвтэр</a>т автоматаар бүртгэгдлээ.
+            {t.loggedPre}<a href={href("mistakes")} className="font-bold text-ai-600 underline underline-offset-4">{t.loggedLink}</a>{t.loggedPost}
           </p>
         </div>
       )}

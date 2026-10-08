@@ -11,11 +11,14 @@ import { LEVEL_LABEL } from "../lib/text";
 import { LEVEL_META } from "../data/levels";
 import { Button, Card, Chip, LevelBadge, Ring, SectionTitle, Spinner } from "../components/ui";
 import { QuizRunner } from "../components/QuizRunner";
+import { ui } from "../lib/i18n";
 
 type Stage = "pick" | "running" | "sectionResult" | "final";
 
 export default function MockExam() {
   const { doc } = useStore();
+  const language = doc.profile.language ?? "mn";
+  const t = ui[language];
   const { query } = useQuery();
   const [level, setLevel] = useState<Level>((query.level as Level) || (doc.profile.current === "zero" ? doc.profile.target : doc.profile.current));
   const [stage, setStage] = useState<Stage>("pick");
@@ -56,14 +59,14 @@ export default function MockExam() {
     const scored = scoreExam(bp, results, Math.round((Date.now() - startAt) / 60000));
     const weakest = [...scored.sections].sort((a, b) => a.score / a.max - b.score / b.max)[0];
     const verdict = scored.total >= bp.passTotal
-      ? "Тэнцэх магадлалтай"
-      : scored.total >= bp.passTotal * 0.85 ? "Хилийн дээр — сайжруулах шаардлагатай" : "Одоогоор тэнцэхгүй";
+      ? t.verdictPass
+      : scored.total >= bp.passTotal * 0.85 ? t.verdictBorder : t.verdictFail;
 
     return (
       <div className="mx-auto max-w-3xl space-y-5">
         <div className="text-center">
           <p className="font-jp text-[11.5px] tracking-[0.3em] text-shu-500">結果発表</p>
-          <h1 className="mt-1 text-[1.8rem] font-extrabold">{bp.title} — үр дүн</h1>
+          <h1 className="mt-1 text-[1.8rem] font-extrabold">{t.resultOf2(language === "en" ? bp.titleEn : bp.title)}</h1>
         </div>
 
         <Card>
@@ -77,11 +80,10 @@ export default function MockExam() {
             <div className="min-w-0 flex-1">
               <Chip tone={scored.passed ? "matcha" : "shu"}>{verdict}</Chip>
               <p className="mt-3 text-[13.5px] leading-relaxed text-sumi-600">
-                Энэ бол <strong>дасгалын үнэлгээ</strong> — JLPT-ийн албан ёсны оноо биш.
-                Жинхэнэ шалгалтад хэсэг бүр 60%-иас доошгүй байх шаардлагатай.
+                {t.examNote}
               </p>
               <p className="mt-2 text-[12.5px] text-sumi-500">
-                Зарцуулсан хугацаа: {Math.round((Date.now() - startAt) / 60000)} мин · тэнцэх босго (жишиг): {bp.passTotal}/{scored.max}
+                {t.spentPre(Math.round((Date.now() - startAt) / 60000), bp.passTotal, scored.max)}
               </p>
             </div>
           </div>
@@ -104,36 +106,35 @@ export default function MockExam() {
           </div>
 
           <div className="mt-6 rounded-2xl border border-kin-200 bg-kin-50 p-4">
-            <p className="text-[13.5px] font-extrabold text-kin-700">Хамгийн сул: {weakest.name}</p>
-            <p className="mt-1 text-[12.5px] text-sumi-600">Санал болгож буй дараагийн алхам:</p>
+            <p className="text-[13.5px] font-extrabold text-kin-700">{t.weakestPre}{weakest.name}</p>
+            <p className="mt-1 text-[12.5px] text-sumi-600">{t.nextStep}</p>
             <div className="mt-3 flex flex-wrap gap-2">
-              <Button size="sm" variant="outline" onClick={() => navigate(`quiz?mode=mixed&level=${level}`)}>Холимог дасгал</Button>
-              <Button size="sm" variant="outline" onClick={() => navigate("review")}>SRS давталт</Button>
-              <Button size="sm" variant="outline" onClick={() => navigate(`reading?level=${level}`)}>Уншлага</Button>
-              <Button size="sm" variant="outline" onClick={() => navigate(`listening?level=${level}`)}>Сонсгол</Button>
+              <Button size="sm" variant="outline" onClick={() => navigate(`quiz?mode=mixed&level=${level}`)}>{t.mixedDrill}</Button>
+              <Button size="sm" variant="outline" onClick={() => navigate("review")}>{t.srsReviewBtn}</Button>
+              <Button size="sm" variant="outline" onClick={() => navigate(`reading?level=${level}`)}>{t.readingBtn}</Button>
+              <Button size="sm" variant="outline" onClick={() => navigate(`listening?level=${level}`)}>{t.listeningBtn}</Button>
             </div>
           </div>
 
           <div className="mt-5 flex flex-wrap gap-2">
-            <Button onClick={() => { setStage("pick"); setResults([]); setSecIdx(0); }}>↺ Дахин өгөх</Button>
-            <Button variant="ghost" onClick={() => navigate("progress")}>Ахицын шинжилгээ →</Button>
+            <Button onClick={() => { setStage("pick"); setResults([]); setSecIdx(0); }}>{t.retakeBtn}</Button>
+            <Button variant="ghost" onClick={() => navigate("progress")}>{t.analysisLink}</Button>
           </div>
         </Card>
 
         <Card>
-          <SectionTitle jp="統計" title="Хугацааны хуваарилалт (жишиг)" />
+          <SectionTitle jp="統計" title={t.timingTitle} />
           <div className="space-y-2.5 text-[13px]">
             {meta.minutes.map((m, i) => (
               <div key={i} className="flex items-center gap-3">
-                <span className="w-32 shrink-0 font-bold text-sumi-600">{meta.minuteLabels[i]}</span>
-                <span className="font-mono font-bold tabnum">{m} мин</span>
-                <span className="text-[11.5px] text-sumi-400">— албан журамд</span>
+                <span className="w-32 shrink-0 font-bold text-sumi-600">{language === "en" ? (meta.minuteLabelsEn?.[i] ?? meta.minuteLabels[i]) : meta.minuteLabels[i]}</span>
+                <span className="font-mono font-bold tabnum">{m} {t.minutes}</span>
+                <span className="text-[11.5px] text-sumi-400">{t.officialNote}</span>
               </div>
             ))}
           </div>
           <p className="mt-4 text-[11.5px] leading-relaxed text-sumi-400">
-            Хугацаа, бүтэц нь jlpt.jp дээрх албан мэдээлэлд тулгуурласан. Асуултын тоо
-            нь дасгалын зориулалтаар багасгасан.
+            {t.timingFoot}
           </p>
         </Card>
       </div>
@@ -147,19 +148,18 @@ export default function MockExam() {
       <div className="mx-auto max-w-xl">
         <Card className="text-center">
           <span className="font-mincho text-[2.6rem] font-bold text-ai-500">区</span>
-          <h2 className="mt-2 text-[1.4rem] font-extrabold">«{last.section.name}» хэсэг дууслаа</h2>
+          <h2 className="mt-2 text-[1.4rem] font-extrabold">{t.sectionDone(language === "en" ? last.section.nameEn ?? last.section.name : last.section.name)}</h2>
           <p className="mt-2 text-[13.5px] text-sumi-600">
             {last.correct} / {last.total} зөв · {Math.round((last.correct / last.total) * 100)}%
           </p>
           <p className="mt-4 rounded-xl bg-sumi-900/[0.045] px-4 py-3 text-[12.5px] leading-relaxed text-sumi-500">
-            Тайлбар, зөв хариултыг шалгалтын дараа бүрэн харна. Одоо дараагийн хэсэг
-            рүү шилжинэ үү.
+            {t.afterExamNote}
           </p>
           <div className="mt-5 flex flex-wrap justify-center gap-2">
             <Button onClick={() => { setSecIdx(secIdx + 1); setStage("running"); }}>
-              Дараагийн хэсэг: {sections[secIdx + 1]?.section.name} →
+              {t.nextSection(sections[secIdx + 1] ? (language === "en" ? sections[secIdx + 1].section.nameEn ?? sections[secIdx + 1].section.name : sections[secIdx + 1].section.name) : "")}
             </Button>
-            <Button variant="ghost" onClick={() => setStage("final")}>Бүгдийг дуусгах</Button>
+            <Button variant="ghost" onClick={() => setStage("final")}>{t.finishAll}</Button>
           </div>
         </Card>
       </div>
@@ -173,10 +173,10 @@ export default function MockExam() {
           <LevelBadge level={level} size="sm" />
           <Chip tone="shu">{bp.title}</Chip>
           <span className="text-[12.5px] text-sumi-500">
-            Хэсэг {secIdx + 1}/{sections.length}: {current.section.name} ({current.section.jp})
+            {t.sectionN(secIdx + 1, sections.length, language === "en" ? current.section.nameEn ?? current.section.name : current.section.name, current.section.jp)}
           </span>
           <span className="ml-auto text-[12px] text-sumi-400">
-            Зарцуулсан: {Math.round((Date.now() - startAt) / 60000)} мин
+            {t.spentN(Math.round((Date.now() - startAt) / 60000))}
           </span>
         </div>
         <QuizRunner
@@ -185,8 +185,8 @@ export default function MockExam() {
           options={{
             timed: current.section.minutes,
             reveal: false,
-            title: `${bp.title} · ${current.section.name}`,
-            sectionLabel: () => current.section.name,
+            title: `${language === "en" ? bp.titleEn : bp.title} · ${language === "en" ? current.section.nameEn ?? current.section.name : current.section.name}`,
+            sectionLabel: () => (language === "en" ? current.section.nameEn ?? current.section.name : current.section.name),
             onFinish: (r) => onFinishSection(r),
           }}
           onClose={() => setStage("pick")}
@@ -200,16 +200,12 @@ export default function MockExam() {
     <div className="space-y-6">
       <div>
         <p className="font-jp text-[11.5px] tracking-[0.3em] text-shu-500">模擬試験</p>
-        <h1 className="mt-1 text-[1.7rem] font-extrabold leading-tight tracking-tight sm:text-[2rem]">Жишиг JLPT шалгалт</h1>
+        <h1 className="mt-1 text-[1.7rem] font-extrabold leading-tight tracking-tight sm:text-[2rem]">{t.mockHero}</h1>
         <p className="mt-1.5 max-w-3xl text-[13.5px] leading-relaxed text-sumi-500">
-          Жинхэнэ шалгалтын бүтэц, хэсгийн дараалал, таймертай. Асуулт бүр бодит
-          өгөгдлийн сангаас үүснэ. Дуусахад хэсэг тус бүрийн оноо, сул тал,
-          тэнцэх магадлалыг тооцоолно.
+          {t.mockHeroSub}
         </p>
         <p className="mt-3 rounded-xl bg-kin-50 px-4 py-3 text-[12.5px] leading-relaxed text-kin-700">
-          ⚠️ Энэ нь <strong>дасгалын симуляц</strong> — JLPT-ийн албан ёсны оноо биш. Бодит
-          шалгалтын асуулт, оноог бид гаргах эрхгүй. Жишиг шалгалт нь таны бэлэн
-          байдлыг үнэлэх хэрэгсэл юм.
+          {t.mockWarn}
         </p>
       </div>
 
@@ -223,48 +219,48 @@ export default function MockExam() {
                 on ? "border-shu-400 bg-shu-50/60 ring-2 ring-shu-500/15" : "")}>
               <div className="flex items-center justify-between">
                 <span className="font-mono text-[1.5rem] font-extrabold">{l}</span>
-                {on && <Chip tone="shu">сонгосон</Chip>}
+                {on && <Chip tone="shu">{t.selected}</Chip>}
               </div>
-              <p className="mt-1 text-[12px] font-bold text-sumi-600">{LEVEL_LABEL[l]}</p>
-              <p className="mt-2 text-[11px] text-sumi-400">{m.kanji} ханз · {m.vocab} үг</p>
+              <p className="mt-1 text-[12px] font-bold text-sumi-600">{LEVEL_LABEL[language][l]}</p>
+              <p className="mt-2 text-[11px] text-sumi-400">{t.kanjiNWords(m.kanji, m.vocab)}</p>
             </button>
           );
         })}
       </div>
 
       <Card>
-        <SectionTitle jp="試験構成" title={`${bp.title} — бүтэц`} sub={`Нийт ${bp.sections.reduce((a, s) => a + s.count, 0)} асуулт · ${bp.minutes} минут`} />
+        <SectionTitle jp="試験構成" title={t.structureOf(language === "en" ? bp.titleEn : bp.title)} sub={t.totalQ(bp.sections.reduce((a, s2) => a + s2.count, 0), bp.minutes)} />
         <div className="space-y-3">
           {bp.sections.map((s, i) => (
             <div key={s.id} className="flex flex-wrap items-center gap-3 rounded-xl border border-sumi-900/8 bg-white/60 p-4">
               <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-sumi-900 font-mono text-[13px] font-bold text-washi-50">{i + 1}</span>
               <div className="min-w-0 flex-1">
-                <p className="text-[13.5px] font-extrabold">{s.name} <span className="font-jp text-sumi-400">{s.jp}</span></p>
+                <p className="text-[13.5px] font-extrabold">{language === "en" ? s.nameEn ?? s.name : s.name} <span className="font-jp text-sumi-400">{s.jp}</span></p>
                 <p className="mt-0.5 text-[12px] text-sumi-500">
-                  {s.count} асуулт · {s.minutes} минут · дээд оноо {s.max}
+                  {s.count} {t.qUnit} · {s.minutes} {t.minutes} · {t.maxScore} {s.max}
                 </p>
               </div>
             </div>
           ))}
         </div>
-        <p className="mt-4 text-[12.5px] text-sumi-500">{bp.note}</p>
+        <p className="mt-4 text-[12.5px] text-sumi-500">{language === "en" ? bp.noteEn : bp.note}</p>
         <div className="mt-5 flex flex-wrap gap-2">
-          <Button size="lg" onClick={start} disabled={loading}>{loading ? "Бэлтгэж байна…" : "▶ Шалгалт эхлэх"}</Button>
-          <Button variant="outline" size="lg" onClick={() => navigate(`quiz?level=${level}`)}>Эхлээд дасгал хийх</Button>
+          <Button size="lg" onClick={start} disabled={loading}>{loading ? t.preparing : t.startExam}</Button>
+          <Button variant="outline" size="lg" onClick={() => navigate(`quiz?level=${level}`)}>{t.practiceFirst}</Button>
         </div>
       </Card>
 
       {doc.exams.length > 0 && (
         <Card>
-          <SectionTitle jp="受験履歴" title="Өмнөх шалгалтууд" />
+          <SectionTitle jp="受験履歴" title={t.pastExams} />
           <ul className="divide-y divide-sumi-900/8">
             {doc.exams.slice(0, 8).map((e) => (
               <li key={e.id} className="flex flex-wrap items-center gap-3 py-3">
                 <LevelBadge level={e.level} size="sm" />
                 <span className="text-[13px] font-bold">{e.total}/{e.max}</span>
-                <Chip tone={e.passed ? "matcha" : "shu"}>{e.passed ? "тэнцсэн" : "тэнцээгүй"}</Chip>
+                <Chip tone={e.passed ? "matcha" : "shu"}>{e.passed ? t.passedC : t.failedC}</Chip>
                 <span className="text-[11.5px] text-sumi-400">
-                  {new Date(e.at).toLocaleDateString("mn-MN")} · {e.minutes} мин
+                  {new Date(e.at).toLocaleDateString(language === "en" ? "en-US" : "mn-MN")} · {e.minutes} {t.minutes}
                 </span>
                 <span className="ml-auto text-[11.5px] text-sumi-400">
                   {e.sections.map((s) => `${s.name.slice(0, 6)} ${Math.round((s.score / s.max) * 100)}%`).join(" · ")}
@@ -275,7 +271,7 @@ export default function MockExam() {
         </Card>
       )}
 
-      {loading && <Spinner label="Асуултууд үүсгэж байна…" />}
+      {loading && <Spinner label={t.genQ} lang={language} />}
     </div>
   );
 }
