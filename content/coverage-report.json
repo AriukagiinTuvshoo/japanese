@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "byLevel": {
+    "N5": {
+      "vocab": {
+        "entries": 1074,
+        "missingMeanings": 259,
+        "missingExamples": 1320,
+        "missingForms": 0,
+        "unclassified": 328,
+        "invalidCategories": 0,
+        "missingProvenance": 715,
+        "mislabeledMn": 0
+      },
+      "kanji": {
+        "entries": 84,
+        "missingMeanings": 0,
+        "missingExamples": 0,
+        "missingForms": 0,
+        "unclassified": 27,
+        "invalidCategories": 0,
+        "missingProvenance": 84,
+        "mislabeledMn": 0
+      },
+      "grammar": {
+        "entries": 81,
+        "missingMeanings": 0,
+        "missingExamples": 242,
+        "missingForms": 79,
+        "unclassified": 0,
+        "invalidCategories": 0,
+        "missingProvenance": 81,
+        "mislabeledMn": 0
+      }
+    },
+    "N4": {
+      "vocab": {
+        "entries": 1080,
+        "missingMeanings": 450,
+        "missingExamples": 1238,
+        "missingForms": 0,
+        "unclassified": 396,
+        "invalidCategories": 0,
+        "missingProvenance": 630,
+        "mislabeledMn": 0
+      },
+      "kanji": {
+        "entries": 169,
+        "missingMeanings": 0,
+        "missingExamples": 0,
+        "missingForms": 0,
+        "unclassified": 69,
+        "invalidCategories": 0,
+        "missingProvenance": 169,
+        "mislabeledMn": 0
+      },
+      "grammar": {
+        "entries": 98,
+        "missingMeanings": 0,
+        "missingExamples": 264,
+        "missingForms": 96,
+        "unclassified": 0,
+        "invalidCategories": 0,
+        "missingProvenance": 0,
+        "mislabeledMn": 0
+      }
+    },
+    "N3": {
+      "vocab": {
+        "entries": 2279,
+        "missingMeanings": 620,
+        "missingExamples": 3218,
+        "missingForms": 0,
+        "unclassified": 827,
+        "invalidCategories": 0,
+        "missingProvenance": 1659,
+        "mislabeledMn": 0
+      },
+      "kanji": {
+        "entries": 387,
+        "missingMeanings": 0,
+        "missingExamples": 0,
+        "missingForms": 0,
+        "unclassified": 229,
+        "invalidCategories": 0,
+        "missingProvenance": 387,
+        "mislabeledMn": 0
+      },
+      "grammar": {
+        "entries": 101,
+        "missingMeanings": 101,
+        "missingExamples": 303,
+        "missingForms": 101,
+        "unclassified": 0,
+        "invalidCategories": 0,
+        "missingProvenance": 0,
+        "mislabeledMn": 0
+      }
+    },
+    "N2": {
+      "vocab": {
+        "entries": 2338,
+        "missingMeanings": 560,
+        "missingExamples": 3094,
+        "missingForms": 0,
+        "unclassified": 835,
+        "invalidCategories": 0,
+        "missingProvenance": 1778,
+        "mislabeledMn": 0
+      },
+      "kanji": {
+        "entries": 400,
+        "missingMeanings": 0,
+        "missingExamples": 0,
+        "missingForms": 0,
+        "unclassified": 248,
+        "invalidCategories": 0,
+        "missingProvenance": 400,
+        "mislabeledMn": 0
+      },
+      "grammar": {
+        "entries": 123,
+        "missingMeanings": 123,
+        "missingExamples": 323,
+        "missingForms": 123,
+        "unclassified": 0,
+        "invalidCategories": 0,
+        "missingProvenance": 0,
+        "mislabeledMn": 0
+      }
+    },
+    "N1": {
+      "vocab": {
+        "entries": 3690,
+        "missingMeanings": 3090,
+        "missingExamples": 4848,
+        "missingForms": 0,
+        "unclassified": 1259,
+        "invalidCategories": 0,
+        "missingProvenance": 600,
+        "mislabeledMn": 0
+      },
+      "kanji": {
+        "entries": 1646,
+        "missingMeanings": 1546,
+        "missingExamples": 0,
+        "missingForms": 0,
+        "unclassified": 1171,
+        "invalidCategories": 0,
+        "missingProvenance": 0,
+        "mislabeledMn": 0
+      },
+      "grammar": {
+        "entries": 123,
+        "missingMeanings": 123,
+        "missingExamples": 366,
+        "missingForms": 123,
+        "unclassified": 0,
+        "invalidCategories": 0,
+        "missingProvenance": 0,
+        "mislabeledMn": 0
+      }
+    }
+  },
+  "totals": {
+    "missingMeanings": 6872,
+    "missingExamples": 15216,
+    "missingForms": 522,
+    "unclassified": 5389,
+    "invalidCategories": 0,
+    "missingProvenance": 6503,
+    "mislabeledMn": 0
+  }
+}

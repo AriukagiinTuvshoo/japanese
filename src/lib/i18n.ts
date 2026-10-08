@@ -974,28 +974,3 @@ export function grammarMnMissing(g: Grammar): boolean {
   return !g.mn;
 }
 
-export type VocabTopic = "daily" | "people" | "places" | "time" | "food" | "nature" | "body" | "learning" | "work" | "actions" | "descriptions" | "other";
-
-const TOPIC_RULES: [VocabTopic, RegExp][] = [
-  ["time", /time|day|week|month|year|hour|minute|morning|evening|today|tomorrow|yesterday|season|age/],
-  ["people", /person|people|man|woman|child|family|mother|father|friend|teacher|student|name/],
-  ["places", /place|city|country|station|school|hospital|shop|store|house|room|building|road|street/],
-  ["food", /food|eat|drink|rice|meat|fish|fruit|vegetable|tea|coffee|meal|restaurant|taste/],
-  ["nature", /weather|rain|snow|wind|sky|sea|river|mountain|tree|flower|animal|bird|sun|moon/],
-  ["body", /body|head|face|eye|ear|mouth|hand|foot|heart|health|ill|medicine/],
-  ["learning", /study|learn|school|exam|book|read|write|word|language|question|answer/],
-  ["work", /work|job|company|office|business|money|buy|sell|price/],
-  ["actions", /\b(to |do|make|go|come|see|hear|speak|take|give|use|walk|run|move|open|close)/],
-  ["descriptions", /adjective|beautiful|large|small|good|bad|new|old|hot|cold|easy|difficult|strong|weak/],
-  ["daily", /clothes|wear|sleep|wake|bath|clean|cook|home|everyday|daily/],
-];
-
-export function vocabTopic(v: Vocab): VocabTopic {
-  const text = v.en.join(" ").toLowerCase();
-  return TOPIC_RULES.find(([, rule]) => rule.test(text))?.[0] ?? (v.t === "v" ? "actions" : v.t === "adj" || v.t === "i" || v.t === "na" ? "descriptions" : "other");
-}
-
-export const topicLabel: Record<Language, Record<VocabTopic, string>> = {
-  mn: { daily: "Өдөр тутам", people: "Хүмүүс", places: "Газар", time: "Цаг хугацаа", food: "Хоол", nature: "Байгаль", body: "Бие · эрүүл мэнд", learning: "Суралцах", work: "Ажил · худалдаа", actions: "Үйлдэл", descriptions: "Шинж чанар", other: "Бусад" },
-  en: { daily: "Daily life", people: "People", places: "Places", time: "Time", food: "Food", nature: "Nature", body: "Body & health", learning: "Learning", work: "Work & commerce", actions: "Actions", descriptions: "Descriptions", other: "Other" },
-};

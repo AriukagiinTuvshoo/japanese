@@ -8,6 +8,7 @@ export const LEVELS: Level[] = ["N5", "N4", "N3", "N2", "N1"];
 
 /** Монгол орчуулгын чанарын төлөв (content policy). */
 export type MnQuality =
+  | "draft"     // authored, not independently reviewed
   | "curated"   // хүн хянасан, батлагдсан
   | "auto"      // EN→MN нэр томьёоны сангаас автоматаар
   | "derived"   // ханзны утгуудаас зөвлөмж
@@ -45,7 +46,8 @@ export interface Vocab {
 export interface KanjiWord {
   w: string;
   r: string;
-  mn: string;
+  mn: string | null;
+  en: string;
   lvl: Level;
 }
 
@@ -83,6 +85,7 @@ export interface Grammar {
   mn: string | null;
   note: string | null;
   form: string | null;
+  form_mn?: string | null;
   jlpt: Level;
   ex: GrammarExample[];
   related: string[];

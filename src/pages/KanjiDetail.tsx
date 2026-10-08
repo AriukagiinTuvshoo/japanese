@@ -7,7 +7,7 @@ import type { Kanji, StrokeMap } from "../lib/types";
 import { LEVEL_LABEL, MQ_LABEL } from "../lib/text";
 import { GRADES, cardStage, previewIntervals } from "../lib/srs";
 import { Bar, Button, Card, Chip, Empty, LevelBadge, SectionTitle, SpeakButton, Spinner, Tabs } from "../components/ui";
-import { ui } from "../lib/i18n";
+import { ui, MN_PENDING, vocabMeaning } from "../lib/i18n";
 import { StrokePad } from "../components/StrokePad";
 
 const TABS = [
@@ -87,7 +87,7 @@ export default function KanjiDetail({ char }: { char: string }) {
             </div>
 
             <h1 className="mt-4 text-[1.5rem] font-extrabold leading-snug">
-              {language === "en" ? (k.en.join(", ") || k.mn.join(", ")) : (k.mn.join(", ") || k.en.join(", "))}
+              {language === "en" ? (k.en.join(", ") || k.mn.join(", ")) : (k.mn.join(", ") || MN_PENDING)}
             </h1>
             {language === "mn" && k.mn.length > 0 && <p className="mt-1 text-[13px] text-sumi-500">{t.enLabel} {k.en.join(", ")}</p>}
 
@@ -155,7 +155,7 @@ export default function KanjiDetail({ char }: { char: string }) {
 
             <Card>
               <p className="text-[13px] font-extrabold">{t.mnemonicTitle}</p>
-              {k.mn_mem && (
+              {language === "mn" && k.mn_mem && (
                 <p className="mt-2 rounded-xl bg-kin-50 px-3.5 py-3 text-[13px] leading-relaxed text-kin-700">{k.mn_mem}</p>
               )}
               <textarea value={mnemonic} onChange={(e) => setMnemonic(e.target.value)} onBlur={() => actions.setMnemonic(char, mnemonic)}
@@ -183,7 +183,7 @@ export default function KanjiDetail({ char }: { char: string }) {
                 <a key={w.id} href={href("vocab", w.id)} className="card-flat flex items-center gap-3 px-3.5 py-3 transition hover:-translate-y-0.5 hover:border-shu-300">
                   <span className="font-jp text-[15.5px] font-bold">{w.w}</span>
                   <span className="min-w-0 flex-1">
-                    <span className="block truncate text-[12.5px] text-sumi-700">{language === "en" ? (w.en.join("; ") || w.mn?.join(", ")) : (w.mn?.join(", ") || w.en.join("; "))}</span>
+                    <span className="block truncate text-[12.5px] text-sumi-700">{vocabMeaning(w, language)}</span>
                     <span className="block font-jp text-[10.5px] text-sumi-400">{w.r}</span>
                   </span>
                   <LevelBadge level={w.lvl} size="sm" />

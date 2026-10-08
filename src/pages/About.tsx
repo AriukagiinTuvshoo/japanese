@@ -28,7 +28,7 @@ export default function About() {
         <SectionTitle jp="方針" title={t.principles} />
         <ul className="space-y-2.5 text-[14px] leading-relaxed text-sumi-700">
           <li>{t.principle1}</li>
-          <li>{t.principle2.replace("pending_review", "")}<b>pending_review</b>{t.principle2.slice(t.principle2.indexOf("pending_review") + 14)}</li>
+          <li>{t.principle2}</li>
           <li>{t.principle3}</li>
           <li>{t.principle4}</li>
         </ul>
@@ -51,7 +51,7 @@ export default function About() {
                     {s.name}
                   </a>
                   <p className="mt-0.5 text-[12.5px] text-sumi-500">{t.licenseLabel} {s.license}</p>
-                  {s.note && <p className="mt-0.5 text-[12.5px] text-sumi-500">{s.note}</p>}
+                  {language === "mn" && s.note && <p className="mt-0.5 text-[12.5px] text-sumi-500">{s.note}</p>}
                 </li>
               ))}
             </ul>

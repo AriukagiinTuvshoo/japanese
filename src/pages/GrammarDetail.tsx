@@ -64,15 +64,15 @@ export default function GrammarDetail({ id, level }: { id: string; level?: Level
           <Chip tone="murasaki">{t.grammarChip}</Chip>
           {g.jlpt !== g.lvl && <Chip tone="sumi">JLPT {g.jlpt}</Chip>}
         </div>
-        <h1 className="mt-4 font-jp text-[2.1rem] font-extrabold leading-tight">{grammarLabel(g.p)}</h1>
-        {g.mn ? (
-          <p className="mt-4 text-[1.15rem] font-bold leading-relaxed text-sumi-900">{g.mn}</p>
+        <h1 className="mt-4 font-jp text-[2.1rem] font-extrabold leading-tight">{grammarLabel(g.p, language)}</h1>
+        {language === "en" || g.mn ? (
+          <p className="mt-4 text-[1.15rem] font-bold leading-relaxed text-sumi-900">{language === "en" ? en : g.mn}</p>
         ) : (
           <p className="mt-4 text-[1.1rem] font-semibold text-sumi-500">
-            {language === "en" ? (en || MN_PENDING) : <span className="italic">{MN_PENDING}</span>}
+            <span className="italic">{MN_PENDING}</span>
           </p>
         )}
-        {g.note && (
+        {language === "mn" && g.note && (
           <div className="mt-4 rounded-2xl border border-ai-100 bg-ai-50/60 p-4">
             <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-ai-600">{t.nuance}</p>
             <p className="mt-2 whitespace-pre-line text-[13.5px] leading-relaxed text-ai-700">{g.note}</p>
@@ -98,7 +98,7 @@ export default function GrammarDetail({ id, level }: { id: string; level?: Level
           <Card>
             <SectionTitle jp="形" title={t.structure} />
             {g.form ? (
-              <p className="rounded-xl bg-sumi-900/[0.045] px-4 py-3 font-jp text-[14px] leading-relaxed">{g.form}</p>
+              <p className="rounded-xl bg-sumi-900/[0.045] px-4 py-3 font-jp text-[14px] leading-relaxed">{language === "mn" && g.form_mn ? g.form_mn : g.form}</p>
             ) : (
               <p className="text-[13px] text-sumi-500">{t.structureMissing}</p>
             )}
@@ -120,7 +120,7 @@ export default function GrammarDetail({ id, level }: { id: string; level?: Level
 
           <Card>
             <SectionTitle jp="よくある間違い" title={t.commonMistakes} />
-            {g.note ? (
+            {language === "mn" && g.note ? (
               <p className="text-[13.5px] leading-relaxed text-sumi-700">{g.note}</p>
             ) : (
               <p className="text-[13px] text-sumi-500">

@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { validMn, topicsFor, auditCoverage } from './validate-coverage.mjs';
+const read = p => JSON.parse(readFileSync(p, 'utf8'));
+assert.equal(validMn('love'), false);
+assert.equal(validMn('Орчуулга хүлээгдэж байна'), false);
+assert.equal(validMn('хайр'), true);
+const taxonomy = read('content/categories/taxonomy.json');
+assert.ok(topicsFor({id:'test',en:['loving mother'],t:'n'},'vocab',taxonomy,{vocab:{}}).includes('relationships'));
+assert.ok(!topicsFor({id:'test',en:['stage'],t:'n'},'vocab',taxonomy,{vocab:{}}).includes('time'));
+assert.deepEqual(topicsFor({id:'test',en:['xyz'],t:'n'},'vocab',taxonomy,{vocab:{}}), []);
+const report = auditCoverage();
+assert.deepEqual(report.totals, read('content/coverage-report.json').totals, 'Refresh coverage report after data changes');
+console.log('Coverage regression checks passed (does not assert release completeness).');

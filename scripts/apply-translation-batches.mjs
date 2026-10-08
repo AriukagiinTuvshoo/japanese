@@ -1,0 +1,69 @@
+import fs from "node:fs";
+import assert from "node:assert/strict";
+
+const read = p => JSON.parse(fs.readFileSync(p, "utf8"));
+const write = (p, value) => fs.writeFileSync(p, JSON.stringify(value) + "\n");
+const levels = ["n5", "n4", "n3", "n2", "n1"];
+const batches = fs.readdirSync("content/mn/batches").filter(f => f.endsWith(".json")).sort().map(f => read(`content/mn/batches/${f}`));
+const provenance = batches.map(b => b.provenance);
+const data = Object.fromEntries(["vocab", "kanji", "grammar"].map(kind => [kind, Object.fromEntries(levels.map(l => [l, read(`public/data/${kind}/${l}.json`)]))]));
+let applied = 0;
+for (const batch of batches) {
+  assert.equal(batch.provenance.license, "CC-BY-SA-4.0");
+  assert.ok(batch.provenance.source && batch.provenance.sourceSnapshot && batch.provenance.method);
+  for (const kind of ["vocab", "kanji", "grammar"]) {
+    const entries = Object.values(data[kind]).flat();
+    for (const [id, translation] of Object.entries(batch[kind] ?? {})) {
+      const entry = entries.find(e => (kind === "kanji" ? e.k : e.id) === id);
+      assert.ok(entry, `Unknown ${kind} key ${id}`);
+      const meanings = Array.isArray(translation.mn) ? translation.mn : [translation.mn];
+      assert.ok(meanings.length && meanings.every(m => typeof m === "string" && /[А-Яа-яӨөҮү]/.test(m)), `Invalid MN: ${id}`);
+      entry.mn = kind === "grammar" ? meanings.join("; ") : meanings;
+      entry.mn_provenance = batch.provenance.id;
+      if (kind !== "grammar") entry.mq = "draft";
+      if (translation.note) entry.note = translation.note;
+      if (translation.formMn) entry.form_mn = translation.formMn;
+      for (const [i, mn] of (translation.examples ?? []).entries()) {
+        assert.ok(entry.ex?.[i], `Unknown example ${id}/${i}`);
+        assert.ok(/[А-Яа-яӨөҮү]/.test(mn));
+        entry.ex[i].mn = mn;
+        entry.ex[i].mn_provenance = batch.provenance.id;
+      }
+      applied++;
+    }
+  }
+}
+// Related words must never store English in a field called mn. Resolve by word + reading.
+const words = new Map(Object.values(data.vocab).flat().map(v => [`${v.w}|${v.r}`, v]));
+for (const list of Object.values(data.kanji)) for (const kanji of list) for (const word of kanji.w ?? []) {
+  const v = words.get(`${word.w}|${word.r}`);
+  word.en = v?.en.join("; ") ?? word.en ?? word.mn;
+  word.mn = v?.mn?.join("; ") || null;
+}
+const drafts = { vocab: read("content/mn/vocab-draft.json"), kanji: read("content/mn/kanji-draft.json") };
+for (const kind of ["vocab", "kanji"]) for (const list of Object.values(data[kind])) for (const e of list) {
+  if (e.mq === "draft") drafts[kind][kind === "kanji" ? e.k : `${e.w}|${e.r}`] = e.mn.join("; ");
+}
+for (const kind of Object.keys(data)) for (const level of levels) write(`public/data/${kind}/${level}.json`, data[kind][level]);
+for (const kind of ["vocab", "kanji"]) write(`content/mn/${kind}-draft.json`, drafts[kind]);
+const index = {
+  v: Object.values(data.vocab).flat().map(v => [v.w, v.r, v.mn?.[0] ?? v.en[0], v.lvl, v.tier === "jlpt" ? 0 : 1, v.id]),
+  k: Object.values(data.kanji).flat().map(k => [k.k, k.on[0] ?? "", k.mn?.[0] ?? k.en[0], k.lvl, k.s ?? 0]),
+  g: Object.values(data.grammar).flat().map(g => [g.p, g.mn ?? g.en, g.lvl, g.id]),
+};
+write("public/data/index/search.json", index);
+write("public/data/index/translations.json", provenance);
+const meta = read("public/data/index/meta.json");
+for (const kind of ["vocab", "kanji"]) meta.counts[`${kind}Draft`] = Object.values(data[kind]).flat().filter(e => e.mq === "draft").length;
+// Preserve existing sources; restore missing attribution from the documented source pipeline.
+const sourceRecords = [
+  { id: "openjlpt", name: "OpenJLPT — evanclan and contributors", url: "https://github.com/evanclan/OpenJLPT", license: "CC-BY-SA-4.0", note: "JLPT үг, ханз, дүрэм ба жишээ. Монгол орчуулгууд нь өөрчилсөн бүтээл; CC-BY-SA-4.0 нөхцөлтэй." },
+  { id: "kanji-data", name: "kanji-data — David Luz Gouveia and contributors", url: "https://github.com/davidluzgouveia/kanji-data", license: "MIT", note: "Ханзны уншлага, утга, түвшин, давтамж." },
+  { id: "kanjivg", name: "KanjiVG — Ulrich Apel and contributors", url: "https://github.com/KanjiVG/kanjivg", license: "CC-BY-SA-3.0", note: "Бичих дарааллын вектор өгөгдөл; эх лицензийг хэвээр хадгална." },
+  { id: "jmdict", name: "JMdict — EDRDG contributors (jamdict-data package)", url: "https://github.com/neocl/jamdict", license: "CC-BY-SA-4.0 (dictionary); MIT (package)", note: "Өргөтгөсөн япон–англи үгийн сан. Монгол өөрчилсөн орчуулга: CC-BY-SA-4.0." },
+  { id: "mn-translations", name: "Mongolian translation batches — provenance and review status", url: "https://github.com/AriukagiinTuvshoo/japanese/tree/main/content/mn", license: "CC-BY-SA-4.0", note: "Шинэ орчуулгын гарал, огноо, хяналтын төлөвийг багц бүрд бүртгэнэ. Хуучин орчуулгын зохиогч, хяналтын мэдээлэл бүрэн бус." },
+];
+meta.sources ??= [];
+for (const source of sourceRecords) if (!meta.sources.some(s => s.id === source.id)) meta.sources.push(source);
+write("public/data/index/meta.json", meta);
+console.log(`Applied ${applied} translation records; preserved Japanese, English, readings and examples.`);

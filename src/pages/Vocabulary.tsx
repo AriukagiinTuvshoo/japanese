@@ -6,7 +6,8 @@ import { loadVocab } from "../lib/data";
 import type { Level, PosType, Vocab } from "../lib/types";
 import { LEVELS } from "../lib/types";
 import { LEVEL_LABEL, MQ_LABEL, TYPE_LABEL, toRomaji } from "../lib/text";
-import { topicLabel, ui, vocabMeaning, vocabTopic, type VocabTopic } from "../lib/i18n";
+import { ui, vocabMeaning } from "../lib/i18n";
+import { topicLabel, entryTopics, type Topic } from "../lib/categories";
 import { cardStage, dueCards, retrievability } from "../lib/srs";
 import {
   Bar, Button, Card, Chip, Empty, Input, Pager, Select, SpeakButton, Spinner, Tabs,
@@ -27,7 +28,7 @@ export default function Vocabulary() {
   const [words, setWords] = useState<Vocab[] | null>(null);
   const [q, setQ] = useState("");
   const [type, setType] = useState<PosType | "all">("all");
-  const [topic, setTopic] = useState<VocabTopic | "all">("all");
+  const [topic, setTopic] = useState<Topic | "all">("all");
   const [state, setState] = useState<"all" | "new" | "learning" | "review" | "mastered" | "fav">("all");
   const [sort, setSort] = useState<"level" | "freq" | "kana" | "random">("level");
   const [page, setPage] = useState(1);
@@ -52,7 +53,7 @@ export default function Vocabulary() {
       );
     }
     if (type !== "all") out = out.filter((v) => v.t === type);
-    if (topic !== "all") out = out.filter((v) => vocabTopic(v) === topic);
+    if (topic !== "all") out = out.filter((v) => entryTopics(v).includes(topic));
     if (state !== "all") {
       out = out.filter((v) => {
         if (state === "fav") return doc.favorites.includes(v.id);
@@ -83,8 +84,8 @@ export default function Vocabulary() {
     return m;
   }, [words]);
   const topicCounts = useMemo(() => {
-    const m: Partial<Record<VocabTopic, number>> = {};
-    for (const w of words ?? []) { const key = vocabTopic(w); m[key] = (m[key] ?? 0) + 1; }
+    const m: Partial<Record<Topic, number>> = {};
+    for (const w of words ?? []) for (const key of entryTopics(w)) m[key] = (m[key] ?? 0) + 1;
     return m;
   }, [words]);
 
@@ -174,7 +175,7 @@ export default function Vocabulary() {
                 className={cn("shrink-0 rounded-lg px-2.5 py-1.5 text-[12px] font-bold transition", topic === "all" ? "bg-shu-500 text-white" : "bg-shu-50 text-shu-700")}>
                 {t.allTopics}
               </button>
-              {(Object.keys(topicLabel[language]) as VocabTopic[]).filter((key) => topicCounts[key]).map((key) => (
+              {(Object.keys(topicLabel[language]) as Topic[]).filter((key) => topicCounts[key]).map((key) => (
                 <button key={key} onClick={() => { setTopic(key); setPage(1); }}
                   className={cn("shrink-0 rounded-lg px-2.5 py-1.5 text-[12px] font-bold transition", topic === key ? "bg-shu-500 text-white" : "bg-sumi-900/5 text-sumi-600 hover:text-sumi-900")}>
                   {topicLabel[language][key]} <span className="tabnum opacity-60">{topicCounts[key]}</span>

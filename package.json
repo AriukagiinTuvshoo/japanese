@@ -14,7 +14,13 @@
     "data:validate": "node scripts/validate-data.mjs",
     "data:all": "npm run data:fetch && npm run data:build && npm run data:validate",
     "test:routes": "node scripts/test-routes.mjs",
-    "server": "node server/index.mjs"
+    "server": "node server/index.mjs",
+    "coverage:report": "node scripts/validate-coverage.mjs --report --write",
+    "coverage:validate": "node scripts/validate-coverage.mjs",
+    "translations:apply": "node scripts/apply-translation-batches.mjs",
+    "test:browser": "node scripts/test-browser.mjs",
+    "test:coverage": "node scripts/test-coverage.mjs",
+    "test": "npm run test:routes && npm run test:coverage"
   },
   "dependencies": {
     "clsx": "2.1.1",
@@ -24,11 +30,13 @@
     "wanakana": "^5.3.1"
   },
   "devDependencies": {
+    "@sparticuz/chromium": "^153.0.0",
     "@tailwindcss/vite": "4.1.17",
     "@types/node": "22.19.17",
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "5.1.1",
+    "playwright-core": "^1.64.0",
     "tailwindcss": "4.1.17",
     "typescript": "5.9.3",
     "vite": "7.3.2"
