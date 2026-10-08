@@ -1,0 +1,1030 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-forward-2-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit semantic categories cross-checked against Japanese entry and retained English gloss, independently unreviewed. Original uncommon senses preserved.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "578447ed67": {
+      "mn": [
+        "тэнгэр",
+        "эзэн хаан"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "乾",
+        "r": "けん",
+        "en": [
+          "heaven",
+          "emperor"
+        ]
+      }
+    },
+    "110ff82b7a": {
+      "mn": [
+        "хүрээ",
+        "тойрог",
+        "хамрах зай"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "圏",
+        "r": "けん",
+        "en": [
+          "sphere",
+          "circle",
+          "range"
+        ]
+      }
+    },
+    "3182bddbf5": {
+      "mn": [
+        "эрх мэдэл",
+        "хийх эрх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "権",
+        "r": "けん",
+        "en": [
+          "authority",
+          "the right (to do something)"
+        ]
+      }
+    },
+    "19bf853f89": {
+      "mn": [
+        "анхны",
+        "анхдагч",
+        "үндсэн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "原",
+        "r": "げん",
+        "en": [
+          "original",
+          "primitive",
+          "primary"
+        ]
+      }
+    },
+    "3999ef3eb7": {
+      "mn": [
+        "эрх мэдэл",
+        "хүч",
+        "нөлөө"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "権威",
+        "r": "けんい",
+        "en": [
+          "authority",
+          "power",
+          "influence"
+        ]
+      }
+    },
+    "4212cea6f0": {
+      "mn": [
+        "давхар ажил",
+        "хоёр дахь бизнес"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "兼業",
+        "r": "けんぎょう",
+        "en": [
+          "side line",
+          "second business"
+        ]
+      }
+    },
+    "b6b1badd76": {
+      "mn": [
+        "анхны хэлбэр",
+        "үндсэн хэлбэр"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "原形",
+        "r": "げんけい",
+        "en": [
+          "original form",
+          "base form"
+        ]
+      }
+    },
+    "1f41af8458": {
+      "mn": [
+        "эрх мэдэл",
+        "эрх хэмжээ",
+        "харьяалал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "権限",
+        "r": "けんげん",
+        "en": [
+          "power",
+          "authority",
+          "jurisdiction"
+        ]
+      }
+    },
+    "0778415a9f": {
+      "mn": [
+        "одоогийн",
+        "одоо мөрдөж буй",
+        "ажиллагаатай"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "現行",
+        "r": "げんこう",
+        "en": [
+          "present",
+          "current",
+          "in operation"
+        ]
+      }
+    },
+    "c97409ccce": {
+      "mn": [
+        "эрүүл энх",
+        "сайн байгаа"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "健在",
+        "r": "けんざい",
+        "en": [
+          "in good health",
+          "well"
+        ]
+      }
+    },
+    "6cc418074b": {
+      "mn": [
+        "эх бүтээл"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "原作",
+        "r": "げんさく",
+        "en": [
+          "original work"
+        ]
+      }
+    },
+    "2dd6313fb5": {
+      "mn": [
+        "улсын прокурор"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "検事",
+        "r": "けんじ",
+        "en": [
+          "public prosecutor"
+        ]
+      }
+    },
+    "b71e616e00": {
+      "mn": [
+        "атом"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "原子",
+        "r": "げんし",
+        "en": [
+          "atom"
+        ]
+      }
+    },
+    "c2199f6b33": {
+      "mn": [
+        "төрийн тэргүүн",
+        "хаан"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "元首",
+        "r": "げんしゅ",
+        "en": [
+          "ruler",
+          "sovereign"
+        ]
+      }
+    },
+    "f7b907fc12": {
+      "mn": [
+        "эх баримт",
+        "эх хэл дээрх ном"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "原書",
+        "r": "げんしょ",
+        "en": [
+          "original document"
+        ]
+      }
+    },
+    "a47d96fcce": {
+      "mn": [
+        "шагнал зарлах",
+        "хожих",
+        "шагнал"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "懸賞",
+        "r": "けんしょう",
+        "en": [
+          "offering prizes",
+          "winning",
+          "reward"
+        ]
+      }
+    },
+    "a85d868e8e": {
+      "mn": [
+        "багасалт",
+        "бууралт"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "減少",
+        "r": "げんしょう",
+        "en": [
+          "decrease",
+          "reduction",
+          "decline"
+        ]
+      }
+    },
+    "ce5ab31b34": {
+      "mn": [
+        "эрүүл",
+        "хэвийн",
+        "эрүүл зөв"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "健全",
+        "r": "けんぜん",
+        "en": [
+          "health",
+          "soundness",
+          "wholesome"
+        ]
+      }
+    },
+    "b8bcd977e2": {
+      "mn": [
+        "химийн элемент"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "元素",
+        "r": "げんそ",
+        "en": [
+          "chemical element"
+        ]
+      }
+    },
+    "2daaf50b4d": {
+      "mn": [
+        "гэрэл зургийн хальс боловсруулах"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "現像",
+        "r": "げんぞう",
+        "en": [
+          "developing (film)"
+        ]
+      }
+    },
+    "5cfe4d867d": {
+      "mn": [
+        "зарчим",
+        "ерөнхий дүрэм"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "原則",
+        "r": "げんそく",
+        "en": [
+          "principle",
+          "general rule"
+        ]
+      }
+    },
+    "ba678d6fe9": {
+      "mn": [
+        "үзэх өнцөг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "見地",
+        "r": "けんち",
+        "en": [
+          "point of view"
+        ]
+      }
+    },
+    "d2cc010c42": {
+      "mn": [
+        "бодит газар",
+        "орон нутгийн"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "現地",
+        "r": "げんち",
+        "en": [
+          "actual place",
+          "local"
+        ]
+      }
+    },
+    "673e068f93": {
+      "mn": [
+        "хязгаар",
+        "хязгаарлалт"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "限定",
+        "r": "げんてい",
+        "en": [
+          "limit",
+          "restriction"
+        ]
+      }
+    },
+    "436aca7af1": {
+      "mn": [
+        "эх бичвэр"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "原典",
+        "r": "げんてん",
+        "en": [
+          "original (text)"
+        ]
+      }
+    },
+    "33b7f9ddbc": {
+      "mn": [
+        "координатын эхлэл",
+        "эхлэх цэг"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "原点",
+        "r": "げんてん",
+        "en": [
+          "origin (coordinates)",
+          "starting point"
+        ]
+      }
+    },
+    "b55001be10": {
+      "mn": [
+        "оноо хасах",
+        "торгуулийн оноо өгөх"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "減点",
+        "r": "げんてん",
+        "en": [
+          "subtract",
+          "give a demerit"
+        ]
+      }
+    },
+    "92e2dcd393": {
+      "mn": [
+        "атомын бөмбөг"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "原爆",
+        "r": "げんばく",
+        "en": [
+          "atomic bomb"
+        ]
+      }
+    },
+    "d7c788ac00": {
+      "mn": [
+        "эх бичвэр",
+        "эх хувь"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "原文",
+        "r": "げんぶん",
+        "en": [
+          "the text",
+          "original"
+        ]
+      }
+    },
+    "de9ea7a309": {
+      "mn": [
+        "хатуу нарийн",
+        "нягт"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "厳密",
+        "r": "げんみつ",
+        "en": [
+          "strict",
+          "close"
+        ]
+      }
+    },
+    "b8978362b1": {
+      "mn": [
+        "мэргэн ухаан",
+        "оюун",
+        "хэрсүү байдал"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "賢明",
+        "r": "けんめい",
+        "en": [
+          "wisdom",
+          "intelligence",
+          "prudence"
+        ]
+      }
+    },
+    "2db513025c": {
+      "mn": [
+        "хэмнэлт",
+        "гамтай байдал"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "倹約",
+        "r": "けんやく",
+        "en": [
+          "thrift",
+          "economy",
+          "frugality"
+        ]
+      }
+    },
+    "c1a3737777": {
+      "mn": [
+        "түүхий газрын тос"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "原油",
+        "r": "げんゆ",
+        "en": [
+          "crude oil"
+        ]
+      }
+    },
+    "204ce2024f": {
+      "mn": [
+        "олон зориулалттай",
+        "хамт хэрэглэх",
+        "хослуулах"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "兼用",
+        "r": "けんよう",
+        "en": [
+          "multi-use",
+          "combined use",
+          "combination"
+        ]
+      }
+    },
+    "34b30a1719": {
+      "mn": [
+        "хүч",
+        "эрх мэдэл",
+        "нөлөө"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "権力",
+        "r": "けんりょく",
+        "en": [
+          "power",
+          "authority",
+          "influence"
+        ]
+      }
+    },
+    "955633d172": {
+      "mn": [
+        "хэлэлцүүлэг",
+        "үзэл бодлоо илэрхийлэх"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "言論",
+        "r": "げんろん",
+        "en": [
+          "discussion"
+        ]
+      }
+    },
+    "56ffead6fe": {
+      "mn": [
+        "эд зүйл тоолох дагавар"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "個",
+        "r": "こ",
+        "en": [
+          "article counter"
+        ]
+      }
+    },
+    "1e176e82e5": {
+      "mn": [
+        "айлын сууц тоолох дагавар"
+      ],
+      "topics": [
+        "quantity",
+        "places"
+      ],
+      "expected": {
+        "w": "戸",
+        "r": "こ",
+        "en": [
+          "counter for houses"
+        ]
+      }
+    },
+    "10c1ffea60": {
+      "mn": [
+        "талийгаач",
+        "агсан"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "故",
+        "r": "こ",
+        "en": [
+          "the late (deceased)"
+        ]
+      }
+    },
+    "013f46c118": {
+      "mn": [
+        "хүүхэд",
+        "амьтны төл"
+      ],
+      "topics": [
+        "people",
+        "nature"
+      ],
+      "expected": {
+        "w": "児",
+        "r": "こ",
+        "en": [
+          "child",
+          "the young of animals"
+        ]
+      }
+    },
+    "a017bb3c0c": {
+      "mn": [
+        "хүндэтгэлийн го угтвар"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "御",
+        "r": "ご",
+        "en": [
+          "go-",
+          "honourable"
+        ]
+      }
+    },
+    "4c2243e0e1": {
+      "mn": [
+        "үгсийн сан",
+        "үгийн тайлбар"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "語彙",
+        "r": "ごい",
+        "en": [
+          "vocabulary",
+          "glossary"
+        ]
+      }
+    },
+    "79b0e74e36": {
+      "mn": [
+        "дурлах",
+        "хайрлах"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "恋する",
+        "r": "こいする",
+        "en": [
+          "to fall in love with",
+          "to love"
+        ]
+      }
+    },
+    "e91f69ef1a": {
+      "mn": [
+        "сургууль",
+        "хэвлэлийн хяналтын хувь"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "校",
+        "r": "こう",
+        "en": [
+          "-school",
+          "proof"
+        ]
+      }
+    },
+    "898777096e": {
+      "mn": [
+        "аравны гучин хоёр зэрэгтэй тэнцэх их тоо"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "溝",
+        "r": "こう",
+        "en": [
+          "hundred undecillion (American)",
+          "hundred sextillion (British)"
+        ]
+      }
+    },
+    "6b56c41e59": {
+      "mn": [
+        "буддын үйлийн үр",
+        "урьд насны үйл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "業",
+        "r": "ごう",
+        "en": [
+          "Buddhist karma",
+          "actions committed in a former life"
+        ]
+      }
+    },
+    "ae0d7c35ac": {
+      "mn": [
+        "тоо",
+        "хэвлэлийн дугаар"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "号",
+        "r": "ごう",
+        "en": [
+          "number",
+          "issue"
+        ]
+      }
+    },
+    "f38adaef87": {
+      "mn": [
+        "усан хамгаалалтын суваг"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "濠",
+        "r": "ごう",
+        "en": [
+          "moat"
+        ]
+      }
+    },
+    "be5a647260": {
+      "mn": [
+        "сайн санаа",
+        "тус",
+        "эелдэг зан"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "好意",
+        "r": "こうい",
+        "en": [
+          "good will",
+          "favor",
+          "courtesy"
+        ]
+      }
+    },
+    "26edf660ec": {
+      "mn": [
+        "үйлдэл",
+        "үйл хэрэг",
+        "зан байдал"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "行為",
+        "r": "こうい",
+        "en": [
+          "act",
+          "deed",
+          "conduct"
+        ]
+      }
+    },
+    "713bb09199": {
+      "mn": [
+        "тохиролцоо",
+        "зөвшөөрөл",
+        "харилцан ойлголцол"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "合意",
+        "r": "ごうい",
+        "en": [
+          "agreement",
+          "consent",
+          "mutual understanding"
+        ]
+      }
+    },
+    "2d66a8b7d0": {
+      "mn": [
+        "банкны ажилтан"
+      ],
+      "topics": [
+        "people",
+        "work"
+      ],
+      "expected": {
+        "w": "行員",
+        "r": "こういん",
+        "en": [
+          "bank clerk"
+        ]
+      }
+    },
+    "3bc4ab80ef": {
+      "mn": [
+        "арилжаа",
+        "худалдаа"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "交易",
+        "r": "こうえき",
+        "en": [
+          "trade",
+          "commerce"
+        ]
+      }
+    },
+    "27878d4524": {
+      "mn": [
+        "нийтийн тоглолт"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "公演",
+        "r": "こうえん",
+        "en": [
+          "public performance"
+        ]
+      }
+    },
+    "75e6d23e26": {
+      "mn": [
+        "харамсал",
+        "гэмшил"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "後悔",
+        "r": "こうかい",
+        "en": [
+          "regret",
+          "repentance"
+        ]
+      }
+    },
+    "e32ba3fdba": {
+      "mn": [
+        "олон нийтэд үзүүлэх"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "公開",
+        "r": "こうかい",
+        "en": [
+          "presenting to the public"
+        ]
+      }
+    },
+    "f5aa5ef963": {
+      "mn": [
+        "далайд аялах",
+        "усан аялал"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "航海",
+        "r": "こうかい",
+        "en": [
+          "sail",
+          "voyage"
+        ]
+      }
+    },
+    "a5d1a21d8e": {
+      "mn": [
+        "инженерийн ухаан"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "工学",
+        "r": "こうがく",
+        "en": [
+          "engineering"
+        ]
+      }
+    },
+    "13c74583e7": {
+      "mn": [
+        "эсэргүүцэл",
+        "санал зөрөлдөөн"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "抗議",
+        "r": "こうぎ",
+        "en": [
+          "protest",
+          "objection"
+        ]
+      }
+    },
+    "925301438b": {
+      "mn": [
+        "агуу",
+        "сүрлэг"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "強気",
+        "r": "ごうぎ",
+        "en": [
+          "great",
+          "grand"
+        ]
+      }
+    }
+  }
+}

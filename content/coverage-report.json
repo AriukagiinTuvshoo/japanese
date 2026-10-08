@@ -146,10 +146,10 @@
     "N1": {
       "vocab": {
         "entries": 3690,
-        "missingMeanings": 2310,
+        "missingMeanings": 1950,
         "missingExamples": 4848,
         "missingForms": 0,
-        "unclassified": 998,
+        "unclassified": 879,
         "invalidCategories": 0,
         "missingProvenance": 0,
         "mislabeledMn": 0,
@@ -180,10 +180,10 @@
     }
   },
   "totals": {
-    "missingMeanings": 3276,
+    "missingMeanings": 2916,
     "missingExamples": 14407,
     "missingForms": 0,
-    "unclassified": 3603,
+    "unclassified": 3484,
     "invalidCategories": 0,
     "missingProvenance": 0,
     "mislabeledMn": 0,
