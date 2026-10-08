@@ -1,0 +1,1071 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-steady-3-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses with Japanese spelling/reading and retained English cross-check; explicit semantic topic evidence. Independently unreviewed; unresolved source conflicts withheld.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "54bb39a184": {
+      "mn": [
+        "намаг",
+        "балчиг",
+        "цөөрөм"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "沼",
+        "r": "ぬま",
+        "en": [
+          "swamp",
+          "bog",
+          "pond"
+        ]
+      }
+    },
+    "88e26cec55": {
+      "mn": [
+        "дуу авиа",
+        "хөгжмийн эгшиг"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "音",
+        "r": "ね",
+        "en": [
+          "sound",
+          "note"
+        ]
+      }
+    },
+    "376a26250c": {
+      "mn": [
+        "дууны өнгө",
+        "эгшгийн чанар",
+        "тембр"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "音色",
+        "r": "ねいろ",
+        "en": [
+          "tone color",
+          "tone quality",
+          "timbre"
+        ]
+      }
+    },
+    "82499bdec6": {
+      "mn": [
+        "үнэ цэнэ",
+        "үнэ"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "値打ち",
+        "r": "ねうち",
+        "en": [
+          "value",
+          "worth",
+          "price"
+        ]
+      }
+    },
+    "17b1b51e96": {
+      "mn": [
+        "гэрэл зургийн негатив"
+      ],
+      "topics": [
+        "arts",
+        "technology"
+      ],
+      "expected": {
+        "w": "ネガ",
+        "r": "ネガ",
+        "en": [
+          "(photographic) negative"
+        ]
+      }
+    },
+    "4c90b6d71c": {
+      "mn": [
+        "унтуулах",
+        "хэвтүүлэх",
+        "исгэж амраах"
+      ],
+      "topics": [
+        "daily",
+        "food",
+        "actions"
+      ],
+      "expected": {
+        "w": "寝かせる",
+        "r": "ねかせる",
+        "en": [
+          "to put to bed",
+          "to lay down",
+          "to ferment"
+        ]
+      }
+    },
+    "d512e45d85": {
+      "mn": [
+        "халив"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "ねじ回し",
+        "r": "ねじまわし",
+        "en": [
+          "screwdriver"
+        ]
+      }
+    },
+    "a8b71cab9b": {
+      "mn": [
+        "мушгирах",
+        "тахийх",
+        "эрчилдэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "捻じれる",
+        "r": "ねじれる",
+        "en": [
+          "to twist",
+          "to wrench",
+          "to screw"
+        ]
+      }
+    },
+    "1ac6d9ceaf": {
+      "mn": [
+        "хулгана",
+        "харх",
+        "бараан саарал өнгө"
+      ],
+      "topics": [
+        "nature",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "鼠",
+        "r": "ねず",
+        "en": [
+          "mouse",
+          "rat",
+          "dark gray"
+        ]
+      }
+    },
+    "ab01ab7345": {
+      "mn": [
+        "атаархах",
+        "хардалт төрөх"
+      ],
+      "topics": [
+        "feelings",
+        "actions"
+      ],
+      "expected": {
+        "w": "妬む",
+        "r": "ねたむ",
+        "en": [
+          "to be jealous",
+          "to be envious"
+        ]
+      }
+    },
+    "9b6551f601": {
+      "mn": [
+        "шалж гуйх",
+        "аргадан гуйх",
+        "нэхэх"
+      ],
+      "topics": [
+        "actions",
+        "relationships"
+      ],
+      "expected": {
+        "w": "強請る",
+        "r": "ねだる",
+        "en": [
+          "to tease",
+          "to coax",
+          "to solicit"
+        ]
+      }
+    },
+    "0424f1858b": {
+      "mn": [
+        "идэвх зүтгэл",
+        "урам зориг"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "熱意",
+        "r": "ねつい",
+        "en": [
+          "zeal",
+          "enthusiasm"
+        ]
+      }
+    },
+    "9dd688ef2b": {
+      "mn": [
+        "буцалсан халуун ус"
+      ],
+      "topics": [
+        "body",
+        "daily"
+      ],
+      "expected": {
+        "w": "熱湯",
+        "r": "ねっとう",
+        "en": [
+          "boiling water"
+        ]
+      }
+    },
+    "13c19c8395": {
+      "mn": [
+        "наалдамхай чанар",
+        "зуурамтгай чанар"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "粘り",
+        "r": "ねばり",
+        "en": [
+          "stickyness",
+          "viscosity"
+        ]
+      }
+    },
+    "946e4b8b9b": {
+      "mn": [
+        "наалдах",
+        "зууралдах",
+        "тууштай зүтгэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "粘る",
+        "r": "ねばる",
+        "en": [
+          "to be sticky",
+          "to be adhesive",
+          "to persevere"
+        ]
+      }
+    },
+    "9f42d19e42": {
+      "mn": [
+        "үнэ бууруулах",
+        "хямдрал"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "値引き",
+        "r": "ねびき",
+        "en": [
+          "price reduction",
+          "discount"
+        ]
+      }
+    },
+    "48a804961e": {
+      "mn": [
+        "урьдчилан тохиролцож бэлтгэл хангах"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "根回し",
+        "r": "ねまわし",
+        "en": [
+          "making necessary arrangements"
+        ]
+      }
+    },
+    "f373251362": {
+      "mn": [
+        "нойрмог"
+      ],
+      "topics": [
+        "daily",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "眠たい",
+        "r": "ねむたい",
+        "en": [
+          "sleepy"
+        ]
+      }
+    },
+    "3e7fc9179d": {
+      "mn": [
+        "зуурах",
+        "дахин боловсруулж сайжруулах",
+        "өнгөлөх"
+      ],
+      "topics": [
+        "actions",
+        "food"
+      ],
+      "expected": {
+        "w": "練る",
+        "r": "ねる",
+        "en": [
+          "to knead",
+          "to work over",
+          "to polish up"
+        ]
+      }
+    },
+    "418d241aaa": {
+      "mn": [
+        "мэдрэмж",
+        "санаа",
+        "бодол"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "念",
+        "r": "ねん",
+        "en": [
+          "sense",
+          "idea",
+          "thought"
+        ]
+      }
+    },
+    "ce58be090e": {
+      "mn": [
+        "жилийн лавлах",
+        "жилийн эмхэтгэл"
+      ],
+      "topics": [
+        "learning",
+        "time"
+      ],
+      "expected": {
+        "w": "年鑑",
+        "r": "ねんかん",
+        "en": [
+          "yearbook"
+        ]
+      }
+    },
+    "f8ba57f00f": {
+      "mn": [
+        "эрин үеийн нэр",
+        "оны дугаар"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "年号",
+        "r": "ねんごう",
+        "en": [
+          "name of an era",
+          "year number"
+        ]
+      }
+    },
+    "b4a78b922a": {
+      "mn": [
+        "шаталт",
+        "шатах үйл явц"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "燃焼",
+        "r": "ねんしょう",
+        "en": [
+          "burning",
+          "combustion"
+        ]
+      }
+    },
+    "a81a657a28": {
+      "mn": [
+        "… дугаар ангийн сурагч",
+        "… дугаар курсийн оюутан"
+      ],
+      "topics": [
+        "learning",
+        "people"
+      ],
+      "expected": {
+        "w": "年生",
+        "r": "ねんせい",
+        "en": [
+          "pupil in .... year",
+          "student in .... year"
+        ]
+      }
+    },
+    "6a7773d61c": {
+      "mn": [
+        "насаар ах байх"
+      ],
+      "topics": [
+        "time",
+        "people"
+      ],
+      "expected": {
+        "w": "年長",
+        "r": "ねんちょう",
+        "en": [
+          "seniority"
+        ]
+      }
+    },
+    "fd6003e8b5": {
+      "mn": [
+        "түлш"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "燃料",
+        "r": "ねんりょう",
+        "en": [
+          "fuel"
+        ]
+      }
+    },
+    "2bc12ccbaf": {
+      "mn": [
+        "модны жилийн цагираг"
+      ],
+      "topics": [
+        "nature",
+        "time"
+      ],
+      "expected": {
+        "w": "年輪",
+        "r": "ねんりん",
+        "en": [
+          "annual tree ring"
+        ]
+      }
+    },
+    "34eeb4ae79": {
+      "mn": [
+        "невроз",
+        "мэдрэлийн хямрал"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "ノイローゼ",
+        "r": "ノイローゼ",
+        "en": [
+          "(de:) (n) neurosis (de: Neurose)"
+        ]
+      }
+    },
+    "4ac13343dc": {
+      "mn": [
+        "тархи",
+        "ой санамж"
+      ],
+      "topics": [
+        "body",
+        "learning"
+      ],
+      "expected": {
+        "w": "脳",
+        "r": "のう",
+        "en": [
+          "brain",
+          "memory"
+        ]
+      }
+    },
+    "c67f56091c": {
+      "mn": [
+        "газар тариалан",
+        "тариалан эрхлэх"
+      ],
+      "topics": [
+        "work",
+        "nature"
+      ],
+      "expected": {
+        "w": "農耕",
+        "r": "のうこう",
+        "en": [
+          "farming",
+          "agriculture"
+        ]
+      }
+    },
+    "bdbf18b1d1": {
+      "mn": [
+        "аж ахуйн тариалангийн талбай",
+        "ферм"
+      ],
+      "topics": [
+        "work",
+        "places"
+      ],
+      "expected": {
+        "w": "農場",
+        "r": "のうじょう",
+        "en": [
+          "farm (agriculture)"
+        ]
+      }
+    },
+    "9c37735220": {
+      "mn": [
+        "тариалангийн газар"
+      ],
+      "topics": [
+        "places",
+        "nature"
+      ],
+      "expected": {
+        "w": "農地",
+        "r": "のうち",
+        "en": [
+          "agricultural land"
+        ]
+      }
+    },
+    "6d57e2cc71": {
+      "mn": [
+        "төлбөр хийх",
+        "нийлүүлэх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "納入",
+        "r": "のうにゅう",
+        "en": [
+          "payment",
+          "supply"
+        ]
+      }
+    },
+    "eecad7aa7d": {
+      "mn": [
+        "суллах",
+        "тавьж явуулах",
+        "зугтаалгах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "逃す",
+        "r": "のがす",
+        "en": [
+          "to let loose",
+          "to set free",
+          "to let escape"
+        ]
+      }
+    },
+    "a982de9434": {
+      "mn": [
+        "зугтан зайлах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "逃れる",
+        "r": "のがれる",
+        "en": [
+          "to escape"
+        ]
+      }
+    },
+    "7c05439ccd": {
+      "mn": [
+        "эгнээ байшингууд"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "軒並み",
+        "r": "のきなみ",
+        "en": [
+          "row of houses"
+        ]
+      }
+    },
+    "2278a3e4a3": {
+      "mn": [
+        "хүсүүштэй",
+        "хүсэн хүлээсэн"
+      ],
+      "topics": [
+        "feelings",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "望ましい",
+        "r": "のぞましい",
+        "en": [
+          "desirable",
+          "hoped for"
+        ]
+      }
+    },
+    "6772563bb9": {
+      "mn": [
+        "… руу харж байрлах",
+        "нүүр тулах",
+        "хандаж ажиллах"
+      ],
+      "topics": [
+        "actions",
+        "places"
+      ],
+      "expected": {
+        "w": "臨む",
+        "r": "のぞむ",
+        "en": [
+          "to look out on",
+          "to face",
+          "to deal with"
+        ]
+      }
+    },
+    "f4567b25f5": {
+      "mn": [
+        "булаан авах",
+        "эзлэх",
+        "эрх мэдэл булаах"
+      ],
+      "topics": [
+        "society",
+        "actions"
+      ],
+      "expected": {
+        "w": "乗っ取る",
+        "r": "のっとる",
+        "en": [
+          "to capture",
+          "to occupy",
+          "to usurp"
+        ]
+      }
+    },
+    "7b38fa3613": {
+      "mn": [
+        "амгалан",
+        "тайван",
+        "нам гүм"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "長閑",
+        "r": "のどか",
+        "en": [
+          "tranquil",
+          "calm",
+          "quiet"
+        ]
+      }
+    },
+    "6cbe3e8ae9": {
+      "mn": [
+        "муулах",
+        "доромжлох"
+      ],
+      "topics": [
+        "actions",
+        "relationships"
+      ],
+      "expected": {
+        "w": "罵る",
+        "r": "ののしる",
+        "en": [
+          "to speak ill of",
+          "to abuse"
+        ]
+      }
+    },
+    "10a1ffe4df": {
+      "mn": [
+        "залгилж уух",
+        "залгих",
+        "ойлгох"
+      ],
+      "topics": [
+        "body",
+        "learning",
+        "actions"
+      ],
+      "expected": {
+        "w": "飲み込む",
+        "r": "のみこむ",
+        "en": [
+          "to gulp down",
+          "to swallow deeply",
+          "to understand"
+        ]
+      }
+    },
+    "115e6f8702": {
+      "mn": [
+        "суух",
+        "хөлөгт суух",
+        "машинд орох"
+      ],
+      "topics": [
+        "places",
+        "actions"
+      ],
+      "expected": {
+        "w": "乗り込む",
+        "r": "のりこむ",
+        "en": [
+          "to board",
+          "to embark on",
+          "to get into (a car)"
+        ]
+      }
+    },
+    "661d1ef651": {
+      "mn": [
+        "илдний ир"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "刃",
+        "r": "は",
+        "en": [
+          "edge (of a sword)"
+        ]
+      }
+    },
+    "7abab0200b": {
+      "mn": [
+        "бүлэглэл",
+        "фракц",
+        "урсгал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "派",
+        "r": "は",
+        "en": [
+          "clique",
+          "faction",
+          "school"
+        ]
+      }
+    },
+    "19f66d37d7": {
+      "mn": [
+        "баар"
+      ],
+      "topics": [
+        "food",
+        "places"
+      ],
+      "expected": {
+        "w": "バー",
+        "r": "バー",
+        "en": [
+          "bar"
+        ]
+      }
+    },
+    "128e858d57": {
+      "mn": [
+        "атгах",
+        "барих",
+        "ойлгож мэдэх"
+      ],
+      "topics": [
+        "actions",
+        "learning"
+      ],
+      "expected": {
+        "w": "把握",
+        "r": "はあく",
+        "en": [
+          "grasp",
+          "catch",
+          "understanding"
+        ]
+      }
+    },
+    "7afb21c39b": {
+      "mn": [
+        "уушги"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "肺",
+        "r": "はい",
+        "en": [
+          "lung"
+        ]
+      }
+    },
+    "0eb30dd86f": {
+      "mn": [
+        "хүчингүй болгох",
+        "хаяж устгах",
+        "хэрэглэхээ болих"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "廃棄",
+        "r": "はいき",
+        "en": [
+          "annullment",
+          "disposal",
+          "abandon"
+        ]
+      }
+    },
+    "d59e92f5eb": {
+      "mn": [
+        "хуваарилан түгээх",
+        "кино зэрэг бүтээл түгээх"
+      ],
+      "topics": [
+        "work",
+        "food",
+        "arts"
+      ],
+      "expected": {
+        "w": "配給",
+        "r": "はいきゅう",
+        "en": [
+          "distribution (eg. films, rice)"
+        ]
+      }
+    },
+    "4fe5047b84": {
+      "mn": [
+        "бактери",
+        "нян"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "黴菌",
+        "r": "ばいきん",
+        "en": [
+          "bacteria",
+          "germ(s)"
+        ]
+      }
+    },
+    "23a4264046": {
+      "mn": [
+        "гэр бүлийн хань",
+        "эхнэр",
+        "нөхөр"
+      ],
+      "topics": [
+        "relationships",
+        "people"
+      ],
+      "expected": {
+        "w": "配偶者",
+        "r": "はいぐうしゃ",
+        "en": [
+          "spouse",
+          "wife",
+          "husband"
+        ]
+      }
+    },
+    "cb2008f46b": {
+      "mn": [
+        "Эрхэм … танаа (захидлын эхний хүндэтгэлийн үг)"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "拝啓",
+        "r": "はいけい",
+        "en": [
+          "Dear (so and so)"
+        ]
+      }
+    },
+    "29b10e360f": {
+      "mn": [
+        "арын дэвсгэр",
+        "байгалийн үзэмж",
+        "орчин"
+      ],
+      "topics": [
+        "arts",
+        "places"
+      ],
+      "expected": {
+        "w": "背景",
+        "r": "はいけい",
+        "en": [
+          "background",
+          "scenery",
+          "setting"
+        ]
+      }
+    },
+    "25abc3f3fb": {
+      "mn": [
+        "ар тал",
+        "ар хэсэг"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "背後",
+        "r": "はいご",
+        "en": [
+          "back",
+          "rear"
+        ]
+      }
+    },
+    "58b8070ec3": {
+      "mn": [
+        "халах",
+        "хүчингүй болгох"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "廃止",
+        "r": "はいし",
+        "en": [
+          "abolition",
+          "repeal"
+        ]
+      }
+    },
+    "35c99c026b": {
+      "mn": [
+        "түр зээлж авах (даруу хүндэтгэлийн хэллэг)"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "拝借",
+        "r": "はいしゃく",
+        "en": [
+          "borrowing"
+        ]
+      }
+    },
+    "13d06bf02b": {
+      "mn": [
+        "хасах",
+        "зайлуулах",
+        "татгалзах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "排除",
+        "r": "はいじょ",
+        "en": [
+          "exclusion",
+          "removal",
+          "rejection"
+        ]
+      }
+    },
+    "de208b6d57": {
+      "mn": [
+        "хохирлын нөхөн төлбөр",
+        "нөхөн олговор"
+      ],
+      "topics": [
+        "society",
+        "work"
+      ],
+      "expected": {
+        "w": "賠償",
+        "r": "ばいしょう",
+        "en": [
+          "reparations",
+          "indemnity",
+          "compensation"
+        ]
+      }
+    },
+    "121f05e948": {
+      "mn": [
+        "ус зайлуулах"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "排水",
+        "r": "はいすい",
+        "en": [
+          "drainage"
+        ]
+      }
+    }
+  }
+}

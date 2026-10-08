@@ -4,6 +4,95 @@
   "method": "Explicit semantic assignments cross-checked against stable IDs, Japanese headwords/readings, and retained English. Not an independent human review. No catch-all for unmatched entries.",
   "entries": {
     "vocab": {
+      "1325504949": {
+        "ja": "移住",
+        "reading": "いじゅう",
+        "en": [
+          "migration",
+          "immigration"
+        ],
+        "topics": [
+          "places",
+          "people"
+        ]
+      },
+      "1932992711": {
+        "ja": "傷付く",
+        "reading": "きずつく",
+        "en": [
+          "to be hurt",
+          "to be wounded",
+          "to get injured"
+        ],
+        "topics": [
+          "body"
+        ]
+      },
+      "2584943533": {
+        "ja": "毎晩",
+        "reading": "まいばん",
+        "en": [
+          "every night"
+        ],
+        "topics": [
+          "time"
+        ]
+      },
+      "2676514561": {
+        "ja": "みんな",
+        "reading": "みんな",
+        "en": [
+          "everyone"
+        ],
+        "topics": [
+          "people"
+        ]
+      },
+      "2788360295": {
+        "ja": "伝説",
+        "reading": "でんせつ",
+        "en": [
+          "tradition",
+          "legend",
+          "folklore"
+        ],
+        "topics": [
+          "arts"
+        ]
+      },
+      "3025545197": {
+        "ja": "茶の湯",
+        "reading": "ちゃのゆ",
+        "en": [
+          "tea ceremony"
+        ],
+        "topics": [
+          "society",
+          "food"
+        ]
+      },
+      "3893318870": {
+        "ja": "点検",
+        "reading": "てんけん",
+        "en": [
+          "inspection",
+          "examination",
+          "checking"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "4198992702": {
+        "ja": "荒廃",
+        "reading": "こうはい",
+        "en": [
+          "ruin"
+        ],
+        "topics": [
+          "places"
+        ]
+      },
       "j1711070": {
         "ja": "百年",
         "reading": "ひゃくねん",
@@ -3240,16 +3329,6 @@
           "time"
         ]
       },
-      "2584943533": {
-        "ja": "毎晩",
-        "reading": "まいばん",
-        "en": [
-          "every night"
-        ],
-        "topics": [
-          "time"
-        ]
-      },
       "319e218950": {
         "ja": "前",
         "reading": "まえ",
@@ -4322,16 +4401,6 @@
       "d2b9c47656": {
         "ja": "皆さん",
         "reading": "みなさん",
-        "en": [
-          "everyone"
-        ],
-        "topics": [
-          "people"
-        ]
-      },
-      "2676514561": {
-        "ja": "みんな",
-        "reading": "みんな",
         "en": [
           "everyone"
         ],
@@ -5570,18 +5639,6 @@
         ],
         "topics": [
           "actions"
-        ]
-      },
-      "1325504949": {
-        "ja": "移住",
-        "reading": "いじゅう",
-        "en": [
-          "migration",
-          "immigration"
-        ],
-        "topics": [
-          "places",
-          "people"
         ]
       },
       "j2409950": {
@@ -29453,18 +29510,6 @@
           "relationships"
         ]
       },
-      "1932992711": {
-        "ja": "傷付く",
-        "reading": "きずつく",
-        "en": [
-          "to be hurt",
-          "to be wounded",
-          "to get injured"
-        ],
-        "topics": [
-          "body"
-        ]
-      },
       "a63d59c119": {
         "ja": "敵",
         "reading": "かたき",
@@ -31332,16 +31377,6 @@
           "learning"
         ]
       },
-      "e05bb17edd": {
-        "ja": "気品",
-        "reading": "きひん",
-        "en": [
-          "aroma"
-        ],
-        "topics": [
-          "feelings"
-        ]
-      },
       "d23da22be0": {
         "ja": "気風",
         "reading": "きふう",
@@ -32805,16 +32840,6 @@
         "topics": [
           "people",
           "work"
-        ]
-      },
-      "4198992702": {
-        "ja": "荒廃",
-        "reading": "こうはい",
-        "en": [
-          "ruin"
-        ],
-        "topics": [
-          "places"
         ]
       },
       "24de60011c": {
@@ -36787,41 +36812,6 @@
         ],
         "topics": [
           "actions"
-        ]
-      },
-      "2788360295": {
-        "ja": "伝説",
-        "reading": "でんせつ",
-        "en": [
-          "tradition",
-          "legend",
-          "folklore"
-        ],
-        "topics": [
-          "arts"
-        ]
-      },
-      "3025545197": {
-        "ja": "茶の湯",
-        "reading": "ちゃのゆ",
-        "en": [
-          "tea ceremony"
-        ],
-        "topics": [
-          "society",
-          "food"
-        ]
-      },
-      "3893318870": {
-        "ja": "点検",
-        "reading": "てんけん",
-        "en": [
-          "inspection",
-          "examination",
-          "checking"
-        ],
-        "topics": [
-          "learning"
         ]
       },
       "42b43ce436": {
@@ -40821,6 +40811,4178 @@
         ],
         "topics": [
           "quantity"
+        ]
+      },
+      "b6b8baaa21": {
+        "ja": "共稼ぎ",
+        "reading": "ともかせぎ",
+        "en": [
+          "working together",
+          "(husband and wife) earning a living together"
+        ],
+        "topics": [
+          "work",
+          "relationships"
+        ]
+      },
+      "9db5fc5943": {
+        "ja": "灯",
+        "reading": "ともしび",
+        "en": [
+          "light"
+        ],
+        "topics": [
+          "daily"
+        ]
+      },
+      "8e13072b37": {
+        "ja": "伴う",
+        "reading": "ともなう",
+        "en": [
+          "to accompany",
+          "to bring with",
+          "to be accompanied by"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "5c95d2786a": {
+        "ja": "共働き",
+        "reading": "ともばたらき",
+        "en": [
+          "dual income"
+        ],
+        "topics": [
+          "work",
+          "relationships"
+        ]
+      },
+      "fd888ecdd5": {
+        "ja": "ドライ",
+        "reading": "ドライ",
+        "en": [
+          "dry"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "bf4278079e": {
+        "ja": "ドライクリーニング",
+        "reading": "ドライクリーニング",
+        "en": [
+          "dry cleaning"
+        ],
+        "topics": [
+          "daily"
+        ]
+      },
+      "cb0a964ac5": {
+        "ja": "ドライバー",
+        "reading": "ドライバー",
+        "en": [
+          "driver",
+          "screwdriver"
+        ],
+        "topics": [
+          "people",
+          "technology",
+          "places"
+        ]
+      },
+      "cc10bd8df6": {
+        "ja": "ドライブイン",
+        "reading": "ドライブイン",
+        "en": [
+          "drive in"
+        ],
+        "topics": [
+          "places",
+          "food"
+        ]
+      },
+      "e3426a80fa": {
+        "ja": "トラブル",
+        "reading": "トラブル",
+        "en": [
+          "trouble (sometimes used as a verb)"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "35b3613e22": {
+        "ja": "トランジスター",
+        "reading": "トランジスター",
+        "en": [
+          "transistor"
+        ],
+        "topics": [
+          "technology"
+        ]
+      },
+      "2923222f81": {
+        "ja": "取りあえず",
+        "reading": "とりあえず",
+        "en": [
+          "at once",
+          "first of all",
+          "for the time being"
+        ],
+        "topics": [
+          "time"
+        ]
+      },
+      "c3c0a73472": {
+        "ja": "取り扱い",
+        "reading": "とりあつかい",
+        "en": [
+          "treatment",
+          "service",
+          "handling"
+        ],
+        "topics": [
+          "actions",
+          "work"
+        ]
+      },
+      "abfc489fce": {
+        "ja": "取り扱う",
+        "reading": "とりあつかう",
+        "en": [
+          "to treat",
+          "to handle",
+          "to deal in"
+        ],
+        "topics": [
+          "actions",
+          "work"
+        ]
+      },
+      "de86cdf652": {
+        "ja": "鳥居",
+        "reading": "とりい",
+        "en": [
+          "torii (Shinto shrine archway)"
+        ],
+        "topics": [
+          "society",
+          "places"
+        ]
+      },
+      "edbf2bae34": {
+        "ja": "取り替え",
+        "reading": "とりかえ",
+        "en": [
+          "swap",
+          "exchange"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "cfeca5e5ef": {
+        "ja": "取り組む",
+        "reading": "とりくむ",
+        "en": [
+          "to tackle",
+          "to wrestle with",
+          "to engage in a bout"
+        ],
+        "topics": [
+          "actions",
+          "arts"
+        ]
+      },
+      "9ece123d2a": {
+        "ja": "取り締まり",
+        "reading": "とりしまり",
+        "en": [
+          "control",
+          "management",
+          "supervision"
+        ],
+        "topics": [
+          "society",
+          "work"
+        ]
+      },
+      "78d8978095": {
+        "ja": "取り締まる",
+        "reading": "とりしまる",
+        "en": [
+          "to manage",
+          "to control",
+          "to supervise"
+        ],
+        "topics": [
+          "society",
+          "work",
+          "actions"
+        ]
+      },
+      "b921800266": {
+        "ja": "取り調べる",
+        "reading": "とりしらべる",
+        "en": [
+          "to investigate",
+          "to examine"
+        ],
+        "topics": [
+          "society",
+          "actions"
+        ]
+      },
+      "8302e4c473": {
+        "ja": "取り立てる",
+        "reading": "とりたてる",
+        "en": [
+          "to collect",
+          "to extort",
+          "to appoint"
+        ],
+        "topics": [
+          "work",
+          "society",
+          "actions"
+        ]
+      },
+      "926d078a4a": {
+        "ja": "取り次ぐ",
+        "reading": "とりつぐ",
+        "en": [
+          "to act as an agent for",
+          "to announce (someone)",
+          "to convey (a message)"
+        ],
+        "topics": [
+          "work",
+          "learning",
+          "actions"
+        ]
+      },
+      "6964beadb0": {
+        "ja": "取り除く",
+        "reading": "とりのぞく",
+        "en": [
+          "to remove",
+          "to take away",
+          "to set apart"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "84712a74c1": {
+        "ja": "取り引き",
+        "reading": "とりひき",
+        "en": [
+          "transactions",
+          "dealings",
+          "business"
+        ],
+        "topics": [
+          "work"
+        ]
+      },
+      "6b96945112": {
+        "ja": "取り巻く",
+        "reading": "とりまく",
+        "en": [
+          "to surround",
+          "to circle",
+          "to enclose"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "edbb308319": {
+        "ja": "取り混ぜる",
+        "reading": "とりまぜる",
+        "en": [
+          "to mix",
+          "to put together"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "2bd8a385f3": {
+        "ja": "取り戻す",
+        "reading": "とりもどす",
+        "en": [
+          "to take back",
+          "to regain"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "5ce219cc8b": {
+        "ja": "取り寄せる",
+        "reading": "とりよせる",
+        "en": [
+          "to order",
+          "to send away for"
+        ],
+        "topics": [
+          "actions",
+          "work"
+        ]
+      },
+      "c239ea3b65": {
+        "ja": "ドリル",
+        "reading": "ドリル",
+        "en": [
+          "drill"
+        ],
+        "topics": [
+          "technology",
+          "learning"
+        ]
+      },
+      "00214393d1": {
+        "ja": "とりわけ",
+        "reading": "とりわけ",
+        "en": [
+          "especially",
+          "above all"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "a6b3309e5a": {
+        "ja": "とろける",
+        "reading": "とろける",
+        "en": [
+          "to be enchanted with"
+        ],
+        "topics": [
+          "feelings",
+          "actions"
+        ]
+      },
+      "4fa38f27ac": {
+        "ja": "度忘れ",
+        "reading": "どわすれ",
+        "en": [
+          "lapse of memory",
+          "forget for a moment"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "ff9d085860": {
+        "ja": "鈍感",
+        "reading": "どんかん",
+        "en": [
+          "thickheadedness",
+          "stolidity"
+        ],
+        "topics": [
+          "feelings",
+          "descriptions"
+        ]
+      },
+      "9a7c2e79ba": {
+        "ja": "とんだ",
+        "reading": "とんだ",
+        "en": [
+          "terrible",
+          "awful",
+          "serious"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "d67d98f36f": {
+        "ja": "問屋",
+        "reading": "とんや",
+        "en": [
+          "wholesale store"
+        ],
+        "topics": [
+          "work",
+          "places"
+        ]
+      },
+      "dcfe83aa60": {
+        "ja": "内閣",
+        "reading": "ないかく",
+        "en": [
+          "cabinet",
+          "(government) ministry"
+        ],
+        "topics": [
+          "society"
+        ]
+      },
+      "0f465008eb": {
+        "ja": "乃至",
+        "reading": "ないし",
+        "en": [
+          "from...to",
+          "between...and",
+          "or"
+        ],
+        "topics": [
+          "learning",
+          "quantity"
+        ]
+      },
+      "d29d292f57": {
+        "ja": "内臓",
+        "reading": "ないぞう",
+        "en": [
+          "internal organs",
+          "intestines",
+          "viscera"
+        ],
+        "topics": [
+          "body"
+        ]
+      },
+      "7b11453390": {
+        "ja": "ナイター",
+        "reading": "ナイター",
+        "en": [
+          "game under lights (e.g. baseball) (lit: nighter)",
+          "night game"
+        ],
+        "topics": [
+          "arts",
+          "time"
+        ]
+      },
+      "14e970343a": {
+        "ja": "内部",
+        "reading": "ないぶ",
+        "en": [
+          "interior",
+          "inside",
+          "internal"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "e77eee8954": {
+        "ja": "内乱",
+        "reading": "ないらん",
+        "en": [
+          "civil war",
+          "insurrection",
+          "rebellion"
+        ],
+        "topics": [
+          "society"
+        ]
+      },
+      "ee686f4d3d": {
+        "ja": "内陸",
+        "reading": "ないりく",
+        "en": [
+          "inland"
+        ],
+        "topics": [
+          "places"
+        ]
+      },
+      "c0f7ee5ea3": {
+        "ja": "苗",
+        "reading": "なえ",
+        "en": [
+          "rice seedling"
+        ],
+        "topics": [
+          "nature"
+        ]
+      },
+      "5311aefc83": {
+        "ja": "尚更",
+        "reading": "なおさら",
+        "en": [
+          "all the more",
+          "still less"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "2b6f94e367": {
+        "ja": "流し",
+        "reading": "ながし",
+        "en": [
+          "sink"
+        ],
+        "topics": [
+          "daily"
+        ]
+      },
+      "a45d9c6b07": {
+        "ja": "長々",
+        "reading": "ながなが",
+        "en": [
+          "long",
+          "drawn-out",
+          "very long"
+        ],
+        "topics": [
+          "time",
+          "descriptions"
+        ]
+      },
+      "356de62d21": {
+        "ja": "中程",
+        "reading": "なかほど",
+        "en": [
+          "middle",
+          "midway"
+        ],
+        "topics": [
+          "places",
+          "quantity"
+        ]
+      },
+      "cfcf176af8": {
+        "ja": "嘆く",
+        "reading": "なげく",
+        "en": [
+          "to sigh",
+          "to lament",
+          "to grieve"
+        ],
+        "topics": [
+          "feelings",
+          "actions"
+        ]
+      },
+      "df0769de6d": {
+        "ja": "投げ出す",
+        "reading": "なげだす",
+        "en": [
+          "to throw down",
+          "to abandon",
+          "to sacrifice"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "08c6648742": {
+        "ja": "仲人",
+        "reading": "なこうど",
+        "en": [
+          "go-between",
+          "matchmaker"
+        ],
+        "topics": [
+          "relationships",
+          "people"
+        ]
+      },
+      "c4f8f62a17": {
+        "ja": "和やか",
+        "reading": "なごやか",
+        "en": [
+          "mild",
+          "calm",
+          "gentle"
+        ],
+        "topics": [
+          "relationships",
+          "descriptions"
+        ]
+      },
+      "f0daebddc3": {
+        "ja": "名残",
+        "reading": "なごり",
+        "en": [
+          "remains",
+          "traces",
+          "memory"
+        ],
+        "topics": [
+          "time",
+          "feelings"
+        ]
+      },
+      "0d977668eb": {
+        "ja": "情け",
+        "reading": "なさけ",
+        "en": [
+          "sympathy",
+          "compassion"
+        ],
+        "topics": [
+          "feelings"
+        ]
+      },
+      "1208bff351": {
+        "ja": "情け深い",
+        "reading": "なさけぶかい",
+        "en": [
+          "tender-hearted",
+          "compassionate"
+        ],
+        "topics": [
+          "feelings",
+          "descriptions"
+        ]
+      },
+      "4956c845dc": {
+        "ja": "詰る",
+        "reading": "なじる",
+        "en": [
+          "to rebuke",
+          "to scold",
+          "to tell off"
+        ],
+        "topics": [
+          "actions",
+          "relationships"
+        ]
+      },
+      "a299ed22cd": {
+        "ja": "名高い",
+        "reading": "なだかい",
+        "en": [
+          "famous",
+          "celebrated",
+          "well-known"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "cde25b33c0": {
+        "ja": "雪崩",
+        "reading": "なだれ",
+        "en": [
+          "avalanche"
+        ],
+        "topics": [
+          "nature"
+        ]
+      },
+      "c714cc1e51": {
+        "ja": "懐く",
+        "reading": "なつく",
+        "en": [
+          "to become emotionally attached"
+        ],
+        "topics": [
+          "relationships",
+          "actions"
+        ]
+      },
+      "5d2540f37c": {
+        "ja": "名付ける",
+        "reading": "なづける",
+        "en": [
+          "to name (someone)"
+        ],
+        "topics": [
+          "learning",
+          "actions"
+        ]
+      },
+      "28c61d9d2a": {
+        "ja": "何気ない",
+        "reading": "なにげない",
+        "en": [
+          "casual",
+          "unconcerned"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "9570ac7fed": {
+        "ja": "何卒",
+        "reading": "なにとぞ",
+        "en": [
+          "please",
+          "kindly",
+          "by all means"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "db403717e5": {
+        "ja": "何より",
+        "reading": "なにより",
+        "en": [
+          "most",
+          "best"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "9cf8caaf7c": {
+        "ja": "ナプキン",
+        "reading": "ナプキン",
+        "en": [
+          "napkin"
+        ],
+        "topics": [
+          "daily",
+          "food"
+        ]
+      },
+      "e12aa3df38": {
+        "ja": "名札",
+        "reading": "なふだ",
+        "en": [
+          "name plate",
+          "name tag"
+        ],
+        "topics": [
+          "work",
+          "daily"
+        ]
+      },
+      "ba1748f1df": {
+        "ja": "生臭い",
+        "reading": "なまぐさい",
+        "en": [
+          "smelling of fish or blood",
+          "fish or meat"
+        ],
+        "topics": [
+          "food",
+          "descriptions"
+        ]
+      },
+      "64ae2006dd": {
+        "ja": "生温い",
+        "reading": "なまぬるい",
+        "en": [
+          "lukewarm",
+          "halfhearted"
+        ],
+        "topics": [
+          "body",
+          "descriptions"
+        ]
+      },
+      "432e75bc0b": {
+        "ja": "生身",
+        "reading": "なまみ",
+        "en": [
+          "living flesh",
+          "flesh and blood",
+          "the quick"
+        ],
+        "topics": [
+          "body"
+        ]
+      },
+      "6c7a3fe563": {
+        "ja": "鉛",
+        "reading": "なまり",
+        "en": [
+          "lead (the metal)"
+        ],
+        "topics": [
+          "technology"
+        ]
+      },
+      "d39ee7b933": {
+        "ja": "並み",
+        "reading": "なみ",
+        "en": [
+          "average",
+          "medium",
+          "common"
+        ],
+        "topics": [
+          "quantity",
+          "descriptions"
+        ]
+      },
+      "26e6475d25": {
+        "ja": "滑らか",
+        "reading": "なめらか",
+        "en": [
+          "smoothness",
+          "glassiness"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "3917b83619": {
+        "ja": "なめる",
+        "reading": "なめる",
+        "en": [
+          "to lick",
+          "to taste",
+          "to experience"
+        ],
+        "topics": [
+          "actions",
+          "food"
+        ]
+      },
+      "bad8c2fee2": {
+        "ja": "悩ましい",
+        "reading": "なやましい",
+        "en": [
+          "seductive",
+          "melancholy",
+          "languid"
+        ],
+        "topics": [
+          "feelings",
+          "descriptions"
+        ]
+      },
+      "e9cfb54883": {
+        "ja": "悩ます",
+        "reading": "なやます",
+        "en": [
+          "to afflict",
+          "to torment",
+          "to harass"
+        ],
+        "topics": [
+          "feelings",
+          "actions"
+        ]
+      },
+      "64d39b7bc3": {
+        "ja": "悩み",
+        "reading": "なやみ",
+        "en": [
+          "trouble(s)",
+          "worry",
+          "distress"
+        ],
+        "topics": [
+          "feelings"
+        ]
+      },
+      "c4be7bde99": {
+        "ja": "慣らす",
+        "reading": "ならす",
+        "en": [
+          "to accustom"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "c35361ecb7": {
+        "ja": "馴らす",
+        "reading": "ならす",
+        "en": [
+          "to domesticate",
+          "to tame"
+        ],
+        "topics": [
+          "nature",
+          "actions"
+        ]
+      },
+      "2ee52d40e1": {
+        "ja": "並びに",
+        "reading": "ならびに",
+        "en": [
+          "and"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "3837730fa3": {
+        "ja": "成り立つ",
+        "reading": "なりたつ",
+        "en": [
+          "to conclude",
+          "to consist of",
+          "to be practical (logical, feasible, viable)"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "c88fd01898": {
+        "ja": "なるたけ",
+        "reading": "なるたけ",
+        "en": [
+          "as much as possible",
+          "if possible"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "8d6d7688de": {
+        "ja": "慣れ",
+        "reading": "なれ",
+        "en": [
+          "practice",
+          "experience"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "6bd687836f": {
+        "ja": "馴れ馴れしい",
+        "reading": "なれなれしい",
+        "en": [
+          "over-familiar"
+        ],
+        "topics": [
+          "relationships",
+          "descriptions"
+        ]
+      },
+      "67f7a8d49f": {
+        "ja": "南",
+        "reading": "なん",
+        "en": [
+          "south"
+        ],
+        "topics": [
+          "places"
+        ]
+      },
+      "855ce6b835": {
+        "ja": "難",
+        "reading": "なん",
+        "en": [
+          "difficulty",
+          "hardships",
+          "defect"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "2cd8f09df7": {
+        "ja": "なんか",
+        "reading": "なんか",
+        "en": [
+          "things like ...",
+          "or something like that .. (often derogatory)"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "7432246708": {
+        "ja": "ナンセンス",
+        "reading": "ナンセンス",
+        "en": [
+          "nonsense"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "0e04473eff": {
+        "ja": "何だか",
+        "reading": "なんだか",
+        "en": [
+          "a little",
+          "somewhat",
+          "somehow"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "9bd5945236": {
+        "ja": "なんだかんだ",
+        "reading": "なんだかんだ",
+        "en": [
+          "something or other"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "fcc6b37129": {
+        "ja": "何て",
+        "reading": "なんて",
+        "en": [
+          "how...!",
+          "what...!"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "73baff290d": {
+        "ja": "何と",
+        "reading": "なんと",
+        "en": [
+          "what",
+          "how",
+          "whatever"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "ecb2bd27c4": {
+        "ja": "何なり",
+        "reading": "なんなり",
+        "en": [
+          "any",
+          "anything",
+          "whatever"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "b68826cd51": {
+        "ja": "荷",
+        "reading": "に",
+        "en": [
+          "load",
+          "baggage",
+          "cargo"
+        ],
+        "topics": [
+          "places",
+          "work"
+        ]
+      },
+      "0a44c1f364": {
+        "ja": "似通う",
+        "reading": "にかよう",
+        "en": [
+          "to resemble closely"
+        ],
+        "topics": [
+          "descriptions",
+          "actions"
+        ]
+      },
+      "0225c64108": {
+        "ja": "にきび",
+        "reading": "にきび",
+        "en": [
+          "pimple",
+          "acne"
+        ],
+        "topics": [
+          "body"
+        ]
+      },
+      "b89194a740": {
+        "ja": "賑わう",
+        "reading": "にぎわう",
+        "en": [
+          "to prosper",
+          "to flourish",
+          "to do thriving business"
+        ],
+        "topics": [
+          "work",
+          "actions"
+        ]
+      },
+      "a7c3dfe336": {
+        "ja": "憎しみ",
+        "reading": "にくしみ",
+        "en": [
+          "hatred"
+        ],
+        "topics": [
+          "feelings"
+        ]
+      },
+      "5a16d4bb86": {
+        "ja": "肉親",
+        "reading": "にくしん",
+        "en": [
+          "blood relationship",
+          "blood relative"
+        ],
+        "topics": [
+          "people",
+          "relationships"
+        ]
+      },
+      "2499a79801": {
+        "ja": "肉体",
+        "reading": "にくたい",
+        "en": [
+          "the body",
+          "the flesh"
+        ],
+        "topics": [
+          "body"
+        ]
+      },
+      "81115b78b4": {
+        "ja": "逃げ出す",
+        "reading": "にげだす",
+        "en": [
+          "to run away",
+          "to escape from"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "0de9f6ef1f": {
+        "ja": "西日",
+        "reading": "にしび",
+        "en": [
+          "westering sun"
+        ],
+        "topics": [
+          "nature",
+          "time"
+        ]
+      },
+      "fdb80c541c": {
+        "ja": "滲む",
+        "reading": "にじむ",
+        "en": [
+          "to run",
+          "to blur",
+          "to spread"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "6465bd7862": {
+        "ja": "贋物",
+        "reading": "にせもの",
+        "en": [
+          "imitation",
+          "counterfeit",
+          "forgery"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "b91e19a03b": {
+        "ja": "日夜",
+        "reading": "にちや",
+        "en": [
+          "day and night",
+          "always"
+        ],
+        "topics": [
+          "time"
+        ]
+      },
+      "f3e15d0ae8": {
+        "ja": "荷造り",
+        "reading": "にづくり",
+        "en": [
+          "packing",
+          "baling",
+          "crating"
+        ],
+        "topics": [
+          "places",
+          "work"
+        ]
+      },
+      "70608dfcae": {
+        "ja": "日当",
+        "reading": "にっとう",
+        "en": [
+          "daily allowance"
+        ],
+        "topics": [
+          "work",
+          "time"
+        ]
+      },
+      "c88c8e2462": {
+        "ja": "担う",
+        "reading": "になう",
+        "en": [
+          "to carry on shoulder",
+          "to bear (burden)",
+          "to shoulder (gun)"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "a5fb8ab81f": {
+        "ja": "鈍る",
+        "reading": "にぶる",
+        "en": [
+          "to become less capable",
+          "to grow dull",
+          "to become blunt"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "b481bbc58e": {
+        "ja": "にも拘らず",
+        "reading": "にもかかわらず",
+        "en": [
+          "in spite of",
+          "nevertheless"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "35e0c31550": {
+        "ja": "ニュアンス",
+        "reading": "ニュアンス",
+        "en": [
+          "nuance"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "c2bed1715c": {
+        "ja": "ニュー",
+        "reading": "ニュー",
+        "en": [
+          "new"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "cd6328c488": {
+        "ja": "入手",
+        "reading": "にゅうしゅ",
+        "en": [
+          "obtaining",
+          "coming to hand"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "340d51444a": {
+        "ja": "入賞",
+        "reading": "にゅうしょう",
+        "en": [
+          "winning a prize or place (in a contest)"
+        ],
+        "topics": [
+          "arts"
+        ]
+      },
+      "7e1cd0971f": {
+        "ja": "入浴",
+        "reading": "にゅうよく",
+        "en": [
+          "bathe",
+          "bathing"
+        ],
+        "topics": [
+          "body",
+          "daily"
+        ]
+      },
+      "921b6cc773": {
+        "ja": "尿",
+        "reading": "にょう",
+        "en": [
+          "urine"
+        ],
+        "topics": [
+          "body"
+        ]
+      },
+      "013e8ffafb": {
+        "ja": "認識",
+        "reading": "にんしき",
+        "en": [
+          "recognition",
+          "cognizance"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "483fe21dee": {
+        "ja": "人情",
+        "reading": "にんじょう",
+        "en": [
+          "humanity",
+          "empathy",
+          "kindness"
+        ],
+        "topics": [
+          "feelings",
+          "relationships"
+        ]
+      },
+      "f91583d66a": {
+        "ja": "妊娠",
+        "reading": "にんしん",
+        "en": [
+          "conception",
+          "pregnancy"
+        ],
+        "topics": [
+          "body"
+        ]
+      },
+      "5419458333": {
+        "ja": "任務",
+        "reading": "にんむ",
+        "en": [
+          "duty",
+          "function",
+          "office"
+        ],
+        "topics": [
+          "work"
+        ]
+      },
+      "513b728441": {
+        "ja": "任命",
+        "reading": "にんめい",
+        "en": [
+          "appointment",
+          "nomination",
+          "ordination"
+        ],
+        "topics": [
+          "work",
+          "society"
+        ]
+      },
+      "d82897d470": {
+        "ja": "抜かす",
+        "reading": "ぬかす",
+        "en": [
+          "to omit",
+          "to leave out"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "1190b0f9c4": {
+        "ja": "抜け出す",
+        "reading": "ぬけだす",
+        "en": [
+          "to slip out",
+          "to sneak away",
+          "to excel"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "44894d8fd0": {
+        "ja": "盗み",
+        "reading": "ぬすみ",
+        "en": [
+          "stealing"
+        ],
+        "topics": [
+          "society"
+        ]
+      },
+      "54bb39a184": {
+        "ja": "沼",
+        "reading": "ぬま",
+        "en": [
+          "swamp",
+          "bog",
+          "pond"
+        ],
+        "topics": [
+          "nature"
+        ]
+      },
+      "88e26cec55": {
+        "ja": "音",
+        "reading": "ね",
+        "en": [
+          "sound",
+          "note"
+        ],
+        "topics": [
+          "arts"
+        ]
+      },
+      "376a26250c": {
+        "ja": "音色",
+        "reading": "ねいろ",
+        "en": [
+          "tone color",
+          "tone quality",
+          "timbre"
+        ],
+        "topics": [
+          "arts"
+        ]
+      },
+      "82499bdec6": {
+        "ja": "値打ち",
+        "reading": "ねうち",
+        "en": [
+          "value",
+          "worth",
+          "price"
+        ],
+        "topics": [
+          "work"
+        ]
+      },
+      "17b1b51e96": {
+        "ja": "ネガ",
+        "reading": "ネガ",
+        "en": [
+          "(photographic) negative"
+        ],
+        "topics": [
+          "arts",
+          "technology"
+        ]
+      },
+      "4c90b6d71c": {
+        "ja": "寝かせる",
+        "reading": "ねかせる",
+        "en": [
+          "to put to bed",
+          "to lay down",
+          "to ferment"
+        ],
+        "topics": [
+          "daily",
+          "food",
+          "actions"
+        ]
+      },
+      "d512e45d85": {
+        "ja": "ねじ回し",
+        "reading": "ねじまわし",
+        "en": [
+          "screwdriver"
+        ],
+        "topics": [
+          "technology"
+        ]
+      },
+      "a8b71cab9b": {
+        "ja": "捻じれる",
+        "reading": "ねじれる",
+        "en": [
+          "to twist",
+          "to wrench",
+          "to screw"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "1ac6d9ceaf": {
+        "ja": "鼠",
+        "reading": "ねず",
+        "en": [
+          "mouse",
+          "rat",
+          "dark gray"
+        ],
+        "topics": [
+          "nature",
+          "descriptions"
+        ]
+      },
+      "ab01ab7345": {
+        "ja": "妬む",
+        "reading": "ねたむ",
+        "en": [
+          "to be jealous",
+          "to be envious"
+        ],
+        "topics": [
+          "feelings",
+          "actions"
+        ]
+      },
+      "9b6551f601": {
+        "ja": "強請る",
+        "reading": "ねだる",
+        "en": [
+          "to tease",
+          "to coax",
+          "to solicit"
+        ],
+        "topics": [
+          "actions",
+          "relationships"
+        ]
+      },
+      "0424f1858b": {
+        "ja": "熱意",
+        "reading": "ねつい",
+        "en": [
+          "zeal",
+          "enthusiasm"
+        ],
+        "topics": [
+          "feelings"
+        ]
+      },
+      "9dd688ef2b": {
+        "ja": "熱湯",
+        "reading": "ねっとう",
+        "en": [
+          "boiling water"
+        ],
+        "topics": [
+          "body",
+          "daily"
+        ]
+      },
+      "13c19c8395": {
+        "ja": "粘り",
+        "reading": "ねばり",
+        "en": [
+          "stickyness",
+          "viscosity"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "946e4b8b9b": {
+        "ja": "粘る",
+        "reading": "ねばる",
+        "en": [
+          "to be sticky",
+          "to be adhesive",
+          "to persevere"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "9f42d19e42": {
+        "ja": "値引き",
+        "reading": "ねびき",
+        "en": [
+          "price reduction",
+          "discount"
+        ],
+        "topics": [
+          "work"
+        ]
+      },
+      "48a804961e": {
+        "ja": "根回し",
+        "reading": "ねまわし",
+        "en": [
+          "making necessary arrangements"
+        ],
+        "topics": [
+          "work"
+        ]
+      },
+      "f373251362": {
+        "ja": "眠たい",
+        "reading": "ねむたい",
+        "en": [
+          "sleepy"
+        ],
+        "topics": [
+          "daily",
+          "descriptions"
+        ]
+      },
+      "3e7fc9179d": {
+        "ja": "練る",
+        "reading": "ねる",
+        "en": [
+          "to knead",
+          "to work over",
+          "to polish up"
+        ],
+        "topics": [
+          "actions",
+          "food"
+        ]
+      },
+      "418d241aaa": {
+        "ja": "念",
+        "reading": "ねん",
+        "en": [
+          "sense",
+          "idea",
+          "thought"
+        ],
+        "topics": [
+          "feelings"
+        ]
+      },
+      "ce58be090e": {
+        "ja": "年鑑",
+        "reading": "ねんかん",
+        "en": [
+          "yearbook"
+        ],
+        "topics": [
+          "learning",
+          "time"
+        ]
+      },
+      "f8ba57f00f": {
+        "ja": "年号",
+        "reading": "ねんごう",
+        "en": [
+          "name of an era",
+          "year number"
+        ],
+        "topics": [
+          "time"
+        ]
+      },
+      "b4a78b922a": {
+        "ja": "燃焼",
+        "reading": "ねんしょう",
+        "en": [
+          "burning",
+          "combustion"
+        ],
+        "topics": [
+          "nature"
+        ]
+      },
+      "a81a657a28": {
+        "ja": "年生",
+        "reading": "ねんせい",
+        "en": [
+          "pupil in .... year",
+          "student in .... year"
+        ],
+        "topics": [
+          "learning",
+          "people"
+        ]
+      },
+      "6a7773d61c": {
+        "ja": "年長",
+        "reading": "ねんちょう",
+        "en": [
+          "seniority"
+        ],
+        "topics": [
+          "time",
+          "people"
+        ]
+      },
+      "fd6003e8b5": {
+        "ja": "燃料",
+        "reading": "ねんりょう",
+        "en": [
+          "fuel"
+        ],
+        "topics": [
+          "technology"
+        ]
+      },
+      "2bc12ccbaf": {
+        "ja": "年輪",
+        "reading": "ねんりん",
+        "en": [
+          "annual tree ring"
+        ],
+        "topics": [
+          "nature",
+          "time"
+        ]
+      },
+      "34eeb4ae79": {
+        "ja": "ノイローゼ",
+        "reading": "ノイローゼ",
+        "en": [
+          "(de:) (n) neurosis (de: Neurose)"
+        ],
+        "topics": [
+          "body"
+        ]
+      },
+      "4ac13343dc": {
+        "ja": "脳",
+        "reading": "のう",
+        "en": [
+          "brain",
+          "memory"
+        ],
+        "topics": [
+          "body",
+          "learning"
+        ]
+      },
+      "c67f56091c": {
+        "ja": "農耕",
+        "reading": "のうこう",
+        "en": [
+          "farming",
+          "agriculture"
+        ],
+        "topics": [
+          "work",
+          "nature"
+        ]
+      },
+      "bdbf18b1d1": {
+        "ja": "農場",
+        "reading": "のうじょう",
+        "en": [
+          "farm (agriculture)"
+        ],
+        "topics": [
+          "work",
+          "places"
+        ]
+      },
+      "9c37735220": {
+        "ja": "農地",
+        "reading": "のうち",
+        "en": [
+          "agricultural land"
+        ],
+        "topics": [
+          "places",
+          "nature"
+        ]
+      },
+      "6d57e2cc71": {
+        "ja": "納入",
+        "reading": "のうにゅう",
+        "en": [
+          "payment",
+          "supply"
+        ],
+        "topics": [
+          "work"
+        ]
+      },
+      "eecad7aa7d": {
+        "ja": "逃す",
+        "reading": "のがす",
+        "en": [
+          "to let loose",
+          "to set free",
+          "to let escape"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "a982de9434": {
+        "ja": "逃れる",
+        "reading": "のがれる",
+        "en": [
+          "to escape"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "7c05439ccd": {
+        "ja": "軒並み",
+        "reading": "のきなみ",
+        "en": [
+          "row of houses"
+        ],
+        "topics": [
+          "places"
+        ]
+      },
+      "2278a3e4a3": {
+        "ja": "望ましい",
+        "reading": "のぞましい",
+        "en": [
+          "desirable",
+          "hoped for"
+        ],
+        "topics": [
+          "feelings",
+          "descriptions"
+        ]
+      },
+      "6772563bb9": {
+        "ja": "臨む",
+        "reading": "のぞむ",
+        "en": [
+          "to look out on",
+          "to face",
+          "to deal with"
+        ],
+        "topics": [
+          "actions",
+          "places"
+        ]
+      },
+      "f4567b25f5": {
+        "ja": "乗っ取る",
+        "reading": "のっとる",
+        "en": [
+          "to capture",
+          "to occupy",
+          "to usurp"
+        ],
+        "topics": [
+          "society",
+          "actions"
+        ]
+      },
+      "7b38fa3613": {
+        "ja": "長閑",
+        "reading": "のどか",
+        "en": [
+          "tranquil",
+          "calm",
+          "quiet"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "6cbe3e8ae9": {
+        "ja": "罵る",
+        "reading": "ののしる",
+        "en": [
+          "to speak ill of",
+          "to abuse"
+        ],
+        "topics": [
+          "actions",
+          "relationships"
+        ]
+      },
+      "10a1ffe4df": {
+        "ja": "飲み込む",
+        "reading": "のみこむ",
+        "en": [
+          "to gulp down",
+          "to swallow deeply",
+          "to understand"
+        ],
+        "topics": [
+          "body",
+          "learning",
+          "actions"
+        ]
+      },
+      "115e6f8702": {
+        "ja": "乗り込む",
+        "reading": "のりこむ",
+        "en": [
+          "to board",
+          "to embark on",
+          "to get into (a car)"
+        ],
+        "topics": [
+          "places",
+          "actions"
+        ]
+      },
+      "661d1ef651": {
+        "ja": "刃",
+        "reading": "は",
+        "en": [
+          "edge (of a sword)"
+        ],
+        "topics": [
+          "technology"
+        ]
+      },
+      "7abab0200b": {
+        "ja": "派",
+        "reading": "は",
+        "en": [
+          "clique",
+          "faction",
+          "school"
+        ],
+        "topics": [
+          "society"
+        ]
+      },
+      "19f66d37d7": {
+        "ja": "バー",
+        "reading": "バー",
+        "en": [
+          "bar"
+        ],
+        "topics": [
+          "food",
+          "places"
+        ]
+      },
+      "128e858d57": {
+        "ja": "把握",
+        "reading": "はあく",
+        "en": [
+          "grasp",
+          "catch",
+          "understanding"
+        ],
+        "topics": [
+          "actions",
+          "learning"
+        ]
+      },
+      "7afb21c39b": {
+        "ja": "肺",
+        "reading": "はい",
+        "en": [
+          "lung"
+        ],
+        "topics": [
+          "body"
+        ]
+      },
+      "0eb30dd86f": {
+        "ja": "廃棄",
+        "reading": "はいき",
+        "en": [
+          "annullment",
+          "disposal",
+          "abandon"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "d59e92f5eb": {
+        "ja": "配給",
+        "reading": "はいきゅう",
+        "en": [
+          "distribution (eg. films, rice)"
+        ],
+        "topics": [
+          "work",
+          "food",
+          "arts"
+        ]
+      },
+      "4fe5047b84": {
+        "ja": "黴菌",
+        "reading": "ばいきん",
+        "en": [
+          "bacteria",
+          "germ(s)"
+        ],
+        "topics": [
+          "body"
+        ]
+      },
+      "23a4264046": {
+        "ja": "配偶者",
+        "reading": "はいぐうしゃ",
+        "en": [
+          "spouse",
+          "wife",
+          "husband"
+        ],
+        "topics": [
+          "relationships",
+          "people"
+        ]
+      },
+      "cb2008f46b": {
+        "ja": "拝啓",
+        "reading": "はいけい",
+        "en": [
+          "Dear (so and so)"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "29b10e360f": {
+        "ja": "背景",
+        "reading": "はいけい",
+        "en": [
+          "background",
+          "scenery",
+          "setting"
+        ],
+        "topics": [
+          "arts",
+          "places"
+        ]
+      },
+      "25abc3f3fb": {
+        "ja": "背後",
+        "reading": "はいご",
+        "en": [
+          "back",
+          "rear"
+        ],
+        "topics": [
+          "places"
+        ]
+      },
+      "58b8070ec3": {
+        "ja": "廃止",
+        "reading": "はいし",
+        "en": [
+          "abolition",
+          "repeal"
+        ],
+        "topics": [
+          "society"
+        ]
+      },
+      "35c99c026b": {
+        "ja": "拝借",
+        "reading": "はいしゃく",
+        "en": [
+          "borrowing"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "13d06bf02b": {
+        "ja": "排除",
+        "reading": "はいじょ",
+        "en": [
+          "exclusion",
+          "removal",
+          "rejection"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "de208b6d57": {
+        "ja": "賠償",
+        "reading": "ばいしょう",
+        "en": [
+          "reparations",
+          "indemnity",
+          "compensation"
+        ],
+        "topics": [
+          "society",
+          "work"
+        ]
+      },
+      "121f05e948": {
+        "ja": "排水",
+        "reading": "はいすい",
+        "en": [
+          "drainage"
+        ],
+        "topics": [
+          "technology"
+        ]
+      },
+      "cfdafe64c4": {
+        "ja": "敗戦",
+        "reading": "はいせん",
+        "en": [
+          "defeat",
+          "losing a war"
+        ],
+        "topics": [
+          "society"
+        ]
+      },
+      "e52ae45f67": {
+        "ja": "配置",
+        "reading": "はいち",
+        "en": [
+          "arrangement (of resources)",
+          "disposition"
+        ],
+        "topics": [
+          "work"
+        ]
+      },
+      "9a048b8df1": {
+        "ja": "配布",
+        "reading": "はいふ",
+        "en": [
+          "distribution"
+        ],
+        "topics": [
+          "work"
+        ]
+      },
+      "ec7bd683ba": {
+        "ja": "配分",
+        "reading": "はいぶん",
+        "en": [
+          "distribution",
+          "allotment"
+        ],
+        "topics": [
+          "quantity",
+          "work"
+        ]
+      },
+      "672ae372a7": {
+        "ja": "配慮",
+        "reading": "はいりょ",
+        "en": [
+          "consideration",
+          "concern",
+          "forethought"
+        ],
+        "topics": [
+          "relationships"
+        ]
+      },
+      "1819ab5ac3": {
+        "ja": "配列",
+        "reading": "はいれつ",
+        "en": [
+          "arrangement",
+          "array (programming)"
+        ],
+        "topics": [
+          "technology"
+        ]
+      },
+      "a15b42b14f": {
+        "ja": "映える",
+        "reading": "はえる",
+        "en": [
+          "to shine",
+          "to look attractive",
+          "to look pretty"
+        ],
+        "topics": [
+          "descriptions",
+          "actions"
+        ]
+      },
+      "373d4785f7": {
+        "ja": "破壊",
+        "reading": "はかい",
+        "en": [
+          "destruction"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "0d807d23a0": {
+        "ja": "捗る",
+        "reading": "はかどる",
+        "en": [
+          "to make progress",
+          "to move right ahead (with the work)",
+          "to advance"
+        ],
+        "topics": [
+          "work",
+          "actions"
+        ]
+      },
+      "59c95b5d68": {
+        "ja": "はかない",
+        "reading": "はかない",
+        "en": [
+          "fleeting",
+          "transient",
+          "short-lived"
+        ],
+        "topics": [
+          "time",
+          "descriptions"
+        ]
+      },
+      "58a5941703": {
+        "ja": "馬鹿馬鹿しい",
+        "reading": "ばかばかしい",
+        "en": [
+          "stupid"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "396285155e": {
+        "ja": "諮る",
+        "reading": "はかる",
+        "en": [
+          "to consult with",
+          "to confer"
+        ],
+        "topics": [
+          "work",
+          "actions"
+        ]
+      },
+      "a8376ded3d": {
+        "ja": "図る",
+        "reading": "はかる",
+        "en": [
+          "to plot",
+          "to attempt",
+          "to plan"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "fd8bebdc50": {
+        "ja": "破棄",
+        "reading": "はき",
+        "en": [
+          "revocation",
+          "annulment",
+          "breaking (e.g. treaty)"
+        ],
+        "topics": [
+          "society"
+        ]
+      },
+      "ccd39dd447": {
+        "ja": "泊",
+        "reading": "はく",
+        "en": [
+          "counter for nights of a stay"
+        ],
+        "topics": [
+          "quantity",
+          "time",
+          "places"
+        ]
+      },
+      "3f2e377124": {
+        "ja": "剥ぐ",
+        "reading": "はぐ",
+        "en": [
+          "to tear off",
+          "to peel off",
+          "to rip off"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "d5abf5baa9": {
+        "ja": "迫害",
+        "reading": "はくがい",
+        "en": [
+          "persecution"
+        ],
+        "topics": [
+          "society"
+        ]
+      },
+      "8996248374": {
+        "ja": "薄弱",
+        "reading": "はくじゃく",
+        "en": [
+          "feebleness",
+          "weakness",
+          "weak"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "10bd68b7e8": {
+        "ja": "白状",
+        "reading": "はくじょう",
+        "en": [
+          "confession"
+        ],
+        "topics": [
+          "society"
+        ]
+      },
+      "988a31e98d": {
+        "ja": "漠然",
+        "reading": "ばくぜん",
+        "en": [
+          "obscure",
+          "vague",
+          "equivocal"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "5f88d07bc6": {
+        "ja": "爆弾",
+        "reading": "ばくだん",
+        "en": [
+          "bomb"
+        ],
+        "topics": [
+          "society",
+          "technology"
+        ]
+      },
+      "79dbad028d": {
+        "ja": "爆破",
+        "reading": "ばくは",
+        "en": [
+          "blast",
+          "explosion",
+          "blow up"
+        ],
+        "topics": [
+          "technology"
+        ]
+      },
+      "bb5ca4e9bd": {
+        "ja": "暴露",
+        "reading": "ばくろ",
+        "en": [
+          "disclosure",
+          "exposure",
+          "revelation"
+        ],
+        "topics": [
+          "learning",
+          "society"
+        ]
+      },
+      "7ea060b767": {
+        "ja": "励ます",
+        "reading": "はげます",
+        "en": [
+          "to encourage",
+          "to cheer",
+          "to raise (the voice)"
+        ],
+        "topics": [
+          "feelings",
+          "actions"
+        ]
+      },
+      "2ea4ecdaab": {
+        "ja": "励む",
+        "reading": "はげむ",
+        "en": [
+          "to be zealous",
+          "to brace oneself",
+          "to endeavour"
+        ],
+        "topics": [
+          "work",
+          "actions"
+        ]
+      },
+      "1b0c715111": {
+        "ja": "剥げる",
+        "reading": "はげる",
+        "en": [
+          "to come off",
+          "to be worn off",
+          "to fade"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "c59d6e396d": {
+        "ja": "化ける",
+        "reading": "ばける",
+        "en": [
+          "to appear in disguise",
+          "to take the form of",
+          "to change for the worse"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "8cd57dd5b8": {
+        "ja": "派遣",
+        "reading": "はけん",
+        "en": [
+          "dispatch",
+          "send"
+        ],
+        "topics": [
+          "work"
+        ]
+      },
+      "9eb0cbae51": {
+        "ja": "恥",
+        "reading": "はじ",
+        "en": [
+          "shame",
+          "embarrassment"
+        ],
+        "topics": [
+          "feelings"
+        ]
+      },
+      "08fac022a1": {
+        "ja": "弾く",
+        "reading": "はじく",
+        "en": [
+          "to flip",
+          "to snap"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "47d9978eab": {
+        "ja": "始め",
+        "reading": "はじめ",
+        "en": [
+          "beginning",
+          "start",
+          "origin"
+        ],
+        "topics": [
+          "time"
+        ]
+      },
+      "58733f2d10": {
+        "ja": "パジャマ",
+        "reading": "パジャマ",
+        "en": [
+          "pajamas",
+          "pyjamas"
+        ],
+        "topics": [
+          "daily"
+        ]
+      },
+      "fd0167bb1a": {
+        "ja": "柱",
+        "reading": "はしら",
+        "en": [
+          "pillar",
+          "post"
+        ],
+        "topics": [
+          "daily",
+          "technology"
+        ]
+      },
+      "29adcf634d": {
+        "ja": "恥じらう",
+        "reading": "はじらう",
+        "en": [
+          "to feel shy",
+          "to be bashful",
+          "to blush"
+        ],
+        "topics": [
+          "feelings",
+          "actions"
+        ]
+      },
+      "9b14b42627": {
+        "ja": "恥じる",
+        "reading": "はじる",
+        "en": [
+          "to feel ashamed"
+        ],
+        "topics": [
+          "feelings",
+          "actions"
+        ]
+      },
+      "e6a2f28faa": {
+        "ja": "橋渡し",
+        "reading": "はしわたし",
+        "en": [
+          "bridge building",
+          "mediation"
+        ],
+        "topics": [
+          "places",
+          "relationships"
+        ]
+      },
+      "27f69b4df3": {
+        "ja": "蓮",
+        "reading": "はす",
+        "en": [
+          "lotus"
+        ],
+        "topics": [
+          "nature"
+        ]
+      },
+      "aec7b25baf": {
+        "ja": "弾む",
+        "reading": "はずむ",
+        "en": [
+          "to spring",
+          "to bound",
+          "to bounce"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "39752dcb45": {
+        "ja": "破損",
+        "reading": "はそん",
+        "en": [
+          "damage"
+        ],
+        "topics": [
+          "technology"
+        ]
+      },
+      "31ce220a2e": {
+        "ja": "機",
+        "reading": "はた",
+        "en": [
+          "loom"
+        ],
+        "topics": [
+          "technology",
+          "work"
+        ]
+      },
+      "a4108bfef5": {
+        "ja": "裸足",
+        "reading": "はだし",
+        "en": [
+          "barefoot"
+        ],
+        "topics": [
+          "body",
+          "daily"
+        ]
+      },
+      "2177b63eb2": {
+        "ja": "果たす",
+        "reading": "はたす",
+        "en": [
+          "to accomplish",
+          "to fulfill",
+          "to carry out"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "5fa4cbe539": {
+        "ja": "罰",
+        "reading": "ばち",
+        "en": [
+          "(divine) punishment",
+          "curse",
+          "retribution"
+        ],
+        "topics": [
+          "society"
+        ]
+      },
+      "5c73b68e41": {
+        "ja": "蜂蜜",
+        "reading": "はちみつ",
+        "en": [
+          "honey"
+        ],
+        "topics": [
+          "food"
+        ]
+      },
+      "548a31eef6": {
+        "ja": "パチンコ",
+        "reading": "パチンコ",
+        "en": [
+          "pachinko (Japanese pinball)"
+        ],
+        "topics": [
+          "arts"
+        ]
+      },
+      "8517e2459f": {
+        "ja": "初",
+        "reading": "はつ",
+        "en": [
+          "first",
+          "new"
+        ],
+        "topics": [
+          "time",
+          "descriptions"
+        ]
+      },
+      "9298e216ea": {
+        "ja": "発",
+        "reading": "はつ",
+        "en": [
+          "departure",
+          "beginning",
+          "counter for gunshots"
+        ],
+        "topics": [
+          "places",
+          "time",
+          "quantity"
+        ]
+      },
+      "e685744c25": {
+        "ja": "発育",
+        "reading": "はついく",
+        "en": [
+          "(physical) growth",
+          "development"
+        ],
+        "topics": [
+          "body"
+        ]
+      },
+      "7444ba3ed5": {
+        "ja": "発芽",
+        "reading": "はつが",
+        "en": [
+          "burgeoning"
+        ],
+        "topics": [
+          "nature"
+        ]
+      },
+      "ef477d1ab9": {
+        "ja": "発掘",
+        "reading": "はっくつ",
+        "en": [
+          "excavation",
+          "exhumation"
+        ],
+        "topics": [
+          "work",
+          "society"
+        ]
+      },
+      "65fb50ee7c": {
+        "ja": "発言",
+        "reading": "はつげん",
+        "en": [
+          "utterance",
+          "speech",
+          "proposal"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "bbc31b510f": {
+        "ja": "バッジ",
+        "reading": "バッジ",
+        "en": [
+          "badge"
+        ],
+        "topics": [
+          "daily"
+        ]
+      },
+      "f50d895a2a": {
+        "ja": "発生",
+        "reading": "はっせい",
+        "en": [
+          "outbreak",
+          "spring forth",
+          "occurrence"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "3089867b81": {
+        "ja": "バット",
+        "reading": "バット",
+        "en": [
+          "bat",
+          "vat"
+        ],
+        "topics": [
+          "arts",
+          "food"
+        ]
+      },
+      "52a27aec4f": {
+        "ja": "発病",
+        "reading": "はつびょう",
+        "en": [
+          "attack (disease)"
+        ],
+        "topics": [
+          "body"
+        ]
+      },
+      "45f5de7d2d": {
+        "ja": "初耳",
+        "reading": "はつみみ",
+        "en": [
+          "something heard for the first time"
+        ],
+        "topics": [
+          "learning",
+          "time"
+        ]
+      },
+      "750951d516": {
+        "ja": "果て",
+        "reading": "はて",
+        "en": [
+          "the end",
+          "the extremity",
+          "the limit(s)"
+        ],
+        "topics": [
+          "places",
+          "quantity"
+        ]
+      },
+      "3573716a63": {
+        "ja": "果てる",
+        "reading": "はてる",
+        "en": [
+          "to end",
+          "to be finished",
+          "to be exhausted"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "b493e331ab": {
+        "ja": "ばてる",
+        "reading": "ばてる",
+        "en": [
+          "to be exhausted",
+          "to be worn out"
+        ],
+        "topics": [
+          "body",
+          "actions"
+        ]
+      },
+      "3122744f68": {
+        "ja": "パトカー",
+        "reading": "パトカー",
+        "en": [
+          "patrol car"
+        ],
+        "topics": [
+          "society",
+          "places"
+        ]
+      },
+      "6e3cda5641": {
+        "ja": "甚だ",
+        "reading": "はなはだ",
+        "en": [
+          "very",
+          "greatly",
+          "exceedingly"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "8616dbfe4e": {
+        "ja": "華々しい",
+        "reading": "はなばなしい",
+        "en": [
+          "brilliant",
+          "magnificent",
+          "spectacular"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "047bfb10cf": {
+        "ja": "花びら",
+        "reading": "はなびら",
+        "en": [
+          "(flower) petal"
+        ],
+        "topics": [
+          "nature"
+        ]
+      },
+      "e6917c64a6": {
+        "ja": "華やか",
+        "reading": "はなやか",
+        "en": [
+          "gay",
+          "showy",
+          "brilliant"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "360aad068d": {
+        "ja": "阻む",
+        "reading": "はばむ",
+        "en": [
+          "to keep someone from doing",
+          "to stop",
+          "to prevent"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "d02723096e": {
+        "ja": "浜",
+        "reading": "はま",
+        "en": [
+          "beach",
+          "seashore"
+        ],
+        "topics": [
+          "places",
+          "nature"
+        ]
+      },
+      "7f5bba0531": {
+        "ja": "浜辺",
+        "reading": "はまべ",
+        "en": [
+          "beach",
+          "foreshore"
+        ],
+        "topics": [
+          "places",
+          "nature"
+        ]
+      },
+      "5f261717b0": {
+        "ja": "はまる",
+        "reading": "はまる",
+        "en": [
+          "to get into",
+          "to go into",
+          "to fit"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "6fc9543bfe": {
+        "ja": "生やす",
+        "reading": "はやす",
+        "en": [
+          "to grow",
+          "to cultivate",
+          "to wear beard"
+        ],
+        "topics": [
+          "nature",
+          "body",
+          "actions"
+        ]
+      },
+      "270dc2bedf": {
+        "ja": "早める",
+        "reading": "はやめる",
+        "en": [
+          "to hasten",
+          "to quicken",
+          "to expedite"
+        ],
+        "topics": [
+          "time",
+          "actions"
+        ]
+      },
+      "505203967e": {
+        "ja": "腹立ち",
+        "reading": "はらだち",
+        "en": [
+          "anger"
+        ],
+        "topics": [
+          "feelings"
+        ]
+      },
+      "66748989bb": {
+        "ja": "原っぱ",
+        "reading": "はらっぱ",
+        "en": [
+          "open field",
+          "empty lot",
+          "plain"
+        ],
+        "topics": [
+          "places",
+          "nature"
+        ]
+      },
+      "af13ed2a6d": {
+        "ja": "ばらまく",
+        "reading": "ばらまく",
+        "en": [
+          "to disseminate",
+          "to scatter",
+          "to give money freely"
+        ],
+        "topics": [
+          "actions",
+          "work"
+        ]
+      },
+      "8d0c7227fb": {
+        "ja": "張り紙",
+        "reading": "はりがみ",
+        "en": [
+          "paper patch",
+          "paper backing",
+          "poster"
+        ],
+        "topics": [
+          "daily",
+          "learning"
+        ]
+      },
+      "398c83bac1": {
+        "ja": "遥か",
+        "reading": "はるか",
+        "en": [
+          "far",
+          "far-away",
+          "distant"
+        ],
+        "topics": [
+          "places",
+          "descriptions"
+        ]
+      },
+      "4da424bbd5": {
+        "ja": "破裂",
+        "reading": "はれつ",
+        "en": [
+          "explosion",
+          "rupture",
+          "break off"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "e3a908e6d8": {
+        "ja": "腫れる",
+        "reading": "はれる",
+        "en": [
+          "to swell (from inflammation)",
+          "to become swollen"
+        ],
+        "topics": [
+          "body",
+          "actions"
+        ]
+      },
+      "6c1de07dfd": {
+        "ja": "判",
+        "reading": "はん",
+        "en": [
+          "seal",
+          "stamp",
+          "monogram signature"
+        ],
+        "topics": [
+          "work"
+        ]
+      },
+      "6b5f079fa9": {
+        "ja": "版",
+        "reading": "はん",
+        "en": [
+          "edition"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "dcd00f82ed": {
+        "ja": "班",
+        "reading": "はん",
+        "en": [
+          "group",
+          "party",
+          "section (mil)"
+        ],
+        "topics": [
+          "people",
+          "society"
+        ]
+      },
+      "8aea8207d5": {
+        "ja": "繁栄",
+        "reading": "はんえい",
+        "en": [
+          "prospering",
+          "prosperity",
+          "thriving"
+        ],
+        "topics": [
+          "work",
+          "society"
+        ]
+      },
+      "31652ca46f": {
+        "ja": "版画",
+        "reading": "はんが",
+        "en": [
+          "art print"
+        ],
+        "topics": [
+          "arts"
+        ]
+      },
+      "ebea08a82f": {
+        "ja": "反感",
+        "reading": "はんかん",
+        "en": [
+          "antipathy",
+          "revolt",
+          "animosity"
+        ],
+        "topics": [
+          "feelings"
+        ]
+      },
+      "ebb9dafc92": {
+        "ja": "反響",
+        "reading": "はんきょう",
+        "en": [
+          "echo",
+          "reverberation",
+          "repercussion"
+        ],
+        "topics": [
+          "arts",
+          "learning"
+        ]
+      },
+      "24aad19c86": {
+        "ja": "パンク",
+        "reading": "パンク",
+        "en": [
+          "(abbreviation) puncture",
+          "bursting",
+          "punk"
+        ],
+        "topics": [
+          "places",
+          "arts"
+        ]
+      },
+      "e4a7d6466e": {
+        "ja": "反撃",
+        "reading": "はんげき",
+        "en": [
+          "counterattack",
+          "counteroffensive",
+          "counterblow"
+        ],
+        "topics": [
+          "society"
+        ]
+      },
+      "f0e1839e03": {
+        "ja": "判決",
+        "reading": "はんけつ",
+        "en": [
+          "judicial decision",
+          "judgement",
+          "sentence"
+        ],
+        "topics": [
+          "society"
+        ]
+      },
+      "c50f3eed79": {
+        "ja": "反射",
+        "reading": "はんしゃ",
+        "en": [
+          "reflection",
+          "reverberation"
+        ],
+        "topics": [
+          "nature"
+        ]
+      },
+      "d215cf494b": {
+        "ja": "繁盛",
+        "reading": "はんじょう",
+        "en": [
+          "prosperity",
+          "flourishing",
+          "thriving"
+        ],
+        "topics": [
+          "work"
+        ]
+      },
+      "9af4af395e": {
+        "ja": "繁殖",
+        "reading": "はんしょく",
+        "en": [
+          "breed",
+          "multiply",
+          "increase"
+        ],
+        "topics": [
+          "nature"
+        ]
+      },
+      "4445a67af3": {
+        "ja": "万人",
+        "reading": "ばんじん",
+        "en": [
+          "all people",
+          "everybody",
+          "10000 people"
+        ],
+        "topics": [
+          "people",
+          "quantity"
+        ]
+      },
+      "100b82539f": {
+        "ja": "反する",
+        "reading": "はんする",
+        "en": [
+          "to be inconsistent with",
+          "to oppose",
+          "to contradict"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "bc77005dc0": {
+        "ja": "判定",
+        "reading": "はんてい",
+        "en": [
+          "judgement",
+          "decision",
+          "award"
+        ],
+        "topics": [
+          "society",
+          "arts"
+        ]
+      },
+      "8b03fa57c9": {
+        "ja": "反応",
+        "reading": "はんのう",
+        "en": [
+          "reaction",
+          "response"
+        ],
+        "topics": [
+          "body",
+          "technology"
+        ]
+      },
+      "c7ea9c58c5": {
+        "ja": "万能",
+        "reading": "ばんのう",
+        "en": [
+          "all-purpose",
+          "almighty",
+          "omnipotent"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "b6ee1dd14e": {
+        "ja": "半端",
+        "reading": "はんぱ",
+        "en": [
+          "remnant",
+          "fragment",
+          "incomplete set"
+        ],
+        "topics": [
+          "quantity"
+        ]
+      },
+      "85bfcd7326": {
+        "ja": "反発",
+        "reading": "はんぱつ",
+        "en": [
+          "repelling",
+          "rebound",
+          "recover"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "9e54509094": {
+        "ja": "反乱",
+        "reading": "はんらん",
+        "en": [
+          "insurrection",
+          "mutiny",
+          "rebellion"
+        ],
+        "topics": [
+          "society"
+        ]
+      },
+      "e1fb008280": {
+        "ja": "氾濫",
+        "reading": "はんらん",
+        "en": [
+          "overflowing",
+          "flood"
+        ],
+        "topics": [
+          "nature"
+        ]
+      },
+      "962a85276b": {
+        "ja": "費",
+        "reading": "ひ",
+        "en": [
+          "cost",
+          "expense"
+        ],
+        "topics": [
+          "work"
+        ]
+      },
+      "02a57db00d": {
+        "ja": "非",
+        "reading": "ひ",
+        "en": [
+          "faulty-",
+          "non-"
+        ],
+        "topics": [
+          "learning",
+          "descriptions"
+        ]
+      },
+      "b25cbb229f": {
+        "ja": "美",
+        "reading": "び",
+        "en": [
+          "beauty"
+        ],
+        "topics": [
+          "arts",
+          "descriptions"
+        ]
+      },
+      "6a84853cf2": {
+        "ja": "延いては",
+        "reading": "ひいては",
+        "en": [
+          "not only...but also",
+          "in addition to",
+          "consequently"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "2879a950d7": {
+        "ja": "ビールス",
+        "reading": "ビールス",
+        "en": [
+          "virus"
+        ],
+        "topics": [
+          "body"
+        ]
+      },
+      "d4c885f1dc": {
+        "ja": "控室",
+        "reading": "ひかえしつ",
+        "en": [
+          "waiting room"
+        ],
+        "topics": [
+          "places"
+        ]
+      },
+      "9b0e88db96": {
+        "ja": "控える",
+        "reading": "ひかえる",
+        "en": [
+          "to draw in",
+          "to hold back",
+          "to make notes"
+        ],
+        "topics": [
+          "actions",
+          "learning"
+        ]
+      },
+      "4f910a19d7": {
+        "ja": "悲観",
+        "reading": "ひかん",
+        "en": [
+          "pessimism",
+          "disappointment"
+        ],
+        "topics": [
+          "feelings"
+        ]
+      },
+      "fd5a222e6e": {
+        "ja": "匹",
+        "reading": "ひき",
+        "en": [
+          "head",
+          "small animal counter",
+          "roll of cloth"
+        ],
+        "topics": [
+          "quantity",
+          "nature",
+          "daily"
+        ]
+      },
+      "cf4cad10bf": {
+        "ja": "引き上げる",
+        "reading": "ひきあげる",
+        "en": [
+          "to withdraw",
+          "to leave",
+          "to pull out"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "5250cd2fa9": {
+        "ja": "率いる",
+        "reading": "ひきいる",
+        "en": [
+          "to lead",
+          "to spearhead (a group)",
+          "to command (troops)"
+        ],
+        "topics": [
+          "work",
+          "society",
+          "actions"
+        ]
+      },
+      "05503a9f2f": {
+        "ja": "引き起こす",
+        "reading": "ひきおこす",
+        "en": [
+          "to cause"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "bf60aacbc5": {
+        "ja": "引き下げる",
+        "reading": "ひきさげる",
+        "en": [
+          "to pull down",
+          "to lower",
+          "to reduce"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "295f2cbf59": {
+        "ja": "引きずる",
+        "reading": "ひきずる",
+        "en": [
+          "to seduce",
+          "to drag along",
+          "to pull"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "34e2aab83f": {
+        "ja": "引き取る",
+        "reading": "ひきとる",
+        "en": [
+          "to take charge of",
+          "to take over",
+          "to retire to a private place"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "e97e75f2c1": {
+        "ja": "否決",
+        "reading": "ひけつ",
+        "en": [
+          "rejection",
+          "negation",
+          "voting down"
+        ],
+        "topics": [
+          "society"
+        ]
+      },
+      "790bed33e0": {
+        "ja": "非行",
+        "reading": "ひこう",
+        "en": [
+          "delinquency",
+          "misconduct"
+        ],
+        "topics": [
+          "society"
+        ]
+      },
+      "130277718b": {
+        "ja": "日頃",
+        "reading": "ひごろ",
+        "en": [
+          "normally",
+          "habitually"
+        ],
+        "topics": [
+          "time"
+        ]
+      },
+      "b430f3039d": {
+        "ja": "久しい",
+        "reading": "ひさしい",
+        "en": [
+          "long",
+          "long-continued",
+          "old (story)"
+        ],
+        "topics": [
+          "time",
+          "descriptions"
+        ]
+      },
+      "eb729b5f01": {
+        "ja": "悲惨",
+        "reading": "ひさん",
+        "en": [
+          "misery"
+        ],
+        "topics": [
+          "feelings"
+        ]
+      },
+      "edfcab4b38": {
+        "ja": "ビジネス",
+        "reading": "ビジネス",
+        "en": [
+          "business"
+        ],
+        "topics": [
+          "work"
+        ]
+      },
+      "1340293e34": {
+        "ja": "比重",
+        "reading": "ひじゅう",
+        "en": [
+          "specific gravity"
+        ],
+        "topics": [
+          "quantity",
+          "learning"
+        ]
+      },
+      "c0d21785c4": {
+        "ja": "美術",
+        "reading": "びじゅつ",
+        "en": [
+          "art",
+          "fine arts"
+        ],
+        "topics": [
+          "arts"
+        ]
+      },
+      "c1eb4a6e5e": {
+        "ja": "秘書",
+        "reading": "ひしょ",
+        "en": [
+          "(private) secretary"
+        ],
+        "topics": [
+          "people",
+          "work"
+        ]
+      },
+      "ec976107e1": {
+        "ja": "微笑",
+        "reading": "びしょう",
+        "en": [
+          "smile"
+        ],
+        "topics": [
+          "feelings"
+        ]
+      },
+      "3a891bf639": {
+        "ja": "密か",
+        "reading": "ひそか",
+        "en": [
+          "secret",
+          "private",
+          "surreptitious"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "3c973bbe09": {
+        "ja": "浸す",
+        "reading": "ひたす",
+        "en": [
+          "to soak",
+          "to dip",
+          "to drench"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "53b486764f": {
+        "ja": "ひたすら",
+        "reading": "ひたすら",
+        "en": [
+          "earnestly"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "8e175c1a31": {
+        "ja": "左利き",
+        "reading": "ひだりきき",
+        "en": [
+          "left-handedness",
+          "sake drinker",
+          "left-hander"
+        ],
+        "topics": [
+          "people",
+          "body",
+          "food"
+        ]
+      },
+      "b274381220": {
+        "ja": "引っ掻く",
+        "reading": "ひっかく",
+        "en": [
+          "to scratch"
+        ],
+        "topics": [
+          "actions",
+          "body"
+        ]
+      },
+      "b820289c1d": {
+        "ja": "引っ掛ける",
+        "reading": "ひっかける",
+        "en": [
+          "to hang (something) on (something)",
+          "to throw on (clothes)",
+          "to hook"
+        ],
+        "topics": [
+          "actions",
+          "daily"
+        ]
+      },
+      "096c8b698e": {
+        "ja": "未",
+        "reading": "ひつじ",
+        "en": [
+          "eighth sign of Chinese zodiac (The Ram, 1pm-3pm, south-southwest, June)"
+        ],
+        "topics": [
+          "time",
+          "society"
+        ]
+      },
+      "d4cad7dfef": {
+        "ja": "必修",
+        "reading": "ひっしゅう",
+        "en": [
+          "required (subject)"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "fc6b31a5c2": {
+        "ja": "びっしょり",
+        "reading": "びっしょり",
+        "en": [
+          "wet through",
+          "drenched"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "bc0cae48eb": {
+        "ja": "必然",
+        "reading": "ひつぜん",
+        "en": [
+          "inevitable",
+          "necessary"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "982542665c": {
+        "ja": "匹敵",
+        "reading": "ひってき",
+        "en": [
+          "comparing with",
+          "match",
+          "rival"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "77a848f1a4": {
+        "ja": "単",
+        "reading": "ひとえ",
+        "en": [
+          "one layer",
+          "single"
+        ],
+        "topics": [
+          "quantity",
+          "descriptions"
+        ]
+      },
+      "0de8e592e2": {
+        "ja": "人柄",
+        "reading": "ひとがら",
+        "en": [
+          "personality",
+          "character",
+          "personal appearance"
+        ],
+        "topics": [
+          "people"
+        ]
+      },
+      "29d531837a": {
+        "ja": "一頃",
+        "reading": "ひところ",
+        "en": [
+          "once",
+          "some time ago"
+        ],
+        "topics": [
+          "time"
+        ]
+      },
+      "208f1838bd": {
+        "ja": "人質",
+        "reading": "ひとじち",
+        "en": [
+          "hostage",
+          "prisoner"
+        ],
+        "topics": [
+          "people",
+          "society"
+        ]
+      },
+      "6fed3799fa": {
+        "ja": "一筋",
+        "reading": "ひとすじ",
+        "en": [
+          "a line",
+          "earnestly",
+          "blindly"
+        ],
+        "topics": [
+          "quantity",
+          "descriptions"
+        ]
+      },
+      "b9ec7cb6d7": {
+        "ja": "日取り",
+        "reading": "ひどり",
+        "en": [
+          "fixed date",
+          "appointed day"
+        ],
+        "topics": [
+          "time"
+        ]
+      },
+      "d4a59bb971": {
+        "ja": "雛",
+        "reading": "ひな",
+        "en": [
+          "young bird",
+          "chick",
+          "doll"
+        ],
+        "topics": [
+          "nature",
+          "arts"
+        ]
+      },
+      "f028179494": {
+        "ja": "日向",
+        "reading": "ひなた",
+        "en": [
+          "sunny place",
+          "in the sun"
+        ],
+        "topics": [
+          "places",
+          "nature"
+        ]
+      },
+      "58e8f6d00f": {
+        "ja": "避難",
+        "reading": "ひなん",
+        "en": [
+          "taking refuge",
+          "finding shelter"
+        ],
+        "topics": [
+          "places",
+          "society"
+        ]
+      },
+      "bcf51a7086": {
+        "ja": "非難",
+        "reading": "ひなん",
+        "en": [
+          "blame",
+          "attack",
+          "criticism"
+        ],
+        "topics": [
+          "relationships"
+        ]
+      },
+      "69ce5c06bb": {
+        "ja": "日の丸",
+        "reading": "ひのまる",
+        "en": [
+          "the Japanese flag"
+        ],
+        "topics": [
+          "society"
+        ]
+      },
+      "9bdf0cd381": {
+        "ja": "火花",
+        "reading": "ひばな",
+        "en": [
+          "spark"
+        ],
+        "topics": [
+          "nature"
+        ]
+      },
+      "5e7b4e3b6c": {
+        "ja": "日々",
+        "reading": "ひび",
+        "en": [
+          "every day",
+          "daily",
+          "day after day"
+        ],
+        "topics": [
+          "time"
+        ]
+      },
+      "dd1da8888a": {
+        "ja": "悲鳴",
+        "reading": "ひめい",
+        "en": [
+          "shriek",
+          "scream"
+        ],
+        "topics": [
+          "feelings"
+        ]
+      },
+      "6166957ca4": {
+        "ja": "冷やかす",
+        "reading": "ひやかす",
+        "en": [
+          "to banter",
+          "to make fun of",
+          "to jeer at"
+        ],
+        "topics": [
+          "relationships",
+          "actions"
+        ]
+      },
+      "35ce366d44": {
+        "ja": "日焼け",
+        "reading": "ひやけ",
+        "en": [
+          "sunburn"
+        ],
+        "topics": [
+          "body"
+        ]
+      },
+      "de4f14f8da": {
+        "ja": "票",
+        "reading": "ひょう",
+        "en": [
+          "label",
+          "ballot",
+          "ticket"
+        ],
+        "topics": [
+          "society",
+          "work"
+        ]
+      },
+      "4adf021ad8": {
+        "ja": "標語",
+        "reading": "ひょうご",
+        "en": [
+          "motto",
+          "slogan",
+          "catchword"
+        ],
+        "topics": [
+          "learning",
+          "society"
+        ]
+      },
+      "c5c782c558": {
+        "ja": "描写",
+        "reading": "びょうしゃ",
+        "en": [
+          "depiction",
+          "description",
+          "portrayal"
+        ],
+        "topics": [
+          "arts"
+        ]
+      },
+      "5d58c89d14": {
+        "ja": "ひょっと",
+        "reading": "ひょっと",
+        "en": [
+          "possibly",
+          "accidentally"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "5e960abe59": {
+        "ja": "平たい",
+        "reading": "ひらたい",
+        "en": [
+          "flat",
+          "even",
+          "level"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "3b112744fa": {
+        "ja": "びり",
+        "reading": "びり",
+        "en": [
+          "last on the list",
+          "at the bottom"
+        ],
+        "topics": [
+          "quantity"
+        ]
+      },
+      "79e5cee9cb": {
+        "ja": "比率",
+        "reading": "ひりつ",
+        "en": [
+          "ratio",
+          "proportion",
+          "percentage"
+        ],
+        "topics": [
+          "quantity"
+        ]
+      },
+      "7a621e52ae": {
+        "ja": "肥料",
+        "reading": "ひりょう",
+        "en": [
+          "manure",
+          "fertilizer"
+        ],
+        "topics": [
+          "nature",
+          "work"
+        ]
+      },
+      "508ca723f8": {
+        "ja": "微量",
+        "reading": "びりょう",
+        "en": [
+          "minuscule amount",
+          "extremely small quantity"
+        ],
+        "topics": [
+          "quantity"
+        ]
+      },
+      "6d94f7f103": {
+        "ja": "昼飯",
+        "reading": "ひるめし",
+        "en": [
+          "lunch",
+          "midday meal"
+        ],
+        "topics": [
+          "food",
+          "time"
+        ]
+      },
+      "14d90b82f3": {
+        "ja": "比例",
+        "reading": "ひれい",
+        "en": [
+          "proportion"
+        ],
+        "topics": [
+          "quantity"
+        ]
+      },
+      "9168af0619": {
+        "ja": "疲労",
+        "reading": "ひろう",
+        "en": [
+          "fatigue",
+          "weariness"
+        ],
+        "topics": [
+          "body"
+        ]
+      },
+      "462a180308": {
+        "ja": "広まる",
+        "reading": "ひろまる",
+        "en": [
+          "to spread",
+          "to be propagated"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "3e0f9f6085": {
+        "ja": "敏感",
+        "reading": "びんかん",
+        "en": [
+          "sensibility",
+          "susceptibility",
+          "sensitive (to)"
+        ],
+        "topics": [
+          "descriptions",
+          "body"
+        ]
+      },
+      "f1fafc0b38": {
+        "ja": "貧困",
+        "reading": "ひんこん",
+        "en": [
+          "poverty",
+          "lack"
+        ],
+        "topics": [
+          "work",
+          "society"
+        ]
+      },
+      "95bddfce2a": {
+        "ja": "品質",
+        "reading": "ひんしつ",
+        "en": [
+          "quality"
+        ],
+        "topics": [
+          "work",
+          "descriptions"
+        ]
+      },
+      "0fe98bc40d": {
+        "ja": "貧弱",
+        "reading": "ひんじゃく",
+        "en": [
+          "poor",
+          "meagre",
+          "insubstantial"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "4080fb1160": {
+        "ja": "ヒント",
+        "reading": "ヒント",
+        "en": [
+          "hint"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "d8165931bc": {
+        "ja": "頻繁",
+        "reading": "ひんぱん",
+        "en": [
+          "frequency"
+        ],
+        "topics": [
+          "time"
+        ]
+      },
+      "4860a4efe0": {
+        "ja": "貧乏",
+        "reading": "びんぼう",
+        "en": [
+          "poverty",
+          "destitute",
+          "poor"
+        ],
+        "topics": [
+          "work",
+          "society"
+        ]
+      },
+      "6898b85866": {
+        "ja": "歩",
+        "reading": "ふ",
+        "en": [
+          "pawn (in chess or shogi)"
+        ],
+        "topics": [
+          "arts"
+        ]
+      },
+      "2ec5748d47": {
+        "ja": "部",
+        "reading": "ぶ",
+        "en": [
+          "department",
+          "part",
+          "category"
+        ],
+        "topics": [
+          "work"
+        ]
+      },
+      "a6b276960f": {
+        "ja": "ファイト",
+        "reading": "ファイト",
+        "en": [
+          "fight"
+        ],
+        "topics": [
+          "arts"
+        ]
+      },
+      "5b8eefb9aa": {
+        "ja": "ファイル",
+        "reading": "ファイル",
+        "en": [
+          "file"
+        ],
+        "topics": [
+          "work",
+          "technology"
+        ]
+      },
+      "c88a44b1e4": {
+        "ja": "不意",
+        "reading": "ふい",
+        "en": [
+          "sudden",
+          "abrupt",
+          "unexpected"
+        ],
+        "topics": [
+          "time",
+          "descriptions"
+        ]
+      },
+      "3fa2ddfa8c": {
+        "ja": "フィルター",
+        "reading": "フィルター",
+        "en": [
+          "(camera) filter"
+        ],
+        "topics": [
+          "technology"
+        ]
+      },
+      "337eea6b53": {
+        "ja": "封",
+        "reading": "ふう",
+        "en": [
+          "seal"
+        ],
+        "topics": [
+          "work"
+        ]
+      },
+      "9b20402a09": {
+        "ja": "封鎖",
+        "reading": "ふうさ",
+        "en": [
+          "blockade",
+          "freezing (funds)"
+        ],
+        "topics": [
+          "society",
+          "work"
+        ]
+      },
+      "9dfd9234b7": {
+        "ja": "風習",
+        "reading": "ふうしゅう",
+        "en": [
+          "custom"
+        ],
+        "topics": [
+          "society"
         ]
       }
     },
@@ -48916,6 +53078,717 @@
         ],
         "topics": [
           "actions"
+        ]
+      },
+      "悼": {
+        "ja": "悼",
+        "reading": null,
+        "en": [
+          "Lament",
+          "Grieve Over"
+        ],
+        "topics": [
+          "feelings"
+        ]
+      },
+      "乏": {
+        "ja": "乏",
+        "reading": null,
+        "en": [
+          "Destitution",
+          "Scarce",
+          "Limited"
+        ],
+        "topics": [
+          "work",
+          "descriptions"
+        ]
+      },
+      "該": {
+        "ja": "該",
+        "reading": null,
+        "en": [
+          "Above-stated",
+          "The Said",
+          "That Specific"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "赴": {
+        "ja": "赴",
+        "reading": null,
+        "en": [
+          "Proceed",
+          "Get",
+          "Become"
+        ],
+        "topics": [
+          "actions",
+          "places"
+        ]
+      },
+      "桑": {
+        "ja": "桑",
+        "reading": null,
+        "en": [
+          "Mulberry"
+        ],
+        "topics": [
+          "nature"
+        ]
+      },
+      "桂": {
+        "ja": "桂",
+        "reading": null,
+        "en": [
+          "Japanese Judas-tree",
+          "Cinnamon Tree"
+        ],
+        "topics": [
+          "nature"
+        ]
+      },
+      "髄": {
+        "ja": "髄",
+        "reading": null,
+        "en": [
+          "Marrow",
+          "Pith",
+          "Essence"
+        ],
+        "topics": [
+          "body",
+          "descriptions"
+        ]
+      },
+      "虎": {
+        "ja": "虎",
+        "reading": null,
+        "en": [
+          "Tiger",
+          "Drunkard"
+        ],
+        "topics": [
+          "nature",
+          "people"
+        ]
+      },
+      "盆": {
+        "ja": "盆",
+        "reading": null,
+        "en": [
+          "Basin",
+          "Lantern Festival",
+          "Tray"
+        ],
+        "topics": [
+          "daily",
+          "society"
+        ]
+      },
+      "晋": {
+        "ja": "晋",
+        "reading": null,
+        "en": [
+          "Advance"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "穂": {
+        "ja": "穂",
+        "reading": null,
+        "en": [
+          "Ear",
+          "Ear (grain)",
+          "Head"
+        ],
+        "topics": [
+          "nature",
+          "food"
+        ]
+      },
+      "壮": {
+        "ja": "壮",
+        "reading": null,
+        "en": [
+          "Robust",
+          "Manhood",
+          "Prosperity"
+        ],
+        "topics": [
+          "body",
+          "descriptions"
+        ]
+      },
+      "堤": {
+        "ja": "堤",
+        "reading": null,
+        "en": [
+          "Dike",
+          "Bank",
+          "Embankment"
+        ],
+        "topics": [
+          "places"
+        ]
+      },
+      "飢": {
+        "ja": "飢",
+        "reading": null,
+        "en": [
+          "Hungry",
+          "Starve"
+        ],
+        "topics": [
+          "body",
+          "food"
+        ]
+      },
+      "傍": {
+        "ja": "傍",
+        "reading": null,
+        "en": [
+          "Bystander",
+          "Side",
+          "Besides"
+        ],
+        "topics": [
+          "people",
+          "places"
+        ]
+      },
+      "疫": {
+        "ja": "疫",
+        "reading": null,
+        "en": [
+          "Epidemic"
+        ],
+        "topics": [
+          "body"
+        ]
+      },
+      "累": {
+        "ja": "累",
+        "reading": null,
+        "en": [
+          "Accumulate",
+          "Involvement",
+          "Trouble"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "痴": {
+        "ja": "痴",
+        "reading": null,
+        "en": [
+          "Stupid",
+          "Foolish"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "搬": {
+        "ja": "搬",
+        "reading": null,
+        "en": [
+          "Conveyor",
+          "Carry",
+          "Transport"
+        ],
+        "topics": [
+          "technology",
+          "places"
+        ]
+      },
+      "晃": {
+        "ja": "晃",
+        "reading": null,
+        "en": [
+          "Clear"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "癒": {
+        "ja": "癒",
+        "reading": null,
+        "en": [
+          "Healing",
+          "Cure",
+          "Quench (thirst)"
+        ],
+        "topics": [
+          "body"
+        ]
+      },
+      "桐": {
+        "ja": "桐",
+        "reading": null,
+        "en": [
+          "Paulownia"
+        ],
+        "topics": [
+          "nature"
+        ]
+      },
+      "寸": {
+        "ja": "寸",
+        "reading": null,
+        "en": [
+          "Measurement",
+          "Tenth Of A Shaku",
+          "A Little"
+        ],
+        "topics": [
+          "quantity"
+        ]
+      },
+      "郭": {
+        "ja": "郭",
+        "reading": null,
+        "en": [
+          "Enclosure",
+          "Quarters",
+          "Fortification"
+        ],
+        "topics": [
+          "places",
+          "society"
+        ]
+      },
+      "尿": {
+        "ja": "尿",
+        "reading": null,
+        "en": [
+          "Urine"
+        ],
+        "topics": [
+          "body"
+        ]
+      },
+      "凶": {
+        "ja": "凶",
+        "reading": null,
+        "en": [
+          "Villain",
+          "Evil",
+          "Bad Luck"
+        ],
+        "topics": [
+          "people",
+          "society"
+        ]
+      },
+      "吐": {
+        "ja": "吐",
+        "reading": null,
+        "en": [
+          "Spit",
+          "Vomit",
+          "Belch"
+        ],
+        "topics": [
+          "body",
+          "actions"
+        ]
+      },
+      "宴": {
+        "ja": "宴",
+        "reading": null,
+        "en": [
+          "Banquet",
+          "Feast",
+          "Party"
+        ],
+        "topics": [
+          "food",
+          "arts"
+        ]
+      },
+      "鷹": {
+        "ja": "鷹",
+        "reading": null,
+        "en": [
+          "Hawk"
+        ],
+        "topics": [
+          "nature"
+        ]
+      },
+      "賓": {
+        "ja": "賓",
+        "reading": null,
+        "en": [
+          "V.i.p.",
+          "Guest"
+        ],
+        "topics": [
+          "people"
+        ]
+      },
+      "虜": {
+        "ja": "虜",
+        "reading": null,
+        "en": [
+          "Captive",
+          "Barbarian",
+          "Low Epithet For The Enemy"
+        ],
+        "topics": [
+          "people",
+          "society"
+        ]
+      },
+      "陶": {
+        "ja": "陶",
+        "reading": null,
+        "en": [
+          "Pottery",
+          "Porcelain"
+        ],
+        "topics": [
+          "arts",
+          "daily"
+        ]
+      },
+      "鐘": {
+        "ja": "鐘",
+        "reading": null,
+        "en": [
+          "Bell",
+          "Gong",
+          "Chimes"
+        ],
+        "topics": [
+          "arts"
+        ]
+      },
+      "憾": {
+        "ja": "憾",
+        "reading": null,
+        "en": [
+          "Remorse",
+          "Regret",
+          "Be Sorry"
+        ],
+        "topics": [
+          "feelings"
+        ]
+      },
+      "畿": {
+        "ja": "畿",
+        "reading": null,
+        "en": [
+          "Capital",
+          "Suburbs Of Capital"
+        ],
+        "topics": [
+          "places"
+        ]
+      },
+      "猪": {
+        "ja": "猪",
+        "reading": null,
+        "en": [
+          "Boar"
+        ],
+        "topics": [
+          "nature"
+        ]
+      },
+      "磁": {
+        "ja": "磁",
+        "reading": null,
+        "en": [
+          "Magnet",
+          "Porcelain"
+        ],
+        "topics": [
+          "technology",
+          "daily"
+        ]
+      },
+      "弥": {
+        "ja": "弥",
+        "reading": null,
+        "en": [
+          "All The More",
+          "Increasingly"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "昆": {
+        "ja": "昆",
+        "reading": null,
+        "en": [
+          "Descendants",
+          "Elder Brother",
+          "Insect"
+        ],
+        "topics": [
+          "people",
+          "nature"
+        ]
+      },
+      "粗": {
+        "ja": "粗",
+        "reading": null,
+        "en": [
+          "Coarse",
+          "Rough",
+          "Rugged"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "訂": {
+        "ja": "訂",
+        "reading": null,
+        "en": [
+          "Revise",
+          "Correct",
+          "Decide"
+        ],
+        "topics": [
+          "learning",
+          "actions"
+        ]
+      },
+      "芽": {
+        "ja": "芽",
+        "reading": null,
+        "en": [
+          "Bud",
+          "Sprout",
+          "Spear"
+        ],
+        "topics": [
+          "nature"
+        ]
+      },
+      "傘": {
+        "ja": "傘",
+        "reading": null,
+        "en": [
+          "Umbrella"
+        ],
+        "topics": [
+          "daily"
+        ]
+      },
+      "敦": {
+        "ja": "敦",
+        "reading": null,
+        "en": [
+          "Industry",
+          "Kindliness"
+        ],
+        "topics": [
+          "work",
+          "feelings"
+        ]
+      },
+      "騎": {
+        "ja": "騎",
+        "reading": null,
+        "en": [
+          "Equestrian",
+          "Riding On Horses",
+          "Counter For Equestrians"
+        ],
+        "topics": [
+          "people",
+          "places",
+          "quantity"
+        ]
+      },
+      "寧": {
+        "ja": "寧",
+        "reading": null,
+        "en": [
+          "Rather",
+          "Preferably",
+          "Peaceful"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "循": {
+        "ja": "循",
+        "reading": null,
+        "en": [
+          "Sequential",
+          "Follow"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "忍": {
+        "ja": "忍",
+        "reading": null,
+        "en": [
+          "Endure",
+          "Bear",
+          "Put Up With"
+        ],
+        "topics": [
+          "actions",
+          "feelings"
+        ]
+      },
+      "磐": {
+        "ja": "磐",
+        "reading": null,
+        "en": [
+          "Rock",
+          "Crag",
+          "Cliff"
+        ],
+        "topics": [
+          "nature"
+        ]
+      },
+      "怠": {
+        "ja": "怠",
+        "reading": null,
+        "en": [
+          "Neglect",
+          "Laziness"
+        ],
+        "topics": [
+          "actions",
+          "descriptions"
+        ]
+      },
+      "如": {
+        "ja": "如",
+        "reading": null,
+        "en": [
+          "Likeness",
+          "Like",
+          "Such As"
+        ],
+        "topics": [
+          "descriptions",
+          "learning"
+        ]
+      },
+      "寮": {
+        "ja": "寮",
+        "reading": null,
+        "en": [
+          "Dormitory",
+          "Hostel",
+          "Villa"
+        ],
+        "topics": [
+          "places"
+        ]
+      },
+      "祐": {
+        "ja": "祐",
+        "reading": null,
+        "en": [
+          "Help"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "鉛": {
+        "ja": "鉛",
+        "reading": null,
+        "en": [
+          "Lead"
+        ],
+        "topics": [
+          "technology"
+        ]
+      },
+      "珠": {
+        "ja": "珠",
+        "reading": null,
+        "en": [
+          "Pearl",
+          "Gem",
+          "Jewel"
+        ],
+        "topics": [
+          "arts"
+        ]
+      },
+      "凝": {
+        "ja": "凝",
+        "reading": null,
+        "en": [
+          "Congeal",
+          "Freeze",
+          "Stiff"
+        ],
+        "topics": [
+          "actions",
+          "body"
+        ]
+      },
+      "苗": {
+        "ja": "苗",
+        "reading": null,
+        "en": [
+          "Seedling",
+          "Sapling",
+          "Shoot"
+        ],
+        "topics": [
+          "nature"
+        ]
+      },
+      "獣": {
+        "ja": "獣",
+        "reading": null,
+        "en": [
+          "Animal",
+          "Beast"
+        ],
+        "topics": [
+          "nature"
+        ]
+      },
+      "哀": {
+        "ja": "哀",
+        "reading": null,
+        "en": [
+          "Pathetic",
+          "Grief",
+          "Sorrow"
+        ],
+        "topics": [
+          "feelings"
+        ]
+      },
+      "跳": {
+        "ja": "跳",
+        "reading": null,
+        "en": [
+          "Hop",
+          "Leap Up",
+          "Spring"
+        ],
+        "topics": [
+          "actions",
+          "arts"
         ]
       }
     }

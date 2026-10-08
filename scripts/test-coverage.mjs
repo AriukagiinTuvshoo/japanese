@@ -36,3 +36,14 @@ try {
 assert.equal(report.legacyUnreviewed, 6503);
 
 for (const lv of ["N3","N2"]) assert.equal(report.byLevel[lv].vocab.missingMeanings,0);
+
+// A conflicting derived gloss is auditable but must not count as an active translation.
+const withdrawn = read('public/data/vocab/n1.json').find(e => e.id === 'e05bb17edd');
+assert.deepEqual([withdrawn.w, withdrawn.r, withdrawn.en], ['気品', 'きひん', ['aroma']]);
+assert.deepEqual(withdrawn.mn, []);
+assert.ok(withdrawn.source_issue);
+assert.equal(withdrawn.mn_provenance, undefined);
+const withdrawal = read('content/mn/batches/2026-10-08-n1-vocab-six-3.json').vocab.e05bb17edd;
+assert.deepEqual(withdrawal.withdrawnMn, ['анхилуун үнэр']);
+assert.equal(withdrawal.mn, undefined);
+assert.ok(!read('content/categories/overrides.json').vocab.e05bb17edd);

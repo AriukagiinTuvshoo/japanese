@@ -1,0 +1,1417 @@
+{
+  "provenance": {
+    "id": "mn-n1-kanji-steady-7-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses with Japanese spelling/reading and retained English cross-check; explicit semantic topic evidence. Independently unreviewed; unresolved source conflicts withheld.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/kanji/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "kanji": {
+    "悼": {
+      "mn": [
+        "гашуудах",
+        "эмгэнэх"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "k": "悼",
+        "on": [
+          "とう"
+        ],
+        "kun": [
+          "いた.む"
+        ],
+        "en": [
+          "Lament",
+          "Grieve Over"
+        ]
+      }
+    },
+    "乏": {
+      "mn": [
+        "ядуурал",
+        "хомс",
+        "хязгаарлагдмал"
+      ],
+      "topics": [
+        "work",
+        "descriptions"
+      ],
+      "expected": {
+        "k": "乏",
+        "on": [
+          "ぼう"
+        ],
+        "kun": [
+          "とぼ.しい",
+          "とも.しい"
+        ],
+        "en": [
+          "Destitution",
+          "Scarce",
+          "Limited"
+        ]
+      }
+    },
+    "該": {
+      "mn": [
+        "дээр дурдсан",
+        "тухайн",
+        "тэр тодорхой зүйл"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "k": "該",
+        "on": [
+          "がい"
+        ],
+        "kun": [],
+        "en": [
+          "Above-stated",
+          "The Said",
+          "That Specific"
+        ]
+      }
+    },
+    "赴": {
+      "mn": [
+        "очих",
+        "зүглэх"
+      ],
+      "topics": [
+        "actions",
+        "places"
+      ],
+      "expected": {
+        "k": "赴",
+        "on": [
+          "ふ"
+        ],
+        "kun": [
+          "おもむ.く"
+        ],
+        "en": [
+          "Proceed",
+          "Get",
+          "Become"
+        ]
+      }
+    },
+    "桑": {
+      "mn": [
+        "ялам мод"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "k": "桑",
+        "on": [
+          "そう"
+        ],
+        "kun": [
+          "くわ"
+        ],
+        "en": [
+          "Mulberry"
+        ]
+      }
+    },
+    "桂": {
+      "mn": [
+        "кацура мод",
+        "шанцай мод"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "k": "桂",
+        "on": [
+          "けい"
+        ],
+        "kun": [
+          "かつら"
+        ],
+        "en": [
+          "Japanese Judas-tree",
+          "Cinnamon Tree"
+        ]
+      }
+    },
+    "髄": {
+      "mn": [
+        "ясны чөмөг",
+        "гол цөм",
+        "мөн чанар"
+      ],
+      "topics": [
+        "body",
+        "descriptions"
+      ],
+      "expected": {
+        "k": "髄",
+        "on": [
+          "ずい"
+        ],
+        "kun": [],
+        "en": [
+          "Marrow",
+          "Pith",
+          "Essence"
+        ]
+      }
+    },
+    "虎": {
+      "mn": [
+        "бар",
+        "архичин"
+      ],
+      "topics": [
+        "nature",
+        "people"
+      ],
+      "expected": {
+        "k": "虎",
+        "on": [
+          "こ"
+        ],
+        "kun": [
+          "とら"
+        ],
+        "en": [
+          "Tiger",
+          "Drunkard"
+        ]
+      }
+    },
+    "盆": {
+      "mn": [
+        "таз",
+        "Обон дэнлүүний баяр",
+        "тавиур сав"
+      ],
+      "topics": [
+        "daily",
+        "society"
+      ],
+      "expected": {
+        "k": "盆",
+        "on": [
+          "ぼん"
+        ],
+        "kun": [],
+        "en": [
+          "Basin",
+          "Lantern Festival",
+          "Tray"
+        ]
+      }
+    },
+    "晋": {
+      "mn": [
+        "урагшлах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "k": "晋",
+        "on": [
+          "しん"
+        ],
+        "kun": [
+          "すす.む"
+        ],
+        "en": [
+          "Advance"
+        ]
+      }
+    },
+    "穂": {
+      "mn": [
+        "тарианы түрүү"
+      ],
+      "topics": [
+        "nature",
+        "food"
+      ],
+      "expected": {
+        "k": "穂",
+        "on": [
+          "すい"
+        ],
+        "kun": [
+          "ほ"
+        ],
+        "en": [
+          "Ear",
+          "Ear (grain)",
+          "Head"
+        ]
+      }
+    },
+    "壮": {
+      "mn": [
+        "чийрэг",
+        "эр бие гүйцэх",
+        "хөгжил цэцэглэл"
+      ],
+      "topics": [
+        "body",
+        "descriptions"
+      ],
+      "expected": {
+        "k": "壮",
+        "on": [
+          "そう"
+        ],
+        "kun": [
+          "さかん"
+        ],
+        "en": [
+          "Robust",
+          "Manhood",
+          "Prosperity"
+        ]
+      }
+    },
+    "堤": {
+      "mn": [
+        "далан",
+        "эрэг",
+        "шороон далан"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "k": "堤",
+        "on": [
+          "てい"
+        ],
+        "kun": [
+          "つつみ"
+        ],
+        "en": [
+          "Dike",
+          "Bank",
+          "Embankment"
+        ]
+      }
+    },
+    "飢": {
+      "mn": [
+        "өлсөх",
+        "өлбөрөх"
+      ],
+      "topics": [
+        "body",
+        "food"
+      ],
+      "expected": {
+        "k": "飢",
+        "on": [
+          "き"
+        ],
+        "kun": [
+          "う.える"
+        ],
+        "en": [
+          "Hungry",
+          "Starve"
+        ]
+      }
+    },
+    "傍": {
+      "mn": [
+        "хажуугийн ажиглагч",
+        "хажуу тал",
+        "түүнээс гадна"
+      ],
+      "topics": [
+        "people",
+        "places"
+      ],
+      "expected": {
+        "k": "傍",
+        "on": [
+          "ぼう"
+        ],
+        "kun": [
+          "かたわ.ら",
+          "わき",
+          "おか-",
+          "はた"
+        ],
+        "en": [
+          "Bystander",
+          "Side",
+          "Besides"
+        ]
+      }
+    },
+    "疫": {
+      "mn": [
+        "халдварт өвчний дэгдэлт"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "k": "疫",
+        "on": [
+          "えき",
+          "やく"
+        ],
+        "kun": [],
+        "en": [
+          "Epidemic"
+        ]
+      }
+    },
+    "累": {
+      "mn": [
+        "хуримтлуулах",
+        "холбогдох",
+        "төвөг"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "k": "累",
+        "on": [
+          "るい"
+        ],
+        "kun": [],
+        "en": [
+          "Accumulate",
+          "Involvement",
+          "Trouble"
+        ]
+      }
+    },
+    "痴": {
+      "mn": [
+        "тэнэг",
+        "мунхаг"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "k": "痴",
+        "on": [
+          "ち"
+        ],
+        "kun": [
+          "し.れる",
+          "おろか"
+        ],
+        "en": [
+          "Stupid",
+          "Foolish"
+        ]
+      }
+    },
+    "搬": {
+      "mn": [
+        "зөөвөрлөх төхөөрөмж",
+        "зөөх",
+        "тээвэрлэх"
+      ],
+      "topics": [
+        "technology",
+        "places"
+      ],
+      "expected": {
+        "k": "搬",
+        "on": [
+          "はん"
+        ],
+        "kun": [],
+        "en": [
+          "Conveyor",
+          "Carry",
+          "Transport"
+        ]
+      }
+    },
+    "晃": {
+      "mn": [
+        "тод",
+        "гэрэлтэй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "k": "晃",
+        "on": [
+          "こう"
+        ],
+        "kun": [
+          "あきらか"
+        ],
+        "en": [
+          "Clear"
+        ]
+      }
+    },
+    "癒": {
+      "mn": [
+        "эдгээх",
+        "анагаах",
+        "цангаа тайлах"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "k": "癒",
+        "on": [
+          "ゆ"
+        ],
+        "kun": [
+          "い.える",
+          "いや.す",
+          "い.やす"
+        ],
+        "en": [
+          "Healing",
+          "Cure",
+          "Quench (thirst)"
+        ]
+      }
+    },
+    "桐": {
+      "mn": [
+        "пауловни мод"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "k": "桐",
+        "on": [
+          "とう",
+          "どう"
+        ],
+        "kun": [
+          "きり"
+        ],
+        "en": [
+          "Paulownia"
+        ]
+      }
+    },
+    "寸": {
+      "mn": [
+        "хэмжүүр",
+        "шакугийн аравны нэг буюу сун",
+        "багахан"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "k": "寸",
+        "on": [
+          "すん"
+        ],
+        "kun": [],
+        "en": [
+          "Measurement",
+          "Tenth Of A Shaku",
+          "A Little"
+        ]
+      }
+    },
+    "郭": {
+      "mn": [
+        "хашаалсан газар",
+        "хороолол",
+        "бэхлэлт"
+      ],
+      "topics": [
+        "places",
+        "society"
+      ],
+      "expected": {
+        "k": "郭",
+        "on": [
+          "かく"
+        ],
+        "kun": [
+          "くるわ"
+        ],
+        "en": [
+          "Enclosure",
+          "Quarters",
+          "Fortification"
+        ]
+      }
+    },
+    "尿": {
+      "mn": [
+        "шээс"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "k": "尿",
+        "on": [
+          "にょう"
+        ],
+        "kun": [
+          "ゆばり",
+          "いばり",
+          "しと"
+        ],
+        "en": [
+          "Urine"
+        ]
+      }
+    },
+    "凶": {
+      "mn": [
+        "муу этгээд",
+        "хорлол",
+        "азгүй явдал"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "k": "凶",
+        "on": [
+          "きょう"
+        ],
+        "kun": [],
+        "en": [
+          "Villain",
+          "Evil",
+          "Bad Luck"
+        ]
+      }
+    },
+    "吐": {
+      "mn": [
+        "нулимж гаргах",
+        "бөөлжих",
+        "хэхрэх"
+      ],
+      "topics": [
+        "body",
+        "actions"
+      ],
+      "expected": {
+        "k": "吐",
+        "on": [
+          "と"
+        ],
+        "kun": [
+          "は.く",
+          "つ.く"
+        ],
+        "en": [
+          "Spit",
+          "Vomit",
+          "Belch"
+        ]
+      }
+    },
+    "宴": {
+      "mn": [
+        "дайлага",
+        "найр",
+        "цэнгэл"
+      ],
+      "topics": [
+        "food",
+        "arts"
+      ],
+      "expected": {
+        "k": "宴",
+        "on": [
+          "えん"
+        ],
+        "kun": [
+          "うたげ"
+        ],
+        "en": [
+          "Banquet",
+          "Feast",
+          "Party"
+        ]
+      }
+    },
+    "鷹": {
+      "mn": [
+        "харцага"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "k": "鷹",
+        "on": [
+          "よう",
+          "おう"
+        ],
+        "kun": [
+          "たか"
+        ],
+        "en": [
+          "Hawk"
+        ]
+      }
+    },
+    "賓": {
+      "mn": [
+        "эрхэм зочин",
+        "зочин"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "k": "賓",
+        "on": [
+          "ひん"
+        ],
+        "kun": [],
+        "en": [
+          "V.i.p.",
+          "Guest"
+        ]
+      }
+    },
+    "虜": {
+      "mn": [
+        "олзлогдогч",
+        "бүдүүлэг хүн гэх хуучны доромжлол",
+        "дайсныг доромжилсон нэр"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "k": "虜",
+        "on": [
+          "りょ",
+          "ろ"
+        ],
+        "kun": [
+          "とりこ",
+          "とりく"
+        ],
+        "en": [
+          "Captive",
+          "Barbarian",
+          "Low Epithet For The Enemy"
+        ]
+      }
+    },
+    "陶": {
+      "mn": [
+        "шавар эдлэл",
+        "шаазан"
+      ],
+      "topics": [
+        "arts",
+        "daily"
+      ],
+      "expected": {
+        "k": "陶",
+        "on": [
+          "とう"
+        ],
+        "kun": [
+          "すえ"
+        ],
+        "en": [
+          "Pottery",
+          "Porcelain"
+        ]
+      }
+    },
+    "鐘": {
+      "mn": [
+        "хонх",
+        "гонг",
+        "хонхны дуу"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "k": "鐘",
+        "on": [
+          "しょう"
+        ],
+        "kun": [
+          "かね"
+        ],
+        "en": [
+          "Bell",
+          "Gong",
+          "Chimes"
+        ]
+      }
+    },
+    "憾": {
+      "mn": [
+        "гэмшил",
+        "харамсал",
+        "харамсах"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "k": "憾",
+        "on": [
+          "かん"
+        ],
+        "kun": [
+          "うら.む"
+        ],
+        "en": [
+          "Remorse",
+          "Regret",
+          "Be Sorry"
+        ]
+      }
+    },
+    "畿": {
+      "mn": [
+        "нийслэл",
+        "нийслэлийн ойр орчим"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "k": "畿",
+        "on": [
+          "き"
+        ],
+        "kun": [
+          "みやこ"
+        ],
+        "en": [
+          "Capital",
+          "Suburbs Of Capital"
+        ]
+      }
+    },
+    "猪": {
+      "mn": [
+        "зэрлэг гахай"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "k": "猪",
+        "on": [
+          "ちょ"
+        ],
+        "kun": [
+          "い",
+          "いのしし"
+        ],
+        "en": [
+          "Boar"
+        ]
+      }
+    },
+    "磁": {
+      "mn": [
+        "соронз",
+        "шаазан"
+      ],
+      "topics": [
+        "technology",
+        "daily"
+      ],
+      "expected": {
+        "k": "磁",
+        "on": [
+          "じ"
+        ],
+        "kun": [],
+        "en": [
+          "Magnet",
+          "Porcelain"
+        ]
+      }
+    },
+    "弥": {
+      "mn": [
+        "бүр ч илүү",
+        "улам бүр"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "k": "弥",
+        "on": [
+          "み",
+          "び"
+        ],
+        "kun": [
+          "や",
+          "いや",
+          "いよ.いよ",
+          "わた.る"
+        ],
+        "en": [
+          "All The More",
+          "Increasingly"
+        ]
+      }
+    },
+    "昆": {
+      "mn": [
+        "үр удам",
+        "ах",
+        "шавж"
+      ],
+      "topics": [
+        "people",
+        "nature"
+      ],
+      "expected": {
+        "k": "昆",
+        "on": [
+          "こん"
+        ],
+        "kun": [],
+        "en": [
+          "Descendants",
+          "Elder Brother",
+          "Insect"
+        ]
+      }
+    },
+    "粗": {
+      "mn": [
+        "бүдүүн ширхэгтэй",
+        "барзгар",
+        "ширүүн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "k": "粗",
+        "on": [
+          "そ"
+        ],
+        "kun": [
+          "あら.い",
+          "あら-"
+        ],
+        "en": [
+          "Coarse",
+          "Rough",
+          "Rugged"
+        ]
+      }
+    },
+    "訂": {
+      "mn": [
+        "засварлах",
+        "залруулах",
+        "тогтоох"
+      ],
+      "topics": [
+        "learning",
+        "actions"
+      ],
+      "expected": {
+        "k": "訂",
+        "on": [
+          "てい"
+        ],
+        "kun": [
+          "ただ.す"
+        ],
+        "en": [
+          "Revise",
+          "Correct",
+          "Decide"
+        ]
+      }
+    },
+    "芽": {
+      "mn": [
+        "нахиа",
+        "соёо",
+        "шинээр ургасан иш"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "k": "芽",
+        "on": [
+          "が"
+        ],
+        "kun": [
+          "め"
+        ],
+        "en": [
+          "Bud",
+          "Sprout",
+          "Spear"
+        ]
+      }
+    },
+    "傘": {
+      "mn": [
+        "шүхэр"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "k": "傘",
+        "on": [
+          "さん"
+        ],
+        "kun": [
+          "かさ"
+        ],
+        "en": [
+          "Umbrella"
+        ]
+      }
+    },
+    "敦": {
+      "mn": [
+        "хичээл зүтгэл",
+        "нинжин сэтгэл"
+      ],
+      "topics": [
+        "work",
+        "feelings"
+      ],
+      "expected": {
+        "k": "敦",
+        "on": [
+          "とん",
+          "たい",
+          "だん"
+        ],
+        "kun": [
+          "あつ.い"
+        ],
+        "en": [
+          "Industry",
+          "Kindliness"
+        ]
+      }
+    },
+    "騎": {
+      "mn": [
+        "морьтон",
+        "морь унах",
+        "морьтон тоолох дагавар"
+      ],
+      "topics": [
+        "people",
+        "places",
+        "quantity"
+      ],
+      "expected": {
+        "k": "騎",
+        "on": [
+          "き"
+        ],
+        "kun": [],
+        "en": [
+          "Equestrian",
+          "Riding On Horses",
+          "Counter For Equestrians"
+        ]
+      }
+    },
+    "寧": {
+      "mn": [
+        "харин",
+        "илүүтэй",
+        "амгалан"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "k": "寧",
+        "on": [
+          "ねい"
+        ],
+        "kun": [
+          "むし.ろ"
+        ],
+        "en": [
+          "Rather",
+          "Preferably",
+          "Peaceful"
+        ]
+      }
+    },
+    "循": {
+      "mn": [
+        "дараалсан",
+        "дагах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "k": "循",
+        "on": [
+          "じゅん"
+        ],
+        "kun": [],
+        "en": [
+          "Sequential",
+          "Follow"
+        ]
+      }
+    },
+    "忍": {
+      "mn": [
+        "тэсвэрлэх",
+        "даах",
+        "тэвчих"
+      ],
+      "topics": [
+        "actions",
+        "feelings"
+      ],
+      "expected": {
+        "k": "忍",
+        "on": [
+          "にん"
+        ],
+        "kun": [
+          "しの.ぶ",
+          "しの.ばせる"
+        ],
+        "en": [
+          "Endure",
+          "Bear",
+          "Put Up With"
+        ]
+      }
+    },
+    "磐": {
+      "mn": [
+        "хад чулуу",
+        "цохио",
+        "хадан хясаа"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "k": "磐",
+        "on": [
+          "ばん",
+          "はん"
+        ],
+        "kun": [
+          "いわ"
+        ],
+        "en": [
+          "Rock",
+          "Crag",
+          "Cliff"
+        ]
+      }
+    },
+    "怠": {
+      "mn": [
+        "үл хайхрах",
+        "залхуурал"
+      ],
+      "topics": [
+        "actions",
+        "descriptions"
+      ],
+      "expected": {
+        "k": "怠",
+        "on": [
+          "たい"
+        ],
+        "kun": [
+          "おこた.る",
+          "なま.ける"
+        ],
+        "en": [
+          "Neglect",
+          "Laziness"
+        ]
+      }
+    },
+    "如": {
+      "mn": [
+        "төстэй байдал",
+        "адил",
+        "… мэт"
+      ],
+      "topics": [
+        "descriptions",
+        "learning"
+      ],
+      "expected": {
+        "k": "如",
+        "on": [
+          "じょ",
+          "にょ"
+        ],
+        "kun": [
+          "ごと.し"
+        ],
+        "en": [
+          "Likeness",
+          "Like",
+          "Such As"
+        ]
+      }
+    },
+    "寮": {
+      "mn": [
+        "дотуур байр",
+        "буудал",
+        "тусдаа сууц"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "k": "寮",
+        "on": [
+          "りょう"
+        ],
+        "kun": [],
+        "en": [
+          "Dormitory",
+          "Hostel",
+          "Villa"
+        ]
+      }
+    },
+    "祐": {
+      "mn": [
+        "туслах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "k": "祐",
+        "on": [
+          "ゆう",
+          "う"
+        ],
+        "kun": [
+          "たす.ける"
+        ],
+        "en": [
+          "Help"
+        ]
+      }
+    },
+    "鉛": {
+      "mn": [
+        "хар тугалга"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "k": "鉛",
+        "on": [
+          "えん"
+        ],
+        "kun": [
+          "なまり"
+        ],
+        "en": [
+          "Lead"
+        ]
+      }
+    },
+    "珠": {
+      "mn": [
+        "сувд",
+        "эрдэнийн чулуу",
+        "үнэт эрдэнэ"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "k": "珠",
+        "on": [
+          "しゅ"
+        ],
+        "kun": [
+          "たま"
+        ],
+        "en": [
+          "Pearl",
+          "Gem",
+          "Jewel"
+        ]
+      }
+    },
+    "凝": {
+      "mn": [
+        "өтгөрч царцах",
+        "хөлдөх",
+        "хөшүүн болох"
+      ],
+      "topics": [
+        "actions",
+        "body"
+      ],
+      "expected": {
+        "k": "凝",
+        "on": [
+          "ぎょう"
+        ],
+        "kun": [
+          "こ.る",
+          "こ.らす",
+          "こご.らす",
+          "こご.らせる"
+        ],
+        "en": [
+          "Congeal",
+          "Freeze",
+          "Stiff"
+        ]
+      }
+    },
+    "苗": {
+      "mn": [
+        "суулгац",
+        "зулзаган мод",
+        "шинэ ургалт"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "k": "苗",
+        "on": [
+          "びょう",
+          "みょう"
+        ],
+        "kun": [
+          "なえ",
+          "なわ-"
+        ],
+        "en": [
+          "Seedling",
+          "Sapling",
+          "Shoot"
+        ]
+      }
+    },
+    "獣": {
+      "mn": [
+        "амьтан",
+        "араатан"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "k": "獣",
+        "on": [
+          "じゅう"
+        ],
+        "kun": [
+          "けもの",
+          "けだもの"
+        ],
+        "en": [
+          "Animal",
+          "Beast"
+        ]
+      }
+    },
+    "哀": {
+      "mn": [
+        "өрөвдөлтэй",
+        "уй гашуу",
+        "гуниг"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "k": "哀",
+        "on": [
+          "あい"
+        ],
+        "kun": [
+          "あわ.れ",
+          "あわ.れむ",
+          "かな.しい"
+        ],
+        "en": [
+          "Pathetic",
+          "Grief",
+          "Sorrow"
+        ]
+      }
+    },
+    "跳": {
+      "mn": [
+        "дэвхрэх",
+        "үсрэх",
+        "ойх"
+      ],
+      "topics": [
+        "actions",
+        "arts"
+      ],
+      "expected": {
+        "k": "跳",
+        "on": [
+          "ちょう"
+        ],
+        "kun": [
+          "は.ねる",
+          "と.ぶ",
+          "-と.び"
+        ],
+        "en": [
+          "Hop",
+          "Leap Up",
+          "Spring"
+        ]
+      }
+    }
+  }
+}

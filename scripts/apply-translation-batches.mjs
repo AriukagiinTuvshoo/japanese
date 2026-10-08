@@ -20,6 +20,16 @@ for (const batch of batches) {
       if (translation.expected) for (const [field, expected] of Object.entries(translation.expected)) {
         assert.deepEqual(entry[field], expected, `Source mismatch ${kind}/${id}/${field}`);
       }
+      // Withdraw a demonstrably conflicting derived sense without deleting its audit trail.
+      if (translation.withdrawnMn) {
+        assert.ok(translation.sourceNote && translation.expected, `Withdrawal requires guarded source issue: ${id}`);
+        assert.equal(translation.mn, undefined, `Withdrawn sense must not also be applied: ${id}`);
+        assert.ok(Array.isArray(translation.withdrawnMn) && translation.withdrawnMn.length);
+        entry.mn = kind === "grammar" ? "" : [];
+        delete entry.mn_provenance;
+        entry.mq = "none";
+        if (kind !== "grammar") delete categoryOverrides[kind][id];
+      }
       const meanings = Array.isArray(translation.mn) ? translation.mn : [translation.mn];
       if (translation.mn !== undefined) {
         assert.ok(meanings.length && meanings.every(m => typeof m === "string" && /[А-Яа-яӨөҮү]/.test(m)), `Invalid MN: ${kind}/${id}`);

@@ -844,19 +844,17 @@
       }
     },
     "e05bb17edd": {
-      "mn": [
-        "анхилуун үнэр"
-      ],
-      "topics": [
-        "feelings"
-      ],
       "expected": {
         "w": "気品",
         "r": "きひん",
         "en": [
           "aroma"
         ]
-      }
+      },
+      "withdrawnMn": [
+        "анхилуун үнэр"
+      ],
+      "sourceNote": "Unresolved Japanese/English conflict: 気品/きひん denotes elegance/dignity, not retained English aroma. Earlier AI-authored MN aroma sense withdrawn from active data; original Japanese/reading/English and batch audit retained. Requires independent dictionary/source review."
     },
     "d23da22be0": {
       "mn": [
