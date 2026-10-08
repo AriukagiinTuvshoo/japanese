@@ -2,6 +2,7 @@ import { Suspense, lazy, useEffect } from "react";
 import Shell from "./components/Shell";
 import { StoreProvider } from "./lib/store";
 import { useRoute } from "./lib/router";
+import { routeArg, routeLevel } from "./lib/routes";
 import { useStore } from "./lib/store";
 import { Spinner } from "./components/ui";
 import { ui } from "./lib/i18n";
@@ -34,18 +35,20 @@ const Admin = lazy(() => import("./pages/Admin"));
 
 function Router() {
   const route = useRoute();
-  const [first = "", second] = route.params;
+  // `#/<name>/<arg>` — аргумент нь params[0] (href() ийн гаргадаг хэлбэр).
+  const arg = routeArg(route);
+  const level = routeLevel(route);
 
   const page = (() => {
     switch (route.name) {
       case "home": return <Home />;
-      case "vocab": return second ? <WordDetail id={second} /> : <Vocabulary />;
+      case "vocab": return arg ? <WordDetail id={arg} /> : <Vocabulary />;
       case "review": return <Review />;
-      case "kanji": return second ? <KanjiDetail char={second} /> : <KanjiList />;
-      case "write": return <Writing char={second} />;
-      case "grammar": return second ? <GrammarDetail id={second} /> : <GrammarList />;
-      case "reading": return second ? <ReadingDetail id={second} /> : <ReadingList />;
-      case "listening": return second ? <ListeningDetail id={second} /> : <ListeningList />;
+      case "kanji": return arg ? <KanjiDetail char={arg} /> : <KanjiList />;
+      case "write": return <Writing char={arg} />;
+      case "grammar": return arg ? <GrammarDetail id={arg} level={level} /> : <GrammarList />;
+      case "reading": return arg ? <ReadingDetail id={arg} /> : <ReadingList />;
+      case "listening": return arg ? <ListeningDetail id={arg} /> : <ListeningList />;
       case "quiz": return <Quiz />;
       case "mock":
       case "exam": return <MockExam />;
@@ -58,7 +61,7 @@ function Router() {
       case "kana": return <Kana />;
       case "mistakes": return <Mistakes />;
       case "about": return <About />;
-      case "admin": return <Admin tab={first || "overview"} />;
+      case "admin": return <Admin tab={arg ?? "overview"} />;
       default: return <NotFound name={route.name} />;
     }
   })();

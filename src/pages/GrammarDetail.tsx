@@ -7,23 +7,28 @@ import { grammarLabel, LEVEL_LABEL, stripFurigana } from "../lib/text";
 import { Button, Card, Chip, Empty, Furigana, LevelBadge, SectionTitle, SpeakButton, Spinner, Tabs } from "../components/ui";
 import { MN_PENDING, grammarEn, grammarMnMissing, ui } from "../lib/i18n";
 
-export default function GrammarDetail({ id }: { id: string }) {
+/** `level` (жишээ: `#/grammar/ni-saishite?level=N2`) байвал эхлээд тэр түвшинг хайна. */
+export default function GrammarDetail({ id, level }: { id: string; level?: Level }) {
   const { doc, actions } = useStore();
   const language = doc.profile.language ?? "mn";
   const t = ui[language];
   const [items, setItems] = useState<Grammar[] | null>(null);
   const [tab, setTab] = useState<"detail" | "compare" | "examples">("detail");
-  const [, setLevel] = useState<Level | null>(null);
-
   useEffect(() => {
+    let cancelled = false;
+    setItems(null);
     (async () => {
-      for (const l of ["N5", "N4", "N3", "N2", "N1"] as Level[]) {
+      const order: Level[] = ["N5", "N4", "N3", "N2", "N1"];
+      const hinted = level ? [level, ...order.filter((l) => l !== level)] : order;
+      for (const l of hinted) {
         const list = await loadGrammar(l);
-        if (list.some((g) => g.id === id)) { setItems(list); setLevel(l); return; }
+        if (cancelled) return;
+        if (list.some((g) => g.id === id)) { setItems(list); return; }
       }
-      setItems([]);
+      if (!cancelled) setItems([]);
     })();
-  }, [id]);
+    return () => { cancelled = true; };
+  }, [id, level]);
 
   const g = items?.find((x) => x.id === id);
   const done = doc.grammarDone.includes(id);
@@ -154,7 +159,7 @@ export default function GrammarDetail({ id }: { id: string }) {
           {similar.length === 0 ? <Empty icon="比" title={t.compareNotFound} /> : (
             <div className="grid gap-3 sm:grid-cols-2">
               {similar.map((s) => (
-                <a key={s.id} href={href("grammar", s.id)} className="card-flat p-4 transition hover:-translate-y-0.5 hover:border-shu-300">
+                <a key={s.id} href={href(`grammar?level=${s.lvl}`, s.id)} className="card-flat p-4 transition hover:-translate-y-0.5 hover:border-shu-300">
                   <div className="flex items-center gap-2">
                     <span className="font-jp text-[15px] font-bold">{s.p}</span>
                     <LevelBadge level={s.lvl} size="sm" />

@@ -188,7 +188,7 @@ export default function Dictionary({ q: initial }: { q?: string }) {
               <ul className="mt-3 divide-y divide-sumi-900/8">
                 {results.grammar.map((gr) => (
                   <li key={gr.id}>
-                    <a href={href("grammar", gr.id)} className="flex flex-wrap items-center gap-3 py-3">
+                    <a href={href(`grammar?level=${gr.lvl}`, gr.id)} className="flex flex-wrap items-center gap-3 py-3">
                       <span className="font-jp text-[16px] font-bold">{gr.w}</span>
                       <span className="min-w-0 flex-1 truncate text-[13px] text-sumi-700">
                         {language === "en"
