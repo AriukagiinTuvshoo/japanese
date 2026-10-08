@@ -1,0 +1,286 @@
+{
+  "provenance": {
+    "id": "mn-n1-grammar-examples-oct9-2",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian compared with exact Japanese and retained English; stable record and headword/pattern guards; independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/grammar/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "grammar": {
+    "o-kinjienai": {
+      "expected": {
+        "p": "〜を禁じ得ない",
+        "en": "cannot help feeling; cannot suppress (an emotion)"
+      },
+      "examples": {
+        "罪のない子どもたちが犠牲になったことに、深い憤りを禁じ得ない。": {
+          "en": "I cannot help feeling deep outrage that innocent children have become victims.",
+          "mn": "Гэмгүй хүүхдүүд хохирсонд гүнээ бухимдахгүй байж чадсангүй."
+        },
+        "長年の苦労の末に夢をかなえた彼の姿に、涙を禁じ得なかった。": {
+          "en": "Seeing him realize his dream after years of hardship, I could not hold back my tears.",
+          "mn": "Олон жилийн бэрхшээлийн эцэст мөрөөдлөө биелүүлсэн түүнийг хараад нулимсаа барьж чадсангүй."
+        },
+        "当局の対応の遅さには、疑問を禁じ得ない。": {
+          "en": "I cannot help having doubts about how slowly the authorities responded.",
+          "mn": "Эрх баригчдын удаан хариу үйлдэлд эргэлзэхгүй байж чадахгүй."
+        }
+      }
+    },
+    "o-yogi-naku-sareru": {
+      "expected": {
+        "p": "〜を余儀なくされる",
+        "en": "be forced to; have no choice but to"
+      },
+      "examples": {
+        "大型台風の接近により、多くの便が欠航を余儀なくされた。": {
+          "en": "With a major typhoon approaching, many flights had to be canceled.",
+          "mn": "Том хар салхи ойртсон тул олон нислэг цуцлахаас өөр аргагүй болсон."
+        },
+        "主力選手の相次ぐ負傷で、チームは戦術の大幅な変更を余儀なくされた。": {
+          "en": "With key players injured one after another, the team was forced to change its tactics drastically.",
+          "mn": "Гол тамирчид дараалан гэмтсэн тул баг тактикаа ихээр өөрчлөхөөс өөр аргагүй болсон."
+        },
+        "住民たちは避難生活を余儀なくされ、今も仮設住宅で暮らしている。": {
+          "en": "The residents were forced to evacuate and still live in temporary housing.",
+          "mn": "Оршин суугчид нүүлгэн шилжүүлэх амьдралд орж, одоо ч түр сууцанд амьдарч байна."
+        }
+      }
+    },
+    "atte-no": {
+      "expected": {
+        "p": "〜あっての",
+        "en": "(only) possible because of; owe everything to"
+      },
+      "examples": {
+        "お客様あっての商売ですから、どんな小さな声にも耳を傾けなければならない。": {
+          "en": "Our business exists only because of our customers, so we must listen to even the smallest voice.",
+          "mn": "Бизнес маань үйлчлүүлэгчдийнхээ ачаар байдаг тул хамгийн өчүүхэн саналд ч чих тавих хэрэгтэй."
+        },
+        "今日の私があるのも、支えてくれた家族あってのことだ。": {
+          "en": "I owe who I am today to my family who supported me.",
+          "mn": "Өнөөдрийн би бий болсон нь намайг дэмжсэн гэр бүлийн минь ач."
+        },
+        "健康あっての人生だ。体を壊すまで働いてはいけない。": {
+          "en": "Life is nothing without health. You mustn't work until you ruin your body.",
+          "mn": "Эрүүл мэнд байж л амьдрал бий. Биеэ эвдтэл ажиллаж болохгүй."
+        }
+      }
+    },
+    "ikan-de-ikan-ni-yorazu": {
+      "expected": {
+        "p": "〜いかんで / 〜いかんによらず",
+        "en": "depending on; regardless of"
+      },
+      "examples": {
+        "来季の契約は、今シーズンの成績いかんで決まる。": {
+          "en": "Next season's contract will depend on this season's performance.",
+          "mn": "Ирэх улирлын гэрээ энэ улирлын амжилтаас хамаарч шийдэгдэнэ."
+        },
+        "試験の結果いかんでは、留年もあり得る。": {
+          "en": "Depending on the exam results, you might even have to repeat the year.",
+          "mn": "Шалгалтын дүнгээс хамаарч анги улирах ч боломжтой."
+        },
+        "理由のいかんによらず、無断欠勤は認められない。": {
+          "en": "Regardless of the reason, absence without notice will not be tolerated.",
+          "mn": "Ямар шалтгаантай ч мэдэгдэлгүй ажил таслахыг зөвшөөрөхгүй."
+        }
+      }
+    },
+    "you-ga-you-to": {
+      "expected": {
+        "p": "〜(よ)うが / 〜(よ)うと",
+        "en": "no matter (what, how); even if"
+      },
+      "examples": {
+        "周りに何と言われようが、自分で決めた道を進むつもりだ。": {
+          "en": "No matter what people around me say, I intend to follow the path I chose.",
+          "mn": "Эргэн тойрныхон юу ч хэлсэн өөрөө сонгосон замаараа явах бодолтой."
+        },
+        "どんなに忙しかろうと、彼は毎晩必ず子どもに絵本を読んでやる。": {
+          "en": "No matter how busy he is, he never fails to read his child a picture book every night.",
+          "mn": "Тэр хэчнээн завгүй байсан ч орой бүр хүүхдэдээ зурагт ном уншиж өгдөг."
+        },
+        "相手が上司だろうが、間違っていることははっきり指摘すべきだ。": {
+          "en": "Even if it's your boss, you should clearly point out what's wrong.",
+          "mn": "Дарга байсан ч буруу зүйлийг нь тодорхой хэлэх хэрэгтэй."
+        }
+      }
+    },
+    "you-ga-mai-ga-you-to-mai-to": {
+      "expected": {
+        "p": "〜(よ)うが〜まいが / 〜(よ)うと〜まいと",
+        "en": "whether or not; regardless of whether"
+      },
+      "examples": {
+        "君が賛成しようがしまいが、この計画はもう動き出している。": {
+          "en": "Whether you agree or not, this plan is already in motion.",
+          "mn": "Чи дэмжсэн ч дэмжээгүй ч энэ төлөвлөгөө аль хэдийн хэрэгжиж эхэлсэн."
+        },
+        "雨が降ろうと降るまいと、試合は予定どおり行われる。": {
+          "en": "Rain or no rain, the match will be held as scheduled.",
+          "mn": "Бороо орсон ч ороогүй ч тоглолт хуваарийн дагуу болно."
+        },
+        "本人が認めようが認めまいが、証拠は明らかだ。": {
+          "en": "Whether he admits it or not, the evidence is clear.",
+          "mn": "Тэр хүлээн зөвшөөрсөн ч үгүй ч нотолгоо тодорхой."
+        }
+      }
+    },
+    "you-ni-mo-nai": {
+      "expected": {
+        "p": "〜(よ)うにも〜ない",
+        "en": "want to (do) but can't; even if one tries, one cannot"
+      },
+      "examples": {
+        "財布を家に忘れてきたので、昼ご飯を買おうにも買えなかった。": {
+          "en": "I'd left my wallet at home, so I couldn't buy lunch even though I wanted to.",
+          "mn": "Түрийвчээ гэртээ мартсан тул өдрийн хоол авах гэсэн ч авч чадаагүй."
+        },
+        "大雪で電車が止まってしまい、帰ろうにも帰れない。": {
+          "en": "The trains have stopped because of heavy snow, so I can't get home even if I want to.",
+          "mn": "Их цаснаас галт тэрэг зогсож, харих гэсэн ч харьж чадахгүй байна."
+        },
+        "当時の記録がすべて失われており、確かめようにも確かめようがない。": {
+          "en": "All the records from that time have been lost, so there's no way to check even if we wanted to.",
+          "mn": "Тэр үеийн бүх бүртгэл алга болсон тул шалгах гэсэн ч арга байхгүй."
+        }
+      }
+    },
+    "kagiri-da": {
+      "expected": {
+        "p": "〜かぎりだ",
+        "en": "extremely; I feel so (emotion)"
+      },
+      "examples": {
+        "長年の夢だった自分の店をついに開くことができ、うれしいかぎりだ。": {
+          "en": "I've finally opened my own shop, a long-held dream, and I couldn't be happier.",
+          "mn": "Олон жилийн мөрөөдөл болсон дэлгүүрээ нээж чадсандаа туйлын баяртай байна."
+        },
+        "頼りにしていた先輩が来月で退職されるとは、心細いかぎりです。": {
+          "en": "Hearing that the senior colleague I relied on is retiring next month leaves me feeling utterly lost.",
+          "mn": "Түшиглэж байсан ахлах ажилтан ирэх сард тэтгэвэрт гарна гэхээр туйлын ганцаардмал санагдаж байна."
+        },
+        "若いのに三か国語を自在に操るなんて、うらやましいかぎりだ。": {
+          "en": "So young and already fluent in three languages — I'm terribly envious.",
+          "mn": "Залуу хэрнээ гурван хэлээр чөлөөтэй ярьдаг нь үнэхээр атаархмаар."
+        }
+      }
+    },
+    "katagata": {
+      "expected": {
+        "p": "〜かたがた",
+        "en": "while also; partly for the purpose of"
+      },
+      "examples": {
+        "先日のお礼かたがた、ご挨拶に伺いたいと存じます。": {
+          "en": "I would like to call on you to pay my respects, and also to thank you for the other day.",
+          "mn": "Өнгөрсөн өдрийн ачийг тань талархахын хамт мэнд мэдэхээр очмоор байна."
+        },
+        "退院のご報告かたがた、入院中のお見舞いのお礼を申し上げます。": {
+          "en": "I'm writing to let you know I've left the hospital, and to thank you for visiting me there.",
+          "mn": "Эмнэлгээс гарснаа мэдэгдэхийн хамт хэвтэж байхад эргэж ирсэнд талархал илэрхийлье."
+        },
+        "出張かたがた、久しぶりに恩師のお宅を訪ねた。": {
+          "en": "While on a business trip, I also visited my former teacher's home for the first time in years.",
+          "mn": "Томилолтоор явах зуураа олон жилийн дараа хуучин багшийндаа очсон."
+        }
+      }
+    },
+    "ka-to-omoikiya": {
+      "expected": {
+        "p": "〜かと思いきや",
+        "en": "just when one thought ...; contrary to expectation"
+      },
+      "examples": {
+        "今年の冬は暖かいかと思いきや、二月に入って記録的な大雪に見舞われた。": {
+          "en": "We thought this winter would be mild, but then February brought record-breaking snow.",
+          "mn": "Энэ өвөл дулаахан байх нь гэж бодтол хоёрдугаар сард түүхэн их цас орсон."
+        },
+        "予約が取れないことで有名な店なので断られるかと思いきや、あっさり席が取れた。": {
+          "en": "The restaurant is famous for being hard to book, so I expected to be turned down, but I got a table easily.",
+          "mn": "Захиалга авахад хэцүү гэдгээрээ алдартай тул татгалзах байх гэж бодтол амархан суудал олдсон."
+        },
+        "息子は宿題をしているのかと思いきや、机の下でゲームに夢中になっていた。": {
+          "en": "I thought my son was doing his homework, but he was actually absorbed in a game under his desk.",
+          "mn": "Хүүгээ даалгавраа хийж байна гэж бодтол ширээн доор тоглоомдоо улайрсан байв."
+        }
+      }
+    },
+    "kirai-ga-aru": {
+      "expected": {
+        "p": "〜きらいがある",
+        "en": "have a (bad) tendency to"
+      },
+      "examples": {
+        "彼は何事も自分一人で抱え込むきらいがある。": {
+          "en": "He has a tendency to shoulder everything by himself.",
+          "mn": "Тэр бүхнийг ганцаараа үүрэх хандлагатай."
+        },
+        "最近の報道は、視聴者の不安をいたずらにあおるきらいがある。": {
+          "en": "News coverage these days tends to stir up viewers' anxiety needlessly.",
+          "mn": "Сүүлийн үеийн мэдээ үзэгчдийн түгшүүрийг хэрэггүйгээр өдөөх хандлагатай."
+        },
+        "この教授の論文は、結論を急ぎすぎるきらいがある。": {
+          "en": "This professor's papers tend to rush to conclusions.",
+          "mn": "Энэ профессорын өгүүллүүд дүгнэлтээ хэт яаран гаргах хандлагатай."
+        }
+      }
+    },
+    "kiwamaru-kiwamari-nai": {
+      "expected": {
+        "p": "〜極まる / 〜極まりない",
+        "en": "extremely; utterly"
+      },
+      "examples": {
+        "公共の場で大声で電話をするなんて、迷惑極まりない。": {
+          "en": "Talking loudly on the phone in a public place is extremely inconsiderate.",
+          "mn": "Олон нийтийн газар чанга утсаар ярих нь туйлын төвөгтэй."
+        },
+        "雨の夜に無灯火で自転車に乗るのは、危険極まりない行為だ。": {
+          "en": "Riding a bicycle without a light on a rainy night is extremely dangerous.",
+          "mn": "Бороотой шөнө гэрэлгүй дугуй унах нь туйлын аюултай үйлдэл."
+        },
+        "被害者を嘲笑するような彼の発言は、不謹慎極まる。": {
+          "en": "His remarks, which all but mocked the victims, were utterly inappropriate.",
+          "mn": "Хохирогчдыг шоолсон мэт түүний үг туйлын зохисгүй."
+        }
+      }
+    },
+    "no-kiwami": {
+      "expected": {
+        "p": "〜の極み",
+        "en": "the height of; the utmost"
+      },
+      "examples": {
+        "決勝戦であのような凡ミスをしたことは、まさに痛恨の極みだ。": {
+          "en": "Making such a careless error in the final is the most bitter regret imaginable.",
+          "mn": "Шигшээ тоглолтод тийм энгийн алдаа гаргасан нь үнэхээр гашуун харамсал."
+        },
+        "徹夜が三日続き、チームの全員が疲労の極みに達していた。": {
+          "en": "After three all-nighters in a row, everyone on the team had reached the point of utter exhaustion.",
+          "mn": "Гурван шөнө дараалан унтаагүй тул багийнхан бүгд туйлын ядарсан."
+        },
+        "一泊百万円のスイートとは、まさにぜいたくの極みだ。": {
+          "en": "A suite costing a million yen a night is truly the height of luxury.",
+          "mn": "Нэг хоноход сая иенийн тансаг өрөө гэдэг үнэхээр тансаглалын дээд."
+        }
+      }
+    },
+    "gotoki-gotoku": {
+      "expected": {
+        "p": "〜ごとき / 〜ごとく",
+        "en": "like; as; (after a person) the likes of"
+      },
+      "examples": {
+        "彼女は何事もなかったかのごとく、静かに微笑んでいた。": {
+          "en": "She was smiling quietly as if nothing had happened.",
+          "mn": "Тэр юу ч болоогүй мэт тайван инээмсэглэж байв."
+        }
+      }
+    }
+  }
+}

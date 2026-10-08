@@ -90,7 +90,7 @@
         "missingMeanings": 0,
         "missingExamples": 0,
         "missingForms": 0,
-        "unclassified": 229,
+        "unclassified": 209,
         "invalidCategories": 0,
         "missingProvenance": 0,
         "mislabeledMn": 0,
@@ -112,7 +112,7 @@
       "vocab": {
         "entries": 2338,
         "missingMeanings": 0,
-        "missingExamples": 3094,
+        "missingExamples": 3074,
         "missingForms": 0,
         "unclassified": 582,
         "invalidCategories": 0,
@@ -134,7 +134,7 @@
       "grammar": {
         "entries": 123,
         "missingMeanings": 0,
-        "missingExamples": 317,
+        "missingExamples": 197,
         "missingForms": 0,
         "unclassified": 0,
         "invalidCategories": 0,
@@ -169,7 +169,7 @@
       "grammar": {
         "entries": 123,
         "missingMeanings": 0,
-        "missingExamples": 366,
+        "missingExamples": 246,
         "missingForms": 0,
         "unclassified": 0,
         "invalidCategories": 0,
@@ -181,9 +181,9 @@
   },
   "totals": {
     "missingMeanings": 62,
-    "missingExamples": 13887,
+    "missingExamples": 13627,
     "missingForms": 0,
-    "unclassified": 2095,
+    "unclassified": 2075,
     "invalidCategories": 0,
     "missingProvenance": 0,
     "mislabeledMn": 0,

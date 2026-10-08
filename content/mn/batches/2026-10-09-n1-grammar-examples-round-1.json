@@ -1,0 +1,286 @@
+{
+  "provenance": {
+    "id": "mn-n1-grammar-examples-oct9-1",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian compared with exact Japanese and retained English; stable record and headword/pattern guards; independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/grammar/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "grammar": {
+    "gatera": {
+      "expected": {
+        "p": "〜がてら",
+        "en": "while; on the way; taking the opportunity of"
+      },
+      "examples": {
+        "散歩がてら、駅前の本屋に寄って新刊をのぞいてきた。": {
+          "en": "While out for a walk, I stopped by the bookstore in front of the station to look at the new releases.",
+          "mn": "Зугаалж явахдаа өртөөний өмнөх номын дэлгүүрт орж шинэ номуудыг харсан."
+        },
+        "お客さんを駅まで送りがてら、郵便局で小包を出してきた。": {
+          "en": "While seeing our guest off to the station, I also sent a parcel at the post office.",
+          "mn": "Зочноо өртөө хүргэж өгөх зуураа шуудангаар илгээмж явуулсан."
+        }
+      }
+    },
+    "katawara": {
+      "expected": {
+        "p": "〜かたわら",
+        "en": "while also; alongside (one's main occupation)"
+      },
+      "examples": {
+        "彼女は会社勤めのかたわら、週末は日本語教室でボランティアをしている。": {
+          "en": "Alongside her office job, she volunteers at a Japanese class on weekends.",
+          "mn": "Тэр компанид ажиллахын зэрэгцээ амралтын өдрөөр япон хэлний ангид сайн дурын ажил хийдэг."
+        },
+        "祖父は農業を営むかたわら、地元の歴史を研究して三冊の本にまとめた。": {
+          "en": "While running a farm, my grandfather researched local history and compiled it into three books.",
+          "mn": "Өвөө тариалан эрхлэхийн зэрэгцээ нутгийн түүхийг судлан гурван ном болгон эмхэтгэсэн."
+        }
+      }
+    },
+    "ga-hayai-ka": {
+      "expected": {
+        "p": "〜が早いか",
+        "en": "the moment; no sooner ... than"
+      },
+      "examples": {
+        "子どもたちは玄関を開けるが早いか、ランドセルを放り出して遊びに行ってしまった。": {
+          "en": "No sooner had the children opened the front door than they tossed their school bags aside and ran off to play.",
+          "mn": "Хүүхдүүд үүд нээмэгц цүнхээ шидээд тоглохоор явчихсан."
+        },
+        "開店のベルが鳴るが早いか、客たちは目当ての売り場へ駆け出した。": {
+          "en": "The moment the opening bell rang, the customers dashed toward the counters they were after.",
+          "mn": "Дэлгүүр нээх хонх дуугармагц үйлчлүүлэгчид зорьсон лангуу руугаа гүйсэн."
+        },
+        "彼は給料をもらうが早いか、全部競馬につぎ込んでしまった。": {
+          "en": "The minute he got his pay, he blew all of it on horse racing.",
+          "mn": "Тэр цалингаа авмагцаа бүгдийг морин уралдаанд үрчихсэн."
+        }
+      }
+    },
+    "sura": {
+      "expected": {
+        "p": "〜すら",
+        "en": "even; not even (an extreme example)"
+      },
+      "examples": {
+        "高熱が三日も続き、水を飲むことすらつらかった。": {
+          "en": "The high fever lasted three days, and even drinking water was hard.",
+          "mn": "Гурван өдөр өндөр халуурч, ус уухад ч хэцүү байлаа."
+        },
+        "この漢字は、専門家ですら読み間違えることがある。": {
+          "en": "Even specialists sometimes misread this kanji.",
+          "mn": "Энэ ханзыг мэргэжилтнүүд хүртэл заримдаа буруу уншдаг."
+        },
+        "彼は長年連れ添った妻にすら、病気のことを打ち明けなかった。": {
+          "en": "He didn't reveal his illness even to the wife he had been with for so many years.",
+          "mn": "Тэр олон жил ханилсан эхнэртээ ч өвчнийхөө тухай хэлээгүй."
+        }
+      }
+    },
+    "zukume": {
+      "expected": {
+        "p": "〜ずくめ",
+        "en": "nothing but; entirely; one ... after another"
+      },
+      "examples": {
+        "昇進に結婚、新居の購入と、今年はいいことずくめの一年だった。": {
+          "en": "A promotion, a wedding and a new home — this year brought nothing but good things.",
+          "mn": "Албан тушаал ахиж, гэрлэж, шинэ байр авсан энэ жил дан сайн зүйлээр дүүрэн байлаа."
+        },
+        "黒ずくめの服を着た男が、店の前をうろうろしている。": {
+          "en": "A man dressed all in black is loitering in front of the shop.",
+          "mn": "Бүхэлдээ хар хувцастай эр дэлгүүрийн өмнө эргэлдэж байна."
+        },
+        "規則ずくめの寮生活に、入学早々うんざりしてしまった。": {
+          "en": "Right after enrolling, I was already fed up with dorm life and its endless rules.",
+          "mn": "Элссэн даруйдаа л дүрмээр дүүрсэн дотуур байрны амьдралаас залхсан."
+        }
+      }
+    },
+    "tara-saigo-ga-saigo": {
+      "expected": {
+        "p": "〜たら最後 / 〜が最後",
+        "en": "once ... (there's no going back); if ever ..., that's the end"
+      },
+      "examples": {
+        "この子は一度泣き出したら最後、何をしても一時間は泣きやまない。": {
+          "en": "Once this child starts crying, nothing will stop her for an hour.",
+          "mn": "Энэ хүүхэд нэг уйлж эхэлбэл юу ч хийсэн нэг цаг зогсохгүй."
+        },
+        "あの人に秘密を話したが最後、翌日には社内中に知れ渡っているだろう。": {
+          "en": "If you ever tell him a secret, the whole company will know by the next day.",
+          "mn": "Тэр хүнд нууцаа хэлчихвэл маргааш гэхэд компани даяар мэдэх байх."
+        },
+        "この契約書に一度判を押したら最後、後から取り消すことはできない。": {
+          "en": "Once you stamp your seal on this contract, you cannot cancel it later.",
+          "mn": "Энэ гэрээнд нэг тамга дарчихвал дараа нь цуцалж болохгүй."
+        }
+      }
+    },
+    "te-kara-to-iu-mono": {
+      "expected": {
+        "p": "〜てからというもの",
+        "en": "ever since"
+      },
+      "examples": {
+        "犬を飼い始めてからというもの、父は毎朝六時に起きるようになった。": {
+          "en": "Ever since we got a dog, my father has been getting up at six every morning.",
+          "mn": "Нохой тэжээж эхэлснээс хойш аав өглөө бүр зургаад босдог болсон."
+        },
+        "彼女は留学から戻ってからというもの、見違えるほど積極的になった。": {
+          "en": "Ever since she came back from studying abroad, she has become remarkably outgoing.",
+          "mn": "Тэр гадаадад сураад ирснээс хойш танигдахын аргагүй идэвхтэй болсон."
+        },
+        "スマートフォンを手にしてからというもの、紙の本をほとんど読まなくなった。": {
+          "en": "Ever since I got a smartphone, I've hardly read any paper books.",
+          "mn": "Ухаалаг утастай болсноос хойш цаасан ном бараг уншихаа больсон."
+        }
+      }
+    },
+    "te-yamanai": {
+      "expected": {
+        "p": "〜てやまない",
+        "en": "never cease to; sincerely; deeply (hope, respect, love)"
+      },
+      "examples": {
+        "皆様のご健康とご多幸を心より願ってやみません。": {
+          "en": "I sincerely wish you all good health and happiness.",
+          "mn": "Та бүхэнд эрүүл энх, аз жаргалыг чин сэтгэлээсээ хүсэн ерөөе."
+        },
+        "恩師は、私が今も尊敬してやまない人物だ。": {
+          "en": "My former teacher is someone I still deeply respect.",
+          "mn": "Миний хуучин багш бол одоо ч гүнээ хүндэлдэг хүн."
+        },
+        "この作家は、生涯故郷の海を愛してやまなかったという。": {
+          "en": "This writer is said to have loved the sea of his hometown all his life.",
+          "mn": "Энэ зохиолч насан туршдаа нутгийнхаа далайг хайрласаар байсан гэдэг."
+        }
+      }
+    },
+    "to-aimatte": {
+      "expected": {
+        "p": "〜と相まって",
+        "en": "combined with; coupled with"
+      },
+      "examples": {
+        "色づいた紅葉が澄んだ秋空と相まって、息をのむような景色をつくり出していた。": {
+          "en": "The red autumn leaves, together with the clear autumn sky, created a breathtaking view.",
+          "mn": "Улайсан намрын навчис цэлмэг тэнгэртэй хослон амьсгал даран биширмээр үзэмж бүтээжээ."
+        },
+        "円安に規制緩和も相まって、訪日客の数は過去最高を記録した。": {
+          "en": "The weak yen, coupled with deregulation, pushed the number of visitors to Japan to a record high.",
+          "mn": "Иений ханш суларсан дээр зохицуулалт хөнгөрснөөр Японд ирсэн жуулчдын тоо дээд амжилт тогтоосон."
+        },
+        "誠実な人柄と確かな技術が相まって、彼の店は地元で厚い信頼を得ている。": {
+          "en": "His sincere character combined with solid skills has earned his shop deep trust locally.",
+          "mn": "Түүний үнэнч зан, баттай ур чадвар хосолж дэлгүүр нь нутгийнхны гүн итгэлийг олсон."
+        }
+      }
+    },
+    "tomo-naru-to-tomo-nareba": {
+      "expected": {
+        "p": "〜ともなると / 〜ともなれば",
+        "en": "when it comes to; once (a certain level or stage) is reached"
+      },
+      "examples": {
+        "大企業の社長ともなると、分刻みのスケジュールで動かなければならない。": {
+          "en": "When you're the president of a big company, you have to work to a minute-by-minute schedule.",
+          "mn": "Том компанийн захирал болбол минут бүрээр хуваарьлан ажиллах хэрэгтэй."
+        },
+        "十二月ともなれば、この辺りの山はすっかり雪に覆われる。": {
+          "en": "Come December, the mountains around here are completely covered in snow.",
+          "mn": "Арван хоёрдугаар сар болоход энэ хавийн уулс бүхэлдээ цастай болдог."
+        },
+        "子どもが三人ともなると、毎月の食費だけでも相当な額になる。": {
+          "en": "Once you have three children, the monthly food bill alone is considerable.",
+          "mn": "Гурван хүүхэдтэй болоход сарын хоолны зардал дангаараа ч их мөнгө болдог."
+        }
+      }
+    },
+    "nara-de-wa": {
+      "expected": {
+        "p": "〜ならでは",
+        "en": "unique to; that only ... could offer"
+      },
+      "examples": {
+        "港町ならではの新鮮な魚介料理を、心ゆくまで味わった。": {
+          "en": "We savored to our hearts' content the fresh seafood you can only get in a port town.",
+          "mn": "Боомт хотод л байдаг шинэхэн далайн хоолыг ханатлаа амталсан."
+        },
+        "細部まで行き届いたこの仕上がりは、熟練の職人ならではだ。": {
+          "en": "This finish, perfect down to the smallest detail, is something only a seasoned craftsman could achieve.",
+          "mn": "Өчүүхэн зүйл хүртэл төгс хийсэн ийм гүйцэтгэл зөвхөн туршлагатай урчны чадвар."
+        },
+        "子どもならではの自由な発想に、大人たちは驚かされた。": {
+          "en": "The adults were amazed by the free-spirited ideas that only a child could come up with.",
+          "mn": "Зөвхөн хүүхдээс гарах чөлөөтэй сэтгэлгээнд томчууд гайхсан."
+        }
+      }
+    },
+    "beku": {
+      "expected": {
+        "p": "〜べく",
+        "en": "in order to; with the aim of"
+      },
+      "examples": {
+        "同社は海外市場に進出すべく、現地に新たな拠点を設けた。": {
+          "en": "The company set up a new local base in order to expand into overseas markets.",
+          "mn": "Компани гадаад зах зээлд гарахын тулд тэнд шинэ төв байгуулсан."
+        },
+        "彼は医師になるべく、働きながら夜間の予備校に通っている。": {
+          "en": "In order to become a doctor, he attends an evening prep school while working.",
+          "mn": "Тэр эмч болохын тулд ажиллахын зэрэгцээ оройн бэлтгэл сургуульд явдаг."
+        },
+        "被災地の復興を支援すべく、全国から多くのボランティアが集まった。": {
+          "en": "Many volunteers gathered from all over the country to support the recovery of the disaster area.",
+          "mn": "Гамшигт нутгийн сэргээн босголтыг дэмжихээр улс даяар олон сайн дурынхан цугларсан."
+        }
+      }
+    },
+    "you-mono-nara": {
+      "expected": {
+        "p": "〜(よ)うものなら",
+        "en": "if one were to (do), (something terrible would happen)"
+      },
+      "examples": {
+        "父の前で母の料理に文句でも言おうものなら、大変なことになる。": {
+          "en": "If I were to complain about Mom's cooking in front of Dad, there'd be hell to pay.",
+          "mn": "Аавын дэргэд ээжийн хоолыг муулбал том хэрэг болно."
+        },
+        "この辺りは、少しでも雨が降ろうものなら、すぐに道路が冠水してしまう。": {
+          "en": "Around here, if it rains even a little, the roads flood right away.",
+          "mn": "Энэ хавьд жаахан бороо ормогц л зам усанд автдаг."
+        },
+        "締め切りに一日でも遅れようものなら、二度と仕事をもらえなくなるだろう。": {
+          "en": "If you were even one day late for the deadline, you'd never get work from them again.",
+          "mn": "Хугацаанаасаа ганц өдөр ч хоцорвол дахиж ажил өгөхгүй байх."
+        }
+      }
+    },
+    "ni-itaru-ni-itatte-ni-itatte-wa": {
+      "expected": {
+        "p": "〜に至る / 〜に至って / 〜に至っては",
+        "en": "reach; lead to; only when it came to; as for (the most extreme case)"
+      },
+      "examples": {
+        "小さな行き違いが、ついには両社の提携解消にまで至った。": {
+          "en": "A small misunderstanding eventually led all the way to the two companies dissolving their partnership.",
+          "mn": "Жижиг үл ойлголцол эцэстээ хоёр компанийн түншлэл цуцлагдахад хүрсэн."
+        },
+        "死者が出るに至って、市はようやく危険な交差点の改良に乗り出した。": {
+          "en": "Only after someone died did the city finally set about improving the dangerous intersection.",
+          "mn": "Хүн нас барсны дараа л хот аюултай уулзварыг сайжруулж эхэлсэн."
+        },
+        "最近の若者は新聞を読まないと言われるが、弟に至ってはテレビのニュースさえ見ない。": {
+          "en": "Young people today are said not to read newspapers, and as for my younger brother, he doesn't even watch the TV news.",
+          "mn": "Өнөөгийн залуус сонин уншдаггүй гэдэг, харин манай дүү зурагтын мэдээ ч үздэггүй."
+        }
+      }
+    }
+  }
+}

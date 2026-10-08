@@ -87356,6 +87356,398 @@
           "ふさ.ぐ",
           "しげ.る"
         ]
+      },
+      "議": {
+        "ja": "議",
+        "on": [
+          "ぎ"
+        ],
+        "kun": [],
+        "en": [
+          "Deliberation",
+          "Consultation",
+          "Debate"
+        ],
+        "topics": [
+          "learning",
+          "society"
+        ]
+      },
+      "対": {
+        "ja": "対",
+        "on": [
+          "たい",
+          "つい"
+        ],
+        "kun": [
+          "あいて",
+          "こた.える",
+          "そろ.い",
+          "つれあ.い"
+        ],
+        "en": [
+          "Vis-a-vis",
+          "Opposite",
+          "Even"
+        ],
+        "topics": [
+          "places",
+          "relationships"
+        ]
+      },
+      "部": {
+        "ja": "部",
+        "on": [
+          "ぶ"
+        ],
+        "kun": [
+          "-べ"
+        ],
+        "en": [
+          "Section",
+          "Bureau",
+          "Dept"
+        ],
+        "topics": [
+          "work"
+        ]
+      },
+      "合": {
+        "ja": "合",
+        "on": [
+          "ごう",
+          "がっ",
+          "かっ"
+        ],
+        "kun": [
+          "あ.う",
+          "-あ.う",
+          "あ.い",
+          "あい-"
+        ],
+        "en": [
+          "Fit",
+          "Suit",
+          "Join"
+        ],
+        "topics": [
+          "actions",
+          "relationships"
+        ]
+      },
+      "内": {
+        "ja": "内",
+        "on": [
+          "ない",
+          "だい"
+        ],
+        "kun": [
+          "うち"
+        ],
+        "en": [
+          "Inside",
+          "Within",
+          "Between"
+        ],
+        "topics": [
+          "places"
+        ]
+      },
+      "相": {
+        "ja": "相",
+        "on": [
+          "そう",
+          "しょう"
+        ],
+        "kun": [
+          "あい-"
+        ],
+        "en": [
+          "Inter-",
+          "Mutual",
+          "Together"
+        ],
+        "topics": [
+          "relationships"
+        ]
+      },
+      "定": {
+        "ja": "定",
+        "on": [
+          "てい",
+          "じょう"
+        ],
+        "kun": [
+          "さだ.める",
+          "さだ.まる",
+          "さだ.か"
+        ],
+        "en": [
+          "Determine",
+          "Fix",
+          "Establish"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "選": {
+        "ja": "選",
+        "on": [
+          "せん"
+        ],
+        "kun": [
+          "えら.ぶ"
+        ],
+        "en": [
+          "Elect",
+          "Select",
+          "Choose"
+        ],
+        "topics": [
+          "actions",
+          "society"
+        ]
+      },
+      "実": {
+        "ja": "実",
+        "on": [
+          "じつ",
+          "しつ"
+        ],
+        "kun": [
+          "み",
+          "みの.る",
+          "まこと",
+          "みの"
+        ],
+        "en": [
+          "Reality",
+          "Truth"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "関": {
+        "ja": "関",
+        "on": [
+          "かん"
+        ],
+        "kun": [
+          "せき",
+          "-ぜき",
+          "かか.わる",
+          "からくり"
+        ],
+        "en": [
+          "Connection",
+          "Barrier",
+          "Gateway"
+        ],
+        "topics": [
+          "relationships",
+          "places"
+        ]
+      },
+      "決": {
+        "ja": "決",
+        "on": [
+          "けつ"
+        ],
+        "kun": [
+          "き.める",
+          "-ぎ.め",
+          "き.まる",
+          "さ.く"
+        ],
+        "en": [
+          "Decide",
+          "Fix",
+          "Agree Upon"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "全": {
+        "ja": "全",
+        "on": [
+          "ぜん"
+        ],
+        "kun": [
+          "まった.く",
+          "すべ.て"
+        ],
+        "en": [
+          "Whole",
+          "Entire",
+          "All"
+        ],
+        "topics": [
+          "quantity"
+        ]
+      },
+      "経": {
+        "ja": "経",
+        "on": [
+          "けい",
+          "きょう",
+          "きん"
+        ],
+        "kun": [
+          "へ.る",
+          "た.つ",
+          "たていと",
+          "はか.る"
+        ],
+        "en": [
+          "Sutra",
+          "Longitude",
+          "Pass Thru"
+        ],
+        "topics": [
+          "society",
+          "places",
+          "actions"
+        ]
+      },
+      "最": {
+        "ja": "最",
+        "on": [
+          "さい",
+          "しゅ"
+        ],
+        "kun": [
+          "もっと.も",
+          "つま"
+        ],
+        "en": [
+          "Utmost",
+          "Most",
+          "Extreme"
+        ],
+        "topics": [
+          "quantity"
+        ]
+      },
+      "現": {
+        "ja": "現",
+        "on": [
+          "げん"
+        ],
+        "kun": [
+          "あらわ.れる",
+          "あらわ.す",
+          "うつつ",
+          "うつ.つ"
+        ],
+        "en": [
+          "Present",
+          "Existing",
+          "Actual"
+        ],
+        "topics": [
+          "time",
+          "descriptions"
+        ]
+      },
+      "約": {
+        "ja": "約",
+        "on": [
+          "やく"
+        ],
+        "kun": [
+          "つづ.まる",
+          "つづ.める",
+          "つづま.やか"
+        ],
+        "en": [
+          "Promise",
+          "Approximately",
+          "Shrink"
+        ],
+        "topics": [
+          "relationships",
+          "quantity",
+          "actions"
+        ]
+      },
+      "性": {
+        "ja": "性",
+        "on": [
+          "せい",
+          "しょう"
+        ],
+        "kun": [
+          "さが"
+        ],
+        "en": [
+          "Sex",
+          "Gender",
+          "Nature"
+        ],
+        "topics": [
+          "body",
+          "descriptions"
+        ]
+      },
+      "要": {
+        "ja": "要",
+        "on": [
+          "よう"
+        ],
+        "kun": [
+          "い.る",
+          "かなめ"
+        ],
+        "en": [
+          "Need",
+          "Main Point",
+          "Essence"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "治": {
+        "ja": "治",
+        "on": [
+          "じ",
+          "ち"
+        ],
+        "kun": [
+          "おさ.める",
+          "おさ.まる",
+          "なお.る",
+          "なお.す"
+        ],
+        "en": [
+          "Reign",
+          "Be At Peace",
+          "Calm Down"
+        ],
+        "topics": [
+          "society",
+          "feelings",
+          "actions"
+        ]
+      },
+      "務": {
+        "ja": "務",
+        "on": [
+          "む"
+        ],
+        "kun": [
+          "つと.める"
+        ],
+        "en": [
+          "Task",
+          "Duties"
+        ],
+        "topics": [
+          "work"
+        ]
       }
     }
   }

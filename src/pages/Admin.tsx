@@ -3,6 +3,15 @@ import { api, type AdminOverview, type QueueItem } from "../lib/api";
 import { navigate } from "../lib/router";
 import { Button, Card, Chip, ErrorBox, Input, PageHeader, Select, SectionTitle, Spinner, Stat, Tabs } from "../components/ui";
 
+import { useStore } from "../lib/store";
+import { adminText, adminMnText } from "../lib/admin-i18n";
+
+function useAdminText() {
+ const { doc } = useStore();
+ const language = doc.profile.language ?? "mn";
+ return (mn: string) => language === "en" ? adminText[mn] ?? mn : adminMnText[mn] ?? mn;
+}
+
 type Tab = "overview" | "queue" | "import";
 
 const ORIGIN_LABEL: Record<QueueItem["origin"], { text: string; tone: "matcha" | "kin" | "ai" | "sumi" }> = {
@@ -13,6 +22,7 @@ const ORIGIN_LABEL: Record<QueueItem["origin"], { text: string; tone: "matcha" |
 };
 
 export default function Admin({ tab = "overview" }: { tab?: string }) {
+  const t = useAdminText();
   const current: Tab = tab === "queue" || tab === "import" ? tab : "overview";
   const setTab = (t: Tab) => navigate(`admin/${t}`, { keepScroll: true });
 
@@ -20,17 +30,17 @@ export default function Admin({ tab = "overview" }: { tab?: string }) {
     <div className="mx-auto max-w-5xl">
       <PageHeader
         jp="管理"
-        title="Админ · Агуулгын удирдлага"
-        sub="Үг, ханз, дүрэм, видео хичээл болон орчуулгын дараалал. AI-ийн санал бүр pending_review төлөвөөр орж, эзэмшигч баталгаажуулснаар л нийтлэгдэнэ."
+        title={t("Админ · Агуулгын удирдлага")}
+        sub={t("Үг, ханз, дүрэм, видео хичээл болон орчуулгын дараалал. AI-ийн санал бүр pending_review төлөвөөр орж, эзэмшигч баталгаажуулснаар л нийтлэгдэнэ.")}
       />
       <div className="mb-6">
         <Tabs<Tab>
           value={current}
           onChange={setTab}
           items={[
-            { id: "overview", label: "Тойм", icon: "概" },
-            { id: "queue", label: "Орчуулгын дараалал", icon: "訳" },
-            { id: "import", label: "Импорт", icon: "入" },
+            { id: "overview", label: t("Тойм"), icon: "概" },
+            { id: "queue", label: t("Орчуулгын дараалал"), icon: "訳" },
+            { id: "import", label: t("Импорт"), icon: "入" },
           ]}
         />
       </div>
@@ -42,6 +52,7 @@ export default function Admin({ tab = "overview" }: { tab?: string }) {
 }
 
 function Overview() {
+  const t = useAdminText();
   const [data, setData] = useState<AdminOverview | null>(null);
   const [error, setError] = useState<unknown>(null);
   const load = useCallback(() => {
@@ -56,23 +67,23 @@ function Overview() {
   return (
     <div className="space-y-5">
       <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
-        <Stat label="Аккаунт" value={data.accounts.toLocaleString()} />
-        <Stat label="Өнөөдөр идэвхтэй" value={data.activeToday.toLocaleString()} />
-        <Stat label="Өнөөдрийн давтлага" value={data.reviewsToday.toLocaleString()} />
-        <Stat label="Хүлээгдэж буй" value={data.queue.pending.toLocaleString()} tone="kin" />
+        <Stat label={t("Аккаунт")} value={data.accounts.toLocaleString()} />
+        <Stat label={t("Өнөөдөр идэвхтэй")} value={data.activeToday.toLocaleString()} />
+        <Stat label={t("Өнөөдрийн давтлага")} value={data.reviewsToday.toLocaleString()} />
+        <Stat label={t("Хүлээгдэж буй")} value={data.queue.pending.toLocaleString()} tone="kin" />
       </div>
       <Card>
-        <SectionTitle title="Агуулгын тоо" />
+        <SectionTitle title={t("Агуулгын тоо")} />
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-5">
           {(Object.entries(data.content) as [string, number][]).map(([k, v]) => (
-            <Stat key={k} label={k} value={v.toLocaleString()} />
+            <Stat key={k} label={t(k)} value={v.toLocaleString()} />
           ))}
         </div>
       </Card>
       <Card>
-        <SectionTitle title="Хамгийн их алдсан үгс" sub="Бүх хэрэглэгчдийн алдааны нийлбэр" />
+        <SectionTitle title={t("Хамгийн их алдсан үгс")} sub={t("Бүх хэрэглэгчдийн алдааны нийлбэр")} />
         {data.top.length === 0 ? (
-          <p className="text-[13px] text-sumi-500">Одоогоор өгөгдөл алга.</p>
+          <p className="text-[13px] text-sumi-500">{t("Одоогоор өгөгдөл алга.")}</p>
         ) : (
           <ul className="divide-y divide-sumi-900/8">
             {data.top.map((t) => (
@@ -87,7 +98,7 @@ function Overview() {
       </Card>
       {data.errors.length > 0 && (
         <Card>
-          <SectionTitle title="QC анхааруулга" />
+          <SectionTitle title={t("QC анхааруулга")} />
           <ul className="space-y-1.5 text-[13px] text-shu-700">
             {data.errors.map((e, i) => <li key={i}>· {e}</li>)}
           </ul>
@@ -98,6 +109,7 @@ function Overview() {
 }
 
 function Queue() {
+  const t = useAdminText();
   const [kind, setKind] = useState<string>("all");
   const [items, setItems] = useState<QueueItem[] | null>(null);
   const [error, setError] = useState<unknown>(null);
@@ -130,18 +142,18 @@ function Queue() {
           value={kind}
           onChange={setKind}
           options={[
-            { id: "all", label: "Бүгд" },
-            { id: "vocab", label: "Үг" },
-            { id: "kanji", label: "Ханз" },
-            { id: "grammar", label: "Дүрэм" },
-            { id: "listening", label: "Сонсгол" },
-            { id: "reading", label: "Унших" },
+            { id: "all", label: t("Бүгд") },
+            { id: "vocab", label: t("Үг") },
+            { id: "kanji", label: t("Ханз") },
+            { id: "grammar", label: t("Дүрэм") },
+            { id: "listening", label: t("Сонсгол") },
+            { id: "reading", label: t("Унших") },
           ]}
         />
-        <span className="text-[12.5px] text-sumi-500">Төлөв: pending_review · Approve эсвэл Edit хийснээр нийтлэгдэнэ</span>
+        <span className="text-[12.5px] text-sumi-500">{t("Төлөв: pending_review · Approve эсвэл Edit хийснээр нийтлэгдэнэ")}</span>
       </div>
       {error ? <ErrorBox error={error} retry={load} /> : !items ? <Spinner /> : items.length === 0 ? (
-        <Card><p className="py-8 text-center text-[13.5px] text-sumi-500">Хүлээгдэж буй зүйл алга.</p></Card>
+        <Card><p className="py-8 text-center text-[13.5px] text-sumi-500">{t("Хүлээгдэж буй зүйл алга.")}</p></Card>
       ) : (
         <div className="space-y-3">
           {items.map((it) => {
@@ -149,8 +161,8 @@ function Queue() {
             return (
               <Card key={it.id} className="p-4">
                 <div className="flex flex-wrap items-center gap-2">
-                  <Chip tone="ai">{it.kind}</Chip>
-                  <Chip tone={q.tone}>{q.text}</Chip>
+                  <Chip tone="ai">{t(it.kind)}</Chip>
+                  <Chip tone={q.tone}>{t(q.text)}</Chip>
                   <span className="font-mono text-[11.5px] text-sumi-500">{it.ref} · {it.level}</span>
                 </div>
                 <p className="mt-2.5 text-[14px] text-sumi-700">EN: {it.en}</p>
@@ -158,12 +170,12 @@ function Queue() {
                   <Input
                     value={editing[it.id] ?? it.mn}
                     onChange={(v) => setEditing((e) => ({ ...e, [it.id]: v }))}
-                    placeholder="Монгол орчуулга"
+                    placeholder={t("Монгол орчуулга")}
                     className="flex-1"
                   />
                   <div className="flex gap-2">
-                    <Button size="sm" variant="soft" disabled={busy === it.id} onClick={() => act(it, "reject")}>Татгалзах</Button>
-                    <Button size="sm" disabled={busy === it.id} onClick={() => act(it, "approve")}>Батлах</Button>
+                    <Button size="sm" variant="soft" disabled={busy === it.id} onClick={() => act(it, "reject")}>{t("Татгалзах")}</Button>
+                    <Button size="sm" disabled={busy === it.id} onClick={() => act(it, "approve")}>{t("Батлах")}</Button>
                   </div>
                 </div>
                 {it.note && <p className="mt-2 text-[12px] text-sumi-500">{it.note}</p>}
@@ -177,6 +189,7 @@ function Queue() {
 }
 
 function Import() {
+  const t = useAdminText();
   const [kind, setKind] = useState<string>("vocab");
   const [note, setNote] = useState("");
   const [json, setJson] = useState("");
@@ -190,7 +203,7 @@ function Import() {
     let entries: unknown[];
     try {
       const parsed = JSON.parse(json);
-      if (!Array.isArray(parsed)) throw new Error("JSON нь массив байх ёстой");
+      if (!Array.isArray(parsed)) throw new Error(t("JSON нь массив байх ёстой"));
       entries = parsed;
     } catch (e) {
       setError(e);
@@ -199,7 +212,7 @@ function Import() {
     setBusy(true);
     try {
       const r = await api.adminImport({ kind, entries, note });
-      setResult(`Нэмэгдсэн: ${r.added} · Алгассан: ${r.skipped}. Бүх мөр pending_review төлөвөөр орсон.`);
+      setResult(`${t("Нэмэгдсэн")}: ${r.added} · ${t("Алгассан")}: ${r.skipped}. ${t("Бүх мөр pending_review төлөвөөр орсон.")}`);
       setJson("");
     } catch (e) {
       setError(e);
@@ -210,31 +223,32 @@ function Import() {
 
   return (
     <Card>
-      <SectionTitle title="Агуулга импорт" sub="JSON массив оруулна. Эх сурвалжийн ID, лиценз, хувилбар заавал байх ёстой." />
+      <SectionTitle title={t("Агуулга импорт")} sub={t("JSON массив оруулна. Эх сурвалжийн ID, лиценз, хувилбар заавал байх ёстой.")} />
       <div className="grid gap-3 sm:grid-cols-2">
         <Select
           value={kind}
           onChange={setKind}
           options={[
-            { id: "vocab", label: "Үг" },
-            { id: "kanji", label: "Ханз" },
-            { id: "grammar", label: "Дүрэм" },
-            { id: "listening", label: "Сонсгол (YouTube)" },
-            { id: "reading", label: "Унших эссэ" },
+            { id: "vocab", label: t("Үг") },
+            { id: "kanji", label: t("Ханз") },
+            { id: "grammar", label: t("Дүрэм") },
+            { id: "listening", label: t("Сонсгол (YouTube)") },
+            { id: "reading", label: t("Унших эссэ") },
           ]}
         />
-        <Input value={note} onChange={setNote} placeholder="Импортын тэмдэглэл (жнь. JMdict 2026-09)" />
+        <Input value={note} onChange={setNote} placeholder={t("Импортын тэмдэглэл (жнь. JMdict 2026-09)")} />
       </div>
       <textarea
         value={json}
         onChange={(e) => setJson(e.target.value)}
+        aria-label={t("Өгөгдлийн JSON")}
         rows={12}
         spellCheck={false}
         placeholder='[ { "w": "...", "r": "...", "source": "jmdict", "sourceId": "..." } ]'
         className="mt-3 w-full rounded-xl border border-sumi-900/12 bg-white/80 p-3.5 font-mono text-[12.5px] text-sumi-800 outline-none focus:border-shu-400 focus:ring-4 focus:ring-shu-500/10"
       />
       <div className="mt-3 flex items-center gap-3">
-        <Button onClick={submit} disabled={busy || !json.trim()}>{busy ? "Илгээж байна…" : "Импортлох"}</Button>
+        <Button onClick={submit} disabled={busy || !json.trim()}>{busy ? t("Илгээж байна…") : t("Импортлох")}</Button>
         {result && <p className="text-[13px] font-semibold text-matcha-600">{result}</p>}
       </div>
       {error ? <div className="mt-3"><ErrorBox error={error} /></div> : null}

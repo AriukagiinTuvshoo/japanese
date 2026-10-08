@@ -1,0 +1,286 @@
+{
+  "provenance": {
+    "id": "mn-n1-grammar-examples-oct9-3",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian compared with exact Japanese and retained English; stable record and headword/pattern guards; independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/grammar/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "grammar": {
+    "gotoki-gotoku": {
+      "expected": {
+        "p": "〜ごとき / 〜ごとく",
+        "en": "like; as; (after a person) the likes of"
+      },
+      "examples": {
+        "前述のごとく、本研究の対象は二十代の社会人に限定している。": {
+          "en": "As stated above, this study is limited to working adults in their twenties.",
+          "mn": "Дээр дурдсанчлан энэ судалгаанд зөвхөн хорь гаруй насны ажил эрхлэгчид хамрагдана."
+        },
+        "私ごとき若輩者が、このような大役を務めてよいのでしょうか。": {
+          "en": "Is it really all right for a novice like me to take on such an important role?",
+          "mn": "Над шиг туршлагагүй хүн ийм чухал үүрэг гүйцэтгэж болох юм болов уу?"
+        }
+      }
+    },
+    "koto-tote": {
+      "expected": {
+        "p": "〜こととて",
+        "en": "because; since (as an excuse or apology)"
+      },
+      "examples": {
+        "何分にも不慣れなこととて、至らぬ点があればご容赦ください。": {
+          "en": "As I am still new to this, please forgive any shortcomings.",
+          "mn": "Шинэ тул дутуу зүйл байвал өршөөнө үү."
+        },
+        "子どものしたこととて、今回ばかりは大目に見てやってください。": {
+          "en": "It was a child who did it, so please overlook it just this once.",
+          "mn": "Хүүхдийн хийсэн зүйл тул энэ удаа л уучлаад өнгөрүүлээрэй."
+        },
+        "急なこととて、十分なおもてなしもできず失礼いたしました。": {
+          "en": "It was all so sudden that I couldn't welcome you properly; please excuse me.",
+          "mn": "Гэнэт болсон учраас таныг зохих ёсоор дайлж чадсангүй, уучлаарай."
+        }
+      }
+    },
+    "koto-nashi-ni": {
+      "expected": {
+        "p": "〜ことなしに",
+        "en": "without (doing)"
+      },
+      "examples": {
+        "基礎を固めることなしに、応用力は身につかない。": {
+          "en": "Without building a solid foundation, you will never develop the ability to apply what you know.",
+          "mn": "Сууриа бататгахгүйгээр мэдлэгээ хэрэглэх чадвар эзэмшихгүй."
+        },
+        "彼は誰にも相談することなしに、会社を辞めてしまった。": {
+          "en": "He quit his job without consulting anyone.",
+          "mn": "Тэр хэнтэй ч зөвлөлдөлгүй ажлаасаа гарчихсан."
+        },
+        "痛みを伴うことなしに、この改革を成し遂げることはできない。": {
+          "en": "This reform cannot be achieved without some pain.",
+          "mn": "Зовиур дагуулахгүйгээр энэ шинэчлэлийг хэрэгжүүлж чадахгүй."
+        }
+      }
+    },
+    "shimatsu-da": {
+      "expected": {
+        "p": "〜始末だ",
+        "en": "end up (in a bad state); (things) have come to this"
+      },
+      "examples": {
+        "弟は遊んでばかりいて、とうとう単位が足りずに留年する始末だ。": {
+          "en": "My brother did nothing but play, and he ended up having to repeat a year for lack of credits.",
+          "mn": "Дүү дандаа тоглож байгаад кредит хүрэлцээгүй тул эцэстээ анги улирсан."
+        },
+        "何度注意しても聞かず、ついには客の前で居眠りをする始末だった。": {
+          "en": "He never listened to our warnings, and in the end he even dozed off in front of a client.",
+          "mn": "Хэчнээн анхааруулсан ч сонсолгүй, эцэст нь үйлчлүүлэгчийн өмнө зүүрмэглэсэн."
+        },
+        "あれだけ準備は万全だと言っていたのに、この始末だ。": {
+          "en": "After all that talk about being fully prepared, look at this mess.",
+          "mn": "Бэлтгэл төгс гэж тэгж их ярьсан атлаа ийм байдалд хүрлээ."
+        }
+      }
+    },
+    "zu-jimai": {
+      "expected": {
+        "p": "〜ずじまい",
+        "en": "end up never doing; never got around to"
+      },
+      "examples": {
+        "旅行中は雨続きで、楽しみにしていた山には登らずじまいだった。": {
+          "en": "It rained throughout the trip, so I never got to climb the mountain I'd been looking forward to.",
+          "mn": "Аяллын турш бороо орсон тул хүсэн хүлээсэн ууландаа авирч чадалгүй дууссан."
+        },
+        "忙しさに追われ、結局恩師にお礼を言わずじまいになってしまった。": {
+          "en": "Swamped with work, I ended up never thanking my former teacher.",
+          "mn": "Ажилдаа дарагдсаар эцэст нь хуучин багшдаа талархаж амжаагүй."
+        },
+        "彼女の本当の気持ちは、とうとう聞けずじまいだった。": {
+          "en": "In the end, I never got to hear how she really felt.",
+          "mn": "Эцэст нь түүний жинхэнэ сэтгэлийг сонсож чадсангүй."
+        }
+      }
+    },
+    "zu-ni-wa-okanai-nai-de-wa-okanai": {
+      "expected": {
+        "p": "〜ずにはおかない / 〜ないではおかない",
+        "en": "will definitely (do); cannot fail to (cause a reaction)"
+      },
+      "examples": {
+        "彼女の力強い歌声は、聴く者の心を揺さぶらずにはおかない。": {
+          "en": "Her powerful voice cannot fail to move the hearts of those who hear it.",
+          "mn": "Түүний хүчтэй дуулалт сонссон хүмүүсийн сэтгэлийг хөдөлгөх нь гарцаагүй."
+        },
+        "今度という今度は、真相を突き止めずにはおかないぞ。": {
+          "en": "This time I'm going to get to the bottom of it, no matter what.",
+          "mn": "Энэ удаа л үнэнийг заавал олж тогтооно шүү."
+        },
+        "政府の今回の決定は、国民の反発を招かずにはおかないだろう。": {
+          "en": "The government's decision is bound to provoke a public backlash.",
+          "mn": "Засгийн газрын энэ шийдвэр олон нийтийн эсэргүүцэл дагуулах нь гарцаагүй."
+        }
+      }
+    },
+    "zu-ni-wa-sumanai-nai-de-wa-sumanai": {
+      "expected": {
+        "p": "〜ずにはすまない / 〜ないではすまない",
+        "en": "must (do); won't get away without (doing)"
+      },
+      "examples": {
+        "大切な花瓶を割ってしまったのだから、弁償せずにはすまないだろう。": {
+          "en": "Since I broke that precious vase, I won't get away without paying for it.",
+          "mn": "Үнэтэй ваарыг хагалчихсан тул төлбөрийг нь өгөхгүй өнгөрч болохгүй байх."
+        },
+        "これほどの不祥事となれば、社長が責任を取らずにはすまない。": {
+          "en": "With a scandal of this scale, the president will have to take responsibility.",
+          "mn": "Ийм хэмжээний дуулиан гарсан бол захирал хариуцлага хүлээхээс өөр аргагүй."
+        },
+        "取引先に迷惑をかけた以上、直接謝りに行かないではすまない。": {
+          "en": "Since we caused our client trouble, we have to go and apologize in person.",
+          "mn": "Харилцагчдаа төвөг удсан тул биеэр очиж уучлал гуйх ёстой."
+        }
+      }
+    },
+    "soba-kara": {
+      "expected": {
+        "p": "〜そばから",
+        "en": "as soon as (and again and again)"
+      },
+      "examples": {
+        "片付けるそばから、子どもたちがおもちゃを散らかしていく。": {
+          "en": "As soon as I tidy up, the kids scatter their toys around again.",
+          "mn": "Цэгцэлмэгц л хүүхдүүд тоглоомоо дахин тараадаг."
+        },
+        "新しい単語は、覚えたそばから忘れてしまう。": {
+          "en": "New words slip away as soon as I learn them.",
+          "mn": "Шинэ үгийг цээжилмэгцээ л мартчихдаг."
+        },
+        "母がクッキーを焼くそばから、弟がつまみ食いしてしまう。": {
+          "en": "No sooner does my mother bake cookies than my little brother snacks on them.",
+          "mn": "Ээж жигнэмэг хийх бүрд дүү амсаад идчихдэг."
+        }
+      }
+    },
+    "tari-tomo": {
+      "expected": {
+        "p": "〜たりとも",
+        "en": "not even (one); not a single"
+      },
+      "examples": {
+        "税金を一円たりとも無駄にしてはならない。": {
+          "en": "Not a single yen of tax money must be wasted.",
+          "mn": "Татварын мөнгөнөөс ганц иенийг ч үргүй зарцуулж болохгүй."
+        },
+        "手術中は、一瞬たりとも気を抜くことができない。": {
+          "en": "During an operation, you can't let your guard down for even an instant.",
+          "mn": "Мэс заслын үед ганц хором ч анхаарлаа сулруулж болохгүй."
+        },
+        "故郷で待つ家族のことを、一日たりとも忘れたことはない。": {
+          "en": "I have never forgotten, even for a single day, the family waiting for me back home.",
+          "mn": "Нутагт хүлээж буй гэр бүлээ ганц өдөр ч мартаагүй."
+        }
+      }
+    },
+    "dani": {
+      "expected": {
+        "p": "〜だに",
+        "en": "even (just); not even"
+      },
+      "examples": {
+        "あの事故の瞬間は、思い出すだに身震いがする。": {
+          "en": "Just recalling the moment of that accident makes me shudder.",
+          "mn": "Тэр ослын мөчийг санах төдийд бие чичирдэг."
+        },
+        "衛兵は一時間、微動だにせず立ち続けた。": {
+          "en": "The guard stood for an hour without moving a muscle.",
+          "mn": "Харуул нэг цаг өчүүхэн ч хөдөлгөөнгүй зогссон."
+        },
+        "自分の書いた小説が映画化されるとは、想像だにしなかった。": {
+          "en": "I never even imagined that a novel I wrote would be made into a film.",
+          "mn": "Өөрийн бичсэн романаар кино хийнэ гэж огт төсөөлөөгүй."
+        }
+      }
+    },
+    "taru": {
+      "expected": {
+        "p": "〜たる",
+        "en": "as (one in the position of); befitting"
+      },
+      "examples": {
+        "教師たる者、生徒の前で模範を示さなければならない。": {
+          "en": "Anyone who is a teacher must set an example in front of the students.",
+          "mn": "Багш хүн сурагчдын өмнө үлгэр жишээ үзүүлэх ёстой."
+        },
+        "一国の首相たる人物が、このような軽率な発言をするとは嘆かわしい。": {
+          "en": "It is deplorable that the prime minister of a nation would make such a careless remark.",
+          "mn": "Улсын ерөнхий сайд хүн ийм болчимгүй үг хэлэх нь харамсалтай."
+        },
+        "王者たる風格が、彼の立ち姿から漂っていた。": {
+          "en": "His very stance radiated the dignity of a true champion.",
+          "mn": "Түүний зогсох байдлаас жинхэнэ аваргын сүр жавхлан мэдрэгдэж байв."
+        }
+      }
+    },
+    "tsu-tsu": {
+      "expected": {
+        "p": "〜つ〜つ",
+        "en": "(doing) A and B alternately; back and forth"
+      },
+      "examples": {
+        "近所の人たちとは、持ちつ持たれつの関係でやってきた。": {
+          "en": "My neighbors and I have always helped each other out.",
+          "mn": "Хөршүүдтэйгээ бие биедээ тусалж ирсэн."
+        },
+        "彼は決心がつかず、店の前を行きつ戻りつしていた。": {
+          "en": "Unable to make up his mind, he kept pacing back and forth in front of the shop.",
+          "mn": "Тэр шийдэж чадахгүй дэлгүүрийн өмнө нааш цааш алхаж байв."
+        },
+        "ゴール直前まで、二台の車は抜きつ抜かれつの接戦を繰り広げた。": {
+          "en": "Right up to the finish, the two cars battled neck and neck, overtaking each other again and again.",
+          "mn": "Бариа хүртэл хоёр машин нэг нэгнээ дахин дахин гүйцэн ширүүн өрсөлдсөн."
+        }
+      }
+    },
+    "de-are-de-are-de-are": {
+      "expected": {
+        "p": "〜であれ / 〜であれ〜であれ",
+        "en": "whatever (it is); whoever; whether A or B"
+      },
+      "examples": {
+        "理由が何であれ、暴力は決して許されない。": {
+          "en": "Whatever the reason, violence is never acceptable.",
+          "mn": "Ямар ч шалтгаантай байсан хүчирхийллийг зөвшөөрөхгүй."
+        },
+        "相手が誰であれ、礼儀をわきまえて接するべきだ。": {
+          "en": "Whoever you're dealing with, you should treat them with proper courtesy.",
+          "mn": "Хэнтэй харилцаж байсан ч зохих ёсоор хүндэтгэх хэрэгтэй."
+        },
+        "正社員であれアルバイトであれ、安全研修は全員が受けなければならない。": {
+          "en": "Whether full-time or part-time, everyone must take the safety training.",
+          "mn": "Байнгын ч бай, цагийн ч бай бүх ажилтан аюулгүй ажиллагааны сургалтад хамрагдах ёстой."
+        }
+      }
+    },
+    "te-shikaru-beki-da": {
+      "expected": {
+        "p": "〜てしかるべきだ",
+        "en": "ought to; it would only be natural to"
+      },
+      "examples": {
+        "これだけの損害を出したのだから、経営陣は責任を問われてしかるべきだ。": {
+          "en": "Having caused this much damage, the management ought to be held accountable.",
+          "mn": "Ийм их хохирол гаргасан тул удирдлага хариуцлага хүлээх ёстой."
+        },
+        "長年会社に貢献してきた彼女は、もっと評価されてしかるべきだ。": {
+          "en": "Having contributed to the company for so many years, she deserves more recognition.",
+          "mn": "Олон жил компанид хувь нэмэр оруулсан түүнийг илүү үнэлэх ёстой."
+        }
+      }
+    }
+  }
+}

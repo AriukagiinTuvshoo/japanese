@@ -183,3 +183,27 @@ for(const r of read('content/mn/example-source-audit-2026-10-08.json').records) 
  for(const [f,v] of Object.entries(r.expected))assert.deepEqual(e[f],v);
  const x=e.ex.find(x=>x.ja===r.ja);assert.equal(x.en,r.en);assert.ok(!x.mn);
 }
+
+for(const file of fs.readdirSync('content/mn/batches').filter(f=>/^2026-10-09-n[12]-(vocab|grammar)-examples-round-\d+\.json$/.test(f))) {
+ const b=read(`content/mn/batches/${file}`);const kind=b.vocab?'vocab':'grammar';const lv=file.match(/-n([12])-/)[1];
+ const data=read(`public/data/${kind}/n${lv}.json`);let count=0;
+ for(const [id,r] of Object.entries(b[kind])) {
+  const e=data.find(x=>x.id===id);assert.ok(e);
+  assert.deepEqual(Object.keys(r.expected).sort(),kind==='vocab'?['en','r','w']:['en','p']);
+  for(const [f,v] of Object.entries(r.expected))assert.deepEqual(e[f],v);
+  for(const [ja,v] of Object.entries(r.examples)) {
+   const xs=e.ex.filter(x=>x.ja===ja);assert.equal(xs.length,1);const x=xs[0];
+   assert.equal(x.en,v.en);assert.equal(x.mn,v.mn);assert.equal(x.mn_provenance,b.provenance.id);assert.ok(validMn(x.mn));count++;
+  }
+ }
+ assert.equal(count,kind==='vocab'?20:40);assert.equal(b.provenance.reviewStatus,'unreviewed');
+}
+const oct9Topics=read('content/mn/batches/2026-10-09-n3-kanji-topics-1.json');
+assert.equal(Object.keys(oct9Topics.kanji).length,20);
+for(const [id,r] of Object.entries(oct9Topics.kanji)) {
+ const e=read('public/data/kanji/n3.json').find(e=>e.k===id);
+ for(const [f,v] of Object.entries(r.expected))assert.deepEqual(e[f],v);
+ const evidence=read('content/categories/provenance.json').entries.kanji[id];
+ assert.equal(evidence.ja,id);assert.deepEqual(evidence.topics,r.topics);
+ for(const f of ['on','kun','en'])assert.deepEqual(evidence[f],e[f]);
+}

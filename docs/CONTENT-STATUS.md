@@ -13,7 +13,7 @@ Baseline `6cf8ca1`: 7,170 missing meanings. Current batches add 7,108 net meanin
 | N1 | 31 | 31 | 0 |
 | Total | 31 | 31 | 0 |
 
-Remaining: **62 meanings, 13,887 examples** (13,204 vocabulary + 683 N2/N1 grammar), **0 formations, 2,095 unclassified entries, 0 missing new-batch provenance records; 6,503 unchanged legacy/unreviewed meanings of unknown authorship (documented, not release-blocking), 10 unresolved source issues**. Invalid categories and mislabeled MN: zero. Measures overlap; do not sum as distinct entries.
+Remaining: **62 meanings, 13,627 examples** (13,184 vocabulary + 443 N2/N1 grammar), **0 formations, 2,075 unclassified entries, 0 missing new-batch provenance records; 6,503 unchanged legacy/unreviewed meanings of unknown authorship (documented, not release-blocking), 10 unresolved source issues**. Invalid categories and mislabeled MN: zero. Measures overlap; do not sum as distinct entries.
 
 N5 vocabulary/kanji and N4 kanji are fully classified. Categories support multiple topics, including relationships. Explicit semantic override evidence is maintained in `content/categories/provenance.json`. Unmatched entries remain visibly filterable, not hidden in a catch-all. Source warnings retain original Japanese/English and block release. Existing drafts and new translations still need accuracy review. Page-wide bilingual localization audit remains incomplete, notably Admin.
 
@@ -111,3 +111,9 @@ Five N5 batches (40/40/40/40/35 sentences) and one N4 batch (24 sentences) added
 ## Sustained examples — 261 sentences
 
 Added 193 N4 + 62 N3 vocabulary and 6 N2 grammar sentences in eight guarded example batches. Coverage after each: 14108 → 14068 → 14028 → 13988 → 13955 → 13915 → 13893 → 13887. Three suspect N4 sentence pairs withheld with exact source/audit records, not silently corrected. N5–N3 grammar examples were already covered, so new grammar work used N2. Twenty additional explicit N4 topic assignments reduce unclassified to 2095. Every batch received full checks/strict gate, new regressions verify exact source/applications/provenance/evidence and withheld sentences. Static UI inspection documented Admin localization gaps; no exhaustive bilingual browser approval. All 62 meanings and ten recorded conflicts unchanged. Strict gate remains exit 1; draft/unmerged/unreleased.
+
+## October 9 continuation — 260 guarded sentences and Admin localization
+
+Recalculated initial working-tree coverage: 62 meanings / 13887 examples / 2095 unclassified / 10 source conflicts. Reconciled local branch metadata to confirmed remote 928cd31 with a mixed reset preserving all working files. Added 120 N2 grammar, 120 N1 grammar, 20 N2 vocabulary examples across seven guarded batches. Counts after each: 13847, 13807, 13767, 13727, 13687, 13647, 13627. Full checks and strict gate after every batch (initial missing tsc resolved with npm ci before advancing). Twenty exact-source N3 kanji topics reduce unclassified to 2075. New semantic content independently unreviewed. All 62 missing meanings and ten conflicts unchanged.
+
+Admin visible static strings now have MN/EN rendering for headers/tabs, overview counts/empty, queue origins/actions/status/empty, import fields/validation/busy/result. Mixed pending_review labels replaced by natural display text, internal API states retained. Mock-API bilingual Chromium regression passed overview, reject/empty, import validation/success in both languages. This does not verify real admin authorization, backend-generated notes/errors/translation content, all loading/network-error states, or exhaustive app browser matrix. No Arena/demo removal claimed. Full release still blocked.
