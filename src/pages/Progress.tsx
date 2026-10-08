@@ -86,10 +86,10 @@ export default function Progress() {
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <Stat label="Идэвхтэй цуваа" value={`${streak} өдөр`} sub={`дээд: ${best} өдөр`} icon="🔥" tone="shu" />
+        <Stat label="Идэвхтэй цуваа" value={`${streak} өдөр`} sub={`дээд: ${best} өдөр`} icon="続" tone="shu" />
         <Stat label="Судалсан үг" value={studiedVocab.toLocaleString()} sub={`/ ${totalVocab.toLocaleString()} (${Math.round((studiedVocab / totalVocab) * 100)}%)`} icon="語" tone="ai" />
         <Stat label="Нийт давталт" value={mem.reviews.toLocaleString()} sub={`${mem.lapses} мартсан`} icon="復" tone="matcha" />
-        <Stat label="Цуглуулсан XP" value={doc.xp.toLocaleString()} sub={`Lv.${levelInfo.level} · ${levelInfo.into}/${levelInfo.need}`} icon="功" tone="kin" />
+        <Stat label="Цуглуулсан оноо" value={doc.xp.toLocaleString()} sub={`Түвшин ${levelInfo.level} · ${levelInfo.into}/${levelInfo.need}`} icon="功" tone="kin" />
       </div>
 
       <Tabs value={tab} onChange={setTab} items={[
@@ -152,7 +152,7 @@ export default function Progress() {
               {days.map((d) => {
                 const max = Math.max(30, ...days.map((x) => x.min));
                 return (
-                  <div key={d.key} className="group relative flex-1" title={`${d.key} · ${d.min} мин · ${d.xp} XP`}>
+                  <div key={d.key} className="group relative flex-1" title={`${d.key} · ${d.min} мин · ${d.xp} оноо`}>
                     <div className={cn("w-full rounded-t transition-all", d.min > 0 ? "bg-shu-500" : "bg-sumi-900/8")}
                       style={{ height: `${Math.max(3, (d.min / max) * 100)}%` }} />
                   </div>
@@ -283,7 +283,7 @@ export default function Progress() {
                 <thead>
                   <tr className="border-b border-sumi-900/10 text-left text-[11px] uppercase tracking-wide text-sumi-400">
                     <th className="py-2">Огноо</th>
-                    <th className="py-2 text-right">XP</th>
+                    <th className="py-2 text-right">Оноо</th>
                     <th className="py-2 text-right">Минут</th>
                     <th className="py-2 text-right">Шинэ</th>
                     <th className="py-2 text-right">Давталт</th>

@@ -163,9 +163,9 @@ export default function Shell({ children }: { children: ReactNode }) {
           <div className="min-w-0 flex-1">
             <p className="text-[12px] font-bold text-washi-100">Өнөөдөр {today.min}/{doc.profile.dailyGoal} мин</p>
             <p className="mt-1 flex items-center gap-2 text-[11.5px] text-washi-400">
-              <span>🔥 {streak} өдөр</span>
+              <span>{streak} өдөр</span>
               <span className="h-1 w-1 rounded-full bg-washi-500" />
-              <span className="tabnum">Lv.{levelInfo.level} · {doc.xp} XP</span>
+              <span className="tabnum">Түвшин {levelInfo.level} · {doc.xp} оноо</span>
             </p>
           </div>
         </div>
@@ -225,7 +225,7 @@ export default function Shell({ children }: { children: ReactNode }) {
           </button>
           <div className="ml-auto flex items-center gap-2">
             {LevelSwitcher}
-            <Chip tone="shu" className="gap-1.5">🔥 {streak} өдөр</Chip>
+            <Chip tone="shu" className="gap-1.5">{streak} өдөр</Chip>
             <button
               onClick={() => setAccountOpen(true)}
               className="flex items-center gap-2 rounded-xl border border-sumi-900/10 bg-white/70 py-1.5 pl-1.5 pr-3 transition hover:bg-white"

@@ -32,11 +32,11 @@ export default function Achievements() {
             </Ring>
             <div className="min-w-0 flex-1">
               <p className="font-mincho text-[2rem] font-bold leading-none">{rank.jp}</p>
-              <p className="mt-1.5 text-[13px] text-washi-300">{rank.mn} · {doc.xp.toLocaleString()} XP</p>
+              <p className="mt-1.5 text-[13px] text-washi-300">{rank.mn} · {doc.xp.toLocaleString()} оноо</p>
               <div className="mt-3 max-w-sm">
                 <Bar value={levelInfo.pct} tone="shu" />
                 <p className="mt-1.5 text-[11.5px] text-washi-400">
-                  Дараагийн түвшинд {levelInfo.need - levelInfo.into} XP үлдсэн
+                  Дараагийн түвшинд {levelInfo.need - levelInfo.into} оноо үлдсэн
                 </p>
               </div>
             </div>
@@ -58,7 +58,7 @@ export default function Achievements() {
       </Card>
 
       <Card>
-        <SectionTitle jp="称号" title="Зэрэглэлүүд" sub="XP цуглуулах тусам дээшилнэ." />
+        <SectionTitle jp="称号" title="Зэрэглэлүүд" sub="Оноо цуглуулах тусам дээшилнэ." />
         <div className="flex flex-wrap gap-2">
           {RANKS.map((r, i) => {
             const lvl = i * 6 + 1;
@@ -70,7 +70,7 @@ export default function Achievements() {
                   reached ? "bg-kin-500 text-white" : "bg-sumi-900/6 text-sumi-400")}>{r}</span>
                 <div>
                   <p className="text-[12.5px] font-bold">{i + 1}-р зэрэг</p>
-                  <p className="font-mono text-[10.5px] text-sumi-500">Lv.{lvl}+</p>
+                  <p className="font-mono text-[10.5px] text-sumi-500">Түвшин {lvl}+</p>
                 </div>
               </div>
             );
@@ -123,7 +123,7 @@ export default function Achievements() {
             const d = doc.activity[k];
             const xp = d?.xp ?? 0;
             return (
-              <span key={k} title={`${k} · ${xp} XP`}
+              <span key={k} title={`${k} · ${xp} оноо`}
                 className={cn("h-4 w-4 rounded-[3px]",
                   xp === 0 ? "bg-sumi-900/8" : xp < 40 ? "bg-matcha-200" : xp < 120 ? "bg-matcha-400" : "bg-matcha-600")} />
             );

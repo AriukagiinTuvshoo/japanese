@@ -3,7 +3,7 @@ import { href, navigate } from "../lib/router";
 import { useStore } from "../lib/store";
 import { loadGrammar } from "../lib/data";
 import type { Grammar, Level } from "../lib/types";
-import { LEVEL_LABEL, stripFurigana } from "../lib/text";
+import { grammarLabel, LEVEL_LABEL, stripFurigana } from "../lib/text";
 import { Button, Card, Chip, Empty, Furigana, LevelBadge, SectionTitle, SpeakButton, Spinner, Tabs } from "../components/ui";
 
 export default function GrammarDetail({ id }: { id: string }) {
@@ -56,7 +56,7 @@ export default function GrammarDetail({ id }: { id: string }) {
           <Chip tone="murasaki">Дүрэм</Chip>
           {g.jlpt !== g.lvl && <Chip tone="sumi">JLPT {g.jlpt}</Chip>}
         </div>
-        <h1 className="mt-4 font-jp text-[2.1rem] font-extrabold leading-tight">{g.p}</h1>
+        <h1 className="mt-4 font-jp text-[2.1rem] font-extrabold leading-tight">{grammarLabel(g.p)}</h1>
         {g.mn ? (
           <p className="mt-4 text-[1.15rem] font-bold leading-relaxed text-sumi-900">{g.mn}</p>
         ) : (

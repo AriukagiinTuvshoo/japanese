@@ -14,7 +14,7 @@
  *
  * Ажиллуулах:  npm run data:build
  */
-import { mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, rm, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -125,6 +125,9 @@ async function loadContent() {
     kanji: (await json(path.join(CONTENT, "mn/kanji.json"), {})) ?? {},
     grammar: (await json(path.join(CONTENT, "mn/grammar.json"), {})) ?? {},
     terms: (await json(path.join(CONTENT, "mn/terms.json"), {})) ?? {},
+    // AI/машин драфт — хянагдаагүй. Хүний баталгаажуулсны дараа mn/vocab.json руу шилжинэ.
+    vocabDraft: (await json(path.join(CONTENT, "mn/vocab-draft.json"), {})) ?? {},
+    kanjiDraft: (await json(path.join(CONTENT, "mn/kanji-draft.json"), {})) ?? {},
     listening: (await json(path.join(CONTENT, "listening.json"), [])) ?? [],
     reading: (await json(path.join(CONTENT, "reading.json"), [])) ?? [],
     curriculum: (await json(path.join(CONTENT, "curriculum.json"), {})) ?? {},
@@ -147,7 +150,8 @@ function buildVocab({ openjlpt, jmCandidates, kanjiData }, content, audit) {
       seen.add(key);
 
       const curated = content.vocab[key] ?? content.vocab[v.word];
-      const mn = curated ? [curated] : auto(v.meanings);
+      const draft = content.vocabDraft[key] ?? content.vocabDraft[v.word];
+      const mn = curated ? [curated] : draft ? [draft] : auto(v.meanings);
       const kd = [...new Set((v.word.match(CJK_RE) ?? []))];
 
       byLevel[lv].push({
@@ -157,7 +161,7 @@ function buildVocab({ openjlpt, jmCandidates, kanjiData }, content, audit) {
         rm: v.romaji,
         en: v.meanings.slice(0, 3),
         mn,
-        mq: curated ? "curated" : mn ? "auto" : "none",
+        mq: curated ? "curated" : draft ? "draft" : mn ? "auto" : "none",
         lvl: lv,
         tier: "jlpt",
         pos: (v.pos ?? []).slice(0, 3),
@@ -192,7 +196,8 @@ function buildVocab({ openjlpt, jmCandidates, kanjiData }, content, audit) {
     ext += 1;
 
     const curated = content.vocab[key] ?? content.vocab[c.w];
-    const mn = curated ? [curated] : auto(c.en);
+    const draft = content.vocabDraft[key] ?? content.vocabDraft[c.w];
+    const mn = curated ? [curated] : draft ? [draft] : auto(c.en);
     byLevel[lv].push({
       id: `j${c.idseq}`,
       w: c.w,
@@ -200,7 +205,7 @@ function buildVocab({ openjlpt, jmCandidates, kanjiData }, content, audit) {
       rm: "",
       en: c.en,
       mn,
-      mq: curated ? "curated" : mn ? "auto" : "none",
+      mq: curated ? "curated" : draft ? "draft" : mn ? "auto" : "none",
       lvl: lv,
       tier: c.isEx ? "ext-example" : "ext-frequency",
       pos: c.pos ?? [],
@@ -284,7 +289,8 @@ function buildKanji({ openjlpt, kanjiData }, content, audit, vocabByLevel) {
     const readings_on = info.readings_on ?? jl?.entry?.on_yomi ?? [];
     const readings_kun = info.readings_kun ?? jl?.entry?.kun_yomi ?? [];
     const enMeanings = (info.meanings ?? jl?.entry?.meanings ?? []).slice(0, 3);
-    const mn = curated.m ?? auto(enMeanings) ?? [];
+    const draftM = content.kanjiDraft[ch];
+    const mn = curated.m ? [curated.m] : draftM ? [draftM] : (auto(enMeanings) ?? []);
 
     byLevel[info.lvl].push({
       k: ch,
@@ -295,7 +301,7 @@ function buildKanji({ openjlpt, kanjiData }, content, audit, vocabByLevel) {
       f: info.freq ?? null,
       en: enMeanings,
       mn,
-      mq: curated.m ? "curated" : mn.length ? "auto" : "none",
+      mq: curated.m ? "curated" : draftM ? "draft" : mn.length ? "auto" : "none",
       on: curated.on ?? readings_on.slice(0, 3),
       kun: curated.kun ?? readings_kun.slice(0, 4),
       rad: curated.rad ?? jl?.entry?.radical ?? info.wk_radicals?.[0] ?? null,
@@ -372,7 +378,16 @@ async function buildStrokes(allKanji) {
 async function main() {
   const t0 = Date.now();
   console.log("→ Эх өгөгдөл уншиж байна…");
+  // Эх сурвалж байхгүй үед гаралтыг ХЭЗЭЭ Ч дарж бичихгүй (өмнөх public/data-г устгахгүй).
+  try {
+    await stat(path.join(SRC, "openjlpt/data/json/vocab/n5.json"));
+  } catch {
+    throw new Error(`Эх сурвалж олдсонгүй: ${SRC}. scripts/fetch-sources.mjs-ээр татна уу. public/data өөрчлөгдсөнгүй.`);
+  }
   const sources = await loadSources();
+  if (!sources.openjlpt.vocab.N5?.length) {
+    throw new Error("OpenJLPT үгийн жагсаалт хоосон байна — гаралтыг бичихгүй.");
+  }
   const content = await loadContent();
   const audit = { mnMissingVocab: [], mnMissingKanji: [], mnMissingGrammar: [] };
 
@@ -397,6 +412,7 @@ async function main() {
     counts.kanji[lv] = kanji[lv].length;
     counts.grammar[lv] = grammar[lv].length;
     counts.vocabMn[lv] = vocab[lv].filter((v) => v.mq === "curated").length;
+    counts.vocabDraft = (counts.vocabDraft ?? 0) + vocab[lv].filter((v) => v.mq === "draft").length;
     bytes += await write(`vocab/${s}.json`, vocab[lv]);
     bytes += await write(`kanji/${s}.json`, kanji[lv]);
     bytes += await write(`grammar/${s}.json`, grammar[lv]);
