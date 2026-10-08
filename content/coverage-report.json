@@ -146,10 +146,10 @@
     "N1": {
       "vocab": {
         "entries": 3690,
-        "missingMeanings": 391,
+        "missingMeanings": 31,
         "missingExamples": 4848,
         "missingForms": 0,
-        "unclassified": 359,
+        "unclassified": 208,
         "invalidCategories": 0,
         "missingProvenance": 0,
         "mislabeledMn": 0,
@@ -157,10 +157,10 @@
       },
       "kanji": {
         "entries": 1646,
-        "missingMeanings": 306,
+        "missingMeanings": 126,
         "missingExamples": 0,
         "missingForms": 0,
-        "unclassified": 277,
+        "unclassified": 156,
         "invalidCategories": 0,
         "missingProvenance": 0,
         "mislabeledMn": 0,
@@ -180,10 +180,10 @@
     }
   },
   "totals": {
-    "missingMeanings": 697,
+    "missingMeanings": 157,
     "missingExamples": 14407,
     "missingForms": 0,
-    "unclassified": 2500,
+    "unclassified": 2228,
     "invalidCategories": 0,
     "missingProvenance": 0,
     "mislabeledMn": 0,

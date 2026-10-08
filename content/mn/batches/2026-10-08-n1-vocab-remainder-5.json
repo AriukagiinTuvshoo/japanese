@@ -1,0 +1,1053 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-remainder-5-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses cross-checked against exact Japanese spelling, reading and retained English; explicit semantic topic assignments. Independent human review outstanding; suspect sources withheld.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n1.json JMdict-derived records at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j1523360": {
+      "mn": [
+        "роман жүжгийг өөр хэлбэрт хөрвүүлэх",
+        "зохиолын хувилбар"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "翻案",
+        "r": "ほんあん",
+        "en": [
+          "adaptation (of a novel, play, etc.)"
+        ]
+      }
+    },
+    "j1706040": {
+      "mn": [
+        "жирэмслэх"
+      ],
+      "topics": [
+        "body",
+        "actions"
+      ],
+      "expected": {
+        "w": "身籠る",
+        "r": "みごもる",
+        "en": [
+          "to become pregnant"
+        ]
+      }
+    },
+    "j2239750": {
+      "mn": [
+        "билгийн тооллын есдүгээр сар"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "無射",
+        "r": "ぶえき",
+        "en": [
+          "ninth month of the lunar calendar"
+        ]
+      }
+    },
+    "j1888700": {
+      "mn": [
+        "санал болгох",
+        "нэр дэвшүүлэх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "薦挙",
+        "r": "せんきょ",
+        "en": [
+          "recommendation"
+        ]
+      }
+    },
+    "j1617610": {
+      "mn": [
+        "харгалзан үзэх",
+        "бодолцох"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "勘案",
+        "r": "かんあん",
+        "en": [
+          "taking into consideration",
+          "giving consideration (to)"
+        ]
+      }
+    },
+    "j1853130": {
+      "mn": [
+        "хүчлийн радикал"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "酸基",
+        "r": "さんき",
+        "en": [
+          "acid radical"
+        ]
+      }
+    },
+    "j1620960": {
+      "mn": [
+        "төлбөргүй",
+        "үнэ төлбөргүй"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "無賃",
+        "r": "むちん",
+        "en": [
+          "charge-free",
+          "free of charge"
+        ]
+      }
+    },
+    "j1436420": {
+      "mn": [
+        "дэмжин уриалах",
+        "санал дэвшүүлэх"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "提唱",
+        "r": "ていしょう",
+        "en": [
+          "advocacy",
+          "proposal"
+        ]
+      }
+    },
+    "j2275200": {
+      "mn": [
+        "суурь хувь",
+        "үндсэн тариф"
+      ],
+      "topics": [
+        "quantity",
+        "work"
+      ],
+      "expected": {
+        "w": "基礎率",
+        "r": "きそりつ",
+        "en": [
+          "basic rate",
+          "base rate"
+        ]
+      }
+    },
+    "j1332100": {
+      "mn": [
+        "ёс суртахуун",
+        "ёс зүй",
+        "хүмүүжил"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "修身",
+        "r": "しゅうしん",
+        "en": [
+          "morals",
+          "ethics",
+          "moral training"
+        ]
+      }
+    },
+    "j1954080": {
+      "mn": [
+        "гэрлээгүй хүн"
+      ],
+      "topics": [
+        "relationships",
+        "people"
+      ],
+      "expected": {
+        "w": "独り身",
+        "r": "ひとりみ",
+        "en": [
+          "unmarried man (woman)"
+        ]
+      }
+    },
+    "j1410760": {
+      "mn": [
+        "зориуд",
+        "санаатайгаар",
+        "зориуд хийсэн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "態と",
+        "r": "わざと",
+        "en": [
+          "on purpose",
+          "deliberately",
+          "intentionally"
+        ]
+      }
+    },
+    "j1606710": {
+      "mn": [
+        "тусгайлан",
+        "ялангуяа",
+        "зориуд цаг гаргаж"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "態々",
+        "r": "わざわざ",
+        "en": [
+          "expressly",
+          "especially",
+          "taking the trouble (to do)"
+        ]
+      }
+    },
+    "j1482550": {
+      "mn": [
+        "бүдүүлэг",
+        "зэрлэг",
+        "хөдөөний гэмээр (хуучны хэллэг)"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "蛮的",
+        "r": "ばんてき",
+        "en": [
+          "savage",
+          "barbarous",
+          "rustic"
+        ]
+      }
+    },
+    "j1780880": {
+      "mn": [
+        "доромжлон гутаасан"
+      ],
+      "topics": [
+        "descriptions",
+        "feelings"
+      ],
+      "expected": {
+        "w": "屈辱的",
+        "r": "くつじょくてき",
+        "en": [
+          "humiliating"
+        ]
+      }
+    },
+    "j1683430": {
+      "mn": [
+        "авсан усыг хуваарилах",
+        "тус тусад нь аягалах",
+        "ялгааг ойлгож хандах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "酌み分ける",
+        "r": "くみわける",
+        "en": [
+          "to apportion drawn water",
+          "to ladle into separate containers",
+          "to show understanding"
+        ]
+      }
+    },
+    "j2608450": {
+      "mn": [
+        "зүрхний синусын зангилаа",
+        "синус-тосгуурын зангилаа"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "洞結節",
+        "r": "どうけっせつ",
+        "en": [
+          "sinus node",
+          "sinoatrial node"
+        ]
+      }
+    },
+    "j1614410": {
+      "mn": [
+        "үндэс",
+        "суурь",
+        "цөм"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "基軸",
+        "r": "きじく",
+        "en": [
+          "basis",
+          "foundation",
+          "core"
+        ]
+      }
+    },
+    "j2837833": {
+      "mn": [
+        "барьцалдуулагч",
+        "холбогч бодис"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "粘結剤",
+        "r": "ねんけつざい",
+        "en": [
+          "binder",
+          "bond",
+          "binding agent"
+        ]
+      }
+    },
+    "j2726390": {
+      "mn": [
+        "этгээд зүйл сонирхсон",
+        "хачин жигтэй",
+        "гаж"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "猟奇的",
+        "r": "りょうきてき",
+        "en": [
+          "curiosity-seeking",
+          "bizarre (crime, etc.)",
+          "grotesque"
+        ]
+      }
+    },
+    "j1392500": {
+      "mn": [
+        "тод",
+        "гэрэлтэй",
+        "гялалзсан"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "鮮か",
+        "r": "あざやか",
+        "en": [
+          "vivid",
+          "bright",
+          "brilliant"
+        ]
+      }
+    },
+    "j1258450": {
+      "mn": [
+        "чин сэтгэлийн зүтгэл",
+        "өөрийгөө зориулах",
+        "өөрийгөө золиослох"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "献身",
+        "r": "けんしん",
+        "en": [
+          "devotion",
+          "dedication",
+          "self-sacrifice"
+        ]
+      }
+    },
+    "j1664910": {
+      "mn": [
+        "тэнэг санаа",
+        "миний даруухан бодол"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "愚案",
+        "r": "ぐあん",
+        "en": [
+          "foolish idea",
+          "my humble opinion"
+        ]
+      }
+    },
+    "j1530450": {
+      "mn": [
+        "мөнгөгүй",
+        "мөнгө шаардахгүй"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "無銭",
+        "r": "むせん",
+        "en": [
+          "without money",
+          "no need for money"
+        ]
+      }
+    },
+    "j1781250": {
+      "mn": [
+        "сүрдүүлсэн",
+        "заналхийлсэн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "威嚇的",
+        "r": "いかくてき",
+        "en": [
+          "threatening",
+          "menacing"
+        ]
+      }
+    },
+    "j1815450": {
+      "mn": [
+        "асран харгалзах",
+        "хамгаалан халамжлах"
+      ],
+      "topics": [
+        "society",
+        "people"
+      ],
+      "expected": {
+        "w": "監護",
+        "r": "かんご",
+        "en": [
+          "custody and care"
+        ]
+      }
+    },
+    "j2634410": {
+      "mn": [
+        "хүчлийн тоо",
+        "хүчлийн үзүүлэлт"
+      ],
+      "topics": [
+        "learning",
+        "quantity"
+      ],
+      "expected": {
+        "w": "酸価",
+        "r": "さんか",
+        "en": [
+          "acid value"
+        ]
+      }
+    },
+    "j1828740": {
+      "mn": [
+        "тэнэг төлөвлөгөө",
+        "утгагүй арга"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "愚策",
+        "r": "ぐさく",
+        "en": [
+          "stupid plan",
+          "inane way of doing something"
+        ]
+      }
+    },
+    "j1882870": {
+      "mn": [
+        "тэмдэг болгон",
+        "нотолгоо болгож"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "証として",
+        "r": "しょうとして",
+        "en": [
+          "in sign of",
+          "in proof of"
+        ]
+      }
+    },
+    "j2122220": {
+      "mn": [
+        "зуучлал",
+        "холбон зуучлах",
+        "хулгайн барааг борлуулах зуучлал"
+      ],
+      "topics": [
+        "work",
+        "society"
+      ],
+      "expected": {
+        "w": "牙保",
+        "r": "がほ",
+        "en": [
+          "brokerage",
+          "mediation",
+          "fencing (of stolen goods)"
+        ]
+      }
+    },
+    "j1307760": {
+      "mn": [
+        "галбир",
+        "хэлбэр",
+        "хэв маяг"
+      ],
+      "topics": [
+        "body",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "姿態",
+        "r": "したい",
+        "en": [
+          "figure",
+          "form",
+          "style"
+        ]
+      }
+    },
+    "j1194490": {
+      "mn": [
+        "зүйл",
+        "заалт",
+        "гэрээний зүйл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "箇条",
+        "r": "かじょう",
+        "en": [
+          "item",
+          "article",
+          "clause"
+        ]
+      }
+    },
+    "j2271010": {
+      "mn": [
+        "буянгүй",
+        "ёс суртахуунгүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "無徳",
+        "r": "むとく",
+        "en": [
+          "virtueless"
+        ]
+      }
+    },
+    "j2445030": {
+      "mn": [
+        "Жон Дори загас",
+        "Zeus faber төрлийн загас"
+      ],
+      "topics": [
+        "nature",
+        "food"
+      ],
+      "expected": {
+        "w": "的鯛",
+        "r": "まとうだい",
+        "en": [
+          "John Dory (Zeus faber)"
+        ]
+      }
+    },
+    "j2206150": {
+      "mn": [
+        "аргагүй",
+        "зайлшгүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "拠無い",
+        "r": "よんどころない",
+        "en": [
+          "can't be helped (of situation, reason, etc.)",
+          "unavoidable"
+        ]
+      }
+    },
+    "j1190940": {
+      "mn": [
+        "сонсогдох",
+        "сонсох боломжтой"
+      ],
+      "topics": [
+        "body",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "可聴",
+        "r": "かちょう",
+        "en": [
+          "audible"
+        ]
+      }
+    },
+    "j1250490": {
+      "mn": [
+        "ивээл",
+        "өрөвдөх сэтгэл",
+        "ач тус"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "恵沢",
+        "r": "けいたく",
+        "en": [
+          "blessing",
+          "pity",
+          "favor"
+        ]
+      }
+    },
+    "j1404120": {
+      "mn": [
+        "нийцүүлэн хариулах",
+        "зохицох",
+        "дасан зохицох"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "即応",
+        "r": "そくおう",
+        "en": [
+          "compliance",
+          "conformance",
+          "adaptation"
+        ]
+      }
+    },
+    "j1174740": {
+      "mn": [
+        "парламентын харуулууд"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "衛視",
+        "r": "えいし",
+        "en": [
+          "guards at parliament"
+        ]
+      }
+    },
+    "j1868020": {
+      "mn": [
+        "дурдсан санал",
+        "тухайн төсөл"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "該案",
+        "r": "がいあん",
+        "en": [
+          "the said proposal"
+        ]
+      }
+    },
+    "j1893890": {
+      "mn": [
+        "шинж",
+        "тэмдэг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "徴証",
+        "r": "ちょうしょう",
+        "en": [
+          "sign",
+          "token"
+        ]
+      }
+    },
+    "j1586290": {
+      "mn": [
+        "удаан явцын дараа",
+        "эцэст нь",
+        "рэнгагийн сүүлийн мөр"
+      ],
+      "topics": [
+        "time",
+        "arts"
+      ],
+      "expected": {
+        "w": "挙句",
+        "r": "あげく",
+        "en": [
+          "after (a long process)",
+          "at the end of",
+          "last line (of a renga)"
+        ]
+      }
+    },
+    "j1666020": {
+      "mn": [
+        "эргэн тойрноо харах",
+        "эргэн ажиглах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "環視",
+        "r": "かんし",
+        "en": [
+          "looking around",
+          "looking about"
+        ]
+      }
+    },
+    "j2564370": {
+      "mn": [
+        "Инлун",
+        "хятадын домгийн луу болон борооны бурхан"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "応竜",
+        "r": "おうりゅう",
+        "en": [
+          "Yinglong",
+          "dragon and rain deity in Chinese mythology"
+        ]
+      }
+    },
+    "j2832333": {
+      "mn": [
+        "суумал",
+        "ишгүй"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "無柄",
+        "r": "むへい",
+        "en": [
+          "sessile",
+          "stalkless"
+        ]
+      }
+    },
+    "j2839545": {
+      "mn": [
+        "Сан-Паулу (Бразил)"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "聖保羅",
+        "r": "サンパウロ",
+        "en": [
+          "São Paulo (Brazil)"
+        ]
+      }
+    },
+    "j1271540": {
+      "mn": [
+        "үндсэн хуулийг хамгаалах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "護憲",
+        "r": "ごけん",
+        "en": [
+          "protecting the constitution"
+        ]
+      }
+    },
+    "j2608440": {
+      "mn": [
+        "зүрхний синус-тосгуурын зангилаа"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "洞房結節",
+        "r": "どうぼうけっせつ",
+        "en": [
+          "sinoatrial node"
+        ]
+      }
+    },
+    "j1196690": {
+      "mn": [
+        "өөрөө",
+        "өөрийн бие"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "我身",
+        "r": "わがみ",
+        "en": [
+          "myself",
+          "oneself"
+        ]
+      }
+    },
+    "j2738140": {
+      "mn": [
+        "наноталст"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "ナノ結晶",
+        "r": "ナノけっしょう",
+        "en": [
+          "nanocrystal"
+        ]
+      }
+    },
+    "j1565470": {
+      "mn": [
+        "үнэрээр нь таних",
+        "ялган таних"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "嗅ぎ分ける",
+        "r": "かぎわける",
+        "en": [
+          "to scent out",
+          "to discern"
+        ]
+      }
+    },
+    "j2749480": {
+      "mn": [
+        "даавуу эсгэх хайч",
+        "оёдлын хайч"
+      ],
+      "topics": [
+        "technology",
+        "daily"
+      ],
+      "expected": {
+        "w": "裁ちばさみ",
+        "r": "たちばさみ",
+        "en": [
+          "sewing scissors",
+          "dressmaker's shears"
+        ]
+      }
+    },
+    "j1530690": {
+      "mn": [
+        "ялагдашгүй",
+        "хосгүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "無敵",
+        "r": "むてき",
+        "en": [
+          "invincible",
+          "unrivaled",
+          "unrivalled"
+        ]
+      }
+    },
+    "j2584610": {
+      "mn": [
+        "талстын тэнхлэг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "結晶軸",
+        "r": "けっしょうじく",
+        "en": [
+          "crystal axis"
+        ]
+      }
+    },
+    "j1523530": {
+      "mn": [
+        "ердийн бодлого",
+        "дунд зэрэг төлөвлөгөө",
+        "олиггүй бодлого"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "凡策",
+        "r": "ぼんさく",
+        "en": [
+          "mediocre policy",
+          "commonplace policy",
+          "worthless policy"
+        ]
+      }
+    },
+    "j2832458": {
+      "mn": [
+        "хөлгүй"
+      ],
+      "topics": [
+        "nature",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "無脚",
+        "r": "むきゃく",
+        "en": [
+          "apodal"
+        ]
+      }
+    },
+    "j1642300": {
+      "mn": [
+        "шавхагдашгүй байдал",
+        "харилцан санхүүжүүлэх холбоо"
+      ],
+      "topics": [
+        "quantity",
+        "work"
+      ],
+      "expected": {
+        "w": "無尽",
+        "r": "むじん",
+        "en": [
+          "inexhaustibility",
+          "mutual financing association"
+        ]
+      }
+    },
+    "j1742040": {
+      "mn": [
+        "арга мухардсан үеийн арга хэмжээ",
+        "эцсийн арга"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "窮策",
+        "r": "きゅうさく",
+        "en": [
+          "desperate measure",
+          "expedient of last resort"
+        ]
+      }
+    },
+    "j2836306": {
+      "mn": [
+        "барилга босгох тавцан",
+        "баганын суурь",
+        "суурь"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "基壇",
+        "r": "きだん",
+        "en": [
+          "platform on which a structure is built",
+          "stylobate",
+          "foundation"
+        ]
+      }
+    },
+    "j1560830": {
+      "mn": [
+        "романтик урсгал",
+        "романтизм"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "浪漫派",
+        "r": "ロマンは",
+        "en": [
+          "romantic school",
+          "romanticism"
+        ]
+      }
+    }
+  }
+}
