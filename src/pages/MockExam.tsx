@@ -37,7 +37,7 @@ export default function MockExam() {
   const start = async () => {
     setLoading(true);
     const data = await loadFullData();
-    const built = buildExam(bp, { vocab: data.vocab, kanji: data.kanji, grammar: data.grammar });
+    const built = buildExam(bp, { vocab: data.vocab, kanji: data.kanji, grammar: data.grammar }, language);
     setSections(built);
     setSecIdx(0);
     setResults([]);

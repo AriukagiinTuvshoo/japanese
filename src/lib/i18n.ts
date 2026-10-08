@@ -1,4 +1,4 @@
-import type { Vocab } from "./types";
+import type { Grammar, Vocab } from "./types";
 
 export type Language = "mn" | "en";
 export const MN_PENDING = "Орчуулга хүлээгдэж байна";
@@ -423,6 +423,9 @@ export const ui = {
     seenBtn: "✓ Үзсэн",
     practiceBtn: "文 Дасгал", meaningDrill: "Утгын дасгал",
     mnPending2: "Монгол тайлбар хараахан хянагдаагүй.",
+    grammarMnInsufficient: "Монгол орчуулга хүлээгдэж байна. Энэ түвшний дүрмийн дасгалыг англи горимоор түр ашиглана уу.",
+    grammarMnInsufficientShort: "MN тайлбар байхгүй",
+    noGrammarMnForQuiz: "Энэ түвшинд монгол орчуулгатай дүрэм байхгүй тул дасгал үүсгэх боломжгүй.",
     nuance: "Ялгаа · нюанс",
     enSource2: "Англи эх сурвалж:",
     improveLink2: "Тайлбар сайжруулах →",
@@ -886,6 +889,9 @@ export const ui = {
     seenBtn: "✓ Seen",
     practiceBtn: "文 Practice", meaningDrill: "Meaning practice",
     mnPending2: "Mongolian explanation not yet reviewed.",
+    grammarMnInsufficient: "Mongolian translations are pending. Please use English mode for this level's grammar practice.",
+    grammarMnInsufficientShort: "No MN translation",
+    noGrammarMnForQuiz: "No grammar items with Mongolian translations at this level, so practice cannot be generated.",
     nuance: "Nuance · differences",
     enSource2: "English source:",
     improveLink2: "Improve this explanation →",
@@ -946,6 +952,26 @@ export const ui = {
 export function vocabMeaning(v: Vocab, language: Language): string {
   if (language === "en") return v.en.join("; ");
   return v.mn?.length ? v.mn.join(", ") : MN_PENDING;
+}
+
+/** Returns the English meaning string from a grammar item (handles string | array). */
+export function grammarEn(g: Grammar): string {
+  return Array.isArray(g.en) ? g.en.join("; ") : String(g.en ?? "");
+}
+
+/**
+ * Grammar meaning in the active language.
+ * - EN mode → always returns the English meaning (never null/empty for valid data).
+ * - MN mode → returns g.mn when present, otherwise MN_PENDING (never English).
+ */
+export function grammarMeaning(g: Grammar, language: Language): string {
+  if (language === "en") return grammarEn(g);
+  return g.mn ?? MN_PENDING;
+}
+
+/** True when the grammar item has no Mongolian translation yet. */
+export function grammarMnMissing(g: Grammar): boolean {
+  return !g.mn;
 }
 
 export type VocabTopic = "daily" | "people" | "places" | "time" | "food" | "nature" | "body" | "learning" | "work" | "actions" | "descriptions" | "other";

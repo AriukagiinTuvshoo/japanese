@@ -8,7 +8,7 @@ import { LEVELS } from "../lib/types";
 import { LEVEL_LABEL, TYPE_LABEL } from "../lib/text";
 import { shuffle } from "../lib/data";
 import { Bar, Button, Card, Chip, LevelBadge, Ring, SectionTitle, Spinner } from "../components/ui";
-import { ui } from "../lib/i18n";
+import { grammarEn, ui } from "../lib/i18n";
 
 interface PQ {
   id: string; level: Level; prompt: string; kind: "vocab" | "kanji" | "grammar";
@@ -34,7 +34,7 @@ export default function Placement() {
     for (const l of LEVELS) {
       const v = shuffle(data.vocabByLevel[l].filter((x) => x.mn?.length || x.en.length)).slice(0, 8);
       const k = shuffle(data.kanjiByLevel[l]).slice(0, 5);
-      const g = shuffle(data.grammarByLevel[l].filter((x) => x.mn || x.en)).slice(0, 4);
+      const g = shuffle(data.grammarByLevel[l].filter((x) => language === "en" ? !!grammarEn(x) : !!x.mn)).slice(0, 4);
       for (const w of v) {
         const others = shuffle(data.vocabByLevel[l].filter((x) => x.id !== w.id && (x.mn?.length || x.en.length))).slice(0, 3);
         const opts = shuffle([w, ...others]);
@@ -52,12 +52,16 @@ export default function Placement() {
         });
       }
       for (const gr of g) {
-        const others = shuffle(data.grammarByLevel[l].filter((x) => x.id !== gr.id && (x.mn || x.en))).slice(0, 3);
+        // In MN mode, only use items with MN translations; in EN mode, use any
+        const hasTranslation = (x: typeof gr) => language === "en" ? !!grammarEn(x) : !!x.mn;
+        if (!hasTranslation(gr)) continue;
+        const others = shuffle(data.grammarByLevel[l].filter((x) => x.id !== gr.id && hasTranslation(x))).slice(0, 3);
+        if (others.length < 3) continue;
         const opts = shuffle([gr, ...others]);
-        const mnOf = (x: typeof gr) => language === "en" ? ((Array.isArray(x.en) ? x.en.join("; ") : String(x.en ?? "")) || x.mn || "") : (x.mn ?? (Array.isArray(x.en) ? x.en.join("; ") : String(x.en ?? "")));
+        const meaningOf = (x: typeof gr) => language === "en" ? grammarEn(x) : (x.mn ?? "");
         out.push({
-          id: gr.id, level: l, kind: "grammar", prompt: gr.p, options: opts.map(mnOf),
-          answer: opts.indexOf(gr), explain: `${gr.p} — ${mnOf(gr)}`,
+          id: gr.id, level: l, kind: "grammar", prompt: gr.p, options: opts.map(meaningOf),
+          answer: opts.indexOf(gr), explain: `${gr.p} — ${meaningOf(gr)}`,
         });
       }
     }

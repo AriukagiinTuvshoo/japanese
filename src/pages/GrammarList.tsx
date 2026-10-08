@@ -6,7 +6,7 @@ import { loadGrammar } from "../lib/data";
 import type { Grammar, Level } from "../lib/types";
 import { grammarLabel, LEVEL_LABEL } from "../lib/text";
 import { Bar, Card, Chip, Empty, Input, LevelBadge, Pager, Select, Spinner } from "../components/ui";
-import { MN_PENDING, ui } from "../lib/i18n";
+import { MN_PENDING, grammarMnMissing, ui } from "../lib/i18n";
 
 const PER_PAGE = 40;
 
@@ -109,8 +109,13 @@ function GrammarCard({ g, done, onToggle }: { g: Grammar; done: boolean; onToggl
           <p className="mt-2 line-clamp-2 text-[13px] font-semibold leading-relaxed text-sumi-800">
             {language === "en"
               ? (en || <span className="text-sumi-400">{MN_PENDING}</span>)
-              : (g.mn ?? <span className="text-sumi-400">{en || MN_PENDING}</span>)}
+              : (g.mn ?? <span className="italic text-sumi-400">{MN_PENDING}</span>)}
           </p>
+          {language === "mn" && grammarMnMissing(g) && en && (
+            <p className="mt-1 line-clamp-1 text-[11.5px] text-sumi-400">
+              {t.enLabel} {en}
+            </p>
+          )}
           {g.ex[0]?.ja && (
             <p className="mt-2 line-clamp-1 font-jp text-[12.5px] text-sumi-500">{g.ex[0].ja}</p>
           )}
