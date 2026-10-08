@@ -1,0 +1,1082 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-priority-1-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit semantic categories cross-checked against Japanese entry and retained English gloss, independently unreviewed. Original uncommon senses preserved.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "bd73b2faac": {
+      "mn": [
+        "халдан орох",
+        "дайрах",
+        "зөвшөөрөлгүй нэвтрэх"
+      ],
+      "topics": [
+        "society",
+        "actions"
+      ],
+      "expected": {
+        "w": "侵す",
+        "r": "おかす",
+        "en": [
+          "to invade",
+          "to raid",
+          "to trespass"
+        ]
+      }
+    },
+    "f20fe91a98": {
+      "mn": [
+        "гэмт хэрэг үйлдэх",
+        "зөрчих"
+      ],
+      "topics": [
+        "society",
+        "actions"
+      ],
+      "expected": {
+        "w": "犯す",
+        "r": "おかす",
+        "en": [
+          "to commit",
+          "to perpetrate",
+          "to violate"
+        ]
+      }
+    },
+    "e3025feafa": {
+      "mn": [
+        "хулчгар зан",
+        "аймхай байдал"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "臆病",
+        "r": "おくびょう",
+        "en": [
+          "cowardice",
+          "timidity"
+        ]
+      }
+    },
+    "7d8114cc2a": {
+      "mn": [
+        "удаашруулах",
+        "хойшлуулах"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "遅らす",
+        "r": "おくらす",
+        "en": [
+          "to retard",
+          "to delay"
+        ]
+      }
+    },
+    "37d3906e02": {
+      "mn": [
+        "саатал",
+        "хоцрогдол"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "遅れ",
+        "r": "おくれ",
+        "en": [
+          "delay",
+          "lag"
+        ]
+      }
+    },
+    "1ee8b93761": {
+      "mn": [
+        "сүрлэг",
+        "эрхэмсэг",
+        "ёслол төгөлдөр"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "厳か",
+        "r": "おごそか",
+        "en": [
+          "austere",
+          "majestic",
+          "dignified"
+        ]
+      }
+    },
+    "59f87d1565": {
+      "mn": [
+        "үйл хэрэг",
+        "зан байдал",
+        "үйлдэл"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "行い",
+        "r": "おこない",
+        "en": [
+          "deed",
+          "conduct",
+          "behavior"
+        ]
+      }
+    },
+    "bc37b59298": {
+      "mn": [
+        "бардамнах"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "おごる",
+        "r": "おごる",
+        "en": [
+          "to be proud"
+        ]
+      }
+    },
+    "1dd6d7ea55": {
+      "mn": [
+        "ахлагч",
+        "тэргүүн"
+      ],
+      "topics": [
+        "people",
+        "work"
+      ],
+      "expected": {
+        "w": "長",
+        "r": "おさ",
+        "en": [
+          "chief",
+          "head"
+        ]
+      }
+    },
+    "019aed3e0a": {
+      "mn": [
+        "амгалан болох",
+        "дарагдах",
+        "шуурга айдас уур намжих"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "治まる",
+        "r": "おさまる",
+        "en": [
+          "to be at peace",
+          "to clamp down",
+          "to lessen (storm, terror, anger)"
+        ]
+      }
+    },
+    "6ebf36ca63": {
+      "mn": [
+        "олж авагдах",
+        "дуусах",
+        "тогтсон байранд орох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "収まる",
+        "r": "おさまる",
+        "en": [
+          "to be obtained",
+          "to end",
+          "to settle into"
+        ]
+      }
+    },
+    "ade60dd5fd": {
+      "mn": [
+        "олж авагдах",
+        "дуусах",
+        "тогтсон байранд орох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "納まる",
+        "r": "おさまる",
+        "en": [
+          "to be obtained",
+          "to end",
+          "to settle into"
+        ]
+      }
+    },
+    "20d2bde23d": {
+      "mn": [
+        "төрөх",
+        "төрөлт"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "お産",
+        "r": "おさん",
+        "en": [
+          "(giving) birth"
+        ]
+      }
+    },
+    "f9d8a00b70": {
+      "mn": [
+        "сургаал",
+        "зарчим",
+        "сургамж"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "教え",
+        "r": "おしえ",
+        "en": [
+          "teachings",
+          "precept",
+          "lesson"
+        ]
+      }
+    },
+    "9cc36de6c5": {
+      "mn": [
+        "чихэж оруулах",
+        "шахан оруулах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "押し込む",
+        "r": "おしこむ",
+        "en": [
+          "to push into",
+          "to crowd into"
+        ]
+      }
+    },
+    "90fe50c793": {
+      "mn": [
+        "хэмнэх",
+        "эрхэмлэх",
+        "харамсах"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "惜しむ",
+        "r": "おしむ",
+        "en": [
+          "to be frugal",
+          "to value",
+          "to regret"
+        ]
+      }
+    },
+    "d88fa19ab3": {
+      "mn": [
+        "түрж зайлуулах",
+        "түрэн ирэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "押し寄せる",
+        "r": "おしよせる",
+        "en": [
+          "to push aside",
+          "to advance on"
+        ]
+      }
+    },
+    "871359b199": {
+      "mn": [
+        "эр амьтан"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "雄",
+        "r": "おす",
+        "en": [
+          "male (animal)"
+        ]
+      }
+    },
+    "eb0a6d9289": {
+      "mn": [
+        "зусардалт",
+        "магтаал"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "お世辞",
+        "r": "おせじ",
+        "en": [
+          "flattery",
+          "compliment"
+        ]
+      }
+    },
+    "744be0e917": {
+      "mn": [
+        "довтлох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "襲う",
+        "r": "おそう",
+        "en": [
+          "to attack"
+        ]
+      }
+    },
+    "000e220ab0": {
+      "mn": [
+        "хамгийн оройдоо"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "遅くとも",
+        "r": "おそくとも",
+        "en": [
+          "at the latest"
+        ]
+      }
+    },
+    "a25819a086": {
+      "mn": [
+        "айдас",
+        "аймшиг"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "恐れ",
+        "r": "おそれ",
+        "en": [
+          "fear",
+          "horror"
+        ]
+      }
+    },
+    "c550db6672": {
+      "mn": [
+        "сүрдэн бишрэх",
+        "өөрийгөө өчүүхэн мэт мэдрэх",
+        "гайхах"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "恐れ入る",
+        "r": "おそれいる",
+        "en": [
+          "to be filled with awe",
+          "to feel small",
+          "to be amazed"
+        ]
+      }
+    },
+    "774c34ef39": {
+      "mn": [
+        "өдөөх",
+        "турхирах",
+        "зусардах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "煽てる",
+        "r": "おだてる",
+        "en": [
+          "to stir up",
+          "to instigate",
+          "to flatter"
+        ]
+      }
+    },
+    "35038194bb": {
+      "mn": [
+        "унаж орох",
+        "сэтгэлээр унах"
+      ],
+      "topics": [
+        "feelings",
+        "actions"
+      ],
+      "expected": {
+        "w": "落ち込む",
+        "r": "おちこむ",
+        "en": [
+          "to fall into",
+          "to feel down (sad)"
+        ]
+      }
+    },
+    "62a36048d0": {
+      "mn": [
+        "тайван байдал",
+        "биеэ барих чадвар"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "落ち着き",
+        "r": "おちつき",
+        "en": [
+          "calm",
+          "composure"
+        ]
+      }
+    },
+    "db320989e5": {
+      "mn": [
+        "унасан навч",
+        "навчны хаягдал",
+        "навч унах"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "落ち葉",
+        "r": "おちば",
+        "en": [
+          "fallen leaves",
+          "leaf litter",
+          "defoliation"
+        ]
+      }
+    },
+    "027523e5bf": {
+      "mn": [
+        "сонин",
+        "өвөрмөц",
+        "дэгжин"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "乙",
+        "r": "おつ",
+        "en": [
+          "strange",
+          "quaint",
+          "stylish"
+        ]
+      }
+    },
+    "486129fbbe": {
+      "mn": [
+        "зарагдаж явах",
+        "жижиг ажил амжуулах"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "お使い",
+        "r": "おつかい",
+        "en": [
+          "errand"
+        ]
+      }
+    },
+    "e6ac4a700b": {
+      "mn": [
+        "аймшигтай",
+        "асар том"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "おっかない",
+        "r": "おっかない",
+        "en": [
+          "frightening",
+          "huge"
+        ]
+      }
+    },
+    "84406af4b1": {
+      "mn": [
+        "арга мухардах",
+        "бууж өгөх",
+        "найдвар тасрах"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "お手上げ",
+        "r": "おてあげ",
+        "en": [
+          "all over",
+          "given in",
+          "given up hope"
+        ]
+      }
+    },
+    "3c74d17c1d": {
+      "mn": [
+        "эрэгтэй дүү"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "弟",
+        "r": "おと",
+        "en": [
+          "younger brother"
+        ]
+      }
+    },
+    "af9c173d83": {
+      "mn": [
+        "айж хулчийсан",
+        "эргэлзсэн байдалтай"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "おどおど",
+        "r": "おどおど",
+        "en": [
+          "coweringly",
+          "hesitantly"
+        ]
+      }
+    },
+    "f235910220": {
+      "mn": [
+        "сүрдүүлэх",
+        "заналхийлэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "脅す",
+        "r": "おどす",
+        "en": [
+          "to threaten",
+          "to menace"
+        ]
+      }
+    },
+    "7fca1acfbd": {
+      "mn": [
+        "айлчлах",
+        "очих"
+      ],
+      "topics": [
+        "places",
+        "actions"
+      ],
+      "expected": {
+        "w": "訪れる",
+        "r": "おとずれる",
+        "en": [
+          "to visit"
+        ]
+      }
+    },
+    "5b32f6a19b": {
+      "mn": [
+        "охин",
+        "залуу бүсгүй",
+        "онгон бүсгүй"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "少女",
+        "r": "おとめ",
+        "en": [
+          "daughter",
+          "young lady",
+          "virgin"
+        ]
+      }
+    },
+    "cff7b322bd": {
+      "mn": [
+        "дагалдагч",
+        "хамт яваа хүн"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "お供",
+        "r": "おとも",
+        "en": [
+          "attendant",
+          "companion"
+        ]
+      }
+    },
+    "df698ae04e": {
+      "mn": [
+        "сулрах",
+        "доройтох",
+        "элэгдэх"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "衰える",
+        "r": "おとろえる",
+        "en": [
+          "to become weak",
+          "to decline",
+          "to wear"
+        ]
+      }
+    },
+    "c572358a69": {
+      "mn": [
+        "гэнэтийн гайхал",
+        "гайхшрал",
+        "бишрэл"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "驚き",
+        "r": "おどろき",
+        "en": [
+          "surprise",
+          "astonishment",
+          "wonder"
+        ]
+      }
+    },
+    "f0375aa40d": {
+      "mn": [
+        "чацуу",
+        "ижил настай"
+      ],
+      "topics": [
+        "people",
+        "time"
+      ],
+      "expected": {
+        "w": "同い年",
+        "r": "おないどし",
+        "en": [
+          "of the same age"
+        ]
+      }
+    },
+    "5eae712fd9": {
+      "mn": [
+        "эмэгтэй",
+        "охин"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "女子",
+        "r": "おなご",
+        "en": [
+          "woman",
+          "girl"
+        ]
+      }
+    },
+    "ca6828b5da": {
+      "mn": [
+        "аяндаа",
+        "жам ёсоороо"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "自ずから",
+        "r": "おのずから",
+        "en": [
+          "naturally",
+          "as a matter of course"
+        ]
+      }
+    },
+    "a7833aaa2c": {
+      "mn": [
+        "айх",
+        "хар дарж зүүдлэх"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "怯える",
+        "r": "おびえる",
+        "en": [
+          "to become frightened",
+          "to have a nightmare"
+        ]
+      }
+    },
+    "8fa321af86": {
+      "mn": [
+        "асар их",
+        "тоолж баршгүй"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "夥しい",
+        "r": "おびただしい",
+        "en": [
+          "abundantly",
+          "innumerably"
+        ]
+      }
+    },
+    "30262fec40": {
+      "mn": [
+        "зүүх",
+        "авч явах",
+        "хариуцуулсан байх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "帯びる",
+        "r": "おびる",
+        "en": [
+          "to wear",
+          "to carry",
+          "to be entrusted"
+        ]
+      }
+    },
+    "830a31a8d7": {
+      "mn": [
+        "дурсамж",
+        "мэдрэмж",
+        "туршлага"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "覚え",
+        "r": "おぼえ",
+        "en": [
+          "memory",
+          "sense",
+          "experience"
+        ]
+      }
+    },
+    "8b18560ec9": {
+      "mn": [
+        "хөнгөлөлт",
+        "шагнал",
+        "нэмэлт зүйл"
+      ],
+      "topics": [
+        "work",
+        "daily"
+      ],
+      "expected": {
+        "w": "おまけ",
+        "r": "おまけ",
+        "en": [
+          "a discount",
+          "a prize",
+          "something additional"
+        ]
+      }
+    },
+    "2e70898eaa": {
+      "mn": [
+        "шинто сүм"
+      ],
+      "topics": [
+        "places",
+        "society"
+      ],
+      "expected": {
+        "w": "お宮",
+        "r": "おみや",
+        "en": [
+          "Shinto shrine"
+        ]
+      }
+    },
+    "4019600b45": {
+      "mn": [
+        "живх"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "おむつ",
+        "r": "おむつ",
+        "en": [
+          "diaper",
+          "nappy"
+        ]
+      }
+    },
+    "e562d42eba": {
+      "mn": [
+        "төлөвлөгөө",
+        "санаа",
+        "санал"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "思い付き",
+        "r": "おもいつき",
+        "en": [
+          "plan",
+          "idea",
+          "suggestion"
+        ]
+      }
+    },
+    "e6562f65be": {
+      "mn": [
+        "нүүр"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "面",
+        "r": "おもて",
+        "en": [
+          "face"
+        ]
+      }
+    },
+    "eae8d1488f": {
+      "mn": [
+        "гол",
+        "үндсэн",
+        "чухал"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "主なる",
+        "r": "おもなる",
+        "en": [
+          "main",
+          "principal",
+          "important"
+        ]
+      }
+    },
+    "061df73f89": {
+      "mn": [
+        "утга",
+        "гол санаа",
+        "агуулга"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "趣",
+        "r": "おもむき",
+        "en": [
+          "meaning",
+          "tenor",
+          "gist"
+        ]
+      }
+    },
+    "59b6e4bc77": {
+      "mn": [
+        "явах",
+        "чиглэх",
+        "зорин очих"
+      ],
+      "topics": [
+        "actions",
+        "places"
+      ],
+      "expected": {
+        "w": "赴く",
+        "r": "おもむく",
+        "en": [
+          "to go",
+          "to proceed",
+          "to repair to"
+        ]
+      }
+    },
+    "c633f63d6a": {
+      "mn": [
+        "хүндэтгэх",
+        "эрхэмлэх",
+        "үнэлэх"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "重んじる",
+        "r": "おもんじる",
+        "en": [
+          "to respect",
+          "to honor",
+          "to esteem"
+        ]
+      }
+    },
+    "35b4517046": {
+      "mn": [
+        "эрхэмлэх",
+        "хүндэтгэх",
+        "үнэлэх"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "重んずる",
+        "r": "おもんずる",
+        "en": [
+          "to honor",
+          "to respect",
+          "to esteem"
+        ]
+      }
+    },
+    "d87794e93f": {
+      "mn": [
+        "болон",
+        "мөн түүнчлэн"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "及び",
+        "r": "および",
+        "en": [
+          "and",
+          "as well as"
+        ]
+      }
+    },
+    "120c0331ab": {
+      "mn": [
+        "хүрэх",
+        "гүйцэх",
+        "хэмжээ нь болох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "及ぶ",
+        "r": "およぶ",
+        "en": [
+          "to reach",
+          "to come up to",
+          "to amount to"
+        ]
+      }
+    },
+    "2b57f165a6": {
+      "mn": [
+        "нэхээс",
+        "нэхэх",
+        "нэхмэл эд"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "織",
+        "r": "おり",
+        "en": [
+          "weave",
+          "weaving",
+          "woven item"
+        ]
+      }
+    },
+    "2d13e31758": {
+      "mn": [
+        "тор",
+        "хашаа",
+        "хорих өрөө"
+      ],
+      "topics": [
+        "daily",
+        "society"
+      ],
+      "expected": {
+        "w": "檻",
+        "r": "おり",
+        "en": [
+          "cage",
+          "pen",
+          "jail cell"
+        ]
+      }
+    }
+  }
+}
