@@ -2,7 +2,7 @@
 
 **Incomplete. PR #12 must remain draft and unmerged. No production completion is claimed.**
 
-Baseline `6cf8ca1`: 7,170 missing meanings. Current batches add 7,108 net meanings, all 526 grammar formation translations and 837 N5–N3 grammar example translations and 40 N5 vocabulary example translations. AI-authored, independently unreviewed; coverage is not semantic approval.
+Baseline `6cf8ca1`: 7,170 missing meanings. Current batches add 7,108 net meanings, all 526 grammar formation translations and 837 N5–N3 grammar example translations and 259 N5/N4 vocabulary example translations. AI-authored, independently unreviewed; coverage is not semantic approval.
 
 | Level | Missing vocabulary meanings | Missing kanji meanings | Missing grammar meanings |
 |---|---:|---:|---:|
@@ -13,7 +13,7 @@ Baseline `6cf8ca1`: 7,170 missing meanings. Current batches add 7,108 net meanin
 | N1 | 31 | 31 | 0 |
 | Total | 31 | 31 | 0 |
 
-Remaining: **62 meanings, 14,367 examples** (13,678 vocabulary + 689 N2/N1 grammar), **0 formations, 2,165 unclassified entries, 0 missing new-batch provenance records; 6,503 unchanged legacy/unreviewed meanings of unknown authorship (documented, not release-blocking), 10 unresolved source issues**. Invalid categories and mislabeled MN: zero. Measures overlap; do not sum as distinct entries.
+Remaining: **62 meanings, 14,148 examples** (13,459 vocabulary + 689 N2/N1 grammar), **0 formations, 2,115 unclassified entries, 0 missing new-batch provenance records; 6,503 unchanged legacy/unreviewed meanings of unknown authorship (documented, not release-blocking), 10 unresolved source issues**. Invalid categories and mislabeled MN: zero. Measures overlap; do not sum as distinct entries.
 
 N5 vocabulary/kanji and N4 kanji are fully classified. Categories support multiple topics, including relationships. Explicit semantic override evidence is maintained in `content/categories/provenance.json`. Unmatched entries remain visibly filterable, not hidden in a catch-all. Source warnings retain original Japanese/English and block release. Existing drafts and new translations still need accuracy review. Page-wide bilingual localization audit remains incomplete, notably Admin.
 
@@ -103,3 +103,7 @@ Three guarded 60-entry kanji batches and six guarded 60-entry vocabulary batches
 ## Final-source pass (still incomplete)
 
 Added 95 guarded kanji meanings in batches of 60 and 35; full checks and strict report recalculated after each. Remaining meanings: 31 vocabulary plus 31 kanji. These remaining records include source mismatches, unsupported glosses and empty sources; no guesses applied. Began examples despite meaning blockers: two 20-sentence N5 batches with exact Japanese sentence keys, English and headword/reading guards. Both batches fully checked individually. Reduced unclassified entries by 63 through explicit semantic topics on new meanings. All ten existing conflicts individually recorded with exact source guards in content/mn/source-conflict-audit-2026-10-08.json; all remain unresolved. This audit is internal comparison, not newly obtained dictionary evidence. Strict gate still blocks release; no merge/deploy/browser-completion claim.
+
+## Example corpus round — 219 sentences and 50 topics
+
+Five N5 batches (40/40/40/40/35 sentences) and one N4 batch (24 sentences) added 219 natural Mongolian example translations. Every sentence uses stable vocabulary ID, exact Japanese sentence key, exact retained English and w/r/en guards. Original source unchanged; new translations AI-authored and independently unreviewed. Counts recalculated after each batch: 14327 → 14287 → 14247 → 14207 → 14172 → 14148 untranslated examples. A separate 50-entry N4 evidence-backed topic batch reduced unclassified 2165 → 2115. Full typecheck/data/routes/coverage/retention/build and strict gate ran after each of these seven batches; structural checks passed, strict gate exit 1. Corpus regression verifies exact source, unique sentence keys, applied Mongolian/provenance, batch sizes and topic evidence. All 62 missing meanings and ten individual source-conflict warnings/audit records unchanged. No external conflict evidence acquired, no warning silently resolved. Higher-level/grammar examples and page/browser/human reviews remain unfinished. PR stays draft/unmerged/unreleased.

@@ -1,0 +1,398 @@
+{
+  "provenance": {
+    "id": "mn-n5-examples-corpus-1-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian examples compared to exact Japanese and retained English; stable ID, spelling, reading, English and sentence guards. Independent human semantic review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n5.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "34e6f7d220": {
+      "expected": {
+        "w": "あちら",
+        "r": "あちら",
+        "en": [
+          "there"
+        ]
+      },
+      "examples": {
+        "こっちの本はあっちの本よりやさしい。": {
+          "en": "These books are easier than those books.",
+          "mn": "Эндхийн номууд тэндхийн номуудаас амархан."
+        },
+        "あちらに着いたら手紙をください。": {
+          "en": "Please write to me when you get there.",
+          "mn": "Тэнд очоод надад захиа бичээрэй."
+        }
+      }
+    },
+    "9949d87445": {
+      "expected": {
+        "w": "厚い",
+        "r": "あつい",
+        "en": [
+          "kind",
+          "deep",
+          "thick"
+        ]
+      },
+      "examples": {
+        "それは４ｃｍの厚さです。": {
+          "en": "It is four centimeters thick.",
+          "mn": "Тэр дөрвөн сантиметр зузаантай."
+        },
+        "氷は２インチの厚さだ。": {
+          "en": "The ice is two inches thick.",
+          "mn": "Мөс хоёр инч зузаантай."
+        }
+      }
+    },
+    "7b4aecdf7b": {
+      "expected": {
+        "w": "暑い",
+        "r": "あつい",
+        "en": [
+          "hot"
+        ]
+      },
+      "examples": {
+        "どうして、こんなに暑いのですか。": {
+          "en": "Why is it so hot?",
+          "mn": "Яагаад ийм халуун байгаа юм бэ?"
+        },
+        "暑くならないうちに出かけよう。": {
+          "en": "Let's go out before it gets hot.",
+          "mn": "Халуун болохоос өмнө гарцгаая."
+        }
+      }
+    },
+    "a379d413fd": {
+      "expected": {
+        "w": "熱い",
+        "r": "あつい",
+        "en": [
+          "hot to the touch"
+        ]
+      },
+      "examples": {
+        "熱いコーヒーを入れてあげましょう。": {
+          "en": "Let me make you a cup of hot coffee.",
+          "mn": "Танд нэг аяга халуун кофе хийж өгье."
+        },
+        "熱いダックスフント・ソーセージはいかが。": {
+          "en": "Get your hot dachshund sausages!",
+          "mn": "Халуун даксхунд зайдас авах уу?"
+        }
+      }
+    },
+    "60dd63379e": {
+      "expected": {
+        "w": "あっち",
+        "r": "あっち",
+        "en": [
+          "over there"
+        ]
+      },
+      "examples": {
+        "こっちの本はあっちの本よりやさしい。": {
+          "en": "These books are easier than those books.",
+          "mn": "Эндхийн номууд тэндхийн номуудаас амархан."
+        },
+        "あっちにエレベーターがあるみたいだよ。": {
+          "en": "It looks like there's an elevator over there.",
+          "mn": "Тэнд цахилгаан шат байгаа бололтой."
+        }
+      }
+    },
+    "4f134c9b38": {
+      "expected": {
+        "w": "後",
+        "r": "あと",
+        "en": [
+          "afterwards"
+        ]
+      },
+      "examples": {
+        "雨天の後には晴天が来る。": {
+          "en": "After rain comes fair weather.",
+          "mn": "Борооны дараа цаг агаар сайхан болдог."
+        },
+        "アルファベットでＢはＡの後にくる。": {
+          "en": "In the alphabet, B comes after A.",
+          "mn": "Цагаан толгойд B нь A-гийн дараа ордог."
+        }
+      }
+    },
+    "afdf384f68": {
+      "expected": {
+        "w": "あなた",
+        "r": "あなた",
+        "en": [
+          "you"
+        ]
+      },
+      "examples": {
+        "ねえあなたたち行かないで。": {
+          "en": "Don't go, dears.",
+          "mn": "Хөөе, та нар битгий яваарай."
+        },
+        "どちらの本があなたのものですか。": {
+          "en": "Which book is yours?",
+          "mn": "Аль ном нь таных вэ?"
+        }
+      }
+    },
+    "4aab699864": {
+      "expected": {
+        "w": "兄",
+        "r": "あに",
+        "en": [
+          "(humble) older brother"
+        ]
+      },
+      "examples": {
+        "これは兄です。かっこいいですね。": {
+          "en": "This is my brother. Handsome, isn't he?",
+          "mn": "Энэ миний ах. Царайлаг байгаа биз?"
+        },
+        "兄はアパートをさがしています。": {
+          "en": "My brother is looking for an apartment.",
+          "mn": "Ах маань байр хайж байна."
+        }
+      }
+    },
+    "8bfeb208b4": {
+      "expected": {
+        "w": "姉",
+        "r": "あね",
+        "en": [
+          "(humble) older sister"
+        ]
+      },
+      "examples": {
+        "先月、姉は６ポンドの男の子を生んだ。": {
+          "en": "Last month my sister gave birth to a six-pound baby.",
+          "mn": "Өнгөрсөн сард эгч маань зургаан фунт жинтэй хүү төрүүлсэн."
+        },
+        "姉は私のズボンにアイロンをかけてくれる。": {
+          "en": "My sister presses my trousers.",
+          "mn": "Эгч маань миний өмдийг индүүдэж өгдөг."
+        }
+      }
+    },
+    "ac4706068b": {
+      "expected": {
+        "w": "あの",
+        "r": "あの",
+        "en": [
+          "that over there"
+        ]
+      },
+      "examples": {
+        "あのおいしいワインをなぜ飲まないんだい。": {
+          "en": "Why not try that delicious wine?",
+          "mn": "Тэр амттай дарсыг яагаад ууж үзэхгүй байгаа юм бэ?"
+        },
+        "この本はあの本ほどやさしくない。": {
+          "en": "This book is not as easy as that one.",
+          "mn": "Энэ ном тэр ном шиг амархан биш."
+        }
+      }
+    },
+    "0cf05b3a0d": {
+      "expected": {
+        "w": "アパート",
+        "r": "アパート",
+        "en": [
+          "apartment"
+        ]
+      },
+      "examples": {
+        "兄はアパートをさがしています。": {
+          "en": "My brother is looking for an apartment.",
+          "mn": "Ах маань байр хайж байна."
+        },
+        "いいアパートね。": {
+          "en": "This is a great apartment.",
+          "mn": "Ямар сайхан байр вэ!"
+        }
+      }
+    },
+    "a5aceb6426": {
+      "expected": {
+        "w": "あびる",
+        "r": "あびる",
+        "en": [
+          "to bathe",
+          "to shower"
+        ]
+      },
+      "examples": {
+        "その時はシャワーを浴びていた。": {
+          "en": "I was taking a shower then.",
+          "mn": "Тэр үед би шүршүүрт орж байсан."
+        },
+        "シャワーを浴びてもよいでしょうか。": {
+          "en": "May I take a shower?",
+          "mn": "Би шүршүүрт орж болох уу?"
+        }
+      }
+    },
+    "0509cb3b27": {
+      "expected": {
+        "w": "危ない",
+        "r": "あぶない",
+        "en": [
+          "dangerous"
+        ]
+      },
+      "examples": {
+        "間一髪！危ないところでした。": {
+          "en": "That was a close call.",
+          "mn": "Арай л өнгөрлөө! Аюултай байлаа."
+        },
+        "危ない！トラックが来るぞ！": {
+          "en": "Look out! There's a truck coming!",
+          "mn": "Болгоомжлоорой! Ачааны машин ирж байна!"
+        }
+      }
+    },
+    "4afffe5811": {
+      "expected": {
+        "w": "甘い",
+        "r": "あまい",
+        "en": [
+          "sweet"
+        ]
+      },
+      "examples": {
+        "メアリーにはつい甘くなってしまう。": {
+          "en": "I have always had a soft spot in my heart for Mary.",
+          "mn": "Би Мэрид өөрийн эрхгүй зөөлөн хандчихдаг."
+        },
+        "このチョコレートはとっても甘くておいしい。": {
+          "en": "This chocolate is very sweet and tasty.",
+          "mn": "Энэ шоколад маш чихэрлэг, амттай."
+        }
+      }
+    },
+    "eac90e8e98": {
+      "expected": {
+        "w": "あまり",
+        "r": "あまり",
+        "en": [
+          "not very"
+        ]
+      },
+      "examples": {
+        "この手の本はあまり読まない。": {
+          "en": "I don't read this kind of book much.",
+          "mn": "Би ийм төрлийн ном төдийлөн уншдаггүй."
+        },
+        "フランス語ではあまり話しません。": {
+          "en": "I don't speak French very much.",
+          "mn": "Би францаар төдийлөн ярьдаггүй."
+        }
+      }
+    },
+    "5d72771a3c": {
+      "expected": {
+        "w": "飴",
+        "r": "あめ",
+        "en": [
+          "candy"
+        ]
+      },
+      "examples": {
+        "いい子にしていたら、あめをあげよう。": {
+          "en": "If you are a good girl, you shall have candy.",
+          "mn": "Сайн хүүхэд байвал чамд чихэр өгнө."
+        },
+        "息子は箱から飴を一つ取った。": {
+          "en": "My son took a candy from the box.",
+          "mn": "Хүү маань хайрцгаас нэг чихэр авсан."
+        }
+      }
+    },
+    "277a58c9df": {
+      "expected": {
+        "w": "雨",
+        "r": "あめ",
+        "en": [
+          "rain"
+        ]
+      },
+      "examples": {
+        "木のおかげで雨にぬれずにすんだ。": {
+          "en": "The trees kept me out of the rain.",
+          "mn": "Модны ачаар би бороонд норсонгүй."
+        },
+        "今すぐにも雨がふるかもしれない。": {
+          "en": "It may rain any minute.",
+          "mn": "Яг одоо ч бороо орж магадгүй."
+        }
+      }
+    },
+    "f8fa96946f": {
+      "expected": {
+        "w": "洗う",
+        "r": "あらう",
+        "en": [
+          "to wash"
+        ]
+      },
+      "examples": {
+        "いつこの車は洗われましたか。": {
+          "en": "When was this car washed?",
+          "mn": "Энэ машиныг хэзээ угаасан бэ?"
+        },
+        "車を洗っているのはジョーンズさんです。": {
+          "en": "The man washing the car is Mr Jones.",
+          "mn": "Машин угааж байгаа хүн бол Жонс гуай."
+        }
+      }
+    },
+    "93461820fe": {
+      "expected": {
+        "w": "ありがとう",
+        "r": "ありがとう",
+        "en": [
+          "Thank you"
+        ]
+      },
+      "examples": {
+        "はるばる来てくれてありがとう。": {
+          "en": "It was nice of you to come all the way.",
+          "mn": "Ийм холоос ирсэнд баярлалаа."
+        },
+        "そうおっしゃって下さってありがとう。": {
+          "en": "It's very kind of you to say so.",
+          "mn": "Тэгж хэлсэнд тань баярлалаа."
+        }
+      }
+    },
+    "ac08788418": {
+      "expected": {
+        "w": "ある",
+        "r": "ある",
+        "en": [
+          "to be",
+          "to have (used for inanimate objects)"
+        ]
+      },
+      "examples": {
+        "話があったら電話をかけて下さい。": {
+          "en": "If you want to speak to me, please call me up.",
+          "mn": "Надтай ярих зүйл байвал утасдаарай."
+        },
+        "木はたとえあってもほとんどない。": {
+          "en": "There were few, if any, trees.",
+          "mn": "Мод байсан ч бараг үгүйтэй адил цөөн байв."
+        }
+      }
+    }
+  }
+}

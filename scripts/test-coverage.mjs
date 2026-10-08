@@ -105,3 +105,36 @@ for (const record of conflictAudit.records) {
  for (const [field, expected] of Object.entries(record.expected)) assert.deepEqual(entry[field], expected);
  assert.equal(entry.source_issue, record.existingWarning);
 }
+
+// Corpus batches: sentence guards, applied MN, provenance and semantic evidence.
+for (const file of fs.readdirSync('content/mn/batches').filter(f => /^2026-10-08-n[45]-(examples|topics)-corpus-\d+\.json$/.test(f))) {
+ const batch = read(`content/mn/batches/${file}`);
+ const level = file.match(/-n([45])-/)[1];
+ const data = read(`public/data/vocab/n${level}.json`);
+ let sentences = 0;
+ for (const [id, record] of Object.entries(batch.vocab)) {
+  const entry = data.find(e => e.id === id);
+  assert.ok(entry, `${file}/${id}: stable ID`);
+  assert.deepEqual(Object.keys(record.expected).sort(), ['en','r','w']);
+  for (const [field, expected] of Object.entries(record.expected)) assert.deepEqual(entry[field], expected);
+  for (const [ja, value] of Object.entries(record.examples ?? {})) {
+   const matches = entry.ex.filter(e => e.ja === ja);
+   assert.equal(matches.length, 1, `${id}/${ja}: unique sentence key`);
+   const example = matches[0];
+   assert.equal(example.en, value.en);
+   assert.equal(example.mn, value.mn);
+   assert.equal(example.mn_provenance, batch.provenance.id);
+   assert.ok(validMn(value.mn)); sentences++;
+  }
+  if (record.topics) {
+   const evidence = read('content/categories/provenance.json').entries.vocab[id];
+   assert.deepEqual(evidence.topics, record.topics);
+   assert.equal(evidence.ja, entry.w);
+   assert.equal(evidence.reading, entry.r);
+   assert.deepEqual(evidence.en, entry.en);
+  }
+ }
+ if (file.includes('examples')) assert.equal(sentences, level === '4' ? 24 : file.endsWith('-5.json') ? 35 : 40);
+ else assert.equal(Object.keys(batch.vocab).length, 50);
+ assert.equal(batch.provenance.reviewStatus, 'unreviewed');
+}

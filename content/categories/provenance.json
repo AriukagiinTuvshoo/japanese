@@ -58605,6 +58605,525 @@
           "learning"
         ],
         "reading": "イオンけっしょう"
+      },
+      "4fff6d0441": {
+        "ja": "あ",
+        "en": [
+          "Ah"
+        ],
+        "topics": [
+          "feelings",
+          "learning"
+        ],
+        "reading": "あ"
+      },
+      "6a4011f27f": {
+        "ja": "ああ",
+        "en": [
+          "like that"
+        ],
+        "topics": [
+          "learning"
+        ],
+        "reading": "ああ"
+      },
+      "d1a343e501": {
+        "ja": "間",
+        "en": [
+          "a space"
+        ],
+        "topics": [
+          "places"
+        ],
+        "reading": "あいだ"
+      },
+      "2a6a55be8d": {
+        "ja": "あかちゃん",
+        "en": [
+          "infant"
+        ],
+        "topics": [
+          "people"
+        ],
+        "reading": "あかちゃん"
+      },
+      "e877021bf4": {
+        "ja": "赤ん坊",
+        "en": [
+          "baby"
+        ],
+        "topics": [
+          "people"
+        ],
+        "reading": "あかんぼう"
+      },
+      "628b6b8e9d": {
+        "ja": "アクセサリー",
+        "en": [
+          "accessory"
+        ],
+        "topics": [
+          "daily"
+        ],
+        "reading": "アクセサリー"
+      },
+      "590fa58ca9": {
+        "ja": "味",
+        "en": [
+          "flavour"
+        ],
+        "topics": [
+          "food"
+        ],
+        "reading": "あじ"
+      },
+      "97bdb63259": {
+        "ja": "アジア",
+        "en": [
+          "Asia"
+        ],
+        "topics": [
+          "places"
+        ],
+        "reading": "アジア"
+      },
+      "c1fb180c70": {
+        "ja": "アナウンサー",
+        "en": [
+          "announcer"
+        ],
+        "topics": [
+          "people",
+          "work"
+        ],
+        "reading": "アナウンサー"
+      },
+      "0fa879c73d": {
+        "ja": "アフリカ",
+        "en": [
+          "Africa"
+        ],
+        "topics": [
+          "places"
+        ],
+        "reading": "アフリカ"
+      },
+      "b921645383": {
+        "ja": "アメリカ",
+        "en": [
+          "America"
+        ],
+        "topics": [
+          "places"
+        ],
+        "reading": "アメリカ"
+      },
+      "ab0767b2f7": {
+        "ja": "アルコール",
+        "en": [
+          "alcohol"
+        ],
+        "topics": [
+          "food"
+        ],
+        "reading": "アルコール"
+      },
+      "629362dbfc": {
+        "ja": "以下",
+        "en": [
+          "less than"
+        ],
+        "topics": [
+          "quantity"
+        ],
+        "reading": "いか"
+      },
+      "da4198f39c": {
+        "ja": "以外",
+        "en": [
+          "with the exception of"
+        ],
+        "topics": [
+          "learning"
+        ],
+        "reading": "いがい"
+      },
+      "ba5a03baf1": {
+        "ja": "意見",
+        "en": [
+          "opinion"
+        ],
+        "topics": [
+          "learning"
+        ],
+        "reading": "いけん"
+      },
+      "13ab63d79a": {
+        "ja": "以上",
+        "en": [
+          "more than",
+          "this is all"
+        ],
+        "topics": [
+          "quantity"
+        ],
+        "reading": "いじょう"
+      },
+      "bf82bb12d2": {
+        "ja": "一度",
+        "en": [
+          "once"
+        ],
+        "topics": [
+          "time",
+          "quantity"
+        ],
+        "reading": "いちど"
+      },
+      "3de1fe452d": {
+        "ja": "糸",
+        "en": [
+          "thread"
+        ],
+        "topics": [
+          "daily"
+        ],
+        "reading": "いと"
+      },
+      "556e3e0d99": {
+        "ja": "以内",
+        "en": [
+          "within"
+        ],
+        "topics": [
+          "places",
+          "time"
+        ],
+        "reading": "いない"
+      },
+      "11d4a3118b": {
+        "ja": "田舎",
+        "en": [
+          "countryside"
+        ],
+        "topics": [
+          "places"
+        ],
+        "reading": "いなか"
+      },
+      "76d4bcd098": {
+        "ja": "うち",
+        "en": [
+          "within"
+        ],
+        "topics": [
+          "places",
+          "time"
+        ],
+        "reading": "うち"
+      },
+      "1b5a6286d6": {
+        "ja": "裏",
+        "en": [
+          "reverse side"
+        ],
+        "topics": [
+          "places"
+        ],
+        "reading": "うら"
+      },
+      "533b248802": {
+        "ja": "うん",
+        "en": [
+          "(informal) yes"
+        ],
+        "topics": [
+          "learning"
+        ],
+        "reading": "うん"
+      },
+      "9f6e25d5e2": {
+        "ja": "運転手",
+        "en": [
+          "driver"
+        ],
+        "topics": [
+          "people",
+          "work"
+        ],
+        "reading": "うんてんしゅ"
+      },
+      "3139c14254": {
+        "ja": "エスカレーター",
+        "en": [
+          "escalator"
+        ],
+        "topics": [
+          "technology",
+          "places"
+        ],
+        "reading": "エスカレーター"
+      },
+      "bb01cb559f": {
+        "ja": "枝",
+        "en": [
+          "branch",
+          "twig"
+        ],
+        "topics": [
+          "nature"
+        ],
+        "reading": "えだ"
+      },
+      "12e7bd036b": {
+        "ja": "お祝い",
+        "en": [
+          "congratulation"
+        ],
+        "topics": [
+          "relationships"
+        ],
+        "reading": "おいわい"
+      },
+      "5c63f36f44": {
+        "ja": "オートバイ",
+        "en": [
+          "motorcycle"
+        ],
+        "topics": [
+          "technology"
+        ],
+        "reading": "オートバイ"
+      },
+      "1065d7145c": {
+        "ja": "屋上",
+        "en": [
+          "rooftop"
+        ],
+        "topics": [
+          "places"
+        ],
+        "reading": "おくじょう"
+      },
+      "ba001e2f36": {
+        "ja": "贈り物",
+        "en": [
+          "gift"
+        ],
+        "topics": [
+          "relationships",
+          "daily"
+        ],
+        "reading": "おくりもの"
+      },
+      "3787755f33": {
+        "ja": "押し入れ",
+        "en": [
+          "closet"
+        ],
+        "topics": [
+          "daily",
+          "places"
+        ],
+        "reading": "おしいれ"
+      },
+      "1f5a7d8e07": {
+        "ja": "お嬢さん",
+        "en": [
+          "young lady"
+        ],
+        "topics": [
+          "people"
+        ],
+        "reading": "おじょうさん"
+      },
+      "f2c38f9517": {
+        "ja": "おつり",
+        "en": [
+          "change from purchase",
+          "balance"
+        ],
+        "topics": [
+          "work",
+          "quantity"
+        ],
+        "reading": "おつり"
+      },
+      "c6815e7618": {
+        "ja": "音",
+        "en": [
+          "sound",
+          "note"
+        ],
+        "topics": [
+          "arts"
+        ],
+        "reading": "おと"
+      },
+      "f586632207": {
+        "ja": "お土産",
+        "en": [
+          "souvenir"
+        ],
+        "topics": [
+          "daily",
+          "relationships"
+        ],
+        "reading": "おみやげ"
+      },
+      "1579d0db1b": {
+        "ja": "おもちゃ",
+        "en": [
+          "toy"
+        ],
+        "topics": [
+          "daily"
+        ],
+        "reading": "おもちゃ"
+      },
+      "721424863e": {
+        "ja": "表",
+        "en": [
+          "the front"
+        ],
+        "topics": [
+          "places"
+        ],
+        "reading": "おもて"
+      },
+      "d9cf4f541d": {
+        "ja": "泳ぎ方",
+        "en": [
+          "way of swimming"
+        ],
+        "topics": [
+          "arts",
+          "actions"
+        ],
+        "reading": "およぎかた"
+      },
+      "12db3e5f4e": {
+        "ja": "お礼",
+        "en": [
+          "expression of gratitude"
+        ],
+        "topics": [
+          "relationships"
+        ],
+        "reading": "おれい"
+      },
+      "19cb869e4d": {
+        "ja": "終わり",
+        "en": [
+          "the end"
+        ],
+        "topics": [
+          "time"
+        ],
+        "reading": "おわり"
+      },
+      "cbbc4c3524": {
+        "ja": "カーテン",
+        "en": [
+          "curtain"
+        ],
+        "topics": [
+          "daily"
+        ],
+        "reading": "カーテン"
+      },
+      "6f4ad2115e": {
+        "ja": "海岸",
+        "en": [
+          "coast"
+        ],
+        "topics": [
+          "nature",
+          "places"
+        ],
+        "reading": "かいがん"
+      },
+      "6365c5ac47": {
+        "ja": "帰り",
+        "en": [
+          "return"
+        ],
+        "topics": [
+          "actions"
+        ],
+        "reading": "かえり"
+      },
+      "2c7db27d62": {
+        "ja": "鏡",
+        "en": [
+          "mirror"
+        ],
+        "topics": [
+          "daily"
+        ],
+        "reading": "かがみ"
+      },
+      "b3c360789e": {
+        "ja": "ガソリン",
+        "en": [
+          "petrol"
+        ],
+        "topics": [
+          "technology"
+        ],
+        "reading": "ガソリン"
+      },
+      "26f2ddd0a2": {
+        "ja": "形",
+        "en": [
+          "shape"
+        ],
+        "topics": [
+          "descriptions"
+        ],
+        "reading": "かたち"
+      },
+      "26a19196b7": {
+        "ja": "課長",
+        "en": [
+          "section manager"
+        ],
+        "topics": [
+          "people",
+          "work"
+        ],
+        "reading": "かちょう"
+      },
+      "876713fb67": {
+        "ja": "かっこう",
+        "en": [
+          "appearance"
+        ],
+        "topics": [
+          "descriptions"
+        ],
+        "reading": "かっこう"
+      },
+      "89927b8fa1": {
+        "ja": "家内",
+        "en": [
+          "housewife"
+        ],
+        "topics": [
+          "people",
+          "relationships"
+        ],
+        "reading": "かない"
+      },
+      "0752484ec5": {
+        "ja": "壁",
+        "en": [
+          "wall"
+        ],
+        "topics": [
+          "places"
+        ],
+        "reading": "かべ"
       }
     },
     "kanji": {
