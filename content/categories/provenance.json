@@ -78099,6 +78099,1112 @@
           "せ",
           "うね"
         ]
+      },
+      "抄": {
+        "ja": "抄",
+        "reading": null,
+        "on": [
+          "しょう"
+        ],
+        "kun": [],
+        "en": [
+          "Extract",
+          "Selection",
+          "Summary"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "杭": {
+        "ja": "杭",
+        "reading": null,
+        "on": [
+          "こう"
+        ],
+        "kun": [
+          "くい"
+        ],
+        "en": [
+          "Stake",
+          "Post",
+          "Picket"
+        ],
+        "topics": [
+          "technology"
+        ]
+      },
+      "寓": {
+        "ja": "寓",
+        "reading": null,
+        "on": [
+          "ぐう",
+          "ぐ",
+          "どう"
+        ],
+        "kun": [
+          "ぐう.する",
+          "かこつ.ける",
+          "よ.せる",
+          "よ.る"
+        ],
+        "en": [
+          "Temporary Abode",
+          "Imply",
+          "Suggest"
+        ],
+        "topics": [
+          "places",
+          "learning"
+        ]
+      },
+      "麺": {
+        "ja": "麺",
+        "reading": null,
+        "on": [
+          "めん",
+          "べん"
+        ],
+        "kun": [
+          "むぎこ"
+        ],
+        "en": [
+          "Noodles",
+          "Wheat Flour"
+        ],
+        "topics": [
+          "food"
+        ]
+      },
+      "戴": {
+        "ja": "戴",
+        "reading": null,
+        "on": [
+          "たい"
+        ],
+        "kun": [
+          "いただ.く"
+        ],
+        "en": [
+          "Be Crowned With",
+          "Live Under (a Ruler)",
+          "Receive"
+        ],
+        "topics": [
+          "society",
+          "actions"
+        ]
+      },
+      "爽": {
+        "ja": "爽",
+        "reading": null,
+        "on": [
+          "そう"
+        ],
+        "kun": [
+          "あき.らか",
+          "さわ.やか",
+          "たがう"
+        ],
+        "en": [
+          "Refreshing",
+          "Bracing",
+          "Resonant"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "裾": {
+        "ja": "裾",
+        "reading": null,
+        "on": [
+          "きょ",
+          "こ"
+        ],
+        "kun": [
+          "すそ"
+        ],
+        "en": [
+          "Cuff",
+          "Hem",
+          "Foot Of Mountain"
+        ],
+        "topics": [
+          "daily",
+          "places"
+        ]
+      },
+      "黎": {
+        "ja": "黎",
+        "reading": null,
+        "on": [
+          "れい",
+          "り"
+        ],
+        "kun": [
+          "くろ.い"
+        ],
+        "en": [
+          "Dark",
+          "Black",
+          "Many"
+        ],
+        "topics": [
+          "descriptions",
+          "quantity"
+        ]
+      },
+      "惰": {
+        "ja": "惰",
+        "reading": null,
+        "on": [
+          "だ"
+        ],
+        "kun": [],
+        "en": [
+          "Lazy",
+          "Laziness"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "坐": {
+        "ja": "坐",
+        "reading": null,
+        "on": [
+          "ざ",
+          "さ"
+        ],
+        "kun": [
+          "すわ.る",
+          "おわす",
+          "そぞろに",
+          "まします"
+        ],
+        "en": [
+          "Sit"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "鍼": {
+        "ja": "鍼",
+        "reading": null,
+        "on": [
+          "しん"
+        ],
+        "kun": [
+          "はり",
+          "さ.す"
+        ],
+        "en": [
+          "Needle"
+        ],
+        "topics": [
+          "technology",
+          "body"
+        ]
+      },
+      "蛮": {
+        "ja": "蛮",
+        "reading": null,
+        "on": [
+          "ばん"
+        ],
+        "kun": [
+          "えびす"
+        ],
+        "en": [
+          "Barbarian"
+        ],
+        "topics": [
+          "society"
+        ]
+      },
+      "塙": {
+        "ja": "塙",
+        "reading": null,
+        "on": [
+          "かく",
+          "こう"
+        ],
+        "kun": [
+          "はなわ",
+          "かた.い"
+        ],
+        "en": [
+          "Projecting Tableland Or Mountain"
+        ],
+        "topics": [
+          "places"
+        ]
+      },
+      "冴": {
+        "ja": "冴",
+        "reading": null,
+        "on": [
+          "ご",
+          "こ"
+        ],
+        "kun": [
+          "さ.える",
+          "こお.る",
+          "ひ.える"
+        ],
+        "en": [
+          "Be Clear",
+          "Serene",
+          "Cold"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "旺": {
+        "ja": "旺",
+        "reading": null,
+        "on": [
+          "おう",
+          "きょう",
+          "ごう"
+        ],
+        "kun": [
+          "かがや.き",
+          "うつくし.い",
+          "さかん"
+        ],
+        "en": [
+          "Flourishing",
+          "Successful",
+          "Beautiful"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "葦": {
+        "ja": "葦",
+        "reading": null,
+        "on": [
+          "い"
+        ],
+        "kun": [
+          "しお.れる",
+          "しな.びる",
+          "しぼ.む",
+          "な.える"
+        ],
+        "en": [
+          "Reed",
+          "Bullrush"
+        ],
+        "topics": [
+          "nature"
+        ]
+      },
+      "礒": {
+        "ja": "礒",
+        "reading": null,
+        "on": [
+          "ぎ",
+          "が"
+        ],
+        "kun": [
+          "いそ",
+          "いわお"
+        ],
+        "en": [
+          "Rock",
+          "Beach",
+          "Shore"
+        ],
+        "topics": [
+          "places",
+          "nature"
+        ]
+      },
+      "咸": {
+        "ja": "咸",
+        "reading": null,
+        "on": [
+          "かん",
+          "げん"
+        ],
+        "kun": [],
+        "en": [
+          "All",
+          "Same"
+        ],
+        "topics": [
+          "quantity",
+          "descriptions"
+        ]
+      },
+      "萌": {
+        "ja": "萌",
+        "reading": null,
+        "on": [
+          "ほう"
+        ],
+        "kun": [
+          "も.える",
+          "きざ.す",
+          "めばえ",
+          "きざ.し"
+        ],
+        "en": [
+          "Show Symptoms Of",
+          "Sprout",
+          "Bud"
+        ],
+        "topics": [
+          "nature"
+        ]
+      },
+      "饗": {
+        "ja": "饗",
+        "reading": null,
+        "on": [
+          "きょう"
+        ],
+        "kun": [
+          "う.ける",
+          "もてな.す"
+        ],
+        "en": [
+          "Banquet"
+        ],
+        "topics": [
+          "food"
+        ]
+      },
+      "歪": {
+        "ja": "歪",
+        "reading": null,
+        "on": [
+          "わい",
+          "え"
+        ],
+        "kun": [
+          "いが.む",
+          "いびつ",
+          "ひず.む",
+          "ゆが.む"
+        ],
+        "en": [
+          "Warp",
+          "Bend",
+          "Strained"
+        ],
+        "topics": [
+          "descriptions",
+          "actions"
+        ]
+      },
+      "冥": {
+        "ja": "冥",
+        "reading": null,
+        "on": [
+          "めい",
+          "みょう"
+        ],
+        "kun": [
+          "くら.い"
+        ],
+        "en": [
+          "Dark"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "偲": {
+        "ja": "偲",
+        "reading": null,
+        "on": [
+          "さい",
+          "し"
+        ],
+        "kun": [
+          "しの.ぶ"
+        ],
+        "en": [
+          "Recollect",
+          "Remember"
+        ],
+        "topics": [
+          "feelings"
+        ]
+      },
+      "壱": {
+        "ja": "壱",
+        "reading": null,
+        "on": [
+          "いち",
+          "いつ"
+        ],
+        "kun": [
+          "ひとつ"
+        ],
+        "en": [
+          "One (in Documents)"
+        ],
+        "topics": [
+          "quantity"
+        ]
+      },
+      "瑠": {
+        "ja": "瑠",
+        "reading": null,
+        "on": [
+          "る",
+          "りゅう"
+        ],
+        "kun": [],
+        "en": [
+          "Lapis Lazuli"
+        ],
+        "topics": [
+          "arts"
+        ]
+      },
+      "韮": {
+        "ja": "韮",
+        "reading": null,
+        "on": [
+          "きゅう",
+          "く"
+        ],
+        "kun": [
+          "にら"
+        ],
+        "en": [
+          "Leek"
+        ],
+        "topics": [
+          "food",
+          "nature"
+        ]
+      },
+      "漕": {
+        "ja": "漕",
+        "reading": null,
+        "on": [
+          "そう"
+        ],
+        "kun": [
+          "こ.ぐ",
+          "はこ.ぶ"
+        ],
+        "en": [
+          "Rowing",
+          "Scull",
+          "Paddle"
+        ],
+        "topics": [
+          "places",
+          "actions"
+        ]
+      },
+      "杵": {
+        "ja": "杵",
+        "reading": null,
+        "on": [
+          "しょ",
+          "そ"
+        ],
+        "kun": [
+          "きね"
+        ],
+        "en": [
+          "Wooden Pestle"
+        ],
+        "topics": [
+          "technology"
+        ]
+      },
+      "薔": {
+        "ja": "薔",
+        "reading": null,
+        "on": [
+          "ば",
+          "しょう",
+          "しょく"
+        ],
+        "kun": [
+          "みずたで"
+        ],
+        "en": [
+          "Water Pepper"
+        ],
+        "topics": [
+          "nature"
+        ]
+      },
+      "膠": {
+        "ja": "膠",
+        "reading": null,
+        "on": [
+          "こう",
+          "きょう"
+        ],
+        "kun": [
+          "にかわ",
+          "にべ"
+        ],
+        "en": [
+          "Glue",
+          "Isinglass"
+        ],
+        "topics": [
+          "technology"
+        ]
+      },
+      "允": {
+        "ja": "允",
+        "reading": null,
+        "on": [
+          "いん"
+        ],
+        "kun": [
+          "じょう",
+          "まこと.に",
+          "ゆるす"
+        ],
+        "en": [
+          "License",
+          "Sincerity",
+          "Permit"
+        ],
+        "topics": [
+          "society"
+        ]
+      },
+      "眞": {
+        "ja": "眞",
+        "reading": null,
+        "on": [
+          "しん"
+        ],
+        "kun": [
+          "ま",
+          "まこと"
+        ],
+        "en": [
+          "Truth",
+          "Reality",
+          "Buddhist Sect"
+        ],
+        "topics": [
+          "society"
+        ]
+      },
+      "蒙": {
+        "ja": "蒙",
+        "reading": null,
+        "on": [
+          "もう",
+          "ぼう"
+        ],
+        "kun": [
+          "こうむ.る",
+          "おお.う",
+          "くら.い"
+        ],
+        "en": [
+          "Ignorance",
+          "Darkness",
+          "Get"
+        ],
+        "topics": [
+          "learning",
+          "actions"
+        ]
+      },
+      "蕃": {
+        "ja": "蕃",
+        "reading": null,
+        "on": [
+          "ばん",
+          "はん"
+        ],
+        "kun": [],
+        "en": [
+          "Grow Luxuriously"
+        ],
+        "topics": [
+          "nature"
+        ]
+      },
+      "呑": {
+        "ja": "呑",
+        "reading": null,
+        "on": [
+          "とん",
+          "どん"
+        ],
+        "kun": [
+          "の.む"
+        ],
+        "en": [
+          "Drink"
+        ],
+        "topics": [
+          "food",
+          "actions"
+        ]
+      },
+      "侯": {
+        "ja": "侯",
+        "reading": null,
+        "on": [
+          "こう"
+        ],
+        "kun": [],
+        "en": [
+          "Marquis",
+          "Lord",
+          "Daimyo"
+        ],
+        "topics": [
+          "people",
+          "society"
+        ]
+      },
+      "碓": {
+        "ja": "碓",
+        "reading": null,
+        "on": [
+          "かく",
+          "たい"
+        ],
+        "kun": [
+          "たし.か",
+          "かく.たる"
+        ],
+        "en": [
+          "Pestle"
+        ],
+        "topics": [
+          "technology"
+        ]
+      },
+      "茗": {
+        "ja": "茗",
+        "reading": null,
+        "on": [
+          "みょう",
+          "めい"
+        ],
+        "kun": [
+          "ちゃ"
+        ],
+        "en": [
+          "Tea"
+        ],
+        "topics": [
+          "food"
+        ]
+      },
+      "瀕": {
+        "ja": "瀕",
+        "reading": null,
+        "on": [
+          "ひん"
+        ],
+        "kun": [
+          "ほとり"
+        ],
+        "en": [
+          "Shore",
+          "Brink",
+          "Verge"
+        ],
+        "topics": [
+          "places"
+        ]
+      },
+      "蒔": {
+        "ja": "蒔",
+        "reading": null,
+        "on": [
+          "し",
+          "じ"
+        ],
+        "kun": [
+          "う.える",
+          "ま.く"
+        ],
+        "en": [
+          "Sow (seeds)"
+        ],
+        "topics": [
+          "work",
+          "nature"
+        ]
+      },
+      "鯉": {
+        "ja": "鯉",
+        "reading": null,
+        "on": [
+          "り"
+        ],
+        "kun": [
+          "こい"
+        ],
+        "en": [
+          "Carp"
+        ],
+        "topics": [
+          "nature"
+        ]
+      },
+      "竪": {
+        "ja": "竪",
+        "reading": null,
+        "on": [
+          "じゅ"
+        ],
+        "kun": [
+          "たて",
+          "た.てる",
+          "こども"
+        ],
+        "en": [
+          "Length",
+          "Height",
+          "Warp"
+        ],
+        "topics": [
+          "quantity",
+          "daily"
+        ]
+      },
+      "弧": {
+        "ja": "弧",
+        "reading": null,
+        "on": [
+          "こ"
+        ],
+        "kun": [],
+        "en": [
+          "Arc",
+          "Arch",
+          "Bow"
+        ],
+        "topics": [
+          "quantity"
+        ]
+      },
+      "瘤": {
+        "ja": "瘤",
+        "reading": null,
+        "on": [
+          "りゅう",
+          "る"
+        ],
+        "kun": [
+          "こぶ"
+        ],
+        "en": [
+          "Lump",
+          "Swelling"
+        ],
+        "topics": [
+          "body"
+        ]
+      },
+      "澤": {
+        "ja": "澤",
+        "reading": null,
+        "on": [
+          "たく"
+        ],
+        "kun": [
+          "さわ",
+          "うるお.い",
+          "うるお.す",
+          "つや"
+        ],
+        "en": [
+          "Swamp"
+        ],
+        "topics": [
+          "nature"
+        ]
+      },
+      "溥": {
+        "ja": "溥",
+        "reading": null,
+        "on": [
+          "ふ",
+          "はく"
+        ],
+        "kun": [
+          "あまねし"
+        ],
+        "en": [
+          "Far And Wide"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "遥": {
+        "ja": "遥",
+        "reading": null,
+        "on": [
+          "よう"
+        ],
+        "kun": [
+          "はる.か"
+        ],
+        "en": [
+          "Far Off",
+          "Distant",
+          "Long Ago"
+        ],
+        "topics": [
+          "places",
+          "time"
+        ]
+      },
+      "或": {
+        "ja": "或",
+        "reading": null,
+        "on": [
+          "わく",
+          "こく",
+          "いき"
+        ],
+        "kun": [
+          "あ.る",
+          "あるい",
+          "あるいは"
+        ],
+        "en": [
+          "Some",
+          "One",
+          "Or"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "訃": {
+        "ja": "訃",
+        "reading": null,
+        "on": [
+          "ふ"
+        ],
+        "kun": [
+          "しらせ"
+        ],
+        "en": [
+          "Obituary"
+        ],
+        "topics": [
+          "society"
+        ]
+      },
+      "矩": {
+        "ja": "矩",
+        "reading": null,
+        "on": [
+          "く"
+        ],
+        "kun": [
+          "かね",
+          "かねざし",
+          "さしがね"
+        ],
+        "en": [
+          "Ruler",
+          "Carpenter's Square"
+        ],
+        "topics": [
+          "technology",
+          "quantity"
+        ]
+      },
+      "厦": {
+        "ja": "厦",
+        "reading": null,
+        "on": [
+          "か",
+          "さ"
+        ],
+        "kun": [
+          "いえ"
+        ],
+        "en": [
+          "House"
+        ],
+        "topics": [
+          "places"
+        ]
+      },
+      "冤": {
+        "ja": "冤",
+        "reading": null,
+        "on": [
+          "えん"
+        ],
+        "kun": [],
+        "en": [
+          "False Charge",
+          "Hatred"
+        ],
+        "topics": [
+          "society",
+          "feelings"
+        ]
+      },
+      "舜": {
+        "ja": "舜",
+        "reading": null,
+        "on": [
+          "しゅん"
+        ],
+        "kun": [],
+        "en": [
+          "Type Of Morning Glory",
+          "Rose Of Sharon",
+          "Althea"
+        ],
+        "topics": [
+          "nature"
+        ]
+      },
+      "侠": {
+        "ja": "侠",
+        "reading": null,
+        "on": [
+          "きょう"
+        ],
+        "kun": [
+          "きゃん",
+          "おとこだて"
+        ],
+        "en": [
+          "Tomboy",
+          "Chivalry"
+        ],
+        "topics": [
+          "people",
+          "descriptions"
+        ]
+      },
+      "贅": {
+        "ja": "贅",
+        "reading": null,
+        "on": [
+          "せい"
+        ],
+        "kun": [
+          "いぼ"
+        ],
+        "en": [
+          "Luxury"
+        ],
+        "topics": [
+          "work"
+        ]
+      },
+      "杖": {
+        "ja": "杖",
+        "reading": null,
+        "on": [
+          "じょう"
+        ],
+        "kun": [
+          "つえ"
+        ],
+        "en": [
+          "Staff",
+          "Cane"
+        ],
+        "topics": [
+          "daily"
+        ]
+      },
+      "畏": {
+        "ja": "畏",
+        "reading": null,
+        "on": [
+          "い"
+        ],
+        "kun": [
+          "おそ.れる",
+          "かしこま.る",
+          "かしこ",
+          "かしこ.し"
+        ],
+        "en": [
+          "Fear",
+          "Majestic",
+          "Graciously"
+        ],
+        "topics": [
+          "descriptions",
+          "feelings"
+        ]
+      },
+      "喉": {
+        "ja": "喉",
+        "reading": null,
+        "on": [
+          "こう"
+        ],
+        "kun": [
+          "のど"
+        ],
+        "en": [
+          "Throat",
+          "Voice"
+        ],
+        "topics": [
+          "body"
+        ]
+      },
+      "汪": {
+        "ja": "汪",
+        "reading": null,
+        "on": [
+          "おう"
+        ],
+        "kun": [],
+        "en": [
+          "Flowing Full",
+          "Expanse Of Water",
+          "Wide"
+        ],
+        "topics": [
+          "nature"
+        ]
+      },
+      "猷": {
+        "ja": "猷",
+        "reading": null,
+        "on": [
+          "ゆう",
+          "よう"
+        ],
+        "kun": [
+          "はかりごと",
+          "はか.る"
+        ],
+        "en": [
+          "Plan",
+          "Scheme",
+          "Plot"
+        ],
+        "topics": [
+          "work"
+        ]
       }
     }
   }
