@@ -1,0 +1,1062 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-continue-6-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit semantic categories cross-checked against Japanese entry and retained English gloss, independently unreviewed. Original uncommon senses preserved.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "8bbeac3005": {
+      "mn": [
+        "холбоотны гэрээ",
+        "холбоо",
+        "эвсэл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "同盟",
+        "r": "どうめい",
+        "en": [
+          "alliance",
+          "union",
+          "league"
+        ]
+      }
+    },
+    "f49ebb3f1c": {
+      "mn": [
+        "бололтой",
+        "яаж ийгээд"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "どうやら",
+        "r": "どうやら",
+        "en": [
+          "it seems like",
+          "somehow or other"
+        ]
+      }
+    },
+    "9844a165bc": {
+      "mn": [
+        "үймээн",
+        "тогтворгүй байдал",
+        "чичрэх"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "動揺",
+        "r": "どうよう",
+        "en": [
+          "disturbance",
+          "unrest",
+          "shaking"
+        ]
+      }
+    },
+    "e05c40bb3c": {
+      "mn": [
+        "чадал",
+        "хөдөлгөгч хүч",
+        "динамик хүч"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "動力",
+        "r": "どうりょく",
+        "en": [
+          "power",
+          "motive power",
+          "dynamic force"
+        ]
+      }
+    },
+    "7842fa57fd": {
+      "mn": [
+        "бүртгэл",
+        "бүртгэх",
+        "бичиж оруулах"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "登録",
+        "r": "とうろく",
+        "en": [
+          "registration",
+          "register",
+          "entry"
+        ]
+      }
+    },
+    "f03d0950ca": {
+      "mn": [
+        "мэтгэлцээн",
+        "хэлэлцүүлэг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "討論",
+        "r": "とうろん",
+        "en": [
+          "debate",
+          "discussion"
+        ]
+      }
+    },
+    "aa03ba1775": {
+      "mn": [
+        "холдох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "遠ざかる",
+        "r": "とおざかる",
+        "en": [
+          "to go far off"
+        ]
+      }
+    },
+    "8c52d34fc9": {
+      "mn": [
+        "тойруу зам"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "遠回り",
+        "r": "とおまわり",
+        "en": [
+          "detour",
+          "roundabout way"
+        ]
+      }
+    },
+    "d49ecb6fe8": {
+      "mn": [
+        "өнгө аяс",
+        "тон"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "トーン",
+        "r": "トーン",
+        "en": [
+          "tone"
+        ]
+      }
+    },
+    "2df626326b": {
+      "mn": [
+        "ямартай ч",
+        "ямар ч байсан",
+        "яаж ийгээд"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "兎角",
+        "r": "とかく",
+        "en": [
+          "anyhow",
+          "anyway",
+          "somehow or other"
+        ]
+      }
+    },
+    "c4a19532a5": {
+      "mn": [
+        "буруутгах",
+        "өө хайх",
+        "зэмлэх"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "咎める",
+        "r": "とがめる",
+        "en": [
+          "to blame",
+          "to find fault",
+          "to take someone to task"
+        ]
+      }
+    },
+    "61384ae276": {
+      "mn": [
+        "хааяа"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "時折",
+        "r": "ときおり",
+        "en": [
+          "sometimes"
+        ]
+      }
+    },
+    "c7ae16d498": {
+      "mn": [
+        "түр зогсох",
+        "тасалдах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "跡切れる",
+        "r": "とぎれる",
+        "en": [
+          "to pause",
+          "to be interrupted"
+        ]
+      }
+    },
+    "1aae8e7f19": {
+      "mn": [
+        "тайлбарлах",
+        "сурталчлах",
+        "номлох"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "説く",
+        "r": "とく",
+        "en": [
+          "to explain",
+          "to advocate",
+          "to preach"
+        ]
+      }
+    },
+    "c290d45d0e": {
+      "mn": [
+        "ирлэх",
+        "зүлгэх",
+        "үрж цэвэрлэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "研ぐ",
+        "r": "とぐ",
+        "en": [
+          "to sharpen",
+          "to grind",
+          "to scour"
+        ]
+      }
+    },
+    "c81695532d": {
+      "mn": [
+        "онцгой ур чадвар"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "特技",
+        "r": "とくぎ",
+        "en": [
+          "special skill"
+        ]
+      }
+    },
+    "d66de4083e": {
+      "mn": [
+        "дарангуйлал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "独裁",
+        "r": "どくさい",
+        "en": [
+          "dictatorship",
+          "despotism"
+        ]
+      }
+    },
+    "4cfa1859c8": {
+      "mn": [
+        "нутгийн онцгой бүтээгдэхүүн",
+        "тусгай бүтээгдэхүүн"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "特産",
+        "r": "とくさん",
+        "en": [
+          "specialty",
+          "special product"
+        ]
+      }
+    },
+    "8d4e07c793": {
+      "mn": [
+        "өөрийн",
+        "өвөрмөц",
+        "онцлог"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "独自",
+        "r": "どくじ",
+        "en": [
+          "original",
+          "peculiar",
+          "characteristic"
+        ]
+      }
+    },
+    "ba4cc6d7fc": {
+      "mn": [
+        "уншигч"
+      ],
+      "topics": [
+        "people",
+        "learning"
+      ],
+      "expected": {
+        "w": "読者",
+        "r": "どくしゃ",
+        "en": [
+          "reader"
+        ]
+      }
+    },
+    "b45b17d66b": {
+      "mn": [
+        "онцлох нийтлэл",
+        "тусгай дугаар",
+        "сурвалжилга"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "特集",
+        "r": "とくしゅう",
+        "en": [
+          "feature (e.g. newspaper)",
+          "special edition",
+          "report"
+        ]
+      }
+    },
+    "8754a51980": {
+      "mn": [
+        "монопол",
+        "дангаар эзэмших"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "独占",
+        "r": "どくせん",
+        "en": [
+          "monopoly"
+        ]
+      }
+    },
+    "28703048eb": {
+      "mn": [
+        "бүтээлийн өвөрмөц чанар"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "独創",
+        "r": "どくそう",
+        "en": [
+          "originality"
+        ]
+      }
+    },
+    "d7b013684f": {
+      "mn": [
+        "оноо",
+        "авсан оноо",
+        "шалгалтын дүн"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "得点",
+        "r": "とくてん",
+        "en": [
+          "score",
+          "points made",
+          "marks obtained"
+        ]
+      }
+    },
+    "2eb5d6529f": {
+      "mn": [
+        "тусгайлан илгээх",
+        "тусгай элч"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "特派",
+        "r": "とくは",
+        "en": [
+          "send specially",
+          "special envoy"
+        ]
+      }
+    },
+    "c21c8f79da": {
+      "mn": [
+        "өвөрмөц",
+        "тухайн зүйлд л байдаг"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "特有",
+        "r": "とくゆう",
+        "en": [
+          "characteristic (of)",
+          "peculiar (to)"
+        ]
+      }
+    },
+    "c3f48454f3": {
+      "mn": [
+        "өргөс",
+        "модны хэлтэрхий",
+        "нурууны өргөс"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "刺",
+        "r": "とげ",
+        "en": [
+          "thorn",
+          "splinter",
+          "spine"
+        ]
+      }
+    },
+    "ef80281ecf": {
+      "mn": [
+        "биелүүлэх",
+        "хүрэх",
+        "гүйцэтгэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "遂げる",
+        "r": "とげる",
+        "en": [
+          "to accomplish",
+          "to achieve",
+          "to carry out"
+        ]
+      }
+    },
+    "75abef3a63": {
+      "mn": [
+        "ор",
+        "өвчтөний ор",
+        "ханын хонхор"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "床",
+        "r": "とこ",
+        "en": [
+          "bed",
+          "sickbed",
+          "alcove"
+        ]
+      }
+    },
+    "e5f9192daa": {
+      "mn": [
+        "нутгийн бүтээгдэхүүн"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "土産",
+        "r": "どさん",
+        "en": [
+          "product of the land"
+        ]
+      }
+    },
+    "7f7552dfdc": {
+      "mn": [
+        "нас",
+        "гэрлэх нас",
+        "өсвөр нас"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "年頃",
+        "r": "としごろ",
+        "en": [
+          "age",
+          "marriageable age",
+          "age of puberty"
+        ]
+      }
+    },
+    "2a6adce990": {
+      "mn": [
+        "хаалга хаах",
+        "түгжих"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "戸締り",
+        "r": "とじまり",
+        "en": [
+          "closing up",
+          "fastening the doors"
+        ]
+      }
+    },
+    "53a5166545": {
+      "mn": [
+        "замдаа",
+        "замын дунд"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "途上",
+        "r": "とじょう",
+        "en": [
+          "en route",
+          "half way"
+        ]
+      }
+    },
+    "7e9c5f0365": {
+      "mn": [
+        "үдэх",
+        "хавтаслах"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "綴じる",
+        "r": "とじる",
+        "en": [
+          "to bind",
+          "to file"
+        ]
+      }
+    },
+    "74fb00cbe2": {
+      "mn": [
+        "суурь",
+        "үндэс",
+        "тулгуур"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "土台",
+        "r": "どだい",
+        "en": [
+          "foundation",
+          "base",
+          "basis"
+        ]
+      }
+    },
+    "f7f005f251": {
+      "mn": [
+        "зогсох",
+        "тасрах",
+        "дуусах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "途絶える",
+        "r": "とだえる",
+        "en": [
+          "to stop",
+          "to cease",
+          "to come to an end"
+        ]
+      }
+    },
+    "70b4d1e574": {
+      "mn": [
+        "тусгай зөвшөөрөл",
+        "патент"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "特許",
+        "r": "とっきょ",
+        "en": [
+          "special permission",
+          "patent"
+        ]
+      }
+    },
+    "1927098b36": {
+      "mn": [
+        "давуу эрх",
+        "тусгай эрх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "特権",
+        "r": "とっけん",
+        "en": [
+          "privilege",
+          "special right"
+        ]
+      }
+    },
+    "f291ca1d87": {
+      "mn": [
+        "агшин",
+        "хором"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "咄嗟",
+        "r": "とっさ",
+        "en": [
+          "moment",
+          "instant"
+        ]
+      }
+    },
+    "dfe5d66fb1": {
+      "mn": [
+        "гэнэт",
+        "гэнэтхэн"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "突如",
+        "r": "とつじょ",
+        "en": [
+          "suddenly",
+          "all of a sudden"
+        ]
+      }
+    },
+    "8be707a42d": {
+      "mn": [
+        "бариул",
+        "атгах хэсэг",
+        "хаалганы товч"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "取っ手",
+        "r": "とって",
+        "en": [
+          "handle",
+          "grip",
+          "knob"
+        ]
+      }
+    },
+    "a75a59840b": {
+      "mn": [
+        "сэтлэн гарах",
+        "том дэвшил",
+        "нэвтрэлт"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "突破",
+        "r": "とっぱ",
+        "en": [
+          "breaking through",
+          "breakthrough",
+          "penetration"
+        ]
+      }
+    },
+    "150cea0f30": {
+      "mn": [
+        "далан",
+        "эрэг"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "土手",
+        "r": "どて",
+        "en": [
+          "embankment",
+          "bank"
+        ]
+      }
+    },
+    "d102cfbac6": {
+      "mn": [
+        "тайлан",
+        "мэдэгдэл",
+        "бүртгэл"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "届け",
+        "r": "とどけ",
+        "en": [
+          "report",
+          "notification",
+          "registration"
+        ]
+      }
+    },
+    "d71baf9f53": {
+      "mn": [
+        "зогсонги болох",
+        "саатах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "滞る",
+        "r": "とどこおる",
+        "en": [
+          "to stagnate",
+          "to be delayed"
+        ]
+      }
+    },
+    "e2a1bdd30c": {
+      "mn": [
+        "эмхлэх",
+        "бэлдэх",
+        "байрлуулах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "整える",
+        "r": "ととのえる",
+        "en": [
+          "to put in order",
+          "to get ready",
+          "to arrange"
+        ]
+      }
+    },
+    "e9f0941d9e": {
+      "mn": [
+        "зөвхөн тэр хүрээнд хязгаарлагдах"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "止まる",
+        "r": "とどまる",
+        "en": [
+          "to be limited to"
+        ]
+      }
+    },
+    "7515db0cfd": {
+      "mn": [
+        "зогсоох",
+        "таслах",
+        "эцэс болгох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "止める",
+        "r": "とどめる",
+        "en": [
+          "to stop",
+          "to cease",
+          "to put an end to"
+        ]
+      }
+    },
+    "d067bdf300": {
+      "mn": [
+        "зогсоох",
+        "таслах",
+        "эцэс болгох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "留める",
+        "r": "とどめる",
+        "en": [
+          "to stop",
+          "to cease",
+          "to put an end to"
+        ]
+      }
+    },
+    "fdd80dff37": {
+      "mn": [
+        "цээжээр унших",
+        "аялан унших",
+        "уриалах"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "唱える",
+        "r": "となえる",
+        "en": [
+          "to recite",
+          "to chant",
+          "to call upon"
+        ]
+      }
+    },
+    "2ed570cfb3": {
+      "mn": [
+        "феодал ноён"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "殿様",
+        "r": "とのさま",
+        "en": [
+          "feudal lord"
+        ]
+      }
+    },
+    "850d0b8295": {
+      "mn": [
+        "хөшиг"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "帳",
+        "r": "とばり",
+        "en": [
+          "curtain"
+        ]
+      }
+    },
+    "9ed26e130c": {
+      "mn": [
+        "сүмогийн дэвжээ"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "土俵",
+        "r": "どひょう",
+        "en": [
+          "arena"
+        ]
+      }
+    },
+    "65aef9dac8": {
+      "mn": [
+        "хаалга",
+        "нээлхий"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "扉",
+        "r": "とびら",
+        "en": [
+          "door",
+          "opening"
+        ]
+      }
+    },
+    "ad3cb7a4b7": {
+      "mn": [
+        "алхах",
+        "явган явах"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "徒歩",
+        "r": "とほ",
+        "en": [
+          "walking",
+          "going on foot"
+        ]
+      }
+    },
+    "ecec76a53b": {
+      "mn": [
+        "нийтийн барилгын ажил"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "土木",
+        "r": "どぼく",
+        "en": [
+          "public works"
+        ]
+      }
+    },
+    "60498e7544": {
+      "mn": [
+        "хомс",
+        "бага",
+        "хязгаарлагдмал"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "乏しい",
+        "r": "とぼしい",
+        "en": [
+          "meagre",
+          "scarce",
+          "limited"
+        ]
+      }
+    },
+    "3c21ade525": {
+      "mn": [
+        "эд баялаг",
+        "хөрөнгө"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "富",
+        "r": "とみ",
+        "en": [
+          "wealth",
+          "fortune"
+        ]
+      }
+    },
+    "aa3dae369b": {
+      "mn": [
+        "баян байх",
+        "баяжих"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "富む",
+        "r": "とむ",
+        "en": [
+          "to be rich",
+          "to become rich"
+        ]
+      }
+    },
+    "3f741eec1a": {
+      "mn": [
+        "хоёулаа",
+        "аль нь ч үгүй",
+        "бүгд"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "共",
+        "r": "とも",
+        "en": [
+          "both",
+          "neither (neg)",
+          "all"
+        ]
+      }
+    }
+  }
+}
