@@ -1,0 +1,15 @@
+# --- машин дээр татсан эх өгөгдөл (asset биш, дахин татаж болно) ---
+.cache/
+node_modules/
+dist/
+build/
+
+# --- серверийн хэрэглэгчийн өгөгдөл ---
+server/data/
+
+# --- редактор / OS ---
+.DS_Store
+*.log
+.vscode/
+.idea/
+*.tsbuildinfo
