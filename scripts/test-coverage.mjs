@@ -71,3 +71,10 @@ for (const file of fs.readdirSync('content/mn/batches').filter(f => /^2026-10-08
     else for (const field of ['on','kun']) assert.deepEqual(evidence[field], entry[field]);
   }
 }
+
+// Regression: 萬 once contained a bare numeric alternative, which is not MN text.
+const tenThousandBatch = read('content/mn/batches/2026-10-08-n1-kanji-sustain-6.json').kanji['萬'];
+assert.deepEqual(tenThousandBatch.mn, ['арван мянга']);
+assert.ok(tenThousandBatch.mn.every(validMn));
+assert.deepEqual(read('public/data/kanji/n1.json').find(e => e.k === '萬').mn, tenThousandBatch.mn);
+assert.equal(validMn('10,000'), false, 'Bare number must not qualify as Mongolian');

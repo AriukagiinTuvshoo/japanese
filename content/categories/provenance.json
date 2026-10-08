@@ -53255,6 +53255,700 @@
         "topics": [
           "actions"
         ]
+      },
+      "j1323500": {
+        "ja": "邪魔",
+        "reading": "じゃま",
+        "en": [
+          "hindrance",
+          "obstacle",
+          "nuisance"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "j1322410": {
+        "ja": "斜めに",
+        "reading": "ななめに",
+        "en": [
+          "diagonally",
+          "obliquely",
+          "slantingly"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "j2265620": {
+        "ja": "彫り",
+        "reading": "ほり",
+        "en": [
+          "carving",
+          "engraving",
+          "chiselled features"
+        ],
+        "topics": [
+          "arts"
+        ]
+      },
+      "j1434040": {
+        "ja": "釣り",
+        "reading": "つり",
+        "en": [
+          "fishing",
+          "angling",
+          "clickbaiting"
+        ],
+        "topics": [
+          "arts",
+          "learning"
+        ]
+      },
+      "j2157330": {
+        "ja": "お邪魔",
+        "reading": "おじゃま",
+        "en": [
+          "hindrance",
+          "intrusion"
+        ],
+        "topics": [
+          "relationships"
+        ]
+      },
+      "j1295180": {
+        "ja": "砕け",
+        "reading": "くだけ",
+        "en": [
+          "breaking (into pieces)",
+          "shattering",
+          "something that has been broken into pieces"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "j1418070": {
+        "ja": "嘆き",
+        "reading": "なげき",
+        "en": [
+          "grief",
+          "lamentation"
+        ],
+        "topics": [
+          "feelings"
+        ]
+      },
+      "j1270770": {
+        "ja": "ご覧なさい",
+        "reading": "ごらんなさい",
+        "en": [
+          "see"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "j1602650": {
+        "ja": "伏す",
+        "reading": "ふす",
+        "en": [
+          "to bend down",
+          "to bow down",
+          "to prostrate oneself"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "j2130700": {
+        "ja": "砕けた",
+        "reading": "くだけた",
+        "en": [
+          "easy (e.g. explanation, description)",
+          "plain",
+          "familiar"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "j1575400": {
+        "ja": "ばい菌",
+        "reading": "ばいきん",
+        "en": [
+          "germ",
+          "germs",
+          "bacteria"
+        ],
+        "topics": [
+          "body"
+        ]
+      },
+      "j1453860": {
+        "ja": "洞窟",
+        "reading": "どうくつ",
+        "en": [
+          "cavern",
+          "cave",
+          "cave system"
+        ],
+        "topics": [
+          "places"
+        ]
+      },
+      "j1500180": {
+        "ja": "伏する",
+        "reading": "ふくする",
+        "en": [
+          "to crouch",
+          "to stoop",
+          "to bend down"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "j1952930": {
+        "ja": "酔い",
+        "reading": "よい",
+        "en": [
+          "drunkenness",
+          "intoxication",
+          "motion sickness"
+        ],
+        "topics": [
+          "body"
+        ]
+      },
+      "j1002690": {
+        "ja": "お盆",
+        "reading": "おぼん",
+        "en": [
+          "O-Bon",
+          "Obon",
+          "Bon Festival"
+        ],
+        "topics": [
+          "society"
+        ]
+      },
+      "j1224070": {
+        "ja": "飢え",
+        "reading": "うえ",
+        "en": [
+          "hunger",
+          "starvation"
+        ],
+        "topics": [
+          "body"
+        ]
+      },
+      "j2236240": {
+        "ja": "イースト菌",
+        "reading": "イーストきん",
+        "en": [
+          "yeast cell"
+        ],
+        "topics": [
+          "food",
+          "learning"
+        ]
+      },
+      "j1633840": {
+        "ja": "如き",
+        "reading": "ごとき",
+        "en": [
+          "like",
+          "as if",
+          "the same as"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "j1429610": {
+        "ja": "跳ね",
+        "reading": "はね",
+        "en": [
+          "splashes (usu. of mud)",
+          "close (e.g. of a theatrical performance)",
+          "breakup"
+        ],
+        "topics": [
+          "arts"
+        ]
+      },
+      "j1370860": {
+        "ja": "垂れ",
+        "reading": "たれ",
+        "en": [
+          "sauce (esp. soy or mirin-based dipping sauce)",
+          "hanging",
+          "something hanging (flap, lappet, etc.)"
+        ],
+        "topics": [
+          "food",
+          "daily"
+        ]
+      },
+      "j1150130": {
+        "ja": "哀れみ",
+        "reading": "あわれみ",
+        "en": [
+          "pity",
+          "compassion"
+        ],
+        "topics": [
+          "feelings"
+        ]
+      },
+      "j2765970": {
+        "ja": "縛り",
+        "reading": "しばり",
+        "en": [
+          "binding",
+          "regulation",
+          "limit"
+        ],
+        "topics": [
+          "society"
+        ]
+      },
+      "j1609020": {
+        "ja": "飽き",
+        "reading": "あき",
+        "en": [
+          "weariness",
+          "boredom",
+          "tedium"
+        ],
+        "topics": [
+          "feelings"
+        ]
+      },
+      "j1328710": {
+        "ja": "狩り",
+        "reading": "かり",
+        "en": [
+          "hunting",
+          "harvesting (e.g. berries, fruit)",
+          "picking"
+        ],
+        "topics": [
+          "nature",
+          "work"
+        ]
+      },
+      "j2633130": {
+        "ja": "鍛え",
+        "reading": "きたえ",
+        "en": [
+          "forging",
+          "tempering",
+          "drilling"
+        ],
+        "topics": [
+          "technology",
+          "learning"
+        ]
+      },
+      "j1267550": {
+        "ja": "胡桃",
+        "reading": "くるみ",
+        "en": [
+          "walnut (Juglans spp., esp. Juglans regia)"
+        ],
+        "topics": [
+          "food"
+        ]
+      },
+      "j1469540": {
+        "ja": "捻挫",
+        "reading": "ねんざ",
+        "en": [
+          "sprain",
+          "twist",
+          "wrench"
+        ],
+        "topics": [
+          "body"
+        ]
+      },
+      "j1291480": {
+        "ja": "沙汰",
+        "reading": "さた",
+        "en": [
+          "affair",
+          "state",
+          "incident"
+        ],
+        "topics": [
+          "society"
+        ]
+      },
+      "j1416860": {
+        "ja": "誰も",
+        "reading": "だれも",
+        "en": [
+          "everyone",
+          "anyone",
+          "no one"
+        ],
+        "topics": [
+          "people",
+          "learning"
+        ]
+      },
+      "j1445650": {
+        "ja": "奴隷",
+        "reading": "どれい",
+        "en": [
+          "slave",
+          "servant",
+          "slavery"
+        ],
+        "topics": [
+          "society",
+          "people"
+        ]
+      },
+      "j1416850": {
+        "ja": "誰でも",
+        "reading": "だれでも",
+        "en": [
+          "anyone",
+          "anybody",
+          "everyone"
+        ],
+        "topics": [
+          "people"
+        ]
+      },
+      "j1631830": {
+        "ja": "癖に",
+        "reading": "くせに",
+        "en": [
+          "and yet",
+          "though",
+          "when"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "j2771310": {
+        "ja": "炒め",
+        "reading": "いため",
+        "en": [
+          "fried dish"
+        ],
+        "topics": [
+          "food"
+        ]
+      },
+      "j1004710": {
+        "ja": "この頃",
+        "reading": "このごろ",
+        "en": [
+          "these days",
+          "nowadays",
+          "now"
+        ],
+        "topics": [
+          "time"
+        ]
+      },
+      "j2547920": {
+        "ja": "その頃",
+        "reading": "そのころ",
+        "en": [
+          "at that time",
+          "in those days",
+          "at that moment"
+        ],
+        "topics": [
+          "time"
+        ]
+      },
+      "j1260500": {
+        "ja": "鍵をかける",
+        "reading": "かぎをかける",
+        "en": [
+          "to lock"
+        ],
+        "topics": [
+          "actions",
+          "daily"
+        ]
+      },
+      "j1952290": {
+        "ja": "腫れ",
+        "reading": "はれ",
+        "en": [
+          "swelling",
+          "boil"
+        ],
+        "topics": [
+          "body"
+        ]
+      },
+      "j1389960": {
+        "ja": "尖った",
+        "reading": "とがった",
+        "en": [
+          "pointed",
+          "sharp",
+          "sharp (e.g. voice)"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "j1391560": {
+        "ja": "煎餅",
+        "reading": "せんべい",
+        "en": [
+          "rice cracker",
+          "senbei",
+          "Japanese cracker"
+        ],
+        "topics": [
+          "food"
+        ]
+      },
+      "j1599760": {
+        "ja": "匂い",
+        "reading": "におい",
+        "en": [
+          "odour",
+          "odor",
+          "scent"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "j1504170": {
+        "ja": "分賦",
+        "reading": "ぶんぷ",
+        "en": [
+          "assignment",
+          "allocation"
+        ],
+        "topics": [
+          "work"
+        ]
+      },
+      "j1504070": {
+        "ja": "分派",
+        "reading": "ぶんぱ",
+        "en": [
+          "faction",
+          "branch",
+          "sect"
+        ],
+        "topics": [
+          "society"
+        ]
+      },
+      "j1586970": {
+        "ja": "案分",
+        "reading": "あんぶん",
+        "en": [
+          "proportional division",
+          "proportional distribution"
+        ],
+        "topics": [
+          "quantity"
+        ]
+      },
+      "j1180020": {
+        "ja": "応分",
+        "reading": "おうぶん",
+        "en": [
+          "according to one's abilities",
+          "appropriate",
+          "reasonable"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "j1617840": {
+        "ja": "検分",
+        "reading": "けんぶん",
+        "en": [
+          "inspection",
+          "examination",
+          "survey"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "j1881370": {
+        "ja": "士分",
+        "reading": "しぶん",
+        "en": [
+          "status of samurai"
+        ],
+        "topics": [
+          "society"
+        ]
+      },
+      "j1503940": {
+        "ja": "分隊",
+        "reading": "ぶんたい",
+        "en": [
+          "squad",
+          "team"
+        ],
+        "topics": [
+          "society"
+        ]
+      },
+      "j2829135": {
+        "ja": "叩く",
+        "reading": "はたく",
+        "en": [
+          "to dust",
+          "to remove dust",
+          "to slap"
+        ],
+        "topics": [
+          "actions",
+          "daily"
+        ]
+      },
+      "j1503460": {
+        "ja": "分遣",
+        "reading": "ぶんけん",
+        "en": [
+          "detachment",
+          "detail"
+        ],
+        "topics": [
+          "society"
+        ]
+      },
+      "j1636000": {
+        "ja": "株分け",
+        "reading": "かぶわけ",
+        "en": [
+          "root division"
+        ],
+        "topics": [
+          "nature"
+        ]
+      },
+      "j1946390": {
+        "ja": "分離派",
+        "reading": "ぶんりは",
+        "en": [
+          "separatists",
+          "secessionists"
+        ],
+        "topics": [
+          "society"
+        ]
+      },
+      "j1896890": {
+        "ja": "藤氏",
+        "reading": "とうし",
+        "en": [
+          "Fujiwara family"
+        ],
+        "topics": [
+          "people"
+        ]
+      },
+      "j2742680": {
+        "ja": "分級",
+        "reading": "ぶんきゅう",
+        "en": [
+          "classification (of particles, using fluid resistance)"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "j1503550": {
+        "ja": "分載",
+        "reading": "ぶんさい",
+        "en": [
+          "publishing part by part (e.g. in a magazine)"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "j1834310": {
+        "ja": "振分け",
+        "reading": "ふりわけ",
+        "en": [
+          "divide",
+          "parting",
+          "separating"
+        ],
+        "topics": [
+          "actions"
+        ]
+      },
+      "j1969290": {
+        "ja": "モル分率",
+        "reading": "モルぶんりつ",
+        "en": [
+          "molar fraction"
+        ],
+        "topics": [
+          "quantity",
+          "learning"
+        ]
+      },
+      "j1612930": {
+        "ja": "びしょ濡れ",
+        "reading": "びしょぬれ",
+        "en": [
+          "sopping wet",
+          "dripping wet",
+          "sodden"
+        ],
+        "topics": [
+          "descriptions"
+        ]
+      },
+      "j1503920": {
+        "ja": "分節",
+        "reading": "ぶんせつ",
+        "en": [
+          "articulation"
+        ],
+        "topics": [
+          "learning"
+        ]
+      },
+      "j2517320": {
+        "ja": "分離器",
+        "reading": "ぶんりき",
+        "en": [
+          "separator",
+          "extractor"
+        ],
+        "topics": [
+          "technology"
+        ]
+      },
+      "j2517340": {
+        "ja": "分析的",
+        "reading": "ぶんせきてき",
+        "en": [
+          "analytical",
+          "analytic"
+        ],
+        "topics": [
+          "learning"
+        ]
       }
     },
     "kanji": {
