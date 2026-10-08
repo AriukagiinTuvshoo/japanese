@@ -4,7 +4,7 @@ import { href, useQuery } from "../lib/router";
 import { useStore } from "../lib/store";
 import { loadGrammar } from "../lib/data";
 import type { Grammar, Level } from "../lib/types";
-import { LEVEL_LABEL } from "../lib/text";
+import { grammarLabel, LEVEL_LABEL } from "../lib/text";
 import { Bar, Card, Chip, Empty, Input, LevelBadge, Pager, Select, Spinner } from "../components/ui";
 
 const PER_PAGE = 40;
@@ -96,7 +96,7 @@ function GrammarCard({ g, done, onToggle }: { g: Grammar; done: boolean; onToggl
       <div className="flex items-start gap-3">
         <a href={href("grammar", g.id)} className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="font-jp text-[1.15rem] font-bold text-sumi-900">{g.p}</span>
+            <span className="font-jp text-[1.15rem] font-bold text-sumi-900">{grammarLabel(g.p)}</span>
             <LevelBadge level={g.lvl} size="sm" />
             {done && <Chip tone="matcha">✓ үзсэн</Chip>}
           </div>

@@ -5,6 +5,35 @@ import type { Level } from "./types";
 export const HIRA_START = 0x3041;
 export const KATA_START = 0x30a1;
 
+const GRAMMAR_LABELS: Record<string, string> = {
+  subject: "өгүүлэгдэхүүн",
+  time: "цаг хугацаа",
+  destination: "очих газар",
+  "place of existence": "оршин буй байрлал",
+  "indirect object": "шууд бус тусагдахуун",
+  frequency: "давтамж",
+  "place of action": "үйлдэл болох газар",
+  means: "арга хэрэгсэл",
+  and: "холбоос",
+  with: "хамт",
+  or: "эсвэл",
+  possessive: "эзэмшил",
+  from: "эхлэл",
+  until: "төгсгөл",
+  question: "асуулт",
+  named: "нэршил",
+  "na-adjective": "な-тэмдэг нэр",
+  approximately: "ойролцоо хэмжээ",
+};
+
+/** Дүрмийн pattern дотор үлдсэн англи тайлбар шошгыг монголоор харуулна. */
+export function grammarLabel(pattern: string) {
+  return pattern.replace(/[（(]([^）)]+)[）)]/g, (whole, label: string) => {
+    const translated = GRAMMAR_LABELS[label.trim().toLowerCase()];
+    return translated ? `（${translated}）` : whole;
+  });
+}
+
 export function isKanji(ch: string) {
   const c = ch.codePointAt(0) ?? 0;
   return (c >= 0x3400 && c <= 0x4dbf) || (c >= 0x4e00 && c <= 0x9fff) || (c >= 0xf900 && c <= 0xfaff);
