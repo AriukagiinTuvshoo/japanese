@@ -2,7 +2,7 @@
 
 **Incomplete. PR #12 must remain draft and unmerged. No production completion is claimed.**
 
-Baseline `6cf8ca1`: 7,170 missing meanings. Current batches add 5,633 net meanings, all 526 grammar formation translations and 837 N5–N3 grammar example translations. AI-authored, independently unreviewed; coverage is not semantic approval.
+Baseline `6cf8ca1`: 7,170 missing meanings. Current batches add 6,113 net meanings, all 526 grammar formation translations and 837 N5–N3 grammar example translations. AI-authored, independently unreviewed; coverage is not semantic approval.
 
 | Level | Missing vocabulary meanings | Missing kanji meanings | Missing grammar meanings |
 |---|---:|---:|---:|
@@ -10,10 +10,10 @@ Baseline `6cf8ca1`: 7,170 missing meanings. Current batches add 5,633 net meanin
 | N4 | 0 | 0 | 0 |
 | N3 | 0 | 0 | 0 |
 | N2 | 0 | 0 | 0 |
-| N1 | 811 | 726 | 0 |
-| Total | 811 | 726 | 0 |
+| N1 | 511 | 546 | 0 |
+| Total | 511 | 546 | 0 |
 
-Remaining: **1,537 meanings, 14,407 examples** (13,718 vocabulary + 689 N2/N1 grammar), **0 formations, 2,961 unclassified entries, 0 missing new-batch provenance records; 6,503 unchanged legacy/unreviewed meanings of unknown authorship (documented, not release-blocking), 10 unresolved source issues**. Invalid categories and mislabeled MN: zero. Measures overlap; do not sum as distinct entries.
+Remaining: **1,057 meanings, 14,407 examples** (13,718 vocabulary + 689 N2/N1 grammar), **0 formations, 2,713 unclassified entries, 0 missing new-batch provenance records; 6,503 unchanged legacy/unreviewed meanings of unknown authorship (documented, not release-blocking), 10 unresolved source issues**. Invalid categories and mislabeled MN: zero. Measures overlap; do not sum as distinct entries.
 
 N5 vocabulary/kanji and N4 kanji are fully classified. Categories support multiple topics, including relationships. Explicit semantic override evidence is maintained in `content/categories/provenance.json`. Unmatched entries remain visibly filterable, not hidden in a catch-all. Source warnings retain original Japanese/English and block release. Existing drafts and new translations still need accuracy review. Page-wide bilingual localization audit remains incomplete, notably Admin.
 
@@ -40,7 +40,7 @@ Continuation added five 60-entry stable-ID/source-guarded batches (N4/N3/N2 voca
 
 Latest group: another five 60-entry guarded batches (300 meanings), 146 fewer unclassified entries. Coverage recalculated after the N4/N3/N2 group and again after the N1 vocabulary/kanji group. No catch-all assigned. Five existing source warnings preserved.
 
-Another five 60-entry guarded batches applied and tested. A legitimate dictionary sense containing the placeholder-detection phrase was rewritten naturally without weakening the validator. Missing meanings 1,537; unclassified 2,961; all five source issues intact.
+Another five 60-entry guarded batches applied and tested. A legitimate dictionary sense containing the placeholder-detection phrase was rewritten naturally without weakening the validator. Missing meanings 1,057; unclassified 2,713; all five source issues intact.
 
 Sustained continuation: five additional 60-entry guarded meaning/topic batches; strict coverage recalculated after each individual batch. All five source issues preserved and blocking. Category evidence manifest refreshed for all overrides. Lightweight checks passed; browser/production deferred.
 
@@ -65,7 +65,7 @@ Withdrew the earlier 気品/きひん aroma translation: Japanese and retained E
 
 Four additional unresolved source sense/reading issues (悪い/にくい, 熱量/temperature, ファン/fun, フォーム/foam) are withheld and explicitly blocking. Together with 気品 and the original five blockers, total source issues are now 10. Uncertainty is not a source correction or independent review. Several unusual records remain withheld for subsequent dictionary review; no comprehensive linguistic approval claimed.
 
-The seven batches add 420 meanings; net reduction in missing meanings is 419 because one suspect older translation was withdrawn. N1 vocabulary missing 1231; N1 kanji missing 726. Examples, UI localization, human review and exhaustive browser checks remain unfinished. No merge or deploy.
+The seven batches add 420 meanings; net reduction in missing meanings is 419 because one suspect older translation was withdrawn. N1 vocabulary missing 1231; N1 kanji missing 546. Examples, UI localization, human review and exhaustive browser checks remain unfinished. No merge or deploy.
 
 Steady-round checks: typecheck, data validation, route/coverage/withdrawal regressions, all 13,673 source-record retention checks and frontend build passed. Strict completion still exits 1, as required. Legacy unknown-author count remains 6,503.
 
@@ -74,6 +74,15 @@ Steady-round checks: typecheck, data validation, route/coverage/withdrawal regre
 
 Added 420 N1 vocabulary and 180 N1 kanji meanings in ten batches of exactly 60. Vocabulary asserts stable ID plus exact `w/r/en`; kanji asserts stable `k/on/kun/en`. Independent review is still outstanding. Coverage recalculated after every batch: missing meanings 2077 → 2017 → 1957 → 1897 → 1837 → 1777 → 1717 → 1657 → 1597 → 1537. Unclassified reduced 3229 → 2961. All ten previously recorded source conflicts remain blocking; no guess assigned to those records. The category manifest now includes kanji on/kun reading evidence alongside retained English and source headwords.
 
-Current N1 vocabulary missing 811; N1 kanji missing 726. Examples remain 14407; formations/new provenance gaps/mislabeled MN/invalid categories zero; legacy unchanged 6503. Queued follow-up features are not started: primary content, semantic review, UI/bilingual browser gates and verified release take precedence. No merge or deploy.
+Current N1 vocabulary missing 511; N1 kanji missing 546. Examples remain 14407; formations/new provenance gaps/mislabeled MN/invalid categories zero; legacy unchanged 6503. Queued follow-up features are not started: primary content, semantic review, UI/bilingual browser gates and verified release take precedence. No merge or deploy.
 
 Persist-round typecheck, structural validation, routes/coverage/source-guard/category-evidence regressions, 13,673-record retention and build passed. Strict coverage exits 1 intentionally; this is not a release pass. Exhaustive bilingual browser and independent human review still outstanding.
+
+Sustain round added 120 N1 vocabulary and 60 N1 kanji meanings in three guarded 60-entry batches. Coverage recomputed after each: 1477, 1417, 1357 missing meanings. All ten source blockers retained; independent review and remaining scope unfinished. No merge/deploy.
+
+
+## Sustained round — eight 60-entry batches (480 meanings)
+
+Added 300 N1 vocabulary and 180 N1 kanji meanings. Exact stable-ID `w/r/en` or `k/on/kun/en` guards; semantic topics with refreshed source/reading evidence. Coverage recomputed after every batch: missing meanings 1477 → 1417 → 1357 → 1297 → 1237 → 1177 → 1117 → 1057. All ten recorded source conflicts retained as visible release blockers. JMdict-derived final vocabulary batches cite their actual retained dataset rather than OpenJLPT. New content remains AI-authored and independently unreviewed.
+
+Current missing meanings: vocabulary 511, kanji 546. Unclassified 2713; untranslated examples 14407. No queued follow-up features started, no merge/deploy. Typecheck/data/regressions/retention/build and strict gate rerun; strict completion remains failing, not a release pass.

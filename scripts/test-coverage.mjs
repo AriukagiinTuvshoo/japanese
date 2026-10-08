@@ -50,7 +50,7 @@ assert.ok(!read('content/categories/overrides.json').vocab.e05bb17edd);
 
 // Persist-round source guards and category evidence are exact, not count-only checks.
 const categoryEvidence = read('content/categories/provenance.json');
-for (const file of fs.readdirSync('content/mn/batches').filter(f => /^2026-10-08-n1-(vocab|kanji)-persist-\d+\.json$/.test(f))) {
+for (const file of fs.readdirSync('content/mn/batches').filter(f => /^2026-10-08-n1-(vocab|kanji)-(persist|sustain)-\d+\.json$/.test(f))) {
   const batch = read(`content/mn/batches/${file}`);
   const kind = batch.vocab ? 'vocab' : 'kanji';
   const records = batch[kind];
