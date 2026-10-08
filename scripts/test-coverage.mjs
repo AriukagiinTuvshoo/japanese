@@ -138,3 +138,48 @@ for (const file of fs.readdirSync('content/mn/batches').filter(f => /^2026-10-08
  else assert.equal(Object.keys(batch.vocab).length, 50);
  assert.equal(batch.provenance.reviewStatus, 'unreviewed');
 }
+
+for (const file of fs.readdirSync('content/mn/batches').filter(f => /^2026-10-08-n[34]-examples-sustained-\d+\.json$/.test(f))) {
+ const batch = read(`content/mn/batches/${file}`);
+ const lv = file.match(/-n([34])-/)[1];
+ const data = read(`public/data/vocab/n${lv}.json`);
+ let count = 0;
+ for (const [id, r] of Object.entries(batch.vocab)) {
+  const entry = data.find(e => e.id === id);
+  assert.deepEqual(Object.keys(r.expected).sort(), ['en','r','w']);
+  for (const [f,v] of Object.entries(r.expected)) assert.deepEqual(entry[f],v);
+  for (const [ja,v] of Object.entries(r.examples)) {
+   const matches=entry.ex.filter(e=>e.ja===ja); assert.equal(matches.length,1);
+   const ex=matches[0]; assert.equal(ex.en,v.en); assert.equal(ex.mn,v.mn);
+   assert.equal(ex.mn_provenance,batch.provenance.id); assert.ok(validMn(ex.mn)); count++;
+  }
+ }
+ assert.equal(count, lv==='4' && file.endsWith('-5.json') ? 33 : lv==='3' && file.endsWith('-2.json') ? 22 : 40);
+ assert.equal(batch.provenance.reviewStatus,'unreviewed');
+}
+
+const grammarBatch=read('content/mn/batches/2026-10-08-n2-grammar-examples-sustained-1.json');
+let grammarSentences=0;
+for(const [id,r] of Object.entries(grammarBatch.grammar)) {
+ const e=read('public/data/grammar/n2.json').find(e=>e.id===id);
+ for(const [f,v] of Object.entries(r.expected)) assert.deepEqual(e[f],v);
+ for(const [ja,v] of Object.entries(r.examples)) {
+  const matches=e.ex.filter(x=>x.ja===ja);assert.equal(matches.length,1);
+  assert.equal(matches[0].en,v.en);assert.equal(matches[0].mn,v.mn);
+  assert.equal(matches[0].mn_provenance,grammarBatch.provenance.id);assert.ok(validMn(v.mn));grammarSentences++;
+ }
+}
+assert.equal(grammarSentences,6);
+const topicBatch=read('content/mn/batches/2026-10-08-n4-topics-sustained-1.json');
+assert.equal(Object.keys(topicBatch.vocab).length,20);
+for(const [id,r] of Object.entries(topicBatch.vocab)) {
+ const e=read('public/data/vocab/n4.json').find(e=>e.id===id);
+ for(const [f,v] of Object.entries(r.expected))assert.deepEqual(e[f],v);
+ const evidence=read('content/categories/provenance.json').entries.vocab[id];
+ assert.deepEqual(evidence.topics,r.topics);assert.equal(evidence.ja,e.w);assert.equal(evidence.reading,e.r);assert.deepEqual(evidence.en,e.en);
+}
+for(const r of read('content/mn/example-source-audit-2026-10-08.json').records) {
+ const e=read(`public/data/vocab/${r.level}.json`).find(e=>e.id===r.id);
+ for(const [f,v] of Object.entries(r.expected))assert.deepEqual(e[f],v);
+ const x=e.ex.find(x=>x.ja===r.ja);assert.equal(x.en,r.en);assert.ok(!x.mn);
+}

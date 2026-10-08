@@ -42,9 +42,9 @@
       "vocab": {
         "entries": 1080,
         "missingMeanings": 0,
-        "missingExamples": 1214,
+        "missingExamples": 1021,
         "missingForms": 0,
-        "unclassified": 164,
+        "unclassified": 144,
         "invalidCategories": 0,
         "missingProvenance": 0,
         "mislabeledMn": 0,
@@ -77,7 +77,7 @@
       "vocab": {
         "entries": 2279,
         "missingMeanings": 0,
-        "missingExamples": 3218,
+        "missingExamples": 3156,
         "missingForms": 0,
         "unclassified": 591,
         "invalidCategories": 0,
@@ -134,7 +134,7 @@
       "grammar": {
         "entries": 123,
         "missingMeanings": 0,
-        "missingExamples": 323,
+        "missingExamples": 317,
         "missingForms": 0,
         "unclassified": 0,
         "invalidCategories": 0,
@@ -181,9 +181,9 @@
   },
   "totals": {
     "missingMeanings": 62,
-    "missingExamples": 14148,
+    "missingExamples": 13887,
     "missingForms": 0,
-    "unclassified": 2115,
+    "unclassified": 2095,
     "invalidCategories": 0,
     "missingProvenance": 0,
     "mislabeledMn": 0,

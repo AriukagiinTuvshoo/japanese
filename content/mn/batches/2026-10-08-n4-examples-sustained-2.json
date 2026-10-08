@@ -1,0 +1,407 @@
+{
+  "provenance": {
+    "id": "mn-n4-examples-sustained-2-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian compared with exact Japanese sentence and retained English; stable entry w/r/en guards. Suspect sentences withheld. Independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n4.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "770aa71095": {
+      "expected": {
+        "w": "いじめる",
+        "r": "いじめる",
+        "en": [
+          "to tease"
+        ]
+      },
+      "examples": {
+        "彼はよく友人をいじめたものだ。": {
+          "en": "He used to bully his friends.",
+          "mn": "Тэр найзуудаа байнга дээрэлхдэг байсан."
+        },
+        "私は彼をいじめたことを後悔した。": {
+          "en": "I felt bad about picking on him.",
+          "mn": "Би түүнийг дээрэлхсэндээ харамссан."
+        }
+      }
+    },
+    "13ab63d79a": {
+      "expected": {
+        "w": "以上",
+        "r": "いじょう",
+        "en": [
+          "more than",
+          "this is all"
+        ]
+      },
+      "examples": {
+        "以上ですか？": {
+          "en": "Is that all?",
+          "mn": "Ингээд бүгд үү?"
+        },
+        "必要以上にお金を使わないようにしなさい。": {
+          "en": "Try not to spend more money than is necessary.",
+          "mn": "Хэрэгцээнээсээ илүү мөнгө үрэхгүй байхыг хичээгээрэй."
+        }
+      }
+    },
+    "05b5de61ab": {
+      "expected": {
+        "w": "急ぐ",
+        "r": "いそぐ",
+        "en": [
+          "to hurry"
+        ]
+      },
+      "examples": {
+        "ニックはバスに間に合うように急いだ。": {
+          "en": "Nick hurried to catch the bus.",
+          "mn": "Ник автобусандаа амжих гэж яарав."
+        },
+        "水を少しもってきてくれ——急いで。": {
+          "en": "Bring me some water, and be quick about it.",
+          "mn": "Надад жаахан ус авчир, хурдлаарай."
+        }
+      }
+    },
+    "6dbf756da1": {
+      "expected": {
+        "w": "致す",
+        "r": "いたす",
+        "en": [
+          "(humble) to do"
+        ]
+      },
+      "examples": {
+        "お取り寄せいたしましょうか。": {
+          "en": "Would you like me to order it?",
+          "mn": "Танд захиалж авчруулж өгөх үү?"
+        }
+      }
+    },
+    "47cc7185d5": {
+      "expected": {
+        "w": "いただく",
+        "r": "いただく",
+        "en": [
+          "(humble) to receive"
+        ]
+      },
+      "examples": {
+        "九時に来ていただきたいのですが。": {
+          "en": "I'd like you to come at nine.",
+          "mn": "Таныг есөн цагт ирээсэй гэж хүсэж байна."
+        },
+        "とても親切にしていただきました。": {
+          "en": "You've been very good to me.",
+          "mn": "Та надад их сайхан хандсан."
+        }
+      }
+    },
+    "bf82bb12d2": {
+      "expected": {
+        "w": "一度",
+        "r": "いちど",
+        "en": [
+          "once"
+        ]
+      },
+      "examples": {
+        "人間はこの世に一度しか生きない。": {
+          "en": "One lives but once in the world.",
+          "mn": "Хүн энэ хорвоод ганцхан удаа амьдардаг."
+        },
+        "週に一度でいいから運動しなさい。": {
+          "en": "Try to exercise at least once a week.",
+          "mn": "Долоо хоногт нэг удаа ч гэсэн дасгал хийгээрэй."
+        }
+      }
+    },
+    "cf69ef2274": {
+      "expected": {
+        "w": "一生懸命",
+        "r": "いっしょうけんめい",
+        "en": [
+          "with utmost effort"
+        ]
+      },
+      "examples": {
+        "もっと一生懸命勉強すべきだったのに。": {
+          "en": "You should have worked harder.",
+          "mn": "Илүү шаргуу сурах ёстой байсан юмсан."
+        },
+        "今後はもっと一生懸命勉強しなさい。": {
+          "en": "Study harder from now on.",
+          "mn": "Одооноос илүү шаргуу сураарай."
+        }
+      }
+    },
+    "95f7288e1b": {
+      "expected": {
+        "w": "いっぱい",
+        "r": "いっぱい",
+        "en": [
+          "full"
+        ]
+      },
+      "examples": {
+        "このボトルに水をいっぱい入れてください。": {
+          "en": "Please fill this bottle with water.",
+          "mn": "Энэ савыг усаар дүүргэж өгнө үү."
+        },
+        "たとえ一日いっぱい掛かってもそのタイプを仕上げます。": {
+          "en": "Even if it takes me the whole day, I will do the typing.",
+          "mn": "Бүтэн өдөр болсон ч би шивэх ажлаа дуусгана."
+        }
+      }
+    },
+    "3de1fe452d": {
+      "expected": {
+        "w": "糸",
+        "r": "いと",
+        "en": [
+          "thread"
+        ]
+      },
+      "examples": {
+        "長い糸はからまりやすい。": {
+          "en": "A long thread is easily entangled.",
+          "mn": "Урт утас амархан орооцолддог."
+        },
+        "この糸はすぐもつれる。": {
+          "en": "This thread tangles easily.",
+          "mn": "Энэ утас амархан орооцолддог."
+        }
+      }
+    },
+    "556e3e0d99": {
+      "expected": {
+        "w": "以内",
+        "r": "いない",
+        "en": [
+          "within"
+        ]
+      },
+      "examples": {
+        "１週間以内に電話します。": {
+          "en": "I'll call you within a week.",
+          "mn": "Би долоо хоногийн дотор утасдана."
+        },
+        "一週間以内にその仕事を終えるでしょう。": {
+          "en": "I'll finish the work in a week or less.",
+          "mn": "Би тэр ажлыг долоо хоногийн дотор дуусгана."
+        }
+      }
+    },
+    "11d4a3118b": {
+      "expected": {
+        "w": "田舎",
+        "r": "いなか",
+        "en": [
+          "countryside"
+        ]
+      },
+      "examples": {
+        "去年の夏、父の田舎に行きました。": {
+          "en": "I visited my father's hometown last summer.",
+          "mn": "Өнгөрсөн зун аавынхаа нутагт очсон."
+        },
+        "私はむしろ田舎に一人で住みたい。": {
+          "en": "I would rather live alone in the country.",
+          "mn": "Би харин хөдөө ганцаараа амьдрахыг илүүд үзнэ."
+        }
+      }
+    },
+    "877a39a99f": {
+      "expected": {
+        "w": "祈る",
+        "r": "いのる",
+        "en": [
+          "to pray"
+        ]
+      },
+      "examples": {
+        "早くよくなられるように祈っています。": {
+          "en": "I hope you'll get well soon.",
+          "mn": "Таныг хурдан эдгээсэй гэж залбирч байна."
+        },
+        "雨が正午前にはやむよう祈っていたのですが。": {
+          "en": "We had hoped that the rain would stop before noon.",
+          "mn": "Бороо үдээс өмнө зогсоосой гэж найдаж байсан юмсан."
+        }
+      }
+    },
+    "833af5347e": {
+      "expected": {
+        "w": "植える",
+        "r": "うえる",
+        "en": [
+          "to plant",
+          "to grow"
+        ]
+      },
+      "examples": {
+        "私は庭にバラを植えた。": {
+          "en": "I planted roses in the garden.",
+          "mn": "Би цэцэрлэгт сарнай тарьсан."
+        },
+        "ここにたくさん植えよう。": {
+          "en": "I will grow many trees here.",
+          "mn": "Энд олныг тарья."
+        }
+      }
+    },
+    "bf69a1d9f2": {
+      "expected": {
+        "w": "うかがう",
+        "r": "うかがう",
+        "en": [
+          "to visit"
+        ]
+      },
+      "examples": {
+        "体重をおうかがいしてもよろしいですか。": {
+          "en": "May I ask you what your weight is?",
+          "mn": "Таны жинг асууж болох уу?"
+        },
+        "病気のため本日はうかがうことができませんでした。": {
+          "en": "On account of illness, I couldn't call on you today.",
+          "mn": "Өвдсөн учраас өнөөдөр танайд очиж чадсангүй."
+        }
+      }
+    },
+    "4bdd43130b": {
+      "expected": {
+        "w": "受付",
+        "r": "うけつけ",
+        "en": [
+          "receipt"
+        ]
+      },
+      "examples": {
+        "受付で入院の手続きをしてください。": {
+          "en": "You have to fill out an application for admission to the hospital at the front desk.",
+          "mn": "Хүлээн авах хэсэгт эмнэлэгт хэвтэх бүртгэлээ хийлгээрэй."
+        },
+        "入院の受付窓口はどこですか。": {
+          "en": "Where is the admission's office?",
+          "mn": "Эмнэлэгт хэвтэх бүртгэлийн цонх хаана вэ?"
+        }
+      }
+    },
+    "20989c0cb5": {
+      "expected": {
+        "w": "受ける",
+        "r": "うける",
+        "en": [
+          "to take a lesson or test"
+        ]
+      },
+      "examples": {
+        "病気なので試験が受けられません。": {
+          "en": "I can't sit for the examination because I am ill.",
+          "mn": "Би өвдсөн учраас шалгалт өгч чадахгүй."
+        },
+        "入学試験を受けるつもりですか。": {
+          "en": "Are you going to take the entrance examination?",
+          "mn": "Та элсэлтийн шалгалт өгөх гэж байгаа юу?"
+        }
+      }
+    },
+    "e54d4fef93": {
+      "expected": {
+        "w": "動く",
+        "r": "うごく",
+        "en": [
+          "to move"
+        ]
+      },
+      "examples": {
+        "まだ動くうちに売ってしまわなきゃ。": {
+          "en": "I should sell it while it still runs.",
+          "mn": "Ажиллаж байгаа дээр нь үүнийг зарах хэрэгтэй."
+        },
+        "私は家の中で何かが動くのを感じた。": {
+          "en": "I felt something move in the house.",
+          "mn": "Гэр дотор ямар нэг юм хөдлөхийг мэдэрсэн."
+        }
+      }
+    },
+    "da1a2f9721": {
+      "expected": {
+        "w": "うそ",
+        "r": "うそ",
+        "en": [
+          "a lie"
+        ]
+      },
+      "examples": {
+        "えっ嘘でしょ。": {
+          "en": "Oh my God, I can't believe this.",
+          "mn": "Юу гэнэ ээ, худлаа байлгүй дээ."
+        },
+        "彼はとりわけうそがきらいである。": {
+          "en": "He hates falsehood more than anything else.",
+          "mn": "Тэр худал үгийг бүхнээс илүү үзэн яддаг."
+        }
+      }
+    },
+    "76d4bcd098": {
+      "expected": {
+        "w": "うち",
+        "r": "うち",
+        "en": [
+          "within"
+        ]
+      },
+      "examples": {
+        "来週はうちへいらしゃいませんか。": {
+          "en": "Won't you come and see me next week?",
+          "mn": "Ирэх долоо хоногт манайд ирэхгүй юу?"
+        }
+      }
+    },
+    "e6f3a7d91a": {
+      "expected": {
+        "w": "打つ",
+        "r": "うつ",
+        "en": [
+          "to hit"
+        ]
+      },
+      "examples": {
+        "８時をちょうど打ちましたね。": {
+          "en": "It has just struck eight, hasn't it?",
+          "mn": "Яг найман цаг цохилоо, тийм ээ?"
+        },
+        "スロットを打っているうちに、あれよあれよと今の時間です。": {
+          "en": "I was hitting the slots, and before I knew it, it's this time already.",
+          "mn": "Слот машин тоглож байтал нэг мэдэхэд ийм цаг болчихжээ."
+        }
+      }
+    },
+    "0dd54894db": {
+      "expected": {
+        "w": "美しい",
+        "r": "うつくしい",
+        "en": [
+          "beautiful"
+        ]
+      },
+      "examples": {
+        "私たちは美しい入り日に見とれた。": {
+          "en": "We admired the beautiful sunset.",
+          "mn": "Бид үзэсгэлэнтэй нар жаргахыг биширсэн."
+        },
+        "バイオリンの音色はとても美しい。": {
+          "en": "The sound of the violin is very sweet.",
+          "mn": "Хийлийн дуу маш уянгалаг."
+        }
+      }
+    }
+  }
+}

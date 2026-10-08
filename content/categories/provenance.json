@@ -59124,6 +59124,218 @@
           "places"
         ],
         "reading": "かべ"
+      },
+      "4c9297421b": {
+        "ja": "ガラス",
+        "en": [
+          "a glass pane"
+        ],
+        "topics": [
+          "daily",
+          "technology"
+        ],
+        "reading": "ガラス"
+      },
+      "6345553664": {
+        "ja": "彼ら",
+        "en": [
+          "they"
+        ],
+        "topics": [
+          "people"
+        ],
+        "reading": "かれら"
+      },
+      "374a0aa749": {
+        "ja": "看護婦",
+        "en": [
+          "female nurse"
+        ],
+        "topics": [
+          "people",
+          "work"
+        ],
+        "reading": "かんごふ"
+      },
+      "ab366b6c9d": {
+        "ja": "気",
+        "en": [
+          "spirit",
+          "mood"
+        ],
+        "topics": [
+          "feelings"
+        ],
+        "reading": "き"
+      },
+      "3f4f3a3b9d": {
+        "ja": "機会",
+        "en": [
+          "opportunity"
+        ],
+        "topics": [
+          "time"
+        ],
+        "reading": "きかい"
+      },
+      "fcca18b129": {
+        "ja": "規則",
+        "en": [
+          "regulations"
+        ],
+        "topics": [
+          "society"
+        ],
+        "reading": "きそく"
+      },
+      "b284605582": {
+        "ja": "きっと",
+        "en": [
+          "surely"
+        ],
+        "topics": [
+          "descriptions"
+        ],
+        "reading": "きっと"
+      },
+      "4d5b12c74c": {
+        "ja": "絹",
+        "en": [
+          "silk"
+        ],
+        "topics": [
+          "daily"
+        ],
+        "reading": "きぬ"
+      },
+      "42f05076b3": {
+        "ja": "気分",
+        "en": [
+          "mood"
+        ],
+        "topics": [
+          "feelings"
+        ],
+        "reading": "きぶん"
+      },
+      "a2a012c05f": {
+        "ja": "着物",
+        "en": [
+          "kimono"
+        ],
+        "topics": [
+          "daily"
+        ],
+        "reading": "きもの"
+      },
+      "cb029e617e": {
+        "ja": "客",
+        "en": [
+          "guest",
+          "customer"
+        ],
+        "topics": [
+          "people",
+          "work"
+        ],
+        "reading": "きゃく"
+      },
+      "7a7b79370f": {
+        "ja": "教会",
+        "en": [
+          "church"
+        ],
+        "topics": [
+          "places",
+          "society"
+        ],
+        "reading": "きょうかい"
+      },
+      "23ea485338": {
+        "ja": "興味",
+        "en": [
+          "an interest"
+        ],
+        "topics": [
+          "feelings"
+        ],
+        "reading": "きょうみ"
+      },
+      "a70d257a61": {
+        "ja": "空気",
+        "en": [
+          "air",
+          "atmosphere"
+        ],
+        "topics": [
+          "nature"
+        ],
+        "reading": "くうき"
+      },
+      "78c6412e35": {
+        "ja": "首",
+        "en": [
+          "neck"
+        ],
+        "topics": [
+          "body"
+        ],
+        "reading": "くび"
+      },
+      "7db3da6e1b": {
+        "ja": "雲",
+        "en": [
+          "cloud"
+        ],
+        "topics": [
+          "nature"
+        ],
+        "reading": "くも"
+      },
+      "5079fc5daf": {
+        "ja": "経済",
+        "en": [
+          "finance",
+          "economy"
+        ],
+        "topics": [
+          "work",
+          "society"
+        ],
+        "reading": "けいざい"
+      },
+      "8426193f36": {
+        "ja": "ケーキ",
+        "en": [
+          "cake"
+        ],
+        "topics": [
+          "food"
+        ],
+        "reading": "ケーキ"
+      },
+      "a200494cec": {
+        "ja": "景色",
+        "en": [
+          "scene",
+          "landscape"
+        ],
+        "topics": [
+          "places",
+          "nature"
+        ],
+        "reading": "けしき"
+      },
+      "ba1b3c0d13": {
+        "ja": "消しゴム",
+        "en": [
+          "eraser"
+        ],
+        "topics": [
+          "learning",
+          "daily"
+        ],
+        "reading": "けしゴム"
       }
     },
     "kanji": {

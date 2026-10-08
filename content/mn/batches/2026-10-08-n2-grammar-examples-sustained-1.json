@@ -1,0 +1,54 @@
+{
+  "provenance": {
+    "id": "mn-n2-grammar-examples-sustained-1-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian, exact grammar pattern/English guards and Japanese sentence keys with retained English guards. Independent human semantic review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/grammar/n2.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "grammar": {
+    "ni-saishite": {
+      "expected": {
+        "p": "〜に際して",
+        "en": "on the occasion of; when; at the time of"
+      },
+      "examples": {
+        "新製品の発売に際して、記者会見が開かれた。": {
+          "en": "A press conference was held on the occasion of the new product's launch.",
+          "mn": "Шинэ бүтээгдэхүүнийг худалдаанд гаргах үеэр хэвлэлийн бага хурал зохион байгуулсан."
+        },
+        "海外へ渡航するに際しては、現地の安全情報を必ず確認してください。": {
+          "en": "When traveling abroad, be sure to check the local safety information.",
+          "mn": "Гадаад руу явахдаа тухайн газрын аюулгүй байдлын мэдээллийг заавал шалгаарай."
+        },
+        "契約の更新に際しての注意事項をまとめました。": {
+          "en": "We have summarized the points to note when renewing the contract.",
+          "mn": "Гэрээг сунгах үед анхаарах зүйлсийг нэгтгэлээ."
+        }
+      }
+    },
+    "ni-tomonatte": {
+      "expected": {
+        "p": "〜に伴って",
+        "en": "along with; as; accompanying"
+      },
+      "examples": {
+        "高齢化に伴って、医療費は年々増加している。": {
+          "en": "Along with the aging of the population, medical costs are rising year by year.",
+          "mn": "Хүн амын хөгшрөлттэй холбоотойгоор эмчилгээний зардал жилээс жилд өсөж байна."
+        },
+        "工場の移転に伴い、約二百人の従業員が転勤することになった。": {
+          "en": "With the relocation of the factory, about two hundred employees are to be transferred.",
+          "mn": "Үйлдвэр нүүхтэй холбоотойгоор хоёр зуу орчим ажилтан өөр газар шилжин ажиллахаар болсон."
+        },
+        "台風の接近に伴う大雨に注意してください。": {
+          "en": "Please watch out for heavy rain accompanying the approaching typhoon.",
+          "mn": "Хар салхи ойртохтой хамт орох аадар борооноос болгоомжлоорой."
+        }
+      }
+    }
+  }
+}

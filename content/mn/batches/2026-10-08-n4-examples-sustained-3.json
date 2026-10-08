@@ -1,0 +1,396 @@
+{
+  "provenance": {
+    "id": "mn-n4-examples-sustained-3-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian compared with exact Japanese sentence and retained English; stable entry w/r/en guards. Suspect sentences withheld. Independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n4.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "69589e0288": {
+      "expected": {
+        "w": "写す",
+        "r": "うつす",
+        "en": [
+          "to copy or photograph"
+        ]
+      },
+      "examples": {
+        "その写真は空から写されたものである。": {
+          "en": "The picture was taken from the air.",
+          "mn": "Тэр зургийг агаараас авсан."
+        },
+        "このページをノートに写しておきなさい。": {
+          "en": "Copy this page in your notebook.",
+          "mn": "Энэ хуудсыг дэвтэртээ хуулж бич."
+        }
+      }
+    },
+    "c7362b5e02": {
+      "expected": {
+        "w": "移る",
+        "r": "うつる",
+        "en": [
+          "to move house or transfer"
+        ]
+      },
+      "examples": {
+        "もっとお金があれば大きな家に移れるのにな。": {
+          "en": "If I had more money, I could move to a bigger house.",
+          "mn": "Илүү мөнгөтэй байсан бол том байшин руу нүүж болохсон."
+        },
+        "今、席を移ってもかまいませんか。": {
+          "en": "Would you mind if I changed seats now?",
+          "mn": "Одоо суудлаа сольж болох уу?"
+        }
+      }
+    },
+    "78d94c404b": {
+      "expected": {
+        "w": "腕",
+        "r": "うで",
+        "en": [
+          "arm"
+        ]
+      },
+      "examples": {
+        "けがをした腕を見せて下さい。": {
+          "en": "Please show me your injured arm.",
+          "mn": "Гэмтсэн гараа үзүүлнэ үү."
+        },
+        "その少女は父親の腕にしがみついていた。": {
+          "en": "The little girl clung to her father's arm.",
+          "mn": "Бяцхан охин аавынхаа гараас зуурсан байв."
+        }
+      }
+    },
+    "6d3b3fe0a4": {
+      "expected": {
+        "w": "うまい",
+        "r": "うまい",
+        "en": [
+          "delicious"
+        ]
+      },
+      "examples": {
+        "それはあまりにもうますぎる話だ。": {
+          "en": "That's too good a story to be true.",
+          "mn": "Энэ яриа дэндүү сайхан учраас үнэн гэхэд итгэмээргүй."
+        },
+        "彼女はテニスは上手いが、水泳は下手だ。": {
+          "en": "She's very good at tennis, but she's not much of a swimmer.",
+          "mn": "Тэр теннис сайн тоглодог ч сэлэхдээ муу."
+        }
+      }
+    },
+    "1b5a6286d6": {
+      "expected": {
+        "w": "裏",
+        "r": "うら",
+        "en": [
+          "reverse side"
+        ]
+      },
+      "examples": {
+        "靴の裏にガムがこびりついちゃった。": {
+          "en": "There's gum stuck to the bottom of my shoe.",
+          "mn": "Гутлын уланд бохь наалдчихлаа."
+        },
+        "裏から手を回してくれるよ。": {
+          "en": "He can pull strings for you.",
+          "mn": "Тэр танд далдуур нөлөөлж тусалж чадна."
+        }
+      }
+    },
+    "11222e25b5": {
+      "expected": {
+        "w": "売り場",
+        "r": "うりば",
+        "en": [
+          "place where things are sold"
+        ]
+      },
+      "examples": {
+        "スナック売り場は、どこですか。": {
+          "en": "Where can I buy snacks?",
+          "mn": "Зууш зардаг хэсэг хаана вэ?"
+        },
+        "ビタミン剤売り場はどこですか。": {
+          "en": "Where's the aisle for vitamins?",
+          "mn": "Витамин зардаг хэсэг хаана вэ?"
+        }
+      }
+    },
+    "c67a9658b1": {
+      "expected": {
+        "w": "うれしい",
+        "r": "うれしい",
+        "en": [
+          "glad"
+        ]
+      },
+      "examples": {
+        "あなたに再会できてうれしい。": {
+          "en": "I am pleased to see you again.",
+          "mn": "Тантай дахин уулзсандаа баяртай байна."
+        },
+        "私はその知らせを聞いてうれしい。": {
+          "en": "I am glad to hear the news.",
+          "mn": "Тэр мэдээг сонсоод баяртай байна."
+        }
+      }
+    },
+    "533b248802": {
+      "expected": {
+        "w": "うん",
+        "r": "うん",
+        "en": [
+          "(informal) yes"
+        ]
+      },
+      "examples": {
+        "うん、休みが終わるまででいいの。": {
+          "en": "Oh, just over the holidays.",
+          "mn": "Тийм ээ, амралт дуустал байхад л болно."
+        },
+        "うん、私はたぶん家にいるわ。": {
+          "en": "Oh, I'll probably just stay home.",
+          "mn": "Тийм ээ, би гэртээ байх болов уу."
+        }
+      }
+    },
+    "44f33984fb": {
+      "expected": {
+        "w": "運転",
+        "r": "うんてん",
+        "en": [
+          "to drive"
+        ]
+      },
+      "examples": {
+        "キャロルはレンタカーを運転しています。": {
+          "en": "Carol is driving a rent-a-car.",
+          "mn": "Кэрол түрээсийн машин жолоодож байна."
+        },
+        "父は自動車の運転がとても上手い。": {
+          "en": "My father drives very well.",
+          "mn": "Аав машин маш сайн барьдаг."
+        }
+      }
+    },
+    "9f6e25d5e2": {
+      "expected": {
+        "w": "運転手",
+        "r": "うんてんしゅ",
+        "en": [
+          "driver"
+        ]
+      },
+      "examples": {
+        "運転手は車のスピードを上げた。": {
+          "en": "The driver accelerated his car.",
+          "mn": "Жолооч машиныхаа хурдыг нэмсэн."
+        },
+        "運転手はハンドルを右にきった。": {
+          "en": "The driver turned the wheel to the right.",
+          "mn": "Жолооч жолоогоо баруун тийш эргүүлсэн."
+        }
+      }
+    },
+    "47487b1e85": {
+      "expected": {
+        "w": "運動",
+        "r": "うんどう",
+        "en": [
+          "to exercise"
+        ]
+      },
+      "examples": {
+        "週に一度でいいから運動しなさい。": {
+          "en": "Try to exercise at least once a week.",
+          "mn": "Долоо хоногт нэг удаа ч гэсэн дасгал хийгээрэй."
+        },
+        "その運動をして若返った。": {
+          "en": "The exercise took years off me.",
+          "mn": "Тэр дасгалыг хийснээр би залуужсан."
+        }
+      }
+    },
+    "3139c14254": {
+      "expected": {
+        "w": "エスカレーター",
+        "r": "エスカレーター",
+        "en": [
+          "escalator"
+        ]
+      },
+      "examples": {
+        "上りのエスカレーターはどこですか？": {
+          "en": "Where's the up-escalator?",
+          "mn": "Дээш явдаг урсдаг шат хаана вэ?"
+        },
+        "急いでいない人はエスカレーターの右側に立ちなさい。": {
+          "en": "People who are not in a hurry stand on the right side of the escalator.",
+          "mn": "Яараагүй хүмүүс урсдаг шатны баруун талд зогсоорой."
+        }
+      }
+    },
+    "bb01cb559f": {
+      "expected": {
+        "w": "枝",
+        "r": "えだ",
+        "en": [
+          "branch",
+          "twig"
+        ]
+      },
+      "examples": {
+        "たくさんの鳥が枝にとまっている。": {
+          "en": "Many birds are on the branch.",
+          "mn": "Мөчир дээр олон шувуу сууж байна."
+        },
+        "枝はオレンジでたわんでいた。": {
+          "en": "The branches were laden with oranges.",
+          "mn": "Мөчрүүд жүржийн жинд бөхийсөн байв."
+        }
+      }
+    },
+    "60c9784974": {
+      "expected": {
+        "w": "選ぶ",
+        "r": "えらぶ",
+        "en": [
+          "to choose"
+        ]
+      },
+      "examples": {
+        "これとあれの中から選んで下さい。": {
+          "en": "Choose between this and that.",
+          "mn": "Энэ тэр хоёроос сонгоорой."
+        },
+        "この二つの中から一つ選びなさい。": {
+          "en": "Choose between these two.",
+          "mn": "Энэ хоёроос нэгийг сонго."
+        }
+      }
+    },
+    "5ceed9165d": {
+      "expected": {
+        "w": "遠慮",
+        "r": "えんりょ",
+        "en": [
+          "to be reserved",
+          "to be restrained"
+        ]
+      },
+      "examples": {
+        "ここでのおタバコはご遠慮願います。": {
+          "en": "Please refrain from smoking here.",
+          "mn": "Энд тамхи татахгүй байхыг хүсье."
+        },
+        "タバコをご遠慮いただけますか。": {
+          "en": "Would you mind not smoking?",
+          "mn": "Тамхи татахгүй байж болох уу?"
+        }
+      }
+    },
+    "53c76e5c6e": {
+      "expected": {
+        "w": "おいでになる",
+        "r": "おいでになる",
+        "en": [
+          "(respectful) to be"
+        ]
+      },
+      "examples": {
+        "いつ旅行においでになりますか。": {
+          "en": "When will you go on a journey?",
+          "mn": "Та хэзээ аялалд явах вэ?"
+        },
+        "この雨の中をおいでにならないでください。": {
+          "en": "Don't bother coming in this rain.",
+          "mn": "Ийм бороонд ирэх гэж битгий зовоорой."
+        }
+      }
+    },
+    "12e7bd036b": {
+      "expected": {
+        "w": "お祝い",
+        "r": "おいわい",
+        "en": [
+          "congratulation"
+        ]
+      },
+      "examples": {
+        "心からお祝いを申し上げます。": {
+          "en": "I offer you my hearty congratulations.",
+          "mn": "Чин сэтгэлээсээ баяр хүргэе."
+        },
+        "ケイトはまず誕生日のお祝いをすることはない。": {
+          "en": "Kate hardly ever celebrates her birthday.",
+          "mn": "Кейт төрсөн өдрөө бараг тэмдэглэдэггүй."
+        }
+      }
+    },
+    "5c63f36f44": {
+      "expected": {
+        "w": "オートバイ",
+        "r": "オートバイ",
+        "en": [
+          "motorcycle"
+        ]
+      },
+      "examples": {
+        "オートバイに乗るのは楽しい。": {
+          "en": "It's fun to ride a motorcycle.",
+          "mn": "Мотоцикл унах хөгжилтэй."
+        },
+        "オートバイが買えたらいいのになあ。": {
+          "en": "I wish I could buy a motorcycle.",
+          "mn": "Мотоцикл авч чаддаг ч болоосой."
+        }
+      }
+    },
+    "e5e5899ce2": {
+      "expected": {
+        "w": "おかげ",
+        "r": "おかげ",
+        "en": [
+          "owing to"
+        ]
+      },
+      "examples": {
+        "私が今日あるのは両親のおかげである。": {
+          "en": "I owe what I am to my parents.",
+          "mn": "Би өнөөдрийн зэрэгт хүрсэн нь эцэг эхийнхээ ач."
+        },
+        "私がいるのは父のおかげです。": {
+          "en": "I owe what I am to my father.",
+          "mn": "Би өдий зэрэгтэй байгаа нь аавын ач."
+        }
+      }
+    },
+    "4d2128cddd": {
+      "expected": {
+        "w": "おかしい",
+        "r": "おかしい",
+        "en": [
+          "strange or funny"
+        ]
+      },
+      "examples": {
+        "君のジョークは何度聞いてもおかしい。": {
+          "en": "Your joke is funny no matter how many times I hear it.",
+          "mn": "Чиний онигоо хэд ч сонссон инээдтэй."
+        },
+        "この車のエンジンはおかしい。": {
+          "en": "Something is wrong with the engine of this car.",
+          "mn": "Энэ машины хөдөлгүүр нэг л биш байна."
+        }
+      }
+    }
+  }
+}

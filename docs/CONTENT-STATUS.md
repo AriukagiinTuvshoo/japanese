@@ -2,7 +2,7 @@
 
 **Incomplete. PR #12 must remain draft and unmerged. No production completion is claimed.**
 
-Baseline `6cf8ca1`: 7,170 missing meanings. Current batches add 7,108 net meanings, all 526 grammar formation translations and 837 N5–N3 grammar example translations and 259 N5/N4 vocabulary example translations. AI-authored, independently unreviewed; coverage is not semantic approval.
+Baseline `6cf8ca1`: 7,170 missing meanings. Current batches add 7,108 net meanings, all 526 grammar formation translations and 837 N5–N3 grammar example translations and 514 vocabulary example translations plus 6 N2 grammar example translations. AI-authored, independently unreviewed; coverage is not semantic approval.
 
 | Level | Missing vocabulary meanings | Missing kanji meanings | Missing grammar meanings |
 |---|---:|---:|---:|
@@ -13,7 +13,7 @@ Baseline `6cf8ca1`: 7,170 missing meanings. Current batches add 7,108 net meanin
 | N1 | 31 | 31 | 0 |
 | Total | 31 | 31 | 0 |
 
-Remaining: **62 meanings, 14,148 examples** (13,459 vocabulary + 689 N2/N1 grammar), **0 formations, 2,115 unclassified entries, 0 missing new-batch provenance records; 6,503 unchanged legacy/unreviewed meanings of unknown authorship (documented, not release-blocking), 10 unresolved source issues**. Invalid categories and mislabeled MN: zero. Measures overlap; do not sum as distinct entries.
+Remaining: **62 meanings, 13,887 examples** (13,204 vocabulary + 683 N2/N1 grammar), **0 formations, 2,095 unclassified entries, 0 missing new-batch provenance records; 6,503 unchanged legacy/unreviewed meanings of unknown authorship (documented, not release-blocking), 10 unresolved source issues**. Invalid categories and mislabeled MN: zero. Measures overlap; do not sum as distinct entries.
 
 N5 vocabulary/kanji and N4 kanji are fully classified. Categories support multiple topics, including relationships. Explicit semantic override evidence is maintained in `content/categories/provenance.json`. Unmatched entries remain visibly filterable, not hidden in a catch-all. Source warnings retain original Japanese/English and block release. Existing drafts and new translations still need accuracy review. Page-wide bilingual localization audit remains incomplete, notably Admin.
 
@@ -107,3 +107,7 @@ Added 95 guarded kanji meanings in batches of 60 and 35; full checks and strict 
 ## Example corpus round — 219 sentences and 50 topics
 
 Five N5 batches (40/40/40/40/35 sentences) and one N4 batch (24 sentences) added 219 natural Mongolian example translations. Every sentence uses stable vocabulary ID, exact Japanese sentence key, exact retained English and w/r/en guards. Original source unchanged; new translations AI-authored and independently unreviewed. Counts recalculated after each batch: 14327 → 14287 → 14247 → 14207 → 14172 → 14148 untranslated examples. A separate 50-entry N4 evidence-backed topic batch reduced unclassified 2165 → 2115. Full typecheck/data/routes/coverage/retention/build and strict gate ran after each of these seven batches; structural checks passed, strict gate exit 1. Corpus regression verifies exact source, unique sentence keys, applied Mongolian/provenance, batch sizes and topic evidence. All 62 missing meanings and ten individual source-conflict warnings/audit records unchanged. No external conflict evidence acquired, no warning silently resolved. Higher-level/grammar examples and page/browser/human reviews remain unfinished. PR stays draft/unmerged/unreleased.
+
+## Sustained examples — 261 sentences
+
+Added 193 N4 + 62 N3 vocabulary and 6 N2 grammar sentences in eight guarded example batches. Coverage after each: 14108 → 14068 → 14028 → 13988 → 13955 → 13915 → 13893 → 13887. Three suspect N4 sentence pairs withheld with exact source/audit records, not silently corrected. N5–N3 grammar examples were already covered, so new grammar work used N2. Twenty additional explicit N4 topic assignments reduce unclassified to 2095. Every batch received full checks/strict gate, new regressions verify exact source/applications/provenance/evidence and withheld sentences. Static UI inspection documented Admin localization gaps; no exhaustive bilingual browser approval. All 62 meanings and ten recorded conflicts unchanged. Strict gate remains exit 1; draft/unmerged/unreleased.
