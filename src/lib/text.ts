@@ -192,6 +192,7 @@ export const TYPE_LABEL: Record<string, string> = {
 
 export const MQ_LABEL: Record<string, { text: string; tone: "matcha" | "kin" | "ai" | "sumi" }> = {
   curated: { text: "Хянасан", tone: "matcha" },
+  draft: { text: "Драфт · хянагдаагүй", tone: "kin" },
   auto: { text: "Авто санал", tone: "kin" },
   derived: { text: "Ханзнаас", tone: "kin" },
   none: { text: "Орчуулга хүлээж байна", tone: "sumi" },

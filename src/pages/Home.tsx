@@ -104,14 +104,14 @@ export default function Home() {
         <div>
           <p className="font-jp text-[12px] tracking-[0.32em] text-shu-500">おかえりなさい</p>
           <h1 className="mt-1 text-[1.7rem] font-extrabold leading-tight tracking-tight sm:text-[2rem]">
-            {greeting}{doc.profile.name ? `, ${doc.profile.name}` : ""} 👋
+            {greeting}{doc.profile.name ? `, ${doc.profile.name}` : ""}
           </h1>
           <p className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-[13px] text-sumi-500">
             <span>{LEVEL_LABEL[level]} ({level}) · {LEVEL_JP_LABEL(level)}</span>
             <span className="h-1 w-1 rounded-full bg-sumi-300" />
-            <span>🔥 {streak} өдрийн цуваа</span>
+            <span>{streak} өдрийн цуваа</span>
             <span className="h-1 w-1 rounded-full bg-sumi-300" />
-            <span className="tabnum">Lv.{levelInfo.level} · {doc.xp.toLocaleString()} XP</span>
+            <span className="tabnum">Түвшин {levelInfo.level} · {doc.xp.toLocaleString()} оноо</span>
           </p>
         </div>
         <div className="flex items-center gap-2">
@@ -121,6 +121,34 @@ export default function Home() {
           </Button>
         </div>
       </div>
+
+      {/* ── анхны зочин: нэвтрэлт, тохиргоогүйгээр шууд эхлэх ── */}
+      {doc.xp === 0 && doc.activity && Object.keys(doc.activity).length === 0 && (
+        <Card className="p-6">
+          <p className="font-jp text-[10.5px] tracking-[0.28em] text-sumi-400">はじめよう</p>
+          <h2 className="mt-0.5 text-[1.2rem] font-extrabold">Эхний 5 минут</h2>
+          <p className="mt-1.5 text-[13.5px] text-sumi-500">Нэвтрэх шаардлагагүй. Доорх алхмуудаас нэгийг сонгож шууд эхэлнэ үү.</p>
+          <div className="mt-4 grid gap-3 sm:grid-cols-3">
+            {[
+              { k: "語", t: "5 үг давтах", d: "N5 · асуулт 5", to: "quiz?mode=vocab-jp-mn&level=N5" },
+              { k: "漢", t: "Ханз бичих", d: "Зурах дараалал шалгана", to: "write?level=N5" },
+              { k: "測", t: "Түвшнээ тогтоох", d: "Ойролцоогоор 5 минут", to: "placement" },
+            ].map((o) => (
+              <button
+                key={o.to}
+                onClick={() => navigate(o.to)}
+                className="flex items-center gap-3 rounded-xl border border-sumi-900/10 bg-white/70 p-4 text-left transition hover:border-shu-400 hover:bg-white"
+              >
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-sumi-900 font-mincho text-[18px] font-bold text-washi-50">{o.k}</span>
+                <span className="min-w-0">
+                  <span className="block text-[14px] font-extrabold text-sumi-900">{o.t}</span>
+                  <span className="block text-[12px] text-sumi-500">{o.d}</span>
+                </span>
+              </button>
+            ))}
+          </div>
+        </Card>
+      )}
 
       {/* ── өнөөдрийн эрхэм зорилго ── */}
       <Card className="overflow-hidden p-0">
@@ -176,7 +204,7 @@ export default function Home() {
               </Ring>
               <div className="min-w-0">
                 <p className="text-[13px] font-bold">{missionDone}/{missionTotal} даалгавар</p>
-                <p className="mt-1 text-[11.5px] text-washi-400">{today.min} мин · {today.xp} XP өнөөдөр</p>
+                <p className="mt-1 text-[11.5px] text-washi-400">{today.min} мин · {today.xp} оноо өнөөдөр</p>
               </div>
             </div>
 
@@ -359,7 +387,7 @@ export default function Home() {
               {heat.slice(w * 7, w * 7 + 7).map((c) => (
                 <span
                   key={c.key}
-                  title={`${c.key} · ${c.xp} XP`}
+                  title={`${c.key} · ${c.xp} оноо`}
                   className={cn("h-[13px] w-[13px] shrink-0 rounded-[3px]",
                     c.xp === 0 ? "bg-sumi-900/8"
                       : c.xp < 40 ? "bg-matcha-200"

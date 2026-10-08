@@ -43,7 +43,9 @@
         "N2": 0,
         "N1": 0
       }
-    }
+    },
+    "vocabDraft": 5382,
+    "kanjiDraft": 1040
   },
   "content": {
     "listeningLessons": 0,
@@ -103,5 +105,7 @@
         "license": "CC BY 2.0 FR"
       }
     }
-  }
+  },
+  "vocabDraft": 5382,
+  "kanjiDraft": 1040
 }

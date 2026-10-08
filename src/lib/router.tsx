@@ -9,6 +9,8 @@ export interface Route {
 }
 
 export function parseHash(hash = window.location.hash): Route {
+  // Хуучин линкүүд бүхэл query-г кодлосон байж магадгүй (жишээ: `#/grammar%3Flevel%3DN2`).
+  // `?` эсвэл `%3F`-ээр path/query-г тусгаарлаад, query-г бүтнээр нь декодлоно.
   const raw = hash.replace(/^#\/?/, "");
   const sep = raw.match(/\?|%3F/i);
   let pathPart = raw;
@@ -18,15 +20,24 @@ export function parseHash(hash = window.location.hash): Route {
     queryPart = raw.slice(sep.index + sep[0].length);
     try { queryPart = decodeURIComponent(queryPart); } catch { /* хэвээр нь */ }
   }
-  const segments = pathPart.split("/").filter(Boolean).map(decodeURIComponent);
+  const segments = pathPart.split("/").filter(Boolean).map((s) => {
+    try { return decodeURIComponent(s); } catch { return s; }
+  });
   const query: Record<string, string> = {};
   new URLSearchParams(queryPart ?? "").forEach((v, k) => { query[k] = v; });
   return { name: segments[0] ?? "home", params: segments.slice(1), query, hash };
 }
 
+/**
+ * `href("vocab?level=N2")` → `#/vocab?level=N2`.
+ * Нэрийн `?query` хэсгийг кодлохгүй — өмнө нь `%3F` болж хуудас олдохгүй болдог байсан.
+ */
 export function href(name: string, ...rest: (string | number | undefined)[]) {
-  const parts = [name, ...rest.filter((x) => x !== undefined && x !== "")].map((s) => encodeURIComponent(String(s)));
-  return `#/${parts.join("/")}`;
+  const qIdx = name.indexOf("?");
+  const path = qIdx >= 0 ? name.slice(0, qIdx) : name;
+  const query = qIdx >= 0 ? name.slice(qIdx + 1) : "";
+  const parts = [path, ...rest.filter((x) => x !== undefined && x !== "")].map((s) => encodeURIComponent(String(s)));
+  return `#/${parts.join("/")}${query ? `?${query}` : ""}`;
 }
 
 export function navigate(to: string, opts: { replace?: boolean; keepScroll?: boolean } = {}) {

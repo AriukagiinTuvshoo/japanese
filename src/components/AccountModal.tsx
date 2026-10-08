@@ -29,11 +29,11 @@ export function AccountModal({ onClose }: { onClose: () => void }) {
         {tab === "sync" && <SyncPanel />}
       </div>
       <div className="flex flex-wrap items-center gap-3 border-t border-sumi-900/10 bg-white/50 px-6 py-3 text-[11.5px] text-sumi-500">
-        <span className="tabnum">Lv.{levelInfo.level}</span>
+        <span className="tabnum">Түвшин {levelInfo.level}</span>
         <span>·</span>
-        <span className="tabnum">{doc.xp.toLocaleString()} XP</span>
+        <span className="tabnum">{doc.xp.toLocaleString()} оноо</span>
         <span>·</span>
-        <span>🔥 {streak} өдөр</span>
+        <span>{streak} өдөр</span>
         <span className="ml-auto flex items-center gap-2">
           <Chip tone={serverAvailable ? "matcha" : "sumi"}>
             {serverAvailable ? "Сервер холбогдсон" : "Офлайн горим"}
@@ -124,14 +124,23 @@ export function AuthForm() {
 
   return (
     <div className="space-y-5">
-      <div className="rounded-2xl border border-ai-100 bg-ai-50/60 p-4">
-        <p className="text-[13.5px] font-extrabold text-ai-700">Аккаунт яагаад хэрэгтэй вэ?</p>
-        <p className="mt-1 text-[12.5px] leading-relaxed text-ai-600">
-          SRS-ийн бүх ахиц, алдааны дэвтэр, цуваа нь аккаунттай холбогдож,
-          утас, компьютер, таблет хооронд автоматаар синхрончлогдоно.
-          Нэвтрэхгүй ч бүх функц ажиллана — зөвхөн энэ төхөөрөмжид хадгалагдана.
-        </p>
-      </div>
+      {serverAvailable ? (
+        <div className="rounded-2xl border border-ai-100 bg-ai-50/60 p-4">
+          <p className="text-[13.5px] font-extrabold text-ai-700">Аккаунт яагаад хэрэгтэй вэ?</p>
+          <p className="mt-1 text-[12.5px] leading-relaxed text-ai-600">
+            SRS-ийн ахиц, алдааны дэвтэр, цуваа нь аккаунттай холбогдож, утас, компьютер, таблет хооронд синхрончлогдоно.
+            Нэвтрэхгүй ч бүх функц ажиллана — ахиц энэ төхөөрөмжид хадгалагдана.
+          </p>
+        </div>
+      ) : (
+        <div className="rounded-2xl border border-kin-100 bg-kin-50/60 p-4">
+          <p className="text-[13.5px] font-extrabold text-kin-600">Бүртгэл одоогоор идэвхгүй байна</p>
+          <p className="mt-1 text-[12.5px] leading-relaxed text-kin-600">
+            Сервертэй холбогдох боломжгүй байна. Бүх сургалтын функц зочноор ажиллана;
+            ахиц таны энэ төхөөрөмжийн хөтөчид хадгалагдана. Бүртгэл нээгдэх үед автоматаар холбогдох болно.
+          </p>
+        </div>
+      )}
 
       <Tabs
         value={mode}
@@ -149,7 +158,7 @@ export function AuthForm() {
         )}
         <label className="block">
           <span className="text-[12.5px] font-bold text-sumi-700">И-мэйл</span>
-          <input type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com"
+          <input type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="name@mail.mn"
             className="mt-1.5 h-11 w-full rounded-xl border border-sumi-900/15 bg-white px-4 text-[14px] font-semibold outline-none focus:border-shu-500" />
         </label>
         <label className="block">
@@ -164,16 +173,12 @@ export function AuthForm() {
       {msg && <p className="rounded-xl bg-shu-50 px-3.5 py-2.5 text-[12.5px] font-bold text-shu-700">{msg}</p>}
 
       <div className="flex items-center gap-3">
-        <Button size="lg" disabled={busy} onClick={submit} className="flex-1">
+        <Button size="lg" disabled={busy || !serverAvailable} onClick={submit} className="flex-1">
           {busy ? "Түр хүлээнэ үү…" : mode === "up" ? "Бүртгүүлэх" : "Нэвтрэх"}
         </Button>
         <Button variant="ghost" size="lg" onClick={() => actions.guestMode()}>Зочноор</Button>
       </div>
 
-      <p className="text-center text-[11.5px] leading-relaxed text-sumi-400">
-        Нууц үг нь PBKDF2-SHA256 (210,000 давталт) алгоритмаар хэшлэгдэж хадгалагдана.
-        Бид таны өгөгдлийг гуравдагч этгээдэд дамжуулахгүй.
-      </p>
     </div>
   );
 }
