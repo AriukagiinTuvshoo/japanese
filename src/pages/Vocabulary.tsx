@@ -6,6 +6,7 @@ import { loadVocab } from "../lib/data";
 import type { Level, PosType, Vocab } from "../lib/types";
 import { LEVELS } from "../lib/types";
 import { LEVEL_LABEL, MQ_LABEL, TYPE_LABEL, toRomaji } from "../lib/text";
+import { topicLabel, vocabMeaning, vocabTopic, type VocabTopic } from "../lib/i18n";
 import { cardStage, dueCards, retrievability } from "../lib/srs";
 import {
   Bar, Button, Card, Chip, Empty, Input, Pager, Select, SpeakButton, Spinner, Tabs,
@@ -18,12 +19,14 @@ const PER_PAGE = 60;
 export default function Vocabulary() {
   const { query, set } = useQuery();
   const { doc } = useStore();
+  const language = doc.profile.language ?? "mn";
   const level = (query.level as Level) || (doc.profile.current === "zero" ? doc.profile.target : doc.profile.current);
   const tab = (query.tab as string) || "browse";
 
   const [words, setWords] = useState<Vocab[] | null>(null);
   const [q, setQ] = useState("");
   const [type, setType] = useState<PosType | "all">("all");
+  const [topic, setTopic] = useState<VocabTopic | "all">("all");
   const [state, setState] = useState<"all" | "new" | "learning" | "review" | "mastered" | "fav">("all");
   const [sort, setSort] = useState<"level" | "freq" | "kana" | "random">("level");
   const [page, setPage] = useState(1);
@@ -48,6 +51,7 @@ export default function Vocabulary() {
       );
     }
     if (type !== "all") out = out.filter((v) => v.t === type);
+    if (topic !== "all") out = out.filter((v) => vocabTopic(v) === topic);
     if (state !== "all") {
       out = out.filter((v) => {
         if (state === "fav") return doc.favorites.includes(v.id);
@@ -61,7 +65,7 @@ export default function Vocabulary() {
     if (sort === "random") out = out.slice().sort(() => Math.random() - 0.5);
     else if (sort === "kana") out = out.slice().sort((a, b) => a.r.localeCompare(b.r, "ja"));
     return out;
-  }, [words, q, type, state, sort, doc.srs, doc.favorites]);
+  }, [words, q, type, topic, state, sort, doc.srs, doc.favorites]);
 
   const pages = Math.ceil(filtered.length / PER_PAGE);
   const shown = filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE);
@@ -75,6 +79,11 @@ export default function Vocabulary() {
     if (!words) return {};
     const m: Record<string, number> = {};
     for (const w of words) m[w.t] = (m[w.t] ?? 0) + 1;
+    return m;
+  }, [words]);
+  const topicCounts = useMemo(() => {
+    const m: Partial<Record<VocabTopic, number>> = {};
+    for (const w of words ?? []) { const key = vocabTopic(w); m[key] = (m[key] ?? 0) + 1; }
     return m;
   }, [words]);
 
@@ -159,6 +168,18 @@ export default function Vocabulary() {
                 </button>
               ))}
             </div>
+            <div className="no-scrollbar mt-3 flex gap-1.5 overflow-x-auto border-t border-sumi-900/8 pt-3" aria-label={language === "mn" ? "Сэдвээр шүүх" : "Filter by topic"}>
+              <button onClick={() => { setTopic("all"); setPage(1); }}
+                className={cn("shrink-0 rounded-lg px-2.5 py-1.5 text-[12px] font-bold transition", topic === "all" ? "bg-shu-500 text-white" : "bg-shu-50 text-shu-700")}>
+                {language === "mn" ? "Бүх сэдэв" : "All topics"}
+              </button>
+              {(Object.keys(topicLabel[language]) as VocabTopic[]).filter((key) => topicCounts[key]).map((key) => (
+                <button key={key} onClick={() => { setTopic(key); setPage(1); }}
+                  className={cn("shrink-0 rounded-lg px-2.5 py-1.5 text-[12px] font-bold transition", topic === key ? "bg-shu-500 text-white" : "bg-sumi-900/5 text-sumi-600 hover:text-sumi-900")}>
+                  {topicLabel[language][key]} <span className="tabnum opacity-60">{topicCounts[key]}</span>
+                </button>
+              ))}
+            </div>
           </Card>
 
           {!words && <Spinner label="Үгийн сан ачаалж байна…" />}
@@ -183,6 +204,7 @@ export default function Vocabulary() {
 
 export function WordRow({ v }: { v: Vocab }) {
   const { doc, actions } = useStore();
+  const language = doc.profile.language ?? "mn";
   const card = doc.srs[v.id];
   const stage = cardStage(card);
   const fav = doc.favorites.includes(v.id);
@@ -196,7 +218,7 @@ export function WordRow({ v }: { v: Vocab }) {
           <span className="truncate font-jp text-[11.5px] text-sumi-500">{v.r !== v.w ? v.r : ""}</span>
         </div>
         <p className="mt-1 line-clamp-2 text-[13px] leading-snug text-sumi-700">
-          {v.mn?.join(", ") ?? <span className="text-sumi-400">{v.en.join("; ")}</span>}
+          <span className={!v.mn?.length && language === "mn" ? "text-kin-600" : undefined}>{vocabMeaning(v, language)}</span>
         </p>
         <div className="mt-2 flex flex-wrap items-center gap-1.5">
           <Chip tone="sumi" className="!px-1.5 !py-0.5 !text-[10px]">{TYPE_LABEL[v.t]}</Chip>
