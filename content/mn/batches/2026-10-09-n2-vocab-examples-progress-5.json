@@ -1,0 +1,112 @@
+{
+  "provenance": {
+    "id": "mn-n2-vocab-examples-progress-5-oct9",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian compared with exact Japanese and retained English; stable record and headword/pattern guards; independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n2.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "7b66979a25": {
+      "expected": {
+        "w": "受け持つ",
+        "r": "うけもつ",
+        "en": [
+          "to take (be in) charge of"
+        ]
+      },
+      "examples": {
+        "私は３年生を受け持っている。": {
+          "en": "I am in charge of the third-year class.",
+          "mn": "Би гуравдугаар анги хариуцдаг."
+        }
+      }
+    },
+    "609f65f056": {
+      "expected": {
+        "w": "薄暗い",
+        "r": "うすぐらい",
+        "en": [
+          "dim",
+          "gloomy"
+        ]
+      },
+      "examples": {
+        "薄暗い光の中で彼の顔を見た。": {
+          "en": "I saw his face in the dim light.",
+          "mn": "Бүдэг гэрэлд түүний царайг харсан."
+        },
+        "薄暗い明かりで本を読んではいけない。": {
+          "en": "You shouldn't read in such poor light.",
+          "mn": "Ийм бүдэг гэрэлд ном уншиж болохгүй."
+        }
+      }
+    },
+    "40a3c95ccf": {
+      "expected": {
+        "w": "打合せ",
+        "r": "うちあわせ",
+        "en": [
+          "business meeting",
+          "previous arrangement",
+          "appointment"
+        ]
+      },
+      "examples": {
+        "打ち合わせは来週に延期になった。": {
+          "en": "The meeting was put off until next week.",
+          "mn": "Уулзалт ирэх долоо хоног хүртэл хойшилсон."
+        },
+        "彼らは会合の打ち合わせをした。": {
+          "en": "They arranged a meeting.",
+          "mn": "Тэд уулзалтын талаар тохиролцсон."
+        }
+      }
+    },
+    "079b23ed2d": {
+      "expected": {
+        "w": "うっかり",
+        "r": "うっかり",
+        "en": [
+          "carelessly",
+          "thoughtlessly",
+          "inadvertently"
+        ]
+      },
+      "examples": {
+        "うっかりそれを忘れるところだったわ。": {
+          "en": "I almost forgot all about that.",
+          "mn": "Би тэрийг мартах шахжээ."
+        },
+        "私はちょっとうっかりしていた。": {
+          "en": "I was absent-minded momentarily.",
+          "mn": "Би түрхэн зуур анхаарал алдсан."
+        }
+      }
+    },
+    "6cfaa71596": {
+      "expected": {
+        "w": "映す",
+        "r": "うつす",
+        "en": [
+          "to project",
+          "to reflect",
+          "to cast (shadow)"
+        ]
+      },
+      "examples": {
+        "一本の高い木が水面に長い影を映している。": {
+          "en": "A tall tree projects its long shadow on the water.",
+          "mn": "Өндөр мод усанд урт сүүдрээ тусгаж байна."
+        },
+        "山が湖に影を映している。": {
+          "en": "The mountains are reflected in the lake.",
+          "mn": "Уулс нууранд тусаж байна."
+        }
+      }
+    }
+  }
+}

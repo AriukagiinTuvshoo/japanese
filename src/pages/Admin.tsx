@@ -89,7 +89,7 @@ function Overview() {
             {data.top.map((t) => (
               <li key={t.word} className="flex items-center justify-between py-2.5 text-[13.5px]">
                 <span className="font-jp font-bold">{t.word}</span>
-                <span className="text-sumi-500">{t.mn}</span>
+                <span className="text-sumi-500">MN: {t.mn}</span>
                 <span className="font-mono text-[12px] tabnum text-shu-600">{t.misses}</span>
               </li>
             ))}
@@ -202,7 +202,8 @@ function Import() {
     setResult("");
     let entries: unknown[];
     try {
-      const parsed = JSON.parse(json);
+      let parsed: unknown;
+      try { parsed = JSON.parse(json); } catch { throw new Error(t("JSON бичлэг буруу байна")); }
       if (!Array.isArray(parsed)) throw new Error(t("JSON нь массив байх ёстой"));
       entries = parsed;
     } catch (e) {

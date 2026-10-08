@@ -59336,6 +59336,232 @@
           "daily"
         ],
         "reading": "けしゴム"
+      },
+      "9452242b03": {
+        "ja": "アイスクリーム",
+        "en": [
+          "ice cream"
+        ],
+        "topics": [
+          "food"
+        ],
+        "reading": "アイスクリーム"
+      },
+      "cf63ac57d2": {
+        "ja": "アウト",
+        "en": [
+          "out"
+        ],
+        "topics": [
+          "arts",
+          "places"
+        ],
+        "reading": "アウト"
+      },
+      "6bec104564": {
+        "ja": "悪魔",
+        "en": [
+          "devil",
+          "demon",
+          "evil spirit"
+        ],
+        "topics": [
+          "society"
+        ],
+        "reading": "あくま"
+      },
+      "7d653ddf51": {
+        "ja": "汗",
+        "en": [
+          "sweat",
+          "perspiration"
+        ],
+        "topics": [
+          "body"
+        ],
+        "reading": "あせ"
+      },
+      "a0ea038f9b": {
+        "ja": "辺り",
+        "en": [
+          "vicinity",
+          "nearby"
+        ],
+        "topics": [
+          "places"
+        ],
+        "reading": "あたり"
+      },
+      "e8c795d3e8": {
+        "ja": "あっ",
+        "en": [
+          "Ah!",
+          "Oh!"
+        ],
+        "topics": [
+          "feelings",
+          "learning"
+        ],
+        "reading": "あっ"
+      },
+      "b22ceca000": {
+        "ja": "集まり",
+        "en": [
+          "gathering",
+          "meeting",
+          "assembly"
+        ],
+        "topics": [
+          "people"
+        ],
+        "reading": "あつまり"
+      },
+      "57c650defa": {
+        "ja": "あと",
+        "en": [
+          "trace",
+          "tracks",
+          "remains"
+        ],
+        "topics": [
+          "places"
+        ],
+        "reading": "あと"
+      },
+      "4f1b6b6e36": {
+        "ja": "穴",
+        "en": [
+          "hole"
+        ],
+        "topics": [
+          "places"
+        ],
+        "reading": "あな"
+      },
+      "064aac92d9": {
+        "ja": "油",
+        "en": [
+          "oil"
+        ],
+        "topics": [
+          "food",
+          "technology"
+        ],
+        "reading": "あぶら"
+      },
+      "8399cefa4f": {
+        "ja": "誤り",
+        "en": [
+          "error"
+        ],
+        "topics": [
+          "learning"
+        ],
+        "reading": "あやまり"
+      },
+      "c461dcc42b": {
+        "ja": "粗",
+        "en": [
+          "defect",
+          "flaw",
+          "blemish"
+        ],
+        "topics": [
+          "descriptions"
+        ],
+        "reading": "あら"
+      },
+      "6c564bf1bd": {
+        "ja": "嵐",
+        "en": [
+          "storm",
+          "tempest"
+        ],
+        "topics": [
+          "nature"
+        ],
+        "reading": "あらし"
+      },
+      "de64f6eb4a": {
+        "ja": "現れ",
+        "en": [
+          "embodiment",
+          "materialization"
+        ],
+        "topics": [
+          "descriptions"
+        ],
+        "reading": "あらわれ"
+      },
+      "61f7afccc0": {
+        "ja": "あるいは",
+        "en": [
+          "or",
+          "possibly"
+        ],
+        "topics": [
+          "learning"
+        ],
+        "reading": "あるいは"
+      },
+      "13fdb782fe": {
+        "ja": "アルバム",
+        "en": [
+          "album"
+        ],
+        "topics": [
+          "arts",
+          "daily"
+        ],
+        "reading": "アルバム"
+      },
+      "f1869f9942": {
+        "ja": "泡",
+        "en": [
+          "bubble",
+          "foam",
+          "froth"
+        ],
+        "topics": [
+          "nature"
+        ],
+        "reading": "あわ"
+      },
+      "e9d213fb20": {
+        "ja": "哀れ",
+        "en": [
+          "helpless",
+          "pity",
+          "sorrow"
+        ],
+        "topics": [
+          "feelings"
+        ],
+        "reading": "あわれ"
+      },
+      "55bea4f5f3": {
+        "ja": "案",
+        "en": [
+          "plan",
+          "suffix meaning draft"
+        ],
+        "topics": [
+          "work",
+          "learning"
+        ],
+        "reading": "あん"
+      },
+      "3f1fbec85e": {
+        "ja": "あんまり",
+        "en": [
+          "not very",
+          "not much",
+          "remainder"
+        ],
+        "topics": [
+          "quantity"
+        ],
+        "reading": "あんまり"
       }
     },
     "kanji": {
@@ -87747,6 +87973,351 @@
         ],
         "topics": [
           "work"
+        ]
+      },
+      "党": {
+        "ja": "党",
+        "en": [
+          "Party",
+          "Faction",
+          "Clique"
+        ],
+        "topics": [
+          "society"
+        ],
+        "on": [
+          "とう"
+        ],
+        "kun": [
+          "なかま",
+          "むら"
+        ]
+      },
+      "協": {
+        "ja": "協",
+        "en": [
+          "Co-",
+          "Cooperation"
+        ],
+        "topics": [
+          "relationships"
+        ],
+        "on": [
+          "きょう"
+        ],
+        "kun": []
+      },
+      "総": {
+        "ja": "総",
+        "en": [
+          "General",
+          "Whole",
+          "All"
+        ],
+        "topics": [
+          "quantity"
+        ],
+        "on": [
+          "そう"
+        ],
+        "kun": [
+          "す.べて",
+          "すべ.て",
+          "ふさ"
+        ]
+      },
+      "区": {
+        "ja": "区",
+        "en": [
+          "Ward",
+          "District"
+        ],
+        "topics": [
+          "places"
+        ],
+        "on": [
+          "く",
+          "おう",
+          "こう"
+        ],
+        "kun": []
+      },
+      "領": {
+        "ja": "領",
+        "en": [
+          "Jurisdiction",
+          "Dominion",
+          "Territory"
+        ],
+        "topics": [
+          "places",
+          "society"
+        ],
+        "on": [
+          "りょう"
+        ],
+        "kun": [
+          "えり"
+        ]
+      },
+      "県": {
+        "ja": "県",
+        "en": [
+          "Prefecture"
+        ],
+        "topics": [
+          "places"
+        ],
+        "on": [
+          "けん"
+        ],
+        "kun": [
+          "か.ける"
+        ]
+      },
+      "設": {
+        "ja": "設",
+        "en": [
+          "Establishment",
+          "Provision",
+          "Prepare"
+        ],
+        "topics": [
+          "actions",
+          "work"
+        ],
+        "on": [
+          "せつ"
+        ],
+        "kun": [
+          "もう.ける"
+        ]
+      },
+      "改": {
+        "ja": "改",
+        "en": [
+          "Reformation",
+          "Change",
+          "Modify"
+        ],
+        "topics": [
+          "actions"
+        ],
+        "on": [
+          "かい"
+        ],
+        "kun": [
+          "あらた.める",
+          "あらた.まる"
+        ]
+      },
+      "査": {
+        "ja": "査",
+        "en": [
+          "Investigate"
+        ],
+        "topics": [
+          "learning"
+        ],
+        "on": [
+          "さ"
+        ],
+        "kun": []
+      },
+      "団": {
+        "ja": "団",
+        "en": [
+          "Group",
+          "Association"
+        ],
+        "topics": [
+          "people",
+          "society"
+        ],
+        "on": [
+          "だん",
+          "とん"
+        ],
+        "kun": [
+          "かたまり",
+          "まる.い"
+        ]
+      },
+      "各": {
+        "ja": "各",
+        "en": [
+          "Each",
+          "Every",
+          "Either"
+        ],
+        "topics": [
+          "quantity"
+        ],
+        "on": [
+          "かく"
+        ],
+        "kun": [
+          "おのおの"
+        ]
+      },
+      "減": {
+        "ja": "減",
+        "en": [
+          "Dwindle",
+          "Decrease",
+          "Reduce"
+        ],
+        "topics": [
+          "quantity",
+          "actions"
+        ],
+        "on": [
+          "げん"
+        ],
+        "kun": [
+          "へ.る",
+          "へ.らす"
+        ]
+      },
+      "比": {
+        "ja": "比",
+        "en": [
+          "Compare",
+          "Race",
+          "Ratio"
+        ],
+        "topics": [
+          "learning",
+          "quantity",
+          "arts"
+        ],
+        "on": [
+          "ひ"
+        ],
+        "kun": [
+          "くら.べる"
+        ]
+      },
+      "防": {
+        "ja": "防",
+        "en": [
+          "Ward Off",
+          "Defend",
+          "Protect"
+        ],
+        "topics": [
+          "society",
+          "actions"
+        ],
+        "on": [
+          "ぼう"
+        ],
+        "kun": [
+          "ふせ.ぐ"
+        ]
+      },
+      "境": {
+        "ja": "境",
+        "en": [
+          "Boundary",
+          "Border",
+          "Region"
+        ],
+        "topics": [
+          "places"
+        ],
+        "on": [
+          "きょう",
+          "けい"
+        ],
+        "kun": [
+          "さかい"
+        ]
+      },
+      "導": {
+        "ja": "導",
+        "en": [
+          "Guidance",
+          "Leading",
+          "Conduct"
+        ],
+        "topics": [
+          "learning",
+          "actions"
+        ],
+        "on": [
+          "どう"
+        ],
+        "kun": [
+          "みちび.く"
+        ]
+      },
+      "副": {
+        "ja": "副",
+        "en": [
+          "Vice-",
+          "Assistant",
+          "Aide"
+        ],
+        "topics": [
+          "people",
+          "work"
+        ],
+        "on": [
+          "ふく"
+        ],
+        "kun": []
+      },
+      "線": {
+        "ja": "線",
+        "en": [
+          "Line",
+          "Track"
+        ],
+        "topics": [
+          "places",
+          "quantity"
+        ],
+        "on": [
+          "せん"
+        ],
+        "kun": [
+          "すじ"
+        ]
+      },
+      "農": {
+        "ja": "農",
+        "en": [
+          "Agriculture",
+          "Farmers"
+        ],
+        "topics": [
+          "nature",
+          "work"
+        ],
+        "on": [
+          "のう"
+        ],
+        "kun": []
+      },
+      "象": {
+        "ja": "象",
+        "en": [
+          "Elephant",
+          "Pattern After",
+          "Imitate"
+        ],
+        "topics": [
+          "nature",
+          "arts",
+          "actions"
+        ],
+        "on": [
+          "しょう",
+          "ぞう"
+        ],
+        "kun": [
+          "かたど.る"
         ]
       }
     }

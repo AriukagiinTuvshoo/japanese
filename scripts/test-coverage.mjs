@@ -207,3 +207,30 @@ for(const [id,r] of Object.entries(oct9Topics.kanji)) {
  assert.equal(evidence.ja,id);assert.deepEqual(evidence.topics,r.topics);
  for(const f of ['on','kun','en'])assert.deepEqual(evidence[f],e[f]);
 }
+for(const file of fs.readdirSync('content/mn/batches').filter(f=>/^2026-10-09-n2-(grammar|vocab)-examples-progress-\d+\.json$/.test(f))) {
+ const b=read(`content/mn/batches/${file}`),kind=b.grammar?'grammar':'vocab';let count=0;
+ for(const [id,r] of Object.entries(b[kind])) {
+  const e=read(`public/data/${kind}/n2.json`).find(e=>e.id===id);assert.ok(e);
+  for(const [f,v] of Object.entries(r.expected))assert.deepEqual(e[f],v);
+  for(const [ja,v] of Object.entries(r.examples)) {
+   const xs=e.ex.filter(x=>x.ja===ja);assert.equal(xs.length,1);assert.equal(xs[0].en,v.en);assert.equal(xs[0].mn,v.mn);assert.equal(xs[0].mn_provenance,b.provenance.id);assert.ok(validMn(v.mn));count++;
+  }
+ }
+ assert.equal(count,kind==='grammar'&&file.endsWith('-3.json')?10:kind==='vocab'&&file.endsWith('-5.json')?9:40);
+}
+const progressTopics=read('content/mn/batches/2026-10-09-topics-progress-1.json');
+for(const kind of ['kanji','vocab']) {
+ assert.equal(Object.keys(progressTopics[kind]).length,20);
+ for(const [id,r] of Object.entries(progressTopics[kind])) {
+  const e=read(`public/data/${kind}/${kind==='kanji'?'n2':'n3'}.json`).find(e=>(kind==='kanji'?e.k:e.id)===id);
+  for(const [f,v] of Object.entries(r.expected))assert.deepEqual(e[f],v);
+  const ev=read('content/categories/provenance.json').entries[kind][id];
+  assert.deepEqual(ev.topics,r.topics);assert.deepEqual(ev.en,e.en);assert.equal(ev.ja,kind==='kanji'?e.k:e.w);
+  if(kind==='vocab')assert.equal(ev.reading,e.r);else for(const f of ['on','kun'])assert.deepEqual(ev[f],e[f]);
+ }
+}
+for(const r of read('content/mn/example-source-audit-2026-10-09.json').records) {
+ const e=read(`public/data/vocab/${r.level}.json`).find(e=>e.id===r.id);
+ for(const [f,v] of Object.entries(r.expected))assert.deepEqual(e[f],v);
+ const x=e.ex.find(x=>x.ja===r.ja);assert.equal(x.en,r.en);assert.ok(!x.mn);
+}

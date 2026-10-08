@@ -1,4 +1,5 @@
 export const adminText: Record<string,string> = {
+ "JSON бичлэг буруу байна":"Invalid JSON syntax",
   "Хүний бичсэн": "Human-authored",
   "Авто санал": "Automatic suggestion",
   "Ханзнаас": "Derived from kanji",

@@ -2,6 +2,7 @@
 import {
   useEffect, useId, useRef, useState, type ButtonHTMLAttributes, type ReactNode,
 } from "react";
+import { useStore } from "../lib/store";
 import { cn } from "../utils/cn";
 import { href } from "../lib/router";
 import type { Level } from "../lib/types";
@@ -274,7 +275,9 @@ export function Empty({ icon = "空", title, sub, action }: { icon?: string; tit
   );
 }
 
-export function Spinner({ label, lang = "mn" }: { label?: string; lang?: "mn" | "en" }) {
+export function Spinner({ label, lang }: { label?: string; lang?: "mn" | "en" }) {
+  const { doc } = useStore();
+  lang ??= doc.profile.language ?? "mn";
   return (
     <div className="flex items-center justify-center gap-3 py-14 text-sumi-500">
       <span className="h-5 w-5 animate-spin rounded-full border-2 border-sumi-900/15 border-t-shu-500" />
@@ -283,7 +286,9 @@ export function Spinner({ label, lang = "mn" }: { label?: string; lang?: "mn" | 
   );
 }
 
-export function ErrorBox({ error, retry, lang = "mn" }: { error: unknown; retry?: () => void; lang?: "mn" | "en" }) {
+export function ErrorBox({ error, retry, lang }: { error: unknown; retry?: () => void; lang?: "mn" | "en" }) {
+  const { doc } = useStore();
+  lang ??= doc.profile.language ?? "mn";
   return (
     <div className="rounded-2xl border border-shu-100 bg-shu-50/60 p-5">
       <p className="text-[14px] font-extrabold text-shu-700">{lang === "en" ? "Failed to load" : "Ачаалахад алдаа гарлаа"}</p>
@@ -387,7 +392,7 @@ export function Pager({
 
 /* ─────────────── Аудио товч ─────────────── */
 export function SpeakButton({
-  text, rate = 1, className, label, lang = "mn",
+  text, rate = 1, className, label, lang,
 }: { text: string; rate?: number; className?: string; label?: string; lang?: "mn" | "en" }) {
   const [on, setOn] = useState(false);
   return (
