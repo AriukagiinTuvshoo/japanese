@@ -5,6 +5,7 @@ import { useStore } from "../lib/store";
 import { LEVELS, type Level } from "../lib/types";
 import { LEVEL_LABEL } from "../lib/text";
 import { dueCards } from "../lib/srs";
+import { ui } from "../lib/i18n";
 import { Bar, Button, Chip, Ring } from "./ui";
 import { SearchPalette } from "./SearchPalette";
 import { AccountModal } from "./AccountModal";
@@ -34,6 +35,8 @@ export default function Shell({ children }: { children: ReactNode }) {
   const [accountOpen, setAccountOpen] = useState(false);
 
   const due = useMemo(() => dueCards(doc.srs).length, [doc.srs]);
+  const language = doc.profile.language ?? "mn";
+  const t = ui[language];
   const level = (route.query.level as Level | undefined) ?? (doc.profile.current === "zero" ? doc.profile.target : doc.profile.current);
 
   useEffect(() => setMenu(false), [route.hash]);
@@ -50,29 +53,25 @@ export default function Shell({ children }: { children: ReactNode }) {
   }, []);
 
   const nav: NavItem[] = [
-    { id: "home", to: "home", k: "家", label: "Нүүр самбар", group: "Эхлэл" },
-    { id: "plan", to: "plan", k: "計", label: "Миний төлөвлөгөө", group: "Эхлэл" },
-    { id: "progress", to: "progress", k: "統", label: "Ахиц · шинжилгээ", group: "Эхлэл" },
-
-    { id: "vocab", to: `vocab?level=${level}`, k: "語", label: "Үгийн сан", group: "Сан", badge: due },
-    { id: "kanji", to: `kanji?level=${level}`, k: "漢", label: "Ханз", group: "Сан" },
-    { id: "write", to: `write?level=${level}`, k: "筆", label: "Бичих дасгал", group: "Сан" },
-    { id: "grammar", to: `grammar?level=${level}`, k: "文", label: "Дүрэм", group: "Сан" },
-    { id: "kana", to: "kana", k: "あ", label: "Хирагана · Катакана", group: "Сан" },
-
-    { id: "reading", to: `reading?level=${level}`, k: "読", label: "Уншлага", group: "Чадвар" },
-    { id: "listening", to: `listening?level=${level}`, k: "聴", label: "Сонсгол · YouTube", group: "Чадвар" },
-
-    { id: "review", to: "review", k: "復", label: "Давталт (SRS)", group: "Дасгал", badge: due },
-    { id: "quiz", to: `quiz?level=${level}`, k: "題", label: "Шалгалтын дасгал", group: "Дасгал" },
-    { id: "mock", to: "mock", k: "試", label: "Жишиг JLPT", group: "Дасгал" },
-    { id: "placement", to: "placement", k: "測", label: "Түвшин тогтоох", group: "Дасгал" },
-
-    { id: "dict", to: "dict", k: "辞", label: "Толь бичиг", group: "Хэрэгсэл" },
-    { id: "achievements", to: "achievements", k: "賞", label: "Амжилт", group: "Хэрэгсэл" },
-    { id: "account", to: "account", k: "人", label: "Аккаунт · синхрон", group: "Хэрэгсэл" },
-    { id: "about", to: "about", k: "元", label: "Эх сурвалж", group: "Хэрэгсэл" },
-    { id: "admin", to: "admin", k: "管", label: "Контент удирдлага", group: "Хэрэгсэл" },
+    { id: "home", to: "home", k: "家", label: t.home, group: t.start },
+    { id: "plan", to: "plan", k: "計", label: t.plan, group: t.start },
+    { id: "progress", to: "progress", k: "統", label: t.progress, group: t.start },
+    { id: "vocab", to: `vocab?level=${level}`, k: "語", label: t.vocab, group: t.library, badge: due },
+    { id: "kanji", to: `kanji?level=${level}`, k: "漢", label: t.kanji, group: t.library },
+    { id: "write", to: `write?level=${level}`, k: "筆", label: t.writing, group: t.library },
+    { id: "grammar", to: `grammar?level=${level}`, k: "文", label: t.grammar, group: t.library },
+    { id: "kana", to: "kana", k: "あ", label: t.kana, group: t.library },
+    { id: "reading", to: `reading?level=${level}`, k: "読", label: t.reading, group: t.skills },
+    { id: "listening", to: `listening?level=${level}`, k: "聴", label: t.listening, group: t.skills },
+    { id: "review", to: "review", k: "復", label: t.review, group: t.practice, badge: due },
+    { id: "quiz", to: `quiz?level=${level}`, k: "題", label: t.quiz, group: t.practice },
+    { id: "mock", to: "mock", k: "試", label: t.mock, group: t.practice },
+    { id: "placement", to: "placement", k: "測", label: t.placement, group: t.practice },
+    { id: "dict", to: "dict", k: "辞", label: t.dictionary, group: t.tools },
+    { id: "achievements", to: "achievements", k: "賞", label: t.achievements, group: t.tools },
+    { id: "account", to: "account", k: "人", label: t.account, group: t.tools },
+    { id: "about", to: "about", k: "元", label: t.sources, group: t.tools },
+    { id: "admin", to: "admin", k: "管", label: t.admin, group: t.tools },
   ];
 
   const groups = [...new Set(nav.map((n) => n.group))];
@@ -125,6 +124,19 @@ export default function Shell({ children }: { children: ReactNode }) {
         <span className="mt-1.5 block font-jp text-[10.5px] font-medium tracking-[0.16em] text-washi-400">日本語道場 · N5→N1</span>
       </span>
     </a>
+  );
+
+  const LanguageSwitcher = (
+    <div className="flex items-center rounded-xl border border-sumi-900/10 bg-white/70 p-1" aria-label={t.language}>
+      {(["mn", "en"] as const).map((lang) => (
+        <button key={lang} onClick={() => actions.patchProfile({ language: lang })}
+          aria-pressed={language === lang}
+          className={cn("h-7 rounded-lg px-2.5 font-mono text-[11px] font-extrabold transition",
+            language === lang ? "bg-shu-500 text-white" : "text-sumi-500 hover:text-sumi-900")}>
+          {lang.toUpperCase()}
+        </button>
+      ))}
+    </div>
   );
 
   const LevelSwitcher = (
@@ -208,7 +220,7 @@ export default function Shell({ children }: { children: ReactNode }) {
             {Brand}
             <button onClick={() => setMenu(false)} className="grid h-9 w-9 place-items-center rounded-lg bg-white/10 text-washi-50" aria-label="Хаах">✕</button>
           </div>
-          <div className="mb-5 px-2">{LevelSwitcher}</div>
+          <div className="mb-5 flex gap-2 px-2">{LevelSwitcher}{LanguageSwitcher}</div>
           {SideNav}
         </div>
       </div>
@@ -224,6 +236,7 @@ export default function Shell({ children }: { children: ReactNode }) {
             <kbd className="ml-auto rounded-md border border-sumi-900/12 bg-white px-1.5 py-0.5 font-mono text-[10px] font-bold text-sumi-500">⌘K</kbd>
           </button>
           <div className="ml-auto flex items-center gap-2">
+            {LanguageSwitcher}
             {LevelSwitcher}
             <Chip tone="shu" className="gap-1.5">{streak} өдөр</Chip>
             <button

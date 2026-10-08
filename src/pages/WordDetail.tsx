@@ -6,12 +6,14 @@ import { loadFullData } from "../lib/data";
 import type { Vocab } from "../lib/types";
 import { MQ_LABEL, TYPE_LABEL, LEVEL_LABEL, stripFurigana, toRomaji } from "../lib/text";
 import { GRADES, cardStage, previewIntervals, retrievability } from "../lib/srs";
+import { MN_PENDING } from "../lib/i18n";
 import {
   Bar, Button, Card, Chip, Empty, Furigana, LevelBadge, SectionTitle, SpeakButton, Spinner, Tabs, speak,
 } from "../components/ui";
 
 export default function WordDetail({ id }: { id: string }) {
   const { doc, actions } = useStore();
+  const language = doc.profile.language ?? "mn";
   const [data, setData] = useState<Awaited<ReturnType<typeof loadFullData>> | null>(null);
   const [tab, setTab] = useState<"overview" | "examples" | "network" | "source">("overview");
   const [mnemonic, setMnemonic] = useState("");
@@ -99,18 +101,17 @@ export default function WordDetail({ id }: { id: string }) {
 
             <div className="mt-6 border-t border-sumi-900/8 pt-5">
               <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-sumi-400">Утга</p>
-              {v.mn?.length ? (
+              {language === "en" ? (
+                <p className="mt-2 text-[1.1rem] font-bold text-sumi-900">{v.en.join("; ")}</p>
+              ) : v.mn?.length ? (
                 <ul className="mt-2 space-y-1.5">
                   {v.mn.map((m, i) => (
                     <li key={i} className="flex items-start gap-2.5 text-[1.15rem] font-bold leading-snug text-sumi-900">
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-shu-500" />
-                      {m}
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-shu-500" />{m}
                     </li>
                   ))}
                 </ul>
-              ) : (
-                <p className="mt-2 text-[1.1rem] font-bold text-sumi-500">{v.en.join("; ")}</p>
-              )}
+              ) : <p className="mt-2 text-[1.1rem] font-bold text-kin-600">{MN_PENDING}</p>}
 
               <div className="mt-3 flex flex-wrap items-center gap-2">
                 <Chip tone={mq?.tone ?? "sumi"}>{mq?.text}</Chip>

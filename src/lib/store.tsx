@@ -14,6 +14,7 @@ import { ACHIEVEMENTS, XP, xpLevel, type AchievementInput } from "./gamification
 import { schedule, type Card, type Grade } from "./srs";
 import { dayOffset, todayKey } from "./text";
 import type { Level } from "./types";
+import type { Language } from "./i18n";
 
 /* ─────────────── Төрлүүд ─────────────── */
 
@@ -62,6 +63,8 @@ export interface Profile {
   onboarded: boolean;
   theme: "light" | "sepia";
   romaji: boolean;
+  /** UI and learning-content language. Stored with the profile and synced. */
+  language: Language;
 }
 
 export interface ActivityDay {
@@ -119,6 +122,7 @@ export const DEFAULT_PROFILE: Profile = {
   onboarded: false,
   theme: "light",
   romaji: false,
+  language: "mn",
 };
 
 const emptyDay = (): ActivityDay => ({ xp: 0, min: 0, newCards: 0, reviews: 0, correct: 0, total: 0 });
