@@ -1,0 +1,1025 @@
+{
+  "provenance": {
+    "id": "mn-n2-vocab-large-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit topics cross-checked individually against retained Japanese headwords/readings and English glosses, including alternate dictionary readings. Independently unreviewed.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n2.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j1513870": {
+      "mn": [
+        "гаалийн баталгаат хадгалалт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "保税",
+        "r": "ほぜい",
+        "en": [
+          "customs bond"
+        ]
+      }
+    },
+    "j2841908": {
+      "mn": [
+        "манлайлал",
+        "чиглүүлэлт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "領導",
+        "r": "りょうどう",
+        "en": [
+          "leadership",
+          "guidance"
+        ]
+      }
+    },
+    "j1386010": {
+      "mn": [
+        "байгууламж буюу хуаран босгох",
+        "барилга",
+        "талбай бэлдэх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "設営",
+        "r": "せつえい",
+        "en": [
+          "setting up (a structure, building, camp, etc.)",
+          "construction",
+          "preparation (e.g. of a venue)"
+        ]
+      }
+    },
+    "j1873900": {
+      "mn": [
+        "мужийн хил",
+        "мужийн зааг"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "県境",
+        "r": "けんざかい",
+        "en": [
+          "prefectural border",
+          "prefectural boundary"
+        ]
+      }
+    },
+    "j2727350": {
+      "mn": [
+        "намын зааг",
+        "намын хүрээ"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "党の枠",
+        "r": "とうのわく",
+        "en": [
+          "party lines (politics)"
+        ]
+      }
+    },
+    "j2665330": {
+      "mn": [
+        "галт тэрэгний шугам",
+        "автобусны шугам"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "線区",
+        "r": "せんく",
+        "en": [
+          "train line",
+          "bus line"
+        ]
+      }
+    },
+    "j2038250": {
+      "mn": [
+        "эзэмших",
+        "хүлээн авах",
+        "ойлгох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "領する",
+        "r": "りょうする",
+        "en": [
+          "to own",
+          "to receive",
+          "to understand"
+        ]
+      }
+    },
+    "j1708500": {
+      "mn": [
+        "гол хаалга"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "総門",
+        "r": "そうもん",
+        "en": [
+          "main gate"
+        ]
+      }
+    },
+    "j1401850": {
+      "mn": [
+        "нийлбэр хэмжээ"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "総量",
+        "r": "そうりょう",
+        "en": [
+          "aggregate amount"
+        ]
+      }
+    },
+    "j1253490": {
+      "mn": [
+        "эрс өрнөлтэй",
+        "сэтгэл хөдөлгөм",
+        "уярам"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "劇的",
+        "r": "げきてき",
+        "en": [
+          "dramatic",
+          "exciting",
+          "touching"
+        ]
+      }
+    },
+    "j1503570": {
+      "mn": [
+        "тусдаа боть",
+        "цувралын хэсэг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "分冊",
+        "r": "ぶんさつ",
+        "en": [
+          "separate volume",
+          "fascicle",
+          "fascicule"
+        ]
+      }
+    },
+    "j1617910": {
+      "mn": [
+        "байгууллага байгуулах",
+        "бүлэг байгуулах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "結団",
+        "r": "けつだん",
+        "en": [
+          "forming into an organization",
+          "forming into an organisation",
+          "setting up a group"
+        ]
+      }
+    },
+    "j2562310": {
+      "mn": [
+        "үхжиж тусгаарлагдсан ясны хэлтэрхий",
+        "салсан хэсэг",
+        "ясны үхжилтэй холбоотой"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "分離片",
+        "r": "ぶんりへん",
+        "en": [
+          "sequestrum",
+          "discerption",
+          "sequestral"
+        ]
+      }
+    },
+    "j2805760": {
+      "mn": [
+        "мужийн нутаг",
+        "мужийн талбай"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "県域",
+        "r": "けんいき",
+        "en": [
+          "prefectural territory",
+          "prefectural area"
+        ]
+      }
+    },
+    "j1669350": {
+      "mn": [
+        "өвийн хууль ёсны хувь"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "遺贈分",
+        "r": "いぞうぶん",
+        "en": [
+          "legal portion"
+        ]
+      }
+    },
+    "j2713260": {
+      "mn": [
+        "намаас гарах мэдэгдэл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "離党届",
+        "r": "りとうとどけ",
+        "en": [
+          "notice of resignation from a party"
+        ]
+      }
+    },
+    "j1385990": {
+      "mn": [
+        "хангах",
+        "байрлуулах",
+        "суурилуулах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "設える",
+        "r": "しつらえる",
+        "en": [
+          "to provide",
+          "to arrange",
+          "to install"
+        ]
+      }
+    },
+    "j1513900": {
+      "mn": [
+        "төмөр замын арчилгаа"
+      ],
+      "topics": [
+        "places",
+        "work"
+      ],
+      "expected": {
+        "w": "保線",
+        "r": "ほせん",
+        "en": [
+          "track maintenance"
+        ]
+      }
+    },
+    "j1762900": {
+      "mn": [
+        "хамгаалагч бурханд зориулсан сүм"
+      ],
+      "topics": [
+        "places",
+        "society"
+      ],
+      "expected": {
+        "w": "氏寺",
+        "r": "うじでら",
+        "en": [
+          "shrine built to a guardian deity"
+        ]
+      }
+    },
+    "j1205120": {
+      "mn": [
+        "нам бүр",
+        "фракц бүр",
+        "бүх шашны урсгал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "各派",
+        "r": "かくは",
+        "en": [
+          "each party",
+          "each faction",
+          "all sects"
+        ]
+      }
+    },
+    "j1213560": {
+      "mn": [
+        "архинаас амттанг илүүд үздэг хүн",
+        "амттанд дуртай хүн"
+      ],
+      "topics": [
+        "food",
+        "people"
+      ],
+      "expected": {
+        "w": "甘党",
+        "r": "あまとう",
+        "en": [
+          "person who prefers sweet things to alcoholic drinks",
+          "person with a sweet tooth"
+        ]
+      }
+    },
+    "j1401750": {
+      "mn": [
+        "ерөнхий захирагч",
+        "захирагч",
+        "хааны төлөөлөгч"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "総督",
+        "r": "そうとく",
+        "en": [
+          "governor-general",
+          "governor",
+          "viceroy"
+        ]
+      }
+    },
+    "j2726330": {
+      "mn": [
+        "нотолгоонд тулгуурласан",
+        "логик дүгнэлттэй",
+        "нарийн сэтгэлгээнд үндэслэсэн"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "比量的",
+        "r": "ひりょうてき",
+        "en": [
+          "demonstrative",
+          "ratiocinative",
+          "based on exact thinking"
+        ]
+      }
+    },
+    "j2747600": {
+      "mn": [
+        "дэмжих үүрэгтэй",
+        "туслах",
+        "туслалцаа үзүүлэх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "補佐的",
+        "r": "ほさてき",
+        "en": [
+          "supportive (role)",
+          "assistant",
+          "assisting"
+        ]
+      }
+    },
+    "j1418210": {
+      "mn": [
+        "баталгаа",
+        "батлан даалт",
+        "барьцаа"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "担保",
+        "r": "たんぽ",
+        "en": [
+          "security",
+          "guarantee",
+          "collateral (e.g. mortgage)"
+        ]
+      }
+    },
+    "j2562290": {
+      "mn": [
+        "хоёр салаалах",
+        "салбар",
+        "салаалалт"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "分枝",
+        "r": "ぶんし",
+        "en": [
+          "bifurcation",
+          "branch",
+          "branching"
+        ]
+      }
+    },
+    "j1158340": {
+      "mn": [
+        "байгууламж шилжүүлэх",
+        "байгууллага нүүлгэх",
+        "нүүлгэн байрлуулах"
+      ],
+      "topics": [
+        "places",
+        "work"
+      ],
+      "expected": {
+        "w": "移設",
+        "r": "いせつ",
+        "en": [
+          "relocation (of a facility)",
+          "moving establishment",
+          "to relocate"
+        ]
+      }
+    },
+    "j1214110": {
+      "mn": [
+        "харьяалах нутаг",
+        "эрх хэмжээний хүрээ"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "管区",
+        "r": "かんく",
+        "en": [
+          "jurisdiction"
+        ]
+      }
+    },
+    "j1500690": {
+      "mn": [
+        "мөрийн эхэнд буцах",
+        "шинэ мөр ба мөрийн эхэнд шилжих"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "復改",
+        "r": "ふっかい",
+        "en": [
+          "carriage return",
+          "return (LF+CR)"
+        ]
+      }
+    },
+    "j1513690": {
+      "mn": [
+        "хамгаалалтад буй улс нутаг"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "保護領",
+        "r": "ほごりょう",
+        "en": [
+          "protectorate"
+        ]
+      }
+    },
+    "j1624300": {
+      "mn": [
+        "шим тэжээл",
+        "тэжээллэг бодис",
+        "тэжээл"
+      ],
+      "topics": [
+        "food",
+        "body"
+      ],
+      "expected": {
+        "w": "栄養分",
+        "r": "えいようぶん",
+        "en": [
+          "nutriment",
+          "nutritious substance",
+          "nourishment"
+        ]
+      }
+    },
+    "j1503360": {
+      "mn": [
+        "салбар төмөр зам",
+        "салаа зам"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "分岐線",
+        "r": "ぶんきせん",
+        "en": [
+          "branch line",
+          "spur"
+        ]
+      }
+    },
+    "j2541260": {
+      "mn": [
+        "хадгалалт",
+        "нөөцлөх",
+        "хадгалах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "保蔵",
+        "r": "ほぞう",
+        "en": [
+          "preservation",
+          "storage",
+          "to store"
+        ]
+      }
+    },
+    "j1708590": {
+      "mn": [
+        "хичээлээ бүхэлд нь давтах",
+        "хувцастай ерөнхий бэлтгэл"
+      ],
+      "topics": [
+        "learning",
+        "arts"
+      ],
+      "expected": {
+        "w": "総ざらい",
+        "r": "そうざらい",
+        "en": [
+          "general review (e.g. of one's lessons)",
+          "dress rehearsal"
+        ]
+      }
+    },
+    "j1708640": {
+      "mn": [
+        "ерөнхий тойм",
+        "ерөнхий судалгаа"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "総まくり",
+        "r": "そうまくり",
+        "en": [
+          "general overview",
+          "general survey"
+        ]
+      }
+    },
+    "j2584830": {
+      "mn": [
+        "нийт хураангуй"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "総まとめ",
+        "r": "そうまとめ",
+        "en": [
+          "overall summary"
+        ]
+      }
+    },
+    "j1748140": {
+      "mn": [
+        "төмөр замын хэсэг"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "保線区",
+        "r": "ほせんく",
+        "en": [
+          "section of track"
+        ]
+      }
+    },
+    "j1989420": {
+      "mn": [
+        "шинэчлэгч"
+      ],
+      "topics": [
+        "society",
+        "people"
+      ],
+      "expected": {
+        "w": "改革派",
+        "r": "かいかくは",
+        "en": [
+          "reformist"
+        ]
+      }
+    },
+    "j1906080": {
+      "mn": [
+        "Осака буюу Киотогийн мужийн татвар"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "府税",
+        "r": "ふぜい",
+        "en": [
+          "urban prefectural tax (of Osaka or Kyoto)"
+        ]
+      }
+    },
+    "j1231410": {
+      "mn": [
+        "хуучин эзэмшил нутаг"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "旧領",
+        "r": "きゅうりょう",
+        "en": [
+          "old fief"
+        ]
+      }
+    },
+    "j2825080": {
+      "mn": [
+        "өрхийн бүртгэлээс тусгаарлах мэдэгдэл",
+        "шинэ өрхийн бүртгэл үүсгэх мэдэгдэл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "分籍届",
+        "r": "ぶんせきとどけ",
+        "en": [
+          "notification of separation from family register",
+          "notification of creation of a new family register"
+        ]
+      }
+    },
+    "j1275240": {
+      "mn": [
+        "үр ашигтай"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "効率的",
+        "r": "こうりつてき",
+        "en": [
+          "efficient"
+        ]
+      }
+    },
+    "j2215790": {
+      "mn": [
+        "биогазарзүйн бүс"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "区系",
+        "r": "くけい",
+        "en": [
+          "ecozone (biogeographical realm)"
+        ]
+      }
+    },
+    "j2210700": {
+      "mn": [
+        "өрхийн бүртгэлийг дахин боловсруулах",
+        "дахин байгуулах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "改製",
+        "r": "かいせい",
+        "en": [
+          "re-drawing up (of family register)",
+          "re-establishment"
+        ]
+      }
+    },
+    "j2059460": {
+      "mn": [
+        "дэд ерөнхийлөгч"
+      ],
+      "topics": [
+        "people",
+        "work"
+      ],
+      "expected": {
+        "w": "副総裁",
+        "r": "ふくそうさい",
+        "en": [
+          "vice president"
+        ]
+      }
+    },
+    "j1200790": {
+      "mn": [
+        "шинэчлэлийн санал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "改革案",
+        "r": "かいかくあん",
+        "en": [
+          "reform proposal"
+        ]
+      }
+    },
+    "j2352920": {
+      "mn": [
+        "шууд утсан холболт"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "結線",
+        "r": "けっせん",
+        "en": [
+          "hard wiring"
+        ]
+      }
+    },
+    "j1906760": {
+      "mn": [
+        "нимгэн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "分が薄い",
+        "r": "ぶがうすい",
+        "en": [
+          "thin"
+        ]
+      }
+    },
+    "j1921180": {
+      "mn": [
+        "дамжих чанартай"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "推移的",
+        "r": "すいいてき",
+        "en": [
+          "transitive"
+        ]
+      }
+    },
+    "j1389920": {
+      "mn": [
+        "техникийн",
+        "тусгай",
+        "мэргэжлийн"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "専門的",
+        "r": "せんもんてき",
+        "en": [
+          "technical (e.g. discussion)",
+          "exclusive",
+          "professional"
+        ]
+      }
+    },
+    "j1776250": {
+      "mn": [
+        "нигилистууд"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "虚無党",
+        "r": "きょむとう",
+        "en": [
+          "the Nihilists"
+        ]
+      }
+    },
+    "j1504050": {
+      "mn": [
+        "жингийн туухай",
+        "тэнцүүлэгч туухай"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "分銅",
+        "r": "ふんどう",
+        "en": [
+          "weight (for scales)",
+          "counterweight"
+        ]
+      }
+    },
+    "j1708690": {
+      "mn": [
+        "ерөнхий захирагчийн захиргаа"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "総督府",
+        "r": "そうとくふ",
+        "en": [
+          "government-general"
+        ]
+      }
+    },
+    "j2841346": {
+      "mn": [
+        "Хятадын Нянь бослого (1851–1868)"
+      ],
+      "topics": [
+        "society",
+        "time"
+      ],
+      "expected": {
+        "w": "捻軍",
+        "r": "ねんぐん",
+        "en": [
+          "Nian Rebellion (China, 1851-1868)"
+        ]
+      }
+    },
+    "j2835502": {
+      "mn": [
+        "мужийн төв",
+        "мужийн гол хэсэг"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "県央",
+        "r": "けんおう",
+        "en": [
+          "centre of a prefecture",
+          "heart of a prefecture"
+        ]
+      }
+    },
+    "j2742660": {
+      "mn": [
+        "буцаах боломжтой"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "可逆的",
+        "r": "かぎゃくてき",
+        "en": [
+          "reversible"
+        ]
+      }
+    },
+    "j1248770": {
+      "mn": [
+        "армийн корпус",
+        "цэргийн корпус"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "軍団",
+        "r": "ぐんだん",
+        "en": [
+          "army corps",
+          "corps"
+        ]
+      }
+    },
+    "j1200810": {
+      "mn": [
+        "үндсэн хууль өөрчлөх",
+        "үндсэн хууль шинэчлэх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "改憲",
+        "r": "かいけん",
+        "en": [
+          "constitutional change",
+          "revising the constitution"
+        ]
+      }
+    },
+    "j2652520": {
+      "mn": [
+        "Ногоон нам",
+        "ногоонтнууд"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "緑の党",
+        "r": "みどりのとう",
+        "en": [
+          "Green Party",
+          "The Greens"
+        ]
+      }
+    },
+    "j1971140": {
+      "mn": [
+        "гетеротип эсийн хуваагдал"
+      ],
+      "topics": [
+        "learning",
+        "body"
+      ],
+      "expected": {
+        "w": "異型分裂",
+        "r": "いけいぶんれつ",
+        "en": [
+          "heterotypic division"
+        ]
+      }
+    }
+  }
+}

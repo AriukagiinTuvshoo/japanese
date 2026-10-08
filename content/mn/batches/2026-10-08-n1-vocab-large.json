@@ -1,0 +1,1047 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-large-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit semantic categories cross-checked against Japanese entry and retained English gloss, independently unreviewed. Original uncommon senses preserved.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "326a77ddc9": {
+      "mn": [
+        "гэх мэт",
+        "энэ тэр",
+        "тайлбар"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "云々",
+        "r": "うんぬん",
+        "en": [
+          "and so on",
+          "and so forth",
+          "comment"
+        ]
+      }
+    },
+    "7e99520775": {
+      "mn": [
+        "тээвэрлэлт",
+        "зөөвөр"
+      ],
+      "topics": [
+        "places",
+        "work"
+      ],
+      "expected": {
+        "w": "運搬",
+        "r": "うんぱん",
+        "en": [
+          "transport",
+          "carriage"
+        ]
+      }
+    },
+    "645451702d": {
+      "mn": [
+        "хувь тавилан"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "運命",
+        "r": "うんめい",
+        "en": [
+          "fate"
+        ]
+      }
+    },
+    "01f242436f": {
+      "mn": [
+        "тээвэр"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "運輸",
+        "r": "うんゆ",
+        "en": [
+          "transportation"
+        ]
+      }
+    },
+    "1103db2949": {
+      "mn": [
+        "ашиглах",
+        "хэрэглэх",
+        "хөрөнгө оруулах"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "運用",
+        "r": "うんよう",
+        "en": [
+          "making use of",
+          "application",
+          "investment"
+        ]
+      }
+    },
+    "5da1033412": {
+      "mn": [
+        "ойлголт"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "会",
+        "r": "え",
+        "en": [
+          "understanding"
+        ]
+      }
+    },
+    "5fd6ea6d24": {
+      "mn": [
+        "давхар",
+        "үе"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "重",
+        "r": "え",
+        "en": [
+          "-fold",
+          "-ply"
+        ]
+      }
+    },
+    "a26814e88a": {
+      "mn": [
+        "агаарын шуудан"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "エアメール",
+        "r": "エアメール",
+        "en": [
+          "air mail"
+        ]
+      }
+    },
+    "922da07980": {
+      "mn": [
+        "скат загас"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "えい",
+        "r": "えい",
+        "en": [
+          "ray (fish)"
+        ]
+      }
+    },
+    "cebfa04858": {
+      "mn": [
+        "англи үсэг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "英字",
+        "r": "えいじ",
+        "en": [
+          "English letter (character)"
+        ]
+      }
+    },
+    "189db824d3": {
+      "mn": [
+        "дэлгэцэнд тусгах"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "映写",
+        "r": "えいしゃ",
+        "en": [
+          "projection"
+        ]
+      }
+    },
+    "be5ed48bcd": {
+      "mn": [
+        "эрүүл мэнд",
+        "эрүүл ахуй",
+        "ариун цэвэр"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "衛生",
+        "r": "えいせい",
+        "en": [
+          "health",
+          "hygiene",
+          "sanitation"
+        ]
+      }
+    },
+    "b1ee34b937": {
+      "mn": [
+        "тусгал",
+        "дүрс"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "映像",
+        "r": "えいぞう",
+        "en": [
+          "reflection",
+          "image"
+        ]
+      }
+    },
+    "62924474c4": {
+      "mn": [
+        "баатар",
+        "агуу хүн"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "英雄",
+        "r": "えいゆう",
+        "en": [
+          "hero",
+          "great man"
+        ]
+      }
+    },
+    "19595bf6aa": {
+      "mn": [
+        "шингэн",
+        "шингэн бодис"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "液",
+        "r": "えき",
+        "en": [
+          "liquid",
+          "fluid"
+        ]
+      }
+    },
+    "ca47625fe8": {
+      "mn": [
+        "дайн",
+        "цэргийн ажиллагаа",
+        "тулалдаан"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "役",
+        "r": "えき",
+        "en": [
+          "war",
+          "campaign",
+          "battle"
+        ]
+      }
+    },
+    "2cd66712b3": {
+      "mn": [
+        "үзэж шалгах",
+        "унших"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "閲覧",
+        "r": "えつらん",
+        "en": [
+          "inspection",
+          "reading"
+        ]
+      }
+    },
+    "d8f1d8b772": {
+      "mn": [
+        "ан",
+        "олз",
+        "ялалтын цом"
+      ],
+      "topics": [
+        "nature",
+        "arts"
+      ],
+      "expected": {
+        "w": "獲物",
+        "r": "えもの",
+        "en": [
+          "game",
+          "spoils",
+          "trophy"
+        ]
+      }
+    },
+    "13ff9735e2": {
+      "mn": [
+        "хүзүү",
+        "зах",
+        "энгэр"
+      ],
+      "topics": [
+        "body",
+        "daily"
+      ],
+      "expected": {
+        "w": "襟",
+        "r": "えり",
+        "en": [
+          "neck",
+          "collar",
+          "lapel"
+        ]
+      }
+    },
+    "6451784f21": {
+      "mn": [
+        "дэгжин"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "エレガント",
+        "r": "エレガント",
+        "en": [
+          "elegant"
+        ]
+      }
+    },
+    "9214f9905f": {
+      "mn": [
+        "цэцэрлэг",
+        "зориуд байгуулсан цэцэрлэг"
+      ],
+      "topics": [
+        "places",
+        "nature"
+      ],
+      "expected": {
+        "w": "園",
+        "r": "えん",
+        "en": [
+          "garden (esp. man-made)"
+        ]
+      }
+    },
+    "f11ad5d8d2": {
+      "mn": [
+        "тохиол",
+        "хувь заяа",
+        "учрал"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "縁",
+        "r": "えん",
+        "en": [
+          "chance",
+          "fate",
+          "destiny"
+        ]
+      }
+    },
+    "281570f768": {
+      "mn": [
+        "сэтгэл татам",
+        "дур булаам",
+        "тачаангуй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "艶",
+        "r": "えん",
+        "en": [
+          "charming",
+          "fascinating",
+          "voluptuous"
+        ]
+      }
+    },
+    "f9aaf64bd0": {
+      "mn": [
+        "давс"
+      ],
+      "topics": [
+        "food"
+      ],
+      "expected": {
+        "w": "塩",
+        "r": "えん",
+        "en": [
+          "salt"
+        ]
+      }
+    },
+    "c21a451e73": {
+      "mn": [
+        "зохицол",
+        "саадгүй байдал"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "円滑",
+        "r": "えんかつ",
+        "en": [
+          "harmony",
+          "smoothness"
+        ]
+      }
+    },
+    "26a7133c2f": {
+      "mn": [
+        "довжоо",
+        "үүдний тавцан",
+        "тагт"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "縁側",
+        "r": "えんがわ",
+        "en": [
+          "veranda",
+          "porch",
+          "balcony"
+        ]
+      }
+    },
+    "32f7aa5c9b": {
+      "mn": [
+        "далайн эрэг",
+        "эрэг"
+      ],
+      "topics": [
+        "places",
+        "nature"
+      ],
+      "expected": {
+        "w": "沿岸",
+        "r": "えんがん",
+        "en": [
+          "coast",
+          "shore"
+        ]
+      }
+    },
+    "93fe84e748": {
+      "mn": [
+        "тойруулан хэлсэн",
+        "зөөлрүүлэн хэлэх",
+        "шууд бус"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "婉曲",
+        "r": "えんきょく",
+        "en": [
+          "euphemistic",
+          "circumlocution",
+          "roundabout"
+        ]
+      }
+    },
+    "e5d4fba484": {
+      "mn": [
+        "инженер"
+      ],
+      "topics": [
+        "people",
+        "work"
+      ],
+      "expected": {
+        "w": "エンジニア",
+        "r": "エンジニア",
+        "en": [
+          "engineer"
+        ]
+      }
+    },
+    "d8d1560f90": {
+      "mn": [
+        "дадлага",
+        "дасгал",
+        "цэргийн сургуулилт"
+      ],
+      "topics": [
+        "learning",
+        "society"
+      ],
+      "expected": {
+        "w": "演習",
+        "r": "えんしゅう",
+        "en": [
+          "practice",
+          "exercises",
+          "manoeuvers"
+        ]
+      }
+    },
+    "62e5ed991c": {
+      "mn": [
+        "жүжгийн тавилт",
+        "найруулга"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "演出",
+        "r": "えんしゅつ",
+        "en": [
+          "production (e.g. play)",
+          "direction"
+        ]
+      }
+    },
+    "df7f4310a6": {
+      "mn": [
+        "жүжиг тоглох",
+        "дүр бүтээх",
+        "жүжиглэх"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "演じる",
+        "r": "えんじる",
+        "en": [
+          "to perform (a play)",
+          "to play (a part)",
+          "to act (a part)"
+        ]
+      }
+    },
+    "b7dd037f7c": {
+      "mn": [
+        "тоглох",
+        "дүр бүтээх"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "演ずる",
+        "r": "えんずる",
+        "en": [
+          "to perform",
+          "to play"
+        ]
+      }
+    },
+    "7429dae3d6": {
+      "mn": [
+        "төмөр замын дагуу"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "沿線",
+        "r": "えんせん",
+        "en": [
+          "along railway line"
+        ]
+      }
+    },
+    "da24646f6d": {
+      "mn": [
+        "гэрлэх санал",
+        "сүй тавих"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "縁談",
+        "r": "えんだん",
+        "en": [
+          "marriage proposal",
+          "engagement"
+        ]
+      }
+    },
+    "3bfb8d81d9": {
+      "mn": [
+        "хол зам",
+        "алс газар"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "遠方",
+        "r": "えんぽう",
+        "en": [
+          "long way",
+          "distant place"
+        ]
+      }
+    },
+    "a24b6a05b0": {
+      "mn": [
+        "төгс байдал",
+        "эв зохицол",
+        "амгалан"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "円満",
+        "r": "えんまん",
+        "en": [
+          "perfection",
+          "harmony",
+          "peace"
+        ]
+      }
+    },
+    "ad00cfc278": {
+      "mn": [
+        "сүүл",
+        "нуруу"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "尾",
+        "r": "お",
+        "en": [
+          "tail",
+          "ridge"
+        ]
+      }
+    },
+    "4fe63ccd71": {
+      "mn": [
+        "ах эгч дүүгийн хүү",
+        "зээ хүү"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "甥",
+        "r": "おい",
+        "en": [
+          "nephew"
+        ]
+      }
+    },
+    "5cdc0b28ad": {
+      "mn": [
+        "туух",
+        "буланд шахах",
+        "шахан оруулах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "追い込む",
+        "r": "おいこむ",
+        "en": [
+          "to herd",
+          "to corner",
+          "to drive"
+        ]
+      }
+    },
+    "bbd3ff32ae": {
+      "mn": [
+        "хөөх",
+        "гаргах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "追い出す",
+        "r": "おいだす",
+        "en": [
+          "to expel",
+          "to drive out"
+        ]
+      }
+    },
+    "98c6945629": {
+      "mn": [
+        "газарт",
+        "дотор",
+        "дээр"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "おいて",
+        "r": "おいて",
+        "en": [
+          "at",
+          "in",
+          "on"
+        ]
+      }
+    },
+    "df8f0c0717": {
+      "mn": [
+        "хөгшрөх",
+        "нас ахих"
+      ],
+      "topics": [
+        "body",
+        "time"
+      ],
+      "expected": {
+        "w": "老いる",
+        "r": "おいる",
+        "en": [
+          "to age",
+          "to grow old"
+        ]
+      }
+    },
+    "4c962a58bb": {
+      "mn": [
+        "үүрэх",
+        "өртэй байх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "負う",
+        "r": "おう",
+        "en": [
+          "to bear",
+          "to owe"
+        ]
+      }
+    },
+    "263aeb9d53": {
+      "mn": [
+        "яаралтай тусламж",
+        "онцгой байдлын арга хэмжээ"
+      ],
+      "topics": [
+        "body",
+        "society"
+      ],
+      "expected": {
+        "w": "応急",
+        "r": "おうきゅう",
+        "en": [
+          "emergency"
+        ]
+      }
+    },
+    "75b3f9459f": {
+      "mn": [
+        "алт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "黄金",
+        "r": "おうごん",
+        "en": [
+          "gold"
+        ]
+      }
+    },
+    "571519d3bb": {
+      "mn": [
+        "бүртгүүлэх",
+        "өргөдөл гаргах"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "応募",
+        "r": "おうぼ",
+        "en": [
+          "subscription",
+          "application"
+        ]
+      }
+    },
+    "98909531bf": {
+      "mn": [
+        "хөөе!"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "おおい",
+        "r": "おおい",
+        "en": [
+          "hey!"
+        ]
+      }
+    },
+    "3351589df4": {
+      "mn": [
+        "магадгүй",
+        "бараг бүгд",
+        "олонх"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "大方",
+        "r": "おおかた",
+        "en": [
+          "perhaps",
+          "almost all",
+          "majority"
+        ]
+      }
+    },
+    "4259b4ca3c": {
+      "mn": [
+        "том бие",
+        "том хээ"
+      ],
+      "topics": [
+        "body",
+        "arts"
+      ],
+      "expected": {
+        "w": "大柄",
+        "r": "おおがら",
+        "en": [
+          "large build",
+          "large pattern"
+        ]
+      }
+    },
+    "f1f8fbc2f8": {
+      "mn": [
+        "за",
+        "болж байна"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "オーケー",
+        "r": "オーケー",
+        "en": [
+          "OK"
+        ]
+      }
+    },
+    "e8a535ddec": {
+      "mn": [
+        "сүржин",
+        "хэтрүүлсэн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "大げさ",
+        "r": "おおげさ",
+        "en": [
+          "grandiose",
+          "exaggerated"
+        ]
+      }
+    },
+    "c117100746": {
+      "mn": [
+        "чухал",
+        "үнэ цэнтэй",
+        "ноцтой хэрэг"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "大事",
+        "r": "おおごと",
+        "en": [
+          "important",
+          "valuable",
+          "serious matter"
+        ]
+      }
+    },
+    "d8aaab462e": {
+      "mn": [
+        "тойм",
+        "хураангуй"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "大筋",
+        "r": "おおすじ",
+        "en": [
+          "outline",
+          "summary"
+        ]
+      }
+    },
+    "7823eb7759": {
+      "mn": [
+        "тэнгэр",
+        "огторгуй"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "大空",
+        "r": "おおぞら",
+        "en": [
+          "heaven",
+          "firmament",
+          "the sky"
+        ]
+      }
+    },
+    "5eec70dba4": {
+      "mn": [
+        "автомат"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "オートマチック",
+        "r": "オートマチック",
+        "en": [
+          "automatic"
+        ]
+      }
+    },
+    "ca1fafcdb2": {
+      "mn": [
+        "бүтэн өргөн",
+        "том хэмжээ",
+        "эрс"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "大幅",
+        "r": "おおはば",
+        "en": [
+          "full width",
+          "large scale",
+          "drastic"
+        ]
+      }
+    },
+    "226ff96dc6": {
+      "mn": [
+        "нээлттэй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "オープン",
+        "r": "オープン",
+        "en": [
+          "open"
+        ]
+      }
+    },
+    "a5ee74734c": {
+      "mn": [
+        "үер"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "大水",
+        "r": "おおみず",
+        "en": [
+          "flood"
+        ]
+      }
+    },
+    "9c2a6f0131": {
+      "mn": [
+        "албан ёсны",
+        "нийтийн",
+        "ёслолын"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "公",
+        "r": "おおやけ",
+        "en": [
+          "official",
+          "public",
+          "formal"
+        ]
+      }
+    }
+  }
+}

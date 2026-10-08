@@ -41,10 +41,10 @@
     "N4": {
       "vocab": {
         "entries": 1080,
-        "missingMeanings": 150,
+        "missingMeanings": 0,
         "missingExamples": 1238,
         "missingForms": 0,
-        "unclassified": 269,
+        "unclassified": 214,
         "invalidCategories": 0,
         "missingProvenance": 0,
         "mislabeledMn": 0,
@@ -76,10 +76,10 @@
     "N3": {
       "vocab": {
         "entries": 2279,
-        "missingMeanings": 380,
+        "missingMeanings": 320,
         "missingExamples": 3218,
         "missingForms": 0,
-        "unclassified": 749,
+        "unclassified": 728,
         "invalidCategories": 0,
         "missingProvenance": 0,
         "mislabeledMn": 0,
@@ -111,10 +111,10 @@
     "N2": {
       "vocab": {
         "entries": 2338,
-        "missingMeanings": 320,
+        "missingMeanings": 260,
         "missingExamples": 3094,
         "missingForms": 0,
-        "unclassified": 726,
+        "unclassified": 703,
         "invalidCategories": 0,
         "missingProvenance": 0,
         "mislabeledMn": 0,
@@ -146,10 +146,10 @@
     "N1": {
       "vocab": {
         "entries": 3690,
-        "missingMeanings": 2850,
+        "missingMeanings": 2790,
         "missingExamples": 4848,
         "missingForms": 0,
-        "unclassified": 1166,
+        "unclassified": 1148,
         "invalidCategories": 0,
         "missingProvenance": 0,
         "mislabeledMn": 0,
@@ -157,10 +157,10 @@
       },
       "kanji": {
         "entries": 1646,
-        "missingMeanings": 1146,
+        "missingMeanings": 1026,
         "missingExamples": 0,
         "missingForms": 0,
-        "unclassified": 872,
+        "unclassified": 785,
         "invalidCategories": 0,
         "missingProvenance": 0,
         "mislabeledMn": 0,
@@ -180,10 +180,10 @@
     }
   },
   "totals": {
-    "missingMeanings": 4846,
+    "missingMeanings": 4396,
     "missingExamples": 14407,
     "missingForms": 0,
-    "unclassified": 4259,
+    "unclassified": 4055,
     "invalidCategories": 0,
     "missingProvenance": 0,
     "mislabeledMn": 0,
