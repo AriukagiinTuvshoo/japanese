@@ -1,6 +1,6 @@
 # Mobile UX pass (320–430px) — audit note
 
-Tested head: `d38412612c2c50d58547912b56601d4e3f2963d4` (worktree identical to tested build; suite ran against frozen dist of this tree).
+Tested head: `f7a437c` (code commit; `scripts/test-mobile-browser.mjs` ran against a frozen `dist` built from its exact source tree — this note only cites that head).
 Suite: `scripts/test-mobile-browser.mjs` (new) — 320/375/390/430px × MN+EN, frozen `dist`, `isMobile`/`hasTouch` context, port 4182.
 
 ## Confirmed defects (browser-measured before fixes)
