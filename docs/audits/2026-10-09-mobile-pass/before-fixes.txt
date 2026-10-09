@@ -1,0 +1,17 @@
+mn@320: 21 routes, no overflow/clipped JP
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: mn@320 menu: touch target 40x40 < 44px
+    at tapBox (file:///home/user/japanese/scripts/test-mobile-browser.mjs:65:10)
+    at async file:///home/user/japanese/scripts/test-mobile-browser.mjs:102:7 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v22.22.3

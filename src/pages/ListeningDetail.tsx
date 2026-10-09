@@ -280,7 +280,7 @@ export default function ListeningDetail({ id }: { id: string }) {
                       <p className="font-jp text-[11px] text-sumi-400">{v.r}</p>
                     </div>
                     <span className="max-w-[130px] truncate text-[12px] text-sumi-600">{language === "en" ? (v.en ?? v.mn) : v.mn}</span>
-                    <SpeakButton text={v.w} className="!h-7 !w-7" />
+                    <SpeakButton text={v.w} className="!h-11 !w-11 sm:!h-7 sm:!w-7" />
                     <Button size="sm" variant={known ? "soft" : "outline"} onClick={() => actions.toggleKnownWord(`${v.w}|${v.r}`)}>
                       {known ? (language === "en" ? "✓ Known" : "✓ Мэднэ") : (language === "en" ? "Review" : "Давтах")}
                     </Button>
@@ -348,7 +348,7 @@ function ShadowRow({ text, index }: { text: string; index: number }) {
         <p className="min-w-0 flex-1 font-jp text-[14.5px] font-semibold">{text}</p>
       </div>
       <div className="mt-2.5 flex flex-wrap items-center gap-2">
-        <SpeakButton text={text} className="!h-7 !w-auto !px-2.5" label={t.listen} />
+        <SpeakButton text={text} className="!h-11 !w-auto sm:!h-7 sm:!px-2.5" label={t.listen} />
         {!recording ? (
           <Button size="sm" variant="outline" onClick={start}>{t.recordBtn}</Button>
         ) : (

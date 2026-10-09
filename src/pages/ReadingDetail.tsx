@@ -72,7 +72,7 @@ export default function ReadingDetail({ id }: { id: string }) {
             <p className="text-[12px] font-bold text-sumi-500">
               {t.tapWordHint}
             </p>
-            <SpeakButton text={passage.body.map(stripFurigana).join("。")} className="!h-8 !w-8" />
+            <SpeakButton text={passage.body.map(stripFurigana).join("。")} className="!h-11 !w-11 sm:!h-8 sm:!w-8" />
           </div>
           <div className="prose-jp p-6 sm:p-9">
             {passage.body.map((para, i) => (
@@ -168,7 +168,7 @@ export default function ReadingDetail({ id }: { id: string }) {
                   <span className="block truncate text-[12.5px] text-sumi-700">{language === "en" ? (g.meaningEn ?? g.mn) : g.mn}</span>
                   <span className="block font-jp text-[10.5px] text-sumi-400">{g.r}</span>
                 </span>
-                <SpeakButton text={g.w} className="!h-7 !w-7" />
+                <SpeakButton text={g.w} className="!h-11 !w-11 sm:!h-7 sm:!w-7" />
                 <Button size="sm" variant={known ? "soft" : "outline"} onClick={() => actions.toggleKnownWord(`${g.w}|${g.r}`)}>
                   {known ? (language === "en" ? "✓ Known" : "✓ Мэднэ") : (language === "en" ? "Review" : "Давтах")}
                 </Button>

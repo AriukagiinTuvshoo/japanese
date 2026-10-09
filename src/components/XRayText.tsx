@@ -131,7 +131,7 @@ export function XRayText({ text, showFurigana = true }: { text: string; showFuri
             </div>
             <div className="flex flex-col items-end gap-1.5">
               <LevelBadge level={active.hit.lvl as never} size="sm" />
-              <SpeakButton text={active.text} className="!h-7 !w-7" />
+              <SpeakButton text={active.text} className="!h-11 !w-11 sm:!h-7 sm:!w-7" />
             </div>
           </div>
 

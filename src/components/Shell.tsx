@@ -127,11 +127,11 @@ export default function Shell({ children }: { children: ReactNode }) {
   );
 
   const LanguageSwitcher = (
-    <div className="flex items-center rounded-xl border border-sumi-900/10 bg-white/70 p-1" aria-label={t.language}>
+    <div className="flex shrink-0 items-center rounded-xl border border-sumi-900/10 bg-white/70 p-1" aria-label={t.language}>
       {(["mn", "en"] as const).map((lang) => (
         <button key={lang} onClick={() => actions.patchProfile({ language: lang })}
           aria-pressed={language === lang}
-          className={cn("h-7 rounded-lg px-2.5 font-mono text-[11px] font-extrabold transition",
+          className={cn("h-11 min-h-11 min-w-11 sm:h-7 sm:min-h-0 sm:min-w-0 rounded-lg px-3.5 sm:px-2.5 font-mono text-[11px] font-extrabold transition",
             language === lang ? "bg-shu-500 text-white" : "text-sumi-500 hover:text-sumi-900")}>
           {lang.toUpperCase()}
         </button>
@@ -140,7 +140,7 @@ export default function Shell({ children }: { children: ReactNode }) {
   );
 
   const LevelSwitcher = (
-    <div className="flex items-center gap-1 rounded-xl bg-sumi-900/5 p-1">
+    <div className="no-scrollbar flex max-w-full items-center gap-1 overflow-x-auto rounded-xl bg-sumi-900/5 p-1">
       {LEVELS.map((l) => (
         <button
           key={l}
@@ -151,7 +151,7 @@ export default function Shell({ children }: { children: ReactNode }) {
           }}
           title={`${l} — ${LEVEL_LABEL[language][l]}`}
           className={cn(
-            "h-7 rounded-lg px-2 font-mono text-[11.5px] font-extrabold transition",
+            "h-11 min-h-11 min-w-11 sm:h-7 sm:min-h-0 sm:min-w-0 rounded-lg px-3 sm:px-2 font-mono text-[11.5px] font-extrabold transition",
             route.query.level === l ? "bg-sumi-900 text-washi-50" : "text-sumi-500 hover:text-sumi-900",
           )}
         >
@@ -198,8 +198,8 @@ export default function Shell({ children }: { children: ReactNode }) {
         <div className="flex h-16 items-center gap-3 px-4">
           {Brand}
           <div className="ml-auto flex items-center gap-2">
-            <button onClick={() => setSearch(true)} aria-label={t.searchTitle} className="grid h-10 w-10 place-items-center rounded-xl bg-white/10 text-washi-50">🔎</button>
-            <button onClick={() => setMenu(true)} aria-label={t.menu} className="grid h-10 w-10 place-items-center rounded-xl bg-white/10 text-washi-50">
+            <button onClick={() => setSearch(true)} aria-label={t.searchTitle} className="grid h-11 w-11 place-items-center rounded-xl bg-white/10 text-washi-50">🔎</button>
+            <button onClick={() => setMenu(true)} aria-label={t.menu} className="grid h-11 w-11 place-items-center rounded-xl bg-white/10 text-washi-50">
               <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M4 7h16M4 12h16M4 17h10" /></svg>
             </button>
           </div>
@@ -218,9 +218,9 @@ export default function Shell({ children }: { children: ReactNode }) {
         )}>
           <div className="mb-5 flex items-center justify-between px-2">
             {Brand}
-            <button onClick={() => setMenu(false)} className="grid h-9 w-9 place-items-center rounded-lg bg-white/10 text-washi-50" aria-label={t.close}>✕</button>
+            <button onClick={() => setMenu(false)} className="grid h-11 w-11 place-items-center rounded-lg bg-white/10 text-washi-50" aria-label={t.close}>✕</button>
           </div>
-          <div className="mb-5 flex gap-2 px-2">{LevelSwitcher}{LanguageSwitcher}</div>
+          <div className="mb-5 flex flex-wrap items-center gap-2 px-2">{LevelSwitcher}{LanguageSwitcher}</div>
           {SideNav}
         </div>
       </div>
@@ -268,7 +268,7 @@ export default function Shell({ children }: { children: ReactNode }) {
           {MOBILE_TABS.map((tab) => {
             const on = route.name === tab.id || (tab.id === "vocab" && ["kanji", "grammar", "reading", "listening", "write", "kana"].includes(route.name));
             return (
-              <a key={tab.id} href={href(tab.to)} className="relative flex flex-col items-center gap-0.5 py-2.5">
+              <a key={tab.id} href={href(tab.to)} className="relative flex min-h-11 flex-col items-center gap-0.5 py-2.5">
                 <span className={cn("relative font-mincho text-[19px] font-bold leading-none transition-colors", on ? "text-shu-500" : "text-sumi-500")}>
                   {tab.k}
                   {tab.id === "vocab" && due > 0 && (

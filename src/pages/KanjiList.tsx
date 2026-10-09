@@ -124,7 +124,7 @@ export default function KanjiList() {
             <div className="no-scrollbar mt-3 flex gap-1.5 overflow-x-auto" aria-label={t.filterByTopic}>
               <button aria-pressed={topic === "all"} onClick={() => { setTopic("all"); setPage(1); }} className="shrink-0 rounded-lg bg-shu-50 px-3 py-2 text-xs font-bold">{t.allTopics}</button>
               {(items ?? []).some(e => entryTopics(e).length === 0) && (
-                <button aria-pressed={topic === "unclassified"} onClick={() => { setTopic("unclassified"); setPage(1); }} className="shrink-0 rounded-lg bg-kin-50 px-3 py-2 text-xs font-bold text-kin-700">
+                <button aria-pressed={topic === "unclassified"} onClick={() => { setTopic("unclassified"); setPage(1); }} className="min-h-11 sm:min-h-0 shrink-0 rounded-lg bg-kin-50 px-3 py-2 text-xs font-bold text-kin-700">
                   {t.unclassifiedTopic} {(items ?? []).filter(e => entryTopics(e).length === 0).length}
                 </button>
               )}
@@ -138,7 +138,7 @@ export default function KanjiList() {
             {radicals.length > 0 && (
               <div className="no-scrollbar mt-3 flex gap-1.5 overflow-x-auto">
                 <button onClick={() => { setRad("all"); setPage(1); }}
-                  className={cn("shrink-0 rounded-lg px-2.5 py-1.5 text-[12px] font-bold transition",
+                  className={cn("min-h-11 sm:min-h-0 shrink-0 rounded-lg px-2.5 py-1.5 text-[12px] font-bold transition",
                     rad === "all" ? "bg-sumi-900 text-washi-50" : "bg-sumi-900/5 text-sumi-600")}>
                   {t.allRadicals}
                 </button>

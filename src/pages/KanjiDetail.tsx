@@ -120,9 +120,9 @@ export default function KanjiDetail({ char }: { char: string }) {
             </div>
 
             <div className="mt-5 flex flex-wrap items-center gap-2">
-              <SpeakButton text={char} rate={doc.profile.rate} className="!h-10 !w-10" />
-              {k.on[0] && <SpeakButton text={k.on[0]} rate={doc.profile.rate} className="!h-10 !w-auto !px-3" label={`🔊 ${k.on[0]}`} />}
-              {k.kun[0] && <SpeakButton text={k.kun[0].replace(/[.()]/g, "")} rate={doc.profile.rate} className="!h-10 !w-auto !px-3" label={`🔊 ${k.kun[0].replace(/[.()]/g, "")}`} />}
+              <SpeakButton text={char} rate={doc.profile.rate} className="!h-11 !w-11 sm:!h-10 sm:!w-10" />
+              {k.on[0] && <SpeakButton text={k.on[0]} rate={doc.profile.rate} className="!h-11 !w-auto sm:!h-10" label={`🔊 ${k.on[0]}`} />}
+              {k.kun[0] && <SpeakButton text={k.kun[0].replace(/[.()]/g, "")} rate={doc.profile.rate} className="!h-11 !w-auto sm:!h-10" label={`🔊 ${k.kun[0].replace(/[.()]/g, "")}`} />}
               {k.rad && <Chip tone="murasaki">{t.radicalLabel} <span className="font-mincho text-[14px]">{k.rad}</span></Chip>}
             </div>
           </div>

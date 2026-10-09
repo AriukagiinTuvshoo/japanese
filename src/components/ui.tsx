@@ -21,10 +21,10 @@ const VARIANTS: Record<Variant, string> = {
   danger: "bg-shu-50 text-shu-700 hover:bg-shu-100",
 };
 const SIZES: Record<Size, string> = {
-  sm: "h-8 px-3 text-[12.5px] rounded-lg gap-1.5",
-  md: "h-10 px-4 text-[13.5px] rounded-xl gap-2",
+  sm: "h-8 min-h-11 sm:min-h-0 px-3 text-[12.5px] rounded-lg gap-1.5",
+  md: "h-10 min-h-11 sm:min-h-0 px-4 text-[13.5px] rounded-xl gap-2",
   lg: "h-12 px-6 text-[15px] rounded-xl gap-2",
-  icon: "h-9 w-9 rounded-lg justify-center",
+  icon: "h-9 w-9 min-h-11 min-w-11 sm:min-h-0 sm:min-w-0 rounded-lg justify-center",
 };
 
 export function Button({
@@ -248,7 +248,7 @@ export function Tabs<T extends string>({
           onClick={() => onChange(it.id)}
           className={cn(
             "relative flex shrink-0 items-center gap-1.5 rounded-lg font-bold transition-all",
-            size === "sm" ? "px-2.5 py-1.5 text-[12px]" : "px-3.5 py-2 text-[13px]",
+            size === "sm" ? "min-h-11 sm:min-h-0 px-2.5 py-1.5 text-[12px]" : "min-h-11 sm:min-h-0 px-3.5 py-2 text-[13px]",
             value === it.id ? "bg-white text-sumi-900 shadow-sm" : "text-sumi-500 hover:text-sumi-800",
           )}
         >
@@ -348,7 +348,7 @@ export function Select<T extends string>({
     <select
       value={value}
       onChange={(e) => onChange(e.target.value as T)}
-      className={cn("h-10 rounded-xl border border-sumi-900/12 bg-white/80 px-3 text-[13px] font-bold text-sumi-800 outline-none focus:border-shu-400", className)}
+      className={cn("h-10 min-h-11 sm:min-h-0 rounded-xl border border-sumi-900/12 bg-white/80 px-3 text-[13px] font-bold text-sumi-800 outline-none focus:border-shu-400", className)}
     >
       {options.map((o) => <option key={o.id} value={o.id}>{o.label}</option>)}
     </select>
@@ -409,7 +409,7 @@ export function SpeakButton({
       title={language === "en" ? "Listen" : "Сонсох"}
       aria-label={language === "en" ? `Listen to ${text}` : `${text} дуудлагыг сонсох`}
       className={cn(
-        "grid h-8 w-8 shrink-0 place-items-center rounded-lg border border-sumi-900/10 bg-white/80 text-[14px] transition",
+        "grid h-8 w-8 min-h-11 min-w-11 sm:min-h-0 sm:min-w-0 shrink-0 place-items-center rounded-lg border border-sumi-900/10 bg-white/80 text-[14px] transition",
         "hover:border-ai-400 hover:text-ai-600",
         on && "scale-95 bg-ai-50",
         className,

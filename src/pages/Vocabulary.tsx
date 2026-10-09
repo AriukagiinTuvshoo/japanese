@@ -160,7 +160,7 @@ export default function Vocabulary() {
             <div className="no-scrollbar mt-3 flex gap-1.5 overflow-x-auto">
               <button
                 onClick={() => { setType("all"); setPage(1); }}
-                className={cn("shrink-0 rounded-lg px-2.5 py-1.5 text-[12px] font-bold transition",
+                className={cn("min-h-11 sm:min-h-0 shrink-0 rounded-lg px-2.5 py-1.5 text-[12px] font-bold transition",
                   type === "all" ? "bg-sumi-900 text-washi-50" : "bg-sumi-900/5 text-sumi-600 hover:text-sumi-900")}
               >
                 {t.all} {words?.length ?? 0}
@@ -169,7 +169,7 @@ export default function Vocabulary() {
                 <button
                   key={k}
                   onClick={() => { setType(k); setPage(1); }}
-                  className={cn("shrink-0 rounded-lg px-2.5 py-1.5 text-[12px] font-bold transition",
+                  className={cn("min-h-11 sm:min-h-0 shrink-0 rounded-lg px-2.5 py-1.5 text-[12px] font-bold transition",
                     type === k ? "bg-sumi-900 text-washi-50" : "bg-sumi-900/5 text-sumi-600 hover:text-sumi-900")}
                 >
                   {TYPE_LABEL[language][k]} <span className="tabnum opacity-60">{typeCounts[k]}</span>
@@ -178,17 +178,17 @@ export default function Vocabulary() {
             </div>
             <div className="no-scrollbar mt-3 flex gap-1.5 overflow-x-auto border-t border-sumi-900/8 pt-3" aria-label={t.filterByTopic}>
               <button onClick={() => { setTopic("all"); setPage(1); }}
-                className={cn("shrink-0 rounded-lg px-2.5 py-1.5 text-[12px] font-bold transition", topic === "all" ? "bg-shu-500 text-white" : "bg-shu-50 text-shu-700")}>
+                className={cn("min-h-11 sm:min-h-0 shrink-0 rounded-lg px-2.5 py-1.5 text-[12px] font-bold transition", topic === "all" ? "bg-shu-500 text-white" : "bg-shu-50 text-shu-700")}>
                 {t.allTopics}
               </button>
               {(words ?? []).some(e => entryTopics(e).length === 0) && (
-                <button aria-pressed={topic === "unclassified"} onClick={() => { setTopic("unclassified"); setPage(1); }} className="shrink-0 rounded-lg bg-kin-50 px-3 py-2 text-xs font-bold text-kin-700">
+                <button aria-pressed={topic === "unclassified"} onClick={() => { setTopic("unclassified"); setPage(1); }} className="min-h-11 sm:min-h-0 shrink-0 rounded-lg bg-kin-50 px-3 py-2 text-xs font-bold text-kin-700">
                   {t.unclassifiedTopic} {(words ?? []).filter(e => entryTopics(e).length === 0).length}
                 </button>
               )}
               {(Object.keys(topicLabel[language]) as Topic[]).filter((key) => topicCounts[key]).map((key) => (
                 <button key={key} aria-pressed={topic === key} onClick={() => { setTopic(key); setPage(1); }}
-                  className={cn("shrink-0 rounded-lg px-2.5 py-1.5 text-[12px] font-bold transition", topic === key ? "bg-shu-500 text-white" : "bg-sumi-900/5 text-sumi-600 hover:text-sumi-900")}>
+                  className={cn("min-h-11 sm:min-h-0 shrink-0 rounded-lg px-2.5 py-1.5 text-[12px] font-bold transition", topic === key ? "bg-shu-500 text-white" : "bg-sumi-900/5 text-sumi-600 hover:text-sumi-900")}>
                   {topicLabel[language][key]} <span className="tabnum opacity-60">{topicCounts[key]}</span>
                 </button>
               ))}
@@ -248,7 +248,7 @@ export function WordRow({ v }: { v: Vocab }) {
       </a>
 
       <div className="flex shrink-0 flex-col items-end gap-1.5">
-        <SpeakButton text={v.w} className="!h-7 !w-7" lang={language} />
+        <SpeakButton text={v.w} className="!h-11 !w-11 sm:!h-7 sm:!w-7" lang={language} />
         <button
           onClick={() => actions.toggleFavorite(v.id)}
           className={cn("grid h-7 w-7 place-items-center rounded-lg border text-[13px] transition",

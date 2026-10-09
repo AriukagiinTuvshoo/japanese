@@ -1,0 +1,35 @@
+mn@320: 21 routes, no overflow/clipped JP
+mn@320: menu/language/level/search controls passed
+mn@320: detail navigation and grammar quiz actions passed
+mn@320: mock practice state passed
+mn@375: 21 routes, no overflow/clipped JP
+mn@375: menu/language/level/search controls passed
+mn@375: detail navigation and grammar quiz actions passed
+mn@375: mock practice state passed
+mn@390: 21 routes, no overflow/clipped JP
+mn@390: menu/language/level/search controls passed
+mn@390: detail navigation and grammar quiz actions passed
+mn@390: mock practice state passed
+mn@430: 21 routes, no overflow/clipped JP
+mn@430: menu/language/level/search controls passed
+mn@430: detail navigation and grammar quiz actions passed
+mn@430: mock practice state passed
+mn: all phone widths passed
+en@320: 21 routes, no overflow/clipped JP
+en@320: menu/language/level/search controls passed
+en@320: detail navigation and grammar quiz actions passed
+en@320: mock practice state passed
+en@375: 21 routes, no overflow/clipped JP
+en@375: menu/language/level/search controls passed
+en@375: detail navigation and grammar quiz actions passed
+en@375: mock practice state passed
+en@390: 21 routes, no overflow/clipped JP
+en@390: menu/language/level/search controls passed
+en@390: detail navigation and grammar quiz actions passed
+en@390: mock practice state passed
+en@430: 21 routes, no overflow/clipped JP
+en@430: menu/language/level/search controls passed
+en@430: detail navigation and grammar quiz actions passed
+en@430: mock practice state passed
+en: all phone widths passed
+MOBILE_EXIT=0

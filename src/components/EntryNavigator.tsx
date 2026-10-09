@@ -12,7 +12,7 @@ interface EntryNavigatorProps {
   positionLabel: string;
 }
 
-const stepClass = "card-flat flex min-w-0 flex-col justify-center rounded-xl px-3 py-2.5 transition hover:border-shu-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-shu-500";
+const stepClass = "card-flat flex min-h-11 min-w-0 flex-col justify-center rounded-xl px-3 py-2.5 transition hover:border-shu-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-shu-500";
 
 function Step({ item, label, direction }: { item: EntryStep | null; label: string; direction: "previous" | "next" }) {
   const arrow = direction === "previous" ? "←" : "→";
