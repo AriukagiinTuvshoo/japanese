@@ -6,7 +6,8 @@ import { loadFullData } from "../lib/data";
 import type { Vocab } from "../lib/types";
 import { MQ_LABEL, TYPE_LABEL, LEVEL_LABEL, stripFurigana, toRomaji } from "../lib/text";
 import { GRADES, cardStage, previewIntervals, retrievability } from "../lib/srs";
-import { MN_PENDING, ui } from "../lib/i18n";
+import { MN_PENDING, ui, vocabMeaning } from "../lib/i18n";
+import { EntryNavigator } from "../components/EntryNavigator";
 import {
   Bar, Button, Card, Chip, Empty, Furigana, LevelBadge, SectionTitle, SpeakButton, Spinner, Tabs, speak,
 } from "../components/ui";
@@ -57,6 +58,11 @@ export default function WordDetail({ id }: { id: string }) {
     );
   }
 
+  const siblings = data.vocabByLevel[v.lvl];
+  const currentIndex = siblings.findIndex((word) => word.id === v.id);
+  const previousWord = currentIndex > 0 ? siblings[currentIndex - 1] : null;
+  const nextWord = currentIndex >= 0 && currentIndex < siblings.length - 1 ? siblings[currentIndex + 1] : null;
+
   return (
     <div className="space-y-6">
       <div className="flex flex-wrap items-center gap-2">
@@ -70,6 +76,14 @@ export default function WordDetail({ id }: { id: string }) {
           <Button size="sm" onClick={() => navigate(`review?level=${v.lvl}`)}>{t.review2}</Button>
         </div>
       </div>
+
+      <EntryNavigator
+        previous={previousWord ? { href: href("vocab", previousWord.id), title: previousWord.w, subtitle: vocabMeaning(previousWord, language) } : null}
+        next={nextWord ? { href: href("vocab", nextWord.id), title: nextWord.w, subtitle: vocabMeaning(nextWord, language) } : null}
+        previousLabel={t.previousWord}
+        nextLabel={t.nextWord}
+        positionLabel={t.entryPosition(currentIndex + 1, siblings.length)}
+      />
 
       {v.source_issue && <p role="alert" className="rounded-xl bg-kin-50 p-4 text-sm text-kin-700">{t.sourceReviewWarning}</p>}
 

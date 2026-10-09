@@ -9,6 +9,7 @@ import { GRADES, cardStage, previewIntervals } from "../lib/srs";
 import { Bar, Button, Card, Chip, Empty, LevelBadge, SectionTitle, SpeakButton, Spinner, Tabs } from "../components/ui";
 import { ui, MN_PENDING, vocabMeaning } from "../lib/i18n";
 import { StrokePad } from "../components/StrokePad";
+import { EntryNavigator } from "../components/EntryNavigator";
 
 const TABS = [
   { id: "overview", label: "Тойм", icon: "要" },
@@ -52,6 +53,10 @@ export default function KanjiDetail({ char }: { char: string }) {
       action={<Button onClick={() => navigate("kanji")}>{t.backToKanjiList}</Button>} />;
   }
   const mq = MQ_LABEL[language][k.mq];
+  const siblings = data.kanjiByLevel[k.lvl];
+  const currentIndex = siblings.findIndex((item) => item.k === k.k);
+  const previousKanji = currentIndex > 0 ? siblings[currentIndex - 1] : null;
+  const nextKanji = currentIndex >= 0 && currentIndex < siblings.length - 1 ? siblings[currentIndex + 1] : null;
 
   return (
     <div className="space-y-6">
@@ -65,6 +70,14 @@ export default function KanjiDetail({ char }: { char: string }) {
           </Button>
         </div>
       </div>
+
+      <EntryNavigator
+        previous={previousKanji ? { href: href("kanji", previousKanji.k), title: previousKanji.k, subtitle: language === "en" ? previousKanji.en.join(", ") || "—" : previousKanji.mn.join(", ") || MN_PENDING } : null}
+        next={nextKanji ? { href: href("kanji", nextKanji.k), title: nextKanji.k, subtitle: language === "en" ? nextKanji.en.join(", ") || "—" : nextKanji.mn.join(", ") || MN_PENDING } : null}
+        previousLabel={t.previousKanji}
+        nextLabel={t.nextKanji}
+        positionLabel={t.entryPosition(currentIndex + 1, siblings.length)}
+      />
 
       <Card className="overflow-hidden p-0">
         <div className="grid gap-0 lg:grid-cols-[380px_1fr]">

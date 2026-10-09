@@ -15,6 +15,8 @@ if(!fs.existsSync(`${libs}/lib/libnss3.so`)) {
 }
 const source=ts.transpileModule(fs.readFileSync('src/lib/i18n.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2020}}).outputText;
 const {ui}=await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`);
+const firstWords=JSON.parse(fs.readFileSync('public/data/vocab/n5.json','utf8'));
+const firstKanji=JSON.parse(fs.readFileSync('public/data/kanji/n5.json','utf8'));
 const origin='http://127.0.0.1:4177';
 const server=spawn('node',['node_modules/vite/bin/vite.js','preview','--host','0.0.0.0','--port','4177','--strictPort'],{stdio:'pipe'});
 let browser;
@@ -47,6 +49,23 @@ try {
    }
    console.log(`${language}: route ${route} rendered`);
   }
+  const firstWord=firstWords[0],nextWord=firstWords[1];
+  await page.goto(`${origin}/#/vocab/${firstWord.id}`);
+  await page.getByRole('heading',{name:firstWord.w,exact:true}).waitFor();
+  assert.equal(await page.getByRole('button',{name:t.previousWord,exact:true}).isDisabled(),true,`${language}: first vocabulary item must not have a previous item`);
+  await page.getByRole('link',{name:`${t.nextWord}: ${nextWord.w}`,exact:true}).click();
+  await page.getByRole('heading',{name:nextWord.w,exact:true}).waitFor();
+  await page.getByRole('link',{name:`${t.previousWord}: ${firstWord.w}`,exact:true}).click();
+  await page.getByRole('heading',{name:firstWord.w,exact:true}).waitFor();
+  const firstCharacter=firstKanji[0],nextCharacter=firstKanji[1];
+  await page.goto(`${origin}/#/kanji/${encodeURIComponent(firstCharacter.k)}`);
+  await page.locator('main').getByText(firstCharacter.k,{exact:true}).first().waitFor();
+  assert.equal(await page.getByRole('button',{name:t.previousKanji,exact:true}).isDisabled(),true,`${language}: first kanji must not have a previous item`);
+  await page.getByRole('link',{name:`${t.nextKanji}: ${nextCharacter.k}`,exact:true}).click();
+  await page.locator('main').getByText(nextCharacter.k,{exact:true}).first().waitFor();
+  await page.getByRole('link',{name:`${t.previousKanji}: ${firstCharacter.k}`,exact:true}).click();
+  await page.locator('main').getByText(firstCharacter.k,{exact:true}).first().waitFor();
+  console.log(`${language}: vocabulary and kanji previous/next navigation passed`);
   for(const [route,text] of [['reading/missing',t.lessonNotFound],['listening/missing',t.lessonNotFound],['reading',t.noLessons],['listening',t.lessonNotFound],['mistakes',t.emptyMistakes],['review',t.emptyDue],['dict',t.searchPromptTitle],['account',t.serverOfflineNote]]) {
    await page.goto(`${origin}/#/${route}`);
    await page.getByText(text,{exact:true}).waitFor();

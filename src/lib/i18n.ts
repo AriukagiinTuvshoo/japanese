@@ -51,6 +51,8 @@ export const ui = {
     bulkAdd: (n: number) => `+ ${n} үгийг SRS-д нэмэх`,
     // word detail
     meaning: "Утга", backToVocab: "← Үгийн сан", backToKanji: "← Ханз", backToGrammar: "← Дүрэм",
+    previousWord: "Өмнөх үг", nextWord: "Дараагийн үг", previousKanji: "Өмнөх ханз", nextKanji: "Дараагийн ханз",
+    entryPosition: (current: number, total: number) => `${current} / ${total}`,
     favIn: "★ Дуртайд", favAdd2: "☆ Дуртайд нэмэх", writePractice: "✍️ Бичих дасгал", review2: "復 Давтлага",
     extPool: "Өргөтгөсөн сан", transitive: "他動詞 — төлөөний үйл үг", intransitive: "自動詞 — эсрэг төлөөний",
     slow: "🐢 Удаан", normal: "🔊 Хэвийн", fast: "⏩ Хурдан",
@@ -525,6 +527,8 @@ export const ui = {
     improvePost: " — they enter the review queue. Every reviewed translation becomes visible to all users.",
     bulkAdd: (n: number) => `+ Add ${n} words to SRS`,
     meaning: "Meaning", backToVocab: "← Vocabulary", backToKanji: "← Kanji", backToGrammar: "← Grammar",
+    previousWord: "Previous word", nextWord: "Next word", previousKanji: "Previous kanji", nextKanji: "Next kanji",
+    entryPosition: (current: number, total: number) => `${current} / ${total}`,
     favIn: "★ Favorited", favAdd2: "☆ Add to favorites", writePractice: "✍️ Writing", review2: "復 Review",
     extPool: "Extended pool", transitive: "他動詞 — transitive verb", intransitive: "自動詞 — intransitive verb",
     slow: "🐢 Slow", normal: "🔊 Normal", fast: "⏩ Fast",
