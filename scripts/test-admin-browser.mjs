@@ -27,7 +27,11 @@ assert.ok(executablePath,'No browser executable found for admin UI tests');
 const browser=await playwright.launch({executablePath,args:['--no-sandbox','--disable-dev-shm-usage','--disable-gpu'],headless:true,env:process.platform==='win32'?process.env:{...process.env,LD_LIBRARY_PATH:`${libs}/lib:${process.env.LD_LIBRARY_PATH??''}`}});
 try {
  for(const language of ['mn','en']) {
-  const page=await browser.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
+  // Fixture/mock contexts block service workers (as in test-site-browser): the SW
+  // serves /data/*.json from cache and its internal fetches bypass page.route,
+  // which would hide the meta-loading/meta-error fixtures from interception.
+  const context=await browser.newContext({serviceWorkers:'block'});
+  const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
   await page.addInitScript(lang=>localStorage.setItem('nd:doc:local',JSON.stringify({profile:{language:lang,onboarded:true,current:'N4',target:'N1'}})),language);
   let empty=false;
   let mode="normal", release, apiWaiting;
@@ -115,6 +119,6 @@ try {
   console.log(`About ${language}: all ${sources.length} source descriptions and pinned dictionary attribution passed (real static metadata).`);
   mode='meta-error';await page.reload();
   await page.getByText(language==='en'?'Failed to load':'Ачаалахад алдаа гарлаа',{exact:true}).waitFor();
-  assert.deepEqual(errors,[]);await page.close();console.log(`Admin ${language}: overview/queue loading/error/retry/empty/populated, import validation/error/busy/success passed (mock API).`);
+  assert.deepEqual(errors,[]);await context.close();console.log(`Admin ${language}: overview/queue loading/error/retry/empty/populated, import validation/error/busy/success passed (mock API).`);
  }
 }finally{await browser.close();server?.kill();}
