@@ -1,5 +1,6 @@
 // Unit tests for the Gemini tutor core (stubbed fetch — no real network/key).
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import {
   handleTutorRequest,
   buildGeminiRequest,
@@ -11,6 +12,7 @@ import {
 
 const KEY = "AIzaFAKEKEYFORTESTS1234567890abcdefgh";
 const env = { GEMINI_API_KEY: KEY };
+delete process.env.GEMINI_MODEL; // pin default-model assertions
 
 // 1. Missing key -> safe disabled state, no fetch attempted.
 {
@@ -41,15 +43,21 @@ const env = { GEMINI_API_KEY: KEY };
 }
 
 // 3. Request shape: key in header only, never in prompt/body; level+language aware.
+//    Model selection: the default must be Google's current stable gemini-3.8-flash
+//    (https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash).
 {
   const req = buildGeminiRequest({
     messages: [{ role: "user", text: "わたしは学生です" }, { role: "tutor", text: "いいですね" }],
     level: "N4",
     language: "mn",
-    model: "gemini-2.0-flash",
     apiKey: KEY,
   });
-  assert.equal(req.headers["x-goog-api-key"], KEY);
+  assert.equal(
+    req.url,
+    "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent",
+    "default model must be gemini-3.8-flash (current official stable)"
+  );
+  assert.equal(req.headers["x-goog-api-key"], KEY, "key travels only in x-goog-api-key header");
   assert.ok(!req.url.includes(KEY), "key must not be in the URL");
   assert.ok(!JSON.stringify(req.body).includes(KEY), "key must not be in the request body/prompt");
   const sys = req.body.systemInstruction.parts[0].text;
@@ -58,7 +66,64 @@ const env = { GEMINI_API_KEY: KEY };
   assert.ok(req.body.contents.length === 2);
   assert.equal(req.body.contents[0].role, "user");
   assert.equal(req.body.contents[1].role, "model");
-  console.log("tutor: key header-only; level/language prompt wiring ok");
+  console.log("tutor: key header-only; default model gemini-3.8-flash; level/language prompt wiring ok");
+}
+
+// 3b. Full request path: the fetch goes to the exact model URL; GEMINI_MODEL overrides it.
+{
+  const calls = [];
+  const fakeOk = {
+    ok: true,
+    status: 200,
+    json: async () => ({ candidates: [{ content: { parts: [{ text: '{"reply":"ok","correction":null,"tip":null}' }] } }] }),
+  };
+  await handleTutorRequest({
+    method: "POST",
+    body: JSON.stringify({ messages: [{ role: "user", text: "a" }] }),
+    env: { GEMINI_API_KEY: KEY },
+    fetchImpl: async (url, init) => { calls.push({ url, init }); return fakeOk; },
+  });
+  assert.equal(calls.length, 1);
+  assert.equal(
+    calls[0].url,
+    "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent",
+    "request path must target the default stable model"
+  );
+  assert.equal(calls[0].init.method, "POST");
+  assert.equal(calls[0].init.headers["x-goog-api-key"], KEY, "key must be sent only in x-goog-api-key header");
+  assert.ok(!calls[0].url.includes(KEY), "key must not appear in the request URL");
+  assert.ok(!calls[0].init.body.includes(KEY), "key must not appear in the request body");
+
+  await handleTutorRequest({
+    method: "POST",
+    body: JSON.stringify({ messages: [{ role: "user", text: "a" }] }),
+    env: { GEMINI_API_KEY: KEY, GEMINI_MODEL: "custom-test-model" },
+    fetchImpl: async (url, init) => { calls.push({ url, init }); return fakeOk; },
+  });
+  assert.equal(
+    calls[1].url,
+    "https://generativelanguage.googleapis.com/v1beta/models/custom-test-model:generateContent",
+    "GEMINI_MODEL env must override the default in the request path"
+  );
+  console.log("tutor: request path + model selection (default and GEMINI_MODEL override) verified");
+}
+
+// 3c. Regression guard: no retired model ids in server code, hints or UI strings.
+{
+  const core = await readFile(new URL("../api/_tutor-core.mjs", import.meta.url), "utf8");
+  const i18n = await readFile(new URL("../src/lib/i18n.ts", import.meta.url), "utf8");
+  assert.ok(core.includes('DEFAULT_MODEL = "gemini-3.8-flash"'), "core default must be gemini-3.8-flash");
+  assert.ok(!/gemini-[12]\./.test(core), "retired 1.x/2.x model ids must not appear in api/_tutor-core.mjs");
+  assert.ok(!/gemini-[12]\./.test(i18n), "retired 1.x/2.x model ids must not appear in UI strings");
+  const missingKey = await handleTutorRequest({
+    method: "POST",
+    body: JSON.stringify({ messages: [{ role: "user", text: "a" }] }),
+    env: {},
+    fetchImpl: async () => { throw new Error("no"); },
+  });
+  assert.ok(missingKey.body.hint.includes("gemini-3.8-flash"), "config hint must name the current default");
+  assert.ok(!/gemini-[12]\./.test(JSON.stringify(missingKey.body)), "hints must not name retired model ids");
+  console.log("tutor: no retired-model defaults remain");
 }
 
 // 4. Success path parses strict JSON and scrubs key-shaped strings.
@@ -109,4 +174,4 @@ const env = { GEMINI_API_KEY: KEY };
   console.log("tutor: helpers pass");
 }
 
-console.log("OK: Gemini tutor core — disabled state, guards, privacy and error paths verified (no real key used)");
+console.log("OK: Gemini tutor core — disabled state, guards, model selection (gemini-3.8-flash default), privacy and error paths verified (no real key used)");

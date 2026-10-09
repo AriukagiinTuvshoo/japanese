@@ -5,7 +5,11 @@
 //  - Learner transcripts are never persisted here: handled per-request only.
 //  - Responses are Cache-Control: no-store.
 
-const DEFAULT_MODEL = "gemini-2.0-flash";
+// Default model = Google's current stable Flash model per official docs
+// (https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash — stable id
+// `gemini-3.8-flash`, updated 2026-09). Retired model ids must never appear
+// as defaults. Override per deployment with GEMINI_MODEL.
+const DEFAULT_MODEL = "gemini-3.8-flash";
 const GEMINI_URL = (model) =>
   `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`;
 
@@ -89,7 +93,7 @@ export async function handleTutorRequest({ method, body, env = process.env, fetc
       headers: NO_STORE_HEADERS,
       body: {
         error: "config_needed",
-        hint: "Set the GEMINI_API_KEY environment variable in the Vercel project (Settings → Environment Variables) and redeploy. Optionally set GEMINI_MODEL (default: gemini-2.0-flash).",
+        hint: "Set the GEMINI_API_KEY environment variable in the Vercel project (Settings → Environment Variables) and redeploy. Optionally set GEMINI_MODEL (default: gemini-3.8-flash).",
       },
     };
   }
