@@ -237,6 +237,77 @@ function grammarQuestion(g: Grammar, pool: Grammar[], language: Language = "mn")
   };
 }
 
+function grammarPatternFurigana(pattern: string, grammar: Grammar): string {
+  const readings = new Map<string, string>();
+  for (const example of grammar.ex) {
+    for (const match of (example.fg ?? "").matchAll(/\{([^|{}]+)\|([^{}]+)\}/g)) {
+      if (!match[2].startsWith("#") && !readings.has(match[1])) readings.set(match[1], match[2]);
+    }
+  }
+  const alternatives = [...readings.entries()].sort(([a], [b]) => b.length - a.length);
+  if (!alternatives.length) return pattern;
+  const escaped = alternatives.map(([base]) => base.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+  const matcher = new RegExp(escaped.join("|"), "g");
+  return pattern.split(/(\{[^{}]+\})/g).map((part) => {
+    if (part.startsWith("{") && part.endsWith("}")) return part;
+    return part.replace(matcher, (base) => `{${base}|${readings.get(base)}}`);
+  }).join("");
+}
+
+function hideGrammarPattern(furigana: string, japanese: string, target: string): string | null {
+  const tokens = [...furigana.matchAll(/\{([^|{}]+)\|([^{}]+)\}|([^{}]+)/g)].map((match) => ({
+    source: match[0], surface: match[1] ?? match[3], reading: match[2],
+  }));
+  const plain = tokens.map((token) => token.surface).join("");
+  const start = plain.indexOf(target);
+  if (start < 0 || !japanese.includes(target)) return null;
+  const end = start + target.length;
+  let offset = 0;
+  let blankInserted = false;
+  return tokens.map((token) => {
+    const tokenStart = offset;
+    const tokenEnd = tokenStart + token.surface.length;
+    offset = tokenEnd;
+    const from = Math.max(tokenStart, start);
+    const to = Math.min(tokenEnd, end);
+    if (from >= to) return token.source;
+    const before = token.surface.slice(0, from - tokenStart);
+    const after = token.surface.slice(to - tokenStart);
+    const blank = blankInserted ? "" : (blankInserted = true, "（　　　）");
+    if (token.reading) return `${before}${blank}${after}`;
+    return `${before}${blank}${after}`;
+  }).join("");
+}
+
+function grammarUseQuestion(g: Grammar, pool: Grammar[], language: Language = "mn"): Question | null {
+  const meaning = language === "en" ? grammarEn(g) : (g.mn ?? "");
+  if (!meaning || (language === "mn" && !g.mn)) return null;
+  const variants = g.p.split(/[\/／]/).map((part) => part.replace(/[〜~]/g, "").replace(/[（(][^）)]*[）)]/g, "").trim())
+    .filter((part) => part.length >= 2)
+    .sort((a, b) => b.length - a.length);
+  const match = g.ex.map((example) => ({ example, target: variants.find((part) => example.ja?.includes(part)) }))
+    .find((item) => item.target);
+  if (!match?.target || !match.example.ja) return null;
+
+  const source = match.example.fg ?? match.example.ja;
+  const prompt = hideGrammarPattern(source, match.example.ja, match.target);
+  if (!prompt) return null;
+  const normalizePattern = (pattern: string) => pattern.replace(/[〜~\s]/g, "");
+  const correctPattern = normalizePattern(g.p);
+  const others = distractors(pool, (item) => item.id === g.id || normalizePattern(item.p) === correctPattern, 3, (item) => normalizePattern(item.p));
+  if (others.length < 3) return null;
+  const options = shuffle([g, ...others], rnd);
+  const displayMeaning = language === "en" ? grammarEn(g) : g.mn ?? "";
+  return {
+    id: `g-use-${g.id}`, kind: "grammar", level: g.lvl, section: SECTION_LABEL[language]["Дүрэм"] ?? "Дүрэм",
+    prompt, promptSub: language === "en" ? "Choose the grammar pattern that completes the sentence." : "Өгүүлбэрийг зөв гүйцээх дүрмийг сонго.",
+    options: options.map((item) => grammarPatternFurigana(item.p, item)),
+    answer: options.indexOf(g),
+    explain: `${g.p} — ${displayMeaning}${g.form ? `\n${language === "mn" && g.form_mn ? g.form_mn : g.form}` : ""}`,
+    example: { ja: match.example.fg ?? match.example.ja, mn: match.example.mn ?? undefined, en: match.example.en },
+  };
+}
+
 /* ─────────────── Композит үүсгэгч ─────────────── */
 export interface QuizRequest {
   mode: QuizMode;
@@ -314,10 +385,15 @@ export function buildQuiz(
         }
         break;
       case "grammar-mn":
-      case "grammar-use":
         for (const g of pick(gPool, per * 2)) {
           if (out.length >= per) break;
           push(grammarQuestion(g, gPool, language));
+        }
+        break;
+      case "grammar-use":
+        for (const g of pick(gPool, per * 3)) {
+          if (out.length >= per) break;
+          push(grammarUseQuestion(g, gPool, language));
         }
         break;
       default:
@@ -359,6 +435,8 @@ export interface ExamSection {
   minutes: number;
   modes: QuizMode[];
   max: number;
+  /** Албан JLPT-ийн хэсгийн доод босго; UI дээр practice estimate гэж тайлбарлана. */
+  min: number;
 }
 
 export interface ExamBlueprint {
@@ -381,8 +459,8 @@ export const EXAM_BLUEPRINTS: Record<Level, ExamBlueprint> = {
   N5: {
     level: "N5", title: "N5 жишиг шалгалт", titleEn: "N5 mock exam", minutes: 35, passTotal: 80,
     sections: [
-      { id: "lang", name: "Хэлний мэдлэг · Уншлага", nameEn: "Language Knowledge · Reading", jp: "言語知識・読解", count: 20, minutes: 20, modes: ["vocab-jp-mn", "vocab-read", "kanji-mn", "grammar-mn"], max: 120 },
-      { id: "listen", name: "Сонсгол", nameEn: "Listening", jp: "聴解", count: 10, minutes: 15, modes: ["vocab-listen"], max: 60 },
+      { id: "lang", name: "Хэлний мэдлэг · Уншлага", nameEn: "Language Knowledge · Reading", jp: "言語知識・読解", count: 20, minutes: 20, modes: ["vocab-jp-mn", "vocab-read", "kanji-mn", "grammar-mn"], max: 120, min: 38 },
+      { id: "listen", name: "Сонсгол", nameEn: "Listening", jp: "聴解", count: 10, minutes: 15, modes: ["vocab-listen"], max: 60, min: 19 },
     ],
     note: "N5-д 800 орчим үг, 100 ханз шаардлагатай.",
     noteEn: "N5 requires about 800 words and 100 kanji.",
@@ -390,8 +468,8 @@ export const EXAM_BLUEPRINTS: Record<Level, ExamBlueprint> = {
   N4: {
     level: "N4", title: "N4 жишиг шалгалт", titleEn: "N4 mock exam", minutes: 50, passTotal: 90,
     sections: [
-      { id: "lang", name: "Хэлний мэдлэг · Уншлага", nameEn: "Language Knowledge · Reading", jp: "言語知識・読解", count: 24, minutes: 30, modes: ["vocab-jp-mn", "vocab-read", "vocab-fill", "grammar-mn"], max: 120 },
-      { id: "listen", name: "Сонсгол", nameEn: "Listening", jp: "聴解", count: 12, minutes: 20, modes: ["vocab-listen"], max: 60 },
+      { id: "lang", name: "Хэлний мэдлэг · Уншлага", nameEn: "Language Knowledge · Reading", jp: "言語知識・読解", count: 24, minutes: 30, modes: ["vocab-jp-mn", "vocab-read", "vocab-fill", "grammar-mn"], max: 120, min: 38 },
+      { id: "listen", name: "Сонсгол", nameEn: "Listening", jp: "聴解", count: 12, minutes: 20, modes: ["vocab-listen"], max: 60, min: 19 },
     ],
     note: "N4-д 1,500 орчим үг, 300 ханз шаардлагатай.",
     noteEn: "N4 requires about 1,500 words and 300 kanji.",
@@ -399,9 +477,9 @@ export const EXAM_BLUEPRINTS: Record<Level, ExamBlueprint> = {
   N3: {
     level: "N3", title: "N3 жишиг шалгалт", titleEn: "N3 mock exam", minutes: 70, passTotal: 95,
     sections: [
-      { id: "lang", name: "Хэлний мэдлэг", nameEn: "Language Knowledge", jp: "言語知識", count: 18, minutes: 25, modes: ["vocab-jp-mn", "vocab-read", "kanji-read", "grammar-mn"], max: 60 },
-      { id: "read", name: "Уншлага", nameEn: "Reading", jp: "読解", count: 10, minutes: 25, modes: ["vocab-fill", "grammar-mn"], max: 60 },
-      { id: "listen", name: "Сонсгол", nameEn: "Listening", jp: "聴解", count: 12, minutes: 20, modes: ["vocab-listen"], max: 60 },
+      { id: "lang", name: "Хэлний мэдлэг", nameEn: "Language Knowledge", jp: "言語知識", count: 18, minutes: 25, modes: ["vocab-jp-mn", "vocab-read", "kanji-read", "grammar-mn"], max: 60, min: 19 },
+      { id: "read", name: "Уншлага", nameEn: "Reading", jp: "読解", count: 10, minutes: 25, modes: ["vocab-fill", "grammar-mn"], max: 60, min: 19 },
+      { id: "listen", name: "Сонсгол", nameEn: "Listening", jp: "聴解", count: 12, minutes: 20, modes: ["vocab-listen"], max: 60, min: 19 },
     ],
     note: "N3-д 3,750 орчим үг, 650 ханз шаардлагатай. Оноо бүр 60-аас дээш байх ёстой.",
     noteEn: "N3 requires about 3,750 words and 650 kanji. Every section needs 60+ points.",
@@ -409,9 +487,9 @@ export const EXAM_BLUEPRINTS: Record<Level, ExamBlueprint> = {
   N2: {
     level: "N2", title: "N2 жишиг шалгалт", titleEn: "N2 mock exam", minutes: 85, passTotal: 90,
     sections: [
-      { id: "lang", name: "Хэлний мэдлэг", nameEn: "Language Knowledge", jp: "言語知識", count: 20, minutes: 30, modes: ["vocab-jp-mn", "vocab-read", "kanji-read", "grammar-mn"], max: 60 },
-      { id: "read", name: "Уншлага", nameEn: "Reading", jp: "読解", count: 12, minutes: 30, modes: ["vocab-fill", "grammar-mn"], max: 60 },
-      { id: "listen", name: "Сонсгол", nameEn: "Listening", jp: "聴解", count: 12, minutes: 25, modes: ["vocab-listen"], max: 60 },
+      { id: "lang", name: "Хэлний мэдлэг", nameEn: "Language Knowledge", jp: "言語知識", count: 20, minutes: 30, modes: ["vocab-jp-mn", "vocab-read", "kanji-read", "grammar-mn"], max: 60, min: 19 },
+      { id: "read", name: "Уншлага", nameEn: "Reading", jp: "読解", count: 12, minutes: 30, modes: ["vocab-fill", "grammar-mn"], max: 60, min: 19 },
+      { id: "listen", name: "Сонсгол", nameEn: "Listening", jp: "聴解", count: 12, minutes: 25, modes: ["vocab-listen"], max: 60, min: 19 },
     ],
     note: "N2 бол Японы ихэнх компанид шаарддаг түвшин.",
     noteEn: "N2 is the level most companies in Japan require.",
@@ -419,9 +497,9 @@ export const EXAM_BLUEPRINTS: Record<Level, ExamBlueprint> = {
   N1: {
     level: "N1", title: "N1 жишиг шалгалт", titleEn: "N1 mock exam", minutes: 95, passTotal: 100,
     sections: [
-      { id: "lang", name: "Хэлний мэдлэг", nameEn: "Language Knowledge", jp: "言語知識", count: 22, minutes: 35, modes: ["vocab-jp-mn", "vocab-read", "kanji-read", "grammar-mn"], max: 60 },
-      { id: "read", name: "Уншлага", nameEn: "Reading", jp: "読解", count: 14, minutes: 35, modes: ["vocab-fill", "grammar-mn"], max: 60 },
-      { id: "listen", name: "Сонсгол", nameEn: "Listening", jp: "聴解", count: 12, minutes: 25, modes: ["vocab-listen"], max: 60 },
+      { id: "lang", name: "Хэлний мэдлэг", nameEn: "Language Knowledge", jp: "言語知識", count: 22, minutes: 35, modes: ["vocab-jp-mn", "vocab-read", "kanji-read", "grammar-mn"], max: 60, min: 19 },
+      { id: "read", name: "Уншлага", nameEn: "Reading", jp: "読解", count: 14, minutes: 35, modes: ["vocab-fill", "grammar-mn"], max: 60, min: 19 },
+      { id: "listen", name: "Сонсгол", nameEn: "Listening", jp: "聴解", count: 12, minutes: 25, modes: ["vocab-listen"], max: 60, min: 19 },
     ],
     note: "N1 нь сонин, эссэ, хийсвэр сэдвийн текстийг бүрэн ойлгох түвшин.",
     noteEn: "N1 means fully understanding newspapers, essays and abstract texts.",
@@ -431,12 +509,34 @@ export const EXAM_BLUEPRINTS: Record<Level, ExamBlueprint> = {
 export function buildExam(bp: ExamBlueprint, data: { vocab: Vocab[]; kanji: Kanji[]; grammar: Grammar[] }, language: Language = "mn") {
   return bp.sections.map((sec) => {
     const per = Math.ceil(sec.count / sec.modes.length);
-    const questions: Question[] = [];
+    const generated: Question[][] = [];
     for (const m of sec.modes) {
-      const set = buildQuiz({ mode: m, level: bp.level, count: per, lang: language }, data);
-      questions.push(...set.questions);
+      const set = buildQuiz({ mode: m, level: bp.level, count: sec.count, lang: language }, data);
+      generated.push(set.questions);
     }
-    return { section: sec, questions: shuffle(questions, rnd).slice(0, sec.count) };
+    // Keep each exam section balanced across its configured question types.
+    // Then backfill from unused questions if one generator has a sparse pool.
+    const questions: Question[] = [];
+    const usedTargets = new Set<string>();
+    const append = (question: Question) => {
+      const target = question.refId ? `v:${question.refId}` : question.refKanji ? `k:${question.refKanji}` : `q:${question.id}`;
+      if (usedTargets.has(target) || questions.length >= sec.count) return false;
+      usedTargets.add(target);
+      questions.push(question);
+      return true;
+    };
+    generated.forEach((pool) => {
+      let added = 0;
+      for (const question of shuffle(pool, rnd)) {
+        if (added >= per || questions.length >= sec.count) break;
+        if (append(question)) added++;
+      }
+    });
+    for (const question of shuffle(generated.flat(), rnd)) {
+      if (questions.length >= sec.count) break;
+      append(question);
+    }
+    return { section: sec, questions: shuffle(questions, rnd) };
   });
 }
 
@@ -445,17 +545,20 @@ export function scoreExam(
   bp: ExamBlueprint,
   results: { section: ExamSection; correct: number; total: number }[],
   minutes: number,
-): { sections: { name: string; correct: number; total: number; score: number; max: number }[]; total: number; max: number; passed: boolean } {
+): { sections: { name: string; correct: number; total: number; score: number; max: number; min: number }[]; total: number; max: number; passed: boolean } {
   const sections = results.map((r) => ({
     name: r.section.name,
     correct: r.correct,
     total: r.total,
     score: Math.round((r.correct / Math.max(1, r.total)) * r.section.max),
     max: r.section.max,
+    min: r.section.min,
   }));
   const total = sections.reduce((a, s) => a + s.score, 0);
   const max = sections.reduce((a, s) => a + s.max, 0);
-  const passed = total >= bp.passTotal;
+  const complete = sections.length === bp.sections.length && sections.every((section) => section.total > 0);
+  const sectionPass = sections.every((section) => section.score >= section.min);
+  const passed = complete && sectionPass && total >= bp.passTotal;
   void minutes;
   return { sections, total, max, passed };
 }

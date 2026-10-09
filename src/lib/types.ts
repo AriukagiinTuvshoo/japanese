@@ -148,33 +148,54 @@ export interface DataMeta {
 export interface ListeningLesson {
   id: string;
   title: string;
+  titleEn?: string;
   titleJp?: string;
+  titleJpFuri?: string;
   channel: string;
   channelUrl?: string;
-  youtubeId: string;
+  /** TTS-native lessons do not need an external YouTube video. */
+  youtubeId?: string;
+  audioMode?: "youtube" | "tts";
   level: Level;
   topic: string;
+  topicEn?: string;
   minutes: number;
   /** Эзэн нь зөвшөөрсөн эсэх — зөвхөн approved нь нийтэд харагдана. */
   status?: "approved" | "pending_review";
-  transcript: { ja: string; mn?: string; at?: number }[];
-  vocab: { w: string; r: string; mn: string }[];
-  questions: { q: string; mn?: string; opts: string[]; a: number; why?: string }[];
+  transcript: { ja: string; mn?: string; en?: string; at?: number }[];
+  vocab: { w: string; r: string; mn: string; en?: string }[];
+  questions: LessonQuestion[];
   shadowing?: string[];
+}
+
+export interface LessonQuestion {
+  q: string;
+  promptEn?: string;
+  mn?: string;
+  opts: string[];
+  optsEn?: string[];
+  a: number;
+  why?: string;
+  whyEn?: string;
 }
 
 export interface ReadingPassage {
   id: string;
   title: string;
+  titleEn?: string;
   titleJp: string;
+  titleJpFuri?: string;
   level: Level;
   topic: string;
+  topicEn?: string;
   minutes: number;
   source?: string;
   /** Текст дэх мөрүүд. `{漢字|かんじ}` хэлбэрийн фуригана дэмжинэ. */
   body: string[];
-  glossary: { w: string; r: string; mn: string }[];
-  questions: { q: string; mn?: string; opts: string[]; a: number; why?: string }[];
+  bodyMn?: string[];
+  bodyEn?: string[];
+  glossary: { w: string; r: string; mn: string; meaningEn?: string }[];
+  questions: LessonQuestion[];
 }
 
 export interface CurriculumPlan {

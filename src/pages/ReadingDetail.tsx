@@ -16,7 +16,7 @@ export default function ReadingDetail({ id }: { id: string }) {
   const [tab, setTab] = useState<"text" | "questions" | "vocab">("text");
   const [answers, setAnswers] = useState<(number | null)[]>([]);
   const [revealed, setRevealed] = useState(false);
-  const [showMn, setShowMn] = useState(true);
+  const [showTranslation, setShowTranslation] = useState(true);
   const startRef = useRef(Date.now());
 
   useEffect(() => { setAnswers((passage?.questions ?? []).map(() => null)); setRevealed(false); }, [passage]);
@@ -37,10 +37,14 @@ export default function ReadingDetail({ id }: { id: string }) {
       <div className="flex flex-wrap items-center gap-2">
         <Button size="sm" variant="ghost" onClick={() => navigate(`reading?level=${passage.level}`)}>{t.backReading}</Button>
         <LevelBadge level={passage.level} size="sm" />
-        <Chip tone="sumi">{passage.topic}</Chip>
+        <Chip tone="sumi">{language === "en" ? (passage.topicEn ?? passage.topic) : passage.topic}</Chip>
         <span className="text-[12px] text-sumi-400">{passage.minutes} {t.minutes}</span>
         <div className="ml-auto flex gap-2">
-          <Button size="sm" variant="outline" onClick={() => setShowMn((v) => !v)}>{showMn ? t.hideMnBtn : t.showMnBtn}</Button>
+          <Button size="sm" variant="outline" onClick={() => setShowTranslation((v) => !v)}>
+            {showTranslation
+              ? (language === "en" ? "Hide translation" : "Монгол орчуулгыг нуух")
+              : (language === "en" ? "Show translation" : "Монгол орчуулгыг харах")}
+          </Button>
           {isDone
             ? <Button size="sm" variant="soft">{t.doneBtn}</Button>
             : <Button size="sm" onClick={() => actions.markReading(id)}>{t.markDone}</Button>}
@@ -49,8 +53,10 @@ export default function ReadingDetail({ id }: { id: string }) {
 
       <div>
         <p className="font-jp text-[11.5px] tracking-[0.3em] text-shu-500">読解 · {passage.level}</p>
-        <h1 className="mt-1 font-jp text-[1.9rem] font-extrabold leading-tight tracking-tight">{passage.titleJp}</h1>
-        <p className="mt-1.5 text-[14px] font-semibold text-sumi-600">{passage.title}</p>
+        <h1 className="mt-1 font-jp text-[1.9rem] font-extrabold leading-tight tracking-tight">
+          <XRayText text={passage.titleJpFuri ?? passage.titleJp} showFurigana={doc.profile.furigana} />
+        </h1>
+        <p className="mt-1.5 text-[14px] font-semibold text-sumi-600">{language === "en" ? (passage.titleEn ?? passage.title) : passage.title}</p>
       </div>
 
       <Tabs value={tab} onChange={setTab} items={[
@@ -71,6 +77,11 @@ export default function ReadingDetail({ id }: { id: string }) {
             {passage.body.map((para, i) => (
               <p key={i} className="font-jp text-[17px] leading-[2.15] text-sumi-900">
                 <XRayText text={para} showFurigana={doc.profile.furigana} />
+                {showTranslation && (language === "en" ? passage.bodyEn?.[i] : passage.bodyMn?.[i]) && (
+                  <span className="mt-1 block font-sans text-[14px] leading-relaxed text-sumi-600">
+                    {language === "en" ? passage.bodyEn?.[i] : passage.bodyMn?.[i]}
+                  </span>
+                )}
               </p>
             ))}
           </div>
@@ -87,9 +98,8 @@ export default function ReadingDetail({ id }: { id: string }) {
             {passage.questions.map((q, qi) => (
               <div key={qi} className="rounded-2xl border border-sumi-900/10 bg-white/60 p-4">
                 <p className="text-[14.5px] font-bold text-sumi-900">
-                  <span className="mr-2 font-mono text-sumi-400">{qi + 1}.</span>{q.q}
+                  <span className="mr-2 font-mono text-sumi-400">{qi + 1}.</span>{language === "en" ? (q.promptEn ?? q.q) : (q.mn ?? q.q)}
                 </p>
-                {q.mn && <p className="mt-1 text-[12.5px] text-sumi-500">{q.mn}</p>}
                 <div className="mt-3 space-y-2">
                   {q.opts.map((o, oi) => {
                     const picked = answers[qi] === oi;
@@ -104,14 +114,14 @@ export default function ReadingDetail({ id }: { id: string }) {
                           revealed && isRight ? "bg-matcha-500 text-white" : picked ? "bg-ai-500 text-white" : "bg-sumi-900/6 text-sumi-500")}>
                           {String.fromCharCode(65 + oi)}
                         </span>
-                        {o}
+                        {language === "en" ? (q.optsEn?.[oi] ?? o) : o}
                       </button>
                     );
                   })}
                 </div>
-                {revealed && q.why && (
+                {revealed && (language === "en" ? q.whyEn : q.why) && (
                   <p className="mt-3 rounded-xl bg-sumi-900/[0.045] px-3.5 py-2.5 text-[12.5px] leading-relaxed text-sumi-600">
-                    {q.why}
+                    {language === "en" ? q.whyEn : q.why}
                   </p>
                 )}
               </div>
@@ -144,18 +154,26 @@ export default function ReadingDetail({ id }: { id: string }) {
 
       {tab === "vocab" && (
         <Card>
-          <SectionTitle jp="語彙" title={t.lessonVocab} sub={t.tapToSrs} />
+          <SectionTitle jp="語彙" title={t.lessonVocab} sub={language === "en" ? "Mark known words to move them to the bottom." : "Мэддэг үгээ тэмдэглэвэл жагсаалтын доош шилжинэ."} />
           <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
-            {passage.glossary.map((g, i) => (
+            {[...passage.glossary]
+              .sort((a, b) => Number(doc.knownWords.includes(`${a.w}|${a.r}`)) - Number(doc.knownWords.includes(`${b.w}|${b.r}`)))
+              .map((g, i) => {
+              const known = doc.knownWords.includes(`${g.w}|${g.r}`);
+              return (
               <div key={i} className="card-flat flex items-center gap-3 px-3.5 py-3">
                 <span className="font-jp text-[16px] font-bold">{g.w}</span>
                 <span className="min-w-0 flex-1">
-                  <span className="block truncate text-[12.5px] text-sumi-700">{g.mn}</span>
+                  <span className="block truncate text-[12.5px] text-sumi-700">{language === "en" ? (g.meaningEn ?? g.mn) : g.mn}</span>
                   <span className="block font-jp text-[10.5px] text-sumi-400">{g.r}</span>
                 </span>
                 <SpeakButton text={g.w} className="!h-7 !w-7" />
+                <Button size="sm" variant={known ? "soft" : "outline"} onClick={() => actions.toggleKnownWord(`${g.w}|${g.r}`)}>
+                  {known ? (language === "en" ? "✓ Known" : "✓ Мэднэ") : (language === "en" ? "Review" : "Давтах")}
+                </Button>
               </div>
-            ))}
+              );
+            })}
           </div>
         </Card>
       )}

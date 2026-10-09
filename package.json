@@ -6,7 +6,7 @@
   "description": "Nihongo Dōjō — Монгол хэл дээрх Japan хэлний N5→N1 сургалтын платформ",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b --noEmit && vite build",
+    "build": "npm run content:validate && tsc -b --noEmit && vite build",
     "preview": "vite preview",
     "typecheck": "tsc -b --noEmit",
     "data:fetch": "node scripts/fetch-sources.mjs",
@@ -17,6 +17,7 @@
     "server": "node server/index.mjs",
     "coverage:report": "node scripts/validate-coverage.mjs --report --write",
     "coverage:validate": "node scripts/validate-coverage.mjs",
+    "content:validate": "node scripts/validate-learning-libraries.mjs",
     "translations:apply": "node scripts/apply-translation-batches.mjs",
     "test:browser": "node scripts/test-browser.mjs",
     "test:coverage": "node scripts/test-coverage.mjs",

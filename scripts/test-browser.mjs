@@ -9,12 +9,14 @@ import chromium from '@sparticuz/chromium';
 // Use the npm-distributed runtime libraries; no OS package download or system mutation.
 const libs = path.resolve('.cache/browser-libs');
 fs.mkdirSync(libs, {recursive:true});
-if (!fs.existsSync(`${libs}/lib/libnss3.so`)) {
+if (process.platform !== 'win32' && !fs.existsSync(`${libs}/lib/libnss3.so`)) {
   fs.writeFileSync(`${libs}/al2023.tar`, brotliDecompressSync(fs.readFileSync('node_modules/@sparticuz/chromium/bin/al2023.tar.br')));
   execFileSync('tar', ['xf', `${libs}/al2023.tar`, '-C', libs]);
 }
 const uiSource = ts.transpileModule(fs.readFileSync('src/lib/i18n.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2020}}).outputText;
 const {ui} = await import(`data:text/javascript;base64,${Buffer.from(uiSource).toString('base64')}`);
+const textSource = ts.transpileModule(fs.readFileSync('src/lib/text.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2020}}).outputText;
+const {grammarLabel,stripFurigana} = await import(`data:text/javascript;base64,${Buffer.from(textSource).toString('base64')}`);
 const server = spawn('node', ['node_modules/vite/bin/vite.js','preview','--host','0.0.0.0','--port','4176','--strictPort'], {stdio:'pipe'});
 try {
   await new Promise((resolve,reject) => {
@@ -23,7 +25,11 @@ try {
     server.on('exit', () => reject(new Error('preview exited')));
   });
   for (const language of ['mn','en']) {
-    const browser = await playwright.launch({ executablePath: await chromium.executablePath(), args:['--no-sandbox','--disable-dev-shm-usage','--disable-gpu'], headless:true, env:{...process.env,LD_LIBRARY_PATH:`${libs}/lib:${process.env.LD_LIBRARY_PATH ?? ''}`} });
+      const executablePath = process.platform === 'win32'
+        ? [process.env.CHROME_PATH,'C:/Program Files/Google/Chrome/Application/chrome.exe','C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'].find(p=>p&&fs.existsSync(p))
+        : await chromium.executablePath();
+      assert.ok(executablePath,'No browser executable found for grammar UI tests');
+      const browser = await playwright.launch({ executablePath, args:['--no-sandbox','--disable-dev-shm-usage','--disable-gpu'], headless:true, env:process.platform==='win32'?process.env:{...process.env,LD_LIBRARY_PATH:`${libs}/lib:${process.env.LD_LIBRARY_PATH ?? ''}`} });
     try {
       const page = await browser.newPage();
       page.setDefaultTimeout(15000);
@@ -37,9 +43,20 @@ try {
       for (const level of ['n5','n4','n3','n2','n1']) {
         const rules = JSON.parse(fs.readFileSync(`public/data/grammar/${level}.json`));
         for (const g of rules) {
-          await page.goto(`http://127.0.0.1:4176/#/grammar/${g.id}?level=${level.toUpperCase()}`,{waitUntil:'domcontentloaded'});
+          await page.evaluate(({id,level})=>{location.hash=`#/grammar/${id}?level=${level}`;},{id:g.id,level:level.toUpperCase()});
           const form = language === 'mn' ? g.form_mn : g.form;
-          await page.waitForFunction(text => document.body.innerText.includes(text), form);
+          const pattern=stripFurigana(grammarLabel(g.p,language));
+          try {
+            await page.waitForFunction(({id,pattern,text})=>{
+              const body=document.body.cloneNode(true);
+              body.querySelectorAll('rt').forEach(node=>node.remove());
+              const h1=body.querySelector('main h1');
+              return location.hash.includes(id)&&h1?.textContent?.includes(pattern)&&body.innerText.includes(text);
+            },{id:g.id,pattern,text:form});
+          } catch (error) {
+            const actual=await page.evaluate(()=>({hash:location.hash,heading:document.querySelector('main h1')?.textContent,body:document.querySelector('main')?.innerText.slice(0,700)}));
+            throw new Error(`${language}/${level}/${g.id} did not render pattern=${JSON.stringify(pattern)} form=${JSON.stringify(form)}; actual=${JSON.stringify(actual)}; ${error.message}`);
+          }
           await page.getByRole('button',{name:new RegExp(ui[language].examplesTab2)}).click();
           const body = await page.locator('body').innerText();
           for (const ex of g.ex) {

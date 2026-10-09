@@ -4,7 +4,7 @@ import { useStore } from "../lib/store";
 import { READING } from "../lib/data";
 import type { Level } from "../lib/types";
 import { LEVEL_LABEL } from "../lib/text";
-import { Button, Card, Chip, Empty, Input, LevelBadge } from "../components/ui";
+import { Button, Card, Chip, Empty, Furigana, Input, LevelBadge } from "../components/ui";
 import { ui } from "../lib/i18n";
 
 export default function ReadingList() {
@@ -19,8 +19,9 @@ export default function ReadingList() {
     let out = READING;
     if (query.all !== "1") out = out.filter((r) => r.level === level);
     const n = q.trim().toLowerCase();
-    if (n) out = out.filter((r) => r.title.toLowerCase().includes(n) || r.titleJp.includes(n) ||
-      r.body.join("").includes(n) || r.topic.toLowerCase().includes(n));
+    if (n) out = out.filter((r) => r.title.toLowerCase().includes(n) || (r.titleEn ?? "").toLowerCase().includes(n) || r.titleJp.includes(n) ||
+      r.body.join("").includes(n) || (r.bodyMn ?? []).join("").toLowerCase().includes(n) || (r.bodyEn ?? []).join(" ").toLowerCase().includes(n) ||
+      r.topic.toLowerCase().includes(n) || (r.topicEn ?? "").toLowerCase().includes(n));
     return out;
   }, [level, q, query.all]);
 
@@ -65,13 +66,15 @@ export default function ReadingList() {
                   {isDone && <Chip tone="matcha">✓</Chip>}
                 </div>
               </div>
-              <h3 className="mt-3.5 font-jp text-[17px] font-bold leading-snug text-sumi-900">{r.titleJp}</h3>
-              <p className="mt-1 text-[13px] font-semibold text-sumi-600">{r.title}</p>
+              <h3 className="mt-3.5 font-jp text-[17px] font-bold leading-snug text-sumi-900">
+                <Furigana text={r.titleJpFuri ?? r.titleJp} show={doc.profile.furigana} />
+              </h3>
+              <p className="mt-1 text-[13px] font-semibold text-sumi-600">{language === "en" ? (r.titleEn ?? r.title) : r.title}</p>
               <p className="mt-2.5 line-clamp-3 flex-1 text-[12.5px] leading-relaxed text-sumi-500">
-                {r.body[0]?.replace(/\{([^|{}]+)\|([^}]+)\}/g, "$1").slice(0, 110)}…
+                {(language === "en" ? r.bodyEn?.[0] : r.bodyMn?.[0]) ?? r.body[0]?.replace(/\{([^|{}]+)\|([^}]+)\}/g, "$1")}
               </p>
               <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-sumi-900/8 pt-3 text-[11.5px] text-sumi-400">
-                <Chip tone="sumi">{r.topic}</Chip>
+                <Chip tone="sumi">{language === "en" ? (r.topicEn ?? r.topic) : r.topic}</Chip>
                 <span>{r.minutes} {t.minutes}</span>
                 <span className="ml-auto">{t.questionsN(r.questions.length)}</span>
               </div>

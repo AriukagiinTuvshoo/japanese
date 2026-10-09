@@ -27,6 +27,7 @@ export default function MockExam() {
   const [results, setResults] = useState<{ section: ExamSection; correct: number; total: number }[]>([]);
   const [, setAnswers] = useState<(number | null)[]>([]);
   const [loading, setLoading] = useState(false);
+  const [buildError, setBuildError] = useState(false);
   const startAt = useMemo(() => Date.now(), [sections]);
 
   const bp = EXAM_BLUEPRINTS[level];
@@ -36,8 +37,14 @@ export default function MockExam() {
 
   const start = async () => {
     setLoading(true);
+    setBuildError(false);
     const data = await loadFullData();
     const built = buildExam(bp, { vocab: data.vocab, kanji: data.kanji, grammar: data.grammar }, language);
+    if (built.some(({ section, questions }) => questions.length !== section.count)) {
+      setBuildError(true);
+      setLoading(false);
+      return;
+    }
     setSections(built);
     setSecIdx(0);
     setResults([]);
@@ -58,9 +65,10 @@ export default function MockExam() {
   if (stage === "final") {
     const scored = scoreExam(bp, results, Math.round((Date.now() - startAt) / 60000));
     const weakest = [...scored.sections].sort((a, b) => a.score / a.max - b.score / b.max)[0];
-    const verdict = scored.total >= bp.passTotal
+    const allSectionMinimums = scored.sections.every((section) => section.score >= section.min);
+    const verdict = scored.passed
       ? t.verdictPass
-      : scored.total >= bp.passTotal * 0.85 ? t.verdictBorder : t.verdictFail;
+      : allSectionMinimums && scored.total >= bp.passTotal * 0.85 ? t.verdictBorder : t.verdictFail;
 
     return (
       <div className="mx-auto max-w-3xl space-y-5">
@@ -94,11 +102,11 @@ export default function MockExam() {
                 <div className="flex items-baseline justify-between">
                   <span className="text-[13.5px] font-bold text-sumi-800">{s.name}</span>
                   <span className="font-mono text-[12.5px] font-bold tabnum text-sumi-500">
-                    {s.correct}/{s.total} · {s.score}/{s.max}
+                    {s.correct}/{s.total} · {s.score}/{s.max} · {language === "en" ? `min ${s.min}` : `доод ${s.min}`}
                   </span>
                 </div>
                 <div className="mt-1.5 h-2 w-full overflow-hidden rounded-full bg-sumi-900/8">
-                  <div className={cn("h-full rounded-full", s.score / s.max >= 0.6 ? "bg-matcha-500" : "bg-shu-500")}
+                  <div className={cn("h-full rounded-full", s.score >= s.min ? "bg-matcha-500" : "bg-shu-500")}
                     style={{ width: `${(s.score / s.max) * 100}%` }} />
                 </div>
               </div>
@@ -237,7 +245,7 @@ export default function MockExam() {
               <div className="min-w-0 flex-1">
                 <p className="text-[13.5px] font-extrabold">{language === "en" ? s.nameEn ?? s.name : s.name} <span className="font-jp text-sumi-400">{s.jp}</span></p>
                 <p className="mt-0.5 text-[12px] text-sumi-500">
-                  {s.count} {t.qUnit} · {s.minutes} {t.minutes} · {t.maxScore} {s.max}
+                  {s.count} {t.qUnit} · {s.minutes} {t.minutes} · {t.maxScore} {s.max} · {language === "en" ? `section minimum ${s.min}` : `хэсгийн доод босго ${s.min}`}
                 </p>
               </div>
             </div>
@@ -272,6 +280,11 @@ export default function MockExam() {
       )}
 
       {loading && <Spinner label={t.genQ} lang={language} />}
+      {buildError && <div role="alert" className="rounded-xl border border-shu-200 bg-shu-50/70 p-4 text-[13px] leading-relaxed text-shu-800">
+        {language === "en"
+          ? "The question bank could not supply the full exam. No partial exam was started; try again after the content is available."
+          : "Асуултын сан бүрэн шалгалт бүрдүүлж чадсангүй. Дутуу шалгалтаар оноо тооцохгүй; контент бэлэн болсны дараа дахин оролдоно уу."}
+      </div>}
     </div>
   );
 }

@@ -7,6 +7,44 @@ import { grammarLabel, LEVEL_LABEL, stripFurigana } from "../lib/text";
 import { Button, Card, Chip, Empty, Furigana, LevelBadge, SectionTitle, SpeakButton, Spinner, Tabs } from "../components/ui";
 import { MN_PENDING, grammarEn, grammarMnMissing, ui } from "../lib/i18n";
 
+// Хэлбэр, хэрэглээний ялгааг нь жишээгээр нягталсан ойролцоо дүрмүүд.
+const VERIFIED_RELATED_GRAMMAR: Record<string, string[]> = {
+  "ni-saishite": ["ni-atatte", "ni-sakidatte"],
+  "ni-atatte": ["ni-saishite", "ni-sakidatte"],
+  "ni-sakidatte": ["ni-saishite", "ni-atatte"],
+};
+
+function grammarFurigana(text: string, grammar: Grammar): string {
+  const readings = new Map<string, string>();
+  for (const example of grammar.ex) {
+    for (const match of (example.fg ?? "").matchAll(/\{([^|{}]+)\|([^{}]+)\}/g)) {
+      if (!match[2].startsWith("#") && !readings.has(match[1])) readings.set(match[1], match[2]);
+    }
+  }
+  const alternatives = [...readings.entries()].sort(([a], [b]) => b.length - a.length);
+  return text.split(/(\{[^{}]+\})/g).map((part) => {
+    if (part.startsWith("{") && part.endsWith("}")) return part;
+    let result = "";
+    for (let i = 0; i < part.length;) {
+      const match = alternatives.find(([base]) => part.startsWith(base, i));
+      if (match) {
+        const [base, reading] = match;
+        result += "{" + base + "|" + reading + "}";
+        i += base.length;
+      } else {
+        result += part[i];
+        i += 1;
+      }
+    }
+    return result;
+  }).join("");
+}
+
+function conciseMeaning(value: string): string {
+  // Олон MN мөрийн `:`-ийн дараах хэсэг нь өмнөх утгаа placeholder-оор давтан хэлдэг.
+  return value.split(":", 1)[0].trim() || value;
+}
+
 /** `level` (жишээ: `#/grammar/ni-saishite?level=N2`) байвал эхлээд тэр түвшинг хайна. */
 export default function GrammarDetail({ id, level }: { id: string; level?: Level }) {
   const { doc, actions } = useStore();
@@ -33,19 +71,24 @@ export default function GrammarDetail({ id, level }: { id: string; level?: Level
 
   const g = items?.find((x) => x.id === id);
   const done = doc.grammarDone.includes(id);
+  const currentIndex = items?.findIndex((item) => item.id === id) ?? -1;
+  const previous = currentIndex > 0 ? items?.[currentIndex - 1] : undefined;
+  const next = currentIndex >= 0 && currentIndex < (items?.length ?? 0) - 1 ? items?.[currentIndex + 1] : undefined;
 
   const similar = useMemo(() => {
     if (!g || !items) return [];
-    const core = g.p.replace(/[〜~]/g, "");
-    const head = core.slice(0, Math.max(1, Math.ceil(core.length / 2)));
-    return items.filter((x) => x.id !== g.id && (x.p.includes(head) || x.p.replace(/[〜~]/g, "").includes(head))).slice(0, 6);
+    const ids = [...g.related, ...(VERIFIED_RELATED_GRAMMAR[g.id] ?? [])];
+    return [...new Set(ids)]
+      .map((relatedId) => items.find((item) => item.id === relatedId))
+      .filter((item): item is Grammar => Boolean(item && item.id !== g.id))
+      .slice(0, 6);
   }, [g, items]);
 
   if (!items) return <Spinner label={t.loadingGrammar} lang={language} />;
   if (!g) return <Empty icon="無" title={t.grammarNotFound} sub={id} action={<Button onClick={() => navigate("grammar")}>← {t.grammar}</Button>} />;
 
-  const note = language === "mn" ? g.note : g.note_en;
   const en = Array.isArray(g.en) ? g.en.join("; ") : String(g.en ?? "");
+  const meaning = language === "mn" && g.mn ? conciseMeaning(g.mn) : en;
 
   return (
     <div className="space-y-6">
@@ -56,8 +99,22 @@ export default function GrammarDetail({ id, level }: { id: string; level?: Level
           <Button size="sm" variant={done ? "soft" : "outline"} onClick={() => actions.toggleGrammar(g.id, g.lvl)}>
             {done ? t.seenBtn : t.markSeen}
           </Button>
-          <Button size="sm" onClick={() => navigate(`quiz?mode=grammar-mn&level=${g.lvl}`)}>{t.practiceBtn}</Button>
+          <Button size="sm" onClick={() => navigate(`quiz?mode=grammar-use&level=${g.lvl}`)}>{t.practiceBtn}</Button>
         </div>
+      </div>
+
+      <div className="flex items-center justify-between gap-3 rounded-2xl border border-sumi-900/8 bg-white/65 px-3 py-2">
+        {previous ? (
+          <a href={href(`grammar?level=${previous.lvl}`, previous.id)} className="inline-flex h-8 items-center rounded-lg border border-sumi-900/12 px-3 text-[12px] font-bold text-sumi-700 hover:bg-sumi-900/5">
+            ← {language === "mn" ? "Өмнөх дүрэм" : "Previous grammar"}
+          </a>
+        ) : <Button size="sm" variant="outline" disabled>← {language === "mn" ? "Өмнөх дүрэм" : "Previous grammar"}</Button>}
+        <span className="shrink-0 text-[12px] font-semibold tabnum text-sumi-500">{currentIndex + 1} / {items.length}</span>
+        {next ? (
+          <a href={href(`grammar?level=${next.lvl}`, next.id)} className="inline-flex h-8 items-center rounded-lg border border-sumi-900/12 px-3 text-[12px] font-bold text-sumi-700 hover:bg-sumi-900/5">
+            {language === "mn" ? "Дараагийн дүрэм" : "Next grammar"} →
+          </a>
+        ) : <Button size="sm" variant="outline" disabled>{language === "mn" ? "Дараагийн дүрэм" : "Next grammar"} →</Button>}
       </div>
 
       <Card className="p-6 sm:p-8">
@@ -66,26 +123,18 @@ export default function GrammarDetail({ id, level }: { id: string; level?: Level
           <Chip tone="murasaki">{t.grammarChip}</Chip>
           {g.jlpt !== g.lvl && <Chip tone="sumi">JLPT {g.jlpt}</Chip>}
         </div>
-        <h1 className="mt-4 font-jp text-[2.1rem] font-extrabold leading-tight">{grammarLabel(g.p, language)}</h1>
+        <h1 className="mt-4 font-jp text-[2.1rem] font-extrabold leading-tight">
+          <Furigana text={grammarFurigana(grammarLabel(g.p, language), g)} show />
+        </h1>
         {language === "en" || g.mn ? (
-          <p className="mt-4 text-[1.15rem] font-bold leading-relaxed text-sumi-900">{language === "en" ? en : g.mn}</p>
+          <p className="mt-4 text-[1.15rem] font-bold leading-relaxed text-sumi-900">{meaning}</p>
         ) : (
           <p className="mt-4 text-[1.1rem] font-semibold text-sumi-500">
             <span className="italic">{MN_PENDING}</span>
           </p>
         )}
-        {note && (
-          <div className="mt-4 rounded-2xl border border-ai-100 bg-ai-50/60 p-4">
-            <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-ai-600">{t.nuance}</p>
-            <p className="mt-2 whitespace-pre-line text-[13.5px] leading-relaxed text-ai-700">{note}</p>
-          </div>
-        )}
-        {!g.mn && en && (
-          <p className="mt-3 text-[13px] text-sumi-500">{t.enSource2} {en}</p>
-        )}
         <div className="mt-5 flex flex-wrap gap-2">
           <Button size="sm" variant="outline" onClick={() => navigate(`quiz?mode=grammar-mn&level=${g.lvl}`)}>{t.meaningDrill}</Button>
-          <a href={href("admin")} className="inline-flex h-8 items-center rounded-lg px-3 text-[12.5px] font-bold text-sumi-500 hover:bg-sumi-900/6">{t.improveLink2}</a>
         </div>
       </Card>
 
@@ -100,7 +149,9 @@ export default function GrammarDetail({ id, level }: { id: string; level?: Level
           <Card>
             <SectionTitle jp="形" title={t.structure} />
             {g.form ? (
-              <p className="rounded-xl bg-sumi-900/[0.045] px-4 py-3 font-jp text-[14px] leading-relaxed">{language === "mn" && g.form_mn ? g.form_mn : g.form}</p>
+              <p className="rounded-xl bg-sumi-900/[0.045] px-4 py-3 font-jp text-[14px] leading-relaxed">
+                <Furigana text={grammarFurigana(language === "mn" && g.form_mn ? g.form_mn : g.form, g)} show />
+              </p>
             ) : (
               <p className="text-[13px] text-sumi-500">{t.structureMissing}</p>
             )}
@@ -109,28 +160,7 @@ export default function GrammarDetail({ id, level }: { id: string; level?: Level
                 <span className="font-bold text-sumi-500">{t.levelRow}</span>
                 <span className="font-semibold">{g.lvl} — {LEVEL_LABEL[language][g.lvl]}</span>
               </div>
-              <div className="flex justify-between border-b border-sumi-900/6 pb-2.5">
-                <span className="font-bold text-sumi-500">{t.relatedGrammarRow}</span>
-                <span className="font-semibold">{g.related.length || similar.length || "—"}</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="font-bold text-sumi-500">{t.srcPool}</span>
-                <span className="font-semibold">OpenJLPT (CC-BY-SA-4.0)</span>
-              </div>
             </div>
-          </Card>
-
-          <Card>
-            <SectionTitle jp="よくある間違い" title={t.commonMistakes} />
-            {note ? (
-              <p className="text-[13.5px] leading-relaxed text-sumi-700">{note}</p>
-            ) : (
-              <p className="text-[13px] text-sumi-500">
-                {t.mistakesMissingPre}
-                <a href={href("admin")} className="mx-1 font-bold text-ai-600 underline underline-offset-4">{t.mistakesMissingLink}</a>
-                {t.mistakesMissingPost}
-              </p>
-            )}
           </Card>
         </div>
       )}
@@ -143,7 +173,7 @@ export default function GrammarDetail({ id, level }: { id: string; level?: Level
               {g.ex.map((e, i) => (
                 <li key={i} className="rounded-xl border border-sumi-900/8 bg-white/60 p-4">
                   <div className="flex items-start gap-3">
-                    <Furigana text={e.fg ?? e.ja ?? ""} show={doc.profile.furigana} className="flex-1 text-[16px] font-semibold leading-relaxed" />
+                    <Furigana text={e.fg ?? e.ja ?? ""} show className="flex-1 text-[16px] font-semibold leading-relaxed" />
                     {e.ja && <SpeakButton text={stripFurigana(e.ja)} />}
                   </div>
                   {language === "mn" && e.mn && <p className="mt-2 text-[13.5px] font-semibold text-sumi-800">{t.mnColon} {e.mn}</p>}
@@ -163,13 +193,13 @@ export default function GrammarDetail({ id, level }: { id: string; level?: Level
               {similar.map((s) => (
                 <a key={s.id} href={href(`grammar?level=${s.lvl}`, s.id)} className="card-flat p-4 transition hover:-translate-y-0.5 hover:border-shu-300">
                   <div className="flex items-center gap-2">
-                    <span className="font-jp text-[15px] font-bold">{s.p}</span>
+                    <Furigana text={grammarFurigana(s.p, s)} show className="text-[15px] font-bold" />
                     <LevelBadge level={s.lvl} size="sm" />
                   </div>
                   <p className="mt-1.5 line-clamp-2 text-[12.5px] leading-relaxed text-sumi-700">
                     {language === "en"
                       ? (grammarEn(s) || s.mn || MN_PENDING)
-                      : (s.mn || <span className="italic text-sumi-400">{MN_PENDING}</span>)}
+                      : (s.mn ? conciseMeaning(s.mn) : <span className="italic text-sumi-400">{MN_PENDING}</span>)}
                   </p>
                   {language === "mn" && grammarMnMissing(s) && grammarEn(s) && (
                     <p className="mt-0.5 line-clamp-1 text-[11px] text-sumi-400">

@@ -223,7 +223,7 @@ export function QuizRunner({
                 q.prompt.length <= 4 ? "text-[2.4rem]" : q.prompt.length <= 14 ? "text-[1.7rem]" : "text-[1.15rem]",
               )}
             >
-              {q.prompt}
+              <Furigana text={q.prompt} show={q.kind === "grammar" || doc.profile.furigana} />
             </p>
             {q.promptSub && <p className="mt-1.5 text-[13px] font-bold text-sumi-500">{q.promptSub}</p>}
           </div>
@@ -258,7 +258,7 @@ export function QuizRunner({
                 )}>
                   {showReveal && isAnswer ? "✓" : showReveal && isPicked ? "✕" : i + 1}
                 </span>
-                <Furigana text={o} className="text-[15px] font-semibold text-sumi-900" show={false} />
+                <Furigana text={o} className="text-[15px] font-semibold text-sumi-900" show={q.kind === "grammar" || doc.profile.furigana} />
               </button>
             );
           })}

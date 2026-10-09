@@ -6,7 +6,7 @@ import {brotliDecompressSync} from 'node:zlib';
 import {chromium as playwright} from 'playwright-core';
 import chromium from '@sparticuz/chromium';
 const libs=path.resolve('.cache/browser-libs');fs.mkdirSync(libs,{recursive:true});
-if(!fs.existsSync(`${libs}/lib/libnss3.so`)) {
+if(process.platform!=='win32'&&!fs.existsSync(`${libs}/lib/libnss3.so`)) {
  fs.writeFileSync(`${libs}/al2023.tar`,brotliDecompressSync(fs.readFileSync('node_modules/@sparticuz/chromium/bin/al2023.tar.br')));
  execFileSync('tar',['xf',`${libs}/al2023.tar`,'-C',libs]);
 }
@@ -20,7 +20,11 @@ if(process.env.ADMIN_TEST_START_SERVER==='1') {
   server.on('exit',()=>{clearTimeout(timer);reject(new Error('Admin test preview exited'));});
  });
 }
-const browser=await playwright.launch({executablePath:await chromium.executablePath(),args:['--no-sandbox','--disable-dev-shm-usage','--disable-gpu'],headless:true,env:{...process.env,LD_LIBRARY_PATH:`${libs}/lib:${process.env.LD_LIBRARY_PATH??''}`}});
+const executablePath=process.platform==='win32'
+ ? [process.env.CHROME_PATH,'C:/Program Files/Google/Chrome/Application/chrome.exe','C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'].find(p=>p&&fs.existsSync(p))
+ : await chromium.executablePath();
+assert.ok(executablePath,'No browser executable found for admin UI tests');
+const browser=await playwright.launch({executablePath,args:['--no-sandbox','--disable-dev-shm-usage','--disable-gpu'],headless:true,env:process.platform==='win32'?process.env:{...process.env,LD_LIBRARY_PATH:`${libs}/lib:${process.env.LD_LIBRARY_PATH??''}`}});
 try {
  for(const language of ['mn','en']) {
   const page=await browser.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
@@ -30,7 +34,8 @@ try {
   await page.route('**/api/admin/**',async route=>{
    const url=route.request().url();let data;
    if(mode==='loading') await new Promise(resolve=>{release=resolve;apiWaiting=true;});
-   if(mode==='error') {await route.fulfill({status:500,json:{error:'fixture backend diagnostic'}});return;}
+    if(mode==='error') {await route.fulfill({status:500,json:{error:'fixture backend diagnostic'}});return;}
+    if(mode==='unavailable') {await route.fulfill({status:404,contentType:'text/html',body:'The page could not be found'});return;}
 
    if(url.includes('/overview'))data={accounts:2,activeToday:1,reviewsToday:3,content:{vocab:4,kanji:5,grammar:6,listening:7,reading:8},queue:{pending:1,approved:0,rejected:0},top:mode==="populated"?[{word:"例",mn:"жишээ",misses:2}]:[],errors:mode==="populated"?["fixture QC diagnostic"]:[]};
    else if(url.includes('/queue'))data={items:empty?[]:[{id:'fixture',kind:'vocab',ref:'fixture-source',level:'N4',en:'example',mn:'жишээ',origin:'ai',status:'pending_review'}]};
@@ -66,6 +71,11 @@ try {
    mode='error';await page.reload();
    await page.getByText(language==='en'?'Failed to load':'Ачаалахад алдаа гарлаа',{exact:true}).waitFor();
    mode='normal';await page.getByRole('button',{name:language==='en'?'Try again':'Дахин оролдох',exact:true}).click();
+   await page.getByText(language==='en'?(tab==='overview'?'Content counts':'AI suggestion · awaiting review'):(tab==='overview'?'Агуулгын тоо':'Хиймэл оюуны санал · хяналт хүлээж буй'),{exact:true}).waitFor();
+   mode='unavailable';await page.reload();
+   await page.getByText(language==='en'?'Admin service unavailable':'Админ үйлчилгээ холбогдоогүй байна',{exact:true}).waitFor();
+   assert.ok(!(await page.locator('body').innerText()).includes('Unexpected token'));
+   mode='normal';await page.getByRole('button',{name:language==='en'?'Retry':'Дахин оролдох',exact:true}).click();
    await page.getByText(language==='en'?(tab==='overview'?'Content counts':'AI suggestion · awaiting review'):(tab==='overview'?'Агуулгын тоо':'Хиймэл оюуны санал · хяналт хүлээж буй'),{exact:true}).waitFor();
   }
   mode='populated';await page.goto(`${origin}/#/admin/overview`);

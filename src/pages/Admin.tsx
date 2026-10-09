@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { api, type AdminOverview, type QueueItem } from "../lib/api";
+import { api, ApiError, type AdminOverview, type QueueItem } from "../lib/api";
 import { navigate } from "../lib/router";
 import { Button, Card, Chip, ErrorBox, Input, PageHeader, Select, SectionTitle, Spinner, Stat, Tabs } from "../components/ui";
 
@@ -13,6 +13,29 @@ function useAdminText() {
 }
 
 type Tab = "overview" | "queue" | "import";
+
+function AdminApiError({ error, retry }: { error: unknown; retry?: () => void }) {
+  const { doc } = useStore();
+  const language = doc.profile.language ?? "mn";
+  if (!(error instanceof ApiError) || !error.unavailable) return <ErrorBox error={error} retry={retry} lang={language} />;
+
+  return (
+    <div role="alert" className="rounded-2xl border border-shu-200 bg-shu-50/70 p-5 text-shu-800">
+      <h2 className="font-bold">{language === "en" ? "Admin service unavailable" : "Админ үйлчилгээ холбогдоогүй байна"}</h2>
+      <p className="mt-1.5 text-[13px] leading-relaxed">
+        {language === "en"
+          ? "This deployment did not return admin API data. Content statistics, review, and import cannot load until the /api/admin service is available."
+          : "Энэ байршуулалт админ API-ийн өгөгдөл буцаасангүй. /api/admin үйлчилгээг холбож, ажиллаж байгааг шалгасны дараа тойм, хяналт, импорт ашиглах боломжтой."}
+      </p>
+      {error.status > 0 && <p className="mt-2 text-[12px] font-mono">HTTP {error.status}</p>}
+      {retry && (
+        <Button size="sm" variant="outline" className="mt-3" onClick={retry}>
+          {language === "en" ? "Retry" : "Дахин оролдох"}
+        </Button>
+      )}
+    </div>
+  );
+}
 
 const ORIGIN_LABEL: Record<QueueItem["origin"], { text: string; tone: "matcha" | "kin" | "ai" | "sumi" }> = {
   human: { text: "Хүний бичсэн", tone: "matcha" },
@@ -61,7 +84,7 @@ function Overview() {
   }, []);
   useEffect(load, [load]);
 
-  if (error) return <ErrorBox error={error} retry={load} />;
+  if (error) return <AdminApiError error={error} retry={load} />;
   if (!data) return <Spinner />;
 
   return (
@@ -152,7 +175,7 @@ function Queue() {
         />
         <span className="text-[12.5px] text-sumi-500">{t("Төлөв: pending_review · Approve эсвэл Edit хийснээр нийтлэгдэнэ")}</span>
       </div>
-      {error ? <ErrorBox error={error} retry={load} /> : !items ? <Spinner /> : items.length === 0 ? (
+      {error ? <AdminApiError error={error} retry={load} /> : !items ? <Spinner /> : items.length === 0 ? (
         <Card><p className="py-8 text-center text-[13.5px] text-sumi-500">{t("Хүлээгдэж буй зүйл алга.")}</p></Card>
       ) : (
         <div className="space-y-3">
@@ -252,7 +275,7 @@ function Import() {
         <Button onClick={submit} disabled={busy || !json.trim()}>{busy ? t("Илгээж байна…") : t("Импортлох")}</Button>
         {result && <p className="text-[13px] font-semibold text-matcha-600">{result}</p>}
       </div>
-      {error ? <div className="mt-3"><ErrorBox error={error} /></div> : null}
+      {error ? <div className="mt-3"><AdminApiError error={error} /></div> : null}
     </Card>
   );
 }

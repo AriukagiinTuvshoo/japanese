@@ -29,7 +29,13 @@ for (const kind of Object.keys(retained)) for (const level of ['n5','n4','n3','n
 }
 for (const kind of ['vocab','kanji']) {
   const p = `content/mn/${kind}-draft.json`;const before=original(p), after=read(p);
-  for (const [key,value] of Object.entries(before)) assert.equal(after[key],value,`${p}: original draft ${key} retained`);
+  for (const [key,value] of Object.entries(before)) {
+    if (kind === 'vocab' && key === '扇ぐ|あおぐ') {
+      const correction = read('content/mn/batches/2026-10-09-n2-vocab-meaning-correction-aogu.json').vocab['5c46e379a2'];
+      assert.deepEqual(correction.previousMn, [value], `${p}: previous 扇ぐ gloss retained in correction audit`);
+      assert.equal(after[key], correction.mn, `${p}: reviewed correction applied to 扇ぐ`);
+    } else assert.equal(after[key],value,`${p}: original draft ${key} retained`);
+  }
 }
 const fifty=read('public/data/vocab/n5.json').find(e=>e.id==='j1693050');
 assert.deepEqual([fifty.w,fifty.r,fifty.en,fifty.mn],['五十','ごじゅう',['fifty','50'],['тавь']]);
