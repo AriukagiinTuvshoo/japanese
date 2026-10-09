@@ -2,11 +2,11 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { cn } from "../utils/cn";
 import { href, navigate } from "../lib/router";
 import { useStore } from "../lib/store";
-import type { Question } from "../lib/study";
+import { presentQuestion, type Question } from "../lib/study";
 import { Bar, Button, Chip, Furigana, LevelBadge, Ring } from "./ui";
 import { speak } from "./ui";
 import { relTime } from "../lib/text";
-import { ui } from "../lib/i18n";
+import { MN_PENDING, ui } from "../lib/i18n";
 
 export interface QuizResult {
   correct: number;
@@ -24,6 +24,7 @@ export interface RunnerOptions {
   /** Асуулт бүрийн дараа автоматаар дараагийнх руу. */
   autoNext?: boolean;
   title?: string;
+  recordKind?: string;
   sectionLabel?: (q: Question) => string;
   onFinish?: (r: QuizResult) => void;
   /** Дараагийн хэсэг рүү шилжих. */
@@ -32,7 +33,7 @@ export interface RunnerOptions {
 }
 
 export function QuizRunner({
-  questions, options = {}, onClose,
+  questions: sourceQuestions, options = {}, onClose,
 }: {
   questions: Question[];
   options?: RunnerOptions;
@@ -41,34 +42,32 @@ export function QuizRunner({
   const { actions, doc } = useStore();
   const language = doc.profile.language ?? "mn";
   const t = ui[language];
+  const questions = useMemo(() => sourceQuestions.map((q) => presentQuestion(q, language)), [sourceQuestions, language]);
   const [idx, setIdx] = useState(0);
   const [picked, setPicked] = useState<number | null>(null);
   const [answers, setAnswers] = useState<(number | null)[]>(() => questions.map(() => null));
   const [done, setDone] = useState(false);
   const startRef = useRef(Date.now());
   const [left, setLeft] = useState<number | null>(options.timed ? options.timed * 60 : null);
-  const wrongRef = useRef<Question[]>([]);
+  const deadlineRef = useRef(options.timed ? Date.now() + options.timed * 60000 : null);
+  const finishedRef = useRef(false);
+  const autoNextRef = useRef<number | undefined>(undefined);
 
   const q = questions[idx];
   const total = questions.length;
 
-  /* ── таймер ── */
-  useEffect(() => {
-    if (left === null || done) return;
-    if (left <= 0) { setDone(true); return; }
-    const t = setTimeout(() => setLeft((l) => (l === null ? null : l - 1)), 1000);
-    return () => clearTimeout(t);
-  }, [left, done]);
-
   /* ── дуусгах ── */
   const finish = useCallback((finalAnswers: (number | null)[]) => {
+    if (finishedRef.current) return;
+    finishedRef.current = true;
+    window.clearTimeout(autoNextRef.current);
+    setAnswers(finalAnswers);
     const correct = questions.reduce((a, qq, i) => a + (finalAnswers[i] === qq.answer ? 1 : 0), 0);
     const minutes = Math.max(1, Math.round((Date.now() - startRef.current) / 60000));
     const wrong = questions.filter((qq, i) => finalAnswers[i] !== qq.answer);
-    wrongRef.current = wrong;
 
     actions.logQuiz({
-      kind: options.title ?? q?.kind ?? "quiz",
+      kind: options.recordKind ?? q?.kind ?? "quiz",
       level: q?.level ?? "N5",
       correct,
       total,
@@ -80,7 +79,7 @@ export function QuizRunner({
       .map((qq) => {
         const i = questions.indexOf(qq);
         return {
-          id: qq.refId ?? qq.refKanji ?? qq.id,
+          id: qq.refId ?? qq.refKanji ?? qq.refGrammar ?? qq.id,
           kind: qq.kind,
           level: qq.level,
           prompt: qq.prompt,
@@ -93,15 +92,24 @@ export function QuizRunner({
     if (mistakes.length) actions.addMistakes(mistakes);
     // Зөв хариулсан алдаануудыг хасах
     questions.forEach((qq, i) => {
-      if (finalAnswers[i] === qq.answer) actions.resolveMistake(qq.refId ?? qq.refKanji ?? qq.id);
+      if (finalAnswers[i] === qq.answer) actions.resolveMistake(qq.refId ?? qq.refKanji ?? qq.refGrammar ?? qq.id);
     });
 
     setDone(true);
     options.onFinish?.({ correct, total, minutes, wrong });
   }, [questions, actions, options, q, total]);
 
+  /* Timer completion goes through the same exactly-once logging/callback as manual completion. */
+  useEffect(() => {
+    if (left === null || done) return;
+    if (left <= 0) { finish(answers.slice()); return; }
+    const timer = setInterval(() => setLeft(deadlineRef.current === null ? null : Math.max(0, Math.ceil((deadlineRef.current - Date.now()) / 1000))), 250);
+    return () => clearInterval(timer);
+  }, [left, done, finish, answers]);
+  useEffect(() => () => window.clearTimeout(autoNextRef.current), []);
+
   const choose = (i: number) => {
-    if (picked !== null || done) return;
+    if (picked !== null || done || finishedRef.current || i < 0 || i >= q.options.length) return;
     setPicked(i);
     setAnswers((a) => {
       const next = a.slice();
@@ -109,11 +117,13 @@ export function QuizRunner({
       return next;
     });
     if (options.autoNext) {
-      window.setTimeout(() => advance(i), 450);
+      autoNextRef.current = window.setTimeout(() => advance(i), 450);
     }
   };
 
   const advance = (override?: number) => {
+    if (done || finishedRef.current) return;
+    window.clearTimeout(autoNextRef.current);
     const answersNow = answers.slice();
     if (override !== undefined) answersNow[idx] = override;
     if (idx + 1 >= total) {
@@ -127,6 +137,7 @@ export function QuizRunner({
   /* ── keyboard ── */
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
+      if (done || e.repeat || e.altKey || e.ctrlKey || e.metaKey || (e.target instanceof HTMLElement && e.target.closest("input, textarea, select, button, a, [contenteditable=true]"))) return;
       if (picked === null && /^[1-4]$/.test(e.key)) choose(Number(e.key) - 1);
       else if (e.key === "Enter" && picked !== null) advance();
       else if (e.key === "ArrowRight" && picked !== null) advance();
@@ -141,7 +152,7 @@ export function QuizRunner({
       const t = setTimeout(() => speak(q.audio!, doc.profile.rate), 350);
       return () => clearTimeout(t);
     }
-  }, [q, doc.profile.rate]);
+  }, [q.id, q.audio, doc.profile.rate]);
 
   const stats = useMemo(() => {
     const answered = answers.filter((a) => a !== null).length;
@@ -167,9 +178,10 @@ export function QuizRunner({
         answers={answers}
         minutes={Math.max(1, Math.round((Date.now() - startRef.current) / 60000))}
         onRetry={() => {
+          finishedRef.current = false;
           setIdx(0); setPicked(null); setAnswers(questions.map(() => null)); setDone(false);
           startRef.current = Date.now();
-          if (options.timed) setLeft(options.timed * 60);
+          if (options.timed) { deadlineRef.current = Date.now() + options.timed * 60000; setLeft(options.timed * 60); }
         }}
         onClose={onClose}
         onNext={options.onNext}
@@ -194,7 +206,7 @@ export function QuizRunner({
           </div>
           <p className="mt-1.5 font-mono text-[12px] font-bold tabnum text-sumi-500">
             {t.questionN} {idx + 1} / {total}
-            {stats.answered > 0 && <> · {t.correctShort} {stats.correct}</>}
+            {options.reveal !== false && stats.answered > 0 && <> · {t.correctShort} {stats.correct}</>}
           </p>
         </div>
         {left !== null && <Timer seconds={left} />}
@@ -245,9 +257,10 @@ export function QuizRunner({
                 className={cn(
                   "flex w-full items-center gap-3.5 rounded-xl border-2 px-4 py-3.5 text-left transition-all",
                   picked === null && "border-sumi-900/10 bg-white/70 hover:-translate-y-0.5 hover:border-ai-400 hover:bg-white",
+                  picked !== null && !showReveal && isPicked && "border-ai-400 bg-ai-50",
                   showReveal && isAnswer && "border-matcha-400 bg-matcha-50",
                   showReveal && isPicked && !isAnswer && "animate-[shake_0.4s] border-shu-400 bg-shu-50",
-                  picked !== null && !isAnswer && !isPicked && "border-sumi-900/8 bg-white/40 opacity-60",
+                  picked !== null && !isPicked && (!showReveal || !isAnswer) && "border-sumi-900/8 bg-white/40 opacity-60",
                 )}
               >
                 <span className={cn(
@@ -278,16 +291,16 @@ export function QuizRunner({
                 <p className="text-[11px] font-bold uppercase tracking-wide text-sumi-400">{t.exampleLabel}</p>
                 <p className="mt-1"><Furigana text={q.example.ja} className="text-[15px] font-semibold text-sumi-900" /></p>
                 {(q.example.mn || q.example.en) && (
-                  <p className="mt-1 text-[13px] text-sumi-600">{language === "en" ? q.example.en ?? q.example.mn : q.example.mn ?? q.example.en}</p>
+                  <p className="mt-1 text-[13px] text-sumi-600">{language === "en" ? q.example.en || "Translation pending" : q.example.mn || MN_PENDING}</p>
                 )}
               </div>
             )}
-            {(q.refId || q.refKanji) && (
+            {(q.refId || q.refKanji || q.refGrammar) && (
               <a
-                href={href(q.refKanji ? "kanji" : "vocab", q.refKanji ?? q.refId!)}
+                href={href(q.refKanji ? "kanji" : q.refGrammar ? "grammar" : "vocab", q.refKanji ?? q.refGrammar ?? q.refId!)}
                 className="mt-3 inline-block text-[12.5px] font-bold text-ai-600 underline underline-offset-4"
               >
-                {q.refKanji ? t.kanjiDetailLink : t.wordDetailLink}
+                {q.refKanji ? t.kanjiDetailLink : q.refGrammar ? (language === "en" ? "Grammar details →" : "Дүрмийн дэлгэрэнгүй →") : t.wordDetailLink}
               </a>
             )}
           </div>
@@ -329,7 +342,7 @@ function Timer({ seconds }: { seconds: number }) {
 
 /* ─────────────── Үр дүн ─────────────── */
 export function ResultView({
-  questions, answers, minutes, onRetry, onClose, onNext, nextLabel, title,
+  questions: sourceQuestions, answers, minutes, onRetry, onClose, onNext, nextLabel, title,
 }: {
   questions: Question[];
   answers: (number | null)[];
@@ -343,6 +356,7 @@ export function ResultView({
   const { doc } = useStore();
   const language = doc.profile.language ?? "mn";
   const t = ui[language];
+  const questions = useMemo(() => sourceQuestions.map((q) => presentQuestion(q, language)), [sourceQuestions, language]);
   const correct = questions.reduce((a, q, i) => a + (answers[i] === q.answer ? 1 : 0), 0);
   const total = questions.length;
   const pct = total ? correct / total : 0;
@@ -424,11 +438,11 @@ export function ResultView({
                   <div className="flex items-start gap-3">
                     <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-shu-50 text-[12px] text-shu-600">✕</span>
                     <div className="min-w-0 flex-1">
-                      <p className="font-jp text-[15px] font-bold text-sumi-900">{q.prompt}</p>
+                      <p className="font-jp text-[15px] font-bold text-sumi-900"><Furigana text={q.prompt} /></p>
                       {q.promptSub && <p className="text-[12px] text-sumi-500">{q.promptSub}</p>}
                       <p className="mt-1 text-[12.5px] text-sumi-600">
-                        {t.correctLabel} <span className="font-bold text-matcha-600">{q.options[q.answer] ?? "—"}</span>
-                        {answers[i] !== null && <> · {t.yourAnswerLabel} <span className="font-bold text-shu-600">{q.options[answers[i] as number] ?? "—"}</span></>}
+                        {t.correctLabel} <span className="font-bold text-matcha-600"><Furigana text={q.options[q.answer] ?? "—"} /></span>
+                        {answers[i] !== null && <> · {t.yourAnswerLabel} <span className="font-bold text-shu-600"><Furigana text={q.options[answers[i] as number] ?? "—"} /></span></>}
                         {answers[i] === null && <> · {t.unanswered}</>}
                       </p>
                     </div>

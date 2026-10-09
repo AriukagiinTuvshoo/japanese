@@ -17,13 +17,32 @@ Remaining: **62 meanings, 12,774 vocabulary examples, 0 grammar examples, 0 form
 
 N5 and N4 vocabulary/kanji are fully classified. Categories support multiple topics, including relationships. Explicit semantic override evidence is maintained in `content/categories/provenance.json`. Unmatched entries remain visibly filterable, not hidden in a catch-all. Source warnings retain original Japanese/English and block release. Existing drafts and new translations still need accuracy review. Full bilingual state/semantic approval remains incomplete. Admin controlled-state tests do not establish backend access or authorization.
 
+## 2026-10-09 quality pass (head 8529ee7 onward)
+
+Full details and actual exits: `docs/audits/2026-10-09-quality-pass/audit.md`.
+
+- Mock exams: Japanese prompts/choices wherever source data supports it; reading
+  comprehension sections that lack a reviewed Japanese question/choice bank are
+  blocked (never substituted with dictionary drills); available N5–N1 Japanese
+  recognition drills are separate and labeled non-official. Live MN/EN switching
+  preserves question order and answer keys. Timer expiry, scoring completeness and
+  section minima fixed; N3–N1 wording corrected.
+- Grammar practice: `grammar-mn` follows UI language without English fallback;
+  `grammar-use` is source-sentence expression recognition with Japanese choices;
+  `vocab-fill` withheld pending a reviewed bank. Duplicate/ambiguous choices,
+  homographs, out-of-scope fallbacks and restrict-ids leakage removed in engine
+  regressions (`npm run test:study`).
+- New reading/listening libraries render with an explicit unreviewed-content
+  warning; their mixed-language question artifacts are documented and excluded
+  from mock scoring. Existing fields/provenance/licenses preserved.
+
 ## Current recovery and release constraints
 
 Recovery/reconciliation and this round's validation are documented in `docs/audits/2026-10-09-recovery-validation.md`. Historical continuation sections below retain their original per-round counts; they are not current totals.
 
 - Added 201 vocabulary example translations (121 exact JA+EN reuses, 80 newly authored N5 sentences) and 144 exact-source N4 topic assignments. All new content remains AI/unreviewed.
 - Independent reference evidence is now available in `docs/audits/2026-10-09-independent-reference-checks.json`. Ten warnings remain blocking; the active warning text acknowledges evidence contradicting earlier categorical mismatch claims. No Japanese, English or reading correction has been applied. Historical warnings are retained as historical records, not endorsed findings. Exact dynamic-web revisions are not established; copyrighted reference text was not imported as app definitions. Reference checking itself does not require an open reuse license.
-- `content/reading.json`, `content/listening.json` and the listening fallback are empty. Library empty-state rendering is not lesson coverage. Populated lesson-detail content needs authoring/licensed sources and MN/EN schema/content work.
+- `content/reading.json`, `content/listening.json` now contain 150+150 generated lessons (remote 8529ee7), but they include unreviewed/mixed-language question artifacts and are labeled as such in the UI; they are not bilingual semantic approval or mock content. Library empty-state rendering is not lesson coverage. Populated lesson-detail content needs authoring/licensed sources and MN/EN schema/content work.
 - `package.json` references `server/index.mjs`, but no implementation exists in the checkout, bundled project ZIP, or available Git history; GitHub main's `/server` lookup returned 404. No Vercel API routing configuration was found. Production auth/sync/admin requires an actual backend implementation/deployment and secure storage/configuration, not mock responses.
 - Frontend fixes include library loading/error/retry handling with stale-response guards, localized lesson controls and speech labels, an honest empty reading state, mobile heading/layout repairs, and corrected pinned JMdict license in word details. Existing learning-content fields and features are retained.
 - Remaining authoring is unfinished work, not a translation-provider access problem. Human review, a deployed backend, current-head gates, merge/deploy and actual production bilingual checks are still required. Do not merge based only on the frontend build or grammar matrix.

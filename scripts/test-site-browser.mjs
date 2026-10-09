@@ -83,12 +83,28 @@ try {
   await page.waitForFunction(id=>location.hash.includes(id),nextGrammar.id);
   await page.goto(`${origin}/#/grammar/${firstGrammar.id}?level=N5`);
   await page.getByRole('button',{name:t.practiceBtn,exact:true}).click();
-  await page.getByText(language==='en'?'Choose the grammar pattern that completes the sentence.':'Өгүүлбэрийг зөв гүйцээх дүрмийг сонго.',{exact:true}).waitFor();
+  await page.getByText(language==='en'?'Which expression appears exactly as written in this sentence? (Recognition, not sentence completion.)':'Энэ өгүүлбэрт яг энэ хэлбэрээр орсон илэрхийлэл аль вэ? (Таних дасгал; өгүүлбэр бөглөх биш.)',{exact:true}).waitFor();
   const grammarOptions=page.locator('main .card.mt-5 .space-y-2\\.5 > button');
   await grammarOptions.first().waitFor();
   assert.equal(await grammarOptions.count(),4,`${language}: grammar-use quiz must show four answer choices`);
   assert.equal(new Set((await grammarOptions.allTextContents()).map(x=>x.trim())).size,4,`${language}: grammar-use choices must be unique`);
   console.log(`${language}: grammar previous/next navigation and usage quiz passed`);
+  await grammarOptions.first().click();
+  const before=await grammarOptions.allTextContents();
+  const otherLang=language==='en'?'mn':'en';
+  await page.getByRole('button',{name:otherLang.toUpperCase(),exact:true}).filter({visible:true}).first().click();
+  await page.getByText(otherLang==='en'?'Which expression appears exactly as written in this sentence? (Recognition, not sentence completion.)':'Энэ өгүүлбэрт яг энэ хэлбэрээр орсон илэрхийлэл аль вэ? (Таних дасгал; өгүүлбэр бөглөх биш.)',{exact:true}).waitFor();
+  assert.deepEqual(await grammarOptions.allTextContents(),before,`${language}: switching language must preserve choices and selected/correct icons`);
+  assert.ok(await grammarOptions.first().isDisabled());
+  await page.getByRole('button',{name:language.toUpperCase(),exact:true}).filter({visible:true}).first().click();
+  await page.goto(`${origin}/#/mock?level=N3`);
+  await page.getByRole('button',{name:t.startExam,exact:true}).waitFor();
+  assert.ok(await page.getByRole('button',{name:t.startExam,exact:true}).isDisabled());
+  await page.getByRole('button',{name:language==='en'?'Start available Japanese drills (not a full exam)':'Бэлэн япон дасгал эхлэх (бүрэн шалгалт биш)',exact:true}).click();
+  await page.locator('main .card.mt-5 .space-y-2\\.5 > button').first().waitFor();
+  assert.ok(!/[A-Za-zА-Яа-яӨөҮү]/.test((await page.locator('main .card.mt-5 .space-y-2\\.5 > button').allTextContents()).join('')));
+  console.log(`${language}: live quiz switching and honest full-mock blocking passed`);
+
   for(const [route,text] of [['reading/missing',t.lessonNotFound],['listening/missing',t.lessonNotFound],['mistakes',t.emptyMistakes],['review',t.emptyDue],['dict',t.searchPromptTitle],['account',t.serverOfflineNote]]) {
    await page.goto(`${origin}/#/${route}`);
    await page.getByText(text,{exact:true}).waitFor();

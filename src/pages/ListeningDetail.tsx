@@ -83,6 +83,7 @@ export default function ListeningDetail({ id }: { id: string }) {
         {lesson.youtubeId && <p className="mt-1 text-[12.5px] text-sumi-400">{lesson.channel}</p>}
       </div>
 
+      <p role="status" className="rounded-xl border border-kin-200 bg-kin-50 p-3 text-[13px]">{language === "en" ? "Unreviewed practice content: translations, readings and answer keys need semantic review. Not eligible for mock-exam scoring." : "Хянаагүй дасгалын контент: орчуулга, уншлага, хариуны түлхүүрийг утгын хувьд нягтлах шаардлагатай. Жишиг шалгалтын оноонд ашиглахгүй."}</p>
       <div className="grid gap-5 lg:grid-cols-[1fr_320px]">
         <div className="space-y-5">
           <Card className="overflow-hidden p-0" >

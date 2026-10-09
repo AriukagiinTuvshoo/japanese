@@ -3,7 +3,7 @@ import { cn } from "../utils/cn";
 import { navigate, useQuery } from "../lib/router";
 import { useStore } from "../lib/store";
 import { loadFullData } from "../lib/data";
-import { EXAM_BLUEPRINTS, buildExam, scoreExam, type ExamSection } from "../lib/study";
+import { EXAM_BLUEPRINTS, buildExam, buildJapanesePractice, examSectionBlocker, scoreExam, type ExamSection } from "../lib/study";
 import type { Question } from "../lib/study";
 import type { Level } from "../lib/types";
 import { LEVELS } from "../lib/types";
@@ -13,7 +13,7 @@ import { Button, Card, Chip, LevelBadge, Ring, SectionTitle, Spinner } from "../
 import { QuizRunner } from "../components/QuizRunner";
 import { ui } from "../lib/i18n";
 
-type Stage = "pick" | "running" | "sectionResult" | "final";
+type Stage = "practice" | "pick" | "running" | "sectionResult" | "final";
 
 export default function MockExam() {
   const { doc } = useStore();
@@ -26,18 +26,21 @@ export default function MockExam() {
   const [sections, setSections] = useState<{ section: ExamSection; questions: Question[] }[]>([]);
   const [results, setResults] = useState<{ section: ExamSection; correct: number; total: number }[]>([]);
   const [, setAnswers] = useState<(number | null)[]>([]);
+  const [practice, setPractice] = useState<Question[]>([]);
   const [loading, setLoading] = useState(false);
   const [buildError, setBuildError] = useState(false);
   const startAt = useMemo(() => Date.now(), [sections]);
 
   const bp = EXAM_BLUEPRINTS[level];
   const meta = LEVEL_META[level];
+  const blockers = bp.sections.map((section) => examSectionBlocker(section, language)).filter((message): message is string => !!message);
 
   useEffect(() => { setStage("pick"); setSecIdx(0); setResults([]); setAnswers([]); }, [level]);
 
   const start = async () => {
     setLoading(true);
     setBuildError(false);
+    try {
     const data = await loadFullData();
     const built = buildExam(bp, { vocab: data.vocab, kanji: data.kanji, grammar: data.grammar }, language);
     if (built.some(({ section, questions }) => questions.length !== section.count)) {
@@ -49,8 +52,21 @@ export default function MockExam() {
     setSecIdx(0);
     setResults([]);
     setStage("running");
-    setLoading(false);
+    } catch { setBuildError(true); } finally { setLoading(false); }
   };
+
+  const startPractice = async () => {
+    setLoading(true); setBuildError(false);
+    try {
+      const data = await loadFullData();
+      const set = buildJapanesePractice(level, 15, data, language);
+      if (!set.questions.length) { setBuildError(true); return; }
+      setPractice(set.questions); setStage("practice");
+    } catch { setBuildError(true); } finally { setLoading(false); }
+  };
+  if (stage === "practice") return <QuizRunner questions={practice} options={{
+    reveal: true, title: language === "en" ? `${level} Japanese recognition practice (not a full mock)` : `${level} япон таних дасгал (бүрэн жишиг шалгалт биш)`,
+  }} onClose={() => setStage("pick")} />;
 
   const current = sections[secIdx];
 
@@ -66,7 +82,7 @@ export default function MockExam() {
     const scored = scoreExam(bp, results, Math.round((Date.now() - startAt) / 60000));
     const weakest = [...scored.sections].sort((a, b) => a.score / a.max - b.score / b.max)[0];
     const allSectionMinimums = scored.sections.every((section) => section.score >= section.min);
-    const verdict = scored.passed
+    const verdict = !scored.complete ? (language === "en" ? "Incomplete — no pass verdict" : "Дутуу — тэнцсэн эсэхийг дүгнэхгүй") : scored.passed
       ? t.verdictPass
       : allSectionMinimums && scored.total >= bp.passTotal * 0.85 ? t.verdictBorder : t.verdictFail;
 
@@ -100,7 +116,7 @@ export default function MockExam() {
             {scored.sections.map((s) => (
               <div key={s.name}>
                 <div className="flex items-baseline justify-between">
-                  <span className="text-[13.5px] font-bold text-sumi-800">{s.name}</span>
+                  <span className="text-[13.5px] font-bold text-sumi-800">{language === "en" ? s.nameEn : s.name}</span>
                   <span className="font-mono text-[12.5px] font-bold tabnum text-sumi-500">
                     {s.correct}/{s.total} · {s.score}/{s.max} · {language === "en" ? `min ${s.min}` : `доод ${s.min}`}
                   </span>
@@ -114,7 +130,7 @@ export default function MockExam() {
           </div>
 
           <div className="mt-6 rounded-2xl border border-kin-200 bg-kin-50 p-4">
-            <p className="text-[13.5px] font-extrabold text-kin-700">{t.weakestPre}{weakest.name}</p>
+            <p className="text-[13.5px] font-extrabold text-kin-700">{t.weakestPre}{language === "en" ? weakest.nameEn : weakest.name}</p>
             <p className="mt-1 text-[12.5px] text-sumi-600">{t.nextStep}</p>
             <div className="mt-3 flex flex-wrap gap-2">
               <Button size="sm" variant="outline" onClick={() => navigate(`quiz?mode=mixed&level=${level}`)}>{t.mixedDrill}</Button>
@@ -179,7 +195,7 @@ export default function MockExam() {
       <div className="space-y-5">
         <div className="flex flex-wrap items-center gap-3">
           <LevelBadge level={level} size="sm" />
-          <Chip tone="shu">{bp.title}</Chip>
+          <Chip tone="shu">{language === "en" ? bp.titleEn : bp.title}</Chip>
           <span className="text-[12.5px] text-sumi-500">
             {t.sectionN(secIdx + 1, sections.length, language === "en" ? current.section.nameEn ?? current.section.name : current.section.name, current.section.jp)}
           </span>
@@ -252,8 +268,13 @@ export default function MockExam() {
           ))}
         </div>
         <p className="mt-4 text-[12.5px] text-sumi-500">{language === "en" ? bp.noteEn : bp.note}</p>
+        {blockers.length > 0 && <div role="status" className="mt-4 rounded-xl border border-kin-200 bg-kin-50 p-4 text-[13px]">
+          <p className="font-bold">{language === "en" ? "Full mock unavailable — content review required" : "Бүрэн жишиг шалгалт бэлэн биш — контентын хяналт шаардлагатай"}</p>
+          <ul className="mt-2 list-disc space-y-1 pl-5">{blockers.map((message) => <li key={message}>{message}</li>)}</ul>
+        </div>}
         <div className="mt-5 flex flex-wrap gap-2">
-          <Button size="lg" onClick={start} disabled={loading}>{loading ? t.preparing : t.startExam}</Button>
+          <Button size="lg" onClick={start} disabled={loading || blockers.length > 0}>{loading ? t.preparing : t.startExam}</Button>
+          <Button variant="outline" size="lg" disabled={loading} onClick={startPractice}>{language === "en" ? "Start available Japanese drills (not a full exam)" : "Бэлэн япон дасгал эхлэх (бүрэн шалгалт биш)"}</Button>
           <Button variant="outline" size="lg" onClick={() => navigate(`quiz?level=${level}`)}>{t.practiceFirst}</Button>
         </div>
       </Card>

@@ -59,6 +59,7 @@ export default function ReadingDetail({ id }: { id: string }) {
         <p className="mt-1.5 text-[14px] font-semibold text-sumi-600">{language === "en" ? (passage.titleEn ?? passage.title) : passage.title}</p>
       </div>
 
+      <p role="status" className="rounded-xl border border-kin-200 bg-kin-50 p-3 text-[13px]">{language === "en" ? "Unreviewed practice content: translations, readings and answer keys need semantic review. Not eligible for mock-exam scoring." : "Хянаагүй дасгалын контент: орчуулга, уншлага, хариуны түлхүүрийг утгын хувьд нягтлах шаардлагатай. Жишиг шалгалтын оноонд ашиглахгүй."}</p>
       <Tabs value={tab} onChange={setTab} items={[
         { id: "text", label: t.readingTab, icon: "文" },
         { id: "questions", label: t.questionsTab, icon: "問", badge: passage.questions.length || undefined },

@@ -39,6 +39,7 @@ export default function Quiz() {
   const start = async (m: QuizMode) => {
     setLoading(true);
     setEmptyMsg(null);
+    try {
     const data = await loadFullData();
     const result = buildQuiz(
       { mode: m, level, count: m === "mistakes" ? Math.max(5, doc.mistakes.length) : count, lang: language },
@@ -50,11 +51,12 @@ export default function Quiz() {
       if ((m === "grammar-mn" || m === "grammar-use" || m === "mixed") && language === "mn") {
         setEmptyMsg(t.grammarMnInsufficient);
       }
+      if (m === "vocab-fill") setEmptyMsg(language === "en" ? "Sentence completion awaits a reviewed question bank. Random dictionary distractors are not a reliable answer key." : "Өгүүлбэр бөглөхөд хянагдсан асуултын сан шаардлагатай. Толь бичгээс санамсаргүй үг сонгох нь найдвартай хариуны түлхүүр биш.");
       return;
     }
     setSet(result);
     set({ mode: m });
-    setLoading(false);
+    } catch { setEmptyMsg(language === "en" ? "Could not load the question bank. Please try again." : "Асуултын санг ачаалж чадсангүй. Дахин оролдоно уу."); } finally { setLoading(false); }
   };
 
   useEffect(() => {
@@ -73,7 +75,7 @@ export default function Quiz() {
         </div>
         <QuizRunner
           questions={set_.questions}
-          options={{ title: (() => { const m2 = QUIZ_MODES.find((q) => q.id === set_.mode); return m2 ? (language === "en" ? m2.labelEn : m2.label) : t.drillBtn; })(), reveal: true }}
+          options={{ recordKind: set_.mode, title: (() => { const m2 = QUIZ_MODES.find((q) => q.id === set_.mode); return m2 ? (language === "en" ? m2.labelEn : m2.label) : t.drillBtn; })(), reveal: true }}
           onClose={() => { setSet(null); set({ mode: "" }); }}
         />
       </div>
