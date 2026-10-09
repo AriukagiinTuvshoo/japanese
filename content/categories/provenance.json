@@ -59787,6 +59787,1655 @@
           "daily"
         ],
         "reading": "いれもの"
+      },
+      "376ccb94c4": {
+        "ja": "ガス",
+        "reading": "ガス",
+        "en": [
+          "petrol"
+        ],
+        "topics": [
+          "technology"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "5a76ee84b9": {
+        "ja": "必ず",
+        "reading": "かならず",
+        "en": [
+          "certainly",
+          "necessarily"
+        ],
+        "topics": [
+          "descriptions"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "b6027b4099": {
+        "ja": "急行",
+        "reading": "きゅうこう",
+        "en": [
+          "speedy",
+          "express"
+        ],
+        "topics": [
+          "places",
+          "descriptions"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "511cbf9eee": {
+        "ja": "決して",
+        "reading": "けっして",
+        "en": [
+          "never"
+        ],
+        "topics": [
+          "descriptions"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "0435dab637": {
+        "ja": "けれど",
+        "reading": "けれど",
+        "en": [
+          "however"
+        ],
+        "topics": [
+          "learning"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "3cd723d544": {
+        "ja": "こう",
+        "reading": "こう",
+        "en": [
+          "this way"
+        ],
+        "topics": [
+          "descriptions"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "aa95e437a0": {
+        "ja": "郊外",
+        "reading": "こうがい",
+        "en": [
+          "outskirts"
+        ],
+        "topics": [
+          "places"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "0c49fbf17c": {
+        "ja": "校長",
+        "reading": "こうちょう",
+        "en": [
+          "headmaster"
+        ],
+        "topics": [
+          "people",
+          "learning"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "8786f4e971": {
+        "ja": "講堂",
+        "reading": "こうどう",
+        "en": [
+          "auditorium"
+        ],
+        "topics": [
+          "places",
+          "arts"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "5bb88bc7a4": {
+        "ja": "ご存じ",
+        "reading": "ごぞんじ",
+        "en": [
+          "knowing",
+          "acquaintance"
+        ],
+        "topics": [
+          "learning",
+          "relationships"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "aac669551b": {
+        "ja": "答",
+        "reading": "こたえ",
+        "en": [
+          "response"
+        ],
+        "topics": [
+          "learning"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "5bd8adf14c": {
+        "ja": "ごちそう",
+        "reading": "ごちそう",
+        "en": [
+          "a feast"
+        ],
+        "topics": [
+          "food"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "038f67b635": {
+        "ja": "こと",
+        "reading": "こと",
+        "en": [
+          "thing",
+          "matter"
+        ],
+        "topics": [
+          "descriptions"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "bdab237e0d": {
+        "ja": "ごみ",
+        "reading": "ごみ",
+        "en": [
+          "rubbish"
+        ],
+        "topics": [
+          "daily"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "b71d50ee32": {
+        "ja": "これから",
+        "reading": "これから",
+        "en": [
+          "after this"
+        ],
+        "topics": [
+          "time"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "d11b994212": {
+        "ja": "コンサート",
+        "reading": "コンサート",
+        "en": [
+          "concert"
+        ],
+        "topics": [
+          "arts"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "bdad768057": {
+        "ja": "今夜",
+        "reading": "こんや",
+        "en": [
+          "tonight"
+        ],
+        "topics": [
+          "time"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "c54201ce25": {
+        "ja": "最後",
+        "reading": "さいご",
+        "en": [
+          "last",
+          "end"
+        ],
+        "topics": [
+          "time"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "856f1c8216": {
+        "ja": "坂",
+        "reading": "さか",
+        "en": [
+          "slope",
+          "hill"
+        ],
+        "topics": [
+          "nature",
+          "places"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "43f6c947f9": {
+        "ja": "サラダ",
+        "reading": "サラダ",
+        "en": [
+          "salad"
+        ],
+        "topics": [
+          "food"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "4b94df57e2": {
+        "ja": "サンダル",
+        "reading": "サンダル",
+        "en": [
+          "sandal"
+        ],
+        "topics": [
+          "daily"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "f919deef04": {
+        "ja": "サンドイッチ",
+        "reading": "サンドイッチ",
+        "en": [
+          "sandwich"
+        ],
+        "topics": [
+          "food"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "dd89673ae0": {
+        "ja": "字",
+        "reading": "じ",
+        "en": [
+          "character"
+        ],
+        "topics": [
+          "learning"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "88125cd960": {
+        "ja": "仕方",
+        "reading": "しかた",
+        "en": [
+          "method"
+        ],
+        "topics": [
+          "actions"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "7f6ffe3432": {
+        "ja": "事故",
+        "reading": "じこ",
+        "en": [
+          "accident"
+        ],
+        "topics": [
+          "society",
+          "body"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "ba8831572d": {
+        "ja": "地震",
+        "reading": "じしん",
+        "en": [
+          "earthquake"
+        ],
+        "topics": [
+          "nature"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "62ebad7ac3": {
+        "ja": "時代",
+        "reading": "じだい",
+        "en": [
+          "era"
+        ],
+        "topics": [
+          "time"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "0c0fb94d28": {
+        "ja": "下着",
+        "reading": "したぎ",
+        "en": [
+          "underwear"
+        ],
+        "topics": [
+          "daily"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "17af6092db": {
+        "ja": "品物",
+        "reading": "しなもの",
+        "en": [
+          "goods"
+        ],
+        "topics": [
+          "work"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "ddfb670acf": {
+        "ja": "ジャム",
+        "reading": "ジャム",
+        "en": [
+          "jam"
+        ],
+        "topics": [
+          "food"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "eacd8a5221": {
+        "ja": "習慣",
+        "reading": "しゅうかん",
+        "en": [
+          "custom",
+          "manners"
+        ],
+        "topics": [
+          "society",
+          "daily"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "47593d1123": {
+        "ja": "住所",
+        "reading": "じゅうしょ",
+        "en": [
+          "an address",
+          "a residence"
+        ],
+        "topics": [
+          "places"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "dcfb33317b": {
+        "ja": "柔道",
+        "reading": "じゅうどう",
+        "en": [
+          "judo"
+        ],
+        "topics": [
+          "arts"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "689dc7a66e": {
+        "ja": "小説",
+        "reading": "しょうせつ",
+        "en": [
+          "novel"
+        ],
+        "topics": [
+          "arts",
+          "learning"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "2ae7b1cb3b": {
+        "ja": "食料品",
+        "reading": "しょくりょうひん",
+        "en": [
+          "groceries"
+        ],
+        "topics": [
+          "food",
+          "work"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "7962f0cea1": {
+        "ja": "人口",
+        "reading": "じんこう",
+        "en": [
+          "population"
+        ],
+        "topics": [
+          "people",
+          "quantity"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "cdddb30c94": {
+        "ja": "ずいぶん",
+        "reading": "ずいぶん",
+        "en": [
+          "extremely"
+        ],
+        "topics": [
+          "quantity"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "48341cc3a0": {
+        "ja": "数学",
+        "reading": "すうがく",
+        "en": [
+          "mathematics",
+          "arithmetic"
+        ],
+        "topics": [
+          "learning",
+          "quantity"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "eb0f717433": {
+        "ja": "スーツ",
+        "reading": "スーツ",
+        "en": [
+          "suit"
+        ],
+        "topics": [
+          "daily"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "8a13543a80": {
+        "ja": "スーツケース",
+        "reading": "スーツケース",
+        "en": [
+          "suitcase"
+        ],
+        "topics": [
+          "places",
+          "daily"
+        ],
+        "provenance": "mn-n4-topics-recovery-1-2026-10-09"
+      },
+      "270801de39": {
+        "ja": "スクリーン",
+        "reading": "スクリーン",
+        "en": [
+          "screen"
+        ],
+        "topics": [
+          "technology",
+          "arts"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "44f773f94f": {
+        "ja": "すっかり",
+        "reading": "すっかり",
+        "en": [
+          "completely"
+        ],
+        "topics": [
+          "quantity"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "d2937b2999": {
+        "ja": "ステーキ",
+        "reading": "ステーキ",
+        "en": [
+          "steak"
+        ],
+        "topics": [
+          "food"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "9071f08832": {
+        "ja": "ステレオ",
+        "reading": "ステレオ",
+        "en": [
+          "stereo"
+        ],
+        "topics": [
+          "technology",
+          "arts"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "97a079585a": {
+        "ja": "砂",
+        "reading": "すな",
+        "en": [
+          "sand"
+        ],
+        "topics": [
+          "nature"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "9776ccd07d": {
+        "ja": "隅",
+        "reading": "すみ",
+        "en": [
+          "corner",
+          "nook"
+        ],
+        "topics": [
+          "places"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "745024b527": {
+        "ja": "すり",
+        "reading": "すり",
+        "en": [
+          "pickpocket"
+        ],
+        "topics": [
+          "people",
+          "society"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "416c1b3679": {
+        "ja": "すると",
+        "reading": "すると",
+        "en": [
+          "then"
+        ],
+        "topics": [
+          "time",
+          "learning"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "1e4db2ac9d": {
+        "ja": "西洋",
+        "reading": "せいよう",
+        "en": [
+          "western countries"
+        ],
+        "topics": [
+          "places"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "bfe54303cd": {
+        "ja": "世界",
+        "reading": "せかい",
+        "en": [
+          "the world"
+        ],
+        "topics": [
+          "places"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "d11d9a6207": {
+        "ja": "席",
+        "reading": "せき",
+        "en": [
+          "seat"
+        ],
+        "topics": [
+          "daily"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "bdf6b26213": {
+        "ja": "ぜひ",
+        "reading": "ぜひ",
+        "en": [
+          "without fail"
+        ],
+        "topics": [
+          "descriptions"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "da94019cdd": {
+        "ja": "線",
+        "reading": "せん",
+        "en": [
+          "line"
+        ],
+        "topics": [
+          "quantity"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "ba20bc66d0": {
+        "ja": "ぜんぜん",
+        "reading": "ぜんぜん",
+        "en": [
+          "not entirely (used in a negative sentence)"
+        ],
+        "topics": [
+          "quantity"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "9b3ce398bd": {
+        "ja": "先輩",
+        "reading": "せんぱい",
+        "en": [
+          "senior"
+        ],
+        "topics": [
+          "people",
+          "relationships"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "14363682cb": {
+        "ja": "祖父",
+        "reading": "そふ",
+        "en": [
+          "grandfather"
+        ],
+        "topics": [
+          "people",
+          "relationships"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "0f0ed38b4c": {
+        "ja": "祖母",
+        "reading": "そぼ",
+        "en": [
+          "grandmother"
+        ],
+        "topics": [
+          "people",
+          "relationships"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "67c8e8ac31": {
+        "ja": "それで",
+        "reading": "それで",
+        "en": [
+          "because of that"
+        ],
+        "topics": [
+          "learning"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "074e70b529": {
+        "ja": "それに",
+        "reading": "それに",
+        "en": [
+          "moreover"
+        ],
+        "topics": [
+          "learning"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "0039e17a55": {
+        "ja": "そろそろ",
+        "reading": "そろそろ",
+        "en": [
+          "gradually",
+          "soon"
+        ],
+        "topics": [
+          "time"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "d1cca83038": {
+        "ja": "そんなに",
+        "reading": "そんなに",
+        "en": [
+          "so much",
+          "like that"
+        ],
+        "topics": [
+          "quantity"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "c0afe72b73": {
+        "ja": "大体",
+        "reading": "だいたい",
+        "en": [
+          "generally"
+        ],
+        "topics": [
+          "descriptions"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "a174ca4443": {
+        "ja": "タイプ",
+        "reading": "タイプ",
+        "en": [
+          "type",
+          "style"
+        ],
+        "topics": [
+          "descriptions"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "b442490fff": {
+        "ja": "大分",
+        "reading": "だいぶ",
+        "en": [
+          "greatly"
+        ],
+        "topics": [
+          "quantity"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "14d52a91d3": {
+        "ja": "台風",
+        "reading": "たいふう",
+        "en": [
+          "typhoon"
+        ],
+        "topics": [
+          "nature"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "ced135c81e": {
+        "ja": "だから",
+        "reading": "だから",
+        "en": [
+          "so",
+          "therefore"
+        ],
+        "topics": [
+          "learning"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "b5579bc4a6": {
+        "ja": "畳",
+        "reading": "たたみ",
+        "en": [
+          "Japanese straw mat"
+        ],
+        "topics": [
+          "daily"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "1cda12dd3f": {
+        "ja": "例えば",
+        "reading": "たとえば",
+        "en": [
+          "for example"
+        ],
+        "topics": [
+          "learning"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "9c96fd3cb4": {
+        "ja": "棚",
+        "reading": "たな",
+        "en": [
+          "shelves"
+        ],
+        "topics": [
+          "daily"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "ebaf7ce5e4": {
+        "ja": "たまに",
+        "reading": "たまに",
+        "en": [
+          "occasionally"
+        ],
+        "topics": [
+          "time"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "43965bbba0": {
+        "ja": "力",
+        "reading": "ちから",
+        "en": [
+          "strength",
+          "power"
+        ],
+        "topics": [
+          "body"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "f527f52c5c": {
+        "ja": "ちっとも",
+        "reading": "ちっとも",
+        "en": [
+          "not at all (used with a negative verb)"
+        ],
+        "topics": [
+          "quantity"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "36f583c207": {
+        "ja": "駐車場",
+        "reading": "ちゅうしゃじょう",
+        "en": [
+          "parking lot"
+        ],
+        "topics": [
+          "places"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "16db6a0f53": {
+        "ja": "地理",
+        "reading": "ちり",
+        "en": [
+          "geography"
+        ],
+        "topics": [
+          "places",
+          "learning"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "7d940762d2": {
+        "ja": "都合",
+        "reading": "つごう",
+        "en": [
+          "circumstances",
+          "convenience"
+        ],
+        "topics": [
+          "descriptions"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "342df55815": {
+        "ja": "つもり",
+        "reading": "つもり",
+        "en": [
+          "intention"
+        ],
+        "topics": [
+          "feelings"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "02dea2f4f6": {
+        "ja": "テニス",
+        "reading": "テニス",
+        "en": [
+          "tennis"
+        ],
+        "topics": [
+          "arts"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "be7c090b8e": {
+        "ja": "手袋",
+        "reading": "てぶくろ",
+        "en": [
+          "glove"
+        ],
+        "topics": [
+          "daily"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "67fb8c065d": {
+        "ja": "点",
+        "reading": "てん",
+        "en": [
+          "point",
+          "dot"
+        ],
+        "topics": [
+          "quantity"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "84e17fcbc2": {
+        "ja": "電報",
+        "reading": "でんぽう",
+        "en": [
+          "telegram"
+        ],
+        "topics": [
+          "technology",
+          "learning"
+        ],
+        "provenance": "mn-n4-topics-recovery-2-2026-10-09"
+      },
+      "80eba2fabb": {
+        "ja": "展覧会",
+        "reading": "てんらんかい",
+        "en": [
+          "exhibition"
+        ],
+        "topics": [
+          "arts"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "53162e310d": {
+        "ja": "都",
+        "reading": "と",
+        "en": [
+          "metropolitan"
+        ],
+        "topics": [
+          "places",
+          "society"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "9ef4ab5d2a": {
+        "ja": "とうとう",
+        "reading": "とうとう",
+        "en": [
+          "finally",
+          "after all"
+        ],
+        "topics": [
+          "time"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "69678bc04e": {
+        "ja": "動物園",
+        "reading": "どうぶつえん",
+        "en": [
+          "zoo"
+        ],
+        "topics": [
+          "places",
+          "nature"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "0b2acf3460": {
+        "ja": "特に",
+        "reading": "とくに",
+        "en": [
+          "particularly",
+          "especially"
+        ],
+        "topics": [
+          "descriptions"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "8743cb4286": {
+        "ja": "とこや",
+        "reading": "とこや",
+        "en": [
+          "barber"
+        ],
+        "topics": [
+          "people",
+          "work"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "9b799806d8": {
+        "ja": "途中",
+        "reading": "とちゅう",
+        "en": [
+          "on the way"
+        ],
+        "topics": [
+          "places",
+          "time"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "76d7890e5d": {
+        "ja": "泥棒",
+        "reading": "どろぼう",
+        "en": [
+          "thief"
+        ],
+        "topics": [
+          "people",
+          "society"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "ccfefc657c": {
+        "ja": "どんどん",
+        "reading": "どんどん",
+        "en": [
+          "more and more"
+        ],
+        "topics": [
+          "quantity",
+          "time"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "626ae1ff39": {
+        "ja": "なるべく",
+        "reading": "なるべく",
+        "en": [
+          "as much as possible"
+        ],
+        "topics": [
+          "quantity"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "76a4fc9d6d": {
+        "ja": "なるほど",
+        "reading": "なるほど",
+        "en": [
+          "now I understand"
+        ],
+        "topics": [
+          "learning"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "40f67571a6": {
+        "ja": "におい",
+        "reading": "におい",
+        "en": [
+          "a smell"
+        ],
+        "topics": [
+          "body"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "0ddf8d04c2": {
+        "ja": "日記",
+        "reading": "にっき",
+        "en": [
+          "journal"
+        ],
+        "topics": [
+          "daily",
+          "learning"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "5cda324083": {
+        "ja": "人形",
+        "reading": "にんぎょう",
+        "en": [
+          "doll",
+          "figure"
+        ],
+        "topics": [
+          "daily",
+          "arts"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "4fbc32438d": {
+        "ja": "熱",
+        "reading": "ねつ",
+        "en": [
+          "fever"
+        ],
+        "topics": [
+          "body"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "6a3d0e7070": {
+        "ja": "のど",
+        "reading": "のど",
+        "en": [
+          "throat"
+        ],
+        "topics": [
+          "body"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "254439ebbe": {
+        "ja": "葉",
+        "reading": "は",
+        "en": [
+          "leaf"
+        ],
+        "topics": [
+          "nature"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "2d86d7e0fc": {
+        "ja": "場合",
+        "reading": "ばあい",
+        "en": [
+          "situation"
+        ],
+        "topics": [
+          "descriptions"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "9bb337edc6": {
+        "ja": "歯医者",
+        "reading": "はいしゃ",
+        "en": [
+          "dentist"
+        ],
+        "topics": [
+          "people",
+          "body"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "32ca6422d6": {
+        "ja": "場所",
+        "reading": "ばしょ",
+        "en": [
+          "location"
+        ],
+        "topics": [
+          "places"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "d02b870af1": {
+        "ja": "はず",
+        "reading": "はず",
+        "en": [
+          "it should be so"
+        ],
+        "topics": [
+          "descriptions"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "2078b08350": {
+        "ja": "はっきり",
+        "reading": "はっきり",
+        "en": [
+          "clearly"
+        ],
+        "topics": [
+          "descriptions"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "a2962b07bc": {
+        "ja": "林",
+        "reading": "はやし",
+        "en": [
+          "woods",
+          "forester"
+        ],
+        "topics": [
+          "nature"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "76e19fba1a": {
+        "ja": "番組",
+        "reading": "ばんぐみ",
+        "en": [
+          "television or radio program"
+        ],
+        "topics": [
+          "arts"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "70eb9aa3ff": {
+        "ja": "ハンドバッグ",
+        "reading": "ハンドバッグ",
+        "en": [
+          "handbag"
+        ],
+        "topics": [
+          "daily"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "897bcab845": {
+        "ja": "ピアノ",
+        "reading": "ピアノ",
+        "en": [
+          "piano"
+        ],
+        "topics": [
+          "arts"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "916e92f3da": {
+        "ja": "引き出し",
+        "reading": "ひきだし",
+        "en": [
+          "drawer",
+          "drawing out"
+        ],
+        "topics": [
+          "daily",
+          "actions"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "36d0fd2044": {
+        "ja": "ひげ",
+        "reading": "ひげ",
+        "en": [
+          "beard"
+        ],
+        "topics": [
+          "body"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "be23bfe1f6": {
+        "ja": "非常に",
+        "reading": "ひじょうに",
+        "en": [
+          "extremely"
+        ],
+        "topics": [
+          "quantity"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "26253e5000": {
+        "ja": "昼休み",
+        "reading": "ひるやすみ",
+        "en": [
+          "noon break"
+        ],
+        "topics": [
+          "time"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "fbb6245e8b": {
+        "ja": "普通",
+        "reading": "ふつう",
+        "en": [
+          "usually",
+          "normally",
+          "ordinary"
+        ],
+        "topics": [
+          "descriptions",
+          "time"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "fceb1b247e": {
+        "ja": "ぶどう",
+        "reading": "ぶどう",
+        "en": [
+          "grapes"
+        ],
+        "topics": [
+          "food"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "f1ef6228cb": {
+        "ja": "布団",
+        "reading": "ふとん",
+        "en": [
+          "Japanese bedding",
+          "futon"
+        ],
+        "topics": [
+          "daily"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "45d920815a": {
+        "ja": "舟",
+        "reading": "ふね",
+        "en": [
+          "ship"
+        ],
+        "topics": [
+          "places"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "2f79469321": {
+        "ja": "文化",
+        "reading": "ぶんか",
+        "en": [
+          "culture"
+        ],
+        "topics": [
+          "society",
+          "arts"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "9eaa627a73": {
+        "ja": "文法",
+        "reading": "ぶんぽう",
+        "en": [
+          "grammar"
+        ],
+        "topics": [
+          "learning"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "e5cfcfab45": {
+        "ja": "ベル",
+        "reading": "ベル",
+        "en": [
+          "bell"
+        ],
+        "topics": [
+          "technology"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "1587d6fbcf": {
+        "ja": "僕",
+        "reading": "ぼく",
+        "en": [
+          "I (used by males)"
+        ],
+        "topics": [
+          "people"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "72df46ea9c": {
+        "ja": "星",
+        "reading": "ほし",
+        "en": [
+          "star"
+        ],
+        "topics": [
+          "nature"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "b3f18d07d4": {
+        "ja": "ほど",
+        "reading": "ほど",
+        "en": [
+          "extent"
+        ],
+        "topics": [
+          "quantity"
+        ],
+        "provenance": "mn-n4-topics-recovery-3-2026-10-09"
+      },
+      "7e5b1397b9": {
+        "ja": "ほとんど",
+        "reading": "ほとんど",
+        "en": [
+          "mostly"
+        ],
+        "topics": [
+          "quantity"
+        ],
+        "provenance": "mn-n4-topics-recovery-4-2026-10-09"
+      },
+      "9c0ee7cfcc": {
+        "ja": "まず",
+        "reading": "まず",
+        "en": [
+          "first of all"
+        ],
+        "topics": [
+          "time"
+        ],
+        "provenance": "mn-n4-topics-recovery-4-2026-10-09"
+      },
+      "0fa3edce9b": {
+        "ja": "または",
+        "reading": "または",
+        "en": [
+          "or",
+          "otherwise"
+        ],
+        "topics": [
+          "learning"
+        ],
+        "provenance": "mn-n4-topics-recovery-4-2026-10-09"
+      },
+      "f71b64fa1e": {
+        "ja": "周り",
+        "reading": "まわり",
+        "en": [
+          "surroundings"
+        ],
+        "topics": [
+          "places"
+        ],
+        "provenance": "mn-n4-topics-recovery-4-2026-10-09"
+      },
+      "8077c744a0": {
+        "ja": "漫画",
+        "reading": "まんが",
+        "en": [
+          "comic"
+        ],
+        "topics": [
+          "arts"
+        ],
+        "provenance": "mn-n4-topics-recovery-4-2026-10-09"
+      },
+      "59944588a8": {
+        "ja": "真ん中",
+        "reading": "まんなか",
+        "en": [
+          "middle"
+        ],
+        "topics": [
+          "places"
+        ],
+        "provenance": "mn-n4-topics-recovery-4-2026-10-09"
+      },
+      "07a76f9be7": {
+        "ja": "湖",
+        "reading": "みずうみ",
+        "en": [
+          "lake"
+        ],
+        "topics": [
+          "nature",
+          "places"
+        ],
+        "provenance": "mn-n4-topics-recovery-4-2026-10-09"
+      },
+      "fcf790e186": {
+        "ja": "味噌",
+        "reading": "みそ",
+        "en": [
+          "bean paste"
+        ],
+        "topics": [
+          "food"
+        ],
+        "provenance": "mn-n4-topics-recovery-4-2026-10-09"
+      },
+      "eb7247f404": {
+        "ja": "皆",
+        "reading": "みな",
+        "en": [
+          "everybody"
+        ],
+        "topics": [
+          "people"
+        ],
+        "provenance": "mn-n4-topics-recovery-4-2026-10-09"
+      },
+      "221e63cb1e": {
+        "ja": "港",
+        "reading": "みなと",
+        "en": [
+          "harbour"
+        ],
+        "topics": [
+          "places"
+        ],
+        "provenance": "mn-n4-topics-recovery-4-2026-10-09"
+      },
+      "0f494574f0": {
+        "ja": "もうすぐ",
+        "reading": "もうすぐ",
+        "en": [
+          "soon"
+        ],
+        "topics": [
+          "time"
+        ],
+        "provenance": "mn-n4-topics-recovery-4-2026-10-09"
+      },
+      "bbaeab9c94": {
+        "ja": "もし",
+        "reading": "もし",
+        "en": [
+          "if"
+        ],
+        "topics": [
+          "learning"
+        ],
+        "provenance": "mn-n4-topics-recovery-4-2026-10-09"
+      },
+      "a695a20c52": {
+        "ja": "もちろん",
+        "reading": "もちろん",
+        "en": [
+          "of course"
+        ],
+        "topics": [
+          "descriptions"
+        ],
+        "provenance": "mn-n4-topics-recovery-4-2026-10-09"
+      },
+      "6e13cee4dc": {
+        "ja": "もっとも",
+        "reading": "もっとも",
+        "en": [
+          "extremely"
+        ],
+        "topics": [
+          "quantity"
+        ],
+        "provenance": "mn-n4-topics-recovery-4-2026-10-09"
+      },
+      "96e10e7209": {
+        "ja": "木綿",
+        "reading": "もめん",
+        "en": [
+          "cotton"
+        ],
+        "topics": [
+          "daily",
+          "nature"
+        ],
+        "provenance": "mn-n4-topics-recovery-4-2026-10-09"
+      },
+      "f2a77c1c6d": {
+        "ja": "やっと",
+        "reading": "やっと",
+        "en": [
+          "at last"
+        ],
+        "topics": [
+          "time"
+        ],
+        "provenance": "mn-n4-topics-recovery-4-2026-10-09"
+      },
+      "7a0b48d3e5": {
+        "ja": "やはり",
+        "reading": "やはり",
+        "en": [
+          "as I thought",
+          "absolutely"
+        ],
+        "topics": [
+          "descriptions"
+        ],
+        "provenance": "mn-n4-topics-recovery-4-2026-10-09"
+      },
+      "79e62e3c87": {
+        "ja": "夢",
+        "reading": "ゆめ",
+        "en": [
+          "dream"
+        ],
+        "topics": [
+          "feelings"
+        ],
+        "provenance": "mn-n4-topics-recovery-4-2026-10-09"
+      },
+      "df83eb2b9c": {
+        "ja": "理由",
+        "reading": "りゆう",
+        "en": [
+          "reason"
+        ],
+        "topics": [
+          "learning"
+        ],
+        "provenance": "mn-n4-topics-recovery-4-2026-10-09"
+      },
+      "cd95253850": {
+        "ja": "旅館",
+        "reading": "りょかん",
+        "en": [
+          "Japanese hotel"
+        ],
+        "topics": [
+          "places"
+        ],
+        "provenance": "mn-n4-topics-recovery-4-2026-10-09"
+      },
+      "bcb7922671": {
+        "ja": "歴史",
+        "reading": "れきし",
+        "en": [
+          "history"
+        ],
+        "topics": [
+          "time",
+          "learning"
+        ],
+        "provenance": "mn-n4-topics-recovery-4-2026-10-09"
+      },
+      "b80da200ff": {
+        "ja": "レジ",
+        "reading": "レジ",
+        "en": [
+          "register"
+        ],
+        "topics": [
+          "work",
+          "technology"
+        ],
+        "provenance": "mn-n4-topics-recovery-4-2026-10-09"
+      },
+      "ceec15828f": {
+        "ja": "訳",
+        "reading": "わけ",
+        "en": [
+          "meaning",
+          "reason"
+        ],
+        "topics": [
+          "learning"
+        ],
+        "provenance": "mn-n4-topics-recovery-4-2026-10-09"
+      },
+      "12abb2a2c6": {
+        "ja": "忘れ物",
+        "reading": "わすれもの",
+        "en": [
+          "lost article"
+        ],
+        "topics": [
+          "daily"
+        ],
+        "provenance": "mn-n4-topics-recovery-4-2026-10-09"
       }
     },
     "kanji": {

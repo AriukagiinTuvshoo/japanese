@@ -2,7 +2,7 @@
 
 **Incomplete. PR #12 must remain draft and unmerged. No production completion is claimed.**
 
-Baseline `6cf8ca1`: 7,170 missing meanings. Current batches add 7,108 net meanings and all 526 grammar formation translations. All **1,526 grammar examples across N5–N1** now have Mongolian text, plus **554 vocabulary example translations** added during continuation. New content is AI-authored and independently unreviewed; coverage and browser rendering are not semantic approval.
+Baseline `6cf8ca1`: 7,170 missing meanings. Current batches add 7,108 net meanings and all 526 grammar formation translations. All **1,526 grammar examples across N5–N1** now have Mongolian text, plus **755 vocabulary example translations** added during continuation (including 121 exact-source reuses with original translation provenance). New content is AI-authored and independently unreviewed; coverage and browser rendering are not semantic approval.
 
 | Level | Missing vocabulary meanings | Missing kanji meanings | Missing grammar meanings |
 |---|---:|---:|---:|
@@ -13,9 +13,20 @@ Baseline `6cf8ca1`: 7,170 missing meanings. Current batches add 7,108 net meanin
 | N1 | 31 | 31 | 0 |
 | Total | 31 | 31 | 0 |
 
-Remaining: **62 meanings, 12,975 vocabulary examples, 0 grammar examples, 0 formations, 1,995 unclassified entries, 0 missing new-batch provenance records; 6,503 unchanged legacy/unreviewed meanings of unknown authorship (documented, not release-blocking), 10 unresolved source issues**. Invalid categories and mislabeled MN: zero. Measures overlap; do not sum as distinct entries.
+Remaining: **62 meanings, 12,774 vocabulary examples, 0 grammar examples, 0 formations, 1,851 unclassified entries, 0 missing new-batch provenance records; 6,503 unchanged legacy/unreviewed meanings of unknown authorship (documented, not release-blocking), 10 unresolved source issues**. Invalid categories and mislabeled MN: zero. Measures overlap; do not sum as distinct entries.
 
-N5 vocabulary/kanji and N4 kanji are fully classified. Categories support multiple topics, including relationships. Explicit semantic override evidence is maintained in `content/categories/provenance.json`. Unmatched entries remain visibly filterable, not hidden in a catch-all. Source warnings retain original Japanese/English and block release. Existing drafts and new translations still need accuracy review. Page-wide bilingual localization audit remains incomplete, notably Admin.
+N5 and N4 vocabulary/kanji are fully classified. Categories support multiple topics, including relationships. Explicit semantic override evidence is maintained in `content/categories/provenance.json`. Unmatched entries remain visibly filterable, not hidden in a catch-all. Source warnings retain original Japanese/English and block release. Existing drafts and new translations still need accuracy review. Full bilingual state/semantic approval remains incomplete. Admin controlled-state tests do not establish backend access or authorization.
+
+## Current recovery and release constraints
+
+Recovery/reconciliation and this round's validation are documented in `docs/audits/2026-10-09-recovery-validation.md`. Historical continuation sections below retain their original per-round counts; they are not current totals.
+
+- Added 201 vocabulary example translations (121 exact JA+EN reuses, 80 newly authored N5 sentences) and 144 exact-source N4 topic assignments. All new content remains AI/unreviewed.
+- Independent reference evidence is now available in `docs/audits/2026-10-09-independent-reference-checks.json`. Ten warnings remain blocking; the active warning text acknowledges evidence contradicting earlier categorical mismatch claims. No Japanese, English or reading correction has been applied. Historical warnings are retained as historical records, not endorsed findings. Exact dynamic-web revisions are not established; copyrighted reference text was not imported as app definitions. Reference checking itself does not require an open reuse license.
+- `content/reading.json`, `content/listening.json` and the listening fallback are empty. Library empty-state rendering is not lesson coverage. Populated lesson-detail content needs authoring/licensed sources and MN/EN schema/content work.
+- `package.json` references `server/index.mjs`, but no implementation exists in the checkout, bundled project ZIP, or available Git history; GitHub main's `/server` lookup returned 404. No Vercel API routing configuration was found. Production auth/sync/admin requires an actual backend implementation/deployment and secure storage/configuration, not mock responses.
+- Frontend fixes include library loading/error/retry handling with stale-response guards, localized lesson controls and speech labels, an honest empty reading state, mobile heading/layout repairs, and corrected pinned JMdict license in word details. Existing learning-content fields and features are retained.
+- Remaining authoring is unfinished work, not a translation-provider access problem. Human review, a deployed backend, current-head gates, merge/deploy and actual production bilingual checks are still required. Do not merge based only on the frontend build or grammar matrix.
 
 ## Validation
 

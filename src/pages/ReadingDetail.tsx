@@ -54,9 +54,9 @@ export default function ReadingDetail({ id }: { id: string }) {
       </div>
 
       <Tabs value={tab} onChange={setTab} items={[
-        { id: "text", label: "Текст", icon: "文" },
-        { id: "questions", label: "Асуулт", icon: "問", badge: passage.questions.length || undefined },
-        { id: "vocab", label: "Үгийн сан", icon: "語", badge: passage.glossary.length || undefined },
+        { id: "text", label: t.readingTab, icon: "文" },
+        { id: "questions", label: t.questionsTab, icon: "問", badge: passage.questions.length || undefined },
+        { id: "vocab", label: t.wordsTab, icon: "語", badge: passage.glossary.length || undefined },
       ]} />
 
       {tab === "text" && (

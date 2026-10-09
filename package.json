@@ -22,7 +22,8 @@
     "test:coverage": "node scripts/test-coverage.mjs",
     "test": "npm run test:routes && npm run test:coverage && npm run test:retention && node scripts/test-grammar-mn-pending.mjs",
     "test:retention": "node scripts/test-source-retention.mjs",
-    "test:admin-browser": "ADMIN_TEST_START_SERVER=1 node scripts/test-admin-browser.mjs"
+    "test:admin-browser": "ADMIN_TEST_START_SERVER=1 node scripts/test-admin-browser.mjs",
+    "test:site-browser": "node scripts/test-site-browser.mjs"
   },
   "dependencies": {
     "clsx": "2.1.1",
@@ -41,6 +42,6 @@
     "playwright-core": "^1.64.0",
     "tailwindcss": "4.1.17",
     "typescript": "5.9.3",
-    "vite": "7.3.2"
+    "vite": "7.3.7"
   }
 }

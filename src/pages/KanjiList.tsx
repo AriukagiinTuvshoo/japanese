@@ -6,7 +6,7 @@ import { loadKanji, loadStrokes } from "../lib/data";
 import type { Kanji, Level, StrokeMap } from "../lib/types";
 import { LEVEL_LABEL, MQ_LABEL } from "../lib/text";
 import { cardStage } from "../lib/srs";
-import { Button, Card, Empty, Input, LevelBadge, Pager, Select, Spinner, Tabs } from "../components/ui";
+import { Button, Card, Empty, ErrorBox, Input, LevelBadge, Pager, Select, Spinner, Tabs } from "../components/ui";
 import { ui, MN_PENDING } from "../lib/i18n";
 import { topicLabel, entryTopics, type Topic } from "../lib/categories";
 import { KanjiStudy } from "../components/KanjiStudy";
@@ -22,6 +22,8 @@ export default function KanjiList() {
   const tab = (query.tab as string) || "browse";
 
   const [items, setItems] = useState<Kanji[] | null>(null);
+  const [error, setError] = useState<unknown>(null);
+  const [attempt, setAttempt] = useState(0);
   const [strokes, setStrokes] = useState<StrokeMap | null>(null);
   const [q, setQ] = useState("");
   const [topic, setTopic] = useState<Topic | "all">("all");
@@ -30,11 +32,14 @@ export default function KanjiList() {
   const [page, setPage] = useState(1);
 
   useEffect(() => {
-    setItems(null);
-    loadKanji(level).then(setItems);
-    loadStrokes(level).then(setStrokes);
+    let active = true;
+    setItems(null); setStrokes(null); setError(null);
+    Promise.all([loadKanji(level), loadStrokes(level)]).then(([entries, paths]) => {
+      if (active) { setItems(entries); setStrokes(paths); }
+    }).catch(err => { if (active) setError(err); });
     setPage(1);
-  }, [level]);
+    return () => { active = false; };
+  }, [level, attempt]);
 
   const radicals = useMemo(() => {
     if (!items) return [];
@@ -149,7 +154,8 @@ export default function KanjiList() {
             )}
           </Card>
 
-          {!items && <Spinner label={t.loadingKanji} lang={language} />}
+          {error != null && <ErrorBox error={error} lang={language} retry={() => setAttempt(n => n + 1)} />}
+          {!error && !items && <Spinner label={t.loadingKanji} lang={language} />}
           {items && pageItems.length === 0 && <Empty icon="無" title={t.noHits} />}
 
           {pageItems.length > 0 && (

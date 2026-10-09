@@ -7,7 +7,7 @@
       "vocab": {
         "entries": 1074,
         "missingMeanings": 0,
-        "missingExamples": 1085,
+        "missingExamples": 974,
         "missingForms": 0,
         "unclassified": 0,
         "invalidCategories": 0,
@@ -42,9 +42,9 @@
       "vocab": {
         "entries": 1080,
         "missingMeanings": 0,
-        "missingExamples": 1021,
+        "missingExamples": 1010,
         "missingForms": 0,
-        "unclassified": 144,
+        "unclassified": 0,
         "invalidCategories": 0,
         "missingProvenance": 0,
         "mislabeledMn": 0,
@@ -77,7 +77,7 @@
       "vocab": {
         "entries": 2279,
         "missingMeanings": 0,
-        "missingExamples": 3156,
+        "missingExamples": 3121,
         "missingForms": 0,
         "unclassified": 571,
         "invalidCategories": 0,
@@ -112,7 +112,7 @@
       "vocab": {
         "entries": 2338,
         "missingMeanings": 0,
-        "missingExamples": 2885,
+        "missingExamples": 2861,
         "missingForms": 0,
         "unclassified": 562,
         "invalidCategories": 0,
@@ -147,7 +147,7 @@
       "vocab": {
         "entries": 3690,
         "missingMeanings": 31,
-        "missingExamples": 4828,
+        "missingExamples": 4808,
         "missingForms": 0,
         "unclassified": 208,
         "invalidCategories": 0,
@@ -181,9 +181,9 @@
   },
   "totals": {
     "missingMeanings": 62,
-    "missingExamples": 12975,
+    "missingExamples": 12774,
     "missingForms": 0,
-    "unclassified": 1995,
+    "unclassified": 1851,
     "invalidCategories": 0,
     "missingProvenance": 0,
     "mislabeledMn": 0,

@@ -4,7 +4,7 @@ import { useStore } from "../lib/store";
 import { READING } from "../lib/data";
 import type { Level } from "../lib/types";
 import { LEVEL_LABEL } from "../lib/text";
-import { Button, Card, Chip, Empty, Input, LevelBadge, Spinner } from "../components/ui";
+import { Button, Card, Chip, Empty, Input, LevelBadge } from "../components/ui";
 import { ui } from "../lib/i18n";
 
 export default function ReadingList() {
@@ -80,7 +80,6 @@ export default function ReadingList() {
         })}
       </div>
 
-      {READING.length === 0 && <Spinner />}
     </div>
   );
 }

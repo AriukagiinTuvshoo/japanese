@@ -10,7 +10,7 @@ import { ui, vocabMeaning } from "../lib/i18n";
 import { topicLabel, entryTopics, type Topic } from "../lib/categories";
 import { cardStage, dueCards, retrievability } from "../lib/srs";
 import {
-  Bar, Button, Card, Chip, Empty, Input, Pager, Select, SpeakButton, Spinner, Tabs,
+  Bar, Button, Card, Chip, Empty, ErrorBox, Input, Pager, Select, SpeakButton, Spinner, Tabs,
 } from "../components/ui";
 import { SessionSetup } from "../components/Session";
 import { WordNetwork } from "../components/WordNetwork";
@@ -26,6 +26,8 @@ export default function Vocabulary() {
   const tab = (query.tab as string) || "browse";
 
   const [words, setWords] = useState<Vocab[] | null>(null);
+  const [error, setError] = useState<unknown>(null);
+  const [attempt, setAttempt] = useState(0);
   const [q, setQ] = useState("");
   const [type, setType] = useState<PosType | "all">("all");
   const [topic, setTopic] = useState<Topic | "all">("all");
@@ -34,10 +36,14 @@ export default function Vocabulary() {
   const [page, setPage] = useState(1);
 
   useEffect(() => {
+    let active = true;
     setWords(null);
-    loadVocab(level).then(setWords);
+    setError(null);
+    loadVocab(level).then(value => { if (active) setWords(value); })
+      .catch(err => { if (active) setError(err); });
     setPage(1);
-  }, [level]);
+    return () => { active = false; };
+  }, [level, attempt]);
 
   const filtered = useMemo(() => {
     if (!words) return [];
@@ -189,7 +195,8 @@ export default function Vocabulary() {
             </div>
           </Card>
 
-          {!words && <Spinner label={t.loadingVocab} />}
+          {error != null && <ErrorBox error={error} lang={language} retry={() => setAttempt(n => n + 1)} />}
+          {!error && !words && <Spinner label={t.loadingVocab} />}
 
           {words && shown.length === 0 && (
             <Empty icon="無" title={t.noResults} sub={t.noResultsSub} />

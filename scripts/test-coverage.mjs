@@ -97,13 +97,15 @@ for (const file of ['2026-10-08-n5-examples-final-1.json','2026-10-08-n5-example
  }
  assert.equal(count, 20);
 }
+const reviewStatusBatch = read('content/mn/batches/2026-10-09-z-source-review-status.json');
 const conflictAudit = read('content/mn/source-conflict-audit-2026-10-08.json');
 assert.equal(conflictAudit.records.length, 10);
 for (const record of conflictAudit.records) {
  const data = read(`public/data/${record.kind}/${record.level}.json`);
  const entry = data.find(e => (record.kind === 'vocab' ? e.id : e.k) === record.key);
  for (const [field, expected] of Object.entries(record.expected)) assert.deepEqual(entry[field], expected);
- assert.equal(entry.source_issue, record.existingWarning);
+ assert.equal(reviewStatusBatch[record.kind][record.key].previousSourceNote, record.existingWarning);
+ assert.equal(entry.source_issue, reviewStatusBatch[record.kind][record.key].sourceNote);
 }
 
 // Corpus batches: sentence guards, applied MN, provenance and semantic evidence.
@@ -278,7 +280,8 @@ assert.equal(new Set(dictionaryAudit.records.map(r=>`${r.kind}/${r.level}/${r.ke
 for(const r of dictionaryAudit.records) {
  const e=read(`public/data/${r.kind}/${r.level}.json`).find(e=>(r.kind==='kanji'?e.k:e.id)===r.key);
  assert.ok(e);for(const [f,v] of Object.entries(r.expected))assert.deepEqual(e[f],v);
- assert.equal(e.source_issue??null,r.existingWarning);if(r.missingMeaning)assert.ok(!e.mn?.length);
+ assert.equal(e.source_issue??null,reviewStatusBatch[r.kind]?.[r.key]?.sourceNote ?? r.existingWarning);
+ if(r.existingWarning)assert.equal(reviewStatusBatch[r.kind][r.key].previousSourceNote,r.existingWarning);if(r.missingMeaning)assert.ok(!e.mn?.length);
  assert.equal(r.artifactUrl,dictionaryAudit.source.artifactUrl);
  assert.equal(r.dictionaryLicense,dictionaryAudit.source.dictionaryLicense);
  assert.match(r.decision,/blocked/);
@@ -304,3 +307,64 @@ for(const level of ['n1','n2']) {
  assert.equal(count,20);assert.equal(batch.provenance.reviewStatus,'unreviewed');
 }
 for(const level of ['N5','N4','N3','N2','N1'])assert.equal(report.byLevel[level].grammar.missingExamples,0);
+
+// Exact reuse must retain the earlier origin, not pretend to be a new human translation.
+const allVocab = ['n5','n4','n3','n2','n1'].flatMap(l=>read(`public/data/vocab/${l}.json`));
+for(let i=1;i<=4;i++) {
+ const b=read(`content/mn/batches/2026-10-09-exact-example-reuse-${i}.json`);let n=0;
+ assert.equal(b.provenance.reviewStatus,'unreviewed');
+ for(const [id,r] of Object.entries(b.vocab)) {
+  const e=allVocab.find(e=>e.id===id);assert.ok(e);
+  assert.deepEqual(Object.keys(r.expected).sort(),['en','r','w']);
+  for(const [k,v] of Object.entries(r.expected))assert.deepEqual(e[k],v);
+  for(const [ja,x] of Object.entries(r.examples)) {
+   const matches=e.ex.filter(ex=>ex.ja===ja);assert.equal(matches.length,1);
+   assert.equal(matches[0].en,x.en);assert.equal(matches[0].mn,x.mn);assert.ok(validMn(x.mn));
+   assert.equal(matches[0].mn_provenance,b.provenance.id);assert.ok(x.reusedFrom.length);
+   for(const origin of x.reusedFrom) {
+    assert.equal(origin.kind,'vocab');
+    const source=read(`public/data/vocab/${origin.level}.json`).find(e=>e.id===origin.id);
+    assert.ok(source);assert.ok(source.ex.some(ex=>ex.ja===ja&&ex.en===x.en&&ex.mn===x.mn&&ex.mn_provenance===origin.provenance));
+   }
+   n++;
+  }
+ }
+ assert.equal(n,i===4?1:40);
+}
+for(let i=1;i<=4;i++) {
+ const b=read(`content/mn/batches/2026-10-09-n4-topics-recovery-${i}.json`);
+ assert.equal(b.provenance.reviewStatus,'unreviewed');assert.equal(Object.keys(b.vocab).length,i===4?24:40);
+ for(const [id,r] of Object.entries(b.vocab)) {
+  const e=read('public/data/vocab/n4.json').find(e=>e.id===id);assert.ok(e);
+  assert.deepEqual(Object.keys(r.expected).sort(),['en','r','w']);
+  for(const [k,v] of Object.entries(r.expected))assert.deepEqual(e[k],v);
+  assert.deepEqual(read('content/categories/overrides.json').vocab[id],r.topics);
+  const evidence=read('content/categories/provenance.json').entries.vocab[id];
+  assert.deepEqual(evidence,{ja:e.w,reading:e.r,en:e.en,topics:r.topics,provenance:b.provenance.id});
+ }
+}
+assert.equal(report.byLevel.N4.vocab.unclassified,0);
+for(let i=1;i<=2;i++) {
+ const b=read(`content/mn/batches/2026-10-09-n5-examples-recovery-${i}.json`);let n=0;
+ assert.equal(b.provenance.reviewStatus,'unreviewed');
+ for(const [id,r] of Object.entries(b.vocab)) {
+  const e=allVocab.find(e=>e.id===id);assert.ok(e);
+  assert.deepEqual(Object.keys(r.expected).sort(),['en','r','w']);
+  for(const [k,v] of Object.entries(r.expected))assert.deepEqual(e[k],v);
+  for(const [ja,x] of Object.entries(r.examples)) {
+   const matches=e.ex.filter(ex=>ex.ja===ja);assert.equal(matches.length,1);
+   assert.equal(matches[0].en,x.en);assert.equal(matches[0].mn,x.mn);assert.ok(validMn(x.mn));
+   assert.equal(matches[0].mn_provenance,b.provenance.id);n++;
+  }
+ }
+ assert.equal(n,40);
+}
+const references=read('docs/audits/2026-10-09-independent-reference-checks.json');
+assert.deepEqual(references.counts,{records:10,activeCorrections:0,clearedWarnings:0});
+for(const r of references.records) {
+ const e=read(`public/data/${r.kind}/${r.level}.json`).find(e=>(r.kind==='kanji'?e.k:e.id)===r.key);
+ assert.ok(e);for(const [k,v] of Object.entries(r.expected))assert.deepEqual(e[k],v);
+ assert.equal(e.source_issue,reviewStatusBatch[r.kind][r.key].sourceNote);
+ assert.equal(reviewStatusBatch[r.kind][r.key].previousSourceNote,r.existingWarning);assert.match(r.referenceUrl,/^https:\/\//);
+ assert.match(r.version,/not established/);assert.match(r.decision,/blocked/);
+}

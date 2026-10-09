@@ -973,4 +973,3 @@ export function grammarMeaning(g: Grammar, language: Language): string {
 export function grammarMnMissing(g: Grammar): boolean {
   return !g.mn;
 }
-

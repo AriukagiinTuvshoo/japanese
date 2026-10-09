@@ -48,8 +48,8 @@ export default function ListeningDetail({ id }: { id: string }) {
         <Chip tone="sumi">{lesson.topic}</Chip>
         <span className="text-[12px] text-sumi-400">{lesson.minutes} {t.minutes}</span>
         <div className="ml-auto flex gap-2">
-          {isDone ? <Button size="sm" variant="soft">✓ Дуусгасан</Button>
-            : <Button size="sm" onClick={() => actions.markListening(id)}>✓ Дуусгах</Button>}
+          {isDone ? <Button size="sm" variant="soft">{t.doneBtn}</Button>
+            : <Button size="sm" onClick={() => actions.markListening(id)}>{t.markDone}</Button>}
         </div>
       </div>
 
@@ -92,22 +92,22 @@ export default function ListeningDetail({ id }: { id: string }) {
               </span>
               <a href={`https://www.youtube.com/watch?v=${lesson.youtubeId}`} target="_blank" rel="noreferrer noopener"
                 className="ml-auto text-[12px] font-bold text-ai-600 underline underline-offset-4">
-                YouTube дээр нээх ↗
+                {t.openOnYt}
               </a>
             </div>
           </Card>
 
           <Tabs value={tab} onChange={setTab} items={[
-            { id: "lesson", label: "Хичээл", icon: "学" },
-            { id: "transcript", label: "Транскрипт", icon: "文", badge: lesson.transcript.length || undefined },
-            { id: "questions", label: "Асуулт", icon: "問", badge: lesson.questions.length || undefined },
-            { id: "shadow", label: "Дуу дагах", icon: "影" },
+            { id: "lesson", label: t.lessonTab, icon: "学" },
+            { id: "transcript", label: t.transcriptTab, icon: "文", badge: lesson.transcript.length || undefined },
+            { id: "questions", label: t.questionsTab, icon: "問", badge: lesson.questions.length || undefined },
+            { id: "shadow", label: t.shadowTab, icon: "影" },
           ]} />
 
           {tab === "transcript" && (
             <Card>
-              <SectionTitle jp="スクリプト" title="Транскрипт"
-                sub="Үг дээр дарж утгыг хараад SRS-д нэмээрэй. Текст нь хичээлийн бодит агуулгаас." />
+              <SectionTitle jp="スクリプト" title={t.transcriptTitle}
+                sub={t.transcriptSub} />
               <div className="space-y-3.5">
                 {lesson.transcript.map((line, i) => (
                   <div key={i} className="flex items-start gap-3 border-b border-sumi-900/6 pb-3.5 last:border-0">
@@ -189,8 +189,8 @@ export default function ListeningDetail({ id }: { id: string }) {
 
           {tab === "shadow" && (
             <Card>
-              <SectionTitle jp="シャドーイング" title="Дуу дагах (shadowing)"
-                sub="1. Сонсох → 2. Дагаж хэлэх → 3. Бичиж авах → 4. Харьцуулах" />
+              <SectionTitle jp="シャドーイング" title={t.shadowingTitle}
+                sub={t.shadowingSub} />
               <div className="space-y-3">
                 {(lesson.shadowing?.length ? lesson.shadowing : lesson.transcript.slice(0, 6).map((t) => stripFurigana(t.ja))).map((line, i) => (
                   <ShadowRow key={i} text={line} index={i} />
@@ -199,10 +199,7 @@ export default function ListeningDetail({ id }: { id: string }) {
               <div className="mt-5 rounded-2xl border border-ai-100 bg-ai-50/60 p-4 text-[12.5px] leading-relaxed text-ai-700">
                 <p className="font-bold">{t.howToShadow}</p>
                 <ol className="mt-2 list-inside list-decimal space-y-1">
-                  <li>Дээрх 🔊 товчоор мөр бүрийг сонсоод, дуугаа оруулах 💬 товчоор давтан хэл</li>
-                  <li>Хөтөч микрофоныг асуух болно — зөвшөөрнө үү</li>
-                  <li>Бичлэгээ эргүүлж сонсоод, эх дуудлагатай харьцуул</li>
-                  <li>Тод дуудлага, урт гийгүүлэгчид (っ), удаан эгшигт анхаар</li>
+                  {t.shadowSteps.split("|").map((step) => <li key={step}>{step}</li>)}
                 </ol>
               </div>
             </Card>
@@ -212,15 +209,13 @@ export default function ListeningDetail({ id }: { id: string }) {
             <Card>
               <SectionTitle jp="この動画について" title={t.aboutLesson} />
               <p className="text-[13.5px] leading-relaxed text-sumi-600">
-                {lesson.channel} сувгийн видеог ашиглан {lesson.level} түвшний сонсголын дасгал.
-                Транскрипт, үгийн сан, асуултууд нь бидний боловсруулсан нэмэлт сургалтын материал —
-                видеоны эрх нь эзэндээ хадгалагдана.
+                {t.aboutLessonBody(lesson.channel, lesson.level)}
               </p>
               <div className="mt-5 grid gap-3 sm:grid-cols-3">
                 {[
-                  { l: "Түвшин", v: lesson.level },
-                  { l: "Сэдэв", v: lesson.topic },
-                  { l: "Үргэлжлэх", v: `${lesson.minutes} мин` },
+                  { l: t.level, v: lesson.level },
+                  { l: t.topicRow, v: lesson.topic },
+                  { l: t.durationRow, v: `${lesson.minutes} ${t.minutes}` },
                 ].map((x) => (
                   <div key={x.l} className="card-flat px-4 py-3">
                     <p className="text-[11px] font-bold uppercase tracking-wide text-sumi-400">{x.l}</p>

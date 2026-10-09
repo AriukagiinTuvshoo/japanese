@@ -18,6 +18,7 @@ jobs:
       - run: npm run build
       - run: npm run test:browser
       - run: npm run test:admin-browser
+      - run: npm run test:site-browser
   complete-content:
     runs-on: ubuntu-latest
     steps:

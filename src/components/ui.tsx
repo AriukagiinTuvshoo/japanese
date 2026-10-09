@@ -63,10 +63,10 @@ export function SectionTitle({
   jp, title, sub, right,
 }: { jp?: string; title: string; sub?: string; right?: ReactNode }) {
   return (
-    <div className="mb-4 flex items-end justify-between gap-4">
+    <div className="mb-4 flex flex-wrap items-end justify-between gap-4">
       <div className="min-w-0">
         {jp && <p className="font-jp text-[11px] font-medium tracking-[0.28em] text-sumi-400">{jp}</p>}
-        <h2 className="mt-0.5 truncate text-[1.3rem] font-extrabold tracking-tight text-sumi-900">{title}</h2>
+        <h2 className="mt-0.5 break-words text-[1.3rem] font-extrabold tracking-tight text-sumi-900">{title}</h2>
         {sub && <p className="mt-1 text-[13px] leading-relaxed text-sumi-500">{sub}</p>}
       </div>
       {right}
@@ -394,6 +394,8 @@ export function Pager({
 export function SpeakButton({
   text, rate = 1, className, label, lang,
 }: { text: string; rate?: number; className?: string; label?: string; lang?: "mn" | "en" }) {
+  const { doc } = useStore();
+  const language = lang ?? doc.profile.language ?? "mn";
   const [on, setOn] = useState(false);
   return (
     <button
@@ -404,8 +406,8 @@ export function SpeakButton({
         e.stopPropagation();
         speak(text, rate);
       }}
-      title={lang === "en" ? "Listen" : "Сонсох"}
-      aria-label={lang === "en" ? `Listen to ${text}` : `${text} дуудлагыг сонсох`}
+      title={language === "en" ? "Listen" : "Сонсох"}
+      aria-label={language === "en" ? `Listen to ${text}` : `${text} дуудлагыг сонсох`}
       className={cn(
         "grid h-8 w-8 shrink-0 place-items-center rounded-lg border border-sumi-900/10 bg-white/80 text-[14px] transition",
         "hover:border-ai-400 hover:text-ai-600",

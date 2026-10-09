@@ -150,7 +150,7 @@ export default function MockExam() {
           <span className="font-mincho text-[2.6rem] font-bold text-ai-500">区</span>
           <h2 className="mt-2 text-[1.4rem] font-extrabold">{t.sectionDone(language === "en" ? last.section.nameEn ?? last.section.name : last.section.name)}</h2>
           <p className="mt-2 text-[13.5px] text-sumi-600">
-            {last.correct} / {last.total} зөв · {Math.round((last.correct / last.total) * 100)}%
+            {t.correctN(last.correct, last.total)} · {Math.round((last.correct / last.total) * 100)}%
           </p>
           <p className="mt-4 rounded-xl bg-sumi-900/[0.045] px-4 py-3 text-[12.5px] leading-relaxed text-sumi-500">
             {t.afterExamNote}

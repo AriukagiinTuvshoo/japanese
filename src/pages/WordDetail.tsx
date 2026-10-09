@@ -140,7 +140,7 @@ export default function WordDetail({ id }: { id: string }) {
                         <span className="font-mincho text-[26px] font-bold leading-none text-sumi-900">{ch}</span>
                         <span className="min-w-0">
                           <span className="block text-[12.5px] font-bold text-sumi-800">
-                            {language === "en" ? (k?.en.join(", ") || k?.mn?.join(", ") || "—") : (k?.mn?.join(", ") || k?.en.join(", ") || "—")}
+                            {language === "en" ? (k?.en.join(", ") || "—") : (k?.mn?.join(", ") || MN_PENDING)}
                           </span>
                           <span className="block text-[10.5px] text-sumi-400">
                             音 {k?.on.slice(0, 2).join("・") || "—"} · 訓 {k?.kun.slice(0, 2).join("・") || "—"}
@@ -308,7 +308,7 @@ export default function WordDetail({ id }: { id: string }) {
                 <a key={w.id} href={href("vocab", w.id)} className="card-flat flex items-center gap-3 px-3.5 py-3 transition hover:-translate-y-0.5 hover:border-shu-300">
                   <span className="font-jp text-[15.5px] font-bold text-sumi-900">{w.w}</span>
                   <span className="min-w-0 flex-1">
-                    <span className="block truncate text-[12.5px] text-sumi-700">{language === "en" ? (w.en.join("; ") || w.mn?.join(", ")) : (w.mn?.join(", ") || w.en.join("; "))}</span>
+                    <span className="block truncate text-[12.5px] text-sumi-700">{language === "en" ? (w.en.join("; ") || "—") : (w.mn?.join(", ") || MN_PENDING)}</span>
                     <span className="block font-jp text-[10.5px] text-sumi-400">{w.r}</span>
                   </span>
                   <LevelBadge level={w.lvl} size="sm" />
@@ -325,7 +325,7 @@ export default function WordDetail({ id }: { id: string }) {
           <div className="space-y-3">
             <Info l={t.srcPool} v={v.src === "openjlpt" ? "OpenJLPT (JLPT N5–N1)" : "JMdict (jamdict-data)"} />
             <Info l={t.srcId} v={v.sid} />
-            <Info l={t.license} v={v.src === "openjlpt" ? "CC-BY-SA-4.0" : "CC-BY-SA-4.0 (JMdict)"} />
+            <Info l={t.license} v={v.src === "openjlpt" ? "CC-BY-SA-4.0" : "CC-BY-SA-3.0 (jamdict-data 1.5 dictionary) · MIT (package)"} />
             <Info l={t.levelBy} v={v.tier === "jlpt" ? t.levelByJlpt : t.levelByDerived} />
             <Info l={t.transStatus} v={mq?.text ?? "—"} />
             <Info l={t.examplesRow} v={v.ex.length ? "Tatoeba (CC BY 2.0 FR)" : "—"} />

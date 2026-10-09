@@ -1,0 +1,968 @@
+{
+  "provenance": {
+    "id": "mn-exact-example-reuse-2-2026-10-09",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "Exact Japanese AND English duplicate match; AI compared all reused Mongolian sentences to source. Prior translation origin retained per sentence. No independent human review. Folding ambiguity and disputed headword excluded.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n5..n1.json at cac78c79587f6fb6d5f93a158790258c24b351e8",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "a695a20c52": {
+      "expected": {
+        "w": "もちろん",
+        "r": "もちろん",
+        "en": [
+          "of course"
+        ]
+      },
+      "examples": {
+        "「ご一緒してもいいですか」「もちろんです」": {
+          "en": "\"May I go with you?\" \"Of course.\"",
+          "mn": "«Би тантай хамт явж болох уу?» «Мэдээж.»",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "2dc7289c82",
+              "provenance": "mn-n5-examples-corpus-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "ad62110b55": {
+      "expected": {
+        "w": "もらう",
+        "r": "もらう",
+        "en": [
+          "to receive"
+        ]
+      },
+      "examples": {
+        "あさって彼にここへ来てもらうつもりです。": {
+          "en": "I will have him come here the day after tomorrow.",
+          "mn": "Би түүнийг нөгөөдөр энд ирүүлэх бодолтой байна.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "b3b4041c52",
+              "provenance": "mn-n5-example-final-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "3f1fbec85e": {
+      "expected": {
+        "w": "あんまり",
+        "r": "あんまり",
+        "en": [
+          "not very",
+          "not much",
+          "remainder"
+        ]
+      },
+      "examples": {
+        "この手の本はあまり読まない。": {
+          "en": "I don't read this kind of book much.",
+          "mn": "Би ийм төрлийн ном төдийлөн уншдаггүй.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "eac90e8e98",
+              "provenance": "mn-n5-examples-corpus-1-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "140d8ab306": {
+      "expected": {
+        "w": "いけない",
+        "r": "いけない",
+        "en": [
+          "must not do",
+          "bad",
+          "wrong"
+        ]
+      },
+      "examples": {
+        "歩きながら本を読んではいけない。": {
+          "en": "Do not read while walking.",
+          "mn": "Алхаж байхдаа ном уншиж болохгүй.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "55f3080ce4",
+              "provenance": "mn-n5-examples-corpus-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "5d347b309a": {
+      "expected": {
+        "w": "いたずら",
+        "r": "いたずら",
+        "en": [
+          "tease",
+          "prank",
+          "trick"
+        ]
+      },
+      "examples": {
+        "男の子のいたずらはしょうがない。": {
+          "en": "Boys will be boys.",
+          "mn": "Хөвгүүдийн сахилгагүйтлийг яалтай билээ.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "6f664d3ded",
+              "provenance": "mn-n5-examples-corpus-5-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "8c4965a193": {
+      "expected": {
+        "w": "得る",
+        "r": "える",
+        "en": [
+          "to get",
+          "to gain",
+          "to win"
+        ]
+      },
+      "examples": {
+        "１０チームが賞を得ようと争った。": {
+          "en": "Ten teams competed for the prize.",
+          "mn": "Арван баг шагналын төлөө өрсөлдсөн.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n2",
+              "id": "2c37f1e65a",
+              "provenance": "mn-n2-vocab-examples-progress-2-oct9"
+            }
+          ]
+        }
+      }
+    },
+    "0973ea4445": {
+      "expected": {
+        "w": "活気",
+        "r": "かっき",
+        "en": [
+          "energy",
+          "liveliness"
+        ]
+      },
+      "examples": {
+        "その街は活気にあふれていた。": {
+          "en": "The town was full of activity.",
+          "mn": "Тэр хот амьд хөдөлгөөнөөр дүүрэн байв.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n2",
+              "id": "3365ac796d",
+              "provenance": "mn-n2-vocab-examples-progress-1-oct9"
+            }
+          ]
+        }
+      }
+    },
+    "1b3b057ef9": {
+      "expected": {
+        "w": "気に入る",
+        "r": "きにいる",
+        "en": [
+          "to be pleased with",
+          "to suit"
+        ]
+      },
+      "examples": {
+        "先生は新しい車が気に入っている。": {
+          "en": "Our teacher likes his new car.",
+          "mn": "Багш шинэ машиндаа дуртай.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "8ae27e3b51",
+              "provenance": "mn-n5-example-final-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "dc6aa5133f": {
+      "expected": {
+        "w": "才能",
+        "r": "さいのう",
+        "en": [
+          "talent",
+          "ability"
+        ]
+      },
+      "examples": {
+        "彼は多くの才能を与えられている。": {
+          "en": "He is endowed with many talents.",
+          "mn": "Түүнд олон авьяас заяасан.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n3",
+              "id": "264ec34f18",
+              "provenance": "mn-n3-examples-sustained-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "f84a6eb064": {
+      "expected": {
+        "w": "作家",
+        "r": "さっか",
+        "en": [
+          "author",
+          "writer",
+          "novelist"
+        ]
+      },
+      "examples": {
+        "彼らはその作家を一流だと思った。": {
+          "en": "They looked on the writer as first-rate.",
+          "mn": "Тэд тэр зохиолчийг шилдэг гэж үзсэн.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n2",
+              "id": "9299dcd9c4",
+              "provenance": "mn-n2-vocab-examples-progress-3-oct9"
+            }
+          ]
+        }
+      }
+    },
+    "823b048f98": {
+      "expected": {
+        "w": "じゃあ",
+        "r": "じゃあ",
+        "en": [
+          "well",
+          "well then"
+        ]
+      },
+      "examples": {
+        "じゃあパーティーで会いましょう。": {
+          "en": "See you at the party.",
+          "mn": "Тэгвэл үдэшлэг дээр уулзъя.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "ada066edfd",
+              "provenance": "mn-n5-example-final-1-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "34502f33ca": {
+      "expected": {
+        "w": "週",
+        "r": "しゅう",
+        "en": [
+          "week"
+        ]
+      },
+      "examples": {
+        "週に一度でいいから運動しなさい。": {
+          "en": "Try to exercise at least once a week.",
+          "mn": "Долоо хоногт нэг удаа ч гэсэн дасгал хийгээрэй.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n4",
+              "id": "bf82bb12d2",
+              "provenance": "mn-n4-examples-sustained-2-2026-10-08"
+            },
+            {
+              "kind": "vocab",
+              "level": "n4",
+              "id": "47487b1e85",
+              "provenance": "mn-n4-examples-sustained-3-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "b5647f7089": {
+      "expected": {
+        "w": "食物",
+        "r": "しょくもつ",
+        "en": [
+          "food",
+          "foodstuff"
+        ]
+      },
+      "examples": {
+        "人間は食物なしでは生きられない。": {
+          "en": "We cannot exist without food.",
+          "mn": "Хүн хоол хүнсгүйгээр амьдарч чадахгүй.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n4",
+              "id": "db01fd59d7",
+              "provenance": "mn-n4-examples-sustained-1-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "0596cdc023": {
+      "expected": {
+        "w": "女子",
+        "r": "じょし",
+        "en": [
+          "woman",
+          "girl"
+        ]
+      },
+      "examples": {
+        "この学校は男子よりも女子が多い。": {
+          "en": "There are more girls than boys in this school.",
+          "mn": "Энэ сургуульд охид хөвгүүдээс олон.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "60813fffd1",
+              "provenance": "mn-n5-examples-corpus-4-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "e9efe8313d": {
+      "expected": {
+        "w": "信号",
+        "r": "しんごう",
+        "en": [
+          "traffic lights",
+          "signal",
+          "semaphore"
+        ]
+      },
+      "examples": {
+        "信号が青に変わったわよ。": {
+          "en": "The traffic light turned green.",
+          "mn": "Гэрлэн дохио ногоон болчихлоо.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "ebec658463",
+              "provenance": "mn-n5-example-final-1-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "d6b975f68f": {
+      "expected": {
+        "w": "スタイル",
+        "r": "スタイル",
+        "en": [
+          "style"
+        ]
+      },
+      "examples": {
+        "ダンスはスタイルをよくするのにいい。": {
+          "en": "Dancing is good for the figure.",
+          "mn": "Бүжиглэх нь биеийн галбирт сайн.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "e37a087c0f",
+              "provenance": "mn-n5-examples-corpus-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "59dd72cefc": {
+      "expected": {
+        "w": "ダンス",
+        "r": "ダンス",
+        "en": [
+          "dance"
+        ]
+      },
+      "examples": {
+        "ダンスはスタイルをよくするのにいい。": {
+          "en": "Dancing is good for the figure.",
+          "mn": "Бүжиглэх нь биеийн галбирт сайн.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "e37a087c0f",
+              "provenance": "mn-n5-examples-corpus-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "ed560b721e": {
+      "expected": {
+        "w": "チーズ",
+        "r": "チーズ",
+        "en": [
+          "cheese"
+        ]
+      },
+      "examples": {
+        "ジョージは朝にたくさんのチーズを食べた。": {
+          "en": "George had a lot of cheese for breakfast.",
+          "mn": "Жорж өглөө их бяслаг идсэн.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "d46ae79a26",
+              "provenance": "mn-n5-example-final-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "bba3ad9899": {
+      "expected": {
+        "w": "都会",
+        "r": "とかい",
+        "en": [
+          "city"
+        ]
+      },
+      "examples": {
+        "あの人達は都会の生活にあこがれている。": {
+          "en": "They are longing for city life.",
+          "mn": "Тэд хотын амьдралыг мөрөөддөг.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n2",
+              "id": "36c77eda04",
+              "provenance": "mn-n2-vocab-examples-progress-1-oct9"
+            }
+          ]
+        }
+      }
+    },
+    "58c5df73fd": {
+      "expected": {
+        "w": "取れる",
+        "r": "とれる",
+        "en": [
+          "to come off",
+          "to be taken off",
+          "to be removed"
+        ]
+      },
+      "examples": {
+        "オリーブの実から油が取れます。": {
+          "en": "Oil is extracted from olives.",
+          "mn": "Оливын жимснээс тос гаргаж авдаг.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n3",
+              "id": "064aac92d9",
+              "provenance": "mn-n3-examples-sustained-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "fcdc62db50": {
+      "expected": {
+        "w": "名",
+        "r": "な",
+        "en": [
+          "name",
+          "reputation"
+        ]
+      },
+      "examples": {
+        "彼女は歌手として名を挙げた。": {
+          "en": "She made a name for herself as a singer.",
+          "mn": "Тэр дуучны хувьд нэрд гарсан.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n2",
+              "id": "8c256fc677",
+              "provenance": "mn-n2-vocab-examples-progress-1-oct9"
+            }
+          ]
+        }
+      }
+    },
+    "9d47958486": {
+      "expected": {
+        "w": "何",
+        "r": "なに",
+        "en": [
+          "what"
+        ]
+      },
+      "examples": {
+        "今のアナウンスは何だったのですか。": {
+          "en": "What did the announcement just say?",
+          "mn": "Саяын зарлал юу гэж хэлсэн бэ?",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "ce75c75644",
+              "provenance": "mn-n5-examples-corpus-3-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "9ebc3edd19": {
+      "expected": {
+        "w": "何でも",
+        "r": "なんでも",
+        "en": [
+          "by all means",
+          "everything"
+        ]
+      },
+      "examples": {
+        "この犬は何でもほとんど食べます。": {
+          "en": "This dog eats almost anything.",
+          "mn": "Энэ нохой бараг юу ч иддэг.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "0df89f5010",
+              "provenance": "mn-n5-examples-corpus-3-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "f59cd43bb0": {
+      "expected": {
+        "w": "バイオリン",
+        "r": "バイオリン",
+        "en": [
+          "violin"
+        ]
+      },
+      "examples": {
+        "バイオリンの音色はとても美しい。": {
+          "en": "The sound of the violin is very sweet.",
+          "mn": "Хийлийн дуу маш уянгалаг.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n4",
+              "id": "0dd54894db",
+              "provenance": "mn-n4-examples-sustained-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "7a68fa62f5": {
+      "expected": {
+        "w": "バッグ",
+        "r": "バッグ",
+        "en": [
+          "bag",
+          "bug"
+        ]
+      },
+      "examples": {
+        "バッグはどこに置けばいいですか。": {
+          "en": "Where can I put my bag?",
+          "mn": "Цүнхээ хаана тавьж болох вэ?",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "96845304fd",
+              "provenance": "mn-n5-examples-corpus-5-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "ba9c96795d": {
+      "expected": {
+        "w": "ハンサム",
+        "r": "ハンサム",
+        "en": [
+          "handsome"
+        ]
+      },
+      "examples": {
+        "あのハンサムな男の子を見て。": {
+          "en": "Look at that good-looking boy.",
+          "mn": "Тэр царайлаг хүүг хар даа.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "6f664d3ded",
+              "provenance": "mn-n5-examples-corpus-5-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "240d8ef155": {
+      "expected": {
+        "w": "ビール",
+        "r": "ビール",
+        "en": [
+          "beer"
+        ]
+      },
+      "examples": {
+        "このビールはアルコール分が５％だ。": {
+          "en": "This beer contains 5% alcohol.",
+          "mn": "Энэ шар айраг таван хувийн спирттэй.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n4",
+              "id": "ab0767b2f7",
+              "provenance": "mn-n4-examples-sustained-1-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "d684a35bd1": {
+      "expected": {
+        "w": "費用",
+        "r": "ひよう",
+        "en": [
+          "cost",
+          "expense"
+        ]
+      },
+      "examples": {
+        "費用を受け持つ者に決定権がある。": {
+          "en": "He who pays the piper calls the tune.",
+          "mn": "Зардлыг хариуцсан хүн шийдвэр гаргах эрхтэй.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n2",
+              "id": "7b66979a25",
+              "provenance": "mn-n2-vocab-examples-progress-4-oct9"
+            }
+          ]
+        }
+      }
+    },
+    "3c5ff54bea": {
+      "expected": {
+        "w": "分",
+        "r": "ぶん",
+        "en": [
+          "dividing",
+          "part"
+        ]
+      },
+      "examples": {
+        "このビールはアルコール分が５％だ。": {
+          "en": "This beer contains 5% alcohol.",
+          "mn": "Энэ шар айраг таван хувийн спирттэй.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n4",
+              "id": "ab0767b2f7",
+              "provenance": "mn-n4-examples-sustained-1-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "c53570cabd": {
+      "expected": {
+        "w": "祭",
+        "r": "まつり",
+        "en": [
+          "festival",
+          "feast"
+        ]
+      },
+      "examples": {
+        "そのお祭りを見たいのですが。": {
+          "en": "I would like to see the festival.",
+          "mn": "Тэр баярыг үзмээр байна.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n4",
+              "id": "68ff489ea4",
+              "provenance": "mn-n4-examples-sustained-5-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "19edd800f0": {
+      "expected": {
+        "w": "招く",
+        "r": "まねく",
+        "en": [
+          "to invite"
+        ]
+      },
+      "examples": {
+        "私の誤りは彼の怒りを招いた。": {
+          "en": "My mistake incurred his anger.",
+          "mn": "Миний алдаа түүний уурыг хүргэсэн.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n3",
+              "id": "8399cefa4f",
+              "provenance": "mn-n3-examples-sustained-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "a4f0b205a3": {
+      "expected": {
+        "w": "満足",
+        "r": "まんぞく",
+        "en": [
+          "satisfaction"
+        ]
+      },
+      "examples": {
+        "いつもあかだらけで、食事も満足に与えられていない様子でした。": {
+          "en": "He was always filthy and looked like he wasn't given enough food.",
+          "mn": "Тэр үргэлж хир буртагтай, хангалттай хоол өгдөггүй бололтой харагддаг байлаа.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n1",
+              "id": "3b72fad905",
+              "provenance": "mn-n1-vocab-examples-continue-1-2026-10-09"
+            }
+          ]
+        }
+      }
+    },
+    "1938fb6bcb": {
+      "expected": {
+        "w": "明後日",
+        "r": "みょうごにち",
+        "en": [
+          "day after tomorrow"
+        ]
+      },
+      "examples": {
+        "あさって彼にここへ来てもらうつもりです。": {
+          "en": "I will have him come here the day after tomorrow.",
+          "mn": "Би түүнийг нөгөөдөр энд ирүүлэх бодолтой байна.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "b3b4041c52",
+              "provenance": "mn-n5-example-final-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "ae498d63bc": {
+      "expected": {
+        "w": "者",
+        "r": "もの",
+        "en": [
+          "person"
+        ]
+      },
+      "examples": {
+        "費用を受け持つ者に決定権がある。": {
+          "en": "He who pays the piper calls the tune.",
+          "mn": "Зардлыг хариуцсан хүн шийдвэр гаргах эрхтэй.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n2",
+              "id": "7b66979a25",
+              "provenance": "mn-n2-vocab-examples-progress-4-oct9"
+            }
+          ]
+        }
+      }
+    },
+    "0f54df5fc1": {
+      "expected": {
+        "w": "言う",
+        "r": "ゆう",
+        "en": [
+          "to say"
+        ]
+      },
+      "examples": {
+        "「みんなひと休みしようぜ」とジョンは言った。": {
+          "en": "John said, \"Hey guys, let's take a break.\"",
+          "mn": "Жон «За, бүгдээрээ түр амарцгаая» гэж хэлсэн.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "ae0cc00f94",
+              "provenance": "mn-n5-examples-corpus-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "aa98da380d": {
+      "expected": {
+        "w": "読み",
+        "r": "よみ",
+        "en": [
+          "reading"
+        ]
+      },
+      "examples": {
+        "もう２、３ページ読みさえすればいい。": {
+          "en": "You have only to read a few more pages.",
+          "mn": "Дахиад хоёр гуравхан хуудас уншихад л болно.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "e37a087c0f",
+              "provenance": "mn-n5-examples-corpus-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "06d663e37a": {
+      "expected": {
+        "w": "ワイン",
+        "r": "ワイン",
+        "en": [
+          "wine"
+        ]
+      },
+      "examples": {
+        "あのおいしいワインをなぜ飲まないんだい。": {
+          "en": "Why not try that delicious wine?",
+          "mn": "Тэр амттай дарсыг яагаад ууж үзэхгүй байгаа юм бэ?",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "ac4706068b",
+              "provenance": "mn-n5-examples-corpus-1-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "2febf6c23b": {
+      "expected": {
+        "w": "思い付く",
+        "r": "おもいつく",
+        "en": [
+          "to think of",
+          "to hit upon"
+        ]
+      },
+      "examples": {
+        "私はよいアイディアを思いついた。": {
+          "en": "I hit on a good idea.",
+          "mn": "Надад сайн санаа төрсөн.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n2",
+              "id": "79169045a2",
+              "provenance": "mn-n2-vocab-examples-oct9-1"
+            }
+          ]
+        }
+      }
+    },
+    "bbd1639a14": {
+      "expected": {
+        "w": "かゆい",
+        "r": "かゆい",
+        "en": [
+          "itchy",
+          "itching"
+        ]
+      },
+      "examples": {
+        "先生、アソコがかゆいんです。": {
+          "en": "Doctor, I've got an itch in my crotch.",
+          "mn": "Эмч ээ, цавь загатнаад байна.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "bee501faf0",
+              "provenance": "mn-n5-example-final-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "36c872b693": {
+      "expected": {
+        "w": "毛糸",
+        "r": "けいと",
+        "en": [
+          "knitting wool"
+        ]
+      },
+      "examples": {
+        "彼女は毛糸でセーターを編んでいる。": {
+          "en": "She is knitting a sweater.",
+          "mn": "Тэр ноосон утсаар цамц сүлжиж байна.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n2",
+              "id": "fb73ee2899",
+              "provenance": "mn-n2-vocab-examples-progress-2-oct9"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
