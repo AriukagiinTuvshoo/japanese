@@ -35,6 +35,20 @@ export default function About() {
       </Card>
 
       <Card>
+        <SectionTitle jp="設定" title={t.pwaInstallHeading} sub={t.offlineReady} />
+        <div className="space-y-2.5 text-[14px] leading-relaxed text-sumi-700">
+          <p>{t.pwaInstallBody}</p>
+          <p className="font-bold">{t.pwaInstallSteps}</p>
+          <ul className="list-disc space-y-1.5 pl-5">
+            <li>{t.pwaInstallIosStep}</li>
+            <li>{t.pwaInstallAndroidStep}</li>
+          </ul>
+          <p>{t.pwaUpdateNote}</p>
+          <p className="rounded-xl bg-sumi-900/5 px-3.5 py-2.5 text-[12.5px] text-sumi-600">{t.pwaPrivacyNote}</p>
+        </div>
+      </Card>
+
+      <Card>
         <SectionTitle jp="資料" title={t.dataSources} sub={t.dataSourcesSub} />
         {error ? <ErrorBox error={error} /> : !meta ? <Spinner /> : (
           <>

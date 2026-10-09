@@ -35,7 +35,9 @@ try {
   assert.ok(executablePath,'No browser executable found for UI tests');
   browser=await playwright.launch({executablePath,args:['--no-sandbox','--disable-dev-shm-usage','--disable-gpu'],headless:true,env:process.platform==='win32'?process.env:{...process.env,LD_LIBRARY_PATH:`${libs}/lib:${process.env.LD_LIBRARY_PATH??''}`}});
  for(const language of ['mn','en']) {
-  const context=await browser.newContext();const t=ui[language];
+  // Fixtures assert network loading/error UI; block SW so its cache cannot
+  // mask the controlled requests. The PWA block below opts back in.
+  const context=await browser.newContext({serviceWorkers:'block'});const t=ui[language];
   await context.addInitScript(lang=>{if(!localStorage.getItem('nd:doc:local'))localStorage.setItem('nd:doc:local',JSON.stringify({profile:{language:lang,onboarded:true,current:'N4',target:'N1'}}));},language);
   await context.route(/^https:\/\//,r=>r.abort());
   const page=await context.newPage();page.setDefaultTimeout(15000);
@@ -200,4 +202,42 @@ try {
   assert.deepEqual(errors,[],`${language}: uncaught page errors`);
   await context.close();console.log(`${language}: route smoke, empty/offline, loading/error/retry and mobile layout checks passed (not real auth)`);
  }
+  // PWA: service-worker install, useful offline corpus, offline launch/routes,
+  // and hard proof that /api traffic (auth, tutor, transcripts) is never cached.
+  {
+   const context=await browser.newContext();
+   await context.addInitScript(()=>{if(!localStorage.getItem('nd:doc:local'))localStorage.setItem('nd:doc:local',JSON.stringify({profile:{language:'mn',onboarded:true,current:'N4',target:'N1'}}));});
+   await context.route(/^https:\/\//,r=>r.abort());
+   const page=await context.newPage();page.setDefaultTimeout(25000);
+   await page.goto(`${origin}/#/home`);
+   await page.evaluate(()=>navigator.serviceWorker.ready);
+   await page.reload();
+   await page.waitForFunction(()=>!!navigator.serviceWorker.controller,null,{timeout:25000});
+   const manifest=await page.evaluate(async()=>{const res=await fetch('/manifest.webmanifest');return res.ok?await res.json():null;});
+   assert.ok(manifest,'pwa: manifest must be served');
+   assert.equal(manifest.display,'standalone','pwa: manifest display');
+   assert.ok((manifest.icons||[]).some(i=>i.sizes==='512x512'&&/maskable/.test(i.purpose||'')),'pwa: maskable icon required');
+   // Warm the study corpus through the SW, then require it to be on disk.
+   await page.evaluate(()=>navigator.serviceWorker.controller.postMessage('WARM_DATA'));
+   await page.waitForFunction(async()=>{
+    const keys=await caches.keys();
+    for(const k of keys){const c=await caches.open(k);if(await c.match('/data/vocab/n5.json'))return true;}
+    return false;
+   },null,{timeout:60000});
+   const apiCached=await page.evaluate(async()=>{
+    const keys=await caches.keys();
+    for(const k of keys){const c=await caches.open(k);for(const req of await c.keys()){if(new URL(req.url).pathname.startsWith('/api/'))return true;}}
+    return false;
+   });
+   assert.equal(apiCached,false,'pwa: /api responses must never be cached');
+   await context.setOffline(true);
+   for(const [route,name] of [['home',null],['vocab?level=N5',ui.mn.vocab],['kanji?level=N5',ui.mn.kanji],['grammar?level=N5',ui.mn.grammar]]) {
+    await page.goto(`${origin}/#/${route}`);
+    if(name===null)await page.getByRole('heading',{name:new RegExp([ui.mn.greetNight,ui.mn.greetMorning,ui.mn.greetDay,ui.mn.greetEvening].join('|'))}).waitFor();
+    else await page.locator('main').getByRole('heading',{name,exact:true}).waitFor();
+    console.log(`pwa: offline route ${route} rendered`);
+   }
+   await context.setOffline(false);
+   await context.close();console.log('pwa: install metadata, offline launch/routes and /api non-caching verified');
+  }
 } finally {if(browser)await browser.close();server.kill();}

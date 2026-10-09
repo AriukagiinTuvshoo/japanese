@@ -1,0 +1,128 @@
+{
+ "retrieved": "2026-10-10",
+ "author": "Arena coding assistant",
+ "license": "CC-BY-SA-4.0",
+ "note": "STATUS 2026-10-10 (corrected): ALL 10 source warnings REMAIN UNRESOLVED and release-blocking. Earlier same-day clearance of 9 flags was REVERSED per the project's source-evidence guard: coverage must not drive clearance. The 2026-10-09 jamdict extract shares the app's source lineage and is not independent verification. The web lookups recorded in docs/audits/2026-10-10-meaning-evidence.json are independent of jamdict but carry unpinned page revisions and no human semantic review; they document findings only. To resolve an issue later requires directly verifiable authoritative independent evidence for the exact spelling, reading and sense, with source/version/URL recorded and the original fields preserved — plus documented human review. Original warning texts preserved verbatim in originalSourceIssue. No JA/EN/reading/source fields were modified.",
+ "records": [
+  {
+   "kind": "vocab",
+   "id": "j2076920",
+   "level": "n5",
+   "w": "手前",
+   "originalSourceIssue": "Unresolved source review: The reference lists both first-person and rough second-person uses of てめえ. This supports the need for register-aware teaching, not a reading replacement. Reference: https://kotobank.jp/word/手前-576793 (retrieved 2026-10-09; exact web revision not established). Pinned-edition evidence and independent semantic review pending. Historical warning retained in docs/audits/2026-10-09-independent-reference-checks.json; no original lexical fields changed.",
+   "decision": "Evidence finding 2026-10-10 (NOT a clearance): kotobank 手前 documents both てめえ uses (first-person self, derogatory second-person). Existing register-aware MN covers both; warning's review requirement satisfied by recorded adjudication. FLAG REMAINS RELEASE-BLOCKING: independent web evidence (kotobank/kanjipedia/goo, retrieved 2026-10-10; page revisions not pinned) does not yet establish the exact spelling, reading AND sense of the retained source record to the project's clearance standard; no pinned primary-edition citation and no human semantic review exist. Do not clear for coverage numbers.",
+   "evidence": "docs/audits/2026-10-10-meaning-evidence.json + docs/audits/2026-10-09-independent-reference-checks.json",
+   "reviewStatus": "AI-assisted adjudication; unreviewed by humans",
+   "originalFieldsChanged": false,
+   "sourceIssueCleared": false
+  },
+  {
+   "kind": "vocab",
+   "id": "j2727400",
+   "level": "n5",
+   "w": "先生",
+   "originalSourceIssue": "Unresolved source review: The reference identifies シーサン as a Shanghai-dialect-derived honorific for men generally. The retained bare English boy is narrower and needs sense/register adjudication. Do not replace it with standard せんせい/teacher. Reference: https://kotobank.jp/word/先生-515802 (retrieved 2026-10-09; exact web revision not established). Pinned-edition evidence and independent semantic review pending. Historical warning retained in docs/audits/2026-10-09-independent-reference-checks.json; no original lexical fields changed.",
+   "decision": "Evidence finding 2026-10-10 (NOT a clearance): kotobank 先生 identifies シーサン as Shanghai-dialect honorific for men. MN corrected accordingly; retained EN 'boy' flagged as narrower legacy gloss, JA/EN preserved. FLAG REMAINS RELEASE-BLOCKING: independent web evidence (kotobank/kanjipedia/goo, retrieved 2026-10-10; page revisions not pinned) does not yet establish the exact spelling, reading AND sense of the retained source record to the project's clearance standard; no pinned primary-edition citation and no human semantic review exist. Do not clear for coverage numbers.",
+   "evidence": "docs/audits/2026-10-10-meaning-evidence.json + docs/audits/2026-10-09-independent-reference-checks.json",
+   "reviewStatus": "AI-assisted adjudication; unreviewed by humans",
+   "originalFieldsChanged": false,
+   "sourceIssueCleared": false
+  },
+  {
+   "kind": "vocab",
+   "id": "e05bb17edd",
+   "level": "n1",
+   "w": "気品",
+   "originalSourceIssue": "Unresolved source review: The retrieved section concerns refined elegance. The historical jamdict artifact contains aroma. The retrieved section alone cannot disprove an omitted historical sense; the exact retained aroma sense remains unadjudicated. Reference: https://kotobank.jp/word/気品-475445 (retrieved 2026-10-09; exact web revision not established). Pinned-edition evidence and independent semantic review pending. Historical warning retained in docs/audits/2026-10-09-independent-reference-checks.json; no original lexical fields changed.",
+   "decision": "Evidence finding 2026-10-10 (NOT a clearance): three major dictionaries (デジタル大辞泉, 精選版日本国語大辞典, 字通) give only refined-elegance; 'aroma' uncorroborated. MN teaches evidenced sense; retained EN preserved and flagged. FLAG REMAINS RELEASE-BLOCKING: independent web evidence (kotobank/kanjipedia/goo, retrieved 2026-10-10; page revisions not pinned) does not yet establish the exact spelling, reading AND sense of the retained source record to the project's clearance standard; no pinned primary-edition citation and no human semantic review exist. Do not clear for coverage numbers.",
+   "evidence": "docs/audits/2026-10-10-meaning-evidence.json + docs/audits/2026-10-09-independent-reference-checks.json",
+   "reviewStatus": "AI-assisted adjudication; unreviewed by humans",
+   "originalFieldsChanged": false,
+   "sourceIssueCleared": false
+  },
+  {
+   "kind": "vocab",
+   "id": "2e8753951c",
+   "level": "n1",
+   "w": "悪い",
+   "originalSourceIssue": "Unresolved source review: Explicitly lists 悪い as an alternative spelling of にくい, alongside 憎い; also includes disliked and poor-looking senses. The prior categorical spelling-mismatch warning is too strong. Preserve original fields; exact teaching/register and version evidence remain pending. Reference: https://kotobank.jp/word/%E6%86%8E%E3%81%84-591233 (retrieved 2026-10-09; exact web revision not established). Pinned-edition evidence and independent semantic review pending. Historical warning retained in docs/audits/2026-10-09-independent-reference-checks.json; no original lexical fields changed.",
+   "decision": "Evidence finding 2026-10-10 (NOT a clearance): goo/kotobank headword 憎い／▽悪い attests the ▽悪い spelling; senses detestable/ironically-admirable/unsightly documented. MN covers evidenced senses. FLAG REMAINS RELEASE-BLOCKING: independent web evidence (kotobank/kanjipedia/goo, retrieved 2026-10-10; page revisions not pinned) does not yet establish the exact spelling, reading AND sense of the retained source record to the project's clearance standard; no pinned primary-edition citation and no human semantic review exist. Do not clear for coverage numbers.",
+   "evidence": "docs/audits/2026-10-10-meaning-evidence.json + docs/audits/2026-10-09-independent-reference-checks.json",
+   "reviewStatus": "AI-assisted adjudication; unreviewed by humans",
+   "originalFieldsChanged": false,
+   "sourceIssueCleared": false
+  },
+  {
+   "kind": "vocab",
+   "id": "64e8f7eda0",
+   "level": "n1",
+   "w": "熱量",
+   "originalSourceIssue": "Unresolved source review: Modern Daijisen emphasizes quantity of heat. Seisenban also records a historical temperature sense with an 1876–77 citation. Therefore the earlier categorical rejection of temperature is too strong; teaching it requires a historical-use label and adjudication, not an unqualified modern gloss. Reference: https://kotobank.jp/word/%E7%86%B1%E9%87%8F-111455 (retrieved 2026-10-09; exact web revision not established). Pinned-edition evidence and independent semantic review pending. Historical warning retained in docs/audits/2026-10-09-independent-reference-checks.json; no original lexical fields changed.",
+   "decision": "Evidence finding 2026-10-10 (NOT a clearance): modern dictionaries give quantity-of-heat (+ figurative fervor); historical temperature sense (Seisenban, 1876-77) explicitly labeled in MN. Categorical-rejection issue resolved by documented sense tiers. FLAG REMAINS RELEASE-BLOCKING: independent web evidence (kotobank/kanjipedia/goo, retrieved 2026-10-10; page revisions not pinned) does not yet establish the exact spelling, reading AND sense of the retained source record to the project's clearance standard; no pinned primary-edition citation and no human semantic review exist. Do not clear for coverage numbers.",
+   "evidence": "docs/audits/2026-10-10-meaning-evidence.json + docs/audits/2026-10-09-independent-reference-checks.json",
+   "reviewStatus": "AI-assisted adjudication; unreviewed by humans",
+   "originalFieldsChanged": false,
+   "sourceIssueCleared": false
+  },
+  {
+   "kind": "vocab",
+   "id": "ed2719ab9d",
+   "level": "n1",
+   "w": "ファン",
+   "originalSourceIssue": "Unresolved source review: Separately records fan (supporter), fan (ventilation device) and fun (enjoyment, notably recreational sport). The earlier assertion that fun cannot correspond to ファン is too strong. Retained homonymous senses need explicit separation. Reference: https://kotobank.jp/word/%E3%81%B5%E3%81%82%E3%82%93-3185662 (retrieved 2026-10-09; exact web revision not established). Pinned-edition evidence and independent semantic review pending. Historical warning retained in docs/audits/2026-10-09-independent-reference-checks.json; no original lexical fields changed.",
+   "decision": "Evidence finding 2026-10-10 (NOT a clearance): kotobank ふぁん attests fan (supporter), fan (ventilation) and fun (enjoyment) as separate senses; MN separates them explicitly. FLAG REMAINS RELEASE-BLOCKING: independent web evidence (kotobank/kanjipedia/goo, retrieved 2026-10-10; page revisions not pinned) does not yet establish the exact spelling, reading AND sense of the retained source record to the project's clearance standard; no pinned primary-edition citation and no human semantic review exist. Do not clear for coverage numbers.",
+   "evidence": "docs/audits/2026-10-10-meaning-evidence.json + docs/audits/2026-10-09-independent-reference-checks.json",
+   "reviewStatus": "AI-assisted adjudication; unreviewed by humans",
+   "originalFieldsChanged": false,
+   "sourceIssueCleared": false
+  },
+  {
+   "kind": "vocab",
+   "id": "0101791a03",
+   "level": "n1",
+   "w": "フォーム",
+   "originalSourceIssue": "Unresolved source review: Separately records form and foam under フォーム. Independent evidence supports both retained glosses; previous warning must not be treated as proof of an error. Sense-separated teaching and exact edition documentation remain pending. Reference: https://kotobank.jp/word/%E3%81%B5%E3%81%8A%E3%83%BC%E3%82%80-3217540 (retrieved 2026-10-09; exact web revision not established). Pinned-edition evidence and independent semantic review pending. Historical warning retained in docs/audits/2026-10-09-independent-reference-checks.json; no original lexical fields changed.",
+   "decision": "Evidence finding 2026-10-10 (NOT a clearance): kotobank フォーム attests form and foam as separate senses; MN separates them; both retained glosses supported. FLAG REMAINS RELEASE-BLOCKING: independent web evidence (kotobank/kanjipedia/goo, retrieved 2026-10-10; page revisions not pinned) does not yet establish the exact spelling, reading AND sense of the retained source record to the project's clearance standard; no pinned primary-edition citation and no human semantic review exist. Do not clear for coverage numbers.",
+   "evidence": "docs/audits/2026-10-10-meaning-evidence.json + docs/audits/2026-10-09-independent-reference-checks.json",
+   "reviewStatus": "AI-assisted adjudication; unreviewed by humans",
+   "originalFieldsChanged": false,
+   "sourceIssueCleared": false
+  },
+  {
+   "kind": "kanji",
+   "id": "聴",
+   "level": "n1",
+   "w": "聴",
+   "originalSourceIssue": "Unresolved source review: Lists attentive listening and acceptance/permission. Retrieved results do not establish the inherited Headstrong/Naughty glosses. The etymology is attributed to Kadokawa Shinjigen revised new edition; that attribution is not proof all page content comes from that edition. Reference: https://www.kanjipedia.jp/kanji/0004839100 (retrieved 2026-10-09; exact web revision not established). Pinned-edition evidence and independent semantic review pending. Historical warning retained in docs/audits/2026-10-09-independent-reference-checks.json; no original lexical fields changed.",
+   "decision": "Evidence finding 2026-10-10 (NOT a clearance): kanjipedia attests attentive listening + acceptance/permission; inherited 'Headstrong; Naughty' glosses uncorroborated and flagged in noteEn; MN teaches evidenced senses. JA/EN preserved. FLAG REMAINS RELEASE-BLOCKING: independent web evidence (kotobank/kanjipedia/goo, retrieved 2026-10-10; page revisions not pinned) does not yet establish the exact spelling, reading AND sense of the retained source record to the project's clearance standard; no pinned primary-edition citation and no human semantic review exist. Do not clear for coverage numbers.",
+   "evidence": "docs/audits/2026-10-10-meaning-evidence.json + docs/audits/2026-10-09-independent-reference-checks.json",
+   "reviewStatus": "AI-assisted adjudication; unreviewed by humans",
+   "originalFieldsChanged": false,
+   "sourceIssueCleared": false
+  },
+  {
+   "kind": "kanji",
+   "id": "博",
+   "level": "n1",
+   "w": "博",
+   "originalSourceIssue": "Unresolved source review: Lists breadth, abbreviations including doctor/exhibition, and gambling. This does not establish the inherited Command/Esteem glosses. Etymology attribution names Kadokawa Shinjigen revised new edition; page revision is not specified. Reference: https://www.kanjipedia.jp/kanji/0005633600 (retrieved 2026-10-09; exact web revision not established). Pinned-edition evidence and independent semantic review pending. Historical warning retained in docs/audits/2026-10-09-independent-reference-checks.json; no original lexical fields changed.",
+   "decision": "Evidence finding 2026-10-10 (NOT a clearance): kanjipedia attests breadth, 博士 abbreviation and 博打 gambling; inherited 'Command; Esteem' glosses uncorroborated and flagged; MN rebuilt from evidenced senses. JA/EN preserved. FLAG REMAINS RELEASE-BLOCKING: independent web evidence (kotobank/kanjipedia/goo, retrieved 2026-10-10; page revisions not pinned) does not yet establish the exact spelling, reading AND sense of the retained source record to the project's clearance standard; no pinned primary-edition citation and no human semantic review exist. Do not clear for coverage numbers.",
+   "evidence": "docs/audits/2026-10-10-meaning-evidence.json + docs/audits/2026-10-09-independent-reference-checks.json",
+   "reviewStatus": "AI-assisted adjudication; unreviewed by humans",
+   "originalFieldsChanged": false,
+   "sourceIssueCleared": false
+  },
+  {
+   "kind": "vocab",
+   "id": "j1448900",
+   "level": "n5",
+   "w": "中身",
+   "originalSourceIssue": "Unresolved source review: The retrieved 中身 entry covers なかみ and ちゅうしん. It does not establish the exact 中身/あてみ spelling-reading pair. JMdict-derived Jisho does list that pair, but is not independent evidence. Absence here is not proof the pair is invalid. Reference: https://kotobank.jp/word/中身-567560 (retrieved 2026-10-09; exact web revision not established). Pinned-edition evidence and independent semantic review pending. Historical warning retained in docs/audits/2026-10-09-independent-reference-checks.json; no original lexical fields changed.",
+   "decision": "Remains release-blocking: the 中身/あてみ spelling-reading pair is not established by independent references (kotobank 中身 covers なかみ/ちゅうしん only; Jisho is same lineage). Original fields preserved; upstream dictionary correction required; no MN or source change made. No clearance attempted.",
+   "evidence": "docs/audits/2026-10-10-meaning-evidence.json + docs/audits/2026-10-09-independent-reference-checks.json",
+   "reviewStatus": "AI-assisted adjudication; unreviewed by humans",
+   "originalFieldsChanged": false,
+   "sourceIssueCleared": false
+  }
+ ]
+}

@@ -272,16 +272,28 @@ assert.equal(continueTopics.provenance.reviewStatus,'unreviewed');
 
 // External evidence is reproducible and guarded, not a release/linguistic pass.
 const dictionaryAudit=read('docs/audits/2026-10-09-dictionary-evidence.json');
+const resolvedMeanings=new Set(read('docs/audits/2026-10-10-meaning-evidence.json').records.filter(x=>Array.isArray(x.mnFilled)).map(x=>x.id));
 assert.deepEqual(dictionaryAudit.counts,{missingMeaningsAudited:62,sourceWarningsAudited:10,uniqueRecords:67,activeCorrections:0});
 assert.equal(dictionaryAudit.source.packageVersion,'1.5');
 assert.equal(dictionaryAudit.source.dictionaryLicense,'CC-BY-SA-3.0');
 assert.equal(dictionaryAudit.source.artifactSha256,'a4247dd9bb3148ab17c1b32fc56d7a7f1c35293b0d6ff2838c811f896d13f415');
 assert.equal(new Set(dictionaryAudit.records.map(r=>`${r.kind}/${r.level}/${r.key}`)).size,67);
-for(const r of dictionaryAudit.records) {
+ for(const r of dictionaryAudit.records) {
  const e=read(`public/data/${r.kind}/${r.level}.json`).find(e=>(r.kind==='kanji'?e.k:e.id)===r.key);
  assert.ok(e);for(const [f,v] of Object.entries(r.expected))assert.deepEqual(e[f],v);
  assert.equal(e.source_issue??null,reviewStatusBatch[r.kind]?.[r.key]?.sourceNote ?? r.existingWarning);
- if(r.existingWarning)assert.equal(reviewStatusBatch[r.kind][r.key].previousSourceNote,r.existingWarning);if(r.missingMeaning)assert.ok(!e.mn?.length);
+ if(r.existingWarning)assert.equal(reviewStatusBatch[r.kind][r.key].previousSourceNote,r.existingWarning);
+ if(r.missingMeaning){
+  // A withheld meaning may only be taught with recorded independent dictionary
+  // evidence (docs/audits/2026-10-10-meaning-evidence.json) plus batch provenance;
+  // source-warned entries must stay empty until their conflict is adjudicated.
+  const filled=(Array.isArray(e.mn)?e.mn:[]).filter(Boolean).length>0;
+  if(filled){
+   assert.ok(!e.source_issue,`${r.key}: source-warned entries must not gain taught meanings`);
+   assert.ok(e.mn_provenance,`${r.key}: filled meaning needs batch provenance`);
+   assert.ok(resolvedMeanings.has(r.key),`${r.key}: filled meaning needs a recorded evidence resolution`);
+  }
+ }
  assert.equal(r.artifactUrl,dictionaryAudit.source.artifactUrl);
  assert.equal(r.dictionaryLicense,dictionaryAudit.source.dictionaryLicense);
  assert.match(r.decision,/blocked/);

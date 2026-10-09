@@ -68,6 +68,7 @@ export default function Shell({ children }: { children: ReactNode }) {
     { id: "mock", to: "mock", k: "試", label: t.mock, group: t.practice },
     { id: "placement", to: "placement", k: "測", label: t.placement, group: t.practice },
     { id: "dict", to: "dict", k: "辞", label: t.dictionary, group: t.tools },
+    { id: "tutor", to: "tutor", k: "話", label: t.tutorTitle, group: t.tools },
     { id: "achievements", to: "achievements", k: "賞", label: t.achievements, group: t.tools },
     { id: "account", to: "account", k: "人", label: t.account, group: t.tools },
     { id: "about", to: "about", k: "元", label: t.sources, group: t.tools },

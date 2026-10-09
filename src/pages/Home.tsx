@@ -246,7 +246,7 @@ export default function Home() {
           <SectionTitle
             jp="続きから"
             title={t.continueTitle}
-            right={<a href={href("review")} className="text-[12.5px] font-bold text-ai-600 underline underline-offset-4">{t.srsLink}</a>}
+            right={<a href={href("review")} className="inline-flex min-h-[28px] items-center px-1.5 py-1.5 text-[12.5px] font-bold text-ai-600 underline underline-offset-4">{t.srsLink}</a>}
           />
           <div className="grid gap-3 sm:grid-cols-2">
             {resume && <ResumeCard id={resume.id} />}
