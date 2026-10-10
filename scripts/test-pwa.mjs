@@ -43,7 +43,7 @@ assert.ok(sw.includes("clients.claim()"), "SW claims clients on activate");
 assert.ok(/caches\.delete/.test(sw), "SW deletes stale caches");
 assert.ok(sw.includes("request.method !== \"GET\""), "SW only handles GET");
 assert.ok(sw.includes("/data/"), "SW caches the study corpus");
-assert.ok(sw.includes("cache.match(\"/index.html\")"), "SW falls back to the app shell for offline navigation");
+assert.ok(/cache\.match\("\/index\.html"/.test(sw), "SW falls back to the app shell for offline navigation");
 
 const pwaTs = read("src/lib/pwa.ts");
 assert.ok(pwaTs.includes("registerServiceWorker"), "registration exported");

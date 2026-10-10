@@ -34,12 +34,41 @@ export function buildSystemPrompt({ level, language }) {
     langLine,
     "When the learner writes or speaks Japanese, gently correct mistakes: show the corrected Japanese sentence and briefly explain the fix.",
     "When helpful, include a short Japanese practice line with reading support.",
+    "For voice turns you also receive the learner's speech as an audio part: understand the spoken Japanese directly, correct it as above, and set \"heard\" to the Japanese you heard (kana/kanji as spoken). Use null for \"heard\" on text turns.",
     "Keep replies under 120 words. Be encouraging. Never ask for personal data (name, age, contacts, location).",
-    'Respond ONLY with strict JSON: {"reply": string, "correction": string|null, "tip": string|null}.',
+    'Respond ONLY with strict JSON: {"reply": string, "correction": string|null, "tip": string|null, "heard": string|null}.',
   ].join("\n");
 }
 
-export function buildGeminiRequest({ messages, level, language, model, apiKey }) {
+// Voice turns: browser records a clip and sends it here; we forward it to Gemini
+// as an inline audio part. Audio is handled per-request only — never logged,
+// never persisted, never echoed back.
+const AUDIO_MIME_BASES = new Set([
+  "audio/webm",
+  "audio/ogg",
+  "audio/wav",
+  "audio/x-wav",
+  "audio/mp4",
+  "audio/m4a",
+  "audio/aac",
+  "audio/flac",
+  "audio/mpeg",
+  "audio/opus",
+]);
+export const MAX_AUDIO_B64 = 2_500_000; // ~1.8 MB of audio; stays well under the 4.5 MB request cap
+
+export function validateAudio(audio) {
+  if (audio == null) return null; // audio is optional
+  if (typeof audio !== "object" || typeof audio.data !== "string" || typeof audio.mimeType !== "string") {
+    return "bad_request";
+  }
+  const base = audio.mimeType.split(";")[0].trim().toLowerCase();
+  if (!AUDIO_MIME_BASES.has(base)) return "audio_unsupported";
+  if (audio.data.length > MAX_AUDIO_B64) return "audio_too_large";
+  return null;
+}
+
+export function buildGeminiRequest({ messages, level, language, model, apiKey, audio }) {
   const contents = (Array.isArray(messages) ? messages : [])
     .filter((m) => m && typeof m.text === "string" && m.text.trim())
     .slice(-16)
@@ -47,6 +76,13 @@ export function buildGeminiRequest({ messages, level, language, model, apiKey })
       role: m.role === "tutor" ? "model" : "user",
       parts: [{ text: m.text.slice(0, 2000) }],
     }));
+  if (audio && typeof audio.data === "string" && audio.data) {
+    // The audio rides as a separate final user turn (the spoken message itself).
+    contents.push({
+      role: "user",
+      parts: [{ inlineData: { mimeType: audio.mimeType, data: audio.data } }],
+    });
+  }
   return {
     url: GEMINI_URL(model || process.env.GEMINI_MODEL || DEFAULT_MODEL),
     headers: {
@@ -70,9 +106,10 @@ export function parseGeminiReply(data) {
       reply: String(parsed.reply ?? "").slice(0, 2000),
       correction: parsed.correction ? String(parsed.correction).slice(0, 1000) : null,
       tip: parsed.tip ? String(parsed.tip).slice(0, 500) : null,
+      heard: parsed.heard ? scrub(String(parsed.heard)).slice(0, 500) : null,
     };
   } catch {
-    return { reply: cleaned.slice(0, 2000), correction: null, tip: null };
+    return { reply: cleaned.slice(0, 2000), correction: null, tip: null, heard: null };
   }
 }
 
@@ -104,7 +141,14 @@ export async function handleTutorRequest({ method, body, env = process.env, fetc
     return { status: 400, headers: NO_STORE_HEADERS, body: { error: "bad_request" } };
   }
   const messages = Array.isArray(payload.messages) ? payload.messages : [];
-  if (!messages.some((m) => m && typeof m.text === "string" && m.text.trim())) {
+  const audio = payload.audio ?? null;
+  const audioErr = validateAudio(audio);
+  if (audioErr) {
+    // Never forward invalid or oversized audio upstream.
+    return { status: 400, headers: NO_STORE_HEADERS, body: { error: audioErr } };
+  }
+  const hasText = messages.some((m) => m && typeof m.text === "string" && m.text.trim());
+  if (!hasText && !audio) {
     return { status: 400, headers: NO_STORE_HEADERS, body: { error: "bad_request" } };
   }
   const req = buildGeminiRequest({
@@ -113,6 +157,7 @@ export async function handleTutorRequest({ method, body, env = process.env, fetc
     language: payload.language === "en" ? "en" : "mn",
     model: env.GEMINI_MODEL,
     apiKey: env.GEMINI_API_KEY,
+    audio,
   });
   let res;
   try {

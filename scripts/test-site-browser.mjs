@@ -219,11 +219,32 @@ try {
    assert.ok((manifest.icons||[]).some(i=>i.sizes==='512x512'&&/maskable/.test(i.purpose||'')),'pwa: maskable icon required');
    // Warm the study corpus through the SW, then require it to be on disk.
    await page.evaluate(()=>navigator.serviceWorker.controller.postMessage('WARM_DATA'));
-   await page.waitForFunction(async()=>{
-    const keys=await caches.keys();
-    for(const k of keys){const c=await caches.open(k);if(await c.match('/data/vocab/n5.json'))return true;}
-    return false;
-   },null,{timeout:60000});
+   // NOTE: page.waitForFunction does NOT await async predicates (a returned
+   // Promise is truthy and resolves the wait instantly) — poll via
+   // page.evaluate, which does await. Wait until the study corpus AND the
+   // lazy route chunks needed by the offline checks below are on disk.
+   {
+    const deadline=Date.now()+120000;
+    for(;;){
+     const ready=await page.evaluate(async()=>{
+      const want=['index-','react-','Home-','Vocabulary-','KanjiList-','GrammarList-','categories-','Session-'];
+      const found=new Set();
+      let corpora=0;
+      for(const k of await caches.keys()){
+      const c=await caches.open(k);
+       for(const req of await c.keys()){
+        const p=new URL(req.url).pathname;
+        if(/^\/data\/(vocab|kanji|grammar)\/n[1-5]\.json$/.test(p))corpora++;
+        for(const w of want) if(p.includes(`/assets/${w}`)) found.add(w);
+       }
+      }
+      return corpora>=15 && found.size>=want.length;
+     });
+     if(ready)break;
+     if(Date.now()>deadline)throw new Error('warm cache timeout (corpus + route chunks)');
+     await page.waitForTimeout(250);
+    }
+   }
    const apiCached=await page.evaluate(async()=>{
     const keys=await caches.keys();
     for(const k of keys){const c=await caches.open(k);for(const req of await c.keys()){if(new URL(req.url).pathname.startsWith('/api/'))return true;}}

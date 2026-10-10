@@ -1,6 +1,7 @@
 // Vercel function: POST /api/gemini-tutor
 // GEMINI_API_KEY is read from the server-side environment only.
-// Learner transcripts are processed per-request and never persisted or logged.
+// Learner transcripts and voice clips are processed per-request and never
+// persisted or logged (the log line carries only the byte count).
 import { handleTutorRequest, scrub } from "./_tutor-core.mjs";
 
 export default async function handler(req, res) {

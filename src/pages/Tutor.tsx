@@ -2,7 +2,15 @@ import { useRef, useState } from "react";
 import { Card, PageHeader, SectionTitle } from "../components/ui";
 import { useStore } from "../lib/store";
 import { ui } from "../lib/i18n";
-import { askTutor, speechSupported, ttsSupported, type TutorError, type TutorTurn } from "../lib/tutor";
+import {
+  askTutor,
+  mediaRecorderSupported,
+  speechSupported,
+  ttsSupported,
+  type TutorAudio,
+  type TutorError,
+  type TutorTurn,
+} from "../lib/tutor";
 
 type SpeechRec = {
   lang: string;
@@ -35,11 +43,17 @@ export default function Tutor() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<TutorError | null>(null);
   const [listening, setListening] = useState(false);
+  const [recording, setRecording] = useState(false);
+  const [micDenied, setMicDenied] = useState(false);
   const recRef = useRef<SpeechRec | null>(null);
+  const mediaRecRef = useRef<MediaRecorder | null>(null);
+  const chunksRef = useRef<Blob[]>([]);
+  const cancelRecRef = useRef(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const canSpeak = speechSupported();
   const canPlay = ttsSupported();
+  const canRecord = mediaRecorderSupported();
 
   async function send(text: string) {
     const trimmed = text.trim();
@@ -53,6 +67,84 @@ export default function Tutor() {
     setBusy(false);
     if (r.ok) setTurns([...next, r.reply]);
     else setError(r.error);
+  }
+
+  // Voice turn: the recorded clip itself is the message — Gemini hears the
+  // actual speech (not browser text). The clip is read once and discarded.
+  async function sendVoice(audio: TutorAudio) {
+    if (busy) return;
+    setError(null);
+    setMicDenied(false);
+    const next: TutorTurn[] = [...turns, { role: "user", text: t.tutorVoiceLabel }];
+    setTurns(next);
+    setBusy(true);
+    const r = await askTutor(next.slice(0, -1), level, language, audio);
+    setBusy(false);
+    if (r.ok) {
+      const heard = r.reply.heard ?? null;
+      setTurns([
+        ...next.map((turn, i) => (i === next.length - 1 ? { ...turn, heard } : turn)),
+        { ...r.reply, heard: null },
+      ]);
+    } else {
+      setError(r.error);
+    }
+  }
+
+  async function toggleVoice() {
+    if (!canRecord) return;
+    if (recording) {
+      mediaRecRef.current?.stop(); // stop & send
+      return;
+    }
+    setMicDenied(false);
+    try {
+      // Permission is requested only on this explicit user action.
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const rec = new MediaRecorder(stream);
+      chunksRef.current = [];
+      cancelRecRef.current = false;
+      rec.ondataavailable = (e) => {
+        if (e.data && e.data.size > 0) chunksRef.current.push(e.data);
+      };
+      rec.onstop = () => {
+        stream.getTracks().forEach((track) => track.stop());
+        setRecording(false);
+        const cancelled = cancelRecRef.current;
+        cancelRecRef.current = false;
+        const parts = chunksRef.current;
+        chunksRef.current = [];
+        if (cancelled) return;
+        const blob = new Blob(parts, { type: rec.mimeType || "audio/webm" });
+        if (blob.size === 0) {
+          setError("audio_unsupported");
+          return;
+        }
+        void blob.arrayBuffer().then((buf) => {
+          const bytes = new Uint8Array(buf);
+          let bin = "";
+          for (let i = 0; i < bytes.length; i += 0x8000) {
+            bin += String.fromCharCode(...bytes.subarray(i, i + 0x8000));
+          }
+          void sendVoice({ mimeType: blob.type || "audio/webm", data: btoa(bin) });
+        });
+      };
+      rec.onerror = () => {
+        stream.getTracks().forEach((track) => track.stop());
+        setRecording(false);
+      };
+      rec.start();
+      mediaRecRef.current = rec;
+      setRecording(true);
+    } catch {
+      setMicDenied(true);
+      setRecording(false);
+    }
+  }
+
+  function cancelVoice() {
+    cancelRecRef.current = true;
+    mediaRecRef.current?.stop();
   }
 
   function toggleMic() {
@@ -139,7 +231,11 @@ export default function Tutor() {
               </div>
             ) : error ? (
               <div className="rounded-xl border border-shu-500/40 bg-shu-500/10 px-4 py-3 text-[13px]">
-                {error === "rate_limited" ? t.tutorRateLimited : t.tutorError}
+                {error === "rate_limited"
+                  ? t.tutorRateLimited
+                  : error === "audio_too_large" || error === "audio_unsupported"
+                    ? t.tutorAudioError
+                    : t.tutorError}
               </div>
             ) : null}
 
@@ -155,6 +251,12 @@ export default function Tutor() {
                     }
                   >
                     <p className="whitespace-pre-wrap leading-relaxed">{turn.text}</p>
+                    {turn.role === "user" && turn.heard ? (
+                      <p className="mt-1.5 text-[12px] opacity-80">
+                        <span className="font-bold">{t.tutorVoiceHeard} </span>
+                        {turn.heard}
+                      </p>
+                    ) : null}
                     {turn.correction ? (
                       <p className="mt-2 rounded-lg bg-shu-500/10 px-2.5 py-1.5 text-[12px]">
                         <span className="font-bold">{t.tutorCorrectionLabel} </span>
@@ -183,37 +285,74 @@ export default function Tutor() {
             </div>
 
             <div className="mt-4 flex items-center gap-2">
-              <input
-                ref={inputRef}
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") void send(input);
-                }}
-                placeholder={t.tutorInputPlaceholder}
-                className="min-h-[44px] flex-1 rounded-xl border border-sumi-900/15 px-3.5 text-[14px] outline-none focus:border-ai-600"
-              />
-              {canSpeak ? (
-                <button
-                  onClick={toggleMic}
-                  aria-label={t.tutorMic}
-                  className={`grid min-h-[44px] min-w-[44px] place-items-center rounded-xl border text-[16px] ${
-                    listening ? "border-shu-500 bg-shu-500 text-white" : "border-sumi-900/15"
-                  }`}
-                >
-                  {listening ? "⏹" : "🎤"}
-                </button>
-              ) : null}
-              <button
-                onClick={() => void send(input)}
-                disabled={busy || !input.trim()}
-                className="min-h-[44px] rounded-xl bg-shu-500 px-5 py-2.5 text-[13.5px] font-bold text-white disabled:opacity-40"
-              >
-                {t.tutorSend}
-              </button>
+              {recording ? (
+                <>
+                  <p role="status" className="flex-1 text-[13px] font-bold text-shu-600">
+                    <span className="mr-1.5 inline-block h-2.5 w-2.5 animate-pulse rounded-full bg-shu-500 align-middle" />
+                    {t.tutorVoiceRec}
+                  </p>
+                  <button
+                    onClick={cancelVoice}
+                    className="min-h-[44px] rounded-xl border border-sumi-900/15 px-4 py-2.5 text-[13px] font-bold"
+                  >
+                    {t.tutorVoiceCancel}
+                  </button>
+                  <button
+                    onClick={() => void toggleVoice()}
+                    className="min-h-[44px] rounded-xl bg-shu-500 px-4 py-2.5 text-[13px] font-bold text-white"
+                  >
+                    ⏹ {t.tutorVoiceStop}
+                  </button>
+                </>
+              ) : (
+                <>
+                  <input
+                    ref={inputRef}
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") void send(input);
+                    }}
+                    placeholder={t.tutorInputPlaceholder}
+                    className="min-h-[44px] flex-1 rounded-xl border border-sumi-900/15 px-3.5 text-[14px] outline-none focus:border-ai-600"
+                  />
+                  {canRecord ? (
+                    <button
+                      onClick={() => void toggleVoice()}
+                      aria-label={t.tutorMic}
+                      className="grid min-h-[44px] min-w-[44px] place-items-center rounded-xl border border-sumi-900/15 text-[16px]"
+                    >
+                      🎤
+                    </button>
+                  ) : canSpeak ? (
+                    <button
+                      onClick={toggleMic}
+                      aria-label={t.tutorMic}
+                      className={`grid min-h-[44px] min-w-[44px] place-items-center rounded-xl border text-[16px] ${
+                        listening ? "border-shu-500 bg-shu-500 text-white" : "border-sumi-900/15"
+                      }`}
+                    >
+                      {listening ? "⏹" : "🎤"}
+                    </button>
+                  ) : null}
+                  <button
+                    onClick={() => void send(input)}
+                    disabled={busy || !input.trim()}
+                    className="min-h-[44px] rounded-xl bg-shu-500 px-5 py-2.5 text-[13.5px] font-bold text-white disabled:opacity-40"
+                  >
+                    {t.tutorSend}
+                  </button>
+                </>
+              )}
             </div>
             <p className="mt-2 text-[11.5px] text-sumi-500">
-              {canSpeak ? t.tutorVoiceNote : t.tutorMicUnsupported}
+              {micDenied
+                ? t.tutorMicDenied
+                : canRecord
+                  ? t.tutorVoiceNote
+                  : canSpeak
+                    ? t.tutorDictateNote
+                    : t.tutorMicUnsupported}
             </p>
           </Card>
         </>

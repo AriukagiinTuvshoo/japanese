@@ -51,7 +51,7 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("message", (event) => {
   if (event.data === "SKIP_WAITING") self.skipWaiting();
   if (event.data === "WARM_DATA") {
-    event.waitUntil(warmData());
+    event.waitUntil(Promise.all([warmData(), warmAssets()]));
   }
 });
 
@@ -60,22 +60,69 @@ const DATA_RE = /^\/data\/.*\.json$/;
 
 async function warmData() {
   const cache = await caches.open(DATA);
+  const urls = ["/data/index/meta.json"];
   for (const level of ["n5", "n4", "n3", "n2", "n1"]) {
     for (const kind of ["vocab", "kanji", "grammar"]) {
-      const url = `/data/${kind}/${level}.json`;
-      try {
-        const res = await fetch(url, { cache: "reload" });
-        if (res.ok) await cache.put(url, res.clone());
-      } catch {
-        /* offline warm-up is best-effort */
+      urls.push(`/data/${kind}/${level}.json`);
+    }
+  }
+  for (const url of urls) {
+    try {
+      const res = await fetch(url, { cache: "reload" });
+      if (res.ok) await cache.put(url, res.clone());
+    } catch {
+      /* offline warm-up is best-effort */
+    }
+  }
+}
+
+// Precache every hashed build asset (entry + lazy route chunks + their shared
+// second-level chunks) so ALL study routes render offline after first launch —
+// not only routes visited before.
+async function warmAssets() {
+  const cache = await caches.open(SHELL);
+  const seen = new Set();
+  const queue = [];
+  try {
+    const indexText = await (await fetch("/index.html", { cache: "reload" })).text();
+    for (const m of indexText.matchAll(/\/assets\/([A-Za-z0-9._-]+\.(?:js|css))/g)) {
+      if (!seen.has(m[1])) {
+        seen.add(m[1]);
+        queue.push(m[1]);
       }
+    }
+  } catch {
+    /* best-effort */
+  }
+  while (queue.length) {
+    const name = queue.shift();
+    const url = `/assets/${name}`;
+    try {
+      const res = await fetch(url, { cache: "reload" });
+      if (!res.ok) continue;
+      await cache.put(url, res.clone());
+      if (name.endsWith(".js")) {
+        // Discover shared second-level chunks (e.g. categories/Session) that
+        // route chunks import — without them, unvisited routes cannot open.
+        const text = await res.text();
+        for (const c of text.matchAll(/["'](?:\.\/)?([A-Za-z0-9._-]+\.(?:js|css))["']/g)) {
+          if (!seen.has(c[1])) {
+            seen.add(c[1]);
+            queue.push(c[1]);
+          }
+        }
+      }
+    } catch {
+      /* best-effort */
     }
   }
 }
 
 async function staleWhileRevalidate(request, cacheName) {
   const cache = await caches.open(cacheName);
-  const cached = await cache.match(request);
+  // ignoreVary: warmed copies and document requests differ in Vary-listed
+  // headers (Origin); our public corpora are keyed by URL only.
+  const cached = await cache.match(request, { ignoreVary: true });
   const network = fetch(request)
     .then((res) => {
       if (res && res.ok) cache.put(request, res.clone());
@@ -87,11 +134,15 @@ async function staleWhileRevalidate(request, cacheName) {
 
 async function cacheFirst(request, cacheName) {
   const cache = await caches.open(cacheName);
-  const cached = await cache.match(request);
+  const cached = await cache.match(request, { ignoreVary: true });
   if (cached) return cached;
-  const res = await fetch(request);
-  if (res && res.ok) await cache.put(request, res.clone());
-  return res;
+  try {
+    const res = await fetch(request);
+    if (res && res.ok) await cache.put(request, res.clone());
+    return res;
+  } catch {
+    return Response.error();
+  }
 }
 
 self.addEventListener("fetch", (event) => {
@@ -115,8 +166,8 @@ self.addEventListener("fetch", (event) => {
         } catch {
           const cache = await caches.open(SHELL);
           return (
-            (await cache.match("/index.html")) ||
-            (await cache.match("/")) ||
+            (await cache.match("/index.html", { ignoreVary: true })) ||
+            (await cache.match("/", { ignoreVary: true })) ||
             Response.error()
           );
         }
