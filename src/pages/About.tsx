@@ -28,10 +28,24 @@ export default function About() {
         <SectionTitle jp="方針" title={t.principles} />
         <ul className="space-y-2.5 text-[14px] leading-relaxed text-sumi-700">
           <li>{t.principle1}</li>
-          <li>{t.principle2.replace("pending_review", "")}<b>pending_review</b>{t.principle2.slice(t.principle2.indexOf("pending_review") + 14)}</li>
+          <li>{t.principle2}</li>
           <li>{t.principle3}</li>
           <li>{t.principle4}</li>
         </ul>
+      </Card>
+
+      <Card>
+        <SectionTitle jp="設定" title={t.pwaInstallHeading} sub={t.offlineReady} />
+        <div className="space-y-2.5 text-[14px] leading-relaxed text-sumi-700">
+          <p>{t.pwaInstallBody}</p>
+          <p className="font-bold">{t.pwaInstallSteps}</p>
+          <ul className="list-disc space-y-1.5 pl-5">
+            <li>{t.pwaInstallIosStep}</li>
+            <li>{t.pwaInstallAndroidStep}</li>
+          </ul>
+          <p>{t.pwaUpdateNote}</p>
+          <p className="rounded-xl bg-sumi-900/5 px-3.5 py-2.5 text-[12.5px] text-sumi-600">{t.pwaPrivacyNote}</p>
+        </div>
       </Card>
 
       <Card>
@@ -51,7 +65,7 @@ export default function About() {
                     {s.name}
                   </a>
                   <p className="mt-0.5 text-[12.5px] text-sumi-500">{t.licenseLabel} {s.license}</p>
-                  {s.note && <p className="mt-0.5 text-[12.5px] text-sumi-500">{s.note}</p>}
+                  {(language === "mn" ? s.note : s.note_en) && <p className="mt-0.5 text-[12.5px] text-sumi-500">{language === "mn" ? s.note : s.note_en}</p>}
                 </li>
               ))}
             </ul>

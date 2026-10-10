@@ -1,0 +1,238 @@
+{
+  "provenance": {
+    "id": "mn-n2-vocab-examples-continue-1-2026-10-09",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian compared with exact Japanese and retained English; stable record and headword/pattern guards; independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n2.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "46b2bb8278": {
+      "expected": {
+        "w": "映る",
+        "r": "うつる",
+        "en": [
+          "to be reflected",
+          "to harmonize with",
+          "to come out (photo)"
+        ]
+      },
+      "examples": {
+        "カーテンに女の子の影が映った。": {
+          "en": "A silhouette of a girl appeared on the curtain.",
+          "mn": "Хөшгөн дээр охины сүүдэр тусав."
+        },
+        "僕の目には君しか映ってないよ。本当さ。": {
+          "en": "I only have eyes for you - honestly.",
+          "mn": "Миний нүдэнд зөвхөн чи л харагддаг шүү. Үнэнээсээ хэлж байна."
+        }
+      }
+    },
+    "8d45108aac": {
+      "expected": {
+        "w": "写る",
+        "r": "うつる",
+        "en": [
+          "to be photographed",
+          "to be projected"
+        ]
+      },
+      "examples": {
+        "うまく写っているといいですが。": {
+          "en": "I hope it'll come out good.",
+          "mn": "Зураг нь сайхан гарсан байгаасай."
+        },
+        "私は鏡に写っている自分を見つめているのです。": {
+          "en": "I'm staring at myself in a mirror.",
+          "mn": "Би толинд туссан өөрийнхөө дүрсийг ширтэж байгаа юм."
+        }
+      }
+    },
+    "10adbed302": {
+      "expected": {
+        "w": "うどん",
+        "r": "うどん",
+        "en": [
+          "noodles (Japanese)"
+        ]
+      },
+      "examples": {
+        "そばはそば粉から、うどんやきしめんは普通の小麦粉からできてるの。": {
+          "en": "Soba is made of buckwheat flour, and udon and kishimen are made of plain wheat flour.",
+          "mn": "Соба гоймонг гурвалжин будааны гурилаар, удон болон кишимэнийг энгийн улаан буудайн гурилаар хийдэг."
+        }
+      }
+    },
+    "27a6e0b315": {
+      "expected": {
+        "w": "有無",
+        "r": "うむ",
+        "en": [
+          "yes or no",
+          "existence",
+          "flag indicator (comp)"
+        ]
+      },
+      "examples": {
+        "排卵の有無を調べる方法はありますか？": {
+          "en": "Is there some way to check for ovulation?",
+          "mn": "Өндгөн эс гадагшилсан эсэхийг шалгах арга бий юу?"
+        }
+      }
+    },
+    "04779b98e7": {
+      "expected": {
+        "w": "埋める",
+        "r": "うめる",
+        "en": [
+          "to bury",
+          "to fill up",
+          "to fill (a seat, a vacant position)"
+        ]
+      },
+      "examples": {
+        "犬はよく骨を地面に埋める。": {
+          "en": "Dogs often bury bones.",
+          "mn": "Нохой яс газар булах нь элбэг."
+        },
+        "あいつの損を埋めてやらなくちゃならないんだ。": {
+          "en": "I have to cover his loss.",
+          "mn": "Би түүний алдагдлыг нөхөж өгөхөөс аргагүй."
+        }
+      }
+    },
+    "d95334bf4d": {
+      "expected": {
+        "w": "敬う",
+        "r": "うやまう",
+        "en": [
+          "to show respect",
+          "to honour"
+        ]
+      },
+      "examples": {
+        "私は、年上の人を敬うように教えられた。": {
+          "en": "I was taught to respect my elders.",
+          "mn": "Надад ахмад хүмүүсээ хүндлэхийг зааж сургасан."
+        },
+        "私たちは祖先をうやまうべきだ。": {
+          "en": "We should worship our ancestors.",
+          "mn": "Бид өвөг дээдсээ хүндэтгэх ёстой."
+        }
+      }
+    },
+    "27cd0cb3fc": {
+      "expected": {
+        "w": "裏返す",
+        "r": "うらがえす",
+        "en": [
+          "to turn inside out",
+          "to turn (something) over"
+        ]
+      },
+      "examples": {
+        "彼はシャツを裏返しに着ていた。": {
+          "en": "He had his shirt on inside out.",
+          "mn": "Тэр цамцаа дотор талаар нь эргүүлж өмссөн байв."
+        },
+        "彼は靴下の片方を裏返しにはいていた。": {
+          "en": "He had one of his socks on inside out.",
+          "mn": "Тэр нэг оймсоо дотор талаар нь эргүүлж өмссөн байв."
+        }
+      }
+    },
+    "01cfbc11d9": {
+      "expected": {
+        "w": "裏口",
+        "r": "うらぐち",
+        "en": [
+          "backdoor",
+          "rear entrance"
+        ]
+      },
+      "examples": {
+        "彼は裏口入学した。": {
+          "en": "He bought his way into college.",
+          "mn": "Тэр арын хаалгаар их сургуульд элссэн."
+        },
+        "少年は裏口から入った。": {
+          "en": "The boy entered by the back door.",
+          "mn": "Хүү арын хаалгаар оржээ."
+        }
+      }
+    },
+    "5ba9e0b071": {
+      "expected": {
+        "w": "占う",
+        "r": "うらなう",
+        "en": [
+          "to forecast",
+          "to predict"
+        ]
+      },
+      "examples": {
+        "私は運勢を占ってもらった。": {
+          "en": "I had my fortune told.",
+          "mn": "Би аз хийморио мэргэлүүлсэн."
+        }
+      }
+    },
+    "598e1dd07c": {
+      "expected": {
+        "w": "恨み",
+        "r": "うらみ",
+        "en": [
+          "resentment"
+        ]
+      },
+      "examples": {
+        "リサはスタンに恨みがある。": {
+          "en": "Lisa bears a grudge against Stan.",
+          "mn": "Лиса Стэнд өс санаж явдаг."
+        },
+        "彼は父の死の恨みを晴らした。": {
+          "en": "He avenged his father's death.",
+          "mn": "Тэр эцгийнхээ үхлийн өшөөг авсан."
+        }
+      }
+    },
+    "d40a8e4a7f": {
+      "expected": {
+        "w": "羨ましい",
+        "r": "うらやましい",
+        "en": [
+          "envious",
+          "enviable"
+        ]
+      },
+      "examples": {
+        "あなたがとても羨ましい。": {
+          "en": "I envy you so much.",
+          "mn": "Би чамд үнэхээр атаархаж байна."
+        },
+        "なんかその日暮らしって感じで、羨ましい。": {
+          "en": "I envy your lifestyle - living day-to-day like that.",
+          "mn": "Чи нэг л тухайн өдрөөрөө амьдардаг юм шиг санагддаг, атаархмаар юм."
+        }
+      }
+    },
+    "343bc443c8": {
+      "expected": {
+        "w": "羨む",
+        "r": "うらやむ",
+        "en": [
+          "to envy"
+        ]
+      },
+      "examples": {
+        "彼らは私たちの成功をうらやんでいる。": {
+          "en": "They are jealous of our success.",
+          "mn": "Тэд бидний амжилтад атаархдаг."
+        }
+      }
+    }
+  }
+}

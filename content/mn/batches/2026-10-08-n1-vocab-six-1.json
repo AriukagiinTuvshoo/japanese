@@ -1,0 +1,1040 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-six-1-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit semantic categories cross-checked against Japanese entry and retained English gloss, independently unreviewed. Original uncommon senses preserved.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "a63d59c119": {
+      "mn": [
+        "дайсан",
+        "өрсөлдөгч"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "敵",
+        "r": "かたき",
+        "en": [
+          "enemy",
+          "rival"
+        ]
+      }
+    },
+    "a2ee87bdca": {
+      "mn": [
+        "сэтгэл чанар",
+        "зан араншин",
+        "онцлог"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "気質",
+        "r": "かたぎ",
+        "en": [
+          "spirit",
+          "character",
+          "trait"
+        ]
+      }
+    },
+    "898632e4f2": {
+      "mn": [
+        "хагас дутуу мэдлэг",
+        "хүүхэд шиг ярих",
+        "түгдэрч ярих"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "片言",
+        "r": "かたこと",
+        "en": [
+          "a smattering",
+          "talk like a baby",
+          "speak haltingly"
+        ]
+      }
+    },
+    "ae870bde15": {
+      "mn": [
+        "цэгцлэх",
+        "дуусгах"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "片付け",
+        "r": "かたづけ",
+        "en": [
+          "tidying up",
+          "finishing"
+        ]
+      }
+    },
+    "31abecc2fa": {
+      "mn": [
+        "хазайлгах",
+        "налуулах",
+        "нугалах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "傾ける",
+        "r": "かたむける",
+        "en": [
+          "to incline",
+          "to list",
+          "to bend"
+        ]
+      }
+    },
+    "cf7e10e3e2": {
+      "mn": [
+        "хатууруулах",
+        "хөлдөөх",
+        "бэхжүүлэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "固める",
+        "r": "かためる",
+        "en": [
+          "to harden",
+          "to freeze",
+          "to fortify"
+        ]
+      }
+    },
+    "09ed6cd566": {
+      "mn": [
+        "нэг талыг барих",
+        "хазайх",
+        "тал засах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "偏る",
+        "r": "かたよる",
+        "en": [
+          "to be one-sided",
+          "to incline",
+          "to be partial"
+        ]
+      }
+    },
+    "ab92b16431": {
+      "mn": [
+        "хажууд",
+        "хийхийн хажуугаар",
+        "ойрхон"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "傍ら",
+        "r": "かたわら",
+        "en": [
+          "beside(s)",
+          "while",
+          "nearby"
+        ]
+      }
+    },
+    "7b0ff27c4a": {
+      "mn": [
+        "цэцгийн мандал"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "花壇",
+        "r": "かだん",
+        "en": [
+          "flower bed"
+        ]
+      }
+    },
+    "637ddc23e2": {
+      "mn": [
+        "уран сайхан чанар",
+        "зөв таашаал",
+        "дэгжин байдал"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "雅致",
+        "r": "がち",
+        "en": [
+          "artistry",
+          "good taste",
+          "elegance"
+        ]
+      }
+    },
+    "b8251bb129": {
+      "mn": [
+        "гэрийн тэжээвэр амьтад",
+        "мал",
+        "үхэр сүрэг"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "家畜",
+        "r": "かちく",
+        "en": [
+          "domestic animals",
+          "livestock",
+          "cattle"
+        ]
+      }
+    },
+    "8d4eb1d5d4": {
+      "mn": [
+        "гэвч",
+        "мөн"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "且つ",
+        "r": "かつ",
+        "en": [
+          "yet",
+          "and"
+        ]
+      }
+    },
+    "f29bc600e2": {
+      "mn": [
+        "эрин үеийг өөрчилсөн"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "画期",
+        "r": "かっき",
+        "en": [
+          "epoch-making"
+        ]
+      }
+    },
+    "4a24741cdf": {
+      "mn": [
+        "сэтгэлээр унасан"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "がっくり",
+        "r": "がっくり",
+        "en": [
+          "heartbroken"
+        ]
+      }
+    },
+    "9ac5d77795": {
+      "mn": [
+        "найрал дуу",
+        "найрал дуугаар дуулах"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "合唱",
+        "r": "がっしょう",
+        "en": [
+          "chorus",
+          "singing in a chorus"
+        ]
+      }
+    },
+    "6552d03076": {
+      "mn": [
+        "баттай",
+        "бат бөх",
+        "чийрэг"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "がっしり",
+        "r": "がっしり",
+        "en": [
+          "firmly",
+          "solidly",
+          "tough"
+        ]
+      }
+    },
+    "226962592a": {
+      "mn": [
+        "санал нийлэх",
+        "давхцах",
+        "тохирох"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "合致",
+        "r": "がっち",
+        "en": [
+          "agreement",
+          "concurrence",
+          "conforming to"
+        ]
+      }
+    },
+    "6ff26acc7a": {
+      "mn": [
+        "бат бөх бүтэцтэй",
+        "чанга",
+        "овсгоотой"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "がっちり",
+        "r": "がっちり",
+        "en": [
+          "solidly built",
+          "tightly",
+          "shrewd"
+        ]
+      }
+    },
+    "bb98750fc8": {
+      "mn": [
+        "урьд нэг удаа",
+        "ер нь хэзээ нэгэн цагт"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "かつて",
+        "r": "かつて",
+        "en": [
+          "once",
+          "ever"
+        ]
+      }
+    },
+    "bf831318fb": {
+      "mn": [
+        "тайралт",
+        "огтлох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "カット",
+        "r": "カット",
+        "en": [
+          "cut",
+          "cutting"
+        ]
+      }
+    },
+    "35ff0c814b": {
+      "mn": [
+        "эрч хүч",
+        "идэвхтэй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "活発",
+        "r": "かっぱつ",
+        "en": [
+          "vigor",
+          "active"
+        ]
+      }
+    },
+    "18c78b84a5": {
+      "mn": [
+        "он сар өдөр"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "月日",
+        "r": "がっぴ",
+        "en": [
+          "(the) date"
+        ]
+      }
+    },
+    "81b1055209": {
+      "mn": [
+        "нэгтгэл",
+        "нэгдэл",
+        "нийлүүлэх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "合併",
+        "r": "がっぺい",
+        "en": [
+          "combination",
+          "union",
+          "amalgamation"
+        ]
+      }
+    },
+    "06f4d19456": {
+      "mn": [
+        "ангилал"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "カテゴリー",
+        "r": "カテゴリー",
+        "en": [
+          "category"
+        ]
+      }
+    },
+    "1f8754ca0a": {
+      "mn": [
+        "хаалга"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "門",
+        "r": "かど",
+        "en": [
+          "gate"
+        ]
+      }
+    },
+    "f62a99c583": {
+      "mn": [
+        "хүсэл биелэх"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "叶う",
+        "r": "かなう",
+        "en": [
+          "to come true (wish)"
+        ]
+      }
+    },
+    "e5f895f32e": {
+      "mn": [
+        "хүсэл хүсэлтийг биелүүлэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "叶える",
+        "r": "かなえる",
+        "en": [
+          "to grant (request, wish)"
+        ]
+      }
+    },
+    "d0f0a90008": {
+      "mn": [
+        "төмөр алх",
+        "шийтгэл"
+      ],
+      "topics": [
+        "daily",
+        "society"
+      ],
+      "expected": {
+        "w": "金槌",
+        "r": "かなづち",
+        "en": [
+          "(iron) hammer",
+          "punishment"
+        ]
+      }
+    },
+    "378a7e05c1": {
+      "mn": [
+        "гишүүн болох",
+        "элсэх",
+        "орох"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "加入",
+        "r": "かにゅう",
+        "en": [
+          "becoming a member",
+          "joining",
+          "entry"
+        ]
+      }
+    },
+    "d4517d7970": {
+      "mn": [
+        "урьдчилан хэлэх",
+        "амлалт",
+        "зөгнөл"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "予言",
+        "r": "かねごと",
+        "en": [
+          "prediction",
+          "promise",
+          "prognostication"
+        ]
+      }
+    },
+    "ed378b5868": {
+      "mn": [
+        "зэрэгцүүлэн",
+        "нэгэн зэрэг"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "兼ねて",
+        "r": "かねて",
+        "en": [
+          "simultaneously"
+        ]
+      }
+    },
+    "11ea9854e2": {
+      "mn": [
+        "ажлын ээлжээс буух"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "下番",
+        "r": "かばん",
+        "en": [
+          "going off duty"
+        ]
+      }
+    },
+    "9914ba6768": {
+      "mn": [
+        "сүр жавхлан",
+        "гоёмсог байдал",
+        "хэт эрээн байдал"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "華美",
+        "r": "かび",
+        "en": [
+          "pomp",
+          "splendor",
+          "gaudiness"
+        ]
+      }
+    },
+    "b892be6c8b": {
+      "mn": [
+        "компанийн хувьцаа"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "株式",
+        "r": "かぶしき",
+        "en": [
+          "stock (company)"
+        ]
+      }
+    },
+    "17127782ea": {
+      "mn": [
+        "харшил өгөх",
+        "нөлөөнд автах",
+        "хэт шүтэх"
+      ],
+      "topics": [
+        "body",
+        "feelings"
+      ],
+      "expected": {
+        "w": "かぶれる",
+        "r": "かぶれる",
+        "en": [
+          "to react to",
+          "to be influenced by",
+          "to go overboard for"
+        ]
+      }
+    },
+    "42f7f86db3": {
+      "mn": [
+        "цэцгийн тоос"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "花粉",
+        "r": "かふん",
+        "en": [
+          "pollen"
+        ]
+      }
+    },
+    "ea13ce8188": {
+      "mn": [
+        "мөнгө",
+        "мөнгөн тэмдэгт",
+        "зоос"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "貨幣",
+        "r": "かへい",
+        "en": [
+          "money",
+          "currency",
+          "coinage"
+        ]
+      }
+    },
+    "ba175a37df": {
+      "mn": [
+        "байрлал",
+        "зогсолт",
+        "хэв маяг"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "構え",
+        "r": "かまえ",
+        "en": [
+          "posture",
+          "pose",
+          "style"
+        ]
+      }
+    },
+    "0cf4699a61": {
+      "mn": [
+        "байрлуулах",
+        "байгуулах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "構える",
+        "r": "かまえる",
+        "en": [
+          "to set up"
+        ]
+      }
+    },
+    "faa5d9f423": {
+      "mn": [
+        "амтлах",
+        "амт оруулах"
+      ],
+      "topics": [
+        "food"
+      ],
+      "expected": {
+        "w": "加味",
+        "r": "かみ",
+        "en": [
+          "seasoning",
+          "flavoring"
+        ]
+      }
+    },
+    "9f4cb35bae": {
+      "mn": [
+        "хазаж таслах",
+        "мэрж таслах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "噛み切る",
+        "r": "かみきる",
+        "en": [
+          "to bite off",
+          "to gnaw through"
+        ]
+      }
+    },
+    "b84686d05e": {
+      "mn": [
+        "хэт бөөгнөрсөн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "過密",
+        "r": "かみつ",
+        "en": [
+          "crowded"
+        ]
+      }
+    },
+    "71e525cecf": {
+      "mn": [
+        "эргэн ирэлт"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "カムバック",
+        "r": "カムバック",
+        "en": [
+          "comeback"
+        ]
+      }
+    },
+    "45e3926625": {
+      "mn": [
+        "вааран сав"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "瓶",
+        "r": "かめ",
+        "en": [
+          "earthenware pot"
+        ]
+      }
+    },
+    "bb321580b5": {
+      "mn": [
+        "зураглаач"
+      ],
+      "topics": [
+        "people",
+        "arts"
+      ],
+      "expected": {
+        "w": "カメラマン",
+        "r": "カメラマン",
+        "en": [
+          "cameraman"
+        ]
+      }
+    },
+    "a17b494ad7": {
+      "mn": [
+        "будааны зутан"
+      ],
+      "topics": [
+        "food"
+      ],
+      "expected": {
+        "w": "粥",
+        "r": "かゆ",
+        "en": [
+          "(rice) gruel"
+        ]
+      }
+    },
+    "e13e651c3d": {
+      "mn": [
+        "биеийн галбир",
+        "төрх"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "体付き",
+        "r": "からだつき",
+        "en": [
+          "body build",
+          "figure"
+        ]
+      }
+    },
+    "b6d0a7d9d0": {
+      "mn": [
+        "орооцолдох",
+        "ороох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "絡む",
+        "r": "からむ",
+        "en": [
+          "to entangle",
+          "to entwine"
+        ]
+      }
+    },
+    "3c350abfd3": {
+      "mn": [
+        "доод тушаалын түшмэл"
+      ],
+      "topics": [
+        "people",
+        "work"
+      ],
+      "expected": {
+        "w": "下吏",
+        "r": "かり",
+        "en": [
+          "lower official"
+        ]
+      }
+    },
+    "86c52538cd": {
+      "mn": [
+        "түр",
+        "урьдчилсан"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "仮",
+        "r": "かり",
+        "en": [
+          "tentative",
+          "provisional"
+        ]
+      }
+    },
+    "1e5e52057a": {
+      "mn": [
+        "зээлэх",
+        "өр",
+        "зээл"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "借り",
+        "r": "かり",
+        "en": [
+          "borrowing",
+          "debt",
+          "loan"
+        ]
+      }
+    },
+    "8f03e9fe5a": {
+      "mn": [
+        "мэдрэмж илэрхийлэх"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "がる",
+        "r": "がる",
+        "en": [
+          "feel"
+        ]
+      }
+    },
+    "f37b92c192": {
+      "mn": [
+        "эмнэлгийн өвчтөний бүртгэл"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "カルテ",
+        "r": "カルテ",
+        "en": [
+          "(de:) (n) clinical records (de: Karte)"
+        ]
+      }
+    },
+    "2270685c93": {
+      "mn": [
+        "гараж"
+      ],
+      "topics": [
+        "daily",
+        "places"
+      ],
+      "expected": {
+        "w": "ガレージ",
+        "r": "ガレージ",
+        "en": [
+          "garage (at house)"
+        ]
+      }
+    },
+    "4012ffd5eb": {
+      "mn": [
+        "хатаж ширгэх",
+        "дуусах"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "涸れる",
+        "r": "かれる",
+        "en": [
+          "to dry up",
+          "to run out"
+        ]
+      }
+    },
+    "7586c985b1": {
+      "mn": [
+        "хэт их ажил",
+        "ачаалал"
+      ],
+      "topics": [
+        "work",
+        "body"
+      ],
+      "expected": {
+        "w": "過労",
+        "r": "かろう",
+        "en": [
+          "overwork",
+          "strain"
+        ]
+      }
+    },
+    "68a47d4c28": {
+      "mn": [
+        "арайхийн",
+        "арай гэж",
+        "дөнгөж амжих"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "辛うじて",
+        "r": "かろうじて",
+        "en": [
+          "barely",
+          "narrowly",
+          "just manage to do st"
+        ]
+      }
+    },
+    "ddb35e549d": {
+      "mn": [
+        "тал",
+        "эгнээ",
+        "эргэн тойрон"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "側",
+        "r": "がわ",
+        "en": [
+          "side",
+          "row",
+          "surroundings"
+        ]
+      }
+    },
+    "b966033b0e": {
+      "mn": [
+        "зурвас солилцох",
+        "бултах",
+        "цохилт хаах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "交わす",
+        "r": "かわす",
+        "en": [
+          "to exchange (messages)",
+          "to dodge",
+          "to parry"
+        ]
+      }
+    },
+    "2a2e56c75e": {
+      "mn": [
+        "ээлжлэн"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "代わる代わる",
+        "r": "かわるがわる",
+        "en": [
+          "alternately"
+        ]
+      }
+    }
+  }
+}

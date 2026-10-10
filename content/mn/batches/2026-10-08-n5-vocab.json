@@ -1,0 +1,1411 @@
+{
+  "provenance": {
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian glosses translated from retained Japanese entries and English glosses. No independent human review claimed.",
+    "source": "https://github.com/neocl/jamdict",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed",
+    "id": "mn-n5-vocab-2026-10-08",
+    "sourceSnapshot": "public/data/vocab/n5.json at 6cf8ca1; these entries are JMdict extensions, not official N5 claims"
+  },
+  "vocab": {
+    "j1160930": {
+      "mn": [
+        "зөвхөн",
+        "бүхэлдээ",
+        "ганцхан"
+      ],
+      "expected": {
+        "w": "一に",
+        "r": "いつに",
+        "en": [
+          "solely",
+          "entirely",
+          "only"
+        ]
+      }
+    },
+    "j2086750": {
+      "mn": [
+        "улс орныг тоолох тоолуур"
+      ],
+      "expected": {
+        "w": "カ国",
+        "r": "かこく",
+        "en": [
+          "counter for countries"
+        ]
+      }
+    },
+    "j2229100": {
+      "mn": [
+        "том",
+        "насанд хүрсэн"
+      ],
+      "expected": {
+        "w": "大の",
+        "r": "だいの",
+        "en": [
+          "large",
+          "big",
+          "grown (man, etc.)"
+        ]
+      }
+    },
+    "j2427850": {
+      "mn": [
+        "ижил зэрэг дэвийн дотор дээгүүр",
+        "ахлах"
+      ],
+      "expected": {
+        "w": "大き",
+        "r": "おおき",
+        "en": [
+          "greater (of equal court ranks)",
+          "upper",
+          "senior"
+        ]
+      }
+    },
+    "j1289030": {
+      "mn": [
+        "нэг л болж өгөхгүй",
+        "тийм ч сайн биш",
+        "жаахан дутмаг"
+      ],
+      "expected": {
+        "w": "今一",
+        "r": "いまいち",
+        "en": [
+          "not quite (right)",
+          "not very good",
+          "somewhat (lacking)"
+        ]
+      }
+    },
+    "j2065280": {
+      "mn": [
+        "хорвоо ертөнц"
+      ],
+      "expected": {
+        "w": "人間",
+        "r": "じんかん",
+        "en": [
+          "the world"
+        ]
+      }
+    },
+    "j1468570": {
+      "mn": [
+        "олон жилийн дараа"
+      ],
+      "expected": {
+        "w": "年後",
+        "r": "ねんご",
+        "en": [
+          "years later"
+        ]
+      }
+    },
+    "j1379400": {
+      "mn": [
+        "төрсөн он",
+        "төрснөөс хойших жилийн тоо",
+        "нас"
+      ],
+      "expected": {
+        "w": "生年",
+        "r": "せいねん",
+        "en": [
+          "year of a person's birth",
+          "number of years since one's birth",
+          "age"
+        ]
+      }
+    },
+    "j2845369": {
+      "mn": [
+        "арван цаг"
+      ],
+      "expected": {
+        "w": "十時",
+        "r": "じゅうじ",
+        "en": [
+          "ten o'clock"
+        ]
+      }
+    },
+    "j1164590": {
+      "mn": [
+        "нэг үе",
+        "насан турш",
+        "эрин үе"
+      ],
+      "expected": {
+        "w": "一代",
+        "r": "いちだい",
+        "en": [
+          "generation",
+          "lifetime",
+          "age"
+        ]
+      }
+    },
+    "j2005520": {
+      "mn": [
+        "хоёр урт, цилиндр хэлбэртэй зүйл"
+      ],
+      "expected": {
+        "w": "二本",
+        "r": "にほん",
+        "en": [
+          "two (long cylindrical things)"
+        ]
+      }
+    },
+    "j1468870": {
+      "mn": [
+        "насаар ах",
+        "ахмад"
+      ],
+      "expected": {
+        "w": "年上",
+        "r": "としうえ",
+        "en": [
+          "older",
+          "senior"
+        ]
+      }
+    },
+    "j1368530": {
+      "mn": [
+        "царай төрх",
+        "нүүрний байдал"
+      ],
+      "expected": {
+        "w": "人相",
+        "r": "にんそう",
+        "en": [
+          "looks",
+          "countenance",
+          "facial features"
+        ]
+      }
+    },
+    "j1508900": {
+      "mn": [
+        "Америкийн Нэгдсэн Улс"
+      ],
+      "expected": {
+        "w": "米国",
+        "r": "べいこく",
+        "en": [
+          "USA",
+          "US"
+        ]
+      }
+    },
+    "j2612160": {
+      "mn": [
+        "нэлээд удаан хугацаа"
+      ],
+      "expected": {
+        "w": "二時",
+        "r": "ふたとき",
+        "en": [
+          "fairly long period of time"
+        ]
+      }
+    },
+    "j1011740": {
+      "mn": [
+        "ердөө",
+        "зөвхөн",
+        "төдий"
+      ],
+      "expected": {
+        "w": "本の",
+        "r": "ほんの",
+        "en": [
+          "mere",
+          "only",
+          "just"
+        ]
+      }
+    },
+    "j1166950": {
+      "mn": [
+        "хальт харах",
+        "харц",
+        "зэрвэс харах"
+      ],
+      "expected": {
+        "w": "一目",
+        "r": "ひとめ",
+        "en": [
+          "glance",
+          "look",
+          "glimpse"
+        ]
+      }
+    },
+    "j1693050": {
+      "mn": [
+        "тавь"
+      ],
+      "expected": {
+        "w": "五十",
+        "r": "ごじゅう",
+        "en": [
+          "fifty",
+          "50"
+        ]
+      }
+    },
+    "j1164900": {
+      "mn": [
+        "баримтын нэг хувь",
+        "нэг захидал"
+      ],
+      "expected": {
+        "w": "一通",
+        "r": "いっつう",
+        "en": [
+          "one copy (of a document)",
+          "one letter"
+        ]
+      }
+    },
+    "j1414520": {
+      "mn": [
+        "газар",
+        "хөрс",
+        "эх дэлхийн хуурай газар"
+      ],
+      "expected": {
+        "w": "大地",
+        "r": "だいち",
+        "en": [
+          "ground",
+          "earth",
+          "the solid earth"
+        ]
+      }
+    },
+    "j1362290": {
+      "mn": [
+        "шинэ жил"
+      ],
+      "expected": {
+        "w": "新年",
+        "r": "しんねん",
+        "en": [
+          "New Year"
+        ]
+      }
+    },
+    "j2825953": {
+      "mn": [
+        "бусдын гар",
+        "бусдын эзэмшил",
+        "ажиллах хүч"
+      ],
+      "expected": {
+        "w": "人手",
+        "r": "ひとで",
+        "en": [
+          "someone else's hands",
+          "someone else's possession",
+          "hand (worker)"
+        ]
+      }
+    },
+    "j1468540": {
+      "mn": [
+        "жилийн тогтмол төлбөр",
+        "тэтгэвэр"
+      ],
+      "expected": {
+        "w": "年金",
+        "r": "ねんきん",
+        "en": [
+          "annuity",
+          "pension"
+        ]
+      }
+    },
+    "j1390210": {
+      "mn": [
+        "иргэний дайнд автсан улс",
+        "дайнаас эмх замбараагүй болсон улс",
+        "ширүүн өрсөлдөөнтэй тоглолт эсвэл зах зээл"
+      ],
+      "expected": {
+        "w": "戦国",
+        "r": "せんごく",
+        "en": [
+          "country in civil war",
+          "country disarrayed by war",
+          "hotly-contested game (match, market, etc.)"
+        ]
+      }
+    },
+    "j1286270": {
+      "mn": [
+        "улсын гадна",
+        "гадаадад"
+      ],
+      "expected": {
+        "w": "国外",
+        "r": "こくがい",
+        "en": [
+          "outside the country",
+          "abroad"
+        ]
+      }
+    },
+    "j1411990": {
+      "mn": [
+        "орлон ажиллагч",
+        "төлөөлөгч",
+        "итгэмжлэгдсэн хүн"
+      ],
+      "expected": {
+        "w": "代人",
+        "r": "だいにん",
+        "en": [
+          "substitute",
+          "deputy",
+          "proxy"
+        ]
+      }
+    },
+    "j1429770": {
+      "mn": [
+        "урт",
+        "уртын хэмжээ"
+      ],
+      "expected": {
+        "w": "長さ",
+        "r": "ながさ",
+        "en": [
+          "length"
+        ]
+      }
+    },
+    "j1871500": {
+      "mn": [
+        "мөрийн дунд"
+      ],
+      "expected": {
+        "w": "行中",
+        "r": "ぎょうちゅう",
+        "en": [
+          "in the middle of a line"
+        ]
+      }
+    },
+    "j1953820": {
+      "mn": [
+        "урт",
+        "мөнхийн"
+      ],
+      "expected": {
+        "w": "長の",
+        "r": "ながの",
+        "en": [
+          "long",
+          "eternal"
+        ]
+      }
+    },
+    "j2639500": {
+      "mn": [
+        "хожмын өдөр",
+        "ирээдүйн огноо"
+      ],
+      "expected": {
+        "w": "来日",
+        "r": "らいじつ",
+        "en": [
+          "future day",
+          "later date"
+        ]
+      }
+    },
+    "j2165110": {
+      "mn": [
+        "сарын дунд үе"
+      ],
+      "expected": {
+        "w": "月中",
+        "r": "つきなか",
+        "en": [
+          "middle of the month",
+          "mid-month"
+        ]
+      }
+    },
+    "j1395480": {
+      "mn": [
+        "гэгээнтэн",
+        "ёс суртахуун, оюуны хувьд тэгш төлөвшсөн хүн"
+      ],
+      "expected": {
+        "w": "全人",
+        "r": "ぜんじん",
+        "en": [
+          "saint",
+          "person well-balanced morally and intellectually"
+        ]
+      }
+    },
+    "j1730200": {
+      "mn": [
+        "өдөр тутмын хэрэглээ"
+      ],
+      "expected": {
+        "w": "日用",
+        "r": "にちよう",
+        "en": [
+          "daily use"
+        ]
+      }
+    },
+    "j1339160": {
+      "mn": [
+        "загас, далайн замгаар хийсэн даши шөлний суурь",
+        "шалтаг",
+        "шалтгаан болгон хэлэх зүйл"
+      ],
+      "expected": {
+        "w": "出し",
+        "r": "だし",
+        "en": [
+          "dashi (Japanese soup stock made from fish and kelp)",
+          "pretext",
+          "excuse"
+        ]
+      }
+    },
+    "j1203850": {
+      "mn": [
+        "гадаад хүн, ялангуяа европ гаралтай хүн"
+      ],
+      "expected": {
+        "w": "外人",
+        "r": "がいじん",
+        "en": [
+          "foreigner (esp. one of European ancestry)",
+          "gaijin"
+        ]
+      }
+    },
+    "j1425780": {
+      "mn": [
+        "самурайн туслах",
+        "явган зарц"
+      ],
+      "expected": {
+        "w": "中間",
+        "r": "ちゅうげん",
+        "en": [
+          "samurai's attendant",
+          "footman"
+        ]
+      }
+    },
+    "j1797520": {
+      "mn": [
+        "урт наслах явдал"
+      ],
+      "expected": {
+        "w": "長生",
+        "r": "ちょうせい",
+        "en": [
+          "longevity"
+        ]
+      }
+    },
+    "j1368680": {
+      "mn": [
+        "хүний гаднах төрх",
+        "царай зүс"
+      ],
+      "expected": {
+        "w": "人体",
+        "r": "じんてい",
+        "en": [
+          "personal appearance",
+          "looks"
+        ]
+      }
+    },
+    "j1678570": {
+      "mn": [
+        "хожим",
+        "дараах"
+      ],
+      "expected": {
+        "w": "後出",
+        "r": "こうしゅつ",
+        "en": [
+          "later",
+          "following"
+        ]
+      }
+    },
+    "j1785500": {
+      "mn": [
+        "уужуу сэтгэл",
+        "хүлцэнгүй байдал"
+      ],
+      "expected": {
+        "w": "大目",
+        "r": "おおめ",
+        "en": [
+          "magnanimity",
+          "tolerance"
+        ]
+      }
+    },
+    "j1579780": {
+      "mn": [
+        "өрхийн тэргүүн",
+        "дэлгүүрийн эзэн",
+        "эзэгтэй"
+      ],
+      "expected": {
+        "w": "主人",
+        "r": "しゅじん",
+        "en": [
+          "head (of a household)",
+          "proprietor (of a store)",
+          "proprietress"
+        ]
+      }
+    },
+    "j1294180": {
+      "mn": [
+        "хамгийн том",
+        "хамгийн их"
+      ],
+      "expected": {
+        "w": "最大",
+        "r": "さいだい",
+        "en": [
+          "biggest",
+          "greatest",
+          "largest"
+        ]
+      }
+    },
+    "j1308610": {
+      "mn": [
+        "хотын дарга"
+      ],
+      "expected": {
+        "w": "市長",
+        "r": "しちょう",
+        "en": [
+          "mayor"
+        ]
+      }
+    },
+    "j1452330": {
+      "mn": [
+        "хамт мөргөлд явагч",
+        "хамт даяанчлан бясалгагч"
+      ],
+      "expected": {
+        "w": "同行",
+        "r": "どうぎょう",
+        "en": [
+          "fellow pilgrim",
+          "fellow practicer of austerities"
+        ]
+      }
+    },
+    "j2081350": {
+      "mn": [
+        "энэ их сургууль",
+        "энэ сургалтын байгууллага"
+      ],
+      "expected": {
+        "w": "本学",
+        "r": "ほんがく",
+        "en": [
+          "this university",
+          "this educational establishment"
+        ]
+      }
+    },
+    "j2128460": {
+      "mn": [
+        "нэг машин",
+        "нисэх онгоц",
+        "нэг нисэх онгоц"
+      ],
+      "expected": {
+        "w": "一機",
+        "r": "いっき",
+        "en": [
+          "one machine",
+          "an aircraft (airplane)",
+          "one aircraft"
+        ]
+      }
+    },
+    "j1300520": {
+      "mn": [
+        "гурван цаг",
+        "гурван цаг орчмын хөнгөн зууш",
+        "буддын номын гурван эрин"
+      ],
+      "expected": {
+        "w": "３時",
+        "r": "さんじ",
+        "en": [
+          "3 o'clock",
+          "afternoon snack (eaten around 3 o'clock)",
+          "three ages of the dharma"
+        ]
+      }
+    },
+    "j1307230": {
+      "mn": [
+        "дөрвөн цаг"
+      ],
+      "expected": {
+        "w": "４時",
+        "r": "よじ",
+        "en": [
+          "four o'clock"
+        ]
+      }
+    },
+    "j2021540": {
+      "mn": [
+        "дашрамд хэлэхэд",
+        "заримдаа"
+      ],
+      "expected": {
+        "w": "時に",
+        "r": "ときに",
+        "en": [
+          "by the way",
+          "incidentally",
+          "sometimes"
+        ]
+      }
+    },
+    "j2612170": {
+      "mn": [
+        "хоёр цаг"
+      ],
+      "expected": {
+        "w": "２時",
+        "r": "にじ",
+        "en": [
+          "two o'clock"
+        ]
+      }
+    },
+    "j2834641": {
+      "mn": [
+        "тухайн үеийн",
+        "тэр цагийн"
+      ],
+      "expected": {
+        "w": "時の",
+        "r": "ときの",
+        "en": [
+          "of the time",
+          "at the time",
+          "of the hour"
+        ]
+      }
+    },
+    "j2845349": {
+      "mn": [
+        "есөн цаг"
+      ],
+      "expected": {
+        "w": "９時",
+        "r": "くじ",
+        "en": [
+          "nine o'clock"
+        ]
+      }
+    },
+    "j2845363": {
+      "mn": [
+        "долоон цаг"
+      ],
+      "expected": {
+        "w": "７時",
+        "r": "しちじ",
+        "en": [
+          "seven o'clock"
+        ]
+      }
+    },
+    "j2845367": {
+      "mn": [
+        "таван цаг"
+      ],
+      "expected": {
+        "w": "５時",
+        "r": "ごじ",
+        "en": [
+          "five o'clock"
+        ]
+      }
+    },
+    "j2845368": {
+      "mn": [
+        "найман цаг"
+      ],
+      "expected": {
+        "w": "８時",
+        "r": "はちじ",
+        "en": [
+          "eight o'clock"
+        ]
+      }
+    },
+    "j1468230": {
+      "mn": [
+        "насаар дүү",
+        "залуу"
+      ],
+      "expected": {
+        "w": "年下",
+        "r": "としした",
+        "en": [
+          "younger",
+          "junior"
+        ]
+      }
+    },
+    "j1634950": {
+      "mn": [
+        "тухайн өдрийн үйл явдал",
+        "цаг үеийн хэрэг явдал"
+      ],
+      "expected": {
+        "w": "時事",
+        "r": "じじ",
+        "en": [
+          "events of the day",
+          "current affairs"
+        ]
+      }
+    },
+    "j1914650": {
+      "mn": [
+        "менежер",
+        "аж ахуй хариуцагч",
+        "олон төрлийн ажил гүйцэтгэгч"
+      ],
+      "expected": {
+        "w": "用人",
+        "r": "ようにん",
+        "en": [
+          "manager",
+          "steward",
+          "factotum"
+        ]
+      }
+    },
+    "j2839075": {
+      "mn": [
+        "хүний хэрэглээ"
+      ],
+      "expected": {
+        "w": "人用",
+        "r": "じんよう",
+        "en": [
+          "human usage"
+        ]
+      }
+    },
+    "j1425480": {
+      "mn": [
+        "Төв Америк"
+      ],
+      "expected": {
+        "w": "中米",
+        "r": "ちゅうべい",
+        "en": [
+          "Central America"
+        ]
+      }
+    },
+    "j1469240": {
+      "mn": [
+        "хэдэн жилийн турш"
+      ],
+      "expected": {
+        "w": "年来",
+        "r": "ねんらい",
+        "en": [
+          "for some years"
+        ]
+      }
+    },
+    "j1576180": {
+      "mn": [
+        "нэг үе",
+        "насан турш",
+        "эрин үе"
+      ],
+      "expected": {
+        "w": "一世",
+        "r": "いっせい",
+        "en": [
+          "generation",
+          "lifetime",
+          "the age"
+        ]
+      }
+    },
+    "j1367020": {
+      "mn": [
+        "хүн байгаагийн шинж",
+        "хүний бараа",
+        "хүн оршин байх байдал"
+      ],
+      "expected": {
+        "w": "人気",
+        "r": "ひとけ",
+        "en": [
+          "sign of life",
+          "human presence",
+          "humanity"
+        ]
+      }
+    },
+    "j1348350": {
+      "mn": [
+        "хүүхэд",
+        "жижиг биетэй хүн",
+        "одой хүн"
+      ],
+      "expected": {
+        "w": "小人",
+        "r": "しょうにん",
+        "en": [
+          "child",
+          "small person",
+          "dwarf"
+        ]
+      }
+    },
+    "j1373200": {
+      "mn": [
+        "хэдэн өдөр"
+      ],
+      "expected": {
+        "w": "数日",
+        "r": "すうじつ",
+        "en": [
+          "few days"
+        ]
+      }
+    },
+    "j1206990": {
+      "mn": [
+        "их сургуулийн захирал"
+      ],
+      "expected": {
+        "w": "学長",
+        "r": "がくちょう",
+        "en": [
+          "university president"
+        ]
+      }
+    },
+    "j1339900": {
+      "mn": [
+        "орж гарах",
+        "орлого, зарлага",
+        "чөлөөтэй харилцах"
+      ],
+      "expected": {
+        "w": "出入",
+        "r": "しゅつにゅう",
+        "en": [
+          "in and out",
+          "income and expenses",
+          "free associations"
+        ]
+      }
+    },
+    "j1801720": {
+      "mn": [
+        "дайны үед"
+      ],
+      "expected": {
+        "w": "戦中",
+        "r": "せんちゅう",
+        "en": [
+          "during the war"
+        ]
+      }
+    },
+    "j1721230": {
+      "mn": [
+        "буурцгийн амтат нухаштай монака вафль"
+      ],
+      "expected": {
+        "w": "最中",
+        "r": "もなか",
+        "en": [
+          "wafer cake filled with bean jam"
+        ]
+      }
+    },
+    "j1367810": {
+      "mn": [
+        "бөөн хүн",
+        "олон хүн"
+      ],
+      "expected": {
+        "w": "人山",
+        "r": "ひとやま",
+        "en": [
+          "crowd of people"
+        ]
+      }
+    },
+    "j1395780": {
+      "mn": [
+        "нийт урт",
+        "дэлгэсэн урт"
+      ],
+      "expected": {
+        "w": "全長",
+        "r": "ぜんちょう",
+        "en": [
+          "over-all length",
+          "span"
+        ]
+      }
+    },
+    "j1523060": {
+      "mn": [
+        "үнэн",
+        "бодит байдал"
+      ],
+      "expected": {
+        "w": "本当",
+        "r": "ほんとう",
+        "en": [
+          "truth",
+          "reality",
+          "actuality"
+        ]
+      }
+    },
+    "j1785700": {
+      "mn": [
+        "гүйцээн дуусгах",
+        "амжилтад хүрэх",
+        "агуу амжилтад хүрэх"
+      ],
+      "expected": {
+        "w": "大成",
+        "r": "たいせい",
+        "en": [
+          "completion",
+          "accomplishment",
+          "attainment of greatness or success"
+        ]
+      }
+    },
+    "j1415270": {
+      "mn": [
+        "нэгдүгээр",
+        "тэргүүн",
+        "хамгийн гол"
+      ],
+      "expected": {
+        "w": "第一",
+        "r": "だいいち",
+        "en": [
+          "first",
+          "foremost",
+          "number one"
+        ]
+      }
+    },
+    "j1522970": {
+      "mn": [
+        "гол асуулт",
+        "ярьж буй жинхэнэ асуудал"
+      ],
+      "expected": {
+        "w": "本題",
+        "r": "ほんだい",
+        "en": [
+          "main question",
+          "real issue at hand"
+        ]
+      }
+    },
+    "j1579880": {
+      "mn": [
+        "арван долоо"
+      ],
+      "expected": {
+        "w": "十七",
+        "r": "じゅうしち",
+        "en": [
+          "17",
+          "seventeen"
+        ]
+      }
+    },
+    "j1462730": {
+      "mn": [
+        "хоёр удаа",
+        "хоёр зэрэг"
+      ],
+      "expected": {
+        "w": "二度",
+        "r": "にど",
+        "en": [
+          "two times",
+          "twice",
+          "two degrees"
+        ]
+      }
+    },
+    "j1373090": {
+      "mn": [
+        "хэдэн хүн",
+        "цөөн хүн"
+      ],
+      "expected": {
+        "w": "数人",
+        "r": "すうにん",
+        "en": [
+          "several people",
+          "a few people"
+        ]
+      }
+    },
+    "j1413150": {
+      "mn": [
+        "мастер",
+        "мэргэжилтэн",
+        "хүлээн зөвшөөрөгдсөн эрхэм"
+      ],
+      "expected": {
+        "w": "大家",
+        "r": "たいか",
+        "en": [
+          "master",
+          "expert",
+          "authority"
+        ]
+      }
+    },
+    "j2845072": {
+      "mn": [
+        "Хюүга хот"
+      ],
+      "expected": {
+        "w": "日向",
+        "r": "ひゅうが",
+        "en": [
+          "Hyūga (city)"
+        ]
+      }
+    },
+    "j1281880": {
+      "mn": [
+        "текстийн мөр хоорондын зай",
+        "мөр хооронд"
+      ],
+      "expected": {
+        "w": "行間",
+        "r": "ぎょうかん",
+        "en": [
+          "line-spacing in text",
+          "between the lines"
+        ]
+      }
+    },
+    "j1407900": {
+      "mn": [
+        "асар их",
+        "маш их хэмжээний"
+      ],
+      "expected": {
+        "w": "多大",
+        "r": "ただい",
+        "en": [
+          "great (quantity, amount, etc.)",
+          "huge",
+          "enormous"
+        ]
+      }
+    },
+    "j1373230": {
+      "mn": [
+        "хэдэн жил"
+      ],
+      "expected": {
+        "w": "数年",
+        "r": "すうねん",
+        "en": [
+          "several years",
+          "a few years"
+        ]
+      }
+    },
+    "j1162410": {
+      "mn": [
+        "бүрэн",
+        "үнэхээр",
+        "бүхэлдээ"
+      ],
+      "expected": {
+        "w": "一向",
+        "r": "いっこう",
+        "en": [
+          "completely",
+          "absolutely",
+          "totally"
+        ]
+      }
+    },
+    "j1281940": {
+      "mn": [
+        "даяанч",
+        "мөргөлчин",
+        "сүсэгтэн"
+      ],
+      "expected": {
+        "w": "行者",
+        "r": "ぎょうじゃ",
+        "en": [
+          "ascetic",
+          "pilgrim",
+          "devotee"
+        ]
+      }
+    },
+    "j1377540": {
+      "mn": [
+        "шударга байдал",
+        "шударга ёс"
+      ],
+      "expected": {
+        "w": "正大",
+        "r": "せいだい",
+        "en": [
+          "fairness",
+          "justice"
+        ]
+      }
+    },
+    "j1282180": {
+      "mn": [
+        "үр дүн",
+        "төгсгөл"
+      ],
+      "expected": {
+        "w": "行方",
+        "r": "ゆくえ",
+        "en": [
+          "outcome"
+        ]
+      }
+    },
+    "j1340420": {
+      "mn": [
+        "тохиолдох явдал",
+        "үйл явдал"
+      ],
+      "expected": {
+        "w": "出来",
+        "r": "しゅったい",
+        "en": [
+          "occurrence",
+          "happening",
+          "taking place"
+        ]
+      }
+    },
+    "j1390260": {
+      "mn": [
+        "дайны үе"
+      ],
+      "expected": {
+        "w": "戦時",
+        "r": "せんじ",
+        "en": [
+          "wartime"
+        ]
+      }
+    },
+    "j1162120": {
+      "mn": [
+        "нэгдүгээр сар",
+        "билгийн тооллын эхний сар"
+      ],
+      "expected": {
+        "w": "１月",
+        "r": "いちがつ",
+        "en": [
+          "January",
+          "first month of the lunar calendar"
+        ]
+      }
+    },
+    "j1243660": {
+      "mn": [
+        "есдүгээр сар",
+        "билгийн тооллын ес дэх сар"
+      ],
+      "expected": {
+        "w": "９月",
+        "r": "くがつ",
+        "en": [
+          "September",
+          "ninth month of the lunar calendar"
+        ]
+      }
+    },
+    "j1268170": {
+      "mn": [
+        "тавдугаар сар",
+        "билгийн тооллын тав дахь сар"
+      ],
+      "expected": {
+        "w": "５月",
+        "r": "ごがつ",
+        "en": [
+          "May",
+          "fifth month of the lunar calendar"
+        ]
+      }
+    },
+    "j1300250": {
+      "mn": [
+        "гуравдугаар сар",
+        "билгийн тооллын гурав дахь сар"
+      ],
+      "expected": {
+        "w": "３月",
+        "r": "さんがつ",
+        "en": [
+          "March",
+          "third month of the lunar calendar"
+        ]
+      }
+    },
+    "j1307180": {
+      "mn": [
+        "дөрөвдүгээр сар",
+        "билгийн тооллын дөрөв дэх сар"
+      ],
+      "expected": {
+        "w": "４月",
+        "r": "しがつ",
+        "en": [
+          "April",
+          "fourth month in the lunar calendar"
+        ]
+      }
+    },
+    "j1319280": {
+      "mn": [
+        "долоодугаар сар",
+        "билгийн тооллын долоо дахь сар"
+      ],
+      "expected": {
+        "w": "７月",
+        "r": "しちがつ",
+        "en": [
+          "July",
+          "seventh month of the lunar calendar"
+        ]
+      }
+    },
+    "j1461560": {
+      "mn": [
+        "хоёрдугаар сар",
+        "билгийн тооллын хоёр дахь сар"
+      ],
+      "expected": {
+        "w": "２月",
+        "r": "にがつ",
+        "en": [
+          "February",
+          "second month of the lunar calendar"
+        ]
+      }
+    },
+    "j1476730": {
+      "mn": [
+        "наймдугаар сар",
+        "билгийн тооллын найм дахь сар"
+      ],
+      "expected": {
+        "w": "８月",
+        "r": "はちがつ",
+        "en": [
+          "August",
+          "eighth month of the lunar calendar"
+        ]
+      }
+    },
+    "j1561330": {
+      "mn": [
+        "зургаадугаар сар",
+        "билгийн тооллын зургаа дахь сар"
+      ],
+      "expected": {
+        "w": "６月",
+        "r": "ろくがつ",
+        "en": [
+          "June",
+          "sixth month of the lunar calendar"
+        ]
+      }
+    },
+    "j2847193": {
+      "mn": [
+        "даваа гарагийн оройн есөн цагийн телевизийн романтик цувралын цаг"
+      ],
+      "expected": {
+        "w": "月９",
+        "r": "げつく",
+        "en": [
+          "9 PM Monday (TV time slot for romantic dramas)"
+        ]
+      }
+    },
+    "j1601920": {
+      "mn": [
+        "нэг давхарга",
+        "дан давхар",
+        "нэг дэлбээтэй"
+      ],
+      "expected": {
+        "w": "一重",
+        "r": "ひとえ",
+        "en": [
+          "one layer",
+          "single layer",
+          "monopetalous"
+        ]
+      }
+    }
+  }
+}

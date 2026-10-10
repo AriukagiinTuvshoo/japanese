@@ -1,0 +1,1122 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-steady-5-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses with Japanese spelling/reading and retained English cross-check; explicit semantic topic evidence. Independently unreviewed; unresolved source conflicts withheld.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "6e3cda5641": {
+      "mn": [
+        "маш",
+        "ихээхэн",
+        "туйлын"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "甚だ",
+        "r": "はなはだ",
+        "en": [
+          "very",
+          "greatly",
+          "exceedingly"
+        ]
+      }
+    },
+    "8616dbfe4e": {
+      "mn": [
+        "гайхамшигтай",
+        "сүрлэг",
+        "үзүүштэй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "華々しい",
+        "r": "はなばなしい",
+        "en": [
+          "brilliant",
+          "magnificent",
+          "spectacular"
+        ]
+      }
+    },
+    "047bfb10cf": {
+      "mn": [
+        "цэцгийн дэлбээ"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "花びら",
+        "r": "はなびら",
+        "en": [
+          "(flower) petal"
+        ]
+      }
+    },
+    "e6917c64a6": {
+      "mn": [
+        "цоглог",
+        "гоёмсог",
+        "гялалзсан"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "華やか",
+        "r": "はなやか",
+        "en": [
+          "gay",
+          "showy",
+          "brilliant"
+        ]
+      }
+    },
+    "360aad068d": {
+      "mn": [
+        "саад хийх",
+        "зогсоох",
+        "урьдчилан сэргийлэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "阻む",
+        "r": "はばむ",
+        "en": [
+          "to keep someone from doing",
+          "to stop",
+          "to prevent"
+        ]
+      }
+    },
+    "d02723096e": {
+      "mn": [
+        "далайн эрэг",
+        "эргийн элс"
+      ],
+      "topics": [
+        "places",
+        "nature"
+      ],
+      "expected": {
+        "w": "浜",
+        "r": "はま",
+        "en": [
+          "beach",
+          "seashore"
+        ]
+      }
+    },
+    "7f5bba0531": {
+      "mn": [
+        "далайн эрэг",
+        "эргийн зурвас"
+      ],
+      "topics": [
+        "places",
+        "nature"
+      ],
+      "expected": {
+        "w": "浜辺",
+        "r": "はまべ",
+        "en": [
+          "beach",
+          "foreshore"
+        ]
+      }
+    },
+    "5f261717b0": {
+      "mn": [
+        "дотор нь орох",
+        "углагдах",
+        "таарах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "はまる",
+        "r": "はまる",
+        "en": [
+          "to get into",
+          "to go into",
+          "to fit"
+        ]
+      }
+    },
+    "6fc9543bfe": {
+      "mn": [
+        "ургуулж гаргах",
+        "тарьж ургуулах",
+        "сахал ургуулах"
+      ],
+      "topics": [
+        "nature",
+        "body",
+        "actions"
+      ],
+      "expected": {
+        "w": "生やす",
+        "r": "はやす",
+        "en": [
+          "to grow",
+          "to cultivate",
+          "to wear beard"
+        ]
+      }
+    },
+    "270dc2bedf": {
+      "mn": [
+        "түргэсгэх",
+        "хурдлуулах",
+        "урагшлуулах"
+      ],
+      "topics": [
+        "time",
+        "actions"
+      ],
+      "expected": {
+        "w": "早める",
+        "r": "はやめる",
+        "en": [
+          "to hasten",
+          "to quicken",
+          "to expedite"
+        ]
+      }
+    },
+    "505203967e": {
+      "mn": [
+        "уур",
+        "бухимдал"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "腹立ち",
+        "r": "はらだち",
+        "en": [
+          "anger"
+        ]
+      }
+    },
+    "66748989bb": {
+      "mn": [
+        "задгай талбай",
+        "хоосон газар",
+        "тал газар"
+      ],
+      "topics": [
+        "places",
+        "nature"
+      ],
+      "expected": {
+        "w": "原っぱ",
+        "r": "はらっぱ",
+        "en": [
+          "open field",
+          "empty lot",
+          "plain"
+        ]
+      }
+    },
+    "af13ed2a6d": {
+      "mn": [
+        "тараах",
+        "цацах",
+        "мөнгө харамгүй тараах"
+      ],
+      "topics": [
+        "actions",
+        "work"
+      ],
+      "expected": {
+        "w": "ばらまく",
+        "r": "ばらまく",
+        "en": [
+          "to disseminate",
+          "to scatter",
+          "to give money freely"
+        ]
+      }
+    },
+    "8d0c7227fb": {
+      "mn": [
+        "цаасан нөхөөс",
+        "цаасан дэвсгэр",
+        "наасан зар"
+      ],
+      "topics": [
+        "daily",
+        "learning"
+      ],
+      "expected": {
+        "w": "張り紙",
+        "r": "はりがみ",
+        "en": [
+          "paper patch",
+          "paper backing",
+          "poster"
+        ]
+      }
+    },
+    "398c83bac1": {
+      "mn": [
+        "хол",
+        "алс",
+        "алслагдсан"
+      ],
+      "topics": [
+        "places",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "遥か",
+        "r": "はるか",
+        "en": [
+          "far",
+          "far-away",
+          "distant"
+        ]
+      }
+    },
+    "4da424bbd5": {
+      "mn": [
+        "дэлбэрэх",
+        "хагарах",
+        "тасрах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "破裂",
+        "r": "はれつ",
+        "en": [
+          "explosion",
+          "rupture",
+          "break off"
+        ]
+      }
+    },
+    "e3a908e6d8": {
+      "mn": [
+        "үрэвслээс хавдах",
+        "хавантай болох"
+      ],
+      "topics": [
+        "body",
+        "actions"
+      ],
+      "expected": {
+        "w": "腫れる",
+        "r": "はれる",
+        "en": [
+          "to swell (from inflammation)",
+          "to become swollen"
+        ]
+      }
+    },
+    "6c1de07dfd": {
+      "mn": [
+        "тамга",
+        "дардас",
+        "гарын үсгийн тэмдэг"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "判",
+        "r": "はん",
+        "en": [
+          "seal",
+          "stamp",
+          "monogram signature"
+        ]
+      }
+    },
+    "6b5f079fa9": {
+      "mn": [
+        "хэвлэл",
+        "хэвлэсэн хувилбар"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "版",
+        "r": "はん",
+        "en": [
+          "edition"
+        ]
+      }
+    },
+    "dcd00f82ed": {
+      "mn": [
+        "бүлэг",
+        "баг",
+        "цэргийн тасаг"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "班",
+        "r": "はん",
+        "en": [
+          "group",
+          "party",
+          "section (mil)"
+        ]
+      }
+    },
+    "8aea8207d5": {
+      "mn": [
+        "хөгжин цэцэглэх",
+        "хөгжил цэцэглэл"
+      ],
+      "topics": [
+        "work",
+        "society"
+      ],
+      "expected": {
+        "w": "繁栄",
+        "r": "はんえい",
+        "en": [
+          "prospering",
+          "prosperity",
+          "thriving"
+        ]
+      }
+    },
+    "31652ca46f": {
+      "mn": [
+        "бар зураг",
+        "дардаст уран зураг"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "版画",
+        "r": "はんが",
+        "en": [
+          "art print"
+        ]
+      }
+    },
+    "ebea08a82f": {
+      "mn": [
+        "дургүйцэл",
+        "эсэргүүцэл",
+        "дайсагнасан сэтгэл"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "反感",
+        "r": "はんかん",
+        "en": [
+          "antipathy",
+          "revolt",
+          "animosity"
+        ]
+      }
+    },
+    "ebb9dafc92": {
+      "mn": [
+        "цуурай",
+        "цуурайтах",
+        "нөлөө үр дагавар"
+      ],
+      "topics": [
+        "arts",
+        "learning"
+      ],
+      "expected": {
+        "w": "反響",
+        "r": "はんきょう",
+        "en": [
+          "echo",
+          "reverberation",
+          "repercussion"
+        ]
+      }
+    },
+    "24aad19c86": {
+      "mn": [
+        "дугуй цоорох",
+        "хагарах",
+        "панк урсгал"
+      ],
+      "topics": [
+        "places",
+        "arts"
+      ],
+      "expected": {
+        "w": "パンク",
+        "r": "パンク",
+        "en": [
+          "(abbreviation) puncture",
+          "bursting",
+          "punk"
+        ]
+      }
+    },
+    "e4a7d6466e": {
+      "mn": [
+        "сөрөг довтолгоо",
+        "сөрөг дайралт",
+        "хариу цохилт"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "反撃",
+        "r": "はんげき",
+        "en": [
+          "counterattack",
+          "counteroffensive",
+          "counterblow"
+        ]
+      }
+    },
+    "f0e1839e03": {
+      "mn": [
+        "шүүхийн шийдвэр",
+        "тогтоол",
+        "ял"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "判決",
+        "r": "はんけつ",
+        "en": [
+          "judicial decision",
+          "judgement",
+          "sentence"
+        ]
+      }
+    },
+    "c50f3eed79": {
+      "mn": [
+        "гэрэл ойх",
+        "цуурайтах"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "反射",
+        "r": "はんしゃ",
+        "en": [
+          "reflection",
+          "reverberation"
+        ]
+      }
+    },
+    "d215cf494b": {
+      "mn": [
+        "наймаа цэцэглэх",
+        "хөгжил",
+        "ажил үйлс өөдрөг байх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "繁盛",
+        "r": "はんじょう",
+        "en": [
+          "prosperity",
+          "flourishing",
+          "thriving"
+        ]
+      }
+    },
+    "9af4af395e": {
+      "mn": [
+        "үржих",
+        "олшрох",
+        "нэмэгдэх"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "繁殖",
+        "r": "はんしょく",
+        "en": [
+          "breed",
+          "multiply",
+          "increase"
+        ]
+      }
+    },
+    "4445a67af3": {
+      "mn": [
+        "бүх хүн",
+        "хүн бүр",
+        "арван мянган хүн"
+      ],
+      "topics": [
+        "people",
+        "quantity"
+      ],
+      "expected": {
+        "w": "万人",
+        "r": "ばんじん",
+        "en": [
+          "all people",
+          "everybody",
+          "10000 people"
+        ]
+      }
+    },
+    "100b82539f": {
+      "mn": [
+        "нийцэхгүй байх",
+        "эсэргүүцэх",
+        "зөрөх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "反する",
+        "r": "はんする",
+        "en": [
+          "to be inconsistent with",
+          "to oppose",
+          "to contradict"
+        ]
+      }
+    },
+    "bc77005dc0": {
+      "mn": [
+        "дүгнэлт",
+        "шийдвэр",
+        "шагнал олгох шийдвэр"
+      ],
+      "topics": [
+        "society",
+        "arts"
+      ],
+      "expected": {
+        "w": "判定",
+        "r": "はんてい",
+        "en": [
+          "judgement",
+          "decision",
+          "award"
+        ]
+      }
+    },
+    "8b03fa57c9": {
+      "mn": [
+        "урвал",
+        "хариу үйлдэл"
+      ],
+      "topics": [
+        "body",
+        "technology"
+      ],
+      "expected": {
+        "w": "反応",
+        "r": "はんのう",
+        "en": [
+          "reaction",
+          "response"
+        ]
+      }
+    },
+    "c7ea9c58c5": {
+      "mn": [
+        "олон зориулалттай",
+        "бүхнийг чадагч"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "万能",
+        "r": "ばんのう",
+        "en": [
+          "all-purpose",
+          "almighty",
+          "omnipotent"
+        ]
+      }
+    },
+    "b6ee1dd14e": {
+      "mn": [
+        "үлдэгдэл",
+        "тасархай",
+        "дутуу иж бүрдэл"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "半端",
+        "r": "はんぱ",
+        "en": [
+          "remnant",
+          "fragment",
+          "incomplete set"
+        ]
+      }
+    },
+    "85bfcd7326": {
+      "mn": [
+        "түлхэлцэх",
+        "эргэж ойх",
+        "буцаж сэргэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "反発",
+        "r": "はんぱつ",
+        "en": [
+          "repelling",
+          "rebound",
+          "recover"
+        ]
+      }
+    },
+    "9e54509094": {
+      "mn": [
+        "бослого",
+        "цэргийн бослого",
+        "үймээн"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "反乱",
+        "r": "はんらん",
+        "en": [
+          "insurrection",
+          "mutiny",
+          "rebellion"
+        ]
+      }
+    },
+    "e1fb008280": {
+      "mn": [
+        "ус халих",
+        "үер"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "氾濫",
+        "r": "はんらん",
+        "en": [
+          "overflowing",
+          "flood"
+        ]
+      }
+    },
+    "962a85276b": {
+      "mn": [
+        "өртөг",
+        "зардал"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "費",
+        "r": "ひ",
+        "en": [
+          "cost",
+          "expense"
+        ]
+      }
+    },
+    "02a57db00d": {
+      "mn": [
+        "буруу",
+        "үл-",
+        "биш гэсэн угтвар"
+      ],
+      "topics": [
+        "learning",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "非",
+        "r": "ひ",
+        "en": [
+          "faulty-",
+          "non-"
+        ]
+      }
+    },
+    "b25cbb229f": {
+      "mn": [
+        "гоо сайхан"
+      ],
+      "topics": [
+        "arts",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "美",
+        "r": "び",
+        "en": [
+          "beauty"
+        ]
+      }
+    },
+    "6a84853cf2": {
+      "mn": [
+        "зөвхөн … төдийгүй",
+        "цаашлаад",
+        "улмаар"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "延いては",
+        "r": "ひいては",
+        "en": [
+          "not only...but also",
+          "in addition to",
+          "consequently"
+        ]
+      }
+    },
+    "2879a950d7": {
+      "mn": [
+        "вирус"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "ビールス",
+        "r": "ビールス",
+        "en": [
+          "virus"
+        ]
+      }
+    },
+    "d4c885f1dc": {
+      "mn": [
+        "хүлээлгийн өрөө"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "控室",
+        "r": "ひかえしつ",
+        "en": [
+          "waiting room"
+        ]
+      }
+    },
+    "9b0e88db96": {
+      "mn": [
+        "татаж авах",
+        "хязгаарлах",
+        "тэмдэглэл хийх"
+      ],
+      "topics": [
+        "actions",
+        "learning"
+      ],
+      "expected": {
+        "w": "控える",
+        "r": "ひかえる",
+        "en": [
+          "to draw in",
+          "to hold back",
+          "to make notes"
+        ]
+      }
+    },
+    "4f910a19d7": {
+      "mn": [
+        "гутранги үзэл",
+        "урам хугарах"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "悲観",
+        "r": "ひかん",
+        "en": [
+          "pessimism",
+          "disappointment"
+        ]
+      }
+    },
+    "fd5a222e6e": {
+      "mn": [
+        "жижиг амьтан тоолох дагавар",
+        "толгой мал",
+        "нэг боодол даавуу"
+      ],
+      "topics": [
+        "quantity",
+        "nature",
+        "daily"
+      ],
+      "expected": {
+        "w": "匹",
+        "r": "ひき",
+        "en": [
+          "head",
+          "small animal counter",
+          "roll of cloth"
+        ]
+      }
+    },
+    "cf4cad10bf": {
+      "mn": [
+        "ухран татах",
+        "орхин гарах",
+        "татаж гаргах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "引き上げる",
+        "r": "ひきあげる",
+        "en": [
+          "to withdraw",
+          "to leave",
+          "to pull out"
+        ]
+      }
+    },
+    "5250cd2fa9": {
+      "mn": [
+        "манлайлах",
+        "бүлэг удирдах",
+        "цэрэг захирах"
+      ],
+      "topics": [
+        "work",
+        "society",
+        "actions"
+      ],
+      "expected": {
+        "w": "率いる",
+        "r": "ひきいる",
+        "en": [
+          "to lead",
+          "to spearhead (a group)",
+          "to command (troops)"
+        ]
+      }
+    },
+    "05503a9f2f": {
+      "mn": [
+        "үүсгэх",
+        "шалтгаан болох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "引き起こす",
+        "r": "ひきおこす",
+        "en": [
+          "to cause"
+        ]
+      }
+    },
+    "bf60aacbc5": {
+      "mn": [
+        "доош татах",
+        "бууруулах",
+        "багасгах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "引き下げる",
+        "r": "ひきさげる",
+        "en": [
+          "to pull down",
+          "to lower",
+          "to reduce"
+        ]
+      }
+    },
+    "295f2cbf59": {
+      "mn": [
+        "дур булаан татах",
+        "чирч явах",
+        "татах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "引きずる",
+        "r": "ひきずる",
+        "en": [
+          "to seduce",
+          "to drag along",
+          "to pull"
+        ]
+      }
+    },
+    "34e2aab83f": {
+      "mn": [
+        "хариуцан авах",
+        "шилжүүлэн авах",
+        "тусдаа газар очих"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "引き取る",
+        "r": "ひきとる",
+        "en": [
+          "to take charge of",
+          "to take over",
+          "to retire to a private place"
+        ]
+      }
+    },
+    "e97e75f2c1": {
+      "mn": [
+        "саналаар няцаах",
+        "татгалзах",
+        "санал хураалтаар унагах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "否決",
+        "r": "ひけつ",
+        "en": [
+          "rejection",
+          "negation",
+          "voting down"
+        ]
+      }
+    },
+    "790bed33e0": {
+      "mn": [
+        "сахилгагүй үйлдэл",
+        "зүй бус авир"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "非行",
+        "r": "ひこう",
+        "en": [
+          "delinquency",
+          "misconduct"
+        ]
+      }
+    },
+    "130277718b": {
+      "mn": [
+        "ердийн үед",
+        "өдөр тутам"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "日頃",
+        "r": "ひごろ",
+        "en": [
+          "normally",
+          "habitually"
+        ]
+      }
+    },
+    "b430f3039d": {
+      "mn": [
+        "удаан",
+        "урт хугацаанд үргэлжилсэн",
+        "эртний түүх"
+      ],
+      "topics": [
+        "time",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "久しい",
+        "r": "ひさしい",
+        "en": [
+          "long",
+          "long-continued",
+          "old (story)"
+        ]
+      }
+    },
+    "eb729b5f01": {
+      "mn": [
+        "зовлон",
+        "эмгэнэлт байдал"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "悲惨",
+        "r": "ひさん",
+        "en": [
+          "misery"
+        ]
+      }
+    },
+    "edfcab4b38": {
+      "mn": [
+        "бизнес",
+        "ажил хэрэг"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "ビジネス",
+        "r": "ビジネス",
+        "en": [
+          "business"
+        ]
+      }
+    }
+  }
+}

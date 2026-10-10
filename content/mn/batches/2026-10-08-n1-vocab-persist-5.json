@@ -1,0 +1,1062 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-persist-5-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses cross-checked against exact Japanese spelling, reading and retained English; explicit semantic topic assignments. Independent human review outstanding; suspect sources withheld.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "12610e01b7": {
+      "mn": [
+        "тэсэн ядан хүлээж буй"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "待ち遠しい",
+        "r": "まちどおしい",
+        "en": [
+          "looking forward to"
+        ]
+      }
+    },
+    "a9c1579160": {
+      "mn": [
+        "санаа зовон хүлээх",
+        "тэсэн ядан хүлээх"
+      ],
+      "topics": [
+        "feelings",
+        "actions"
+      ],
+      "expected": {
+        "w": "待ち望む",
+        "r": "まちのぞむ",
+        "en": [
+          "to look anxiously for",
+          "to wait eagerly for"
+        ]
+      }
+    },
+    "24cf50fa20": {
+      "mn": [
+        "олон янзын",
+        "янз бүрийн",
+        "зөрүүтэй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "まちまち",
+        "r": "まちまち",
+        "en": [
+          "several",
+          "various",
+          "divergent"
+        ]
+      }
+    },
+    "a6b638592c": {
+      "mn": [
+        "үеийн төгсгөл",
+        "сүүлийн шат"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "末期",
+        "r": "まっき",
+        "en": [
+          "closing years (period, days)",
+          "last stage"
+        ]
+      }
+    },
+    "8724f25af8": {
+      "mn": [
+        "иллэг",
+        "массаж"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "マッサージ",
+        "r": "マッサージ",
+        "en": [
+          "massage"
+        ]
+      }
+    },
+    "0c84e3be76": {
+      "mn": [
+        "яг хоёр тэнцүү хэсэгт"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "真っ二つ",
+        "r": "まっぷたつ",
+        "en": [
+          "in two equal parts"
+        ]
+      }
+    },
+    "0234ae0bc2": {
+      "mn": [
+        "дүгнэлт",
+        "шийдэл",
+        "уялдаа нэгдэл"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "纏まり",
+        "r": "まとまり",
+        "en": [
+          "conclusion",
+          "settlement",
+          "consistency"
+        ]
+      }
+    },
+    "fa2a840942": {
+      "mn": [
+        "шийдэл",
+        "нэгтгэсэн дүгнэлт"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "まとめ",
+        "r": "まとめ",
+        "en": [
+          "settlement",
+          "conclusion"
+        ]
+      }
+    },
+    "d8bd0de451": {
+      "mn": [
+        "зайлсхийх",
+        "аврагдах",
+        "мултрах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "免れる",
+        "r": "まぬがれる",
+        "en": [
+          "to escape from",
+          "to be rescued from",
+          "to avoid"
+        ]
+      }
+    },
+    "110edd2c50": {
+      "mn": [
+        "урилга"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "招き",
+        "r": "まねき",
+        "en": [
+          "invitation"
+        ]
+      }
+    },
+    "3904257f59": {
+      "mn": [
+        "саажилт",
+        "саа",
+        "мэдээ алдах"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "麻痺",
+        "r": "まひ",
+        "en": [
+          "paralysis",
+          "palsy",
+          "numbness"
+        ]
+      }
+    },
+    "e0f4bf005a": {
+      "mn": [
+        "хөмсөг"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "眉",
+        "r": "まゆ",
+        "en": [
+          "eyebrow"
+        ]
+      }
+    },
+    "7444466df7": {
+      "mn": [
+        "бөмбөг"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "鞠",
+        "r": "まり",
+        "en": [
+          "ball"
+        ]
+      }
+    },
+    "3bc1b71a60": {
+      "mn": [
+        "бүхэлд нь",
+        "бүтнээр",
+        "бүхлээр"
+      ],
+      "topics": [
+        "descriptions",
+        "quantity"
+      ],
+      "expected": {
+        "w": "丸ごと",
+        "r": "まるごと",
+        "en": [
+          "in its entirety",
+          "whole",
+          "wholly"
+        ]
+      }
+    },
+    "65cd5f0ee7": {
+      "mn": [
+        "бүхэлд нь",
+        "бүрэн"
+      ],
+      "topics": [
+        "descriptions",
+        "quantity"
+      ],
+      "expected": {
+        "w": "丸々",
+        "r": "まるまる",
+        "en": [
+          "completely"
+        ]
+      }
+    },
+    "ada31963c3": {
+      "mn": [
+        "бөөрөнхий болгох",
+        "тоймлох",
+        "хуйлж ороох"
+      ],
+      "topics": [
+        "actions",
+        "quantity"
+      ],
+      "expected": {
+        "w": "丸める",
+        "r": "まるめる",
+        "en": [
+          "to make round",
+          "to round off",
+          "to roll up"
+        ]
+      }
+    },
+    "d172705e37": {
+      "mn": [
+        "тэргэл сар"
+      ],
+      "topics": [
+        "nature",
+        "time"
+      ],
+      "expected": {
+        "w": "満月",
+        "r": "まんげつ",
+        "en": [
+          "full moon"
+        ]
+      }
+    },
+    "f7ffaf9ec1": {
+      "mn": [
+        "бүх оролцогч",
+        "нийт үзэгчид"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "満場",
+        "r": "まんじょう",
+        "en": [
+          "unanimous",
+          "whole audience"
+        ]
+      }
+    },
+    "c87b23e06b": {
+      "mn": [
+        "яг өмнө",
+        "нүүрэн дээр"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "真ん前",
+        "r": "まんまえ",
+        "en": [
+          "right in front",
+          "under the nose"
+        ]
+      }
+    },
+    "61b39f2848": {
+      "mn": [
+        "төгс дугуй",
+        "бөөрөнхий"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "真ん丸い",
+        "r": "まんまるい",
+        "en": [
+          "perfectly circular"
+        ]
+      }
+    },
+    "68e9c896bf": {
+      "mn": [
+        "гурав"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "三",
+        "r": "み",
+        "en": [
+          "three"
+        ]
+      }
+    },
+    "7e068a9494": {
+      "mn": [
+        "гэрлэхээр албан ёсоор танилцах уулзалт"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "見合い",
+        "r": "みあい",
+        "en": [
+          "formal marriage interview"
+        ]
+      }
+    },
+    "c0f31ccbd4": {
+      "mn": [
+        "харц солилцох",
+        "хойшлуулах",
+        "үйл ажиллагааг түр зогсоох"
+      ],
+      "topics": [
+        "actions",
+        "time"
+      ],
+      "expected": {
+        "w": "見合わせる",
+        "r": "みあわせる",
+        "en": [
+          "to exchange glances",
+          "to postpone",
+          "to suspend operations"
+        ]
+      }
+    },
+    "4b53630a67": {
+      "mn": [
+        "анзааралгүй өнгөрөөх",
+        "харалгүй орхих"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "見落とす",
+        "r": "みおとす",
+        "en": [
+          "to overlook",
+          "to fail to notice"
+        ]
+      }
+    },
+    "fad263d0b1": {
+      "mn": [
+        "амт",
+        "амтлах мэдрэхүй"
+      ],
+      "topics": [
+        "food",
+        "body"
+      ],
+      "expected": {
+        "w": "味覚",
+        "r": "みかく",
+        "en": [
+          "taste",
+          "palate",
+          "sense of taste"
+        ]
+      }
+    },
+    "62dfbdbf3f": {
+      "mn": [
+        "санамсаргүй харах",
+        "анзаарах",
+        "олж харах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "見掛ける",
+        "r": "みかける",
+        "en": [
+          "to (happen to) see",
+          "to notice",
+          "to catch sight of"
+        ]
+      }
+    },
+    "63607fd708": {
+      "mn": [
+        "үзэл бодол",
+        "харах өнцөг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "見方",
+        "r": "みかた",
+        "en": [
+          "viewpoint"
+        ]
+      }
+    },
+    "64a9f67d24": {
+      "mn": [
+        "модны их бие"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "幹",
+        "r": "みき",
+        "en": [
+          "(tree) trunk"
+        ]
+      }
+    },
+    "88bc3515f2": {
+      "mn": [
+        "харахад муухай",
+        "үзэмжгүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "見苦しい",
+        "r": "みぐるしい",
+        "en": [
+          "unsightly",
+          "ugly"
+        ]
+      }
+    },
+    "2b0e48cde1": {
+      "mn": [
+        "найдвар",
+        "хэтийн боломж",
+        "хүлээлт"
+      ],
+      "topics": [
+        "feelings",
+        "work"
+      ],
+      "expected": {
+        "w": "見込み",
+        "r": "みこみ",
+        "en": [
+          "hope",
+          "prospects",
+          "expectation"
+        ]
+      }
+    },
+    "bd247508be": {
+      "mn": [
+        "гэрлээгүй"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "未婚",
+        "r": "みこん",
+        "en": [
+          "unmarried"
+        ]
+      }
+    },
+    "1534662816": {
+      "mn": [
+        "туршлагагүй",
+        "боловсроогүй",
+        "түүхий"
+      ],
+      "topics": [
+        "descriptions",
+        "food"
+      ],
+      "expected": {
+        "w": "未熟",
+        "r": "みじゅく",
+        "en": [
+          "inexperience",
+          "unripeness",
+          "raw"
+        ]
+      }
+    },
+    "2bbc3577e1": {
+      "mn": [
+        "өчүүхэн хэсэг",
+        "маш жижиг ширхэг"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "微塵",
+        "r": "みじん",
+        "en": [
+          "particle",
+          "atom"
+        ]
+      }
+    },
+    "434fc61861": {
+      "mn": [
+        "чийг",
+        "нойтон байдал",
+        "усны уур"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "水気",
+        "r": "みずけ",
+        "en": [
+          "moisture",
+          "dampness",
+          "vapor"
+        ]
+      }
+    },
+    "2606862998": {
+      "mn": [
+        "хэвлэлийн алдаа"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "ミスプリント",
+        "r": "ミスプリント",
+        "en": [
+          "misprint"
+        ]
+      }
+    },
+    "e4c887588d": {
+      "mn": [
+        "ноорхой",
+        "ядмаг"
+      ],
+      "topics": [
+        "daily",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "見すぼらしい",
+        "r": "みすぼらしい",
+        "en": [
+          "shabby",
+          "seedy"
+        ]
+      }
+    },
+    "4b7e4383b0": {
+      "mn": [
+        "хатагтай (гэрлэсэн эмэгтэйн хүндэтгэл нэр)"
+      ],
+      "topics": [
+        "people",
+        "relationships"
+      ],
+      "expected": {
+        "w": "ミセス",
+        "r": "ミセス",
+        "en": [
+          "Mrs."
+        ]
+      }
+    },
+    "0ac82e3b35": {
+      "mn": [
+        "гайхуулах",
+        "сайрхан үзүүлэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "見せびらかす",
+        "r": "みせびらかす",
+        "en": [
+          "to show off",
+          "to flaunt"
+        ]
+      }
+    },
+    "8cfbd85b71": {
+      "mn": [
+        "үзүүлбэр",
+        "үзэсгэлэн"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "見せ物",
+        "r": "みせもの",
+        "en": [
+          "show",
+          "exhibition"
+        ]
+      }
+    },
+    "492bf6e2fc": {
+      "mn": [
+        "эмх замбараагүй болгох",
+        "байрлалыг алдагдуулах",
+        "үймүүлэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "乱す",
+        "r": "みだす",
+        "en": [
+          "to throw out of order",
+          "to disarrange",
+          "to disturb"
+        ]
+      }
+    },
+    "affcd995c2": {
+      "mn": [
+        "будилах",
+        "эмх замбараагүй болох",
+        "үймэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "乱れる",
+        "r": "みだれる",
+        "en": [
+          "to get confused",
+          "to be disordered",
+          "to be disturbed"
+        ]
+      }
+    },
+    "5fe2bc62e1": {
+      "mn": [
+        "хараахан мэдэгдээгүй",
+        "үл мэдэгдэх"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "未知",
+        "r": "みち",
+        "en": [
+          "not yet known"
+        ]
+      }
+    },
+    "72f6bc6de3": {
+      "mn": [
+        "өөрт ойр",
+        "дотно",
+        "танил"
+      ],
+      "topics": [
+        "relationships",
+        "places"
+      ],
+      "expected": {
+        "w": "身近",
+        "r": "みぢか",
+        "en": [
+          "near oneself",
+          "close to one",
+          "familiar"
+        ]
+      }
+    },
+    "05164a42ee": {
+      "mn": [
+        "цэцгийн бал",
+        "зөгийн бал"
+      ],
+      "topics": [
+        "food",
+        "nature"
+      ],
+      "expected": {
+        "w": "蜜",
+        "r": "みつ",
+        "en": [
+          "nectar",
+          "honey"
+        ]
+      }
+    },
+    "64374f31d6": {
+      "mn": [
+        "бөөгнөрөл",
+        "нягт эгнээ",
+        "шигүү байрлал"
+      ],
+      "topics": [
+        "people",
+        "quantity"
+      ],
+      "expected": {
+        "w": "密集",
+        "r": "みっしゅう",
+        "en": [
+          "crowd",
+          "close formation",
+          "dense"
+        ]
+      }
+    },
+    "aac21ad21e": {
+      "mn": [
+        "холбоотой",
+        "холбогдсон",
+        "нягт"
+      ],
+      "topics": [
+        "relationships",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "密接",
+        "r": "みっせつ",
+        "en": [
+          "related",
+          "connected",
+          "close"
+        ]
+      }
+    },
+    "14c9478686": {
+      "mn": [
+        "нягт",
+        "нягтрал"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "密度",
+        "r": "みつど",
+        "en": [
+          "density"
+        ]
+      }
+    },
+    "567666993e": {
+      "mn": [
+        "тооцоолол",
+        "үнийн санал"
+      ],
+      "topics": [
+        "work",
+        "quantity"
+      ],
+      "expected": {
+        "w": "見積り",
+        "r": "みつもり",
+        "en": [
+          "estimation",
+          "quotation"
+        ]
+      }
+    },
+    "7c7723d97e": {
+      "mn": [
+        "хараахан тогтоогүй",
+        "шийдээгүй"
+      ],
+      "topics": [
+        "time",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "未定",
+        "r": "みてい",
+        "en": [
+          "not yet fixed",
+          "undecided",
+          "pending"
+        ]
+      }
+    },
+    "5e7cd7436c": {
+      "mn": [
+        "хэтийн төлөв",
+        "саадгүй харагдах байдал",
+        "ирээдүйн төсөөлөл"
+      ],
+      "topics": [
+        "places",
+        "work"
+      ],
+      "expected": {
+        "w": "見通し",
+        "r": "みとおし",
+        "en": [
+          "perspective",
+          "unobstructed view",
+          "outlook"
+        ]
+      }
+    },
+    "12c93760ce": {
+      "mn": [
+        "эх сурвалж",
+        "үүсэл"
+      ],
+      "topics": [
+        "nature",
+        "learning"
+      ],
+      "expected": {
+        "w": "源",
+        "r": "みなもと",
+        "en": [
+          "source",
+          "origin"
+        ]
+      }
+    },
+    "676ccd8a3b": {
+      "mn": [
+        "гадаад төрх",
+        "хувцаслалт"
+      ],
+      "topics": [
+        "daily",
+        "people"
+      ],
+      "expected": {
+        "w": "身なり",
+        "r": "みなり",
+        "en": [
+          "personal appearance"
+        ]
+      }
+    },
+    "1bdd837b48": {
+      "mn": [
+        "уулын оргил",
+        "нуруу"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "峰",
+        "r": "みね",
+        "en": [
+          "peak",
+          "ridge"
+        ]
+      }
+    },
+    "553c385823": {
+      "mn": [
+        "анзаарахгүй өнгөрөөх",
+        "харалгүй орхих",
+        "сул тавьж явуулах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "見逃す",
+        "r": "みのがす",
+        "en": [
+          "to miss",
+          "to overlook",
+          "to leave at large"
+        ]
+      }
+    },
+    "5f2d1f7cc1": {
+      "mn": [
+        "харагдах үзэмж",
+        "алсын бараа"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "見晴らし",
+        "r": "みはらし",
+        "en": [
+          "view"
+        ]
+      }
+    },
+    "5fbb3143b5": {
+      "mn": [
+        "дохио зангаа"
+      ],
+      "topics": [
+        "body",
+        "learning"
+      ],
+      "expected": {
+        "w": "身振り",
+        "r": "みぶり",
+        "en": [
+          "gesture"
+        ]
+      }
+    },
+    "b94f734eb4": {
+      "mn": [
+        "судасны лугшилт",
+        "судасны цохилт"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "脈",
+        "r": "みゃく",
+        "en": [
+          "pulse"
+        ]
+      }
+    },
+    "e3fc8893fa": {
+      "mn": [
+        "хөгжим"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "ミュージック",
+        "r": "ミュージック",
+        "en": [
+          "music"
+        ]
+      }
+    },
+    "bd88a27e3e": {
+      "mn": [
+        "үлдсэн хайр сэтгэл",
+        "салж чадахгүй сэтгэл",
+        "харамсал"
+      ],
+      "topics": [
+        "relationships",
+        "feelings"
+      ],
+      "expected": {
+        "w": "未練",
+        "r": "みれん",
+        "en": [
+          "lingering affection",
+          "attachment",
+          "regret(s)"
+        ]
+      }
+    },
+    "5911280a02": {
+      "mn": [
+        "алсыг харах",
+        "орчныг бүхэлд нь ажиглах",
+        "өргөн хүрээнд харах"
+      ],
+      "topics": [
+        "places",
+        "actions"
+      ],
+      "expected": {
+        "w": "見渡す",
+        "r": "みわたす",
+        "en": [
+          "to look out over",
+          "to survey (scene)",
+          "to take an extensive view of"
+        ]
+      }
+    }
+  }
+}

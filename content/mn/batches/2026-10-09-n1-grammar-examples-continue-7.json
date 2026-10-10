@@ -1,0 +1,190 @@
+{
+  "provenance": {
+    "id": "mn-n1-grammar-examples-continue-7-2026-10-09",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian compared with exact Japanese and retained English; stable record and headword/pattern guards; independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/grammar/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "grammar": {
+    "gurumi": {
+      "expected": {
+        "p": "〜ぐるみ",
+        "en": "including all; the whole (group) together"
+      },
+      "examples": {
+        "この地域では、町ぐるみで子どもたちの登下校を見守っている。": {
+          "en": "In this area, the whole town watches over the children on their way to and from school.",
+          "mn": "Энэ нутагт хотынхон бүгдээрээ хүүхдүүдийг сургуульдаа явах, буцах замд нь харж хамгаалдаг."
+        },
+        "調査の結果、会社ぐるみの不正であったことが明らかになった。": {
+          "en": "The investigation revealed that the fraud involved the entire company.",
+          "mn": "Шалгалтын дүнд уг зөрчилд компани бүхэлдээ оролцсон нь илэрчээ."
+        }
+      }
+    },
+    "ni-mo-hodo-ga-aru": {
+      "expected": {
+        "p": "〜にもほどがある",
+        "en": "there's a limit to; too ... (beyond what's acceptable)"
+      },
+      "examples": {
+        "約束の時間に二時間も遅れてくるなんて、非常識にもほどがある。": {
+          "en": "Showing up two hours late for an appointment — there's a limit to how inconsiderate you can be.",
+          "mn": "Уулзахаар тохирсон цагаасаа бүтэн хоёр цаг хоцорно гэдэг чинь хэтэрхий бүдүүлэг хэрэг!"
+        },
+        "初対面の人に年収を聞くなんて、失礼にもほどがある。": {
+          "en": "Asking someone's income the first time you meet them is beyond rude.",
+          "mn": "Анх танилцсан хүнээсээ жилийн орлогыг нь асуух нь дэндүү ёсгүй хэрэг."
+        },
+        "冗談にもほどがある。そんな話、誰が信じるものか。": {
+          "en": "That's taking a joke too far. Who would ever believe a story like that?",
+          "mn": "Тоглоом шоглоом ч гэсэн хэмжээтэй байх ёстой. Ийм ярианд хэн итгэх юм бэ!"
+        }
+      }
+    },
+    "o-ii-koto-ni": {
+      "expected": {
+        "p": "〜をいいことに",
+        "en": "taking (unfair) advantage of; using (a situation) as license to"
+      },
+      "examples": {
+        "親が留守なのをいいことに、息子は友達を呼んで夜通し騒いでいた。": {
+          "en": "Taking advantage of his parents being away, the son invited friends over and partied all night.",
+          "mn": "Эцэг эх нь эзгүйг далимдуулан хүү найзуудаа дуудаж, шөнөжин шуугилджээ."
+        },
+        "上司が何も言わないのをいいことに、彼は毎日のように遅刻してくる。": {
+          "en": "Taking advantage of the fact that his boss never says anything, he comes in late almost every day.",
+          "mn": "Дарга нь юу ч хэлдэггүйг далимдуулаад тэр бараг өдөр бүр хоцорч ирдэг."
+        },
+        "高齢者の知識不足をいいことに、業者は高額な契約を結ばせていた。": {
+          "en": "Exploiting elderly people's lack of knowledge, the dealer had been getting them to sign expensive contracts.",
+          "mn": "Худалдаа эрхлэгч ахмад настнуудын мэдлэг дутмаг байдлыг ашиглан өндөр төлбөртэй гэрээнд гарын үсэг зуруулж байжээ."
+        }
+      }
+    },
+    "ni-nottotte": {
+      "expected": {
+        "p": "〜に則って",
+        "en": "in accordance with (rules, law, tradition)"
+      },
+      "examples": {
+        "大会は、国際ルールに則って公正に運営される。": {
+          "en": "The tournament will be run fairly in accordance with international rules.",
+          "mn": "Тэмцээнийг олон улсын дүрмийн дагуу шударгаар зохион байгуулна."
+        },
+        "二人の結婚式は、古くからのしきたりに則って神社で執り行われた。": {
+          "en": "Their wedding was held at a shrine according to long-standing custom.",
+          "mn": "Тэр хоёрын хуримыг эртнээс уламжилсан заншлын дагуу шинто сүмд хийжээ."
+        },
+        "本件については、社内規定に則った処分が下される予定だ。": {
+          "en": "In this matter, disciplinary action in line with company regulations is expected.",
+          "mn": "Энэ асуудлаар компанийн дотоод журмын дагуу сахилгын арга хэмжээ авах төлөвтэй байна."
+        }
+      }
+    },
+    "kare-kare": {
+      "expected": {
+        "p": "〜かれ〜かれ",
+        "en": "whether A or B; A or B alike (fixed pairs)"
+      },
+      "examples": {
+        "遅かれ早かれ、この秘密はみんなに知られることになるだろう。": {
+          "en": "Sooner or later, everyone will probably find out this secret.",
+          "mn": "Эрт орой хэзээ нэгэн цагт энэ нууцыг бүгд мэдэх л байх."
+        },
+        "多かれ少なかれ、誰にでも人に言えない悩みはあるものだ。": {
+          "en": "Everyone has worries they can't share with others, to a greater or lesser degree.",
+          "mn": "Их бага хэмжээгээр хүн бүрд бусдад хэлж чаддаггүй зовнил байдаг."
+        },
+        "良かれあしかれ、あの人の一言が会社の方向を決めてきた。": {
+          "en": "For better or worse, a single word from that man has set the company's course.",
+          "mn": "Сайн ч бай, муу ч бай, тэр хүний ганц үг компанийн чиглэлийг шийдэж ирсэн."
+        }
+      }
+    },
+    "koto-kono-ue-nai": {
+      "expected": {
+        "p": "〜ことこの上ない",
+        "en": "extremely; nothing could be more"
+      },
+      "examples": {
+        "深夜の山道を一人で運転するのは、心細いことこの上ない。": {
+          "en": "Driving alone on a mountain road late at night is as unnerving as it gets.",
+          "mn": "Шөнө дөлөөр уулын замд ганцаараа машин жолоодох нь туйлын түгшүүртэй."
+        },
+        "彼の説明は回りくどく、分かりにくいことこの上ない。": {
+          "en": "His explanation is roundabout and extremely hard to follow.",
+          "mn": "Түүний тайлбар тойруу, ойлгоход үнэхээр бэрх."
+        },
+        "会議中に何度も携帯電話が鳴り、迷惑なことこの上なかった。": {
+          "en": "A cell phone kept ringing during the meeting, which was extremely annoying.",
+          "mn": "Хурлын үеэр гар утас дахин дахин дуугарч, туйлын төвөгтэй байлаа."
+        }
+      }
+    },
+    "to-mieru-to-miete": {
+      "expected": {
+        "p": "〜とみえる / 〜とみえて",
+        "en": "it seems (judging from evidence); apparently"
+      },
+      "examples": {
+        "息子はよほど疲れていたとみえて、夕食も食べずに眠ってしまった。": {
+          "en": "My son must have been really tired — he fell asleep without even eating dinner.",
+          "mn": "Хүү маань ихэд ядарсан бололтой, оройн хоолоо ч идэлгүй унтчихлаа."
+        },
+        "隣の家は留守とみえて、何度チャイムを鳴らしても返事がない。": {
+          "en": "The neighbors seem to be out; nobody answers no matter how many times I ring the bell.",
+          "mn": "Хөрш айлынхан эзгүй бололтой, хонхыг нь хэд ч дарсан хариу алга."
+        },
+        "彼はこの結果にかなり満足しているとみえる。": {
+          "en": "He seems to be quite satisfied with this result.",
+          "mn": "Тэр энэ үр дүнд нэлээд сэтгэл хангалуун байгаа бололтой."
+        }
+      }
+    },
+    "o-fumaete": {
+      "expected": {
+        "p": "〜を踏まえて",
+        "en": "based on; taking into account; in light of"
+      },
+      "examples": {
+        "アンケートの結果を踏まえて、来年度のサービス内容を見直すことにした。": {
+          "en": "Based on the survey results, we decided to review next year's service offerings.",
+          "mn": "Санал асуулгын үр дүнд үндэслэн ирэх жилийн үйлчилгээний агуулгыг шинэчлэхээр шийдлээ."
+        },
+        "過去の失敗を踏まえたうえで、新たな計画を立てるべきだ。": {
+          "en": "We should draw up a new plan that takes our past failures into account.",
+          "mn": "Өмнөх алдаагаа харгалзан үзэж байж шинэ төлөвлөгөө гаргах хэрэгтэй."
+        },
+        "委員会は現地調査の結果を踏まえ、報告書をまとめた。": {
+          "en": "The committee compiled its report in light of the findings of its on-site investigation.",
+          "mn": "Хороо газар дээр нь хийсэн судалгааны үр дүнд тулгуурлан тайлангаа боловсруулав."
+        }
+      }
+    },
+    "nai-to-mo-kagiranai": {
+      "expected": {
+        "p": "〜ないとも限らない",
+        "en": "it's not impossible that; there's a chance that"
+      },
+      "examples": {
+        "途中で渋滞に巻き込まれないとも限らないから、早めに出発しよう。": {
+          "en": "We might get stuck in traffic on the way, so let's leave early.",
+          "mn": "Замдаа түгжрэлд орохыг үгүйсгэхгүй тул эртхэн гаръя."
+        },
+        "誰が聞いていないとも限らないので、ここで仕事の話はやめておこう。": {
+          "en": "You never know who might be listening, so let's not talk about work here.",
+          "mn": "Хэн нэгэн сонсож байж мэдэх тул энд ажлын тухай ярихгүй байя."
+        },
+        "大きな地震がいつ起きないとも限らない。日頃から備えておくことが大切だ。": {
+          "en": "A major earthquake could strike at any time, so it's important to be prepared every day.",
+          "mn": "Хүчтэй газар хөдлөлт хэзээ ч тохиолдож мэднэ. Өдөр тутамдаа бэлтгэлтэй байх нь чухал."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "check": "site-rerun",
+    "command": "npm run test:site-browser",
+    "exit": 0
+  },
+  {
+    "check": "strict-coverage",
+    "command": "npm run coverage:validate",
+    "exit": 1
+  },
+  {
+    "check": "diff-check",
+    "command": "git diff --check",
+    "exit": 0
+  },
+  {
+    "check": "typecheck",
+    "command": "npm run typecheck",
+    "exit": 0
+  },
+  {
+    "check": "data",
+    "command": "npm run data:validate",
+    "exit": 0
+  },
+  {
+    "check": "regression",
+    "command": "npm test",
+    "exit": 0
+  },
+  {
+    "check": "build",
+    "command": "npm run build",
+    "exit": 0
+  }
+]

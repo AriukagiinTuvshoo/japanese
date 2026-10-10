@@ -1,0 +1,294 @@
+{
+  "provenance": {
+    "id": "mn-n2-grammar-examples-progress-1-oct9",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian compared with exact Japanese and retained English; stable record and headword/pattern guards; independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/grammar/n2.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "grammar": {
+    "ta-tokoro": {
+      "expected": {
+        "p": "〜たところ",
+        "en": "when (I) did ..., (I found that); upon doing"
+      },
+      "examples": {
+        "駅の窓口で問い合わせたところ、その電車は運休しているとのことだった。": {
+          "en": "When I asked at the station window, I was told that the train wasn't running.",
+          "mn": "Өртөөний цонхонд лавлахад тэр галт тэрэг явахгүй байгаа гэж хэлсэн."
+        },
+        "試しに新しい肥料を使ってみたところ、トマトがよく育った。": {
+          "en": "When I tried using a new fertilizer, the tomatoes grew very well.",
+          "mn": "Туршиж шинэ бордоо хэрэглэтэл улаан лооль сайн ургасан."
+        }
+      }
+    },
+    "bakari-ka": {
+      "expected": {
+        "p": "〜ばかりか",
+        "en": "not only ... but also"
+      },
+      "examples": {
+        "彼は約束の時間に遅れたばかりか、謝りもしなかった。": {
+          "en": "Not only was he late, he didn't even apologize.",
+          "mn": "Тэр тохирсон цагаасаа хоцроод зогсохгүй уучлал ч гуйгаагүй."
+        },
+        "この薬は効果がないばかりか、副作用まであるそうだ。": {
+          "en": "I hear this medicine not only doesn't work but even has side effects.",
+          "mn": "Энэ эм нөлөөгүйгээс гадна гаж нөлөөтэй гэнэ."
+        },
+        "その歌手は国内ばかりか、アジア各国でも人気がある。": {
+          "en": "That singer is popular not only in Japan but all over Asia.",
+          "mn": "Тэр дуучин Японд төдийгүй Азийн орнуудад алдартай."
+        }
+      }
+    },
+    "bakari-ni": {
+      "expected": {
+        "p": "〜ばかりに",
+        "en": "simply because; just because (with a bad result)"
+      },
+      "examples": {
+        "確認を一つ怠ったばかりに、大きな損害を出してしまった。": {
+          "en": "Simply because I skipped one check, I ended up causing heavy losses.",
+          "mn": "Ганц шалгалт орхисноос л их хохирол гаргачихсан."
+        },
+        "正直に話したばかりに、かえって彼女を傷つけてしまった。": {
+          "en": "Just because I told the truth, I ended up hurting her instead.",
+          "mn": "Үнэнийг хэлснээс л харин түүнийг гомдоочихсон."
+        },
+        "英語ができないばかりに、せっかくのチャンスを逃した。": {
+          "en": "Just because I can't speak English, I missed a great opportunity.",
+          "mn": "Англиар ярьж чадахгүйгээс л сайхан боломж алдсан."
+        }
+      }
+    },
+    "bakari-da": {
+      "expected": {
+        "p": "〜ばかりだ",
+        "en": "keep (getting worse); only continue to"
+      },
+      "examples": {
+        "駅前の商店街は、客が減るばかりだ。": {
+          "en": "The shopping street in front of the station just keeps losing customers.",
+          "mn": "Өртөөний өмнөх худалдааны гудамжны үйлчлүүлэгчид улам цөөрч байна."
+        },
+        "薬を飲んでいるのに、症状は悪くなるばかりだ。": {
+          "en": "Even though I'm taking medicine, my symptoms just keep getting worse.",
+          "mn": "Эм ууж байгаа ч шинж тэмдэг улам муудаж байна."
+        }
+      }
+    },
+    "wa-mochiron-wa-motoyori": {
+      "expected": {
+        "p": "〜はもちろん / 〜はもとより",
+        "en": "not to mention; of course ... and also"
+      },
+      "examples": {
+        "この公園は、週末はもちろん平日も家族連れでにぎわう。": {
+          "en": "This park is busy with families on weekdays, not to mention weekends.",
+          "mn": "Энэ цэцэрлэг амралтын өдөр байтугай ажлын өдөр ч гэр бүлээрээ ирсэн хүмүүсээр дүүрэн байдаг."
+        },
+        "この料理教室では、基本の調理法はもとより、盛り付けのコツまで教えてもらえる。": {
+          "en": "At this cooking class, they teach you not only basic techniques but even tips on presentation.",
+          "mn": "Энэ хоолны сургалтаар үндсэн аргуудаас гадна хоол тавган дээр өрөх арга хүртэл заадаг."
+        },
+        "地震の後、電気はもちろん、水道もガスも止まってしまった。": {
+          "en": "After the earthquake, the water and gas were cut off, not to mention the electricity.",
+          "mn": "Газар хөдлөлтийн дараа цахилгаан байтугай ус, хий ч тасарсан."
+        }
+      }
+    },
+    "wa-tomokaku": {
+      "expected": {
+        "p": "〜はともかく",
+        "en": "setting aside; regardless of; whatever about"
+      },
+      "examples": {
+        "見た目はともかく、味はなかなかいい。": {
+          "en": "Looks aside, it tastes pretty good.",
+          "mn": "Харагдах байдлыг нь орхивол амт нь нэлээд сайн."
+        },
+        "結果はともかくとして、最後まで諦めなかったことは評価したい。": {
+          "en": "Whatever the result, I want to give you credit for not giving up until the end.",
+          "mn": "Үр дүнг нь орхилоо ч эцэс хүртэл бууж өгөөгүйг нь үнэлмээр байна."
+        }
+      }
+    },
+    "wa-sateoki": {
+      "expected": {
+        "p": "〜はさておき",
+        "en": "leaving aside; putting aside (for now)"
+      },
+      "examples": {
+        "冗談はさておき、そろそろ本題に入りましょう。": {
+          "en": "Joking aside, let's get down to business.",
+          "mn": "Тоглоомыг орхиод гол асуудалдаа орцгооё."
+        },
+        "費用の問題はさておき、まずは実現可能かどうかを検討すべきだ。": {
+          "en": "Setting aside the question of cost, we should first consider whether it's feasible.",
+          "mn": "Зардлын асуудлыг түр орхиод эхлээд хэрэгжүүлэх боломжтой эсэхийг хэлэлцэх хэрэгтэй."
+        }
+      }
+    },
+    "hanmen": {
+      "expected": {
+        "p": "〜反面 / 〜半面",
+        "en": "on the other hand; while (it is ...)"
+      },
+      "examples": {
+        "都会の暮らしは便利な反面、ストレスも多い。": {
+          "en": "City life is convenient, but on the other hand it's also stressful.",
+          "mn": "Хотын амьдрал тохилог ч нөгөө талаар стресс ихтэй."
+        },
+        "インターネットは情報を手軽に得られる反面、誤った情報も広まりやすい。": {
+          "en": "While the internet lets you get information easily, false information also spreads easily.",
+          "mn": "Интернетээр мэдээлэл амархан олдог ч буруу мэдээлэл ч амархан тархдаг."
+        },
+        "彼は仕事には厳しい反面、部下思いの一面もある。": {
+          "en": "Though he's strict about work, he also has a side that looks out for his staff.",
+          "mn": "Тэр ажилд хатуу ч ажилтнууддаа санаа тавьдаг талтай."
+        }
+      }
+    },
+    "nagara-mo": {
+      "expected": {
+        "p": "〜ながら（も）",
+        "en": "although; despite; while (contrary to expectation)"
+      },
+      "examples": {
+        "狭いながらも、日当たりのいい快適な部屋だ。": {
+          "en": "Although it's small, it's a comfortable, sunny room.",
+          "mn": "Жижиг ч нар сайн тусдаг тухтай өрөө."
+        },
+        "悪いと知りながら、つい嘘をついてしまった。": {
+          "en": "Even though I knew it was wrong, I ended up telling a lie.",
+          "mn": "Бурууг нь мэдсээр байж худал хэлчихсэн."
+        },
+        "彼女は若いながらも、しっかりした考えを持っている。": {
+          "en": "Young as she is, she has very sound views.",
+          "mn": "Тэр залуу ч баттай үзэл бодолтой."
+        }
+      }
+    },
+    "tsutsu-tsutsu-mo": {
+      "expected": {
+        "p": "〜つつ / 〜つつも",
+        "en": "while (doing); although, even while"
+      },
+      "examples": {
+        "今年の業績を振り返りつつ、来年の目標を考えたい。": {
+          "en": "While looking back on this year's results, I'd like to think about next year's goals.",
+          "mn": "Энэ жилийн үр дүнг эргэн харахын зэрэгцээ ирэх жилийн зорилгыг бодмоор байна."
+        },
+        "体に悪いと分かりつつも、夜更かしがやめられない。": {
+          "en": "Even though I know it's bad for me, I can't stop staying up late.",
+          "mn": "Биед муу гэдгийг мэдсэн ч оройтож унтахаа больж чадахгүй."
+        },
+        "早く返事をしなければと思いつつ、もう一週間もたってしまった。": {
+          "en": "Even as I kept thinking I had to reply soon, a whole week has gone by.",
+          "mn": "Хурдан хариу өгөх ёстой гэж бодсоор байтал бүтэн долоо хоног өнгөрчихсөн."
+        }
+      }
+    },
+    "tsutsu-aru": {
+      "expected": {
+        "p": "〜つつある",
+        "en": "be in the process of; be gradually (changing)"
+      },
+      "examples": {
+        "地球の平均気温は、年々上昇しつつある。": {
+          "en": "The earth's average temperature is steadily rising year by year.",
+          "mn": "Дэлхийн дундаж температур жилээс жилд өсөж байна."
+        },
+        "この地域の伝統的な祭りは、若者の減少とともに失われつつある。": {
+          "en": "This area's traditional festivals are gradually being lost as the young population declines.",
+          "mn": "Залуус цөөрөхийн хэрээр энэ нутгийн уламжлалт баярууд аажмаар алга болж байна."
+        }
+      }
+    },
+    "ppanashi": {
+      "expected": {
+        "p": "〜っぱなし",
+        "en": "leaving (something) as is; keep (doing) without a break"
+      },
+      "examples": {
+        "部屋の電気をつけっぱなしにして出かけてしまった。": {
+          "en": "I went out and left the light on in my room.",
+          "mn": "Өрөөний гэрлээ асаалттай орхиод гарчихсан."
+        },
+        "今日は朝から立ちっぱなしで、足が痛い。": {
+          "en": "I've been on my feet since this morning, and my legs hurt.",
+          "mn": "Өнөөдөр өглөөнөөс хойш тасралтгүй зогссон тул хөл өвдөж байна."
+        },
+        "窓を開けっぱなしにしないでください。": {
+          "en": "Please don't leave the window open.",
+          "mn": "Цонхыг нээлттэй битгий орхиорой."
+        }
+      }
+    },
+    "nuku": {
+      "expected": {
+        "p": "〜抜く",
+        "en": "do to the very end; see through; do thoroughly"
+      },
+      "examples": {
+        "足を痛めていたが、彼は最後まで走り抜いた。": {
+          "en": "Although he had hurt his leg, he ran all the way to the finish.",
+          "mn": "Хөлөө гэмтээсэн ч тэр эцэс хүртэл гүйсэн."
+        },
+        "悩み抜いた末に出した結論なので、後悔はない。": {
+          "en": "It's a conclusion I reached after thinking it through thoroughly, so I have no regrets.",
+          "mn": "Сайтар тунгаасны эцэст гаргасан дүгнэлт тул харамсах зүйлгүй."
+        },
+        "チームは苦しい試合で一点のリードを守り抜いた。": {
+          "en": "The team held on to its one-point lead through a tough game.",
+          "mn": "Баг хүнд тоглолтод нэг онооны давуугаа эцэс хүртэл хамгаалсан."
+        }
+      }
+    },
+    "uru-enai": {
+      "expected": {
+        "p": "〜得る / 〜得ない",
+        "en": "can; be possible / cannot; be impossible"
+      },
+      "examples": {
+        "どんなに注意していても、事故は起こり得る。": {
+          "en": "No matter how careful you are, accidents can happen.",
+          "mn": "Хэчнээн болгоомжтой байсан ч осол гарч болно."
+        },
+        "あの真面目な彼が犯人だなんて、あり得ない。": {
+          "en": "There's no way someone as serious as him could be the culprit.",
+          "mn": "Тийм нухацтай хүн гэмт этгээд байх боломжгүй."
+        },
+        "今回の調査で、これまで知り得なかった事実が明らかになった。": {
+          "en": "This investigation brought to light facts we had been unable to learn until now.",
+          "mn": "Энэ шалгалтаар урьд нь мэдэж чадаагүй баримтууд ил болсон."
+        }
+      }
+    },
+    "gatai": {
+      "expected": {
+        "p": "〜がたい",
+        "en": "hard to; almost impossible to (emotionally)"
+      },
+      "examples": {
+        "あの誠実な人が不正をしたとは、信じがたい。": {
+          "en": "It's hard to believe that such an honest person committed fraud.",
+          "mn": "Тийм үнэнч хүн хууль бус зүйл хийсэн гэхэд итгэхэд бэрх."
+        },
+        "彼の失礼な態度は、どうにも許しがたい。": {
+          "en": "His rude attitude is simply unforgivable.",
+          "mn": "Түүний бүдүүлэг хандлагыг яагаад ч уучилж болохгүй."
+        },
+        "生まれ育った町は、やはり離れがたいものだ。": {
+          "en": "The town you grew up in is, after all, hard to leave.",
+          "mn": "Төрж өссөн хотоосоо явах үнэхээр хэцүү."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1078 @@
+{
+  "provenance": {
+    "id": "mn-n3-vocab-middle-c-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit topics cross-checked individually against retained Japanese headwords/readings and English glosses, including alternate dictionary readings. Independently unreviewed.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n3.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j2791090": {
+      "mn": [
+        "сонор сэрэмжтэй",
+        "анхааралтай",
+        "болгоомжтой"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "油断なく",
+        "r": "ゆだんなく",
+        "en": [
+          "alertly",
+          "vigilantly",
+          "warily"
+        ]
+      }
+    },
+    "j2624140": {
+      "mn": [
+        "халаагуур",
+        "халаалтын төхөөрөмж",
+        "халаалтын систем"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "暖房装置",
+        "r": "だんぼうそうち",
+        "en": [
+          "heater",
+          "heating apparatus",
+          "heating arrangement"
+        ]
+      }
+    },
+    "j1350380": {
+      "mn": [
+        "мөхөх",
+        "унтрах",
+        "алга болох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "消滅",
+        "r": "しょうめつ",
+        "en": [
+          "extinction",
+          "extinguishment",
+          "disappearance"
+        ]
+      }
+    },
+    "j1878140": {
+      "mn": [
+        "го тоглох"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "碁を打つ",
+        "r": "ごをうつ",
+        "en": [
+          "to play (a game of) go"
+        ]
+      }
+    },
+    "j1444620": {
+      "mn": [
+        "гатлах",
+        "нэвтрэх",
+        "дамжин өнгөрөх"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "渡り",
+        "r": "わたり",
+        "en": [
+          "crossing",
+          "passage",
+          "transit"
+        ]
+      }
+    },
+    "j1855000": {
+      "mn": [
+        "гатлага",
+        "гатлага онгоц",
+        "хүргэлт"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "渡し",
+        "r": "わたし",
+        "en": [
+          "ferry (crossing)",
+          "ferry(boat)",
+          "delivery"
+        ]
+      }
+    },
+    "j1150680": {
+      "mn": [
+        "дурлах",
+        "бишрэх"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "愛好",
+        "r": "あいこう",
+        "en": [
+          "love",
+          "adoration"
+        ]
+      }
+    },
+    "j2423450": {
+      "mn": [
+        "хоёр хүний хооронд",
+        "нүүр тулан",
+        "саад"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "差し",
+        "r": "さし",
+        "en": [
+          "between (e.g. two people)",
+          "face to face",
+          "hindrance"
+        ]
+      }
+    },
+    "j1590740": {
+      "mn": [
+        "хөөрхий",
+        "өрөвдөлтэй",
+        "хөөрхийлөлтэй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "可哀想",
+        "r": "かわいそう",
+        "en": [
+          "poor",
+          "pitiable",
+          "pathetic"
+        ]
+      }
+    },
+    "j1270300": {
+      "mn": [
+        "танд учруулсан төвөг",
+        "хөдөлмөрт тань баярлалаа",
+        "зүтгэлийг тань үнэлж байна"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "ご苦労",
+        "r": "ごくろう",
+        "en": [
+          "trouble (I have put you through)",
+          "thank you for your hard work",
+          "I appreciate your efforts"
+        ]
+      }
+    },
+    "j1483760": {
+      "mn": [
+        "туйлдан ядрах",
+        "эцэж цуцах"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "疲れ果てる",
+        "r": "つかれはてる",
+        "en": [
+          "to get tired out",
+          "to be exhausted"
+        ]
+      }
+    },
+    "j2018680": {
+      "mn": [
+        "сонголт",
+        "таалал"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "お好み",
+        "r": "おこのみ",
+        "en": [
+          "choice",
+          "preference"
+        ]
+      }
+    },
+    "j2160860": {
+      "mn": [
+        "төрөл зүйлийн ялгаа"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "種差",
+        "r": "しゅさ",
+        "en": [
+          "specific difference"
+        ]
+      }
+    },
+    "j1525280": {
+      "mn": [
+        "эцэст нь",
+        "дараа нь",
+        "үүний дараа"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "末に",
+        "r": "すえに",
+        "en": [
+          "finally",
+          "after",
+          "following"
+        ]
+      }
+    },
+    "j2174560": {
+      "mn": [
+        "гүйцэх",
+        "гүйцэж түрүүлэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "若く",
+        "r": "しく",
+        "en": [
+          "to catch up with",
+          "to overtake"
+        ]
+      }
+    },
+    "j2153930": {
+      "mn": [
+        "ялангуяа",
+        "зөвхөн",
+        "тохиолдолд"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "に限って",
+        "r": "にかぎって",
+        "en": [
+          "particularly",
+          "only",
+          "in the case of"
+        ]
+      }
+    },
+    "j2402090": {
+      "mn": [
+        "тухайн өдрийн төгсгөлөөс",
+        "тэр өдрийг сүүлчийн өдөр болгох"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "を限りに",
+        "r": "をかぎりに",
+        "en": [
+          "as of the end of (today, this month, etc.)",
+          "to make (today, etc.) the last (day)"
+        ]
+      }
+    },
+    "j1860440": {
+      "mn": [
+        "морь унах",
+        "моринд мордох"
+      ],
+      "topics": [
+        "places",
+        "nature"
+      ],
+      "expected": {
+        "w": "馬に乗る",
+        "r": "うまにのる",
+        "en": [
+          "to get on a horse",
+          "to mount a horse"
+        ]
+      }
+    },
+    "j1397810": {
+      "mn": [
+        "саад",
+        "дарангуйлал"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "阻害",
+        "r": "そがい",
+        "en": [
+          "obstruction",
+          "inhibition"
+        ]
+      }
+    },
+    "j1594850": {
+      "mn": [
+        "төрөл бүрийн",
+        "олон янз",
+        "бүх төрлийн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "種々",
+        "r": "しゅじゅ",
+        "en": [
+          "various",
+          "a variety of",
+          "all kinds of"
+        ]
+      }
+    },
+    "j2081850": {
+      "mn": [
+        "дөрвөлжин хэлбэр",
+        "гонзгой",
+        "тэгш өнцөгт"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "角形",
+        "r": "かくがた",
+        "en": [
+          "square shape",
+          "oblong",
+          "rectangle"
+        ]
+      }
+    },
+    "j1304700": {
+      "mn": [
+        "харамсалтай нь",
+        "хэлэхэд харамсалтай",
+        "азгүй нь"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "残念ながら",
+        "r": "ざんねんながら",
+        "en": [
+          "I'm afraid to say",
+          "I'm sorry to say",
+          "unfortunately"
+        ]
+      }
+    },
+    "j1486630": {
+      "mn": [
+        "сайхан царай",
+        "сайхан төрх",
+        "гоо үзэсгэлэн"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "美貌",
+        "r": "びぼう",
+        "en": [
+          "beautiful face",
+          "good looks",
+          "beauty"
+        ]
+      }
+    },
+    "j2164640": {
+      "mn": [
+        "Фүкүока хот буюу муж"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "福岡",
+        "r": "ふくおか",
+        "en": [
+          "Fukuoka (city, prefecture)"
+        ]
+      }
+    },
+    "j1383010": {
+      "mn": [
+        "идэвхтэй",
+        "эерэг",
+        "дэвшилтэт"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "積極",
+        "r": "せっきょく",
+        "en": [
+          "active",
+          "positive",
+          "progressive"
+        ]
+      }
+    },
+    "j2008540": {
+      "mn": [
+        "хэт идэвхжил",
+        "хэт их ажил"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "働きすぎ",
+        "r": "はたらきすぎ",
+        "en": [
+          "overactivity",
+          "overwork"
+        ]
+      }
+    },
+    "j2144670": {
+      "mn": [
+        "хамгаалалтын камер"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "防犯カメラ",
+        "r": "ぼうはんカメラ",
+        "en": [
+          "security camera"
+        ]
+      }
+    },
+    "j1617160": {
+      "mn": [
+        "буруушаах",
+        "зэмлэн мэдэгдэх"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "非と",
+        "r": "ひと",
+        "en": [
+          "condemning",
+          "denouncing"
+        ]
+      }
+    },
+    "j2669380": {
+      "mn": [
+        "турш",
+        "хугацаанд",
+        "нийт хугацааны турш"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "に渡り",
+        "r": "にわたり",
+        "en": [
+          "throughout",
+          "over a period of ...",
+          "over a span of ..."
+        ]
+      }
+    },
+    "j1005030": {
+      "mn": [
+        "ажилласанд баярлалаа",
+        "зүтгэлийг тань үнэлж байна"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "ご苦労様",
+        "r": "ごくろうさま",
+        "en": [
+          "thank you for your hard work",
+          "I appreciate your efforts"
+        ]
+      }
+    },
+    "j1594920": {
+      "mn": [
+        "магтаал",
+        "бишрэл",
+        "сайшаал"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "賞賛",
+        "r": "しょうさん",
+        "en": [
+          "praise",
+          "admiration",
+          "commendation"
+        ]
+      }
+    },
+    "j2842389": {
+      "mn": [
+        "хөөрхий дөө",
+        "хөөрхий амьтан",
+        "ямар харамсалтай вэ"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "可哀想に",
+        "r": "かわいそうに",
+        "en": [
+          "poor thing!",
+          "pour soul!",
+          "what a pity!"
+        ]
+      }
+    },
+    "j1298730": {
+      "mn": [
+        "бусдыг бодох",
+        "таамаг",
+        "төсөөлөл"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "察し",
+        "r": "さっし",
+        "en": [
+          "consideration",
+          "guess",
+          "conjecture"
+        ]
+      }
+    },
+    "j2409970": {
+      "mn": [
+        "таамаглах",
+        "мэдрэх",
+        "гэж үзэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "察す",
+        "r": "さっす",
+        "en": [
+          "to guess",
+          "to sense",
+          "to presume"
+        ]
+      }
+    },
+    "j1250370": {
+      "mn": [
+        "ул мөр",
+        "нотолгоо"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "形跡",
+        "r": "けいせき",
+        "en": [
+          "traces",
+          "evidence"
+        ]
+      }
+    },
+    "j1632900": {
+      "mn": [
+        "хөндлөн",
+        "хавтгайгаар",
+        "хөндлөн чиглэлд"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "横に",
+        "r": "よこに",
+        "en": [
+          "horizontally",
+          "flat",
+          "across"
+        ]
+      }
+    },
+    "j2543170": {
+      "mn": [
+        "шат",
+        "но театрын тайзны өмнөх шат"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "段階",
+        "r": "きざはし",
+        "en": [
+          "stairs",
+          "stairs at the front of a noh stage"
+        ]
+      }
+    },
+    "j1600160": {
+      "mn": [
+        "үнэ",
+        "өртөг"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "値段",
+        "r": "ねだん",
+        "en": [
+          "price",
+          "cost"
+        ]
+      }
+    },
+    "j1362650": {
+      "mn": [
+        "гүн",
+        "гүнзгий чанар"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "深さ",
+        "r": "ふかさ",
+        "en": [
+          "depth",
+          "profundity"
+        ]
+      }
+    },
+    "j1362670": {
+      "mn": [
+        "гүн",
+        "гүн газар"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "深み",
+        "r": "ふかみ",
+        "en": [
+          "depth",
+          "deep place"
+        ]
+      }
+    },
+    "j2843268": {
+      "mn": [
+        "гүнзгий",
+        "дотно",
+        "чин сэтгэлээсээ"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "深く",
+        "r": "ふかく",
+        "en": [
+          "deeply",
+          "intimately",
+          "heartily"
+        ]
+      }
+    },
+    "j2258700": {
+      "mn": [
+        "төгс цагийн хэлбэр"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "完了形",
+        "r": "かんりょうけい",
+        "en": [
+          "perfect tense"
+        ]
+      }
+    },
+    "j2827393": {
+      "mn": [
+        "сэргэлэн",
+        "ухаантай"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "頭がいい",
+        "r": "あたまがいい",
+        "en": [
+          "bright",
+          "intelligent"
+        ]
+      }
+    },
+    "j1518730": {
+      "mn": [
+        "орноосоо зугтах",
+        "орогнол хүсэх",
+        "урван гарах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "亡命",
+        "r": "ぼうめい",
+        "en": [
+          "flight from one's country",
+          "seeking asylum",
+          "defection"
+        ]
+      }
+    },
+    "j1620850": {
+      "mn": [
+        "энэ төрлийн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "この種",
+        "r": "このしゅ",
+        "en": [
+          "this kind of"
+        ]
+      }
+    },
+    "j2114450": {
+      "mn": [
+        "тодорхой нэг",
+        "ямар нэг төрлийн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "ある種",
+        "r": "あるしゅ",
+        "en": [
+          "certain",
+          "some kind of",
+          "some sort of"
+        ]
+      }
+    },
+    "j2765450": {
+      "mn": [
+        "гоо үзэсгэлэн"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "美しさ",
+        "r": "うつくしさ",
+        "en": [
+          "beauty"
+        ]
+      }
+    },
+    "j1935100": {
+      "mn": [
+        "суутгасан дүн",
+        "суутгал",
+        "бууруулалт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "控除額",
+        "r": "こうじょがく",
+        "en": [
+          "amount deducted (from)",
+          "deduction (from)",
+          "abatement"
+        ]
+      }
+    },
+    "j2409190": {
+      "mn": [
+        "мэт байх",
+        "шиг харагдах",
+        "адил"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "様だ",
+        "r": "ようだ",
+        "en": [
+          "seeming to be",
+          "appearing to be",
+          "like"
+        ]
+      }
+    },
+    "j2017020": {
+      "mn": [
+        "харуул хамгаалалтын байдал",
+        "хамгаалалт"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "警戒ぶり",
+        "r": "けいかいぶり",
+        "en": [
+          "guarding",
+          "guard"
+        ]
+      }
+    },
+    "j1451050": {
+      "mn": [
+        "хэт их ажиллах"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "働きすぎる",
+        "r": "はたらきすぎる",
+        "en": [
+          "to overwork"
+        ]
+      }
+    },
+    "j1473050": {
+      "mn": [
+        "хослол",
+        "гэр бүлийн хань",
+        "нөхөр буюу эхнэр"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "配偶",
+        "r": "はいぐう",
+        "en": [
+          "combination",
+          "spouse",
+          "husband or wife"
+        ]
+      }
+    },
+    "j2453540": {
+      "mn": [
+        "дуудлага",
+        "урилга"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "呼び",
+        "r": "よび",
+        "en": [
+          "call",
+          "invitation"
+        ]
+      }
+    },
+    "j1447400": {
+      "mn": [
+        "онгоцонд суух",
+        "хөлөгт суух"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "搭乗",
+        "r": "とうじょう",
+        "en": [
+          "embarkation",
+          "boarding (an aeroplane, airplane)"
+        ]
+      }
+    },
+    "j1949200": {
+      "mn": [
+        "албан мэдэгдэл",
+        "мэдээлэл"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "達し",
+        "r": "たっし",
+        "en": [
+          "official notice",
+          "notification"
+        ]
+      }
+    },
+    "j2410080": {
+      "mn": [
+        "хүрэх",
+        "очих"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "達す",
+        "r": "たっす",
+        "en": [
+          "to reach",
+          "to get to"
+        ]
+      }
+    },
+    "j1605820": {
+      "mn": [
+        "сайн",
+        "маш сайн",
+        "сайхан"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "良い",
+        "r": "よい",
+        "en": [
+          "good",
+          "excellent",
+          "fine"
+        ]
+      }
+    },
+    "j1605870": {
+      "mn": [
+        "сайхнаар",
+        "зөвөөр",
+        "сайн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "良く",
+        "r": "よく",
+        "en": [
+          "nicely",
+          "properly",
+          "well"
+        ]
+      }
+    },
+    "j1634130": {
+      "mn": [
+        "давуу тал",
+        "сайн чанар",
+        "чанар"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "良さ",
+        "r": "よさ",
+        "en": [
+          "merit",
+          "virtue",
+          "good quality"
+        ]
+      }
+    },
+    "j1984930": {
+      "mn": [
+        "сайн чанар",
+        "сайн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "良き",
+        "r": "よき",
+        "en": [
+          "goodness",
+          "good"
+        ]
+      }
+    }
+  }
+}

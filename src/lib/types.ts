@@ -8,6 +8,7 @@ export const LEVELS: Level[] = ["N5", "N4", "N3", "N2", "N1"];
 
 /** Монгол орчуулгын чанарын төлөв (content policy). */
 export type MnQuality =
+  | "draft"     // authored, not independently reviewed
   | "curated"   // хүн хянасан, батлагдсан
   | "auto"      // EN→MN нэр томьёоны сангаас автоматаар
   | "derived"   // ханзны утгуудаас зөвлөмж
@@ -25,6 +26,7 @@ export interface Example {
 }
 
 export interface Vocab {
+  source_issue?: string;
   id: string;
   w: string;
   r: string;
@@ -45,11 +47,13 @@ export interface Vocab {
 export interface KanjiWord {
   w: string;
   r: string;
-  mn: string;
+  mn: string | null;
+  en: string;
   lvl: Level;
 }
 
 export interface Kanji {
+  source_issue?: string;
   k: string;
   lvl: Level;
   lvlSrc: "jlpt" | "derived";
@@ -82,7 +86,9 @@ export interface Grammar {
   en: string[] | string;
   mn: string | null;
   note: string | null;
+  note_en?: string | null;
   form: string | null;
+  form_mn?: string | null;
   jlpt: Level;
   ex: GrammarExample[];
   related: string[];
@@ -105,6 +111,7 @@ export interface SourceRecord {
   url: string;
   license: string;
   note: string;
+  note_en?: string;
   retrievedAt: string;
 }
 
@@ -141,33 +148,54 @@ export interface DataMeta {
 export interface ListeningLesson {
   id: string;
   title: string;
+  titleEn?: string;
   titleJp?: string;
+  titleJpFuri?: string;
   channel: string;
   channelUrl?: string;
-  youtubeId: string;
+  /** TTS-native lessons do not need an external YouTube video. */
+  youtubeId?: string;
+  audioMode?: "youtube" | "tts";
   level: Level;
   topic: string;
+  topicEn?: string;
   minutes: number;
   /** Эзэн нь зөвшөөрсөн эсэх — зөвхөн approved нь нийтэд харагдана. */
   status?: "approved" | "pending_review";
-  transcript: { ja: string; mn?: string; at?: number }[];
-  vocab: { w: string; r: string; mn: string }[];
-  questions: { q: string; mn?: string; opts: string[]; a: number; why?: string }[];
+  transcript: { ja: string; mn?: string; en?: string; at?: number }[];
+  vocab: { w: string; r: string; mn: string; en?: string }[];
+  questions: LessonQuestion[];
   shadowing?: string[];
+}
+
+export interface LessonQuestion {
+  q: string;
+  promptEn?: string;
+  mn?: string;
+  opts: string[];
+  optsEn?: string[];
+  a: number;
+  why?: string;
+  whyEn?: string;
 }
 
 export interface ReadingPassage {
   id: string;
   title: string;
+  titleEn?: string;
   titleJp: string;
+  titleJpFuri?: string;
   level: Level;
   topic: string;
+  topicEn?: string;
   minutes: number;
   source?: string;
   /** Текст дэх мөрүүд. `{漢字|かんじ}` хэлбэрийн фуригана дэмжинэ. */
   body: string[];
-  glossary: { w: string; r: string; mn: string }[];
-  questions: { q: string; mn?: string; opts: string[]; a: number; why?: string }[];
+  bodyMn?: string[];
+  bodyEn?: string[];
+  glossary: { w: string; r: string; mn: string; meaningEn?: string }[];
+  questions: LessonQuestion[];
 }
 
 export interface CurriculumPlan {

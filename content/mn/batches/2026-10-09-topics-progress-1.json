@@ -1,0 +1,667 @@
+{
+  "provenance": {
+    "id": "mn-n2kanji-n3vocab-topics-progress-oct9",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "Explicit topic assignments compared to exact retained Japanese headwords, readings and English. No catch-all; independent semantic review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/kanji/n2.json and public/data/vocab/n3.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "9452242b03": {
+      "expected": {
+        "w": "アイスクリーム",
+        "r": "アイスクリーム",
+        "en": [
+          "ice cream"
+        ]
+      },
+      "topics": [
+        "food"
+      ]
+    },
+    "cf63ac57d2": {
+      "expected": {
+        "w": "アウト",
+        "r": "アウト",
+        "en": [
+          "out"
+        ]
+      },
+      "topics": [
+        "arts",
+        "places"
+      ]
+    },
+    "6bec104564": {
+      "expected": {
+        "w": "悪魔",
+        "r": "あくま",
+        "en": [
+          "devil",
+          "demon",
+          "evil spirit"
+        ]
+      },
+      "topics": [
+        "society"
+      ]
+    },
+    "7d653ddf51": {
+      "expected": {
+        "w": "汗",
+        "r": "あせ",
+        "en": [
+          "sweat",
+          "perspiration"
+        ]
+      },
+      "topics": [
+        "body"
+      ]
+    },
+    "a0ea038f9b": {
+      "expected": {
+        "w": "辺り",
+        "r": "あたり",
+        "en": [
+          "vicinity",
+          "nearby"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "e8c795d3e8": {
+      "expected": {
+        "w": "あっ",
+        "r": "あっ",
+        "en": [
+          "Ah!",
+          "Oh!"
+        ]
+      },
+      "topics": [
+        "feelings",
+        "learning"
+      ]
+    },
+    "b22ceca000": {
+      "expected": {
+        "w": "集まり",
+        "r": "あつまり",
+        "en": [
+          "gathering",
+          "meeting",
+          "assembly"
+        ]
+      },
+      "topics": [
+        "people"
+      ]
+    },
+    "57c650defa": {
+      "expected": {
+        "w": "あと",
+        "r": "あと",
+        "en": [
+          "trace",
+          "tracks",
+          "remains"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "4f1b6b6e36": {
+      "expected": {
+        "w": "穴",
+        "r": "あな",
+        "en": [
+          "hole"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "064aac92d9": {
+      "expected": {
+        "w": "油",
+        "r": "あぶら",
+        "en": [
+          "oil"
+        ]
+      },
+      "topics": [
+        "food",
+        "technology"
+      ]
+    },
+    "8399cefa4f": {
+      "expected": {
+        "w": "誤り",
+        "r": "あやまり",
+        "en": [
+          "error"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "c461dcc42b": {
+      "expected": {
+        "w": "粗",
+        "r": "あら",
+        "en": [
+          "defect",
+          "flaw",
+          "blemish"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "6c564bf1bd": {
+      "expected": {
+        "w": "嵐",
+        "r": "あらし",
+        "en": [
+          "storm",
+          "tempest"
+        ]
+      },
+      "topics": [
+        "nature"
+      ]
+    },
+    "de64f6eb4a": {
+      "expected": {
+        "w": "現れ",
+        "r": "あらわれ",
+        "en": [
+          "embodiment",
+          "materialization"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "61f7afccc0": {
+      "expected": {
+        "w": "あるいは",
+        "r": "あるいは",
+        "en": [
+          "or",
+          "possibly"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "13fdb782fe": {
+      "expected": {
+        "w": "アルバム",
+        "r": "アルバム",
+        "en": [
+          "album"
+        ]
+      },
+      "topics": [
+        "arts",
+        "daily"
+      ]
+    },
+    "f1869f9942": {
+      "expected": {
+        "w": "泡",
+        "r": "あわ",
+        "en": [
+          "bubble",
+          "foam",
+          "froth"
+        ]
+      },
+      "topics": [
+        "nature"
+      ]
+    },
+    "e9d213fb20": {
+      "expected": {
+        "w": "哀れ",
+        "r": "あわれ",
+        "en": [
+          "helpless",
+          "pity",
+          "sorrow"
+        ]
+      },
+      "topics": [
+        "feelings"
+      ]
+    },
+    "55bea4f5f3": {
+      "expected": {
+        "w": "案",
+        "r": "あん",
+        "en": [
+          "plan",
+          "suffix meaning draft"
+        ]
+      },
+      "topics": [
+        "work",
+        "learning"
+      ]
+    },
+    "3f1fbec85e": {
+      "expected": {
+        "w": "あんまり",
+        "r": "あんまり",
+        "en": [
+          "not very",
+          "not much",
+          "remainder"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    }
+  },
+  "kanji": {
+    "党": {
+      "expected": {
+        "k": "党",
+        "on": [
+          "とう"
+        ],
+        "kun": [
+          "なかま",
+          "むら"
+        ],
+        "en": [
+          "Party",
+          "Faction",
+          "Clique"
+        ]
+      },
+      "topics": [
+        "society"
+      ]
+    },
+    "協": {
+      "expected": {
+        "k": "協",
+        "on": [
+          "きょう"
+        ],
+        "kun": [],
+        "en": [
+          "Co-",
+          "Cooperation"
+        ]
+      },
+      "topics": [
+        "relationships"
+      ]
+    },
+    "総": {
+      "expected": {
+        "k": "総",
+        "on": [
+          "そう"
+        ],
+        "kun": [
+          "す.べて",
+          "すべ.て",
+          "ふさ"
+        ],
+        "en": [
+          "General",
+          "Whole",
+          "All"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "区": {
+      "expected": {
+        "k": "区",
+        "on": [
+          "く",
+          "おう",
+          "こう"
+        ],
+        "kun": [],
+        "en": [
+          "Ward",
+          "District"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "領": {
+      "expected": {
+        "k": "領",
+        "on": [
+          "りょう"
+        ],
+        "kun": [
+          "えり"
+        ],
+        "en": [
+          "Jurisdiction",
+          "Dominion",
+          "Territory"
+        ]
+      },
+      "topics": [
+        "places",
+        "society"
+      ]
+    },
+    "県": {
+      "expected": {
+        "k": "県",
+        "on": [
+          "けん"
+        ],
+        "kun": [
+          "か.ける"
+        ],
+        "en": [
+          "Prefecture"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "設": {
+      "expected": {
+        "k": "設",
+        "on": [
+          "せつ"
+        ],
+        "kun": [
+          "もう.ける"
+        ],
+        "en": [
+          "Establishment",
+          "Provision",
+          "Prepare"
+        ]
+      },
+      "topics": [
+        "actions",
+        "work"
+      ]
+    },
+    "改": {
+      "expected": {
+        "k": "改",
+        "on": [
+          "かい"
+        ],
+        "kun": [
+          "あらた.める",
+          "あらた.まる"
+        ],
+        "en": [
+          "Reformation",
+          "Change",
+          "Modify"
+        ]
+      },
+      "topics": [
+        "actions"
+      ]
+    },
+    "査": {
+      "expected": {
+        "k": "査",
+        "on": [
+          "さ"
+        ],
+        "kun": [],
+        "en": [
+          "Investigate"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "団": {
+      "expected": {
+        "k": "団",
+        "on": [
+          "だん",
+          "とん"
+        ],
+        "kun": [
+          "かたまり",
+          "まる.い"
+        ],
+        "en": [
+          "Group",
+          "Association"
+        ]
+      },
+      "topics": [
+        "people",
+        "society"
+      ]
+    },
+    "各": {
+      "expected": {
+        "k": "各",
+        "on": [
+          "かく"
+        ],
+        "kun": [
+          "おのおの"
+        ],
+        "en": [
+          "Each",
+          "Every",
+          "Either"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "減": {
+      "expected": {
+        "k": "減",
+        "on": [
+          "げん"
+        ],
+        "kun": [
+          "へ.る",
+          "へ.らす"
+        ],
+        "en": [
+          "Dwindle",
+          "Decrease",
+          "Reduce"
+        ]
+      },
+      "topics": [
+        "quantity",
+        "actions"
+      ]
+    },
+    "比": {
+      "expected": {
+        "k": "比",
+        "on": [
+          "ひ"
+        ],
+        "kun": [
+          "くら.べる"
+        ],
+        "en": [
+          "Compare",
+          "Race",
+          "Ratio"
+        ]
+      },
+      "topics": [
+        "learning",
+        "quantity",
+        "arts"
+      ]
+    },
+    "防": {
+      "expected": {
+        "k": "防",
+        "on": [
+          "ぼう"
+        ],
+        "kun": [
+          "ふせ.ぐ"
+        ],
+        "en": [
+          "Ward Off",
+          "Defend",
+          "Protect"
+        ]
+      },
+      "topics": [
+        "society",
+        "actions"
+      ]
+    },
+    "境": {
+      "expected": {
+        "k": "境",
+        "on": [
+          "きょう",
+          "けい"
+        ],
+        "kun": [
+          "さかい"
+        ],
+        "en": [
+          "Boundary",
+          "Border",
+          "Region"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "導": {
+      "expected": {
+        "k": "導",
+        "on": [
+          "どう"
+        ],
+        "kun": [
+          "みちび.く"
+        ],
+        "en": [
+          "Guidance",
+          "Leading",
+          "Conduct"
+        ]
+      },
+      "topics": [
+        "learning",
+        "actions"
+      ]
+    },
+    "副": {
+      "expected": {
+        "k": "副",
+        "on": [
+          "ふく"
+        ],
+        "kun": [],
+        "en": [
+          "Vice-",
+          "Assistant",
+          "Aide"
+        ]
+      },
+      "topics": [
+        "people",
+        "work"
+      ]
+    },
+    "線": {
+      "expected": {
+        "k": "線",
+        "on": [
+          "せん"
+        ],
+        "kun": [
+          "すじ"
+        ],
+        "en": [
+          "Line",
+          "Track"
+        ]
+      },
+      "topics": [
+        "places",
+        "quantity"
+      ]
+    },
+    "農": {
+      "expected": {
+        "k": "農",
+        "on": [
+          "のう"
+        ],
+        "kun": [],
+        "en": [
+          "Agriculture",
+          "Farmers"
+        ]
+      },
+      "topics": [
+        "nature",
+        "work"
+      ]
+    },
+    "象": {
+      "expected": {
+        "k": "象",
+        "on": [
+          "しょう",
+          "ぞう"
+        ],
+        "kun": [
+          "かたど.る"
+        ],
+        "en": [
+          "Elephant",
+          "Pattern After",
+          "Imitate"
+        ]
+      },
+      "topics": [
+        "nature",
+        "arts",
+        "actions"
+      ]
+    }
+  }
+}

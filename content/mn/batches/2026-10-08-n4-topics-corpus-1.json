@@ -1,0 +1,633 @@
+{
+  "provenance": {
+    "id": "mn-n4-topic-corpus-1-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "Explicit topic assignments compared to exact retained Japanese headwords, readings and English. No catch-all; independent semantic review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n4.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "4fff6d0441": {
+      "expected": {
+        "w": "あ",
+        "r": "あ",
+        "en": [
+          "Ah"
+        ]
+      },
+      "topics": [
+        "feelings",
+        "learning"
+      ]
+    },
+    "6a4011f27f": {
+      "expected": {
+        "w": "ああ",
+        "r": "ああ",
+        "en": [
+          "like that"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "d1a343e501": {
+      "expected": {
+        "w": "間",
+        "r": "あいだ",
+        "en": [
+          "a space"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "2a6a55be8d": {
+      "expected": {
+        "w": "あかちゃん",
+        "r": "あかちゃん",
+        "en": [
+          "infant"
+        ]
+      },
+      "topics": [
+        "people"
+      ]
+    },
+    "e877021bf4": {
+      "expected": {
+        "w": "赤ん坊",
+        "r": "あかんぼう",
+        "en": [
+          "baby"
+        ]
+      },
+      "topics": [
+        "people"
+      ]
+    },
+    "628b6b8e9d": {
+      "expected": {
+        "w": "アクセサリー",
+        "r": "アクセサリー",
+        "en": [
+          "accessory"
+        ]
+      },
+      "topics": [
+        "daily"
+      ]
+    },
+    "590fa58ca9": {
+      "expected": {
+        "w": "味",
+        "r": "あじ",
+        "en": [
+          "flavour"
+        ]
+      },
+      "topics": [
+        "food"
+      ]
+    },
+    "97bdb63259": {
+      "expected": {
+        "w": "アジア",
+        "r": "アジア",
+        "en": [
+          "Asia"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "c1fb180c70": {
+      "expected": {
+        "w": "アナウンサー",
+        "r": "アナウンサー",
+        "en": [
+          "announcer"
+        ]
+      },
+      "topics": [
+        "people",
+        "work"
+      ]
+    },
+    "0fa879c73d": {
+      "expected": {
+        "w": "アフリカ",
+        "r": "アフリカ",
+        "en": [
+          "Africa"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "b921645383": {
+      "expected": {
+        "w": "アメリカ",
+        "r": "アメリカ",
+        "en": [
+          "America"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "ab0767b2f7": {
+      "expected": {
+        "w": "アルコール",
+        "r": "アルコール",
+        "en": [
+          "alcohol"
+        ]
+      },
+      "topics": [
+        "food"
+      ]
+    },
+    "629362dbfc": {
+      "expected": {
+        "w": "以下",
+        "r": "いか",
+        "en": [
+          "less than"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "da4198f39c": {
+      "expected": {
+        "w": "以外",
+        "r": "いがい",
+        "en": [
+          "with the exception of"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "ba5a03baf1": {
+      "expected": {
+        "w": "意見",
+        "r": "いけん",
+        "en": [
+          "opinion"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "13ab63d79a": {
+      "expected": {
+        "w": "以上",
+        "r": "いじょう",
+        "en": [
+          "more than",
+          "this is all"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "bf82bb12d2": {
+      "expected": {
+        "w": "一度",
+        "r": "いちど",
+        "en": [
+          "once"
+        ]
+      },
+      "topics": [
+        "time",
+        "quantity"
+      ]
+    },
+    "3de1fe452d": {
+      "expected": {
+        "w": "糸",
+        "r": "いと",
+        "en": [
+          "thread"
+        ]
+      },
+      "topics": [
+        "daily"
+      ]
+    },
+    "556e3e0d99": {
+      "expected": {
+        "w": "以内",
+        "r": "いない",
+        "en": [
+          "within"
+        ]
+      },
+      "topics": [
+        "places",
+        "time"
+      ]
+    },
+    "11d4a3118b": {
+      "expected": {
+        "w": "田舎",
+        "r": "いなか",
+        "en": [
+          "countryside"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "76d4bcd098": {
+      "expected": {
+        "w": "うち",
+        "r": "うち",
+        "en": [
+          "within"
+        ]
+      },
+      "topics": [
+        "places",
+        "time"
+      ]
+    },
+    "1b5a6286d6": {
+      "expected": {
+        "w": "裏",
+        "r": "うら",
+        "en": [
+          "reverse side"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "533b248802": {
+      "expected": {
+        "w": "うん",
+        "r": "うん",
+        "en": [
+          "(informal) yes"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "9f6e25d5e2": {
+      "expected": {
+        "w": "運転手",
+        "r": "うんてんしゅ",
+        "en": [
+          "driver"
+        ]
+      },
+      "topics": [
+        "people",
+        "work"
+      ]
+    },
+    "3139c14254": {
+      "expected": {
+        "w": "エスカレーター",
+        "r": "エスカレーター",
+        "en": [
+          "escalator"
+        ]
+      },
+      "topics": [
+        "technology",
+        "places"
+      ]
+    },
+    "bb01cb559f": {
+      "expected": {
+        "w": "枝",
+        "r": "えだ",
+        "en": [
+          "branch",
+          "twig"
+        ]
+      },
+      "topics": [
+        "nature"
+      ]
+    },
+    "12e7bd036b": {
+      "expected": {
+        "w": "お祝い",
+        "r": "おいわい",
+        "en": [
+          "congratulation"
+        ]
+      },
+      "topics": [
+        "relationships"
+      ]
+    },
+    "5c63f36f44": {
+      "expected": {
+        "w": "オートバイ",
+        "r": "オートバイ",
+        "en": [
+          "motorcycle"
+        ]
+      },
+      "topics": [
+        "technology"
+      ]
+    },
+    "1065d7145c": {
+      "expected": {
+        "w": "屋上",
+        "r": "おくじょう",
+        "en": [
+          "rooftop"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "ba001e2f36": {
+      "expected": {
+        "w": "贈り物",
+        "r": "おくりもの",
+        "en": [
+          "gift"
+        ]
+      },
+      "topics": [
+        "relationships",
+        "daily"
+      ]
+    },
+    "3787755f33": {
+      "expected": {
+        "w": "押し入れ",
+        "r": "おしいれ",
+        "en": [
+          "closet"
+        ]
+      },
+      "topics": [
+        "daily",
+        "places"
+      ]
+    },
+    "1f5a7d8e07": {
+      "expected": {
+        "w": "お嬢さん",
+        "r": "おじょうさん",
+        "en": [
+          "young lady"
+        ]
+      },
+      "topics": [
+        "people"
+      ]
+    },
+    "f2c38f9517": {
+      "expected": {
+        "w": "おつり",
+        "r": "おつり",
+        "en": [
+          "change from purchase",
+          "balance"
+        ]
+      },
+      "topics": [
+        "work",
+        "quantity"
+      ]
+    },
+    "c6815e7618": {
+      "expected": {
+        "w": "音",
+        "r": "おと",
+        "en": [
+          "sound",
+          "note"
+        ]
+      },
+      "topics": [
+        "arts"
+      ]
+    },
+    "f586632207": {
+      "expected": {
+        "w": "お土産",
+        "r": "おみやげ",
+        "en": [
+          "souvenir"
+        ]
+      },
+      "topics": [
+        "daily",
+        "relationships"
+      ]
+    },
+    "1579d0db1b": {
+      "expected": {
+        "w": "おもちゃ",
+        "r": "おもちゃ",
+        "en": [
+          "toy"
+        ]
+      },
+      "topics": [
+        "daily"
+      ]
+    },
+    "721424863e": {
+      "expected": {
+        "w": "表",
+        "r": "おもて",
+        "en": [
+          "the front"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "d9cf4f541d": {
+      "expected": {
+        "w": "泳ぎ方",
+        "r": "およぎかた",
+        "en": [
+          "way of swimming"
+        ]
+      },
+      "topics": [
+        "arts",
+        "actions"
+      ]
+    },
+    "12db3e5f4e": {
+      "expected": {
+        "w": "お礼",
+        "r": "おれい",
+        "en": [
+          "expression of gratitude"
+        ]
+      },
+      "topics": [
+        "relationships"
+      ]
+    },
+    "19cb869e4d": {
+      "expected": {
+        "w": "終わり",
+        "r": "おわり",
+        "en": [
+          "the end"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "cbbc4c3524": {
+      "expected": {
+        "w": "カーテン",
+        "r": "カーテン",
+        "en": [
+          "curtain"
+        ]
+      },
+      "topics": [
+        "daily"
+      ]
+    },
+    "6f4ad2115e": {
+      "expected": {
+        "w": "海岸",
+        "r": "かいがん",
+        "en": [
+          "coast"
+        ]
+      },
+      "topics": [
+        "nature",
+        "places"
+      ]
+    },
+    "6365c5ac47": {
+      "expected": {
+        "w": "帰り",
+        "r": "かえり",
+        "en": [
+          "return"
+        ]
+      },
+      "topics": [
+        "actions"
+      ]
+    },
+    "2c7db27d62": {
+      "expected": {
+        "w": "鏡",
+        "r": "かがみ",
+        "en": [
+          "mirror"
+        ]
+      },
+      "topics": [
+        "daily"
+      ]
+    },
+    "b3c360789e": {
+      "expected": {
+        "w": "ガソリン",
+        "r": "ガソリン",
+        "en": [
+          "petrol"
+        ]
+      },
+      "topics": [
+        "technology"
+      ]
+    },
+    "26f2ddd0a2": {
+      "expected": {
+        "w": "形",
+        "r": "かたち",
+        "en": [
+          "shape"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "26a19196b7": {
+      "expected": {
+        "w": "課長",
+        "r": "かちょう",
+        "en": [
+          "section manager"
+        ]
+      },
+      "topics": [
+        "people",
+        "work"
+      ]
+    },
+    "876713fb67": {
+      "expected": {
+        "w": "かっこう",
+        "r": "かっこう",
+        "en": [
+          "appearance"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "89927b8fa1": {
+      "expected": {
+        "w": "家内",
+        "r": "かない",
+        "en": [
+          "housewife"
+        ]
+      },
+      "topics": [
+        "people",
+        "relationships"
+      ]
+    },
+    "0752484ec5": {
+      "expected": {
+        "w": "壁",
+        "r": "かべ",
+        "en": [
+          "wall"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    }
+  }
+}

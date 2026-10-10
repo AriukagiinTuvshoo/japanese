@@ -1,0 +1,1067 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-continue-3-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit semantic categories cross-checked against Japanese entry and retained English gloss, independently unreviewed. Original uncommon senses preserved.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "23e1db8f06": {
+      "mn": [
+        "цөллөг",
+        "хөөн зайлуулах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "追放",
+        "r": "ついほう",
+        "en": [
+          "exile",
+          "banishment"
+        ]
+      }
+    },
+    "20ac1171ef": {
+      "mn": [
+        "зарцуулах",
+        "зориулах",
+        "үрэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "費やす",
+        "r": "ついやす",
+        "en": [
+          "to spend",
+          "to devote",
+          "to waste"
+        ]
+      }
+    },
+    "286333828b": {
+      "mn": [
+        "унаж сүйрэх",
+        "осолдож унах"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "墜落",
+        "r": "ついらく",
+        "en": [
+          "falling",
+          "crashing"
+        ]
+      }
+    },
+    "151c9084b7": {
+      "mn": [
+        "нарийн мэддэг хүн",
+        "захидал тоолох дагавар"
+      ],
+      "topics": [
+        "learning",
+        "quantity"
+      ],
+      "expected": {
+        "w": "通",
+        "r": "つう",
+        "en": [
+          "connoisseur",
+          "counter for letters"
+        ]
+      }
+    },
+    "57978c598e": {
+      "mn": [
+        "гүн мэдрэх",
+        "бүрэн ухаарах"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "痛感",
+        "r": "つうかん",
+        "en": [
+          "feeling keenly",
+          "fully realizing"
+        ]
+      }
+    },
+    "c6f69808b7": {
+      "mn": [
+        "ердийн",
+        "нийтлэг",
+        "ихэвчлэн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "通常",
+        "r": "つうじょう",
+        "en": [
+          "common",
+          "general",
+          "usually"
+        ]
+      }
+    },
+    "2ea8895f87": {
+      "mn": [
+        "хурц",
+        "хүчтэй мэдрэгдсэн"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "痛切",
+        "r": "つうせつ",
+        "en": [
+          "keen",
+          "acute"
+        ]
+      }
+    },
+    "6bd8f39ea4": {
+      "mn": [
+        "таяг"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "杖",
+        "r": "つえ",
+        "en": [
+          "cane"
+        ]
+      }
+    },
+    "0bfbb7af91": {
+      "mn": [
+        "даалгавар",
+        "жижиг ажил",
+        "хийх үйл"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "遣い",
+        "r": "つかい",
+        "en": [
+          "mission",
+          "simple task",
+          "doing"
+        ]
+      }
+    },
+    "aa0f93504f": {
+      "mn": [
+        "ашиглах арга",
+        "зориулалт"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "使い道",
+        "r": "つかいみち",
+        "en": [
+          "use"
+        ]
+      }
+    },
+    "521e3dc77f": {
+      "mn": [
+        "алба хаах",
+        "хүнд ажиллах"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "仕える",
+        "r": "つかえる",
+        "en": [
+          "to serve",
+          "to work for"
+        ]
+      }
+    },
+    "be3990b6a4": {
+      "mn": [
+        "захирах",
+        "удирдах",
+        "эрхлэх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "司る",
+        "r": "つかさどる",
+        "en": [
+          "to rule",
+          "to govern",
+          "to administer"
+        ]
+      }
+    },
+    "f908b2fcd8": {
+      "mn": [
+        "агшин",
+        "богино хугацаа",
+        "түрхэн"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "束の間",
+        "r": "つかのま",
+        "en": [
+          "moment",
+          "brief time",
+          "brief"
+        ]
+      }
+    },
+    "5680067b6b": {
+      "mn": [
+        "хавсарсан",
+        "сэтгэгдэл",
+        "нийтэч байдал"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "付き",
+        "r": "つき",
+        "en": [
+          "attached to",
+          "impression",
+          "sociality"
+        ]
+      }
+    },
+    "7831f2b02c": {
+      "mn": [
+        "сар бүр",
+        "хэвийн ердийн"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "月並み",
+        "r": "つきなみ",
+        "en": [
+          "every month",
+          "common"
+        ]
+      }
+    },
+    "54a5fd6985": {
+      "mn": [
+        "залгаас",
+        "холбосон цэг"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "継ぎ目",
+        "r": "つぎめ",
+        "en": [
+          "a joint",
+          "joining point"
+        ]
+      }
+    },
+    "353975152e": {
+      "mn": [
+        "дуусах",
+        "шавхагдах",
+        "барагдах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "尽きる",
+        "r": "つきる",
+        "en": [
+          "to be used up",
+          "to be run out",
+          "to be exhausted"
+        ]
+      }
+    },
+    "08cfe03cb3": {
+      "mn": [
+        "амьсгалах",
+        "худал хэлэх",
+        "бөөлжих"
+      ],
+      "topics": [
+        "body",
+        "learning"
+      ],
+      "expected": {
+        "w": "吐く",
+        "r": "つく",
+        "en": [
+          "to breathe",
+          "to tell (lies)",
+          "to vomit"
+        ]
+      }
+    },
+    "b0dfaaf7ed": {
+      "mn": [
+        "залгамжлах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "継ぐ",
+        "r": "つぐ",
+        "en": [
+          "to succeed"
+        ]
+      }
+    },
+    "2e6b817c6f": {
+      "mn": [
+        "залгах",
+        "эвлүүлэх",
+        "яс нийлүүлэх"
+      ],
+      "topics": [
+        "actions",
+        "body"
+      ],
+      "expected": {
+        "w": "接ぐ",
+        "r": "つぐ",
+        "en": [
+          "to join",
+          "to piece together",
+          "to set (bones)"
+        ]
+      }
+    },
+    "a942fde509": {
+      "mn": [
+        "шавхах",
+        "дуустал хэрэглэх",
+        "хүний төлөө зүтгэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "尽くす",
+        "r": "つくす",
+        "en": [
+          "to exhaust",
+          "to run out",
+          "to serve (a person)"
+        ]
+      }
+    },
+    "617364b915": {
+      "mn": [
+        "хийц",
+        "хэрчсэн түүхий загас"
+      ],
+      "topics": [
+        "daily",
+        "food"
+      ],
+      "expected": {
+        "w": "作り",
+        "r": "つくり",
+        "en": [
+          "make-up",
+          "sliced raw fish"
+        ]
+      }
+    },
+    "5b0c727913": {
+      "mn": [
+        "хийц",
+        "бүтэц",
+        "биеийн галбир"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "造り",
+        "r": "つくり",
+        "en": [
+          "make up",
+          "structure",
+          "physique"
+        ]
+      }
+    },
+    "6686f635d7": {
+      "mn": [
+        "хийх",
+        "бүтээх",
+        "үйлдвэрлэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "造る",
+        "r": "つくる",
+        "en": [
+          "to make",
+          "to create",
+          "to manufacture"
+        ]
+      }
+    },
+    "88bf13c181": {
+      "mn": [
+        "сэлбэх",
+        "засах",
+        "янзлах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "繕う",
+        "r": "つくろう",
+        "en": [
+          "to mend",
+          "to repair",
+          "to fix"
+        ]
+      }
+    },
+    "6a852ae347": {
+      "mn": [
+        "нэмж оруулах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "付け加える",
+        "r": "つけくわえる",
+        "en": [
+          "to add one thing to another"
+        ]
+      }
+    },
+    "4b3148b7e1": {
+      "mn": [
+        "мэдэгдэх"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "告げる",
+        "r": "つげる",
+        "en": [
+          "to inform"
+        ]
+      }
+    },
+    "134e796195": {
+      "mn": [
+        "утгын холбоо",
+        "нийцтэй байдал"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "辻褄",
+        "r": "つじつま",
+        "en": [
+          "coherence",
+          "consistency"
+        ]
+      }
+    },
+    "8ba1e58b80": {
+      "mn": [
+        "буу"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "銃",
+        "r": "つつ",
+        "en": [
+          "gun"
+        ]
+      }
+    },
+    "c002a107c0": {
+      "mn": [
+        "хоолой",
+        "гуурс"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "筒",
+        "r": "つつ",
+        "en": [
+          "pipe",
+          "tube"
+        ]
+      }
+    },
+    "2564dfcfcb": {
+      "mn": [
+        "хатгах",
+        "цохих",
+        "дайрах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "突く",
+        "r": "つつく",
+        "en": [
+          "to thrust",
+          "to strike",
+          "to attack"
+        ]
+      }
+    },
+    "0738098ee1": {
+      "mn": [
+        "болгоомжлох",
+        "ариун хянуур байх",
+        "тэвчих"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "慎む",
+        "r": "つつしむ",
+        "en": [
+          "to be careful",
+          "to be chaste or discreet",
+          "to abstain or refrain"
+        ]
+      }
+    },
+    "70d41d423d": {
+      "mn": [
+        "тулж дэмжих",
+        "хөшүүн болох",
+        "чангарах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "突っ張る",
+        "r": "つっぱる",
+        "en": [
+          "to support",
+          "to become stiff",
+          "to become taut"
+        ]
+      }
+    },
+    "00c77c36b3": {
+      "mn": [
+        "ажилд тохирох",
+        "үүргээ дийлэх",
+        "зөв ажиллах"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "勤まる",
+        "r": "つとまる",
+        "en": [
+          "to be fit for",
+          "to be equal to",
+          "to function properly"
+        ]
+      }
+    },
+    "847b810d08": {
+      "mn": [
+        "ажлын газар"
+      ],
+      "topics": [
+        "work",
+        "places"
+      ],
+      "expected": {
+        "w": "勤め先",
+        "r": "つとめさき",
+        "en": [
+          "place of work"
+        ]
+      }
+    },
+    "f7acf9c5b4": {
+      "mn": [
+        "хичээгээрэй",
+        "шаргуу ажиллаарай"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "努めて",
+        "r": "つとめて",
+        "en": [
+          "make an effort!",
+          "work hard!"
+        ]
+      }
+    },
+    "e90119f304": {
+      "mn": [
+        "цунами",
+        "далайн аварга давалгаа"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "津波",
+        "r": "つなみ",
+        "en": [
+          "tsunami",
+          "tidal wave"
+        ]
+      }
+    },
+    "637c1223d2": {
+      "mn": [
+        "чимхэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "抓る",
+        "r": "つねる",
+        "en": [
+          "to pinch"
+        ]
+      }
+    },
+    "3a6a16d2af": {
+      "mn": [
+        "урих",
+        "тусламж оролцоо хүсэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "募る",
+        "r": "つのる",
+        "en": [
+          "to invite",
+          "to solicit help participation etc"
+        ]
+      }
+    },
+    "fac8d25e69": {
+      "mn": [
+        "шүлс",
+        "цэр"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "唾",
+        "r": "つば",
+        "en": [
+          "saliva",
+          "sputum"
+        ]
+      }
+    },
+    "1d6e69684f": {
+      "mn": [
+        "амандаа бувтнах",
+        "шивнэх"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "呟く",
+        "r": "つぶやく",
+        "en": [
+          "to mutter",
+          "to murmur"
+        ]
+      }
+    },
+    "a5bd04e61d": {
+      "mn": [
+        "нүдээ аних"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "瞑る",
+        "r": "つぶる",
+        "en": [
+          "to close the eyes"
+        ]
+      }
+    },
+    "ff6c18c3ce": {
+      "mn": [
+        "ваар",
+        "сав",
+        "цэцгийн ваар"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "壷",
+        "r": "つぼ",
+        "en": [
+          "tsubo jar",
+          "pot",
+          "vase"
+        ]
+      }
+    },
+    "a72d0a162f": {
+      "mn": [
+        "нахиа",
+        "цэцгийн нахиа"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "蕾",
+        "r": "つぼみ",
+        "en": [
+          "bud",
+          "flower bud"
+        ]
+      }
+    },
+    "691f993a5a": {
+      "mn": [
+        "чимхэх",
+        "барих",
+        "авч өргөх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "摘む",
+        "r": "つまむ",
+        "en": [
+          "to pinch",
+          "to hold",
+          "to pick up"
+        ]
+      }
+    },
+    "1cad4b9af1": {
+      "mn": [
+        "шүүдэр"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "露",
+        "r": "つゆ",
+        "en": [
+          "dew"
+        ]
+      }
+    },
+    "b341206308": {
+      "mn": [
+        "хүчтэй болох",
+        "хүч нэмэгдэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "強まる",
+        "r": "つよまる",
+        "en": [
+          "to get strong",
+          "to gain strength"
+        ]
+      }
+    },
+    "f507f7f8a6": {
+      "mn": [
+        "хүчжүүлэх",
+        "онцлох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "強める",
+        "r": "つよめる",
+        "en": [
+          "to strengthen",
+          "to emphasize"
+        ]
+      }
+    },
+    "17ba5166b9": {
+      "mn": [
+        "үргэлжлэх",
+        "сунан байрлах",
+        "эгнэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "連なる",
+        "r": "つらなる",
+        "en": [
+          "to extend",
+          "to stretch out",
+          "to stand in a row"
+        ]
+      }
+    },
+    "4786dd1bfd": {
+      "mn": [
+        "нэвт гарах",
+        "тууштай баримтлах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "貫く",
+        "r": "つらぬく",
+        "en": [
+          "to go through"
+        ]
+      }
+    },
+    "24aea90de3": {
+      "mn": [
+        "холбох",
+        "залгах",
+        "нийлүүлэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "連ねる",
+        "r": "つらねる",
+        "en": [
+          "to link",
+          "to join",
+          "to put together"
+        ]
+      }
+    },
+    "34f200e33e": {
+      "mn": [
+        "дүүжин хонх"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "釣鐘",
+        "r": "つりがね",
+        "en": [
+          "hanging bell"
+        ]
+      }
+    },
+    "763f0e37f3": {
+      "mn": [
+        "унаанд барих дүүжин оосор"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "吊り革",
+        "r": "つりかわ",
+        "en": [
+          "strap"
+        ]
+      }
+    },
+    "21fc5b6373": {
+      "mn": [
+        "санамсаргүй уулзах",
+        "таарах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "出合う",
+        "r": "であう",
+        "en": [
+          "to meet by chance",
+          "to come across",
+          "to happen to encounter"
+        ]
+      }
+    },
+    "232bbc0cc6": {
+      "mn": [
+        "нэмэгдэл хөлс",
+        "нөхөн төлбөр",
+        "эмчилгээ"
+      ],
+      "topics": [
+        "work",
+        "body"
+      ],
+      "expected": {
+        "w": "手当て",
+        "r": "てあて",
+        "en": [
+          "allowance",
+          "compensation",
+          "treatment"
+        ]
+      }
+    },
+    "060bd26d75": {
+      "mn": [
+        "төрх",
+        "байдал",
+        "нөхцөл"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "体",
+        "r": "てい",
+        "en": [
+          "appearance",
+          "air",
+          "condition"
+        ]
+      }
+    },
+    "80ca5a134c": {
+      "mn": [
+        "тодорхойлолт"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "定義",
+        "r": "ていぎ",
+        "en": [
+          "definition"
+        ]
+      }
+    },
+    "bb77560bcb": {
+      "mn": [
+        "санал болгох",
+        "өгөх",
+        "нэвтрүүлэг ивээн тэтгэх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "提供",
+        "r": "ていきょう",
+        "en": [
+          "offer",
+          "tender",
+          "program sponsoring"
+        ]
+      }
+    },
+    "207bda82fe": {
+      "mn": [
+        "хамтын ажиллагаа",
+        "холбоо",
+        "хамтарсан бизнес"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "提携",
+        "r": "ていけい",
+        "en": [
+          "cooperation",
+          "tie-up",
+          "joint business"
+        ]
+      }
+    },
+    "66ade36f4f": {
+      "mn": [
+        "зохистой байдал",
+        "хэв маяг",
+        "хэлбэр"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "体裁",
+        "r": "ていさい",
+        "en": [
+          "decency",
+          "style",
+          "form"
+        ]
+      }
+    }
+  }
+}

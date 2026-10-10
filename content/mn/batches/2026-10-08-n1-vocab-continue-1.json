@@ -1,0 +1,1055 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-continue-1-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit semantic categories cross-checked against Japanese entry and retained English gloss, independently unreviewed. Original uncommon senses preserved.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "42b43ce436": {
+      "mn": [
+        "төгсгөл",
+        "эцсийн өнгөлгөө",
+        "дууссан байдал"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "仕上げ",
+        "r": "しあげ",
+        "en": [
+          "end",
+          "finishing touches",
+          "being finished"
+        ]
+      }
+    },
+    "4f03a7c46d": {
+      "mn": [
+        "дуусгах",
+        "гүйцээх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "仕上げる",
+        "r": "しあげる",
+        "en": [
+          "to finish up",
+          "to complete"
+        ]
+      }
+    },
+    "da8dd04cb6": {
+      "mn": [
+        "үржүүлэх",
+        "өсгөх",
+        "тэжээх"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "飼育",
+        "r": "しいく",
+        "en": [
+          "breeding",
+          "raising",
+          "rearing"
+        ]
+      }
+    },
+    "863a775a01": {
+      "mn": [
+        "хүчээр"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "強いて",
+        "r": "しいて",
+        "en": [
+          "by force"
+        ]
+      }
+    },
+    "1b60cfb2ae": {
+      "mn": [
+        "суудал",
+        "хуудас"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "シート",
+        "r": "シート",
+        "en": [
+          "seat",
+          "sheet"
+        ]
+      }
+    },
+    "3d353fdf0a": {
+      "mn": [
+        "жинсэн өмд",
+        "ажлын жинсэн өмд"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "ジーパン",
+        "r": "ジーパン",
+        "en": [
+          "jeans (lit: jeans pants)",
+          "dungarees"
+        ]
+      }
+    },
+    "f63ec8688f": {
+      "mn": [
+        "хүчлэх",
+        "албадах",
+        "шахах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "強いる",
+        "r": "しいる",
+        "en": [
+          "to force",
+          "to compel",
+          "to coerce"
+        ]
+      }
+    },
+    "7ff4bf42f4": {
+      "mn": [
+        "бараа татах",
+        "нөөцөө нөхөх",
+        "худалдан бэлтгэх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "仕入れる",
+        "r": "しいれる",
+        "en": [
+          "to lay in stock",
+          "to replenish stock",
+          "to procure"
+        ]
+      }
+    },
+    "6f65d17ebd": {
+      "mn": [
+        "шүдний эмчилгээ"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "歯科",
+        "r": "しか",
+        "en": [
+          "dentistry"
+        ]
+      }
+    },
+    "69d6bca427": {
+      "mn": [
+        "өөрийн би",
+        "эго"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "自我",
+        "r": "じが",
+        "en": [
+          "self",
+          "the ego"
+        ]
+      }
+    },
+    "82f87e36f1": {
+      "mn": [
+        "хотын бүс",
+        "гудамжууд",
+        "хот"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "市街",
+        "r": "しがい",
+        "en": [
+          "urban areas",
+          "the streets",
+          "town"
+        ]
+      }
+    },
+    "56d9848db1": {
+      "mn": [
+        "харах мэдрэхүй",
+        "хараа"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "視覚",
+        "r": "しかく",
+        "en": [
+          "sense of sight",
+          "vision"
+        ]
+      }
+    },
+    "8b7f4fc480": {
+      "mn": [
+        "мэргэшлийн шаардлага",
+        "нөхцөл",
+        "чадамж"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "資格",
+        "r": "しかく",
+        "en": [
+          "qualifications",
+          "requirements",
+          "capabilities"
+        ]
+      }
+    },
+    "46d28a7430": {
+      "mn": [
+        "өөрийгөө ухамсарлах"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "自覚",
+        "r": "じかく",
+        "en": [
+          "self-conscious"
+        ]
+      }
+    },
+    "af09a2fb2b": {
+      "mn": [
+        "төхөөрөмж",
+        "арга мэх",
+        "механизм"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "仕掛け",
+        "r": "しかけ",
+        "en": [
+          "device",
+          "trick",
+          "mechanism"
+        ]
+      }
+    },
+    "0c73fbec8d": {
+      "mn": [
+        "эхлэх",
+        "мина тавих",
+        "урхи тавих"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "仕掛ける",
+        "r": "しかける",
+        "en": [
+          "to commence",
+          "to lay (mines)",
+          "to set (traps)"
+        ]
+      }
+    },
+    "64778c95f5": {
+      "mn": [
+        "тэгсэн ч",
+        "гэвч"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "しかしながら",
+        "r": "しかしながら",
+        "en": [
+          "nevertheless",
+          "however"
+        ]
+      }
+    },
+    "26c17d8895": {
+      "mn": [
+        "нутаг",
+        "газар",
+        "дүүрэг"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "地方",
+        "r": "じかた",
+        "en": [
+          "area",
+          "locality",
+          "district"
+        ]
+      }
+    },
+    "db8eb581ea": {
+      "mn": [
+        "команд",
+        "удирдлага"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "指揮",
+        "r": "しき",
+        "en": [
+          "command",
+          "direction"
+        ]
+      }
+    },
+    "0e7b5df019": {
+      "mn": [
+        "шаазан",
+        "шаазан эдлэл"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "磁器",
+        "r": "じき",
+        "en": [
+          "porcelain",
+          "china"
+        ]
+      }
+    },
+    "ba9a20ea9f": {
+      "mn": [
+        "соронзон чанар"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "磁気",
+        "r": "じき",
+        "en": [
+          "magnetism"
+        ]
+      }
+    },
+    "12b0fc3312": {
+      "mn": [
+        "өнгө",
+        "өнгөний туяа",
+        "өнгөний ялгарал"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "色彩",
+        "r": "しきさい",
+        "en": [
+          "colour",
+          "hue",
+          "tints"
+        ]
+      }
+    },
+    "0c606e7a79": {
+      "mn": [
+        "ёслолын танхим",
+        "хурим зэрэг ёслол хийх газар"
+      ],
+      "topics": [
+        "places",
+        "relationships"
+      ],
+      "expected": {
+        "w": "式場",
+        "r": "しきじょう",
+        "en": [
+          "ceremonial hall",
+          "place of ceremony (e.g. marriage)"
+        ]
+      }
+    },
+    "299764879b": {
+      "mn": [
+        "заншил"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "しきたり",
+        "r": "しきたり",
+        "en": [
+          "customs"
+        ]
+      }
+    },
+    "ae6a0942f1": {
+      "mn": [
+        "төсөл",
+        "аж ахуй",
+        "бизнес"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "事業",
+        "r": "じぎょう",
+        "en": [
+          "project",
+          "enterprise",
+          "business"
+        ]
+      }
+    },
+    "af52de6f58": {
+      "mn": [
+        "таславчлах",
+        "хуваах",
+        "зааглах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "仕切る",
+        "r": "しきる",
+        "en": [
+          "to partition",
+          "to divide",
+          "to mark off"
+        ]
+      }
+    },
+    "230b57c6b3": {
+      "mn": [
+        "санхүүгийн хөрөнгө",
+        "капитал"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "資金",
+        "r": "しきん",
+        "en": [
+          "funds",
+          "capital"
+        ]
+      }
+    },
+    "7e7a810b78": {
+      "mn": [
+        "тэнхлэг",
+        "иш",
+        "гол"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "軸",
+        "r": "じく",
+        "en": [
+          "axis",
+          "stem",
+          "shaft"
+        ]
+      }
+    },
+    "eb4849bf00": {
+      "mn": [
+        "бүтэлгүйтэх",
+        "нурж унах",
+        "алдаа гаргах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "しくじる",
+        "r": "しくじる",
+        "en": [
+          "to fail",
+          "to fall through",
+          "to blunder"
+        ]
+      }
+    },
+    "d5263c628f": {
+      "mn": [
+        "зохион бүтээх",
+        "төлөвлөгөө",
+        "далд арга"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "仕組み",
+        "r": "しくみ",
+        "en": [
+          "devising",
+          "plan",
+          "plot"
+        ]
+      }
+    },
+    "b5bf192e57": {
+      "mn": [
+        "цаазаар авах ял"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "死刑",
+        "r": "しけい",
+        "en": [
+          "death penalty",
+          "capital punishment"
+        ]
+      }
+    },
+    "9cbce49fda": {
+      "mn": [
+        "чийгтэх",
+        "нойтон болох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "湿気る",
+        "r": "しける",
+        "en": [
+          "to be damp",
+          "to be moist"
+        ]
+      }
+    },
+    "e111d4b814": {
+      "mn": [
+        "өөрөө",
+        "өөрийн би"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "自己",
+        "r": "じこ",
+        "en": [
+          "self",
+          "oneself"
+        ]
+      }
+    },
+    "73cb8b25c2": {
+      "mn": [
+        "санаа зорилго",
+        "чиглэл"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "志向",
+        "r": "しこう",
+        "en": [
+          "intention",
+          "aim"
+        ]
+      }
+    },
+    "61fc1c79e5": {
+      "mn": [
+        "сэтгэлгээ",
+        "бодол"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "思考",
+        "r": "しこう",
+        "en": [
+          "thought"
+        ]
+      }
+    },
+    "5dea6ed2ff": {
+      "mn": [
+        "хэрэгжүүлэх",
+        "мөрдүүлэх",
+        "гүйцэтгэх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "施行",
+        "r": "しこう",
+        "en": [
+          "execution",
+          "enforcing",
+          "carrying out"
+        ]
+      }
+    },
+    "9f66f67f0f": {
+      "mn": [
+        "таашаал",
+        "дуртай зүйл",
+        "сонголт"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "嗜好",
+        "r": "しこう",
+        "en": [
+          "taste",
+          "liking",
+          "preference"
+        ]
+      }
+    },
+    "27a80f5aeb": {
+      "mn": [
+        "асуудал",
+        "зүйл",
+        "баримтууд"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "事項",
+        "r": "じこう",
+        "en": [
+          "matter",
+          "item",
+          "facts"
+        ]
+      }
+    },
+    "aadd965d71": {
+      "mn": [
+        "там"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "地獄",
+        "r": "じごく",
+        "en": [
+          "hell"
+        ]
+      }
+    },
+    "6fd972e632": {
+      "mn": [
+        "цагийн хүснэгт",
+        "диаграмм",
+        "хүснэгт"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "時刻表",
+        "r": "じこくひょう",
+        "en": [
+          "table",
+          "diagram",
+          "chart"
+        ]
+      }
+    },
+    "f4553f0b0b": {
+      "mn": [
+        "цагийн зөрүү"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "時差",
+        "r": "じさ",
+        "en": [
+          "time difference"
+        ]
+      }
+    },
+    "8b4027dbec": {
+      "mn": [
+        "чөлөөтэй",
+        "дураараа"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "自在",
+        "r": "じざい",
+        "en": [
+          "freely",
+          "at will"
+        ]
+      }
+    },
+    "fb769f71e3": {
+      "mn": [
+        "үзлэг",
+        "ажиглалт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "視察",
+        "r": "しさつ",
+        "en": [
+          "inspection",
+          "observation"
+        ]
+      }
+    },
+    "454687e7e8": {
+      "mn": [
+        "өмч",
+        "хөрөнгө",
+        "боломж хөрөнгө"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "資産",
+        "r": "しさん",
+        "en": [
+          "property",
+          "fortune",
+          "means"
+        ]
+      }
+    },
+    "3d995a5e6a": {
+      "mn": [
+        "заалт",
+        "заавар",
+        "чиглэл"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "指示",
+        "r": "しじ",
+        "en": [
+          "indication",
+          "instruction",
+          "directions"
+        ]
+      }
+    },
+    "70c9f8812e": {
+      "mn": [
+        "дэмжлэг",
+        "хадгалан дэмжих"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "支持",
+        "r": "しじ",
+        "en": [
+          "support",
+          "maintenance"
+        ]
+      }
+    },
+    "2d1c66161d": {
+      "mn": [
+        "бие даасан байдал",
+        "өөртөө засах эрх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "自主",
+        "r": "じしゅ",
+        "en": [
+          "independence",
+          "autonomy"
+        ]
+      }
+    },
+    "99dd4adc73": {
+      "mn": [
+        "өөрийгөө илчлэх",
+        "сайн дураар очиж баригдах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "自首",
+        "r": "じしゅ",
+        "en": [
+          "surrender",
+          "give oneself up"
+        ]
+      }
+    },
+    "8b1e86984f": {
+      "mn": [
+        "хатгамал"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "刺繍",
+        "r": "ししゅう",
+        "en": [
+          "embroidery"
+        ]
+      }
+    },
+    "33dff47c30": {
+      "mn": [
+        "ажлаас огцрох"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "辞職",
+        "r": "じしょく",
+        "en": [
+          "resignation"
+        ]
+      }
+    },
+    "d8525590a4": {
+      "mn": [
+        "өөртөө итгэх итгэл"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "自信",
+        "r": "じしん",
+        "en": [
+          "self-confidence"
+        ]
+      }
+    },
+    "8b25299c99": {
+      "mn": [
+        "усны дусал"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "雫",
+        "r": "しずく",
+        "en": [
+          "drop (of water)"
+        ]
+      }
+    },
+    "35d3365a8f": {
+      "mn": [
+        "систем",
+        "тогтолцоо"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "システム",
+        "r": "システム",
+        "en": [
+          "system"
+        ]
+      }
+    },
+    "377fdae689": {
+      "mn": [
+        "живүүлэх",
+        "усанд далд оруулах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "沈める",
+        "r": "しずめる",
+        "en": [
+          "to sink",
+          "to submerge"
+        ]
+      }
+    },
+    "27fc686a45": {
+      "mn": [
+        "байгууллага",
+        "байгууламж",
+        "тоног байгууламж"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "施設",
+        "r": "しせつ",
+        "en": [
+          "institution",
+          "establishment",
+          "facility"
+        ]
+      }
+    },
+    "11acdf0a51": {
+      "mn": [
+        "урьд",
+        "өмнө нь",
+        "урьдчилан"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "事前",
+        "r": "じぜん",
+        "en": [
+          "prior",
+          "beforehand",
+          "in advance"
+        ]
+      }
+    },
+    "708465fbe8": {
+      "mn": [
+        "хүү"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "子息",
+        "r": "しそく",
+        "en": [
+          "son"
+        ]
+      }
+    },
+    "833943523e": {
+      "mn": [
+        "үргэлжлэх",
+        "тогтвортой хадгалах"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "持続",
+        "r": "じぞく",
+        "en": [
+          "continuation"
+        ]
+      }
+    },
+    "4e1176615c": {
+      "mn": [
+        "өөрийгөө хүндлэх",
+        "биеэ тоох"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "自尊心",
+        "r": "じそんしん",
+        "en": [
+          "self-respect",
+          "conceit"
+        ]
+      }
+    },
+    "4c55f42bcc": {
+      "mn": [
+        "үсгийн хэлбэр",
+        "фонт",
+        "бичгийн хэв"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "字体",
+        "r": "じたい",
+        "en": [
+          "type",
+          "font",
+          "lettering"
+        ]
+      }
+    }
+  }
+}

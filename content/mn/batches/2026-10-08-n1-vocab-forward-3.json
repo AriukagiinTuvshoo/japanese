@@ -1,0 +1,1029 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-forward-3-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit semantic categories cross-checked against Japanese entry and retained English gloss, independently unreviewed. Original uncommon senses preserved.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "cbbb3f1bb9": {
+      "mn": [
+        "зөвлөлдөх",
+        "хурал"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "合議",
+        "r": "ごうぎ",
+        "en": [
+          "consultation",
+          "conference"
+        ]
+      }
+    },
+    "aec480ac67": {
+      "mn": [
+        "эзэн хааны ордон"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "皇居",
+        "r": "こうきょ",
+        "en": [
+          "Imperial Palace"
+        ]
+      }
+    },
+    "1137fc3ef3": {
+      "mn": [
+        "эдийн засгийн сайн нөхцөл",
+        "эдийн засгийн өсөлт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "好況",
+        "r": "こうきょう",
+        "en": [
+          "prosperous conditions",
+          "healthy economy"
+        ]
+      }
+    },
+    "334ba829ae": {
+      "mn": [
+        "аж үйлдвэрийн бизнес"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "興業",
+        "r": "こうぎょう",
+        "en": [
+          "industrial enterprise"
+        ]
+      }
+    },
+    "5630137157": {
+      "mn": [
+        "уул уурхайн салбар"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "鉱業",
+        "r": "こうぎょう",
+        "en": [
+          "mining industry"
+        ]
+      }
+    },
+    "1d68ad437b": {
+      "mn": [
+        "өндөрлөг тал",
+        "тэгш өндөрлөг"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "高原",
+        "r": "こうげん",
+        "en": [
+          "tableland",
+          "plateau"
+        ]
+      }
+    },
+    "b755e6195d": {
+      "mn": [
+        "харилцан",
+        "ээлжилсэн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "交互",
+        "r": "こうご",
+        "en": [
+          "mutual",
+          "reciprocal",
+          "alternate"
+        ]
+      }
+    },
+    "24113c7b64": {
+      "mn": [
+        "гялалзан",
+        "тод гэрэлтэн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "煌々と",
+        "r": "こうこうと",
+        "en": [
+          "brilliantly",
+          "brightly"
+        ]
+      }
+    },
+    "22c467a634": {
+      "mn": [
+        "археологи"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "考古学",
+        "r": "こうこがく",
+        "en": [
+          "archaeology"
+        ]
+      }
+    },
+    "0fafecee52": {
+      "mn": [
+        "ажил",
+        "бүтээн байгуулалт",
+        "гар урлал"
+      ],
+      "topics": [
+        "work",
+        "arts"
+      ],
+      "expected": {
+        "w": "工作",
+        "r": "こうさく",
+        "en": [
+          "work",
+          "construction",
+          "handicraft"
+        ]
+      }
+    },
+    "06a25be1a7": {
+      "mn": [
+        "тариалалт",
+        "газар тариалан"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "耕作",
+        "r": "こうさく",
+        "en": [
+          "cultivation",
+          "farming"
+        ]
+      }
+    },
+    "64b65e1fa8": {
+      "mn": [
+        "хүдрийн уурхай"
+      ],
+      "topics": [
+        "places",
+        "work"
+      ],
+      "expected": {
+        "w": "鉱山",
+        "r": "こうざん",
+        "en": [
+          "mine (ore)"
+        ]
+      }
+    },
+    "30f8be8da2": {
+      "mn": [
+        "богино сургалт",
+        "дадлага"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "講習",
+        "r": "こうしゅう",
+        "en": [
+          "short course",
+          "training"
+        ]
+      }
+    },
+    "52798b0447": {
+      "mn": [
+        "аман мэдүүлэг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "口述",
+        "r": "こうじゅつ",
+        "en": [
+          "verbal statement"
+        ]
+      }
+    },
+    "c2da32810a": {
+      "mn": [
+        "татаас",
+        "суутгал"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "控除",
+        "r": "こうじょ",
+        "en": [
+          "subsidy",
+          "deduction"
+        ]
+      }
+    },
+    "087e2a9fbd": {
+      "mn": [
+        "хэлэлцээр",
+        "хэлэлцүүлэг",
+        "холбоо"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "交渉",
+        "r": "こうしょう",
+        "en": [
+          "negotiations",
+          "discussions",
+          "connection"
+        ]
+      }
+    },
+    "e6156e0e0d": {
+      "mn": [
+        "өндөр",
+        "эрхэм",
+        "боловсронгуй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "高尚",
+        "r": "こうしょう",
+        "en": [
+          "high",
+          "noble",
+          "refined"
+        ]
+      }
+    },
+    "6a99d0c518": {
+      "mn": [
+        "дээшлэх",
+        "өсөх",
+        "сайжрах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "向上",
+        "r": "こうじょう",
+        "en": [
+          "elevation",
+          "rise",
+          "improvement"
+        ]
+      }
+    },
+    "8eaf15f84c": {
+      "mn": [
+        "жагсаалаар алхах",
+        "парад"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "行進",
+        "r": "こうしん",
+        "en": [
+          "march",
+          "parade"
+        ]
+      }
+    },
+    "8aa704aca6": {
+      "mn": [
+        "халуун ногоо"
+      ],
+      "topics": [
+        "food"
+      ],
+      "expected": {
+        "w": "香辛料",
+        "r": "こうしんりょう",
+        "en": [
+          "spices"
+        ]
+      }
+    },
+    "22383cfb48": {
+      "mn": [
+        "бороо орох",
+        "хур тунадас"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "降水",
+        "r": "こうすい",
+        "en": [
+          "rainfall",
+          "precipitation"
+        ]
+      }
+    },
+    "6c44a3132f": {
+      "mn": [
+        "үер"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "洪水",
+        "r": "こうずい",
+        "en": [
+          "flood"
+        ]
+      }
+    },
+    "36f0eeba9f": {
+      "mn": [
+        "нийлэгжилт",
+        "бүрдэл",
+        "нийлэг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "合成",
+        "r": "ごうせい",
+        "en": [
+          "synthesis",
+          "composition",
+          "synthetic"
+        ]
+      }
+    },
+    "aa577197fc": {
+      "mn": [
+        "ил тод",
+        "нийтийн",
+        "албан ёсны"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "公然",
+        "r": "こうぜん",
+        "en": [
+          "open (e.g. secret)",
+          "public",
+          "official"
+        ]
+      }
+    },
+    "01d0e9895f": {
+      "mn": [
+        "маргаан",
+        "эсэргүүцэл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "抗争",
+        "r": "こうそう",
+        "en": [
+          "dispute",
+          "resistance"
+        ]
+      }
+    },
+    "e6a8a40d3e": {
+      "mn": [
+        "төлөвлөгөө",
+        "зохиолын өрнөл",
+        "санаа"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "構想",
+        "r": "こうそう",
+        "en": [
+          "plan",
+          "plot",
+          "idea"
+        ]
+      }
+    },
+    "7113165c32": {
+      "mn": [
+        "хязгаарлалт",
+        "баривчлан саатуулах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "拘束",
+        "r": "こうそく",
+        "en": [
+          "restriction",
+          "restraint"
+        ]
+      }
+    },
+    "802b0bd9ca": {
+      "mn": [
+        "ухрах",
+        "буцаан арилгах товч"
+      ],
+      "topics": [
+        "actions",
+        "technology"
+      ],
+      "expected": {
+        "w": "後退",
+        "r": "こうたい",
+        "en": [
+          "retreat",
+          "backspace (BS)"
+        ]
+      }
+    },
+    "c1adc6f591": {
+      "mn": [
+        "гялбаа",
+        "өнгөлгөө",
+        "гялалзсан байдал"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "光沢",
+        "r": "こうたく",
+        "en": [
+          "brilliance",
+          "polish",
+          "lustre"
+        ]
+      }
+    },
+    "5d6639a067": {
+      "mn": [
+        "төрийн корпораци"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "公団",
+        "r": "こうだん",
+        "en": [
+          "public corporation"
+        ]
+      }
+    },
+    "c11852e9f0": {
+      "mn": [
+        "таатай",
+        "ирээдүйтэй",
+        "хангалттай"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "好調",
+        "r": "こうちょう",
+        "en": [
+          "favourable",
+          "promising",
+          "satisfactory"
+        ]
+      }
+    },
+    "af42c84532": {
+      "mn": [
+        "аман"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "口頭",
+        "r": "こうとう",
+        "en": [
+          "oral"
+        ]
+      }
+    },
+    "180a48d1c5": {
+      "mn": [
+        "уншиж тайлбарлах",
+        "орчуулах"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "講読",
+        "r": "こうどく",
+        "en": [
+          "reading",
+          "translation"
+        ]
+      }
+    },
+    "c63f69eadd": {
+      "mn": [
+        "хэвлэл захиалах"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "購読",
+        "r": "こうどく",
+        "en": [
+          "subscription (e.g. magazine)"
+        ]
+      }
+    },
+    "37fd5d476b": {
+      "mn": [
+        "худалдан авалт",
+        "худалдан авах"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "購入",
+        "r": "こうにゅう",
+        "en": [
+          "purchase",
+          "buy"
+        ]
+      }
+    },
+    "45cadd9e01": {
+      "mn": [
+        "албан ёсны хүлээн зөвшөөрөл",
+        "зөвшөөрөл",
+        "лиценз"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "公認",
+        "r": "こうにん",
+        "en": [
+          "official recognition",
+          "authorization",
+          "licence"
+        ]
+      }
+    },
+    "95a0a7e61d": {
+      "mn": [
+        "түлш цахилгааны зардал"
+      ],
+      "topics": [
+        "daily",
+        "work"
+      ],
+      "expected": {
+        "w": "光熱費",
+        "r": "こうねつひ",
+        "en": [
+          "cost of fuel and light"
+        ]
+      }
+    },
+    "4198992702": {
+      "mn": [
+        "сүйрэл",
+        "эзгүйрэл"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "荒廃",
+        "r": "こうはい",
+        "en": [
+          "ruin"
+        ]
+      }
+    },
+    "1896b7fe33": {
+      "mn": [
+        "худалдан авах",
+        "худалдан авалт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "購買",
+        "r": "こうばい",
+        "en": [
+          "purchase",
+          "buy"
+        ]
+      }
+    },
+    "aee63a8a23": {
+      "mn": [
+        "алдаршил",
+        "сайн үнэлгээ"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "好評",
+        "r": "こうひょう",
+        "en": [
+          "popularity",
+          "favorable reputation"
+        ]
+      }
+    },
+    "6b5d95aa03": {
+      "mn": [
+        "хүргэх",
+        "баримтын хувь олгох"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "交付",
+        "r": "こうふ",
+        "en": [
+          "delivering",
+          "furnishing (with copies)"
+        ]
+      }
+    },
+    "a8a6342961": {
+      "mn": [
+        "бууж өгөх",
+        "дагаар орох",
+        "захирагдах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "降伏",
+        "r": "こうふく",
+        "en": [
+          "capitulation",
+          "surrender",
+          "submission"
+        ]
+      }
+    },
+    "f23b69e7c1": {
+      "mn": [
+        "сэтгэл хөдлөл",
+        "өдөөлт",
+        "догдлол"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "興奮",
+        "r": "こうふん",
+        "en": [
+          "excitement",
+          "stimulation",
+          "agitation"
+        ]
+      }
+    },
+    "8f96617de5": {
+      "mn": [
+        "нийтэд санал хүсэлт тавих",
+        "олон нийтийн оролцоо"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "公募",
+        "r": "こうぼ",
+        "en": [
+          "public appeal",
+          "public contribution"
+        ]
+      }
+    },
+    "6b0a6c0492": {
+      "mn": [
+        "овсгоотой",
+        "чадварлаг",
+        "ухаалаг"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "巧妙",
+        "r": "こうみょう",
+        "en": [
+          "ingenious",
+          "skillful",
+          "clever"
+        ]
+      }
+    },
+    "7bdda8364c": {
+      "mn": [
+        "төрийн ажил",
+        "нийтийн хэрэглээ",
+        "улсын зардал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "公用",
+        "r": "こうよう",
+        "en": [
+          "government business",
+          "public use",
+          "public expense"
+        ]
+      }
+    },
+    "56bd535249": {
+      "mn": [
+        "жижиглэн худалдаа"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "小売",
+        "r": "こうり",
+        "en": [
+          "retail"
+        ]
+      }
+    },
+    "34e67f93c2": {
+      "mn": [
+        "улсын байгууллага"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "公立",
+        "r": "こうりつ",
+        "en": [
+          "public (institution)"
+        ]
+      }
+    },
+    "86c6a0755f": {
+      "mn": [
+        "үр ашиг"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "効率",
+        "r": "こうりつ",
+        "en": [
+          "efficiency"
+        ]
+      }
+    },
+    "316a3ff997": {
+      "mn": [
+        "хамгаалалт",
+        "хамгаалан дагалдах цуваа",
+        "дагалдан хамгаалах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "護衛",
+        "r": "ごえい",
+        "en": [
+          "guard",
+          "convoy",
+          "escort"
+        ]
+      }
+    },
+    "7ce2808b7d": {
+      "mn": [
+        "булан"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "コーナー",
+        "r": "コーナー",
+        "en": [
+          "corner"
+        ]
+      }
+    },
+    "e68dcc56e0": {
+      "mn": [
+        "намхан биетэй"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "小柄",
+        "r": "こがら",
+        "en": [
+          "short (build)"
+        ]
+      }
+    },
+    "196b8819a9": {
+      "mn": [
+        "чек"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "小切手",
+        "r": "こぎって",
+        "en": [
+          "cheque",
+          "check"
+        ]
+      }
+    },
+    "70f79bff43": {
+      "mn": [
+        "сэлүүрдэх",
+        "сэлүүрээр хөдөлгөх",
+        "дөрөө жийх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "漕ぐ",
+        "r": "こぐ",
+        "en": [
+          "to row",
+          "to scull",
+          "to pedal"
+        ]
+      }
+    },
+    "a00cb4f981": {
+      "mn": [
+        "үг",
+        "хэллэг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "語句",
+        "r": "ごく",
+        "en": [
+          "words",
+          "phrases"
+        ]
+      }
+    },
+    "ff494b1ed2": {
+      "mn": [
+        "дотоодын бүтээгдэхүүн"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "国産",
+        "r": "こくさん",
+        "en": [
+          "domestic products"
+        ]
+      }
+    },
+    "835a4dfb9c": {
+      "mn": [
+        "төрөөс дэмжсэн",
+        "улсын"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "国定",
+        "r": "こくてい",
+        "en": [
+          "state-sponsored",
+          "national"
+        ]
+      }
+    },
+    "d2f43648b9": {
+      "mn": [
+        "улсын нутаг"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "国土",
+        "r": "こくど",
+        "en": [
+          "realm"
+        ]
+      }
+    },
+    "49e878d25a": {
+      "mn": [
+        "үнэнээ хэлэх",
+        "хүлээн зөвшөөрөх"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "告白",
+        "r": "こくはく",
+        "en": [
+          "confession",
+          "acknowledgement"
+        ]
+      }
+    },
+    "eb4a3a96bc": {
+      "mn": [
+        "үндэсний батлан хамгаалалт"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "国防",
+        "r": "こくぼう",
+        "en": [
+          "national defence"
+        ]
+      }
+    }
+  }
+}

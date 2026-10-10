@@ -94,6 +94,8 @@ export interface Doc {
   mnemonics: Record<string, string>;
   /** таалагдсан үг/ханз/дүрэм */
   favorites: string[];
+  /** Known words encountered in reading/listening lessons, keyed by `word|reading`. */
+  knownWords: string[];
   grammarDone: string[];
   readingDone: string[];
   listeningDone: string[];
@@ -135,6 +137,7 @@ function freshDoc(name = ""): Doc {
     writing: {},
     mnemonics: {},
     favorites: [],
+    knownWords: [],
     grammarDone: [],
     readingDone: [],
     listeningDone: [],
@@ -167,6 +170,7 @@ function readDoc(uid: string): Doc | null {
       ...parsed,
       profile: { ...base.profile, ...(parsed.profile ?? {}) },
       srs: parsed.srs ?? {},
+      knownWords: parsed.knownWords ?? [],
       activity: parsed.activity ?? {},
     } as Doc;
   } catch {
@@ -213,6 +217,7 @@ export interface Actions {
   toggleGrammar: (id: string, level: Level, on?: boolean) => void;
   markReading: (id: string) => void;
   markListening: (id: string) => void;
+  toggleKnownWord: (key: string) => void;
   recordWriting: (kanji: string, score: number) => void;
   setMnemonic: (kanji: string, text: string) => void;
   toggleFavorite: (id: string) => void;
@@ -471,6 +476,13 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       ...d,
       listeningDone: [...d.listeningDone, id],
       ...bumpDayInto(d, { xp: XP.listeningDone }),
+    })),
+
+    toggleKnownWord: (key) => patch((d) => ({
+      ...d,
+      knownWords: d.knownWords.includes(key)
+        ? d.knownWords.filter((item) => item !== key)
+        : [...d.knownWords, key],
     })),
 
     recordWriting: (kanji, score) => patch((d) => {

@@ -1,0 +1,180 @@
+{
+  "createdAt": "2026-10-08",
+  "author": "Arena coding assistant",
+  "method": "Individual comparison of exact retained source fields and existing warning. Internal audit only; no newly retrieved dictionary evidence or independent semantic approval.",
+  "releaseStatus": "blocked",
+  "records": [
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "e05bb17edd",
+      "expected": {
+        "w": "気品",
+        "r": "きひん",
+        "en": [
+          "aroma"
+        ]
+      },
+      "existingWarning": "Unresolved Japanese/English conflict: 気品/きひん denotes elegance/dignity, not retained English aroma. Earlier AI-authored MN aroma sense withdrawn from active data; original Japanese/reading/English and batch audit retained. Requires independent dictionary/source review.",
+      "assessment": "Earlier aroma translation remains withdrawn. Exact 気品/きひん spelling/reading conflicts with aroma. Independent source evidence required.",
+      "decision": "unresolved; release blocker; original source retained"
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "2e8753951c",
+      "expected": {
+        "w": "悪い",
+        "r": "にくい",
+        "en": [
+          "hateful",
+          "abominable",
+          "poor-looking"
+        ]
+      },
+      "existingWarning": "悪い/にくい is a spelling/reading mismatch with hateful/abominable gloss; standard にくい uses 憎い. Original source retained; translation withheld pending dictionary evidence.",
+      "assessment": "Exact 悪い/にくい spelling/reading conflicts. Translation remains withheld.",
+      "decision": "unresolved; release blocker; original source retained"
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "64e8f7eda0",
+      "expected": {
+        "w": "熱量",
+        "r": "ねつりょう",
+        "en": [
+          "temperature"
+        ]
+      },
+      "existingWarning": "熱量/ねつりょう means quantity of heat, not retained English temperature (温度). Translation withheld; source correction needs evidence.",
+      "assessment": "Exact 熱量/ねつりょう versus temperature mismatch remains. No original fields altered.",
+      "decision": "unresolved; release blocker; original source retained"
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "ed2719ab9d",
+      "expected": {
+        "w": "ファン",
+        "r": "ファン",
+        "en": [
+          "fan",
+          "fun"
+        ]
+      },
+      "existingWarning": "ファン supports fan, but retained English fun normally corresponds to ファンではなく楽しみ. Gloss mixture withheld pending source sense audit.",
+      "assessment": "Mixed fan/fun gloss remains unverified. No active translation assigned.",
+      "decision": "unresolved; release blocker; original source retained"
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "0101791a03",
+      "expected": {
+        "w": "フォーム",
+        "r": "フォーム",
+        "en": [
+          "foam",
+          "form"
+        ]
+      },
+      "existingWarning": "フォーム normally supports form, while foam normally uses フォーム only in specific technical loans; unsupported mixed senses withheld pending dictionary evidence.",
+      "assessment": "Loanword may have technical foam senses; no blanket correction to form is justified without sense-specific evidence. Translation remains withheld.",
+      "decision": "unresolved; release blocker; original source retained"
+    },
+    {
+      "kind": "vocab",
+      "level": "n5",
+      "key": "j2076920",
+      "expected": {
+        "w": "手前",
+        "r": "てめえ",
+        "en": [
+          "I",
+          "me",
+          "oneself"
+        ]
+      },
+      "existingWarning": "てめえ is not the standard てまえ reading. MN includes the rude second-person sense alongside self-reference; register must be reviewed.",
+      "assessment": "Self-reference versus rude second-person sense/register remains unresolved; do not equate てめえ with standard てまえ. Requires independent dictionary sense/register review.",
+      "decision": "unresolved; release blocker; original source retained"
+    },
+    {
+      "kind": "vocab",
+      "level": "n5",
+      "key": "j2727400",
+      "expected": {
+        "w": "先生",
+        "r": "シーサン",
+        "en": [
+          "boy"
+        ]
+      },
+      "existingWarning": "Dialectal reading シーサン and gloss boy retained; do not substitute standard せんせい/teacher. Confirm dialect attribution in the upstream dictionary before independent review.",
+      "assessment": "Nonstandard シーサン reading and boy gloss need dialect/source attribution. No assumption that this is standard せんせい.",
+      "decision": "unresolved; release blocker; original source retained"
+    },
+    {
+      "kind": "vocab",
+      "level": "n5",
+      "key": "j1448900",
+      "expected": {
+        "w": "中身",
+        "r": "あてみ",
+        "en": [
+          "blow to a vital point of a person's body",
+          "striking techniques (judo)"
+        ]
+      },
+      "existingWarning": "Source headword 中身 with reading あてみ conflicts with normal spelling 当て身 for the English blow/striking sense. MN follows the supplied reading/English; do not claim the headword is verified. Needs upstream dictionary correction, not silent overwrite.",
+      "assessment": "Exact 中身/あてみ source and striking gloss disagree at spelling level. Original fields and existing translation retained for audit; upstream correction not authorized.",
+      "decision": "unresolved; release blocker; original source retained"
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "聴",
+      "expected": {
+        "k": "聴",
+        "on": [
+          "ちょう",
+          "てい"
+        ],
+        "kun": [
+          "き.く",
+          "ゆる.す"
+        ],
+        "en": [
+          "Listen",
+          "Headstrong",
+          "Naughty"
+        ]
+      },
+      "existingWarning": "The inherited glosses Headstrong and Naughty are not taught as standard modern senses of 聴. Primary Japanese sense 聞く: listen attentively. English source retained for audit.",
+      "assessment": "Listen is supported primary teaching sense; headstrong/naughty not independently justified. No unsupported senses added.",
+      "decision": "unresolved; release blocker; original source retained"
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "博",
+      "expected": {
+        "k": "博",
+        "on": [
+          "はく",
+          "ばく"
+        ],
+        "kun": [],
+        "en": [
+          "Dr.",
+          "Command",
+          "Esteem"
+        ]
+      },
+      "existingWarning": "Inherited gloss Command is ambiguous; Mongolian teaches broad learning, scholar/doctor and esteem. Original source remains unchanged.",
+      "assessment": "Command gloss remains ambiguous beside doctor/esteem. No source correction or new sense claimed.",
+      "decision": "unresolved; release blocker; original source retained"
+    }
+  ]
+}

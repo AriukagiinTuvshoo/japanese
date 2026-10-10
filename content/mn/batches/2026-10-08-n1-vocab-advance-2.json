@@ -1,0 +1,1037 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-advance-2-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses cross-checked against exact Japanese spelling, reading and retained English; explicit semantic topic assignments. Independent human review outstanding; suspect sources withheld.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n1.json JMdict-derived records at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j1504060": {
+      "mn": [
+        "хэсэгчлэн төлөх буюу нийлүүлэх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "分納",
+        "r": "ぶんのう",
+        "en": [
+          "installment payment or delivery",
+          "instalment payment or delivery"
+        ]
+      }
+    },
+    "j1503090": {
+      "mn": [
+        "салгах",
+        "тусгаарлах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "分け離す",
+        "r": "わけはなす",
+        "en": [
+          "to separate from",
+          "to detach"
+        ]
+      }
+    },
+    "j2725860": {
+      "mn": [
+        "сум байг оносон эсэхийг шалгах",
+        "оноо тэмдэглэх",
+        "бай шалгагч"
+      ],
+      "topics": [
+        "arts",
+        "people"
+      ],
+      "expected": {
+        "w": "監的",
+        "r": "かんてき",
+        "en": [
+          "checking (if an arrow has hit its target)",
+          "marking",
+          "person who checks if an arrow has hit its target"
+        ]
+      }
+    },
+    "j1622160": {
+      "mn": [
+        "тусгайлан салгасан анги"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "分遣隊",
+        "r": "ぶんけんたい",
+        "en": [
+          "detachment"
+        ]
+      }
+    },
+    "j1361280": {
+      "mn": [
+        "хоёр хуваах",
+        "таллан хуваах",
+        "хуваарилах"
+      ],
+      "topics": [
+        "actions",
+        "quantity"
+      ],
+      "expected": {
+        "w": "振分ける",
+        "r": "ふりわける",
+        "en": [
+          "to divide in two",
+          "to divide in half",
+          "to apportion"
+        ]
+      }
+    },
+    "j1486140": {
+      "mn": [
+        "дифференциалчлах",
+        "дифференциал",
+        "уламжлал"
+      ],
+      "topics": [
+        "learning",
+        "quantity"
+      ],
+      "expected": {
+        "w": "微分",
+        "r": "びぶん",
+        "en": [
+          "differentiation",
+          "differential",
+          "derivative"
+        ]
+      }
+    },
+    "j1449660": {
+      "mn": [
+        "захирах",
+        "удирдах",
+        "командлах"
+      ],
+      "topics": [
+        "society",
+        "actions"
+      ],
+      "expected": {
+        "w": "統べる",
+        "r": "すべる",
+        "en": [
+          "to rule over",
+          "to govern",
+          "to command"
+        ]
+      }
+    },
+    "j1910720": {
+      "mn": [
+        "зэрэг дэв",
+        "нийгмийн байр суурь"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "身分柄",
+        "r": "みぶんがら",
+        "en": [
+          "status",
+          "social standing"
+        ]
+      }
+    },
+    "j1770570": {
+      "mn": [
+        "хянан удирдах",
+        "хянан удирдагч"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "統監",
+        "r": "とうかん",
+        "en": [
+          "supervision",
+          "supervisor"
+        ]
+      }
+    },
+    "j1608050": {
+      "mn": [
+        "Гэнжи зохиолын дүр",
+        "Минамото овог"
+      ],
+      "topics": [
+        "arts",
+        "people"
+      ],
+      "expected": {
+        "w": "源氏",
+        "r": "げんじ",
+        "en": [
+          "Genji (the character in the Genji Monogatari)",
+          "the Minamoto family"
+        ]
+      }
+    },
+    "j2837351": {
+      "mn": [
+        "шинжилгээний төхөөрөмж"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "分析器",
+        "r": "ぶんせきき",
+        "en": [
+          "analyzer (device)"
+        ]
+      }
+    },
+    "j1205690": {
+      "mn": [
+        "цөмийн хуваагдал"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "核分裂",
+        "r": "かくぶんれつ",
+        "en": [
+          "nuclear fission"
+        ]
+      }
+    },
+    "j1615540": {
+      "mn": [
+        "харьяалагдсан",
+        "хоёрдогч"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "従的",
+        "r": "じゅうてき",
+        "en": [
+          "subordinate",
+          "secondary"
+        ]
+      }
+    },
+    "j1254600": {
+      "mn": [
+        "үс засаж боох",
+        "хувцаслах",
+        "цэгцлэх"
+      ],
+      "topics": [
+        "daily",
+        "actions"
+      ],
+      "expected": {
+        "w": "結う",
+        "r": "ゆう",
+        "en": [
+          "to do up (hair)",
+          "to dress",
+          "to arrange"
+        ]
+      }
+    },
+    "j2827446": {
+      "mn": [
+        "сэтгэл гутрал",
+        "дарагдсан сэтгэл"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "鬱結",
+        "r": "うっけつ",
+        "en": [
+          "depression",
+          "oppression"
+        ]
+      }
+    },
+    "j2834040": {
+      "mn": [
+        "тор хийх",
+        "тор нэхэх"
+      ],
+      "topics": [
+        "work",
+        "actions"
+      ],
+      "expected": {
+        "w": "結く",
+        "r": "すく",
+        "en": [
+          "to make a net",
+          "to knit a net"
+        ]
+      }
+    },
+    "j1691630": {
+      "mn": [
+        "дарангуйлсан",
+        "захиран тушаасан"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "独裁的",
+        "r": "どくさいてき",
+        "en": [
+          "dictatorial"
+        ]
+      }
+    },
+    "j1513850": {
+      "mn": [
+        "өөрийгөө хамгаалах"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "保身",
+        "r": "ほしん",
+        "en": [
+          "self-protection"
+        ]
+      }
+    },
+    "j1251060": {
+      "mn": [
+        "системтэй",
+        "зохион байгуулалттай"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "系統的",
+        "r": "けいとうてき",
+        "en": [
+          "systematic"
+        ]
+      }
+    },
+    "j1843750": {
+      "mn": [
+        "олон өнгөөр будсан"
+      ],
+      "topics": [
+        "daily",
+        "arts"
+      ],
+      "expected": {
+        "w": "染め分け",
+        "r": "そめわけ",
+        "en": [
+          "dyed in various colors",
+          "dyed in various colours"
+        ]
+      }
+    },
+    "j1488810": {
+      "mn": [
+        "бай",
+        "онилсон зүйл"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "標的",
+        "r": "ひょうてき",
+        "en": [
+          "target"
+        ]
+      }
+    },
+    "j1513210": {
+      "mn": [
+        "батлах",
+        "баталгаа өгөх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "保する",
+        "r": "ほする",
+        "en": [
+          "to guarantee"
+        ]
+      }
+    },
+    "j2841768": {
+      "mn": [
+        "хамгаалалт",
+        "батлан хамгаалах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "保衛",
+        "r": "ほえい",
+        "en": [
+          "defense",
+          "defence",
+          "protection"
+        ]
+      }
+    },
+    "j1672600": {
+      "mn": [
+        "ямар ч нам буюу урсгалд харьяалагдаагүй"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "無派",
+        "r": "むは",
+        "en": [
+          "belonging to no party or school of thought"
+        ]
+      }
+    },
+    "j1372800": {
+      "mn": [
+        "маш",
+        "туйлын",
+        "санаандгүй их"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "随分",
+        "r": "ずいぶん",
+        "en": [
+          "very",
+          "extremely",
+          "surprisingly"
+        ]
+      }
+    },
+    "j1190800": {
+      "mn": [
+        "аль болох …",
+        "боломжийн хэрээр"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "可及的",
+        "r": "かきゅうてき",
+        "en": [
+          "as ... as possible"
+        ]
+      }
+    },
+    "j1503340": {
+      "mn": [
+        "салаалалт",
+        "салбарлах",
+        "хоёр тийш салах"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "分岐",
+        "r": "ぶんき",
+        "en": [
+          "divergence",
+          "ramification",
+          "bifurcation"
+        ]
+      }
+    },
+    "j1616270": {
+      "mn": [
+        "буцаан үйлчлэх",
+        "өнгөрсөнд хамаарах"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "遡及的",
+        "r": "そきゅうてき",
+        "en": [
+          "retroactive"
+        ]
+      }
+    },
+    "j1450250": {
+      "mn": [
+        "хүн олны буюу ургамлын дундуур зүтгэн гарах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "踏み分ける",
+        "r": "ふみわける",
+        "en": [
+          "to push through (a crowd, vegetation, etc.)"
+        ]
+      }
+    },
+    "j1167600": {
+      "mn": [
+        "халилт",
+        "бялхалт"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "溢れ",
+        "r": "あふれ",
+        "en": [
+          "overflow"
+        ]
+      }
+    },
+    "j1962940": {
+      "mn": [
+        "хийн шинжилгээ"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "ガス分析",
+        "r": "ガスぶんせき",
+        "en": [
+          "gas analysis"
+        ]
+      }
+    },
+    "j2656850": {
+      "mn": [
+        "мета шинжилгээ",
+        "судалгаануудыг нэгтгэн шинжлэх"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "メタ分析",
+        "r": "メタぶんせき",
+        "en": [
+          "meta-analysis"
+        ]
+      }
+    },
+    "j1449650": {
+      "mn": [
+        "чихрийн хэмжээ",
+        "чихрийн агууламж"
+      ],
+      "topics": [
+        "food",
+        "quantity"
+      ],
+      "expected": {
+        "w": "糖分",
+        "r": "とうぶん",
+        "en": [
+          "amount of sugar",
+          "sugar content"
+        ]
+      }
+    },
+    "j1689210": {
+      "mn": [
+        "салбар",
+        "салаа",
+        "цутгал гол"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "分脈",
+        "r": "ぶんみゃく",
+        "en": [
+          "branch",
+          "offshoot",
+          "tributary"
+        ]
+      }
+    },
+    "j1714900": {
+      "mn": [
+        "чин сэтгэлээр зүтгэсэн",
+        "өөрийгөө зориулсан"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "献身的",
+        "r": "けんしんてき",
+        "en": [
+          "devoted",
+          "self-sacrificing"
+        ]
+      }
+    },
+    "j1001850": {
+      "mn": [
+        "будааны бөмбөлөг"
+      ],
+      "topics": [
+        "food"
+      ],
+      "expected": {
+        "w": "お結び",
+        "r": "おむすび",
+        "en": [
+          "rice ball"
+        ]
+      }
+    },
+    "j1254890": {
+      "mn": [
+        "шүүхийн хэлэлцүүлэг дуусах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "結審",
+        "r": "けっしん",
+        "en": [
+          "conclusion of trial (hearing)"
+        ]
+      }
+    },
+    "j1675250": {
+      "mn": [
+        "довтлох шинжтэй",
+        "түрэмгий"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "攻撃的",
+        "r": "こうげきてき",
+        "en": [
+          "offensive",
+          "aggressive"
+        ]
+      }
+    },
+    "j1719360": {
+      "mn": [
+        "эзэн хааны удам"
+      ],
+      "topics": [
+        "society",
+        "people"
+      ],
+      "expected": {
+        "w": "皇統",
+        "r": "こうとう",
+        "en": [
+          "the imperial line"
+        ]
+      }
+    },
+    "j2830729": {
+      "mn": [
+        "төмөр замын суман шилжүүлэг"
+      ],
+      "topics": [
+        "places",
+        "technology"
+      ],
+      "expected": {
+        "w": "分岐器",
+        "r": "ぶんきき",
+        "en": [
+          "railroad switch",
+          "turnout"
+        ]
+      }
+    },
+    "j2841601": {
+      "mn": [
+        "хаан ширээ залгамжлах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "継統",
+        "r": "けいとう",
+        "en": [
+          "accession to the throne"
+        ]
+      }
+    },
+    "j1530830": {
+      "mn": [
+        "бүтээгдэхүүний баталгаагүй",
+        "зээлийн барьцаагүй"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "無保証",
+        "r": "むほしょう",
+        "en": [
+          "lack of a warranty (products, etc.)",
+          "lack of security (e.g. loan)"
+        ]
+      }
+    },
+    "j1391190": {
+      "mn": [
+        "янз бүрийн өнгөөр будах"
+      ],
+      "topics": [
+        "arts",
+        "actions"
+      ],
+      "expected": {
+        "w": "染め分ける",
+        "r": "そめわける",
+        "en": [
+          "to dye in different colors (colours)"
+        ]
+      }
+    },
+    "j2833205": {
+      "mn": [
+        "арчилгаа",
+        "засвар үйлчилгээ"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "保修",
+        "r": "ほしゅう",
+        "en": [
+          "maintenance"
+        ]
+      }
+    },
+    "j1322290": {
+      "mn": [
+        "бай буудах дасгал",
+        "онч буудлага",
+        "тоглоомын бай буудах"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "射的",
+        "r": "しゃてき",
+        "en": [
+          "target practice",
+          "marksmanship",
+          "target shooting (e.g. at a fair)"
+        ]
+      }
+    },
+    "j1455950": {
+      "mn": [
+        "бүтээлч",
+        "өвөрмөц"
+      ],
+      "topics": [
+        "arts",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "独創的",
+        "r": "どくそうてき",
+        "en": [
+          "creative",
+          "original"
+        ]
+      }
+    },
+    "j2827623": {
+      "mn": [
+        "арчих зүйл",
+        "арчуур",
+        "баллуур"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "拭き",
+        "r": "ふき",
+        "en": [
+          "cleaner",
+          "wiper",
+          "eraser"
+        ]
+      }
+    },
+    "j1875540": {
+      "mn": [
+        "догол мөр болгон хуваах",
+        "зүйлчлэн жагсаах"
+      ],
+      "topics": [
+        "learning",
+        "actions"
+      ],
+      "expected": {
+        "w": "項に分かつ",
+        "r": "こうにわかつ",
+        "en": [
+          "to paragraph",
+          "to itemize",
+          "to itemise"
+        ]
+      }
+    },
+    "j1691620": {
+      "mn": [
+        "өөрийгөө л зөв гэж үздэг"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "独善的",
+        "r": "どくぜんてき",
+        "en": [
+          "self-righteous"
+        ]
+      }
+    },
+    "j1418940": {
+      "mn": [
+        "илэн далангүй",
+        "шууд",
+        "энгийн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "端的",
+        "r": "たんてき",
+        "en": [
+          "frank",
+          "direct",
+          "plain"
+        ]
+      }
+    },
+    "j1585680": {
+      "mn": [
+        "цайз",
+        "бэхлэлт",
+        "хэрэм"
+      ],
+      "topics": [
+        "society",
+        "places"
+      ],
+      "expected": {
+        "w": "保塁",
+        "r": "ほうるい",
+        "en": [
+          "fort",
+          "fortification",
+          "fortress"
+        ]
+      }
+    },
+    "j1228190": {
+      "mn": [
+        "шалгалтад тэнцэх",
+        "шаардлага хангах"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "及第",
+        "r": "きゅうだい",
+        "en": [
+          "passing (an examination)",
+          "making the grade"
+        ]
+      }
+    },
+    "j1897090": {
+      "mn": [
+        "жанжин штаб"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "統幕",
+        "r": "とうばく",
+        "en": [
+          "general staff headquarters"
+        ]
+      }
+    },
+    "j1700300": {
+      "mn": [
+        "өчүүхэн хэсэг"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "寸分",
+        "r": "すんぶん",
+        "en": [
+          "tiny bit"
+        ]
+      }
+    },
+    "j1727600": {
+      "mn": [
+        "эвсэл байгуулах",
+        "тангараглах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "結盟",
+        "r": "けつめい",
+        "en": [
+          "concluding an alliance",
+          "making a pledge"
+        ]
+      }
+    },
+    "j1000460": {
+      "mn": [
+        "ажил олж чадахгүй болох",
+        "ан загасчлалд хоосон хоцрох",
+        "орхигдох"
+      ],
+      "topics": [
+        "work",
+        "actions"
+      ],
+      "expected": {
+        "w": "溢れる",
+        "r": "あぶれる",
+        "en": [
+          "to fail (in getting a job)",
+          "to miss out (at fishing, hunting, etc.)",
+          "to be left out"
+        ]
+      }
+    },
+    "j2199130": {
+      "mn": [
+        "геномын шинжилгээ"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "ゲノム分析",
+        "r": "ゲノムぶんせき",
+        "en": [
+          "genome analysis"
+        ]
+      }
+    },
+    "j2310880": {
+      "mn": [
+        "өгөгдлийн шинжилгээ"
+      ],
+      "topics": [
+        "learning",
+        "technology"
+      ],
+      "expected": {
+        "w": "データ分析",
+        "r": "データぶんせき",
+        "en": [
+          "data analysis"
+        ]
+      }
+    },
+    "j2833221": {
+      "mn": [
+        "макро шинжилгээ",
+        "макро эдийн засгийн шинжилгээ"
+      ],
+      "topics": [
+        "learning",
+        "work"
+      ],
+      "expected": {
+        "w": "マクロ分析",
+        "r": "マクロぶんせき",
+        "en": [
+          "macroanalysis",
+          "macroeconomic analysis"
+        ]
+      }
+    },
+    "j1256240": {
+      "mn": [
+        "ариун цэвэрт нийцсэн",
+        "эрүүл",
+        "эрүүл мэндэд тустай"
+      ],
+      "topics": [
+        "body",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "健康的",
+        "r": "けんこうてき",
+        "en": [
+          "hygienic",
+          "healthy",
+          "healthful"
+        ]
+      }
+    }
+  }
+}

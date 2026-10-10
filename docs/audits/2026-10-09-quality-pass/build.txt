@@ -1,0 +1,53 @@
+
+> nihongo-dojo@3.0.0 build
+> npm run content:validate && tsc -b --noEmit && vite build
+
+
+> nihongo-dojo@3.0.0 content:validate
+> node scripts/validate-learning-libraries.mjs
+
+reading: 150 lessons; 30 per level; bilingual content, furigana, questions and choices pass
+listening: 150 lessons; 30 per level; bilingual content, furigana, questions and choices pass
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 91 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                              1.63 kB │ gzip:   0.93 kB
+dist/assets/index-Yz120qmR.css              62.91 kB │ gzip:  10.94 kB
+dist/assets/Account-B9M6AQ5Z.js              1.05 kB │ gzip:   0.63 kB
+dist/assets/EntryNavigator-BMGRsILM.js       1.39 kB │ gzip:   0.67 kB
+dist/assets/About-DzBG0yO6.js                1.79 kB │ gzip:   0.83 kB
+dist/assets/Mistakes-BfDw5Bbm.js             2.98 kB │ gzip:   1.29 kB
+dist/assets/ReadingList-Dz4HZDhx.js          3.20 kB │ gzip:   1.39 kB
+dist/assets/Review-D1wpsYEr.js               3.54 kB │ gzip:   1.59 kB
+dist/assets/XRayText-CKl9L5gB.js             3.61 kB │ gzip:   1.74 kB
+dist/assets/ListeningList-B1nTp0y7.js        4.06 kB │ gzip:   1.75 kB
+dist/assets/GrammarList-CpRAZfD1.js          4.49 kB │ gzip:   1.93 kB
+dist/assets/Achievements-CsXku1QT.js         4.92 kB │ gzip:   1.83 kB
+dist/assets/Writing-DW-apcSW.js              5.79 kB │ gzip:   2.24 kB
+dist/assets/Quiz-DT15Ly8T.js                 6.07 kB │ gzip:   2.57 kB
+dist/assets/ReadingDetail-Da744C-q.js        6.85 kB │ gzip:   2.77 kB
+dist/assets/GrammarDetail-DhC6r4r0.js        6.88 kB │ gzip:   2.67 kB
+dist/assets/levels-DU2kXVbS.js               7.37 kB │ gzip:   2.46 kB
+dist/assets/Dictionary-C1KA2yV-.js           7.46 kB │ gzip:   2.75 kB
+dist/assets/Kana-CFXBY7hW.js                 8.24 kB │ gzip:   3.00 kB
+dist/assets/StrokePad-pv10lOrE.js            9.05 kB │ gzip:   3.86 kB
+dist/assets/Plan-B55KpC2Q.js                 9.26 kB │ gzip:   3.07 kB
+dist/assets/KanjiList-CgfsgR48.js            9.28 kB │ gzip:   3.46 kB
+dist/assets/Placement-CsBFRpbi.js            9.30 kB │ gzip:   3.13 kB
+dist/assets/KanjiDetail-CaFCimqX.js          9.73 kB │ gzip:   3.49 kB
+dist/assets/react-ByNFwixe.js               11.21 kB │ gzip:   4.03 kB
+dist/assets/MockExam-C9ZmTewe.js            11.56 kB │ gzip:   3.86 kB
+dist/assets/Session-Dc62pa27.js             12.01 kB │ gzip:   4.12 kB
+dist/assets/Progress-ChpJFx22.js            12.17 kB │ gzip:   3.85 kB
+dist/assets/Admin-D0qsdaPF.js               12.22 kB │ gzip:   4.22 kB
+dist/assets/WordDetail-CSdBcYmq.js          12.69 kB │ gzip:   4.07 kB
+dist/assets/QuizRunner-Bcy55NXb.js          12.87 kB │ gzip:   4.38 kB
+dist/assets/ListeningDetail-D2d5gRA8.js     13.54 kB │ gzip:   4.85 kB
+dist/assets/study-COlhGTrF.js               15.88 kB │ gzip:   5.41 kB
+dist/assets/Vocabulary-BJTz4zFg.js          16.91 kB │ gzip:   5.59 kB
+dist/assets/Home-SZVkIeA_.js                17.08 kB │ gzip:   5.33 kB
+dist/assets/categories-CrcVBj4m.js         184.14 kB │ gzip:  50.10 kB
+dist/assets/index-Dyg_evnC.js            1,120.73 kB │ gzip: 269.68 kB
+✓ built in 4.59s

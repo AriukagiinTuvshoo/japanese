@@ -1,0 +1,13 @@
+{
+  "typecheck": 0,
+  "data:validate": 0,
+  "test": 0,
+  "coverage:report": 0,
+  "build": 0,
+  "test:browser": 0,
+  "test:admin-browser": 0,
+  "test:site-browser": 0,
+  "test:runner-browser": 0,
+  "coverage:validate": 1,
+  "git diff --check": 0
+}

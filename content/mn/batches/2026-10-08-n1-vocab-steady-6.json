@@ -1,0 +1,1072 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-steady-6-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses with Japanese spelling/reading and retained English cross-check; explicit semantic topic evidence. Independently unreviewed; unresolved source conflicts withheld.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "1340293e34": {
+      "mn": [
+        "харьцангуй нягт"
+      ],
+      "topics": [
+        "quantity",
+        "learning"
+      ],
+      "expected": {
+        "w": "比重",
+        "r": "ひじゅう",
+        "en": [
+          "specific gravity"
+        ]
+      }
+    },
+    "c0d21785c4": {
+      "mn": [
+        "дүрслэх урлаг",
+        "уран сайхны урлаг"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "美術",
+        "r": "びじゅつ",
+        "en": [
+          "art",
+          "fine arts"
+        ]
+      }
+    },
+    "c1eb4a6e5e": {
+      "mn": [
+        "нарийн бичгийн дарга",
+        "хувийн туслах"
+      ],
+      "topics": [
+        "people",
+        "work"
+      ],
+      "expected": {
+        "w": "秘書",
+        "r": "ひしょ",
+        "en": [
+          "(private) secretary"
+        ]
+      }
+    },
+    "ec976107e1": {
+      "mn": [
+        "инээмсэглэл"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "微笑",
+        "r": "びしょう",
+        "en": [
+          "smile"
+        ]
+      }
+    },
+    "3a891bf639": {
+      "mn": [
+        "нууц",
+        "хувийн",
+        "сэм"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "密か",
+        "r": "ひそか",
+        "en": [
+          "secret",
+          "private",
+          "surreptitious"
+        ]
+      }
+    },
+    "3c973bbe09": {
+      "mn": [
+        "дэвтээх",
+        "дүрэх",
+        "нэвт норгох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "浸す",
+        "r": "ひたす",
+        "en": [
+          "to soak",
+          "to dip",
+          "to drench"
+        ]
+      }
+    },
+    "53b486764f": {
+      "mn": [
+        "чин сэтгэлээсээ",
+        "бүх хүчээрээ"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "ひたすら",
+        "r": "ひたすら",
+        "en": [
+          "earnestly"
+        ]
+      }
+    },
+    "8e175c1a31": {
+      "mn": [
+        "солгой гарын",
+        "архинд дуртай хүн",
+        "солгой хүн"
+      ],
+      "topics": [
+        "people",
+        "body",
+        "food"
+      ],
+      "expected": {
+        "w": "左利き",
+        "r": "ひだりきき",
+        "en": [
+          "left-handedness",
+          "sake drinker",
+          "left-hander"
+        ]
+      }
+    },
+    "b274381220": {
+      "mn": [
+        "маажих"
+      ],
+      "topics": [
+        "actions",
+        "body"
+      ],
+      "expected": {
+        "w": "引っ掻く",
+        "r": "ひっかく",
+        "en": [
+          "to scratch"
+        ]
+      }
+    },
+    "b820289c1d": {
+      "mn": [
+        "өлгөх",
+        "хувцас углан өмсөх",
+        "дэгээдэх"
+      ],
+      "topics": [
+        "actions",
+        "daily"
+      ],
+      "expected": {
+        "w": "引っ掛ける",
+        "r": "ひっかける",
+        "en": [
+          "to hang (something) on (something)",
+          "to throw on (clothes)",
+          "to hook"
+        ]
+      }
+    },
+    "096c8b698e": {
+      "mn": [
+        "арван хоёр жилийн найм дахь тэмдэг болох хонь",
+        "хонь цаг (13–15 цаг)",
+        "өмнө зүгээс баруун тийшх чиглэл",
+        "зургаадугаар сар"
+      ],
+      "topics": [
+        "time",
+        "society"
+      ],
+      "expected": {
+        "w": "未",
+        "r": "ひつじ",
+        "en": [
+          "eighth sign of Chinese zodiac (The Ram, 1pm-3pm, south-southwest, June)"
+        ]
+      }
+    },
+    "d4cad7dfef": {
+      "mn": [
+        "заавал үзэх хичээл"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "必修",
+        "r": "ひっしゅう",
+        "en": [
+          "required (subject)"
+        ]
+      }
+    },
+    "fc6b31a5c2": {
+      "mn": [
+        "нэвт норсон",
+        "шалба нойтон"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "びっしょり",
+        "r": "びっしょり",
+        "en": [
+          "wet through",
+          "drenched"
+        ]
+      }
+    },
+    "bc0cae48eb": {
+      "mn": [
+        "зайлшгүй",
+        "зайлшгүй шаардлагатай"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "必然",
+        "r": "ひつぜん",
+        "en": [
+          "inevitable",
+          "necessary"
+        ]
+      }
+    },
+    "982542665c": {
+      "mn": [
+        "эн зэрэгцэх",
+        "дүйцэх",
+        "өрсөлдөх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "匹敵",
+        "r": "ひってき",
+        "en": [
+          "comparing with",
+          "match",
+          "rival"
+        ]
+      }
+    },
+    "77a848f1a4": {
+      "mn": [
+        "нэг давхар",
+        "дан"
+      ],
+      "topics": [
+        "quantity",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "単",
+        "r": "ひとえ",
+        "en": [
+          "one layer",
+          "single"
+        ]
+      }
+    },
+    "0de8e592e2": {
+      "mn": [
+        "зан төлөв",
+        "зан чанар",
+        "хүний төрх"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "人柄",
+        "r": "ひとがら",
+        "en": [
+          "personality",
+          "character",
+          "personal appearance"
+        ]
+      }
+    },
+    "29d531837a": {
+      "mn": [
+        "нэгэн үед",
+        "урьд нэг цагт"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "一頃",
+        "r": "ひところ",
+        "en": [
+          "once",
+          "some time ago"
+        ]
+      }
+    },
+    "208f1838bd": {
+      "mn": [
+        "барьцааны хүн",
+        "хоригдол"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "人質",
+        "r": "ひとじち",
+        "en": [
+          "hostage",
+          "prisoner"
+        ]
+      }
+    },
+    "6fed3799fa": {
+      "mn": [
+        "нэг зурвас",
+        "нэгэн сэтгэлээр",
+        "туйлбартайгаар"
+      ],
+      "topics": [
+        "quantity",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "一筋",
+        "r": "ひとすじ",
+        "en": [
+          "a line",
+          "earnestly",
+          "blindly"
+        ]
+      }
+    },
+    "b9ec7cb6d7": {
+      "mn": [
+        "тогтсон огноо",
+        "товлосон өдөр"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "日取り",
+        "r": "ひどり",
+        "en": [
+          "fixed date",
+          "appointed day"
+        ]
+      }
+    },
+    "d4a59bb971": {
+      "mn": [
+        "шувууны дэгдээхэй",
+        "ангаахай",
+        "хүүхэлдэй"
+      ],
+      "topics": [
+        "nature",
+        "arts"
+      ],
+      "expected": {
+        "w": "雛",
+        "r": "ひな",
+        "en": [
+          "young bird",
+          "chick",
+          "doll"
+        ]
+      }
+    },
+    "f028179494": {
+      "mn": [
+        "нар туссан газар",
+        "наранд"
+      ],
+      "topics": [
+        "places",
+        "nature"
+      ],
+      "expected": {
+        "w": "日向",
+        "r": "ひなた",
+        "en": [
+          "sunny place",
+          "in the sun"
+        ]
+      }
+    },
+    "58e8f6d00f": {
+      "mn": [
+        "аюулаас хоргодох",
+        "хоргодох байр олох"
+      ],
+      "topics": [
+        "places",
+        "society"
+      ],
+      "expected": {
+        "w": "避難",
+        "r": "ひなん",
+        "en": [
+          "taking refuge",
+          "finding shelter"
+        ]
+      }
+    },
+    "bcf51a7086": {
+      "mn": [
+        "буруутгал",
+        "дайралт",
+        "шүүмжлэл"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "非難",
+        "r": "ひなん",
+        "en": [
+          "blame",
+          "attack",
+          "criticism"
+        ]
+      }
+    },
+    "69ce5c06bb": {
+      "mn": [
+        "Японы төрийн далбаа"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "日の丸",
+        "r": "ひのまる",
+        "en": [
+          "the Japanese flag"
+        ]
+      }
+    },
+    "9bdf0cd381": {
+      "mn": [
+        "оч"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "火花",
+        "r": "ひばな",
+        "en": [
+          "spark"
+        ]
+      }
+    },
+    "5e7b4e3b6c": {
+      "mn": [
+        "өдөр бүр",
+        "өдөр тутам",
+        "өдөр өдрөөр"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "日々",
+        "r": "ひび",
+        "en": [
+          "every day",
+          "daily",
+          "day after day"
+        ]
+      }
+    },
+    "dd1da8888a": {
+      "mn": [
+        "орилох дуу",
+        "хашхираан"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "悲鳴",
+        "r": "ひめい",
+        "en": [
+          "shriek",
+          "scream"
+        ]
+      }
+    },
+    "6166957ca4": {
+      "mn": [
+        "тоглоомоор шоолох",
+        "элэглэх",
+        "даапаалах"
+      ],
+      "topics": [
+        "relationships",
+        "actions"
+      ],
+      "expected": {
+        "w": "冷やかす",
+        "r": "ひやかす",
+        "en": [
+          "to banter",
+          "to make fun of",
+          "to jeer at"
+        ]
+      }
+    },
+    "35ce366d44": {
+      "mn": [
+        "наранд түлэгдэх"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "日焼け",
+        "r": "ひやけ",
+        "en": [
+          "sunburn"
+        ]
+      }
+    },
+    "de4f14f8da": {
+      "mn": [
+        "шошго",
+        "саналын хуудас",
+        "тасалбар"
+      ],
+      "topics": [
+        "society",
+        "work"
+      ],
+      "expected": {
+        "w": "票",
+        "r": "ひょう",
+        "en": [
+          "label",
+          "ballot",
+          "ticket"
+        ]
+      }
+    },
+    "4adf021ad8": {
+      "mn": [
+        "уриа",
+        "лоозон",
+        "уриа үг"
+      ],
+      "topics": [
+        "learning",
+        "society"
+      ],
+      "expected": {
+        "w": "標語",
+        "r": "ひょうご",
+        "en": [
+          "motto",
+          "slogan",
+          "catchword"
+        ]
+      }
+    },
+    "c5c782c558": {
+      "mn": [
+        "дүрслэл",
+        "тайлбар дүрслэл",
+        "дүр гаргах"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "描写",
+        "r": "びょうしゃ",
+        "en": [
+          "depiction",
+          "description",
+          "portrayal"
+        ]
+      }
+    },
+    "5d58c89d14": {
+      "mn": [
+        "магадгүй",
+        "санамсаргүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "ひょっと",
+        "r": "ひょっと",
+        "en": [
+          "possibly",
+          "accidentally"
+        ]
+      }
+    },
+    "5e960abe59": {
+      "mn": [
+        "хавтгай",
+        "тэгш",
+        "ижил түвшний"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "平たい",
+        "r": "ひらたい",
+        "en": [
+          "flat",
+          "even",
+          "level"
+        ]
+      }
+    },
+    "3b112744fa": {
+      "mn": [
+        "жагсаалтын сүүлд",
+        "хамгийн доор"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "びり",
+        "r": "びり",
+        "en": [
+          "last on the list",
+          "at the bottom"
+        ]
+      }
+    },
+    "79e5cee9cb": {
+      "mn": [
+        "харьцаа",
+        "эзлэх хувь",
+        "хувь хэмжээ"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "比率",
+        "r": "ひりつ",
+        "en": [
+          "ratio",
+          "proportion",
+          "percentage"
+        ]
+      }
+    },
+    "7a621e52ae": {
+      "mn": [
+        "бууц",
+        "бордоо"
+      ],
+      "topics": [
+        "nature",
+        "work"
+      ],
+      "expected": {
+        "w": "肥料",
+        "r": "ひりょう",
+        "en": [
+          "manure",
+          "fertilizer"
+        ]
+      }
+    },
+    "508ca723f8": {
+      "mn": [
+        "өчүүхэн хэмжээ",
+        "маш бага тоо хэмжээ"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "微量",
+        "r": "びりょう",
+        "en": [
+          "minuscule amount",
+          "extremely small quantity"
+        ]
+      }
+    },
+    "6d94f7f103": {
+      "mn": [
+        "өдрийн хоол",
+        "үдийн хоол"
+      ],
+      "topics": [
+        "food",
+        "time"
+      ],
+      "expected": {
+        "w": "昼飯",
+        "r": "ひるめし",
+        "en": [
+          "lunch",
+          "midday meal"
+        ]
+      }
+    },
+    "14d90b82f3": {
+      "mn": [
+        "харьцаа",
+        "шууд хамаарал"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "比例",
+        "r": "ひれい",
+        "en": [
+          "proportion"
+        ]
+      }
+    },
+    "9168af0619": {
+      "mn": [
+        "ядаргаа",
+        "ядрал"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "疲労",
+        "r": "ひろう",
+        "en": [
+          "fatigue",
+          "weariness"
+        ]
+      }
+    },
+    "462a180308": {
+      "mn": [
+        "тархах",
+        "дэлгэрэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "広まる",
+        "r": "ひろまる",
+        "en": [
+          "to spread",
+          "to be propagated"
+        ]
+      }
+    },
+    "3e0f9f6085": {
+      "mn": [
+        "мэдрэмтгий",
+        "амархан өртөмтгий",
+        "эмзэг"
+      ],
+      "topics": [
+        "descriptions",
+        "body"
+      ],
+      "expected": {
+        "w": "敏感",
+        "r": "びんかん",
+        "en": [
+          "sensibility",
+          "susceptibility",
+          "sensitive (to)"
+        ]
+      }
+    },
+    "f1fafc0b38": {
+      "mn": [
+        "ядуурал",
+        "хомсдол"
+      ],
+      "topics": [
+        "work",
+        "society"
+      ],
+      "expected": {
+        "w": "貧困",
+        "r": "ひんこん",
+        "en": [
+          "poverty",
+          "lack"
+        ]
+      }
+    },
+    "95bddfce2a": {
+      "mn": [
+        "чанар"
+      ],
+      "topics": [
+        "work",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "品質",
+        "r": "ひんしつ",
+        "en": [
+          "quality"
+        ]
+      }
+    },
+    "0fe98bc40d": {
+      "mn": [
+        "ядмаг",
+        "хомс",
+        "сул дорой"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "貧弱",
+        "r": "ひんじゃく",
+        "en": [
+          "poor",
+          "meagre",
+          "insubstantial"
+        ]
+      }
+    },
+    "4080fb1160": {
+      "mn": [
+        "сэжүүр",
+        "санаа өгөх дохио"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "ヒント",
+        "r": "ヒント",
+        "en": [
+          "hint"
+        ]
+      }
+    },
+    "d8165931bc": {
+      "mn": [
+        "ойр ойрхон",
+        "олон давтагдах"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "頻繁",
+        "r": "ひんぱん",
+        "en": [
+          "frequency"
+        ]
+      }
+    },
+    "4860a4efe0": {
+      "mn": [
+        "ядуурал",
+        "хоосрол",
+        "ядуу"
+      ],
+      "topics": [
+        "work",
+        "society"
+      ],
+      "expected": {
+        "w": "貧乏",
+        "r": "びんぼう",
+        "en": [
+          "poverty",
+          "destitute",
+          "poor"
+        ]
+      }
+    },
+    "6898b85866": {
+      "mn": [
+        "шогийн явган хүү"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "歩",
+        "r": "ふ",
+        "en": [
+          "pawn (in chess or shogi)"
+        ]
+      }
+    },
+    "2ec5748d47": {
+      "mn": [
+        "хэлтэс",
+        "хэсэг",
+        "ангилал"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "部",
+        "r": "ぶ",
+        "en": [
+          "department",
+          "part",
+          "category"
+        ]
+      }
+    },
+    "a6b276960f": {
+      "mn": [
+        "тулаан",
+        "тэмцэл"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "ファイト",
+        "r": "ファイト",
+        "en": [
+          "fight"
+        ]
+      }
+    },
+    "5b8eefb9aa": {
+      "mn": [
+        "хавтас",
+        "файл"
+      ],
+      "topics": [
+        "work",
+        "technology"
+      ],
+      "expected": {
+        "w": "ファイル",
+        "r": "ファイル",
+        "en": [
+          "file"
+        ]
+      }
+    },
+    "c88a44b1e4": {
+      "mn": [
+        "гэнэтийн",
+        "огцом",
+        "санаандгүй"
+      ],
+      "topics": [
+        "time",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "不意",
+        "r": "ふい",
+        "en": [
+          "sudden",
+          "abrupt",
+          "unexpected"
+        ]
+      }
+    },
+    "3fa2ddfa8c": {
+      "mn": [
+        "гэрэл зургийн аппаратын шүүлтүүр"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "フィルター",
+        "r": "フィルター",
+        "en": [
+          "(camera) filter"
+        ]
+      }
+    },
+    "337eea6b53": {
+      "mn": [
+        "лац",
+        "битүүмжлэл"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "封",
+        "r": "ふう",
+        "en": [
+          "seal"
+        ]
+      }
+    },
+    "9b20402a09": {
+      "mn": [
+        "бүслэлт",
+        "хөрөнгө битүүмжлэх"
+      ],
+      "topics": [
+        "society",
+        "work"
+      ],
+      "expected": {
+        "w": "封鎖",
+        "r": "ふうさ",
+        "en": [
+          "blockade",
+          "freezing (funds)"
+        ]
+      }
+    },
+    "9dfd9234b7": {
+      "mn": [
+        "зан заншил"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "風習",
+        "r": "ふうしゅう",
+        "en": [
+          "custom"
+        ]
+      }
+    }
+  }
+}

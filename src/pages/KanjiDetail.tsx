@@ -7,8 +7,9 @@ import type { Kanji, StrokeMap } from "../lib/types";
 import { LEVEL_LABEL, MQ_LABEL } from "../lib/text";
 import { GRADES, cardStage, previewIntervals } from "../lib/srs";
 import { Bar, Button, Card, Chip, Empty, LevelBadge, SectionTitle, SpeakButton, Spinner, Tabs } from "../components/ui";
-import { ui } from "../lib/i18n";
+import { ui, MN_PENDING, vocabMeaning } from "../lib/i18n";
 import { StrokePad } from "../components/StrokePad";
+import { EntryNavigator } from "../components/EntryNavigator";
 
 const TABS = [
   { id: "overview", label: "Тойм", icon: "要" },
@@ -52,6 +53,10 @@ export default function KanjiDetail({ char }: { char: string }) {
       action={<Button onClick={() => navigate("kanji")}>{t.backToKanjiList}</Button>} />;
   }
   const mq = MQ_LABEL[language][k.mq];
+  const siblings = data.kanjiByLevel[k.lvl];
+  const currentIndex = siblings.findIndex((item) => item.k === k.k);
+  const previousKanji = currentIndex > 0 ? siblings[currentIndex - 1] : null;
+  const nextKanji = currentIndex >= 0 && currentIndex < siblings.length - 1 ? siblings[currentIndex + 1] : null;
 
   return (
     <div className="space-y-6">
@@ -65,6 +70,14 @@ export default function KanjiDetail({ char }: { char: string }) {
           </Button>
         </div>
       </div>
+
+      <EntryNavigator
+        previous={previousKanji ? { href: href("kanji", previousKanji.k), title: previousKanji.k, subtitle: language === "en" ? previousKanji.en.join(", ") || "—" : previousKanji.mn.join(", ") || MN_PENDING } : null}
+        next={nextKanji ? { href: href("kanji", nextKanji.k), title: nextKanji.k, subtitle: language === "en" ? nextKanji.en.join(", ") || "—" : nextKanji.mn.join(", ") || MN_PENDING } : null}
+        previousLabel={t.previousKanji}
+        nextLabel={t.nextKanji}
+        positionLabel={t.entryPosition(currentIndex + 1, siblings.length)}
+      />
 
       <Card className="overflow-hidden p-0">
         <div className="grid gap-0 lg:grid-cols-[380px_1fr]">
@@ -87,7 +100,7 @@ export default function KanjiDetail({ char }: { char: string }) {
             </div>
 
             <h1 className="mt-4 text-[1.5rem] font-extrabold leading-snug">
-              {language === "en" ? (k.en.join(", ") || k.mn.join(", ")) : (k.mn.join(", ") || k.en.join(", "))}
+              {language === "en" ? (k.en.join(", ") || k.mn.join(", ")) : (k.mn.join(", ") || MN_PENDING)}
             </h1>
             {language === "mn" && k.mn.length > 0 && <p className="mt-1 text-[13px] text-sumi-500">{t.enLabel} {k.en.join(", ")}</p>}
 
@@ -107,14 +120,16 @@ export default function KanjiDetail({ char }: { char: string }) {
             </div>
 
             <div className="mt-5 flex flex-wrap items-center gap-2">
-              <SpeakButton text={char} rate={doc.profile.rate} className="!h-10 !w-10" />
-              {k.on[0] && <SpeakButton text={k.on[0]} rate={doc.profile.rate} className="!h-10 !w-auto !px-3" label={`🔊 ${k.on[0]}`} />}
-              {k.kun[0] && <SpeakButton text={k.kun[0].replace(/[.()]/g, "")} rate={doc.profile.rate} className="!h-10 !w-auto !px-3" label={`🔊 ${k.kun[0].replace(/[.()]/g, "")}`} />}
+              <SpeakButton text={char} rate={doc.profile.rate} className="!h-11 !w-11 sm:!h-10 sm:!w-10" />
+              {k.on[0] && <SpeakButton text={k.on[0]} rate={doc.profile.rate} className="!h-11 !w-auto sm:!h-10" label={`🔊 ${k.on[0]}`} />}
+              {k.kun[0] && <SpeakButton text={k.kun[0].replace(/[.()]/g, "")} rate={doc.profile.rate} className="!h-11 !w-auto sm:!h-10" label={`🔊 ${k.kun[0].replace(/[.()]/g, "")}`} />}
               {k.rad && <Chip tone="murasaki">{t.radicalLabel} <span className="font-mincho text-[14px]">{k.rad}</span></Chip>}
             </div>
           </div>
         </div>
       </Card>
+
+      {k.source_issue && <p role="alert" className="rounded-xl bg-kin-50 p-4 text-sm text-kin-700">{t.sourceReviewWarning}</p>}
 
       <Tabs value={tab} onChange={setTab} items={TABS.map((tb) => ({ ...tb, label: t[TAB_KEYS[tb.id]], badge: tb.id === "words" ? words.length || undefined : undefined }))} />
 
@@ -155,7 +170,7 @@ export default function KanjiDetail({ char }: { char: string }) {
 
             <Card>
               <p className="text-[13px] font-extrabold">{t.mnemonicTitle}</p>
-              {k.mn_mem && (
+              {language === "mn" && k.mn_mem && (
                 <p className="mt-2 rounded-xl bg-kin-50 px-3.5 py-3 text-[13px] leading-relaxed text-kin-700">{k.mn_mem}</p>
               )}
               <textarea value={mnemonic} onChange={(e) => setMnemonic(e.target.value)} onBlur={() => actions.setMnemonic(char, mnemonic)}
@@ -183,7 +198,7 @@ export default function KanjiDetail({ char }: { char: string }) {
                 <a key={w.id} href={href("vocab", w.id)} className="card-flat flex items-center gap-3 px-3.5 py-3 transition hover:-translate-y-0.5 hover:border-shu-300">
                   <span className="font-jp text-[15.5px] font-bold">{w.w}</span>
                   <span className="min-w-0 flex-1">
-                    <span className="block truncate text-[12.5px] text-sumi-700">{language === "en" ? (w.en.join("; ") || w.mn?.join(", ")) : (w.mn?.join(", ") || w.en.join("; "))}</span>
+                    <span className="block truncate text-[12.5px] text-sumi-700">{vocabMeaning(w, language)}</span>
                     <span className="block font-jp text-[10.5px] text-sumi-400">{w.r}</span>
                   </span>
                   <LevelBadge level={w.lvl} size="sm" />

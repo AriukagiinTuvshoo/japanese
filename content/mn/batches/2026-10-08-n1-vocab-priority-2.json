@@ -1,0 +1,1026 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-priority-2-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit semantic categories cross-checked against Japanese entry and retained English gloss, independently unreviewed. Original uncommon senses preserved.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "280c350aaf": {
+      "mn": [
+        "танилцуулах чиглүүлэх сургалт"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "オリエンテーション",
+        "r": "オリエンテーション",
+        "en": [
+          "orientation"
+        ]
+      }
+    },
+    "64ad3d3360": {
+      "mn": [
+        "дээш эргүүлэх",
+        "буцааж нугалах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "折り返す",
+        "r": "おりかえす",
+        "en": [
+          "to turn up",
+          "to fold back"
+        ]
+      }
+    },
+    "e7af77b5ad": {
+      "mn": [
+        "нэхмэл",
+        "даавуу"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "織物",
+        "r": "おりもの",
+        "en": [
+          "textile",
+          "fabric"
+        ]
+      }
+    },
+    "dd75448626": {
+      "mn": [
+        "нэхэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "織る",
+        "r": "おる",
+        "en": [
+          "to weave"
+        ]
+      }
+    },
+    "1d05a03cd3": {
+      "mn": [
+        "би (бардам, албан бус эрэгтэй хүний төлөөний үг)"
+      ],
+      "topics": [
+        "people",
+        "learning"
+      ],
+      "expected": {
+        "w": "俺",
+        "r": "おれ",
+        "en": [
+          "I (ego) (boastful first-person pronoun)"
+        ]
+      }
+    },
+    "cfae27ab7c": {
+      "mn": [
+        "жүрж"
+      ],
+      "topics": [
+        "food"
+      ],
+      "expected": {
+        "w": "オレンジ",
+        "r": "オレンジ",
+        "en": [
+          "an orange"
+        ]
+      }
+    },
+    "68865480c1": {
+      "mn": [
+        "мунхаг",
+        "тэнэг"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "愚か",
+        "r": "おろか",
+        "en": [
+          "foolish",
+          "stupid"
+        ]
+      }
+    },
+    "679dc60eb0": {
+      "mn": [
+        "үл тоох",
+        "хайхрамжгүй байдал",
+        "болгоомжгүй байдал"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "疎か",
+        "r": "おろそか",
+        "en": [
+          "neglect",
+          "negligence",
+          "carelessness"
+        ]
+      }
+    },
+    "612aa8aa8b": {
+      "mn": [
+        "цахим сүлжээнд холбогдсон"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "オンライン",
+        "r": "オンライン",
+        "en": [
+          "on-line"
+        ]
+      }
+    },
+    "75df9efb1e": {
+      "mn": [
+        "зөөлөн",
+        "аядуу",
+        "дунд зэрэг"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "温和",
+        "r": "おんわ",
+        "en": [
+          "gentle",
+          "mild",
+          "moderate"
+        ]
+      }
+    },
+    "bacad0baf0": {
+      "mn": [
+        "тэнхим",
+        "тасаг"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "科",
+        "r": "か",
+        "en": [
+          "department",
+          "section"
+        ]
+      }
+    },
+    "b9efa4c556": {
+      "mn": [
+        "хивс"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "カーペット",
+        "r": "カーペット",
+        "en": [
+          "carpet"
+        ]
+      }
+    },
+    "a77c8b1d1f": {
+      "mn": [
+        "доод зэрэг",
+        "захирагдсан",
+        "доод эрэмбэ"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "下位",
+        "r": "かい",
+        "en": [
+          "low rank",
+          "subordinate",
+          "lower order (e.g. byte)"
+        ]
+      }
+    },
+    "e8f22989ca": {
+      "mn": [
+        "давхар тоолох дагавар",
+        "давхар"
+      ],
+      "topics": [
+        "places",
+        "quantity"
+      ],
+      "expected": {
+        "w": "階",
+        "r": "かい",
+        "en": [
+          "-floor (counter)",
+          "stories"
+        ]
+      }
+    },
+    "42cf1a5950": {
+      "mn": [
+        "гудамж",
+        "хороолол"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "街",
+        "r": "がい",
+        "en": [
+          "~street",
+          "~quarters"
+        ]
+      }
+    },
+    "a6f8ab22ac": {
+      "mn": [
+        "доройтол",
+        "муу тал руу өөрчлөх"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "改悪",
+        "r": "かいあく",
+        "en": [
+          "deterioration",
+          "changing for the worse"
+        ]
+      }
+    },
+    "230db12bf5": {
+      "mn": [
+        "далайн тээвэр"
+      ],
+      "topics": [
+        "places",
+        "work"
+      ],
+      "expected": {
+        "w": "海運",
+        "r": "かいうん",
+        "en": [
+          "maritime",
+          "marine transportation"
+        ]
+      }
+    },
+    "ac684e96b8": {
+      "mn": [
+        "импортын бараа",
+        "гадаад валют"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "外貨",
+        "r": "がいか",
+        "en": [
+          "imported goods",
+          "foreign money"
+        ]
+      }
+    },
+    "b20fd69e1c": {
+      "mn": [
+        "шинэчлэл",
+        "өөрчлөн шинэчлэх",
+        "инновац"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "改革",
+        "r": "かいかく",
+        "en": [
+          "reform",
+          "reformation",
+          "innovation"
+        ]
+      }
+    },
+    "a260f0ef0d": {
+      "mn": [
+        "дунгийн хясаа"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "貝殻",
+        "r": "かいがら",
+        "en": [
+          "shell"
+        ]
+      }
+    },
+    "ade644e17c": {
+      "mn": [
+        "гадаад байдал",
+        "гадна тал",
+        "нүүрэн тал"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "外観",
+        "r": "がいかん",
+        "en": [
+          "appearance",
+          "exterior",
+          "facade"
+        ]
+      }
+    },
+    "40f53466d6": {
+      "mn": [
+        "анги",
+        "зэрэг",
+        "шатлал"
+      ],
+      "topics": [
+        "society",
+        "quantity"
+      ],
+      "expected": {
+        "w": "階級",
+        "r": "かいきゅう",
+        "en": [
+          "class",
+          "rank",
+          "grade"
+        ]
+      }
+    },
+    "0abb370e7c": {
+      "mn": [
+        "далайн хоолой"
+      ],
+      "topics": [
+        "places",
+        "nature"
+      ],
+      "expected": {
+        "w": "海峡",
+        "r": "かいきょう",
+        "en": [
+          "channel"
+        ]
+      }
+    },
+    "3576b5bfed": {
+      "mn": [
+        "ярилцлага",
+        "бараалхалт"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "会見",
+        "r": "かいけん",
+        "en": [
+          "interview",
+          "audience"
+        ]
+      }
+    },
+    "aa2c1d27ef": {
+      "mn": [
+        "асаргаа"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "介護",
+        "r": "かいご",
+        "en": [
+          "nursing"
+        ]
+      }
+    },
+    "4bc51f4a57": {
+      "mn": [
+        "хурал зохион байгуулах",
+        "үзэсгэлэн нээх"
+      ],
+      "topics": [
+        "work",
+        "arts"
+      ],
+      "expected": {
+        "w": "開催",
+        "r": "かいさい",
+        "en": [
+          "holding a meeting",
+          "open an exhibition"
+        ]
+      }
+    },
+    "76371e791a": {
+      "mn": [
+        "цуглуулах",
+        "эргүүлэн авах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "回収",
+        "r": "かいしゅう",
+        "en": [
+          "collection",
+          "recovery"
+        ]
+      }
+    },
+    "0e51793639": {
+      "mn": [
+        "засвар",
+        "сайжруулалт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "改修",
+        "r": "かいしゅう",
+        "en": [
+          "repair",
+          "improvement"
+        ]
+      }
+    },
+    "6fc1606473": {
+      "mn": [
+        "мангас"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "怪獣",
+        "r": "かいじゅう",
+        "en": [
+          "monster"
+        ]
+      }
+    },
+    "a236f969f0": {
+      "mn": [
+        "цуцлалт",
+        "хүчингүй болгох",
+        "чөлөөлөх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "解除",
+        "r": "かいじょ",
+        "en": [
+          "cancellation",
+          "rescinding",
+          "release"
+        ]
+      }
+    },
+    "be24bd3e1e": {
+      "mn": [
+        "гадаад хэргийн сайд"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "外相",
+        "r": "がいしょう",
+        "en": [
+          "Foreign Minister"
+        ]
+      }
+    },
+    "6cbf79a71a": {
+      "mn": [
+        "гэмтээх",
+        "сүйтгэх",
+        "хор хүргэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "害する",
+        "r": "がいする",
+        "en": [
+          "to injure",
+          "to damage",
+          "to harm"
+        ]
+      }
+    },
+    "754e93952d": {
+      "mn": [
+        "ерөнхий тайлбар",
+        "тойм"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "概説",
+        "r": "がいせつ",
+        "en": [
+          "general statement",
+          "outline"
+        ]
+      }
+    },
+    "eabf3cc94c": {
+      "mn": [
+        "дамжуулан илгээх"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "回送",
+        "r": "かいそう",
+        "en": [
+          "forwarding"
+        ]
+      }
+    },
+    "06f4ced5f8": {
+      "mn": [
+        "анги",
+        "түвшин",
+        "давхарга"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "階層",
+        "r": "かいそう",
+        "en": [
+          "class",
+          "level",
+          "stratum"
+        ]
+      }
+    },
+    "347ac832b6": {
+      "mn": [
+        "атар газар эзэмших",
+        "тариалах",
+        "шинэ зам нээх"
+      ],
+      "topics": [
+        "nature",
+        "work"
+      ],
+      "expected": {
+        "w": "開拓",
+        "r": "かいたく",
+        "en": [
+          "reclamation (of wasteland)",
+          "cultivation",
+          "pioneer"
+        ]
+      }
+    },
+    "e871aeff74": {
+      "mn": [
+        "яриа",
+        "хурал",
+        "хэлэлцүүлэг"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "会談",
+        "r": "かいだん",
+        "en": [
+          "conversation",
+          "conference",
+          "discussion"
+        ]
+      }
+    },
+    "cd8e0693bd": {
+      "mn": [
+        "шинэчлэл",
+        "тогтоосон зүйлийг өөрчлөх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "改定",
+        "r": "かいてい",
+        "en": [
+          "reform"
+        ]
+      }
+    },
+    "e1ffadc5ac": {
+      "mn": [
+        "эх бичвэрийг засварлах"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "改訂",
+        "r": "かいてい",
+        "en": [
+          "revision"
+        ]
+      }
+    },
+    "71bcfaf693": {
+      "mn": [
+        "аяллын хөтөч"
+      ],
+      "topics": [
+        "people",
+        "places"
+      ],
+      "expected": {
+        "w": "ガイド",
+        "r": "ガイド",
+        "en": [
+          "tour guide"
+        ]
+      }
+    },
+    "46b12b1acf": {
+      "mn": [
+        "гол зам"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "街道",
+        "r": "かいどう",
+        "en": [
+          "highway"
+        ]
+      }
+    },
+    "438bbd01da": {
+      "mn": [
+        "гудамжинд"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "街頭",
+        "r": "がいとう",
+        "en": [
+          "in the street"
+        ]
+      }
+    },
+    "a08c270ca6": {
+      "mn": [
+        "тохирох",
+        "нийцэх",
+        "ангилалд багтах"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "該当",
+        "r": "がいとう",
+        "en": [
+          "corresponding",
+          "answering to",
+          "coming under"
+        ]
+      }
+    },
+    "32e318a947": {
+      "mn": [
+        "гарын авлага"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "ガイドブック",
+        "r": "ガイドブック",
+        "en": [
+          "guidebook"
+        ]
+      }
+    },
+    "5c1c884ffe": {
+      "mn": [
+        "хөндлөнгөөс оролцох"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "介入",
+        "r": "かいにゅう",
+        "en": [
+          "intervention"
+        ]
+      }
+    },
+    "2430b22515": {
+      "mn": [
+        "ерөнхий санаа",
+        "ойлголт",
+        "ухагдахуун"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "概念",
+        "r": "がいねん",
+        "en": [
+          "general idea",
+          "concept",
+          "notion"
+        ]
+      }
+    },
+    "de9ee73238": {
+      "mn": [
+        "хөгжүүлэлт",
+        "нөөцийг ашиглах"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "開発",
+        "r": "かいはつ",
+        "en": [
+          "development",
+          "exploitation"
+        ]
+      }
+    },
+    "3192ac8ca0": {
+      "mn": [
+        "далайн түвшнээс дээших өндөр"
+      ],
+      "topics": [
+        "quantity",
+        "places"
+      ],
+      "expected": {
+        "w": "海抜",
+        "r": "かいばつ",
+        "en": [
+          "height above sea level"
+        ]
+      }
+    },
+    "1fa591f378": {
+      "mn": [
+        "асрах",
+        "харж хандах"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "介抱",
+        "r": "かいほう",
+        "en": [
+          "nursing",
+          "looking after"
+        ]
+      }
+    },
+    "3673e85a58": {
+      "mn": [
+        "задлан шинжлэх",
+        "задлан үзлэг"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "解剖",
+        "r": "かいぼう",
+        "en": [
+          "dissection",
+          "autopsy"
+        ]
+      }
+    },
+    "46e584a03b": {
+      "mn": [
+        "гаднаас ирсэн",
+        "амбулаторийн үзлэг"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "外来",
+        "r": "がいらい",
+        "en": [
+          "imported",
+          "outpatient clinic"
+        ]
+      }
+    },
+    "a5f7798d72": {
+      "mn": [
+        "ээлжлэн уншуулах"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "回覧",
+        "r": "かいらん",
+        "en": [
+          "circulation"
+        ]
+      }
+    },
+    "dd35b714da": {
+      "mn": [
+        "тойм",
+        "хураангуй",
+        "гол агуулга"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "概略",
+        "r": "がいりゃく",
+        "en": [
+          "outline",
+          "summary",
+          "gist"
+        ]
+      }
+    },
+    "7527fce287": {
+      "mn": [
+        "далайн урсгал"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "海流",
+        "r": "かいりゅう",
+        "en": [
+          "ocean current"
+        ]
+      }
+    },
+    "534de6d5d3": {
+      "mn": [
+        "сайжруулалт",
+        "шинэчлэл"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "改良",
+        "r": "かいりょう",
+        "en": [
+          "improvement",
+          "reform"
+        ]
+      }
+    },
+    "ecd9ff4900": {
+      "mn": [
+        "цахилгаан хэлхээ"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "回路",
+        "r": "かいろ",
+        "en": [
+          "circuit (electric)"
+        ]
+      }
+    },
+    "4385ccd897": {
+      "mn": [
+        "далайн зам"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "海路",
+        "r": "かいろ",
+        "en": [
+          "sea route"
+        ]
+      }
+    },
+    "c41eb29491": {
+      "mn": [
+        "эргэж харах",
+        "эргэх",
+        "эргэн хянах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "顧みる",
+        "r": "かえりみる",
+        "en": [
+          "to look back",
+          "to turn around",
+          "to review"
+        ]
+      }
+    },
+    "4ff84bb232": {
+      "mn": [
+        "өөрийгөө эргэцүүлэх"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "省みる",
+        "r": "かえりみる",
+        "en": [
+          "to reflect"
+        ]
+      }
+    },
+    "3bd1fc1cbb": {
+      "mn": [
+        "буцах",
+        "эргэж ирэх",
+        "буцаж явах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "返る",
+        "r": "かえる",
+        "en": [
+          "to return",
+          "to come back",
+          "to go back"
+        ]
+      }
+    }
+  }
+}

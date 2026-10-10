@@ -486,7 +486,9 @@ async function main() {
   console.log("─────────────────────────────────────────────────");
 }
 
-main().catch((e) => {
+main().then(async () => {
+  await import("./apply-translation-batches.mjs");
+}).catch((e) => {
   console.error("✗ Боловсруулахад алдаа:", e);
   process.exit(1);
 });

@@ -1,0 +1,515 @@
+{
+  "provenance": {
+    "id": "mn-n4-topics-recovery-1-2026-10-09",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "Explicit semantic assignments compared with exact Japanese, readings and retained English. Multiple topics where justified; no default catch-all. Independent human review pending.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n4.json at cac78c79587f6fb6d5f93a158790258c24b351e8",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "376ccb94c4": {
+      "expected": {
+        "w": "ガス",
+        "r": "ガス",
+        "en": [
+          "petrol"
+        ]
+      },
+      "topics": [
+        "technology"
+      ]
+    },
+    "5a76ee84b9": {
+      "expected": {
+        "w": "必ず",
+        "r": "かならず",
+        "en": [
+          "certainly",
+          "necessarily"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "b6027b4099": {
+      "expected": {
+        "w": "急行",
+        "r": "きゅうこう",
+        "en": [
+          "speedy",
+          "express"
+        ]
+      },
+      "topics": [
+        "places",
+        "descriptions"
+      ]
+    },
+    "511cbf9eee": {
+      "expected": {
+        "w": "決して",
+        "r": "けっして",
+        "en": [
+          "never"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "0435dab637": {
+      "expected": {
+        "w": "けれど",
+        "r": "けれど",
+        "en": [
+          "however"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "3cd723d544": {
+      "expected": {
+        "w": "こう",
+        "r": "こう",
+        "en": [
+          "this way"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "aa95e437a0": {
+      "expected": {
+        "w": "郊外",
+        "r": "こうがい",
+        "en": [
+          "outskirts"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "0c49fbf17c": {
+      "expected": {
+        "w": "校長",
+        "r": "こうちょう",
+        "en": [
+          "headmaster"
+        ]
+      },
+      "topics": [
+        "people",
+        "learning"
+      ]
+    },
+    "8786f4e971": {
+      "expected": {
+        "w": "講堂",
+        "r": "こうどう",
+        "en": [
+          "auditorium"
+        ]
+      },
+      "topics": [
+        "places",
+        "arts"
+      ]
+    },
+    "5bb88bc7a4": {
+      "expected": {
+        "w": "ご存じ",
+        "r": "ごぞんじ",
+        "en": [
+          "knowing",
+          "acquaintance"
+        ]
+      },
+      "topics": [
+        "learning",
+        "relationships"
+      ]
+    },
+    "aac669551b": {
+      "expected": {
+        "w": "答",
+        "r": "こたえ",
+        "en": [
+          "response"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "5bd8adf14c": {
+      "expected": {
+        "w": "ごちそう",
+        "r": "ごちそう",
+        "en": [
+          "a feast"
+        ]
+      },
+      "topics": [
+        "food"
+      ]
+    },
+    "038f67b635": {
+      "expected": {
+        "w": "こと",
+        "r": "こと",
+        "en": [
+          "thing",
+          "matter"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "bdab237e0d": {
+      "expected": {
+        "w": "ごみ",
+        "r": "ごみ",
+        "en": [
+          "rubbish"
+        ]
+      },
+      "topics": [
+        "daily"
+      ]
+    },
+    "b71d50ee32": {
+      "expected": {
+        "w": "これから",
+        "r": "これから",
+        "en": [
+          "after this"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "d11b994212": {
+      "expected": {
+        "w": "コンサート",
+        "r": "コンサート",
+        "en": [
+          "concert"
+        ]
+      },
+      "topics": [
+        "arts"
+      ]
+    },
+    "bdad768057": {
+      "expected": {
+        "w": "今夜",
+        "r": "こんや",
+        "en": [
+          "tonight"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "c54201ce25": {
+      "expected": {
+        "w": "最後",
+        "r": "さいご",
+        "en": [
+          "last",
+          "end"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "856f1c8216": {
+      "expected": {
+        "w": "坂",
+        "r": "さか",
+        "en": [
+          "slope",
+          "hill"
+        ]
+      },
+      "topics": [
+        "nature",
+        "places"
+      ]
+    },
+    "43f6c947f9": {
+      "expected": {
+        "w": "サラダ",
+        "r": "サラダ",
+        "en": [
+          "salad"
+        ]
+      },
+      "topics": [
+        "food"
+      ]
+    },
+    "4b94df57e2": {
+      "expected": {
+        "w": "サンダル",
+        "r": "サンダル",
+        "en": [
+          "sandal"
+        ]
+      },
+      "topics": [
+        "daily"
+      ]
+    },
+    "f919deef04": {
+      "expected": {
+        "w": "サンドイッチ",
+        "r": "サンドイッチ",
+        "en": [
+          "sandwich"
+        ]
+      },
+      "topics": [
+        "food"
+      ]
+    },
+    "dd89673ae0": {
+      "expected": {
+        "w": "字",
+        "r": "じ",
+        "en": [
+          "character"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "88125cd960": {
+      "expected": {
+        "w": "仕方",
+        "r": "しかた",
+        "en": [
+          "method"
+        ]
+      },
+      "topics": [
+        "actions"
+      ]
+    },
+    "7f6ffe3432": {
+      "expected": {
+        "w": "事故",
+        "r": "じこ",
+        "en": [
+          "accident"
+        ]
+      },
+      "topics": [
+        "society",
+        "body"
+      ]
+    },
+    "ba8831572d": {
+      "expected": {
+        "w": "地震",
+        "r": "じしん",
+        "en": [
+          "earthquake"
+        ]
+      },
+      "topics": [
+        "nature"
+      ]
+    },
+    "62ebad7ac3": {
+      "expected": {
+        "w": "時代",
+        "r": "じだい",
+        "en": [
+          "era"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "0c0fb94d28": {
+      "expected": {
+        "w": "下着",
+        "r": "したぎ",
+        "en": [
+          "underwear"
+        ]
+      },
+      "topics": [
+        "daily"
+      ]
+    },
+    "17af6092db": {
+      "expected": {
+        "w": "品物",
+        "r": "しなもの",
+        "en": [
+          "goods"
+        ]
+      },
+      "topics": [
+        "work"
+      ]
+    },
+    "ddfb670acf": {
+      "expected": {
+        "w": "ジャム",
+        "r": "ジャム",
+        "en": [
+          "jam"
+        ]
+      },
+      "topics": [
+        "food"
+      ]
+    },
+    "eacd8a5221": {
+      "expected": {
+        "w": "習慣",
+        "r": "しゅうかん",
+        "en": [
+          "custom",
+          "manners"
+        ]
+      },
+      "topics": [
+        "society",
+        "daily"
+      ]
+    },
+    "47593d1123": {
+      "expected": {
+        "w": "住所",
+        "r": "じゅうしょ",
+        "en": [
+          "an address",
+          "a residence"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "dcfb33317b": {
+      "expected": {
+        "w": "柔道",
+        "r": "じゅうどう",
+        "en": [
+          "judo"
+        ]
+      },
+      "topics": [
+        "arts"
+      ]
+    },
+    "689dc7a66e": {
+      "expected": {
+        "w": "小説",
+        "r": "しょうせつ",
+        "en": [
+          "novel"
+        ]
+      },
+      "topics": [
+        "arts",
+        "learning"
+      ]
+    },
+    "2ae7b1cb3b": {
+      "expected": {
+        "w": "食料品",
+        "r": "しょくりょうひん",
+        "en": [
+          "groceries"
+        ]
+      },
+      "topics": [
+        "food",
+        "work"
+      ]
+    },
+    "7962f0cea1": {
+      "expected": {
+        "w": "人口",
+        "r": "じんこう",
+        "en": [
+          "population"
+        ]
+      },
+      "topics": [
+        "people",
+        "quantity"
+      ]
+    },
+    "cdddb30c94": {
+      "expected": {
+        "w": "ずいぶん",
+        "r": "ずいぶん",
+        "en": [
+          "extremely"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "48341cc3a0": {
+      "expected": {
+        "w": "数学",
+        "r": "すうがく",
+        "en": [
+          "mathematics",
+          "arithmetic"
+        ]
+      },
+      "topics": [
+        "learning",
+        "quantity"
+      ]
+    },
+    "eb0f717433": {
+      "expected": {
+        "w": "スーツ",
+        "r": "スーツ",
+        "en": [
+          "suit"
+        ]
+      },
+      "topics": [
+        "daily"
+      ]
+    },
+    "8a13543a80": {
+      "expected": {
+        "w": "スーツケース",
+        "r": "スーツケース",
+        "en": [
+          "suitcase"
+        ]
+      },
+      "topics": [
+        "places",
+        "daily"
+      ]
+    }
+  }
+}

@@ -14,6 +14,7 @@ import { readFileSync } from "node:fs";
 import { mkdtempSync, writeFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
+import { pathToFileURL } from "node:url";
 import ts from "typescript";
 
 const src = readFileSync("src/lib/routes.ts", "utf-8");
@@ -21,7 +22,7 @@ const js = ts.transpileModule(src, { compilerOptions: { module: ts.ModuleKind.ES
 const dir = mkdtempSync(join(tmpdir(), "routes-test-"));
 const file = join(dir, "routes.mjs");
 writeFileSync(file, js);
-const { parseHash, href, routeArg, routeLevel } = await import(file);
+const { parseHash, href, routeArg, routeLevel } = await import(pathToFileURL(file).href);
 rmSync(dir, { recursive: true, force: true });
 
 let failures = 0;

@@ -11,7 +11,7 @@
  *   JMdict (jamdict)  Япон–Англи толь (өргөтгөсөн үгийн сан)
  *
  * Монгол хэлний давхарга (content/mn-*.json) нь энэ скриптоос хамааралгүй,
- * гараар хянагдсан контент юм.
+ * тусдаа хадгалагдсан контент юм; шинэ AI орчуулгууд хараат бус хяналтад ороогүй.
  *
  * Ажиллуулах:  npm run data:fetch
  */
@@ -67,7 +67,7 @@ const SOURCES = [
     url: "https://files.pythonhosted.org/packages/source/j/jamdict-data/jamdict_data-1.5.tar.gz",
     archive: "jamdict-data.tar.gz",
     dir: "jamdict-data",
-    license: "MIT (багц) / CC-BY-SA-4.0 (JMdict өгөгдөл)",
+    license: "MIT (багц) / CC-BY-SA-3.0 (jamdict-data 1.5 дахь толь)",
     homepage: "https://www.edrdg.org/jmdict/j_jmdict.html",
     note: "Япон–Англи толь. JLPT-д хамрагдаагүй ч өндөр давтамжтай үгсийг «өргөтгөсөн сан» болгон авахад ашиглана.",
     extra: async (dir) => {

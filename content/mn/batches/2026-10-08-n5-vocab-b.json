@@ -1,0 +1,4591 @@
+{
+  "provenance": {
+    "id": "mn-n5-vocab-b-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian meanings and topic assignments cross-checked against stored Japanese headwords/readings and English senses. These JMdict extensions are not official N5 content. Ambiguous source records flagged for review. Independent human review outstanding.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n5.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j1711070": {
+      "mn": [
+        "зуун жил",
+        "зуун",
+        "урт удаан хугацаа"
+      ],
+      "expected": {
+        "w": "百年",
+        "r": "ひゃくねん",
+        "en": [
+          "century",
+          "hundred years",
+          "a long time"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1502990": {
+      "mn": [
+        "хуваалцах",
+        "хуваарилалт",
+        "тэнцээ"
+      ],
+      "expected": {
+        "w": "分け",
+        "r": "わけ",
+        "en": [
+          "sharing",
+          "division",
+          "draw"
+        ]
+      },
+      "topics": [
+        "actions",
+        "quantity",
+        "arts"
+      ]
+    },
+    "j2145670": {
+      "mn": [
+        "бутархайн хуваарийг заах: ...-ны нэг"
+      ],
+      "expected": {
+        "w": "分の",
+        "r": "ぶんの",
+        "en": [
+          "-th (e.g. one fifth)"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "j1259550": {
+      "mn": [
+        "гэрлэх зорилготой албан танилцах уулзалт"
+      ],
+      "expected": {
+        "w": "見合",
+        "r": "みあい",
+        "en": [
+          "formal marriage interview",
+          "marriage meeting"
+        ]
+      },
+      "topics": [
+        "relationships"
+      ]
+    },
+    "j1523290": {
+      "mn": [
+        "онцлог чанар",
+        "өвөрмөц шинж",
+        "жинхэнэ чадвар"
+      ],
+      "expected": {
+        "w": "本領",
+        "r": "ほんりょう",
+        "en": [
+          "characteristic quality",
+          "special character",
+          "one's real ability"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "j1303050": {
+      "mn": [
+        "ууланд",
+        "уулсын дунд"
+      ],
+      "expected": {
+        "w": "山中",
+        "r": "さんちゅう",
+        "en": [
+          "in the mountains",
+          "among the mountains"
+        ]
+      },
+      "topics": [
+        "nature",
+        "places"
+      ]
+    },
+    "j1576230": {
+      "mn": [
+        "нэг анги",
+        "нэг иж бүрдэл",
+        "нэг хос"
+      ],
+      "expected": {
+        "w": "一組",
+        "r": "ひとくみ",
+        "en": [
+          "one class",
+          "one set",
+          "a pair"
+        ]
+      },
+      "topics": [
+        "quantity",
+        "learning"
+      ]
+    },
+    "j2583620": {
+      "mn": [
+        "зургаан цаг"
+      ],
+      "expected": {
+        "w": "六時",
+        "r": "ろくじ",
+        "en": [
+          "six o'clock"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1268590": {
+      "mn": [
+        "хагас",
+        "тавин хувь",
+        "тэнцээ"
+      ],
+      "expected": {
+        "w": "五分",
+        "r": "ごぶ",
+        "en": [
+          "half",
+          "50%",
+          "tie"
+        ]
+      },
+      "topics": [
+        "quantity",
+        "arts"
+      ]
+    },
+    "j1777070": {
+      "mn": [
+        "тогтсон үзэл бодол"
+      ],
+      "expected": {
+        "w": "定見",
+        "r": "ていけん",
+        "en": [
+          "fixed opinion"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "j1164680": {
+      "mn": [
+        "бөөн",
+        "бүлэг",
+        "баг"
+      ],
+      "expected": {
+        "w": "一団",
+        "r": "いちだん",
+        "en": [
+          "body",
+          "group",
+          "party"
+        ]
+      },
+      "topics": [
+        "people",
+        "society"
+      ]
+    },
+    "j1248540": {
+      "mn": [
+        "цэргийн албан хаагч",
+        "цэрэг"
+      ],
+      "expected": {
+        "w": "軍人",
+        "r": "ぐんじん",
+        "en": [
+          "military personnel",
+          "soldier"
+        ]
+      },
+      "topics": [
+        "people",
+        "society"
+      ]
+    },
+    "j1580740": {
+      "mn": [
+        "хүн төрөлхтний соёл",
+        "соёл иргэншил"
+      ],
+      "expected": {
+        "w": "人文",
+        "r": "じんぶん",
+        "en": [
+          "humanity",
+          "civilization",
+          "civilisation"
+        ]
+      },
+      "topics": [
+        "society"
+      ]
+    },
+    "j1415400": {
+      "mn": [
+        "хоёрдугаар",
+        "хоёр дахь"
+      ],
+      "expected": {
+        "w": "第二",
+        "r": "だいに",
+        "en": [
+          "second"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "j1269350": {
+      "mn": [
+        "дараа нь",
+        "хожим"
+      ],
+      "expected": {
+        "w": "後で",
+        "r": "あとで",
+        "en": [
+          "afterwards"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j2640160": {
+      "mn": [
+        "хожим",
+        "дараа нь",
+        "яваандаа"
+      ],
+      "expected": {
+        "w": "後に",
+        "r": "のちに",
+        "en": [
+          "later on",
+          "subsequently",
+          "by and by"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1720200": {
+      "mn": [
+        "шинэ сар",
+        "хавирган сар"
+      ],
+      "expected": {
+        "w": "新月",
+        "r": "しんげつ",
+        "en": [
+          "new moon",
+          "crescent moon"
+        ]
+      },
+      "topics": [
+        "nature",
+        "time"
+      ]
+    },
+    "j1307340": {
+      "mn": [
+        "дөрөв хуваах",
+        "дөрөвний нэг"
+      ],
+      "expected": {
+        "w": "四分",
+        "r": "しぶん",
+        "en": [
+          "divide into four pieces",
+          "one fourth"
+        ]
+      },
+      "topics": [
+        "quantity",
+        "actions"
+      ]
+    },
+    "j1162640": {
+      "mn": [
+        "нэгийн өмнөх",
+        "урдах"
+      ],
+      "expected": {
+        "w": "一昨",
+        "r": "いっさく",
+        "en": [
+          "one previous"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1242510": {
+      "mn": [
+        "сүүлийн жилүүд"
+      ],
+      "expected": {
+        "w": "近年",
+        "r": "きんねん",
+        "en": [
+          "recent years"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1002290": {
+      "mn": [
+        "чи",
+        "эрхэм дээд хүн, бурхны өмнө байх байдал"
+      ],
+      "expected": {
+        "w": "お前",
+        "r": "おまえ",
+        "en": [
+          "you",
+          "presence (of a god, nobleman, etc.)"
+        ]
+      },
+      "topics": [
+        "people",
+        "society"
+      ]
+    },
+    "j1392590": {
+      "mn": [
+        "өмнө",
+        "урд",
+        "...-ын өмнө"
+      ],
+      "expected": {
+        "w": "前に",
+        "r": "まえに",
+        "en": [
+          "ahead",
+          "before",
+          "ago"
+        ]
+      },
+      "topics": [
+        "time",
+        "places"
+      ]
+    },
+    "j1595500": {
+      "mn": [
+        "хүний оюун ухаан",
+        "мэдлэг"
+      ],
+      "expected": {
+        "w": "人知",
+        "r": "じんち",
+        "en": [
+          "human intellect",
+          "knowledge"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "j1368890": {
+      "mn": [
+        "хүнлэг ёс",
+        "явган хүний зам"
+      ],
+      "expected": {
+        "w": "人道",
+        "r": "じんどう",
+        "en": [
+          "humanity",
+          "sidewalk",
+          "footpath"
+        ]
+      },
+      "topics": [
+        "society",
+        "places"
+      ]
+    },
+    "j1522660": {
+      "mn": [
+        "бичвэр",
+        "эх бичиг",
+        "энэ ном"
+      ],
+      "expected": {
+        "w": "本書",
+        "r": "ほんしょ",
+        "en": [
+          "text",
+          "script",
+          "this book"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "j2002320": {
+      "mn": [
+        "тэр өдөр",
+        "яг тэр өдөр"
+      ],
+      "expected": {
+        "w": "その日",
+        "r": "そのひ",
+        "en": [
+          "that day",
+          "the very same day"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j2738190": {
+      "mn": [
+        "сарын хорин хоёрны өдөр",
+        "хорин хоёр хоног"
+      ],
+      "expected": {
+        "w": "２２日",
+        "r": "にじゅうににち",
+        "en": [
+          "twenty-second day of the month",
+          "twenty-two days"
+        ]
+      },
+      "topics": [
+        "time",
+        "quantity"
+      ]
+    },
+    "j1262360": {
+      "mn": [
+        "эх хувь",
+        "анхны эх",
+        "эх бичиг"
+      ],
+      "expected": {
+        "w": "原本",
+        "r": "げんぽん",
+        "en": [
+          "the original",
+          "original copy",
+          "script"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "j1730310": {
+      "mn": [
+        "өдрийн жижүүр",
+        "өдрийн ээлж",
+        "ангийн жижүүр"
+      ],
+      "expected": {
+        "w": "日直",
+        "r": "にっちょく",
+        "en": [
+          "day duty",
+          "day shift",
+          "class duty (students)"
+        ]
+      },
+      "topics": [
+        "work",
+        "learning"
+      ]
+    },
+    "j1413200": {
+      "mn": [
+        "далай",
+        "их тэнгис",
+        "даавууны нэгэн хээ"
+      ],
+      "expected": {
+        "w": "大海",
+        "r": "たいかい",
+        "en": [
+          "ocean",
+          "large sea",
+          "fabric pattern"
+        ]
+      },
+      "topics": [
+        "nature",
+        "arts"
+      ]
+    },
+    "j1604610": {
+      "mn": [
+        "саадгүй харагдах орчин",
+        "хэтийн төлөв",
+        "харагдах байдал"
+      ],
+      "expected": {
+        "w": "見通",
+        "r": "みとおし",
+        "en": [
+          "unobstructed view",
+          "perspective",
+          "visibility"
+        ]
+      },
+      "topics": [
+        "places",
+        "descriptions"
+      ]
+    },
+    "j1165500": {
+      "mn": [
+        "өдөржин",
+        "бүтэн өдрийн турш"
+      ],
+      "expected": {
+        "w": "一日中",
+        "r": "いちにちじゅう",
+        "en": [
+          "all day long",
+          "all the day",
+          "throughout the day"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j2426940": {
+      "mn": [
+        "Япон улс"
+      ],
+      "expected": {
+        "w": "日本国",
+        "r": "にほんこく",
+        "en": [
+          "Japan"
+        ]
+      },
+      "topics": [
+        "places",
+        "society"
+      ]
+    },
+    "j1464700": {
+      "mn": [
+        "япон хүн",
+        "япон хүмүүс"
+      ],
+      "expected": {
+        "w": "日本人",
+        "r": "にほんじん",
+        "en": [
+          "Japanese person",
+          "Japanese people"
+        ]
+      },
+      "topics": [
+        "people"
+      ]
+    },
+    "j2844150": {
+      "mn": [
+        "нэг миллиметр"
+      ],
+      "expected": {
+        "w": "一ミリ",
+        "r": "いちミリ",
+        "en": [
+          "one millimeter"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "j1163700": {
+      "mn": [
+        "ганцаараа",
+        "өөрөө бие даан"
+      ],
+      "expected": {
+        "w": "一人で",
+        "r": "ひとりで",
+        "en": [
+          "alone",
+          "by oneself",
+          "on one's own"
+        ]
+      },
+      "topics": [
+        "people",
+        "descriptions"
+      ]
+    },
+    "j1378500": {
+      "mn": [
+        "амьд байх",
+        "амьдрал",
+        "шинэхэн байдал"
+      ],
+      "expected": {
+        "w": "生き",
+        "r": "いき",
+        "en": [
+          "living",
+          "being alive",
+          "freshness"
+        ]
+      },
+      "topics": [
+        "body",
+        "descriptions"
+      ]
+    },
+    "j1588410": {
+      "mn": [
+        "төрүүлэх",
+        "хүүхэд гаргах",
+        "өндөг гаргах"
+      ],
+      "expected": {
+        "w": "生む",
+        "r": "うむ",
+        "en": [
+          "to give birth",
+          "to bear (child)",
+          "to lay (eggs)"
+        ]
+      },
+      "topics": [
+        "body",
+        "people",
+        "nature"
+      ]
+    },
+    "j1854850": {
+      "mn": [
+        "төрөлт",
+        "төрүүлэх",
+        "бий болгох"
+      ],
+      "expected": {
+        "w": "生み",
+        "r": "うみ",
+        "en": [
+          "birth",
+          "giving birth",
+          "creating"
+        ]
+      },
+      "topics": [
+        "body",
+        "actions"
+      ]
+    },
+    "j2410700": {
+      "mn": [
+        "хөвд зэрэг ургах"
+      ],
+      "expected": {
+        "w": "生す",
+        "r": "むす",
+        "en": [
+          "to grow (of moss, etc.)"
+        ]
+      },
+      "topics": [
+        "nature",
+        "actions"
+      ]
+    },
+    "j1464760": {
+      "mn": [
+        "Япон даяар"
+      ],
+      "expected": {
+        "w": "日本中",
+        "r": "にほんじゅう",
+        "en": [
+          "throughout Japan"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "j1394010": {
+      "mn": [
+        "урагш",
+        "урд тал",
+        "өмнө"
+      ],
+      "expected": {
+        "w": "前方",
+        "r": "ぜんぽう",
+        "en": [
+          "forward",
+          "frontward",
+          "ahead"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "j1468550": {
+      "mn": [
+        "он сар өдөр"
+      ],
+      "expected": {
+        "w": "年月日",
+        "r": "ねんがっぴ",
+        "en": [
+          "date"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j2141990": {
+      "mn": [
+        "испани–япон хэлний, орчуулга эсвэл толь бичгийн тухай"
+      ],
+      "expected": {
+        "w": "西日",
+        "r": "せいにち",
+        "en": [
+          "Spanish-Japanese (gen. for translations and dictionaries)"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "j1269520": {
+      "mn": [
+        "залуу эрдэмтэн",
+        "хожим хэрэг болох мэдлэг"
+      ],
+      "expected": {
+        "w": "後学",
+        "r": "こうがく",
+        "en": [
+          "younger scholar",
+          "future reference"
+        ]
+      },
+      "topics": [
+        "people",
+        "learning"
+      ]
+    },
+    "j1553590": {
+      "mn": [
+        "хоёр улс",
+        "Токиогийн Рёогокү дүүрэг"
+      ],
+      "expected": {
+        "w": "両国",
+        "r": "りょうこく",
+        "en": [
+          "both countries",
+          "Ryōgoku (area of Tokyo)"
+        ]
+      },
+      "topics": [
+        "places",
+        "society"
+      ]
+    },
+    "j1379340": {
+      "mn": [
+        "төрсөн газар"
+      ],
+      "expected": {
+        "w": "生地",
+        "r": "せいち",
+        "en": [
+          "birthplace"
+        ]
+      },
+      "topics": [
+        "places",
+        "people"
+      ]
+    },
+    "j1298230": {
+      "mn": [
+        "өнгөрсөн жил"
+      ],
+      "expected": {
+        "w": "昨年",
+        "r": "さくねん",
+        "en": [
+          "last year"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j2012690": {
+      "mn": [
+        "хоёр өдрийн хугацаа"
+      ],
+      "expected": {
+        "w": "二日間",
+        "r": "ふつかかん",
+        "en": [
+          "a period of two days"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j2076920": {
+      "mn": [
+        "би",
+        "өөрөө",
+        "чи гэх бүдүүлэг хандалт"
+      ],
+      "expected": {
+        "w": "手前",
+        "r": "てめえ",
+        "en": [
+          "I",
+          "me",
+          "oneself"
+        ]
+      },
+      "topics": [
+        "people",
+        "learning"
+      ],
+      "sourceNote": "てめえ is not the standard てまえ reading. MN includes the rude second-person sense alongside self-reference; register must be reviewed."
+    },
+    "j1165580": {
+      "mn": [
+        "нэг наст ургамал",
+        "нэгдүгээр ангийн сурагч эсвэл оюутан"
+      ],
+      "expected": {
+        "w": "一年生",
+        "r": "いちねんせい",
+        "en": [
+          "annual (plant)",
+          "first-year student"
+        ]
+      },
+      "topics": [
+        "nature",
+        "learning",
+        "people"
+      ]
+    },
+    "j1197600": {
+      "mn": [
+        "зураг хуулж сурах дэвтэр"
+      ],
+      "expected": {
+        "w": "画本",
+        "r": "がほん",
+        "en": [
+          "picture copybook"
+        ]
+      },
+      "topics": [
+        "arts",
+        "learning"
+      ]
+    },
+    "j1587410": {
+      "mn": [
+        "нэг сар"
+      ],
+      "expected": {
+        "w": "一ヶ月",
+        "r": "いっかげつ",
+        "en": [
+          "one month"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1806110": {
+      "mn": [
+        "сарны гэрэлд"
+      ],
+      "expected": {
+        "w": "月下",
+        "r": "げっか",
+        "en": [
+          "in the moonlight"
+        ]
+      },
+      "topics": [
+        "nature",
+        "time"
+      ]
+    },
+    "j1000440": {
+      "mn": [
+        "тэр хүн",
+        "тэр эрэгтэй эсвэл эмэгтэй"
+      ],
+      "expected": {
+        "w": "あの人",
+        "r": "あのひと",
+        "en": [
+          "he",
+          "she",
+          "that person"
+        ]
+      },
+      "topics": [
+        "people"
+      ]
+    },
+    "j1153620": {
+      "mn": [
+        "нэг хүн",
+        "хэн нэгэн тодорхой хүн"
+      ],
+      "expected": {
+        "w": "ある人",
+        "r": "あるひと",
+        "en": [
+          "someone (unspecified, but someone in particular)",
+          "a certain person"
+        ]
+      },
+      "topics": [
+        "people"
+      ]
+    },
+    "j1200230": {
+      "mn": [
+        "шархадсан хүн",
+        "гэмтсэн хүн"
+      ],
+      "expected": {
+        "w": "けが人",
+        "r": "けがにん",
+        "en": [
+          "wounded person",
+          "injured person"
+        ]
+      },
+      "topics": [
+        "body",
+        "people"
+      ]
+    },
+    "j2692710": {
+      "mn": [
+        "бусдаас илүү",
+        "бусадтай харьцуулахад"
+      ],
+      "expected": {
+        "w": "人より",
+        "r": "ひとより",
+        "en": [
+          "more than most people",
+          "more than other people",
+          "compared with other people"
+        ]
+      },
+      "topics": [
+        "people",
+        "descriptions"
+      ]
+    },
+    "j2832864": {
+      "mn": [
+        "тухайн хүн",
+        "нэр хүндтэй, онцгой хүн"
+      ],
+      "expected": {
+        "w": "その人",
+        "r": "そのひと",
+        "en": [
+          "the person in question",
+          "prominent figure",
+          "distinguished person"
+        ]
+      },
+      "topics": [
+        "people"
+      ]
+    },
+    "j2832955": {
+      "mn": [
+        "энэ хүн"
+      ],
+      "expected": {
+        "w": "この人",
+        "r": "このひと",
+        "en": [
+          "this person"
+        ]
+      },
+      "topics": [
+        "people"
+      ]
+    },
+    "j1607450": {
+      "mn": [
+        "дайны дараах үе",
+        "Дэлхийн хоёрдугаар дайны дараах үе"
+      ],
+      "expected": {
+        "w": "戦後",
+        "r": "せんご",
+        "en": [
+          "postwar period",
+          "period after Second World War"
+        ]
+      },
+      "topics": [
+        "time",
+        "society"
+      ]
+    },
+    "j1162940": {
+      "mn": [
+        "нэг цаг"
+      ],
+      "expected": {
+        "w": "一時間",
+        "r": "いちじかん",
+        "en": [
+          "one hour"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1201640": {
+      "mn": [
+        "далайн дотор",
+        "далайн усан дор"
+      ],
+      "expected": {
+        "w": "海中",
+        "r": "かいちゅう",
+        "en": [
+          "in the sea"
+        ]
+      },
+      "topics": [
+        "nature",
+        "places"
+      ]
+    },
+    "j1322770": {
+      "mn": [
+        "ажил эрхэлдэг насанд хүрсэн хүн",
+        "нийгмийн бие даасан гишүүн"
+      ],
+      "expected": {
+        "w": "社会人",
+        "r": "しゃかいじん",
+        "en": [
+          "working adult",
+          "full-fledged member of society"
+        ]
+      },
+      "topics": [
+        "people",
+        "work",
+        "society"
+      ]
+    },
+    "j1452680": {
+      "mn": [
+        "ижил ном",
+        "дээр дурдсан ном",
+        "мөн эх сурвалж"
+      ],
+      "expected": {
+        "w": "同書",
+        "r": "どうしょ",
+        "en": [
+          "the same book",
+          "the said book",
+          "ibid."
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "j1406830": {
+      "mn": [
+        "тосгоны оршин суугч"
+      ],
+      "expected": {
+        "w": "村人",
+        "r": "むらびと",
+        "en": [
+          "villager"
+        ]
+      },
+      "topics": [
+        "people",
+        "places"
+      ]
+    },
+    "j1415000": {
+      "mn": [
+        "маш",
+        "ихэд",
+        "айхтар"
+      ],
+      "expected": {
+        "w": "大変",
+        "r": "たいへん",
+        "en": [
+          "very",
+          "greatly",
+          "terribly"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "j1461870": {
+      "mn": [
+        "хоёрдугаар",
+        "хоёрдогч",
+        "квадрат зэрэгтэй"
+      ],
+      "expected": {
+        "w": "二次",
+        "r": "にじ",
+        "en": [
+          "second",
+          "secondary",
+          "quadratic (function, equation, etc.)"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "j1468160": {
+      "mn": [
+        "... жилийн дараа дахин",
+        "... жилд анх удаа"
+      ],
+      "expected": {
+        "w": "年ぶり",
+        "r": "ねんぶり",
+        "en": [
+          "after an interval of ... years",
+          "for the first time in ... years"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1289400": {
+      "mn": [
+        "сайн байна уу",
+        "өдрийн мэнд"
+      ],
+      "expected": {
+        "w": "今日は",
+        "r": "こんにちは",
+        "en": [
+          "hello",
+          "good day",
+          "good afternoon"
+        ]
+      },
+      "topics": [
+        "learning",
+        "daily"
+      ]
+    },
+    "j1927970": {
+      "mn": [
+        "... хооронд",
+        "... байх хугацаанд"
+      ],
+      "expected": {
+        "w": "間に",
+        "r": "あいだに",
+        "en": [
+          "while",
+          "during (the time when)"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1162370": {
+      "mn": [
+        "нэг ам",
+        "үмх",
+        "хазалт"
+      ],
+      "expected": {
+        "w": "一口",
+        "r": "ひとくち",
+        "en": [
+          "mouthful",
+          "morsel",
+          "bite"
+        ]
+      },
+      "topics": [
+        "food",
+        "quantity"
+      ]
+    },
+    "j1405810": {
+      "mn": [
+        "үргэлжлэл",
+        "үргэлжлүүлэн явуулах"
+      ],
+      "expected": {
+        "w": "続行",
+        "r": "ぞっこう",
+        "en": [
+          "continuation",
+          "continuance",
+          "going on"
+        ]
+      },
+      "topics": [
+        "actions"
+      ]
+    },
+    "j1412910": {
+      "mn": [
+        "хэмжээ",
+        "овор",
+        "эзлэхүүн"
+      ],
+      "expected": {
+        "w": "大きさ",
+        "r": "おおきさ",
+        "en": [
+          "size",
+          "dimensions",
+          "volume"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "j1451790": {
+      "mn": [
+        "ижил нас",
+        "чацуу"
+      ],
+      "expected": {
+        "w": "同じ年",
+        "r": "おなじとし",
+        "en": [
+          "same age"
+        ]
+      },
+      "topics": [
+        "time",
+        "people"
+      ]
+    },
+    "j2039990": {
+      "mn": [
+        "өргөн хэмжээнд",
+        "ихээхэн",
+        "томоор"
+      ],
+      "expected": {
+        "w": "大きく",
+        "r": "おおきく",
+        "en": [
+          "in a big way",
+          "on a grand scale"
+        ]
+      },
+      "topics": [
+        "descriptions",
+        "quantity"
+      ]
+    },
+    "j2773910": {
+      "mn": [
+        "дахиад нэг",
+        "өөр нэг",
+        "нөгөө нэг"
+      ],
+      "expected": {
+        "w": "今一つ",
+        "r": "いまひとつ",
+        "en": [
+          "one more",
+          "another",
+          "the other"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "j1161320": {
+      "mn": [
+        "нэг эргэлт",
+        "нэг тойрог",
+        "тойрч явах"
+      ],
+      "expected": {
+        "w": "一回り",
+        "r": "ひとまわり",
+        "en": [
+          "one turn",
+          "one round",
+          "to go around"
+        ]
+      },
+      "topics": [
+        "quantity",
+        "actions"
+      ]
+    },
+    "j1368500": {
+      "mn": [
+        "олны өмнө",
+        "хүмүүсийн дунд"
+      ],
+      "expected": {
+        "w": "人前で",
+        "r": "ひとまえで",
+        "en": [
+          "in public",
+          "in company"
+        ]
+      },
+      "topics": [
+        "society",
+        "people"
+      ]
+    },
+    "j1508910": {
+      "mn": [
+        "америк хүн"
+      ],
+      "expected": {
+        "w": "米国人",
+        "r": "べいこくじん",
+        "en": [
+          "American person"
+        ]
+      },
+      "topics": [
+        "people"
+      ]
+    },
+    "j1584640": {
+      "mn": [
+        "нөгөөдөр"
+      ],
+      "expected": {
+        "w": "明後日",
+        "r": "あさって",
+        "en": [
+          "day after tomorrow"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1334110": {
+      "mn": [
+        "оршин суугч",
+        "суугч"
+      ],
+      "expected": {
+        "w": "住人",
+        "r": "じゅうにん",
+        "en": [
+          "dweller",
+          "inhabitant",
+          "resident"
+        ]
+      },
+      "topics": [
+        "people",
+        "places"
+      ]
+    },
+    "j1352300": {
+      "mn": [
+        "хувцасны нугалаас",
+        "өсөлт, тухайлбал үнийн өсөлт"
+      ],
+      "expected": {
+        "w": "上げ",
+        "r": "あげ",
+        "en": [
+          "tuck (e.g. in a dress)",
+          "rise (e.g. in price)"
+        ]
+      },
+      "topics": [
+        "daily",
+        "work"
+      ]
+    },
+    "j1352410": {
+      "mn": [
+        "дээш өргөх",
+        "тэмдэглэн бичих",
+        "асуудал дэвшүүлэх"
+      ],
+      "expected": {
+        "w": "上す",
+        "r": "のぼす",
+        "en": [
+          "to raise",
+          "to record",
+          "to bring up (a matter)"
+        ]
+      },
+      "topics": [
+        "actions",
+        "learning"
+      ]
+    },
+    "j1898600": {
+      "mn": [
+        "амралтын өдрүүд",
+        "бямба, ням"
+      ],
+      "expected": {
+        "w": "土日",
+        "r": "どにち",
+        "en": [
+          "weekend",
+          "Saturday and Sunday"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j2181810": {
+      "mn": [
+        "нэгэнт ... болсон тул",
+        "... байгаа болохоор",
+        "... л бол"
+      ],
+      "expected": {
+        "w": "上は",
+        "r": "うえは",
+        "en": [
+          "now that",
+          "since",
+          "as long as"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "j2792300": {
+      "mn": [
+        "дээд албан тушаалтан",
+        "дарга"
+      ],
+      "expected": {
+        "w": "上の人",
+        "r": "うえのひと",
+        "en": [
+          "superior",
+          "boss",
+          "higher-up"
+        ]
+      },
+      "topics": [
+        "people",
+        "work"
+      ]
+    },
+    "j1354250": {
+      "mn": [
+        "дээд хэсэг",
+        "гадаргуу"
+      ],
+      "expected": {
+        "w": "上部",
+        "r": "じょうぶ",
+        "en": [
+          "top part",
+          "surface"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "j1162350": {
+      "mn": [
+        "нэг үг"
+      ],
+      "expected": {
+        "w": "一語",
+        "r": "いちご",
+        "en": [
+          "one word"
+        ]
+      },
+      "topics": [
+        "learning",
+        "quantity"
+      ]
+    },
+    "j1278600": {
+      "mn": [
+        "өргөн уудам",
+        "асар том",
+        "үлэмж"
+      ],
+      "expected": {
+        "w": "広大",
+        "r": "こうだい",
+        "en": [
+          "vast",
+          "extensive",
+          "immense"
+        ]
+      },
+      "topics": [
+        "descriptions",
+        "places"
+      ]
+    },
+    "j1421180": {
+      "mn": [
+        "газрын дээр",
+        "газрын гадаргуу"
+      ],
+      "expected": {
+        "w": "地上",
+        "r": "ちじょう",
+        "en": [
+          "above ground",
+          "surface",
+          "overground"
+        ]
+      },
+      "topics": [
+        "places",
+        "nature"
+      ]
+    },
+    "j1257380": {
+      "mn": [
+        "улс байгуулах"
+      ],
+      "expected": {
+        "w": "建国",
+        "r": "けんこく",
+        "en": [
+          "founding of a nation"
+        ]
+      },
+      "topics": [
+        "society",
+        "actions"
+      ]
+    },
+    "j1395250": {
+      "mn": [
+        "улсын бүх иргэд",
+        "ард түмэн бүхэлдээ"
+      ],
+      "expected": {
+        "w": "全国民",
+        "r": "ぜんこくみん",
+        "en": [
+          "the whole nation"
+        ]
+      },
+      "topics": [
+        "society",
+        "people"
+      ]
+    },
+    "j1904310": {
+      "mn": [
+        "бусдын мөнгө"
+      ],
+      "expected": {
+        "w": "人の金",
+        "r": "ひとのかね",
+        "en": [
+          "other people's money"
+        ]
+      },
+      "topics": [
+        "work"
+      ]
+    },
+    "j2061150": {
+      "mn": [
+        "том аж ахуй",
+        "томоохон бизнес",
+        "өргөн хэмжээний үйл хэрэг"
+      ],
+      "expected": {
+        "w": "大事業",
+        "r": "だいじぎょう",
+        "en": [
+          "large enterprise",
+          "big business",
+          "large undertaking"
+        ]
+      },
+      "topics": [
+        "work"
+      ]
+    },
+    "j1464220": {
+      "mn": [
+        "нар хиртэлт"
+      ],
+      "expected": {
+        "w": "日食",
+        "r": "にっしょく",
+        "en": [
+          "solar eclipse"
+        ]
+      },
+      "topics": [
+        "nature"
+      ]
+    },
+    "j1423320": {
+      "mn": [
+        "тэдгээрийн дотор",
+        "зарим нь"
+      ],
+      "expected": {
+        "w": "中には",
+        "r": "なかには",
+        "en": [
+          "among (them)",
+          "of (them)"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "j2755690": {
+      "mn": [
+        "тэр дотор",
+        "түүн дотор",
+        "дотогш нь"
+      ],
+      "expected": {
+        "w": "その中",
+        "r": "そのなか",
+        "en": [
+          "wherein",
+          "therein",
+          "thereinto"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "j1448120": {
+      "mn": [
+        "зүүн зүг",
+        "Дорно дахин",
+        "сүмогийн барилдааны зүүн талын бөх"
+      ],
+      "expected": {
+        "w": "東方",
+        "r": "とうほう",
+        "en": [
+          "eastern direction",
+          "the Orient",
+          "eastern fighter in a match (e.g. sumo wrestling)"
+        ]
+      },
+      "topics": [
+        "places",
+        "arts"
+      ]
+    },
+    "j1528830": {
+      "mn": [
+        "ардчилсан улс"
+      ],
+      "expected": {
+        "w": "民主国",
+        "r": "みんしゅこく",
+        "en": [
+          "democratic state"
+        ]
+      },
+      "topics": [
+        "society"
+      ]
+    },
+    "j1612400": {
+      "mn": [
+        "амьдрал",
+        "эрч хүч",
+        "цог золбоо"
+      ],
+      "expected": {
+        "w": "生気",
+        "r": "せいき",
+        "en": [
+          "life",
+          "vitality",
+          "verve"
+        ]
+      },
+      "topics": [
+        "body",
+        "feelings"
+      ]
+    },
+    "j2059660": {
+      "mn": [
+        "төв газрын дарга",
+        "ерөнхий захирал"
+      ],
+      "expected": {
+        "w": "本部長",
+        "r": "ほんぶちょう",
+        "en": [
+          "general manager",
+          "director-general"
+        ]
+      },
+      "topics": [
+        "people",
+        "work"
+      ]
+    },
+    "j1393430": {
+      "mn": [
+        "өмнөх төрөл",
+        "урьд нас"
+      ],
+      "expected": {
+        "w": "前世",
+        "r": "ぜんせ",
+        "en": [
+          "one's previous life",
+          "previous existence"
+        ]
+      },
+      "topics": [
+        "society",
+        "time"
+      ]
+    },
+    "j1479370": {
+      "mn": [
+        "түр зуур",
+        "богино хугацаа"
+      ],
+      "expected": {
+        "w": "半時",
+        "r": "はんとき",
+        "en": [
+          "little while",
+          "short time"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1658480": {
+      "mn": [
+        "... цаг хагас",
+        "... цаг гучин минут"
+      ],
+      "expected": {
+        "w": "時半",
+        "r": "じはん",
+        "en": [
+          "half past (the hour)"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1908740": {
+      "mn": [
+        "номын хуудасны хооронд",
+        "хоёр номын хооронд"
+      ],
+      "expected": {
+        "w": "本の間",
+        "r": "ほんのあいだ",
+        "en": [
+          "between the pages of a book",
+          "between two books"
+        ]
+      },
+      "topics": [
+        "learning",
+        "places"
+      ]
+    },
+    "j1469220": {
+      "mn": [
+        "оны эхэн",
+        "шинэ жилийн эхэн үе"
+      ],
+      "expected": {
+        "w": "年明け",
+        "r": "としあけ",
+        "en": [
+          "beginning of the year",
+          "early in the New Year"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1198340": {
+      "mn": [
+        "чуулганы үеэр",
+        "хуралдааны хугацаанд"
+      ],
+      "expected": {
+        "w": "会期中",
+        "r": "かいきちゅう",
+        "en": [
+          "during a session (of the legislature)"
+        ]
+      },
+      "topics": [
+        "society",
+        "time"
+      ]
+    },
+    "j2757540": {
+      "mn": [
+        "гарахын даваан дээр",
+        "хөдлөх гэж байх үед"
+      ],
+      "expected": {
+        "w": "出しな",
+        "r": "でしな",
+        "en": [
+          "about to leave",
+          "about to start out"
+        ]
+      },
+      "topics": [
+        "time",
+        "actions"
+      ]
+    },
+    "j1369030": {
+      "mn": [
+        "нэр хүнд",
+        "бусдын үнэлгээ"
+      ],
+      "expected": {
+        "w": "人付",
+        "r": "ひとづき",
+        "en": [
+          "reputation"
+        ]
+      },
+      "topics": [
+        "society",
+        "people"
+      ]
+    },
+    "j1579200": {
+      "mn": [
+        "хамгийн сайн",
+        "дээд зэрэг"
+      ],
+      "expected": {
+        "w": "最上",
+        "r": "さいじょう",
+        "en": [
+          "best"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "j1165970": {
+      "mn": [
+        "нэгдүгээр",
+        "хамгийн эхний",
+        "тэргүүн байр"
+      ],
+      "expected": {
+        "w": "一番",
+        "r": "いちばん",
+        "en": [
+          "number one",
+          "first",
+          "first place"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "j1429990": {
+      "mn": [
+        "удаан хугацаа"
+      ],
+      "expected": {
+        "w": "長時間",
+        "r": "ちょうじかん",
+        "en": [
+          "long time"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1610940": {
+      "mn": [
+        "урт нас",
+        "урт наслах"
+      ],
+      "expected": {
+        "w": "長生き",
+        "r": "ながいき",
+        "en": [
+          "longevity",
+          "long life"
+        ]
+      },
+      "topics": [
+        "body",
+        "time"
+      ]
+    },
+    "j2838012": {
+      "mn": [
+        "яг дунд",
+        "төв"
+      ],
+      "expected": {
+        "w": "真中",
+        "r": "まなか",
+        "en": [
+          "middle",
+          "centre",
+          "center"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "j1161730": {
+      "mn": [
+        "нэг амьсгаагаар",
+        "нэг дор",
+        "нэг залгилтаар"
+      ],
+      "expected": {
+        "w": "一気に",
+        "r": "いっきに",
+        "en": [
+          "in one go",
+          "in one gulp",
+          "in one breath"
+        ]
+      },
+      "topics": [
+        "actions",
+        "food"
+      ]
+    },
+    "j1429760": {
+      "mn": [
+        "удаан хугацаанд",
+        "урт завсар",
+        "нэлээд удаан"
+      ],
+      "expected": {
+        "w": "長い間",
+        "r": "ながいあいだ",
+        "en": [
+          "long time",
+          "long interval",
+          "for quite some time"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1447690": {
+      "mn": [
+        "Токио"
+      ],
+      "expected": {
+        "w": "東京",
+        "r": "とうきょう",
+        "en": [
+          "Tokyo"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "j1338250": {
+      "mn": [
+        "гарахаас өмнө"
+      ],
+      "expected": {
+        "w": "出る前",
+        "r": "でるまえ",
+        "en": [
+          "before going out"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1270390": {
+      "mn": [
+        "таны нөхөр",
+        "түүний нөхөр"
+      ],
+      "expected": {
+        "w": "ご主人",
+        "r": "ごしゅじん",
+        "en": [
+          "your husband",
+          "her husband"
+        ]
+      },
+      "topics": [
+        "relationships",
+        "people"
+      ]
+    },
+    "j1452510": {
+      "mn": [
+        "зэрэг",
+        "нэгэн зэрэг",
+        "...-тай давхцан"
+      ],
+      "expected": {
+        "w": "同時に",
+        "r": "どうじに",
+        "en": [
+          "coincident with",
+          "while",
+          "simultaneously"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1607340": {
+      "mn": [
+        "самурайн ёслолын хувцас",
+        "хуучны ёслолын өмсгөл",
+        "дээд ба доод хэсэг"
+      ],
+      "expected": {
+        "w": "上下",
+        "r": "かみしも",
+        "en": [
+          "samurai costume",
+          "old ceremonial costume",
+          "top and bottom"
+        ]
+      },
+      "topics": [
+        "daily",
+        "society"
+      ]
+    },
+    "j1163520": {
+      "mn": [
+        "нэг зураас",
+        "зурвас",
+        "судал"
+      ],
+      "expected": {
+        "w": "一条",
+        "r": "いちじょう",
+        "en": [
+          "a line",
+          "a streak",
+          "a stripe"
+        ]
+      },
+      "topics": [
+        "quantity",
+        "descriptions"
+      ]
+    },
+    "j1189100": {
+      "mn": [
+        "хэдэн хүн",
+        "хэд хэдэн хүн"
+      ],
+      "expected": {
+        "w": "何人",
+        "r": "なんにん",
+        "en": [
+          "how many people",
+          "a number of people"
+        ]
+      },
+      "topics": [
+        "people",
+        "quantity"
+      ]
+    },
+    "j1643470": {
+      "mn": [
+        "том зүсэм",
+        "тухайн өдрийн хөтөлбөрийн сүүлчийн хэсэг",
+        "жүжгийн эцсийн үзэгдэл"
+      ],
+      "expected": {
+        "w": "大切",
+        "r": "おおぎり",
+        "en": [
+          "large cut (e.g. of meat)",
+          "last piece of the day's programme",
+          "last act of a play"
+        ]
+      },
+      "topics": [
+        "food",
+        "arts"
+      ]
+    },
+    "j2428340": {
+      "mn": [
+        "үлгэр жишээ",
+        "дуурайх загвар"
+      ],
+      "expected": {
+        "w": "お手本",
+        "r": "おてほん",
+        "en": [
+          "example",
+          "role model"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "j1345320": {
+      "mn": [
+        "эмэгтэй сурагч",
+        "сургуулийн охин"
+      ],
+      "expected": {
+        "w": "女生",
+        "r": "じょせい",
+        "en": [
+          "schoolgirl"
+        ]
+      },
+      "topics": [
+        "people",
+        "learning"
+      ]
+    },
+    "j1315860": {
+      "mn": [
+        "заримдаа",
+        "үе үе"
+      ],
+      "expected": {
+        "w": "時には",
+        "r": "ときには",
+        "en": [
+          "at times",
+          "occasionally"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j2002300": {
+      "mn": [
+        "тэр үед",
+        "тэр мөчид",
+        "тэгэхэд"
+      ],
+      "expected": {
+        "w": "その時",
+        "r": "そのとき",
+        "en": [
+          "at that time",
+          "at that moment",
+          "then"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j2845370": {
+      "mn": [
+        "арван нэгэн цаг"
+      ],
+      "expected": {
+        "w": "１１時",
+        "r": "じゅういちじ",
+        "en": [
+          "eleven o'clock"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1468830": {
+      "mn": [
+        "жилийн орлого"
+      ],
+      "expected": {
+        "w": "年収",
+        "r": "ねんしゅう",
+        "en": [
+          "annual income"
+        ]
+      },
+      "topics": [
+        "work"
+      ]
+    },
+    "j1464460": {
+      "mn": [
+        "японы уламжлалт уран зураг"
+      ],
+      "expected": {
+        "w": "日本画",
+        "r": "にほんが",
+        "en": [
+          "Japanese painting"
+        ]
+      },
+      "topics": [
+        "arts"
+      ]
+    },
+    "j1801890": {
+      "mn": [
+        "дайны үед"
+      ],
+      "expected": {
+        "w": "戦時中",
+        "r": "せんじちゅう",
+        "en": [
+          "during the war"
+        ]
+      },
+      "topics": [
+        "time",
+        "society"
+      ]
+    },
+    "j1189250": {
+      "mn": [
+        "хэдэн жил",
+        "хэр удаан",
+        "хэдэн он"
+      ],
+      "expected": {
+        "w": "何年",
+        "r": "なんねん",
+        "en": [
+          "how many years",
+          "how long",
+          "what year"
+        ]
+      },
+      "topics": [
+        "time",
+        "quantity"
+      ]
+    },
+    "j1316260": {
+      "mn": [
+        "цаг үеийн хандлага",
+        "эрин үеийн уур амьсгал"
+      ],
+      "expected": {
+        "w": "時勢",
+        "r": "じせい",
+        "en": [
+          "current of the times",
+          "spirit of the age"
+        ]
+      },
+      "topics": [
+        "society",
+        "time"
+      ]
+    },
+    "j1657360": {
+      "mn": [
+        "олон улсын үзэл хандлагатай хүн",
+        "дэлхийн иргэн"
+      ],
+      "expected": {
+        "w": "国際人",
+        "r": "こくさいじん",
+        "en": [
+          "internationally-minded person",
+          "cosmopolitan",
+          "cosmopolite"
+        ]
+      },
+      "topics": [
+        "people",
+        "society"
+      ]
+    },
+    "j1715690": {
+      "mn": [
+        "үзэх зүйл",
+        "үзүүштэй юм",
+        "сонирхолтой үзэгдэл"
+      ],
+      "expected": {
+        "w": "見物",
+        "r": "みもの",
+        "en": [
+          "sight",
+          "attraction",
+          "spectacle"
+        ]
+      },
+      "topics": [
+        "arts"
+      ]
+    },
+    "j2131770": {
+      "mn": [
+        "хотод орох"
+      ],
+      "expected": {
+        "w": "入市",
+        "r": "にゅうし",
+        "en": [
+          "entering a city"
+        ]
+      },
+      "topics": [
+        "places",
+        "actions"
+      ]
+    },
+    "j2092600": {
+      "mn": [
+        "амьд төрөлт",
+        "амьд хүүхэд төрөх"
+      ],
+      "expected": {
+        "w": "生産",
+        "r": "せいざん",
+        "en": [
+          "live birth"
+        ]
+      },
+      "topics": [
+        "body",
+        "people"
+      ]
+    },
+    "j1543300": {
+      "mn": [
+        "товлосон өдөр",
+        "тооцоолсон огноо"
+      ],
+      "expected": {
+        "w": "予定日",
+        "r": "よていび",
+        "en": [
+          "scheduled date",
+          "expected date"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1749170": {
+      "mn": [
+        "өв залгамжлагч",
+        "өвлөгч"
+      ],
+      "expected": {
+        "w": "相続人",
+        "r": "そうぞくにん",
+        "en": [
+          "heir",
+          "heiress",
+          "inheritor"
+        ]
+      },
+      "topics": [
+        "people",
+        "work"
+      ]
+    },
+    "j2727400": {
+      "mn": [
+        "хүү, Окинавагийн аялгууны шиисан гэсэн үг"
+      ],
+      "expected": {
+        "w": "先生",
+        "r": "シーサン",
+        "en": [
+          "boy"
+        ]
+      },
+      "topics": [
+        "people",
+        "learning"
+      ],
+      "sourceNote": "Dialectal reading シーサン and gloss boy retained; do not substitute standard せんせい/teacher. Confirm dialect attribution in the upstream dictionary before independent review."
+    },
+    "j1206700": {
+      "mn": [
+        "сурлага",
+        "сургуулийн хичээл",
+        "ангийн ажил"
+      ],
+      "expected": {
+        "w": "学業",
+        "r": "がくぎょう",
+        "en": [
+          "studies",
+          "schoolwork",
+          "classwork"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "j1448900": {
+      "mn": [
+        "биеийн эмзэг цэгт цохилт",
+        "жүдо дахь цохилтын арга"
+      ],
+      "expected": {
+        "w": "中身",
+        "r": "あてみ",
+        "en": [
+          "blow to a vital point of a person's body",
+          "striking techniques (judo)"
+        ]
+      },
+      "topics": [
+        "body",
+        "arts"
+      ],
+      "sourceNote": "Source headword 中身 with reading あてみ conflicts with normal spelling 当て身 for the English blow/striking sense. MN follows the supplied reading/English; do not claim the headword is verified. Needs upstream dictionary correction, not silent overwrite."
+    },
+    "j1611580": {
+      "mn": [
+        "үнэхээр",
+        "үнэнээсээ"
+      ],
+      "expected": {
+        "w": "本当に",
+        "r": "ほんとうに",
+        "en": [
+          "really",
+          "truly"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "j1163590": {
+      "mn": [
+        "бүх сэтгэлээрээ",
+        "нэгэн үзүүрт сэтгэлээр",
+        "чин сэтгэлээсээ"
+      ],
+      "expected": {
+        "w": "一心に",
+        "r": "いっしんに",
+        "en": [
+          "wholeheartedly",
+          "single-mindedly",
+          "fervently"
+        ]
+      },
+      "topics": [
+        "feelings"
+      ]
+    },
+    "j2841214": {
+      "mn": [
+        "гэр бүлийнхэн",
+        "гэр бүлийн гишүүн"
+      ],
+      "expected": {
+        "w": "家の人",
+        "r": "いえのひと",
+        "en": [
+          "one's family",
+          "family member"
+        ]
+      },
+      "topics": [
+        "people"
+      ]
+    },
+    "j1307370": {
+      "mn": [
+        "дөрвөн зүг",
+        "хойд, зүүн, өмнөд, баруун",
+        "бүх зүг"
+      ],
+      "expected": {
+        "w": "四方",
+        "r": "しほう",
+        "en": [
+          "the four cardinal directions",
+          "north, east, south and west",
+          "all directions"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "j1584500": {
+      "mn": [
+        "бүх хүн",
+        "хүн бүр",
+        "арван мянган хүн"
+      ],
+      "expected": {
+        "w": "万人",
+        "r": "ばんにん",
+        "en": [
+          "all people",
+          "everybody",
+          "ten thousand people"
+        ]
+      },
+      "topics": [
+        "people",
+        "quantity"
+      ]
+    },
+    "j1479900": {
+      "mn": [
+        "хагас минут"
+      ],
+      "expected": {
+        "w": "半分",
+        "r": "はんぷん",
+        "en": [
+          "half minute"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1587710": {
+      "mn": [
+        "нар жаргах үе"
+      ],
+      "expected": {
+        "w": "入相",
+        "r": "いりあい",
+        "en": [
+          "sunset"
+        ]
+      },
+      "topics": [
+        "nature",
+        "time"
+      ]
+    },
+    "j1603780": {
+      "mn": [
+        "урьдчилсан худалдаа",
+        "урьдчилсан захиалга"
+      ],
+      "expected": {
+        "w": "前売",
+        "r": "まえうり",
+        "en": [
+          "advance sale",
+          "booking"
+        ]
+      },
+      "topics": [
+        "work"
+      ]
+    },
+    "j1368550": {
+      "mn": [
+        "хүний царай зүсийн тодорхойлолт"
+      ],
+      "expected": {
+        "w": "人相書",
+        "r": "にんそうがき",
+        "en": [
+          "personal description"
+        ]
+      },
+      "topics": [
+        "people",
+        "society"
+      ]
+    },
+    "j2448740": {
+      "mn": [
+        "ижил үг"
+      ],
+      "expected": {
+        "w": "同語",
+        "r": "どうご",
+        "en": [
+          "same word"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "j2110850": {
+      "mn": [
+        "дахин хэзээ ч, үгүйсгэлтэй хэрэглэнэ"
+      ],
+      "expected": {
+        "w": "二度と",
+        "r": "にどと",
+        "en": [
+          "never again"
+        ]
+      },
+      "topics": [
+        "time",
+        "learning"
+      ]
+    },
+    "j1523000": {
+      "mn": [
+        "хэвийн байдал",
+        "өөрийн ердийн чадвар",
+        "шамисэн хөгжмийн үндсэн хөг"
+      ],
+      "expected": {
+        "w": "本調子",
+        "r": "ほんちょうし",
+        "en": [
+          "one's normal condition",
+          "one's usual state",
+          "keynote (esp. shamisen)"
+        ]
+      },
+      "topics": [
+        "body",
+        "arts"
+      ]
+    },
+    "j1526310": {
+      "mn": [
+        "арван мянган жил",
+        "мөнх",
+        "олон наст"
+      ],
+      "expected": {
+        "w": "万年",
+        "r": "まんねん",
+        "en": [
+          "ten thousand years",
+          "eternity",
+          "perennial"
+        ]
+      },
+      "topics": [
+        "time",
+        "nature"
+      ]
+    },
+    "j1490360": {
+      "mn": [
+        "өвчтэй хүн",
+        "өвчтөн"
+      ],
+      "expected": {
+        "w": "病人",
+        "r": "びょうにん",
+        "en": [
+          "sick person",
+          "patient",
+          "invalid"
+        ]
+      },
+      "topics": [
+        "body",
+        "people"
+      ]
+    },
+    "j2062710": {
+      "mn": [
+        "үтрээнээс гадуур үрийн шингэн гадагшлуулах"
+      ],
+      "expected": {
+        "w": "外出し",
+        "r": "そとだし",
+        "en": [
+          "extravaginal ejaculation"
+        ]
+      },
+      "topics": [
+        "body"
+      ]
+    },
+    "j1580350": {
+      "mn": [
+        "парламентын дээд танхим",
+        "сенат"
+      ],
+      "expected": {
+        "w": "上院",
+        "r": "じょういん",
+        "en": [
+          "upper house",
+          "upper legislative chamber",
+          "senate"
+        ]
+      },
+      "topics": [
+        "society"
+      ]
+    },
+    "j1270040": {
+      "mn": [
+        "сүүлийн хагас",
+        "хоёрдугаар хагас"
+      ],
+      "expected": {
+        "w": "後半",
+        "r": "こうはん",
+        "en": [
+          "second half",
+          "latter half"
+        ]
+      },
+      "topics": [
+        "time",
+        "quantity"
+      ]
+    },
+    "j2763680": {
+      "mn": [
+        "үргэлжилж буй",
+        "явагдаж байгаа"
+      ],
+      "expected": {
+        "w": "進行中",
+        "r": "しんこうちゅう",
+        "en": [
+          "ongoing",
+          "in progress",
+          "afoot"
+        ]
+      },
+      "topics": [
+        "actions",
+        "time"
+      ]
+    },
+    "j2827682": {
+      "mn": [
+        "нухацтай",
+        "чин сэтгэлээсээ",
+        "үнэхээр"
+      ],
+      "expected": {
+        "w": "本気で",
+        "r": "ほんきで",
+        "en": [
+          "seriously",
+          "in earnest",
+          "for real"
+        ]
+      },
+      "topics": [
+        "feelings",
+        "descriptions"
+      ]
+    },
+    "j1451870": {
+      "mn": [
+        "ижил санал бодол"
+      ],
+      "expected": {
+        "w": "同意見",
+        "r": "どういけん",
+        "en": [
+          "the same opinion"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "j1544190": {
+      "mn": [
+        "өөр тийш харах",
+        "хажуу тийш харах"
+      ],
+      "expected": {
+        "w": "よそ見",
+        "r": "よそみ",
+        "en": [
+          "looking away",
+          "looking aside"
+        ]
+      },
+      "topics": [
+        "actions"
+      ]
+    },
+    "j1604420": {
+      "mn": [
+        "гаднах төрх",
+        "харагдах байдал"
+      ],
+      "expected": {
+        "w": "見かけ",
+        "r": "みかけ",
+        "en": [
+          "outward appearance",
+          "apparent"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "j1609230": {
+      "mn": [
+        "бүрэн",
+        "огт",
+        "ерөөсөө, ихэвчлэн үгүйсгэлтэй"
+      ],
+      "expected": {
+        "w": "一向に",
+        "r": "いっこうに",
+        "en": [
+          "completely",
+          "absolutely",
+          "totally"
+        ]
+      },
+      "topics": [
+        "descriptions",
+        "learning"
+      ]
+    },
+    "j2056520": {
+      "mn": [
+        "бараалхах",
+        "уулзах",
+        "үзэгдэх"
+      ],
+      "expected": {
+        "w": "見える",
+        "r": "まみえる",
+        "en": [
+          "to have an audience",
+          "to meet",
+          "to see"
+        ]
+      },
+      "topics": [
+        "actions",
+        "society"
+      ]
+    },
+    "j1802050": {
+      "mn": [
+        "дайны ялсан улс"
+      ],
+      "expected": {
+        "w": "戦勝国",
+        "r": "せんしょうこく",
+        "en": [
+          "victorious nation"
+        ]
+      },
+      "topics": [
+        "society"
+      ]
+    },
+    "j1611860": {
+      "mn": [
+        "ялгах явдал",
+        "ялгаа"
+      ],
+      "expected": {
+        "w": "見分け",
+        "r": "みわけ",
+        "en": [
+          "distinction"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "j1660970": {
+      "mn": [
+        "хүнд өвчин",
+        "аюултай өвчин"
+      ],
+      "expected": {
+        "w": "大病",
+        "r": "たいびょう",
+        "en": [
+          "serious illness",
+          "dangerous disease"
+        ]
+      },
+      "topics": [
+        "body"
+      ]
+    },
+    "j2834093": {
+      "mn": [
+        "моод",
+        "дэлгэрсэн хандлага",
+        "ид дэлгэрэлт"
+      ],
+      "expected": {
+        "w": "流行",
+        "r": "はやり",
+        "en": [
+          "fashion",
+          "fad",
+          "vogue"
+        ]
+      },
+      "topics": [
+        "arts",
+        "society"
+      ]
+    },
+    "j1361900": {
+      "mn": [
+        "шинэ эрин",
+        "шинэ үе"
+      ],
+      "expected": {
+        "w": "新時代",
+        "r": "しんじだい",
+        "en": [
+          "new era",
+          "new period",
+          "new age"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1289000": {
+      "mn": [
+        "одоо",
+        "сая л",
+        "эдүгээ"
+      ],
+      "expected": {
+        "w": "今や",
+        "r": "いまや",
+        "en": [
+          "now (esp. in contrast to the past)",
+          "now at last",
+          "at present"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1521260": {
+      "mn": [
+        "хойд хэсэг",
+        "умард нутаг"
+      ],
+      "expected": {
+        "w": "北部",
+        "r": "ほくぶ",
+        "en": [
+          "northern part",
+          "the north (of a region)"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "j1414300": {
+      "mn": [
+        "чанга дуу",
+        "өндөр дуугаар ярих"
+      ],
+      "expected": {
+        "w": "大声",
+        "r": "おおごえ",
+        "en": [
+          "loud voice"
+        ]
+      },
+      "topics": [
+        "learning",
+        "descriptions"
+      ]
+    },
+    "j1732560": {
+      "mn": [
+        "танхай өсвөр насныхны бүлгийн толгойлогч"
+      ],
+      "expected": {
+        "w": "番長",
+        "r": "ばんちょう",
+        "en": [
+          "leader of a group of juvenile delinquents"
+        ]
+      },
+      "topics": [
+        "people",
+        "society"
+      ]
+    },
+    "j2105800": {
+      "mn": [
+        "хөтөч",
+        "газар заагч"
+      ],
+      "expected": {
+        "w": "案内人",
+        "r": "あんないにん",
+        "en": [
+          "guide (on a tour, etc.)"
+        ]
+      },
+      "topics": [
+        "people",
+        "places"
+      ]
+    },
+    "j1340450": {
+      "mn": [
+        "чадах",
+        "хийх боломжтой байх",
+        "бэлэн болох"
+      ],
+      "expected": {
+        "w": "出来る",
+        "r": "できる",
+        "en": [
+          "to be able (in a position) to do",
+          "to be up to the task",
+          "to be ready"
+        ]
+      },
+      "topics": [
+        "actions"
+      ]
+    },
+    "j1215450": {
+      "mn": [
+        "яг өмнөх мөч",
+        "болохын даваа",
+        "тулсан үе"
+      ],
+      "expected": {
+        "w": "間際",
+        "r": "まぎわ",
+        "en": [
+          "the point just before",
+          "the point of doing",
+          "the verge of happening"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1334480": {
+      "mn": [
+        "арван нэгдүгээр сар",
+        "билгийн тооллын арван нэг дэх сар"
+      ],
+      "expected": {
+        "w": "１１月",
+        "r": "じゅういちがつ",
+        "en": [
+          "November",
+          "eleventh month of the lunar calendar"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1334910": {
+      "mn": [
+        "арван хоёрдугаар сар",
+        "билгийн тооллын арван хоёр дахь сар"
+      ],
+      "expected": {
+        "w": "１２月",
+        "r": "じゅうにがつ",
+        "en": [
+          "December",
+          "twelfth month of the lunar calendar"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1379440": {
+      "mn": [
+        "түүхий хүнс",
+        "амархан муудах хүнс"
+      ],
+      "expected": {
+        "w": "生物",
+        "r": "なまもの",
+        "en": [
+          "raw food",
+          "perishables"
+        ]
+      },
+      "topics": [
+        "food"
+      ]
+    },
+    "j1448160": {
+      "mn": [
+        "зүүн хойд зүг",
+        "Хоншюүгийн хойд зургаан мужийг хамарсан Тоохокү бүс"
+      ],
+      "expected": {
+        "w": "東北",
+        "r": "とうほく",
+        "en": [
+          "north-east",
+          "Tōhoku (northernmost six prefectures of Honshu)",
+          "Tohoku"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "j1629260": {
+      "mn": [
+        "хүлээн авагч"
+      ],
+      "expected": {
+        "w": "受取人",
+        "r": "うけとりにん",
+        "en": [
+          "recipient"
+        ]
+      },
+      "topics": [
+        "people"
+      ]
+    },
+    "j1174450": {
+      "mn": [
+        "Нэгдсэн Хаант Улс",
+        "Британи",
+        "Их Британи"
+      ],
+      "expected": {
+        "w": "英国",
+        "r": "えいこく",
+        "en": [
+          "United Kingdom",
+          "Britain",
+          "Great Britain"
+        ]
+      },
+      "topics": [
+        "places",
+        "society"
+      ]
+    },
+    "j1286520": {
+      "mn": [
+        "олон улсын"
+      ],
+      "expected": {
+        "w": "国際的",
+        "r": "こくさいてき",
+        "en": [
+          "international"
+        ]
+      },
+      "topics": [
+        "society"
+      ]
+    },
+    "j1464530": {
+      "mn": [
+        "япон хэл"
+      ],
+      "expected": {
+        "w": "日本語",
+        "r": "にほんご",
+        "en": [
+          "Japanese (language)"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "j1917220": {
+      "mn": [
+        "салаа",
+        "салбар",
+        "салаалсан хэсэг"
+      ],
+      "expected": {
+        "w": "分かれ",
+        "r": "わかれ",
+        "en": [
+          "offshoot",
+          "branch",
+          "fork"
+        ]
+      },
+      "topics": [
+        "places",
+        "descriptions"
+      ]
+    },
+    "j2000520": {
+      "mn": [
+        "... хэмжээтэй нь тэнцүүлэн",
+        "...-тай нь хувь тэнцүүлэн"
+      ],
+      "expected": {
+        "w": "分だけ",
+        "r": "ぶんだけ",
+        "en": [
+          "in proportion to",
+          "just as much as"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "j2062720": {
+      "mn": [
+        "энэ янзаараа",
+        "энэ хурдаар"
+      ],
+      "expected": {
+        "w": "この分",
+        "r": "このぶん",
+        "en": [
+          "at this rate"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "j1523020": {
+      "mn": [
+        "төв оффис",
+        "гол салбар",
+        "үндсэн дэлгүүр"
+      ],
+      "expected": {
+        "w": "本店",
+        "r": "ほんてん",
+        "en": [
+          "head office",
+          "main office",
+          "main store"
+        ]
+      },
+      "topics": [
+        "work",
+        "places"
+      ]
+    },
+    "j1477020": {
+      "mn": [
+        "бүх тал",
+        "том унждаг дэнлүү"
+      ],
+      "expected": {
+        "w": "八方",
+        "r": "はっぽう",
+        "en": [
+          "all sides",
+          "large hanging lantern"
+        ]
+      },
+      "topics": [
+        "places",
+        "daily"
+      ]
+    },
+    "j1829780": {
+      "mn": [
+        "амьдрал ба үхэл",
+        "амьд үлдэх эсэх"
+      ],
+      "expected": {
+        "w": "生死",
+        "r": "いきしに",
+        "en": [
+          "life and death",
+          "life or death"
+        ]
+      },
+      "topics": [
+        "body"
+      ]
+    },
+    "j1362240": {
+      "mn": [
+        "шинээр ирсэн",
+        "шинээр элссэн",
+        "шинээр орсон"
+      ],
+      "expected": {
+        "w": "新入",
+        "r": "しんにゅう",
+        "en": [
+          "newly arrived",
+          "newly joined",
+          "newly entered"
+        ]
+      },
+      "topics": [
+        "people",
+        "learning"
+      ]
+    },
+    "j1728020": {
+      "mn": [
+        "нэг бүжиг",
+        "нэг өрөг тоглолт, тухайлбал шёоги"
+      ],
+      "expected": {
+        "w": "一差",
+        "r": "ひとさし",
+        "en": [
+          "one dance",
+          "one game (e.g. of shogi)"
+        ]
+      },
+      "topics": [
+        "arts",
+        "quantity"
+      ]
+    },
+    "j1162290": {
+      "mn": [
+        "нэг ширхэг",
+        "хэлтэрхий",
+        "нэг зүйл"
+      ],
+      "expected": {
+        "w": "一個",
+        "r": "いっこ",
+        "en": [
+          "piece",
+          "fragment",
+          "one (object)"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "j2542800": {
+      "mn": [
+        "бямба, ням, даваа гараг"
+      ],
+      "expected": {
+        "w": "土日月",
+        "r": "どにちげつ",
+        "en": [
+          "Saturday, Sunday and Monday"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1188760": {
+      "mn": [
+        "хэзээ",
+        "хэдийд",
+        "хэр удахгүй"
+      ],
+      "expected": {
+        "w": "何時",
+        "r": "いつ",
+        "en": [
+          "when",
+          "at what time",
+          "how soon"
+        ]
+      },
+      "topics": [
+        "time",
+        "learning"
+      ]
+    },
+    "j1424290": {
+      "mn": [
+        "хятад хэл"
+      ],
+      "expected": {
+        "w": "中国語",
+        "r": "ちゅうごくご",
+        "en": [
+          "Chinese (language)"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "j1922010": {
+      "mn": [
+        "шёогийн дэвшсэн хүү"
+      ],
+      "expected": {
+        "w": "と金",
+        "r": "ときん",
+        "en": [
+          "promoted pawn"
+        ]
+      },
+      "topics": [
+        "arts"
+      ]
+    },
+    "j1464240": {
+      "mn": [
+        "өдөр ирэх тусам нэмэгдэх",
+        "хоног хоногоор өсөх",
+        "олон хоног хадгалсан хүнс"
+      ],
+      "expected": {
+        "w": "日増し",
+        "r": "ひまし",
+        "en": [
+          "increasing daily",
+          "increasing day by day",
+          "foodstuffs left out for many days"
+        ]
+      },
+      "topics": [
+        "time",
+        "food"
+      ]
+    },
+    "j1268130": {
+      "mn": [
+        "таван мэдрэхүй"
+      ],
+      "expected": {
+        "w": "五感",
+        "r": "ごかん",
+        "en": [
+          "the five senses"
+        ]
+      },
+      "topics": [
+        "body"
+      ]
+    },
+    "j2216900": {
+      "mn": [
+        "саяхан",
+        "урьдхан",
+        "өнгөрсөн удаа"
+      ],
+      "expected": {
+        "w": "この前",
+        "r": "このまえ",
+        "en": [
+          "some time ago",
+          "recently",
+          "lately"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j2627660": {
+      "mn": [
+        "үйлдэл хийх чадвар",
+        "санаачилга гаргах чадвар",
+        "эрч хүч"
+      ],
+      "expected": {
+        "w": "行動力",
+        "r": "こうどうりょく",
+        "en": [
+          "ability to take action",
+          "ability to take initiatives",
+          "energy"
+        ]
+      },
+      "topics": [
+        "work",
+        "descriptions"
+      ]
+    },
+    "j1188740": {
+      "mn": [
+        "юу",
+        "ямар хэрэг явдал",
+        "аливаа зүйл"
+      ],
+      "expected": {
+        "w": "何事",
+        "r": "なにごと",
+        "en": [
+          "what",
+          "what sort of thing",
+          "everything"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "j1584360": {
+      "mn": [
+        "жил бүр",
+        "жил тутам"
+      ],
+      "expected": {
+        "w": "毎年",
+        "r": "まいとし",
+        "en": [
+          "every year",
+          "yearly",
+          "annually"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j2067880": {
+      "mn": [
+        "амьтны зан үйлийг судлах ухаан",
+        "этологи"
+      ],
+      "expected": {
+        "w": "行動学",
+        "r": "こうどうがく",
+        "en": [
+          "ethology"
+        ]
+      },
+      "topics": [
+        "learning",
+        "nature"
+      ]
+    },
+    "j2847477": {
+      "mn": [
+        "зүрх сэтгэл дотор",
+        "бодол дотроо"
+      ],
+      "expected": {
+        "w": "心の中",
+        "r": "こころのなか",
+        "en": [
+          "inside one's heart",
+          "in one's mind"
+        ]
+      },
+      "topics": [
+        "feelings"
+      ]
+    },
+    "j1503530": {
+      "mn": [
+        "салбар сургууль"
+      ],
+      "expected": {
+        "w": "分校",
+        "r": "ぶんこう",
+        "en": [
+          "branch school"
+        ]
+      },
+      "topics": [
+        "learning",
+        "places"
+      ]
+    },
+    "j1368930": {
+      "mn": [
+        "хүнлэг",
+        "энэрэнгүй"
+      ],
+      "expected": {
+        "w": "人道的",
+        "r": "じんどうてき",
+        "en": [
+          "humane"
+        ]
+      },
+      "topics": [
+        "society",
+        "descriptions"
+      ]
+    },
+    "j1242870": {
+      "mn": [
+        "мөнгөний нийт дүн"
+      ],
+      "expected": {
+        "w": "金高",
+        "r": "きんだか",
+        "en": [
+          "sum"
+        ]
+      },
+      "topics": [
+        "work",
+        "quantity"
+      ]
+    },
+    "j1715550": {
+      "mn": [
+        "олон нийтийн үнэлгээ",
+        "олны харц",
+        "таних нүд"
+      ],
+      "expected": {
+        "w": "見る目",
+        "r": "みるめ",
+        "en": [
+          "public opinion",
+          "public eye",
+          "discerning eye"
+        ]
+      },
+      "topics": [
+        "society",
+        "descriptions"
+      ]
+    },
+    "j1393620": {
+      "mn": [
+        "өмнөтгөл",
+        "оршил"
+      ],
+      "expected": {
+        "w": "前置",
+        "r": "ぜんち",
+        "en": [
+          "preface",
+          "introduction"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "j1164690": {
+      "mn": [
+        "нэг шат",
+        "бүр илүү",
+        "улам их"
+      ],
+      "expected": {
+        "w": "一段",
+        "r": "いちだん",
+        "en": [
+          "more",
+          "much more",
+          "still more"
+        ]
+      },
+      "topics": [
+        "quantity",
+        "descriptions"
+      ]
+    },
+    "j1368970": {
+      "mn": [
+        "бусдад даатгах",
+        "бусдад найдаж орхих"
+      ],
+      "expected": {
+        "w": "人任せ",
+        "r": "ひとまかせ",
+        "en": [
+          "leaving (it) to others"
+        ]
+      },
+      "topics": [
+        "actions",
+        "people"
+      ]
+    },
+    "j1951240": {
+      "mn": [
+        "цайзын хаалганы урд талын орц",
+        "барилгын эд ангийн нүүрэн тал"
+      ],
+      "expected": {
+        "w": "見付",
+        "r": "みつけ",
+        "en": [
+          "approach (to a castle gate)",
+          "front of a structural member"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "j2070970": {
+      "mn": [
+        "өөр нэг",
+        "дахиад нэг",
+        "нэг л дутмаг"
+      ],
+      "expected": {
+        "w": "もう一つ",
+        "r": "もうひとつ",
+        "en": [
+          "another",
+          "one more",
+          "not quite"
+        ]
+      },
+      "topics": [
+        "quantity",
+        "descriptions"
+      ]
+    },
+    "j1367830": {
+      "mn": [
+        "ажилчдаа удирдах, ажиллуулах байдал"
+      ],
+      "expected": {
+        "w": "人使い",
+        "r": "ひとづかい",
+        "en": [
+          "handling one's workmen"
+        ]
+      },
+      "topics": [
+        "work"
+      ]
+    },
+    "j1587190": {
+      "mn": [
+        "цэцэг урлах",
+        "тарих",
+        "амьд байх"
+      ],
+      "expected": {
+        "w": "生ける",
+        "r": "いける",
+        "en": [
+          "to arrange (flowers)",
+          "to plant",
+          "living"
+        ]
+      },
+      "topics": [
+        "arts",
+        "nature",
+        "actions"
+      ]
+    },
+    "j1576310": {
+      "mn": [
+        "нэг шөнө",
+        "шөнөжин",
+        "хоноглоод"
+      ],
+      "expected": {
+        "w": "一夜",
+        "r": "いちや",
+        "en": [
+          "one night",
+          "all night",
+          "overnight"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1465410": {
+      "mn": [
+        "орох",
+        "нар жаргах",
+        "агуулах"
+      ],
+      "expected": {
+        "w": "入り",
+        "r": "いり",
+        "en": [
+          "entering",
+          "setting (of the Sun)",
+          "containing"
+        ]
+      },
+      "topics": [
+        "places",
+        "nature",
+        "actions"
+      ]
+    },
+    "j1465600": {
+      "mn": [
+        "сав",
+        "багтаамжтай сав",
+        "гэр"
+      ],
+      "expected": {
+        "w": "入れ",
+        "r": "いれ",
+        "en": [
+          "container",
+          "receptacle",
+          "case"
+        ]
+      },
+      "topics": [
+        "daily"
+      ]
+    },
+    "j1469210": {
+      "mn": [
+        "оны эцэс"
+      ],
+      "expected": {
+        "w": "年末",
+        "r": "ねんまつ",
+        "en": [
+          "end-of-year"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1354230": {
+      "mn": [
+        "дэгжин",
+        "боловсон",
+        "тансаг"
+      ],
+      "expected": {
+        "w": "上品",
+        "r": "じょうひん",
+        "en": [
+          "elegant",
+          "refined",
+          "polished"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "j1252200": {
+      "mn": [
+        "мөнгөн дүнг тооцоонд оруулах",
+        "төсөвт тусгах"
+      ],
+      "expected": {
+        "w": "計上",
+        "r": "けいじょう",
+        "en": [
+          "including a sum of money in one's calculations",
+          "appropriation (a sum of money)"
+        ]
+      },
+      "topics": [
+        "work"
+      ]
+    },
+    "j1929940": {
+      "mn": [
+        "Япон улсын иргэн",
+        "япон иргэд"
+      ],
+      "expected": {
+        "w": "日本国民",
+        "r": "にほんこくみん",
+        "en": [
+          "Japanese citizen",
+          "Japanese citizens"
+        ]
+      },
+      "topics": [
+        "people",
+        "society"
+      ]
+    },
+    "j1466850": {
+      "mn": [
+        "оролт",
+        "өгөгдөл оруулах"
+      ],
+      "expected": {
+        "w": "入力",
+        "r": "にゅうりょく",
+        "en": [
+          "input"
+        ]
+      },
+      "topics": [
+        "technology"
+      ]
+    },
+    "j1424880": {
+      "mn": [
+        "сургуулиа төгсөлгүй орхих",
+        "сургууль завсардах"
+      ],
+      "expected": {
+        "w": "中退",
+        "r": "ちゅうたい",
+        "en": [
+          "leaving school during a term"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "j2159060": {
+      "mn": [
+        "буудал, хоолны газарт анх удаа ирсэн зочин",
+        "байнгын үйлчлүүлэгчийн танилцуулгагүй шинэ үйлчлүүлэгч"
+      ],
+      "expected": {
+        "w": "一見さん",
+        "r": "いちげんさん",
+        "en": [
+          "first-time customer (of an inn or a restaurant)",
+          "chance customer",
+          "customer without an introduction from a regular customer"
+        ]
+      },
+      "topics": [
+        "work",
+        "people"
+      ]
+    },
+    "j1526080": {
+      "mn": [
+        "бүх зүйл",
+        "бүх хэрэг явдал"
+      ],
+      "expected": {
+        "w": "万事",
+        "r": "ばんじ",
+        "en": [
+          "all",
+          "everything"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "j1753790": {
+      "mn": [
+        "дэлхий даяар",
+        "дэлхийн эргэн тойронд"
+      ],
+      "expected": {
+        "w": "世界中",
+        "r": "せかいじゅう",
+        "en": [
+          "around the world",
+          "throughout the world"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "j1440090": {
+      "mn": [
+        "нар",
+        "нарны гэрэл",
+        "нарны илч"
+      ],
+      "expected": {
+        "w": "天日",
+        "r": "てんぴ",
+        "en": [
+          "the sun",
+          "sunlight",
+          "heat of the sun"
+        ]
+      },
+      "topics": [
+        "nature"
+      ]
+    },
+    "j1746680": {
+      "mn": [
+        "дотоодод үйлдвэрлэсэн бараа"
+      ],
+      "expected": {
+        "w": "国産品",
+        "r": "こくさんひん",
+        "en": [
+          "domestic goods"
+        ]
+      },
+      "topics": [
+        "work"
+      ]
+    },
+    "j1521310": {
+      "mn": [
+        "хойд зүг",
+        "умард тийш",
+        "хойд чиглэл"
+      ],
+      "expected": {
+        "w": "北方",
+        "r": "ほっぽう",
+        "en": [
+          "the north",
+          "northward",
+          "northern direction"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "j1475250": {
+      "mn": [
+        "цагаан арьст хүн",
+        "европ гаралтай хүн"
+      ],
+      "expected": {
+        "w": "白人",
+        "r": "はくじん",
+        "en": [
+          "white person",
+          "Caucasian"
+        ]
+      },
+      "topics": [
+        "people"
+      ]
+    },
+    "j1415190": {
+      "mn": [
+        "их хэмжээ",
+        "асар олон",
+        "их хэмжээгээр"
+      ],
+      "expected": {
+        "w": "大量",
+        "r": "たいりょう",
+        "en": [
+          "large quantity",
+          "massive (quantity)",
+          "mass (e.g. mass production, mass transit, mass destruction)"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "j1599410": {
+      "mn": [
+        "боомтын ачигч",
+        "ачаа зөөгч"
+      ],
+      "expected": {
+        "w": "中仕",
+        "r": "なかし",
+        "en": [
+          "longshoreman",
+          "baggageman"
+        ]
+      },
+      "topics": [
+        "people",
+        "work"
+      ]
+    },
+    "j1633240": {
+      "mn": [
+        "танхим",
+        "том өрөө",
+        "уужим өрөө"
+      ],
+      "expected": {
+        "w": "広間",
+        "r": "ひろま",
+        "en": [
+          "hall",
+          "saloon",
+          "spacious room"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "j1411410": {
+      "mn": [
+        "гарч явах",
+        "бараалхлаас гарах",
+        "ажлаас эсвэл зах зээлээс гарах"
+      ],
+      "expected": {
+        "w": "退出",
+        "r": "たいしゅつ",
+        "en": [
+          "leaving (e.g. work at end of day)",
+          "withdrawal (e.g. from a noble's or superior's presence)",
+          "exit (e.g. from a market)"
+        ]
+      },
+      "topics": [
+        "actions",
+        "work"
+      ]
+    },
+    "j1413740": {
+      "mn": [
+        "хурандаа"
+      ],
+      "expected": {
+        "w": "大佐",
+        "r": "たいさ",
+        "en": [
+          "colonel"
+        ]
+      },
+      "topics": [
+        "people",
+        "society"
+      ]
+    },
+    "j1808020": {
+      "mn": [
+        "нүдний өмнө",
+        "урд талд",
+        "яг дэргэд"
+      ],
+      "expected": {
+        "w": "目の前",
+        "r": "めのまえ",
+        "en": [
+          "before one's eyes",
+          "in front of one",
+          "under one's nose"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "j1468190": {
+      "mn": [
+        "хөгшрөх",
+        "нас ахих"
+      ],
+      "expected": {
+        "w": "年をとる",
+        "r": "としをとる",
+        "en": [
+          "to grow old",
+          "to age"
+        ]
+      },
+      "topics": [
+        "body",
+        "time",
+        "actions"
+      ]
+    },
+    "j2427070": {
+      "mn": [
+        "хагас цагийн хугацаа",
+        "гучин минут"
+      ],
+      "expected": {
+        "w": "半時間",
+        "r": "はんじかん",
+        "en": [
+          "half an hour (period of)",
+          "half hour"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j2006150": {
+      "mn": [
+        "олон жилийн турш",
+        "хэдэн жилийн хугацаа"
+      ],
+      "expected": {
+        "w": "何年間",
+        "r": "なんねんかん",
+        "en": [
+          "many years"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1358450": {
+      "mn": [
+        "хоолны дараа"
+      ],
+      "expected": {
+        "w": "食後",
+        "r": "しょくご",
+        "en": [
+          "after a meal"
+        ]
+      },
+      "topics": [
+        "food",
+        "time"
+      ]
+    },
+    "j1004690": {
+      "mn": [
+        "саяхан",
+        "өнгөрсөн нэг өдөр",
+        "сүүлийн үед"
+      ],
+      "expected": {
+        "w": "この間",
+        "r": "このあいだ",
+        "en": [
+          "the other day",
+          "lately",
+          "recently"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "j1339870": {
+      "mn": [
+        "биечлэн очих",
+        "хүрэлцэн ирэх",
+        "оролцох"
+      ],
+      "expected": {
+        "w": "出頭",
+        "r": "しゅっとう",
+        "en": [
+          "appearance",
+          "presence",
+          "attendance"
+        ]
+      },
+      "topics": [
+        "actions",
+        "society"
+      ]
+    },
+    "j2691710": {
+      "mn": [
+        "хоёр гол өрөөг холбосон завсрын өрөө"
+      ],
+      "expected": {
+        "w": "間の間",
+        "r": "あいのま",
+        "en": [
+          "room connecting the two main rooms of a building",
+          "intermediate room"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "j1413530": {
+      "mn": [
+        "том",
+        "том оврын",
+        "өргөн цар хүрээтэй"
+      ],
+      "expected": {
+        "w": "大型",
+        "r": "おおがた",
+        "en": [
+          "large",
+          "large-sized",
+          "large-scale"
+        ]
+      },
+      "topics": [
+        "descriptions",
+        "quantity"
+      ]
+    },
+    "j1366900": {
+      "mn": [
+        "хүний нийгэм"
+      ],
+      "expected": {
+        "w": "人間社会",
+        "r": "にんげんしゃかい",
+        "en": [
+          "human society"
+        ]
+      },
+      "topics": [
+        "society"
+      ]
+    },
+    "j1368740": {
+      "mn": [
+        "хүмүүс"
+      ],
+      "expected": {
+        "w": "人達",
+        "r": "ひとたち",
+        "en": [
+          "people"
+        ]
+      },
+      "topics": [
+        "people"
+      ]
+    },
+    "j1388600": {
+      "mn": [
+        "нөгөө тал",
+        "нөгөө этгээд",
+        "урд тал"
+      ],
+      "expected": {
+        "w": "先方",
+        "r": "せんぽう",
+        "en": [
+          "other party",
+          "other side",
+          "ahead"
+        ]
+      },
+      "topics": [
+        "people",
+        "places"
+      ]
+    },
+    "j2836610": {
+      "mn": [
+        "нөгөө нэг",
+        "нөгөө тал"
+      ],
+      "expected": {
+        "w": "もう一方",
+        "r": "もういっぽう",
+        "en": [
+          "the other"
+        ]
+      },
+      "topics": [
+        "quantity",
+        "places"
+      ]
+    },
+    "j1242970": {
+      "mn": [
+        "баян хүн",
+        "хөрөнгөтэй хүн"
+      ],
+      "expected": {
+        "w": "金持",
+        "r": "かねもち",
+        "en": [
+          "rich person"
+        ]
+      },
+      "topics": [
+        "people",
+        "work"
+      ]
+    },
+    "j1286220": {
+      "mn": [
+        "төрийн дуулал"
+      ],
+      "expected": {
+        "w": "国歌",
+        "r": "こっか",
+        "en": [
+          "national anthem"
+        ]
+      },
+      "topics": [
+        "arts",
+        "society"
+      ]
+    },
+    "j1358520": {
+      "mn": [
+        "хоолны өмнө"
+      ],
+      "expected": {
+        "w": "食前",
+        "r": "しょくぜん",
+        "en": [
+          "before meals"
+        ]
+      },
+      "topics": [
+        "food",
+        "time"
+      ]
+    },
+    "j1699700": {
+      "mn": [
+        "ажлын өдөр"
+      ],
+      "expected": {
+        "w": "週日",
+        "r": "しゅうじつ",
+        "en": [
+          "weekday"
+        ]
+      },
+      "topics": [
+        "time",
+        "work"
+      ]
+    },
+    "j1334630": {
+      "mn": [
+        "загалмай",
+        "солбисон",
+        "загалмай хэлбэртэй"
+      ],
+      "expected": {
+        "w": "十字",
+        "r": "じゅうじ",
+        "en": [
+          "cross",
+          "crossed",
+          "cruciform"
+        ]
+      },
+      "topics": [
+        "descriptions",
+        "society"
+      ]
+    }
+  }
+}

@@ -1,0 +1,1054 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-six-3-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit semantic categories cross-checked against Japanese entry and retained English gloss, independently unreviewed. Original uncommon senses preserved.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "fafb1c5079": {
+      "mn": [
+        "хөгжилтэй",
+        "цовоо",
+        "хөнгөн сэтгэлтэй"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "気軽",
+        "r": "きがる",
+        "en": [
+          "cheerful",
+          "buoyant",
+          "lighthearted"
+        ]
+      }
+    },
+    "bdd2a9e0d8": {
+      "mn": [
+        "эрхтэн",
+        "хэрэгсэл"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "器官",
+        "r": "きかん",
+        "en": [
+          "organ (of body)",
+          "instrument"
+        ]
+      }
+    },
+    "268ecc0793": {
+      "mn": [
+        "улирал тутмын хэвлэл"
+      ],
+      "topics": [
+        "time",
+        "learning"
+      ],
+      "expected": {
+        "w": "季刊",
+        "r": "きかん",
+        "en": [
+          "quarterly (e.g. magazine)"
+        ]
+      }
+    },
+    "4588cf36bc": {
+      "mn": [
+        "хямрал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "危機",
+        "r": "きき",
+        "en": [
+          "crisis"
+        ]
+      }
+    },
+    "d2d2bc8e51": {
+      "mn": [
+        "сонсож ойлгох"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "聞き取り",
+        "r": "ききとり",
+        "en": [
+          "listening comprehension"
+        ]
+      }
+    },
+    "2d50f7ad6c": {
+      "mn": [
+        "үр нөлөө",
+        "ач тус",
+        "үйлчлэл"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "効き目",
+        "r": "ききめ",
+        "en": [
+          "effect",
+          "virtue",
+          "efficacy"
+        ]
+      }
+    },
+    "47771f1706": {
+      "mn": [
+        "Токио руу буцах"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "帰京",
+        "r": "ききょう",
+        "en": [
+          "returning to Tokyo"
+        ]
+      }
+    },
+    "e9cce3fe13": {
+      "mn": [
+        "жүжиг",
+        "драм"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "戯曲",
+        "r": "ぎきょく",
+        "en": [
+          "play",
+          "drama"
+        ]
+      }
+    },
+    "f4044c1119": {
+      "mn": [
+        "сан",
+        "сангийн байгууллага"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "基金",
+        "r": "ききん",
+        "en": [
+          "fund",
+          "foundation"
+        ]
+      }
+    },
+    "3f6adda25e": {
+      "mn": [
+        "инээдмийн жүжиг",
+        "хөгжилтэй үзүүлбэр"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "喜劇",
+        "r": "きげき",
+        "en": [
+          "comedy",
+          "funny show"
+        ]
+      }
+    },
+    "0e52dda10a": {
+      "mn": [
+        "тогтоол",
+        "шийдвэр",
+        "санал хураалт"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "議決",
+        "r": "ぎけつ",
+        "en": [
+          "resolution",
+          "decision",
+          "vote"
+        ]
+      }
+    },
+    "107a18ca50": {
+      "mn": [
+        "санал өгөхөөс түдгэлзэх",
+        "эрхээсээ татгалзах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "棄権",
+        "r": "きけん",
+        "en": [
+          "abstain from voting",
+          "renunciation of a right"
+        ]
+      }
+    },
+    "400423303a": {
+      "mn": [
+        "үүсэл",
+        "эхлэл",
+        "бий болох"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "起源",
+        "r": "きげん",
+        "en": [
+          "origin",
+          "beginning",
+          "rise"
+        ]
+      }
+    },
+    "4e00989d6c": {
+      "mn": [
+        "механизм",
+        "байгууллага"
+      ],
+      "topics": [
+        "technology",
+        "work"
+      ],
+      "expected": {
+        "w": "機構",
+        "r": "きこう",
+        "en": [
+          "mechanism",
+          "organization"
+        ]
+      }
+    },
+    "e4a3072227": {
+      "mn": [
+        "гэрлэлт",
+        "гэрлэсэн"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "既婚",
+        "r": "きこん",
+        "en": [
+          "marriage",
+          "married"
+        ]
+      }
+    },
+    "7ab6d50625": {
+      "mn": [
+        "маяглах",
+        "биеэ тоох",
+        "ихэмсэг зан"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "気障",
+        "r": "きざ",
+        "en": [
+          "affectation",
+          "conceit",
+          "snobbery"
+        ]
+      }
+    },
+    "3cad90a857": {
+      "mn": [
+        "дурдах",
+        "бичиж бүртгэх"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "記載",
+        "r": "きさい",
+        "en": [
+          "mention",
+          "entry"
+        ]
+      }
+    },
+    "acfd50010e": {
+      "mn": [
+        "шинж",
+        "ёр",
+        "шинж тэмдэг"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "兆し",
+        "r": "きざし",
+        "en": [
+          "signs",
+          "omen",
+          "symptoms"
+        ]
+      }
+    },
+    "40998d8848": {
+      "mn": [
+        "товлосон өдөр",
+        "тооцоо хийх өдөр"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "期日",
+        "r": "きじつ",
+        "en": [
+          "fixed date",
+          "settlement date"
+        ]
+      }
+    },
+    "7403053ba1": {
+      "mn": [
+        "парламентын ордон"
+      ],
+      "topics": [
+        "places",
+        "society"
+      ],
+      "expected": {
+        "w": "議事堂",
+        "r": "ぎじどう",
+        "en": [
+          "Diet building"
+        ]
+      }
+    },
+    "d80fc9667c": {
+      "mn": [
+        "хяхтнах",
+        "шаржигнах",
+        "үрэлдэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "軋む",
+        "r": "きしむ",
+        "en": [
+          "to jar",
+          "to creak",
+          "to grate"
+        ]
+      }
+    },
+    "b0868ed2cd": {
+      "mn": [
+        "дүрслэн бичих",
+        "тодорхойлогч"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "記述",
+        "r": "きじゅつ",
+        "en": [
+          "describing",
+          "descriptor"
+        ]
+      }
+    },
+    "c756e082cc": {
+      "mn": [
+        "цаг агаар",
+        "уур амьсгал"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "気象",
+        "r": "きしょう",
+        "en": [
+          "weather",
+          "climate"
+        ]
+      }
+    },
+    "1ef8454626": {
+      "mn": [
+        "сондгой тоо"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "奇数",
+        "r": "きすう",
+        "en": [
+          "odd number"
+        ]
+      }
+    },
+    "7c29a620bc": {
+      "mn": [
+        "барих",
+        "овоолох",
+        "хуримтлуулах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "築く",
+        "r": "きずく",
+        "en": [
+          "to build",
+          "to pile up",
+          "to amass"
+        ]
+      }
+    },
+    "1932992711": {
+      "mn": [
+        "гэмтэх",
+        "шархдах",
+        "бэртэх"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "傷付く",
+        "r": "きずつく",
+        "en": [
+          "to be hurt",
+          "to be wounded",
+          "to get injured"
+        ]
+      }
+    },
+    "64b98ebf54": {
+      "mn": [
+        "зохицуулалт",
+        "хязгаарлалт"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "規制",
+        "r": "きせい",
+        "en": [
+          "regulation"
+        ]
+      }
+    },
+    "c3f182c7a5": {
+      "mn": [
+        "золиос"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "犠牲",
+        "r": "ぎせい",
+        "en": [
+          "sacrifice"
+        ]
+      }
+    },
+    "d793a29cc2": {
+      "mn": [
+        "уурын хөлөг"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "汽船",
+        "r": "きせん",
+        "en": [
+          "steamship"
+        ]
+      }
+    },
+    "56c97b87bd": {
+      "mn": [
+        "хандив",
+        "бэлэглэх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "寄贈",
+        "r": "きぞう",
+        "en": [
+          "donation",
+          "presentation"
+        ]
+      }
+    },
+    "0ce664d522": {
+      "mn": [
+        "хуурамчаар үйлдэх",
+        "хуурамч болгох",
+        "зохиомлоор бүрдүүлэх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "偽造",
+        "r": "ぎぞう",
+        "en": [
+          "forgery",
+          "falsification",
+          "fabrication"
+        ]
+      }
+    },
+    "91fdffaf48": {
+      "mn": [
+        "язгууртан"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "貴族",
+        "r": "きぞく",
+        "en": [
+          "noble",
+          "aristocrat"
+        ]
+      }
+    },
+    "c18859026f": {
+      "mn": [
+        "хэлэлцэх сэдэв",
+        "хөтөлбөр"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "議題",
+        "r": "ぎだい",
+        "en": [
+          "topic of discussion",
+          "agenda"
+        ]
+      }
+    },
+    "6a55eceb06": {
+      "mn": [
+        "давтах",
+        "сургуулилах",
+        "хатжуулах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "鍛える",
+        "r": "きたえる",
+        "en": [
+          "to forge",
+          "to drill",
+          "to temper"
+        ]
+      }
+    },
+    "0aba7c931b": {
+      "mn": [
+        "зан араншин",
+        "уг чанар"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "気立て",
+        "r": "きだて",
+        "en": [
+          "disposition",
+          "nature"
+        ]
+      }
+    },
+    "48d1eb2573": {
+      "mn": [
+        "ирэх",
+        "хүрэлцэн ирэх",
+        "болохоор товлогдох"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "来る",
+        "r": "きたる",
+        "en": [
+          "to come",
+          "to arrive",
+          "to be due to"
+        ]
+      }
+    },
+    "10ac90d275": {
+      "mn": [
+        "яг",
+        "төгс"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "きちっと",
+        "r": "きちっと",
+        "en": [
+          "exactly",
+          "perfectly"
+        ]
+      }
+    },
+    "d5ab320203": {
+      "mn": [
+        "нямбай",
+        "цаг барьдаг",
+        "тогтмол"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "几帳面",
+        "r": "きちょうめん",
+        "en": [
+          "methodical",
+          "punctual",
+          "steady"
+        ]
+      }
+    },
+    "62271007f5": {
+      "mn": [
+        "яг",
+        "нарийн таарсан"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "きっかり",
+        "r": "きっかり",
+        "en": [
+          "exactly",
+          "precisely"
+        ]
+      }
+    },
+    "23de10d698": {
+      "mn": [
+        "цай уух",
+        "цайны газар"
+      ],
+      "topics": [
+        "food"
+      ],
+      "expected": {
+        "w": "喫茶",
+        "r": "きっさ",
+        "en": [
+          "tea drinking",
+          "tea house"
+        ]
+      }
+    },
+    "e8532fa5c4": {
+      "mn": [
+        "яг нарийн",
+        "чанга"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "きっちり",
+        "r": "きっちり",
+        "en": [
+          "precisely",
+          "tightly"
+        ]
+      }
+    },
+    "082f3292f2": {
+      "mn": [
+        "тодорхой",
+        "ил тод",
+        "шийдэмгий"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "きっぱり",
+        "r": "きっぱり",
+        "en": [
+          "clearly",
+          "plainly",
+          "distinctly"
+        ]
+      }
+    },
+    "c8ec08e8af": {
+      "mn": [
+        "дүрэм",
+        "заалт"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "規定",
+        "r": "きてい",
+        "en": [
+          "regulation",
+          "provisions"
+        ]
+      }
+    },
+    "59fc835fed": {
+      "mn": [
+        "эхлэх цэг"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "起点",
+        "r": "きてん",
+        "en": [
+          "starting point"
+        ]
+      }
+    },
+    "7825b83055": {
+      "mn": [
+        "тойрог зам",
+        "төмөр замын зам"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "軌道",
+        "r": "きどう",
+        "en": [
+          "orbit",
+          "railroad track"
+        ]
+      }
+    },
+    "fef649093b": {
+      "mn": [
+        "техникийн ур чадвар",
+        "чадвар",
+        "чадамж"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "技能",
+        "r": "ぎのう",
+        "en": [
+          "technical skill",
+          "ability",
+          "capacity"
+        ]
+      }
+    },
+    "99d671e7c9": {
+      "mn": [
+        "тэргүүн зэрэг",
+        "дорнын тооллын эхний тэмдэг",
+        "хуяг"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "甲",
+        "r": "きのえ",
+        "en": [
+          "1st in rank",
+          "first sign of the Chinese calendar",
+          "shell"
+        ]
+      }
+    },
+    "27f5dcd741": {
+      "mn": [
+        "загвар",
+        "стандарт",
+        "үлгэр жишээ"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "規範",
+        "r": "きはん",
+        "en": [
+          "model",
+          "standard",
+          "pattern"
+        ]
+      }
+    },
+    "e05bb17edd": {
+      "expected": {
+        "w": "気品",
+        "r": "きひん",
+        "en": [
+          "aroma"
+        ]
+      },
+      "withdrawnMn": [
+        "анхилуун үнэр"
+      ],
+      "sourceNote": "Unresolved Japanese/English conflict: 気品/きひん denotes elegance/dignity, not retained English aroma. Earlier AI-authored MN aroma sense withdrawn from active data; original Japanese/reading/English and batch audit retained. Requires independent dictionary/source review."
+    },
+    "d23da22be0": {
+      "mn": [
+        "зан чанар",
+        "онцлог",
+        "хамтын ёс суртахуун"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "気風",
+        "r": "きふう",
+        "en": [
+          "character",
+          "traits",
+          "ethos"
+        ]
+      }
+    },
+    "e5983c3097": {
+      "mn": [
+        "өгсөж уруудах",
+        "долгиолох"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "起伏",
+        "r": "きふく",
+        "en": [
+          "undulation"
+        ]
+      }
+    },
+    "8cae689952": {
+      "mn": [
+        "хэмжээ",
+        "хүрээ",
+        "төлөвлөгөө"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "規模",
+        "r": "きぼ",
+        "en": [
+          "scale",
+          "scope",
+          "plan"
+        ]
+      }
+    },
+    "584d78b24f": {
+      "mn": [
+        "гэнэтийн хүсэл",
+        "хувьсамтгай ааш",
+        "дур зорго"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "気まぐれ",
+        "r": "きまぐれ",
+        "en": [
+          "whim",
+          "caprice",
+          "whimsy"
+        ]
+      }
+    },
+    "9d306d1477": {
+      "mn": [
+        "хэт нухацтай",
+        "хэт нухацтай хүн",
+        "үнэнч зан"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "生真面目",
+        "r": "きまじめ",
+        "en": [
+          "too serious",
+          "person who is too serious",
+          "honesty"
+        ]
+      }
+    },
+    "ac858447fc": {
+      "mn": [
+        "улирлын төгсгөл"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "期末",
+        "r": "きまつ",
+        "en": [
+          "end of term"
+        ]
+      }
+    },
+    "47871e07a3": {
+      "mn": [
+        "эвгүй санагдах",
+        "ичих"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "決まり悪い",
+        "r": "きまりわるい",
+        "en": [
+          "feeling awkward",
+          "being ashamed"
+        ]
+      }
+    },
+    "aa8aefa05c": {
+      "mn": [
+        "гарын үсэг",
+        "нэр бүртгэх"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "記名",
+        "r": "きめい",
+        "en": [
+          "signature",
+          "register"
+        ]
+      }
+    },
+    "b23f5a2bd7": {
+      "mn": [
+        "тохиролцоо",
+        "дүрэм",
+        "журам"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "規約",
+        "r": "きやく",
+        "en": [
+          "agreement",
+          "rules",
+          "code"
+        ]
+      }
+    },
+    "3a40a73925": {
+      "mn": [
+        "зохиолыг жүжиг кино болгон хувиргах"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "脚色",
+        "r": "きゃくしょく",
+        "en": [
+          "dramatization (e.g. film)"
+        ]
+      }
+    },
+    "f44fefb984": {
+      "mn": [
+        "гэнэтийн өөрчлөлт",
+        "эргэлт",
+        "урвуу болох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "逆転",
+        "r": "ぎゃくてん",
+        "en": [
+          "(sudden) change",
+          "reversal",
+          "turn-around"
+        ]
+      }
+    }
+  }
+}

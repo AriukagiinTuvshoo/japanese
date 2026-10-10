@@ -1,5 +1,6 @@
 import { Suspense, lazy, useEffect } from "react";
 import Shell from "./components/Shell";
+import PwaBar from "./components/PwaBar";
 import { StoreProvider } from "./lib/store";
 import { useRoute } from "./lib/router";
 import { routeArg, routeLevel } from "./lib/routes";
@@ -31,6 +32,7 @@ const Account = lazy(() => import("./pages/Account"));
 const Kana = lazy(() => import("./pages/Kana"));
 const Mistakes = lazy(() => import("./pages/Mistakes"));
 const About = lazy(() => import("./pages/About"));
+const Tutor = lazy(() => import("./pages/Tutor"));
 const Admin = lazy(() => import("./pages/Admin"));
 
 function Router() {
@@ -61,6 +63,7 @@ function Router() {
       case "kana": return <Kana />;
       case "mistakes": return <Mistakes />;
       case "about": return <About />;
+      case "tutor": return <Tutor />;
       case "admin": return <Admin tab={arg ?? "overview"} />;
       default: return <NotFound name={route.name} />;
     }
@@ -91,6 +94,7 @@ export default function App() {
   return (
     <StoreProvider>
       <Router />
+      <PwaBar />
     </StoreProvider>
   );
 }

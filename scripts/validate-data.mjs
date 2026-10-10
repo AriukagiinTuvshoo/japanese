@@ -94,7 +94,7 @@ for (const e of draftVocab) {
     warn(`vocab-draft.json-д байхгүй: ${key}`);
     continue;
   }
-  if ((e.mn ?? [])[0] !== vocabDraft[key]) warn(`драфт зөрүү ${key}: data="${e.mn[0]}" draft="${vocabDraft[key]}"`);
+  if ((e.mn ?? []).join("; ") !== vocabDraft[key] && (e.mn ?? [])[0] !== vocabDraft[key]) warn(`драфт зөрүү ${key}: data="${e.mn[0]}" draft="${vocabDraft[key]}"`);
 }
 
 // --- Kanji ---------------------------------------------------------------------

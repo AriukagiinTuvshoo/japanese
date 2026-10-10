@@ -1,0 +1,1045 @@
+{
+  "provenance": {
+    "id": "mn-n4-vocab-large-b-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit topics cross-checked individually against retained Japanese headwords/readings and English glosses, including alternate dictionary readings. Independently unreviewed.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n4.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j1172960": {
+      "mn": [
+        "хөдөлгөөний мэдрэл",
+        "рефлекс"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "運動神経",
+        "r": "うんどうしんけい",
+        "en": [
+          "motor nerves",
+          "reflexes"
+        ]
+      }
+    },
+    "j1379710": {
+      "mn": [
+        "хөл ихтэй газар",
+        "хөдөлгөөнтэй гудамж",
+        "үргэлж бужигнадаг газар"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "盛り場",
+        "r": "さかりば",
+        "en": [
+          "busy place",
+          "busy street",
+          "place that's always bustling with people"
+        ]
+      }
+    },
+    "j1342850": {
+      "mn": [
+        "анхны зорилго",
+        "эхний шийдвэр"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "初心",
+        "r": "しょしん",
+        "en": [
+          "original intention",
+          "initial resolution"
+        ]
+      }
+    },
+    "j2215420": {
+      "mn": [
+        "аргаар",
+        "ашиглан"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "を以て",
+        "r": "をもって",
+        "en": [
+          "by (means of)",
+          "with"
+        ]
+      }
+    },
+    "j1612810": {
+      "mn": [
+        "гэрийн үйлчлэгч",
+        "туслагч",
+        "тусламж"
+      ],
+      "topics": [
+        "people",
+        "work"
+      ],
+      "expected": {
+        "w": "お手伝い",
+        "r": "おてつだい",
+        "en": [
+          "maid",
+          "helper",
+          "help"
+        ]
+      }
+    },
+    "j1748850": {
+      "mn": [
+        "харилцан үйлчлэл"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "相互作用",
+        "r": "そうごさよう",
+        "en": [
+          "interaction"
+        ]
+      }
+    },
+    "j1197320": {
+      "mn": [
+        "зураасны тоо"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "画数",
+        "r": "かくすう",
+        "en": [
+          "stroke count"
+        ]
+      }
+    },
+    "j1380100": {
+      "mn": [
+        "гүн мэдлэгтэй",
+        "мэргэшсэн",
+        "сайн мэддэг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "精通",
+        "r": "せいつう",
+        "en": [
+          "having deep knowledge of",
+          "being expert in",
+          "being well versed in"
+        ]
+      }
+    },
+    "j1493830": {
+      "mn": [
+        "болгоомжгүй байдал",
+        "анхааралгүй байдал",
+        "бодлогогүй байдал"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "不注意",
+        "r": "ふちゅうい",
+        "en": [
+          "carelessness",
+          "inattention",
+          "thoughtlessness"
+        ]
+      }
+    },
+    "j2832461": {
+      "mn": [
+        "замын хөдөлгөөний хязгаарлалт",
+        "хөдөлгөөн зохицуулах"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "交通規制",
+        "r": "こうつうきせい",
+        "en": [
+          "traffic restrictions",
+          "traffic control"
+        ]
+      }
+    },
+    "j1320990": {
+      "mn": [
+        "лаборатори"
+      ],
+      "topics": [
+        "learning",
+        "places"
+      ],
+      "expected": {
+        "w": "実験室",
+        "r": "じっけんしつ",
+        "en": [
+          "laboratory"
+        ]
+      }
+    },
+    "j1946270": {
+      "mn": [
+        "нийгмийн халамжийн ажил"
+      ],
+      "topics": [
+        "work",
+        "society"
+      ],
+      "expected": {
+        "w": "福祉事業",
+        "r": "ふくしじぎょう",
+        "en": [
+          "welfare work"
+        ]
+      }
+    },
+    "j2217310": {
+      "mn": [
+        "дээд зиндааны хүнтэй уулзах"
+      ],
+      "topics": [
+        "actions",
+        "people"
+      ],
+      "expected": {
+        "w": "目にかかる",
+        "r": "めにかかる",
+        "en": [
+          "to meet (someone of higher status)"
+        ]
+      }
+    },
+    "j1491520": {
+      "mn": [
+        "боломжгүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "不可能",
+        "r": "ふかのう",
+        "en": [
+          "impossible"
+        ]
+      }
+    },
+    "j2049170": {
+      "mn": [
+        "харилцан ойлголцол"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "相互理解",
+        "r": "そうごりかい",
+        "en": [
+          "mutual understanding"
+        ]
+      }
+    },
+    "j1395680": {
+      "mn": [
+        "нийтэд нь"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "全体として",
+        "r": "ぜんたいとして",
+        "en": [
+          "overall"
+        ]
+      }
+    },
+    "j1829450": {
+      "mn": [
+        "атаархал"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "妬心",
+        "r": "としん",
+        "en": [
+          "jealousy"
+        ]
+      }
+    },
+    "j2410220": {
+      "mn": [
+        "болгоомжлох",
+        "санаа тавих",
+        "анхаарах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "心す",
+        "r": "こころす",
+        "en": [
+          "to take care",
+          "to mind",
+          "to be attentive"
+        ]
+      }
+    },
+    "j1442810": {
+      "mn": [
+        "тутарга суулгах"
+      ],
+      "topics": [
+        "food",
+        "nature"
+      ],
+      "expected": {
+        "w": "田植",
+        "r": "たうえ",
+        "en": [
+          "rice planting"
+        ]
+      }
+    },
+    "j2665100": {
+      "mn": [
+        "орчин үеийн дүрслэх урлаг"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "現代美術",
+        "r": "げんだいびじゅつ",
+        "en": [
+          "contemporary art"
+        ]
+      }
+    },
+    "j1514310": {
+      "mn": [
+        "тойрон алхах",
+        "нааш цааш алхах",
+        "холхих"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "歩き回る",
+        "r": "あるきまわる",
+        "en": [
+          "to walk about",
+          "to walk to and fro",
+          "to pace around"
+        ]
+      }
+    },
+    "j1500010": {
+      "mn": [
+        "агаар сэлгэлт",
+        "байгууллагын дотоод харилцаа",
+        "нээлттэй байдал"
+      ],
+      "topics": [
+        "daily",
+        "work"
+      ],
+      "expected": {
+        "w": "風通し",
+        "r": "かぜとおし",
+        "en": [
+          "ventilation",
+          "communication (within an organisation)",
+          "openness"
+        ]
+      }
+    },
+    "j2124620": {
+      "mn": [
+        "эмнэлгийн алдаа"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "医療事故",
+        "r": "いりょうじこ",
+        "en": [
+          "medical error"
+        ]
+      }
+    },
+    "j1511810": {
+      "mn": [
+        "нэг тал",
+        "нэг оролцогч",
+        "нөгөө тал"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "片方",
+        "r": "かたほう",
+        "en": [
+          "one side",
+          "one party",
+          "counterpart"
+        ]
+      }
+    },
+    "j1632870": {
+      "mn": [
+        "аз эргэх",
+        "хувь заяа сайжрах"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "運が開ける",
+        "r": "うんがひらける",
+        "en": [
+          "to have luck turn one's way",
+          "to have one's fortune change for the better"
+        ]
+      }
+    },
+    "j1236530": {
+      "mn": [
+        "хүчтэй салхи",
+        "ширүүн салхи",
+        "дунд зэргийн шуурга"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "強風",
+        "r": "きょうふう",
+        "en": [
+          "strong wind",
+          "high wind",
+          "moderate gale"
+        ]
+      }
+    },
+    "j2002260": {
+      "mn": [
+        "энэ ертөнц",
+        "амьд хүмүүсийн ертөнц"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "この世",
+        "r": "このよ",
+        "en": [
+          "this world",
+          "world of the living"
+        ]
+      }
+    },
+    "j1408120": {
+      "mn": [
+        "олон янз байдал",
+        "төрөл бүрийн байдал"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "多様性",
+        "r": "たようせい",
+        "en": [
+          "diversity",
+          "variety"
+        ]
+      }
+    },
+    "j2121890": {
+      "mn": [
+        "ханзны нийт зураасны тоо"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "総画数",
+        "r": "そうかくすう",
+        "en": [
+          "stroke-count of a kanji"
+        ]
+      }
+    },
+    "j2620850": {
+      "mn": [
+        "олонхийн зарчим"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "多数決原理",
+        "r": "たすうけつげんり",
+        "en": [
+          "principle of majority rule"
+        ]
+      }
+    },
+    "j1359380": {
+      "mn": [
+        "итгэл бишрэл",
+        "сүсэг",
+        "сүсэг бишрэл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "信心",
+        "r": "しんじん",
+        "en": [
+          "faith",
+          "belief",
+          "piety"
+        ]
+      }
+    },
+    "j2658850": {
+      "mn": [
+        "амьтанд хайртай",
+        "амьтанд дуртай"
+      ],
+      "topics": [
+        "nature",
+        "feelings"
+      ],
+      "expected": {
+        "w": "動物好き",
+        "r": "どうぶつすき",
+        "en": [
+          "love of animals",
+          "animal loving"
+        ]
+      }
+    },
+    "j1602430": {
+      "mn": [
+        "гэнэтийн дайралт",
+        "гэнэтийн айлчлал",
+        "бэлтгэлгүй байхад нь дайрах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "不意打ち",
+        "r": "ふいうち",
+        "en": [
+          "surprise attack",
+          "surprise visit",
+          "catching a person off guard"
+        ]
+      }
+    },
+    "j1008870": {
+      "mn": [
+        "гэж нэрлэгдэх",
+        "гэж хэлэгдэх"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "と言われる",
+        "r": "といわれる",
+        "en": [
+          "to be called ...",
+          "to be referred to as ..."
+        ]
+      }
+    },
+    "j1484450": {
+      "mn": [
+        "гамшигт өртсөн хүн"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "被災者",
+        "r": "ひさいしゃ",
+        "en": [
+          "victim of (a disaster)"
+        ]
+      }
+    },
+    "j2264760": {
+      "mn": [
+        "тохиромжгүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "都合が悪い",
+        "r": "つごうがわるい",
+        "en": [
+          "inconvenient"
+        ]
+      }
+    },
+    "j2131430": {
+      "mn": [
+        "өөрөө арчлах",
+        "өөрийгөө удирдах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "自己管理",
+        "r": "じこかんり",
+        "en": [
+          "taking care of something by oneself",
+          "self-management"
+        ]
+      }
+    },
+    "j1493950": {
+      "mn": [
+        "хангалтгүй байдал",
+        "зохисгүй байдал",
+        "тохирохгүй байдал"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "不適",
+        "r": "ふてき",
+        "en": [
+          "inadequacy",
+          "inappropriateness",
+          "unfitness"
+        ]
+      }
+    },
+    "j1725650": {
+      "mn": [
+        "чинээлэг хүн"
+      ],
+      "topics": [
+        "people",
+        "work"
+      ],
+      "expected": {
+        "w": "資産家",
+        "r": "しさんか",
+        "en": [
+          "wealthy person"
+        ]
+      }
+    },
+    "j1553260": {
+      "mn": [
+        "аялалд гарах",
+        "хөдөлж явах"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "旅立ち",
+        "r": "たびだち",
+        "en": [
+          "setting off (on a trip)",
+          "departure"
+        ]
+      }
+    },
+    "j1773010": {
+      "mn": [
+        "далайн бүтээгдэхүүн",
+        "далайн гаралтай"
+      ],
+      "topics": [
+        "food",
+        "nature"
+      ],
+      "expected": {
+        "w": "海産",
+        "r": "かいさん",
+        "en": [
+          "marine product",
+          "marine (e.g. product, animal etc.)"
+        ]
+      }
+    },
+    "j2589190": {
+      "mn": [
+        "хүчирхийлэлгүй байх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "非暴力",
+        "r": "ひぼうりょく",
+        "en": [
+          "nonviolence",
+          "non-violence"
+        ]
+      }
+    },
+    "j1398620": {
+      "mn": [
+        "бүтээх чадвар",
+        "бүтээлч сэтгэлгээ"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "創造力",
+        "r": "そうぞうりょく",
+        "en": [
+          "creative power",
+          "creativity"
+        ]
+      }
+    },
+    "j1151090": {
+      "mn": [
+        "дуртай хэрэглэдэг",
+        "тогтмол хэрэглэдэг"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "愛用",
+        "r": "あいよう",
+        "en": [
+          "favorite",
+          "favourite",
+          "habitually used"
+        ]
+      }
+    },
+    "j2823170": {
+      "mn": [
+        "нууц тайлах зохиолын зохиолч",
+        "мөрдөгчийн зохиолын зохиолч",
+        "гэмт хэргийн зохиолч"
+      ],
+      "topics": [
+        "people",
+        "arts"
+      ],
+      "expected": {
+        "w": "推理作家",
+        "r": "すいりさっか",
+        "en": [
+          "mystery writer",
+          "detective fiction writer",
+          "crime author"
+        ]
+      }
+    },
+    "j2827208": {
+      "mn": [
+        "туршлага дутмаг"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "経験不足",
+        "r": "けいけんぶそく",
+        "en": [
+          "lack of experience"
+        ]
+      }
+    },
+    "j1581470": {
+      "mn": [
+        "орлуулалт",
+        "ээлжлэлт",
+        "өөр хувилбар"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "代替",
+        "r": "だいたい",
+        "en": [
+          "substitution",
+          "alternation",
+          "alternative"
+        ]
+      }
+    },
+    "j1699590": {
+      "mn": [
+        "бариул"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "手掛",
+        "r": "てかけ",
+        "en": [
+          "handle"
+        ]
+      }
+    },
+    "j1658060": {
+      "mn": [
+        "бүтээгдэхүүн"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "産品",
+        "r": "さんぴん",
+        "en": [
+          "products"
+        ]
+      }
+    },
+    "j1407520": {
+      "mn": [
+        "их мөнгө",
+        "асар их",
+        "их хэмжээтэй"
+      ],
+      "topics": [
+        "quantity",
+        "work"
+      ],
+      "expected": {
+        "w": "多額",
+        "r": "たがく",
+        "en": [
+          "large (amount of money)",
+          "huge",
+          "hefty"
+        ]
+      }
+    },
+    "j2399950": {
+      "mn": [
+        "нүүлгэн шилжүүлэх газар",
+        "ил өртөх байдал",
+        "хоргодох байр"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "避難場所",
+        "r": "ひなんばしょ",
+        "en": [
+          "evacuation site",
+          "exposure",
+          "refuge shelter"
+        ]
+      }
+    },
+    "j1735120": {
+      "mn": [
+        "дайсны нутаг",
+        "дайсагнасан газар"
+      ],
+      "topics": [
+        "places",
+        "society"
+      ],
+      "expected": {
+        "w": "敵地",
+        "r": "てきち",
+        "en": [
+          "enemy territory",
+          "hostile place"
+        ]
+      }
+    },
+    "j2827272": {
+      "mn": [
+        "зөв",
+        "зөвөөр",
+        "зохистойгоор"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "正しく",
+        "r": "ただしく",
+        "en": [
+          "right",
+          "rightly",
+          "properly"
+        ]
+      }
+    },
+    "j1537700": {
+      "mn": [
+        "эр",
+        "нөхөр",
+        "залуу"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "野郎",
+        "r": "やろう",
+        "en": [
+          "guy",
+          "fellow",
+          "chap"
+        ]
+      }
+    },
+    "j1677260": {
+      "mn": [
+        "төрийн албаны шалгалт"
+      ],
+      "topics": [
+        "learning",
+        "work"
+      ],
+      "expected": {
+        "w": "公務員試験",
+        "r": "こうむいんしけん",
+        "en": [
+          "civil service examination"
+        ]
+      }
+    },
+    "j1966420": {
+      "mn": [
+        "ам.долларын ханш буурах"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "ドル安",
+        "r": "ドルやす",
+        "en": [
+          "cheap dollar"
+        ]
+      }
+    },
+    "j1602810": {
+      "mn": [
+        "хөөрхий",
+        "өрөвдөлтэй",
+        "хөөрхийлөлтэй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "不便",
+        "r": "ふびん",
+        "en": [
+          "poor",
+          "pitiful",
+          "piteous"
+        ]
+      }
+    },
+    "j1505420": {
+      "mn": [
+        "шууд утгатай",
+        "үгчилбэл"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "文字通り",
+        "r": "もじどおり",
+        "en": [
+          "literal",
+          "literally"
+        ]
+      }
+    },
+    "j2727760": {
+      "mn": [
+        "бэлэн галын хүч",
+        "байлдаанд бэлэн хүчин",
+        "шууд хэрэг болох ажилтан"
+      ],
+      "topics": [
+        "society",
+        "work"
+      ],
+      "expected": {
+        "w": "即戦力",
+        "r": "そくせんりょく",
+        "en": [
+          "ready fire-power",
+          "battle-ready forces",
+          "immediate asset (to a team or firm)"
+        ]
+      }
+    },
+    "j1332810": {
+      "mn": [
+        "төгсгөл",
+        "хаалт"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "終結",
+        "r": "しゅうけつ",
+        "en": [
+          "end",
+          "close"
+        ]
+      }
+    }
+  }
+}

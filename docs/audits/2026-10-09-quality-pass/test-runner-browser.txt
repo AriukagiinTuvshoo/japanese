@@ -1,0 +1,13 @@
+
+> nihongo-dojo@3.0.0 test:runner-browser
+> node scripts/test-runner-browser.mjs
+
+6:10:05 AM [vite] http proxy error: /api/health
+Error: connect ECONNREFUSED 127.0.0.1:8787
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+6:10:05 AM [vite] http proxy error: /api/health
+Error: connect ECONNREFUSED 127.0.0.1:8787
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+Real React runner: keyboard focus guard, hidden-answer styling, live language state, timeout exactly-once callback/log and retry passed.

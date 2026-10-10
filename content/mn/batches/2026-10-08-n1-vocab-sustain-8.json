@@ -1,0 +1,1097 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-sustain-8-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses cross-checked against exact Japanese spelling, reading and retained English; explicit semantic topic assignments. Independent human review outstanding; suspect sources withheld.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n1.json JMdict-derived records at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j1238090": {
+      "mn": [
+        "аюул занал",
+        "сүрдүүлэг"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "脅威",
+        "r": "きょうい",
+        "en": [
+          "threat",
+          "menace"
+        ]
+      }
+    },
+    "j1381160": {
+      "mn": [
+        "үнэхээр",
+        "нээрээ",
+        "гарцаагүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "誠に",
+        "r": "まことに",
+        "en": [
+          "indeed",
+          "really",
+          "absolutely"
+        ]
+      }
+    },
+    "j1816860": {
+      "mn": [
+        "зүлэг хадах"
+      ],
+      "topics": [
+        "work",
+        "nature"
+      ],
+      "expected": {
+        "w": "芝刈",
+        "r": "しばかり",
+        "en": [
+          "lawn mowing"
+        ]
+      }
+    },
+    "j2218960": {
+      "mn": [
+        "хөрш"
+      ],
+      "topics": [
+        "people",
+        "relationships"
+      ],
+      "expected": {
+        "w": "お隣さん",
+        "r": "おとなりさん",
+        "en": [
+          "neighbor"
+        ]
+      }
+    },
+    "j1176710": {
+      "mn": [
+        "дагуу",
+        "хажуугаар",
+        "зэрэгцэн"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "沿って",
+        "r": "そって",
+        "en": [
+          "along",
+          "by",
+          "parallel to"
+        ]
+      }
+    },
+    "j1328960": {
+      "mn": [
+        "утга",
+        "өнгө аяс",
+        "гол санаа"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "趣き",
+        "r": "おもむき",
+        "en": [
+          "meaning",
+          "tenor",
+          "gist"
+        ]
+      }
+    },
+    "j1260650": {
+      "mn": [
+        "микроскопын",
+        "нүдэнд үл үзэгдэх жижиг"
+      ],
+      "topics": [
+        "descriptions",
+        "learning"
+      ],
+      "expected": {
+        "w": "顕微",
+        "r": "けんび",
+        "en": [
+          "microscopic"
+        ]
+      }
+    },
+    "j1156880": {
+      "mn": [
+        "тайтгарал",
+        "тайтгаруулалт",
+        "анхаарал өөр тийш хандуулах"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "慰め",
+        "r": "なぐさめ",
+        "en": [
+          "comfort",
+          "consolation",
+          "diversion"
+        ]
+      }
+    },
+    "j2215300": {
+      "mn": [
+        "… дагуу",
+        "… зэрэгцэн",
+        "… нийцүүлэн"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "に沿って",
+        "r": "にそって",
+        "en": [
+          "along",
+          "parallel to",
+          "in accordance with"
+        ]
+      }
+    },
+    "j1630260": {
+      "mn": [
+        "сүрдүүлэг",
+        "шувуу үргээх төхөөрөмж"
+      ],
+      "topics": [
+        "society",
+        "nature"
+      ],
+      "expected": {
+        "w": "脅し",
+        "r": "おどし",
+        "en": [
+          "threat",
+          "bird-scaring device (scarecrow, gun, etc.)"
+        ]
+      }
+    },
+    "j1280250": {
+      "mn": [
+        "үр нөлөө",
+        "үр дүн",
+        "үнэ цэнэ"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "甲斐",
+        "r": "かい",
+        "en": [
+          "effect",
+          "result",
+          "worth"
+        ]
+      }
+    },
+    "j1533730": {
+      "mn": [
+        "ширэнгэ",
+        "модон төгөл",
+        "бутан ширэнгэ"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "茂み",
+        "r": "しげみ",
+        "en": [
+          "thicket",
+          "coppice",
+          "brushwood"
+        ]
+      }
+    },
+    "j1238720": {
+      "mn": [
+        "гайхшрал",
+        "бишрэл",
+        "бишрэн гайхах"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "驚嘆",
+        "r": "きょうたん",
+        "en": [
+          "wonder",
+          "admiration",
+          "being struck with admiration"
+        ]
+      }
+    },
+    "j1613270": {
+      "mn": [
+        "нас барагсдын сүнсийг тайтгаруулах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "慰霊",
+        "r": "いれい",
+        "en": [
+          "consoling the spirits of the dead"
+        ]
+      }
+    },
+    "j1238690": {
+      "mn": [
+        "гайхалтай",
+        "гайхамшигтай",
+        "гайхшруулмаар"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "驚くべき",
+        "r": "おどろくべき",
+        "en": [
+          "astonishing",
+          "amazing",
+          "surprising"
+        ]
+      }
+    },
+    "j2629050": {
+      "mn": [
+        "гайхшруулах",
+        "айлгах",
+        "шуугиан тарих"
+      ],
+      "topics": [
+        "feelings",
+        "actions"
+      ],
+      "expected": {
+        "w": "驚かせる",
+        "r": "おどろかせる",
+        "en": [
+          "to surprise",
+          "to frighten",
+          "to create a stir"
+        ]
+      }
+    },
+    "j1830690": {
+      "mn": [
+        "бурхдад өргөх тахил",
+        "золиос",
+        "бурууг тохсон хүн"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "犠牲",
+        "r": "いけにえ",
+        "en": [
+          "sacrifice (to the gods)",
+          "victim",
+          "scapegoat"
+        ]
+      }
+    },
+    "j1587620": {
+      "mn": [
+        "дургүйхэн",
+        "цааргалан",
+        "хүсэлгүйгээр"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "嫌々",
+        "r": "いやいや",
+        "en": [
+          "unwillingly",
+          "grudgingly",
+          "reluctantly"
+        ]
+      }
+    },
+    "j2796330": {
+      "mn": [
+        "дургүйцэл",
+        "үзэн ядалт",
+        "айдас"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "嫌い",
+        "r": "ぎらい",
+        "en": [
+          "dislike",
+          "hatred",
+          "fear"
+        ]
+      }
+    },
+    "j1630270": {
+      "mn": [
+        "сүрдүүлэг"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "脅かし",
+        "r": "おどかし",
+        "en": [
+          "threat"
+        ]
+      }
+    },
+    "j1521720": {
+      "mn": [
+        "үндсээр нь устгах",
+        "бүрэн арилгах",
+        "сүйтгэл"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "撲滅",
+        "r": "ぼくめつ",
+        "en": [
+          "eradication",
+          "extermination",
+          "destruction"
+        ]
+      }
+    },
+    "j1004570": {
+      "mn": [
+        "бүгдээрээ",
+        "бүхэлд нь"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "尽く",
+        "r": "ことごとく",
+        "en": [
+          "altogether",
+          "entirely"
+        ]
+      }
+    },
+    "j1521410": {
+      "mn": [
+        "бид"
+      ],
+      "topics": [
+        "people",
+        "learning"
+      ],
+      "expected": {
+        "w": "僕ら",
+        "r": "ぼくら",
+        "en": [
+          "we"
+        ]
+      }
+    },
+    "j1614060": {
+      "mn": [
+        "гулгах",
+        "халтирах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "滑り",
+        "r": "すべり",
+        "en": [
+          "sliding",
+          "slipping"
+        ]
+      }
+    },
+    "j2529990": {
+      "mn": [
+        "дурсгалын хөшөө",
+        "нас барагсдын дурсгалын хөшөө"
+      ],
+      "topics": [
+        "society",
+        "places"
+      ],
+      "expected": {
+        "w": "慰霊碑",
+        "r": "いれいひ",
+        "en": [
+          "cenotaph",
+          "memorial monument"
+        ]
+      }
+    },
+    "j1557360": {
+      "mn": [
+        "хөшүүрэг",
+        "урам өгөх зүйл"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "励み",
+        "r": "はげみ",
+        "en": [
+          "stimulus",
+          "incentive"
+        ]
+      }
+    },
+    "j1151160": {
+      "mn": [
+        "болзоо",
+        "нууц уулзалт"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "逢瀬",
+        "r": "おうせ",
+        "en": [
+          "rendezvous",
+          "tryst"
+        ]
+      }
+    },
+    "j1854350": {
+      "mn": [
+        "нөөц",
+        "хадгалсан зүйл",
+        "барааны нөөц"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "蓄え",
+        "r": "たくわえ",
+        "en": [
+          "store",
+          "reserve",
+          "stock"
+        ]
+      }
+    },
+    "j1194430": {
+      "mn": [
+        "орлого",
+        "олсон мөнгө"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "稼ぎ",
+        "r": "かせぎ",
+        "en": [
+          "earnings"
+        ]
+      }
+    },
+    "j1290790": {
+      "mn": [
+        "өдөөн турхирах",
+        "уруу татах",
+        "ятган татах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "唆す",
+        "r": "そそのかす",
+        "en": [
+          "to instigate",
+          "to tempt",
+          "to entice"
+        ]
+      }
+    },
+    "j1901610": {
+      "mn": [
+        "урамшуулал",
+        "зоригжуулалт"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "励まし",
+        "r": "はげまし",
+        "en": [
+          "encouragement (as an abstract concept)",
+          "stimulation"
+        ]
+      }
+    },
+    "j1562520": {
+      "mn": [
+        "хахууль",
+        "авлига"
+      ],
+      "topics": [
+        "society",
+        "work"
+      ],
+      "expected": {
+        "w": "賄賂",
+        "r": "わいろ",
+        "en": [
+          "bribe",
+          "sweetener",
+          "douceur"
+        ]
+      }
+    },
+    "j2181900": {
+      "mn": [
+        "… хандлагатай байх",
+        "… магадлалтай байх",
+        "… шинж бага зэрэг байх"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "嫌いがある",
+        "r": "きらいがある",
+        "en": [
+          "to have a tendency to",
+          "to be liable to",
+          "to have a touch of"
+        ]
+      }
+    },
+    "j2789850": {
+      "mn": [
+        "шархны тав",
+        "хавдар",
+        "хөөсөн байдал"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "膨れ",
+        "r": "ふくれ",
+        "en": [
+          "scab",
+          "swelling",
+          "puffiness"
+        ]
+      }
+    },
+    "j1560850": {
+      "mn": [
+        "алдагдал",
+        "орхигдсон зүйл",
+        "анзаараагүй алдаа"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "漏れ",
+        "r": "もれ",
+        "en": [
+          "leakage",
+          "omission",
+          "oversight"
+        ]
+      }
+    },
+    "j1545490": {
+      "mn": [
+        "шарах",
+        "шарсан хоол"
+      ],
+      "topics": [
+        "food"
+      ],
+      "expected": {
+        "w": "揚げ",
+        "r": "あげ",
+        "en": [
+          "frying",
+          "fried food"
+        ]
+      }
+    },
+    "j1585790": {
+      "mn": [
+        "догшин",
+        "ширүүн",
+        "хэрцгий"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "どう猛",
+        "r": "どうもう",
+        "en": [
+          "ferocious",
+          "fierce",
+          "truculent"
+        ]
+      }
+    },
+    "j1467500": {
+      "mn": [
+        "тэсвэр",
+        "тууштай байдал",
+        "тэвчээр"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "忍耐",
+        "r": "にんたい",
+        "en": [
+          "endurance",
+          "perseverance",
+          "patience"
+        ]
+      }
+    },
+    "j1204400": {
+      "mn": [
+        "ерөнхийдөө",
+        "гол төлөв"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "概して",
+        "r": "がいして",
+        "en": [
+          "generally",
+          "as a rule"
+        ]
+      }
+    },
+    "j2081300": {
+      "mn": [
+        "дулаан",
+        "зөөлөн",
+        "найрсаг"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "暖か",
+        "r": "あたたか",
+        "en": [
+          "warm",
+          "mild",
+          "genial"
+        ]
+      }
+    },
+    "j1229650": {
+      "mn": [
+        "уйлах",
+        "гашуудах"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "泣き",
+        "r": "なき",
+        "en": [
+          "weeping",
+          "lamenting"
+        ]
+      }
+    },
+    "j1206350": {
+      "mn": [
+        "таславч",
+        "ялгаа"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "隔て",
+        "r": "へだて",
+        "en": [
+          "partition",
+          "distinction"
+        ]
+      }
+    },
+    "j1517740": {
+      "mn": [
+        "муу",
+        "хангалтгүй",
+        "таатай бус"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "芳しくない",
+        "r": "かんばしくない",
+        "en": [
+          "poor",
+          "not satisfactory",
+          "undesirable"
+        ]
+      }
+    },
+    "j2410480": {
+      "mn": [
+        "нас барах",
+        "үхэх",
+        "алга болох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "没す",
+        "r": "もっす",
+        "en": [
+          "to pass away",
+          "to die",
+          "to disappear"
+        ]
+      }
+    },
+    "j1865020": {
+      "mn": [
+        "араар нь",
+        "нууцаар"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "陰で",
+        "r": "かげで",
+        "en": [
+          "behind one's back"
+        ]
+      }
+    },
+    "j2409170": {
+      "mn": [
+        "үл үзэгдэн",
+        "нууцаар",
+        "хувиараа"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "陰に",
+        "r": "いんに",
+        "en": [
+          "invisibly",
+          "secretly",
+          "privately"
+        ]
+      }
+    },
+    "j2835838": {
+      "mn": [
+        "асуулт",
+        "лавлагаа",
+        "асуух"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "尋ね",
+        "r": "たずね",
+        "en": [
+          "question",
+          "inquiry",
+          "asking"
+        ]
+      }
+    },
+    "j2016900": {
+      "mn": [
+        "бүрхүүл",
+        "цас мод зэрэг бүрхсэн зүйл"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "覆われ",
+        "r": "おおわれ",
+        "en": [
+          "cover (e.g. of snow, trees, etc.)"
+        ]
+      }
+    },
+    "j2013080": {
+      "mn": [
+        "живэх",
+        "доош орох",
+        "нар жаргах"
+      ],
+      "topics": [
+        "actions",
+        "nature"
+      ],
+      "expected": {
+        "w": "没する",
+        "r": "ぼっする",
+        "en": [
+          "to sink",
+          "to go down",
+          "to set"
+        ]
+      }
+    },
+    "j1521860": {
+      "mn": [
+        "хонины аж ахуй"
+      ],
+      "topics": [
+        "work",
+        "nature"
+      ],
+      "expected": {
+        "w": "牧羊",
+        "r": "ぼくよう",
+        "en": [
+          "sheep farming"
+        ]
+      }
+    },
+    "j2846266": {
+      "mn": [
+        "асуух",
+        "лавлах",
+        "эрж хайх"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "お尋ね",
+        "r": "おたずね",
+        "en": [
+          "asking",
+          "enquiring",
+          "searching"
+        ]
+      }
+    },
+    "j1237480": {
+      "mn": [
+        "галзуурал",
+        "солиорол",
+        "жигд бус байдал"
+      ],
+      "topics": [
+        "body",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "狂い",
+        "r": "くるい",
+        "en": [
+          "madness",
+          "insanity",
+          "irregularity"
+        ]
+      }
+    },
+    "j1852830": {
+      "mn": [
+        "сулрал",
+        "тураал",
+        "доройтол"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "衰え",
+        "r": "おとろえ",
+        "en": [
+          "weakening",
+          "emaciation",
+          "decline"
+        ]
+      }
+    },
+    "j1448380": {
+      "mn": [
+        "гол хүн",
+        "улсын тулгуур",
+        "гол түшиг"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "棟梁",
+        "r": "とうりょう",
+        "en": [
+          "central figure",
+          "pillar (e.g. of the nation)",
+          "mainstay"
+        ]
+      }
+    },
+    "j1519110": {
+      "mn": [
+        "саад",
+        "тээг"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "妨げ",
+        "r": "さまたげ",
+        "en": [
+          "obstruction",
+          "hindrance"
+        ]
+      }
+    },
+    "j1557790": {
+      "mn": [
+        "сүнс",
+        "сүлд"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "霊魂",
+        "r": "れいこん",
+        "en": [
+          "soul",
+          "spirit"
+        ]
+      }
+    },
+    "j1049260": {
+      "mn": [
+        "кофены үр"
+      ],
+      "topics": [
+        "food"
+      ],
+      "expected": {
+        "w": "コーヒー豆",
+        "r": "コーヒーまめ",
+        "en": [
+          "coffee bean"
+        ]
+      }
+    },
+    "j1270760": {
+      "mn": [
+        "харах",
+        "ажиглах",
+        "үзэх (хүндэтгэлийн хэллэг)"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "ご覧",
+        "r": "ごらん",
+        "en": [
+          "seeing",
+          "looking",
+          "watching"
+        ]
+      }
+    },
+    "j2133230": {
+      "mn": [
+        "дотнын",
+        "санасан",
+        "үгүйлсэн"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "懐かし",
+        "r": "なつかし",
+        "en": [
+          "dear",
+          "desired",
+          "missed"
+        ]
+      }
+    },
+    "j1184460": {
+      "mn": [
+        "буулгах",
+        "ачаа буулгах",
+        "авах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "卸し",
+        "r": "おろし",
+        "en": [
+          "dropping",
+          "unloading",
+          "removing"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,1792 @@
+{
+  "provenance": {
+    "id": "mn-n5-support-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian examples and formation explanations checked against retained Japanese and English. Compiled into Japanese sentence keys with source guards. No independent review claimed.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/grammar/n5.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "grammar": {
+    "wa": {
+      "formMn": "Нэр үг + は（уншлага: わ）. Ярианы сэдвийг заана; заавал үйлдэгч байх албагүй.",
+      "examples": {
+        "私は学生です。": {
+          "en": "I am a student.",
+          "mn": "Би оюутан."
+        },
+        "今日は天気がいいです。": {
+          "en": "The weather is nice today.",
+          "mn": "Өнөөдөр цаг агаар сайхан байна."
+        },
+        "この本はおもしろいです。": {
+          "en": "This book is interesting.",
+          "mn": "Энэ ном сонирхолтой."
+        }
+      },
+      "expected": {
+        "p": "〜は",
+        "en": "as for; marks the topic of the sentence",
+        "form": "Noun + は"
+      }
+    },
+    "ga-subject": {
+      "formMn": "Нэр үг + が. Үйлдэгч эсвэл төлөвийн эзнийг зааж, хэн эсвэл юу гэдгийг тодруулна.",
+      "examples": {
+        "雨が降っています。": {
+          "en": "It is raining.",
+          "mn": "Бороо орж байна."
+        },
+        "だれが窓を開けましたか。": {
+          "en": "Who opened the window?",
+          "mn": "Хэн цонх онгойлгосон бэ?"
+        },
+        "私が行きます。": {
+          "en": "I'll be the one to go.",
+          "mn": "Би явъя."
+        }
+      },
+      "expected": {
+        "p": "〜が（subject）",
+        "en": "marks the subject; points out new or focused information",
+        "form": "Noun + が"
+      }
+    },
+    "o": {
+      "formMn": "Нэр үг + を（уншлага: お）. Үйлдлийн шууд тусагдахуун, мөн туулж өнгөрөх орон зайг зааж болно.",
+      "examples": {
+        "毎朝パンを食べます。": {
+          "en": "I eat bread every morning.",
+          "mn": "Өглөө бүр талх иддэг."
+        },
+        "姉は新しいかばんを買いました。": {
+          "en": "My older sister bought a new bag.",
+          "mn": "Эгч шинэ цүнх худалдаж авсан."
+        },
+        "公園を散歩しました。": {
+          "en": "I took a walk in the park.",
+          "mn": "Цэцэрлэгт хүрээлэнгээр зугаалсан."
+        }
+      },
+      "expected": {
+        "p": "〜を",
+        "en": "marks the direct object of a verb; marks a place moved through or left",
+        "form": "Noun + を"
+      }
+    },
+    "ni-time": {
+      "formMn": "Тодорхой цаг, огноо заасан нэр үг + に. 今日, 明日, 毎日 зэрэг харьцангуй хугацааны үгэнд ихэвчлэн に залгахгүй.",
+      "examples": {
+        "毎朝7時に起きます。": {
+          "en": "I get up at seven every morning.",
+          "mn": "Өглөө бүр долоон цагт босдог."
+        },
+        "日曜日に友達と会います。": {
+          "en": "I'm meeting a friend on Sunday.",
+          "mn": "Ням гарагт найзтайгаа уулзана."
+        },
+        "8月に国へ帰ります。": {
+          "en": "I'm going back to my country in August.",
+          "mn": "Наймдугаар сард эх орондоо харина."
+        }
+      },
+      "expected": {
+        "p": "〜に（time）",
+        "en": "at; on; in (a specific point in time)",
+        "form": "Noun + に"
+      }
+    },
+    "ni-destination": {
+      "formMn": "Очих газар + に + 行く / 来る / 帰る зэрэг хөдөлгөөний үйл үг.",
+      "examples": {
+        "毎日バスで学校に行きます。": {
+          "en": "I go to school by bus every day.",
+          "mn": "Өдөр бүр автобусаар сургуульдаа явдаг."
+        },
+        "夜10時に家に帰りました。": {
+          "en": "I got home at 10 p.m.",
+          "mn": "Орой арван цагт гэртээ харьсан."
+        },
+        "来月、姉が日本に来ます。": {
+          "en": "My older sister is coming to Japan next month.",
+          "mn": "Ирэх сард эгч Японд ирнэ."
+        }
+      },
+      "expected": {
+        "p": "〜に（destination）",
+        "en": "to; into (the destination of movement)",
+        "form": "Noun + に + 行く / 来る / 帰る"
+      }
+    },
+    "ni-location": {
+      "formMn": "Байрлал заасан нэр үг + に + ある / いる; оршин суухыг заах 住む зэрэг үйл үгтэй ч хэрэглэнэ.",
+      "examples": {
+        "机の上に辞書があります。": {
+          "en": "There is a dictionary on the desk.",
+          "mn": "Ширээн дээр толь бичиг байна."
+        },
+        "姉は東京に住んでいます。": {
+          "en": "My older sister lives in Tokyo.",
+          "mn": "Эгч Токиод амьдардаг."
+        },
+        "猫は今どこにいますか。": {
+          "en": "Where is the cat now?",
+          "mn": "Муур одоо хаана байна вэ?"
+        }
+      },
+      "expected": {
+        "p": "〜に（place of existence）",
+        "en": "in; at; on (where someone or something is)",
+        "form": "Noun + に + ある / いる"
+      }
+    },
+    "ni-indirect-object": {
+      "formMn": "Хүлээн авагч, үйлдэл чиглэх хүнийг заасан нэр үг + に.",
+      "examples": {
+        "母に手紙を書きます。": {
+          "en": "I'm going to write a letter to my mother.",
+          "mn": "Ээждээ захидал бичнэ."
+        },
+        "妹に本を貸しました。": {
+          "en": "I lent a book to my younger sister.",
+          "mn": "Охин дүүдээ ном зээлүүлсэн."
+        },
+        "友達に電話をかけました。": {
+          "en": "I called my friend.",
+          "mn": "Найз руугаа утсаар залгасан."
+        }
+      },
+      "expected": {
+        "p": "〜に（indirect object）",
+        "en": "to (the person who receives or is the target of an action)",
+        "form": "Noun + に"
+      }
+    },
+    "ni-frequency": {
+      "formMn": "Хугацааны нэгж + に + давтамжийн тоо. Жишээ: 一週間に二回（долоо хоногт хоёр удаа）.",
+      "examples": {
+        "一週間に二回、プールで泳ぎます。": {
+          "en": "I swim in the pool twice a week.",
+          "mn": "Долоо хоногт хоёр удаа усан санд сэлдэг."
+        },
+        "母は一日に二回、犬の散歩をします。": {
+          "en": "My mother walks the dog twice a day.",
+          "mn": "Ээж өдөрт хоёр удаа нохойгоо салхилуулдаг."
+        },
+        "一年に一度、家族で旅行します。": {
+          "en": "Once a year, my family goes on a trip.",
+          "mn": "Жилд нэг удаа гэр бүлээрээ аялдаг."
+        }
+      },
+      "expected": {
+        "p": "〜に（frequency）",
+        "en": "per; in (how many times within a period)",
+        "form": "Noun + に + Noun"
+      }
+    },
+    "e": {
+      "formMn": "Очих чиглэл, газар заасан нэр үг + へ（уншлага: え）.",
+      "examples": {
+        "夏休みに北海道へ行きます。": {
+          "en": "I'm going to Hokkaido during summer vacation.",
+          "mn": "Зуны амралтаар Хоккайдо руу явна."
+        },
+        "来週、国へ帰ります。": {
+          "en": "I'm going back to my home country next week.",
+          "mn": "Ирэх долоо хоногт эх орондоо харина."
+        },
+        "どこへ行きますか。": {
+          "en": "Where are you going?",
+          "mn": "Хаашаа явж байна вэ?"
+        }
+      },
+      "expected": {
+        "p": "〜へ",
+        "en": "to; toward (the direction of movement)",
+        "form": "Noun + へ"
+      }
+    },
+    "de-place": {
+      "formMn": "Үйлдэл болж буй газар + で. Зүгээр оршин буй байрлалыг заах に-ээс ялгана.",
+      "examples": {
+        "図書館で本を読みます。": {
+          "en": "I read books at the library.",
+          "mn": "Номын санд ном уншдаг."
+        },
+        "きのう、デパートでくつを買いました。": {
+          "en": "Yesterday I bought shoes at the department store.",
+          "mn": "Өчигдөр их дэлгүүрээс гутал худалдаж авсан."
+        },
+        "駅の前で友達を待ちました。": {
+          "en": "I waited for my friend in front of the station.",
+          "mn": "Буудлын өмнө найзыгаа хүлээсэн."
+        }
+      },
+      "expected": {
+        "p": "〜で（place of action）",
+        "en": "at; in (the place where an action happens)",
+        "form": "Noun + で"
+      }
+    },
+    "de-means": {
+      "formMn": "Арга хэрэгсэл, унаа, хэл заасан нэр үг + で.",
+      "examples": {
+        "毎日電車で会社へ行きます。": {
+          "en": "I go to work by train every day.",
+          "mn": "Өдөр бүр галт тэргээр ажилдаа явдаг."
+        },
+        "はしでご飯を食べます。": {
+          "en": "I eat my meals with chopsticks.",
+          "mn": "Савхаар хоол иддэг."
+        },
+        "日本語で手紙を書きました。": {
+          "en": "I wrote a letter in Japanese.",
+          "mn": "Япон хэлээр захидал бичсэн."
+        }
+      },
+      "expected": {
+        "p": "〜で（means）",
+        "en": "by; with; in (means, tool, method or language)",
+        "form": "Noun + で"
+      }
+    },
+    "to-and": {
+      "formMn": "Нэр үг + と + нэр үг. Хамт нэрлэж буй зүйлсийг бүрэн жагсаана.",
+      "examples": {
+        "かばんの中にペンとノートがあります。": {
+          "en": "There is a pen and a notebook in my bag.",
+          "mn": "Цүнхэнд үзэг, дэвтэр байна."
+        },
+        "朝ご飯にパンとたまごを食べました。": {
+          "en": "I had bread and eggs for breakfast.",
+          "mn": "Өглөөний хоолонд талх, өндөг идсэн."
+        },
+        "父と母は銀行で働いています。": {
+          "en": "My father and mother work at a bank.",
+          "mn": "Аав, ээж хоёр банкинд ажилладаг."
+        }
+      },
+      "expected": {
+        "p": "〜と（and）",
+        "en": "and (joining nouns in a complete list)",
+        "form": "Noun + と + Noun"
+      }
+    },
+    "to-with": {
+      "formMn": "Хамтрагч хүнийг заасан нэр үг + と.",
+      "examples": {
+        "週末、友達と映画を見ました。": {
+          "en": "I saw a movie with a friend on the weekend.",
+          "mn": "Амралтын өдрөөр найзтайгаа кино үзсэн."
+        },
+        "妹といっしょに買い物に行きます。": {
+          "en": "I'm going shopping with my younger sister.",
+          "mn": "Охин дүүтэйгээ дэлгүүр хэсэхээр явна."
+        },
+        "だれと昼ご飯を食べましたか。": {
+          "en": "Who did you have lunch with?",
+          "mn": "Хэнтэй өдрийн хоол идсэн бэ?"
+        }
+      },
+      "expected": {
+        "p": "〜と（with）",
+        "en": "with; together with (a partner in an action)",
+        "form": "Noun + と"
+      }
+    },
+    "ya": {
+      "formMn": "Нэр үг + や + нэр үг. Зарим зүйлийг жишээ болгон нэрлэнэ; жагсаалт үүгээр дуусахгүй.",
+      "examples": {
+        "机の上に本や雑誌があります。": {
+          "en": "On the desk there are books, magazines and so on.",
+          "mn": "Ширээн дээр ном, сэтгүүл зэрэг зүйл байна."
+        },
+        "スーパーで肉や野菜を買いました。": {
+          "en": "I bought meat, vegetables and other things at the supermarket.",
+          "mn": "Супермаркетаас мах, ногоо зэрэг зүйл худалдаж авсан."
+        }
+      },
+      "expected": {
+        "p": "〜や",
+        "en": "and (giving some examples out of more); ... and so on",
+        "form": "Noun + や + Noun"
+      }
+    },
+    "ka-or": {
+      "formMn": "Нэр үг + か + нэр үг. Сонгох хувилбаруудыг холбоно.",
+      "examples": {
+        "飲み物はコーヒーか紅茶がいいです。": {
+          "en": "For a drink, coffee or tea would be good.",
+          "mn": "Уух юм гэвэл кофе эсвэл хар цай байвал зүгээр."
+        },
+        "土曜日か日曜日に買い物に行きます。": {
+          "en": "I'll go shopping on Saturday or Sunday.",
+          "mn": "Бямба эсвэл ням гарагт дэлгүүр явна."
+        },
+        "駅までバスかタクシーで行きます。": {
+          "en": "I'll go to the station by bus or taxi.",
+          "mn": "Буудал хүртэл автобус эсвэл таксигаар явна."
+        }
+      },
+      "expected": {
+        "p": "〜か（or）",
+        "en": "or (a choice between nouns)",
+        "form": "Noun + か + Noun"
+      }
+    },
+    "mo": {
+      "formMn": "Нэр үг + も. は, が, を-г орлож болно; に, で зэрэг бусад холбоосын дараа орж болно.",
+      "examples": {
+        "私も学生です。": {
+          "en": "I'm a student too.",
+          "mn": "Би ч бас оюутан."
+        },
+        "兄はサッカーも好きです。": {
+          "en": "My older brother likes soccer too.",
+          "mn": "Ах маань хөлбөмбөгт ч бас дуртай."
+        },
+        "肉も魚も食べません。": {
+          "en": "I eat neither meat nor fish.",
+          "mn": "Мах ч, загас ч иддэггүй."
+        }
+      },
+      "expected": {
+        "p": "〜も",
+        "en": "also; too; (with a negative) not ... either; neither ... nor",
+        "form": "Noun + も"
+      }
+    },
+    "no": {
+      "formMn": "Нэр үг + の + нэр үг. Эзэмшил, харьяалал, төрөл болон бусад тодотгох холбоог үүсгэнэ.",
+      "examples": {
+        "これは私のかさです。": {
+          "en": "This is my umbrella.",
+          "mn": "Энэ миний шүхэр."
+        },
+        "日本語の先生はとてもやさしいです。": {
+          "en": "The Japanese teacher is very kind.",
+          "mn": "Япон хэлний багш их сайхан сэтгэлтэй."
+        },
+        "駅の近くに新しい店があります。": {
+          "en": "There is a new shop near the station.",
+          "mn": "Буудлын ойролцоо шинэ дэлгүүр бий."
+        }
+      },
+      "expected": {
+        "p": "〜の（possessive）",
+        "en": "'s; of (possession, belonging or description)",
+        "form": "Noun + の + Noun"
+      }
+    },
+    "kara-from": {
+      "formMn": "Эхлэх цаг, газар заасан нэр үг + から.",
+      "examples": {
+        "授業は9時からです。": {
+          "en": "Class starts at nine.",
+          "mn": "Хичээл есөн цагаас эхэлнэ."
+        },
+        "学校から駅まで歩きます。": {
+          "en": "I walk from school to the station.",
+          "mn": "Сургуулиас буудал хүртэл алхдаг."
+        },
+        "私はブラジルから来ました。": {
+          "en": "I'm from Brazil.",
+          "mn": "Би Бразилаас ирсэн."
+        }
+      },
+      "expected": {
+        "p": "〜から（from）",
+        "en": "from (a starting point in time or place)",
+        "form": "Noun + から"
+      }
+    },
+    "made": {
+      "formMn": "Төгсөх цаг, хүрэх газар заасан нэр үг + まで. Эцсийн хугацаанд хийж дуусгахыг заах までに-тай ялгана.",
+      "examples": {
+        "昼休みは1時までです。": {
+          "en": "Lunch break is until one o'clock.",
+          "mn": "Өдрийн завсарлага нэг цаг хүртэл үргэлжилнэ."
+        },
+        "駅までいっしょに行きましょう。": {
+          "en": "Let's go together as far as the station.",
+          "mn": "Буудал хүртэл хамт явцгаая."
+        },
+        "きのうは夜11時まで勉強しました。": {
+          "en": "Yesterday I studied until 11 p.m.",
+          "mn": "Өчигдөр шөнийн арван нэгэн цаг хүртэл хичээлээ давтсан."
+        }
+      },
+      "expected": {
+        "p": "〜まで（until）",
+        "en": "until; up to; as far as",
+        "form": "Noun + まで"
+      }
+    },
+    "ka-question": {
+      "formMn": "Асуух өгүүлбэрийн төгсгөлд か залгана. Эелдэг асуултад ですか / ますか түгээмэл.",
+      "examples": {
+        "これはあなたのかばんですか。": {
+          "en": "Is this your bag?",
+          "mn": "Энэ таны цүнх үү?"
+        },
+        "朝ご飯を食べましたか。": {
+          "en": "Did you eat breakfast?",
+          "mn": "Өглөөний хоол идсэн үү?"
+        },
+        "トイレはどこですか。": {
+          "en": "Where is the restroom?",
+          "mn": "Ариун цэврийн өрөө хаана вэ?"
+        }
+      },
+      "expected": {
+        "p": "〜か（question）",
+        "en": "(question marker) turns a sentence into a question",
+        "form": "Sentence + か"
+      }
+    },
+    "ne": {
+      "formMn": "Өгүүлбэрийн төгсгөл + ね. Сонсогчтой санал нийлэх, баталгаажуулах өнгө аяс нэмнэ.",
+      "examples": {
+        "今日は暑いですね。": {
+          "en": "It's hot today, isn't it?",
+          "mn": "Өнөөдөр халуун байна, тийм ээ?"
+        },
+        "このケーキ、おいしいですね。": {
+          "en": "This cake is delicious, isn't it?",
+          "mn": "Энэ бялуу амттай юм аа, тийм ээ?"
+        },
+        "明日のテストは10時からですね。": {
+          "en": "Tomorrow's test starts at ten, right?",
+          "mn": "Маргаашийн шалгалт арван цагаас эхэлнэ, тийм ээ?"
+        }
+      },
+      "expected": {
+        "p": "〜ね",
+        "en": "isn't it?; right? (seeking agreement or sharing a feeling)",
+        "form": "Sentence + ね"
+      }
+    },
+    "yo": {
+      "formMn": "Өгүүлбэрийн төгсгөл + よ. Сонсогчид мэдээллийг сануулах, шинээр хэлэх эсвэл онцлох өнгө аяс нэмнэ.",
+      "examples": {
+        "このラーメンはとてもおいしいですよ。": {
+          "en": "This ramen is really good, you know.",
+          "mn": "Энэ рамен маш амттай шүү."
+        },
+        "かさを忘れていますよ。": {
+          "en": "You're forgetting your umbrella.",
+          "mn": "Шүхрээ мартчихлаа шүү."
+        },
+        "明日はテストがありますよ。": {
+          "en": "There's a test tomorrow, you know.",
+          "mn": "Маргааш шалгалттай шүү."
+        }
+      },
+      "expected": {
+        "p": "〜よ",
+        "en": "you know; I tell you (giving new information or emphasis)",
+        "form": "Sentence + よ"
+      }
+    },
+    "yori": {
+      "formMn": "Харьцуулах суурь нэр үг + より. Дараа нь шинж эсвэл үйлдлийн ялгааг хэлнэ.",
+      "examples": {
+        "今日はきのうより寒いです。": {
+          "en": "Today is colder than yesterday.",
+          "mn": "Өнөөдөр өчигдрөөс хүйтэн байна."
+        },
+        "電車はバスより速いです。": {
+          "en": "Trains are faster than buses.",
+          "mn": "Галт тэрэг автобуснаас хурдан."
+        },
+        "兄は父より背が高いです。": {
+          "en": "My older brother is taller than my father.",
+          "mn": "Ах маань ааваас өндөр."
+        }
+      },
+      "expected": {
+        "p": "〜より",
+        "en": "than (the standard of comparison)",
+        "form": "Noun + より"
+      }
+    },
+    "no-hou-ga-yori": {
+      "formMn": "Илүү гэж буй зүйл + の方が + харьцуулах зүйл + より + шинж. より-той хэсгийг урд нь байрлуулж бас болно.",
+      "examples": {
+        "犬の方が猫より好きです。": {
+          "en": "I like dogs more than cats.",
+          "mn": "Би муурнаас илүү нохойд дуртай."
+        },
+        "東京の方が大阪より人が多いです。": {
+          "en": "Tokyo has more people than Osaka.",
+          "mn": "Токио Осакагаас олон хүнтэй."
+        },
+        "夏より冬の方が好きです。": {
+          "en": "I like winter better than summer.",
+          "mn": "Би зунаас илүү өвөлд дуртай."
+        }
+      },
+      "expected": {
+        "p": "〜の方が〜より",
+        "en": "X is more ... than Y",
+        "form": "Noun + の方が + Noun + より"
+      }
+    },
+    "to-to-dochira-ga": {
+      "formMn": "Нэр үг + と + нэр үг + とどちらが + шинж + ですか. Хоёр сонголтыг харьцуулан асууна.",
+      "examples": {
+        "コーヒーと紅茶とどちらが好きですか。": {
+          "en": "Which do you like better, coffee or tea?",
+          "mn": "Кофе, хар цай хоёрын алинд нь илүү дуртай вэ?"
+        },
+        "電車とバスとどちらが安いですか。": {
+          "en": "Which is cheaper, the train or the bus?",
+          "mn": "Галт тэрэг, автобус хоёрын аль нь хямд вэ?"
+        },
+        "「山と海とどちらがいいですか。」「海の方がいいです。」": {
+          "en": "\"Which is better, the mountains or the sea?\" \"The sea is better.\"",
+          "mn": "“Уул, далай хоёрын аль нь дээр вэ?” “Далай нь дээр.”"
+        }
+      },
+      "expected": {
+        "p": "〜と〜とどちらが",
+        "en": "which is more ..., X or Y?",
+        "form": "Noun + と + Noun + とどちらが"
+      }
+    },
+    "no-naka-de-ga-ichiban": {
+      "formMn": "Харьцуулах бүлэг + の中で + зүйл эсвэл хүн + が一番 + шинж. Бүлгийн дотор хамгийн илүүг заана.",
+      "examples": {
+        "果物の中でりんごが一番好きです。": {
+          "en": "Of all fruits, I like apples the most.",
+          "mn": "Жимснээс би алимд хамгийн дуртай."
+        },
+        "クラスの中でだれが一番背が高いですか。": {
+          "en": "Who is the tallest in the class?",
+          "mn": "Ангид хэн хамгийн өндөр вэ?"
+        },
+        "家族の中で父が一番早く起きます。": {
+          "en": "In my family, my father gets up the earliest.",
+          "mn": "Манай гэр бүлээс аав хамгийн эрт босдог."
+        }
+      },
+      "expected": {
+        "p": "〜の中で〜が一番",
+        "en": "... is the most ... among/of",
+        "form": "Noun + の中で + Noun + が一番"
+      }
+    },
+    "desu": {
+      "formMn": "Нэр үг / な-тэмдэг нэр / い-тэмдэг нэр + です. い-тэмдэг нэрийн дараах です нь эелдэг өнгө нэмдэг.",
+      "examples": {
+        "私はマリアです。": {
+          "en": "I'm Maria.",
+          "mn": "Би Мариа."
+        },
+        "今日は月曜日です。": {
+          "en": "Today is Monday.",
+          "mn": "Өнөөдөр даваа гараг."
+        },
+        "この部屋はとても静かです。": {
+          "en": "This room is very quiet.",
+          "mn": "Энэ өрөө маш нам гүм."
+        }
+      },
+      "expected": {
+        "p": "〜です",
+        "en": "is; am; are (polite copula)",
+        "form": "Noun + です / na-Adj + です / i-Adj + です"
+      }
+    },
+    "da": {
+      "formMn": "Нэр үг / な-тэмдэг нэр + だ. い-тэмдэг нэрийн дараа だ залгахгүй.",
+      "examples": {
+        "今日は日曜日だ。": {
+          "en": "Today is Sunday.",
+          "mn": "Өнөөдөр ням гараг."
+        },
+        "あの人は私の兄だ。": {
+          "en": "That person is my older brother.",
+          "mn": "Тэр хүн миний ах."
+        },
+        "明日は休みだから、ゆっくり寝る。": {
+          "en": "Tomorrow is a day off, so I'll sleep in.",
+          "mn": "Маргааш амралтын өдөр болохоор унтаж амарна."
+        }
+      },
+      "expected": {
+        "p": "〜だ",
+        "en": "is; am; are (plain copula)",
+        "form": "Noun + だ / na-Adj + だ"
+      }
+    },
+    "de-wa-arimasen-ja-nai": {
+      "formMn": "Нэр үг / な-тэмдэг нэр + ではありません（эелдэг）/ じゃない（энгийн яриа）. Үгүйсгэсэн холбоос хэлбэр.",
+      "examples": {
+        "私は先生ではありません。学生です。": {
+          "en": "I'm not a teacher. I'm a student.",
+          "mn": "Би багш биш. Оюутан."
+        },
+        "今日は休みじゃない。": {
+          "en": "Today isn't a day off.",
+          "mn": "Өнөөдөр амралтын өдөр биш."
+        },
+        "この町はあまりにぎやかではありません。": {
+          "en": "This town isn't very lively.",
+          "mn": "Энэ хот тийм ч хөл хөдөлгөөнтэй биш."
+        }
+      },
+      "expected": {
+        "p": "〜ではありません / 〜じゃない",
+        "en": "is not; am not; are not",
+        "form": "Noun + ではありません / na-Adj + ではありません / Noun + じゃない / na-Adj + じゃない"
+      }
+    },
+    "deshita": {
+      "formMn": "Нэр үг / な-тэмдэг нэр + でした. い-тэмдэг нэрийн өнгөрсөн цагт かったです хэрэглэнэ, でした-г шууд залгахгүй.",
+      "examples": {
+        "きのうは私の誕生日でした。": {
+          "en": "Yesterday was my birthday.",
+          "mn": "Өчигдөр миний төрсөн өдөр байсан."
+        },
+        "子どものころ、野菜がきらいでした。": {
+          "en": "When I was a child, I didn't like vegetables.",
+          "mn": "Хүүхэд байхдаа ногоонд дургүй байсан."
+        },
+        "テストはかんたんでした。": {
+          "en": "The test was easy.",
+          "mn": "Шалгалт амархан байсан."
+        }
+      },
+      "expected": {
+        "p": "〜でした",
+        "en": "was; were (polite past copula)",
+        "form": "Noun + でした / na-Adj + でした"
+      }
+    },
+    "masu": {
+      "formMn": "Үйл үгийн ます-гийн өмнөх үндэс + ます. Эелдэг одоо, ирээдүй эсвэл тогтмол үйлдэл илэрхийлнэ.",
+      "examples": {
+        "毎朝コーヒーを飲みます。": {
+          "en": "I drink coffee every morning.",
+          "mn": "Өглөө бүр кофе уудаг."
+        },
+        "明日、京都へ行きます。": {
+          "en": "I'm going to Kyoto tomorrow.",
+          "mn": "Маргааш Киото руу явна."
+        },
+        "弟は毎晩9時に寝ます。": {
+          "en": "My younger brother goes to bed at nine every night.",
+          "mn": "Эрэгтэй дүү орой бүр есөн цагт унтдаг."
+        }
+      },
+      "expected": {
+        "p": "〜ます",
+        "en": "polite non-past verb ending (do; will do)",
+        "form": "Verb-stem + ます"
+      }
+    },
+    "masen": {
+      "formMn": "Үйл үгийн ます-гүй үндэс + ません. Эелдэг үгүйсгэсэн одоо эсвэл ирээдүй цаг.",
+      "examples": {
+        "私はお酒を飲みません。": {
+          "en": "I don't drink alcohol.",
+          "mn": "Би архи уудаггүй."
+        },
+        "日曜日は学校へ行きません。": {
+          "en": "I don't go to school on Sundays.",
+          "mn": "Ням гарагт сургуульдаа явдаггүй."
+        },
+        "今晩はテレビを見ません。": {
+          "en": "I won't watch TV tonight.",
+          "mn": "Өнөө орой зурагт үзэхгүй."
+        }
+      },
+      "expected": {
+        "p": "〜ません",
+        "en": "do not; will not (polite negative)",
+        "form": "Verb-stem + ません"
+      }
+    },
+    "mashita": {
+      "formMn": "Үйл үгийн ます-гүй үндэс + ました. Эелдэг өнгөрсөн цаг.",
+      "examples": {
+        "きのう、友達に会いました。": {
+          "en": "I met a friend yesterday.",
+          "mn": "Өчигдөр найзтайгаа уулзсан."
+        },
+        "先週、新しいくつを買いました。": {
+          "en": "I bought new shoes last week.",
+          "mn": "Өнгөрсөн долоо хоногт шинэ гутал худалдаж авсан."
+        },
+        "けさ、6時に起きました。": {
+          "en": "I got up at six this morning.",
+          "mn": "Өнөө өглөө зургаан цагт боссон."
+        }
+      },
+      "expected": {
+        "p": "〜ました",
+        "en": "did (polite past)",
+        "form": "Verb-stem + ました"
+      }
+    },
+    "masen-deshita": {
+      "formMn": "Үйл үгийн ます-гүй үндэс + ませんでした. Эелдэг үгүйсгэсэн өнгөрсөн цаг.",
+      "examples": {
+        "けさは朝ご飯を食べませんでした。": {
+          "en": "I didn't eat breakfast this morning.",
+          "mn": "Өнөө өглөө өглөөний хоол идээгүй."
+        },
+        "週末は宿題をしませんでした。": {
+          "en": "I didn't do my homework over the weekend.",
+          "mn": "Амралтын өдрөөр гэрийн даалгавраа хийгээгүй."
+        },
+        "きのうは雨でしたから、出かけませんでした。": {
+          "en": "It rained yesterday, so I didn't go out.",
+          "mn": "Өчигдөр бороотой байсан тул гадагш гараагүй."
+        }
+      },
+      "expected": {
+        "p": "〜ませんでした",
+        "en": "did not (polite past negative)",
+        "form": "Verb-stem + ませんでした"
+      }
+    },
+    "nai": {
+      "formMn": "Нэгдүгээр бүлгийн төгсгөлийн う-эгшгийг あ-эгшигт шилжүүлээд ない: 書く → 書かない; う-ээр төгсвөл わない: 買う → 買わない. Хоёрдугаар бүлгийн る-г хасаад ない: 食べない. する → しない; 来る → 来ない（こない）; ある → ない.",
+      "examples": {
+        "今日は学校へ行かない。": {
+          "en": "I'm not going to school today.",
+          "mn": "Өнөөдөр сургуульдаа явахгүй."
+        },
+        "兄は肉を食べない。": {
+          "en": "My older brother doesn't eat meat.",
+          "mn": "Ах мах иддэггүй."
+        },
+        "「コーヒー、飲む？」「ううん、飲まない。」": {
+          "en": "\"Are you having coffee?\" \"No, I'm not.\"",
+          "mn": "“Кофе уух уу?” “Үгүй, уухгүй.”"
+        }
+      },
+      "expected": {
+        "p": "〜ない",
+        "en": "do not; will not (plain negative of verbs)",
+        "form": "Verb-nai stem + ない"
+      }
+    },
+    "ta": {
+      "formMn": "Үйл үгийн энгийн өнгөрсөн цагийн た / だ-хэлбэр. Хоёрдугаар бүлэгт る-г хасаад た: 食べた. Нэгдүгээр бүлэг: う・つ・る → った; む・ぶ・ぬ → んだ; く → いた; ぐ → いだ; す → した. Онцгой: 行く → 行った; する → した; 来る → 来た（きた）.",
+      "examples": {
+        "週末は家で映画を見た。": {
+          "en": "I watched a movie at home over the weekend.",
+          "mn": "Амралтын өдрөөр гэртээ кино үзсэн."
+        },
+        "駅で先生に会った。": {
+          "en": "I ran into my teacher at the station.",
+          "mn": "Буудал дээр багштайгаа тааралдсан."
+        },
+        "「昼ご飯、食べた？」「うん、もう食べた。」": {
+          "en": "\"Did you eat lunch?\" \"Yeah, I already ate.\"",
+          "mn": "“Өдрийн хоол идсэн үү?” “Тийм, аль хэдийн идсэн.”"
+        }
+      },
+      "expected": {
+        "p": "〜た",
+        "en": "did (plain past of verbs)",
+        "form": "Verb-ta"
+      }
+    },
+    "mashou": {
+      "formMn": "Үйл үгийн ます-гүй үндэс + ましょう. Хамт хийхийг эелдгээр уриална.",
+      "examples": {
+        "いっしょに行きましょう。": {
+          "en": "Let's go together.",
+          "mn": "Хамт явцгаая."
+        },
+        "少し休みましょう。": {
+          "en": "Let's take a short break.",
+          "mn": "Жаахан амарцгаая."
+        },
+        "駅の前で会いましょう。": {
+          "en": "Let's meet in front of the station.",
+          "mn": "Буудлын өмнө уулзъя."
+        }
+      },
+      "expected": {
+        "p": "〜ましょう",
+        "en": "let's (do)",
+        "form": "Verb-stem + ましょう"
+      }
+    },
+    "mashou-ka": {
+      "formMn": "Үйл үгийн ます-гүй үндэс + ましょうか. Хийж өгөх санал эсвэл хамтын төлөвлөгөө асууна.",
+      "examples": {
+        "窓を開けましょうか。": {
+          "en": "Shall I open the window?",
+          "mn": "Цонх онгойлгох уу?"
+        },
+        "荷物を持ちましょうか。": {
+          "en": "Shall I carry your bags?",
+          "mn": "Ачааг тань барьж өгөх үү?"
+        },
+        "何時に会いましょうか。": {
+          "en": "What time shall we meet?",
+          "mn": "Хэдэн цагт уулзах вэ?"
+        }
+      },
+      "expected": {
+        "p": "〜ましょうか",
+        "en": "shall I ...?; shall we ...?",
+        "form": "Verb-stem + ましょうか"
+      }
+    },
+    "masen-ka": {
+      "formMn": "Үйл үгийн ます-гүй үндэс + ませんか. Хамт хийхийг эелдгээр урьж асууна.",
+      "examples": {
+        "いっしょに昼ご飯を食べませんか。": {
+          "en": "Would you like to have lunch together?",
+          "mn": "Хамт өдрийн хоол идэхгүй юу?"
+        },
+        "日曜日にテニスをしませんか。": {
+          "en": "Would you like to play tennis on Sunday?",
+          "mn": "Ням гарагт теннис тоглохгүй юу?"
+        },
+        "明日、公園を散歩しませんか。": {
+          "en": "How about a walk in the park tomorrow?",
+          "mn": "Маргааш цэцэрлэгт хүрээлэнгээр зугаалахгүй юу?"
+        }
+      },
+      "expected": {
+        "p": "〜ませんか",
+        "en": "won't you ...?; would you like to ...? (polite invitation)",
+        "form": "Verb-stem + ませんか"
+      }
+    },
+    "tai": {
+      "formMn": "Үйл үгийн ます-гүй үндэс + たい. Өөрийн хүсэлд хэрэглэнэ; い-тэмдэг нэр шиг хувирна: たくない, たかった.",
+      "examples": {
+        "夏休みに沖縄へ行きたいです。": {
+          "en": "I want to go to Okinawa during summer vacation.",
+          "mn": "Зуны амралтаар Окинава руу явмаар байна."
+        },
+        "冷たい水が飲みたいです。": {
+          "en": "I want to drink some cold water.",
+          "mn": "Хүйтэн ус уумаар байна."
+        },
+        "何が食べたいですか。": {
+          "en": "What do you want to eat?",
+          "mn": "Юу идмээр байна вэ?"
+        }
+      },
+      "expected": {
+        "p": "〜たい",
+        "en": "want to (do)",
+        "form": "Verb-stem + たい"
+      }
+    },
+    "ga-hoshii": {
+      "formMn": "Хүсэж буй зүйлийг заасан нэр үг + がほしい. Өөрийн хүсэлд хэрэглэнэ; бусдаар үйлдэл хийлгэх хүсэлд てほしい хэрэглэдэг.",
+      "examples": {
+        "新しいパソコンがほしいです。": {
+          "en": "I want a new computer.",
+          "mn": "Шинэ компьютертой болмоор байна."
+        },
+        "誕生日に何がほしいですか。": {
+          "en": "What do you want for your birthday?",
+          "mn": "Төрсөн өдрөөрөө юу авмаар байна вэ?"
+        },
+        "今は何もほしくないです。": {
+          "en": "I don't want anything right now.",
+          "mn": "Одоо юу ч хүсэхгүй байна."
+        }
+      },
+      "expected": {
+        "p": "〜がほしい",
+        "en": "want (something)",
+        "form": "Noun + がほしい"
+      }
+    },
+    "o-kudasai": {
+      "formMn": "Хүсэж буй зүйлийг заасан нэр үг + をください.",
+      "examples": {
+        "すみません、水をください。": {
+          "en": "Excuse me, could I have some water?",
+          "mn": "Уучлаарай, ус өгнө үү."
+        },
+        "このりんごを三つください。": {
+          "en": "I'll take three of these apples, please.",
+          "mn": "Эдгээр алимнаас гурвыг өгнө үү."
+        },
+        "メニューをください。": {
+          "en": "Could I have the menu, please?",
+          "mn": "Хоолны цэс өгнө үү."
+        }
+      },
+      "expected": {
+        "p": "〜をください",
+        "en": "please give me (something); I'll have",
+        "form": "Noun + をください"
+      }
+    },
+    "te-kudasai": {
+      "formMn": "Үйл үгийн て-хэлбэр + ください. Хийх үйлдлийг эелдгээр хүсэж, зааварлана.",
+      "examples": {
+        "もう少しゆっくり話してください。": {
+          "en": "Please speak a little more slowly.",
+          "mn": "Жаахан удаан ярина уу."
+        },
+        "ここでくつをぬいでください。": {
+          "en": "Please take off your shoes here.",
+          "mn": "Энд гутлаа тайлаарай."
+        },
+        "すみません、駅までの道を教えてください。": {
+          "en": "Excuse me, could you tell me the way to the station?",
+          "mn": "Уучлаарай, буудал хүрэх замыг зааж өгнө үү."
+        }
+      },
+      "expected": {
+        "p": "〜てください",
+        "en": "please (do)",
+        "form": "Verb-te + ください"
+      }
+    },
+    "naide-kudasai": {
+      "formMn": "Үйл үгийн ない-хэлбэр + でください. Үйлдлийг хийхгүй байхыг хүснэ.",
+      "examples": {
+        "教室で食べないでください。": {
+          "en": "Please don't eat in the classroom.",
+          "mn": "Ангид хоол бүү идээрэй."
+        },
+        "この部屋に入らないでください。": {
+          "en": "Please don't go into this room.",
+          "mn": "Энэ өрөөнд битгий ороорой."
+        },
+        "心配しないでください。": {
+          "en": "Please don't worry.",
+          "mn": "Санаа бүү зовоорой."
+        }
+      },
+      "expected": {
+        "p": "〜ないでください",
+        "en": "please don't (do)",
+        "form": "Verb-nai + でください"
+      }
+    },
+    "te-mo-ii": {
+      "formMn": "Үйл үгийн て-хэлбэр + もいい. Асуухад もいいですか: зөвшөөрөл хүснэ.",
+      "examples": {
+        "この辞書を使ってもいいですか。": {
+          "en": "May I use this dictionary?",
+          "mn": "Энэ толь бичгийг ашиглаж болох уу?"
+        },
+        "今日は早く帰ってもいいです。": {
+          "en": "You may go home early today.",
+          "mn": "Өнөөдөр эрт харьж болно."
+        },
+        "ここにすわってもいいですか。": {
+          "en": "Is it all right if I sit here?",
+          "mn": "Энд сууж болох уу?"
+        }
+      },
+      "expected": {
+        "p": "〜てもいい",
+        "en": "may; it's okay to",
+        "form": "Verb-te + もいい"
+      }
+    },
+    "te-wa-ikenai": {
+      "formMn": "Үйл үгийн て-хэлбэр + はいけない. Эелдэг хэлбэр нь はいけません. Хориглоно.",
+      "examples": {
+        "図書館で大きい声で話してはいけません。": {
+          "en": "You must not talk loudly in the library.",
+          "mn": "Номын санд чанга ярьж болохгүй."
+        },
+        "子どもはこの川で泳いではいけません。": {
+          "en": "Children must not swim in this river.",
+          "mn": "Хүүхдүүд энэ голд сэлж болохгүй."
+        },
+        "ここでたばこを吸ってはいけません。": {
+          "en": "You must not smoke here.",
+          "mn": "Энд тамхи татаж болохгүй."
+        }
+      },
+      "expected": {
+        "p": "〜てはいけない",
+        "en": "must not; may not",
+        "form": "Verb-te + はいけない"
+      }
+    },
+    "nakereba-naranai-nakute-wa-ikenai": {
+      "formMn": "Үйл үгийн ない-гүй үндэс + なければならない / なくてはいけない. Жишээ: 行かなければならない / 行かなくてはいけない.",
+      "examples": {
+        "明日は6時に起きなければなりません。": {
+          "en": "I have to get up at six tomorrow.",
+          "mn": "Маргааш зургаан цагт босох ёстой."
+        },
+        "今日は早く家に帰らなくてはいけません。": {
+          "en": "I have to go home early today.",
+          "mn": "Өнөөдөр гэртээ эрт харих хэрэгтэй."
+        },
+        "日本では、家に入る前にくつをぬがなければなりません。": {
+          "en": "In Japan, you have to take off your shoes before going into a house.",
+          "mn": "Японд гэрт орохын өмнө гутлаа тайлах ёстой."
+        }
+      },
+      "expected": {
+        "p": "〜なければならない / 〜なくてはいけない",
+        "en": "must; have to",
+        "form": "Verb-nai stem + なければならない / Verb-nai stem + なくてはいけない"
+      }
+    },
+    "nakute-mo-ii": {
+      "formMn": "Үйл үгийн ない-гүй үндэс + なくてもいい. Үйлдлийг заавал хийх шаардлагагүйг хэлнэ; хориг биш.",
+      "examples": {
+        "明日は学校へ来なくてもいいです。": {
+          "en": "You don't have to come to school tomorrow.",
+          "mn": "Маргааш сургуульдаа ирэх албагүй."
+        },
+        "名前は書かなくてもいいです。": {
+          "en": "You don't need to write your name.",
+          "mn": "Нэрээ бичих шаардлагагүй."
+        },
+        "今日は料理をしなくてもいいですよ。": {
+          "en": "You don't have to cook today.",
+          "mn": "Өнөөдөр хоол хийх албагүй шүү."
+        }
+      },
+      "expected": {
+        "p": "〜なくてもいい",
+        "en": "don't have to; need not",
+        "form": "Verb-nai stem + なくてもいい"
+      }
+    },
+    "te-iru": {
+      "formMn": "Үйл үгийн て-хэлбэр + いる. Үргэлжилж буй үйлдэл, давтагдах дадал, эсвэл үр дүнгийн төлөвийг заана. Эелдэг хэлбэр: ています.",
+      "examples": {
+        "弟は今、部屋でゲームをしています。": {
+          "en": "My younger brother is playing a game in his room now.",
+          "mn": "Эрэгтэй дүү одоо өрөөндөө тоглоом тоглож байна."
+        },
+        "姉は結婚しています。": {
+          "en": "My older sister is married.",
+          "mn": "Эгч маань гэрлэсэн."
+        },
+        "窓が開いています。": {
+          "en": "The window is open.",
+          "mn": "Цонх онгорхой байна."
+        }
+      },
+      "expected": {
+        "p": "〜ている",
+        "en": "be doing (ongoing action); be in a state (result of a change); do regularly",
+        "form": "Verb-te + いる"
+      }
+    },
+    "te": {
+      "formMn": "Үйл үгийн て-хэлбэр + дараагийн өгүүлбэр. Хоёрдугаар бүлэг: る-г хасаад て. Нэгдүгээр бүлэг: う・つ・る → って; む・ぶ・ぬ → んで; く → いて; ぐ → いで; す → して. Онцгой: 行く → 行って; する → して; 来る → 来て（きて）.",
+      "examples": {
+        "朝起きて、顔を洗います。": {
+          "en": "I get up in the morning and wash my face.",
+          "mn": "Өглөө босоод нүүрээ угаадаг."
+        },
+        "デパートへ行って、セーターを買いました。": {
+          "en": "I went to the department store and bought a sweater.",
+          "mn": "Их дэлгүүрт очоод ноосон цамц худалдаж авсан."
+        },
+        "家に帰って、晩ご飯を食べて、寝ました。": {
+          "en": "I went home, ate dinner and went to bed.",
+          "mn": "Гэртээ харьж, оройн хоол идээд унтсан."
+        }
+      },
+      "expected": {
+        "p": "〜て",
+        "en": "and; and then (linking actions in order)",
+        "form": "Verb-te + Sentence"
+      }
+    },
+    "te-kara": {
+      "formMn": "Үйл үгийн て-хэлбэр + から. Эхний үйлдэл дууссаны дараах дараалал эсвэл түүнээс хойших хугацааг заана.",
+      "examples": {
+        "手を洗ってから、ご飯を食べましょう。": {
+          "en": "Let's wash our hands and then eat.",
+          "mn": "Гараа угаасны дараа хоолоо идэцгээе."
+        },
+        "宿題をしてから、テレビを見ます。": {
+          "en": "I'll watch TV after I do my homework.",
+          "mn": "Гэрийн даалгавраа хийсний дараа зурагт үзнэ."
+        },
+        "日本に来てから、毎日日本語を勉強しています。": {
+          "en": "Since coming to Japan, I've been studying Japanese every day.",
+          "mn": "Японд ирснээсээ хойш өдөр бүр япон хэл үзэж байна."
+        }
+      },
+      "expected": {
+        "p": "〜てから",
+        "en": "after doing; (do A) and then (B); since",
+        "form": "Verb-te + から"
+      }
+    },
+    "tari-tari-suru": {
+      "formMn": "Үйл үгийн た-хэлбэр + り + өөр үйл үгийн た-хэлбэр + りする. Бүрэн бус жишээ жагсаана; эцсийн する нь цаг, эелдэг байдлаар хувирна.",
+      "examples": {
+        "日曜日はそうじをしたり、洗濯をしたりします。": {
+          "en": "On Sundays I do things like cleaning and laundry.",
+          "mn": "Ням гарагт цэвэрлэгээ, угаалга зэрэг ажил хийдэг."
+        },
+        "休みの日は本を読んだり、音楽を聞いたりします。": {
+          "en": "On my days off I read books, listen to music and so on.",
+          "mn": "Амралтын өдрөөр ном унших, хөгжим сонсох зэрэг зүйл хийдэг."
+        },
+        "夏休みは海で泳いだり、山に登ったりしました。": {
+          "en": "During summer vacation I swam in the sea, climbed mountains and so on.",
+          "mn": "Зуны амралтаар далайд сэлэх, ууланд авирах зэрэг зүйл хийсэн."
+        }
+      },
+      "expected": {
+        "p": "〜たり〜たりする",
+        "en": "do things like A and B; sometimes A, sometimes B",
+        "form": "Verb-ta + り + Verb-ta + りする"
+      }
+    },
+    "ta-koto-ga-aru": {
+      "formMn": "Үйл үгийн た-хэлбэр + ことがある. Өмнөх туршлагыг заана; үгүйсгэл нь ことがない.",
+      "examples": {
+        "富士山に登ったことがあります。": {
+          "en": "I have climbed Mt. Fuji.",
+          "mn": "Фүжи ууланд авирч үзсэн."
+        },
+        "日本の映画を見たことがありますか。": {
+          "en": "Have you ever seen a Japanese movie?",
+          "mn": "Япон кино үзэж байсан уу?"
+        },
+        "私は馬に乗ったことがありません。": {
+          "en": "I have never ridden a horse.",
+          "mn": "Би морь унаж үзээгүй."
+        }
+      },
+      "expected": {
+        "p": "〜たことがある",
+        "en": "have (ever) done; have the experience of doing",
+        "form": "Verb-ta + ことがある"
+      }
+    },
+    "mae-ni": {
+      "formMn": "Үйл үгийн толь бичгийн хэлбэр + 前に; үйл явдлын нэр үг + の + 前に. Хугацааны хэмжээний дараа の хэрэггүй: 三年前に.",
+      "examples": {
+        "寝る前に歯をみがきます。": {
+          "en": "I brush my teeth before going to bed.",
+          "mn": "Унтахын өмнө шүдээ угаадаг."
+        },
+        "授業の前にコーヒーを飲みます。": {
+          "en": "I drink coffee before class.",
+          "mn": "Хичээлийн өмнө кофе уудаг."
+        },
+        "3年前に日本へ来ました。": {
+          "en": "I came to Japan three years ago.",
+          "mn": "Гурван жилийн өмнө Японд ирсэн."
+        }
+      },
+      "expected": {
+        "p": "〜前に",
+        "en": "before (doing); before (an event); ago",
+        "form": "Verb-dict + 前に / Noun + の + 前に"
+      }
+    },
+    "ato-de": {
+      "formMn": "Үйл үгийн た-хэлбэр + 後で; нэр үг + の + 後で.",
+      "examples": {
+        "晩ご飯を食べた後で、散歩をします。": {
+          "en": "I take a walk after eating dinner.",
+          "mn": "Оройн хоол идсэний дараа зугаалдаг."
+        },
+        "仕事の後で、いっしょに飲みに行きませんか。": {
+          "en": "Would you like to go for a drink after work?",
+          "mn": "Ажлын дараа хамт юм уухаар явахгүй юу?"
+        },
+        "テストが終わった後で、友達と遊びました。": {
+          "en": "After the test was over, I hung out with friends.",
+          "mn": "Шалгалт дууссаны дараа найзуудтайгаа цагийг өнгөрөөсөн."
+        }
+      },
+      "expected": {
+        "p": "〜後で",
+        "en": "after (doing); after (an event)",
+        "form": "Verb-ta + 後で / Noun + の + 後で"
+      }
+    },
+    "nagara": {
+      "formMn": "Үйл үгийн ます-гүй үндэс + ながら. Нэг хүн хоёр үйлдлийг зэрэг хийнэ; гол үйлдэл нь дараагийн хэсэгт орно.",
+      "examples": {
+        "音楽を聞きながら勉強します。": {
+          "en": "I study while listening to music.",
+          "mn": "Хөгжим сонсонгоо хичээлээ давтдаг."
+        },
+        "父はいつも新聞を読みながら朝ご飯を食べます。": {
+          "en": "My father always eats breakfast while reading the newspaper.",
+          "mn": "Аав үргэлж сонин уншингаа өглөөний хоолоо иддэг."
+        },
+        "コーヒーを飲みながら話しましょう。": {
+          "en": "Let's talk over coffee.",
+          "mn": "Кофе уунгаа ярилцъя."
+        }
+      },
+      "expected": {
+        "p": "〜ながら（while）",
+        "en": "while (doing two actions at the same time)",
+        "form": "Verb-stem + ながら"
+      }
+    },
+    "ni-iku": {
+      "formMn": "Үйл үгийн ます-гүй үндэс / үйл ажиллагаа заасан нэр үг + に + 行く. 来る, 帰る зэрэг хөдөлгөөний үйл үгтэй мөн хэрэглэнэ.",
+      "examples": {
+        "デパートへ服を買いに行きます。": {
+          "en": "I'm going to the department store to buy clothes.",
+          "mn": "Их дэлгүүрт хувцас худалдаж авахаар явна."
+        },
+        "週末、海へ泳ぎに行きました。": {
+          "en": "I went to the beach to swim on the weekend.",
+          "mn": "Амралтын өдрөөр далайд сэлэхээр явсан."
+        },
+        "友達がうちへ遊びに来ました。": {
+          "en": "A friend came over to my place to hang out.",
+          "mn": "Найз манайд тоглохоор ирсэн."
+        }
+      },
+      "expected": {
+        "p": "〜に行く",
+        "en": "go (somewhere) to do",
+        "form": "Verb-stem + に行く / Noun + に行く"
+      }
+    },
+    "ga-suki-ga-kirai": {
+      "formMn": "Нэр үг + が好き / が嫌い; үйл үгийн толь бичгийн хэлбэр + の + が好き / が嫌い.",
+      "examples": {
+        "私は甘いものが好きです。": {
+          "en": "I like sweet things.",
+          "mn": "Би амттанд дуртай."
+        },
+        "弟は野菜が嫌いです。": {
+          "en": "My younger brother doesn't like vegetables.",
+          "mn": "Эрэгтэй дүү ногоонд дургүй."
+        },
+        "母は料理をするのが好きです。": {
+          "en": "My mother likes cooking.",
+          "mn": "Ээж хоол хийх дуртай."
+        }
+      },
+      "expected": {
+        "p": "〜が好き / 〜が嫌い",
+        "en": "like; dislike",
+        "form": "Noun + が好き / Noun + が嫌い / Verb-dict + の + が好き"
+      }
+    },
+    "ga-jouzu-ga-heta": {
+      "formMn": "Чадвар, үйл ажиллагаа заасан нэр үг + が上手 / が下手. 上手 нь бусдын чадварыг магтахад түгээмэл.",
+      "examples": {
+        "姉はピアノが上手です。": {
+          "en": "My older sister is good at the piano.",
+          "mn": "Эгч төгөлдөр хуур сайн тоглодог."
+        },
+        "私は歌が下手です。": {
+          "en": "I'm bad at singing.",
+          "mn": "Би дуулахдаа муу."
+        },
+        "マイクさんは日本語が上手ですね。": {
+          "en": "Mike, your Japanese is really good.",
+          "mn": "Майк, таны япон хэл сайн юм аа."
+        }
+      },
+      "expected": {
+        "p": "〜が上手 / 〜が下手",
+        "en": "good at; bad at",
+        "form": "Noun + が上手 / Noun + が下手"
+      }
+    },
+    "ga-aru-ga-iru": {
+      "formMn": "Амьгүй зүйл, үйл явдлыг заасан нэр үг + がある; хүн, амьтан + がいる. Байрлал + に-г өмнө нь нэмж болно.",
+      "examples": {
+        "公園に大きい木があります。": {
+          "en": "There is a big tree in the park.",
+          "mn": "Цэцэрлэгт хүрээлэнд том мод бий."
+        },
+        "私は妹が一人います。": {
+          "en": "I have one younger sister.",
+          "mn": "Би нэг охин дүүтэй."
+        },
+        "明日、日本語のテストがあります。": {
+          "en": "There's a Japanese test tomorrow.",
+          "mn": "Маргааш япон хэлний шалгалттай."
+        }
+      },
+      "expected": {
+        "p": "〜がある / 〜がいる",
+        "en": "there is; there are; have (ある for things, いる for people and animals)",
+        "form": "Noun + がある / Noun + がいる"
+      }
+    },
+    "kara-reason": {
+      "formMn": "Шалтгаан заасан өгүүлбэр + から. Нэр үг, な-тэмдэг нэрийн энгийн батлах хэлбэрт だ-г хадгална.",
+      "examples": {
+        "今日は寒いから、コートを着ます。": {
+          "en": "It's cold today, so I'll wear a coat.",
+          "mn": "Өнөөдөр хүйтэн болохоор пальто өмсөнө."
+        },
+        "時間がありませんから、タクシーで行きましょう。": {
+          "en": "We don't have time, so let's take a taxi.",
+          "mn": "Цаг байхгүй болохоор таксигаар явцгаая."
+        },
+        "「どうして休みましたか。」「頭が痛かったからです。」": {
+          "en": "\"Why were you absent?\" \"Because I had a headache.\"",
+          "mn": "“Яагаад хичээлдээ ирээгүй вэ?” “Толгой өвдсөн болохоор.”"
+        }
+      },
+      "expected": {
+        "p": "〜から（reason）",
+        "en": "because; since; so",
+        "form": "Sentence + から"
+      }
+    },
+    "ga-but": {
+      "formMn": "Өгүүлбэр + が. Эсрэгцүүлэхээс гадна хүсэлтийн өмнө зөөлөн оршил болдог.",
+      "examples": {
+        "この店は安いですが、あまりおいしくないです。": {
+          "en": "This restaurant is cheap, but the food isn't very good.",
+          "mn": "Энэ хоолны газар хямд боловч тийм ч амттай биш."
+        },
+        "日本語は難しいですが、おもしろいです。": {
+          "en": "Japanese is difficult, but interesting.",
+          "mn": "Япон хэл хэцүү боловч сонирхолтой."
+        },
+        "すみませんが、ちょっと静かにしてください。": {
+          "en": "Excuse me, but please be a little quieter.",
+          "mn": "Уучлаарай, жаахан чимээгүй байгаарай."
+        }
+      },
+      "expected": {
+        "p": "〜が（but）",
+        "en": "but; although",
+        "form": "Sentence + が"
+      }
+    },
+    "deshou": {
+      "formMn": "Үйл үгийн энгийн хэлбэр / い-тэмдэг нэр / な-тэмдэг нэр / нэр үг + でしょう. Одоо цагийн батлах нэр үг, な-тэмдэг нэрийн だ-г хасна.",
+      "examples": {
+        "明日は雨が降るでしょう。": {
+          "en": "It will probably rain tomorrow.",
+          "mn": "Маргааш бороо орох байх."
+        },
+        "山の上は寒いでしょう。": {
+          "en": "It's probably cold at the top of the mountain.",
+          "mn": "Уулын орой хүйтэн байх."
+        },
+        "このかばん、かわいいでしょう？": {
+          "en": "This bag is cute, isn't it?",
+          "mn": "Энэ цүнх хөөрхөн байгаа биз?"
+        }
+      },
+      "expected": {
+        "p": "〜でしょう",
+        "en": "probably; I think; ..., right?",
+        "form": "Verb-plain / i-Adj / na-Adj / Noun + でしょう"
+      }
+    },
+    "ku-naru-ni-naru": {
+      "formMn": "い-тэмдэг нэрийн い-гүй үндэс + くなる; な-тэмдэг нэр / нэр үг + になる. Төлөв өөрчлөгдөхийг заана.",
+      "examples": {
+        "あたたかくなりましたね。": {
+          "en": "It's gotten warmer, hasn't it?",
+          "mn": "Дулаарчихлаа шүү, тийм ээ?"
+        },
+        "部屋がきれいになりました。": {
+          "en": "The room has become clean.",
+          "mn": "Өрөө цэвэрхэн болсон."
+        },
+        "兄は来年、医者になります。": {
+          "en": "My older brother will become a doctor next year.",
+          "mn": "Ах ирэх жил эмч болно."
+        }
+      },
+      "expected": {
+        "p": "〜くなる / 〜になる",
+        "en": "become; get; turn",
+        "form": "i-Adj-ku + なる / na-Adj + になる / Noun + になる"
+      }
+    },
+    "ni-suru": {
+      "formMn": "Сонгож буй зүйлийн нэр үг + にする. Өөрийн шийдвэр, сонголтыг хэлнэ.",
+      "examples": {
+        "私はカレーにします。": {
+          "en": "I'll have the curry.",
+          "mn": "Би карри авъя."
+        },
+        "飲み物は何にしますか。": {
+          "en": "What would you like to drink?",
+          "mn": "Юу уухаар сонгох вэ?"
+        },
+        "旅行は来月にしましょう。": {
+          "en": "Let's plan the trip for next month.",
+          "mn": "Аяллаа ирэх сард болгоё."
+        }
+      },
+      "expected": {
+        "p": "〜にする（decide）",
+        "en": "decide on; choose; I'll have",
+        "form": "Noun + にする"
+      }
+    },
+    "mada-te-inai": {
+      "formMn": "まだ + үйл үгийн て-хэлбэр + いない / いません. Хүлээж буй үйлдэл хараахан болоогүйг заана.",
+      "examples": {
+        "まだ昼ご飯を食べていません。": {
+          "en": "I haven't eaten lunch yet.",
+          "mn": "Өдрийн хоол хараахан идээгүй."
+        },
+        "「宿題はもうしましたか。」「いいえ、まだしていません。」": {
+          "en": "\"Have you done your homework yet?\" \"No, not yet.\"",
+          "mn": "“Гэрийн даалгавраа хийчихсэн үү?” “Үгүй, хараахан хийгээгүй.”"
+        },
+        "電車はまだ来ていません。": {
+          "en": "The train hasn't come yet.",
+          "mn": "Галт тэрэг хараахан ирээгүй."
+        }
+      },
+      "expected": {
+        "p": "まだ〜ていない",
+        "en": "not yet (have done)",
+        "form": "まだ + Verb-te + いない / まだ + Verb-te + いません"
+      }
+    },
+    "mou-ta": {
+      "formMn": "もう + үйл үгийн た-хэлбэр; эелдэг хэлбэрт もう + үйл үгийн ます-гүй үндэс + ました.",
+      "examples": {
+        "「もう晩ご飯を食べましたか。」「はい、もう食べました。」": {
+          "en": "\"Have you eaten dinner yet?\" \"Yes, I already have.\"",
+          "mn": "“Оройн хоолоо идчихсэн үү?” “Тийм, аль хэдийн идсэн.”"
+        },
+        "妹はもう寝ました。": {
+          "en": "My younger sister has already gone to bed.",
+          "mn": "Охин дүү аль хэдийн унтсан."
+        },
+        "映画はもう始まりましたよ。": {
+          "en": "The movie has already started.",
+          "mn": "Кино аль хэдийн эхэлсэн шүү."
+        }
+      },
+      "expected": {
+        "p": "もう〜た",
+        "en": "already (have done); (in questions) yet",
+        "form": "もう + Verb-ta / もう + Verb-stem + ました"
+      }
+    },
+    "amari-nai": {
+      "formMn": "あまり + үгүйсгэсэн үйл үг; い-тэмдэг нэрийн くない; эсвэл な-тэмдэг нэрийн じゃない хэлбэр. Хэмжээ өндөр бишийг заана.",
+      "examples": {
+        "私はあまりテレビを見ません。": {
+          "en": "I don't watch much TV.",
+          "mn": "Би зурагт нэг их үздэггүй."
+        },
+        "このりんごはあまり甘くないです。": {
+          "en": "This apple isn't very sweet.",
+          "mn": "Энэ алим тийм ч чихэрлэг биш."
+        },
+        "今日はあまり忙しくありません。": {
+          "en": "I'm not very busy today.",
+          "mn": "Өнөөдөр тийм ч завгүй биш."
+        }
+      },
+      "expected": {
+        "p": "あまり〜ない",
+        "en": "not very; not much; not often",
+        "form": "あまり + Verb-nai / あまり + i-Adj-ku + ない / あまり + na-Adj + じゃない"
+      }
+    },
+    "zenzen-nai": {
+      "formMn": "全然 + үгүйсгэсэн үйл үг, тэмдэг нэр. Огт үгүйг онцолно: 全然分からない.",
+      "examples": {
+        "この問題は全然わかりません。": {
+          "en": "I don't understand this question at all.",
+          "mn": "Энэ асуултыг огт ойлгохгүй байна."
+        },
+        "今日は全然寒くないです。": {
+          "en": "It's not cold at all today.",
+          "mn": "Өнөөдөр огт хүйтэн биш."
+        },
+        "弟は全然勉強しません。": {
+          "en": "My younger brother doesn't study at all.",
+          "mn": "Эрэгтэй дүү огт хичээлээ давтдаггүй."
+        }
+      },
+      "expected": {
+        "p": "全然〜ない",
+        "en": "not at all; not in the least",
+        "form": "全然 + Verb-nai / 全然 + i-Adj-ku + ない / 全然 + na-Adj + じゃない"
+      }
+    },
+    "dake": {
+      "formMn": "Нэр үг / үйл үгийн толь бичгийн хэлбэр + だけ. Хүрээ, хэмжээг зөвхөн түүнд хязгаарлана.",
+      "examples": {
+        "財布に100円だけあります。": {
+          "en": "I only have 100 yen in my wallet.",
+          "mn": "Түрийвчинд зөвхөн зуун иен байна."
+        },
+        "朝はコーヒーだけ飲みます。": {
+          "en": "In the morning I only have coffee.",
+          "mn": "Өглөө зөвхөн кофе уудаг."
+        },
+        "日曜日だけ休みです。": {
+          "en": "Sunday is my only day off.",
+          "mn": "Зөвхөн ням гарагт амардаг."
+        }
+      },
+      "expected": {
+        "p": "〜だけ",
+        "en": "only; just",
+        "form": "Noun + だけ / Verb-dict + だけ"
+      }
+    },
+    "kurai-gurai": {
+      "formMn": "Ойролцоо тоо хэмжээ, үргэлжлэх хугацаа заасан нэр үг + くらい / ぐらい.",
+      "examples": {
+        "駅まで歩いて10分ぐらいです。": {
+          "en": "It's about a ten-minute walk to the station.",
+          "mn": "Буудал хүртэл арав орчим минут алхана."
+        },
+        "毎日2時間くらい勉強します。": {
+          "en": "I study for about two hours every day.",
+          "mn": "Өдөр бүр хоёр цаг орчим хичээлээ давтдаг."
+        },
+        "このかばんは5000円ぐらいでした。": {
+          "en": "This bag was about 5,000 yen.",
+          "mn": "Энэ цүнх таван мянга орчим иений үнэтэй байсан."
+        }
+      },
+      "expected": {
+        "p": "〜くらい / 〜ぐらい（approximately）",
+        "en": "about; approximately (an amount or length of time)",
+        "form": "Noun + くらい / Noun + ぐらい"
+      }
+    },
+    "goro": {
+      "formMn": "Ойролцоо цаг мөч, сар, он заасан нэр үг + ごろ. Үргэлжлэх хугацаанд ぐらい хэрэглэнэ.",
+      "examples": {
+        "毎晩11時ごろ寝ます。": {
+          "en": "I go to bed around eleven every night.",
+          "mn": "Орой бүр арван нэгэн цагийн үед унтдаг."
+        },
+        "4月ごろ、桜が咲きます。": {
+          "en": "The cherry blossoms bloom around April.",
+          "mn": "Дөрөвдүгээр сарын үед сакура цэцэглэдэг."
+        },
+        "夕方6時ごろに家に帰ります。": {
+          "en": "I get home around six in the evening.",
+          "mn": "Орой зургаан цагийн үед гэртээ харьдаг."
+        }
+      },
+      "expected": {
+        "p": "〜ごろ",
+        "en": "around; about (a point in time)",
+        "form": "Noun + ごろ"
+      }
+    },
+    "nani-mo-nai-dare-mo-nai": {
+      "formMn": "何も / 誰も + үгүйсгэсэн үйл үг. Юу ч эсвэл хэн ч үгүйг хэлнэ.",
+      "examples": {
+        "けさは何も食べませんでした。": {
+          "en": "I didn't eat anything this morning.",
+          "mn": "Өнөө өглөө юу ч идээгүй."
+        },
+        "教室にはだれもいません。": {
+          "en": "There's nobody in the classroom.",
+          "mn": "Ангид хэн ч алга."
+        },
+        "冷蔵庫の中には何もありません。": {
+          "en": "There's nothing in the fridge.",
+          "mn": "Хөргөгчинд юу ч байхгүй."
+        }
+      },
+      "expected": {
+        "p": "何も〜ない / 誰も〜ない",
+        "en": "nothing; nobody; not anything; not anyone",
+        "form": "何も + Verb-nai / 誰も + Verb-nai"
+      }
+    },
+    "nani-ka-dare-ka-doko-ka": {
+      "formMn": "Асуух үг + か: 何か（ямар нэг зүйл）, 誰か（хэн нэгэн）, どこか（хаа нэг газар）.",
+      "examples": {
+        "何か飲みますか。": {
+          "en": "Would you like something to drink?",
+          "mn": "Ямар нэг юм уух уу?"
+        },
+        "だれか来ましたよ。": {
+          "en": "Someone's here.",
+          "mn": "Хэн нэгэн ирлээ шүү."
+        },
+        "夏休みにどこかへ行きましたか。": {
+          "en": "Did you go anywhere during summer vacation?",
+          "mn": "Зуны амралтаар хаашаа нэг тийш явсан уу?"
+        }
+      },
+      "expected": {
+        "p": "何か / 誰か / どこか",
+        "en": "something; someone; somewhere",
+        "form": "Question word + か"
+      }
+    },
+    "kore-sore-are-dore": {
+      "formMn": "これ（энэ）, それ（тэр, сонсогчийн ойр）, あれ（тэр, хоёулангаас хол）, どれ（аль нь）нь бие даасан төлөөний үг. Шууд араас нь нэр үг залгахгүй.",
+      "examples": {
+        "これは私の辞書です。": {
+          "en": "This is my dictionary.",
+          "mn": "Энэ миний толь бичиг."
+        },
+        "それは何ですか。": {
+          "en": "What is that?",
+          "mn": "Тэр юу вэ?"
+        },
+        "「あなたのかさはどれですか。」「あれです。」": {
+          "en": "\"Which one is your umbrella?\" \"That one over there.\"",
+          "mn": "“Таны шүхэр аль нь вэ?” “Тэр хол байгаа нь.”"
+        }
+      },
+      "expected": {
+        "p": "これ / それ / あれ / どれ",
+        "en": "this one; that one (near you); that one (over there); which one",
+        "form": "これ / それ / あれ / どれ"
+      }
+    },
+    "kono-sono-ano-dono": {
+      "formMn": "この / その / あの / どの + нэр үг. Заавал нэр үгийг тодотгоно; これ шиг бие дааж хэрэглэхгүй.",
+      "examples": {
+        "このケーキはおいしいです。": {
+          "en": "This cake is delicious.",
+          "mn": "Энэ бялуу амттай."
+        },
+        "その本はだれのですか。": {
+          "en": "Whose book is that?",
+          "mn": "Тэр хэний ном бэ?"
+        },
+        "「どの人が先生ですか。」「あの人です。」": {
+          "en": "\"Which person is the teacher?\" \"That person over there.\"",
+          "mn": "“Аль хүн нь багш вэ?” “Тэр хүн.”"
+        }
+      },
+      "expected": {
+        "p": "この / その / あの / どの",
+        "en": "this; that (near you); that ... over there; which (before a noun)",
+        "form": "この / その / あの / どの + Noun"
+      }
+    },
+    "koko-soko-asoko-doko": {
+      "formMn": "Газар заах үгс: ここ（энд）, そこ（тэнд, сонсогчийн ойр）, あそこ（тэр хол газар）, どこ（хаана）.",
+      "examples": {
+        "ここは私の学校です。": {
+          "en": "This is my school.",
+          "mn": "Энэ миний сургууль."
+        },
+        "トイレはあそこです。": {
+          "en": "The restroom is over there.",
+          "mn": "Ариун цэврийн өрөө тэр тэнд байна."
+        },
+        "すみません、駅はどこですか。": {
+          "en": "Excuse me, where is the station?",
+          "mn": "Уучлаарай, буудал хаана вэ?"
+        }
+      },
+      "expected": {
+        "p": "ここ / そこ / あそこ / どこ",
+        "en": "here; there (near you); over there; where",
+        "form": "ここ / そこ / あそこ / どこ"
+      }
+    },
+    "ku-nai-katta-ku-nakatta": {
+      "formMn": "い-тэмдэг нэрийн төгсгөлийн い-г хасаад くない（үгүйсгэл）, かった（өнгөрсөн）, くなかった（үгүйсгэсэн өнгөрсөн）залгана. いい-ийн үндэс нь よ: よくない, よかった.",
+      "examples": {
+        "この部屋はあまり広くないです。": {
+          "en": "This room isn't very big.",
+          "mn": "Энэ өрөө тийм ч уужим биш."
+        },
+        "きのうのテストは難しかったです。": {
+          "en": "Yesterday's test was difficult.",
+          "mn": "Өчигдрийн шалгалт хэцүү байсан."
+        },
+        "先週見た映画はおもしろくなかったです。": {
+          "en": "The movie I saw last week wasn't interesting.",
+          "mn": "Өнгөрсөн долоо хоногт үзсэн кино сонирхолгүй байсан."
+        }
+      },
+      "expected": {
+        "p": "〜くない / 〜かった / 〜くなかった",
+        "en": "negative and past forms of i-adjectives (is not; was; was not)",
+        "form": "i-Adj stem + くない / i-Adj stem + かった / i-Adj stem + くなかった"
+      }
+    },
+    "na-na-adjective": {
+      "formMn": "な-тэмдэг нэр + な + нэр үг. Өгүүлэхүүнд です / ではありません / でした хэрэглэнэ, な-г залгахгүй.",
+      "examples": {
+        "京都は有名な町です。": {
+          "en": "Kyoto is a famous city.",
+          "mn": "Киото бол алдартай хот."
+        },
+        "きのうは暇でした。": {
+          "en": "I was free yesterday.",
+          "mn": "Өчигдөр завтай байсан."
+        },
+        "この部屋はあまり静かではありません。": {
+          "en": "This room isn't very quiet.",
+          "mn": "Энэ өрөө тийм ч нам гүм биш."
+        }
+      },
+      "expected": {
+        "p": "〜な（na-adjective）",
+        "en": "na-adjectives: take な before a noun and です or だ at the end of a sentence",
+        "form": "na-Adj + な + Noun / na-Adj + です / na-Adj + ではありません / na-Adj + でした"
+      }
+    },
+    "kute-de": {
+      "formMn": "い-тэмдэг нэрийн い-гүй үндэс + くて; な-тэмдэг нэр / нэр үг + で. Шинж, өгүүлбэрүүдийг холбоно.",
+      "examples": {
+        "この店は安くておいしいです。": {
+          "en": "This restaurant is cheap and good.",
+          "mn": "Энэ газар хямдхан, хоол нь амттай."
+        },
+        "私の町は静かできれいです。": {
+          "en": "My town is quiet and clean.",
+          "mn": "Миний хот нам гүм, цэвэрхэн."
+        },
+        "兄は大学生で、妹は高校生です。": {
+          "en": "My older brother is a university student, and my younger sister is a high school student.",
+          "mn": "Ах их сургуулийн оюутан, охин дүү ахлах сургуулийн сурагч."
+        }
+      },
+      "expected": {
+        "p": "〜くて / 〜で",
+        "en": "and (linking adjectives or nouns)",
+        "form": "i-Adj-ku + て / na-Adj + で / Noun + で"
+      }
+    },
+    "to-iu-named": {
+      "formMn": "Нэр, нэршил + という + зүйлийн төрөл эсвэл хүн заасан нэр үг.",
+      "examples": {
+        "これは「すきやき」という料理です。": {
+          "en": "This is a dish called sukiyaki.",
+          "mn": "Энэ бол сүкияки гэдэг хоол."
+        },
+        "「さくら」という店でアルバイトをしています。": {
+          "en": "I work part-time at a shop called Sakura.",
+          "mn": "Сакура гэдэг дэлгүүрт цагийн ажил хийдэг."
+        },
+        "山田さんという人から電話がありました。": {
+          "en": "There was a call from someone named Yamada.",
+          "mn": "Ямада гэдэг хүнээс утас ирсэн."
+        }
+      },
+      "expected": {
+        "p": "〜という（named）",
+        "en": "called; named",
+        "form": "Noun + という + Noun"
+      }
+    }
+  }
+}

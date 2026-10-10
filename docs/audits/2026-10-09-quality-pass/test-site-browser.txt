@@ -1,0 +1,56 @@
+
+> nihongo-dojo@3.0.0 test:site-browser
+> node scripts/test-site-browser.mjs
+
+mn: route home rendered
+mn: route vocab?level=N5 rendered
+mn: route kanji?level=N5 rendered
+mn: route grammar?level=N5 rendered
+mn: route reading rendered
+mn: route listening rendered
+mn: route review rendered
+mn: route quiz rendered
+mn: route mock rendered
+mn: route placement rendered
+mn: route dict rendered
+mn: route plan rendered
+mn: route progress rendered
+mn: route achievements rendered
+mn: route account rendered
+mn: route kana rendered
+mn: route mistakes rendered
+mn: route about rendered
+mn: route write/日 rendered
+mn: route not-a-page rendered
+mn: vocabulary and kanji previous/next navigation passed
+mn: grammar previous/next navigation and usage quiz passed
+mn: live quiz switching and honest full-mock blocking passed
+mn: reading/listening libraries each show 30 lessons; known-word controls persist
+mn: 201 added vocabulary example translations rendered
+mn: route smoke, empty/offline, loading/error/retry and mobile layout checks passed (not real auth)
+en: route home rendered
+en: route vocab?level=N5 rendered
+en: route kanji?level=N5 rendered
+en: route grammar?level=N5 rendered
+en: route reading rendered
+en: route listening rendered
+en: route review rendered
+en: route quiz rendered
+en: route mock rendered
+en: route placement rendered
+en: route dict rendered
+en: route plan rendered
+en: route progress rendered
+en: route achievements rendered
+en: route account rendered
+en: route kana rendered
+en: route mistakes rendered
+en: route about rendered
+en: route write/日 rendered
+en: route not-a-page rendered
+en: vocabulary and kanji previous/next navigation passed
+en: grammar previous/next navigation and usage quiz passed
+en: live quiz switching and honest full-mock blocking passed
+en: reading/listening libraries each show 30 lessons; known-word controls persist
+en: 201 added vocabulary example translations rendered
+en: route smoke, empty/offline, loading/error/retry and mobile layout checks passed (not real auth)

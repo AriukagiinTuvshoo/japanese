@@ -1,0 +1,294 @@
+{
+  "provenance": {
+    "id": "mn-n1-grammar-examples-continue-4-2026-10-09",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian compared with exact Japanese and retained English; stable record and headword/pattern guards; independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/grammar/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "grammar": {
+    "bekarazu-bekarazaru": {
+      "expected": {
+        "p": "〜べからず / 〜べからざる",
+        "en": "must not; do not (on signs); (before a noun) must not be"
+      },
+      "examples": {
+        "水は人間の生活にとって欠くべからざるものである。": {
+          "en": "Water is indispensable to human life.",
+          "mn": "Ус хүний амьдралд зайлшгүй хэрэгтэй."
+        }
+      }
+    },
+    "beku-mo-nai": {
+      "expected": {
+        "p": "〜べくもない",
+        "en": "cannot possibly; there's no way to"
+      },
+      "examples": {
+        "プロの演奏と私の演奏とでは、比べるべくもない。": {
+          "en": "There's no comparing a professional's performance with mine.",
+          "mn": "Мэргэжлийн хүний тоглолттой минийхийг харьцуулах ч аргагүй."
+        },
+        "都心の一等地に家を買うなど、今の収入では望むべくもない。": {
+          "en": "With my current income, buying a house in a prime central location is out of the question.",
+          "mn": "Одоогийн орлогоороо хотын төвийн үнэтэй газарт байр авна гэж найдах аргагүй."
+        },
+        "当事者が全員亡くなった今となっては、事故の真相は知るべくもない。": {
+          "en": "Now that everyone involved has died, there is no way to know the truth about the accident.",
+          "mn": "Холбоотой хүмүүс бүгд нас барсан одоо ослын үнэнийг мэдэх аргагүй."
+        }
+      }
+    },
+    "majiki": {
+      "expected": {
+        "p": "〜まじき",
+        "en": "unacceptable for (someone in that position); should not"
+      },
+      "examples": {
+        "生徒に暴言を吐くなど、教育者にあるまじき行為だ。": {
+          "en": "Verbally abusing students is conduct unbecoming of an educator.",
+          "mn": "Сурагчдыг хэл амаар доромжлох нь сурган хүмүүжүүлэгчид байж боломгүй үйлдэл."
+        },
+        "賄賂を受け取るとは、政治家としてあるまじきことである。": {
+          "en": "Accepting bribes is utterly unacceptable for a politician.",
+          "mn": "Хахууль авах нь улс төрчийн хувьд байж боломгүй зүйл."
+        }
+      }
+    },
+    "made-mo-nai": {
+      "expected": {
+        "p": "〜までもない",
+        "en": "needless to; there's no need to (go as far as)"
+      },
+      "examples": {
+        "言うまでもないが、試験中の私語は禁止だ。": {
+          "en": "Needless to say, talking during the exam is prohibited.",
+          "mn": "Хэлэх ч хэрэггүй, шалгалтын үеэр хоорондоо ярих хориотой."
+        },
+        "この程度の傷なら、わざわざ病院へ行くまでもない。": {
+          "en": "A cut this minor isn't worth going all the way to the hospital for.",
+          "mn": "Ийм жижиг шарханд заавал эмнэлэг явах шаардлагагүй."
+        },
+        "彼女の実力は、改めて説明するまでもないだろう。": {
+          "en": "Her abilities hardly need explaining again.",
+          "mn": "Түүний чадварыг дахин тайлбарлах хэрэггүй байх."
+        }
+      }
+    },
+    "made-da-made-no-koto-da": {
+      "expected": {
+        "p": "〜までだ / 〜までのことだ",
+        "en": "(I'll) just (do); I merely (did)"
+      },
+      "examples": {
+        "電車が動かないなら、歩いて帰るまでだ。": {
+          "en": "If the trains aren't running, I'll just walk home.",
+          "mn": "Галт тэрэг явахгүй бол явган л харина."
+        },
+        "今回だめでも、また来年挑戦するまでのことだ。": {
+          "en": "Even if I fail this time, I'll simply try again next year.",
+          "mn": "Энэ удаа бүтэхгүй ч ирэх жил дахин оролдоно."
+        },
+        "別に怒っているわけではない。事実を言ったまでだ。": {
+          "en": "I'm not angry. I was merely stating the facts.",
+          "mn": "Би уурлаагүй. Зөвхөн баримтыг л хэлсэн."
+        }
+      }
+    },
+    "mamire": {
+      "expected": {
+        "p": "〜まみれ",
+        "en": "covered in; smeared with"
+      },
+      "examples": {
+        "子どもたちは泥まみれになって、日が暮れるまで遊んでいた。": {
+          "en": "The children played until sundown, getting covered in mud.",
+          "mn": "Хүүхдүүд шавар шавхай болж нар жаргатал тоглосон."
+        },
+        "救助隊員は汗まみれになりながら、がれきの中を捜索し続けた。": {
+          "en": "Drenched in sweat, the rescue workers kept searching through the rubble.",
+          "mn": "Аврагчид хөлсөндөө норсон ч нуранги дунд эрлээ үргэлжлүүлсэн."
+        },
+        "彼は事業に失敗して以来、借金まみれの生活を送っている。": {
+          "en": "Ever since his business failed, he has been living a life buried in debt.",
+          "mn": "Бизнес нь бүтэлгүйтсэнээс хойш тэр өрөнд баригдаж амьдарч байна."
+        }
+      }
+    },
+    "meku": {
+      "expected": {
+        "p": "〜めく",
+        "en": "show signs of; become like; -ish"
+      },
+      "examples": {
+        "三月に入り、日差しもだいぶ春めいてきた。": {
+          "en": "Now that it's March, the sunlight has become quite spring-like.",
+          "mn": "Гуравдугаар сар гарч нарны тусгал ч нэлээд хаврын шинжтэй болсон."
+        },
+        "彼女は謎めいた微笑みを浮かべて、何も答えなかった。": {
+          "en": "She gave an enigmatic smile and said nothing.",
+          "mn": "Тэр учир битүүлэг инээмсэглээд юу ч хариулаагүй."
+        },
+        "先輩の皮肉めいた言い方が、どうも気になった。": {
+          "en": "The slightly sarcastic way my senior colleague spoke kept bothering me.",
+          "mn": "Ахлах ажилтны ёжтойдуу яриа надад нэг л таагүй санагдсан."
+        }
+      }
+    },
+    "mo-saru-koto-nagara": {
+      "expected": {
+        "p": "〜もさることながら",
+        "en": "not only ... but also (even more); ... aside"
+      },
+      "examples": {
+        "この店は、料理の味もさることながら、器の美しさにも心を奪われる。": {
+          "en": "At this restaurant, it's not just the flavor of the food — the beauty of the tableware captivates you too.",
+          "mn": "Энэ газарт хоолны амтаас гадна аяга тавагны үзэсгэлэн ч сэтгэл булаадаг."
+        },
+        "彼の成功は、才能もさることながら、人一倍の努力によるものだ。": {
+          "en": "His success is due not only to talent but, even more, to his extraordinary effort.",
+          "mn": "Түүний амжилт авьяасаас гадна бусдаас илүү хичээл зүтгэлийн үр дүн."
+        },
+        "この本は内容もさることながら、装丁の美しさが話題を呼んだ。": {
+          "en": "The book's content was good, but it was the beauty of its binding that got people talking.",
+          "mn": "Энэ ном агуулгаасаа гадна хавтас, хийцийн үзэсгэлэнгээрээ ярианы сэдэв болсон."
+        }
+      }
+    },
+    "mono-o": {
+      "expected": {
+        "p": "〜ものを",
+        "en": "if only (..., but); although (regret or reproach)"
+      },
+      "examples": {
+        "一言相談してくれれば手伝ったものを、どうして一人で抱え込んだのか。": {
+          "en": "If only you'd asked me, I would have helped — why did you keep it all to yourself?",
+          "mn": "Нэг үг хэлсэн бол туслах байсан юмсан, яагаад ганцаараа бүхнийг үүрсэн юм бэ?"
+        },
+        "すぐに病院へ行けば軽く済んだものを、我慢したせいで入院する羽目になった。": {
+          "en": "It would have been minor if he'd gone to the hospital right away, but because he put up with it, he ended up hospitalized.",
+          "mn": "Шууд эмнэлэг явсан бол хөнгөн өнгөрөх байтал тэвчсэнээс болж хэвтэхэд хүрсэн."
+        },
+        "黙っていればいいものを、彼は余計なことを言って話をこじらせた。": {
+          "en": "He should have just kept quiet, but he said something unnecessary and complicated matters.",
+          "mn": "Дуугүй байсан бол болох байтал тэр хэрэггүй үг хэлж асуудлыг хүндрүүлсэн."
+        }
+      }
+    },
+    "ya-ina-ya": {
+      "expected": {
+        "p": "〜や否や",
+        "en": "as soon as; the moment; no sooner ... than"
+      },
+      "examples": {
+        "首相が会見場に姿を現すや否や、一斉にカメラのフラッシュがたかれた。": {
+          "en": "The moment the prime minister appeared in the press room, cameras flashed all at once.",
+          "mn": "Ерөнхий сайд хэвлэлийн танхимд орж ирмэгц зургийн аппаратууд зэрэг гялсхийсэн."
+        },
+        "新製品は発売されるや否や、たちまち品切れになった。": {
+          "en": "No sooner had the new product gone on sale than it sold out.",
+          "mn": "Шинэ бүтээгдэхүүн худалдаанд гармагцаа шууд дууссан."
+        },
+        "終業のベルが鳴るや、生徒たちは教室を飛び出していった。": {
+          "en": "As soon as the final bell rang, the students dashed out of the classroom.",
+          "mn": "Хичээл тарсны хонх дуугармагц сурагчид ангиас гүйн гарсан."
+        }
+      }
+    },
+    "yue-ni": {
+      "expected": {
+        "p": "〜ゆえ(に)",
+        "en": "because of; due to; therefore"
+      },
+      "examples": {
+        "若さゆえの無謀な挑戦だったが、今ではいい思い出だ。": {
+          "en": "It was a reckless challenge born of youth, but now it's a fond memory.",
+          "mn": "Залуугийн омгоор хийсэн болчимгүй оролдлого байсан ч одоо сайхан дурсамж."
+        },
+        "彼は正直すぎるがゆえに、損をすることも多い。": {
+          "en": "Because he is too honest, he often ends up losing out.",
+          "mn": "Тэр хэт шударга учраас олонтаа хохирдог."
+        },
+        "資源が乏しいがゆえに、この国は技術開発に力を注いできた。": {
+          "en": "Precisely because it lacks resources, this country has poured its energy into technological development.",
+          "mn": "Нөөц баялаг бага учраас энэ улс технологийн хөгжилд хүчээ зориулсан."
+        }
+      }
+    },
+    "o-oite": {
+      "expected": {
+        "p": "〜をおいて",
+        "en": "other than; apart from (no one / nothing else)"
+      },
+      "examples": {
+        "この難しい手術を任せられるのは、彼をおいてほかにいない。": {
+          "en": "There's no one but him we can entrust with this difficult operation.",
+          "mn": "Энэ хэцүү мэс заслыг түүнээс өөр хүнд даалгаж болохгүй."
+        },
+        "次の大会を開くなら、この町をおいてふさわしい場所はない。": {
+          "en": "If we're holding the next tournament, there's no better place for it than this town.",
+          "mn": "Дараагийн тэмцээнийг зохион байгуулахад энэ хотоос илүү тохирох газар үгүй."
+        },
+        "今をおいて、改革を断行する機会はないだろう。": {
+          "en": "If not now, there will be no other chance to push through reform.",
+          "mn": "Одоо л биш бол шинэчлэлийг шийдэмгий хэрэгжүүлэх өөр боломж гарахгүй байх."
+        }
+      }
+    },
+    "o-kawakiri-ni": {
+      "expected": {
+        "p": "〜を皮切りに",
+        "en": "starting with; beginning with (followed by a series)"
+      },
+      "examples": {
+        "バンドは来月の東京公演を皮切りに、全国二十か所を回るツアーを行う。": {
+          "en": "Starting with a concert in Tokyo next month, the band will tour twenty venues nationwide.",
+          "mn": "Хамтлаг ирэх сарын Токиогийн тоглолтоос эхлэн улсын хорин газраар аялан тоглоно."
+        },
+        "彼女の発言を皮切りに、会議ではさまざまな不満が噴き出した。": {
+          "en": "Starting with her remarks, all sorts of complaints erupted at the meeting.",
+          "mn": "Түүний хэлсэн үгнээс эхлэн хурлаар янз бүрийн гомдол гарч ирсэн."
+        },
+        "この店は、駅前への出店を皮切りに、市内で次々と支店を増やしていった。": {
+          "en": "Beginning with an outlet in front of the station, this shop opened one branch after another across the city.",
+          "mn": "Энэ дэлгүүр өртөөний өмнө нээснээс эхлэн хот даяар салбаруудаа дараалан нэмсэн."
+        }
+      }
+    },
+    "o-ki-ni": {
+      "expected": {
+        "p": "〜を機に",
+        "en": "taking the opportunity of; with (an event) as a turning point"
+      },
+      "examples": {
+        "還暦を機に、父は長年勤めた会社を退職した。": {
+          "en": "On turning sixty, my father retired from the company he had worked at for decades.",
+          "mn": "Жаран нас хүрэхдээ аав олон жил ажилласан компаниасаа тэтгэвэрт гарсан."
+        },
+        "子どもが生まれたのを機に、郊外の一戸建てに引っ越した。": {
+          "en": "When our child was born, we took the opportunity to move to a house in the suburbs.",
+          "mn": "Хүүхэд төрснийг далимдуулан хотын захын амины байшинд нүүсэн."
+        },
+        "今回の事故を機に、社内の安全管理体制が全面的に見直された。": {
+          "en": "Prompted by this accident, the company's safety management system was completely overhauled.",
+          "mn": "Энэ ослоос үүдэн компанийн аюулгүй ажиллагааны удирдлагыг бүхэлд нь шинэчилсэн."
+        }
+      }
+    },
+    "o-kagiri-ni": {
+      "expected": {
+        "p": "〜を限りに",
+        "en": "as of (and no longer); for the last time; at the top of (one's voice)"
+      },
+      "examples": {
+        "本日を限りに、当店は四十年の歴史に幕を下ろします。": {
+          "en": "As of today, our shop closes its doors after forty years.",
+          "mn": "Өнөөдрөөр манай дэлгүүр дөчин жилийн түүхээ өндөрлөж байна."
+        }
+      }
+    }
+  }
+}

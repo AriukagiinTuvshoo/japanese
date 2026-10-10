@@ -1,0 +1,1044 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-remainder-1-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses cross-checked against exact Japanese spelling, reading and retained English; explicit semantic topic assignments. Independent human review outstanding; suspect sources withheld.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n1.json JMdict-derived records at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j1254640": {
+      "mn": [
+        "холбоотой байх",
+        "холбогдох",
+        "нэгдэн нийлэх"
+      ],
+      "topics": [
+        "relationships",
+        "actions"
+      ],
+      "expected": {
+        "w": "結びつく",
+        "r": "むすびつく",
+        "en": [
+          "to be related",
+          "to be connected",
+          "to be joined together"
+        ]
+      }
+    },
+    "j1254680": {
+      "mn": [
+        "уях",
+        "бэхлэх",
+        "боох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "結わえる",
+        "r": "ゆわえる",
+        "en": [
+          "to bind",
+          "to fasten",
+          "to tie up"
+        ]
+      }
+    },
+    "j1777410": {
+      "mn": [
+        "хуйвалдан хамтрах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "策応",
+        "r": "さくおう",
+        "en": [
+          "in collusion with"
+        ]
+      }
+    },
+    "j1814660": {
+      "mn": [
+        "цогцост үзлэг хийх",
+        "нас баралтыг шинжлэх"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "検案",
+        "r": "けんあん",
+        "en": [
+          "autopsy"
+        ]
+      }
+    },
+    "j2769980": {
+      "mn": [
+        "холбогдон уягдах",
+        "бэхлэгдэх",
+        "гэрлэх"
+      ],
+      "topics": [
+        "actions",
+        "relationships"
+      ],
+      "expected": {
+        "w": "結ばれる",
+        "r": "むすばれる",
+        "en": [
+          "to be tied together",
+          "to be fastened",
+          "to be wedded"
+        ]
+      }
+    },
+    "j2824370": {
+      "mn": [
+        "зангидсан уяа",
+        "хувцас бэхлэх уяа"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "結びひも",
+        "r": "むすびひも",
+        "en": [
+          "knotted cord",
+          "cord for fastening clothes, etc."
+        ]
+      }
+    },
+    "j2598030": {
+      "mn": [
+        "өөр урсгал",
+        "өөр сургууль"
+      ],
+      "topics": [
+        "arts",
+        "society"
+      ],
+      "expected": {
+        "w": "異派",
+        "r": "いは",
+        "en": [
+          "different school (e.g. of ikebana)"
+        ]
+      }
+    },
+    "j1673220": {
+      "mn": [
+        "бодлогогүй",
+        "арга хэмжээгүй",
+        "арга замгүй"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "無策",
+        "r": "むさく",
+        "en": [
+          "lack of policy",
+          "having no measures",
+          "lacking means"
+        ]
+      }
+    },
+    "j1503740": {
+      "mn": [
+        "үүрэг хуваарилах"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "分掌",
+        "r": "ぶんしょう",
+        "en": [
+          "division of duties"
+        ]
+      }
+    },
+    "j1059070": {
+      "mn": [
+        "шиа урсгал (ислам)"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "シーア派",
+        "r": "シーアは",
+        "en": [
+          "Shia (Islam)"
+        ]
+      }
+    },
+    "j2111510": {
+      "mn": [
+        "суннит урсгал (ислам)"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "スンナ派",
+        "r": "スンナは",
+        "en": [
+          "Sunni (Islam)"
+        ]
+      }
+    },
+    "j2585900": {
+      "mn": [
+        "суннит урсгал",
+        "сунна (ислам)"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "スンニ派",
+        "r": "スンニは",
+        "en": [
+          "Sunni (Islam)",
+          "Sunnah"
+        ]
+      }
+    },
+    "j2830483": {
+      "mn": [
+        "алевийн урсгал",
+        "алеви хүн"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "アレビ派",
+        "r": "アレヴィーは",
+        "en": [
+          "Alevism",
+          "Alevi"
+        ]
+      }
+    },
+    "j1503310": {
+      "mn": [
+        "тусдаа харьяалал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "分轄",
+        "r": "ぶんかつ",
+        "en": [
+          "separate jurisdiction"
+        ]
+      }
+    },
+    "j1605070": {
+      "mn": [
+        "ашиг",
+        "орлого"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "儲け",
+        "r": "もうけ",
+        "en": [
+          "profit",
+          "earnings"
+        ]
+      }
+    },
+    "j1310380": {
+      "mn": [
+        "бодлого",
+        "арга хэмжээ"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "施策",
+        "r": "しさく",
+        "en": [
+          "policy",
+          "measure"
+        ]
+      }
+    },
+    "j2388600": {
+      "mn": [
+        "хамгаалалтын түлхүүр"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "保護キー",
+        "r": "ほごキー",
+        "en": [
+          "protection key"
+        ]
+      }
+    },
+    "j2664460": {
+      "mn": [
+        "сэтгэл сүйдэм",
+        "зүрх шимшрэм",
+        "цочирдом"
+      ],
+      "topics": [
+        "feelings",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "衝撃的",
+        "r": "しょうげきてき",
+        "en": [
+          "devastating",
+          "gut-wrenching",
+          "shocking"
+        ]
+      }
+    },
+    "j1756790": {
+      "mn": [
+        "суурь",
+        "үндсэн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "基礎的",
+        "r": "きそてき",
+        "en": [
+          "fundamental",
+          "basic"
+        ]
+      }
+    },
+    "j1485950": {
+      "mn": [
+        "микроскопын",
+        "бичил хэмжээний"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "微視的",
+        "r": "びしてき",
+        "en": [
+          "microscopic"
+        ]
+      }
+    },
+    "j1449680": {
+      "mn": [
+        "нэгтгэл",
+        "хамтатган удирдах",
+        "ерөнхийлөх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "統括",
+        "r": "とうかつ",
+        "en": [
+          "unification",
+          "bringing together",
+          "generalization"
+        ]
+      }
+    },
+    "j2848016": {
+      "mn": [
+        "нууцыг хадгалах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "保秘",
+        "r": "ほひ",
+        "en": [
+          "keeping (something) secret"
+        ]
+      }
+    },
+    "j1312230": {
+      "mn": [
+        "яруу найргийн",
+        "уянгын"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "詩的",
+        "r": "してき",
+        "en": [
+          "poetic"
+        ]
+      }
+    },
+    "j2726360": {
+      "mn": [
+        "бусдыг буруутгах хандлагагүй"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "無罰的",
+        "r": "むばつてき",
+        "en": [
+          "impunitive",
+          "not tending to blame others"
+        ]
+      }
+    },
+    "j2846897": {
+      "mn": [
+        "харьяалагдсан",
+        "хамааралтай",
+        "туслах"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "従属的",
+        "r": "じゅうぞくてき",
+        "en": [
+          "subordinate",
+          "dependent",
+          "subsidiary"
+        ]
+      }
+    },
+    "j1509440": {
+      "mn": [
+        "ялгавар",
+        "тал тохой татах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "分け隔て",
+        "r": "わけへだて",
+        "en": [
+          "distinction",
+          "favoritism",
+          "favouritism"
+        ]
+      }
+    },
+    "j1732420": {
+      "mn": [
+        "хэсэгчилсэн уламжлал",
+        "хэсэгчилсэн дифференциалчлал"
+      ],
+      "topics": [
+        "learning",
+        "quantity"
+      ],
+      "expected": {
+        "w": "偏微分",
+        "r": "へんびぶん",
+        "en": [
+          "partial derivative",
+          "partial differentiation"
+        ]
+      }
+    },
+    "j1316810": {
+      "mn": [
+        "шим тэжээлийн бодис"
+      ],
+      "topics": [
+        "food",
+        "body"
+      ],
+      "expected": {
+        "w": "滋養分",
+        "r": "じようぶん",
+        "en": [
+          "nutrient"
+        ]
+      }
+    },
+    "j1891920": {
+      "mn": [
+        "бохир усны нүх",
+        "шингэн хураах нүх",
+        "бууцны нүх"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "溜め",
+        "r": "ため",
+        "en": [
+          "cesspool",
+          "sink",
+          "manure sink"
+        ]
+      }
+    },
+    "j2053860": {
+      "mn": [
+        "хуурамч дүрээр өөрийгөө танилцуулах",
+        "нийгмийн байр сууриа худал мэдүүлэх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "身分詐称",
+        "r": "みぶんさしょう",
+        "en": [
+          "false personation",
+          "misrepresentation of one's social position"
+        ]
+      }
+    },
+    "j1436660": {
+      "mn": [
+        "гэрээ байгуулах",
+        "гэрээнд гарын үсэг зурах",
+        "хэлэлцээрт нэгдэх"
+      ],
+      "topics": [
+        "society",
+        "work"
+      ],
+      "expected": {
+        "w": "締結",
+        "r": "ていけつ",
+        "en": [
+          "conclusion",
+          "execution (of a contract)",
+          "entering (into treaty)"
+        ]
+      }
+    },
+    "j1586940": {
+      "mn": [
+        "санаа зовох",
+        "түгшин бодох",
+        "айх"
+      ],
+      "topics": [
+        "feelings",
+        "actions"
+      ],
+      "expected": {
+        "w": "案ずる",
+        "r": "あんずる",
+        "en": [
+          "to be anxious or concerned about",
+          "to ponder (anxiously)",
+          "to fear"
+        ]
+      }
+    },
+    "j2820540": {
+      "mn": [
+        "үндсэн хуулийг хамгаалагчид",
+        "одоогийн үндсэн хуулийг дэмжигчид"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "護憲派",
+        "r": "ごけんは",
+        "en": [
+          "advocates of protection of the Constitution",
+          "supporter of the current Constitution"
+        ]
+      }
+    },
+    "j1513620": {
+      "mn": [
+        "тэнсэн харгалзах ажилтан"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "保護司",
+        "r": "ほごし",
+        "en": [
+          "probation officer"
+        ]
+      }
+    },
+    "j2476690": {
+      "mn": [
+        "төлөвлөгөө боловсруулах",
+        "арга сэдэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "策する",
+        "r": "さくする",
+        "en": [
+          "to devise a plan",
+          "to work out a plot"
+        ]
+      }
+    },
+    "j2425200": {
+      "mn": [
+        "будааны жигнэмэг",
+        "сэнбэй"
+      ],
+      "topics": [
+        "food"
+      ],
+      "expected": {
+        "w": "お煎",
+        "r": "おせん",
+        "en": [
+          "rice cracker",
+          "senbei",
+          "Japanese cracker"
+        ]
+      }
+    },
+    "j2745060": {
+      "mn": [
+        "сум ба бай",
+        "бай харвах сум"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "的矢",
+        "r": "まとや",
+        "en": [
+          "arrow and target",
+          "arrow used for shooting marks"
+        ]
+      }
+    },
+    "j1484030": {
+      "mn": [
+        "өтгөн хаталт"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "秘結",
+        "r": "ひけつ",
+        "en": [
+          "constipation"
+        ]
+      }
+    },
+    "j1605270": {
+      "mn": [
+        "үндэслэх",
+        "суурилах",
+        "… шалтгаалсан байх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "基く",
+        "r": "もとづく",
+        "en": [
+          "to be grounded on",
+          "to be based on",
+          "to be due to"
+        ]
+      }
+    },
+    "j1727510": {
+      "mn": [
+        "төгсгөл",
+        "эцэс",
+        "дүгнэлт"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "結尾",
+        "r": "けつび",
+        "en": [
+          "end",
+          "close",
+          "conclusion"
+        ]
+      }
+    },
+    "j2112510": {
+      "mn": [
+        "боулайн буюу гогцоот зангилаа"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "もやい結び",
+        "r": "もやいむすび",
+        "en": [
+          "bowline (knot)"
+        ]
+      }
+    },
+    "j2116640": {
+      "mn": [
+        "мидзүхики уяаны нэг төрлийн зангилаа",
+        "тэр хэлбэрээр сүлжсэн эмэгтэй үс"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "あわび結び",
+        "r": "あわびむすび",
+        "en": [
+          "var. of knot often used to tie mizu-hiki",
+          "woman's hairstyle, braided in this fashion"
+        ]
+      }
+    },
+    "j2199690": {
+      "mn": [
+        "лютеран урсгал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "ルーテル派",
+        "r": "ルーテルは",
+        "en": [
+          "Lutheranism"
+        ]
+      }
+    },
+    "j2231110": {
+      "mn": [
+        "ессейн урсгалынхан"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "エッセネ派",
+        "r": "エッセネは",
+        "en": [
+          "the Essenes"
+        ]
+      }
+    },
+    "j2231120": {
+      "mn": [
+        "садукейн урсгалынхан"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "サドカイ派",
+        "r": "サドカイは",
+        "en": [
+          "the Sadducees"
+        ]
+      }
+    },
+    "j2231130": {
+      "mn": [
+        "фарисейн урсгалынхан"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "パリサイ派",
+        "r": "ファリサイは",
+        "en": [
+          "Pharisees"
+        ]
+      }
+    },
+    "j2718660": {
+      "mn": [
+        "друзийн урсгал",
+        "Сири Ливанд голлон оршдог шашны бүлэг"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "ドルーズ派",
+        "r": "ドルーズは",
+        "en": [
+          "Druze",
+          "Druse",
+          "Islamic sect primarily found in Syria and Lebanon"
+        ]
+      }
+    },
+    "j1776240": {
+      "mn": [
+        "нигилист",
+        "үнэ цэнийг үгүйсгэсэн"
+      ],
+      "topics": [
+        "descriptions",
+        "society"
+      ],
+      "expected": {
+        "w": "虚無的",
+        "r": "きょむてき",
+        "en": [
+          "nihilistic"
+        ]
+      }
+    },
+    "j1298270": {
+      "mn": [
+        "тактикч",
+        "арга сэдэгч",
+        "хуйвалдагч"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "策士",
+        "r": "さくし",
+        "en": [
+          "tactician",
+          "schemer",
+          "intriguer"
+        ]
+      }
+    },
+    "j2787430": {
+      "mn": [
+        "Шо овог",
+        "Рюкю улсын хааны удмынхан"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "尚氏",
+        "r": "しょうし",
+        "en": [
+          "Shō clan (royal family of the Ryukyu Kingdom)"
+        ]
+      }
+    },
+    "j1670990": {
+      "mn": [
+        "үлгэр жишээ"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "模範的",
+        "r": "もはんてき",
+        "en": [
+          "exemplary"
+        ]
+      }
+    },
+    "j1628420": {
+      "mn": [
+        "конденсац",
+        "шүүдэр үүсэх"
+      ],
+      "topics": [
+        "nature",
+        "learning"
+      ],
+      "expected": {
+        "w": "結露",
+        "r": "けつろ",
+        "en": [
+          "condensation",
+          "formation of dew"
+        ]
+      }
+    },
+    "j2655760": {
+      "mn": [
+        "сэтгэл татам",
+        "уруу татах",
+        "дур хүргэм"
+      ],
+      "topics": [
+        "feelings",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "誘惑的",
+        "r": "ゆうわくてき",
+        "en": [
+          "alluring",
+          "enticing",
+          "tempting"
+        ]
+      }
+    },
+    "j1831080": {
+      "mn": [
+        "гайхамшигтай",
+        "алмайрам",
+        "биширмээр"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "驚異的",
+        "r": "きょういてき",
+        "en": [
+          "wonderful",
+          "astounding",
+          "marvellous"
+        ]
+      }
+    },
+    "j1254920": {
+      "mn": [
+        "зангилаа",
+        "жижиг товгор",
+        "зангилаат ургацаг"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "結節",
+        "r": "けっせつ",
+        "en": [
+          "knot",
+          "nodule",
+          "tubercule"
+        ]
+      }
+    },
+    "j2773930": {
+      "mn": [
+        "далд илэрхийлсэн",
+        "ил хэлээгүй"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "陰的",
+        "r": "いんてき",
+        "en": [
+          "implicit"
+        ]
+      }
+    },
+    "j1251040": {
+      "mn": [
+        "угсаа гарлын мод",
+        "удам судрын мод",
+        "гэр бүлийн мод"
+      ],
+      "topics": [
+        "people",
+        "learning"
+      ],
+      "expected": {
+        "w": "系統樹",
+        "r": "けいとうじゅ",
+        "en": [
+          "phylogenetic tree",
+          "genealogical tree",
+          "family tree"
+        ]
+      }
+    },
+    "j2210490": {
+      "mn": [
+        "шумбагчийн хамгаалалтын өмсгөл",
+        "нойтон буюу хуурай шумбалтын хувцас",
+        "хүйтэн ба үрэлтээс хамгаалах хувцас"
+      ],
+      "topics": [
+        "daily",
+        "body"
+      ],
+      "expected": {
+        "w": "保護スーツ",
+        "r": "ほごスーツ",
+        "en": [
+          "diver's exposure suit",
+          "body suits, wet suits, and dry suits",
+          "suit which protects divers from exposure and abrasion"
+        ]
+      }
+    },
+    "j2310930": {
+      "mn": [
+        "өгөгдөл хамгаалах"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "データ保護",
+        "r": "データほご",
+        "en": [
+          "data protection"
+        ]
+      }
+    },
+    "j2334480": {
+      "mn": [
+        "санах ой хамгаалах"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "メモリ保護",
+        "r": "メモリほご",
+        "en": [
+          "memory protection"
+        ]
+      }
+    }
+  }
+}

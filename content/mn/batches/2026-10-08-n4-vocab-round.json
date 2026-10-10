@@ -1,0 +1,1063 @@
+{
+  "provenance": {
+    "id": "mn-n4-vocab-round-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit topics cross-checked individually against retained Japanese headwords/readings and English glosses, including alternate dictionary readings. Independently unreviewed.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n4.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j1432890": {
+      "mn": [
+        "харилцан ойлголцох",
+        "бодол мэдрэмжээ солилцох",
+        "санаагаа бие биедээ илэрхийлэх"
+      ],
+      "topics": [
+        "relationships",
+        "actions"
+      ],
+      "expected": {
+        "w": "通じ合う",
+        "r": "つうじあう",
+        "en": [
+          "to be comprehended",
+          "to exchange with each other (thoughts, feelings, etc.)",
+          "to express to each other (e.g. intentions)"
+        ]
+      }
+    },
+    "j1409700": {
+      "mn": [
+        "нэр хүнд",
+        "хүндлэл",
+        "эрхэмсэг байдал"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "体面",
+        "r": "たいめん",
+        "en": [
+          "honour",
+          "honor",
+          "dignity"
+        ]
+      }
+    },
+    "j1344780": {
+      "mn": [
+        "туслалцаа",
+        "дэмжлэг"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "助力",
+        "r": "じょりょく",
+        "en": [
+          "assistance",
+          "support"
+        ]
+      }
+    },
+    "j2827401": {
+      "mn": [
+        "хийсэн нь дээр",
+        "хийхгүй байсан нь дээр"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "方がいい",
+        "r": "ほうがいい",
+        "en": [
+          "had better",
+          "had better not"
+        ]
+      }
+    },
+    "j1454260": {
+      "mn": [
+        "учир шалтгаан",
+        "логик",
+        "зөв ухаан"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "道理",
+        "r": "どうり",
+        "en": [
+          "reason",
+          "logic",
+          "sense"
+        ]
+      }
+    },
+    "j1697890": {
+      "mn": [
+        "шалгалт өгөгч"
+      ],
+      "topics": [
+        "learning",
+        "people"
+      ],
+      "expected": {
+        "w": "受験者",
+        "r": "じゅけんしゃ",
+        "en": [
+          "examinee"
+        ]
+      }
+    },
+    "j1545390": {
+      "mn": [
+        "сэжигтэн"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "容疑者",
+        "r": "ようぎしゃ",
+        "en": [
+          "suspect (person)"
+        ]
+      }
+    },
+    "j2016000": {
+      "mn": [
+        "сургалт семинар",
+        "дадлага сургалт"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "研修会",
+        "r": "けんしゅうかい",
+        "en": [
+          "workshop",
+          "training course"
+        ]
+      }
+    },
+    "j1305550": {
+      "mn": [
+        "хувцас оёх",
+        "эсгэж оёх",
+        "оёдол"
+      ],
+      "topics": [
+        "daily",
+        "work"
+      ],
+      "expected": {
+        "w": "仕立",
+        "r": "したて",
+        "en": [
+          "tailoring",
+          "dressmaking",
+          "sewing"
+        ]
+      }
+    },
+    "j1335330": {
+      "mn": [
+        "дагалдагч",
+        "үйлчлэгч",
+        "хувийн зарц"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "従者",
+        "r": "じゅうしゃ",
+        "en": [
+          "follower",
+          "attendant",
+          "valet"
+        ]
+      }
+    },
+    "j1346200": {
+      "mn": [
+        "дураараа",
+        "өөрөө аяндаа",
+        "сайн дураар"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "勝手に",
+        "r": "かってに",
+        "en": [
+          "arbitrarily",
+          "of its own accord",
+          "voluntarily"
+        ]
+      }
+    },
+    "j1722270": {
+      "mn": [
+        "үйл явдал болохоос өмнө"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "未発",
+        "r": "みはつ",
+        "en": [
+          "before an event takes place"
+        ]
+      }
+    },
+    "j1535760": {
+      "mn": [
+        "ихэмсэг дүр",
+        "чухал хүн мэт ааш",
+        "хэт чухалчлах"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "物体",
+        "r": "もったい",
+        "en": [
+          "superior airs",
+          "air of importance",
+          "overemphasis"
+        ]
+      }
+    },
+    "j1172860": {
+      "mn": [
+        "тээврийн хэрэгслийн жолооч"
+      ],
+      "topics": [
+        "people",
+        "places"
+      ],
+      "expected": {
+        "w": "運転者",
+        "r": "うんてんしゃ",
+        "en": [
+          "driver (of a vehicle)"
+        ]
+      }
+    },
+    "j1455240": {
+      "mn": [
+        "төлөөлөгч",
+        "элч"
+      ],
+      "topics": [
+        "people",
+        "work"
+      ],
+      "expected": {
+        "w": "特派員",
+        "r": "とくはいん",
+        "en": [
+          "representative",
+          "delegate"
+        ]
+      }
+    },
+    "j1423050": {
+      "mn": [
+        "тууштай",
+        "найдвартай",
+        "баттай"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "着実",
+        "r": "ちゃくじつ",
+        "en": [
+          "steady",
+          "sound",
+          "solid"
+        ]
+      }
+    },
+    "j1537310": {
+      "mn": [
+        "бейсболын талбай",
+        "бейсболын цэнгэлдэх"
+      ],
+      "topics": [
+        "places",
+        "arts"
+      ],
+      "expected": {
+        "w": "野球場",
+        "r": "やきゅうじょう",
+        "en": [
+          "baseball ground",
+          "baseball stadium"
+        ]
+      }
+    },
+    "j1535670": {
+      "mn": [
+        "нүдний харц",
+        "нүдний илэрхийлэл",
+        "нүд"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "目つき",
+        "r": "めつき",
+        "en": [
+          "look (in someone's eyes)",
+          "expression (of the eyes)",
+          "eyes"
+        ]
+      }
+    },
+    "j2187150": {
+      "mn": [
+        "буддын магтаал аялан унших"
+      ],
+      "topics": [
+        "society",
+        "arts"
+      ],
+      "expected": {
+        "w": "声明",
+        "r": "しょうみょう",
+        "en": [
+          "chanting of Buddhist hymns (usu. in Sanskrit or Chinese)"
+        ]
+      }
+    },
+    "j2663370": {
+      "mn": [
+        "дэвшээгүй шогийн хүү"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "不成",
+        "r": "ふなり",
+        "en": [
+          "unpromoted (piece)"
+        ]
+      }
+    },
+    "j1563800": {
+      "mn": [
+        "хийх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "作す",
+        "r": "なす",
+        "en": [
+          "to make"
+        ]
+      }
+    },
+    "j2267930": {
+      "mn": [
+        "хийх",
+        "бүтээх",
+        "ургуулах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "作り",
+        "r": "づくり",
+        "en": [
+          "making",
+          "forming",
+          "cultivating"
+        ]
+      }
+    },
+    "j1402610": {
+      "mn": [
+        "гүйгч",
+        "бейсболын суурийн гүйгч"
+      ],
+      "topics": [
+        "people",
+        "arts"
+      ],
+      "expected": {
+        "w": "走者",
+        "r": "そうしゃ",
+        "en": [
+          "runner",
+          "base runner"
+        ]
+      }
+    },
+    "j1720290": {
+      "mn": [
+        "шинэ цэрэг",
+        "цэрэгт татагдагч"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "新兵",
+        "r": "しんぺい",
+        "en": [
+          "new recruit",
+          "conscript"
+        ]
+      }
+    },
+    "j2259180": {
+      "mn": [
+        "асуултын эмхэтгэл",
+        "бодлогын эмхэтгэл",
+        "дасгалын багц"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "問題集",
+        "r": "もんだいしゅう",
+        "en": [
+          "question collection",
+          "problem collection",
+          "problem set"
+        ]
+      }
+    },
+    "j1510210": {
+      "mn": [
+        "өөр зүйл",
+        "өөр асуулт",
+        "өөр тохиолдол"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "別問題",
+        "r": "べつもんだい",
+        "en": [
+          "different thing",
+          "another question",
+          "different case"
+        ]
+      }
+    },
+    "j2011570": {
+      "mn": [
+        "шинэ баг"
+      ],
+      "topics": [
+        "people",
+        "arts"
+      ],
+      "expected": {
+        "w": "新チーム",
+        "r": "しんチーム",
+        "en": [
+          "new team"
+        ]
+      }
+    },
+    "j1592630": {
+      "mn": [
+        "эцсийн шийдэл",
+        "шийдвэр",
+        "төгсгөл"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "決着",
+        "r": "けっちゃく",
+        "en": [
+          "conclusion",
+          "decision",
+          "end"
+        ]
+      }
+    },
+    "j1335240": {
+      "mn": [
+        "ажил эрхлэлт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "従業",
+        "r": "じゅうぎょう",
+        "en": [
+          "employment"
+        ]
+      }
+    },
+    "j2522490": {
+      "mn": [
+        "цэцэрлэгт хүрээлэн",
+        "цэцэрлэг"
+      ],
+      "topics": [
+        "places",
+        "nature"
+      ],
+      "expected": {
+        "w": "園地",
+        "r": "えんち",
+        "en": [
+          "park",
+          "garden"
+        ]
+      }
+    },
+    "j2399970": {
+      "mn": [
+        "талбайн судалгаа",
+        "газар дээрх судалгаа"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "実地調査",
+        "r": "じっちちょうさ",
+        "en": [
+          "site survey",
+          "field study"
+        ]
+      }
+    },
+    "j2836225": {
+      "mn": [
+        "үе",
+        "нугас"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "番目",
+        "r": "つがいめ",
+        "en": [
+          "joint",
+          "hinge"
+        ]
+      }
+    },
+    "j1223880": {
+      "mn": [
+        "асаах",
+        "компьютер эхлүүлэх",
+        "идэвхжүүлэх"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "起動",
+        "r": "きどう",
+        "en": [
+          "startup",
+          "booting up",
+          "activation"
+        ]
+      }
+    },
+    "j2835418": {
+      "mn": [
+        "хамгийн хүчтэй нэр дэвшигч",
+        "ялах магадлал хамгийн өндөр",
+        "гол сэжигтэн"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "最有力",
+        "r": "さいゆうりょく",
+        "en": [
+          "strongest (candidate)",
+          "likeliest (winner)",
+          "top (suspect)"
+        ]
+      }
+    },
+    "j2152560": {
+      "mn": [
+        "үндсэн бизнес",
+        "гол үүрэг",
+        "үндсэн чиглэл"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "主要業務",
+        "r": "しゅようぎょうむ",
+        "en": [
+          "primary business",
+          "primary function",
+          "primary focus"
+        ]
+      }
+    },
+    "j1432870": {
+      "mn": [
+        "дамжин",
+        "замаар",
+        "турш"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "通じて",
+        "r": "つうじて",
+        "en": [
+          "through",
+          "via",
+          "throughout"
+        ]
+      }
+    },
+    "j1800020": {
+      "mn": [
+        "спортын тэмцээн"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "競技会",
+        "r": "きょうぎかい",
+        "en": [
+          "athletic meet"
+        ]
+      }
+    },
+    "j1691640": {
+      "mn": [
+        "дарангуйлагч",
+        "харгис захирагч"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "独裁者",
+        "r": "どくさいしゃ",
+        "en": [
+          "dictator",
+          "despot"
+        ]
+      }
+    },
+    "j1981690": {
+      "mn": [
+        "ажил эрхэлдэг хүн"
+      ],
+      "topics": [
+        "people",
+        "work"
+      ],
+      "expected": {
+        "w": "就業者",
+        "r": "しゅうぎょうしゃ",
+        "en": [
+          "employed person"
+        ]
+      }
+    },
+    "j1355440": {
+      "mn": [
+        "тээврийн ажилтан",
+        "багийн гишүүн",
+        "хөлгийн ажилтан"
+      ],
+      "topics": [
+        "people",
+        "places"
+      ],
+      "expected": {
+        "w": "乗務員",
+        "r": "じょうむいん",
+        "en": [
+          "transport staff (driver, conductor, etc.)",
+          "crew member",
+          "crewman"
+        ]
+      }
+    },
+    "j1008860": {
+      "mn": [
+        "хэлж болох",
+        "хэлж чадах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "言える",
+        "r": "いえる",
+        "en": [
+          "to be possible to say",
+          "to be able to say"
+        ]
+      }
+    },
+    "j1922760": {
+      "mn": [
+        "гэж нэрлэдэг",
+        "нэртэй",
+        "гэж хэлдэг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "と言う",
+        "r": "という",
+        "en": [
+          "called",
+          "named",
+          "that says"
+        ]
+      }
+    },
+    "j2844736": {
+      "mn": [
+        "аль алиных нь хувьд",
+        "мөн тэр талаас",
+        "аль нь ч бай"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "と言い",
+        "r": "といい",
+        "en": [
+          "in terms of both ... and ...",
+          "from the perspective of ... as well as ...",
+          "whether it be ... or ...."
+        ]
+      }
+    },
+    "j1495070": {
+      "mn": [
+        "буруу нарийвчлалтай",
+        "бүдэг",
+        "тодорхой бус"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "不明確",
+        "r": "ふめいかく",
+        "en": [
+          "inaccurate",
+          "indistinct",
+          "imprecise"
+        ]
+      }
+    },
+    "j1007270": {
+      "mn": [
+        "удаа бүр",
+        "бүрд",
+        "болох болгонд"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "度に",
+        "r": "たびに",
+        "en": [
+          "each time",
+          "every time",
+          "whenever (something happens)"
+        ]
+      }
+    },
+    "j1156620": {
+      "mn": [
+        "шийдвэр гаргах"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "意思決定",
+        "r": "いしけってい",
+        "en": [
+          "decision-making"
+        ]
+      }
+    },
+    "j1528840": {
+      "mn": [
+        "ардчилал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "民主主義",
+        "r": "みんしゅしゅぎ",
+        "en": [
+          "democracy"
+        ]
+      }
+    },
+    "j1680230": {
+      "mn": [
+        "эсэргүүцлийн хөдөлгөөн"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "反対運動",
+        "r": "はんたいうんどう",
+        "en": [
+          "opposition movement"
+        ]
+      }
+    },
+    "j1327980": {
+      "mn": [
+        "үйлчилгээний төлбөр",
+        "шимтгэл",
+        "зуучлалын хөлс"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "手数料",
+        "r": "てすうりょう",
+        "en": [
+          "charge (e.g. for a cancellation)",
+          "commission",
+          "brokerage"
+        ]
+      }
+    },
+    "j1960190": {
+      "mn": [
+        "чадварлаг хүн",
+        "сайн тоглогч"
+      ],
+      "topics": [
+        "people",
+        "arts"
+      ],
+      "expected": {
+        "w": "好選手",
+        "r": "こうせんしゅ",
+        "en": [
+          "strong or skillful person",
+          "good player"
+        ]
+      }
+    },
+    "j1208370": {
+      "mn": [
+        "идэвхтэн"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "活動家",
+        "r": "かつどうか",
+        "en": [
+          "activist"
+        ]
+      }
+    },
+    "j1281300": {
+      "mn": [
+        "агаарын тээврийн компани"
+      ],
+      "topics": [
+        "work",
+        "places"
+      ],
+      "expected": {
+        "w": "航空会社",
+        "r": "こうくうがいしゃ",
+        "en": [
+          "airline company"
+        ]
+      }
+    },
+    "j1236120": {
+      "mn": [
+        "хүч",
+        "чадал"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "強さ",
+        "r": "つよさ",
+        "en": [
+          "strength",
+          "power"
+        ]
+      }
+    },
+    "j2087680": {
+      "mn": [
+        "хатуу",
+        "хөшүүн",
+        "бат бөх"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "強い",
+        "r": "こわい",
+        "en": [
+          "tough",
+          "stiff",
+          "hard"
+        ]
+      }
+    },
+    "j1254660": {
+      "mn": [
+        "зангилаа"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "結び目",
+        "r": "むすびめ",
+        "en": [
+          "knot"
+        ]
+      }
+    },
+    "j1395530": {
+      "mn": [
+        "бүх дэлхий"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "全世界",
+        "r": "ぜんせかい",
+        "en": [
+          "the whole world"
+        ]
+      }
+    },
+    "j2764520": {
+      "mn": [
+        "нээлттэй байх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "開かれる",
+        "r": "ひらかれる",
+        "en": [
+          "to be open"
+        ]
+      }
+    },
+    "j1477480": {
+      "mn": [
+        "ялгаруулалт",
+        "цацрал",
+        "цацраг"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "発散",
+        "r": "はっさん",
+        "en": [
+          "emission",
+          "emanation",
+          "radiation"
+        ]
+      }
+    },
+    "j2090390": {
+      "mn": [
+        "Жиан эрин үе (1021 оны 2 сарын 2–1024 оны 7 сарын 13)"
+      ],
+      "topics": [
+        "time",
+        "society"
+      ],
+      "expected": {
+        "w": "治安",
+        "r": "じあん",
+        "en": [
+          "Jian era (1021.2.2-1024.7.13)"
+        ]
+      }
+    },
+    "j1779300": {
+      "mn": [
+        "тэтгэвэрт гарсан хүн"
+      ],
+      "topics": [
+        "people",
+        "work"
+      ],
+      "expected": {
+        "w": "退職者",
+        "r": "たいしょくしゃ",
+        "en": [
+          "retired person",
+          "retiree"
+        ]
+      }
+    }
+  }
+}

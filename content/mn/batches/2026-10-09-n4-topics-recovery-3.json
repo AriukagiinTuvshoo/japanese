@@ -1,0 +1,514 @@
+{
+  "provenance": {
+    "id": "mn-n4-topics-recovery-3-2026-10-09",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "Explicit semantic assignments compared with exact Japanese, readings and retained English. Multiple topics where justified; no default catch-all. Independent human review pending.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n4.json at cac78c79587f6fb6d5f93a158790258c24b351e8",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "80eba2fabb": {
+      "expected": {
+        "w": "展覧会",
+        "r": "てんらんかい",
+        "en": [
+          "exhibition"
+        ]
+      },
+      "topics": [
+        "arts"
+      ]
+    },
+    "53162e310d": {
+      "expected": {
+        "w": "都",
+        "r": "と",
+        "en": [
+          "metropolitan"
+        ]
+      },
+      "topics": [
+        "places",
+        "society"
+      ]
+    },
+    "9ef4ab5d2a": {
+      "expected": {
+        "w": "とうとう",
+        "r": "とうとう",
+        "en": [
+          "finally",
+          "after all"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "69678bc04e": {
+      "expected": {
+        "w": "動物園",
+        "r": "どうぶつえん",
+        "en": [
+          "zoo"
+        ]
+      },
+      "topics": [
+        "places",
+        "nature"
+      ]
+    },
+    "0b2acf3460": {
+      "expected": {
+        "w": "特に",
+        "r": "とくに",
+        "en": [
+          "particularly",
+          "especially"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "8743cb4286": {
+      "expected": {
+        "w": "とこや",
+        "r": "とこや",
+        "en": [
+          "barber"
+        ]
+      },
+      "topics": [
+        "people",
+        "work"
+      ]
+    },
+    "9b799806d8": {
+      "expected": {
+        "w": "途中",
+        "r": "とちゅう",
+        "en": [
+          "on the way"
+        ]
+      },
+      "topics": [
+        "places",
+        "time"
+      ]
+    },
+    "76d7890e5d": {
+      "expected": {
+        "w": "泥棒",
+        "r": "どろぼう",
+        "en": [
+          "thief"
+        ]
+      },
+      "topics": [
+        "people",
+        "society"
+      ]
+    },
+    "ccfefc657c": {
+      "expected": {
+        "w": "どんどん",
+        "r": "どんどん",
+        "en": [
+          "more and more"
+        ]
+      },
+      "topics": [
+        "quantity",
+        "time"
+      ]
+    },
+    "626ae1ff39": {
+      "expected": {
+        "w": "なるべく",
+        "r": "なるべく",
+        "en": [
+          "as much as possible"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "76a4fc9d6d": {
+      "expected": {
+        "w": "なるほど",
+        "r": "なるほど",
+        "en": [
+          "now I understand"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "40f67571a6": {
+      "expected": {
+        "w": "におい",
+        "r": "におい",
+        "en": [
+          "a smell"
+        ]
+      },
+      "topics": [
+        "body"
+      ]
+    },
+    "0ddf8d04c2": {
+      "expected": {
+        "w": "日記",
+        "r": "にっき",
+        "en": [
+          "journal"
+        ]
+      },
+      "topics": [
+        "daily",
+        "learning"
+      ]
+    },
+    "5cda324083": {
+      "expected": {
+        "w": "人形",
+        "r": "にんぎょう",
+        "en": [
+          "doll",
+          "figure"
+        ]
+      },
+      "topics": [
+        "daily",
+        "arts"
+      ]
+    },
+    "4fbc32438d": {
+      "expected": {
+        "w": "熱",
+        "r": "ねつ",
+        "en": [
+          "fever"
+        ]
+      },
+      "topics": [
+        "body"
+      ]
+    },
+    "6a3d0e7070": {
+      "expected": {
+        "w": "のど",
+        "r": "のど",
+        "en": [
+          "throat"
+        ]
+      },
+      "topics": [
+        "body"
+      ]
+    },
+    "254439ebbe": {
+      "expected": {
+        "w": "葉",
+        "r": "は",
+        "en": [
+          "leaf"
+        ]
+      },
+      "topics": [
+        "nature"
+      ]
+    },
+    "2d86d7e0fc": {
+      "expected": {
+        "w": "場合",
+        "r": "ばあい",
+        "en": [
+          "situation"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "9bb337edc6": {
+      "expected": {
+        "w": "歯医者",
+        "r": "はいしゃ",
+        "en": [
+          "dentist"
+        ]
+      },
+      "topics": [
+        "people",
+        "body"
+      ]
+    },
+    "32ca6422d6": {
+      "expected": {
+        "w": "場所",
+        "r": "ばしょ",
+        "en": [
+          "location"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "d02b870af1": {
+      "expected": {
+        "w": "はず",
+        "r": "はず",
+        "en": [
+          "it should be so"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "2078b08350": {
+      "expected": {
+        "w": "はっきり",
+        "r": "はっきり",
+        "en": [
+          "clearly"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "a2962b07bc": {
+      "expected": {
+        "w": "林",
+        "r": "はやし",
+        "en": [
+          "woods",
+          "forester"
+        ]
+      },
+      "topics": [
+        "nature"
+      ]
+    },
+    "76e19fba1a": {
+      "expected": {
+        "w": "番組",
+        "r": "ばんぐみ",
+        "en": [
+          "television or radio program"
+        ]
+      },
+      "topics": [
+        "arts"
+      ]
+    },
+    "70eb9aa3ff": {
+      "expected": {
+        "w": "ハンドバッグ",
+        "r": "ハンドバッグ",
+        "en": [
+          "handbag"
+        ]
+      },
+      "topics": [
+        "daily"
+      ]
+    },
+    "897bcab845": {
+      "expected": {
+        "w": "ピアノ",
+        "r": "ピアノ",
+        "en": [
+          "piano"
+        ]
+      },
+      "topics": [
+        "arts"
+      ]
+    },
+    "916e92f3da": {
+      "expected": {
+        "w": "引き出し",
+        "r": "ひきだし",
+        "en": [
+          "drawer",
+          "drawing out"
+        ]
+      },
+      "topics": [
+        "daily",
+        "actions"
+      ]
+    },
+    "36d0fd2044": {
+      "expected": {
+        "w": "ひげ",
+        "r": "ひげ",
+        "en": [
+          "beard"
+        ]
+      },
+      "topics": [
+        "body"
+      ]
+    },
+    "be23bfe1f6": {
+      "expected": {
+        "w": "非常に",
+        "r": "ひじょうに",
+        "en": [
+          "extremely"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "26253e5000": {
+      "expected": {
+        "w": "昼休み",
+        "r": "ひるやすみ",
+        "en": [
+          "noon break"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "fbb6245e8b": {
+      "expected": {
+        "w": "普通",
+        "r": "ふつう",
+        "en": [
+          "usually",
+          "normally",
+          "ordinary"
+        ]
+      },
+      "topics": [
+        "descriptions",
+        "time"
+      ]
+    },
+    "fceb1b247e": {
+      "expected": {
+        "w": "ぶどう",
+        "r": "ぶどう",
+        "en": [
+          "grapes"
+        ]
+      },
+      "topics": [
+        "food"
+      ]
+    },
+    "f1ef6228cb": {
+      "expected": {
+        "w": "布団",
+        "r": "ふとん",
+        "en": [
+          "Japanese bedding",
+          "futon"
+        ]
+      },
+      "topics": [
+        "daily"
+      ]
+    },
+    "45d920815a": {
+      "expected": {
+        "w": "舟",
+        "r": "ふね",
+        "en": [
+          "ship"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "2f79469321": {
+      "expected": {
+        "w": "文化",
+        "r": "ぶんか",
+        "en": [
+          "culture"
+        ]
+      },
+      "topics": [
+        "society",
+        "arts"
+      ]
+    },
+    "9eaa627a73": {
+      "expected": {
+        "w": "文法",
+        "r": "ぶんぽう",
+        "en": [
+          "grammar"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "e5cfcfab45": {
+      "expected": {
+        "w": "ベル",
+        "r": "ベル",
+        "en": [
+          "bell"
+        ]
+      },
+      "topics": [
+        "technology"
+      ]
+    },
+    "1587d6fbcf": {
+      "expected": {
+        "w": "僕",
+        "r": "ぼく",
+        "en": [
+          "I (used by males)"
+        ]
+      },
+      "topics": [
+        "people"
+      ]
+    },
+    "72df46ea9c": {
+      "expected": {
+        "w": "星",
+        "r": "ほし",
+        "en": [
+          "star"
+        ]
+      },
+      "topics": [
+        "nature"
+      ]
+    },
+    "b3f18d07d4": {
+      "expected": {
+        "w": "ほど",
+        "r": "ほど",
+        "en": [
+          "extent"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    }
+  }
+}

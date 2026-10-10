@@ -1,0 +1,230 @@
+{
+  "provenance": {
+    "id": "mn-n2-grammar-examples-progress-4-oct9",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian compared with exact Japanese and retained English; stable record and headword/pattern guards; independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/grammar/n2.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "grammar": {
+    "ni-koshita-koto-wa-nai": {
+      "expected": {
+        "p": "〜に越したことはない",
+        "en": "it's best to; nothing is better than"
+      },
+      "examples": {
+        "住まいは駅に近いに越したことはないが、その分家賃が高くなる。": {
+          "en": "It's best to live near the station, of course, but the rent goes up accordingly.",
+          "mn": "Өртөөнд ойр амьдарсан нь дээр ч тэр хэрээр түрээс өндөр болно."
+        }
+      }
+    },
+    "ni-hoka-naranai": {
+      "expected": {
+        "p": "〜にほかならない",
+        "en": "nothing other than; none other than; precisely"
+      },
+      "examples": {
+        "今回の成功は、社員一人ひとりの努力の結果にほかならない。": {
+          "en": "This success is nothing other than the result of each employee's efforts.",
+          "mn": "Энэ амжилт бол ажилтан бүрийн хичээл зүтгэлийн үр дүнгээс өөр юу ч биш."
+        },
+        "彼が厳しく指導するのは、選手の才能を信じているからにほかならない。": {
+          "en": "He coaches strictly precisely because he believes in the athletes' talent.",
+          "mn": "Тэр тамирчдын авьяаст итгэдэг учраас л хатуу дасгалжуулдаг."
+        }
+      }
+    },
+    "ni-mo-kakawarazu": {
+      "expected": {
+        "p": "〜にもかかわらず",
+        "en": "despite; in spite of; although"
+      },
+      "examples": {
+        "悪天候にもかかわらず、大勢の観客が会場に集まった。": {
+          "en": "Despite the bad weather, a large crowd gathered at the venue.",
+          "mn": "Цаг агаар муу байсан ч олон үзэгч талбайд цугларсан."
+        },
+        "何度も注意されたにもかかわらず、彼は同じミスを繰り返した。": {
+          "en": "Despite being warned many times, he repeated the same mistake.",
+          "mn": "Олон удаа анхааруулсан ч тэр ижил алдаагаа давтсан."
+        }
+      }
+    },
+    "ni-atatte": {
+      "expected": {
+        "p": "〜にあたって",
+        "en": "when; at the time of; on the occasion of (starting something important)"
+      },
+      "examples": {
+        "新生活を始めるにあたって、必要な物をリストにまとめた。": {
+          "en": "When starting my new life, I made a list of the things I'd need.",
+          "mn": "Шинэ амьдрал эхлэхдээ хэрэгтэй зүйлсээ жагсаасан."
+        },
+        "開会にあたり、主催者を代表して一言ご挨拶申し上げます。": {
+          "en": "On the occasion of the opening, allow me to say a few words on behalf of the organizers.",
+          "mn": "Нээлтийн үеэр зохион байгуулагчдыг төлөөлөн хэдэн үг хэлье."
+        },
+        "論文を書くにあたっては、引用のルールを守らなければならない。": {
+          "en": "When writing a thesis, you must follow the rules of citation.",
+          "mn": "Эрдмийн ажил бичихдээ эшлэлийн дүрмийг мөрдөх ёстой."
+        }
+      }
+    },
+    "ni-oite-ni-okeru": {
+      "expected": {
+        "p": "〜において / 〜における",
+        "en": "in; at; in the field of (formal)"
+      },
+      "examples": {
+        "卒業式は大講堂において行われます。": {
+          "en": "The graduation ceremony will be held in the main auditorium.",
+          "mn": "Төгсөлтийн ёслол том танхимд болно."
+        },
+        "現代社会における家族の役割について考えてみたい。": {
+          "en": "I'd like to consider the role of the family in modern society.",
+          "mn": "Орчин үеийн нийгэм дэх гэр бүлийн үүргийг бодож үзмээр байна."
+        },
+        "彼女はデザインの分野において高く評価されている。": {
+          "en": "She is highly regarded in the field of design.",
+          "mn": "Түүнийг загварын салбарт өндөр үнэлдэг."
+        }
+      }
+    },
+    "ni-kakawarazu": {
+      "expected": {
+        "p": "〜にかかわらず",
+        "en": "regardless of; irrespective of"
+      },
+      "examples": {
+        "このセミナーは、経験の有無にかかわらず、どなたでも参加できます。": {
+          "en": "Anyone can join this seminar, regardless of experience.",
+          "mn": "Туршлагатай эсэхээс үл хамааран хэн ч энэ семинарт оролцож болно."
+        },
+        "天候にかかわらず、試合は予定通り行います。": {
+          "en": "The match will go ahead as scheduled regardless of the weather.",
+          "mn": "Цаг агаараас үл хамааран тоглолт хуваарийн дагуу болно."
+        },
+        "出席するしないにかかわらず、必ず返信してください。": {
+          "en": "Please be sure to reply whether or not you will attend.",
+          "mn": "Ирэх эсэхээс үл хамааран заавал хариу өгөөрэй."
+        }
+      }
+    },
+    "ni-kakawaru": {
+      "expected": {
+        "p": "〜にかかわる",
+        "en": "affecting; concerning (something important); relating to"
+      },
+      "examples": {
+        "これは人の命にかかわる問題だから、慎重に判断しなければならない。": {
+          "en": "This is a matter of life and death, so we must judge carefully.",
+          "mn": "Энэ нь хүний амьтай холбоотой асуудал тул болгоомжтой шийдэх ёстой."
+        },
+        "会社の信用にかかわるようなミスは、絶対に避けたい。": {
+          "en": "I absolutely want to avoid any mistake that could damage the company's reputation.",
+          "mn": "Компанийн нэр хүндэд нөлөөлөх алдаанаас заавал зайлсхиймээр байна."
+        }
+      }
+    },
+    "ni-tsuki": {
+      "expected": {
+        "p": "〜につき",
+        "en": "per; for each; due to (in formal notices)"
+      },
+      "examples": {
+        "駐車料金は、一時間につき三百円です。": {
+          "en": "Parking costs 300 yen per hour.",
+          "mn": "Зогсоолын төлбөр нэг цаг тутам гурван зуун иен."
+        },
+        "本日は定休日につき、お休みさせていただきます。": {
+          "en": "We are closed today as it is our regular holiday.",
+          "mn": "Өнөөдөр манай тогтмол амралтын өдөр тул ажиллахгүй."
+        },
+        "工事中につき、この先は通行止めです。": {
+          "en": "Due to construction, the road ahead is closed.",
+          "mn": "Барилгын ажилтай тул цааш зам хаалттай."
+        }
+      }
+    },
+    "ni-mukete": {
+      "expected": {
+        "p": "〜に向けて",
+        "en": "toward; aimed at; in preparation for; addressed to"
+      },
+      "examples": {
+        "来年の全国大会に向けて、毎日練習に励んでいる。": {
+          "en": "We're practicing hard every day for next year's national tournament.",
+          "mn": "Ирэх жилийн улсын тэмцээнд бэлдэж өдөр бүр шаргуу дасгал хийж байна."
+        },
+        "政府は、温室効果ガス削減に向けた新しい計画を発表した。": {
+          "en": "The government announced a new plan aimed at reducing greenhouse gases.",
+          "mn": "Засгийн газар хүлэмжийн хийг бууруулах шинэ төлөвлөгөө зарласан."
+        },
+        "大統領は国民に向けてメッセージを発表した。": {
+          "en": "The president issued a message addressed to the nation.",
+          "mn": "Ерөнхийлөгч ард түмэндээ хандан мэдэгдэл гаргасан."
+        }
+      }
+    },
+    "no-moto-de-no-moto-ni": {
+      "expected": {
+        "p": "〜のもとで / 〜のもとに",
+        "en": "under (guidance, influence, a rule); with"
+      },
+      "examples": {
+        "私は大学院で、有名な教授のもとで研究を続けた。": {
+          "en": "In graduate school, I continued my research under a famous professor.",
+          "mn": "Би магистрын сургалтад алдарт профессорыг түшиглэн судалгаагаа үргэлжлүүлсэн."
+        },
+        "明るい太陽のもとで、子どもたちが元気に遊んでいる。": {
+          "en": "Children are playing happily under the bright sun.",
+          "mn": "Гэрэлт нарны дор хүүхдүүд хөгжилтэй тоглож байна."
+        },
+        "すべての国民は、法のもとに平等である。": {
+          "en": "All citizens are equal under the law.",
+          "mn": "Бүх иргэн хуулийн өмнө тэгш эрхтэй."
+        }
+      }
+    },
+    "nuki-de-nuki-ni": {
+      "expected": {
+        "p": "〜抜きで / 〜抜きに",
+        "en": "without; leaving out"
+      },
+      "examples": {
+        "今日は仕事の話抜きで、ゆっくり楽しみましょう。": {
+          "en": "Let's leave work talk out of it today and just relax and enjoy ourselves.",
+          "mn": "Өнөөдөр ажлын яриаг орхиод тайван сайхан амарцгаая."
+        },
+        "彼の協力抜きには、このプロジェクトは成功しなかっただろう。": {
+          "en": "Without his cooperation, this project probably wouldn't have succeeded.",
+          "mn": "Түүний туслалцаагүй бол энэ төсөл амжилттай болохгүй байсан байх."
+        },
+        "朝食抜きで出勤する人が増えている。": {
+          "en": "More and more people are going to work without breakfast.",
+          "mn": "Өглөөний хоолгүй ажилдаа явдаг хүмүүс нэмэгдэж байна."
+        }
+      }
+    },
+    "o-komete": {
+      "expected": {
+        "p": "〜をこめて",
+        "en": "with (feeling); full of; putting ... into"
+      },
+      "examples": {
+        "母の誕生日に、感謝の気持ちをこめて手紙を書いた。": {
+          "en": "For my mother's birthday, I wrote her a letter full of gratitude.",
+          "mn": "Ээжийн төрсөн өдөрт талархлаа шингээсэн захиа бичсэн."
+        },
+        "職人が一つ一つ心をこめて作った器です。": {
+          "en": "These bowls were made one by one, with great care, by craftsmen.",
+          "mn": "Урчууд нэг нэгийг нь сэтгэл гаргаж хийсэн аяганууд юм."
+        }
+      }
+    }
+  }
+}

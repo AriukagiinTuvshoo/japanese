@@ -1,0 +1,399 @@
+{
+  "provenance": {
+    "id": "mn-n5-examples-corpus-2-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian examples compared to exact Japanese and retained English; stable ID, spelling, reading, English and sentence guards. Independent human semantic review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n5.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "55f3080ce4": {
+      "expected": {
+        "w": "歩く",
+        "r": "あるく",
+        "en": [
+          "to walk"
+        ]
+      },
+      "examples": {
+        "歩いて行きますか？それともバスで行きますか？": {
+          "en": "Will you go on foot or by bus?",
+          "mn": "Та явган явах уу, эсвэл автобусаар явах уу?"
+        },
+        "歩きながら本を読んではいけない。": {
+          "en": "Do not read while walking.",
+          "mn": "Алхаж байхдаа ном уншиж болохгүй."
+        }
+      }
+    },
+    "e37a087c0f": {
+      "expected": {
+        "w": "いい",
+        "r": "いい",
+        "en": [
+          "good"
+        ]
+      },
+      "examples": {
+        "もう２、３ページ読みさえすればいい。": {
+          "en": "You have only to read a few more pages.",
+          "mn": "Дахиад хоёр гуравхан хуудас уншихад л болно."
+        },
+        "ダンスはスタイルをよくするのにいい。": {
+          "en": "Dancing is good for the figure.",
+          "mn": "Бүжиглэх нь биеийн галбирт сайн."
+        }
+      }
+    },
+    "ae0cc00f94": {
+      "expected": {
+        "w": "言う",
+        "r": "いう",
+        "en": [
+          "to say"
+        ]
+      },
+      "examples": {
+        "「みんなひと休みしようぜ」とジョンは言った。": {
+          "en": "John said, \"Hey guys, let's take a break.\"",
+          "mn": "Жон «За, бүгдээрээ түр амарцгаая» гэж хэлсэн."
+        },
+        "さんざん小言をいってやる。": {
+          "en": "I give a good scolding.",
+          "mn": "Би баахан загнана."
+        }
+      }
+    },
+    "9f074820b1": {
+      "expected": {
+        "w": "家",
+        "r": "いえ",
+        "en": [
+          "house"
+        ]
+      },
+      "examples": {
+        "木立の間に家が見える。": {
+          "en": "I see a house among the trees.",
+          "mn": "Моддын завсраар байшин харагдаж байна."
+        },
+        "母はいつも家にいるわけではない。": {
+          "en": "My mother is not always at home.",
+          "mn": "Ээж маань үргэлж гэртээ байдаг гэсэн үг биш."
+        }
+      }
+    },
+    "a3f296ad9a": {
+      "expected": {
+        "w": "いかが",
+        "r": "いかが",
+        "en": [
+          "how"
+        ]
+      },
+      "examples": {
+        "コンタクトを入れるというのはいかがでしょう？": {
+          "en": "How about wearing contact lenses?",
+          "mn": "Контакт линз зүүвэл ямар вэ?"
+        },
+        "ベーコンかソーセージはいかがか。": {
+          "en": "Would you like bacon or sausage?",
+          "mn": "Та гахайн утсан мах эсвэл зайдас авах уу?"
+        }
+      }
+    },
+    "66e4692df7": {
+      "expected": {
+        "w": "行く",
+        "r": "いく",
+        "en": [
+          "to go"
+        ]
+      },
+      "examples": {
+        "お母さん、泳ぎに行ってもいい？": {
+          "en": "Can I go swimming, Mother?",
+          "mn": "Ээж ээ, би усанд сэлэхээр явж болох уу?"
+        },
+        "父は、アメリカへ行ってしまった。": {
+          "en": "My father has gone to America.",
+          "mn": "Аав Америк руу явчихсан."
+        }
+      }
+    },
+    "026ae57b50": {
+      "expected": {
+        "w": "いくつ",
+        "r": "いくつ",
+        "en": [
+          "how many?",
+          "how old?"
+        ]
+      },
+      "examples": {
+        "あなたのお父さんはおいくつですか。": {
+          "en": "How old is your father?",
+          "mn": "Таны аав хэдэн настай вэ?"
+        },
+        "ウエストのサイズはいくつですか。": {
+          "en": "What is your waist size?",
+          "mn": "Таны бэлхүүсний хэмжээ хэд вэ?"
+        }
+      }
+    },
+    "4fc98c6938": {
+      "expected": {
+        "w": "いくら",
+        "r": "いくら",
+        "en": [
+          "how much?"
+        ]
+      },
+      "examples": {
+        "このハンカチはいくらですか。": {
+          "en": "How much is this handkerchief?",
+          "mn": "Энэ нусны алчуур ямар үнэтэй вэ?"
+        },
+        "ヒルトンホテルまでいくらですか。": {
+          "en": "How much is the fare to the Hilton Hotel?",
+          "mn": "Хилтон зочид буудал хүртэлх унааны хөлс хэд вэ?"
+        }
+      }
+    },
+    "43c874a6c8": {
+      "expected": {
+        "w": "池",
+        "r": "いけ",
+        "en": [
+          "pond"
+        ]
+      },
+      "examples": {
+        "その池にはほとんど水がない。": {
+          "en": "There is little water in the pond.",
+          "mn": "Тэр цөөрөмд ус бараг байхгүй."
+        },
+        "この前の夏にこの池は水がなくなりました。": {
+          "en": "The pond dried up last summer.",
+          "mn": "Өнгөрсөн зун энэ цөөрөм ширгэсэн."
+        }
+      }
+    },
+    "ca76162587": {
+      "expected": {
+        "w": "医者",
+        "r": "いしゃ",
+        "en": [
+          "medical doctor"
+        ]
+      },
+      "examples": {
+        "医者になるつもりだったのですが。": {
+          "en": "I intended to become a doctor.",
+          "mn": "Би эмч болох бодолтой байсан юмсан."
+        },
+        "日本語の話せる医者はいますか。": {
+          "en": "Do you know any doctors who speak Japanese?",
+          "mn": "Японоор ярьдаг эмч байна уу?"
+        }
+      }
+    },
+    "d305fa14a8": {
+      "expected": {
+        "w": "いす",
+        "r": "いす",
+        "en": [
+          "chair"
+        ]
+      },
+      "examples": {
+        "ちょっと椅子をずらしてくれない？": {
+          "en": "Could you move the chair a bit?",
+          "mn": "Сандлыг жаахан хөдөлгөөд өгч болох уу?"
+        },
+        "イスはそのままにしておきなさい。": {
+          "en": "Leave the chairs as they are.",
+          "mn": "Сандлуудыг тэр хэвээр нь орхи."
+        }
+      }
+    },
+    "cd1bcc2b1b": {
+      "expected": {
+        "w": "忙しい",
+        "r": "いそがしい",
+        "en": [
+          "busy",
+          "irritated"
+        ]
+      },
+      "examples": {
+        "忙しくてそれどころじゃないよ。": {
+          "en": "I've got no time for that now.",
+          "mn": "Би одоо завгүй, тийм зүйлд цаг гаргах аргагүй."
+        },
+        "このところ、とても忙しくてね。": {
+          "en": "I'm very busy these days.",
+          "mn": "Сүүлийн үед би их завгүй байна."
+        }
+      }
+    },
+    "4dae367794": {
+      "expected": {
+        "w": "痛い",
+        "r": "いたい",
+        "en": [
+          "painful"
+        ]
+      },
+      "examples": {
+        "ほかに痛いところはありますか。": {
+          "en": "Do you feel pain in any other part of your body?",
+          "mn": "Таны биеийн өөр хэсэг өвдөж байна уу?"
+        },
+        "痛くないようにしてください。": {
+          "en": "Please be gentle.",
+          "mn": "Өвтгөхгүй, зөөлөн хандаарай."
+        }
+      }
+    },
+    "eac7a22620": {
+      "expected": {
+        "w": "いただきます",
+        "r": "いただきます",
+        "en": [
+          "expression of gratitude before meals"
+        ]
+      },
+      "examples": {
+        "８ドル５０セントいただきます。": {
+          "en": "$8.50, please.",
+          "mn": "Найман доллар тавин цент болно."
+        },
+        "ワインをいただきます。": {
+          "en": "We'd like to have some wine.",
+          "mn": "Бид дарс авъя."
+        }
+      }
+    },
+    "9d8f862791": {
+      "expected": {
+        "w": "一",
+        "r": "いち",
+        "en": [
+          "one"
+        ]
+      },
+      "examples": {
+        "これは東京一のインドレストランです。": {
+          "en": "This is the best Indian restaurant anywhere in Tokyo.",
+          "mn": "Энэ бол Токиогийн хамгийн сайн Энэтхэг ресторан."
+        },
+        "このとおりを一マイル行きなさい。": {
+          "en": "Go along this street for a mile.",
+          "mn": "Энэ гудамжаар нэг миль яваарай."
+        }
+      }
+    },
+    "1cfccd0cdd": {
+      "expected": {
+        "w": "一日",
+        "r": "いちにち",
+        "en": [
+          "one day",
+          "first of month"
+        ]
+      },
+      "examples": {
+        "一日で５００ドルつかってしまった。": {
+          "en": "I've spent $500 a day.",
+          "mn": "Би нэг өдөрт таван зуун доллар үрчихсэн."
+        },
+        "一日いい天気になりそうですよ。": {
+          "en": "I think it's going to be a nice day.",
+          "mn": "Өдөржин цаг агаар сайхан байх шинжтэй."
+        }
+      }
+    },
+    "cb96f363df": {
+      "expected": {
+        "w": "いちばん",
+        "r": "いちばん",
+        "en": [
+          "best",
+          "first"
+        ]
+      },
+      "examples": {
+        "このリンゴがいちばんおいしい。": {
+          "en": "This is the most delicious apple.",
+          "mn": "Энэ алим хамгийн амттай."
+        },
+        "あいつはクラスでいちばんのまぬけだ。": {
+          "en": "He is the dumbest kid in the class.",
+          "mn": "Тэр ангийнхаа хамгийн тэнэг хүүхэд."
+        }
+      }
+    },
+    "fac6fc0838": {
+      "expected": {
+        "w": "いつ",
+        "r": "いつ",
+        "en": [
+          "when"
+        ]
+      },
+      "examples": {
+        "いつ旅行においでになりますか。": {
+          "en": "When will you go on a journey?",
+          "mn": "Та хэзээ аялалд явах вэ?"
+        },
+        "パーティーはいつにしましょうか。": {
+          "en": "When shall we have the party?",
+          "mn": "Үдэшлэгээ хэзээ хийх вэ?"
+        }
+      }
+    },
+    "2a7c4baf86": {
+      "expected": {
+        "w": "五日",
+        "r": "いつか",
+        "en": [
+          "five days",
+          "fifth day"
+        ]
+      },
+      "examples": {
+        "１月５日から１月１５日までおねがいします。": {
+          "en": "From the 5th to the 15th of January, please.",
+          "mn": "Нэгдүгээр сарын таваас арван тав хүртэл байхаар авъя."
+        },
+        "五日待ってくれ。": {
+          "en": "Give me five days.",
+          "mn": "Тав хоног хүлээгээрэй."
+        }
+      }
+    },
+    "2dc7289c82": {
+      "expected": {
+        "w": "一緒",
+        "r": "いっしょ",
+        "en": [
+          "together"
+        ]
+      },
+      "examples": {
+        "「ご一緒してもいいですか」「もちろんです」": {
+          "en": "\"May I go with you?\" \"Of course.\"",
+          "mn": "«Би тантай хамт явж болох уу?» «Мэдээж.»"
+        },
+        "もっと一緒にいられたらいいのに。": {
+          "en": "I wish that we could spend more time together.",
+          "mn": "Хамтдаа илүү удаан байж чаддаг ч болоосой."
+        }
+      }
+    }
+  }
+}

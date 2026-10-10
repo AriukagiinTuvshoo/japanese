@@ -6,8 +6,9 @@ import { loadKanji, loadStrokes } from "../lib/data";
 import type { Kanji, Level, StrokeMap } from "../lib/types";
 import { LEVEL_LABEL, MQ_LABEL } from "../lib/text";
 import { cardStage } from "../lib/srs";
-import { Button, Card, Empty, Input, LevelBadge, Pager, Select, Spinner, Tabs } from "../components/ui";
-import { ui } from "../lib/i18n";
+import { Button, Card, Empty, ErrorBox, Input, LevelBadge, Pager, Select, Spinner, Tabs } from "../components/ui";
+import { ui, MN_PENDING } from "../lib/i18n";
+import { topicLabel, entryTopics, type Topic } from "../lib/categories";
 import { KanjiStudy } from "../components/KanjiStudy";
 
 const PER_PAGE = 84;
@@ -21,18 +22,24 @@ export default function KanjiList() {
   const tab = (query.tab as string) || "browse";
 
   const [items, setItems] = useState<Kanji[] | null>(null);
+  const [error, setError] = useState<unknown>(null);
+  const [attempt, setAttempt] = useState(0);
   const [strokes, setStrokes] = useState<StrokeMap | null>(null);
   const [q, setQ] = useState("");
+  const [topic, setTopic] = useState<Topic | "all">("all");
   const [rad, setRad] = useState<string>("all");
   const [sort, setSort] = useState<"freq" | "stroke" | "grade" | "level">("freq");
   const [page, setPage] = useState(1);
 
   useEffect(() => {
-    setItems(null);
-    loadKanji(level).then(setItems);
-    loadStrokes(level).then(setStrokes);
+    let active = true;
+    setItems(null); setStrokes(null); setError(null);
+    Promise.all([loadKanji(level), loadStrokes(level)]).then(([entries, paths]) => {
+      if (active) { setItems(entries); setStrokes(paths); }
+    }).catch(err => { if (active) setError(err); });
     setPage(1);
-  }, [level]);
+    return () => { active = false; };
+  }, [level, attempt]);
 
   const radicals = useMemo(() => {
     if (!items) return [];
@@ -41,18 +48,25 @@ export default function KanjiList() {
     return [...m.entries()].sort((a, b) => b[1] - a[1]).slice(0, 24);
   }, [items]);
 
+  const topicCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    for (const item of items ?? []) for (const key of entryTopics(item)) counts[key] = (counts[key] ?? 0) + 1;
+    return counts;
+  }, [items]);
+
   const filtered = useMemo(() => {
     if (!items) return [];
     let out = items;
     const n = q.trim().toLowerCase();
     if (n) out = out.filter((k) => k.k === n || k.on.some((r) => r.includes(n)) || k.kun.some((r) => r.includes(n)) ||
       k.en.some((e) => e.toLowerCase().includes(n)) || k.mn.some((m) => m.toLowerCase().includes(n)));
+    if (topic !== "all") out = out.filter(k => (topic === "unclassified" ? entryTopics(k).length === 0 : entryTopics(k).includes(topic)));
     if (rad !== "all") out = out.filter((k) => k.rad === rad);
     if (sort === "stroke") out = out.slice().sort((a, b) => (a.s ?? 99) - (b.s ?? 99));
     else if (sort === "grade") out = out.slice().sort((a, b) => (a.g ?? 99) - (b.g ?? 99));
     else if (sort === "level") out = out.slice().sort((a, b) => (b.f ?? 9999) - (a.f ?? 9999));
     return out;
-  }, [items, q, rad, sort]);
+  }, [items, q, rad, topic, sort]);
 
   const pages = Math.ceil(filtered.length / PER_PAGE);
   const pageItems = filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE);
@@ -105,12 +119,26 @@ export default function KanjiList() {
             <div className="flex flex-wrap items-center gap-2">
               <Input value={q} onChange={(v) => { setQ(v); setPage(1); }} placeholder={t.kanjiSearchPh} icon="🔎" className="min-w-[200px] flex-1" />
               <Select value={sort} onChange={setSort}
-                options={[{ id: "freq", label: "Давтамжаар" }, { id: "stroke", label: "Зурлагаар" }, { id: "grade", label: "Ангиар" }, { id: "level", label: "Түвшнээр" }]} />
+                options={[{ id: "freq", label: t.sortFreq }, { id: "stroke", label: t.sortStroke }, { id: "grade", label: t.sortGrade }, { id: "level", label: t.sortLevel }]} />
+            </div>
+            <div className="no-scrollbar mt-3 flex gap-1.5 overflow-x-auto" aria-label={t.filterByTopic}>
+              <button aria-pressed={topic === "all"} onClick={() => { setTopic("all"); setPage(1); }} className="shrink-0 rounded-lg bg-shu-50 px-3 py-2 text-xs font-bold">{t.allTopics}</button>
+              {(items ?? []).some(e => entryTopics(e).length === 0) && (
+                <button aria-pressed={topic === "unclassified"} onClick={() => { setTopic("unclassified"); setPage(1); }} className="min-h-11 sm:min-h-0 shrink-0 rounded-lg bg-kin-50 px-3 py-2 text-xs font-bold text-kin-700">
+                  {t.unclassifiedTopic} {(items ?? []).filter(e => entryTopics(e).length === 0).length}
+                </button>
+              )}
+              {Object.keys(topicLabel[language]).filter(key => topicCounts[key]).map(key => (
+                <button key={key} aria-pressed={topic === key} onClick={() => { setTopic(key); setPage(1); }}
+                  className={cn("shrink-0 rounded-lg px-3 py-2 text-xs font-bold", topic === key ? "bg-shu-500 text-white" : "bg-sumi-900/5 text-sumi-600")}>
+                  {topicLabel[language][key]} {topicCounts[key]}
+                </button>
+              ))}
             </div>
             {radicals.length > 0 && (
               <div className="no-scrollbar mt-3 flex gap-1.5 overflow-x-auto">
                 <button onClick={() => { setRad("all"); setPage(1); }}
-                  className={cn("shrink-0 rounded-lg px-2.5 py-1.5 text-[12px] font-bold transition",
+                  className={cn("min-h-11 sm:min-h-0 shrink-0 rounded-lg px-2.5 py-1.5 text-[12px] font-bold transition",
                     rad === "all" ? "bg-sumi-900 text-washi-50" : "bg-sumi-900/5 text-sumi-600")}>
                   {t.allRadicals}
                 </button>
@@ -126,7 +154,8 @@ export default function KanjiList() {
             )}
           </Card>
 
-          {!items && <Spinner label={t.loadingKanji} lang={language} />}
+          {error != null && <ErrorBox error={error} lang={language} retry={() => setAttempt(n => n + 1)} />}
+          {!error && !items && <Spinner label={t.loadingKanji} lang={language} />}
           {items && pageItems.length === 0 && <Empty icon="無" title={t.noHits} />}
 
           {pageItems.length > 0 && (
@@ -158,7 +187,7 @@ function KanjiTile({ k }: { k: Kanji }) {
           <span className="font-mono text-[10px] text-sumi-400">{k.s}画</span>
         </div>
       </div>
-      <p className="mt-2.5 line-clamp-1 text-[12.5px] font-bold text-sumi-800">{language === "en" ? (k.en.join(", ") || k.mn.join(", ")) : (k.mn.join(", ") || k.en.join(", "))}</p>
+      <p className="mt-2.5 line-clamp-1 text-[12.5px] font-bold text-sumi-800">{language === "en" ? (k.en.join(", ") || k.mn.join(", ")) : (k.mn.join(", ") || MN_PENDING)}</p>
       <p className="mt-1 line-clamp-1 font-jp text-[11px] text-sumi-400">
         {k.on.slice(0, 2).join("・")}{k.kun.length ? ` / ${k.kun.slice(0, 2).join("・")}` : ""}
       </p>

@@ -1,0 +1,302 @@
+{
+  "provenance": {
+    "id": "mn-n2-grammar-examples-continue-1-2026-10-09",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian compared with exact Japanese and retained English; stable record and headword/pattern guards; independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/grammar/n2.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "grammar": {
+    "o-chuushin-ni": {
+      "expected": {
+        "p": "〜を中心に",
+        "en": "centered on; focusing on; mainly"
+      },
+      "examples": {
+        "今回の地震では、沿岸部を中心に大きな被害が出た。": {
+          "en": "In this earthquake, serious damage occurred mainly in coastal areas.",
+          "mn": "Энэ газар хөдлөлтөөр голчлон эрэг орчимд их хохирол учирсан."
+        },
+        "この講座では、会話を中心に実践的な日本語を学びます。": {
+          "en": "In this course, you'll learn practical Japanese with a focus on conversation.",
+          "mn": "Энэ сургалтаар ярианд төвлөрсөн, хэрэглээний япон хэл сурна."
+        },
+        "若者を中心とした新しいファッションが広がっている。": {
+          "en": "New fashions popular mainly among young people are spreading.",
+          "mn": "Голчлон залуусын дунд шинэ загвар дэлгэрч байна."
+        }
+      }
+    },
+    "o-moto-ni": {
+      "expected": {
+        "p": "〜をもとに",
+        "en": "based on; using ... as a basis or source"
+      },
+      "examples": {
+        "この小説は、作者自身の体験をもとに書かれている。": {
+          "en": "This novel is based on the author's own experiences.",
+          "mn": "Энэ романыг зохиолч өөрийн туршлагад үндэслэн бичсэн."
+        },
+        "集めたデータをもとにして、グラフを作成した。": {
+          "en": "I made a graph based on the data I had collected.",
+          "mn": "Цуглуулсан өгөгдөлдөө үндэслэн график хийсэн."
+        }
+      }
+    },
+    "o-towazu": {
+      "expected": {
+        "p": "〜を問わず",
+        "en": "regardless of; irrespective of"
+      },
+      "examples": {
+        "この仕事は、年齢や経験を問わず応募できます。": {
+          "en": "Anyone can apply for this job regardless of age or experience.",
+          "mn": "Энэ ажилд нас, туршлагаас үл хамааран хүсэлт гаргаж болно."
+        },
+        "この曲は国内外を問わず、多くの人々に愛されている。": {
+          "en": "This song is loved by many people both in Japan and abroad.",
+          "mn": "Энэ дуунд Японд ч, гадаадад ч олон хүн дуртай."
+        },
+        "救急隊員は、昼夜を問わず出動に備えている。": {
+          "en": "Paramedics are ready to respond day or night.",
+          "mn": "Түргэн тусламжийн ажилтнууд өдөр шөнөгүй дуудлагад гарахад бэлэн байдаг."
+        }
+      }
+    },
+    "o-hajime": {
+      "expected": {
+        "p": "〜をはじめ",
+        "en": "starting with; including; such as (a representative example)"
+      },
+      "examples": {
+        "京都には、金閣寺をはじめ、多くの有名な寺がある。": {
+          "en": "Kyoto has many famous temples, including Kinkakuji.",
+          "mn": "Киотод Кинкакүжи тэргүүтэй олон алдартай сүм бий."
+        },
+        "社長をはじめとして、社員全員がこの計画に賛成した。": {
+          "en": "Everyone in the company, starting with the president, agreed to this plan.",
+          "mn": "Захирлаас эхлээд бүх ажилтан энэ төлөвлөгөөг дэмжсэн."
+        },
+        "米をはじめとする農産物の価格が上昇している。": {
+          "en": "Prices of farm products, rice among them, are rising.",
+          "mn": "Будаа зэрэг хөдөө аж ахуйн бүтээгдэхүүний үнэ өсөж байна."
+        }
+      }
+    },
+    "o-to-shite": {
+      "expected": {
+        "p": "〜を〜として",
+        "en": "treating (A) as (B); with A as B"
+      },
+      "examples": {
+        "この大会は、地域の活性化を目的として開かれている。": {
+          "en": "This event is held with the aim of revitalizing the local area.",
+          "mn": "Энэ арга хэмжээг нутгийн хөгжлийг сэргээх зорилгоор зохион байгуулдаг."
+        },
+        "私たちのチームは、営業部の山口さんをリーダーとして新しい企画に取り組んでいる。": {
+          "en": "Our team is working on a new project with Ms. Yamaguchi from sales as leader.",
+          "mn": "Манай баг борлуулалтын албаны Ямагүчигээр ахлуулан шинэ төсөл дээр ажиллаж байна."
+        }
+      }
+    },
+    "ka-to-iu-to": {
+      "expected": {
+        "p": "〜かというと",
+        "en": "if you ask whether (actually, not); the reason why ... is"
+      },
+      "examples": {
+        "高い料理ならおいしいかというと、必ずしもそうではない。": {
+          "en": "Is expensive food always delicious? Not necessarily.",
+          "mn": "Үнэтэй хоол болгон амттай юу гэвэл заавал тийм биш."
+        },
+        "なぜこの仕事を選んだかというと、人の役に立ちたかったからです。": {
+          "en": "The reason I chose this job is that I wanted to help people.",
+          "mn": "Би энэ ажлыг сонгосон нь хүмүүст тус болохыг хүссэнээс юм."
+        },
+        "では、彼の意見に全面的に賛成かというと、そういうわけでもない。": {
+          "en": "But does that mean I fully agree with his opinion? Not exactly.",
+          "mn": "Гэхдээ түүний саналыг бүрэн дэмжиж байна уу гэвэл бас тийм биш."
+        }
+      }
+    },
+    "ka-to-omottara-ka-to-omou-to": {
+      "expected": {
+        "p": "〜かと思ったら / 〜かと思うと",
+        "en": "just when; no sooner than; the moment"
+      },
+      "examples": {
+        "空が急に暗くなったかと思ったら、激しい雨が降り出した。": {
+          "en": "No sooner had the sky suddenly gone dark than it started to pour.",
+          "mn": "Тэнгэр гэнэт харанхуйлмагц ширүүн бороо орж эхэлсэн."
+        },
+        "息子は帰ってきたかと思うと、すぐにまた遊びに出かけた。": {
+          "en": "My son had no sooner come home than he went straight back out to play.",
+          "mn": "Хүү гэртээ орж ирэнгүүтээ дахин тоглохоор гарсан."
+        },
+        "やっと静かになったかと思ったら、また隣の工事が始まった。": {
+          "en": "Just when I thought it had finally gotten quiet, the construction next door started up again.",
+          "mn": "Арайхийн нам гүм боллоо гэж бодтол хажуугийн барилгын ажил дахин эхэлсэн."
+        }
+      }
+    },
+    "ka-nai-ka-no-uchi-ni": {
+      "expected": {
+        "p": "〜か〜ないかのうちに",
+        "en": "as soon as; barely ... when"
+      },
+      "examples": {
+        "ベルが鳴るか鳴らないかのうちに、生徒たちは教室を飛び出した。": {
+          "en": "The bell had barely rung when the students rushed out of the classroom.",
+          "mn": "Хонх дуугарч амжаагүй байхад сурагчид ангиас гүйн гарсан."
+        },
+        "彼は布団に入ったか入らないかのうちに、いびきをかき始めた。": {
+          "en": "He had barely gotten into bed when he started snoring.",
+          "mn": "Тэр орондоо орж амжаагүй шахам байхад хурхирч эхэлсэн."
+        }
+      }
+    },
+    "kiri": {
+      "expected": {
+        "p": "〜きり",
+        "en": "since (and nothing after); only; just"
+      },
+      "examples": {
+        "兄は十年前に家を出たきり、一度も連絡をよこさない。": {
+          "en": "My brother left home ten years ago and hasn't been in touch once since.",
+          "mn": "Ах арван жилийн өмнө гэрээсээ яваад нэг ч удаа холбоо бариагүй."
+        },
+        "今度の休みは、久しぶりに二人きりで旅行したい。": {
+          "en": "For our next holiday, I'd like us to take a trip, just the two of us, for the first time in ages.",
+          "mn": "Дараагийн амралтаар удаан хугацааны дараа зөвхөн хоёулаа аялмаар байна."
+        },
+        "チャンスは一度きりだから、絶対に失敗できない。": {
+          "en": "There's only one chance, so I absolutely can't fail.",
+          "mn": "Ганцхан боломж байгаа учраас огт алдаж болохгүй."
+        }
+      }
+    },
+    "ge": {
+      "expected": {
+        "p": "〜げ",
+        "en": "seeming; looking (as if); with an air of"
+      },
+      "examples": {
+        "彼女は窓の外を寂しげに見つめていた。": {
+          "en": "She was gazing out the window with a lonely look.",
+          "mn": "Тэр цонхоор гунигтай ширтэж байв."
+        },
+        "少年は得意げな顔で、描いた絵を見せてくれた。": {
+          "en": "The boy proudly showed me the picture he had drawn.",
+          "mn": "Хүү өөрийн зурсан зургийг бахархсан царайтайгаар үзүүлсэн."
+        },
+        "何か言いたげな様子だったが、彼は黙って帰っていった。": {
+          "en": "He looked as if he wanted to say something, but he left without a word.",
+          "mn": "Ямар нэг зүйл хэлмээр харагдсан ч тэр дуугүй яваад өгсөн."
+        }
+      }
+    },
+    "kko-nai": {
+      "expected": {
+        "p": "〜っこない",
+        "en": "no way; there's absolutely no chance"
+      },
+      "examples": {
+        "こんな量の仕事、一日で終わりっこないよ。": {
+          "en": "There's no way this much work will get done in one day.",
+          "mn": "Ийм их ажлыг нэг өдөрт дуусгах ямар ч боломжгүй."
+        },
+        "宝くじなんて当たりっこないと思いながら、毎年買っている。": {
+          "en": "I buy lottery tickets every year, even though I figure there's no way I'll win.",
+          "mn": "Сугалаанд хожно гэж байхгүй дээ гэж бодсоор жил бүр авдаг."
+        }
+      }
+    },
+    "dokoro-ka": {
+      "expected": {
+        "p": "〜どころか",
+        "en": "far from; let alone; on the contrary"
+      },
+      "examples": {
+        "薬を飲んだが、熱は下がるどころか、ますます高くなった。": {
+          "en": "I took medicine, but far from going down, my fever got even higher.",
+          "mn": "Эм уусан ч халуун буурах нь байтугай улам нэмэгдсэн."
+        },
+        "忙しくて、旅行どころか週末に休むこともできない。": {
+          "en": "I'm so busy I can't even take weekends off, let alone travel.",
+          "mn": "Завгүй тул аялах нь байтугай амралтын өдрөөр ч амарч чадахгүй."
+        },
+        "彼は謝るどころか、逆に私を責めてきた。": {
+          "en": "Far from apologizing, he turned around and blamed me.",
+          "mn": "Тэр уучлал гуйх нь байтугай эсрэгээр намайг буруутгасан."
+        }
+      }
+    },
+    "dokoro-de-wa-nai": {
+      "expected": {
+        "p": "〜どころではない",
+        "en": "this is no time for; out of the question"
+      },
+      "examples": {
+        "来週は試験なので、遊びに行くどころではない。": {
+          "en": "I have exams next week, so this is no time to be going out.",
+          "mn": "Ирэх долоо хоногт шалгалттай тул зугаалах цаг биш."
+        },
+        "引っ越しの準備に追われて、花見どころではなかった。": {
+          "en": "I was so busy getting ready for the move that cherry blossom viewing was out of the question.",
+          "mn": "Нүүх бэлтгэлд дарагдсан тул сакура үзэх тухай бодох ч завгүй байв."
+        }
+      }
+    },
+    "to-wa-kagiranai": {
+      "expected": {
+        "p": "〜とは限らない",
+        "en": "not necessarily; not always"
+      },
+      "examples": {
+        "値段が高いからといって、品質がいいとは限らない。": {
+          "en": "Just because something is expensive doesn't necessarily mean it's good quality.",
+          "mn": "Үнэ өндөр гээд чанар сайн гэсэн үг биш."
+        },
+        "専門家の意見がいつも正しいとは限らない。": {
+          "en": "Experts' opinions are not always right.",
+          "mn": "Мэргэжилтнүүдийн санал үргэлж зөв байдаггүй."
+        }
+      }
+    },
+    "to-iu-mono-da": {
+      "expected": {
+        "p": "〜というものだ",
+        "en": "that's what (A) is; that's just how it is; that's really"
+      },
+      "examples": {
+        "困っている人がいたら助ける。それが人情というものだ。": {
+          "en": "When someone's in trouble, you help them. That's what human kindness is.",
+          "mn": "Хүн хэцүүдсэн байвал тусална. Хүнлэг сэтгэл гэдэг тэр."
+        },
+        "何の準備もせずに合格しようなんて、虫がよすぎるというものだ。": {
+          "en": "Expecting to pass without any preparation is just wishful thinking.",
+          "mn": "Ямар ч бэлтгэлгүй тэнцэнэ гэж найдах нь хэт амар юм бодсон хэрэг."
+        },
+        "一人で全部やろうとするのは無理というものだ。": {
+          "en": "Trying to do it all alone is simply unrealistic.",
+          "mn": "Ганцаараа бүгдийг хийх гэж оролдох нь боломжгүй зүйл."
+        }
+      }
+    },
+    "to-iu-mono-de-wa-nai": {
+      "expected": {
+        "p": "〜というものではない",
+        "en": "it's not (necessarily) the case that; it doesn't follow that"
+      },
+      "examples": {
+        "練習は長くやればいいというものではない。": {
+          "en": "Longer practice isn't automatically better practice.",
+          "mn": "Бэлтгэлийг удаан хийх тусам сайн болно гэсэн үг биш."
+        }
+      }
+    }
+  }
+}

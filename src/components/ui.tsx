@@ -2,6 +2,7 @@
 import {
   useEffect, useId, useRef, useState, type ButtonHTMLAttributes, type ReactNode,
 } from "react";
+import { useStore } from "../lib/store";
 import { cn } from "../utils/cn";
 import { href } from "../lib/router";
 import type { Level } from "../lib/types";
@@ -20,10 +21,10 @@ const VARIANTS: Record<Variant, string> = {
   danger: "bg-shu-50 text-shu-700 hover:bg-shu-100",
 };
 const SIZES: Record<Size, string> = {
-  sm: "h-8 px-3 text-[12.5px] rounded-lg gap-1.5",
-  md: "h-10 px-4 text-[13.5px] rounded-xl gap-2",
+  sm: "h-8 min-h-11 sm:min-h-0 px-3 text-[12.5px] rounded-lg gap-1.5",
+  md: "h-10 min-h-11 sm:min-h-0 px-4 text-[13.5px] rounded-xl gap-2",
   lg: "h-12 px-6 text-[15px] rounded-xl gap-2",
-  icon: "h-9 w-9 rounded-lg justify-center",
+  icon: "h-9 w-9 min-h-11 min-w-11 sm:min-h-0 sm:min-w-0 rounded-lg justify-center",
 };
 
 export function Button({
@@ -62,10 +63,10 @@ export function SectionTitle({
   jp, title, sub, right,
 }: { jp?: string; title: string; sub?: string; right?: ReactNode }) {
   return (
-    <div className="mb-4 flex items-end justify-between gap-4">
+    <div className="mb-4 flex flex-wrap items-end justify-between gap-4">
       <div className="min-w-0">
         {jp && <p className="font-jp text-[11px] font-medium tracking-[0.28em] text-sumi-400">{jp}</p>}
-        <h2 className="mt-0.5 truncate text-[1.3rem] font-extrabold tracking-tight text-sumi-900">{title}</h2>
+        <h2 className="mt-0.5 break-words text-[1.3rem] font-extrabold tracking-tight text-sumi-900">{title}</h2>
         {sub && <p className="mt-1 text-[13px] leading-relaxed text-sumi-500">{sub}</p>}
       </div>
       {right}
@@ -247,7 +248,7 @@ export function Tabs<T extends string>({
           onClick={() => onChange(it.id)}
           className={cn(
             "relative flex shrink-0 items-center gap-1.5 rounded-lg font-bold transition-all",
-            size === "sm" ? "px-2.5 py-1.5 text-[12px]" : "px-3.5 py-2 text-[13px]",
+            size === "sm" ? "min-h-11 sm:min-h-0 px-2.5 py-1.5 text-[12px]" : "min-h-11 sm:min-h-0 px-3.5 py-2 text-[13px]",
             value === it.id ? "bg-white text-sumi-900 shadow-sm" : "text-sumi-500 hover:text-sumi-800",
           )}
         >
@@ -274,7 +275,9 @@ export function Empty({ icon = "空", title, sub, action }: { icon?: string; tit
   );
 }
 
-export function Spinner({ label, lang = "mn" }: { label?: string; lang?: "mn" | "en" }) {
+export function Spinner({ label, lang }: { label?: string; lang?: "mn" | "en" }) {
+  const { doc } = useStore();
+  lang ??= doc.profile.language ?? "mn";
   return (
     <div className="flex items-center justify-center gap-3 py-14 text-sumi-500">
       <span className="h-5 w-5 animate-spin rounded-full border-2 border-sumi-900/15 border-t-shu-500" />
@@ -283,7 +286,9 @@ export function Spinner({ label, lang = "mn" }: { label?: string; lang?: "mn" | 
   );
 }
 
-export function ErrorBox({ error, retry, lang = "mn" }: { error: unknown; retry?: () => void; lang?: "mn" | "en" }) {
+export function ErrorBox({ error, retry, lang }: { error: unknown; retry?: () => void; lang?: "mn" | "en" }) {
+  const { doc } = useStore();
+  lang ??= doc.profile.language ?? "mn";
   return (
     <div className="rounded-2xl border border-shu-100 bg-shu-50/60 p-5">
       <p className="text-[14px] font-extrabold text-shu-700">{lang === "en" ? "Failed to load" : "Ачаалахад алдаа гарлаа"}</p>
@@ -343,7 +348,7 @@ export function Select<T extends string>({
     <select
       value={value}
       onChange={(e) => onChange(e.target.value as T)}
-      className={cn("h-10 rounded-xl border border-sumi-900/12 bg-white/80 px-3 text-[13px] font-bold text-sumi-800 outline-none focus:border-shu-400", className)}
+      className={cn("h-10 min-h-11 sm:min-h-0 rounded-xl border border-sumi-900/12 bg-white/80 px-3 text-[13px] font-bold text-sumi-800 outline-none focus:border-shu-400", className)}
     >
       {options.map((o) => <option key={o.id} value={o.id}>{o.label}</option>)}
     </select>
@@ -387,8 +392,10 @@ export function Pager({
 
 /* ─────────────── Аудио товч ─────────────── */
 export function SpeakButton({
-  text, rate = 1, className, label, lang = "mn",
+  text, rate = 1, className, label, lang,
 }: { text: string; rate?: number; className?: string; label?: string; lang?: "mn" | "en" }) {
+  const { doc } = useStore();
+  const language = lang ?? doc.profile.language ?? "mn";
   const [on, setOn] = useState(false);
   return (
     <button
@@ -399,10 +406,10 @@ export function SpeakButton({
         e.stopPropagation();
         speak(text, rate);
       }}
-      title={lang === "en" ? "Listen" : "Сонсох"}
-      aria-label={lang === "en" ? `Listen to ${text}` : `${text} дуудлагыг сонсох`}
+      title={language === "en" ? "Listen" : "Сонсох"}
+      aria-label={language === "en" ? `Listen to ${text}` : `${text} дуудлагыг сонсох`}
       className={cn(
-        "grid h-8 w-8 shrink-0 place-items-center rounded-lg border border-sumi-900/10 bg-white/80 text-[14px] transition",
+        "grid h-8 w-8 min-h-11 min-w-11 sm:min-h-0 sm:min-w-0 shrink-0 place-items-center rounded-lg border border-sumi-900/10 bg-white/80 text-[14px] transition",
         "hover:border-ai-400 hover:text-ai-600",
         on && "scale-95 bg-ai-50",
         className,

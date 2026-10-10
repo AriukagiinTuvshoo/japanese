@@ -1,0 +1,977 @@
+{
+  "provenance": {
+    "id": "mn-exact-example-reuse-3-2026-10-09",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "Exact Japanese AND English duplicate match; AI compared all reused Mongolian sentences to source. Prior translation origin retained per sentence. No independent human review. Folding ambiguity and disputed headword excluded.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n5..n1.json at cac78c79587f6fb6d5f93a158790258c24b351e8",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "753724063a": {
+      "expected": {
+        "w": "探る",
+        "r": "さぐる",
+        "en": [
+          "to search",
+          "to look for",
+          "to sound out"
+        ]
+      },
+      "examples": {
+        "真相は井戸の底にあり探りにくい。": {
+          "en": "Truth is difficult to find at the bottom of a well.",
+          "mn": "Үнэн худгийн ёроолд байдаг тул олоход хэцүү.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n2",
+              "id": "354b630662",
+              "provenance": "mn-n2-vocab-examples-progress-4-oct9"
+            }
+          ]
+        }
+      }
+    },
+    "e9eff104ec": {
+      "expected": {
+        "w": "冷める",
+        "r": "さめる",
+        "en": [
+          "to become cool",
+          "to wear off",
+          "to abate"
+        ]
+      },
+      "examples": {
+        "彼への愛はもう冷めてしまった。": {
+          "en": "My love for him has already cooled.",
+          "mn": "Түүнд байсан хайр маань аль хэдийн хөрсөн.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n3",
+              "id": "c3b1f16454",
+              "provenance": "mn-n3-examples-sustained-1-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "d4b22ac7cb": {
+      "expected": {
+        "w": "さわやか",
+        "r": "さわやか",
+        "en": [
+          "fresh",
+          "refreshing",
+          "invigorating"
+        ]
+      },
+      "examples": {
+        "さわやかな秋となりました。": {
+          "en": "Cool fall is here.",
+          "mn": "Сэрүүн таатай намар ирлээ.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "8dc7006bda",
+              "provenance": "mn-n5-example-final-1-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "0c96de4f87": {
+      "expected": {
+        "w": "シャッター",
+        "r": "シャッター",
+        "en": [
+          "shutter"
+        ]
+      },
+      "examples": {
+        "シャッターを押してくれますか。": {
+          "en": "Could you press this button?",
+          "mn": "Зургийн аппаратын товчийг дарж өгч болох уу?",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "ce8facdf69",
+              "provenance": "mn-n5-examples-corpus-5-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "001d99a6ea": {
+      "expected": {
+        "w": "しょうがない",
+        "r": "しょうがない",
+        "en": [
+          "there's no (other) way"
+        ]
+      },
+      "examples": {
+        "男の子のいたずらはしょうがない。": {
+          "en": "Boys will be boys.",
+          "mn": "Хөвгүүдийн сахилгагүйтлийг яалтай билээ.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "6f664d3ded",
+              "provenance": "mn-n5-examples-corpus-5-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "c55109ac27": {
+      "expected": {
+        "w": "ずらす",
+        "r": "ずらす",
+        "en": [
+          "to put off",
+          "to delay"
+        ]
+      },
+      "examples": {
+        "ちょっと椅子をずらしてくれない？": {
+          "en": "Could you move the chair a bit?",
+          "mn": "Сандлыг жаахан хөдөлгөөд өгч болох уу?",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "d305fa14a8",
+              "provenance": "mn-n5-examples-corpus-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "55527ab494": {
+      "expected": {
+        "w": "生年月日",
+        "r": "せいねんがっぴ",
+        "en": [
+          "birth date"
+        ]
+      },
+      "examples": {
+        "生年月日を教えてくださいますか？": {
+          "en": "May I have your birth date?",
+          "mn": "Та төрсөн он сар өдрөө хэлж өгч болох уу?",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "f2fa049fdd",
+              "provenance": "mn-n5-examples-corpus-5-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "0011c40f28": {
+      "expected": {
+        "w": "せっせと",
+        "r": "せっせと",
+        "en": [
+          "diligently",
+          "assiduously",
+          "industriously"
+        ]
+      },
+      "examples": {
+        "彼女はせっせと編み物に精を出していた。": {
+          "en": "She was busy with her knitting.",
+          "mn": "Тэр сүлжмэлээ идэвхтэй хийж байв.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n2",
+              "id": "796332c2c7",
+              "provenance": "mn-n2-vocab-examples-progress-2-oct9"
+            }
+          ]
+        }
+      }
+    },
+    "5c5886d7ab": {
+      "expected": {
+        "w": "祖先",
+        "r": "そせん",
+        "en": [
+          "ancestor"
+        ]
+      },
+      "examples": {
+        "私たちは祖先をうやまうべきだ。": {
+          "en": "We should worship our ancestors.",
+          "mn": "Бид өвөг дээдсээ хүндэтгэх ёстой.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n2",
+              "id": "d95334bf4d",
+              "provenance": "mn-n2-vocab-examples-continue-1-2026-10-09"
+            }
+          ]
+        }
+      }
+    },
+    "5f30ae15e7": {
+      "expected": {
+        "w": "蕎麦",
+        "r": "そば",
+        "en": [
+          "soba (buckwheat noodles)"
+        ]
+      },
+      "examples": {
+        "そばはそば粉から、うどんやきしめんは普通の小麦粉からできてるの。": {
+          "en": "Soba is made of buckwheat flour, and udon and kishimen are made of plain wheat flour.",
+          "mn": "Соба гоймонг гурвалжин будааны гурилаар, удон болон кишимэнийг энгийн улаан буудайн гурилаар хийдэг.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n2",
+              "id": "10adbed302",
+              "provenance": "mn-n2-vocab-examples-continue-1-2026-10-09"
+            }
+          ]
+        }
+      }
+    },
+    "e31981ba75": {
+      "expected": {
+        "w": "地名",
+        "r": "ちめい",
+        "en": [
+          "place name"
+        ]
+      },
+      "examples": {
+        "私はその地名を思い出せなかった。": {
+          "en": "I couldn't think of the name of the place.",
+          "mn": "Би тэр газрын нэрийг санаж чадсангүй.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n4",
+              "id": "3e4c1468c7",
+              "provenance": "mn-n4-examples-sustained-5-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "0ef594e9fa": {
+      "expected": {
+        "w": "散らかす",
+        "r": "ちらかす",
+        "en": [
+          "to scatter around",
+          "to leave untidy"
+        ]
+      },
+      "examples": {
+        "お前の物をその辺りに散らかすな。": {
+          "en": "Don't scatter your things about.",
+          "mn": "Юмаа тэр хавиар битгий тарааж тавь.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n3",
+              "id": "a0ea038f9b",
+              "provenance": "mn-n3-examples-sustained-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "ad75b4bf14": {
+      "expected": {
+        "w": "手続き",
+        "r": "てつづき",
+        "en": [
+          "procedure",
+          "(legal) process",
+          "formalities"
+        ]
+      },
+      "examples": {
+        "受付で入院の手続きをしてください。": {
+          "en": "You have to fill out an application for admission to the hospital at the front desk.",
+          "mn": "Хүлээн авах хэсэгт эмнэлэгт хэвтэх бүртгэлээ хийлгээрэй.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n4",
+              "id": "4bdd43130b",
+              "provenance": "mn-n4-examples-sustained-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "54d18abf59": {
+      "expected": {
+        "w": "憎い",
+        "r": "にくい",
+        "en": [
+          "hateful",
+          "abominable",
+          "poor-looking"
+        ]
+      },
+      "examples": {
+        "かわいさ余って憎さ百倍。": {
+          "en": "The greatest hate springs from the greatest love.",
+          "mn": "Их хайрласнаас их үзэн ядалт төрдөг.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n2",
+              "id": "89251f222d",
+              "provenance": "mn-n2-vocab-examples-progress-2-oct9"
+            }
+          ]
+        }
+      }
+    },
+    "e8c3be43a1": {
+      "expected": {
+        "w": "早口",
+        "r": "はやくち",
+        "en": [
+          "fast-talking"
+        ]
+      },
+      "examples": {
+        "アナウンサーは早口が出来る。": {
+          "en": "The announcer can talk rapidly.",
+          "mn": "Нэвтрүүлэгч хурдан ярьж чаддаг.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n4",
+              "id": "c1fb180c70",
+              "provenance": "mn-n4-examples-sustained-1-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "a89704a64a": {
+      "expected": {
+        "w": "拭く",
+        "r": "ふく",
+        "en": [
+          "to wipe",
+          "to dry"
+        ]
+      },
+      "examples": {
+        "額の汗をふきなさい。": {
+          "en": "Wipe the sweat from your brow.",
+          "mn": "Духныхаа хөлсийг арч.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n3",
+              "id": "7d653ddf51",
+              "provenance": "mn-n3-examples-sustained-1-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "242ec4e108": {
+      "expected": {
+        "w": "法則",
+        "r": "ほうそく",
+        "en": [
+          "law",
+          "rule"
+        ]
+      },
+      "examples": {
+        "ニュートンは引力の法則を確立した。": {
+          "en": "Newton established the law of gravity.",
+          "mn": "Ньютон таталцлын хуулийг тогтоосон.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n2",
+              "id": "1cda943bec",
+              "provenance": "mn-n2-vocab-examples-progress-4-oct9"
+            }
+          ]
+        }
+      }
+    },
+    "8c71b2d8dc": {
+      "expected": {
+        "w": "窓口",
+        "r": "まどぐち",
+        "en": [
+          "ticket window"
+        ]
+      },
+      "examples": {
+        "入院の受付窓口はどこですか。": {
+          "en": "Where is the admission's office?",
+          "mn": "Эмнэлэгт хэвтэх бүртгэлийн цонх хаана вэ?",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n4",
+              "id": "4bdd43130b",
+              "provenance": "mn-n4-examples-sustained-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "a104cae099": {
+      "expected": {
+        "w": "見下ろす",
+        "r": "みおろす",
+        "en": [
+          "to overlook",
+          "to command a view of",
+          "to look down on something"
+        ]
+      },
+      "examples": {
+        "男の子は妹を見下ろしがちである。": {
+          "en": "Boys tend to look down on their younger sisters.",
+          "mn": "Хөвгүүд дүү охидоо дорд үзэх хандлагатай.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "12047d019b",
+              "provenance": "mn-n5-examples-corpus-3-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "03d04bc918": {
+      "expected": {
+        "w": "薬品",
+        "r": "やくひん",
+        "en": [
+          "medicine(s)",
+          "chemical(s)"
+        ]
+      },
+      "examples": {
+        "この薬品は日光に当てないようにしなさい。": {
+          "en": "Don't expose this chemical to direct sunlight.",
+          "mn": "Энэ химийн бодисыг нарны шууд гэрэлд бүү байлга.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n3",
+              "id": "bd36844c24",
+              "provenance": "mn-n3-examples-sustained-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "ebea673dd1": {
+      "expected": {
+        "w": "火傷",
+        "r": "やけど",
+        "en": [
+          "burn",
+          "scald"
+        ]
+      },
+      "examples": {
+        "アイロンで手をやけどしました。": {
+          "en": "I burned my hand with an iron.",
+          "mn": "Би гараа индүүд түлсэн.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n3",
+              "id": "15ffb31b53",
+              "provenance": "mn-n3-examples-sustained-1-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "9b84f255df": {
+      "expected": {
+        "w": "怒り",
+        "r": "いかり",
+        "en": [
+          "anger",
+          "hatred"
+        ]
+      },
+      "examples": {
+        "私の誤りは彼の怒りを招いた。": {
+          "en": "My mistake incurred his anger.",
+          "mn": "Миний алдаа түүний уурыг хүргэсэн.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n3",
+              "id": "8399cefa4f",
+              "provenance": "mn-n3-examples-sustained-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "bd89f26551": {
+      "expected": {
+        "w": "依存",
+        "r": "いぞん",
+        "en": [
+          "dependence",
+          "dependent",
+          "reliance"
+        ]
+      },
+      "examples": {
+        "子供は衣食住を親に依存している。": {
+          "en": "Children depend on their parents for food, clothing and shelter.",
+          "mn": "Хүүхдүүд хоол, хувцас, орон байраар эцэг эхээсээ хамааралтай.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n2",
+              "id": "05292c6357",
+              "provenance": "mn-n2-vocab-examples-progress-3-oct9"
+            }
+          ]
+        }
+      }
+    },
+    "e183ec9f8c": {
+      "expected": {
+        "w": "一目",
+        "r": "いちもく",
+        "en": [
+          "a glance",
+          "a look",
+          "a glimpse"
+        ]
+      },
+      "examples": {
+        "何としても海をひと目みたいものだ。": {
+          "en": "I ache for a sight of the sea.",
+          "mn": "Яаж ийгээд далайг нэг харах юмсан.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "06ac21dc7d",
+              "provenance": "mn-n5-examples-corpus-3-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "345c476ef0": {
+      "expected": {
+        "w": "鬱陶しい",
+        "r": "うっとうしい",
+        "en": [
+          "gloomy",
+          "depressing"
+        ]
+      },
+      "examples": {
+        "毎日うっとうしくていやですね。": {
+          "en": "Don't you just hate this weather?",
+          "mn": "Өдөр бүр ийм бүрхэг байхаар дургүй хүрмээр юм, тийм ээ?",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "eda751e069",
+              "provenance": "mn-n5-examples-corpus-3-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "21bbf8697c": {
+      "expected": {
+        "w": "雨天",
+        "r": "うてん",
+        "en": [
+          "rainy weather"
+        ]
+      },
+      "examples": {
+        "雨天の後には晴天が来る。": {
+          "en": "After rain comes fair weather.",
+          "mn": "Борооны дараа цаг агаар сайхан болдог.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "4f134c9b38",
+              "provenance": "mn-n5-examples-corpus-1-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "cca92e4195": {
+      "expected": {
+        "w": "五月蝿い",
+        "r": "うるさい",
+        "en": [
+          "noisy",
+          "loud",
+          "fussy"
+        ]
+      },
+      "examples": {
+        "あの子はなんてうるさい子だろう。": {
+          "en": "What a nuisance that child is!",
+          "mn": "Тэр хүүхэд ямар төвөгтэй юм бэ!",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "7ecfe0d248",
+              "provenance": "mn-n5-examples-corpus-4-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "dc7b2d1515": {
+      "expected": {
+        "w": "真相",
+        "r": "しんそう",
+        "en": [
+          "truth",
+          "real situation"
+        ]
+      },
+      "examples": {
+        "真相は井戸の底にあり探りにくい。": {
+          "en": "Truth is difficult to find at the bottom of a well.",
+          "mn": "Үнэн худгийн ёроолд байдаг тул олоход хэцүү.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n2",
+              "id": "354b630662",
+              "provenance": "mn-n2-vocab-examples-progress-4-oct9"
+            }
+          ]
+        }
+      }
+    },
+    "c97f669a80": {
+      "expected": {
+        "w": "スポーツカー",
+        "r": "スポーツカー",
+        "en": [
+          "sports car"
+        ]
+      },
+      "examples": {
+        "あそこのスポーツカーを見なさい。": {
+          "en": "Look at the sports car over there.",
+          "mn": "Тэнд байгаа спорт машиныг хар.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "bee501faf0",
+              "provenance": "mn-n5-example-final-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "048029554e": {
+      "expected": {
+        "w": "晴天",
+        "r": "せいてん",
+        "en": [
+          "fine weather"
+        ]
+      },
+      "examples": {
+        "雨天の後には晴天が来る。": {
+          "en": "After rain comes fair weather.",
+          "mn": "Борооны дараа цаг агаар сайхан болдог.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "4f134c9b38",
+              "provenance": "mn-n5-examples-corpus-1-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "2e6b817c6f": {
+      "expected": {
+        "w": "接ぐ",
+        "r": "つぐ",
+        "en": [
+          "to join",
+          "to piece together",
+          "to set (bones)"
+        ]
+      },
+      "examples": {
+        "医者は彼の折れた足をついだ。": {
+          "en": "The doctor set his broken leg.",
+          "mn": "Эмч түүний хугарсан хөлийг эвлүүлж тогтоосон.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n4",
+              "id": "d517e5d931",
+              "provenance": "mn-n4-examples-sustained-5-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "5ce219cc8b": {
+      "expected": {
+        "w": "取り寄せる",
+        "r": "とりよせる",
+        "en": [
+          "to order",
+          "to send away for"
+        ]
+      },
+      "examples": {
+        "お取り寄せいたしましょうか。": {
+          "en": "Would you like me to order it?",
+          "mn": "Танд захиалж авчруулж өгөх үү?",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n4",
+              "id": "6dbf756da1",
+              "provenance": "mn-n4-examples-sustained-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "00214393d1": {
+      "expected": {
+        "w": "とりわけ",
+        "r": "とりわけ",
+        "en": [
+          "especially",
+          "above all"
+        ]
+      },
+      "examples": {
+        "とりわけ子供たちは愛情を必要とする。": {
+          "en": "Above all, children need love.",
+          "mn": "Юунаас ч илүү хүүхдүүдэд хайр халамж хэрэгтэй.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n3",
+              "id": "0cb7e80d4c",
+              "provenance": "mn-n3-examples-sustained-1-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "376a26250c": {
+      "expected": {
+        "w": "音色",
+        "r": "ねいろ",
+        "en": [
+          "tone color",
+          "tone quality",
+          "timbre"
+        ]
+      },
+      "examples": {
+        "バイオリンの音色はとても美しい。": {
+          "en": "The sound of the violin is very sweet.",
+          "mn": "Хийлийн дуу маш уянгалаг.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n4",
+              "id": "0dd54894db",
+              "provenance": "mn-n4-examples-sustained-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "a81a657a28": {
+      "expected": {
+        "w": "年生",
+        "r": "ねんせい",
+        "en": [
+          "pupil in .... year",
+          "student in .... year"
+        ]
+      },
+      "examples": {
+        "私は３年生を受け持っている。": {
+          "en": "I am in charge of the third-year class.",
+          "mn": "Би гуравдугаар анги хариуцдаг.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n2",
+              "id": "7b66979a25",
+              "provenance": "mn-n2-vocab-examples-progress-5-oct9"
+            }
+          ]
+        }
+      }
+    },
+    "115e6f8702": {
+      "expected": {
+        "w": "乗り込む",
+        "r": "のりこむ",
+        "en": [
+          "to board",
+          "to embark on",
+          "to get into (a car)"
+        ]
+      },
+      "examples": {
+        "一人で原始林へ乗り込もうとは君はなんて勇ましいんだ。": {
+          "en": "How brave of you to go alone into the primaeval forest!",
+          "mn": "Онгон ой руу ганцаараа орно гэдэг чи ямар зоригтой юм бэ!",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n2",
+              "id": "3966c8755c",
+              "provenance": "mn-n2-vocab-examples-progress-3-oct9"
+            }
+          ]
+        }
+      }
+    },
+    "58733f2d10": {
+      "expected": {
+        "w": "パジャマ",
+        "r": "パジャマ",
+        "en": [
+          "pajamas",
+          "pyjamas"
+        ]
+      },
+      "examples": {
+        "このパジャマはよく汗を吸収します。": {
+          "en": "These pajamas absorb sweat well.",
+          "mn": "Энэ унтлагын хувцас хөлс сайн шингээдэг.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n3",
+              "id": "7d653ddf51",
+              "provenance": "mn-n3-examples-sustained-1-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "6166957ca4": {
+      "expected": {
+        "w": "冷やかす",
+        "r": "ひやかす",
+        "en": [
+          "to banter",
+          "to make fun of",
+          "to jeer at"
+        ]
+      },
+      "examples": {
+        "人前で彼を冷やかすなんて君は意地悪だ。": {
+          "en": "It is mean of you to ridicule him in public.",
+          "mn": "Түүнийг олны өмнө шоолох нь чиний муухай зан.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n2",
+              "id": "9332146c42",
+              "provenance": "mn-n2-vocab-examples-progress-3-oct9"
+            }
+          ]
+        }
+      }
+    },
+    "16434bd461": {
+      "expected": {
+        "w": "物体",
+        "r": "ぶったい",
+        "en": [
+          "body",
+          "object"
+        ]
+      },
+      "examples": {
+        "その物体の表面はかなり粗い。": {
+          "en": "The surface of the object is fairly rough.",
+          "mn": "Тэр зүйлийн гадаргуу нэлээд барзгар.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n2",
+              "id": "1c9be68b8f",
+              "provenance": "mn-n2-vocab-examples-progress-2-oct9"
+            }
+          ]
+        }
+      }
+    },
+    "16f035d374": {
+      "expected": {
+        "w": "もしかして",
+        "r": "もしかして",
+        "en": [
+          "perhaps",
+          "possibly"
+        ]
+      },
+      "examples": {
+        "ああ、もしかして名前を呼ばれるのが恥ずかしいって？": {
+          "en": "Ah, could it be you're embarrassed to be called by your first name?",
+          "mn": "Аан, чамайг нэрээр чинь дуудахыг ичмээр санагдаад байгаа юм биш биз?",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n1",
+              "id": "1cf257772e",
+              "provenance": "mn-n1-vocab-examples-continue-1-2026-10-09"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

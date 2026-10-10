@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-10-09",
+  "attempt": "JMdict authoritative upstream data via third-party scriptin/jmdict-simplified distributor",
+  "url": "https://github.com/scriptin/jmdict-simplified/releases/tag/3.6.2%2B20261005200550",
+  "version": "3.6.2+20261005200550",
+  "metadataRetrieved": true,
+  "dictionaryContentRetrieved": false,
+  "failure": "gh release download redirected to release-assets.githubusercontent.com and failed EOF (host outside allowed sandbox list).",
+  "decision": "No external entry evidence obtained; all ten recorded conflicts and 62 missing meanings unchanged. Distributor README/metadata not entry verification; no source correction authorized or applied."
+}

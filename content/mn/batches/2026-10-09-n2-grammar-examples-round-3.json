@@ -1,0 +1,294 @@
+{
+  "provenance": {
+    "id": "mn-n2-grammar-examples-oct9-3",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian compared with exact Japanese and retained English; stable record and headword/pattern guards; independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/grammar/n2.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "grammar": {
+    "amari-ni": {
+      "expected": {
+        "p": "〜あまり（に）",
+        "en": "so much that; out of excessive; because of too much"
+      },
+      "examples": {
+        "子どもの将来を心配するあまり、親が口を出しすぎることがある。": {
+          "en": "Out of excessive worry for their children's future, parents sometimes interfere too much.",
+          "mn": "Хүүхдийнхээ ирээдүйд хэт санаа зовсноос эцэг эх заримдаа дэндүү оролцдог."
+        },
+        "うれしさのあまり、思わず涙が出た。": {
+          "en": "I was so happy that tears came to my eyes.",
+          "mn": "Маш их баярласандаа өөрийн эрхгүй нулимс гарсан."
+        }
+      }
+    },
+    "ue-ni": {
+      "expected": {
+        "p": "〜上（に）",
+        "en": "besides; on top of; in addition to"
+      },
+      "examples": {
+        "あのレストランは料理がおいしい上に、値段も手頃だ。": {
+          "en": "That restaurant has delicious food, and on top of that, the prices are reasonable.",
+          "mn": "Тэр рестораны хоол амттайгаас гадна үнэ нь боломжийн."
+        },
+        "道に迷った上に、雨まで降ってきた。": {
+          "en": "Not only did we get lost, it started raining too.",
+          "mn": "Замаа алдсан дээр бороо хүртэл орж эхэлсэн."
+        },
+        "彼女は仕事が速い上、ミスもほとんどない。": {
+          "en": "She works fast, and she hardly makes any mistakes either.",
+          "mn": "Тэр хурдан ажиллахаас гадна бараг алдаа гаргадаггүй."
+        }
+      }
+    },
+    "ue-de": {
+      "expected": {
+        "p": "〜上で",
+        "en": "after (doing), upon; in (doing), when it comes to"
+      },
+      "examples": {
+        "家族とよく相談した上で、お返事いたします。": {
+          "en": "I'll give you my answer after discussing it carefully with my family.",
+          "mn": "Гэр бүлтэйгээ сайтар зөвлөлдсөний дараа хариу өгнө."
+        },
+        "内容を確認した上で、契約書に署名してください。": {
+          "en": "Please sign the contract after checking its contents.",
+          "mn": "Агуулгыг шалгасны дараа гэрээнд гарын үсэг зураарай."
+        },
+        "外国語を学ぶ上で大切なのは、間違いを恐れないことだ。": {
+          "en": "What's important in learning a foreign language is not being afraid of mistakes.",
+          "mn": "Гадаад хэл сурахад чухал нь алдаанаас айхгүй байх."
+        }
+      }
+    },
+    "ijou-wa": {
+      "expected": {
+        "p": "〜以上（は）",
+        "en": "since; now that; as long as"
+      },
+      "examples": {
+        "引き受けた以上は、最後まで責任を持ってやり遂げるつもりだ。": {
+          "en": "Now that I've taken it on, I intend to see it through responsibly to the end.",
+          "mn": "Хүлээж авсан болохоор эцэс хүртэл нь хариуцлагатай гүйцээх бодолтой."
+        },
+        "プロである以上、言い訳は許されない。": {
+          "en": "As long as you're a professional, excuses aren't acceptable.",
+          "mn": "Мэргэжлийн хүн юм чинь шалтаг хэлэхийг зөвшөөрөхгүй."
+        },
+        "証拠がない以上、彼を犯人と決めつけることはできない。": {
+          "en": "Since there's no evidence, we can't conclude that he's the culprit.",
+          "mn": "Нотолгоо байхгүй тул түүнийг гэмт этгээд гэж тогтоож болохгүй."
+        }
+      }
+    },
+    "kara-ni-wa": {
+      "expected": {
+        "p": "〜からには",
+        "en": "now that; since (having done/being ..., one must)"
+      },
+      "examples": {
+        "オリンピックに出るからには、メダルを狙いたい。": {
+          "en": "Since I'm competing in the Olympics, I want to go for a medal.",
+          "mn": "Олимпод оролцож байгаа болохоор медаль авахыг зорьмоор байна."
+        },
+        "自分で決めたからには、途中で投げ出すわけにはいかない。": {
+          "en": "Since I decided on this myself, I can't just give up halfway.",
+          "mn": "Өөрөө шийдсэн болохоор дундаас нь орхиж болохгүй."
+        }
+      }
+    },
+    "kara-koso": {
+      "expected": {
+        "p": "〜からこそ",
+        "en": "precisely because; it is because ... that"
+      },
+      "examples": {
+        "君のことを思っているからこそ、厳しいことを言うんだ。": {
+          "en": "It's precisely because I care about you that I'm being hard on you.",
+          "mn": "Чамд санаа тавьж байгаа учраас л хатуу үг хэлж байна."
+        },
+        "苦しい時期があったからこそ、今の成功があるのだと思う。": {
+          "en": "I think it's precisely because we went through hard times that we're successful now.",
+          "mn": "Хэцүү үе туулсан учраас л өнөөдрийн амжилт бий гэж боддог."
+        },
+        "小さな会社だからこそできるサービスもある。": {
+          "en": "There are some services we can offer precisely because we're a small company.",
+          "mn": "Жижиг компани учраас л үзүүлж чаддаг үйлчилгээ ч бий."
+        }
+      }
+    },
+    "kara-shite": {
+      "expected": {
+        "p": "〜からして",
+        "en": "judging from; (starting) even with; to begin with"
+      },
+      "examples": {
+        "空の様子からして、午後は雨になりそうだ。": {
+          "en": "Judging from the look of the sky, it's likely to rain in the afternoon.",
+          "mn": "Тэнгэрийн байдлаас харахад үдээс хойш бороо орох бололтой."
+        },
+        "あの店は、店員の態度からして感じが悪い。": {
+          "en": "That shop is unpleasant, starting with the staff's attitude.",
+          "mn": "Тэр дэлгүүр ажилтнуудынхаа хандлагаас эхлээд л таагүй."
+        },
+        "彼の話は、最初の前提からして間違っている。": {
+          "en": "His argument is wrong right from its first premise.",
+          "mn": "Түүний яриа эхний үндэслэлээсээ л буруу."
+        }
+      }
+    },
+    "kara-suru-to-kara-sureba": {
+      "expected": {
+        "p": "〜からすると / 〜からすれば",
+        "en": "judging from; from the standpoint of"
+      },
+      "examples": {
+        "あの話し方からすると、彼は関西の出身だろう。": {
+          "en": "Judging from the way he talks, he's probably from the Kansai area.",
+          "mn": "Ярианы хэв маягаас нь харахад тэр Кансайгийн хүн байх."
+        },
+        "親からすれば、子どもはいくつになっても子どもだ。": {
+          "en": "From a parent's point of view, children are children no matter how old they get.",
+          "mn": "Эцэг эхийн хувьд хүүхэд хэдэн настай болсон ч хүүхэд хэвээр."
+        }
+      }
+    },
+    "kara-miru-to-kara-mireba": {
+      "expected": {
+        "p": "〜から見ると / 〜から見れば",
+        "en": "from the point of view of; judging from; seen from"
+      },
+      "examples": {
+        "外国人から見ると、日本の習慣には不思議なものが多いらしい。": {
+          "en": "Apparently, from a foreigner's point of view, many Japanese customs seem strange.",
+          "mn": "Гадаад хүний нүдээр харвал Японы олон заншил сонин санагддаг бололтой."
+        },
+        "今の成績から見れば、第一志望の合格は十分可能だ。": {
+          "en": "Judging from your current grades, getting into your first-choice school is quite possible.",
+          "mn": "Одоогийн дүнгээс харахад хамгийн их хүссэн сургуульдаа тэнцэх бүрэн боломжтой."
+        }
+      }
+    },
+    "kara-iu-to-kara-itte": {
+      "expected": {
+        "p": "〜からいうと / 〜からいって",
+        "en": "in terms of; from the standpoint of; judging by"
+      },
+      "examples": {
+        "立地からいうと、駅前のマンションのほうが便利だ。": {
+          "en": "In terms of location, the apartment in front of the station is more convenient.",
+          "mn": "Байршлын хувьд өртөөний өмнөх орон сууц илүү тохиромжтой."
+        },
+        "これまでの経験からいって、この計画はうまくいかないと思う。": {
+          "en": "Judging from past experience, I don't think this plan will work.",
+          "mn": "Өмнөх туршлагаас үзвэл энэ төлөвлөгөө амжилтгүй болно гэж бодож байна."
+        }
+      }
+    },
+    "sai-ni": {
+      "expected": {
+        "p": "〜際（に）",
+        "en": "when; at the time of; on the occasion of"
+      },
+      "examples": {
+        "お降りの際は、お忘れ物のないようご注意ください。": {
+          "en": "When getting off, please make sure you don't leave anything behind.",
+          "mn": "Буухдаа юмаа мартахгүй байхыг анхаараарай."
+        },
+        "以前京都を訪れた際に、この寺にも立ち寄った。": {
+          "en": "When I visited Kyoto before, I also stopped by this temple.",
+          "mn": "Өмнө нь Киотод очихдоо энэ сүмд ч орсон."
+        },
+        "パスポートを申請する際には、写真と本人確認書類が必要です。": {
+          "en": "When you apply for a passport, you need a photo and proof of identity.",
+          "mn": "Паспорт хүсэхэд зураг, биеийн байцаалт хэрэгтэй."
+        }
+      }
+    },
+    "shidai": {
+      "expected": {
+        "p": "〜次第",
+        "en": "as soon as (then immediately)"
+      },
+      "examples": {
+        "詳しい日程が決まり次第、皆様にご連絡いたします。": {
+          "en": "We will contact everyone as soon as the detailed schedule is decided.",
+          "mn": "Нарийвчилсан хуваарь шийдэгдмэгц та бүхэнд мэдэгдэнэ."
+        },
+        "資料が届き次第、内容を確認してお返事します。": {
+          "en": "As soon as the materials arrive, I'll check them and get back to you.",
+          "mn": "Материал ирмэгц агуулгыг шалгаад хариу өгнө."
+        },
+        "定員になり次第、受付を締め切らせていただきます。": {
+          "en": "Registration will close as soon as capacity is reached.",
+          "mn": "Багтаамж дүүрмэгц бүртгэл хаагдана."
+        }
+      }
+    },
+    "shidai-da-shidai-de": {
+      "expected": {
+        "p": "〜次第だ / 〜次第で",
+        "en": "depending on; it depends on"
+      },
+      "examples": {
+        "合格できるかどうかは、これからの努力次第だ。": {
+          "en": "Whether you pass depends on your efforts from now on.",
+          "mn": "Тэнцэх эсэх нь одооноос гаргах хичээл зүтгэлээс шалтгаална."
+        },
+        "天気次第で、明日の予定を変えるかもしれない。": {
+          "en": "Depending on the weather, we may change tomorrow's plans.",
+          "mn": "Цаг агаараас хамаарч маргаашийн төлөвлөгөөг өөрчилж магадгүй."
+        },
+        "考え方次第では、失敗も貴重な経験になる。": {
+          "en": "Depending on how you look at it, even failure can be a valuable experience.",
+          "mn": "Яаж харж байгаагаас хамаарч бүтэлгүйтэл ч үнэ цэнтэй туршлага болно."
+        }
+      }
+    },
+    "sue-ni": {
+      "expected": {
+        "p": "〜末（に）",
+        "en": "after (a long process of); finally, at the end of"
+      },
+      "examples": {
+        "半年にわたる交渉の末、両社はようやく合意に達した。": {
+          "en": "After six months of negotiations, the two companies finally reached an agreement.",
+          "mn": "Зургаан сарын хэлэлцээний эцэст хоёр компани сая нэг тохиролцсон."
+        },
+        "散々悩んだ末に、彼は留学をあきらめることにした。": {
+          "en": "After much agonizing, he decided to give up studying abroad.",
+          "mn": "Удаан шаналсны эцэст тэр гадаадад сурахаас татгалзахаар шийдсэн."
+        },
+        "試行錯誤の末に完成したのが、この新しいエンジンだ。": {
+          "en": "What we finally completed after much trial and error is this new engine.",
+          "mn": "Олон удаагийн туршилт, алдааны эцэст бүтээсэн нь энэ шинэ хөдөлгүүр."
+        }
+      }
+    },
+    "ta-tokoro-de": {
+      "expected": {
+        "p": "〜たところで",
+        "en": "even if (it would be no use); no matter how much"
+      },
+      "examples": {
+        "今から急いだところで、終電には間に合わないだろう。": {
+          "en": "Even if we hurry now, we probably won't make the last train.",
+          "mn": "Одоо яарсан ч сүүлчийн галт тэргэнд амжихгүй байх."
+        },
+        "いくら説明したところで、あの人は聞く耳を持たない。": {
+          "en": "No matter how much you explain, he just won't listen.",
+          "mn": "Хэчнээн тайлбарласан ч тэр хүн сонсохгүй."
+        },
+        "失敗したところで、失うものは何もない。": {
+          "en": "Even if we fail, we have nothing to lose.",
+          "mn": "Бүтэлгүйтсэн ч алдах зүйл бидэнд байхгүй."
+        }
+      }
+    }
+  }
+}
