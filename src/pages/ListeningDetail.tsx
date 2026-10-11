@@ -7,7 +7,7 @@ import { lessonById } from "../lib/data";
 import type { ListeningLesson } from "../lib/types";
 import { FALLBACK_LESSONS } from "../data/listening-fallback";
 import { stripFurigana } from "../lib/text";
-import { Button, Card, Chip, Empty, LevelBadge, SectionTitle, SpeakButton, Tabs } from "../components/ui";
+import { Button, Card, Chip, Empty, LevelBadge, SectionTitle, SpeakButton, Tabs, speak } from "../components/ui";
 import { XRayText } from "../components/XRayText";
 
 export default function ListeningDetail({ id }: { id: string }) {
@@ -50,16 +50,12 @@ export default function ListeningDetail({ id }: { id: string }) {
       setAudioError(language === "en" ? "Japanese speech is unavailable in this browser." : "Энэ браузерт япон хэлний дуу хоолой боломжгүй байна.");
       return;
     }
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(lesson.transcript.map((line) => stripFurigana(line.ja)).join("。"));
-    utterance.lang = "ja-JP";
-    utterance.rate = speed;
-    const voices = window.speechSynthesis.getVoices();
-    utterance.voice = voices.find((voice) => voice.lang.toLowerCase().startsWith("ja")) ?? null;
-    utterance.onend = () => setSpeaking(false);
-    utterance.onerror = () => setSpeaking(false);
     setSpeaking(true);
-    window.speechSynthesis.speak(utterance);
+    speak(lesson.transcript.map((line) => stripFurigana(line.ja)).join("。"), speed, {
+      lang: "ja-JP",
+      onend: () => setSpeaking(false),
+      onerror: () => setSpeaking(false),
+    });
   };
   const stopTts = () => { window.speechSynthesis?.cancel(); setSpeaking(false); };
 
@@ -141,13 +137,7 @@ export default function ListeningDetail({ id }: { id: string }) {
                 {lesson.transcript.map((line, i) => (
                   <div key={i} className="flex items-start gap-3 border-b border-sumi-900/6 pb-3.5 last:border-0">
                     <button
-                      onClick={() => {
-                        const u = new SpeechSynthesisUtterance(stripFurigana(line.ja));
-                        u.lang = "ja-JP";
-                        u.rate = 0.9;
-                        window.speechSynthesis.cancel();
-                        window.speechSynthesis.speak(u);
-                      }}
+                      onClick={() => speak(stripFurigana(line.ja), 0.9, { lang: "ja-JP" })}
                       className="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-lg border border-sumi-900/10 bg-white/70 text-[12px] text-sumi-500 hover:border-ai-400 hover:text-ai-600"
                       title={t.readAloud}>
                       🔊

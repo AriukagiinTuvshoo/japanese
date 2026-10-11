@@ -29,6 +29,7 @@
     "test:runner-browser": "node scripts/test-runner-browser.mjs",
     "test:pwa": "node scripts/test-pwa.mjs",
     "test:pwa-smoke": "node scripts/test-pwa-smoke.mjs",
+    "test:ui-audit": "node scripts/test-ui-audit.mjs",
     "test:tutor": "node scripts/test-tutor.mjs"
   },
   "dependencies": {

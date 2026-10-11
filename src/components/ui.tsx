@@ -429,15 +429,60 @@ if (typeof window !== "undefined" && "speechSynthesis" in window) {
   window.speechSynthesis.addEventListener?.("voiceschanged", loadVoices);
 }
 
-export function speak(text: string, rate = 1) {
-  if (!("speechSynthesis" in window)) return;
+// Best-effort hints for mature, natural-sounding voices across platforms
+// (cloud/neural voices first, then well-known system voices). Selection always
+// falls back gracefully — the feature must work with whatever the browser has.
+const VOICE_HINTS = [
+  "google us english", "google 日本語", "google uk english",
+  "microsoft aria", "microsoft jenny", "microsoft guy", "microsoft michelle",
+  "microsoft nanami", "microsoft keita", "microsoft ichiro",
+  "natural", "neural", "premium", "enhanced",
+  "samantha", "karen", "daniel", "alex", "nanami", "kyoko", "otoya", "haruka",
+  "online", "google",
+];
+
+export function pickVoice(langPrefix: string): SpeechSynthesisVoice | null {
+  const prefix = langPrefix.toLowerCase();
+  const list = voices.filter((v) => (v.lang || "").toLowerCase().replace("_", "-").startsWith(prefix));
+  if (!list.length) return null;
+  const score = (v: SpeechSynthesisVoice) => {
+    const n = (v.name || "").toLowerCase();
+    let s = 0;
+    VOICE_HINTS.forEach((hint, i) => {
+      if (n.includes(hint)) s += VOICE_HINTS.length - i;
+    });
+    return s;
+  };
+  return list.slice().sort((a, b) => score(b) - score(a))[0] ?? null;
+}
+
+export interface SpeakOptions {
+  /** BCP-47 language for the utterance (default ja-JP). */
+  lang?: string;
+  /** Pitch, clamped to a natural band (default 1 — never chipmunk-high). */
+  pitch?: number;
+  onend?: () => void;
+  onerror?: () => void;
+}
+
+/** Speak text with the best available natural voice; full fallback chain:
+ *  preferred voice for the language → any voice for the language → browser
+ *  default. Rate is clamped to a comfortable, mature band. */
+export function speak(text: string, rate = 1, opts?: SpeakOptions) {
+  const done = () => { try { opts?.onend?.(); } catch { /* noop */ } };
+  if (typeof window === "undefined" || !("speechSynthesis" in window)) { done(); return; }
   window.speechSynthesis.cancel();
-  const clean = text.replace(/\{([^|{}]+)\|([^}]+)\}/g, "$1");
+  const clean = text.replace(/\{([^|{}]+)\|([^}]+)\}/g, "$1").trim();
+  if (!clean) { done(); return; }
   const u = new SpeechSynthesisUtterance(clean);
-  u.lang = "ja-JP";
-  u.rate = rate;
-  const ja = voices.filter((v) => v.lang.startsWith("ja"));
-  if (ja[0]) u.voice = ja[0];
+  const lang = opts?.lang ?? "ja-JP";
+  u.lang = lang;
+  u.rate = Math.min(1.3, Math.max(0.7, rate));
+  u.pitch = Math.min(1.1, Math.max(0.9, opts?.pitch ?? 1));
+  const v = pickVoice(lang.split("-")[0]);
+  if (v) u.voice = v;
+  u.onend = done;
+  u.onerror = () => { try { opts?.onerror?.(); } catch { /* noop */ } };
   window.speechSynthesis.speak(u);
 }
 

@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Card, PageHeader, SectionTitle } from "../components/ui";
+import { Card, PageHeader, SectionTitle, speak as speakText } from "../components/ui";
 import { useStore } from "../lib/store";
 import { ui } from "../lib/i18n";
 import {
@@ -172,10 +172,7 @@ export default function Tutor() {
 
   function speak(turn: TutorTurn) {
     if (!canPlay || !turn.text) return;
-    window.speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(turn.text);
-    u.lang = language === "en" ? "en-US" : "mn-MN";
-    window.speechSynthesis.speak(u);
+    speakText(turn.text, 1, { lang: language === "en" ? "en-US" : "mn-MN" });
   }
 
   function clearChat() {
