@@ -58,7 +58,12 @@ export function XRayText({ text, showFurigana = true }: { text: string; showFuri
     const parts = parseFurigana(text);
     const out: Token[] = [];
     for (const p of parts) {
-      if (p.ruby) { out.push({ text: p.base, ruby: p.ruby, kind: "word" }); continue; }
+      if (p.ruby) {
+        // Furigana-annotated words stay tappable: look the base up in the dictionary too.
+        const hit = dict?.words.get(p.base) ?? dict?.kanji.get(p.base) ?? dict?.grammar.get(p.base) ?? undefined;
+        out.push({ text: p.base, ruby: p.ruby, kind: "word", hit });
+        continue;
+      }
       if (!dict) { out.push({ text: p.base, kind: "kana" }); continue; }
       let i = 0;
       while (i < p.base.length) {

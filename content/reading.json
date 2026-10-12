@@ -68,7 +68,9 @@
     "whyEn": "The passage states that the person ate breakfast."
    }
   ],
-  "titleJpFuri": "{朝|あさ}ごはん"
+  "titleJpFuri": "{朝|あさ}ごはん",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n5-02",
@@ -139,7 +141,9 @@
     "whyEn": "Tanaka goes to the bus stop at seven."
    }
   ],
-  "titleJpFuri": "{バスてい|ばすてい}"
+  "titleJpFuri": "{バスてい|ばすてい}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n5-03",
@@ -210,7 +214,9 @@
     "whyEn": "Yamada reads the Japanese book at the library."
    }
   ],
-  "titleJpFuri": "{図書館|としょかん}"
+  "titleJpFuri": "{図書館|としょかん}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n5-04",
@@ -281,7 +287,9 @@
     "whyEn": "The passage states that the person took a water bottle to school."
    }
   ],
-  "titleJpFuri": "{みずのボトル|みずのぼとる}"
+  "titleJpFuri": "{みずのボトル|みずのぼとる}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n5-05",
@@ -352,7 +360,9 @@
     "whyEn": "The father bought two bottles of milk."
    }
   ],
-  "titleJpFuri": "{スーパーのみるく|すーぱーのみるく}"
+  "titleJpFuri": "{スーパーのみるく|すーぱーのみるく}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n5-06",
@@ -423,7 +433,9 @@
     "whyEn": "The younger sister cleans her room on Saturday."
    }
   ],
-  "titleJpFuri": "{へやのそうじ|へやのそうじ}"
+  "titleJpFuri": "{へやのそうじ|へやのそうじ}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n5-07",
@@ -494,7 +506,9 @@
     "whyEn": "The passage states that the person walked with an umbrella."
    }
   ],
-  "titleJpFuri": "あめの{日|ひ}"
+  "titleJpFuri": "あめの{日|ひ}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n5-08",
@@ -565,7 +579,9 @@
     "whyEn": "Ken posts the letter on Sunday."
    }
   ],
-  "titleJpFuri": "{ともだちへのてがみ|ともだちへのてがみ}"
+  "titleJpFuri": "{ともだちへのてがみ|ともだちへのてがみ}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n5-09",
@@ -636,7 +652,9 @@
     "whyEn": "The passage states that the person made curry."
    }
   ],
-  "titleJpFuri": "{うちでカレー|うちでかれー}"
+  "titleJpFuri": "{うちでカレー|うちでかれー}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n5-10",
@@ -707,7 +725,9 @@
     "whyEn": "The passage states that the person put flowers in a vase."
    }
   ],
-  "titleJpFuri": "{はなや|はなや}"
+  "titleJpFuri": "{はなや|はなや}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n5-11",
@@ -778,7 +798,9 @@
     "whyEn": "The person runs in the park for about fifteen minutes."
    }
   ],
-  "titleJpFuri": "{あさのうんどう|あさのうんどう}"
+  "titleJpFuri": "{あさのうんどう|あさのうんどう}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n5-12",
@@ -849,7 +871,9 @@
     "whyEn": "The passage states that the person bought medicine."
    }
   ],
-  "titleJpFuri": "{くすりや|くすりや}"
+  "titleJpFuri": "{くすりや|くすりや}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n5-13",
@@ -920,7 +944,9 @@
     "whyEn": "The student reads the new words three times."
    }
   ],
-  "titleJpFuri": "{じゅぎょうのノート|じゅぎょうののーと}"
+  "titleJpFuri": "{じゅぎょうのノート|じゅぎょうののーと}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n5-14",
@@ -991,7 +1017,9 @@
     "whyEn": "The passage states that the person fed the cat."
    }
   ],
-  "titleJpFuri": "{ねこのごはん|ねこのごはん}"
+  "titleJpFuri": "{ねこのごはん|ねこのごはん}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n5-15",
@@ -1062,7 +1090,9 @@
     "whyEn": "The passage states that the person greeted a neighbor."
    }
   ],
-  "titleJpFuri": "{となりの人にあいさつ|となりのひとにあいさつ}"
+  "titleJpFuri": "{となりの人にあいさつ|となりのひとにあいさつ}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n5-16",
@@ -1133,7 +1163,9 @@
     "whyEn": "The ticket was for Osaka."
    }
   ],
-  "titleJpFuri": "{でんしゃのきっぷ|でんしゃのきっぷ}"
+  "titleJpFuri": "{でんしゃのきっぷ|でんしゃのきっぷ}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n5-17",
@@ -1204,7 +1236,9 @@
     "whyEn": "The passage states that the person brushed teeth."
    }
   ],
-  "titleJpFuri": "{はをみがく|はをみがく}"
+  "titleJpFuri": "{はをみがく|はをみがく}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n5-18",
@@ -1275,7 +1309,9 @@
     "whyEn": "The passage states that the person played at the park with family."
    }
   ],
-  "titleJpFuri": "やすみの{日|ひ}"
+  "titleJpFuri": "やすみの{日|ひ}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n5-19",
@@ -1346,7 +1382,9 @@
     "whyEn": "The passage states that the person bought a picture book."
    }
   ],
-  "titleJpFuri": "{ほんや|ほんや}"
+  "titleJpFuri": "{ほんや|ほんや}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n5-20",
@@ -1417,7 +1455,9 @@
     "whyEn": "The passage states that the person ate soba."
    }
   ],
-  "titleJpFuri": "{ひるごはん|ひるごはん}"
+  "titleJpFuri": "{ひるごはん|ひるごはん}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n5-21",
@@ -1488,7 +1528,9 @@
     "whyEn": "The passage states that the person gave my sister a teddy bear."
    }
   ],
-  "titleJpFuri": "{たんじょう日のプレゼント|たんじょうびのぷれぜんと}"
+  "titleJpFuri": "{たんじょう日のプレゼント|たんじょうびのぷれぜんと}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n5-22",
@@ -1559,7 +1601,9 @@
     "whyEn": "Three apples were bought at the market."
    }
   ],
-  "titleJpFuri": "{いちばのりんご|いちばのりんご}"
+  "titleJpFuri": "{いちばのりんご|いちばのりんご}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n5-23",
@@ -1630,7 +1674,9 @@
     "whyEn": "The passage states that the person drank tea with family."
    }
   ],
-  "titleJpFuri": "{ばんのおちゃ|ばんのおちゃ}"
+  "titleJpFuri": "{ばんのおちゃ|ばんのおちゃ}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n5-24",
@@ -1701,7 +1747,9 @@
     "whyEn": "The passage states that the person looked at a map."
    }
   ],
-  "titleJpFuri": "{まちのちず|まちのちず}"
+  "titleJpFuri": "{まちのちず|まちのちず}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n5-25",
@@ -1772,7 +1820,9 @@
     "whyEn": "The passage states that the person read a book on the train."
    }
   ],
-  "titleJpFuri": "{でんしゃの中で本を読む|でんしゃのなかでほんをよむ}"
+  "titleJpFuri": "{でんしゃの中で本を読む|でんしゃのなかでほんをよむ}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n5-26",
@@ -1843,7 +1893,9 @@
     "whyEn": "The passage states that the person opened the window."
    }
   ],
-  "titleJpFuri": "{へやのまど|へやのまど}"
+  "titleJpFuri": "{へやのまど|へやのまど}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n5-27",
@@ -1914,7 +1966,9 @@
     "whyEn": "The passage states that the person wrote a daily note."
    }
   ],
-  "titleJpFuri": "{まい日のメモ|まいにちのめも}"
+  "titleJpFuri": "{まい日のメモ|まいにちのめも}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n5-28",
@@ -1985,7 +2039,9 @@
     "whyEn": "The supermarket opens at nine in the morning."
    }
   ],
-  "titleJpFuri": "{スーパーのじかん|すーぱーのじかん}"
+  "titleJpFuri": "{スーパーのじかん|すーぱーのじかん}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n5-29",
@@ -2056,7 +2112,9 @@
     "whyEn": "The passage states that the person ate ice cream."
    }
   ],
-  "titleJpFuri": "{アイスクリーム|あいすくりーむ}"
+  "titleJpFuri": "{アイスクリーム|あいすくりーむ}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n5-30",
@@ -2127,7 +2185,9 @@
     "whyEn": "The passage states that the person practiced piano."
    }
   ],
-  "titleJpFuri": "{じゅぎょうのあと|じゅぎょうのあと}"
+  "titleJpFuri": "{じゅぎょうのあと|じゅぎょうのあと}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-01",
@@ -2198,7 +2258,9 @@
     "whyEn": "The person checked the day’s plan before leaving home."
    }
   ],
-  "titleJpFuri": "{早起き|はやおき}"
+  "titleJpFuri": "{早起き|はやおき}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-02",
@@ -2269,7 +2331,9 @@
     "whyEn": "The person commutes to the station by bicycle on days without rain."
    }
   ],
-  "titleJpFuri": "{自転車で通う|じてんしゃでかよう}"
+  "titleJpFuri": "{自転車で通う|じてんしゃでかよう}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-03",
@@ -2340,7 +2404,9 @@
     "whyEn": "The neighbor gave the person tomatoes from the garden as thanks."
    }
   ],
-  "titleJpFuri": "{近所の手伝い|きんじょのてつだい}"
+  "titleJpFuri": "{近所の手伝い|きんじょのてつだい}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-04",
@@ -2411,7 +2477,9 @@
     "whyEn": "The person went because the cough had lasted three days."
    }
   ],
-  "titleJpFuri": "{病院へ行く|びょういんへいく}"
+  "titleJpFuri": "{病院へ行く|びょういんへいく}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-05",
@@ -2482,7 +2550,9 @@
     "whyEn": "The clothes were dry by evening."
    }
   ],
-  "titleJpFuri": "{洗濯をする|せんたくをする}"
+  "titleJpFuri": "{洗濯をする|せんたくをする}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-06",
@@ -2553,7 +2623,9 @@
     "whyEn": "The vegetables were simmered in a pot for twenty minutes."
    }
   ],
-  "titleJpFuri": "{夕食のスープ|ゆうしょくのすーぷ}"
+  "titleJpFuri": "{夕食のスープ|ゆうしょくのすーぷ}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-07",
@@ -2624,7 +2696,9 @@
     "whyEn": "After getting lost, the person asked the station attendant where the platform was."
    }
   ],
-  "titleJpFuri": "{電車を乗りかえる|でんしゃをのりかえる}"
+  "titleJpFuri": "{電車を乗りかえる|でんしゃをのりかえる}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-08",
@@ -2695,7 +2769,9 @@
     "whyEn": "The person explained nearby shops and garbage collection days."
    }
   ],
-  "titleJpFuri": "{新しい近所の人|あたらしいきんじょのひと}"
+  "titleJpFuri": "{新しい近所の人|あたらしいきんじょのひと}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-09",
@@ -2766,7 +2842,9 @@
     "whyEn": "The teacher made two short example sentences."
    }
   ],
-  "titleJpFuri": "{文法の質問|ぶんぽうのしつもん}"
+  "titleJpFuri": "{文法の質問|ぶんぽうのしつもん}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-10",
@@ -2837,7 +2915,9 @@
     "whyEn": "After the room number was provided, the package arrived the next day."
    }
   ],
-  "titleJpFuri": "{住所を忘れた配達|じゅうしょをわすれたはいたつ}"
+  "titleJpFuri": "{住所を忘れた配達|じゅうしょをわすれたはいたつ}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-11",
@@ -2908,7 +2988,9 @@
     "whyEn": "The train delay made the person keep the friend waiting for ten minutes."
    }
   ],
-  "titleJpFuri": "{カフェで会う|かふぇであう}"
+  "titleJpFuri": "{カフェで会う|かふぇであう}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-12",
@@ -2979,7 +3061,9 @@
     "whyEn": "The email arrived three days after the reservation."
    }
   ],
-  "titleJpFuri": "{図書館の予約|としょかんのよやく}"
+  "titleJpFuri": "{図書館の予約|としょかんのよやく}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-13",
@@ -3050,7 +3134,9 @@
     "whyEn": "After playing on the slide, the child ate a snack on a bench."
    }
   ],
-  "titleJpFuri": "{子どもの公園|こどものこうえん}"
+  "titleJpFuri": "{子どもの公園|こどものこうえん}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-14",
@@ -3121,7 +3207,9 @@
     "whyEn": "The person bought a white frame for the travel photos."
    }
   ],
-  "titleJpFuri": "{写真のフレーム|しゃしんのふれーむ}"
+  "titleJpFuri": "{写真のフレーム|しゃしんのふれーむ}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-15",
@@ -3192,7 +3280,9 @@
     "whyEn": "The person showed first-time visitors around the venue."
    }
   ],
-  "titleJpFuri": "{町のお祭り|まちのおまつり}"
+  "titleJpFuri": "{町のお祭り|まちのおまつり}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-16",
@@ -3263,7 +3353,9 @@
     "whyEn": "The person saves water by turning off the faucet while brushing."
    }
   ],
-  "titleJpFuri": "{水を節約する|みずをせつやくする}"
+  "titleJpFuri": "{水を節約する|みずをせつやくする}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-17",
@@ -3334,7 +3426,9 @@
     "whyEn": "The person removed the labels and took them to the designated place."
    }
   ],
-  "titleJpFuri": "{ごみを分ける日|ごみをわけるひ}"
+  "titleJpFuri": "{ごみを分ける日|ごみをわけるひ}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-18",
@@ -3405,7 +3499,9 @@
     "whyEn": "The person tries not to look at a smartphone before bed."
    }
   ],
-  "titleJpFuri": "{寝る前の習慣|ねるまえのしゅうかん}"
+  "titleJpFuri": "{寝る前の習慣|ねるまえのしゅうかん}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-19",
@@ -3476,7 +3572,9 @@
     "whyEn": "The person sent the notes to the colleague who missed the meeting."
    }
   ],
-  "titleJpFuri": "{会議のメモ|かいぎのめも}"
+  "titleJpFuri": "{会議のメモ|かいぎのめも}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-20",
@@ -3547,7 +3645,9 @@
     "whyEn": "The person got off at the next station and boarded a train in the opposite direction."
    }
   ],
-  "titleJpFuri": "{まちがえた駅|まちがえたえき}"
+  "titleJpFuri": "{まちがえた駅|まちがえたえき}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-21",
@@ -3618,7 +3718,9 @@
     "whyEn": "The person charged the phone for ten minutes before checking the map."
    }
   ],
-  "titleJpFuri": "{携帯電話を充電する|けいたいでんわをじゅうでんする}"
+  "titleJpFuri": "{携帯電話を充電する|けいたいでんわをじゅうでんする}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-22",
@@ -3689,7 +3791,9 @@
     "whyEn": "The person told the staff about an allergen and chose another dish."
    }
   ],
-  "titleJpFuri": "{食事を注文する|しょくじをちゅうもんする}"
+  "titleJpFuri": "{食事を注文する|しょくじをちゅうもんする}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-23",
@@ -3760,7 +3864,9 @@
     "whyEn": "The person wrapped the gift and added a card with a congratulatory message."
    }
   ],
-  "titleJpFuri": "{プレゼントを包む|ぷれぜんとをつつむ}"
+  "titleJpFuri": "{プレゼントを包む|ぷれぜんとをつつむ}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-24",
@@ -3831,7 +3937,9 @@
     "whyEn": "The person got a map at the tourist information center before walking around."
    }
   ],
-  "titleJpFuri": "{町を歩く|まちをあるく}"
+  "titleJpFuri": "{町を歩く|まちをあるく}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-25",
@@ -3902,7 +4010,9 @@
     "whyEn": "The friend said the new workplace makes it easier to have personal time."
    }
   ],
-  "titleJpFuri": "{友だちとの話|ともだちとのはなし}"
+  "titleJpFuri": "{友だちとの話|ともだちとのはなし}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-26",
@@ -3973,7 +4083,9 @@
     "whyEn": "The person prepared a thick jacket because it was expected to get cold."
    }
   ],
-  "titleJpFuri": "{服を選ぶ|ふくをえらぶ}"
+  "titleJpFuri": "{服を選ぶ|ふくをえらぶ}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-27",
@@ -4044,7 +4156,9 @@
     "whyEn": "They learned that the collection day differs by type of trash."
    }
   ],
-  "titleJpFuri": "{ごみのルール|ごみのるーる}"
+  "titleJpFuri": "{ごみのルール|ごみのるーる}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-28",
@@ -4115,7 +4229,9 @@
     "whyEn": "They arranged to meet at the station to show the student around town."
    }
   ],
-  "titleJpFuri": "{学生の交流|がくせいのこうりゅう}"
+  "titleJpFuri": "{学生の交流|がくせいのこうりゅう}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-29",
@@ -4186,7 +4302,9 @@
     "whyEn": "After learning the train had stopped, the person changed to another line."
    }
   ],
-  "titleJpFuri": "{別の路線で仕事へ|べつのろせんでしごとへ}"
+  "titleJpFuri": "{別の路線で仕事へ|べつのろせんでしごとへ}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n4-30",
@@ -4257,7 +4375,9 @@
     "whyEn": "The person washes up after returning home, wears a mask in crowded places, and goes to bed early."
    }
   ],
-  "titleJpFuri": "{風邪を予防する|かぜをよぼうする}"
+  "titleJpFuri": "{風邪を予防する|かぜをよぼうする}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-01",
@@ -4328,7 +4448,9 @@
     "whyEn": "The passage states that the person learned the workflow and asked about unclear points."
    }
   ],
-  "titleJpFuri": "{新しい仕事の始まり|あたらしいしごとのはじまり}"
+  "titleJpFuri": "{新しい仕事の始まり|あたらしいしごとのはじまり}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-02",
@@ -4399,7 +4521,9 @@
     "whyEn": "The passage states that the person called the shop and retrieved the wallet."
    }
   ],
-  "titleJpFuri": "{なくした財布|なくしたさいふ}"
+  "titleJpFuri": "{なくした財布|なくしたさいふ}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-03",
@@ -4470,7 +4594,9 @@
     "whyEn": "The passage states that the person compared priorities and chose a home."
    }
   ],
-  "titleJpFuri": "{家族で話し合う|かぞくではなしあう}"
+  "titleJpFuri": "{家族で話し合う|かぞくではなしあう}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-04",
@@ -4541,7 +4667,9 @@
     "whyEn": "The passage states that the person proposed an alternative to test."
    }
   ],
-  "titleJpFuri": "{仕事の提案|しごとのていあん}"
+  "titleJpFuri": "{仕事の提案|しごとのていあん}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-05",
@@ -4612,7 +4740,9 @@
     "whyEn": "The passage states that the person delayed the trip by one day."
    }
   ],
-  "titleJpFuri": "{旅行の予定変更|りょこうのよていへんこう}"
+  "titleJpFuri": "{旅行の予定変更|りょこうのよていへんこう}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-06",
@@ -4683,7 +4813,9 @@
     "whyEn": "The passage states that the person noted when the pain started and saw a doctor."
    }
   ],
-  "titleJpFuri": "{病院で症状を説明する|びょういんでしょうじょうをせつめいする}"
+  "titleJpFuri": "{病院で症状を説明する|びょういんでしょうじょうをせつめいする}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-07",
@@ -4754,7 +4886,9 @@
     "whyEn": "The passage states that the person wiped the counter and reviewed the shared rule."
    }
   ],
-  "titleJpFuri": "{共有の台所|きょうゆうのだいどころ}"
+  "titleJpFuri": "{共有の台所|きょうゆうのだいどころ}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-08",
@@ -4825,7 +4959,9 @@
     "whyEn": "The passage states that the person used words in short sentences to study."
    }
   ],
-  "titleJpFuri": "{勉強方法を変える|べんきょうほうほうをかえる}"
+  "titleJpFuri": "{勉強方法を変える|べんきょうほうほうをかえる}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-09",
@@ -4896,7 +5032,9 @@
     "whyEn": "The passage states that the person explained technical terms simply."
    }
   ],
-  "titleJpFuri": "{翻訳のボランティア|ほんやくのぼらんてぃあ}"
+  "titleJpFuri": "{翻訳のボランティア|ほんやくのぼらんてぃあ}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-10",
@@ -4967,7 +5105,9 @@
     "whyEn": "The passage states that the person checked the solar power output."
    }
   ],
-  "titleJpFuri": "{太陽光パネル|たいようこうぱねる}"
+  "titleJpFuri": "{太陽光パネル|たいようこうぱねる}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-11",
@@ -5038,7 +5178,9 @@
     "whyEn": "The person handed it to a nearby station attendant."
    }
   ],
-  "titleJpFuri": "{落とし物を届ける|おとしものをとどける}"
+  "titleJpFuri": "{落とし物を届ける|おとしものをとどける}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-12",
@@ -5109,7 +5251,9 @@
     "whyEn": "The passage says it was booked one month in advance."
    }
   ],
-  "titleJpFuri": "{早めに予約した切符|はやめによやくしたきっぷ}"
+  "titleJpFuri": "{早めに予約した切符|はやめによやくしたきっぷ}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-13",
@@ -5180,7 +5324,9 @@
     "whyEn": "They will be notified by email when their turn comes."
    }
   ],
-  "titleJpFuri": "{図書館へのリクエスト|としょかんへのりくえすと}"
+  "titleJpFuri": "{図書館へのリクエスト|としょかんへのりくえすと}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-14",
@@ -5251,7 +5397,9 @@
     "whyEn": "The person asked the neighbor to water the plants."
    }
   ],
-  "titleJpFuri": "{隣人の助け|りんじんのたすけ}"
+  "titleJpFuri": "{隣人の助け|りんじんのたすけ}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-15",
@@ -5322,7 +5470,9 @@
     "whyEn": "The person started switching off lights in rooms that were not being used."
    }
   ],
-  "titleJpFuri": "{電気の節約|でんきのせつやく}"
+  "titleJpFuri": "{電気の節約|でんきのせつやく}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-16",
@@ -5393,7 +5543,9 @@
     "whyEn": "The person walked to the next stop and transferred to another bus route."
    }
   ],
-  "titleJpFuri": "{朝のバス|あさのばす}"
+  "titleJpFuri": "{朝のバス|あさのばす}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-17",
@@ -5464,7 +5616,9 @@
     "whyEn": "The doctor advised the person to drink plenty of fluids."
    }
   ],
-  "titleJpFuri": "{病院の予約|びょういんのよやく}"
+  "titleJpFuri": "{病院の予約|びょういんのよやく}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-18",
@@ -5535,7 +5689,9 @@
     "whyEn": "In the second half, the person answers the partner's questions in English."
    }
   ],
-  "titleJpFuri": "{言語交換の会|げんごこうかんのかい}"
+  "titleJpFuri": "{言語交換の会|げんごこうかんのかい}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-19",
@@ -5606,7 +5762,9 @@
     "whyEn": "The person in charge will come tomorrow afternoon."
    }
   ],
-  "titleJpFuri": "{修理の依頼|しゅうりのいらい}"
+  "titleJpFuri": "{修理の依頼|しゅうりのいらい}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-20",
@@ -5677,7 +5835,9 @@
     "whyEn": "The restaurant did not charge for the mistaken dish."
    }
   ],
-  "titleJpFuri": "{注文の間違い|ちゅうもんのまちがい}"
+  "titleJpFuri": "{注文の間違い|ちゅうもんのまちがい}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-21",
@@ -5748,7 +5908,9 @@
     "whyEn": "Burnable trash is put out on Tuesdays and Fridays."
    }
   ],
-  "titleJpFuri": "{ごみを分別する日|ごみをぶんべつするひ}"
+  "titleJpFuri": "{ごみを分別する日|ごみをぶんべつするひ}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-22",
@@ -5819,7 +5981,9 @@
     "whyEn": "Their seats were near the back."
    }
   ],
-  "titleJpFuri": "{コンサートの座席|こんさーとのざせき}"
+  "titleJpFuri": "{コンサートの座席|こんさーとのざせき}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-23",
@@ -5890,7 +6054,9 @@
     "whyEn": "His older sister baked the cake using fruit."
    }
   ],
-  "titleJpFuri": "{父の誕生日|ちちのたんじょうび}"
+  "titleJpFuri": "{父の誕生日|ちちのたんじょうび}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-24",
@@ -5961,7 +6127,9 @@
     "whyEn": "The person chose shoes that would be comfortable for long walks."
    }
   ],
-  "titleJpFuri": "{新しい靴を選ぶ|あたらしいくつをえらぶ}"
+  "titleJpFuri": "{新しい靴を選ぶ|あたらしいくつをえらぶ}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-25",
@@ -6032,7 +6200,9 @@
     "whyEn": "The person showed a residence card and a document with the new address."
    }
   ],
-  "titleJpFuri": "{住所を変更する|じゅうしょをへんこうする}"
+  "titleJpFuri": "{住所を変更する|じゅうしょをへんこうする}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-26",
@@ -6103,7 +6273,9 @@
     "whyEn": "The person first checked whether the restaurant had a child's chair."
    }
   ],
-  "titleJpFuri": "{子ども向けの食事|こどもむけのしょくじ}"
+  "titleJpFuri": "{子ども向けの食事|こどもむけのしょくじ}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-27",
@@ -6174,7 +6346,9 @@
     "whyEn": "The colleague bought a folding umbrella at a shop on the way home."
    }
   ],
-  "titleJpFuri": "{雨から守る|あめからまもる}"
+  "titleJpFuri": "{雨から守る|あめからまもる}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-28",
@@ -6245,7 +6419,9 @@
     "whyEn": "The person asked the team to put “Urgent” in the subject line."
    }
   ],
-  "titleJpFuri": "{メールを確認する|めーるをかくにんする}"
+  "titleJpFuri": "{メールを確認する|めーるをかくにんする}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-29",
@@ -6316,7 +6492,9 @@
     "whyEn": "The person now writes down only key words during class."
    }
   ],
-  "titleJpFuri": "{授業のノート|じゅぎょうののーと}"
+  "titleJpFuri": "{授業のノート|じゅぎょうののーと}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n3-30",
@@ -6387,7 +6565,9 @@
     "whyEn": "They gathered fallen leaves and cleared the path."
    }
   ],
-  "titleJpFuri": "{公園の清掃|こうえんのせいそう}"
+  "titleJpFuri": "{公園の清掃|こうえんのせいそう}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-01",
@@ -6465,7 +6645,9 @@
    }
   ],
   "genre": "report",
-  "titleJpFuri": "{遠隔診療|えんかくしんりょう}の{試行|しこう}"
+  "titleJpFuri": "{遠隔診療|えんかくしんりょう}の{試行|しこう}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-02",
@@ -6543,7 +6725,9 @@
    }
   ],
   "genre": "notice",
-  "titleJpFuri": "{給食|きゅうしょく}の{食品|しょくひん}ロス"
+  "titleJpFuri": "{給食|きゅうしょく}の{食品|しょくひん}ロス",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-03",
@@ -6624,7 +6808,9 @@
    }
   ],
   "genre": "email",
-  "titleJpFuri": "{災害時|さいがいじ}の{情報共有|じょうほうきょうゆう}"
+  "titleJpFuri": "{災害時|さいがいじ}の{情報共有|じょうほうきょうゆう}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-04",
@@ -6702,7 +6888,9 @@
    }
   ],
   "genre": "dialogue",
-  "titleJpFuri": "{図書館|としょかん}の{学習|がくしゅう}スペース"
+  "titleJpFuri": "{図書館|としょかん}の{学習|がくしゅう}スペース",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-05",
@@ -6780,7 +6968,9 @@
    }
   ],
   "genre": "account",
-  "titleJpFuri": "{共同自転車|きょうどうじてんしゃ}の{整備|せいび}"
+  "titleJpFuri": "{共同自転車|きょうどうじてんしゃ}の{整備|せいび}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-06",
@@ -6858,7 +7048,9 @@
    }
   ],
   "genre": "opinion",
-  "titleJpFuri": "{余剰食品|よじょうしょくひん}の{地域共有|ちいききょうゆう}"
+  "titleJpFuri": "{余剰食品|よじょうしょくひん}の{地域共有|ちいききょうゆう}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-07",
@@ -6939,7 +7131,9 @@
    }
   ],
   "genre": "instructions",
-  "titleJpFuri": "{小規模事業者|しょうきぼじぎょうしゃ}のオンライン{販売|はんばい}"
+  "titleJpFuri": "{小規模事業者|しょうきぼじぎょうしゃ}のオンライン{販売|はんばい}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-08",
@@ -7017,7 +7211,9 @@
    }
   ],
   "genre": "minutes",
-  "titleJpFuri": "{柔軟|じゅうなん}な{勤務|きんむ}{時間|じかん}"
+  "titleJpFuri": "{柔軟|じゅうなん}な{勤務|きんむ}{時間|じかん}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-09",
@@ -7095,7 +7291,9 @@
    }
   ],
   "genre": "analysis",
-  "titleJpFuri": "{観光|かんこう}{地|ち}の{案内表示|あんないひょうじ}"
+  "titleJpFuri": "{観光|かんこう}{地|ち}の{案内表示|あんないひょうじ}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-10",
@@ -7173,7 +7371,9 @@
    }
   ],
   "genre": "review",
-  "titleJpFuri": "{空き家|あきや}の{再活用|さいかつよう}"
+  "titleJpFuri": "{空き家|あきや}の{再活用|さいかつよう}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-11",
@@ -7251,7 +7451,9 @@
    }
   ],
   "genre": "qna",
-  "titleJpFuri": "{地域|ちいき}{鉄道|てつどう}の{運行|うんこう}{時間|じかん}"
+  "titleJpFuri": "{地域|ちいき}{鉄道|てつどう}の{運行|うんこう}{時間|じかん}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-12",
@@ -7329,7 +7531,9 @@
    }
   ],
   "genre": "proposal",
-  "titleJpFuri": "{賃貸契約|ちんたいけいやく}の{説明|せつめい}"
+  "titleJpFuri": "{賃貸契約|ちんたいけいやく}の{説明|せつめい}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-13",
@@ -7407,7 +7611,9 @@
    }
   ],
   "genre": "report",
-  "titleJpFuri": "{容器|ようき}の{再利用|さいりよう}{制度|せいど}"
+  "titleJpFuri": "{容器|ようき}の{再利用|さいりよう}{制度|せいど}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-14",
@@ -7485,7 +7691,9 @@
    }
   ],
   "genre": "notice",
-  "titleJpFuri": "{小さな店|ちいさなみせ}のキャッシュレス{決済|けっさい}"
+  "titleJpFuri": "{小さな店|ちいさなみせ}のキャッシュレス{決済|けっさい}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-15",
@@ -7566,7 +7774,9 @@
    }
   ],
   "genre": "email",
-  "titleJpFuri": "{一時保育|いちじほいく}の{予約|よやく}{改善|かいぜん}"
+  "titleJpFuri": "{一時保育|いちじほいく}の{予約|よやく}{改善|かいぜん}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-16",
@@ -7644,7 +7854,9 @@
    }
   ],
   "genre": "dialogue",
-  "titleJpFuri": "{遠隔勤務|えんかくきんむ}の{連携|れんけい}"
+  "titleJpFuri": "{遠隔勤務|えんかくきんむ}の{連携|れんけい}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-17",
@@ -7722,7 +7934,9 @@
    }
   ],
   "genre": "account",
-  "titleJpFuri": "{水|すい}の{使用|しよう}{量|りょう}を{減らす|へらす}{工夫|くふう}"
+  "titleJpFuri": "{水|すい}の{使用|しよう}{量|りょう}を{減らす|へらす}{工夫|くふう}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-18",
@@ -7800,7 +8014,9 @@
    }
   ],
   "genre": "opinion",
-  "titleJpFuri": "{空き地|あきち}の{共同|きょうどう}{菜園|さいえん}"
+  "titleJpFuri": "{空き地|あきち}の{共同|きょうどう}{菜園|さいえん}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-19",
@@ -7881,7 +8097,9 @@
    }
   ],
   "genre": "instructions",
-  "titleJpFuri": "{通学路|つうがくろ}の{安全|あんぜん}{対策|たいさく}"
+  "titleJpFuri": "{通学路|つうがくろ}の{安全|あんぜん}{対策|たいさく}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-20",
@@ -7959,7 +8177,9 @@
    }
   ],
   "genre": "minutes",
-  "titleJpFuri": "{博物館|はくぶつかん}の{音声案内|おんせいあんない}"
+  "titleJpFuri": "{博物館|はくぶつかん}の{音声案内|おんせいあんない}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-21",
@@ -8037,7 +8257,9 @@
    }
   ],
   "genre": "analysis",
-  "titleJpFuri": "{地域|ちいき}{通訳|つうやく}の{支援体制|しえんたいせい}"
+  "titleJpFuri": "{地域|ちいき}{通訳|つうやく}の{支援体制|しえんたいせい}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-22",
@@ -8115,7 +8337,9 @@
    }
   ],
   "genre": "review",
-  "titleJpFuri": "{地域|ちいき}の{貸し出し棚|かしだしだな}"
+  "titleJpFuri": "{地域|ちいき}の{貸し出し棚|かしだしだな}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-23",
@@ -8193,7 +8417,9 @@
    }
   ],
   "genre": "qna",
-  "titleJpFuri": "{地域産品|ちいきさんぴん}の{共同発信|きょうどうはっしん}"
+  "titleJpFuri": "{地域産品|ちいきさんぴん}の{共同発信|きょうどうはっしん}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-24",
@@ -8271,7 +8497,9 @@
    }
   ],
   "genre": "proposal",
-  "titleJpFuri": "{学生|がくせい}インターンの{機会|きかい}"
+  "titleJpFuri": "{学生|がくせい}インターンの{機会|きかい}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-25",
@@ -8349,7 +8577,9 @@
    }
   ],
   "genre": "report",
-  "titleJpFuri": "{高齢者向け|こうれいしゃむけ}デジタル{相談|そうだん}"
+  "titleJpFuri": "{高齢者向け|こうれいしゃむけ}デジタル{相談|そうだん}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-26",
@@ -8427,7 +8657,9 @@
    }
   ],
   "genre": "notice",
-  "titleJpFuri": "{診察|しんさつ}{予約|よやく}の{通知|つうち}{改善|かいぜん}"
+  "titleJpFuri": "{診察|しんさつ}{予約|よやく}の{通知|つうち}{改善|かいぜん}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-27",
@@ -8508,7 +8740,9 @@
    }
   ],
   "genre": "email",
-  "titleJpFuri": "{猛暑日|もうしょび}の{地域|ちいき}{支援|しえん}"
+  "titleJpFuri": "{猛暑日|もうしょび}の{地域|ちいき}{支援|しえん}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-28",
@@ -8586,7 +8820,9 @@
    }
   ],
   "genre": "dialogue",
-  "titleJpFuri": "{地域|ちいき}の{落とし物|おとしもの}{情報|じょうほう}"
+  "titleJpFuri": "{地域|ちいき}の{落とし物|おとしもの}{情報|じょうほう}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-29",
@@ -8664,7 +8900,9 @@
    }
   ],
   "genre": "account",
-  "titleJpFuri": "{工場|こうじょう}の{省エネルギー|しょうエネルギー}"
+  "titleJpFuri": "{工場|こうじょう}の{省エネルギー|しょうエネルギー}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n2-30",
@@ -8742,7 +8980,9 @@
    }
   ],
   "genre": "opinion",
-  "titleJpFuri": "{図書館|としょかん}{資料|しりょう}の{地域配送|ちいきはいそう}"
+  "titleJpFuri": "{図書館|としょかん}{資料|しりょう}の{地域配送|ちいきはいそう}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-01",
@@ -8820,7 +9060,9 @@
    }
   ],
   "genre": "policy memo",
-  "titleJpFuri": "{採用|さいよう}アルゴリズムの{透明性|とうめいせい}"
+  "titleJpFuri": "{採用|さいよう}アルゴリズムの{透明性|とうめいせい}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-02",
@@ -8898,7 +9140,9 @@
    }
   ],
   "genre": "interview",
-  "titleJpFuri": "{沿岸地域|えんがんちいき}の{移転計画|いてんけいかく}"
+  "titleJpFuri": "{沿岸地域|えんがんちいき}の{移転計画|いてんけいかく}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-03",
@@ -8979,7 +9223,9 @@
    }
   ],
   "genre": "letter",
-  "titleJpFuri": "{研究|けんきゅう}{結果|けっか}の{再現性|さいげんせい}"
+  "titleJpFuri": "{研究|けんきゅう}{結果|けっか}の{再現性|さいげんせい}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-04",
@@ -9057,7 +9303,9 @@
    }
   ],
   "genre": "roundtable",
-  "titleJpFuri": "{地域通貨|ちいきつうか}の{効果測定|こうかそくてい}"
+  "titleJpFuri": "{地域通貨|ちいきつうか}の{効果測定|こうかそくてい}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-05",
@@ -9135,7 +9383,9 @@
    }
   ],
   "genre": "field note",
-  "titleJpFuri": "{遠隔勤務|えんかくきんむ}の{評価指標|ひょうかしひょう}"
+  "titleJpFuri": "{遠隔勤務|えんかくきんむ}の{評価指標|ひょうかしひょう}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-06",
@@ -9213,7 +9463,9 @@
    }
   ],
   "genre": "editorial",
-  "titleJpFuri": "スマートシティの{個人|こじん}{情報|じょうほう}"
+  "titleJpFuri": "スマートシティの{個人|こじん}{情報|じょうほう}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-07",
@@ -9294,7 +9546,9 @@
    }
   ],
   "genre": "protocol",
-  "titleJpFuri": "{少数言語話者|しょうすうげんごわしゃ}への{行政|ぎょうせい}{支援|しえん}"
+  "titleJpFuri": "{少数言語話者|しょうすうげんごわしゃ}への{行政|ぎょうせい}{支援|しえん}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-08",
@@ -9372,7 +9626,9 @@
    }
   ],
   "genre": "minutes",
-  "titleJpFuri": "{自然|しぜん}{保護|ほご}と{観光|かんこう}の{両立|りょうりつ}"
+  "titleJpFuri": "{自然|しぜん}{保護|ほご}と{観光|かんこう}の{両立|りょうりつ}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-09",
@@ -9450,7 +9706,9 @@
    }
   ],
   "genre": "analysis",
-  "titleJpFuri": "{抗菌薬|こうきんやく}の{処方判断|しょほうはんだん}"
+  "titleJpFuri": "{抗菌薬|こうきんやく}の{処方判断|しょほうはんだん}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-10",
@@ -9528,7 +9786,9 @@
    }
   ],
   "genre": "case review",
-  "titleJpFuri": "{職|しょく}{場|じょう}の{内部|ないぶ}{通|つう}{報|ほう}{制度|せいど}"
+  "titleJpFuri": "{職|しょく}{場|じょう}の{内部|ないぶ}{通|つう}{報|ほう}{制度|せいど}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-11",
@@ -9606,7 +9866,9 @@
    }
   ],
   "genre": "FAQ",
-  "titleJpFuri": "{公共|こうきょう}データの{長期|ちょうき}{保存|ほぞん}"
+  "titleJpFuri": "{公共|こうきょう}データの{長期|ちょうき}{保存|ほぞん}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-12",
@@ -9684,7 +9946,9 @@
    }
   ],
   "genre": "proposal",
-  "titleJpFuri": "{学習|がくしゅう}{評価|ひょうか}の{標準化|ひょうじゅんか}"
+  "titleJpFuri": "{学習|がくしゅう}{評価|ひょうか}の{標準化|ひょうじゅんか}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-13",
@@ -9762,7 +10026,9 @@
    }
   ],
   "genre": "policy memo",
-  "titleJpFuri": "{老朽|ろうきゅう}インフラの{更新|こうしん}"
+  "titleJpFuri": "{老朽|ろうきゅう}インフラの{更新|こうしん}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-14",
@@ -9840,7 +10106,9 @@
    }
   ],
   "genre": "interview",
-  "titleJpFuri": "{供給網|きょうきゅうもう}の{強靱化|きょうじんか}"
+  "titleJpFuri": "{供給網|きょうきゅうもう}の{強靱化|きょうじんか}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-15",
@@ -9921,7 +10189,9 @@
    }
   ],
   "genre": "letter",
-  "titleJpFuri": "{炭素価格|たんそかかく}の{設計|せっけい}"
+  "titleJpFuri": "{炭素価格|たんそかかく}の{設計|せっけい}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-16",
@@ -9999,7 +10269,9 @@
    }
   ],
   "genre": "roundtable",
-  "titleJpFuri": "{都市密度|としみつど}と{緑地|りょくち}の{配置|はいち}"
+  "titleJpFuri": "{都市密度|としみつど}と{緑地|りょくち}の{配置|はいち}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-17",
@@ -10077,7 +10349,9 @@
    }
   ],
   "genre": "field note",
-  "titleJpFuri": "{科学|かがく}{情報|じょうほう}の{誤解防止|ごかいぼうし}"
+  "titleJpFuri": "{科学|かがく}{情報|じょうほう}の{誤解防止|ごかいぼうし}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-18",
@@ -10155,7 +10429,9 @@
    }
   ],
   "genre": "editorial",
-  "titleJpFuri": "{機械|きかい}{翻訳|ほんやく}と{情報保障|じょうほうほしょう}"
+  "titleJpFuri": "{機械|きかい}{翻訳|ほんやく}と{情報保障|じょうほうほしょう}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-19",
@@ -10236,7 +10512,9 @@
    }
   ],
   "genre": "protocol",
-  "titleJpFuri": "{補助金|ほじょきん}の{公平|こうへい}な{配分|はいぶん}"
+  "titleJpFuri": "{補助金|ほじょきん}の{公平|こうへい}な{配分|はいぶん}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-20",
@@ -10314,7 +10592,9 @@
    }
   ],
   "genre": "minutes",
-  "titleJpFuri": "{再生可能電力|さいせいかのうでんりょく}の{系統接続|けいとうせつぞく}"
+  "titleJpFuri": "{再生可能電力|さいせいかのうでんりょく}の{系統接続|けいとうせつぞく}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-21",
@@ -10392,7 +10672,9 @@
    }
   ],
   "genre": "analysis",
-  "titleJpFuri": "{災害|さいがい}{対応|たいおう}の{意思決定|いしけってい}"
+  "titleJpFuri": "{災害|さいがい}{対応|たいおう}の{意思決定|いしけってい}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-22",
@@ -10470,7 +10752,9 @@
    }
   ],
   "genre": "case review",
-  "titleJpFuri": "{介護労働|かいごろうどう}の{評価|ひょうか}"
+  "titleJpFuri": "{介護労働|かいごろうどう}の{評価|ひょうか}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-23",
@@ -10548,7 +10832,9 @@
    }
   ],
   "genre": "FAQ",
-  "titleJpFuri": "{孤立|こりつ}の{早期把握|そうきはあく}"
+  "titleJpFuri": "{孤立|こりつ}の{早期把握|そうきはあく}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-24",
@@ -10626,7 +10912,9 @@
    }
   ],
   "genre": "proposal",
-  "titleJpFuri": "{電子決済|でんしけっさい}と{利用格差|りようかくさ}"
+  "titleJpFuri": "{電子決済|でんしけっさい}と{利用格差|りようかくさ}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-25",
@@ -10704,7 +10992,9 @@
    }
   ],
   "genre": "policy memo",
-  "titleJpFuri": "{自動化|じどうか}と{職業能力|しょくぎょうのうりょく}"
+  "titleJpFuri": "{自動化|じどうか}と{職業能力|しょくぎょうのうりょく}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-26",
@@ -10782,7 +11072,9 @@
    }
   ],
   "genre": "interview",
-  "titleJpFuri": "デジタル{資料|しりょう}の{来歴管理|らいれきかんり}"
+  "titleJpFuri": "デジタル{資料|しりょう}の{来歴管理|らいれきかんり}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-27",
@@ -10863,7 +11155,9 @@
    }
   ],
   "genre": "letter",
-  "titleJpFuri": "プラットフォーム{労働|ろうどう}の{保護|ほご}"
+  "titleJpFuri": "プラットフォーム{労働|ろうどう}の{保護|ほご}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-28",
@@ -10941,7 +11235,9 @@
    }
   ],
   "genre": "roundtable",
-  "titleJpFuri": "{多文化交流|たぶんかこうりゅう}の{継続性|けいぞくせい}"
+  "titleJpFuri": "{多文化交流|たぶんかこうりゅう}の{継続性|けいぞくせい}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-29",
@@ -11019,7 +11315,9 @@
    }
   ],
   "genre": "field note",
-  "titleJpFuri": "{循環|じゅんかん}{経済|けいざい}の{評価指標|ひょうかしひょう}"
+  "titleJpFuri": "{循環|じゅんかん}{経済|けいざい}の{評価指標|ひょうかしひょう}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  },
  {
   "id": "read-n1-30",
@@ -11097,6 +11395,1511 @@
    }
   ],
   "genre": "editorial",
-  "titleJpFuri": "{相関|そうかん}と{因果|いんが}の{見分け方|みわけかた}"
+  "titleJpFuri": "{相関|そうかん}と{因果|いんが}の{見分け方|みわけかた}",
+  "status": "pending_review",
+  "source": "original-ai-assisted"
+ },
+ {
+  "id": "read-n5-31",
+  "level": "N5",
+  "minutes": 2,
+  "title": "Зуны баярын зар",
+  "titleEn": "Summer festival flyer",
+  "titleJp": "夏まつりのチラシ",
+  "titleJpFuri": "{夏|なつ}まつりのチラシ",
+  "topic": "Зар · Баяр",
+  "topicEn": "Advertisement · Festival",
+  "body": [
+   "{今|いま}{日|ひ}の{夜|よる}{七|しち}{時|じ}から、{公園|こうえん}で{夏|なつ}まつりがあります。",
+   "{踊|おど}りと{花火|はなび}があります。{入|い}り{口|くち}は{無料|むりょう}です。",
+   "{雨|あめ}の{日|ひ}は{来|こ}ないでください。"
+  ],
+  "bodyMn": [
+   "Өнөөдөр орой 7 цагаас цэцэрлэгт хүрээлэнд зуны баяр болно.",
+   "Бүжиг, галын наадам байна. Үнэгүй.",
+   "Бороотой өдөр ирэхгүй байна уу."
+  ],
+  "bodyEn": [
+   "Tonight from 7 p.m., there is a summer festival at the park.",
+   "There will be dancing and fireworks. Admission is free.",
+   "Please do not come on rainy days."
+  ],
+  "glossary": [
+   {
+    "w": "今",
+    "r": "いま",
+    "mn": "одоо",
+    "meaningEn": "now"
+   },
+   {
+    "w": "夜",
+    "r": "よる",
+    "mn": "орой",
+    "meaningEn": "evening"
+   },
+   {
+    "w": "公園",
+    "r": "こうえん",
+    "mn": "цэцэрлэгт хүрээлэн",
+    "meaningEn": "park"
+   },
+   {
+    "w": "花火",
+    "r": "はなび",
+    "mn": "галын наадам",
+    "meaningEn": "fireworks"
+   },
+   {
+    "w": "無料",
+    "r": "むりょう",
+    "mn": "үнэгүй",
+    "meaningEn": "free of charge"
+   }
+  ],
+  "questions": [
+   {
+    "q": "夏まつりはいつですか。",
+    "mn": "Зуны баяр хэзээ вэ?",
+    "promptEn": "When is the summer festival?",
+    "opts": [
+     "Өнөөдөр орой 7 цагаас",
+     "Маргааш өглөө",
+     "Ирэх долоо хоног",
+     "Бороотой өдөр"
+    ],
+    "optsEn": [
+     "Tonight from 7 p.m.",
+     "Tomorrow morning",
+     "Next week",
+     "On a rainy day"
+    ],
+    "a": 0,
+    "why": "“今日の夜七時から” гэж зард бичсэн.",
+    "whyEn": "The flyer says “tonight from 7 p.m.”"
+   },
+   {
+    "q": "入り口は有料ですか。",
+    "mn": "Ороход мөнгө төлдөг үү?",
+    "promptEn": "Is there an admission fee?",
+    "opts": [
+     "Үгүй, үнэгүй",
+     "Тийм, төлдөг",
+     "Зөвхөн хүүхдэд үнэгүй",
+     "Мэдэхгүй"
+    ],
+    "optsEn": [
+     "No, it is free",
+     "Yes, you pay",
+     "Only free for children",
+     "Unknown"
+    ],
+    "a": 0,
+    "why": "“入り口は無料です” гэсэн байна.",
+    "whyEn": "The text says admission is free."
+   }
+  ],
+  "status": "pending_review",
+  "source": "original-ai-assisted"
+ },
+ {
+  "id": "read-n5-32",
+  "level": "N5",
+  "minutes": 1,
+  "title": "Найзын мессеж",
+  "titleEn": "A message from a friend",
+  "titleJp": "友だちからのメッセージ",
+  "titleJpFuri": "{友|とも}だちからのメッセージ",
+  "topic": "Мессеж · Нөхөрлөл",
+  "topicEn": "Message · Friendship",
+  "body": [
+   "{明|あ}した{映画|えいが}を{見|み}に{行|い}きませんか。",
+   "{昼|ひる}の{一時|いちじ}に{駅|えき}で{会|あ}いましょう。",
+   "{好|す}きな{映画|えいが}を{教|おし}えてください。"
+  ],
+  "bodyMn": [
+   "Маргааш кино үзэх үү?",
+   "Өдөр 1 цагт өртөөнд уулзая.",
+   "Дуртай киногоо хэлээрэй."
+  ],
+  "bodyEn": [
+   "Shall we go see a movie tomorrow?",
+   "Let's meet at the station at 1 p.m.",
+   "Please tell me your favorite movie."
+  ],
+  "glossary": [
+   {
+    "w": "明",
+    "r": "あ",
+    "mn": "маргааш (明日-ийн эх)",
+    "meaningEn": "tomorrow (start of 明日)"
+   },
+   {
+    "w": "映画",
+    "r": "えいが",
+    "mn": "кино",
+    "meaningEn": "movie"
+   },
+   {
+    "w": "駅",
+    "r": "えき",
+    "mn": "өртөө",
+    "meaningEn": "station"
+   },
+   {
+    "w": "教",
+    "r": "おし",
+    "mn": "зааж өгөх (教える-ийн эх)",
+    "meaningEn": "to teach (start of 教える)"
+   }
+  ],
+  "questions": [
+   {
+    "q": "明した何時に会いますか。",
+    "mn": "Маргааш хэдэн цагт уулзах вэ?",
+    "promptEn": "What time will they meet tomorrow?",
+    "opts": [
+     "Өдөр 1 цагт",
+     "Өглөө 8 цагт",
+     "Орой 7 цагт",
+     "Шөнө 12 цагт"
+    ],
+    "optsEn": [
+     "At 1 p.m.",
+     "At 8 a.m.",
+     "At 7 p.m.",
+     "At midnight"
+    ],
+    "a": 0,
+    "why": "“昼の一時に駅で会いましょう” гэж бичсэн.",
+    "whyEn": "The message says to meet at the station at 1 p.m."
+   },
+   {
+    "q": "明した何をしますか。",
+    "mn": "Маргааш юу хийх вэ?",
+    "promptEn": "What will they do tomorrow?",
+    "opts": [
+     "Кино үзнэ",
+     "Ажиллана",
+     "Ном уншина",
+     "Гэртээ амарна"
+    ],
+    "optsEn": [
+     "See a movie",
+     "Work",
+     "Read a book",
+     "Rest at home"
+    ],
+    "a": 0,
+    "why": "“映画を見に行きませんか” гэж санал болгосон.",
+    "whyEn": "The friend suggests going to see a movie."
+   }
+  ],
+  "status": "pending_review",
+  "source": "original-ai-assisted"
+ },
+ {
+  "id": "read-n5-33",
+  "level": "N5",
+  "minutes": 2,
+  "title": "Өртөөний заавар",
+  "titleEn": "Station directions",
+  "titleJp": "駅の案内",
+  "titleJpFuri": "{駅|えき}の{案内|あんない}",
+  "topic": "Заавар · Зам",
+  "topicEn": "Instructions · Directions",
+  "body": [
+   "{出口|でぐち}を{出|で}て、{右|みぎ}に{行|い}ってください。",
+   "{銀行|ぎんこう}の{前|まえ}を{左|ひだり}に{曲|ま}がります。",
+   "{図書館|としょかん}は{右|みぎ}の{方|ほう}です。"
+  ],
+  "bodyMn": [
+   "Гараас гарч баруун тийш явна уу.",
+   "Банкны өмнүүр зүүн тийш эргэнэ.",
+   "Номын сан баруун талд байна."
+  ],
+  "bodyEn": [
+   "Go out of the exit and turn right.",
+   "Turn left in front of the bank.",
+   "The library is on the right."
+  ],
+  "glossary": [
+   {
+    "w": "出口",
+    "r": "でぐち",
+    "mn": "гарах гарц",
+    "meaningEn": "exit"
+   },
+   {
+    "w": "銀行",
+    "r": "ぎんこう",
+    "mn": "банк",
+    "meaningEn": "bank"
+   },
+   {
+    "w": "図書館",
+    "r": "としょかん",
+    "mn": "номын сан",
+    "meaningEn": "library"
+   },
+   {
+    "w": "曲",
+    "r": "ま",
+    "mn": "эргэх (曲がる-ийн эх)",
+    "meaningEn": "to turn (start of 曲がる)"
+   }
+  ],
+  "questions": [
+   {
+    "q": "出口の後は何をしますか。",
+    "mn": "Гараас гарсны дараа юу хийх вэ?",
+    "promptEn": "What should you do after exiting?",
+    "opts": [
+     "Баруун тийш явах",
+     "Зүүн тийш явах",
+     "Шууд цааш явах",
+     "Буцаж орох"
+    ],
+    "optsEn": [
+     "Go right",
+     "Go left",
+     "Go straight",
+     "Go back inside"
+    ],
+    "a": 0,
+    "why": "“出口を出て、右に行ってください” гэж заасан.",
+    "whyEn": "The directions say to go right after the exit."
+   },
+   {
+    "q": "図書館は何時ですか。",
+    "mn": "Номын сан хэдэн цаг вэ?",
+    "promptEn": "Where is the library?",
+    "opts": [
+     "Баруун талд",
+     "Зүүн талд",
+     "Урд талд",
+     "Хойд талд"
+    ],
+    "optsEn": [
+     "On the right",
+     "On the left",
+     "In front",
+     "Behind"
+    ],
+    "a": 0,
+    "why": "“図書館は右の方です” гэж бичсэн.",
+    "whyEn": "The text says the library is on the right."
+   }
+  ],
+  "status": "pending_review",
+  "source": "original-ai-assisted"
+ },
+ {
+  "id": "read-n4-31",
+  "level": "N4",
+  "minutes": 2,
+  "title": "Багшаас ирсэн и-мэйл",
+  "titleEn": "Email from a teacher",
+  "titleJp": "先生からのメール",
+  "titleJpFuri": "{先生|せんせい}からのメール",
+  "topic": "И-мэйл · Сургууль",
+  "topicEn": "Email · School",
+  "body": [
+   "{来週|らいしゅう}の{水曜日|すいようび}に{試験|しけん}があります。",
+   "{教科書|きょうかしょ}の{五十|ごじゅう}ページから{八十|はちじゅう}ページまで{勉強|べんきょう}してください。",
+   "{質問|しつもん}が{有|あ}ったら、メールで{聞|き}いてください。"
+  ],
+  "bodyMn": [
+   "Ирэх лхагва гарагт шалгалт болно.",
+   "Сурах бичгийн 50–80-р хуудсыг үзээрэй.",
+   "Асуулт байвал и-мэйлээр асууна уу."
+  ],
+  "bodyEn": [
+   "There will be an exam next Wednesday.",
+   "Please study pages 50 to 80 of the textbook.",
+   "If you have questions, please ask by email."
+  ],
+  "glossary": [
+   {
+    "w": "来週",
+    "r": "らいしゅう",
+    "mn": "ирэх долоо хоног",
+    "meaningEn": "next week"
+   },
+   {
+    "w": "試験",
+    "r": "しけん",
+    "mn": "шалгалт",
+    "meaningEn": "exam"
+   },
+   {
+    "w": "教科書",
+    "r": "きょうかしょ",
+    "mn": "сурах бичиг",
+    "meaningEn": "textbook"
+   },
+   {
+    "w": "勉強",
+    "r": "べんきょう",
+    "mn": "суралцах",
+    "meaningEn": "to study"
+   }
+  ],
+  "questions": [
+   {
+    "q": "試験は何曜日ですか。",
+    "mn": "Шалгалт ямар гарагт вэ?",
+    "promptEn": "On which day is the exam?",
+    "opts": [
+     "Лхагва гараг",
+     "Даваа гараг",
+     "Баасан гараг",
+     "Ням гараг"
+    ],
+    "optsEn": [
+     "Wednesday",
+     "Monday",
+     "Friday",
+     "Sunday"
+    ],
+    "a": 0,
+    "why": "“来週の水曜日に試験があります” гэсэн.",
+    "whyEn": "The email says the exam is next Wednesday."
+   },
+   {
+    "q": "何を勉強しますか。",
+    "mn": "Юу үзэх вэ?",
+    "promptEn": "What should students study?",
+    "opts": [
+     "Сурах бичгийн 50–80-р хуудас",
+     "Сурах бичгийн эхэн хэсэг",
+     "Зөвхөн шинэ үгс",
+     "Юу ч үзэхгүй"
+    ],
+    "optsEn": [
+     "Pages 50–80 of the textbook",
+     "The beginning of the textbook",
+     "Only new words",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "“教科書の五十ページから八十ページまで” гэж өгсөн.",
+    "whyEn": "The email assigns pages 50 through 80."
+   }
+  ],
+  "status": "pending_review",
+  "source": "original-ai-assisted"
+ },
+ {
+  "id": "read-n4-32",
+  "level": "N4",
+  "minutes": 2,
+  "title": "Ажлын зар",
+  "titleEn": "Part-time job ad",
+  "titleJp": "アルバイトの募集",
+  "titleJpFuri": "アルバイトの{募集|ぼしゅう}",
+  "topic": "Зар · Ажил",
+  "topicEn": "Advertisement · Work",
+  "body": [
+   "{食堂|しょくどう}で{働|はたら}く{人|ひと}を{募集|ぼしゅう}します。",
+   "{週|しゅう}に{三日|みっか}から、{一時間|いちじかん}{四百|よんひゃく}{円|えん}です。",
+   "{経験|けいけん}は{要|い}りません。{電話|でんわ}で{連絡|れんらく}してください。"
+  ],
+  "bodyMn": [
+   "Хоолны газарт ажиллах хүн авна.",
+   "Долоо хоногт 3-аас дээш өдөр, цагт 400 иен.",
+   "Туршлага шаардахгүй. Утсаар холбогдоно уу."
+  ],
+  "bodyEn": [
+   "We are hiring people to work at the cafeteria.",
+   "Three or more days a week, 400 yen per hour.",
+   "No experience needed. Please contact us by phone."
+  ],
+  "glossary": [
+   {
+    "w": "食堂",
+    "r": "しょくどう",
+    "mn": "хоолны газар",
+    "meaningEn": "cafeteria"
+   },
+   {
+    "w": "募集",
+    "r": "ぼしゅう",
+    "mn": "ажилд авах",
+    "meaningEn": "recruitment"
+   },
+   {
+    "w": "経験",
+    "r": "けいけん",
+    "mn": "туршлага",
+    "meaningEn": "experience"
+   },
+   {
+    "w": "連絡",
+    "r": "れんらく",
+    "mn": "холбогдох",
+    "meaningEn": "to contact"
+   }
+  ],
+  "questions": [
+   {
+    "q": "時給は何円ですか。",
+    "mn": "Цалин хэдэн иен вэ?",
+    "promptEn": "How much is the hourly wage?",
+    "opts": [
+     "400 иен",
+     "300 иен",
+     "500 иен",
+     "1000 иен"
+    ],
+    "optsEn": [
+     "400 yen",
+     "300 yen",
+     "500 yen",
+     "1000 yen"
+    ],
+    "a": 0,
+    "why": "“一時間四百円です” гэж бичсэн.",
+    "whyEn": "The ad says 400 yen per hour."
+   },
+   {
+    "q": "経験は必要ですか。",
+    "mn": "Туршлага шаардлагатай юу?",
+    "promptEn": "Is work experience required?",
+    "opts": [
+     "Шаардахгүй",
+     "Шаардлагатай",
+     "Зөвхөн туршлагатай хүн",
+     "Мэдээлэлгүй"
+    ],
+    "optsEn": [
+     "No",
+     "Yes",
+     "Only experienced people",
+     "Not stated"
+    ],
+    "a": 0,
+    "why": "“経験は要りません” гэсэн байна.",
+    "whyEn": "The ad states that no experience is needed."
+   }
+  ],
+  "status": "pending_review",
+  "source": "original-ai-assisted"
+ },
+ {
+  "id": "read-n4-33",
+  "level": "N4",
+  "minutes": 2,
+  "title": "Гэрийн мессеж",
+  "titleEn": "Family message",
+  "titleJp": "家族からのメッセージ",
+  "titleJpFuri": "{家族|かぞく}からのメッセージ",
+  "topic": "Мессеж · Гэр бүл",
+  "topicEn": "Message · Family",
+  "body": [
+   "{今日|きょう}の{晩|ばん}ごはんはカレーです。",
+   "{牛乳|ぎゅうにゅう}を{買|か}って{来|き}てください。",
+   "{帰|かえ}りが{遅|おそ}くなる{時|とき}は{知|し}らせてください。"
+  ],
+  "bodyMn": [
+   "Өнөөдрийн оройн хоол карри.",
+   "Сүү авчирч өгөөрэй.",
+   "Оройтож байвал мэдэгдээрэй."
+  ],
+  "bodyEn": [
+   "Tonight's dinner is curry.",
+   "Please buy milk on your way home.",
+   "If you will be late, please let me know."
+  ],
+  "glossary": [
+   {
+    "w": "晩",
+    "r": "ばん",
+    "mn": "орой",
+    "meaningEn": "evening"
+   },
+   {
+    "w": "牛乳",
+    "r": "ぎゅうにゅう",
+    "mn": "сүү",
+    "meaningEn": "milk"
+   },
+   {
+    "w": "帰",
+    "r": "かえ",
+    "mn": "гэртээ харих (帰る-ийн эх)",
+    "meaningEn": "to return (start of 帰る)"
+   },
+   {
+    "w": "知",
+    "r": "し",
+    "mn": "мэдэгдэх (知らせる-ийн эх)",
+    "meaningEn": "to notify (start of 知らせる)"
+   }
+  ],
+  "questions": [
+   {
+    "q": "何を買って来ますか。",
+    "mn": "Юу авчрах вэ?",
+    "promptEn": "What should be bought?",
+    "opts": [
+     "Сүү",
+     "Карри",
+     "Талх",
+     "Өндөг"
+    ],
+    "optsEn": [
+     "Milk",
+     "Curry",
+     "Bread",
+     "Eggs"
+    ],
+    "a": 0,
+    "why": "“牛乳を買って来てください” гэж гуйсан.",
+    "whyEn": "The message asks to buy milk."
+   },
+   {
+    "q": "帰りが遅くなる時は何をしますか。",
+    "mn": "Оройтвол юу хийх вэ?",
+    "promptEn": "What should you do if you will be late?",
+    "opts": [
+     "Мэдэгдэх",
+     "Юу ч хийхгүй",
+     "Шууд унтах",
+     "Хоол авчрах"
+    ],
+    "optsEn": [
+     "Let them know",
+     "Do nothing",
+     "Go straight to sleep",
+     "Bring food"
+    ],
+    "a": 0,
+    "why": "“知らせてください” гэж захисан.",
+    "whyEn": "The message says to notify the family."
+   }
+  ],
+  "status": "pending_review",
+  "source": "original-ai-assisted"
+ },
+ {
+  "id": "read-n3-31",
+  "level": "N3",
+  "minutes": 3,
+  "title": "Эмийн тайлбар",
+  "titleEn": "Medicine instructions",
+  "titleJp": "薬の説明",
+  "titleJpFuri": "{薬|くすり}の{説明|せつめい}",
+  "topic": "Заавар · Эрүүл мэнд",
+  "topicEn": "Instructions · Health",
+  "body": [
+   "この{薬|くすり}は{食後|しょくご}に{一|いっ}{回|かい}{二|に}{錠|じょう}を{飲|の}んでください。",
+   "{水|みず}と{一緒|いっしょ}に{飲|の}んでください。お{茶|ちゃ}では{飲|の}まないでください。",
+   "{熱|ねつ}が{続|つづ}く{時|とき}は、{飲|の}むのを{止|や}めて{医者|いしゃ}に{相談|そうだん}してください。"
+  ],
+  "bodyMn": [
+   "Энэ эмийг хоолны дараа удаа тутамд 2 ширхэг ууна.",
+   "Устай хамт ууна. Цайтай бүү уу.",
+   "Халуурсаар байвал уухаа больж эмчтэй зөвлөөрэй."
+  ],
+  "bodyEn": [
+   "Take two pills of this medicine each time after meals.",
+   "Take it with water. Do not take it with tea.",
+   "If the fever continues, stop taking it and consult a doctor."
+  ],
+  "glossary": [
+   {
+    "w": "薬",
+    "r": "くすり",
+    "mn": "эм",
+    "meaningEn": "medicine"
+   },
+   {
+    "w": "食後",
+    "r": "しょくご",
+    "mn": "хоолны дараа",
+    "meaningEn": "after a meal"
+   },
+   {
+    "w": "錠",
+    "r": "じょう",
+    "mn": "ширхэг (эм)",
+    "meaningEn": "pill (counter)"
+   },
+   {
+    "w": "医者",
+    "r": "いしゃ",
+    "mn": "эмч",
+    "meaningEn": "doctor"
+   },
+   {
+    "w": "相談",
+    "r": "そうだん",
+    "mn": "зөвлөлдөх",
+    "meaningEn": "to consult"
+   }
+  ],
+  "questions": [
+   {
+    "q": "一回に何錠飲みますか。",
+    "mn": "Нэг удаа хэдэн ширхэг уух вэ?",
+    "promptEn": "How many pills should be taken at one time?",
+    "opts": [
+     "2 ширхэг",
+     "1 ширхэг",
+     "3 ширхэг",
+     "4 ширхэг"
+    ],
+    "optsEn": [
+     "Two pills",
+     "One pill",
+     "Three pills",
+     "Four pills"
+    ],
+    "a": 0,
+    "why": "“一回二錠を飲んでください” гэсэн.",
+    "whyEn": "The label says to take two pills each time."
+   },
+   {
+    "q": "お茶で薬を飲めますか。",
+    "mn": "Цайтай эм ууж болох уу?",
+    "promptEn": "Can the medicine be taken with tea?",
+    "opts": [
+     "Болохгүй",
+     "Болно",
+     "Зөвхөн өглөө болно",
+     "Эмчээс асуух хэрэгтэй"
+    ],
+    "optsEn": [
+     "No",
+     "Yes",
+     "Only in the morning",
+     "Ask a doctor first"
+    ],
+    "a": 0,
+    "why": "“お茶では飲まないでください” гэж хориглосон.",
+    "whyEn": "The instructions say not to take it with tea."
+   }
+  ],
+  "status": "pending_review",
+  "source": "original-ai-assisted"
+ },
+ {
+  "id": "read-n3-32",
+  "level": "N3",
+  "minutes": 3,
+  "title": "Хотын мэдээ",
+  "titleEn": "City news",
+  "titleJp": "市のニュース",
+  "titleJpFuri": "{市|し}のニュース",
+  "topic": "Нийтлэл · Нийтийн тээвэр",
+  "topicEn": "Article · Public transport",
+  "body": [
+   "{来月|らいげつ}から、{市内|しない}のバスの{料金|りょうきん}が{少|すこ}し{高|たか}くなります。",
+   "{一|いっ}{回|かい}の{切符|きっぷ}は{百|ひゃく}{八十|はちじゅう}{円|えん}から{二百|にひゃく}{円|えん}になります。",
+   "{市役所|しやくしょ}は、{電車|でんしゃ}やバスを{使|つか}う{人|ひと}が{多|おお}い{理由|りゆう}だと{言|い}っています。"
+  ],
+  "bodyMn": [
+   "Ирэх сараас хот доторх автобусны тариф бага зэрэг нэмэгдэнэ.",
+   "Нэг удаагийн тасалбар 180 иенээс 200 иен болно.",
+   "Захирагчийн газар галт тэрэг, автобус хэрэглэгч олон байгааг шалтгаан гэж тайлбарлажээ."
+  ],
+  "bodyEn": [
+   "From next month, city bus fares will rise slightly.",
+   "A single ticket will go from 180 yen to 200 yen.",
+   "The city office says the reason is that more people use trains and buses."
+  ],
+  "glossary": [
+   {
+    "w": "来月",
+    "r": "らいげつ",
+    "mn": "ирэх сар",
+    "meaningEn": "next month"
+   },
+   {
+    "w": "料金",
+    "r": "りょうきん",
+    "mn": "тариф, төлбөр",
+    "meaningEn": "fee"
+   },
+   {
+    "w": "切符",
+    "r": "きっぷ",
+    "mn": "тасалбар",
+    "meaningEn": "ticket"
+   },
+   {
+    "w": "市役所",
+    "r": "しやくしょ",
+    "mn": "захирагчийн газар",
+    "meaningEn": "city office"
+   },
+   {
+    "w": "理由",
+    "r": "りゆう",
+    "mn": "шалтгаан",
+    "meaningEn": "reason"
+   }
+  ],
+  "questions": [
+   {
+    "q": "来月から切符は何円になりますか。",
+    "mn": "Ирэх сараас тасалбар хэдэн иен болох вэ?",
+    "promptEn": "How much will a ticket cost from next month?",
+    "opts": [
+     "200 иен",
+     "180 иен",
+     "150 иен",
+     "250 иен"
+    ],
+    "optsEn": [
+     "200 yen",
+     "180 yen",
+     "150 yen",
+     "250 yen"
+    ],
+    "a": 0,
+    "why": "“百八十円から二百円になります” гэсэн.",
+    "whyEn": "The article says the fare rises from 180 to 200 yen."
+   },
+   {
+    "q": "料金が高くなる理由は何ですか。",
+    "mn": "Үнэ өсөх шалтгаан юу вэ?",
+    "promptEn": "Why will the fare increase?",
+    "opts": [
+     "Нийтийн тээвэр хэрэглэгч олшсоор",
+     "Шатахууны үнэ",
+     "Шинэ автобус",
+     "Мэдээлэлгүй"
+    ],
+    "optsEn": [
+     "More people use public transport",
+     "Fuel prices",
+     "New buses",
+     "Not stated"
+    ],
+    "a": 0,
+    "why": "“電車やバスを使う人が多い理由だと言っています” гэж тайлбарласан.",
+    "whyEn": "The city office cites the growing number of train and bus users."
+   }
+  ],
+  "status": "pending_review",
+  "source": "original-ai-assisted"
+ },
+ {
+  "id": "read-n3-33",
+  "level": "N3",
+  "minutes": 3,
+  "title": "Компанийн и-мэйл",
+  "titleEn": "Company email",
+  "titleJp": "会社からのメール",
+  "titleJpFuri": "{会社|かいしゃ}からのメール",
+  "topic": "И-мэйл · Ажил",
+  "topicEn": "Email · Work",
+  "body": [
+   "{来週|らいしゅう}の{月曜日|げつようび}に、{新|あたら}しい{商品|しょうひん}の{会議|かいぎ}があります。",
+   "{資料|しりょう}を{今日|きょう}の{午後|ごご}{五時|ごじ}までにメールで{送|おく}ってください。",
+   "{会議|かいぎ}に{出|で}られない{人|ひと}は、{前|まえ}の{日|ひ}に{連絡|れんらく}してください。"
+  ],
+  "bodyMn": [
+   "Ирэх даваа гарагт шинэ бүтээгдэхүүний хурал болно.",
+   "Материалыг өнөөдөр орой 5 цагаас өмнө и-мэйлээр илгээнэ үү.",
+   "Хуралд оролцохгүй хүн өмнөх өдөр нь мэдэгдэнэ үү."
+  ],
+  "bodyEn": [
+   "There will be a meeting about the new product next Monday.",
+   "Please send the materials by email before 5 p.m. today.",
+   "Those who cannot attend should report the day before."
+  ],
+  "glossary": [
+   {
+    "w": "商品",
+    "r": "しょうひん",
+    "mn": "бүтээгдэхүүн",
+    "meaningEn": "product"
+   },
+   {
+    "w": "会議",
+    "r": "かいぎ",
+    "mn": "хурал",
+    "meaningEn": "meeting"
+   },
+   {
+    "w": "資料",
+    "r": "しりょう",
+    "mn": "материал",
+    "meaningEn": "materials"
+   },
+   {
+    "w": "送",
+    "r": "おく",
+    "mn": "илгээх (送る-ийн эх)",
+    "meaningEn": "to send (start of 送る)"
+   }
+  ],
+  "questions": [
+   {
+    "q": "資料は何時までに送りますか。",
+    "mn": "Материалыг хэдэн цагаас өмнө илгээх вэ?",
+    "promptEn": "By what time must the materials be sent?",
+    "opts": [
+     "Өнөөдөр орой 5 цаг",
+     "Ирэх даваа гараг",
+     "Маргааш өглөө",
+     "Хурлын дараа"
+    ],
+    "optsEn": [
+     "By 5 p.m. today",
+     "Next Monday",
+     "Tomorrow morning",
+     "After the meeting"
+    ],
+    "a": 0,
+    "why": "“今日の午後五時までに” гэж хугацаа өгсөн.",
+    "whyEn": "The email sets the deadline at 5 p.m. today."
+   },
+   {
+    "q": "会議に出られない時は何をしますか。",
+    "mn": "Хуралд оролцохгүй бол юу хийх вэ?",
+    "promptEn": "What should you do if you cannot attend the meeting?",
+    "opts": [
+     "Өмнөх өдөр нь мэдэгдэх",
+     "Юу ч хийхгүй",
+     "Хурлын дараа ярих",
+     "И-мэйл устгах"
+    ],
+    "optsEn": [
+     "Report the day before",
+     "Do nothing",
+     "Talk after the meeting",
+     "Delete the email"
+    ],
+    "a": 0,
+    "why": "“前の日に連絡してください” гэж заасан.",
+    "whyEn": "The email says to report the day before."
+   }
+  ],
+  "status": "pending_review",
+  "source": "original-ai-assisted"
+ },
+ {
+  "id": "read-n2-31",
+  "level": "N2",
+  "minutes": 4,
+  "title": "Цахилгааны төлбөрийн мэдээ",
+  "titleEn": "News on electricity bills",
+  "titleJp": "電気代のニュース",
+  "titleJpFuri": "{電気|でんき}{代|だい}のニュース",
+  "topic": "Нийтлэл · Эдийн засаг",
+  "topicEn": "Article · Economy",
+  "body": [
+   "{今年|ことし}の{冬|ふゆ}から、{電気|でんき}の{料金|りょうきん}が{平均|へいきん}で{五|ご}パーセントほどうちが{上|あ}がる{見込|みこ}みです。",
+   "{会社|かいしゃ}は、{燃料|ねんりょう}の{価格|かかく}が{高|たか}くなったことが{理由|りゆう}だと{説明|せつめい}しています。",
+   "{政府|せいふ}は、{家計|かけい}への{影響|えいきょう}を{考|かんが}えて、{一部|いちぶ}の{家庭|かてい}に{支援|しえん}を{検討|けんとう}しています。"
+  ],
+  "bodyMn": [
+   "Энэ өвлийн эхнээс цахилгааны төлбөр дунджаар 5 орчим хувиар нэмэгдэх төлөвтэй.",
+   "Компани түлшний үнэ өссөнийг шалтгаан гэж тайлбарлажээ.",
+   "Засгийн газар айл өрхөд үзүүлэх нөлөөллийг харгалзан зарим өрхөд дэмжлэг үзүүлэхийг хэлэлцэж байна."
+  ],
+  "bodyEn": [
+   "From this winter, electricity bills are expected to rise by about 5% on average.",
+   "The company explains that higher fuel prices are the reason.",
+   "The government is considering support for some households, taking the impact on family budgets into account."
+  ],
+  "glossary": [
+   {
+    "w": "電気代",
+    "r": "でんきだい",
+    "mn": "цахилгааны төлбөр",
+    "meaningEn": "electricity bill"
+   },
+   {
+    "w": "平均",
+    "r": "へいきん",
+    "mn": "дундаж",
+    "meaningEn": "average"
+   },
+   {
+    "w": "燃料",
+    "r": "ねんりょう",
+    "mn": "түлш",
+    "meaningEn": "fuel"
+   },
+   {
+    "w": "家計",
+    "r": "かけい",
+    "mn": "өрхийн санхүү",
+    "meaningEn": "household budget"
+   },
+   {
+    "w": "支援",
+    "r": "しえん",
+    "mn": "дэмжлэг",
+    "meaningEn": "support"
+   }
+  ],
+  "questions": [
+   {
+    "q": "電気代は今年の冬から何パーセントくらい上がりますか。",
+    "mn": "Энэ өвлөөс цахилгааны төлбөр хэдэн хувиар өсөх вэ?",
+    "promptEn": "By about how much will electricity bills rise from this winter?",
+    "opts": [
+     "Ойролцоогоор 5 хувь",
+     "Ойролцоогоор 15 хувь",
+     "Ойролцоогоор 50 хувь",
+     "Буурах төлөвтэй"
+    ],
+    "optsEn": [
+     "About 5%",
+     "About 15%",
+     "About 50%",
+     "Expected to fall"
+    ],
+    "a": 0,
+    "why": "“平均で五パーセントほどうちが上がる見込みです” гэсэн.",
+    "whyEn": "The article says bills are expected to rise by about 5%."
+   },
+   {
+    "q": "政府は何を検討していますか。",
+    "mn": "Засгийн газар юуг хэлэлцэж байна вэ?",
+    "promptEn": "What is the government considering?",
+    "opts": [
+     "Зарим өрхөд дэмжлэг үзүүлэх",
+     "Цахилгааны үнийг бууруулах",
+     "Компанийг торгох",
+     "Шинэ татвар нэмэх"
+    ],
+    "optsEn": [
+     "Support for some households",
+     "Lowering electricity prices",
+     "Fining the company",
+     "Adding a new tax"
+    ],
+    "a": 0,
+    "why": "“一部の家庭に支援を検討しています” гэсэн.",
+    "whyEn": "The government is considering support for some households."
+   }
+  ],
+  "status": "pending_review",
+  "source": "original-ai-assisted"
+ },
+ {
+  "id": "read-n2-32",
+  "level": "N2",
+  "minutes": 3,
+  "title": "Хурлын урилга",
+  "titleEn": "Meeting invitation",
+  "titleJp": "会議のご案内",
+  "titleJpFuri": "{会議|かいぎ}のご{案内|あんない}",
+  "topic": "И-мэйл · Ажил",
+  "topicEn": "Email · Work",
+  "body": [
+   "{来月|らいげつ}{十日|とおか}に、{取引先|とりひきさき}との{打|う}ち{合|あ}わせを{開|ひら}きます。",
+   "{場所|ばしょ}は{本社|ほんしゃ}の{三|さん}{階|かい}の{会議室|かいぎしつ}で、{午後|ごご}{一時|いちじ}から{始|はじ}まります。",
+   "{議事録|ぎじろく}は{後|あと}でメールに{添付|てんぷ}しますので、{確認|かくにん}の{上|うえ}、{金曜日|きんようび}までに{返事|へんじ}を{願|ねが}います。"
+  ],
+  "bodyMn": [
+   "Ирэх сарын 10-нд харилцагч талтай уулзалт зохион байгуулна.",
+   "Газар нь төв оффисын 3-р давхрын хурлын танхим, өдөр 1 цагаас эхэлнэ.",
+   "Хурлын тэмдэглэлийг дараа нь и-мэйлээр хавсаргах тул шалгаад баасан гарагаас өмнө хариу өгнө үү."
+  ],
+  "bodyEn": [
+   "On the 10th of next month we will hold a meeting with our business partner.",
+   "It will be in the third-floor meeting room of the head office, starting at 1 p.m.",
+   "I will attach the minutes by email later, so please check them and reply by Friday."
+  ],
+  "glossary": [
+   {
+    "w": "取引先",
+    "r": "とりひきさき",
+    "mn": "харилцагч байгууллага",
+    "meaningEn": "business partner"
+   },
+   {
+    "w": "会議室",
+    "r": "かいぎしつ",
+    "mn": "хурлын танхим",
+    "meaningEn": "meeting room"
+   },
+   {
+    "w": "議事録",
+    "r": "ぎじろく",
+    "mn": "хурлын тэмдэглэл",
+    "meaningEn": "minutes (of a meeting)"
+   },
+   {
+    "w": "添付",
+    "r": "てんぷ",
+    "mn": "хавсаргах",
+    "meaningEn": "to attach"
+   },
+   {
+    "w": "返事",
+    "r": "へんじ",
+    "mn": "хариу",
+    "meaningEn": "reply"
+   }
+  ],
+  "questions": [
+   {
+    "q": "打ち合わせは何時からですか。",
+    "mn": "Уулзалт хэдэн цагаас эхлэх вэ?",
+    "promptEn": "What time does the meeting start?",
+    "opts": [
+     "Өдөр 1 цагаас",
+     "Өглөө 9 цагаас",
+     "Орой 6 цагаас",
+     "Хэдэн цаг нь тодорхойгүй"
+    ],
+    "optsEn": [
+     "From 1 p.m.",
+     "From 9 a.m.",
+     "From 6 p.m.",
+     "Time not specified"
+    ],
+    "a": 0,
+    "why": "“午後一時から始まります” гэсэн.",
+    "whyEn": "The invitation says it starts at 1 p.m."
+   },
+   {
+    "q": "返事は何曜日までに送りますか。",
+    "mn": "Хариуг ямар гарагаас өмнө илгээх вэ?",
+    "promptEn": "By which day must the reply be sent?",
+    "opts": [
+     "Баасан гараг",
+     "Даваа гараг",
+     "Лхагва гараг",
+     "Ням гараг"
+    ],
+    "optsEn": [
+     "Friday",
+     "Monday",
+     "Wednesday",
+     "Sunday"
+    ],
+    "a": 0,
+    "why": "“金曜日までに返事を願います” гэж гуйсан.",
+    "whyEn": "The email asks for a reply by Friday."
+   }
+  ],
+  "status": "pending_review",
+  "source": "original-ai-assisted"
+ },
+ {
+  "id": "read-n2-33",
+  "level": "N2",
+  "minutes": 3,
+  "title": "Тэтгэлэгийн зар",
+  "titleEn": "Scholarship announcement",
+  "titleJp": "奨学金の募集",
+  "titleJpFuri": "{奨学金|しょうがくきん}の{募集|ぼしゅう}",
+  "topic": "Зар · Боловсрол",
+  "topicEn": "Advertisement · Education",
+  "body": [
+   "{市|し}は、{高校|こうこう}に{通|かよ}う{生徒|せいと}に{対|たい}して、{奨学金|しょうがくきん}の{申|もう}し{込|こ}みを{受|う}け{付|つ}けます。",
+   "{家計|かけい}が{厳|きび}しい{家庭|かてい}の{子|こ}どもを{優先|ゆうせん}し、{月|つき}に{三万|さんまん}{円|えん}を{支給|しきゅう}します。",
+   "{申|もう}し{込|こ}み{締|し}め{切|き}りは{四月|しがつ}{末|まつ}で、{必要|ひつよう}な{書類|しょるい}は{市役所|しやくしょ}の{窓口|まどぐち}でもらえます。"
+  ],
+  "bodyMn": [
+   "Хот ахлах сургуульд суралцагчдад тэтгэлэгт хамрагдах өргөдөл хүлээн авна.",
+   "Санхүүгийн хүнд айл өрхийн хүүхдүүдийг тэргүүлэн үзэж, сард 30 мянган иен олгоно.",
+   "Өргөдлийн хугацаа дөрөвдүгээр сарын эцэс, шаардлагатай бичиг баримтыг захиргааны цонхоор авч болно."
+  ],
+  "bodyEn": [
+   "The city is accepting scholarship applications from high school students.",
+   "Children from financially struggling households are given priority, and 30,000 yen per month is provided.",
+   "The application deadline is the end of April, and the necessary documents are available at the city office counter."
+  ],
+  "glossary": [
+   {
+    "w": "奨学金",
+    "r": "しょうがくきん",
+    "mn": "тэтгэлэг",
+    "meaningEn": "scholarship"
+   },
+   {
+    "w": "生徒",
+    "r": "せいと",
+    "mn": "суралцагч (ахлах)",
+    "meaningEn": "student (secondary)"
+   },
+   {
+    "w": "支給",
+    "r": "しきゅう",
+    "mn": "олгох (мөнгө)",
+    "meaningEn": "payment (of funds)"
+   },
+   {
+    "w": "書類",
+    "r": "しょるい",
+    "mn": "бичиг баримт",
+    "meaningEn": "documents"
+   },
+   {
+    "w": "窓口",
+    "r": "まどぐち",
+    "mn": "үйлчилгээний цонх",
+    "meaningEn": "service counter"
+   }
+  ],
+  "questions": [
+   {
+    "q": "月に何円支給しますか。",
+    "mn": "Сард хэдэн иен олгох вэ?",
+    "promptEn": "How much is provided per month?",
+    "opts": [
+     "30 мянган иен",
+     "3 мянган иен",
+     "100 мянган иен",
+     "50 мянган иен"
+    ],
+    "optsEn": [
+     "30,000 yen",
+     "3,000 yen",
+     "100,000 yen",
+     "50,000 yen"
+    ],
+    "a": 0,
+    "why": "“月に三万円を支給します” гэсэн.",
+    "whyEn": "The announcement states 30,000 yen per month."
+   },
+   {
+    "q": "申し込み締め切りは何時ですか。",
+    "mn": "Өргөдлийн хугацаа хэзээ вэ?",
+    "promptEn": "When is the application deadline?",
+    "opts": [
+     "Дөрөвдүгээр сарын эцэс",
+     "Гуравдугаар сарын эх",
+     "Нэгдүгээр сарын дунд",
+     "Арванхоёрдугаар сар"
+    ],
+    "optsEn": [
+     "End of April",
+     "Beginning of March",
+     "Mid-January",
+     "December"
+    ],
+    "a": 0,
+    "why": "“申し込み締め切りは四月末” гэж заасан.",
+    "whyEn": "The deadline is the end of April."
+   }
+  ],
+  "status": "pending_review",
+  "source": "original-ai-assisted"
+ },
+ {
+  "id": "read-n1-31",
+  "level": "N1",
+  "minutes": 5,
+  "title": "Уншлагын тухай багана",
+  "titleEn": "Column on reading",
+  "titleJp": "読書についてのコラム",
+  "titleJpFuri": "{読書|どくしょ}についてのコラム",
+  "topic": "Нийтлэл · Соёл",
+  "topicEn": "Article · Culture",
+  "body": [
+   "{情報|じょうほう}が{溢|あふ}れる{現代|げんだい}において、じっくりと{本|ほん}を{読|よ}む{時間|じかん}を{確保|かくほ}するのは{容易|ようい}なことではない。",
+   "{多|おお}くの{人|ひと}は、{短|みじか}い{記事|きじ}や{動画|どうが}で{情報|じょうほう}を{得|え}る{習慣|しゅうかん}が{身|み}についてしまった。",
+   "しかしながら、{長|なが}い{文章|ぶんしょう}に{集中|しゅうちゅう}する{力|ちから}は、{他|ほか}では{得|え}がたい{思考|しこう}の{深|ふか}さを{育|そだ}てると{言|い}える。",
+   "{読書|どくしょ}の{価値|かち}は、{単|たん}に{知識|ちしき}を{増|ふ}やすだけではなく、{自分|じぶん}の{考|かんが}えを{客観的|きゃっかんてき}に{見|み}る{目|め}を{養|やしな}う{点|てん}にある。"
+  ],
+  "bodyMn": [
+   "Мэдээлэл дүүрэн өнөө үед номыг тайван унших цаг гаргах нь амар биш.",
+   "Олон хүн богино нийтлэл, бичлэгээр мэдээлэл авах дадалд орчихжээ.",
+   "Гэвч урт текстэд төвлөрөх чадвар нь өөр хаанаас олдохгүй бодлын гүнзгийрлийг төлөвшүүлдэг.",
+   "Уншлагын үнэ цэн нь зөвхөн мэдлэг нэмэхэд бус, өөрийн бодлыг объектив харах харааг хөгжүүлэхэд оршдог."
+  ],
+  "bodyEn": [
+   "In the modern age of information overload, securing time to read books carefully is no easy task.",
+   "Many people have grown used to getting information from short articles and videos.",
+   "Yet the ability to concentrate on long texts fosters a depth of thinking hard to gain elsewhere.",
+   "The value of reading lies not only in increasing knowledge but in cultivating an eye that views one's own thinking objectively."
+  ],
+  "glossary": [
+   {
+    "w": "情報",
+    "r": "じょうほう",
+    "mn": "мэдээлэл",
+    "meaningEn": "information"
+   },
+   {
+    "w": "確保",
+    "r": "かくほ",
+    "mn": "баталгаажуулах, гаргаж авах",
+    "meaningEn": "to secure"
+   },
+   {
+    "w": "習慣",
+    "r": "しゅうかん",
+    "mn": "дадал",
+    "meaningEn": "habit"
+   },
+   {
+    "w": "思考",
+    "r": "しこう",
+    "mn": "бодлого, бодох үйл",
+    "meaningEn": "thinking"
+   },
+   {
+    "w": "客観",
+    "r": "きゃっかん",
+    "mn": "объектив",
+    "meaningEn": "objectivity"
+   }
+  ],
+  "questions": [
+   {
+    "q": "この文章の筆者は、読書の価値を何にあると考えていますか。",
+    "mn": "Зохиогч уншлагын үнэ цэнийг юунд оршино гэж үзэж байна вэ?",
+    "promptEn": "According to the author, where does the value of reading lie?",
+    "opts": [
+     "Мэдлэг нэмэхэд л бус, объектив харах харааг хөгжүүлэхэд",
+     "Чөлөөт цагийг зугаатай өнгөрөөхөд",
+     "Богино мэдээлэл хурдан авахад",
+     "Хэлний шалгалтад бэлдэхэд"
+    ],
+    "optsEn": [
+     "Not just in gaining knowledge but in cultivating an objective view",
+     "In passing free time pleasantly",
+     "In getting short information quickly",
+     "In preparing for language tests"
+    ],
+    "a": 0,
+    "why": "Сүүлийн мөрөнд “単に知識を増やすだけではなく…客観的に見る目を養う点にある” гэж дүгнэсэн.",
+    "whyEn": "The final line states the value lies beyond mere knowledge, in cultivating an objective eye."
+   },
+   {
+    "q": "筆者によると、現代の多くの人は何に問題がありますか。",
+    "mn": "Зохиогчийн үзэж байгаагаар орчин үеийн олон хүнд ямар асуудал байна вэ?",
+    "promptEn": "According to the author, what is the issue with many modern people?",
+    "opts": [
+     "Богино мэдээлэлд дассан байдал",
+     "Ном худалдаж авах мөнгөгүй байдал",
+     "Гадаад хэл сурах цаггүй байдал",
+     "Номын санд явах зам хол байдал"
+    ],
+    "optsEn": [
+     "Habituation to short information",
+     "Lack of money to buy books",
+     "No time to study foreign languages",
+     "Libraries being too far away"
+    ],
+    "a": 0,
+    "why": "Хоёр дахь мөрөнд богино нийтлэл, бичлэгээр мэдээлэл авах дадалд орсныг дурджээ.",
+    "whyEn": "The second line notes the habit of consuming short articles and videos."
+   }
+  ],
+  "status": "pending_review",
+  "source": "original-ai-assisted"
+ },
+ {
+  "id": "read-n1-32",
+  "level": "N1",
+  "minutes": 4,
+  "title": "Өргөдлийн гарын авлага",
+  "titleEn": "Application guide",
+  "titleJp": "申請の手引き",
+  "titleJpFuri": "{申請|しんせい}の{手引|てび}き",
+  "topic": "Заавар · Ажил",
+  "topicEn": "Instructions · Administration",
+  "body": [
+   "この{制度|せいど}の{利用|りよう}を{希望|きぼう}する{方|かた}は、{必要|ひつよう}な{書類|しょるい}を{揃|そろ}えた{上|うえ}、{受付|うけつけ}{期間内|きかんない}に{提出|ていしゅつ}してください。",
+   "{申請書|しんせいしょ}は{本文|ほんぶん}の{末尾|まつび}に{添付|てんぷ}されておりますので、{印刷|いんさつ}の{上|うえ}、{記入|きにゅう}してください。",
+   "{虚偽|きょぎ}の{記載|きさい}が{判明|はんめい}した{場合|ばあい}は、{受|う}け{入|い}れられた{後|あと}でも{取消|とりけし}となることがあります。",
+   "{不明|ふめい}な{点|てん}がございましたら、{担当|たんとう}までお{問|と}い{合|あ}わせください。"
+  ],
+  "bodyMn": [
+   "Энэ хөтөлбөрийг ашиглахыг хүсэгч нь шаардлагатай бичиг баримтыг бүрдүүлэн, хүлээн авах хугацаанд ирүүлнэ үү.",
+   "Өргөдлийн маягтыг бичгийн төгсгөлд хавсаргасан тул хэвлэж бөглөнө үү.",
+   "Худал мэдээлэл илэрсэн тохиолдолд хүлээн авсны дараа ч цуцлагдах магадлалтай.",
+   "Тодорхойгүй зүйл байвал хариуцах албатай холбогдоно уу."
+  ],
+  "bodyEn": [
+   "Those who wish to use this system should prepare the required documents and submit them within the acceptance period.",
+   "The application form is attached at the end of this document; please print and complete it.",
+   "If any false statements are found, the application may be revoked even after acceptance.",
+   "If anything is unclear, please contact the department in charge."
+  ],
+  "glossary": [
+   {
+    "w": "申請",
+    "r": "しんせい",
+    "mn": "өргөдөл гаргах",
+    "meaningEn": "application"
+   },
+   {
+    "w": "必要",
+    "r": "ひつよう",
+    "mn": "шаардлагатай",
+    "meaningEn": "necessary"
+   },
+   {
+    "w": "提出",
+    "r": "ていしゅつ",
+    "mn": "ирүүлэх",
+    "meaningEn": "to submit"
+   },
+   {
+    "w": "虚偽",
+    "r": "きょぎ",
+    "mn": "худал, зохиомол",
+    "meaningEn": "falsehood"
+   },
+   {
+    "w": "取消",
+    "r": "とりけし",
+    "mn": "цуцлах",
+    "meaningEn": "revocation"
+   }
+  ],
+  "questions": [
+   {
+    "q": "虚偽の記載が判明した場合は、何になることがありますか。",
+    "mn": "Худал мэдээлэл илэрвэл яах вэ?",
+    "promptEn": "What may happen if false information is found?",
+    "opts": [
+     "Хүлээн авсны дараа ч цуцлагдах",
+     "Ямар ч нөлөөгүй",
+     "Төлбөр нэмэгдэх",
+     "Хугацаа сунгагдах"
+    ],
+    "optsEn": [
+     "It may be revoked even after acceptance",
+     "Nothing happens",
+     "The fee increases",
+     "The deadline is extended"
+    ],
+    "a": 0,
+    "why": "“受け入れられた後でも取消となることがあります” гэж анхааруулсан.",
+    "whyEn": "The guide warns of revocation even after acceptance."
+   },
+   {
+    "q": "申請書は何処にありますか。",
+    "mn": "Өргөдлийн маягт хаана байна вэ?",
+    "promptEn": "Where is the application form?",
+    "opts": [
+     "Бичгийн төгсгөлд хавсаргасан",
+     "Вэбсайтын нүүр хуудас",
+     "Захиргааны цонхонд",
+     "И-мэйлээр илгээнэ"
+    ],
+    "optsEn": [
+     "Attached at the end of the document",
+     "On the website homepage",
+     "At the service counter",
+     "Sent by email"
+    ],
+    "a": 0,
+    "why": "“申請書は本文の末尾に添付されております” гэсэн.",
+    "whyEn": "The form is attached at the end of the text."
+   }
+  ],
+  "status": "pending_review",
+  "source": "original-ai-assisted"
+ },
+ {
+  "id": "read-n1-33",
+  "level": "N1",
+  "minutes": 4,
+  "title": "Харилцагчид илгээх саналын захиа",
+  "titleEn": "Proposal email to a client",
+  "titleJp": "取引先への提案メール",
+  "titleJpFuri": "{取引先|とりひきさき}への{提案|ていあん}メール",
+  "topic": "И-мэйл · Бизнес",
+  "topicEn": "Email · Business",
+  "body": [
+   "{平素|へいそ}より{格別|かくべつ}のお{引|ひ}き{立|た}てを{賜|たまわ}り、{誠|まこと}に{有難|ありが}うございます。",
+   "このたび、{貴社|きしゃ}の{業務|ぎょうむ}{効率化|こうりつか}に{資|し}すると{考|かんが}えられる{新|あたら}しい{案|あん}を{考案|こうあん}いたしましたので、ご{提案|ていあん}{申|もう}し{上|あ}げます。",
+   "つきましては、{来週|らいしゅう}の{貴社|きしゃ}の{都合|つごう}のよろしい{日時|にちじ}に、{詳細|しょうさい}をご{説明|せつめい}する{機会|きかい}を{賜|たまわ}れましたら{幸|さいわ}いです。",
+   "{多忙|たぼう}の{折|おり}とは{存|ぞん}じますが、{何卒|なにとぞ}{高配|こうはい}の{程|ほど}よろしく{願|ねが}い{申|もう}し{上|あ}げます。"
+  ],
+  "bodyMn": [
+   "Тогтмол үнэт хамтын ажиллагаандаа чин сэтгэлээс талархаж байна.",
+   "Энэ удаа танай компанийн үйл ажиллагааны үр ашгийг дээшлүүлэхэд тустай гэж үзсэн шинэ санааг боловсруулсан тул танилцуулж байна.",
+   "Ирэх долоо хоногт танд тохиромжтой цагт дэлгэрэнгүй танилцуулах боломж олдвол баяртай байх болно.",
+   "Завгүй үед гэдгийг ойлгож байгаа ч, хүндэтгэн үзэж хандана уу."
+  ],
+  "bodyEn": [
+   "We sincerely appreciate your continued, exceptional support.",
+   "We have developed a new proposal that we believe will contribute to the efficiency of your operations, and we would like to present it.",
+   "If we could have the opportunity to explain the details at your convenience next week, we would be grateful.",
+   "We understand you are busy, and we appreciate your kind consideration."
+  ],
+  "glossary": [
+   {
+    "w": "貴社",
+    "r": "きしゃ",
+    "mn": "танай компани (хүндэтгэл)",
+    "meaningEn": "your company (honorific)"
+   },
+   {
+    "w": "効率",
+    "r": "こうりつ",
+    "mn": "үр ашиг",
+    "meaningEn": "efficiency"
+   },
+   {
+    "w": "提案",
+    "r": "ていあん",
+    "mn": "санал",
+    "meaningEn": "proposal"
+   },
+   {
+    "w": "都合",
+    "r": "つごう",
+    "mn": "боломж, тохиромж",
+    "meaningEn": "convenience"
+   },
+   {
+    "w": "詳細",
+    "r": "しょうさい",
+    "mn": "дэлгэрэнгүй",
+    "meaningEn": "details"
+   }
+  ],
+  "questions": [
+   {
+    "q": "このメールの主な目的は何ですか。",
+    "mn": "Энэ захианы үндсэн зорилго юу вэ?",
+    "promptEn": "What is the main purpose of this email?",
+    "opts": [
+     "Шинэ санал танилцуулах цаг хүсэх",
+     "Төлбөр төлөхийг сануулах",
+     "Гэрээг цуцлах",
+     "Ажилтныг магтах"
+    ],
+    "optsEn": [
+     "To request time to present a new proposal",
+     "To remind about payment",
+     "To cancel a contract",
+     "To praise an employee"
+    ],
+    "a": 0,
+    "why": "“詳細をご説明する機会を賜れましたら幸いです” гэж уулзах цаг гуйжээ.",
+    "whyEn": "The writer asks for an opportunity to explain the proposal in detail."
+   },
+   {
+    "q": "この文で使われている表現は、主に何の場面で使われますか。",
+    "mn": "Энд хэрэглэсэн илэрхийлэл ямар нөхцөлд ихэвчлэн хэрэглэгддэг вэ?",
+    "promptEn": "In what kind of situation is the style of this text mainly used?",
+    "opts": [
+     "Албан ёсны бизнесийн захиа",
+     "Найзуудын чат",
+     "Өдөр тутмын тэмдэглэл",
+     "Ярианы хэлний шалгалт"
+    ],
+    "optsEn": [
+     "Formal business correspondence",
+     "Chat between friends",
+     "Daily notes",
+     "Spoken-language exam"
+    ],
+    "a": 0,
+    "why": "“平素より…賜り” “何卒高配の程” зэрэг хэв маяг нь албан ёсны бизнес захианы онцлог юм.",
+    "whyEn": "Expressions like 賜り and 何卒…の程よろしく are typical of formal business letters."
+   }
+  ],
+  "status": "pending_review",
+  "source": "original-ai-assisted"
  }
 ]

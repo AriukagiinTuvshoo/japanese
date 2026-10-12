@@ -51,8 +51,8 @@ try {
   for(const route of ['home','vocab?level=N5','kanji?level=N5','grammar?level=N5','reading','listening','review','quiz','mock','placement','dict','plan','progress','achievements','account','kana','mistakes','about','write/日','not-a-page']) {
    await page.goto(`${origin}/#/${route}`);
    await waitRoute(route);
-   if(route==='reading')assert.equal(await page.locator('main a[href^="#/reading/"]').count(),30,`${language}: reading library must show 30 default-level lessons`);
-   if(route==='listening')assert.equal(await page.locator('main a[href^="#/listening/"]').count(),30,`${language}: listening library must show 30 default-level lessons`);
+   if(route==='reading'){const expected=readingLessons.filter(x=>x.level==='N4').length;assert.ok(expected>=30,`reading corpus must keep a floor of 30/level`);assert.equal(await page.locator('main a[href^="#/reading/"]').count(),expected,`${language}: reading library must show every N4 lesson (${expected}, growth floor 30/level)`);}
+   if(route==='listening'){const expected=listeningLessons.filter(x=>x.level==='N4').length;assert.ok(expected>=30,`listening corpus must keep a floor of 30/level`);assert.equal(await page.locator('main a[href^="#/listening/"]').count(),expected,`${language}: listening library must show every N4 lesson (${expected}, growth floor 30/level)`);}
    if(language==='en') {
     const text=await page.locator('main').innerText();
     const leftovers=text.split('\n').filter(line=>/[А-Яа-яӨөҮү]/.test(line));

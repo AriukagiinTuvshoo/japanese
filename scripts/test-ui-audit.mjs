@@ -39,7 +39,11 @@ try {
   for (const language of ["mn", "en"]) {
     const context = await browser.newContext({ serviceWorkers: "block" });
     await context.addInitScript((lang) => {
-      localStorage.setItem("nd:doc:local", JSON.stringify({ profile: { language: lang, onboarded: true, current: "N4", target: "N1" } }));
+      // Merge — never wipe saved state on reload (this is what "settings persist" must exercise).
+      let d = {};
+      try { d = JSON.parse(localStorage.getItem("nd:doc:local") || "{}"); } catch { d = {}; }
+      d.profile = { ...(d.profile || {}), language: lang, onboarded: true, current: "N4", target: "N1" };
+      localStorage.setItem("nd:doc:local", JSON.stringify(d));
     }, language);
     await context.route(/^https:\/\//, (r) => r.abort());
     const page = await context.newPage();
@@ -127,11 +131,163 @@ try {
     await page.locator("main").waitFor();
     await page.reload();
     await page.locator("main").waitFor();
+
+    // 6) narrow (320) and tablet (820) widths on a reduced route set
+    for (const width of [320, 820]) {
+      await page.setViewportSize({ width, height: 800 });
+      for (const route of ["home", "vocab?level=N5", "reading", "mock", "placement", "write"]) {
+        await page.goto(`${origin}/#/${route}`);
+        await page.locator("main").waitFor();
+        await page.waitForTimeout(100);
+        const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+        assert.ok(overflow <= 1, `${language}@${width} #/${route}: horizontal overflow ${overflow}px`);
+      }
+      console.log(`audit ${language}@${width}: reduced route set renders with no overflow`);
+    }
+
+    // 7) tap-to-lookup popover (phone tap + desktop hover) on reading body
+    await page.setViewportSize({ width: 375, height: 800 });
+    await page.goto(`${origin}/#/reading/read-n5-31`);
+    await page.locator("main").waitFor();
+    // XRayText tokens appear after the search index loads — poll instead of a fixed sleep.
+    const tapped = await (async () => {
+      for (let i = 0; i < 40; i++) {
+        const got = await page.evaluate(() => {
+          const btns = [...document.querySelectorAll("main button")].filter((b) => (b.className || "").includes("rounded-[3px]") && (b.textContent || "").trim());
+          if (!btns.length) return "";
+          btns[0].click();
+          return btns[0].textContent.trim();
+        });
+        if (got) return got;
+        await page.waitForTimeout(250);
+      }
+      return "";
+    })();
+    assert.ok(tapped, `${language}: reading body must expose tappable word tokens`);
+    await page.waitForTimeout(250);
+    const popText = await page.locator("main").innerText();
+    assert.ok(/Үгийн санд хадгалах|Save to vocab/.test(popText), `${language}: tap-lookup popover must offer save-to-vocab (tapped: ${tapped})`);
+    await page.setViewportSize({ width: 1280, height: 800 });
+    await page.reload();
+    await page.locator("main").waitFor();
+    let hoverBtn = null;
+    for (let i = 0; i < 40; i++) {
+      hoverBtn = page.locator('main button[class*="rounded-[3px]"]').first();
+      if (await hoverBtn.count()) break;
+      await page.waitForTimeout(250);
+    }
+    await hoverBtn.hover();
+    await page.waitForTimeout(250);
+    assert.ok(/Үгийн санд хадгалах|Save to vocab/.test(await page.locator("main").innerText()), `${language}: desktop hover must open the lookup popover`);
+
+    // 8) jaPrompts setting: grammar instructions in Japanese, explanations follow MN/EN
+    await page.evaluate(() => {
+      const d = JSON.parse(localStorage.getItem("nd:doc:local") || "{}");
+      d.profile = { ...(d.profile || {}), jaPrompts: true };
+      localStorage.setItem("nd:doc:local", JSON.stringify(d));
+    });
+    await page.goto(`${origin}/#/quiz?mode=grammar-mn&level=N5`);
+    await page.reload();
+    await page.locator("main").waitFor();
+    let jaShown = false;
+    for (let i = 0; i < 30 && !jaShown; i++) {
+      jaShown = (await page.locator("main").innerText()).includes("この文法の意味として正しいものはどれですか。");
+      if (!jaShown) await page.waitForTimeout(300);
+    }
+    assert.ok(jaShown, `${language}: jaPrompts=true must show the Japanese grammar instruction`);
+    await page.evaluate(() => {
+      const d = JSON.parse(localStorage.getItem("nd:doc:local") || "{}");
+      d.profile = { ...(d.profile || {}), jaPrompts: false };
+      localStorage.setItem("nd:doc:local", JSON.stringify(d));
+    });
+    await page.reload();
+    await page.locator("main").waitFor();
+    let mnShown = false;
+    for (let i = 0; i < 30 && !mnShown; i++) {
+      mnShown = /Энэ дүрмийн утга аль вэ\?|What does this pattern mean\?/.test(await page.locator("main").innerText());
+      if (!mnShown) await page.waitForTimeout(300);
+    }
+    assert.ok(mnShown, `${language}: jaPrompts=false must show the MN/EN grammar instruction`);
+
+    // 9) listening exam replay policy: 2 listens per line, counters, disabled at cap
+    await page.evaluate(() => {
+      const d = JSON.parse(localStorage.getItem("nd:doc:local") || "{}");
+      d.profile = { ...(d.profile || {}), replayPolicy: "exam" };
+      localStorage.setItem("nd:doc:local", JSON.stringify(d));
+    });
+    await page.goto(`${origin}/#/listening/listen-gen-n5-01`);
+    await page.reload();
+    await page.locator("main").waitFor();
+    await page.getByRole("button", { name: /Транскрипт|Transcript/ }).first().click();
+    await page.waitForTimeout(250);
+    const linePlay = page.locator("main button", { hasText: "0/2" }).first();
+    await linePlay.waitFor();
+    await linePlay.click();
+    // The counter text changes after the click — follow the same line via its new count.
+    await page.locator("main button", { hasText: "1/2" }).first().click();
+    const capped = page.locator("main button", { hasText: "2/2" }).first();
+    await capped.waitFor();
+    assert.ok(await capped.isDisabled(), `${language}: exam replay must disable a line after 2 listens`);
+    assert.ok(/2 удаа|2 listens/.test(await page.locator("main").innerText()), `${language}: exam replay policy must be visible`);
+    await page.evaluate(() => {
+      const d = JSON.parse(localStorage.getItem("nd:doc:local") || "{}");
+      d.profile = { ...(d.profile || {}), replayPolicy: "free" };
+      localStorage.setItem("nd:doc:local", JSON.stringify(d));
+    });
+
+    // 10) placement run → internal sublevels + score explanation + coverage + next steps
+    await page.goto(`${origin}/#/placement`);
+    await page.reload();
+    await page.locator("main").waitFor();
+    // Start is a no-op until question data loads — retry until the run stage appears.
+    for (let i = 0; i < 30; i++) {
+      if (/1 \/ 45/.test(await page.locator("main").innerText())) break;
+      await page.getByRole("button", { name: /Тест эхлэх|Start test/ }).first().click().catch(() => {});
+      await page.waitForTimeout(300);
+    }
+    assert.ok(/1 \/ 45/.test(await page.locator("main").innerText()), `${language}: placement run must start`);
+    const pickA = async () => {
+      const ok = await page.evaluate(() => {
+        const b = [...document.querySelectorAll("main button")].find((x) => [...x.querySelectorAll("span")].some((s) => s.textContent.trim() === "A"));
+        if (!b) return false;
+        b.click();
+        return true;
+      });
+      assert.ok(ok, `${language}: placement must offer answer choices`);
+      await page.waitForTimeout(120);
+    };
+    await pickA();
+    await page.getByRole("button", { name: language === "en" ? "Finish" : "Дуусгах", exact: true }).first().click();
+    await page.waitForTimeout(300);
+    const pText = await page.locator("main").innerText();
+    for (const re of language === "en"
+      ? [/Internal sub-levels/, /beginner|mid|advanced/, /not official JLPT sub-grades/, /Score explanation/, /Skill coverage/, /Next steps/, /Retake in/]
+      : [/Дотоод дэд түвшин/, /анхан|дунд|ахисан/, /албан JLPT дэд шалгалтын үзүүлэлт биш/, /Онооны тайлбар/, /Чадварын хамрах хүрээ/, /Дараагийн алхам/, /дахин өгч/]) {
+      assert.ok(re.test(pText), `${language}: placement result must include ${re}`);
+    }
+
+    // 11) mock practice-score disclaimer + writing self-check + multi-question reading
+    // (wait for a route-specific marker: `main` stays mounted across hash navigations)
+    await page.goto(`${origin}/#/mock`);
+    await page.locator("main", { hasText: /Жишиг JLPT шалгалт|JLPT mock exam/ }).first().waitFor();
+    assert.ok(/албан ёсны оноо биш|not an official JLPT score/.test(await page.locator("main").innerText()),
+      `${language}: mock page must carry the practice-score disclaimer`);
+    await page.goto(`${origin}/#/write`);
+    await page.locator("main", { hasText: /Өөрийн шалгалт|Self-check/ }).first().waitFor();
+    assert.ok(/Өөрийн шалгалт|Self-check/.test(await page.locator("main").innerText()),
+      `${language}: writing page must show the self-check criteria`);
+    await page.goto(`${origin}/#/reading/read-n5-31`);
+    await page.locator("main", { hasText: /зуны баярын зар|Summer festival flyer/i }).first().waitFor();
+    await page.getByRole("button", { name: /Асуулт|Questions/ }).first().click();
+    await page.waitForTimeout(200);
+    assert.ok(/Ороход мөнгө төлдөг|admission fee/.test(await page.locator("main").innerText()),
+      `${language}: the new reading texts must carry 2 comprehension questions`);
+
     assert.deepEqual(errors, [], `${language}: uncaught page errors`);
-    console.log(`audit ${language}: search/filters, reading+listening answer-key flows, settings reload all ok`);
+    console.log(`audit ${language}: search/filters, answer-key flows, settings, tap-lookup, jaPrompts, replay policy, placement sublevels, disclaimers all ok`);
     await context.close();
   }
-  console.log("OK: UI audit — routes, overflow (375+1280), placeholders, unnamed controls, search, answer flows, persistence (MN+EN)");
+  console.log("OK: UI audit — routes, overflow (320/375/820/1280), placeholders, unnamed controls, search, answer flows, persistence, tap-lookup, jaPrompts, replay policy, placement (MN+EN)");
 } finally {
   await browser.close();
   server.kill();
