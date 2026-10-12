@@ -91,6 +91,7 @@ export default function MockExam() {
         <div className="text-center">
           <p className="font-jp text-[11.5px] tracking-[0.3em] text-shu-500">結果発表</p>
           <h1 className="mt-1 text-[1.8rem] font-extrabold">{t.resultOf2(language === "en" ? bp.titleEn : bp.title)}</h1>
+          <p className="mt-1.5 text-[12px] font-bold text-shu-600">{t.practiceScoreNote}</p>
         </div>
 
         <Card>
@@ -281,7 +282,7 @@ export default function MockExam() {
 
       {doc.exams.length > 0 && (
         <Card>
-          <SectionTitle jp="受験履歴" title={t.pastExams} />
+          <SectionTitle jp="受験履歴" title={t.pastExams} sub={t.practiceScoreNote} />
           <ul className="divide-y divide-sumi-900/8">
             {doc.exams.slice(0, 8).map((e) => (
               <li key={e.id} className="flex flex-wrap items-center gap-3 py-3">

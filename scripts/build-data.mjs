@@ -427,7 +427,7 @@ async function main() {
   };
   for (const lv of LEVELS) {
     for (const v of vocab[lv]) {
-      idx.v.push([v.w, v.r, v.mn?.[0] ?? v.en[0] ?? "", lv, v.tier === "jlpt" ? 0 : 1, v.id]);
+      idx.v.push([v.w, v.r, v.mn?.[0] ?? v.en[0] ?? "", lv, v.tier === "jlpt" ? 0 : 1, v.id, v.en?.[0] ?? ""]);
     }
     for (const k of kanji[lv]) {
       idx.k.push([k.k, k.on?.[0] ?? "", k.mn?.[0] ?? k.en[0] ?? "", lv, k.s ?? 0]);

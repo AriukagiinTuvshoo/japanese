@@ -65,6 +65,10 @@ export interface Profile {
   romaji: boolean;
   /** UI and learning-content language. Stored with the profile and synced. */
   language: Language;
+  /** Асуултын зааврыг япон хэлээр харуулах (дүрэм/шаалгалтын асуулт). Тайлбар MN/EN-г дагана. */
+  jaPrompts: boolean;
+  /** Сонсголын давталтын бодлого: free = дурын, exam = шалгалтын (2 удаа). */
+  replayPolicy: "free" | "exam";
 }
 
 export interface ActivityDay {
@@ -102,7 +106,15 @@ export interface Doc {
   kanaBest: number;
   exams: ExamRecord[];
   quizzes: QuizRecord[];
-  placement?: { level: Level | "zero"; at: number; detail: Record<string, Level> };
+  placement?: {
+    level: Level | "zero";
+    at: number;
+    detail: Record<string, Level>;
+    /** Дотоод дэд түвшин (албан JLPT дэд шалгалт биш). */
+    sub?: Record<string, "beginner" | "mid" | "advanced">;
+    /** Чадвар тус бүрийн нарийвчлал (0..1) — онооны тайлбарт. */
+    acc?: Record<string, number>;
+  };
   mistakes: Mistake[];
   activity: Record<string, ActivityDay>;
   xp: number;
@@ -125,6 +137,8 @@ export const DEFAULT_PROFILE: Profile = {
   theme: "light",
   romaji: false,
   language: "mn",
+  jaPrompts: false,
+  replayPolicy: "free",
 };
 
 const emptyDay = (): ActivityDay => ({ xp: 0, min: 0, newCards: 0, reviews: 0, correct: 0, total: 0 });
@@ -227,7 +241,7 @@ export interface Actions {
   resolveMistake: (id: string) => void;
   clearMistakes: () => void;
 
-  setPlacement: (level: Level | "zero", detail: Record<string, Level>) => void;
+  setPlacement: (level: Level | "zero", detail: Record<string, Level>, extra?: { sub?: Record<string, "beginner" | "mid" | "advanced">; acc?: Record<string, number> }) => void;
   startCurriculum: (level: Level, days: number) => void;
   completeCurriculumDay: (day: number, counts: Partial<{ vocab: number; kanji: number; grammar: number; reading: number; listening: number }>) => void;
 
@@ -524,9 +538,9 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     })),
     clearMistakes: () => patch((d) => ({ ...d, mistakes: [] })),
 
-    setPlacement: (level, detail) => patch((d) => ({
+    setPlacement: (level, detail, extra) => patch((d) => ({
       ...d,
-      placement: { level, at: Date.now(), detail },
+      placement: { level, at: Date.now(), detail, ...(extra ?? {}) },
       profile: { ...d.profile, current: level },
       ...bumpDayInto(d, { xp: XP.placement }),
     })),

@@ -100,7 +100,7 @@ export interface StrokeMap {
 }
 
 export interface SearchIndex {
-  v: [string, string, string, Level, number, string][]; // word, reading, mn, level, tier, id
+  v: [string, string, string, Level, number, string, string?][]; // word, reading, mn, level, tier, id, en
   k: [string, string, string, Level, number][];         // kanji, on, mn, level, strokes
   g: [string, string, Level, string][];                 // pattern, mn, level, id
 }

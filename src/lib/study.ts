@@ -19,6 +19,8 @@ export interface Question {
   /** Асуултын толгой хэсэг (япон). */
   prompt: string;
   promptSub?: string;
+  /** Япон хэл дээрх зааврын хувилбар (тохиргоогоор сонгоно). Тайлбар/rationale нь MN/EN-г дагана. */
+  promptJa?: string;
   /** Толь бичгийн popover-д. */
   refId?: string;
   refKanji?: string;
@@ -34,7 +36,7 @@ export interface Question {
   section: string;
 }
 
-export type QuestionPresentation = Pick<Question, "prompt" | "promptSub" | "options" | "explain" | "section">;
+export type QuestionPresentation = Pick<Question, "prompt" | "promptSub" | "promptJa" | "options" | "explain" | "section">;
 
 export function presentQuestion(question: Question, language: Language): Question {
   return { ...question, ...question.presentation?.[language] };
@@ -76,6 +78,18 @@ export const PROMPT_SUB: Record<Language, Record<string, string>> = {
     "Утгыг сонго": "Choose the meaning",
     "Энэ дүрмийн утга аль вэ?": "What does this pattern mean?",
   },
+};
+
+/** Асуултын зааврыг япон хэлээр харуулах тохиргооны текстүүд (JLPT маягийн заавар). */
+export const PROMPT_SUB_JA: Record<string, string> = {
+  "Энэ утгатай япон үг аль вэ?": "次の意味に合う日本語の言葉はどれですか。",
+  "Хэрхэн унших вэ?": "この言葉の読み方はどれですか。",
+  "Дутуу үгийг бөглө": "空欄に入る最もよいものを選びなさい。",
+  "Хэдэн зурлагатай вэ?": "この漢字の画数はいくつですか。",
+  "Уншлагыг сонго": "正しい読みを選びなさい。",
+  "Утгыг сонго": "意味を選びなさい。",
+  "Энэ дүрмийн утга аль вэ?": "この文法の意味として正しいものはどれですか。",
+  "Илэрхийллийг тань": "この文に出てくる表現はどれですか。（空欄補充ではなく、表現の確認です。）",
 };
 
 export const QUIZ_MODES: { id: QuizMode; label: string; desc: string; labelEn: string; descEn: string; icon: string; tone: "shu" | "ai" | "matcha" | "kin" | "murasaki" }[] = [
@@ -144,6 +158,10 @@ function vocabQuestion(v: Vocab, pool: Vocab[], mode: QuizMode, language: Langua
       : mode === "vocab-read" ? PROMPT_SUB[lang]["Хэрхэн унших вэ?"]
       : mode === "listening" ? (lang === "en" ? "Listen and choose the written word." : "Сонсоод япон үгийг сонго.")
       : mode === "vocab-listen" ? PROMPT_SUB[lang]["Утгыг сонго"] : v.r,
+    promptJa: mode === "vocab-mn-jp" ? PROMPT_SUB_JA["Энэ утгатай япон үг аль вэ?"]
+      : mode === "vocab-read" ? PROMPT_SUB_JA["Хэрхэн унших вэ?"]
+      : mode === "listening" ? "聞いて、日本語の言葉を選びなさい。"
+      : mode === "vocab-listen" ? PROMPT_SUB_JA["Утгыг сонго"] : undefined,
     options: opts.map((x) => mode === "vocab-read" ? x.r : mode === "vocab-mn-jp" || mode === "listening" ? x.w : vocabMeaning(x, lang)),
     explain: `${v.w}（${v.r}） = ${vocabMeaning(v, lang)}`,
   }])) as Record<Language, QuestionPresentation>;
@@ -179,6 +197,7 @@ function kanjiQuestion(k: Kanji, pool: Kanji[], mode: QuizMode, language: Langua
   const presentation = Object.fromEntries((["mn", "en"] as Language[]).map((lang) => [lang, {
     section: SECTION_LABEL[lang]["Ханз"], prompt: k.k,
     promptSub: PROMPT_SUB[lang][mode === "kanji-stroke" ? "Хэдэн зурлагатай вэ?" : mode === "kanji-read" ? "Уншлагыг сонго" : "Утгыг сонго"],
+    promptJa: PROMPT_SUB_JA[mode === "kanji-stroke" ? "Хэдэн зурлагатай вэ?" : mode === "kanji-read" ? "Уншлагыг сонго" : "Утгыг сонго"],
     options: mode === "kanji-stroke" ? strokes.map(String) : options.map((x) => mode === "kanji-read" ? reading(x) : kanjiMeaning(x, lang)),
     explain: mode === "kanji-stroke" ? `${k.k} — ${k.s} ${lang === "en" ? "strokes" : "зурлага"} · ${kanjiMeaning(k, lang)}`
       : mode === "kanji-read" ? `${k.k} — 音: ${k.on.join("・") || "—"}　訓: ${k.kun.join("・") || "—"}` : `${k.k} = ${kanjiMeaning(k, lang)}`,
@@ -197,6 +216,7 @@ function grammarQuestion(g: Grammar, pool: Grammar[], language: Language): Quest
   const opts = shuffle([g, ...others], rnd);
   const presentation = Object.fromEntries((["mn", "en"] as Language[]).map((lang) => [lang, {
     section: SECTION_LABEL[lang]["Дүрэм"], prompt: g.p, promptSub: PROMPT_SUB[lang]["Энэ дүрмийн утга аль вэ?"],
+    promptJa: PROMPT_SUB_JA["Энэ дүрмийн утга аль вэ?"],
     options: opts.map((x) => grammarMeaning(x, lang)),
     explain: `${g.p} — ${grammarMeaning(g, lang)}${(lang === "en" ? g.note_en : g.note) ? `\n${lang === "en" ? g.note_en : g.note}` : ""}`,
   }])) as Record<Language, QuestionPresentation>;
@@ -221,6 +241,7 @@ function grammarUseQuestion(g: Grammar, pool: Grammar[], language: Language): Qu
   const presentation = Object.fromEntries((["mn", "en"] as Language[]).map((lang) => [lang, {
     section: SECTION_LABEL[lang]["Дүрэм"], prompt: match.example.fg ?? match.example.ja!,
     promptSub: lang === "en" ? "Which expression appears exactly as written in this sentence? (Recognition, not sentence completion.)" : "Энэ өгүүлбэрт яг энэ хэлбэрээр орсон илэрхийлэл аль вэ? (Таних дасгал; өгүүлбэр бөглөх биш.)",
+    promptJa: PROMPT_SUB_JA["Илэрхийллийг тань"],
     options: options.map((x) => x.target),
     explain: `${g.p} — ${grammarMeaning(g, lang)}${g.form ? `\n${lang === "mn" ? g.form_mn || MN_PENDING : g.form}` : ""}`,
   }])) as Record<Language, QuestionPresentation>;

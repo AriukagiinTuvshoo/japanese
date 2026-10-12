@@ -214,6 +214,8 @@ export function Settings() {
       <div className="space-y-2.5">
         <Toggle label={t.furiganaToggle} sub={t.furiganaSub} on={p.furigana} onChange={(v) => actions.patchProfile({ furigana: v })} />
         <Toggle label={t.romajiToggle} sub={t.romajiSub} on={p.romaji} onChange={(v) => actions.patchProfile({ romaji: v })} />
+        <Toggle label={t.jaPromptsToggle} sub={t.jaPromptsSub} on={p.jaPrompts} onChange={(v) => actions.patchProfile({ jaPrompts: v })} />
+        <Toggle label={t.replayPolicyToggle} sub={t.replayPolicySub} on={p.replayPolicy === "exam"} onChange={(v) => actions.patchProfile({ replayPolicy: v ? "exam" : "free" })} />
       </div>
 
       <label className="block">

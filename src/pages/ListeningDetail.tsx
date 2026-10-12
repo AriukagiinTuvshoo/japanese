@@ -22,6 +22,14 @@ export default function ListeningDetail({ id }: { id: string }) {
   const [speaking, setSpeaking] = useState(false);
   const [audioError, setAudioError] = useState("");
   const [inView, setInView] = useState(false);
+  /** Давталтын бодлого: шалгалтын горимд мөр/бүтэн уншилт тус бүр 2 удаа. */
+  const [plays, setPlays] = useState<Record<string, number>>({});
+  const examReplay = doc.profile.replayPolicy === "exam";
+  const playOnce = (key: string, run: () => void) => {
+    if (examReplay && (plays[key] ?? 0) >= 2) return;
+    setPlays((p) => ({ ...p, [key]: (p[key] ?? 0) + 1 }));
+    run();
+  };
   const holder = useRef<HTMLDivElement>(null);
 
   useEffect(() => { setAnswers((lesson?.questions ?? []).map(() => null)); setRevealed(false); }, [lesson]);
@@ -99,7 +107,10 @@ export default function ListeningDetail({ id }: { id: string }) {
                 <div className="flex flex-col items-center gap-4 p-5 text-center">
                   <span className="font-mincho text-6xl text-ai-500">聴</span>
                   <p className="text-[13px] font-semibold text-sumi-600">{language === "en" ? "Listen to the Japanese passage" : "Япон өгүүлбэрүүдийг сонсоорой"}</p>
-                  <Button onClick={speaking ? stopTts : playTts}>{speaking ? (language === "en" ? "Stop" : "Зогсоох") : (language === "en" ? "▶ Play audio" : "▶ Аудио сонсох")}</Button>
+                  <Button disabled={!speaking && examReplay && (plays.full ?? 0) >= 2} onClick={speaking ? stopTts : () => playOnce("full", playTts)}>
+                    {speaking ? (language === "en" ? "Stop" : "Зогсоох") : (language === "en" ? "▶ Play audio" : "▶ Аудио сонсох")}
+                    {examReplay && !speaking && <span className="ml-2 font-mono text-[11px] tabnum">{plays.full ?? 0}/2</span>}
+                  </Button>
                   {audioError && <p role="alert" className="text-[12px] text-shu-700">{audioError}</p>}
                 </div>
               )}
@@ -115,6 +126,14 @@ export default function ListeningDetail({ id }: { id: string }) {
                 ))}
               </div>}
               {!lesson.youtubeId && <span className="text-[11.5px] text-sumi-400">{language === "en" ? "Playback speed" : "Сонсох хурд"}</span>}
+              {examReplay && !lesson.youtubeId && (
+                <span className="flex items-center gap-2">
+                  <Chip tone="kin">{t.replayExamChip}</Chip>
+                  <button onClick={() => setPlays({})} className="text-[11.5px] font-bold text-ai-600 underline underline-offset-4">
+                    {t.replayReset}
+                  </button>
+                </span>
+              )}
               {lesson.youtubeId && <a href={`https://www.youtube.com/watch?v=${lesson.youtubeId}`} target="_blank" rel="noreferrer noopener"
                 className="ml-auto text-[12px] font-bold text-ai-600 underline underline-offset-4">
                 {t.openOnYt}
@@ -137,10 +156,12 @@ export default function ListeningDetail({ id }: { id: string }) {
                 {lesson.transcript.map((line, i) => (
                   <div key={i} className="flex items-start gap-3 border-b border-sumi-900/6 pb-3.5 last:border-0">
                     <button
-                      onClick={() => speak(stripFurigana(line.ja), 0.9, { lang: "ja-JP" })}
-                      className="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-lg border border-sumi-900/10 bg-white/70 text-[12px] text-sumi-500 hover:border-ai-400 hover:text-ai-600"
+                      onClick={() => playOnce(`l${i}`, () => speak(stripFurigana(line.ja), 0.9, { lang: "ja-JP" }))}
+                      disabled={examReplay && (plays[`l${i}`] ?? 0) >= 2}
+                      className={cn("mt-0.5 grid h-11 w-11 shrink-0 place-items-center rounded-lg border border-sumi-900/10 bg-white/70 text-[12px] text-sumi-500 hover:border-ai-400 hover:text-ai-600 sm:h-7 sm:w-7",
+                        examReplay && (plays[`l${i}`] ?? 0) >= 2 && "opacity-40")}
                       title={t.readAloud}>
-                      🔊
+                      🔊{examReplay && <span className="ml-0.5 font-mono text-[9px] tabnum">{plays[`l${i}`] ?? 0}/2</span>}
                     </button>
                     <div className="min-w-0 flex-1">
                       <p className="text-[15.5px] leading-relaxed">

@@ -6,12 +6,13 @@ import { loadSearchIndex } from "../lib/data";
 import { isKana, isKanji, parseFurigana, toHiragana } from "../lib/text";
 import type { SearchIndex } from "../lib/types";
 import { Button, Chip, LevelBadge, SpeakButton } from "./ui";
+import { ui } from "../lib/i18n";
 
 interface Token {
   text: string;
   ruby?: string;
   kind: "word" | "kana" | "punct";
-  hit?: { mn: string; lvl: string; id: string; reading: string; kind: "v" | "k" };
+  hit?: { mn: string; en?: string; lvl: string; id: string; reading: string; kind: "v" | "k" | "g" };
 }
 
 /**
@@ -33,14 +34,24 @@ export function XRayText({ text, showFurigana = true }: { text: string; showFuri
     if (!index) return null;
     const words = new Map<string, Token["hit"]>();
     const kanji = new Map<string, Token["hit"]>();
-    for (const [w, r, mn, lvl, , id] of index.v) {
-      if (!words.has(w)) words.set(w, { mn, lvl, id, reading: r, kind: "v" });
+    const grammar = new Map<string, Token["hit"]>();
+    for (const [w, r, mn, lvl, , id, en] of index.v) {
+      if (!words.has(w)) words.set(w, { mn, en, lvl, id, reading: r, kind: "v" });
     }
     for (const [ch, on, mn, lvl] of index.k) {
       if (!kanji.has(ch)) kanji.set(ch, { mn, lvl, id: ch, reading: on, kind: "k" });
     }
-    const maxLen = Math.max(1, ...[...words.keys()].map((w) => w.length));
-    return { words, kanji, maxLen: Math.min(8, maxLen) };
+    /** Дүрмийн хэлбэрийг текстээс тааруулна (〜/() хэсгийг хассан гол хэсэг). */
+    for (const [pattern, mn, lvl, id] of index.g) {
+      for (const part of pattern.split(/[\/／]/)) {
+        const core = part.replace(/[〜~]/g, "").replace(/[（(][^）)]*[）)]/g, "").trim();
+        if (core.length >= 2 && /^[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}ー・]+$/u.test(core) && !grammar.has(core)) {
+          grammar.set(core, { mn, lvl, id, reading: pattern, kind: "g" });
+        }
+      }
+    }
+    const maxLen = Math.max(1, ...[...words.keys()].map((w) => w.length), ...[...grammar.keys()].map((w) => w.length));
+    return { words, kanji, grammar, maxLen: Math.min(8, maxLen) };
   }, [index]);
 
   const tokens = useMemo<Token[]>(() => {
@@ -60,6 +71,17 @@ export function XRayText({ text, showFurigana = true }: { text: string; showFuri
         if (matched) {
           out.push({ text: matched, kind: "word", hit: dict.words.get(matched) });
           i += matched.length;
+          continue;
+        }
+        // 1b) дүрмийн хэлбэрийг тааруулна
+        let matchedG = "";
+        for (let len = Math.min(dict.maxLen, p.base.length - i); len >= 1; len--) {
+          const cand = p.base.slice(i, i + len);
+          if (dict.grammar.has(cand)) { matchedG = cand; break; }
+        }
+        if (matchedG) {
+          out.push({ text: matchedG, kind: "word", hit: dict.grammar.get(matchedG) });
+          i += matchedG.length;
           continue;
         }
         // 2) ханз эсвэл кана тусдаа
@@ -98,6 +120,10 @@ export function XRayText({ text, showFurigana = true }: { text: string; showFuri
   };
 
   const added = active?.hit ? !!doc.srs[active.hit.id] : false;
+  const language = doc.profile.language ?? "mn";
+  const tr = ui[language];
+  /** Touch: tap opens; fine pointer: hover opens (requirement: phone tap + desktop hover). */
+  const hoverCapable = () => typeof window !== "undefined" && !!window.matchMedia?.("(hover: hover)").matches;
 
   return (
     <div ref={wrapRef} className="relative">
@@ -106,10 +132,11 @@ export function XRayText({ text, showFurigana = true }: { text: string; showFuri
           <button
             key={i}
             onClick={(e) => open(t, e)}
+            onMouseEnter={(e) => { if (hoverCapable()) open(t, e); }}
             className={cn(
               "rounded-[3px] transition-colors",
               active === t ? "bg-shu-500 text-white" : "hover:bg-shu-100/70",
-              doc.srs[t.hit.id] && "underline decoration-matcha-400 decoration-2 underline-offset-4",
+              t.hit.kind === "v" && doc.srs[t.hit.id] && "underline decoration-matcha-400 decoration-2 underline-offset-4",
             )}
           >
             {t.ruby && showFurigana ? <ruby>{t.text}<rt>{t.ruby}</rt></ruby> : t.text}
@@ -131,27 +158,31 @@ export function XRayText({ text, showFurigana = true }: { text: string; showFuri
             </div>
             <div className="flex flex-col items-end gap-1.5">
               <LevelBadge level={active.hit.lvl as never} size="sm" />
+              <Chip tone="sumi">{active.hit.kind === "k" ? tr.xrayKindKanji : active.hit.kind === "g" ? tr.xrayKindGrammar : tr.xrayKindWord}</Chip>
               <SpeakButton text={active.text} className="!h-11 !w-11 sm:!h-7 sm:!w-7" />
             </div>
           </div>
 
           <p className="mt-2.5 text-[13.5px] font-bold leading-snug text-sumi-800">
-            {active.hit.mn || <span className="font-medium text-sumi-400">Орчуулга хүлээж байна</span>}
+            {(language === "en" ? active.hit.en || active.hit.mn : active.hit.mn) || <span className="font-medium text-sumi-400">{tr.xrayPending}</span>}
           </p>
 
           <div className="mt-3 flex flex-wrap gap-2">
-            <Button size="sm" variant={added ? "soft" : "primary"} onClick={() => actions.grade(active.hit!.id, 2, { isNew: !added })}>
-              {added ? "✓ SRS-д бий" : "+ SRS-д нэмэх"}
-            </Button>
-            <Button size="sm" variant="outline" onClick={() => { window.location.hash = href(active.hit!.kind === "k" ? "kanji" : "vocab", active.hit!.id).slice(1); setActive(null); }}>
-              Дэлгэрэнгүй →
+            {active.hit.kind !== "g" && (
+              <Button size="sm" variant={added ? "soft" : "primary"} onClick={() => actions.grade(active.hit!.id, 2, { isNew: !added })}>
+                {added ? tr.xrayInSrs : tr.xrayAddSrs}
+              </Button>
+            )}
+            <Button size="sm" variant="outline" onClick={() => { window.location.hash = href(active.hit!.kind === "k" ? "kanji" : active.hit!.kind === "g" ? "grammar" : "vocab", active.hit!.id).slice(1); setActive(null); }}>
+              {tr.xrayDetail}
             </Button>
           </div>
 
           {active.hit.kind === "k" && (
-            <p className="mt-2.5 border-t border-sumi-900/8 pt-2 text-[11px] text-sumi-400">
-              Ханз · KanjiVG-ээр бичих дасгал хийх боломжтой
-            </p>
+            <p className="mt-2.5 border-t border-sumi-900/8 pt-2 text-[11px] text-sumi-400">{tr.xrayKanjiNote}</p>
+          )}
+          {active.hit.kind === "g" && (
+            <p className="mt-2.5 border-t border-sumi-900/8 pt-2 text-[11px] text-sumi-400">{tr.xrayGrammarNote}</p>
           )}
         </div>
       )}

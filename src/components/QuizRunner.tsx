@@ -54,6 +54,8 @@ export function QuizRunner({
   const autoNextRef = useRef<number | undefined>(undefined);
 
   const q = questions[idx];
+  /** Зааврын хэл: тохиргоогоор япон, эс бөглө MN/EN-г дагана. Тайлбар (explain) үргэлж MN/EN. */
+  const qSub = doc.profile.jaPrompts ? (q.promptJa ?? q.promptSub) : q.promptSub;
   const total = questions.length;
 
   /* ── дуусгах ── */
@@ -237,7 +239,7 @@ export function QuizRunner({
             >
               <Furigana text={q.prompt} show={q.kind === "grammar" || doc.profile.furigana} />
             </p>
-            {q.promptSub && <p className="mt-1.5 text-[13px] font-bold text-sumi-500">{q.promptSub}</p>}
+            {qSub && <p className="mt-1.5 text-[13px] font-bold text-sumi-500">{qSub}</p>}
           </div>
           {q.audio && (
             <Button size="sm" variant="ghost" onClick={() => speak(q.audio!, Math.max(0.6, doc.profile.rate - 0.25))}>{t.slowBtn}</Button>
@@ -439,7 +441,9 @@ export function ResultView({
                     <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-shu-50 text-[12px] text-shu-600">✕</span>
                     <div className="min-w-0 flex-1">
                       <p className="font-jp text-[15px] font-bold text-sumi-900"><Furigana text={q.prompt} /></p>
-                      {q.promptSub && <p className="text-[12px] text-sumi-500">{q.promptSub}</p>}
+                      {(doc.profile.jaPrompts ? (q.promptJa ?? q.promptSub) : q.promptSub) && (
+                        <p className="text-[12px] text-sumi-500">{doc.profile.jaPrompts ? (q.promptJa ?? q.promptSub) : q.promptSub}</p>
+                      )}
                       <p className="mt-1 text-[12.5px] text-sumi-600">
                         {t.correctLabel} <span className="font-bold text-matcha-600"><Furigana text={q.options[q.answer] ?? "—"} /></span>
                         {answers[i] !== null && <> · {t.yourAnswerLabel} <span className="font-bold text-shu-600"><Furigana text={q.options[answers[i] as number] ?? "—"} /></span></>}
