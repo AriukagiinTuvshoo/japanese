@@ -112,7 +112,7 @@ try {
 
   await page.goto(`${origin}/#/vocab/d9c88143a2`);
   await page.getByRole("heading",{name:"シャワー",exact:true}).waitFor();
-  await page.getByRole("button",{name:t.examplesTab,exact:true}).click();
+  await page.getByRole("button",{name:t.examplesTab}).click();
   if (language === "mn") await page.getByText("Шүршүүрт оръё.",{exact:true}).waitFor();
   await page.getByText(t.exampleMnNeedsReview,{exact:true}).waitFor();
   console.log(`${language}: example translation review status is visible`);
