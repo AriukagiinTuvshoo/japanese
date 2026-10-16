@@ -237,6 +237,11 @@ try {
 
 // --- Report -------------------------------------------------------------------------
 console.log(`vocab ${allVocab.length} (curated ${curatedVocab.length}, draft ${draftVocab.length}), kanji ${allKanji.length} (draft ${draftKanji.length}), grammar ${grammarCount}`);
+const vocabExamples = allVocab.flatMap((v) => Array.isArray(v.ex) ? v.ex : []);
+const grammarExamples = allGrammar.flatMap((g) => Array.isArray(g.ex) ? g.ex : []);
+const translatedVocabExamples = vocabExamples.filter((e) => typeof e.mn === "string" && e.mn.trim()).length;
+const translatedGrammarExamples = grammarExamples.filter((e) => typeof e.mn === "string" && e.mn.trim()).length;
+console.log(`Монгол жишээ орчуулга: үгийн сан ${translatedVocabExamples}/${vocabExamples.length}, дүрэм ${translatedGrammarExamples}/${grammarExamples.length}`);
 for (const w of warnings.slice(0, 30)) console.log("  WARN ", w);
 if (warnings.length > 30) console.log(`  ... өөр ${warnings.length - 30} анхааруулга`);
 for (const e of errors.slice(0, 50)) console.log("  ERROR", e);
