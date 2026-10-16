@@ -1,0 +1,6 @@
+
+> nihongo-dojo@3.0.0 typecheck
+> tsc -b --noEmit
+
+
+EXIT=0

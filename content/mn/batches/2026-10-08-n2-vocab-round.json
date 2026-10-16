@@ -1,0 +1,1033 @@
+{
+  "provenance": {
+    "id": "mn-n2-vocab-round-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit topics cross-checked individually against retained Japanese headwords/readings and English glosses, including alternate dictionary readings. Independently unreviewed.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n2.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j2410710": {
+      "mn": [
+        "усанд орох",
+        "хүндлэл хүртэх"
+      ],
+      "topics": [
+        "actions",
+        "body"
+      ],
+      "expected": {
+        "w": "浴す",
+        "r": "よくす",
+        "en": [
+          "to bathe",
+          "to receive (an honor, etc.)"
+        ]
+      }
+    },
+    "j1524490": {
+      "mn": [
+        "хучих",
+        "булшлах",
+        "усанд далд оруулах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "埋める",
+        "r": "うずめる",
+        "en": [
+          "to cover",
+          "to bury (e.g. one's face in hands)",
+          "to submerge"
+        ]
+      }
+    },
+    "j2476580": {
+      "mn": [
+        "хальслах",
+        "арьсыг хуулах",
+        "нимгэлэн хальслах"
+      ],
+      "topics": [
+        "actions",
+        "food"
+      ],
+      "expected": {
+        "w": "皮をむく",
+        "r": "かわをむく",
+        "en": [
+          "to peel",
+          "to skin",
+          "to pare"
+        ]
+      }
+    },
+    "j2255500": {
+      "mn": [
+        "усанд орох",
+        "хүндлэл хүртэх"
+      ],
+      "topics": [
+        "actions",
+        "body"
+      ],
+      "expected": {
+        "w": "浴する",
+        "r": "よくする",
+        "en": [
+          "to bathe",
+          "to receive (an honor, etc.)"
+        ]
+      }
+    },
+    "j1390850": {
+      "mn": [
+        "гүехэн газар",
+        "гүехэн ус",
+        "элсэн хөмөг"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "浅瀬",
+        "r": "あさせ",
+        "en": [
+          "shoal",
+          "shallows",
+          "sand bar"
+        ]
+      }
+    },
+    "j1598620": {
+      "mn": [
+        "эрхэм",
+        "үнэ цэнтэй",
+        "үнэлж баршгүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "尊い",
+        "r": "とうとい",
+        "en": [
+          "precious",
+          "valuable",
+          "priceless"
+        ]
+      }
+    },
+    "j1612770": {
+      "mn": [
+        "баяр хүргэх",
+        "баяр хүргэлт",
+        "баяр ёслол"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "お祝",
+        "r": "おいわい",
+        "en": [
+          "congratulation",
+          "congratulations",
+          "celebration"
+        ]
+      }
+    },
+    "j2709280": {
+      "mn": [
+        "жүдо",
+        "жүжүцү"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "柔ら",
+        "r": "やわら",
+        "en": [
+          "judo",
+          "jujutsu"
+        ]
+      }
+    },
+    "j1178740": {
+      "mn": [
+        "шиокара хэмээх давсалж исгэсэн далайн бүтээгдэхүүн"
+      ],
+      "topics": [
+        "food"
+      ],
+      "expected": {
+        "w": "塩辛",
+        "r": "しおから",
+        "en": [
+          "shiokara"
+        ]
+      }
+    },
+    "j1460730": {
+      "mn": [
+        "зөөлөн",
+        "булбарай",
+        "сул унжсан"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "柔らか",
+        "r": "やわらか",
+        "en": [
+          "soft",
+          "tender",
+          "limp"
+        ]
+      }
+    },
+    "j2540650": {
+      "mn": [
+        "ур чадвартай",
+        "чадварлаг"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "腕のいい",
+        "r": "うでのいい",
+        "en": [
+          "skillful",
+          "skilful"
+        ]
+      }
+    },
+    "j1213420": {
+      "mn": [
+        "бие дааж чаддаггүй байдал",
+        "бусдад найдах"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "甘え",
+        "r": "あまえ",
+        "en": [
+          "lack of self-reliance",
+          "depending on others"
+        ]
+      }
+    },
+    "j2600730": {
+      "mn": [
+        "живүүлэх",
+        "усанд оруулах",
+        "живүүлэгч туухай"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "沈め",
+        "r": "しずめ",
+        "en": [
+          "sinking",
+          "submerging",
+          "sinker"
+        ]
+      }
+    },
+    "j2598480": {
+      "mn": [
+        "ялдам дуу буюу үнэр"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "甘やか",
+        "r": "あまやか",
+        "en": [
+          "sweet (voice, fragrance, etc.)"
+        ]
+      }
+    },
+    "j1209620": {
+      "mn": [
+        "хатаах",
+        "хатаасан"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "干し",
+        "r": "ほし",
+        "en": [
+          "drying",
+          "dried"
+        ]
+      }
+    },
+    "j1002510": {
+      "mn": [
+        "халуун ус",
+        "халуун усан ванн"
+      ],
+      "topics": [
+        "body",
+        "daily"
+      ],
+      "expected": {
+        "w": "お湯",
+        "r": "おゆ",
+        "en": [
+          "hot water",
+          "hot bath"
+        ]
+      }
+    },
+    "j2265610": {
+      "mn": [
+        "бүрэлт",
+        "лакан өнгөлгөө"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "塗り",
+        "r": "ぬり",
+        "en": [
+          "coating (esp. lacquering)"
+        ]
+      }
+    },
+    "j1565230": {
+      "mn": [
+        "сүү ялгаруулах",
+        "хөхүүлэх",
+        "хөхтөн амьтан"
+      ],
+      "topics": [
+        "body",
+        "nature"
+      ],
+      "expected": {
+        "w": "哺乳",
+        "r": "ほにゅう",
+        "en": [
+          "lactation",
+          "suckling",
+          "mammal"
+        ]
+      }
+    },
+    "j1545780": {
+      "mn": [
+        "шүдний чигчлүүр",
+        "вагаши идэх савх"
+      ],
+      "topics": [
+        "food",
+        "daily"
+      ],
+      "expected": {
+        "w": "楊枝",
+        "r": "ようじ",
+        "en": [
+          "toothpick",
+          "skewer for eating moist wagashi (steel, bamboo, etc.)"
+        ]
+      }
+    },
+    "j2827321": {
+      "mn": [
+        "түүж авах",
+        "юм түүдэг хүн",
+        "хэвлэлийн үсэг сонгох"
+      ],
+      "topics": [
+        "actions",
+        "people"
+      ],
+      "expected": {
+        "w": "拾い",
+        "r": "ひろい",
+        "en": [
+          "picking up",
+          "someone who picks up things",
+          "type picking (letterpress printing)"
+        ]
+      }
+    },
+    "j1476290": {
+      "mn": [
+        "улаан буудайн гурил"
+      ],
+      "topics": [
+        "food"
+      ],
+      "expected": {
+        "w": "麦粉",
+        "r": "むぎこ",
+        "en": [
+          "wheat flour"
+        ]
+      }
+    },
+    "j1808640": {
+      "mn": [
+        "гурвалжин будааны гурил"
+      ],
+      "topics": [
+        "food"
+      ],
+      "expected": {
+        "w": "そば粉",
+        "r": "そばこ",
+        "en": [
+          "buckwheat flour"
+        ]
+      }
+    },
+    "j1346310": {
+      "mn": [
+        "зарлан дуудах",
+        "дуудлага"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "召し",
+        "r": "めし",
+        "en": [
+          "summons",
+          "call"
+        ]
+      }
+    },
+    "j2009300": {
+      "mn": [
+        "мохоо",
+        "хурц бус",
+        "залхуу"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "鈍ら",
+        "r": "なまくら",
+        "en": [
+          "blunt (e.g. sword)",
+          "dull",
+          "lazy"
+        ]
+      }
+    },
+    "j2838553": {
+      "mn": [
+        "ухаан муутай",
+        "мунхаг",
+        "тэнэг"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "鈍い",
+        "r": "のろい",
+        "en": [
+          "thickheaded",
+          "obtuse",
+          "stupid"
+        ]
+      }
+    },
+    "j2096480": {
+      "mn": [
+        "хийхэд хэцүү",
+        "хийхэд бэрх"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "辛い",
+        "r": "づらい",
+        "en": [
+          "difficult to ...",
+          "hard to ..."
+        ]
+      }
+    },
+    "j1641550": {
+      "mn": [
+        "өнгөлгөө",
+        "сайжруулалт",
+        "гялалзуулан өнгөлөх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "磨き",
+        "r": "みがき",
+        "en": [
+          "polish",
+          "improvement",
+          "burnishing"
+        ]
+      }
+    },
+    "j2795520": {
+      "mn": [
+        "шаварт бүрхэгдсэн",
+        "шавар болсон"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "泥だらけ",
+        "r": "どろだらけ",
+        "en": [
+          "covered in mud",
+          "mud-caked"
+        ]
+      }
+    },
+    "j1643090": {
+      "mn": [
+        "жигшмээр байдал",
+        "үзэн ядалт"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "憎さ",
+        "r": "にくさ",
+        "en": [
+          "hatefulness",
+          "hatred"
+        ]
+      }
+    },
+    "j1859890": {
+      "mn": [
+        "дуудлага",
+        "айлчлал",
+        "лавлагаа"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "伺い",
+        "r": "うかがい",
+        "en": [
+          "call",
+          "visit",
+          "inquiry"
+        ]
+      }
+    },
+    "j2780110": {
+      "mn": [
+        "дуудлага",
+        "айлчлал",
+        "лавлагаа"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "お伺",
+        "r": "おうかがい",
+        "en": [
+          "call",
+          "visit",
+          "inquiry"
+        ]
+      }
+    },
+    "j1504040": {
+      "mn": [
+        "намаас салж гарах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "分党",
+        "r": "ぶんとう",
+        "en": [
+          "secession from a party"
+        ]
+      }
+    },
+    "j1503430": {
+      "mn": [
+        "дэд дүүрэг"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "分区",
+        "r": "ぶんく",
+        "en": [
+          "subdistrict"
+        ]
+      }
+    },
+    "j1634140": {
+      "mn": [
+        "нутаг",
+        "эзэмшил",
+        "захиргааны хүрээ"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "領分",
+        "r": "りょうぶん",
+        "en": [
+          "territory",
+          "domain",
+          "dominion"
+        ]
+      }
+    },
+    "j1549730": {
+      "mn": [
+        "түшмэдийн нам"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "吏党",
+        "r": "りとう",
+        "en": [
+          "party of officials"
+        ]
+      }
+    },
+    "j1503980": {
+      "mn": [
+        "байгууллагын салбар",
+        "орон нутгийн нэгж"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "分団",
+        "r": "ぶんだん",
+        "en": [
+          "branch (of a larger organization)",
+          "local chapter"
+        ]
+      }
+    },
+    "j1254960": {
+      "mn": [
+        "нам байгуулах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "結党",
+        "r": "けっとう",
+        "en": [
+          "formation of a party"
+        ]
+      }
+    },
+    "j1503120": {
+      "mn": [
+        "харуулын салбар",
+        "тусдаа байрласан цэргийн анги"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "分営",
+        "r": "ぶんえい",
+        "en": [
+          "outpost",
+          "detached garrison"
+        ]
+      }
+    },
+    "j1232600": {
+      "mn": [
+        "бүх нам",
+        "нам бүхэлдээ"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "挙党",
+        "r": "きょとう",
+        "en": [
+          "whole party",
+          "party as a whole"
+        ]
+      }
+    },
+    "j1244240": {
+      "mn": [
+        "хуваалт",
+        "хэсэг",
+        "зааглал"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "区分け",
+        "r": "くわけ",
+        "en": [
+          "division",
+          "section",
+          "demarcation"
+        ]
+      }
+    },
+    "j1654270": {
+      "mn": [
+        "намын хүч"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "党勢",
+        "r": "とうせい",
+        "en": [
+          "strength of a party"
+        ]
+      }
+    },
+    "j1391860": {
+      "mn": [
+        "хэрчим"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "線分",
+        "r": "せんぶん",
+        "en": [
+          "line segment"
+        ]
+      }
+    },
+    "j2830013": {
+      "mn": [
+        "хэсэгчлэн тодорхойлсон"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "区分的",
+        "r": "くぶんてき",
+        "en": [
+          "piecewise"
+        ]
+      }
+    },
+    "j2196630": {
+      "mn": [
+        "Нацист нам"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "ナチ党",
+        "r": "ナチとう",
+        "en": [
+          "Nazi Party (National Socialist German Workers' Party)"
+        ]
+      }
+    },
+    "j1503190": {
+      "mn": [
+        "дэд хэсэг",
+        "тасаг",
+        "салбар"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "分課",
+        "r": "ぶんか",
+        "en": [
+          "subdivision",
+          "section",
+          "branch"
+        ]
+      }
+    },
+    "j1503410": {
+      "mn": [
+        "гэрэл радио долгионы туйлшрал"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "分極",
+        "r": "ぶんきょく",
+        "en": [
+          "polarization (light, radio waves)",
+          "polarisation"
+        ]
+      }
+    },
+    "j1503810": {
+      "mn": [
+        "минутын зүү"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "分針",
+        "r": "ふんしん",
+        "en": [
+          "minute hand"
+        ]
+      }
+    },
+    "j1295720": {
+      "mn": [
+        "жижиг хэсгүүдэд хуваах"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "細分",
+        "r": "さいぶん",
+        "en": [
+          "subdivision (into small parts)"
+        ]
+      }
+    },
+    "j1827680": {
+      "mn": [
+        "улс төрийн намдаа дахин элсэх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "復党",
+        "r": "ふくとう",
+        "en": [
+          "rejoining a political party"
+        ]
+      }
+    },
+    "j1503700": {
+      "mn": [
+        "давтамж хуваах"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "分周",
+        "r": "ぶんしゅう",
+        "en": [
+          "division"
+        ]
+      }
+    },
+    "j2835136": {
+      "mn": [
+        "овгоо өөрчлөх"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "改氏",
+        "r": "かいし",
+        "en": [
+          "change of one's surname"
+        ]
+      }
+    },
+    "j2843208": {
+      "mn": [
+        "улс төрийн намын түүх"
+      ],
+      "topics": [
+        "society",
+        "time"
+      ],
+      "expected": {
+        "w": "党史",
+        "r": "とうし",
+        "en": [
+          "history of a (political) party"
+        ]
+      }
+    },
+    "j2847415": {
+      "mn": [
+        "намын ерөнхийлөгч",
+        "намын удирдагч"
+      ],
+      "topics": [
+        "society",
+        "people"
+      ],
+      "expected": {
+        "w": "党総裁",
+        "r": "とうそうさい",
+        "en": [
+          "president of the party",
+          "party leader"
+        ]
+      }
+    },
+    "j2057190": {
+      "mn": [
+        "нам бус хүмүүс"
+      ],
+      "topics": [
+        "society",
+        "people"
+      ],
+      "expected": {
+        "w": "無党派",
+        "r": "むとうは",
+        "en": [
+          "political independents"
+        ]
+      }
+    },
+    "j2213300": {
+      "mn": [
+        "Баас нам"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "バース党",
+        "r": "バースとう",
+        "en": [
+          "Baath Party",
+          "Ba'ath Party"
+        ]
+      }
+    },
+    "j2453350": {
+      "mn": [
+        "Египетийн Вафд нам"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "ワフド党",
+        "r": "ワフドとう",
+        "en": [
+          "Wafd Party (Egypt)"
+        ]
+      }
+    },
+    "j1438000": {
+      "mn": [
+        "төмрийн агууламж"
+      ],
+      "topics": [
+        "body",
+        "quantity"
+      ],
+      "expected": {
+        "w": "鉄分",
+        "r": "てつぶん",
+        "en": [
+          "iron (content)"
+        ]
+      }
+    },
+    "j1644490": {
+      "mn": [
+        "улс төрийн намаас гарах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "離党",
+        "r": "りとう",
+        "en": [
+          "secession from a political party"
+        ]
+      }
+    },
+    "j1561260": {
+      "mn": [
+        "вассалууд",
+        "албат",
+        "дагалдагчид"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "郎党",
+        "r": "ろうどう",
+        "en": [
+          "vassals",
+          "retainers",
+          "followers"
+        ]
+      }
+    },
+    "j2093300": {
+      "mn": [
+        "тосны агууламж"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "油分",
+        "r": "ゆぶん",
+        "en": [
+          "oil content"
+        ]
+      }
+    }
+  }
+}

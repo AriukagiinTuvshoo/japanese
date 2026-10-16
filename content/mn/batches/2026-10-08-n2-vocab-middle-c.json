@@ -1,0 +1,993 @@
+{
+  "provenance": {
+    "id": "mn-n2-vocab-middle-c-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit topics cross-checked individually against retained Japanese headwords/readings and English glosses, including alternate dictionary readings. Independently unreviewed.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n2.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j1248500": {
+      "mn": [
+        "армийн командлагч"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "軍将",
+        "r": "ぐんしょう",
+        "en": [
+          "army commander"
+        ]
+      }
+    },
+    "j1347680": {
+      "mn": [
+        "жанжин",
+        "шогүн"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "将軍",
+        "r": "しょうぐん",
+        "en": [
+          "general",
+          "shogun"
+        ]
+      }
+    },
+    "j2276320": {
+      "mn": [
+        "дүрслэл",
+        "дүрс үүсэх"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "結像",
+        "r": "けつぞう",
+        "en": [
+          "imaging",
+          "image formation"
+        ]
+      }
+    },
+    "j1496920": {
+      "mn": [
+        "Осака буюу Киотогийн мужийн захиргаа"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "府庁",
+        "r": "ふちょう",
+        "en": [
+          "prefectural office (of Osaka or Kyoto)"
+        ]
+      }
+    },
+    "j1764370": {
+      "mn": [
+        "хот",
+        "хотын хэрэм"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "城府",
+        "r": "じょうふ",
+        "en": [
+          "town",
+          "town walls"
+        ]
+      }
+    },
+    "j1280940": {
+      "mn": [
+        "ерөнхий төлөвлөгөө",
+        "гол зүйлс",
+        "хураангуй"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "綱領",
+        "r": "こうりょう",
+        "en": [
+          "general plan",
+          "main points",
+          "summary"
+        ]
+      }
+    },
+    "j1623660": {
+      "mn": [
+        "тойрон суух",
+        "гэр бүлийн халуун дулаан цугларалт",
+        "эв зохицол"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "団らん",
+        "r": "だんらん",
+        "en": [
+          "sitting together in a circle",
+          "happy circle",
+          "harmony"
+        ]
+      }
+    },
+    "j1200890": {
+      "mn": [
+        "нэр өөрчлөх",
+        "дахин нэрлэх"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "改称",
+        "r": "かいしょう",
+        "en": [
+          "renaming",
+          "retitling"
+        ]
+      }
+    },
+    "j1293680": {
+      "mn": [
+        "адвентистууд"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "再臨派",
+        "r": "さいりんは",
+        "en": [
+          "Adventists"
+        ]
+      }
+    },
+    "j1248680": {
+      "mn": [
+        "цэргийн тоног хэрэгсэл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "軍装",
+        "r": "ぐんそう",
+        "en": [
+          "soldier's equipment"
+        ]
+      }
+    },
+    "j1293200": {
+      "mn": [
+        "дахин санал гаргах"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "再提案",
+        "r": "さいていあん",
+        "en": [
+          "proposing again"
+        ]
+      }
+    },
+    "j1200870": {
+      "mn": [
+        "шашнаа өөрчлөх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "改宗",
+        "r": "かいしゅう",
+        "en": [
+          "religious conversion"
+        ]
+      }
+    },
+    "j2832878": {
+      "mn": [
+        "батлан хамгаалах хүчин",
+        "хамгаалах корпус"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "防衛軍",
+        "r": "ぼうえいぐん",
+        "en": [
+          "defence forces",
+          "defence corps"
+        ]
+      }
+    },
+    "j2368620": {
+      "mn": [
+        "үйлдвэрлэлийн байгууламж"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "製造施設",
+        "r": "せいぞうしせつ",
+        "en": [
+          "manufacturing facility"
+        ]
+      }
+    },
+    "j1810960": {
+      "mn": [
+        "загас агнуурын газар",
+        "загасны аж ахуй"
+      ],
+      "topics": [
+        "nature",
+        "work"
+      ],
+      "expected": {
+        "w": "漁区",
+        "r": "ぎょく",
+        "en": [
+          "fishing ground",
+          "fishery"
+        ]
+      }
+    },
+    "j1450300": {
+      "mn": [
+        "судалгаа",
+        "хайгуул",
+        "газар дээрх шинжилгээ"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "踏査",
+        "r": "とうさ",
+        "en": [
+          "survey",
+          "exploration",
+          "field investigation"
+        ]
+      }
+    },
+    "j1524820": {
+      "mn": [
+        "бакүфү",
+        "шогүний засгийн газар"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "幕府",
+        "r": "ばくふ",
+        "en": [
+          "bakufu",
+          "shogunate"
+        ]
+      }
+    },
+    "j1590325": {
+      "mn": [
+        "түр",
+        "урьдчилсан",
+        "түр хугацаанд хийх"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "仮設",
+        "r": "かせつ",
+        "en": [
+          "temporary",
+          "provisional",
+          "to do something provisionally"
+        ]
+      }
+    },
+    "j2828429": {
+      "mn": [
+        "хөрш муж",
+        "залгаа муж"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "隣県",
+        "r": "りんけん",
+        "en": [
+          "neighboring prefecture",
+          "adjacent prefecture"
+        ]
+      }
+    },
+    "j1454640": {
+      "mn": [
+        "Токүшима муж"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "徳島県",
+        "r": "とくしまけん",
+        "en": [
+          "Tokushima prefecture (Shikoku)"
+        ]
+      }
+    },
+    "j1594540": {
+      "mn": [
+        "арлууд"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "島々",
+        "r": "しまじま",
+        "en": [
+          "islands"
+        ]
+      }
+    },
+    "j1744710": {
+      "mn": [
+        "олон өнгөөр цэцэглэх"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "咲き分け",
+        "r": "さきわけ",
+        "en": [
+          "variegated flowering"
+        ]
+      }
+    },
+    "j2143480": {
+      "mn": [
+        "хамгаалалтын хавтан"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "保護板",
+        "r": "ほごばん",
+        "en": [
+          "protective plate"
+        ]
+      }
+    },
+    "j1905890": {
+      "mn": [
+        "төрийн сан"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "府庫",
+        "r": "ふこ",
+        "en": [
+          "treasury"
+        ]
+      }
+    },
+    "j2411910": {
+      "mn": [
+        "асрамжийн газар",
+        "ахмадын амрах байр"
+      ],
+      "topics": [
+        "body",
+        "places"
+      ],
+      "expected": {
+        "w": "介護施設",
+        "r": "かいごしせつ",
+        "en": [
+          "nursing home",
+          "rest home"
+        ]
+      }
+    },
+    "j1168420": {
+      "mn": [
+        "импрессионистууд"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "印象派",
+        "r": "いんしょうは",
+        "en": [
+          "Impressionists"
+        ]
+      }
+    },
+    "j2285800": {
+      "mn": [
+        "цуурайн бүс",
+        "цуурай эзлэх орон зай"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "エコー領域",
+        "r": "エコーりょういき",
+        "en": [
+          "echo area",
+          "echo volume"
+        ]
+      }
+    },
+    "j2294890": {
+      "mn": [
+        "графикийн талбар"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "グラフ領域",
+        "r": "グラフりょういき",
+        "en": [
+          "graph area"
+        ]
+      }
+    },
+    "j2320890": {
+      "mn": [
+        "хип санах ойн талбар"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "ヒープ領域",
+        "r": "ヒープりょういき",
+        "en": [
+          "heap area"
+        ]
+      }
+    },
+    "j2334500": {
+      "mn": [
+        "санах ойн орон зай"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "メモリ領域",
+        "r": "メモリりょういき",
+        "en": [
+          "memory space"
+        ]
+      }
+    },
+    "j1201130": {
+      "mn": [
+        "дахин орчуулга",
+        "шинэ орчуулга",
+        "зассан орчуулга"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "改訳",
+        "r": "かいやく",
+        "en": [
+          "retranslation",
+          "new translation",
+          "revised translation"
+        ]
+      }
+    },
+    "j1506610": {
+      "mn": [
+        "армийн корпус"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "兵団",
+        "r": "へいだん",
+        "en": [
+          "army corps"
+        ]
+      }
+    },
+    "j1222860": {
+      "mn": [
+        "улирлын шинжтэй"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "季節的",
+        "r": "きせつてき",
+        "en": [
+          "seasonal"
+        ]
+      }
+    },
+    "j1506400": {
+      "mn": [
+        "Хёого муж"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "兵庫県",
+        "r": "ひょうごけん",
+        "en": [
+          "Hyogo prefecture (Kinki area) (Hyougo)"
+        ]
+      }
+    },
+    "j2371310": {
+      "mn": [
+        "багцын толгой баримт"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "総括票",
+        "r": "そうかつひょう",
+        "en": [
+          "batch-header document"
+        ]
+      }
+    },
+    "j1220440": {
+      "mn": [
+        "байгуулагдсан",
+        "одоо байгаа"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "既設",
+        "r": "きせつ",
+        "en": [
+          "established",
+          "existing"
+        ]
+      }
+    },
+    "j2352930": {
+      "mn": [
+        "шалгах түлхүүр"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "検査キー",
+        "r": "けんさキー",
+        "en": [
+          "check key"
+        ]
+      }
+    },
+    "j1359930": {
+      "mn": [
+        "түрэмгий"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "侵略的",
+        "r": "しんりゃくてき",
+        "en": [
+          "aggressive"
+        ]
+      }
+    },
+    "j1551020": {
+      "mn": [
+        "хуурай замын цэрэг"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "陸軍",
+        "r": "りくぐん",
+        "en": [
+          "army"
+        ]
+      }
+    },
+    "j2848834": {
+      "mn": [
+        "нэг өвөгтэй бүлэг",
+        "овог"
+      ],
+      "topics": [
+        "learning",
+        "nature"
+      ],
+      "expected": {
+        "w": "系統群",
+        "r": "けいとうぐん",
+        "en": [
+          "clade",
+          "family"
+        ]
+      }
+    },
+    "j1179860": {
+      "mn": [
+        "дэмжигчдийн баг",
+        "хөгжөөн дэмжих баг"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "応援団",
+        "r": "おうえんだん",
+        "en": [
+          "cheering group",
+          "cheering squad"
+        ]
+      }
+    },
+    "j1781230": {
+      "mn": [
+        "албадсан",
+        "дээрэнгүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "威圧的",
+        "r": "いあつてき",
+        "en": [
+          "coercive",
+          "overbearing"
+        ]
+      }
+    },
+    "j2844135": {
+      "mn": [
+        "хоёр дахь давалгаа"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "第２波",
+        "r": "だいには",
+        "en": [
+          "second wave"
+        ]
+      }
+    },
+    "j2847690": {
+      "mn": [
+        "гурав дахь давалгаа"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "第３波",
+        "r": "だいさんぱ",
+        "en": [
+          "third wave"
+        ]
+      }
+    },
+    "j1263140": {
+      "mn": [
+        "үнэ бууруулах",
+        "элэгдэл",
+        "бууралт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "減価",
+        "r": "げんか",
+        "en": [
+          "price reduction",
+          "depreciation",
+          "abatement"
+        ]
+      }
+    },
+    "j1426200": {
+      "mn": [
+        "хийсвэр"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "抽象的",
+        "r": "ちゅうしょうてき",
+        "en": [
+          "abstract"
+        ]
+      }
+    },
+    "j1667210": {
+      "mn": [
+        "цэргийн оршуулга"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "軍葬",
+        "r": "ぐんそう",
+        "en": [
+          "military funeral"
+        ]
+      }
+    },
+    "j1821920": {
+      "mn": [
+        "эмх замбараагүй тулалдаан"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "乱軍",
+        "r": "らんぐん",
+        "en": [
+          "melee"
+        ]
+      }
+    },
+    "j1437680": {
+      "mn": [
+        "нарийн нягт",
+        "бүрэн",
+        "бүхэл"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "徹底的",
+        "r": "てっていてき",
+        "en": [
+          "thorough",
+          "exhaustive",
+          "complete"
+        ]
+      }
+    },
+    "j1618300": {
+      "mn": [
+        "кабель газар доор тавих",
+        "хоолой булах"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "埋設",
+        "r": "まいせつ",
+        "en": [
+          "laying underground (e.g. cables)",
+          "burying (e.g. pipe)"
+        ]
+      }
+    },
+    "j2395830": {
+      "mn": [
+        "сейф",
+        "үнэт зүйл хадгалах өрөө",
+        "хадгалах шүүгээ"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "保管庫",
+        "r": "ほかんこ",
+        "en": [
+          "safe",
+          "vault",
+          "storage cabinet"
+        ]
+      }
+    },
+    "j2446340": {
+      "mn": [
+        "утасны үзүүрийн зангилаа"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "玉結び",
+        "r": "たまむすび",
+        "en": [
+          "thread knot (end of the thread tied up to a knot)"
+        ]
+      }
+    },
+    "j2092670": {
+      "mn": [
+        "тосгод"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "村々",
+        "r": "むらむら",
+        "en": [
+          "villages"
+        ]
+      }
+    },
+    "j2725850": {
+      "mn": [
+        "когерент",
+        "хөндлөн нөлөөлөх",
+        "хөндлөнгөөс оролцдог"
+      ],
+      "topics": [
+        "technology",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "干渉的",
+        "r": "かんしょうてき",
+        "en": [
+          "coherent",
+          "interfering",
+          "meddlesome"
+        ]
+      }
+    },
+    "j1742810": {
+      "mn": [
+        "нунтаг материалыг халааж барьцалдуулах"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "焼結",
+        "r": "しょうけつ",
+        "en": [
+          "sintering"
+        ]
+      }
+    },
+    "j1799150": {
+      "mn": [
+        "чимэглэлийн"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "装飾的",
+        "r": "そうしょくてき",
+        "en": [
+          "decorative"
+        ]
+      }
+    },
+    "j1248700": {
+      "mn": [
+        "цэрэг"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "軍卒",
+        "r": "ぐんそつ",
+        "en": [
+          "soldier"
+        ]
+      }
+    },
+    "j1249160": {
+      "mn": [
+        "стратеги",
+        "тактик"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "軍略",
+        "r": "ぐんりゃく",
+        "en": [
+          "strategy",
+          "tactics"
+        ]
+      }
+    },
+    "j1961920": {
+      "mn": [
+        "Энэтхэгийн хааны төлөөлөгч"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "インド総督",
+        "r": "インドそうとく",
+        "en": [
+          "Viceroy of India"
+        ]
+      }
+    },
+    "j2737700": {
+      "mn": [
+        "дөрвөлжин зангилаа",
+        "хавтгай зангилаа"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "固結び",
+        "r": "かたむすび",
+        "en": [
+          "reef knot",
+          "flat knot",
+          "square knot"
+        ]
+      }
+    }
+  }
+}

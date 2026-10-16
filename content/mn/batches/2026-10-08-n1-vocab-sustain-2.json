@@ -1,0 +1,1049 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-sustain-2-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses cross-checked against exact Japanese spelling, reading and retained English; explicit semantic topic assignments. Independent human review outstanding; suspect sources withheld.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "9c552d88c0": {
+      "mn": [
+        "тиймээс",
+        "иймд",
+        "үүний дагуу"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "よって",
+        "r": "よって",
+        "en": [
+          "therefore",
+          "consequently",
+          "accordingly"
+        ]
+      }
+    },
+    "fc653283bc": {
+      "mn": [
+        "маш",
+        "ихээхэн",
+        "нэлээд"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "よっぽど",
+        "r": "よっぽど",
+        "en": [
+          "very",
+          "greatly",
+          "much"
+        ]
+      }
+    },
+    "8307cffb68": {
+      "mn": [
+        "эрх баригч нам",
+        "засгийн газрын нам"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "与党",
+        "r": "よとう",
+        "en": [
+          "government party",
+          "(ruling) party in power",
+          "government"
+        ]
+      }
+    },
+    "e22d9858a2": {
+      "mn": [
+        "дуудаж зогсоох",
+        "зогсохыг шаардах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "呼び止める",
+        "r": "よびとめる",
+        "en": [
+          "to challenge",
+          "to call somebody to halt"
+        ]
+      }
+    },
+    "52b17bca55": {
+      "mn": [
+        "орой болтол унтахгүй байх",
+        "шөнө суух"
+      ],
+      "topics": [
+        "daily",
+        "time"
+      ],
+      "expected": {
+        "w": "夜更かし",
+        "r": "よふかし",
+        "en": [
+          "staying up late",
+          "keeping late hours",
+          "sitting up late at night"
+        ]
+      }
+    },
+    "601e4974f7": {
+      "mn": [
+        "шөнийн орой",
+        "шөнө дунд өнгөрсөн үе"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "夜更け",
+        "r": "よふけ",
+        "en": [
+          "late at night"
+        ]
+      }
+    },
+    "8d99b1a5b4": {
+      "mn": [
+        "тод чангаар унших",
+        "нэрс дуудах"
+      ],
+      "topics": [
+        "learning",
+        "actions"
+      ],
+      "expected": {
+        "w": "読み上げる",
+        "r": "よみあげる",
+        "en": [
+          "to read out loud (and clearly)",
+          "to call a roll"
+        ]
+      }
+    },
+    "fe91926aad": {
+      "mn": [
+        "налж түших",
+        "налан хэвтэх",
+        "тулж түшиглэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "寄り掛かる",
+        "r": "よりかかる",
+        "en": [
+          "to lean against",
+          "to recline on",
+          "to lean on"
+        ]
+      }
+    },
+    "16deaaa427": {
+      "mn": [
+        "намжих",
+        "сулрах",
+        "турах"
+      ],
+      "topics": [
+        "body",
+        "actions"
+      ],
+      "expected": {
+        "w": "弱まる",
+        "r": "よわまる",
+        "en": [
+          "to abate",
+          "to weaken",
+          "to be emaciated"
+        ]
+      }
+    },
+    "fd3790e0c9": {
+      "mn": [
+        "сулруулах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "弱める",
+        "r": "よわめる",
+        "en": [
+          "to weaken"
+        ]
+      }
+    },
+    "215bd62d34": {
+      "mn": [
+        "сулрах",
+        "зовох",
+        "сэтгэлээр унах"
+      ],
+      "topics": [
+        "body",
+        "feelings"
+      ],
+      "expected": {
+        "w": "弱る",
+        "r": "よわる",
+        "en": [
+          "to weaken",
+          "to be troubled",
+          "to be downcast"
+        ]
+      }
+    },
+    "c83e444029": {
+      "mn": [
+        "арга хэмжээнд ирэх",
+        "оролцох"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "来場",
+        "r": "らいじょう",
+        "en": [
+          "attendance"
+        ]
+      }
+    },
+    "8778116f3a": {
+      "mn": [
+        "будаа",
+        "агшаасан будаа"
+      ],
+      "topics": [
+        "food"
+      ],
+      "expected": {
+        "w": "ライス",
+        "r": "ライス",
+        "en": [
+          "rice"
+        ]
+      }
+    },
+    "aff35fe459": {
+      "mn": [
+        "сүүний аж ахуй"
+      ],
+      "topics": [
+        "work",
+        "food"
+      ],
+      "expected": {
+        "w": "酪農",
+        "r": "らくのう",
+        "en": [
+          "dairy (farm)"
+        ]
+      }
+    },
+    "ed1c4e0b8b": {
+      "mn": [
+        "унах",
+        "доош буух"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "落下",
+        "r": "らっか",
+        "en": [
+          "fall",
+          "drop",
+          "come down"
+        ]
+      }
+    },
+    "4e80000648": {
+      "mn": [
+        "өөдрөг үзэл"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "楽観",
+        "r": "らっかん",
+        "en": [
+          "optimism"
+        ]
+      }
+    },
+    "9471e53797": {
+      "mn": [
+        "шошго"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "ラベル",
+        "r": "ラベル",
+        "en": [
+          "label"
+        ]
+      }
+    },
+    "a6fba53840": {
+      "mn": [
+        "зүй бусаар ашиглах",
+        "буруу хэрэглэх",
+        "завших"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "濫用",
+        "r": "らんよう",
+        "en": [
+          "abuse",
+          "misuse",
+          "misappropriation"
+        ]
+      }
+    },
+    "7d5268e159": {
+      "mn": [
+        "онол",
+        "учир шалтгаан"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "理屈",
+        "r": "りくつ",
+        "en": [
+          "theory",
+          "reason"
+        ]
+      }
+    },
+    "f045f3fdfe": {
+      "mn": [
+        "оюуны чадвар",
+        "ухаан"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "利根",
+        "r": "りこん",
+        "en": [
+          "intelligence"
+        ]
+      }
+    },
+    "9ea667e1d8": {
+      "mn": [
+        "банкны хүү"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "利子",
+        "r": "りし",
+        "en": [
+          "interest (bank)"
+        ]
+      }
+    },
+    "5b1c5016f7": {
+      "mn": [
+        "ашиг",
+        "өгөөж"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "利潤",
+        "r": "りじゅん",
+        "en": [
+          "profit",
+          "returns"
+        ]
+      }
+    },
+    "f04b9925b7": {
+      "mn": [
+        "эрүүл ухаан",
+        "бодож тунгаах чадвар"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "理性",
+        "r": "りせい",
+        "en": [
+          "reason",
+          "sense"
+        ]
+      }
+    },
+    "105141ee39": {
+      "mn": [
+        "банкны хүү"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "利息",
+        "r": "りそく",
+        "en": [
+          "interest (bank)"
+        ]
+      }
+    },
+    "16f60442c8": {
+      "mn": [
+        "эзлэхүүнтэй биет",
+        "гурван хэмжээст биет"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "立体",
+        "r": "りったい",
+        "en": [
+          "solid body"
+        ]
+      }
+    },
+    "a46a045f8b": {
+      "mn": [
+        "хууль тогтоох",
+        "хууль боловсруулах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "立法",
+        "r": "りっぽう",
+        "en": [
+          "legislation",
+          "lawmaking"
+        ]
+      }
+    },
+    "93039ef052": {
+      "mn": [
+        "давуу тал",
+        "ашигтай тал"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "利点",
+        "r": "りてん",
+        "en": [
+          "advantage",
+          "point in favor"
+        ]
+      }
+    },
+    "09ead8c70e": {
+      "mn": [
+        "товчилсон үг",
+        "үгийн эхний үсгийн товчлол"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "略語",
+        "r": "りゃくご",
+        "en": [
+          "abbreviation",
+          "acronym"
+        ]
+      }
+    },
+    "1389b25f13": {
+      "mn": [
+        "дээрэм",
+        "тонолт",
+        "эд хөрөнгө тонох"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "略奪",
+        "r": "りゃくだつ",
+        "en": [
+          "pillage",
+          "plunder",
+          "looting"
+        ]
+      }
+    },
+    "27d78c0d94": {
+      "mn": [
+        "хэв маяг",
+        "арга",
+        "хийх байдал"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "流",
+        "r": "りゅう",
+        "en": [
+          "styleof",
+          "method of",
+          "manner of"
+        ]
+      }
+    },
+    "75af206529": {
+      "mn": [
+        "мөнгө барааны эргэлт",
+        "ус агаарын урсгал",
+        "түгээлт"
+      ],
+      "topics": [
+        "work",
+        "nature"
+      ],
+      "expected": {
+        "w": "流通",
+        "r": "りゅうつう",
+        "en": [
+          "circulation of money or goods",
+          "flow of water or air",
+          "distribution"
+        ]
+      }
+    },
+    "6325479166": {
+      "mn": [
+        "дуусах",
+        "гүйцээх",
+        "ойлгох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "了",
+        "r": "りょう",
+        "en": [
+          "finish",
+          "completion",
+          "understanding"
+        ]
+      }
+    },
+    "a434acf5bd": {
+      "mn": [
+        "материал",
+        "төлбөр",
+        "тариф"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "料",
+        "r": "りょう",
+        "en": [
+          "material",
+          "charge",
+          "rate"
+        ]
+      }
+    },
+    "3e37fcff5a": {
+      "mn": [
+        "хүрээ",
+        "салбар",
+        "нутаг дэвсгэр"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "領域",
+        "r": "りょういき",
+        "en": [
+          "area",
+          "domain",
+          "territory"
+        ]
+      }
+    },
+    "8c9facae6d": {
+      "mn": [
+        "ойлгох",
+        "зөвшөөрөх",
+        "ойлголцол"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "了解",
+        "r": "りょうかい",
+        "en": [
+          "comprehension",
+          "consent",
+          "understanding"
+        ]
+      }
+    },
+    "b03689d9fa": {
+      "mn": [
+        "нутаг дэвсгэрийн ус"
+      ],
+      "topics": [
+        "society",
+        "places"
+      ],
+      "expected": {
+        "w": "領海",
+        "r": "りょうかい",
+        "en": [
+          "territorial waters"
+        ]
+      }
+    },
+    "864c7afe67": {
+      "mn": [
+        "хоёр туйл",
+        "хойд өмнөд туйл",
+        "эерэг сөрөг туйл"
+      ],
+      "topics": [
+        "quantity",
+        "nature"
+      ],
+      "expected": {
+        "w": "両極",
+        "r": "りょうきょく",
+        "en": [
+          "both extremities",
+          "north and south poles",
+          "positive and negative poles"
+        ]
+      }
+    },
+    "e6b6167d98": {
+      "mn": [
+        "таатай",
+        "хангалттай сайн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "良好",
+        "r": "りょうこう",
+        "en": [
+          "favorable",
+          "satisfactory"
+        ]
+      }
+    },
+    "e0cafd1188": {
+      "mn": [
+        "эрүүл саруул бодол",
+        "зөв үнэлэх чадвар"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "良識",
+        "r": "りょうしき",
+        "en": [
+          "good sense"
+        ]
+      }
+    },
+    "1450f6b908": {
+      "mn": [
+        "сайн чанар",
+        "дээд зэргийн чанар"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "良質",
+        "r": "りょうしつ",
+        "en": [
+          "good quality",
+          "superior quality"
+        ]
+      }
+    },
+    "720dca0098": {
+      "mn": [
+        "ойлгон зөвшөөрөх",
+        "нөхцөл байдлыг ойлгож хүлээн авах"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "了承",
+        "r": "りょうしょう",
+        "en": [
+          "acknowledgement",
+          "understanding (e.g. please be understanding of the mess during our renovation)"
+        ]
+      }
+    },
+    "4863d88e91": {
+      "mn": [
+        "ёс суртахууны ухамсар",
+        "мөс чанар"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "良心",
+        "r": "りょうしん",
+        "en": [
+          "conscience"
+        ]
+      }
+    },
+    "fa1720345c": {
+      "mn": [
+        "эзэмшил нутаг",
+        "захиргаанд буй газар"
+      ],
+      "topics": [
+        "places",
+        "society"
+      ],
+      "expected": {
+        "w": "領地",
+        "r": "りょうち",
+        "en": [
+          "territory",
+          "dominion"
+        ]
+      }
+    },
+    "21cc63f32d": {
+      "mn": [
+        "нутаг дэвсгэр",
+        "эзэмшил газар"
+      ],
+      "topics": [
+        "society",
+        "places"
+      ],
+      "expected": {
+        "w": "領土",
+        "r": "りょうど",
+        "en": [
+          "dominion",
+          "territory",
+          "possession"
+        ]
+      }
+    },
+    "17969345a9": {
+      "mn": [
+        "зэрэгцэн нийцэх",
+        "хамт орших",
+        "хоёул биелэх"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "両立",
+        "r": "りょうりつ",
+        "en": [
+          "compatibility",
+          "coexistence",
+          "standing together"
+        ]
+      }
+    },
+    "e1864b7eb9": {
+      "mn": [
+        "зорчигч"
+      ],
+      "topics": [
+        "people",
+        "places"
+      ],
+      "expected": {
+        "w": "旅客",
+        "r": "りょかく",
+        "en": [
+          "passenger (transport)"
+        ]
+      }
+    },
+    "0d2ff54220": {
+      "mn": [
+        "паспорт"
+      ],
+      "topics": [
+        "places",
+        "society"
+      ],
+      "expected": {
+        "w": "旅券",
+        "r": "りょけん",
+        "en": [
+          "passport"
+        ]
+      }
+    },
+    "9e34a9d77a": {
+      "mn": [
+        "намтар",
+        "түүх",
+        "ажилласан замнал"
+      ],
+      "topics": [
+        "work",
+        "people"
+      ],
+      "expected": {
+        "w": "履歴",
+        "r": "りれき",
+        "en": [
+          "personal history",
+          "background",
+          "career"
+        ]
+      }
+    },
+    "d0ffd0f38f": {
+      "mn": [
+        "онол"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "理論",
+        "r": "りろん",
+        "en": [
+          "theory"
+        ]
+      }
+    },
+    "c0b0e43f57": {
+      "mn": [
+        "дугуй болон цэцэг тоолох дагавар"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "輪",
+        "r": "りん",
+        "en": [
+          "counter for wheels and flowers"
+        ]
+      }
+    },
+    "63601d234c": {
+      "mn": [
+        "ойн аж ахуй"
+      ],
+      "topics": [
+        "work",
+        "nature"
+      ],
+      "expected": {
+        "w": "林業",
+        "r": "りんぎょう",
+        "en": [
+          "forestry"
+        ]
+      }
+    },
+    "bbecf30aea": {
+      "mn": [
+        "төстэй",
+        "адил шинжтэй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "類似",
+        "r": "るいじ",
+        "en": [
+          "analogous"
+        ]
+      }
+    },
+    "996bce1e41": {
+      "mn": [
+        "адилтган дүгнэх",
+        "аналог дүгнэлт"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "類推",
+        "r": "るいすい",
+        "en": [
+          "analogy"
+        ]
+      }
+    },
+    "8cb7651d8e": {
+      "mn": [
+        "сул",
+        "чанд бус"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "ルーズ",
+        "r": "ルーズ",
+        "en": [
+          "loose"
+        ]
+      }
+    },
+    "118dd946b4": {
+      "mn": [
+        "дүрэм"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "ルール",
+        "r": "ルール",
+        "en": [
+          "rule"
+        ]
+      }
+    },
+    "d6a5ec1c0b": {
+      "mn": [
+        "харгислал",
+        "хүйтэн сэтгэл",
+        "өршөөлгүй"
+      ],
+      "topics": [
+        "descriptions",
+        "feelings"
+      ],
+      "expected": {
+        "w": "冷酷",
+        "r": "れいこく",
+        "en": [
+          "cruelty",
+          "coldheartedness",
+          "relentless"
+        ]
+      }
+    },
+    "e6e8d718b9": {
+      "mn": [
+        "хүйтэн хадгалалт",
+        "хөргөх"
+      ],
+      "topics": [
+        "food",
+        "technology"
+      ],
+      "expected": {
+        "w": "冷蔵",
+        "r": "れいぞう",
+        "en": [
+          "cold storage",
+          "refrigeration"
+        ]
+      }
+    },
+    "47aa9c6d11": {
+      "mn": [
+        "хүйтэн хөндий",
+        "хайхрамжгүй байдал"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "冷淡",
+        "r": "れいたん",
+        "en": [
+          "coolness",
+          "indifference"
+        ]
+      }
+    },
+    "4f878a51a9": {
+      "mn": [
+        "байнгын",
+        "тогтмол"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "レギュラー",
+        "r": "レギュラー",
+        "en": [
+          "regular"
+        ]
+      }
+    },
+    "669651e81b": {
+      "mn": [
+        "амралт зугаалга"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "レクリエーション",
+        "r": "レクリエーション",
+        "en": [
+          "recreation"
+        ]
+      }
+    }
+  }
+}

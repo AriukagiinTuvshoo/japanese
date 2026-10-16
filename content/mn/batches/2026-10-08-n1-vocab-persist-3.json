@@ -1,0 +1,1080 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-persist-3-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses cross-checked against exact Japanese spelling, reading and retained English; explicit semantic topic assignments. Independent human review outstanding; suspect sources withheld.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "aed7830e50": {
+      "mn": [
+        "хуулийн төсөл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "法案",
+        "r": "ほうあん",
+        "en": [
+          "bill (law)"
+        ]
+      }
+    },
+    "5848a1a829": {
+      "mn": [
+        "батлан хамгаалах",
+        "хамгаалалт",
+        "өөрийгөө хамгаалах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "防衛",
+        "r": "ぼうえい",
+        "en": [
+          "defense",
+          "protection",
+          "self-defense"
+        ]
+      }
+    },
+    "77fe998ed5": {
+      "mn": [
+        "галаас сэргийлэх",
+        "гал унтраах",
+        "галд тэсвэртэй"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "防火",
+        "r": "ぼうか",
+        "en": [
+          "fire prevention",
+          "fire fighting",
+          "fire proof"
+        ]
+      }
+    },
+    "e10b8d5307": {
+      "mn": [
+        "нуран унах",
+        "физикийн задрал",
+        "бутран задрах"
+      ],
+      "topics": [
+        "learning",
+        "actions"
+      ],
+      "expected": {
+        "w": "崩壊",
+        "r": "ほうかい",
+        "en": [
+          "collapse",
+          "decay (physics)",
+          "crumbling"
+        ]
+      }
+    },
+    "f916dfd1cc": {
+      "mn": [
+        "саад",
+        "хөндлөнгөөс саад хийх",
+        "тээг"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "妨害",
+        "r": "ぼうがい",
+        "en": [
+          "disturbance",
+          "obstruction",
+          "hindrance"
+        ]
+      }
+    },
+    "6e418239d4": {
+      "mn": [
+        "хууль судлал",
+        "эрх зүйн ухаан"
+      ],
+      "topics": [
+        "society",
+        "learning"
+      ],
+      "expected": {
+        "w": "法学",
+        "r": "ほうがく",
+        "en": [
+          "law",
+          "jurisprudence"
+        ]
+      }
+    },
+    "042950a048": {
+      "mn": [
+        "үнэт эдлэл буюу сав",
+        "онцгой чадвартай хүн"
+      ],
+      "topics": [
+        "arts",
+        "people"
+      ],
+      "expected": {
+        "w": "宝器",
+        "r": "ほうき",
+        "en": [
+          "treasured article or vessel",
+          "outstanding individual"
+        ]
+      }
+    },
+    "1799cfb5f8": {
+      "mn": [
+        "орхих",
+        "эрхээсээ татгалзах",
+        "үүрэг хариуцлагаас татгалзах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "放棄",
+        "r": "ほうき",
+        "en": [
+          "abandonment",
+          "renunciation",
+          "abdication (responsibility, right)"
+        ]
+      }
+    },
+    "817825c9b9": {
+      "mn": [
+        "феодалын",
+        "феодал ёсны"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "封建",
+        "r": "ほうけん",
+        "en": [
+          "feudalistic"
+        ]
+      }
+    },
+    "85eb63e6e0": {
+      "mn": [
+        "төлөвлөгөө",
+        "бодлого"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "方策",
+        "r": "ほうさく",
+        "en": [
+          "plan",
+          "policy"
+        ]
+      }
+    },
+    "9fb7bc06a9": {
+      "mn": [
+        "арвин ургац",
+        "ургац сайн авах"
+      ],
+      "topics": [
+        "nature",
+        "work"
+      ],
+      "expected": {
+        "w": "豊作",
+        "r": "ほうさく",
+        "en": [
+          "abundant harvest",
+          "bumper crop"
+        ]
+      }
+    },
+    "c1c82b2952": {
+      "mn": [
+        "үйлчлэх",
+        "бусдын төлөө ажиллах"
+      ],
+      "topics": [
+        "work",
+        "society"
+      ],
+      "expected": {
+        "w": "奉仕",
+        "r": "ほうし",
+        "en": [
+          "attendance",
+          "service"
+        ]
+      }
+    },
+    "ebee201fce": {
+      "mn": [
+        "хэлбэр",
+        "арга",
+        "тогтолцоо"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "方式",
+        "r": "ほうしき",
+        "en": [
+          "form",
+          "method",
+          "system"
+        ]
+      }
+    },
+    "9e3ffc8eb0": {
+      "mn": [
+        "цацрал",
+        "ялгаруулалт"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "放射",
+        "r": "ほうしゃ",
+        "en": [
+          "radiation",
+          "emission"
+        ]
+      }
+    },
+    "c015ddb7c6": {
+      "mn": [
+        "цацраг идэвхт чанар"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "放射能",
+        "r": "ほうしゃのう",
+        "en": [
+          "radioactivity"
+        ]
+      }
+    },
+    "a227e50797": {
+      "mn": [
+        "ажлын хөлс",
+        "нөхөн төлбөр",
+        "шагнал"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "報酬",
+        "r": "ほうしゅう",
+        "en": [
+          "remuneration",
+          "recompense",
+          "reward"
+        ]
+      }
+    },
+    "7704534786": {
+      "mn": [
+        "гаргах",
+        "ялгаруулах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "放出",
+        "r": "ほうしゅつ",
+        "en": [
+          "release",
+          "emit"
+        ]
+      }
+    },
+    "e3797104ae": {
+      "mn": [
+        "мэдээлэх",
+        "сурвалжлан мэдээлэх"
+      ],
+      "topics": [
+        "learning",
+        "actions"
+      ],
+      "expected": {
+        "w": "報じる",
+        "r": "ほうじる",
+        "en": [
+          "to inform",
+          "to report"
+        ]
+      }
+    },
+    "ba25c582aa": {
+      "mn": [
+        "мэдээлэх",
+        "сурвалжлан мэдээлэх"
+      ],
+      "topics": [
+        "learning",
+        "actions"
+      ],
+      "expected": {
+        "w": "報ずる",
+        "r": "ほうずる",
+        "en": [
+          "to inform",
+          "to report"
+        ]
+      }
+    },
+    "3356356fb8": {
+      "mn": [
+        "утас ээрэх"
+      ],
+      "topics": [
+        "work",
+        "technology"
+      ],
+      "expected": {
+        "w": "紡績",
+        "r": "ぼうせき",
+        "en": [
+          "spinning"
+        ]
+      }
+    },
+    "b55c78d275": {
+      "mn": [
+        "мэл гайхсан",
+        "гайхшралд автсан",
+        "юу ч хэлж чадахгүй гайхах"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "呆然",
+        "r": "ぼうぜん",
+        "en": [
+          "dumbfounded",
+          "overcome with surprise",
+          "in blank amazement"
+        ]
+      }
+    },
+    "5eb4b23381": {
+      "mn": [
+        "байгаагаар нь орхих",
+        "тоохгүй орхих",
+        "зүгээр орхих"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "放置",
+        "r": "ほうち",
+        "en": [
+          "leave as is",
+          "leave to chance",
+          "leave alone"
+        ]
+      }
+    },
+    "7c8cd24ffc": {
+      "mn": [
+        "тэлэлт",
+        "хөөх",
+        "өсөлт"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "膨脹",
+        "r": "ぼうちょう",
+        "en": [
+          "expansion",
+          "swelling",
+          "increase"
+        ]
+      }
+    },
+    "d20d61f6b7": {
+      "mn": [
+        "шүүхийн танхим"
+      ],
+      "topics": [
+        "society",
+        "places"
+      ],
+      "expected": {
+        "w": "法廷",
+        "r": "ほうてい",
+        "en": [
+          "courtroom"
+        ]
+      }
+    },
+    "0214a293b8": {
+      "mn": [
+        "мэдээлэл",
+        "сурвалжилга"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "報道",
+        "r": "ほうどう",
+        "en": [
+          "information",
+          "report"
+        ]
+      }
+    },
+    "2967145e45": {
+      "mn": [
+        "эхлэл",
+        "эхний хэсэг"
+      ],
+      "topics": [
+        "learning",
+        "time"
+      ],
+      "expected": {
+        "w": "冒頭",
+        "r": "ぼうとう",
+        "en": [
+          "beginning",
+          "start",
+          "outset"
+        ]
+      }
+    },
+    "4e4240a247": {
+      "mn": [
+        "үймээн",
+        "бослого",
+        "эсэргүүцлийн үймээн"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "暴動",
+        "r": "ぼうどう",
+        "en": [
+          "insurrection",
+          "rebellion",
+          "revolt"
+        ]
+      }
+    },
+    "966b77c0d5": {
+      "mn": [
+        "шагнал",
+        "урамшуулал"
+      ],
+      "topics": [
+        "work",
+        "arts"
+      ],
+      "expected": {
+        "w": "褒美",
+        "r": "ほうび",
+        "en": [
+          "reward",
+          "prize"
+        ]
+      }
+    },
+    "8f2f3b69ad": {
+      "mn": [
+        "шуурга",
+        "хүчтэй салхи",
+        "догшин салхи"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "暴風",
+        "r": "ぼうふう",
+        "en": [
+          "storm",
+          "windstorm",
+          "gale"
+        ]
+      }
+    },
+    "c103994f0c": {
+      "mn": [
+        "оршуулах",
+        "булшлах"
+      ],
+      "topics": [
+        "society",
+        "actions"
+      ],
+      "expected": {
+        "w": "葬る",
+        "r": "ほうむる",
+        "en": [
+          "to bury",
+          "to inter",
+          "to entomb"
+        ]
+      }
+    },
+    "29f6f83ec8": {
+      "mn": [
+        "дотор нь шидэж оруулах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "放り込む",
+        "r": "ほうりこむ",
+        "en": [
+          "to throw into"
+        ]
+      }
+    },
+    "c3fd7b34c2": {
+      "mn": [
+        "шидэж гаргах",
+        "ажлаас халах",
+        "хөөх"
+      ],
+      "topics": [
+        "actions",
+        "work"
+      ],
+      "expected": {
+        "w": "放り出す",
+        "r": "ほうりだす",
+        "en": [
+          "to throw out",
+          "to fire",
+          "to expel"
+        ]
+      }
+    },
+    "add5c108a6": {
+      "mn": [
+        "хүчирхийлэл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "暴力",
+        "r": "ぼうりょく",
+        "en": [
+          "violence"
+        ]
+      }
+    },
+    "91965451e5": {
+      "mn": [
+        "ханалт",
+        "ханасан байдал"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "飽和",
+        "r": "ほうわ",
+        "en": [
+          "saturation"
+        ]
+      }
+    },
+    "d1ca85869d": {
+      "mn": [
+        "уян хоолой"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "ホース",
+        "r": "ホース",
+        "en": [
+          "hose"
+        ]
+      }
+    },
+    "d65feae548": {
+      "mn": [
+        "дулаан хадгалах",
+        "дулаан алдахгүй байлгах",
+        "дулаалга"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "保温",
+        "r": "ほおん",
+        "en": [
+          "retaining warmth",
+          "keeping heat in",
+          "heat insulation"
+        ]
+      }
+    },
+    "c161ba7230": {
+      "mn": [
+        "барьж авах",
+        "олзлох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "捕獲",
+        "r": "ほかく",
+        "en": [
+          "capture",
+          "seizure"
+        ]
+      }
+    },
+    "40373b9997": {
+      "mn": [
+        "хариуцан хадгалах",
+        "хамгаалан хадгалах",
+        "найдвартай хадгалалт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "保管",
+        "r": "ほかん",
+        "en": [
+          "charge",
+          "custody",
+          "safekeeping"
+        ]
+      }
+    },
+    "6d956e7507": {
+      "mn": [
+        "хангалт",
+        "нийлүүлэх",
+        "нөөц нөхөх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "補給",
+        "r": "ほきゅう",
+        "en": [
+          "supply",
+          "supplying",
+          "replenishment"
+        ]
+      }
+    },
+    "faa9c24081": {
+      "mn": [
+        "дутагдлыг нөхөх",
+        "хүчитгэн бэхжүүлэх"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "補強",
+        "r": "ほきょう",
+        "en": [
+          "compensation",
+          "reinforcement"
+        ]
+      }
+    },
+    "8724bbab50": {
+      "mn": [
+        "хандив цуглуулах",
+        "хөрөнгө босгох"
+      ],
+      "topics": [
+        "society",
+        "work"
+      ],
+      "expected": {
+        "w": "募金",
+        "r": "ぼきん",
+        "en": [
+          "fund-raising",
+          "collection of funds"
+        ]
+      }
+    },
+    "a07de51f3c": {
+      "mn": [
+        "христийн шашны пастор",
+        "санваартан"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "牧師",
+        "r": "ぼくし",
+        "en": [
+          "pastor",
+          "minister",
+          "clergyman"
+        ]
+      }
+    },
+    "8f3a807dad": {
+      "mn": [
+        "халим агнах"
+      ],
+      "topics": [
+        "nature",
+        "work"
+      ],
+      "expected": {
+        "w": "捕鯨",
+        "r": "ほげい",
+        "en": [
+          "whaling",
+          "whale fishing"
+        ]
+      }
+    },
+    "2ad8eb39d1": {
+      "mn": [
+        "даатгал",
+        "баталгаа"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "保険",
+        "r": "ほけん",
+        "en": [
+          "insurance",
+          "guarantee"
+        ]
+      }
+    },
+    "dffc76283b": {
+      "mn": [
+        "асран халамжлах",
+        "хамгаалалт",
+        "хоргодох газар"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "保護",
+        "r": "ほご",
+        "en": [
+          "care",
+          "protection",
+          "shelter"
+        ]
+      }
+    },
+    "d414f6e1f3": {
+      "mn": [
+        "өөрийн төгссөн сургууль"
+      ],
+      "topics": [
+        "learning",
+        "places"
+      ],
+      "expected": {
+        "w": "母校",
+        "r": "ぼこう",
+        "en": [
+          "alma mater"
+        ]
+      }
+    },
+    "41f92a40f2": {
+      "mn": [
+        "бахархах",
+        "бахархан ярих"
+      ],
+      "topics": [
+        "feelings",
+        "actions"
+      ],
+      "expected": {
+        "w": "誇る",
+        "r": "ほこる",
+        "en": [
+          "to boast of",
+          "to be proud of"
+        ]
+      }
+    },
+    "b775abdd11": {
+      "mn": [
+        "оёдол задрах",
+        "дэлгэрч эхлэх",
+        "өргөн инээмсэглэх"
+      ],
+      "topics": [
+        "daily",
+        "nature",
+        "actions"
+      ],
+      "expected": {
+        "w": "綻びる",
+        "r": "ほころびる",
+        "en": [
+          "to come apart at the seams",
+          "to begin to open",
+          "to smile broadly"
+        ]
+      }
+    },
+    "0556bb5bbe": {
+      "mn": [
+        "байрлал",
+        "байр суурь"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "ポジション",
+        "r": "ポジション",
+        "en": [
+          "position"
+        ]
+      }
+    },
+    "a81b409958": {
+      "mn": [
+        "хатаасан угаалгын хувцас"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "干し物",
+        "r": "ほしもの",
+        "en": [
+          "dried washing (clothes)"
+        ]
+      }
+    },
+    "1e8904b5b7": {
+      "mn": [
+        "хуучинсаг",
+        "хэвээр хадгалах"
+      ],
+      "topics": [
+        "society",
+        "technology"
+      ],
+      "expected": {
+        "w": "保守",
+        "r": "ほしゅ",
+        "en": [
+          "conservative",
+          "maintaining"
+        ]
+      }
+    },
+    "f8c0cfc076": {
+      "mn": [
+        "нөхөн дүүргэх",
+        "нэмэлт",
+        "нөөц нөхөх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "補充",
+        "r": "ほじゅう",
+        "en": [
+          "supplementation",
+          "supplement",
+          "replenishment"
+        ]
+      }
+    },
+    "8932970695": {
+      "mn": [
+        "тусламж",
+        "дэмжлэг",
+        "туслах"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "補助",
+        "r": "ほじょ",
+        "en": [
+          "assistance",
+          "support",
+          "aid"
+        ]
+      }
+    },
+    "65fc20eed5": {
+      "mn": [
+        "баталгаа",
+        "хамгаалалт",
+        "батлан хангах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "保障",
+        "r": "ほしょう",
+        "en": [
+          "guarantee",
+          "security",
+          "assurance"
+        ]
+      }
+    },
+    "800e05bcf1": {
+      "mn": [
+        "нөхөн төлбөр",
+        "хохирол барагдуулах"
+      ],
+      "topics": [
+        "work",
+        "society"
+      ],
+      "expected": {
+        "w": "補償",
+        "r": "ほしょう",
+        "en": [
+          "compensation",
+          "reparation"
+        ]
+      }
+    },
+    "73edd67700": {
+      "mn": [
+        "замын хучилт",
+        "замын гадаргуу"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "舗装",
+        "r": "ほそう",
+        "en": [
+          "pavement",
+          "road surface"
+        ]
+      }
+    },
+    "d5de1db218": {
+      "mn": [
+        "нэмж гүйцээх",
+        "нэмэлт тайлбар"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "補足",
+        "r": "ほそく",
+        "en": [
+          "supplement",
+          "complement"
+        ]
+      }
+    },
+    "d5c389a11d": {
+      "mn": [
+        "оршуулгын газар",
+        "булшны газар"
+      ],
+      "topics": [
+        "places",
+        "society"
+      ],
+      "expected": {
+        "w": "墓地",
+        "r": "ぼち",
+        "en": [
+          "cemetery",
+          "graveyard"
+        ]
+      }
+    },
+    "10d587dd95": {
+      "mn": [
+        "өвчний дайралт",
+        "таталт"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "発作",
+        "r": "ほっさ",
+        "en": [
+          "fit",
+          "spasm"
+        ]
+      }
+    },
+    "f907fc3a9b": {
+      "mn": [
+        "хураан авах",
+        "улсын орлого болгох"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "没収",
+        "r": "ぼっしゅう",
+        "en": [
+          "forfeited"
+        ]
+      }
+    }
+  }
+}

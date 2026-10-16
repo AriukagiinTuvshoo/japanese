@@ -1,0 +1,290 @@
+{
+  "provenance": {
+    "id": "mn-n2-grammar-examples-continue-2-2026-10-09",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian compared with exact Japanese and retained English; stable record and headword/pattern guards; independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/grammar/n2.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "grammar": {
+    "to-iu-mono-de-wa-nai": {
+      "expected": {
+        "p": "〜というものではない",
+        "en": "it's not (necessarily) the case that; it doesn't follow that"
+      },
+      "examples": {
+        "お金さえあれば幸せになれるというものではない。": {
+          "en": "It's not as if money alone can make you happy.",
+          "mn": "Зөвхөн мөнгөтэй байлаа гээд аз жаргалтай болдоггүй."
+        }
+      }
+    },
+    "to-itte-mo": {
+      "expected": {
+        "p": "〜といっても",
+        "en": "although I say; even though (it's called)"
+      },
+      "examples": {
+        "料理ができるといっても、簡単なものしか作れません。": {
+          "en": "I say I can cook, but I can only make simple things.",
+          "mn": "Хоол хийж чадна гэсэн ч энгийн хоол л хийдэг."
+        },
+        "海外に住んでいたといっても、たった半年のことだ。": {
+          "en": "I did live abroad, but only for six months.",
+          "mn": "Гадаадад амьдарсан гэсэн ч ердөө хагас жил байсан."
+        }
+      }
+    },
+    "to-ieba-to-iu-to": {
+      "expected": {
+        "p": "〜といえば / 〜というと",
+        "en": "speaking of; when you think of; if you mention"
+      },
+      "examples": {
+        "日本の夏の風物詩といえば、やはり花火大会だろう。": {
+          "en": "When you think of summer traditions in Japan, fireworks festivals come to mind first.",
+          "mn": "Японы зуны уламжлал гэвэл юуны түрүүнд салютын баяр санаанд орно."
+        },
+        "北海道というと、広い大地とおいしい海産物を思い浮かべる人が多い。": {
+          "en": "When people hear 'Hokkaido', many picture vast open land and delicious seafood.",
+          "mn": "Хоккайдо гэхээр олон хүн өргөн уудам газар, амттай далайн хүнсийг төсөөлдөг."
+        },
+        "旅行といえば、来月の出張の件はどうなりましたか。": {
+          "en": "Speaking of travel, what happened with next month's business trip?",
+          "mn": "Аялал гэснээс ирэх сарын томилолтын асуудал юу болсон бэ?"
+        }
+      }
+    },
+    "hoka-nai": {
+      "expected": {
+        "p": "〜ほかない",
+        "en": "have no choice but to; there's nothing to do but"
+      },
+      "examples": {
+        "終電を逃してしまったので、タクシーで帰るほかない。": {
+          "en": "I've missed the last train, so I have no choice but to take a taxi home.",
+          "mn": "Сүүлчийн галт тэргийг алдсан тул таксигаар харихаас өөр аргагүй."
+        },
+        "自分で決めた道なのだから、前に進むよりほかない。": {
+          "en": "It's the path I chose, so there's nothing to do but keep going.",
+          "mn": "Өөрөө сонгосон зам тул урагш явахаас өөр аргагүй."
+        }
+      }
+    },
+    "mai": {
+      "expected": {
+        "p": "〜まい",
+        "en": "will not (resolve); probably won't (conjecture)"
+      },
+      "examples": {
+        "あんな恥ずかしい思いは、二度とするまいと心に誓った。": {
+          "en": "I swore to myself that I would never go through such embarrassment again.",
+          "mn": "Дахиж тэгж ичгэвтэр байдалд орохгүй гэж өөртөө тангарагласан."
+        },
+        "この大雨では、今日はもう誰も来るまい。": {
+          "en": "In this downpour, probably no one else will come today.",
+          "mn": "Ийм аадар бороонд өнөөдөр дахиж хүн ирэхгүй байх."
+        }
+      }
+    },
+    "you-de-wa-nai-ka": {
+      "expected": {
+        "p": "〜（よ）うではないか",
+        "en": "let's (formal call to action); why don't we"
+      },
+      "examples": {
+        "この町の未来のために、皆で力を合わせようではないか。": {
+          "en": "For the future of this town, let us all join forces.",
+          "mn": "Энэ хотын ирээдүйн төлөө бүгдээрээ хүчээ нэгтгэцгээе."
+        },
+        "失敗を恐れず、新しいことに挑戦してみようではありませんか。": {
+          "en": "Let's not fear failure, and try taking on something new, shall we?",
+          "mn": "Бүтэлгүйтлээс айлгүй шинэ зүйлд өөрсдийгөө сорьцгооё."
+        }
+      }
+    },
+    "mo-kamawazu": {
+      "expected": {
+        "p": "〜もかまわず",
+        "en": "without caring about; regardless of; paying no attention to"
+      },
+      "examples": {
+        "彼女は人目もかまわず、駅のホームで大声で泣いた。": {
+          "en": "She cried out loud on the station platform, not caring who was watching.",
+          "mn": "Тэр бусдын харцыг үл тоон өртөөний тавцан дээр чанга уйлсан."
+        },
+        "服が汚れるのもかまわず、子どもたちは泥の中で遊び続けた。": {
+          "en": "The children kept playing in the mud without caring that their clothes were getting dirty.",
+          "mn": "Хүүхдүүд хувцас бохирдохыг үл тоон шаварт тоглосоор байв."
+        }
+      }
+    },
+    "jou": {
+      "expected": {
+        "p": "〜上",
+        "en": "from the standpoint of; in terms of; for reasons of"
+      },
+      "examples": {
+        "この映画には、教育上好ましくない場面が多い。": {
+          "en": "This movie has many scenes that are undesirable from an educational standpoint.",
+          "mn": "Энэ кинонд хүмүүжлийн талаас зохисгүй хэсэг олон бий."
+        },
+        "安全上の理由から、この先には立ち入らないでください。": {
+          "en": "For safety reasons, please do not go beyond this point.",
+          "mn": "Аюулгүй байдлын үүднээс цааш нэвтэрч болохгүй."
+        },
+        "法律上は問題がなくても、道徳的に許されないこともある。": {
+          "en": "Even if something is legally fine, it may still be morally unacceptable.",
+          "mn": "Хуулийн хувьд асуудалгүй ч ёс суртахууны хувьд хүлээн зөвшөөрөхгүй зүйл байдаг."
+        }
+      }
+    },
+    "osore-ga-aru": {
+      "expected": {
+        "p": "〜おそれがある",
+        "en": "there is a risk that; could (bad outcome)"
+      },
+      "examples": {
+        "台風の影響で、今夜から大雨になるおそれがあります。": {
+          "en": "Due to the typhoon, there is a risk of heavy rain from tonight.",
+          "mn": "Хар салхины нөлөөгөөр өнөө шөнөөс аадар бороо орох эрсдэлтэй."
+        },
+        "この薬は眠くなるおそれがあるので、服用後の運転は避けてください。": {
+          "en": "This medicine may cause drowsiness, so avoid driving after taking it.",
+          "mn": "Энэ эм нойр хүргэж болзошгүй тул уусныхаа дараа машин бүү бариарай."
+        },
+        "沿岸部には津波のおそれがあるため、避難指示が出された。": {
+          "en": "An evacuation order was issued for coastal areas because of the risk of a tsunami.",
+          "mn": "Цунамигийн эрсдэлээс болж эрэг орчмынхонд нүүлгэн шилжүүлэх заавар өгсөн."
+        }
+      }
+    },
+    "sei-ka": {
+      "expected": {
+        "p": "〜せいか",
+        "en": "perhaps because; maybe due to"
+      },
+      "examples": {
+        "年のせいか、最近疲れが取れにくくなった。": {
+          "en": "Maybe it's my age, but lately it takes longer to recover from fatigue.",
+          "mn": "Насных ч юм уу, сүүлийн үед ядрал тайлагдах нь удааширсан."
+        },
+        "昨夜遅くまで起きていたせいか、今日は頭がぼんやりしている。": {
+          "en": "Perhaps because I stayed up late last night, my head feels foggy today.",
+          "mn": "Өчигдөр оройтож унтсаных ч юм уу, өнөөдөр толгой манарсан байна."
+        },
+        "気のせいか、彼女は少し元気がないように見えた。": {
+          "en": "Maybe it was just my imagination, but she seemed a little down.",
+          "mn": "Миний төсөөлөл ч байж магадгүй, тэр жаахан гундуу харагдсан."
+        }
+      }
+    },
+    "dake-atte-dake-ni": {
+      "expected": {
+        "p": "〜だけあって / 〜だけに",
+        "en": "as might be expected (since); precisely because; all the more because"
+      },
+      "examples": {
+        "さすが一流ホテルだけあって、サービスが行き届いている。": {
+          "en": "As you'd expect from a first-class hotel, the service is impeccable.",
+          "mn": "Шилдэг зочид буудал гэсэндээ үйлчилгээ нь өөгүй юм."
+        },
+        "十年も日本に住んでいただけあって、彼の日本語はとても自然だ。": {
+          "en": "As you'd expect from someone who lived in Japan for ten years, his Japanese is very natural.",
+          "mn": "Японд арван жил амьдарсан гэсэндээ тэр тун байгалийн япон хэлээр ярьдаг."
+        },
+        "期待していただけに、落選の知らせはショックだった。": {
+          "en": "Because I'd had such high hopes, the news that I wasn't selected hit me all the harder.",
+          "mn": "Их найдаж байсан болохоор шалгараагүй гэсэн мэдээ хүнд туссан."
+        }
+      }
+    },
+    "dake-no-koto-wa-aru": {
+      "expected": {
+        "p": "〜だけのことはある",
+        "en": "it's no wonder; it lives up to; as expected of"
+      },
+      "examples": {
+        "この料理は本当においしい。人気店だけのことはある。": {
+          "en": "This food is really delicious. No wonder the place is so popular.",
+          "mn": "Энэ хоол үнэхээр амттай. Алдартай газар гэдэг нь аргагүй юм."
+        },
+        "素晴らしい演奏だった。さすが毎日練習しているだけのことはある。": {
+          "en": "It was a wonderful performance. All that daily practice really shows.",
+          "mn": "Гайхалтай тоглолт байлаа. Өдөр бүрийн бэлтгэлийн үр дүн харагдаж байна."
+        }
+      }
+    },
+    "tatoe-te-mo": {
+      "expected": {
+        "p": "たとえ〜ても",
+        "en": "even if; no matter"
+      },
+      "examples": {
+        "たとえ反対されても、自分の夢を諦めるつもりはない。": {
+          "en": "Even if people oppose me, I have no intention of giving up my dream.",
+          "mn": "Бусад эсэргүүцсэн ч мөрөөдлөөсөө татгалзах бодолгүй."
+        },
+        "たとえ小さな会社でも、やりがいのある仕事がしたい。": {
+          "en": "Even if it's a small company, I want to do rewarding work.",
+          "mn": "Жижиг компани байсан ч утга учиртай ажил хиймээр байна."
+        },
+        "たとえ給料が安くても、好きな仕事なら続けられる。": {
+          "en": "Even if the pay is low, I can keep at it if it's work I love.",
+          "mn": "Цалин бага ч дуртай ажил бол үргэлжлүүлж чадна."
+        }
+      }
+    },
+    "yara-yara": {
+      "expected": {
+        "p": "〜やら〜やら",
+        "en": "what with ... and ...; and ... and (among other things)"
+      },
+      "examples": {
+        "引っ越しの前は、荷造りやら手続きやらで目が回るほど忙しかった。": {
+          "en": "Before the move, what with packing and paperwork, I was run off my feet.",
+          "mn": "Нүүхийн өмнө баглаа боодол, бичиг цаас гээд толгой эргэм завгүй байсан."
+        },
+        "財布をなくして、情けないやら腹が立つやらで、泣きたくなった。": {
+          "en": "I lost my wallet, and between feeling pathetic and angry, I wanted to cry.",
+          "mn": "Түрийвчээ алдаад өөрийгөө өрөвдөх ч шиг, уурлах ч шиг болоод уйлмаар санагдсан."
+        }
+      }
+    },
+    "zu-ni-sumu-naide-sumu": {
+      "expected": {
+        "p": "〜ずに済む / 〜ないで済む",
+        "en": "get by without; not have to; be spared from"
+      },
+      "examples": {
+        "友人が車で送ってくれたので、タクシーを使わずに済んだ。": {
+          "en": "My friend gave me a ride, so I didn't have to take a taxi.",
+          "mn": "Найз машинаараа хүргэж өгсөн тул такси авах шаардлагагүй болсон."
+        },
+        "早めに治療を始めたおかげで、手術しないで済んだ。": {
+          "en": "Thanks to starting treatment early, I didn't need surgery.",
+          "mn": "Эмчилгээг эрт эхэлсний ачаар мэс засал хийлгэхгүй өнгөрсөн."
+        }
+      }
+    },
+    "you-ni-yotte-wa": {
+      "expected": {
+        "p": "〜ようによっては",
+        "en": "depending on how (one does it)"
+      },
+      "examples": {
+        "考えようによっては、今回の失敗はいい教訓になったとも言える。": {
+          "en": "Depending on how you look at it, you could say this failure taught us a good lesson.",
+          "mn": "Яаж бодохоос хамаарч энэ бүтэлгүйтэл сайн сургамж болсон гэж ч хэлж болно."
+        },
+        "古い家具も、使いようによってはおしゃれなインテリアになる。": {
+          "en": "Depending on how you use it, even old furniture can become stylish decor.",
+          "mn": "Хэрэглэх аргаа олбол хуучин тавилга ч загварлаг дотоод засал болж чадна."
+        }
+      }
+    }
+  }
+}

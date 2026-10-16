@@ -1,0 +1,396 @@
+{
+  "provenance": {
+    "id": "mn-n5-examples-corpus-3-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian examples compared to exact Japanese and retained English; stable ID, spelling, reading, English and sentence guards. Independent human semantic review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n5.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "9ac35c3990": {
+      "expected": {
+        "w": "五つ",
+        "r": "いつつ",
+        "en": [
+          "five"
+        ]
+      },
+      "examples": {
+        "この箱にはリンゴが五つ入っている。": {
+          "en": "This box contains five apples.",
+          "mn": "Энэ хайрцагт таван алим байна."
+        },
+        "レストランやパブは五つ木通りにたくさんあります。": {
+          "en": "Many restaurants and pubs are on Itsutsugi Street.",
+          "mn": "Ицүцүги гудамжинд олон ресторан, паб байдаг."
+        }
+      }
+    },
+    "dea2a1df8b": {
+      "expected": {
+        "w": "いつも",
+        "r": "いつも",
+        "en": [
+          "always"
+        ]
+      },
+      "examples": {
+        "あの子はいつもニコニコしている。": {
+          "en": "She is always smiling.",
+          "mn": "Тэр хүүхэд үргэлж инээмсэглэж байдаг."
+        },
+        "あの子はいつもだだをこねている。": {
+          "en": "That child is always throwing tantrums.",
+          "mn": "Тэр хүүхэд үргэлж эрхэлж зөрүүдэлдэг."
+        }
+      }
+    },
+    "0df89f5010": {
+      "expected": {
+        "w": "犬",
+        "r": "いぬ",
+        "en": [
+          "dog"
+        ]
+      },
+      "examples": {
+        "その犬はかみついたりしませんよ。": {
+          "en": "The dog will not harm you.",
+          "mn": "Тэр нохой хазахгүй ээ."
+        },
+        "この犬は何でもほとんど食べます。": {
+          "en": "This dog eats almost anything.",
+          "mn": "Энэ нохой бараг юу ч иддэг."
+        }
+      }
+    },
+    "ce75c75644": {
+      "expected": {
+        "w": "今",
+        "r": "いま",
+        "en": [
+          "now"
+        ]
+      },
+      "examples": {
+        "今のアナウンスは何だったのですか。": {
+          "en": "What did the announcement just say?",
+          "mn": "Саяын зарлал юу гэж хэлсэн бэ?"
+        },
+        "トムもビルも今テニスをしている。": {
+          "en": "Both Tom and Bill are playing tennis now.",
+          "mn": "Том, Билл хоёр одоо теннис тоглож байна."
+        }
+      }
+    },
+    "cb29ccdd2a": {
+      "expected": {
+        "w": "意味",
+        "r": "いみ",
+        "en": [
+          "meaning"
+        ]
+      },
+      "examples": {
+        "その語にはいくつかの意味がある。": {
+          "en": "The word has several meanings.",
+          "mn": "Тэр үг хэд хэдэн утгатай."
+        },
+        "おっしゃる意味がわかりませんが。": {
+          "en": "What you said does not make sense.",
+          "mn": "Таны хэлж буй утгыг ойлгохгүй байна."
+        }
+      }
+    },
+    "12047d019b": {
+      "expected": {
+        "w": "妹",
+        "r": "いもうと",
+        "en": [
+          "(humble) younger sister"
+        ]
+      },
+      "examples": {
+        "男の子は妹を見下ろしがちである。": {
+          "en": "Boys tend to look down on their younger sisters.",
+          "mn": "Хөвгүүд дүү охидоо дорд үзэх хандлагатай."
+        },
+        "あいつの妹、とてもかわいいね。": {
+          "en": "His little sister is very cute, isn't she?",
+          "mn": "Түүний дүү охин их хөөрхөн юм, тийм ээ?"
+        }
+      }
+    },
+    "eda751e069": {
+      "expected": {
+        "w": "嫌",
+        "r": "いや",
+        "en": [
+          "unpleasant"
+        ]
+      },
+      "examples": {
+        "毎日うっとうしくていやですね。": {
+          "en": "Don't you just hate this weather?",
+          "mn": "Өдөр бүр ийм бүрхэг байхаар дургүй хүрмээр юм, тийм ээ?"
+        },
+        "どんなものでも、スポーツはいやです。": {
+          "en": "I just do not like any kind of sports.",
+          "mn": "Би ямар ч спортод дургүй."
+        }
+      }
+    },
+    "1ff0529d03": {
+      "expected": {
+        "w": "入口",
+        "r": "いりぐち",
+        "en": [
+          "entrance"
+        ]
+      },
+      "examples": {
+        "１台の車が入り口に止まった。": {
+          "en": "A car stopped at the entrance.",
+          "mn": "Нэг машин үүдэнд зогсов."
+        },
+        "数人の人が入り口でぶらついていた。": {
+          "en": "Some people were hanging around at the entrance.",
+          "mn": "Хэдэн хүн үүдэнд эргэлдэж байв."
+        }
+      }
+    },
+    "9438889173": {
+      "expected": {
+        "w": "いる",
+        "r": "いる",
+        "en": [
+          "to be",
+          "to have (used for people and animals)"
+        ]
+      },
+      "examples": {
+        "すっかり食べ終わってはいない。": {
+          "en": "I haven't quite finished eating.",
+          "mn": "Би хоолоо бүрэн идэж дуусаагүй байна."
+        },
+        "あんないい男そうそういないぞ！！": {
+          "en": "There aren't many blokes that nice!",
+          "mn": "Тийм сайн залуу ховор шүү!"
+        }
+      }
+    },
+    "7a84208708": {
+      "expected": {
+        "w": "要る",
+        "r": "いる",
+        "en": [
+          "to need"
+        ]
+      },
+      "examples": {
+        "今のところお金はいらない。": {
+          "en": "I don't need money at present.",
+          "mn": "Одоохондоо надад мөнгө хэрэггүй."
+        },
+        "バターが要るんだけど、いくらかありますか。": {
+          "en": "I need some butter. Do you have any?",
+          "mn": "Надад цөцгийн тос хэрэгтэй байна. Жаахан байна уу?"
+        }
+      }
+    },
+    "6d824d5110": {
+      "expected": {
+        "w": "入れる",
+        "r": "いれる",
+        "en": [
+          "to put in"
+        ]
+      },
+      "examples": {
+        "それは引き出しに入れておきました。": {
+          "en": "I put it in the drawer.",
+          "mn": "Би түүнийг шургуулганд хийсэн."
+        },
+        "本をさかさまに入れないで下さい。": {
+          "en": "Don't put the books in the shelf upside down.",
+          "mn": "Номуудыг доош нь харуулж битгий хий."
+        }
+      }
+    },
+    "523266ea6f": {
+      "expected": {
+        "w": "色",
+        "r": "いろ",
+        "en": [
+          "colour"
+        ]
+      },
+      "examples": {
+        "カメレオンはどんな色にでもなれる。": {
+          "en": "The chameleon can take on any color.",
+          "mn": "Хамелеон ямар ч өнгөтэй болж чаддаг."
+        },
+        "この色、気に入りましたか。": {
+          "en": "Do you like this color?",
+          "mn": "Энэ өнгө танд таалагдсан уу?"
+        }
+      }
+    },
+    "f74dd1ee9a": {
+      "expected": {
+        "w": "いろいろ",
+        "r": "いろいろ",
+        "en": [
+          "various"
+        ]
+      },
+      "examples": {
+        "先生といってもいろいろある。": {
+          "en": "There are teachers and then there are teachers.",
+          "mn": "Багш болгон адилгүй."
+        },
+        "コーヒーにもいろいろある。": {
+          "en": "There are various kinds of coffee.",
+          "mn": "Кофе ч олон янз байдаг."
+        }
+      }
+    },
+    "08a3ed212d": {
+      "expected": {
+        "w": "上",
+        "r": "うえ",
+        "en": [
+          "on top of"
+        ]
+      },
+      "examples": {
+        "テーブルの上にリンゴがあります。": {
+          "en": "There is an apple on the table.",
+          "mn": "Ширээн дээр алим байна."
+        },
+        "テーブルの上にオレンジがある。": {
+          "en": "There is an orange on the table.",
+          "mn": "Ширээн дээр жүрж байна."
+        }
+      }
+    },
+    "93bdc81dd9": {
+      "expected": {
+        "w": "後ろ",
+        "r": "うしろ",
+        "en": [
+          "behind"
+        ]
+      },
+      "examples": {
+        "校長が先生の後ろから入ってきた。": {
+          "en": "The principal came in after the teacher.",
+          "mn": "Захирал багшийн араас орж ирсэн."
+        },
+        "あなたの後ろのドアをしめて下さい。": {
+          "en": "Please close the door behind you.",
+          "mn": "Ард байгаа хаалгаа хаагаарай."
+        }
+      }
+    },
+    "d2b2316e45": {
+      "expected": {
+        "w": "薄い",
+        "r": "うすい",
+        "en": [
+          "thin",
+          "weak"
+        ]
+      },
+      "examples": {
+        "コーヒーは薄いのが好きです。": {
+          "en": "I'd like my coffee weak.",
+          "mn": "Би сулхан кофе уух дуртай."
+        },
+        "肉を薄く切りなさい。": {
+          "en": "Cut the meat into thin slices.",
+          "mn": "Махыг нимгэн хэрч."
+        }
+      }
+    },
+    "036f4180a2": {
+      "expected": {
+        "w": "歌",
+        "r": "うた",
+        "en": [
+          "song"
+        ]
+      },
+      "examples": {
+        "歌がうまければいいのになあ。": {
+          "en": "I wish I were a good singer.",
+          "mn": "Сайн дуулдаг ч болоосой."
+        },
+        "この歌の名前は『オンリー・ユー』です。": {
+          "en": "This song's name is \"Only You\".",
+          "mn": "Энэ дууны нэр «Зөвхөн чи»."
+        }
+      }
+    },
+    "3464318c23": {
+      "expected": {
+        "w": "歌う",
+        "r": "うたう",
+        "en": [
+          "to sing"
+        ]
+      },
+      "examples": {
+        "ジョンはステージで何を歌いましたか。": {
+          "en": "What did John sing on the stage?",
+          "mn": "Жон тайзан дээр юу дуулсан бэ?"
+        },
+        "ベティはうまく歌うことができた。": {
+          "en": "Betty managed to sing well.",
+          "mn": "Бетти сайн дуулж чадсан."
+        }
+      }
+    },
+    "63bc7722fa": {
+      "expected": {
+        "w": "生まれる",
+        "r": "うまれる",
+        "en": [
+          "to be born"
+        ]
+      },
+      "examples": {
+        "どんぐりからオークが生まれる。": {
+          "en": "From acorns come oaks.",
+          "mn": "Царсны самраас царс ургадаг."
+        },
+        "ここが父の生まれたところです。": {
+          "en": "This is the place where my father was born.",
+          "mn": "Энэ бол миний аавын төрсөн газар."
+        }
+      }
+    },
+    "06ac21dc7d": {
+      "expected": {
+        "w": "海",
+        "r": "うみ",
+        "en": [
+          "sea"
+        ]
+      },
+      "examples": {
+        "何としても海をひと目みたいものだ。": {
+          "en": "I ache for a sight of the sea.",
+          "mn": "Яаж ийгээд далайг нэг харах юмсан."
+        },
+        "海までは、たった１マイルです。": {
+          "en": "It is no more than a mile to the sea.",
+          "mn": "Далай хүртэл ердөө нэг миль."
+        }
+      }
+    }
+  }
+}

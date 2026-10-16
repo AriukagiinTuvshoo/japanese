@@ -1,0 +1,23 @@
+{
+  "provenance": {
+    "id": "mn-n2-vocab-aogu-correction-2026-10-09",
+    "createdAt": "2026-10-09",
+    "author": "Codex",
+    "method": "Mongolian gloss corrected after checking the Japanese headword, reading, and retained English senses against the Japanese lexical definition. The Mongolian wording is an original concise adaptation; independent human review outstanding.",
+    "source": "https://kotobank.jp/word/%E6%89%87%E3%81%90-422236",
+    "sourceSnapshot": "Kotobank Digital Daijisen entry for 扇ぐ, checked 2026-10-09; local public/data/vocab/n2.json entry 5c46e379a2",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "5c46e379a2": {
+      "expected": {
+        "w": "扇ぐ",
+        "r": "あおぐ",
+        "en": ["to fan", "to flap"]
+      },
+      "previousMn": ["сэлмээр салхи хийх"],
+      "mn": "дэвүүрдэх; сэвэх (салхилуулах)"
+    }
+  }
+}

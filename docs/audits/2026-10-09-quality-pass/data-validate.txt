@@ -1,0 +1,6 @@
+
+> nihongo-dojo@3.0.0 data:validate
+> node scripts/validate-data.mjs
+
+vocab 10461 (draft 10430), kanji 2686 (draft 2655), grammar 526
+OK: алдаа байхгүй, 0 анхааруулга

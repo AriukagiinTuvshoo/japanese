@@ -1,0 +1,1085 @@
+{
+  "provenance": {
+    "id": "mn-n3-vocab-middle-a-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit topics cross-checked individually against retained Japanese headwords/readings and English glosses, including alternate dictionary readings. Independently unreviewed.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n3.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j1252400": {
+      "mn": [
+        "цагдаагийн ажилтан",
+        "эрэгтэй цагдаа",
+        "эмэгтэй цагдаа"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "警察官",
+        "r": "けいさつかん",
+        "en": [
+          "police officer",
+          "policeman",
+          "policewoman"
+        ]
+      }
+    },
+    "j1288670": {
+      "mn": [
+        "ясан хүрээ",
+        "араг яс",
+        "биеийн бүтэц"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "骨組",
+        "r": "ほねぐみ",
+        "en": [
+          "skeletal frame",
+          "skeleton",
+          "build"
+        ]
+      }
+    },
+    "j2846444": {
+      "mn": [
+        "ээлжлэн",
+        "ээлжээр",
+        "нэг нэгнийхээ дараа"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "交互に",
+        "r": "こうごに",
+        "en": [
+          "alternately",
+          "by turns",
+          "one after the other"
+        ]
+      }
+    },
+    "j1391070": {
+      "mn": [
+        "угаалгын өрөө",
+        "ариун цэврийн өрөө"
+      ],
+      "topics": [
+        "places",
+        "daily"
+      ],
+      "expected": {
+        "w": "洗面所",
+        "r": "せんめんじょ",
+        "en": [
+          "washroom",
+          "bathroom"
+        ]
+      }
+    },
+    "j1516490": {
+      "mn": [
+        "буу сум асуулт зэргийг тавих",
+        "буудах",
+        "бөмбөг цохих"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "放つ",
+        "r": "はなつ",
+        "en": [
+          "to fire (gun, arrow, questions, etc.)",
+          "to shoot",
+          "to hit (e.g. baseball)"
+        ]
+      }
+    },
+    "j2405150": {
+      "mn": [
+        "дүрэм зөрчсөн"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "ルール違反",
+        "r": "ルールいはん",
+        "en": [
+          "against the rules"
+        ]
+      }
+    },
+    "j1874940": {
+      "mn": [
+        "сайн боломжоо алдах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "好機を逃す",
+        "r": "こうきをのがす",
+        "en": [
+          "to let an opportunity slip"
+        ]
+      }
+    },
+    "j1886610": {
+      "mn": [
+        "хэд хэдэн байшин"
+      ],
+      "topics": [
+        "places",
+        "quantity"
+      ],
+      "expected": {
+        "w": "数軒",
+        "r": "すうけん",
+        "en": [
+          "several houses"
+        ]
+      }
+    },
+    "j1599490": {
+      "mn": [
+        "зөөлөн сэтгэлтэй",
+        "энэрэнгүй",
+        "өглөгч"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "情深い",
+        "r": "なさけぶかい",
+        "en": [
+          "tender-hearted",
+          "compassionate",
+          "charitable"
+        ]
+      }
+    },
+    "j1510690": {
+      "mn": [
+        "ер бусын",
+        "хэвийн бус",
+        "хачин"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "変わった",
+        "r": "かわった",
+        "en": [
+          "unusual",
+          "abnormal",
+          "strange"
+        ]
+      }
+    },
+    "j1487420": {
+      "mn": [
+        "гарцаагүй",
+        "лавтай",
+        "заавал"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "必ずや",
+        "r": "かならずや",
+        "en": [
+          "certainly",
+          "surely",
+          "definitely"
+        ]
+      }
+    },
+    "j1225620": {
+      "mn": [
+        "эргэлзээ",
+        "сэжиг",
+        "болгоомжилсон бодол"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "疑念",
+        "r": "ぎねん",
+        "en": [
+          "doubt",
+          "suspicion",
+          "misgivings"
+        ]
+      }
+    },
+    "j1391050": {
+      "mn": [
+        "нүүрээ угаах"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "洗面",
+        "r": "せんめん",
+        "en": [
+          "washing one's face"
+        ]
+      }
+    },
+    "j1506880": {
+      "mn": [
+        "мөнгөний тогтолцоо",
+        "мөнгөн тэмдэгт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "幣制",
+        "r": "へいせい",
+        "en": [
+          "monetary system",
+          "currency"
+        ]
+      }
+    },
+    "j1590480": {
+      "mn": [
+        "хэлбэр",
+        "дүрс",
+        "галбир"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "格好",
+        "r": "かっこう",
+        "en": [
+          "shape",
+          "form",
+          "figure"
+        ]
+      }
+    },
+    "j2115270": {
+      "mn": [
+        "наймаанд ашиг алдагдалгүй",
+        "давуу сул талгүй"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "損得なし",
+        "r": "そんとくなし",
+        "en": [
+          "even (of a trade)",
+          "no advantage and no disadvantage"
+        ]
+      }
+    },
+    "j1408940": {
+      "mn": [
+        "бокст унагах",
+        "түлхэн унагаах",
+        "ялах"
+      ],
+      "topics": [
+        "arts",
+        "society"
+      ],
+      "expected": {
+        "w": "打倒",
+        "r": "だとう",
+        "en": [
+          "knockdown (e.g. in boxing)",
+          "overthrow",
+          "defeat"
+        ]
+      }
+    },
+    "j1518560": {
+      "mn": [
+        "ямар нэг зүйлгүйгээр"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "無しに",
+        "r": "なしに",
+        "en": [
+          "without"
+        ]
+      }
+    },
+    "j1316410": {
+      "mn": [
+        "дараах байдлаар",
+        "дор дурдсанчлан"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "次のように",
+        "r": "つぎのように",
+        "en": [
+          "in the following manner",
+          "as follows"
+        ]
+      }
+    },
+    "j2147680": {
+      "mn": [
+        "хуучрах",
+        "элэгдэх",
+        "доройтох"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "老朽化",
+        "r": "ろうきゅうか",
+        "en": [
+          "aging",
+          "wearing out",
+          "deterioration"
+        ]
+      }
+    },
+    "j1700140": {
+      "mn": [
+        "нүүрстөрөгчийн исэл",
+        "цусан дахь нүүрсхүчлийн хий ихсэх"
+      ],
+      "topics": [
+        "learning",
+        "body"
+      ],
+      "expected": {
+        "w": "酸化炭素",
+        "r": "さんかたんそ",
+        "en": [
+          "carbon oxide",
+          "hypercapnia",
+          "hypercarbia"
+        ]
+      }
+    },
+    "j2423990": {
+      "mn": [
+        "хичээл тарах",
+        "сургуулийн завсарлага",
+        "амралт"
+      ],
+      "topics": [
+        "time",
+        "learning"
+      ],
+      "expected": {
+        "w": "放課",
+        "r": "ほうか",
+        "en": [
+          "dismissal of class (at the end of the day)",
+          "recess (at school)",
+          "break"
+        ]
+      }
+    },
+    "j1380520": {
+      "mn": [
+        "өсвөр насанд дуу хоолой өөрчлөгдөх",
+        "дуу бүдүүрэх"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "声変わり",
+        "r": "こえがわり",
+        "en": [
+          "change of voice (during puberty)",
+          "break of voice"
+        ]
+      }
+    },
+    "j1544720": {
+      "mn": [
+        "бэлэг",
+        "тэнгэрийн хишиг"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "与え",
+        "r": "あたえ",
+        "en": [
+          "gift",
+          "godsend"
+        ]
+      }
+    },
+    "j2829042": {
+      "mn": [
+        "нарийн үзлэг",
+        "бүрэн шинжилгээ",
+        "биеийн дэлгэрэнгүй үзлэг"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "精密検査",
+        "r": "せいみつけんさ",
+        "en": [
+          "thorough checkup",
+          "complete examination",
+          "complete physical"
+        ]
+      }
+    },
+    "j2831239": {
+      "mn": [
+        "мэт санагдах",
+        "мэдрэмж төрөх"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "感じがする",
+        "r": "かんじがする",
+        "en": [
+          "to have a feeling (that)",
+          "to have a sensation (that)"
+        ]
+      }
+    },
+    "j1580510": {
+      "mn": [
+        "сэтгэл хөдлөл",
+        "мэдрэмж",
+        "уур амьсгал"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "情緒",
+        "r": "じょうちょ",
+        "en": [
+          "emotion",
+          "feeling",
+          "atmosphere"
+        ]
+      }
+    },
+    "j1223390": {
+      "mn": [
+        "дурсгалын чулуун самбар",
+        "бичээст чулуун хөшөө"
+      ],
+      "topics": [
+        "places",
+        "society"
+      ],
+      "expected": {
+        "w": "記念碑",
+        "r": "きねんひ",
+        "en": [
+          "commemorative plaque (usu. on a stone)",
+          "stone monument (bearing an inscription)"
+        ]
+      }
+    },
+    "j1208010": {
+      "mn": [
+        "хагарсан хэсэг",
+        "тогтоосон түвшнээс доош",
+        "доош буурах"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "割れ",
+        "r": "われ",
+        "en": [
+          "broken piece",
+          "below (a certain level, point, quantity, etc.)",
+          "dropping below"
+        ]
+      }
+    },
+    "j1606800": {
+      "mn": [
+        "хувь",
+        "харьцаа",
+        "эзлэх хэмжээ"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "割り",
+        "r": "わり",
+        "en": [
+          "rate",
+          "ratio",
+          "proportion"
+        ]
+      }
+    },
+    "j1606930": {
+      "mn": [
+        "харьцангуй",
+        "нэлээд"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "割に",
+        "r": "わりに",
+        "en": [
+          "comparatively",
+          "relatively",
+          "pretty"
+        ]
+      }
+    },
+    "j1507310": {
+      "mn": [
+        "тэнцүү жинлүүр",
+        "тэнцвэр",
+        "тэнцэл"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "平衡",
+        "r": "へいこう",
+        "en": [
+          "even scale",
+          "equilibrium",
+          "balance"
+        ]
+      }
+    },
+    "j1471310": {
+      "mn": [
+        "гамшиг",
+        "их сүйрэл",
+        "харилцаа тасрах"
+      ],
+      "topics": [
+        "society",
+        "relationships"
+      ],
+      "expected": {
+        "w": "破局",
+        "r": "はきょく",
+        "en": [
+          "catastrophe",
+          "cataclysm",
+          "collapse (of a relationship)"
+        ]
+      }
+    },
+    "j1181420": {
+      "mn": [
+        "хаан ширээ",
+        "хааны эрх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "王位",
+        "r": "おうい",
+        "en": [
+          "the throne",
+          "the crown"
+        ]
+      }
+    },
+    "j1495750": {
+      "mn": [
+        "тооцоо",
+        "борлуулалтын баримт",
+        "төлбөрийн нэхэмжлэх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "付け",
+        "r": "つけ",
+        "en": [
+          "bill",
+          "bill of sale",
+          "payment invoice"
+        ]
+      }
+    },
+    "j1496460": {
+      "mn": [
+        "зүүлт тэмдэг",
+        "жижиг цаас",
+        "шошго"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "付箋",
+        "r": "ふせん",
+        "en": [
+          "tag",
+          "slip",
+          "label"
+        ]
+      }
+    },
+    "j1584020": {
+      "mn": [
+        "булш эргэх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "墓参",
+        "r": "はかまいり",
+        "en": [
+          "visit to a grave"
+        ]
+      }
+    },
+    "j2037140": {
+      "mn": [
+        "байхгүй бол",
+        "үгүй бол",
+        "эзэмшдэггүй бол"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "無ければ",
+        "r": "なければ",
+        "en": [
+          "if (it) doesn't exist",
+          "if there is no ...",
+          "if (one) doesn't have ..."
+        ]
+      }
+    },
+    "j1427580": {
+      "mn": [
+        "дэвтэр",
+        "дансны дэвтэр",
+        "бүртгэл"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "帳面",
+        "r": "ちょうめん",
+        "en": [
+          "notebook",
+          "account book",
+          "register"
+        ]
+      }
+    },
+    "j1552820": {
+      "mn": [
+        "мөрдөн шалгах үеийн саатуулах",
+        "хорих",
+        "мал саатуулсны төлбөр"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "留置",
+        "r": "りゅうち",
+        "en": [
+          "detention (usu. during investigation)",
+          "imprisonment",
+          "poundage"
+        ]
+      }
+    },
+    "j1292750": {
+      "mn": [
+        "хоёр дахь гэрлэлт",
+        "дахин гэрлэх"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "再婚",
+        "r": "さいこん",
+        "en": [
+          "second marriage",
+          "remarriage"
+        ]
+      }
+    },
+    "j2132690": {
+      "mn": [
+        "хамгаалалтын арга хэмжээ"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "警備態勢",
+        "r": "けいびたいせい",
+        "en": [
+          "security measures"
+        ]
+      }
+    },
+    "j2772730": {
+      "mn": [
+        "хийхэд хэцүү",
+        "хийхэд бэрх"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "難い",
+        "r": "にくい",
+        "en": [
+          "difficult to ...",
+          "hard to ..."
+        ]
+      }
+    },
+    "j1689120": {
+      "mn": [
+        "гутранги үзэл"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "悲観論",
+        "r": "ひかんろん",
+        "en": [
+          "pessimism"
+        ]
+      }
+    },
+    "j1596250": {
+      "mn": [
+        "татвар багтсан үнэ",
+        "татвар суутгахаас өмнөх цалин"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "税込",
+        "r": "ぜいこみ",
+        "en": [
+          "tax included (e.g. price)",
+          "before tax (e.g. salary)"
+        ]
+      }
+    },
+    "j1539060": {
+      "mn": [
+        "амархан хүрэх буюу давах",
+        "төвөггүй",
+        "хангалттай"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "優に",
+        "r": "ゆうに",
+        "en": [
+          "easily (reach, exceed, etc.)",
+          "comfortably",
+          "amply"
+        ]
+      }
+    },
+    "j1544750": {
+      "mn": [
+        "оролцох",
+        "тал болох",
+        "талд нь орох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "与する",
+        "r": "くみする",
+        "en": [
+          "to take part in",
+          "to be a party to",
+          "to side with"
+        ]
+      }
+    },
+    "j1562920": {
+      "mn": [
+        "чадвартай",
+        "чадамжтай",
+        "мэргэшсэн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "腕利き",
+        "r": "うできき",
+        "en": [
+          "able",
+          "capable",
+          "competent"
+        ]
+      }
+    },
+    "j2142160": {
+      "mn": [
+        "хайр халамжтай",
+        "энэрэнгүй",
+        "үнэнч"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "愛情深い",
+        "r": "あいじょうぶかい",
+        "en": [
+          "loving",
+          "caring",
+          "devoted"
+        ]
+      }
+    },
+    "j1915920": {
+      "mn": [
+        "тоо хэмжээ нэмэгдэх"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "量が増える",
+        "r": "りょうがふえる",
+        "en": [
+          "to gain in quantity"
+        ]
+      }
+    },
+    "j1634340": {
+      "mn": [
+        "мэдэгдэл",
+        "мэдээлэх",
+        "анхааруулга"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "断り",
+        "r": "ことわり",
+        "en": [
+          "notice",
+          "notification",
+          "warning"
+        ]
+      }
+    },
+    "j1192970": {
+      "mn": [
+        "жимсний мод"
+      ],
+      "topics": [
+        "nature",
+        "food"
+      ],
+      "expected": {
+        "w": "果樹",
+        "r": "かじゅ",
+        "en": [
+          "fruit tree"
+        ]
+      }
+    },
+    "j1487490": {
+      "mn": [
+        "зайлшгүй хэрэгтэй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "必需",
+        "r": "ひつじゅ",
+        "en": [
+          "necessary"
+        ]
+      }
+    },
+    "j1319100": {
+      "mn": [
+        "ёслол",
+        "зан үйл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "式典",
+        "r": "しきてん",
+        "en": [
+          "ceremony",
+          "rites"
+        ]
+      }
+    },
+    "j1470760": {
+      "mn": [
+        "тариачин",
+        "фермийн ажилчин"
+      ],
+      "topics": [
+        "people",
+        "work"
+      ],
+      "expected": {
+        "w": "農夫",
+        "r": "のうふ",
+        "en": [
+          "peasant",
+          "farmhand"
+        ]
+      }
+    },
+    "j1294680": {
+      "mn": [
+        "заасан наснаас доош",
+        "тухайн нас хүрээгүй"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "歳未満",
+        "r": "さいみまん",
+        "en": [
+          "under ... years of age",
+          "less than ... years old"
+        ]
+      }
+    },
+    "j2109290": {
+      "mn": [
+        "ялгаатай байх",
+        "өөр байх",
+        "зөрөх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "違う",
+        "r": "たがう",
+        "en": [
+          "to differ",
+          "to be different",
+          "to run counter to"
+        ]
+      }
+    },
+    "j1390990": {
+      "mn": [
+        "угаалгын машин"
+      ],
+      "topics": [
+        "technology",
+        "daily"
+      ],
+      "expected": {
+        "w": "洗濯機",
+        "r": "せんたくき",
+        "en": [
+          "washing machine (laundry)"
+        ]
+      }
+    },
+    "j1484990": {
+      "mn": [
+        "эрүүл ухаангүй байдал",
+        "бодлогогүй зан",
+        "утгагүй байдал"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "非常識",
+        "r": "ひじょうしき",
+        "en": [
+          "lack of common sense",
+          "thoughtlessness",
+          "senselessness"
+        ]
+      }
+    },
+    "j1945670": {
+      "mn": [
+        "ядарсан мэдрэмж",
+        "туйлдсан байдал",
+        "ядрал"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "疲労感",
+        "r": "ひろうかん",
+        "en": [
+          "tired feeling",
+          "feeling of exhaustion",
+          "sense of fatigue"
+        ]
+      }
+    }
+  }
+}

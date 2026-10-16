@@ -1,0 +1,538 @@
+{
+  "provenance": {
+    "id": "mn-n4-vocab-final-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit topics cross-checked individually against retained Japanese headwords/readings and English glosses, including alternate dictionary readings. Independently unreviewed.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n4.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j2062750": {
+      "mn": [
+        "тайлагнах хариуцлага",
+        "үйлдлийнхээ төлөө хариуцлага хүлээх"
+      ],
+      "topics": [
+        "work",
+        "society"
+      ],
+      "expected": {
+        "w": "説明責任",
+        "r": "せつめいせきにん",
+        "en": [
+          "accountability",
+          "being held accountable"
+        ]
+      }
+    },
+    "j1954950": {
+      "mn": [
+        "сэрэх"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "目覚め",
+        "r": "めざめ",
+        "en": [
+          "waking"
+        ]
+      }
+    },
+    "j1234490": {
+      "mn": [
+        "коммунизм",
+        "хамтач үзэл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "共産主義",
+        "r": "きょうさんしゅぎ",
+        "en": [
+          "communism",
+          "collectivism"
+        ]
+      }
+    },
+    "j1409230": {
+      "mn": [
+        "спорт заал"
+      ],
+      "topics": [
+        "places",
+        "arts"
+      ],
+      "expected": {
+        "w": "体育館",
+        "r": "たいいくかん",
+        "en": [
+          "gymnasium"
+        ]
+      }
+    },
+    "j1265170": {
+      "mn": [
+        "хуучин байшин",
+        "эзгүй байшин"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "古家",
+        "r": "ふるいえ",
+        "en": [
+          "old house",
+          "deserted house"
+        ]
+      }
+    },
+    "j1407750": {
+      "mn": [
+        "олон төрөл",
+        "янз бүрийн"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "多種",
+        "r": "たしゅ",
+        "en": [
+          "many kinds",
+          "various"
+        ]
+      }
+    },
+    "j1360960": {
+      "mn": [
+        "гарын мөнгө",
+        "цайны мөнгө"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "心付",
+        "r": "こころづけ",
+        "en": [
+          "gratuity",
+          "tip"
+        ]
+      }
+    },
+    "j1408170": {
+      "mn": [
+        "их хэмжээ",
+        "их тоо"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "多量",
+        "r": "たりょう",
+        "en": [
+          "large quantity",
+          "large amount"
+        ]
+      }
+    },
+    "j1748060": {
+      "mn": [
+        "хэв журам хамгаалагч",
+        "шериф"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "保安官",
+        "r": "ほあんかん",
+        "en": [
+          "peace officer",
+          "sheriff"
+        ]
+      }
+    },
+    "j2810030": {
+      "mn": [
+        "эцсийн",
+        "туйлын"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "究極的",
+        "r": "きゅうきょくてき",
+        "en": [
+          "ultimate"
+        ]
+      }
+    },
+    "j1549120": {
+      "mn": [
+        "урвуулан ашиглах",
+        "буруу хэрэглэх",
+        "завших"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "乱用",
+        "r": "らんよう",
+        "en": [
+          "abuse",
+          "misuse",
+          "misappropriation"
+        ]
+      }
+    },
+    "j2394480": {
+      "mn": [
+        "дураараа",
+        "хүссэнээрээ"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "意のままに",
+        "r": "いのままに",
+        "en": [
+          "at will"
+        ]
+      }
+    },
+    "j1939730": {
+      "mn": [
+        "дэлхийн энх тайван"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "世界平和",
+        "r": "せかいへいわ",
+        "en": [
+          "world peace",
+          "peace of the world"
+        ]
+      }
+    },
+    "j1327920": {
+      "mn": [
+        "гар хүрэхэд мэдрэгдэх байдал",
+        "хүрэлцэх мэдрэмж"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "手触り",
+        "r": "てざわり",
+        "en": [
+          "feel",
+          "touch"
+        ]
+      }
+    },
+    "j1312000": {
+      "mn": [
+        "харах хүрээ",
+        "харагдац",
+        "үзэгдэх орчин"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "視界",
+        "r": "しかい",
+        "en": [
+          "field of vision",
+          "visibility",
+          "view"
+        ]
+      }
+    },
+    "j2729820": {
+      "mn": [
+        "дурдахуйц зүйл",
+        "найдаж болох зүйл",
+        "асуудалтай зүйл"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "物の数",
+        "r": "もののかず",
+        "en": [
+          "something worth mentioning",
+          "something to count on",
+          "something problematic"
+        ]
+      }
+    },
+    "j1328020": {
+      "mn": [
+        "гараа угаах",
+        "гар угаах ус буюу сав",
+        "бие засах өрөө"
+      ],
+      "topics": [
+        "body",
+        "daily"
+      ],
+      "expected": {
+        "w": "手洗",
+        "r": "てあらい",
+        "en": [
+          "washing one's hands",
+          "water (or basin, etc.) for washing one's hands",
+          "restroom"
+        ]
+      }
+    },
+    "j2046710": {
+      "mn": [
+        "өөрийн зарчим ба байр суурь"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "主義主張",
+        "r": "しゅぎしゅちょう",
+        "en": [
+          "one's principles and position"
+        ]
+      }
+    },
+    "j1360500": {
+      "mn": [
+        "сэтгэх арга",
+        "анхаарал",
+        "халамж"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "心がけ",
+        "r": "こころがけ",
+        "en": [
+          "way of thinking",
+          "attention",
+          "care"
+        ]
+      }
+    },
+    "j1640030": {
+      "mn": [
+        "болгоомжлох",
+        "санаа тавих",
+        "анхаарах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "心する",
+        "r": "こころする",
+        "en": [
+          "to take care",
+          "to mind",
+          "to be attentive"
+        ]
+      }
+    },
+    "j1853490": {
+      "mn": [
+        "чин зүрхнээсээ",
+        "халуун сэтгэлээр",
+        "үнэн сэтгэлээсээ"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "心から",
+        "r": "こころから",
+        "en": [
+          "from the bottom of one's heart",
+          "heartily",
+          "sincerely"
+        ]
+      }
+    },
+    "j2202550": {
+      "mn": [
+        "чин сэтгэлийн"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "心より",
+        "r": "こころより",
+        "en": [
+          "heartfelt"
+        ]
+      }
+    },
+    "j2398550": {
+      "mn": [
+        "болгоомжтой",
+        "анхааралтай"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "心して",
+        "r": "こころして",
+        "en": [
+          "carefully",
+          "with caution"
+        ]
+      }
+    },
+    "j1493300": {
+      "mn": [
+        "бүтэлгүйтэл",
+        "амжилтгүй оролдлого"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "不成功",
+        "r": "ふせいこう",
+        "en": [
+          "failure",
+          "abortive (attempt, action)"
+        ]
+      }
+    },
+    "j1327360": {
+      "mn": [
+        "гар тээш",
+        "гар ачаа"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "手荷物",
+        "r": "てにもつ",
+        "en": [
+          "hand luggage",
+          "hand baggage"
+        ]
+      }
+    },
+    "j1309180": {
+      "mn": [
+        "бусдыг бодох",
+        "халамж",
+        "өрөвдөн ойлгох"
+      ],
+      "topics": [
+        "feelings",
+        "relationships"
+      ],
+      "expected": {
+        "w": "思いやり",
+        "r": "おもいやり",
+        "en": [
+          "consideration",
+          "thoughtfulness",
+          "sympathy"
+        ]
+      }
+    },
+    "j1309380": {
+      "mn": [
+        "төлөвлөгөө",
+        "санаа",
+        "санал"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "思いつき",
+        "r": "おもいつき",
+        "en": [
+          "plan",
+          "idea",
+          "suggestion"
+        ]
+      }
+    },
+    "j1309470": {
+      "mn": [
+        "мэт санагдах",
+        "шиг харагдах"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "思われる",
+        "r": "おもわれる",
+        "en": [
+          "to seem",
+          "to appear"
+        ]
+      }
+    },
+    "j2119470": {
+      "mn": [
+        "хүсэл эрмэлзэлтэй",
+        "урам зоригтой",
+        "өөрийн хүслээр зүтгэдэг"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "意欲的",
+        "r": "いよくてき",
+        "en": [
+          "ambitious",
+          "motivated",
+          "willful"
+        ]
+      }
+    },
+    "j1938440": {
+      "mn": [
+        "цөөнхийн бүлэг",
+        "цөөнх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "少数派",
+        "r": "しょうすうは",
+        "en": [
+          "minority group (party)",
+          "minority"
+        ]
+      }
+    }
+  }
+}

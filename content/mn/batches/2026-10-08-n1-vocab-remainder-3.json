@@ -1,0 +1,1018 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-remainder-3-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses cross-checked against exact Japanese spelling, reading and retained English; explicit semantic topic assignments. Independent human review outstanding; suspect sources withheld.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n1.json JMdict-derived records at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j1873490": {
+      "mn": [
+        "Буддатай холбоо тогтоох"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "結縁",
+        "r": "けちえん",
+        "en": [
+          "making a connection (with Buddha)"
+        ]
+      }
+    },
+    "j1765600": {
+      "mn": [
+        "ёс журамтай",
+        "хүмүүжилтэй",
+        "боловсон"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "紳士的",
+        "r": "しんしてき",
+        "en": [
+          "gentlemanly",
+          "well-mannered",
+          "well-bred"
+        ]
+      }
+    },
+    "j1141550": {
+      "mn": [
+        "бүтцийн өөрчлөлтийн төлөвлөгөө"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "リストラ策",
+        "r": "リストラさく",
+        "en": [
+          "restructuring scheme"
+        ]
+      }
+    },
+    "j2402190": {
+      "mn": [
+        "хүрээг нарийсгах",
+        "яг чиглэх",
+        "төвлөрөх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "的を絞る",
+        "r": "まとをしぼる",
+        "en": [
+          "to narrow in (on)",
+          "to home in",
+          "to focus"
+        ]
+      }
+    },
+    "j2774880": {
+      "mn": [
+        "Миэ мужийн Матоя булангийн хясаа"
+      ],
+      "topics": [
+        "food",
+        "nature"
+      ],
+      "expected": {
+        "w": "的矢かき",
+        "r": "まとやかき",
+        "en": [
+          "Matoya Oyster (from Matoya bay, Mie-ken)"
+        ]
+      }
+    },
+    "j2376700": {
+      "mn": [
+        "санал болгосон анги"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "提案クラス",
+        "r": "ていあんクラス",
+        "en": [
+          "proposed class"
+        ]
+      }
+    },
+    "j1179810": {
+      "mn": [
+        "хариулах",
+        "хариу өгөх",
+        "шаардлага хүлээлтийг хангах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "応える",
+        "r": "こたえる",
+        "en": [
+          "to respond",
+          "to answer",
+          "to meet (e.g. demands, expectations)"
+        ]
+      }
+    },
+    "j1179820": {
+      "mn": [
+        "харьцаагаар",
+        "… дагуу",
+        "… хамааран"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "応じて",
+        "r": "おうじて",
+        "en": [
+          "in proportion to",
+          "according to",
+          "depending on"
+        ]
+      }
+    },
+    "j2836143": {
+      "mn": [
+        "хувцсыг тайлуулан биеийг шалгах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "検身",
+        "r": "けんしん",
+        "en": [
+          "strip search"
+        ]
+      }
+    },
+    "j1961000": {
+      "mn": [
+        "амин бүлэг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "アミノ基",
+        "r": "アミノき",
+        "en": [
+          "amino group"
+        ]
+      }
+    },
+    "j1963720": {
+      "mn": [
+        "кетон бүлэг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "ケトン基",
+        "r": "ケトンき",
+        "en": [
+          "ketone group"
+        ]
+      }
+    },
+    "j1965360": {
+      "mn": [
+        "сульфо бүлэг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "スルホ基",
+        "r": "スルホき",
+        "en": [
+          "sulfo group"
+        ]
+      }
+    },
+    "j1966620": {
+      "mn": [
+        "нитро бүлэг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "ニトロ基",
+        "r": "ニトロき",
+        "en": [
+          "nitro group"
+        ]
+      }
+    },
+    "j1967270": {
+      "mn": [
+        "винил бүлэг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "ビニル基",
+        "r": "ビニルき",
+        "en": [
+          "vinyl group"
+        ]
+      }
+    },
+    "j1967770": {
+      "mn": [
+        "бутил бүлэг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "ブチル基",
+        "r": "ブチルき",
+        "en": [
+          "butyl group"
+        ]
+      }
+    },
+    "j1969110": {
+      "mn": [
+        "метил бүлэг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "メチル基",
+        "r": "メチルき",
+        "en": [
+          "methyl group"
+        ]
+      }
+    },
+    "j2073480": {
+      "mn": [
+        "үндэслэн"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "に基づき",
+        "r": "にもとづき",
+        "en": [
+          "based on"
+        ]
+      }
+    },
+    "j2421710": {
+      "mn": [
+        "ацил бүлэг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "アシル基",
+        "r": "アシルき",
+        "en": [
+          "acyl group"
+        ]
+      }
+    },
+    "j2506790": {
+      "mn": [
+        "циано бүлэг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "シアノ基",
+        "r": "シアノき",
+        "en": [
+          "cyano group"
+        ]
+      }
+    },
+    "j2748700": {
+      "mn": [
+        "бадарчин санваартны өглөгийн аяга"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "応器",
+        "r": "おうき",
+        "en": [
+          "mendicant priest's begging bowl"
+        ]
+      }
+    },
+    "j2827297": {
+      "mn": [
+        "баривчилгааны хувь",
+        "хэрэг илрүүлэлтийн хувь",
+        "гэмт хэрэг баривчилгааны харьцаа"
+      ],
+      "topics": [
+        "society",
+        "quantity"
+      ],
+      "expected": {
+        "w": "検挙率",
+        "r": "けんきょりつ",
+        "en": [
+          "arrest rate",
+          "clear-up rate",
+          "crime-arrest ratio"
+        ]
+      }
+    },
+    "j1868860": {
+      "mn": [
+        "уламжлалт хятад эмийн орц"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "基源",
+        "r": "きげん",
+        "en": [
+          "ingredient (of a traditional Chinese medicine)"
+        ]
+      }
+    },
+    "j1295920": {
+      "mn": [
+        "шүүлт",
+        "шийдвэр"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "裁き",
+        "r": "さばき",
+        "en": [
+          "judgment",
+          "judgement",
+          "decision"
+        ]
+      }
+    },
+    "j1295950": {
+      "mn": [
+        "огтлох",
+        "эсгэх"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "裁ち",
+        "r": "たち",
+        "en": [
+          "cutting",
+          "cut"
+        ]
+      }
+    },
+    "j1296050": {
+      "mn": [
+        "даавуу эсгэх"
+      ],
+      "topics": [
+        "daily",
+        "actions"
+      ],
+      "expected": {
+        "w": "裁つ",
+        "r": "たつ",
+        "en": [
+          "to cut (cloth)"
+        ]
+      }
+    },
+    "j1592700": {
+      "mn": [
+        "цогцсын үзлэг",
+        "нас баралтын мөрдөн шалгалт"
+      ],
+      "topics": [
+        "body",
+        "society"
+      ],
+      "expected": {
+        "w": "検視",
+        "r": "けんし",
+        "en": [
+          "autopsy",
+          "inquest",
+          "investigation of death"
+        ]
+      }
+    },
+    "j1756100": {
+      "mn": [
+        "өөрийгөө золиослосон",
+        "өөрийгөө зориулсан"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "犠牲的",
+        "r": "ぎせいてき",
+        "en": [
+          "self-sacrificing"
+        ]
+      }
+    },
+    "j2831688": {
+      "mn": [
+        "бусдын бие сайн эсэхэд санаа зовох",
+        "сайн сайхны төлөө санаа тавих"
+      ],
+      "topics": [
+        "feelings",
+        "actions"
+      ],
+      "expected": {
+        "w": "身を案じる",
+        "r": "みをあんじる",
+        "en": [
+          "to be worried about",
+          "to be concerned for someone's welfare"
+        ]
+      }
+    },
+    "j1296060": {
+      "mn": [
+        "зөвшөөрөл",
+        "батламж"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "裁可",
+        "r": "さいか",
+        "en": [
+          "sanction",
+          "approval"
+        ]
+      }
+    },
+    "j1564510": {
+      "mn": [
+        "зуурдын",
+        "түрхэн зуурын"
+      ],
+      "topics": [
+        "time",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "刹那的",
+        "r": "せつなてき",
+        "en": [
+          "ephemeral",
+          "transitory"
+        ]
+      }
+    },
+    "j1824270": {
+      "mn": [
+        "зайлшгүй",
+        "өөр аргагүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "詮無い",
+        "r": "せんない",
+        "en": [
+          "unavoidable",
+          "no help for"
+        ]
+      }
+    },
+    "j2837832": {
+      "mn": [
+        "бөөгнөрч барьцалдах",
+        "коксжих"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "粘結",
+        "r": "ねんけつ",
+        "en": [
+          "caking",
+          "coking"
+        ]
+      }
+    },
+    "j2570210": {
+      "mn": [
+        "Саохимэ",
+        "хаврын бурхан"
+      ],
+      "topics": [
+        "society",
+        "time"
+      ],
+      "expected": {
+        "w": "佐保姫",
+        "r": "さほひめ",
+        "en": [
+          "Saohime",
+          "goddess of Spring"
+        ]
+      }
+    },
+    "j1472910": {
+      "mn": [
+        "уушгины сүрьеэ"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "肺結核",
+        "r": "はいけっかく",
+        "en": [
+          "pulmonary tuberculosis",
+          "consumption"
+        ]
+      }
+    },
+    "j1961610": {
+      "mn": [
+        "цахилгаан валент"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "イオン価",
+        "r": "イオンか",
+        "en": [
+          "electrovalence"
+        ]
+      }
+    },
+    "j1965440": {
+      "mn": [
+        "цетаны тоо"
+      ],
+      "topics": [
+        "learning",
+        "quantity"
+      ],
+      "expected": {
+        "w": "セタン価",
+        "r": "セタンか",
+        "en": [
+          "cetane number"
+        ]
+      }
+    },
+    "j1896960": {
+      "mn": [
+        "сакэ исгэх үйлдвэрийн ахлах исгэгч"
+      ],
+      "topics": [
+        "people",
+        "work"
+      ],
+      "expected": {
+        "w": "杜氏",
+        "r": "とうじ",
+        "en": [
+          "chief brewer at a sake brewery"
+        ]
+      }
+    },
+    "j1529640": {
+      "mn": [
+        "юу ч хийдэггүй, бодлогогүй байдал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "無為無策",
+        "r": "むいむさく",
+        "en": [
+          "do-nothing, plan-nothing (government, etc.)"
+        ]
+      }
+    },
+    "j2053980": {
+      "mn": [
+        "юу ч хийхгүй байх үзэл",
+        "ажил ч үгүй, төлөвлөгөө ч үгүй байдал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "無策無為",
+        "r": "むさくむい",
+        "en": [
+          "do-nothingism",
+          "do-nothing, plan-nothing (government, etc.)"
+        ]
+      }
+    },
+    "j2524920": {
+      "mn": [
+        "хөгжлийг дэмжих арга хэмжээ",
+        "эдийн засгийг сэргээх арга хэмжээ"
+      ],
+      "topics": [
+        "work",
+        "society"
+      ],
+      "expected": {
+        "w": "振興策",
+        "r": "しんこうさく",
+        "en": [
+          "measures for the promotion of",
+          "stimulation measure (for the economy)"
+        ]
+      }
+    },
+    "j1218120": {
+      "mn": [
+        "төлөвлөх",
+        "сэдэх",
+        "санал болгох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "企てる",
+        "r": "くわだてる",
+        "en": [
+          "to plan",
+          "to plot",
+          "to propose"
+        ]
+      }
+    },
+    "j1748090": {
+      "mn": [
+        "өвчин үүсгэгч тээгч байх",
+        "эмгэг төрүүлэгч тээх"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "保菌",
+        "r": "ほきん",
+        "en": [
+          "carrying a disease-causing agent",
+          "carrying a pathogen"
+        ]
+      }
+    },
+    "j2134950": {
+      "mn": [
+        "нотлох",
+        "батлах"
+      ],
+      "topics": [
+        "actions",
+        "learning"
+      ],
+      "expected": {
+        "w": "証す",
+        "r": "あかす",
+        "en": [
+          "to prove",
+          "to verify"
+        ]
+      }
+    },
+    "j1717990": {
+      "mn": [
+        "өөрт ирсэн зүйлийг бусадтай хуваалцах",
+        "ашгийн хэсгийг бусдад өгөх"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "裾分け",
+        "r": "すそわけ",
+        "en": [
+          "sharing with others what has been given to you",
+          "sharing a portion of the profit with others"
+        ]
+      }
+    },
+    "j1218180": {
+      "mn": [
+        "оролдлого"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "企及",
+        "r": "ききゅう",
+        "en": [
+          "attempt"
+        ]
+      }
+    },
+    "j1764520": {
+      "mn": [
+        "том хэмжээний ажил хэрэг"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "盛挙",
+        "r": "せいきょ",
+        "en": [
+          "large-scale undertaking"
+        ]
+      }
+    },
+    "j1528500": {
+      "mn": [
+        "мэргэн санаа",
+        "маш сайн төлөвлөгөө",
+        "оновчтой санаа"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "妙案",
+        "r": "みょうあん",
+        "en": [
+          "ingenious idea",
+          "excellent plan",
+          "bright idea"
+        ]
+      }
+    },
+    "j1519720": {
+      "mn": [
+        "нэгэн хүн",
+        "нэрээ нууцалсан хүн",
+        "тэр хэн гуай"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "某氏",
+        "r": "ぼうし",
+        "en": [
+          "a certain person",
+          "unnamed person",
+          "Mr. So-and-so"
+        ]
+      }
+    },
+    "j1709520": {
+      "mn": [
+        "буруу давхарласан зангилаа",
+        "эмээгийн зангилаа"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "縦結び",
+        "r": "たてむすび",
+        "en": [
+          "granny knot"
+        ]
+      }
+    },
+    "j1810140": {
+      "mn": [
+        "овжин арга",
+        "ухаалаг төлөвлөгөө"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "妙策",
+        "r": "みょうさく",
+        "en": [
+          "clever scheme"
+        ]
+      }
+    },
+    "j2820810": {
+      "mn": [
+        "хамгаалалтын бүрхүүл",
+        "хамгаалах хальс",
+        "гадна бүрхүүл"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "保護膜",
+        "r": "ほごまく",
+        "en": [
+          "protective coating",
+          "protective film",
+          "overcoat"
+        ]
+      }
+    },
+    "j2809120": {
+      "mn": [
+        "өргөгч булчин"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "挙筋",
+        "r": "きょきん",
+        "en": [
+          "levator",
+          "levator muscle"
+        ]
+      }
+    },
+    "j2674410": {
+      "mn": [
+        "гайхуулсан",
+        "гял цал"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "虚飾的",
+        "r": "きょしょくてき",
+        "en": [
+          "ostentatious",
+          "showy"
+        ]
+      }
+    },
+    "j1190870": {
+      "mn": [
+        "хэлбэржүүлэх боломжтой",
+        "пластик чанартай"
+      ],
+      "topics": [
+        "descriptions",
+        "technology"
+      ],
+      "expected": {
+        "w": "可塑",
+        "r": "かそ",
+        "en": [
+          "plastic"
+        ]
+      }
+    },
+    "j1177550": {
+      "mn": [
+        "гэрлэлт",
+        "гэрлэлтийн холбоо",
+        "хайр сэтгэлийн холбоо"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "縁結び",
+        "r": "えんむすび",
+        "en": [
+          "marriage",
+          "marriage tie",
+          "love knot"
+        ]
+      }
+    },
+    "j1588790": {
+      "mn": [
+        "халхлан хамгаалах",
+        "хамгаалалт",
+        "дэмжлэг"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "援護",
+        "r": "えんご",
+        "en": [
+          "covering",
+          "protection",
+          "backing"
+        ]
+      }
+    },
+    "j2504560": {
+      "mn": [
+        "шалгах",
+        "хянан удирдах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "検する",
+        "r": "けんする",
+        "en": [
+          "to inspect",
+          "to supervise"
+        ]
+      }
+    },
+    "j1727530": {
+      "mn": [
+        "сүрьеэгийн нян"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "結核菌",
+        "r": "けっかくきん",
+        "en": [
+          "tubercle bacillus",
+          "tuberculosis germ"
+        ]
+      }
+    },
+    "j1529650": {
+      "mn": [
+        "хэрэггүй",
+        "үр дүнгүй",
+        "дэмий"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "無益",
+        "r": "むえき",
+        "en": [
+          "useless",
+          "futile",
+          "vain"
+        ]
+      }
+    },
+    "j2539950": {
+      "mn": [
+        "центрифугаар шүүсийг нь ялгасан сахар",
+        "шингэнийг салгасан элсэн чихэр"
+      ],
+      "topics": [
+        "food",
+        "technology"
+      ],
+      "expected": {
+        "w": "分蜜糖",
+        "r": "ぶんみつとう",
+        "en": [
+          "centrifugal sugar",
+          "sugar freed from liquid by a centrifuge"
+        ]
+      }
+    }
+  }
+}

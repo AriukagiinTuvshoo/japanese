@@ -1,0 +1,169 @@
+{
+  "provenance": {
+    "id": "mn-n5-example-translation-batch-2026-10-16-3",
+    "createdAt": "2026-10-16",
+    "author": "Arena coding assistant",
+    "method": "AI-assisted Mongolian example translations drafted against retained Japanese and English example pairs. Japanese and English source fields are preserved. Naturalness and semantic accuracy remain unreviewed by a human linguist; review is required before release.",
+    "source": "https://github.com/evanclan/OpenJLPT (retained Japanese/English example sentences; Mongolian translation added in this repository)",
+    "sourceSnapshot": "6de4deafa0370c167cafd2b2cadf26eeb3d9a3d5",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "c373555102": {
+      "expected": {
+        "w": "少し",
+        "r": "すこし",
+        "en": [
+          "few"
+        ]
+      },
+      "examples": {
+        "少しテレビを見てもいいですか。": "Телевизор хэсэг хугацаанд үзэж болох уу?"
+      }
+    },
+    "938a169f6c": {
+      "expected": {
+        "w": "スプーン",
+        "r": "スプーン",
+        "en": [
+          "spoon"
+        ]
+      },
+      "examples": {
+        "スプーンをいただけますか。": "Нэг халбага өгч болох уу?",
+        "スプーンがありません。": "Нэг халбага алга байна."
+      }
+    },
+    "0a33903ccf": {
+      "expected": {
+        "w": "スポーツ",
+        "r": "スポーツ",
+        "en": [
+          "sport"
+        ]
+      },
+      "examples": {
+        "ビリーはスポーツがうまいです。": "Билли спортод сайн.",
+        "どのようなスポーツをなさいますか。": "Та ямар төрлийн спортоор хичээллэдэг вэ?"
+      }
+    },
+    "10fe0704ca": {
+      "expected": {
+        "w": "ズボン",
+        "r": "ズボン",
+        "en": [
+          "trousers"
+        ]
+      },
+      "examples": {
+        "ちょっとこのズボンにつめて。": "Энэ өмдийг жаахан нарийсгаад өгөөч.",
+        "このズボンはひざが出やすい。": "Энэ өмдний өвдөг амархан сунадаг."
+      }
+    },
+    "feae64eac4": {
+      "expected": {
+        "w": "すみません",
+        "r": "すみません",
+        "en": [
+          "sorry",
+          "excuse me"
+        ]
+      },
+      "examples": {
+        "すみません、この席あいていますか。": "Уучлаарай, энэ суудал сул уу?",
+        "すみませんが電話に出てください。": "Уучлаарай, утсаа аваад өгнө үү."
+      }
+    },
+    "d671097071": {
+      "expected": {
+        "w": "住む",
+        "r": "すむ",
+        "en": [
+          "to live in"
+        ]
+      },
+      "examples": {
+        "どうしてアメリカに住んでいたの？": "Яагаад Америкт амьдарч байсан юм бэ?",
+        "ここにかつて住んでいたのですか。": "Та өмнө нь энд амьдарч байсан уу?"
+      }
+    },
+    "508131fe89": {
+      "expected": {
+        "w": "スリッパ",
+        "r": "スリッパ",
+        "en": [
+          "slippers"
+        ]
+      },
+      "examples": {
+        "スリッパをはいてください。": "Гэрийн шаахайгаа өмсөөрэй."
+      }
+    },
+    "c4cdc162d7": {
+      "expected": {
+        "w": "する",
+        "r": "する",
+        "en": [
+          "to do"
+        ]
+      },
+      "examples": {
+        "ログアウトするんじゃなかったよ。": "Бүртгэлээс гарах ёсгүй байсан юм."
+      }
+    },
+    "c9a15e8777": {
+      "expected": {
+        "w": "座る",
+        "r": "すわる",
+        "en": [
+          "to sit"
+        ]
+      },
+      "examples": {
+        "父と母は木の下に座っていました。": "Аав, ээж хоёр модны доор сууж байсан.",
+        "あのベンチに座ってはいけません。": "Тэр сандал дээр сууж болохгүй."
+      }
+    },
+    "898b067287": {
+      "expected": {
+        "w": "背",
+        "r": "せ",
+        "en": [
+          "height",
+          "stature"
+        ]
+      },
+      "examples": {
+        "トムはジャックと背が同じくらいだ。": "Том Жэктэй ойролцоо өндөртэй.",
+        "彼はいすの背にもたれている。": "Тэр сандлын түшлэгт налж байна."
+      }
+    },
+    "af7459ef1e": {
+      "expected": {
+        "w": "生徒",
+        "r": "せいと",
+        "en": [
+          "pupil"
+        ]
+      },
+      "examples": {
+        "あなたは生徒ではありません。": "Та сурагч биш."
+      }
+    },
+    "4b0b49a42d": {
+      "expected": {
+        "w": "セーター",
+        "r": "セーター",
+        "en": [
+          "sweater",
+          "jumper"
+        ]
+      },
+      "examples": {
+        "このセーターは気に入らない。": "Энэ свитер надад таалагдахгүй байна.",
+        "母にこのセーターをつくろってもらった。": "Ээжээрээ энэ свитерээ нөхүүлсэн."
+      }
+    }
+  }
+}

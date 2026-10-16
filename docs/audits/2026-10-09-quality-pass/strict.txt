@@ -1,0 +1,30 @@
+
+> nihongo-dojo@3.0.0 coverage:validate
+> node scripts/validate-coverage.mjs
+
+N5 vocab: 0/1074 meanings missing; 974 examples; 0 forms; 0 unclassified
+N5 kanji: 0/84 meanings missing; 0 examples; 0 forms; 0 unclassified
+N5 grammar: 0/81 meanings missing; 0 examples; 0 forms; 0 unclassified
+N4 vocab: 0/1080 meanings missing; 1010 examples; 0 forms; 0 unclassified
+N4 kanji: 0/169 meanings missing; 0 examples; 0 forms; 0 unclassified
+N4 grammar: 0/98 meanings missing; 0 examples; 0 forms; 0 unclassified
+N3 vocab: 0/2279 meanings missing; 3121 examples; 0 forms; 571 unclassified
+N3 kanji: 0/387 meanings missing; 0 examples; 0 forms; 189 unclassified
+N3 grammar: 0/101 meanings missing; 0 examples; 0 forms; 0 unclassified
+N2 vocab: 0/2338 meanings missing; 2861 examples; 0 forms; 562 unclassified
+N2 kanji: 0/400 meanings missing; 0 examples; 0 forms; 228 unclassified
+N2 grammar: 0/123 meanings missing; 0 examples; 0 forms; 0 unclassified
+N1 vocab: 31/3690 meanings missing; 4808 examples; 0 forms; 208 unclassified
+N1 kanji: 31/1646 meanings missing; 0 examples; 0 forms; 93 unclassified
+N1 grammar: 0/123 meanings missing; 0 examples; 0 forms; 0 unclassified
+Totals: {
+  missingMeanings: 62,
+  missingExamples: 12774,
+  missingForms: 0,
+  unclassified: 1851,
+  invalidCategories: 0,
+  missingProvenance: 0,
+  mislabeledMn: 0,
+  unresolvedSourceIssues: 10
+}
+INCOMPLETE — release blocked

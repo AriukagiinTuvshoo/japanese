@@ -1,0 +1,35 @@
+{
+  "generatedAt": "2026-10-10",
+  "head": "see PR #12 latest commit",
+  "reading": {
+    "total": 165,
+    "perLevel": { "N5": 33, "N4": 33, "N3": 33, "N2": 33, "N1": 33 },
+    "targetPerLevel": 100,
+    "gapPerLevel": 67,
+    "reviewed": 0,
+    "pendingReview": 165,
+    "questions": 180,
+    "provenanceField": "status= pending_review|reviewed, source=original-ai-assisted"
+  },
+  "listening": {
+    "total": 150,
+    "perLevel": { "N5": 30, "N4": 30, "N3": 30, "N2": 30, "N1": 30 },
+    "reviewed": 0,
+    "pendingReview": 150,
+    "questions": 150
+  },
+  "writing": {
+    "bank": "per-level kanji with KanjiVG stroke order (guided/practice/free modes); per-kanji best/tries/at persisted in doc.writing",
+    "reviewed": 0,
+    "note": "instruction/self-check copy is UI text; stroke data is KanjiVG-derived"
+  },
+  "batch20261010": {
+    "script": "scripts/add-reading-batch-1.py",
+    "added": 15,
+    "perLevelAdded": 3,
+    "genres": ["ad", "message", "email", "instruction", "article"],
+    "questionsPerLesson": 2
+  },
+  "rights": "All reading/listening cases are clearly original AI-assisted authoring; no NHK/JLPT-official/YouTube text or audio is downloaded, re-hosted or translated. Audio is generated (browser TTS). JLPT format is imitated for practice only; scores are never labeled official.",
+  "humanReview": "NOT human-reviewed. Linguist review is required and open for JA naturalness, MN/EN translations, and answer keys. AI-assisted content is never marked human-reviewed."
+}

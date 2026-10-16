@@ -1,0 +1,1099 @@
+{
+  "provenance": {
+    "id": "mn-n4-vocab-a-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit categories cross-checked against each retained Japanese headword, reading and English gloss. Independent review outstanding. Rare alternate dictionary senses retained rather than replaced with common homographs.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n4.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j2409950": {
+      "mn": [
+        "уулзуулах",
+        "уулзах боломж олгох",
+        "өртүүлэх"
+      ],
+      "expected": {
+        "w": "会す",
+        "r": "あわす",
+        "en": [
+          "to make (someone) to meet",
+          "to let (someone) meet",
+          "to expose to"
+        ]
+      },
+      "topics": [
+        "actions",
+        "people"
+      ]
+    },
+    "j1824110": {
+      "mn": [
+        "бүх хуралдагсад",
+        "нийт чуулган"
+      ],
+      "expected": {
+        "w": "全会",
+        "r": "ぜんかい",
+        "en": [
+          "whole assembly"
+        ]
+      },
+      "topics": [
+        "society"
+      ]
+    },
+    "j1452570": {
+      "mn": [
+        "мөн тэр компани"
+      ],
+      "expected": {
+        "w": "同社",
+        "r": "どうしゃ",
+        "en": [
+          "the same firm"
+        ]
+      },
+      "topics": [
+        "work"
+      ]
+    },
+    "j1198330": {
+      "mn": [
+        "чуулганы хугацаа"
+      ],
+      "expected": {
+        "w": "会期",
+        "r": "かいき",
+        "en": [
+          "session (of a legislature)"
+        ]
+      },
+      "topics": [
+        "society",
+        "time"
+      ]
+    },
+    "j1226080": {
+      "mn": [
+        "хурлын хэлэлцүүлэг",
+        "хэлэлцэх ажил"
+      ],
+      "expected": {
+        "w": "議事",
+        "r": "ぎじ",
+        "en": [
+          "proceedings (e.g. parliament, congress)",
+          "business (of the day)"
+        ]
+      },
+      "topics": [
+        "society",
+        "work"
+      ]
+    },
+    "j1317330": {
+      "mn": [
+        "аяндаа",
+        "цаг нь болохоор",
+        "өөрөө"
+      ],
+      "expected": {
+        "w": "自ら",
+        "r": "おのずから",
+        "en": [
+          "naturally",
+          "in due course",
+          "by itself"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "j1198850": {
+      "mn": [
+        "фракц",
+        "шашны урсгал",
+        "шашны нэгдэл"
+      ],
+      "expected": {
+        "w": "会派",
+        "r": "かいは",
+        "en": [
+          "faction",
+          "denomination",
+          "communion"
+        ]
+      },
+      "topics": [
+        "society"
+      ]
+    },
+    "j1322930": {
+      "mn": [
+        "компанийн дотор",
+        "байгууллагын дотоод",
+        "сүмийн дотор"
+      ],
+      "expected": {
+        "w": "社内",
+        "r": "しゃない",
+        "en": [
+          "within a company",
+          "in-house",
+          "within a shrine"
+        ]
+      },
+      "topics": [
+        "work",
+        "places"
+      ]
+    },
+    "j2005530": {
+      "mn": [
+        "аман орчуулга"
+      ],
+      "expected": {
+        "w": "通事",
+        "r": "つうじ",
+        "en": [
+          "interpretation"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "j1449070": {
+      "mn": [
+        "холбогдох асуудал"
+      ],
+      "expected": {
+        "w": "当事",
+        "r": "とうじ",
+        "en": [
+          "matter under concern"
+        ]
+      },
+      "topics": [
+        "society"
+      ]
+    },
+    "j1318250": {
+      "mn": [
+        "өөрөө",
+        "өөрийн бие",
+        "өөрийгөө"
+      ],
+      "expected": {
+        "w": "自体",
+        "r": "じたい",
+        "en": [
+          "itself",
+          "one's own body",
+          "oneself"
+        ]
+      },
+      "topics": [
+        "people",
+        "body"
+      ]
+    },
+    "j2810410": {
+      "mn": [
+        "чухал хэрэг",
+        "хэрэгтэй зүйл",
+        "шаардлага"
+      ],
+      "expected": {
+        "w": "要事",
+        "r": "ようじ",
+        "en": [
+          "important matter",
+          "necessary thing",
+          "requirement"
+        ]
+      },
+      "topics": [
+        "daily"
+      ]
+    },
+    "j1451320": {
+      "mn": [
+        "хуралд оруулсан санал"
+      ],
+      "expected": {
+        "w": "動議",
+        "r": "どうぎ",
+        "en": [
+          "motion (i.e. proposal to a committee, etc.)"
+        ]
+      },
+      "topics": [
+        "society"
+      ]
+    },
+    "j2007590": {
+      "mn": [
+        "уулзах",
+        "цуглах",
+        "хуран чуулах"
+      ],
+      "expected": {
+        "w": "会する",
+        "r": "かいする",
+        "en": [
+          "to meet",
+          "to assemble",
+          "to gather"
+        ]
+      },
+      "topics": [
+        "actions",
+        "people"
+      ]
+    },
+    "j1798040": {
+      "mn": [
+        "ээлжит хурал",
+        "парламентын ээлжит чуулган"
+      ],
+      "expected": {
+        "w": "常会",
+        "r": "じょうかい",
+        "en": [
+          "regular meeting",
+          "ordinary Diet session"
+        ]
+      },
+      "topics": [
+        "society"
+      ]
+    },
+    "j1407980": {
+      "mn": [
+        "магадгүй",
+        "лавтай байх",
+        "өгөөмөр"
+      ],
+      "expected": {
+        "w": "多分",
+        "r": "たぶん",
+        "en": [
+          "perhaps",
+          "probably",
+          "generous"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "j1637740": {
+      "mn": [
+        "таамаглал",
+        "таамаг"
+      ],
+      "expected": {
+        "w": "思議",
+        "r": "しぎ",
+        "en": [
+          "conjecture",
+          "guess"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "j1499310": {
+      "mn": [
+        "ажилтан",
+        "клуб, холбооны гишүүн"
+      ],
+      "expected": {
+        "w": "部員",
+        "r": "ぶいん",
+        "en": [
+          "staff",
+          "member (club, society, etc.)"
+        ]
+      },
+      "topics": [
+        "people",
+        "work"
+      ]
+    },
+    "j1226030": {
+      "mn": [
+        "парламент",
+        "конгресс",
+        "улсын их хурал"
+      ],
+      "expected": {
+        "w": "議院",
+        "r": "ぎいん",
+        "en": [
+          "parliament",
+          "congress",
+          "diet"
+        ]
+      },
+      "topics": [
+        "society"
+      ]
+    },
+    "j1665340": {
+      "mn": [
+        "парламентын шийдвэр"
+      ],
+      "expected": {
+        "w": "院議",
+        "r": "いんぎ",
+        "en": [
+          "legislative decision"
+        ]
+      },
+      "topics": [
+        "society"
+      ]
+    },
+    "j1445990": {
+      "mn": [
+        "намын гишүүн"
+      ],
+      "expected": {
+        "w": "党員",
+        "r": "とういん",
+        "en": [
+          "party member"
+        ]
+      },
+      "topics": [
+        "society",
+        "people"
+      ]
+    },
+    "j1451760": {
+      "mn": [
+        "адилхан",
+        "мөн адил санаа",
+        "мөн адил нэр"
+      ],
+      "expected": {
+        "w": "同じく",
+        "r": "おなじく",
+        "en": [
+          "similarly",
+          "same (idea)",
+          "same (name)"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "j1421370": {
+      "mn": [
+        "газрын түрээс"
+      ],
+      "expected": {
+        "w": "地代",
+        "r": "ちだい",
+        "en": [
+          "land rent"
+        ]
+      },
+      "topics": [
+        "places",
+        "work"
+      ]
+    },
+    "j1308305": {
+      "mn": [
+        "зах зээл",
+        "зах",
+        "бирж"
+      ],
+      "expected": {
+        "w": "市場",
+        "r": "しじょう",
+        "en": [
+          "market (financial, stock, domestic, etc.)",
+          "marketplace",
+          "exchange"
+        ]
+      },
+      "topics": [
+        "work",
+        "places"
+      ]
+    },
+    "j1321380": {
+      "mn": [
+        "онолоос ялгаатай бодит дадлага",
+        "практик",
+        "бодит газар"
+      ],
+      "expected": {
+        "w": "実地",
+        "r": "じっち",
+        "en": [
+          "practice (as opposed to theory)",
+          "actual practice",
+          "actual site"
+        ]
+      },
+      "topics": [
+        "learning",
+        "places"
+      ]
+    },
+    "j1622600": {
+      "mn": [
+        "дэлхийн гадарга",
+        "газрын гадаргуу"
+      ],
+      "expected": {
+        "w": "地表",
+        "r": "ちひょう",
+        "en": [
+          "surface of the earth",
+          "ground surface"
+        ]
+      },
+      "topics": [
+        "nature"
+      ]
+    },
+    "j1504190": {
+      "mn": [
+        "хэрсүү байдал",
+        "болгоомжтой ухаалаг хандлага",
+        "зөв бодол"
+      ],
+      "expected": {
+        "w": "分別",
+        "r": "ふんべつ",
+        "en": [
+          "discretion",
+          "prudence",
+          "good sense"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "j1320940": {
+      "mn": [
+        "үйлдвэрлэл",
+        "бизнес"
+      ],
+      "expected": {
+        "w": "実業",
+        "r": "じつぎょう",
+        "en": [
+          "industry",
+          "business"
+        ]
+      },
+      "topics": [
+        "work"
+      ]
+    },
+    "j1584105": {
+      "mn": [
+        "энд тэнд",
+        "нааш цааш",
+        "хаа сайгүй"
+      ],
+      "expected": {
+        "w": "方々",
+        "r": "ほうぼう",
+        "en": [
+          "here and there",
+          "this way and that way",
+          "everywhere"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "j2830519": {
+      "mn": [
+        "өөрөө",
+        "биечлэн",
+        "өөрийн хүчээр"
+      ],
+      "expected": {
+        "w": "自分で",
+        "r": "じぶんで",
+        "en": [
+          "by myself",
+          "in person",
+          "by oneself"
+        ]
+      },
+      "topics": [
+        "people",
+        "actions"
+      ]
+    },
+    "j1156110": {
+      "mn": [
+        "хороо",
+        "комисс",
+        "зөвлөл"
+      ],
+      "expected": {
+        "w": "委員会",
+        "r": "いいんかい",
+        "en": [
+          "committee",
+          "commission",
+          "board"
+        ]
+      },
+      "topics": [
+        "society",
+        "work"
+      ]
+    },
+    "j1409640": {
+      "mn": [
+        "биеийн дотор"
+      ],
+      "expected": {
+        "w": "体内",
+        "r": "たいない",
+        "en": [
+          "interior of the body"
+        ]
+      },
+      "topics": [
+        "body"
+      ]
+    },
+    "j1421430": {
+      "mn": [
+        "тэгш газар",
+        "тэнгэрийн хаяа",
+        "харах хүрээ"
+      ],
+      "expected": {
+        "w": "地平",
+        "r": "ちへい",
+        "en": [
+          "level ground",
+          "horizon",
+          "field of view"
+        ]
+      },
+      "topics": [
+        "places",
+        "nature"
+      ]
+    },
+    "j1583890": {
+      "mn": [
+        "тэгш газар",
+        "тал",
+        "тэгш талбай"
+      ],
+      "expected": {
+        "w": "平地",
+        "r": "ひらち",
+        "en": [
+          "level ground",
+          "plain",
+          "flatland"
+        ]
+      },
+      "topics": [
+        "places",
+        "nature"
+      ]
+    },
+    "j2610790": {
+      "mn": [
+        "хотын хэв маягтай",
+        "хотын залуу мэргэжилтний хэв маягтай"
+      ],
+      "expected": {
+        "w": "都会派",
+        "r": "とかいは",
+        "en": [
+          "urban",
+          "yuppy"
+        ]
+      },
+      "topics": [
+        "people",
+        "descriptions"
+      ]
+    },
+    "j1449080": {
+      "mn": [
+        "холбогдох хүн",
+        "ашиг сонирхол бүхий тал",
+        "хамааралтай тал"
+      ],
+      "expected": {
+        "w": "当事者",
+        "r": "とうじしゃ",
+        "en": [
+          "person concerned",
+          "interested party",
+          "related party"
+        ]
+      },
+      "topics": [
+        "people",
+        "society"
+      ]
+    },
+    "j2834962": {
+      "mn": [
+        "зам дагуух амрах газар",
+        "хуучин даавууны бөөний худалдаачин"
+      ],
+      "expected": {
+        "w": "立場",
+        "r": "たてば",
+        "en": [
+          "high way resting place",
+          "wholesale rag dealer"
+        ]
+      },
+      "topics": [
+        "places",
+        "work"
+      ]
+    },
+    "j1191840": {
+      "mn": [
+        "гэр бүлийн бизнес",
+        "удам дамжсан ажил",
+        "өөрийн ажил мэргэжил"
+      ],
+      "expected": {
+        "w": "家業",
+        "r": "かぎょう",
+        "en": [
+          "family business",
+          "family trade",
+          "one's occupation"
+        ]
+      },
+      "topics": [
+        "work",
+        "people"
+      ]
+    },
+    "j1318050": {
+      "mn": [
+        "өөрийн үзэл бодол"
+      ],
+      "expected": {
+        "w": "自説",
+        "r": "じせつ",
+        "en": [
+          "one's personal opinion"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "j1314280": {
+      "mn": [
+        "бичиг хэргийн ажилтан",
+        "оффисын ажилтан",
+        "албан хаагч"
+      ],
+      "expected": {
+        "w": "事務員",
+        "r": "じむいん",
+        "en": [
+          "clerk",
+          "office worker",
+          "office staff"
+        ]
+      },
+      "topics": [
+        "work",
+        "people"
+      ]
+    },
+    "j1294090": {
+      "mn": [
+        "хамгийн сүүлийн",
+        "хамгийн шинэ",
+        "шуурхай мэдээ"
+      ],
+      "expected": {
+        "w": "最新",
+        "r": "さいしん",
+        "en": [
+          "latest",
+          "newest",
+          "late-breaking (news)"
+        ]
+      },
+      "topics": [
+        "time",
+        "descriptions"
+      ]
+    },
+    "j1313690": {
+      "mn": [
+        "санаачилгатай бизнес эрхлэгч",
+        "бизнесмен",
+        "үйлдвэрийн эзэн"
+      ],
+      "expected": {
+        "w": "事業家",
+        "r": "じぎょうか",
+        "en": [
+          "enterprising man",
+          "businessman",
+          "industrialist"
+        ]
+      },
+      "topics": [
+        "work",
+        "people"
+      ]
+    },
+    "j1239380": {
+      "mn": [
+        "бизнесийн ертөнц",
+        "ажил хэргийн хүрээ"
+      ],
+      "expected": {
+        "w": "業界",
+        "r": "ぎょうかい",
+        "en": [
+          "business world",
+          "business circles"
+        ]
+      },
+      "topics": [
+        "work"
+      ]
+    },
+    "j1421510": {
+      "mn": [
+        "газар",
+        "газрын гадаргуу"
+      ],
+      "expected": {
+        "w": "地面",
+        "r": "じめん",
+        "en": [
+          "ground",
+          "earth's surface"
+        ]
+      },
+      "topics": [
+        "nature"
+      ]
+    },
+    "j1377910": {
+      "mn": [
+        "дөрвөлжин"
+      ],
+      "expected": {
+        "w": "正方",
+        "r": "せいほう",
+        "en": [
+          "square"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "j2220900": {
+      "mn": [
+        "ангийнхны уулзалт"
+      ],
+      "expected": {
+        "w": "クラス会",
+        "r": "クラスかい",
+        "en": [
+          "class reunion"
+        ]
+      },
+      "topics": [
+        "people",
+        "learning"
+      ]
+    },
+    "j1452950": {
+      "mn": [
+        "төстэй",
+        "адил",
+        "зөв"
+      ],
+      "expected": {
+        "w": "同然",
+        "r": "どうぜん",
+        "en": [
+          "similar to",
+          "same",
+          "right"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "j1551240": {
+      "mn": [
+        "явах",
+        "замд гарах",
+        "эхлэл"
+      ],
+      "expected": {
+        "w": "立ち",
+        "r": "たち",
+        "en": [
+          "departure",
+          "setting off",
+          "start"
+        ]
+      },
+      "topics": [
+        "actions",
+        "time"
+      ]
+    },
+    "j2081610": {
+      "mn": [
+        "төвийн",
+        "гол",
+        "тэргүүлэх"
+      ],
+      "expected": {
+        "w": "立て",
+        "r": "たて",
+        "en": [
+          "central",
+          "main",
+          "head"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "j1477130": {
+      "mn": [
+        "гаргах",
+        "дуугарах",
+        "бий болгох"
+      ],
+      "expected": {
+        "w": "発する",
+        "r": "はっする",
+        "en": [
+          "to let out",
+          "to utter",
+          "to produce"
+        ]
+      },
+      "topics": [
+        "actions"
+      ]
+    },
+    "j1989500": {
+      "mn": [
+        "нээлхий",
+        "завсар",
+        "дэлгэж хатаасан загас"
+      ],
+      "expected": {
+        "w": "開き",
+        "r": "ひらき",
+        "en": [
+          "opening",
+          "gap",
+          "dried and opened fish"
+        ]
+      },
+      "topics": [
+        "daily",
+        "food"
+      ]
+    },
+    "j2810010": {
+      "mn": [
+        "эхлэл",
+        "эхлэх үе",
+        "соёл иргэншил"
+      ],
+      "expected": {
+        "w": "開け",
+        "r": "ひらけ",
+        "en": [
+          "beginning",
+          "start",
+          "civilization"
+        ]
+      },
+      "topics": [
+        "time",
+        "society"
+      ]
+    },
+    "j1375980": {
+      "mn": [
+        "улс төрч",
+        "төрийн зүтгэлтэн"
+      ],
+      "expected": {
+        "w": "政治家",
+        "r": "せいじか",
+        "en": [
+          "politician",
+          "statesman"
+        ]
+      },
+      "topics": [
+        "society",
+        "people"
+      ]
+    },
+    "j2256560": {
+      "mn": [
+        "гар",
+        "гарын шуу",
+        "гар бичмэл"
+      ],
+      "expected": {
+        "w": "お手",
+        "r": "おて",
+        "en": [
+          "hand",
+          "arm",
+          "handwriting"
+        ]
+      },
+      "topics": [
+        "body",
+        "learning"
+      ]
+    },
+    "j1314540": {
+      "mn": [
+        "жишээ",
+        "өмнөх тохиолдол",
+        "хэрэг явдал"
+      ],
+      "expected": {
+        "w": "事例",
+        "r": "じれい",
+        "en": [
+          "example",
+          "precedent",
+          "case"
+        ]
+      },
+      "topics": [
+        "learning",
+        "society"
+      ]
+    },
+    "j1408900": {
+      "mn": [
+        "цохигч тамирчин"
+      ],
+      "expected": {
+        "w": "打者",
+        "r": "だしゃ",
+        "en": [
+          "batter"
+        ]
+      },
+      "topics": [
+        "people",
+        "arts"
+      ]
+    },
+    "j1528880": {
+      "mn": [
+        "Ардчилсан нам"
+      ],
+      "expected": {
+        "w": "民主党",
+        "r": "みんしゅとう",
+        "en": [
+          "Democratic Party (esp. DPJ or US Democratic Party)"
+        ]
+      },
+      "topics": [
+        "society"
+      ]
+    },
+    "j1553650": {
+      "mn": [
+        "хос",
+        "тэр хоёр",
+        "хоёр хүн хоёулаа"
+      ],
+      "expected": {
+        "w": "両者",
+        "r": "りょうしゃ",
+        "en": [
+          "pair",
+          "the two",
+          "both persons"
+        ]
+      },
+      "topics": [
+        "people",
+        "quantity"
+      ]
+    },
+    "j2837784": {
+      "mn": [
+        "хүний нөлөөгүйгээр байгалиараа үүсэх"
+      ],
+      "expected": {
+        "w": "自然",
+        "r": "じねん",
+        "en": [
+          "occurring naturally (without human influence)"
+        ]
+      },
+      "topics": [
+        "nature"
+      ]
+    },
+    "j1396390": {
+      "mn": [
+        "бүх хүч чадал",
+        "бүхий л эрч хүч",
+        "хамаг хичээл зүтгэл"
+      ],
+      "expected": {
+        "w": "全力",
+        "r": "ぜんりょく",
+        "en": [
+          "all one's power (strength, energy, efforts)",
+          "one's utmost"
+        ]
+      },
+      "topics": [
+        "actions"
+      ]
+    }
+  }
+}

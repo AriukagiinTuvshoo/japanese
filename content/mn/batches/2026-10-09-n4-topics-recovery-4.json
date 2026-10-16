@@ -1,0 +1,309 @@
+{
+  "provenance": {
+    "id": "mn-n4-topics-recovery-4-2026-10-09",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "Explicit semantic assignments compared with exact Japanese, readings and retained English. Multiple topics where justified; no default catch-all. Independent human review pending.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n4.json at cac78c79587f6fb6d5f93a158790258c24b351e8",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "7e5b1397b9": {
+      "expected": {
+        "w": "ほとんど",
+        "r": "ほとんど",
+        "en": [
+          "mostly"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "9c0ee7cfcc": {
+      "expected": {
+        "w": "まず",
+        "r": "まず",
+        "en": [
+          "first of all"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "0fa3edce9b": {
+      "expected": {
+        "w": "または",
+        "r": "または",
+        "en": [
+          "or",
+          "otherwise"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "f71b64fa1e": {
+      "expected": {
+        "w": "周り",
+        "r": "まわり",
+        "en": [
+          "surroundings"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "8077c744a0": {
+      "expected": {
+        "w": "漫画",
+        "r": "まんが",
+        "en": [
+          "comic"
+        ]
+      },
+      "topics": [
+        "arts"
+      ]
+    },
+    "59944588a8": {
+      "expected": {
+        "w": "真ん中",
+        "r": "まんなか",
+        "en": [
+          "middle"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "07a76f9be7": {
+      "expected": {
+        "w": "湖",
+        "r": "みずうみ",
+        "en": [
+          "lake"
+        ]
+      },
+      "topics": [
+        "nature",
+        "places"
+      ]
+    },
+    "fcf790e186": {
+      "expected": {
+        "w": "味噌",
+        "r": "みそ",
+        "en": [
+          "bean paste"
+        ]
+      },
+      "topics": [
+        "food"
+      ]
+    },
+    "eb7247f404": {
+      "expected": {
+        "w": "皆",
+        "r": "みな",
+        "en": [
+          "everybody"
+        ]
+      },
+      "topics": [
+        "people"
+      ]
+    },
+    "221e63cb1e": {
+      "expected": {
+        "w": "港",
+        "r": "みなと",
+        "en": [
+          "harbour"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "0f494574f0": {
+      "expected": {
+        "w": "もうすぐ",
+        "r": "もうすぐ",
+        "en": [
+          "soon"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "bbaeab9c94": {
+      "expected": {
+        "w": "もし",
+        "r": "もし",
+        "en": [
+          "if"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "a695a20c52": {
+      "expected": {
+        "w": "もちろん",
+        "r": "もちろん",
+        "en": [
+          "of course"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "6e13cee4dc": {
+      "expected": {
+        "w": "もっとも",
+        "r": "もっとも",
+        "en": [
+          "extremely"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "96e10e7209": {
+      "expected": {
+        "w": "木綿",
+        "r": "もめん",
+        "en": [
+          "cotton"
+        ]
+      },
+      "topics": [
+        "daily",
+        "nature"
+      ]
+    },
+    "f2a77c1c6d": {
+      "expected": {
+        "w": "やっと",
+        "r": "やっと",
+        "en": [
+          "at last"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "7a0b48d3e5": {
+      "expected": {
+        "w": "やはり",
+        "r": "やはり",
+        "en": [
+          "as I thought",
+          "absolutely"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "79e62e3c87": {
+      "expected": {
+        "w": "夢",
+        "r": "ゆめ",
+        "en": [
+          "dream"
+        ]
+      },
+      "topics": [
+        "feelings"
+      ]
+    },
+    "df83eb2b9c": {
+      "expected": {
+        "w": "理由",
+        "r": "りゆう",
+        "en": [
+          "reason"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "cd95253850": {
+      "expected": {
+        "w": "旅館",
+        "r": "りょかん",
+        "en": [
+          "Japanese hotel"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "bcb7922671": {
+      "expected": {
+        "w": "歴史",
+        "r": "れきし",
+        "en": [
+          "history"
+        ]
+      },
+      "topics": [
+        "time",
+        "learning"
+      ]
+    },
+    "b80da200ff": {
+      "expected": {
+        "w": "レジ",
+        "r": "レジ",
+        "en": [
+          "register"
+        ]
+      },
+      "topics": [
+        "work",
+        "technology"
+      ]
+    },
+    "ceec15828f": {
+      "expected": {
+        "w": "訳",
+        "r": "わけ",
+        "en": [
+          "meaning",
+          "reason"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "12abb2a2c6": {
+      "expected": {
+        "w": "忘れ物",
+        "r": "わすれもの",
+        "en": [
+          "lost article"
+        ]
+      },
+      "topics": [
+        "daily"
+      ]
+    }
+  }
+}

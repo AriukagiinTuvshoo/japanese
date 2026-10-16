@@ -1,0 +1,213 @@
+{
+  "provenance": {
+    "id": "mn-n2-vocab-examples-oct9-1",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian compared with exact Japanese and retained English; stable record and headword/pattern guards; independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n2.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "42c4654587": {
+      "expected": {
+        "w": "あいかわらず",
+        "r": "あいかわらず",
+        "en": [
+          "as ever",
+          "as usual",
+          "the same"
+        ]
+      },
+      "examples": {
+        "君は相変わらず健康そうに見える。": {
+          "en": "You look as healthy as ever.",
+          "mn": "Чи урьдын адил эрүүл харагдаж байна."
+        },
+        "彼は相変わらず忙しいようである。": {
+          "en": "He seems as busy as ever.",
+          "mn": "Тэр урьдын адил завгүй бололтой."
+        }
+      }
+    },
+    "79169045a2": {
+      "expected": {
+        "w": "アイデア",
+        "r": "アイデア",
+        "en": [
+          "idea"
+        ]
+      },
+      "examples": {
+        "アイディアが足りないということはない。": {
+          "en": "There is no shortage of ideas.",
+          "mn": "Санаа дутагдаж байгаа юм биш."
+        },
+        "私はよいアイディアを思いついた。": {
+          "en": "I hit on a good idea.",
+          "mn": "Надад сайн санаа төрсөн."
+        }
+      }
+    },
+    "08e45ae028": {
+      "expected": {
+        "w": "あいまい",
+        "r": "あいまい",
+        "en": [
+          "vague",
+          "ambiguous"
+        ]
+      },
+      "examples": {
+        "彼は私にあいまいな返事をした。": {
+          "en": "He gave me a vague answer.",
+          "mn": "Тэр надад тодорхойгүй хариу өгсөн."
+        },
+        "何てあいまいな表現だ。": {
+          "en": "What an ambiguous expression!",
+          "mn": "Ямар хоёрдмол илэрхийлэл вэ!"
+        }
+      }
+    },
+    "5b1dbc60e6": {
+      "expected": {
+        "w": "遭う",
+        "r": "あう",
+        "en": [
+          "to meet",
+          "to encounter (undesirable nuance)"
+        ]
+      },
+      "examples": {
+        "駅へ行く途中でにわか雨に遭った。": {
+          "en": "I was caught in a shower on my way to the station.",
+          "mn": "Өртөө рүү явах замд гэнэтийн бороонд өртсөн."
+        },
+        "前に彼にあったのを覚えている。": {
+          "en": "I remember seeing him before.",
+          "mn": "Би өмнө нь түүнтэй уулзсанаа санаж байна."
+        }
+      }
+    },
+    "5c46e379a2": {
+      "expected": {
+        "w": "扇ぐ",
+        "r": "あおぐ",
+        "en": [
+          "to fan",
+          "to flap"
+        ]
+      },
+      "examples": {
+        "彼はあおいで火をおこした。": {
+          "en": "He fanned the fire into flame.",
+          "mn": "Тэр сэвж галыг асаасан."
+        },
+        "少年は帽子で自分を煽いだ。": {
+          "en": "The boy fanned himself with his hat.",
+          "mn": "Хүү малгайгаараа өөрийгөө сэвсэн."
+        }
+      }
+    },
+    "f24da46d2e": {
+      "expected": {
+        "w": "青白い",
+        "r": "あおじろい",
+        "en": [
+          "pale",
+          "pallid"
+        ]
+      },
+      "examples": {
+        "彼女はいつも青白い顔をしている。": {
+          "en": "She always looks pale.",
+          "mn": "Түүний царай үргэлж цонхигор байдаг."
+        },
+        "青白くて暗い顔をした人物だった。": {
+          "en": "He was a dark figure with a pale face.",
+          "mn": "Цонхигор царайтай, бараан төрхтэй хүн байсан."
+        }
+      }
+    },
+    "b286c3e278": {
+      "expected": {
+        "w": "明き",
+        "r": "あき",
+        "en": [
+          "room",
+          "time to spare",
+          "emptiness"
+        ]
+      },
+      "examples": {
+        "字と字の間の空きをもっと広くしなさい。": {
+          "en": "Leave more space between characters.",
+          "mn": "Үсэг хоорондын зайг илүү өргөн болго."
+        },
+        "うちの会社には空きがない。": {
+          "en": "There is no opening in our firm.",
+          "mn": "Манай компанид сул орон тоо алга."
+        }
+      }
+    },
+    "4bbc998853": {
+      "expected": {
+        "w": "あきれる",
+        "r": "あきれる",
+        "en": [
+          "to be amazed",
+          "to be shocked"
+        ]
+      },
+      "examples": {
+        "あの人にはあきれてしまった。": {
+          "en": "I am sick and tired of him.",
+          "mn": "Би тэр хүнээс бүр залхсан."
+        },
+        "君の厚かましいのには呆れたよ。": {
+          "en": "I am amazed at your audacity.",
+          "mn": "Чиний ичгүүргүй занг хараад гайхлаа."
+        }
+      }
+    },
+    "f4f844d9b9": {
+      "expected": {
+        "w": "アクセント",
+        "r": "アクセント",
+        "en": [
+          "accent"
+        ]
+      },
+      "examples": {
+        "Australiaという語のアクセントはどこですか。": {
+          "en": "Where do you place the stress in the word \"Australia\"?",
+          "mn": "«Australia» гэдэг үгийн өргөлт аль үедээ байдаг вэ?"
+        },
+        "この語のアクセントはどこにあるか。": {
+          "en": "How is the word accented?",
+          "mn": "Энэ үгийн өргөлт хаана байдаг вэ?"
+        }
+      }
+    },
+    "4f70e78ef3": {
+      "expected": {
+        "w": "あくび",
+        "r": "あくび",
+        "en": [
+          "yawn"
+        ]
+      },
+      "examples": {
+        "あの先生の講義はあくびが出る。": {
+          "en": "His lectures are terribly boring.",
+          "mn": "Тэр багшийн лекц эвшээлгэм уйтгартай."
+        },
+        "彼を見るたびに彼はあくびをしていた。": {
+          "en": "Every time I looked at him, he was yawning.",
+          "mn": "Түүнийг харах бүрд тэр эвшээж байсан."
+        }
+      }
+    }
+  }
+}

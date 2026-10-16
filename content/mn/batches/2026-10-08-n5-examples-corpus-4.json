@@ -1,0 +1,396 @@
+{
+  "provenance": {
+    "id": "mn-n5-examples-corpus-4-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian examples compared to exact Japanese and retained English; stable ID, spelling, reading, English and sentence guards. Independent human semantic review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n5.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "f7e1da43df": {
+      "expected": {
+        "w": "売る",
+        "r": "うる",
+        "en": [
+          "to sell"
+        ]
+      },
+      "examples": {
+        "トムはメアリーにバイクを売った。": {
+          "en": "Tom sold his motorcycle to Mary.",
+          "mn": "Том мотоциклоо Мэрид зарсан."
+        },
+        "バターは１ポンドいくらで売られる。": {
+          "en": "Butter is sold by the pound.",
+          "mn": "Цөцгийн тосыг фунтээр зардаг."
+        }
+      }
+    },
+    "7ecfe0d248": {
+      "expected": {
+        "w": "煩い",
+        "r": "うるさい",
+        "en": [
+          "noisy",
+          "annoying"
+        ]
+      },
+      "examples": {
+        "あの子はなんてうるさい子だろう。": {
+          "en": "What a nuisance that child is!",
+          "mn": "Тэр хүүхэд ямар төвөгтэй юм бэ!"
+        },
+        "つべこべうるさいよ。やるのかやらないのか！？": {
+          "en": "Quit your bellyaching. You goin' to do it, or not!?",
+          "mn": "Битгий олон юм яриад бай. Хийх юм уу, үгүй юм уу?"
+        }
+      }
+    },
+    "1ef8a05bf3": {
+      "expected": {
+        "w": "上着",
+        "r": "うわぎ",
+        "en": [
+          "jacket"
+        ]
+      },
+      "examples": {
+        "ドアのそばのかぎに上着をかけなさい。": {
+          "en": "Hang your jacket on the hook by the door.",
+          "mn": "Хүрмээ хаалганы дэргэдэх дэгээнд өлгө."
+        },
+        "その上着はよくもったね。": {
+          "en": "The coat has worn well.",
+          "mn": "Тэр хүрэм удаан эдэлгээтэй байжээ."
+        }
+      }
+    },
+    "5bb390da0b": {
+      "expected": {
+        "w": "絵",
+        "r": "え",
+        "en": [
+          "picture"
+        ]
+      },
+      "examples": {
+        "絵がテーブルの上にかかっている。": {
+          "en": "The picture hangs over the table.",
+          "mn": "Зураг ширээний дээр өлгөөтэй байна."
+        },
+        "なぜその絵を見なかったのですか。": {
+          "en": "Why didn't you look at the picture?",
+          "mn": "Яагаад тэр зургийг хараагүй юм бэ?"
+        }
+      }
+    },
+    "92b1621231": {
+      "expected": {
+        "w": "映画",
+        "r": "えいが",
+        "en": [
+          "movie"
+        ]
+      },
+      "examples": {
+        "その映画をもう一度見たいな。": {
+          "en": "I want to see the movie again.",
+          "mn": "Тэр киног дахиад нэг үзмээр байна."
+        },
+        "映画を見に行こうではないですか。": {
+          "en": "What do you say to going to the movies?",
+          "mn": "Кино үзэхээр явбал ямар вэ?"
+        }
+      }
+    },
+    "8a88cfbcb8": {
+      "expected": {
+        "w": "映画館",
+        "r": "えいがかん",
+        "en": [
+          "cinema"
+        ]
+      },
+      "examples": {
+        "その映画館は人々でいっぱいだった。": {
+          "en": "The cinema was filled with people.",
+          "mn": "Тэр кино театр хүнээр дүүрэн байв."
+        },
+        "この近くに映画館はありますか。": {
+          "en": "Are there any movie theaters near here?",
+          "mn": "Энэ ойролцоо кино театр байна уу?"
+        }
+      }
+    },
+    "16adc7bd03": {
+      "expected": {
+        "w": "英語",
+        "r": "えいご",
+        "en": [
+          "English language"
+        ]
+      },
+      "examples": {
+        "アメリカでは英語を話します。": {
+          "en": "They speak English in America.",
+          "mn": "Америкт англиар ярьдаг."
+        },
+        "先生のように英語が話せたらなぁ。": {
+          "en": "I wish I could speak English the way my teacher does.",
+          "mn": "Багш шигээ англиар ярьж чаддаг ч болоосой."
+        }
+      }
+    },
+    "8ac60a4060": {
+      "expected": {
+        "w": "ええ",
+        "r": "ええ",
+        "en": [
+          "yes"
+        ]
+      },
+      "examples": {
+        "「テニスをしましょうか」「ええ」": {
+          "en": "\"Let's play tennis.\" \"Yes let's.\"",
+          "mn": "«Теннис тоглох уу?» «Тэгье.»"
+        },
+        "ええ、アンソニーです。": {
+          "en": "Yes, this is Anthony.",
+          "mn": "Тийм ээ, Энтони байна."
+        }
+      }
+    },
+    "d5f359c20b": {
+      "expected": {
+        "w": "駅",
+        "r": "えき",
+        "en": [
+          "station"
+        ]
+      },
+      "examples": {
+        "グランド・セントラル駅までやってください。": {
+          "en": "Grand Central Station, please.",
+          "mn": "Гранд Сентрал өртөө хүргэж өгнө үү."
+        },
+        "ここから駅まで２マイルあります。": {
+          "en": "It's two miles from here to the station.",
+          "mn": "Эндээс өртөө хүртэл хоёр миль."
+        }
+      }
+    },
+    "eb1695baf6": {
+      "expected": {
+        "w": "エレベーター",
+        "r": "エレベーター",
+        "en": [
+          "elevator"
+        ]
+      },
+      "examples": {
+        "エレベーターはどこですか。": {
+          "en": "Where is the elevator?",
+          "mn": "Цахилгаан шат хаана байна вэ?"
+        },
+        "私はエレベーターで下におりた。": {
+          "en": "I went down by elevator.",
+          "mn": "Би цахилгаан шатаар доош буусан."
+        }
+      }
+    },
+    "381da4d060": {
+      "expected": {
+        "w": "鉛筆",
+        "r": "えんぴつ",
+        "en": [
+          "pencil"
+        ]
+      },
+      "examples": {
+        "えんぴつであなたの名前を書きなさい。": {
+          "en": "Write your name with the pencil.",
+          "mn": "Харандаагаар нэрээ бич."
+        },
+        "ペンか鉛筆を持っていますか。": {
+          "en": "Do you have a pen or a pencil?",
+          "mn": "Танд үзэг эсвэл харандаа байна уу?"
+        }
+      }
+    },
+    "7f02ae8fa1": {
+      "expected": {
+        "w": "おいしい",
+        "r": "おいしい",
+        "en": [
+          "delicious"
+        ]
+      },
+      "examples": {
+        "おいしい食事をありがとう。": {
+          "en": "Thanks for the delicious meal.",
+          "mn": "Амттай хоол өгсөнд баярлалаа."
+        },
+        "なんておいしいスープなんだろう。": {
+          "en": "This soup is exquisite.",
+          "mn": "Энэ шөл ямар амттай юм бэ!"
+        }
+      }
+    },
+    "60813fffd1": {
+      "expected": {
+        "w": "多い",
+        "r": "おおい",
+        "en": [
+          "many"
+        ]
+      },
+      "examples": {
+        "この学校は男子よりも女子が多い。": {
+          "en": "There are more girls than boys in this school.",
+          "mn": "Энэ сургуульд охид хөвгүүдээс олон."
+        },
+        "そこには、水が多かったからである。": {
+          "en": "Because there was plenty of water...",
+          "mn": "Учир нь тэнд ус их байсан."
+        }
+      }
+    },
+    "8fa5a63fc7": {
+      "expected": {
+        "w": "大きい",
+        "r": "おおきい",
+        "en": [
+          "big"
+        ]
+      },
+      "examples": {
+        "もっと大きいサイズはありますか。": {
+          "en": "Do you have a larger size?",
+          "mn": "Илүү том хэмжээтэй нь байна уу?"
+        },
+        "きみは何と大きい家を持っているんだろう。": {
+          "en": "What a big house you have!",
+          "mn": "Чи ямар том байшинтай юм бэ!"
+        }
+      }
+    },
+    "3a2de0afca": {
+      "expected": {
+        "w": "大きな",
+        "r": "おおきな",
+        "en": [
+          "big"
+        ]
+      },
+      "examples": {
+        "それらはとても大きなりんごです。": {
+          "en": "They are very big apples.",
+          "mn": "Тэд маш том алимнууд."
+        },
+        "あの大きなハンマーを見てごらん。": {
+          "en": "Look at that big hammer.",
+          "mn": "Тэр том алхыг хараарай."
+        }
+      }
+    },
+    "57ed89b240": {
+      "expected": {
+        "w": "大勢",
+        "r": "おおぜい",
+        "en": [
+          "great number of people"
+        ]
+      },
+      "examples": {
+        "大ぜいの人たちがいた。": {
+          "en": "There were lots of people.",
+          "mn": "Маш олон хүн байсан."
+        },
+        "そこには大勢の人がいた。": {
+          "en": "There was a large crowd there.",
+          "mn": "Тэнд бөөн хүн байсан."
+        }
+      }
+    },
+    "2007947770": {
+      "expected": {
+        "w": "お母さん",
+        "r": "おかあさん",
+        "en": [
+          "(honorable) mother"
+        ]
+      },
+      "examples": {
+        "お母さんに口答えしてはいけませんよ。": {
+          "en": "Don't answer your mother back.",
+          "mn": "Ээжтэйгээ битгий сөргөлдөж ярь."
+        },
+        "ダンはよくお母さんにしかられる。": {
+          "en": "Dan is often scolded by his mother.",
+          "mn": "Дан ээждээ их загнуулдаг."
+        }
+      }
+    },
+    "669019c625": {
+      "expected": {
+        "w": "お菓子",
+        "r": "おかし",
+        "en": [
+          "sweets",
+          "candy"
+        ]
+      },
+      "examples": {
+        "もうすこしお菓子を食べませんか。": {
+          "en": "Will you have some more cake?",
+          "mn": "Дахиад жаахан бялуу идэх үү?"
+        },
+        "このお菓子を食べてもいいですか。": {
+          "en": "May I eat this cake?",
+          "mn": "Энэ бялууг идэж болох уу?"
+        }
+      }
+    },
+    "3e015d0a8b": {
+      "expected": {
+        "w": "お金",
+        "r": "おかね",
+        "en": [
+          "money"
+        ]
+      },
+      "examples": {
+        "どうやってそのお金を手に入れたんですか。": {
+          "en": "How did you come by the money?",
+          "mn": "Тэр мөнгийг яаж олж авсан бэ?"
+        },
+        "ぼくにいくらかお金をくれないか。": {
+          "en": "Can you give me some money?",
+          "mn": "Надад жаахан мөнгө өгч болох уу?"
+        }
+      }
+    },
+    "248a353e09": {
+      "expected": {
+        "w": "起きる",
+        "r": "おきる",
+        "en": [
+          "to get up"
+        ]
+      },
+      "examples": {
+        "お子さんはまだ起きているのですか。": {
+          "en": "Is the kid still up?",
+          "mn": "Танай хүүхэд унтаагүй хэвээр байгаа юу?"
+        },
+        "６時ごろ起きた。": {
+          "en": "I got up at about six.",
+          "mn": "Би зургаан цагийн орчимд боссон."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+
+> nihongo-dojo@3.0.0 test:browser
+> node scripts/test-browser.mjs
+
+mn/n5: 81 grammar details/forms and 242 examples checked
+mn/n4: 98 grammar details/forms and 292 examples checked
+mn/n3: 101 grammar details/forms and 303 examples checked
+mn/n2: 123 grammar details/forms and 323 examples checked
+mn/n1: 123 grammar details/forms and 366 examples checked
+mn: 526 N5–N1 grammar details/forms and 1526 example translations plus vocabulary/kanji topic filters passed
+en/n5: 81 grammar details/forms and 242 examples checked
+en/n4: 98 grammar details/forms and 292 examples checked
+en/n3: 101 grammar details/forms and 303 examples checked
+en/n2: 123 grammar details/forms and 323 examples checked
+en/n1: 123 grammar details/forms and 366 examples checked
+en: 526 N5–N1 grammar details/forms and 1526 example translations plus vocabulary/kanji topic filters passed

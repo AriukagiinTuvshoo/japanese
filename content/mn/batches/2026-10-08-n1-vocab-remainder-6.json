@@ -1,0 +1,1015 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-remainder-6-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses cross-checked against exact Japanese spelling, reading and retained English; explicit semantic topic assignments. Independent human review outstanding; suspect sources withheld.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n1.json JMdict-derived records at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j1257900": {
+      "mn": [
+        "тольд үг хайх",
+        "өгөгдөл татаж олох",
+        "эрж хайх"
+      ],
+      "topics": [
+        "learning",
+        "technology"
+      ],
+      "expected": {
+        "w": "検索",
+        "r": "けんさく",
+        "en": [
+          "looking up (e.g. a word in a dictionary)",
+          "retrieval (e.g. data)",
+          "searching for"
+        ]
+      }
+    },
+    "j1788730": {
+      "mn": [
+        "ивээл",
+        "хишиг"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "徳沢",
+        "r": "とくたく",
+        "en": [
+          "blessing",
+          "grace"
+        ]
+      }
+    },
+    "j2845084": {
+      "mn": [
+        "Миязаки хот буюу муж"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "宮崎",
+        "r": "みやざき",
+        "en": [
+          "Miyazaki (city, prefecture)"
+        ]
+      }
+    },
+    "j1739410": {
+      "mn": [
+        "амархан",
+        "энгийн",
+        "… боломжгүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "訳無い",
+        "r": "わけない",
+        "en": [
+          "easy",
+          "simple",
+          "there's no way that ..."
+        ]
+      }
+    },
+    "j1529660": {
+      "mn": [
+        "холбоогүй",
+        "хамааралгүй",
+        "үл хамаарах"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "無縁",
+        "r": "むえん",
+        "en": [
+          "unrelated",
+          "unconnected",
+          "irrelevant"
+        ]
+      }
+    },
+    "j1550860": {
+      "mn": [
+        "эзэн хааны зуслан",
+        "хааны тусдаа ордон"
+      ],
+      "topics": [
+        "places",
+        "society"
+      ],
+      "expected": {
+        "w": "離宮",
+        "r": "りきゅう",
+        "en": [
+          "imperial villa",
+          "royal villa",
+          "detached palace"
+        ]
+      }
+    },
+    "j1255000": {
+      "mn": [
+        "нүдний салст бүрхүүлийн үрэвсэл"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "結膜炎",
+        "r": "けつまくえん",
+        "en": [
+          "conjunctivitis"
+        ]
+      }
+    },
+    "j2826006": {
+      "mn": [
+        "бүдүүн гэдэсний үрэвсэл"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "結腸炎",
+        "r": "けっちょうえん",
+        "en": [
+          "colitis"
+        ]
+      }
+    },
+    "j1691550": {
+      "mn": [
+        "бие даан суралцах"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "独修",
+        "r": "どくしゅう",
+        "en": [
+          "self-education"
+        ]
+      }
+    },
+    "j1573930": {
+      "mn": [
+        "худаг өрөмдөх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "削井",
+        "r": "さくせい",
+        "en": [
+          "well drilling"
+        ]
+      }
+    },
+    "j2010240": {
+      "mn": [
+        "програм хангамжийн дэд бүтэц",
+        "суурь програм"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "基盤ソフト",
+        "r": "きばんソフト",
+        "en": [
+          "software infrastructure",
+          "underlying software"
+        ]
+      }
+    },
+    "j2731920": {
+      "mn": [
+        "өрөөсгөл бус байдал",
+        "бодитой хандлага"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "無偏",
+        "r": "むへん",
+        "en": [
+          "unbiasedness",
+          "objectivity"
+        ]
+      }
+    },
+    "j2826003": {
+      "mn": [
+        "ганглион уйланхай"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "結節腫",
+        "r": "けっせつしゅ",
+        "en": [
+          "ganglion"
+        ]
+      }
+    },
+    "j1838780": {
+      "mn": [
+        "эрвээхэй зангилаа",
+        "туузны зангилаа"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "蝶結び",
+        "r": "ちょうむすび",
+        "en": [
+          "bow",
+          "bowknot"
+        ]
+      }
+    },
+    "j2227310": {
+      "mn": [
+        "мэдлэг олгох",
+        "гэгээрүүлэх"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "啓蒙的",
+        "r": "けいもうてき",
+        "en": [
+          "enlightening"
+        ]
+      }
+    },
+    "j2763270": {
+      "mn": [
+        "доромжилсон",
+        "гомдоосон"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "侮辱的",
+        "r": "ぶじょくてき",
+        "en": [
+          "insulting",
+          "offensive"
+        ]
+      }
+    },
+    "j1530880": {
+      "mn": [
+        "болчимгүй",
+        "бодлогогүй",
+        "яаруу"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "無謀",
+        "r": "むぼう",
+        "en": [
+          "reckless",
+          "thoughtless",
+          "rash"
+        ]
+      }
+    },
+    "j2842769": {
+      "mn": [
+        "илт давамгайлах",
+        "дийлэн нөлөөлөх",
+        "ноёрхох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "雄視",
+        "r": "ゆうし",
+        "en": [
+          "overwhelming",
+          "overpowering",
+          "prevailing"
+        ]
+      }
+    },
+    "j1641790": {
+      "mn": [
+        "өөрийн мөнгө"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "身銭",
+        "r": "みぜに",
+        "en": [
+          "one's own money"
+        ]
+      }
+    },
+    "j2015640": {
+      "mn": [
+        "тусламжийн баг",
+        "аврах баг"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "救援隊",
+        "r": "きゅうえんたい",
+        "en": [
+          "relief party",
+          "rescue party"
+        ]
+      }
+    },
+    "j1672410": {
+      "mn": [
+        "эсэргүүцэхгүй байх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "無抵抗",
+        "r": "むていこう",
+        "en": [
+          "nonresistance"
+        ]
+      }
+    },
+    "j1337060": {
+      "mn": [
+        "бууны гол төмөр"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "銃身",
+        "r": "じゅうしん",
+        "en": [
+          "gun barrel"
+        ]
+      }
+    },
+    "j2228920": {
+      "mn": [
+        "бишрэл хүсэл тэмүүллийн бай",
+        "хүсэмжлэн биширдэг зүйл"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "憧れの的",
+        "r": "あこがれのまと",
+        "en": [
+          "object of adoration, longing"
+        ]
+      }
+    },
+    "j1736540": {
+      "mn": [
+        "үзлэгийн аялал",
+        "хянан шалгах тойрог"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "巡検",
+        "r": "じゅんけん",
+        "en": [
+          "inspection tour"
+        ]
+      }
+    },
+    "j1530930": {
+      "mn": [
+        "гарын үсэггүй",
+        "нэр тэмдэггүй"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "無銘",
+        "r": "むめい",
+        "en": [
+          "unsigned",
+          "without a signature"
+        ]
+      }
+    },
+    "j2062430": {
+      "mn": [
+        "Германыг эсэргүүцсэн"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "抗独",
+        "r": "こうどく",
+        "en": [
+          "anti-German"
+        ]
+      }
+    },
+    "j2657810": {
+      "mn": [
+        "хүчилтөрөгчгүй",
+        "анаэроб",
+        "хүчилтөрөгчийн дутагдал"
+      ],
+      "topics": [
+        "body",
+        "learning"
+      ],
+      "expected": {
+        "w": "無酸素",
+        "r": "むさんそ",
+        "en": [
+          "without oxygen",
+          "anaerobic",
+          "anoxia"
+        ]
+      }
+    },
+    "j1229120": {
+      "mn": [
+        "аврах тусламж",
+        "тусламж"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "救護",
+        "r": "きゅうご",
+        "en": [
+          "relief",
+          "aid"
+        ]
+      }
+    },
+    "j1245120": {
+      "mn": [
+        "тэнэг ажил хэрэг"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "愚挙",
+        "r": "ぐきょ",
+        "en": [
+          "foolish undertaking"
+        ]
+      }
+    },
+    "j1385280": {
+      "mn": [
+        "муу бодлого",
+        "муу төлөвлөгөө",
+        "буруу арга хэмжээ"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "拙策",
+        "r": "せっさく",
+        "en": [
+          "poor policy",
+          "poor plan",
+          "unwise measure"
+        ]
+      }
+    },
+    "j1179990": {
+      "mn": [
+        "зөвшөөрөл",
+        "дагаж биелүүлэх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "応諾",
+        "r": "おうだく",
+        "en": [
+          "consent",
+          "compliance"
+        ]
+      }
+    },
+    "j1224510": {
+      "mn": [
+        "хуурамч нотлох баримт",
+        "худал мэдүүлэг",
+        "худал гэрчлэл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "偽証",
+        "r": "ぎしょう",
+        "en": [
+          "false evidence",
+          "perjury",
+          "false testimony"
+        ]
+      }
+    },
+    "j1656920": {
+      "mn": [
+        "хийл"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "提琴",
+        "r": "ていきん",
+        "en": [
+          "violin"
+        ]
+      }
+    },
+    "j1961640": {
+      "mn": [
+        "ионы талст"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "イオン結晶",
+        "r": "イオンけっしょう",
+        "en": [
+          "ionic crystal"
+        ]
+      }
+    },
+    "j1503760": {
+      "mn": [
+        "үл хөдлөх хөрөнгийг хэсэглэн худалдах"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "分譲",
+        "r": "ぶんじょう",
+        "en": [
+          "selling (real-estate) lots"
+        ]
+      }
+    },
+    "j2090780": {
+      "mn": [
+        "Охо эрин (1161.9.4–1163.3.29)"
+      ],
+      "topics": [
+        "time",
+        "society"
+      ],
+      "expected": {
+        "w": "応保",
+        "r": "おうほう",
+        "en": [
+          "Ōhō era (1161.9.4-1163.3.29)"
+        ]
+      }
+    },
+    "j2090230": {
+      "mn": [
+        "Кохо эрин (964.7.10–968.8.13)"
+      ],
+      "topics": [
+        "time",
+        "society"
+      ],
+      "expected": {
+        "w": "康保",
+        "r": "こうほう",
+        "en": [
+          "Kōhō era (964.7.10-968.8.13)"
+        ]
+      }
+    },
+    "j2092010": {
+      "mn": [
+        "Канпо эрин (1741.2.27–1744.2.21)"
+      ],
+      "topics": [
+        "time",
+        "society"
+      ],
+      "expected": {
+        "w": "寛保",
+        "r": "かんぽう",
+        "en": [
+          "Kanpō era (1741.2.27-1744.2.21)"
+        ]
+      }
+    },
+    "j2090540": {
+      "mn": [
+        "Кахо эрин (1094.12.15–1096.12.17)"
+      ],
+      "topics": [
+        "time",
+        "society"
+      ],
+      "expected": {
+        "w": "嘉保",
+        "r": "かほう",
+        "en": [
+          "Kahō era (1094.12.15-1096.12.17)"
+        ]
+      }
+    },
+    "j2091570": {
+      "mn": [
+        "Хойд ордны Коо эрин (1389.2.9–1390.3.26)"
+      ],
+      "topics": [
+        "time",
+        "society"
+      ],
+      "expected": {
+        "w": "康応",
+        "r": "こうおう",
+        "en": [
+          "Kōō era (of the Northern Court) (1389.2.9-1390.3.26)"
+        ]
+      }
+    },
+    "j2091990": {
+      "mn": [
+        "Кёхо эрин (1716.6.22–1736.4.28)"
+      ],
+      "topics": [
+        "time",
+        "society"
+      ],
+      "expected": {
+        "w": "享保",
+        "r": "きょうほう",
+        "en": [
+          "Kyōhō era (1716.6.22-1736.4.28)"
+        ]
+      }
+    },
+    "j2090520": {
+      "mn": [
+        "Отокү эрин (1084.2.7–1087.4.7)"
+      ],
+      "topics": [
+        "time",
+        "society"
+      ],
+      "expected": {
+        "w": "応徳",
+        "r": "おうとく",
+        "en": [
+          "Ōtoku era (1084.2.7-1087.4.7)"
+        ]
+      }
+    },
+    "j2092160": {
+      "mn": [
+        "Кэйо эрин (1865.4.7–1868.9.8)"
+      ],
+      "topics": [
+        "time",
+        "society"
+      ],
+      "expected": {
+        "w": "慶応",
+        "r": "けいおう",
+        "en": [
+          "Keiō era (1865.4.7-1868.9.8)"
+        ]
+      }
+    },
+    "j2091690": {
+      "mn": [
+        "Онин эрин (1467.3.5–1469.4.28)"
+      ],
+      "topics": [
+        "time",
+        "society"
+      ],
+      "expected": {
+        "w": "応仁",
+        "r": "おうにん",
+        "en": [
+          "Ōnin era (1467.3.5-1469.4.28)"
+        ]
+      }
+    },
+    "j2090980": {
+      "mn": [
+        "Жоо эрин (1222.4.13–1224.11.20)"
+      ],
+      "topics": [
+        "time",
+        "society"
+      ],
+      "expected": {
+        "w": "貞応",
+        "r": "じょうおう",
+        "en": [
+          "Jōō era (1222.4.13-1224.11.20)"
+        ]
+      }
+    },
+    "j2477310": {
+      "mn": [
+        "Янгийн төлөвлөгөө"
+      ],
+      "topics": [
+        "work",
+        "society"
+      ],
+      "expected": {
+        "w": "ヤング案",
+        "r": "ヤングあん",
+        "en": [
+          "Young Plan"
+        ]
+      }
+    },
+    "j2504180": {
+      "mn": [
+        "Доузын төлөвлөгөө"
+      ],
+      "topics": [
+        "work",
+        "society"
+      ],
+      "expected": {
+        "w": "ドーズ案",
+        "r": "ドーズあん",
+        "en": [
+          "Dawes Plan"
+        ]
+      }
+    },
+    "j2726350": {
+      "mn": [
+        "удаан",
+        "тайван"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "慢慢的",
+        "r": "マンマンデ",
+        "en": [
+          "slow",
+          "at ease"
+        ]
+      }
+    },
+    "j2250310": {
+      "mn": [
+        "илт … байх",
+        "байнга … байх гэсэн дагавар"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "張る",
+        "r": "ばる",
+        "en": [
+          "to be prominently ...",
+          "to be persistently ..."
+        ]
+      }
+    },
+    "j2817960": {
+      "mn": [
+        "хариу мэдрэмж",
+        "мэдрэмж",
+        "… хийх үнэ цэнэ"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "応え",
+        "r": "ごたえ",
+        "en": [
+          "response",
+          "feeling",
+          "worth ...ing"
+        ]
+      }
+    },
+    "j1009280": {
+      "mn": [
+        "шуугиан",
+        "олны хөдөлгөөн"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "響き",
+        "r": "どよめき",
+        "en": [
+          "commotion",
+          "stir"
+        ]
+      }
+    },
+    "j1612890": {
+      "mn": [
+        "цуурайтах",
+        "шуугиан гаргах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "響く",
+        "r": "どよめく",
+        "en": [
+          "to resound",
+          "to make a stir"
+        ]
+      }
+    },
+    "j2216510": {
+      "mn": [
+        "сайн айлын охин гэсэн хүндэтгэл нэр"
+      ],
+      "topics": [
+        "people",
+        "learning"
+      ],
+      "expected": {
+        "w": "嬢さん",
+        "r": "とうさん",
+        "en": [
+          "daughter (of a good family)"
+        ]
+      }
+    },
+    "j2177030": {
+      "mn": [
+        "сүнсийг хуваан өөр газарт залсан хэсэг"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "分霊",
+        "r": "ぶんれい",
+        "en": [
+          "spirit divided in such a manner"
+        ]
+      }
+    },
+    "j2847182": {
+      "mn": [
+        "норголт",
+        "хайр сэтгэлийн явдал",
+        "амраг"
+      ],
+      "topics": [
+        "actions",
+        "relationships"
+      ],
+      "expected": {
+        "w": "濡れ",
+        "r": "ぬれ",
+        "en": [
+          "wetting",
+          "love affair",
+          "lover"
+        ]
+      }
+    },
+    "5faae23d3b": {
+      "mn": [
+        "давамгайлал",
+        "давуу байр суурь",
+        "илүү чанар"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "優位",
+        "r": "ゆうい",
+        "en": [
+          "predominance",
+          "ascendancy",
+          "superiority"
+        ]
+      }
+    },
+    "77aabada2a": {
+      "mn": [
+        "уралдаан",
+        "торон нэхээс"
+      ],
+      "topics": [
+        "arts",
+        "daily"
+      ],
+      "expected": {
+        "w": "レース",
+        "r": "レース",
+        "en": [
+          "race",
+          "lace"
+        ]
+      }
+    },
+    "2352843605": {
+      "mn": [
+        "танхим",
+        "нүх"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "ホール",
+        "r": "ホール",
+        "en": [
+          "hall",
+          "hole"
+        ]
+      }
+    },
+    "d545dfb4f1": {
+      "mn": [
+        "түр завсарлага"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "ポーズ",
+        "r": "ポーズ",
+        "en": [
+          "pause"
+        ]
+      }
+    },
+    "32afdf9540": {
+      "mn": [
+        "хааяа",
+        "олонтоо"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "間々",
+        "r": "まま",
+        "en": [
+          "occasionally",
+          "frequently"
+        ]
+      }
+    }
+  }
+}

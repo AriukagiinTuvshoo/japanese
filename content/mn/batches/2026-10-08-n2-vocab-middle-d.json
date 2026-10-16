@@ -1,0 +1,992 @@
+{
+  "provenance": {
+    "id": "mn-n2-vocab-middle-d-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit topics cross-checked individually against retained Japanese headwords/readings and English glosses, including alternate dictionary readings. Independently unreviewed.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n2.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j1904050": {
+      "mn": [
+        "Филиппин"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "比島",
+        "r": "ひとう",
+        "en": [
+          "the Philippines"
+        ]
+      }
+    },
+    "j2019890": {
+      "mn": [
+        "дулаан тусгаарлах материал",
+        "хоолойн дулаалга"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "保温材",
+        "r": "ほおんざい",
+        "en": [
+          "heat insulating material",
+          "lagging material"
+        ]
+      }
+    },
+    "j1375200": {
+      "mn": [
+        "бүтэн нэр",
+        "овог"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "姓氏",
+        "r": "せいし",
+        "en": [
+          "full name",
+          "family name"
+        ]
+      }
+    },
+    "j2656390": {
+      "mn": [
+        "эрүүгийн мөрдөн шалгалт"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "捜査線",
+        "r": "そうさせん",
+        "en": [
+          "criminal investigation"
+        ]
+      }
+    },
+    "j2598140": {
+      "mn": [
+        "заалт бүр",
+        "зүйл бүр",
+        "хэсэг бүр"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "各条",
+        "r": "かくじょう",
+        "en": [
+          "each clause",
+          "each article",
+          "each item"
+        ]
+      }
+    },
+    "j1756760": {
+      "mn": [
+        "суурь шугам"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "基線",
+        "r": "きせん",
+        "en": [
+          "base line"
+        ]
+      }
+    },
+    "j1249180": {
+      "mn": [
+        "цэргийн тушаал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "軍令",
+        "r": "ぐんれい",
+        "en": [
+          "military command"
+        ]
+      }
+    },
+    "j1794670": {
+      "mn": [
+        "симболист урсгал"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "象徴派",
+        "r": "しょうちょうは",
+        "en": [
+          "the symbolist school"
+        ]
+      }
+    },
+    "j1790790": {
+      "mn": [
+        "ашиглалтад буй шугамууд"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "既設線",
+        "r": "きせつせん",
+        "en": [
+          "lines in operation"
+        ]
+      }
+    },
+    "j2846928": {
+      "mn": [
+        "тосгоны удирддаг",
+        "тосгоны үйл ажиллагаатай"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "村営",
+        "r": "そんえい",
+        "en": [
+          "run by a village",
+          "village-operated"
+        ]
+      }
+    },
+    "j2836746": {
+      "mn": [
+        "дайны өмнөх Японы иргэний хамгаалалтын бүлэг"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "防護団",
+        "r": "ぼうごだん",
+        "en": [
+          "civilian defense corps (pre-war Japan)"
+        ]
+      }
+    },
+    "j1731710": {
+      "mn": [
+        "үнийн тэнцэл"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "比価",
+        "r": "ひか",
+        "en": [
+          "parity"
+        ]
+      }
+    },
+    "j2153220": {
+      "mn": [
+        "хамгаалалтын төлөвлөгөө"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "防衛策",
+        "r": "ぼうえいさく",
+        "en": [
+          "defense plan"
+        ]
+      }
+    },
+    "j1292510": {
+      "mn": [
+        "дахин оролдлого",
+        "хоёр дахь оролдлого"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "再挙",
+        "r": "さいきょ",
+        "en": [
+          "another attempt",
+          "another try",
+          "second attempt"
+        ]
+      }
+    },
+    "j2575880": {
+      "mn": [
+        "Юүкигийн байгалийн индиго будгатай торгон эдлэл",
+        "Юүки цүмүги торго"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "結城紬",
+        "r": "ゆうきつむぎ",
+        "en": [
+          "silk products produced near Yūki (using natural indigo dye)",
+          "Yūki pongee"
+        ]
+      }
+    },
+    "j2847156": {
+      "mn": [
+        "тоглоомын үеэр шинэ онооны тоолуур зээлэх"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "改貫",
+        "r": "かいかん",
+        "en": [
+          "borrowing new scoring counters during an ongoing game"
+        ]
+      }
+    },
+    "j1290710": {
+      "mn": [
+        "Сага муж"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "佐賀県",
+        "r": "さがけん",
+        "en": [
+          "Saga prefecture (Kyushu)"
+        ]
+      }
+    },
+    "j1248560": {
+      "mn": [
+        "хуаран",
+        "тулалдааны талбар"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "軍陣",
+        "r": "ぐんじん",
+        "en": [
+          "camp",
+          "battlefield"
+        ]
+      }
+    },
+    "j2726280": {
+      "mn": [
+        "бүлээн",
+        "хүйтэн ч халуун ч биш",
+        "хайхрамжгүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "微温的",
+        "r": "びおんてき",
+        "en": [
+          "lukewarm",
+          "tepid",
+          "indifferent"
+        ]
+      }
+    },
+    "j1670760": {
+      "mn": [
+        "шогүний арми"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "幕軍",
+        "r": "ばくぐん",
+        "en": [
+          "the shogunate army"
+        ]
+      }
+    },
+    "j1794350": {
+      "mn": [
+        "хүүхдийн асрамжийн газар",
+        "хүүхэд асрах байгууллага",
+        "өнчин хүүхдийн асрамж"
+      ],
+      "topics": [
+        "people",
+        "places"
+      ],
+      "expected": {
+        "w": "養護施設",
+        "r": "ようごしせつ",
+        "en": [
+          "children's home",
+          "child care institution",
+          "orphanage"
+        ]
+      }
+    },
+    "j2725820": {
+      "mn": [
+        "когерент",
+        "уялдаатай"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "可干渉的",
+        "r": "かかんしょうてき",
+        "en": [
+          "coherent"
+        ]
+      }
+    },
+    "j2695290": {
+      "mn": [
+        "эрүүгийн мөрдөн шалгах хэлтэс"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "捜査課",
+        "r": "そうさか",
+        "en": [
+          "criminal investigation department",
+          "CID",
+          "criminal investigation section"
+        ]
+      }
+    },
+    "j1625210": {
+      "mn": [
+        "байгалийн бууралт"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "減耗",
+        "r": "げんもう",
+        "en": [
+          "natural decrease"
+        ]
+      }
+    },
+    "j1517120": {
+      "mn": [
+        "фракц",
+        "бүлэглэл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "朋党",
+        "r": "ほうとう",
+        "en": [
+          "faction",
+          "clique"
+        ]
+      }
+    },
+    "j2138160": {
+      "mn": [
+        "Либерал Ардчилсан намын Цүшима фракц"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "津島派",
+        "r": "つしまは",
+        "en": [
+          "Tsushima Faction (of the LDP)"
+        ]
+      }
+    },
+    "j2643890": {
+      "mn": [
+        "дэслэгч генерал",
+        "дэд шогүн"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "副将軍",
+        "r": "ふくしょうぐん",
+        "en": [
+          "lieutenant general",
+          "vice-shogun"
+        ]
+      }
+    },
+    "j1673270": {
+      "mn": [
+        "тооны хувьд цөөн",
+        "тоогоор дутуу"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "無勢",
+        "r": "ぶぜい",
+        "en": [
+          "numerical inferiority",
+          "being outnumbered"
+        ]
+      }
+    },
+    "j1675260": {
+      "mn": [
+        "довтлогч хүчин"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "攻撃軍",
+        "r": "こうげきぐん",
+        "en": [
+          "attacking force"
+        ]
+      }
+    },
+    "j1801120": {
+      "mn": [
+        "техникийн ур чадвартай",
+        "техникийн",
+        "боловсронгуй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "技巧的",
+        "r": "ぎこうてき",
+        "en": [
+          "technically accomplished",
+          "technical",
+          "polished"
+        ]
+      }
+    },
+    "j1515460": {
+      "mn": [
+        "иж бүрэн",
+        "багтаасан",
+        "хамарсан"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "包括的",
+        "r": "ほうかつてき",
+        "en": [
+          "comprehensive",
+          "inclusive",
+          "encompassing"
+        ]
+      }
+    },
+    "j1247960": {
+      "mn": [
+        "дайны гавьяа"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "軍功",
+        "r": "ぐんこう",
+        "en": [
+          "meritorious war service"
+        ]
+      }
+    },
+    "j1497050": {
+      "mn": [
+        "төмөр зам хоолой мина тавих",
+        "байгуулах"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "敷設",
+        "r": "ふせつ",
+        "en": [
+          "laying (a railroad, pipes, naval mines, etc.)",
+          "construction"
+        ]
+      }
+    },
+    "j2838587": {
+      "mn": [
+        "дайвар үгийн"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "副詞的",
+        "r": "ふくしてき",
+        "en": [
+          "adverbial"
+        ]
+      }
+    },
+    "j1760250": {
+      "mn": [
+        "байнгын",
+        "мөнхийн",
+        "удаан үргэлжлэх"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "恒久的",
+        "r": "こうきゅうてき",
+        "en": [
+          "permanent",
+          "perpetual",
+          "lasting"
+        ]
+      }
+    },
+    "j1995810": {
+      "mn": [
+        "ойн хамгаалалт"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "森林保護",
+        "r": "しんりんほご",
+        "en": [
+          "forest protection"
+        ]
+      }
+    },
+    "j1916250": {
+      "mn": [
+        "хөрш муж"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "隣接県",
+        "r": "りんせつけん",
+        "en": [
+          "neighboring prefecture",
+          "neighbouring prefecture"
+        ]
+      }
+    },
+    "j2798220": {
+      "mn": [
+        "тосолсон цаасан дэвсгэр",
+        "лавтай даавуу"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "油団",
+        "r": "ゆとん",
+        "en": [
+          "oiled-paper cushion",
+          "wax-cloth"
+        ]
+      }
+    },
+    "j1204950": {
+      "mn": [
+        "хүн бүр",
+        "тус бүр"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "各個",
+        "r": "かっこ",
+        "en": [
+          "every one",
+          "each"
+        ]
+      }
+    },
+    "j1979780": {
+      "mn": [
+        "аудитын стандарт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "監査基準",
+        "r": "かんさきじゅん",
+        "en": [
+          "audit standard"
+        ]
+      }
+    },
+    "j2600020": {
+      "mn": [
+        "эд хатуурах"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "硬結",
+        "r": "こうけつ",
+        "en": [
+          "induration"
+        ]
+      }
+    },
+    "j2797920": {
+      "mn": [
+        "эрхээсээ татгалзах",
+        "татгалзал",
+        "эрхээ орхих"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "委棄",
+        "r": "いき",
+        "en": [
+          "waiving (a right)",
+          "waiver",
+          "renunciation"
+        ]
+      }
+    },
+    "j1873910": {
+      "mn": [
+        "экспедицийн арми"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "懸軍",
+        "r": "けんぐん",
+        "en": [
+          "expeditionary army"
+        ]
+      }
+    },
+    "j1189590": {
+      "mn": [
+        "үнэлгээ",
+        "үнийн дүн"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "価額",
+        "r": "かがく",
+        "en": [
+          "valuation",
+          "amount"
+        ]
+      }
+    },
+    "j1280640": {
+      "mn": [
+        "хатуу чиг шугам баримтлагчид",
+        "буулт хийдэггүй хүмүүс",
+        "дайныг дэмжигчид"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "硬派",
+        "r": "こうは",
+        "en": [
+          "hard-liners",
+          "diehards",
+          "hawks"
+        ]
+      }
+    },
+    "j1248630": {
+      "mn": [
+        "цэргийн бүртгэл",
+        "цэргийн жагсаалт"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "軍籍",
+        "r": "ぐんせき",
+        "en": [
+          "military or naval register",
+          "muster roll"
+        ]
+      }
+    },
+    "j2578740": {
+      "mn": [
+        "АНУ-ын зэвсэгт хүчин",
+        "Америкийн цэрэг"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "アメリカ軍",
+        "r": "アメリカぐん",
+        "en": [
+          "U.S. forces",
+          "American military"
+        ]
+      }
+    },
+    "j1248690": {
+      "mn": [
+        "цэрэгт ажилладаг энгийн иргэн"
+      ],
+      "topics": [
+        "people",
+        "work"
+      ],
+      "expected": {
+        "w": "軍属",
+        "r": "ぐんぞく",
+        "en": [
+          "civilian in military employ"
+        ]
+      }
+    },
+    "j1446790": {
+      "mn": [
+        "арлын бүдэг дүрс",
+        "арлын тойм",
+        "арлын сүүдэр"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "島影",
+        "r": "しまかげ",
+        "en": [
+          "faint outlines of an island",
+          "vague shape of an island",
+          "silhouette of an island"
+        ]
+      }
+    },
+    "j1783530": {
+      "mn": [
+        "нэмэлт хүч",
+        "тусламжийн цэргийн цуваа"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "救援軍",
+        "r": "きゅうえんぐん",
+        "en": [
+          "reinforcements",
+          "relief column"
+        ]
+      }
+    },
+    "j2845123": {
+      "mn": [
+        "Яманашигийн Коофү хот"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "甲府",
+        "r": "こうふ",
+        "en": [
+          "Kōfu (city in Yamanashi)"
+        ]
+      }
+    },
+    "j1434260": {
+      "mn": [
+        "хямд үнэ"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "低価",
+        "r": "ていか",
+        "en": [
+          "low price"
+        ]
+      }
+    },
+    "j1227160": {
+      "mn": [
+        "эсрэг санал"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "逆提案",
+        "r": "ぎゃくていあん",
+        "en": [
+          "counter-proposal"
+        ]
+      }
+    },
+    "j1446970": {
+      "mn": [
+        "арлууд"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "島しょ",
+        "r": "とうしょ",
+        "en": [
+          "islands"
+        ]
+      }
+    },
+    "j1248410": {
+      "mn": [
+        "цэргийн хангамж",
+        "байлдааны нөөц"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "軍需",
+        "r": "ぐんじゅ",
+        "en": [
+          "munitions",
+          "military stores"
+        ]
+      }
+    },
+    "j1682990": {
+      "mn": [
+        "хасах үйлдэл"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "減算",
+        "r": "げんざん",
+        "en": [
+          "subtraction"
+        ]
+      }
+    },
+    "j1297230": {
+      "mn": [
+        "Сайтама муж"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "埼玉県",
+        "r": "さいたまけん",
+        "en": [
+          "Saitama prefecture (Kanto area)"
+        ]
+      }
+    },
+    "j1204920": {
+      "mn": [
+        "давхар бүр"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "各階",
+        "r": "かくかい",
+        "en": [
+          "each floor"
+        ]
+      }
+    },
+    "j1859810": {
+      "mn": [
+        "хуруугаар бэлгэдлийн дохио үйлдэх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "印を結ぶ",
+        "r": "いんをむすぶ",
+        "en": [
+          "to make symbolic signs (gestures) with the fingers"
+        ]
+      }
+    },
+    "j2667070": {
+      "mn": [
+        "цайны ёслолын дараа хэрэгслүүдийг дэлгэн үзүүлэх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "総飾り",
+        "r": "そうかざり",
+        "en": [
+          "displaying utensils after tea ceremony"
+        ]
+      }
+    }
+  }
+}

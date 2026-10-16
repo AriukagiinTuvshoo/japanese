@@ -1,0 +1,416 @@
+{
+  "provenance": {
+    "id": "mn-n3-examples-sustained-1-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian compared with exact Japanese sentence and retained English; stable entry w/r/en guards. Suspect sentences withheld. Independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n3.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "c3b1f16454": {
+      "expected": {
+        "w": "愛",
+        "r": "あい",
+        "en": [
+          "love"
+        ]
+      },
+      "examples": {
+        "愛とは夢にまで彼女を見ることだ。": {
+          "en": "Love is seeing her in your dreams.",
+          "mn": "Хайр гэдэг бол түүнийг зүүдэндээ ч харахыг хэлнэ."
+        },
+        "彼への愛はもう冷めてしまった。": {
+          "en": "My love for him has already cooled.",
+          "mn": "Түүнд байсан хайр маань аль хэдийн хөрсөн."
+        }
+      }
+    },
+    "d2ac37bee3": {
+      "expected": {
+        "w": "挨拶",
+        "r": "あいさつ",
+        "en": [
+          "greeting",
+          "salutation"
+        ]
+      },
+      "examples": {
+        "彼女はにっこり挨拶をした。": {
+          "en": "She greeted us with a smile.",
+          "mn": "Тэр инээмсэглэн мэндэлсэн."
+        },
+        "この場をお借りして一言挨拶を申し上げます。": {
+          "en": "Please allow me to say a few words on this occasion.",
+          "mn": "Энэ завшааныг ашиглан хэдэн үг хэлэхийг зөвшөөрнө үү."
+        }
+      }
+    },
+    "0cb7e80d4c": {
+      "expected": {
+        "w": "愛情",
+        "r": "あいじょう",
+        "en": [
+          "love",
+          "affection"
+        ]
+      },
+      "examples": {
+        "とりわけ子供たちは愛情を必要とする。": {
+          "en": "Above all, children need love.",
+          "mn": "Юунаас ч илүү хүүхдүүдэд хайр халамж хэрэгтэй."
+        },
+        "愛情だけでは生きてはいけない。": {
+          "en": "You cannot live by love alone.",
+          "mn": "Дан хайраар амьдарч болохгүй."
+        }
+      }
+    },
+    "7d26b9a262": {
+      "expected": {
+        "w": "合図",
+        "r": "あいず",
+        "en": [
+          "sign",
+          "signal"
+        ]
+      },
+      "examples": {
+        "すぐにゴーの合図をしてください。": {
+          "en": "Give us the sign to go soon.",
+          "mn": "Удахгүй явах дохио өгөөрэй."
+        },
+        "彼は私に逃げろという合図をした。": {
+          "en": "He made a gesture to me to run away.",
+          "mn": "Тэр надад зугтаа гэсэн дохио өгсөн."
+        }
+      }
+    },
+    "9452242b03": {
+      "expected": {
+        "w": "アイスクリーム",
+        "r": "アイスクリーム",
+        "en": [
+          "ice cream"
+        ]
+      },
+      "examples": {
+        "アイスクリームを３つください。": {
+          "en": "Give me three ice creams, please.",
+          "mn": "Гурван зайрмаг өгнө үү."
+        },
+        "彼女はアイスクリームが好きだ。": {
+          "en": "She has liking for ice cream.",
+          "mn": "Тэр зайрмагт дуртай."
+        }
+      }
+    },
+    "41df1c11e3": {
+      "expected": {
+        "w": "愛する",
+        "r": "あいする",
+        "en": [
+          "to love"
+        ]
+      },
+      "examples": {
+        "ロメオはジュリエットが愛している男だ。": {
+          "en": "Romeo is the man Juliet loves.",
+          "mn": "Ромео бол Жульеттагийн хайрладаг эр."
+        },
+        "彼女は学問を愛する気持ちがある。": {
+          "en": "She has a love of learning.",
+          "mn": "Тэр эрдэм сурах дуртай."
+        }
+      }
+    },
+    "cab1bc201f": {
+      "expected": {
+        "w": "相手",
+        "r": "あいて",
+        "en": [
+          "companion",
+          "partner",
+          "company"
+        ]
+      },
+      "examples": {
+        "あなたのダンスの相手はだれですか。": {
+          "en": "Who is your dance partner?",
+          "mn": "Таны бүжгийн хамтрагч хэн бэ?"
+        },
+        "彼女は彼のいい相手になるだろう。": {
+          "en": "She will be a good companion for him.",
+          "mn": "Тэр түүнд сайн хань болно."
+        }
+      }
+    },
+    "3c8f324542": {
+      "expected": {
+        "w": "あいにく",
+        "r": "あいにく",
+        "en": [
+          "unfortunately",
+          "Sorry",
+          "but...."
+        ]
+      },
+      "examples": {
+        "あいにく私はお金を持っていない。": {
+          "en": "Unfortunately I have no money with me.",
+          "mn": "Харамсалтай нь надад мөнгө алга."
+        },
+        "あいにくですが、彼は外出中です。": {
+          "en": "Sorry, but he is out now.",
+          "mn": "Харамсалтай нь тэр одоо гадуур явж байна."
+        }
+      }
+    },
+    "15ffb31b53": {
+      "expected": {
+        "w": "アイロン",
+        "r": "アイロン",
+        "en": [
+          "(electric) iron"
+        ]
+      },
+      "examples": {
+        "アイロンで手をやけどしました。": {
+          "en": "I burned my hand with an iron.",
+          "mn": "Би гараа индүүд түлсэн."
+        },
+        "私はハンカチにアイロンをかけた。": {
+          "en": "I ironed my handkerchiefs.",
+          "mn": "Би нусны алчууруудаа индүүдсэн."
+        }
+      }
+    },
+    "cf63ac57d2": {
+      "expected": {
+        "w": "アウト",
+        "r": "アウト",
+        "en": [
+          "out"
+        ]
+      },
+      "examples": {
+        "最初の打者はアウトになった。": {
+          "en": "The first batter was caught out.",
+          "mn": "Эхний цохигч аут болсон."
+        },
+        "打球がインかアウトかを判定するのは難しいことが多い。": {
+          "en": "It is often difficult to see if a ball is in or out.",
+          "mn": "Бөмбөг талбайн дотор уу, гадна уу гэдгийг тогтооход олонтаа хэцүү байдаг."
+        }
+      }
+    },
+    "b36b0a71b9": {
+      "expected": {
+        "w": "明かり",
+        "r": "あかり",
+        "en": [
+          "lamplight",
+          "light (in general)",
+          "brightness"
+        ]
+      },
+      "examples": {
+        "どうか明かりをつけて下さい。": {
+          "en": "Turn on the light, please.",
+          "mn": "Гэрэл асааж өгнө үү."
+        },
+        "この明かりで字を読もうとすれば目が悪くなるよ。": {
+          "en": "You'll strain your eyes trying to read in this light.",
+          "mn": "Ийм гэрэлд унших гэж оролдвол нүдээ муутгана шүү."
+        }
+      }
+    },
+    "03e5958da6": {
+      "expected": {
+        "w": "空き",
+        "r": "あき",
+        "en": [
+          "room",
+          "time to spare",
+          "emptiness"
+        ]
+      },
+      "examples": {
+        "字と字の間の空きをもっと広くしなさい。": {
+          "en": "Leave more space between characters.",
+          "mn": "Үсэг хоорондын зайг илүү өргөн болго."
+        },
+        "うちの会社には空きがない。": {
+          "en": "There is no opening in our firm.",
+          "mn": "Манай компанид сул орон тоо алга."
+        }
+      }
+    },
+    "b32e523015": {
+      "expected": {
+        "w": "明らか",
+        "r": "あきらか",
+        "en": [
+          "obvious",
+          "evident",
+          "clear"
+        ]
+      },
+      "examples": {
+        "その船が沈んだのは明らかだ。": {
+          "en": "It is clear that the ship sank.",
+          "mn": "Тэр хөлөг живсэн нь тодорхой."
+        },
+        "彼がそれをやったことは明らかだ。": {
+          "en": "It is evident that he did it.",
+          "mn": "Үүнийг тэр хийсэн нь илт."
+        }
+      }
+    },
+    "8ff67241d3": {
+      "expected": {
+        "w": "諦める",
+        "r": "あきらめる",
+        "en": [
+          "to give up",
+          "to abandon"
+        ]
+      },
+      "examples": {
+        "その少年は死んだものとしてあきらめられた。": {
+          "en": "The boy was given up for dead.",
+          "mn": "Тэр хүүг нас барсан гэж үзээд найдлагаа алдсан."
+        },
+        "才能がなくても諦めてはいけない。": {
+          "en": "You shouldn't give up just because you have no talent.",
+          "mn": "Авьяасгүй гээд бууж өгч болохгүй."
+        }
+      }
+    },
+    "2d5b06d1fa": {
+      "expected": {
+        "w": "飽きる",
+        "r": "あきる",
+        "en": [
+          "to get tired of",
+          "to lose interest in",
+          "to have enough"
+        ]
+      },
+      "examples": {
+        "息子はハンバーガーにあきています。": {
+          "en": "My son is tired of hamburgers.",
+          "mn": "Хүү маань гамбургерээс залхсан."
+        },
+        "彼はテレビを見るのに飽きている。": {
+          "en": "He is tired of watching television.",
+          "mn": "Тэр зурагт үзэхээс залхсан."
+        }
+      }
+    },
+    "6312892cc5": {
+      "expected": {
+        "w": "握手",
+        "r": "あくしゅ",
+        "en": [
+          "handshake"
+        ]
+      },
+      "examples": {
+        "彼は友人と握手した。": {
+          "en": "He shook hands with his friend.",
+          "mn": "Тэр найзтайгаа гар барьсан."
+        },
+        "彼は握手を求めて私に手を出した。": {
+          "en": "He put out his hand to me for a handshake.",
+          "mn": "Тэр надтай гар барих гэж гараа сунгасан."
+        }
+      }
+    },
+    "6bec104564": {
+      "expected": {
+        "w": "悪魔",
+        "r": "あくま",
+        "en": [
+          "devil",
+          "demon",
+          "evil spirit"
+        ]
+      },
+      "examples": {
+        "悪魔がやってくるかもしれないよ。": {
+          "en": "The Devil may come.",
+          "mn": "Чөтгөр ирж магадгүй шүү."
+        },
+        "彼女は悪魔に取り付かれている。": {
+          "en": "She is possessed by a devil.",
+          "mn": "Тэр эмэгтэйд чөтгөр шүглэсэн."
+        }
+      }
+    },
+    "5b9f9fdc86": {
+      "expected": {
+        "w": "明ける",
+        "r": "あける",
+        "en": [
+          "to dawn",
+          "to become daylight"
+        ]
+      },
+      "examples": {
+        "夜が明ける。": {
+          "en": "Day breaks.",
+          "mn": "Үүр цайж байна."
+        },
+        "夜がちょうど明けようとしている。": {
+          "en": "The dawn is just breaking.",
+          "mn": "Яг үүр цайх гэж байна."
+        }
+      }
+    },
+    "9092a33de5": {
+      "expected": {
+        "w": "預ける",
+        "r": "あずける",
+        "en": [
+          "to give into custody",
+          "to entrust",
+          "to deposit"
+        ]
+      },
+      "examples": {
+        "銀行にそのお金を預けてください。": {
+          "en": "Please deposit the money in a bank.",
+          "mn": "Тэр мөнгийг банкинд хийгээрэй."
+        },
+        "あなたのお金を銀行に預けなさい。": {
+          "en": "Deposit your money in the bank.",
+          "mn": "Мөнгөө банкинд хадгалуул."
+        }
+      }
+    },
+    "7d653ddf51": {
+      "expected": {
+        "w": "汗",
+        "r": "あせ",
+        "en": [
+          "sweat",
+          "perspiration"
+        ]
+      },
+      "examples": {
+        "額の汗をふきなさい。": {
+          "en": "Wipe the sweat from your brow.",
+          "mn": "Духныхаа хөлсийг арч."
+        },
+        "このパジャマはよく汗を吸収します。": {
+          "en": "These pajamas absorb sweat well.",
+          "mn": "Энэ унтлагын хувцас хөлс сайн шингээдэг."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1023 @@
+{
+ "retrieved": "2026-10-10",
+ "author": "Arena coding assistant",
+ "reviewStatus": "AI-assisted; unreviewed by humans",
+ "license": "CC-BY-SA-4.0",
+ "note": "Per-entry authoritative dictionary evidence for the 62 withheld meanings and the 10 source warnings. Dictionaries cited: デジタル大辞泉, 精選版日本国語大辞典, 普及版字通 (via kotobank), 角川新字源 改訂新版 (via kanjipedia), goo国語辞書, 国語辞典(jitenon), Weblio古語. Web pages retrieved 2026-10-10; exact page revisions not pinned. Evidence establishes senses for teaching; it does not authorise edits to JA/EN source strings. EVIDENCE STATUS: findings only. Same-lineage jamdict extracts are not independent verification; these web lookups are independent of jamdict but unpinned (page revisions not established) and unreviewed by humans, so they cannot clear source_issue flags under the project's source-evidence guard.",
+ "records": [
+  {
+   "kind": "vocab",
+   "id": "e05bb17edd",
+   "w": "気品",
+   "r": "きひん",
+   "mnFilled": "NOT APPLIED — conflicted entry (source_issue present): taught content withheld per source-evidence guard; evidence finding recorded only",
+   "evidenceUrl": "https://kotobank.jp/word/気品-475445",
+   "evidenceSummary": "デジタル大辞泉/日国/字通: 上品で気高い趣 only; no aroma sense found",
+   "decision": "MN teaches the evidenced refined-elegance sense. Retained EN 'aroma' is NOT supported by デジタル大辞泉, 精選版日本国語大辞典 or 字通 (2026-10-10) and is flagged as uncorroborated legacy gloss; JA/EN source strings preserved. [2026-10-10 correction: mn withheld for this conflicted entry; flag remains release-blocking.]",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)",
+   "existingMnCorrected": "NOT APPLIED — pre-batch mn/mn_provenance restored"
+  },
+  {
+   "kind": "vocab",
+   "id": "4ec7fe1166",
+   "w": "何々",
+   "r": "どれどれ",
+   "mnFilled": [
+    "аль нь вэ (онцолж асуух)"
+   ],
+   "evidenceUrl": null,
+   "evidenceSummary": "No independent headword entry located 2026-10-10; sense follows the retained gloss 'which (emphatic)' of the idiomatic interrogative どれどれ",
+   "decision": "EVIDENCE PARTIAL: MN translated from retained sense of the idiomatic interrogative; W/R pairing 何々/どれどれ as recorded in source. Human review recommended.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "vocab",
+   "id": "2e8753951c",
+   "w": "悪い",
+   "r": "にくい",
+   "mnFilled": "NOT APPLIED — conflicted entry (source_issue present): taught content withheld per source-evidence guard; evidence finding recorded only",
+   "evidenceUrl": "https://dictionary.goo.ne.jp/word/憎い/",
+   "evidenceSummary": "goo headword 憎い／▽悪い: 1 許しがたく嫌う 2 (反語)感心すべき 3 見苦しい 4 はしたない",
+   "decision": "Spelling ▽悪い attested as variant of にくい in goo/kotobank. MN covers evidenced senses (retained en hateful/abominable/poor-looking maps to 1+3); ironic-admirable sense included. Spelling finding recorded for review only — the source_issue flag remains release-blocking. [2026-10-10 correction: mn withheld for this conflicted entry; flag remains release-blocking.]",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)",
+   "existingMnCorrected": "NOT APPLIED — pre-batch mn/mn_provenance restored"
+  },
+  {
+   "kind": "vocab",
+   "id": "64e8f7eda0",
+   "w": "熱量",
+   "r": "ねつりょう",
+   "mnFilled": "NOT APPLIED — conflicted entry (source_issue present): taught content withheld per source-evidence guard; evidence finding recorded only",
+   "evidenceUrl": "https://kotobank.jp/word/熱量-111455",
+   "evidenceSummary": "デジタル大辞泉: 1 熱エネルギーの大きさ 2 (比喩)熱意; ニッポニカ/ブリタニカ: quantity of heat; Seisenban historical temperature sense 1876-77 per earlier audit",
+   "decision": "MN teaches modern senses + explicitly labels the historical 'temperature' sense (retained EN 'temperature' is not a modern sense). [2026-10-10 correction: mn withheld for this conflicted entry; flag remains release-blocking.]",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)",
+   "existingMnCorrected": "NOT APPLIED — pre-batch mn/mn_provenance restored"
+  },
+  {
+   "kind": "vocab",
+   "id": "ee708f5bbd",
+   "w": "延べ",
+   "r": "のべ",
+   "mnFilled": [
+    "нийт дүнгээр",
+    "хавтгай дарвалзсан металл",
+    "хугацаа сунгах",
+    "урьдчилсан арилжаа"
+   ],
+   "evidenceUrl": "https://kotobank.jp/word/延べ-597232",
+   "evidenceSummary": "デジタル大辞泉 のべ: 1 延べ金 2 重複を各1として数える合計 3 期日延長 4 延べ取引の略 5 延べ紙の略; kanjipedia のべ 1-2",
+   "decision": "MN follows evidenced aggregate/flattened-metal/extension/延べ取引 senses; retained 'credit (buying)' maps loosely to 延べ取引 (deferred/futures dealing).",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "vocab",
+   "id": "c6304d0283",
+   "w": "倍率",
+   "r": "ばいりつ",
+   "mnFilled": [
+    "хэд дахин болох харьцаа",
+    "өрсөлдөх харьцаа",
+    "томруулах хүч"
+   ],
+   "evidenceUrl": "https://kotobank.jp/word/倍率-113191",
+   "evidenceSummary": "デジタル大辞泉/goo: 1 比率・特に競争率 2 光学器械の実物比 (magnification)",
+   "decision": "MN = ratio/competition-rate/magnification. Retained EN 'diameter' is not an evidenced sense of 倍率 and is flagged; source string preserved.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "vocab",
+   "id": "02e6ac02bf",
+   "w": "ハンガー",
+   "r": "ハンガー",
+   "mnFilled": [
+    "хувцасны өлгүүр",
+    "татах утасны хавчаар",
+    "өлсгөлөн"
+   ],
+   "evidenceUrl": "https://kotobank.jp/word/はんがー-3185141",
+   "evidenceSummary": "デジタル大辞泉 ハンガー(hanger): 1 洋服掛け 2 鉄道の架線金具; ハンガー(hunger): 飢え",
+   "decision": "MN separates hanger senses + hunger. Retained EN 'hangar' (aircraft shed) is not evidenced under this headword and is flagged; source string preserved.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "vocab",
+   "id": "21d892acef",
+   "w": "番目",
+   "r": "ばんめ",
+   "mnFilled": [
+    "-р (дараалал заах)",
+    "кабуки тоглолтын анги"
+   ],
+   "evidenceUrl": "https://kotobank.jp/word/番目-607359",
+   "evidenceSummary": "デジタル大辞泉/goo: 1 (接尾)助数詞で物の順序 2 歌舞伎の上演分類",
+   "decision": "MN = ordinal suffix + kabuki classification. Retained EN 'cardinal number suffix' misnames an ORDINAL suffix; flagged, source preserved.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "vocab",
+   "id": "f3c62d6d70",
+   "w": "一息",
+   "r": "ひといき",
+   "mnFilled": [
+    "амьсгал авах завсарлага",
+    "богино агшин",
+    "амьсгаа авалгүй",
+    "бага зэргийн хүч хөдөлмөр"
+   ],
+   "evidenceUrl": "https://kotobank.jp/word/一息-611244",
+   "evidenceSummary": "デジタル大辞泉: 1 一呼吸・ひと休み 2 短い間 3 休まずに 4 すこしの努力",
+   "decision": "MN covers four evidenced senses. Retained EN 'puffy' is not evidenced and is flagged; source preserved.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "vocab",
+   "id": "d3286be832",
+   "w": "人目",
+   "r": "ひとめ",
+   "mnFilled": [
+    "бусдын хараа, олны нүд",
+    "хүмүүсийн зорчих хөдөлгөөн"
+   ],
+   "evidenceUrl": "https://kotobank.jp/word/人目-539122",
+   "evidenceSummary": "デジタル大辞泉: 1 他人の目・世間の目 2 人の往来",
+   "decision": "MN = others' eyes + people's coming and going. Retained 'glimpse' is a loose gloss only; flagged lightly.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "vocab",
+   "id": "eda690b2a4",
+   "w": "品種",
+   "r": "ひんしゅ",
+   "mnFilled": [
+    "барааны төрөл",
+    "ургамал, малаас сорт, омог"
+   ],
+   "evidenceUrl": "https://kotobank.jp/word/品種-122095",
+   "evidenceSummary": "日国/ニッポニカ/ブリタニカ+goo: 1 品物の種類 2 栽培植物・飼養動物の遺伝的に固定した型 3 分類学上種の下位単位",
+   "decision": "MN = kinds of goods + breed/cultivar. Retained 'brand; kind; description' is inexact ('description' unsupported); flagged.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "vocab",
+   "id": "ed2719ab9d",
+   "w": "ファン",
+   "r": "ファン",
+   "mnFilled": "NOT APPLIED — conflicted entry (source_issue present): taught content withheld per source-evidence guard; evidence finding recorded only",
+   "evidenceUrl": "https://kotobank.jp/word/ふぁん-3185662",
+   "evidenceSummary": "kotobank ふぁん separately records fan (supporter), fan (ventilation) and fun (enjoyment)",
+   "decision": "MN explicitly separates the three homonymous senses as required. Sense-separation finding recorded for review only — the source_issue flag remains release-blocking. [2026-10-10 correction: mn withheld for this conflicted entry; flag remains release-blocking.]",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)",
+   "existingMnCorrected": "NOT APPLIED — pre-batch mn/mn_provenance restored"
+  },
+  {
+   "kind": "vocab",
+   "id": "0101791a03",
+   "w": "フォーム",
+   "r": "フォーム",
+   "mnFilled": "NOT APPLIED — conflicted entry (source_issue present): taught content withheld per source-evidence guard; evidence finding recorded only",
+   "evidenceUrl": "https://kotobank.jp/word/ふぉーむ-3217540",
+   "evidenceSummary": "kotobank フォーム separately records form and foam",
+   "decision": "MN separates form/foam senses; both retained glosses evidenced. Sense-separation finding recorded for review only — the source_issue flag remains release-blocking. [2026-10-10 correction: mn withheld for this conflicted entry; flag remains release-blocking.]",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)",
+   "existingMnCorrected": "NOT APPLIED — pre-batch mn/mn_provenance restored"
+  },
+  {
+   "kind": "vocab",
+   "id": "ad9000928d",
+   "w": "震わせる",
+   "r": "ふるわせる",
+   "mnFilled": [
+    "чичрүүлэх",
+    "гуйвуулах"
+   ],
+   "evidenceUrl": "https://kokugo.jitenon.jp/word/p45459",
+   "evidenceSummary": "jitenon 震わせる: 揺れ動くようにする。「声を震わせる」",
+   "decision": "MN = causative 'to make tremble/quiver' (retained EN wrongly gives intransitive 'to be shaking'); JA/EN preserved, MN teaches the evidenced transitive sense.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "vocab",
+   "id": "47e4de1f65",
+   "w": "ペア",
+   "r": "ペア",
+   "mnFilled": [
+    "хос, хоёр бүрдэлтэй багц",
+    "хоёр хүний бүрэлдэхүүн"
+   ],
+   "evidenceUrl": "https://kotobank.jp/word/ペア-3186466",
+   "evidenceSummary": "デジタル大辞泉 ペア(pair): 1 二つでひと揃い 2 ダブルスの組 3 二人こぎ 4 ペアスケ略; ペアー(pear)=洋梨 is a SEPARATE headword",
+   "decision": "MN = pair senses only. Retained EN 'pear' belongs to headword ペアー and is flagged; source preserved.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "vocab",
+   "id": "28bbcaef7c",
+   "w": "弁償",
+   "r": "べんしょう",
+   "mnFilled": [
+    "хохирол нөхөн төлөх",
+    "мөнгөөр барагдуулах"
+   ],
+   "evidenceUrl": "https://kotobank.jp/word/弁償-626315",
+   "evidenceSummary": "デジタル大辞泉: 損害を金銭・物品で埋め合わせる; 日国: 1 年貢納付(古) 2 損害をつぐなう",
+   "decision": "MN = recompense/compensate. Retained EN 'next word' is a junk gloss and is flagged; source preserved.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "vocab",
+   "id": "e482d02cda",
+   "w": "本格",
+   "r": "ほんかく",
+   "mnFilled": [
+    "жинхэнэ ёс, журам",
+    "жинхэнэ хэлбэрээр"
+   ],
+   "evidenceUrl": "https://kotobank.jp/word/本格-632011",
+   "evidenceSummary": "デジタル大辞泉/日国/字通: 本来の格式・正しい方式、それに従うさま (本式)",
+   "decision": "MN = the evidenced 'authentic original form/style' senses. Retained 'propriety' is a loose gloss only.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "vocab",
+   "id": "97b08ab1d6",
+   "w": "本気",
+   "r": "ほんき",
+   "mnFilled": [
+    "чин сэтгэл, ноцтой байдал",
+    "тоглоомын дүрмээр хожсон зүйл авах"
+   ],
+   "evidenceUrl": "https://kotobank.jp/word/本気-632041",
+   "evidenceSummary": "デジタル大辞泉: 1 まじめ・真剣な気持ち 2 めんこ遊びの勝敗ルール(ほんこ); 日国 2 正気",
+   "decision": "MN = earnestness + the menko game-rule sense. Retained 'truth; sanctity' unsupported and flagged; source preserved.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "vocab",
+   "id": "7d2fc5b5b0",
+   "w": "丸っきり",
+   "r": "まるっきり",
+   "mnFilled": [
+    "бүрмөсөн, огт",
+    "яг л ... мэт"
+   ],
+   "evidenceUrl": "https://kokugo.jitenon.jp/word/p48400",
+   "evidenceSummary": "jitenon 丸っきり: まったく。まるで。ぜんぜん。",
+   "decision": "MN = entirely/at all + just as if (retained en maps).",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "vocab",
+   "id": "b93e0a31d0",
+   "w": "未開",
+   "r": "みかい",
+   "mnFilled": [
+    "соёл төлөвшөөгүй",
+    "эзэмшээгүй газар",
+    "судлагдаагүй салбар",
+    "дэлбээрлээгүй"
+   ],
+   "evidenceUrl": "https://kotobank.jp/word/未開-637174",
+   "evidenceSummary": "デジタル大辞泉: 1 文化・文明が未発達 2 未開拓の土地 3 未開拓の分野 4 花が咲かない",
+   "decision": "MN covers four evidenced senses; retained 'savage land; backward region; uncivilized' narrower.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "vocab",
+   "id": "084bab949b",
+   "w": "満たす",
+   "r": "みたす",
+   "mnFilled": [
+    "дүүргэх, дүүргэн хангах",
+    "сэтгэл хангалуун болгох"
+   ],
+   "evidenceUrl": "https://kotobank.jp/word/満たす-638376",
+   "evidenceSummary": "デジタル大辞泉: 1 容器いっぱいに入れる 2 要求を実現し満足させる",
+   "decision": "MN = fill up + satisfy (retained en maps; 'to ingratiate' is a loose gloss).",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "vocab",
+   "id": "cfaa0c9c42",
+   "w": "導く",
+   "r": "みちびく",
+   "mnFilled": [
+    "зам зааж аваачих",
+    "удирдан хөтлөх",
+    "нэг тийш чиглүүлэх",
+    "дүгнэлтэд хүргэх"
+   ],
+   "evidenceUrl": "https://kotobank.jp/word/導く-638542",
+   "evidenceSummary": "デジタル大辞泉: 1 道案内 2 正しい方向へ手引き 3 事柄をある方向へ動かす 4 結論を引き出す 5 仲介",
+   "decision": "MN = transitive evidenced senses; retained EN wrongly lists intransitive 'to be guided'.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "vocab",
+   "id": "f3f52aaa64",
+   "w": "民主",
+   "r": "みんしゅ",
+   "mnFilled": [
+    "ард түмэн эрх мэдэлтэй байдал",
+    "ардчиллын үзэл",
+    "ардын тэргүүн (түүхэн)"
+   ],
+   "evidenceUrl": "https://kotobank.jp/word/民主-640600",
+   "evidenceSummary": "デジタル大辞泉: 1 主権が国民 2 自由平等の精神; 日国: 1 人民の支配者(古) 2 主権人民",
+   "decision": "MN = modern democracy senses + labeled historical 'ruler of the people' sense.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "vocab",
+   "id": "78fbae6020",
+   "w": "民俗",
+   "r": "みんぞく",
+   "mnFilled": [
+    "ардын ёс заншил, уламжлалт"
+   ],
+   "evidenceUrl": "https://kotobank.jp/word/民俗-640648",
+   "evidenceSummary": "デジタル大辞泉/日国/字通: 古くから民間に伝承された風俗・習慣",
+   "decision": "MN = folk customs. Retained 'people; race; nation' is not the みんぞく sense and is flagged.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "vocab",
+   "id": "88c5764dde",
+   "w": "無駄遣い",
+   "r": "むだづかい",
+   "mnFilled": [
+    "үрэлгэн зарлага",
+    "хэрэггүй зүйлд үрэх"
+   ],
+   "evidenceUrl": "https://kotobank.jp/word/無駄遣い-641885",
+   "evidenceSummary": "デジタル大辞泉/日国: 金銭などを無駄に使うこと。浪費",
+   "decision": "MN = squandering; retained en maps ('flog a dead horse' is idiom-junk, flagged).",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "vocab",
+   "id": "957434f95c",
+   "w": "優",
+   "r": "やさ",
+   "mnFilled": [
+    "эелдэг зөөлөн",
+    "зөөлөн, даруу зан"
+   ],
+   "evidenceUrl": "https://kotobank.jp/word/優-648167",
+   "evidenceSummary": "デジタル大辞泉/日国 やさ: (形容詞やさしいの語幹)やさしく上品; 形動やさしくおとなしいさま",
+   "decision": "MN = gentle/gracious (prefixal and adjectival uses).",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "vocab",
+   "id": "d0cc8bf9a9",
+   "w": "ランプ",
+   "r": "ランプ",
+   "mnFilled": [
+    "чийдэн, гэрлийн чийдэн",
+    "тосон чийдэн"
+   ],
+   "evidenceUrl": "https://kotobank.jp/word/ランプ-148234",
+   "evidenceSummary": "世界大百科/ニッポニカ/ブリタニカ: 油・ガス・電気の灯火具、照明器具",
+   "decision": "MN = lamp/light. Retained 'ramp' is not evidenced under ランプ and is flagged.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "vocab",
+   "id": "e91d9f8a96",
+   "w": "枠",
+   "r": "わく",
+   "mnFilled": [
+    "хүрээ, жааз",
+    "хязгаар"
+   ],
+   "evidenceUrl": "https://www.kanjipedia.jp/kanji/0007422000",
+   "evidenceSummary": "kanjipedia 角川新字源: 1 細い材で周囲をかこったもの・ふち 2 一定の範囲・限界",
+   "decision": "MN = frame + limits. Retained 'slide' is junk and is flagged.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "vocab",
+   "id": "j2599040",
+   "w": "分屯",
+   "r": "ぶんとん",
+   "mnFilled": [
+    "цэргийг хуваан байршуулах",
+    "салан байрлах ангийн байр"
+   ],
+   "evidenceUrl": "https://kotobank.jp/word/分屯-377676",
+   "evidenceSummary": "日国: 1 軍隊を分けて駐屯させる 2 営舎を割り当てる・その営舎",
+   "decision": "MN = split-stationing (military). Retained 'vice-; sub-' is not evidenced and is flagged.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "vocab",
+   "id": "j1684450",
+   "w": "応訴",
+   "r": "おうそ",
+   "mnFilled": [
+    "нэхэмжлэлд хариу мэтгэлцэх"
+   ],
+   "evidenceUrl": "https://dictionary.goo.ne.jp/word/応訴/",
+   "evidenceSummary": "goo: 民事訴訟で原告の訴訟に対する防御行為として被告が弁論や申述を行うこと",
+   "decision": "MN = defend/respond to a lawsuit as defendant (retained 'countersuit' conflates 反訴).",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "vocab",
+   "id": "j2618190",
+   "w": "弾き応え",
+   "r": "ひきごたえ",
+   "mnFilled": [
+    "тоглоход мэдрэгдэх таатай эсэргүүцэл",
+    "сорилт болж чадахуйц сөрөг хүч"
+   ],
+   "evidenceUrl": "https://kotobank.jp/word/手応え-575648",
+   "evidenceSummary": "No independent headword entry located; sense follows composition 弾き+応え and the parallel 手応え (resistance felt back / satisfying response)",
+   "decision": "EVIDENCE PARTIAL: MN translated from composition and retained sense; human review recommended.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "庄",
+   "w": "庄",
+   "mnFilled": [
+    "эзэмшлийн газар",
+    "харш, эзэмшил"
+   ],
+   "evidenceUrl": "https://www.weblio.jp/content/庄",
+   "evidenceSummary": "デジタル大辞泉 しょう【庄】: 荘園。「庄司・庄屋」; もと「荘」の俗字",
+   "decision": "MN = manor/estate (retained 'Level; In The Country' junk, flagged).",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "鵬",
+   "w": "鵬",
+   "mnFilled": [
+    "домгийн том угалз шувуу"
+   ],
+   "evidenceUrl": "https://kanjitisiki.com/zinmei/639.html",
+   "evidenceSummary": "漢字辞典/故事: 鯤が化した想像上の大きな鳥 (荘子)",
+   "decision": "MN = mythical giant peng bird (retained 'Phoenix' is a loose identification, flagged).",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "紳",
+   "w": "紳",
+   "mnFilled": [
+    "сургалттай язгууртан",
+    "өргөн дээлийн бүс"
+   ],
+   "evidenceUrl": "https://www.weblio.jp/content/紳",
+   "evidenceSummary": "デジタル大辞泉 しん: 身分・教養のある人; 原義は高官の礼装の太い帯",
+   "decision": "MN = gentleman + original wide-sash sense. Retained 'Sire; Good Belt; Gentleman' mixture partially junk.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "幣",
+   "w": "幣",
+   "mnFilled": [
+    "бурханд өргөх даавуу, өргөл",
+    "мөнгө, тэмдэгт мөнгө"
+   ],
+   "evidenceUrl": "https://kanji-jiten.com/kanji/5e63/",
+   "evidenceSummary": "漢字辞典.com/jitenon: 1 神前に供えるぬさ 2 金銭・貨幣 3 贈り物",
+   "decision": "MN = ritual offering cloth + currency. Retained 'Cash; Bad Habit; Humble Prefix' mostly junk, flagged.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "堺",
+   "w": "堺",
+   "mnFilled": [
+    "хязгаар, зааг"
+   ],
+   "evidenceUrl": "https://www.kanjipedia.jp/kanji/0000802000",
+   "evidenceSummary": "kanjipedia 角川新字源: 土地のさい。くぎり。一説に「界」の異体字",
+   "decision": "MN = boundary (retained 'World' is wrong; source preserved).",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "瑞",
+   "w": "瑞",
+   "mnFilled": [
+    "сайны билэг тэмдэг",
+    "сайхан, цэвэрхэн"
+   ],
+   "evidenceUrl": "https://kanjitisiki.com/zinmei/354.html",
+   "evidenceSummary": "漢字辞典/kanjipedia: 1 しるし・めでたいしるし 2 めでたい 3 みずみずしい",
+   "decision": "MN = auspicious sign + fine/fresh. Retained 'Congratulations' is a loose gloss.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "秦",
+   "w": "秦",
+   "mnFilled": [
+    "Шинь (эртний Хятад улс)",
+    "Хата (Японы овог)"
+   ],
+   "evidenceUrl": "https://kanji.jitenon.jp/kanjif/2599",
+   "evidenceSummary": "jitenon: 1 古代中国の国名(戦国七雄の一) 2 日本のはた(姓)",
+   "decision": "MN = Qin state + Hata clan. Retained 'Manchu Dynasty' is wrong (Manchu = 満洲); flagged.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "薩",
+   "w": "薩",
+   "mnFilled": [
+    "бодьсадва (дуудлагын үсэг)",
+    "Сацума (газрын нэр)"
+   ],
+   "evidenceUrl": "https://www.weblio.jp/content/薩",
+   "evidenceSummary": "デジタル大辞泉 さつ: 1 梵語の音訳字(薩埵・菩薩) 2 薩摩国",
+   "decision": "MN = sattva transliteration + Satsuma. Retained 'Salvation; Buddha' loose, flagged.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "擬",
+   "w": "擬",
+   "mnFilled": [
+    "дуурайлган хийх, дууриах",
+    "тооцоолох, тааварлах",
+    "хуурамч, дууриамал"
+   ],
+   "evidenceUrl": "https://www.kanjipedia.jp/kanji/0001316800",
+   "evidenceSummary": "kanjipedia 角川新字源: 1 なぞらえる・まねる 2 はかる・おしはかる 3 まがい・もどき",
+   "decision": "MN = imitate/estimate/sham. Retained 'Mimic; Aim (a Gun) At; Nominate' partially junk.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "菩",
+   "w": "菩",
+   "mnFilled": [
+    "бодь (Буддын номын дуудлага)",
+    "өргөл дэвсэх даавуу (түүхэн)"
+   ],
+   "evidenceUrl": "https://kanji.jitenon.jp/kanjif/2901",
+   "evidenceSummary": "jitenon/okjiten: 1 梵語音訳字(菩薩・菩提) 2 むしろ(敷物) 3 草名",
+   "decision": "MN = bodhi transliteration + historical mat sense. Retained 'Kind Of Grass; Sacred Tree' loose.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "牟",
+   "w": "牟",
+   "mnFilled": [
+    "үхэр дуугарах авиа",
+    "нүдний хүүхэн хараа",
+    "шунах, булаан авах"
+   ],
+   "evidenceUrl": "https://kotobabox.com/kanji/0a9629a0566f9470",
+   "evidenceSummary": "kotoba-boxほか: 牟=牛の鳴き声・むさぼる・かぶと; 牟子=瞳",
+   "decision": "MN = moo + pupil (eye, 牟子) + covet. Retained 'Moo (cow Sound); Pupil (eye)' maps.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "錫",
+   "w": "錫",
+   "mnFilled": [
+    "цагаан тугалган",
+    "ламын таяг",
+    "хайрлан өгөх"
+   ],
+   "evidenceUrl": "https://www.kanjipedia.jp/kanji/0003011100",
+   "evidenceSummary": "kanjipedia 角川新字源: 1 すず(金属元素) 2 道士や僧のつえ(錫杖) 3 たまわる(天錫)",
+   "decision": "MN = tin + staff + bestow. Retained 'Copper; Tin' — copper is wrong (銅=copper); flagged.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "芹",
+   "w": "芹",
+   "mnFilled": [
+    "сэри ногоо (Сери овгийн олон наст ногоо)"
+   ],
+   "evidenceUrl": "https://www.kanjipedia.jp/kanji/0001598800",
+   "evidenceSummary": "kanjipedia 角川新字源: せり。セリ科の多年草",
+   "decision": "MN = seri (Japanese parsley / water dropwort). Retained 'Parsley' approximate.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "鮎",
+   "w": "鮎",
+   "mnFilled": [
+    "аюу загас (сэлгэн нуурын загас)",
+    "(Хятад) намаз загас"
+   ],
+   "evidenceUrl": "https://www.kanjipedia.jp/kanji/0005097800",
+   "evidenceSummary": "kanjipedia 角川新字源: あゆ。アユ科の淡水魚。参考: 中国ではなまずの意",
+   "decision": "MN = sweetfish (ayu) + Chinese catfish sense. Retained 'Freshwater Trout; Smelt' is not the Japanese sense; flagged.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "宵",
+   "w": "宵",
+   "mnFilled": [
+    "үдшийн эхэн",
+    "үдэш, шөнө"
+   ],
+   "evidenceUrl": "https://www.kanjipedia.jp/kanji/0003373700",
+   "evidenceSummary": "kanjipedia 角川新字源: よい。夕ぐれ。日が暮れてまもないころ。また、よる",
+   "decision": "MN = early evening + night. Retained 'Wee Hours' is wrong (wee hours = 未明); flagged.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "蛋",
+   "w": "蛋",
+   "mnFilled": [
+    "шувууны өндөг",
+    "өмнөд Хятадын усан амьдралтай овог"
+   ],
+   "evidenceUrl": "https://www.weblio.jp/content/蛋",
+   "evidenceSummary": "デジタル大辞泉 たん: 1 鳥の卵 2 中国南方で水上生活をする部族(蛋民)",
+   "decision": "MN = egg + Tanka people. Retained 'Barbarian; Egg' — 'Barbarian' is a crude gloss of 蛋民, flagged.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "檀",
+   "w": "檀",
+   "mnFilled": [
+    "чандан мод",
+    "маймод (галсан мод)",
+    "өглөгийн дуудлага"
+   ],
+   "evidenceUrl": "https://kotobank.jp/word/檀-563616",
+   "evidenceSummary": "デジタル大辞泉 だん: 1 香木(白檀・栴檀) 2 ニシキギ科マユミ 3 梵語dāna(布施)",
+   "decision": "MN = sandalwood + spindle tree + dana. Retained 'Cedar' is wrong (cedar=杉/檜); flagged.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "脊",
+   "w": "脊",
+   "mnFilled": [
+    "нуруу, нугалма",
+    "биеийн өндөр"
+   ],
+   "evidenceUrl": "https://okjiten.jp/kanji301.html",
+   "evidenceSummary": "okjiten/漢字辞典: 1 背・背骨(脊椎) 2 身長(せい)",
+   "decision": "MN = spine/back + stature. Retained 'Stature; Height' partial.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "抒",
+   "w": "抒",
+   "mnFilled": [
+    "илэрхийлэх, дэлгэн ярих",
+    "гаргаж авах"
+   ],
+   "evidenceUrl": "https://kanji.me/%E6%8A%92",
+   "evidenceSummary": "漢和: のべる、くむ。express/extend (字通)",
+   "decision": "MN = express/put forth. Retained 'Tell; 10**24' — 10^24 is junk (KANJIDIC artifact); flagged.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "鍾",
+   "w": "鍾",
+   "mnFilled": [
+    "төвлөрүүлэх, цуглуулах",
+    "дарсны сав, хундага",
+    "хонх"
+   ],
+   "evidenceUrl": "https://kotobank.jp/word/鍾-530361",
+   "evidenceSummary": "デジタル大辞泉 しょう: 1 あつまる・あつめる 2 かね・つりがね; 日国: 1 容量単位 2 さかつぼ 3 =鐘",
+   "decision": "MN = gather + sake vessel + bell. Retained 'Spindle; Gather; Collect' — 'Spindle' junk; flagged.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "𠮟",
+   "w": "𠮟",
+   "mnFilled": [
+    "зэмлэх, буруутгах"
+   ],
+   "evidenceUrl": "https://www.kanjipedia.jp/kanji/0002920800",
+   "evidenceSummary": "kanjipedia 角川新字源: しかる。責める。とがめる。「𠮟正」「𠮟責」",
+   "decision": "MN = scold/blame. Retained EN gloss is EMPTY; MN established from kanjipedia evidence.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "剝",
+   "w": "剝",
+   "mnFilled": [
+    "хуулж хуулах, арьс салгах",
+    "хальтрах, хуулрах"
+   ],
+   "evidenceUrl": "https://www.kanjipedia.jp/kanji/0005630600",
+   "evidenceSummary": "kanjipedia 角川新字源: 1 はぐ・はぎとる・むく 2 はがれる・はがす・はげる",
+   "decision": "MN = peel/strip + come off. Retained EN gloss is EMPTY; MN established from kanjipedia evidence.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "竣",
+   "w": "竣",
+   "mnFilled": [
+    "дуусгах, дуусах",
+    "тогтож үлдэх"
+   ],
+   "evidenceUrl": "https://www.kanjipedia.jp/kanji/0003239300",
+   "evidenceSummary": "kanjipedia 角川新字源: 1 おわる・できあがる・完成する 2 とどまる・とどめる",
+   "decision": "MN = finish + remain (retained 'End; Finish' partial).",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "椋",
+   "w": "椋",
+   "mnFilled": [
+    "мүк мод (Улмас овгийн намхан мод)"
+   ],
+   "evidenceUrl": "https://kanji-jiten.com/kanji/243.html",
+   "evidenceSummary": "漢字辞典/jitenon: むく。ムクノキ。ニレ科の落葉高木",
+   "decision": "MN = muku tree. Retained 'Grey Starling' comes from compound 椋鳥 only; flagged.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "瑚",
+   "w": "瑚",
+   "mnFilled": [
+    "бурханд өргөх сав (瑚璉)",
+    "шүр"
+   ],
+   "evidenceUrl": "https://okjiten.jp/kanji2596.html",
+   "evidenceSummary": "okjiten/日国 瑚璉: 1 神前に供える器(夏では瑚) 2 珊瑚",
+   "decision": "MN = ritual vessel + coral.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "嵩",
+   "w": "嵩",
+   "mnFilled": [
+    "эзлэхүүн, хэмжээ",
+    "өндөр газар",
+    "нэр хүнд, жин"
+   ],
+   "evidenceUrl": "https://kotobank.jp/word/嵩-461537",
+   "evidenceSummary": "デジタル大辞泉 かさ: 1 大きさ・分量・容積 2 高い所 3 威厳・貫禄; すう: 山が高くそびえる",
+   "decision": "MN = volume + high place + dignity.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "詮",
+   "w": "詮",
+   "mnFilled": [
+    "эцэстээ, аргагүй",
+    "арга, арга зам",
+    "ил тод, тодорхой"
+   ],
+   "evidenceUrl": "https://kobun.weblio.jp/content/詮",
+   "evidenceSummary": "Weblio古語/pon-navi: 1 結局 2 要点 3 方法・手段 4 効果; あきらか、選ぶ",
+   "decision": "MN = after all + method + clear. Retained 'Discussion; Methods Called For; Selection' partial.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "諄",
+   "w": "諄",
+   "mnFilled": [
+    "хэт их яриатай, халшрамтгай",
+    "хэт амтлаг, тод өнгөтэй",
+    "нинжин, итгэлт"
+   ],
+   "evidenceUrl": "https://www.kanjipedia.jp/kotoba/0003269900",
+   "evidenceSummary": "kanjipedia くどい: 1 しつこくてうっとうしい 2 味や色が濃くてしつこい; 諄ろ(ねんごろ)=懇ろ",
+   "decision": "MN = pesky/persistent + heavy flavor + earnest (ねんごろ). Retained 'Tedious' partial.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "叡",
+   "w": "叡",
+   "mnFilled": [
+    "ухаалаг, билигт",
+    "тэнгэрлэг эзэнтэй холбогдох"
+   ],
+   "evidenceUrl": "https://www.weblio.jp/content/叡",
+   "evidenceSummary": "デジタル大辞泉 えい: 1 かしこい・聡明 2 天子の行いに冠する敬意",
+   "decision": "MN = wise + imperial honorific.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "麿",
+   "w": "麿",
+   "mnFilled": [
+    "би (түүхэн язгуурт хаяг)",
+    "нэрний хүндэтгэлийн нэмэлт"
+   ],
+   "evidenceUrl": "https://pon-navi.net/nazuke/name/kanji/%E9%BA%BF",
+   "evidenceSummary": "名付けポン/姓氏: 1 一人称「まろ」 2 人の名・動物名に添える語",
+   "decision": "MN = archaic 'I' + name suffix. Retained 'I; You; (kokuji)' — 'You' unsupported; flagged.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "璧",
+   "w": "璧",
+   "mnFilled": [
+    "хөндий тойрог чулуу (эртний бэлэг)",
+    "онцгой сайхан зүйл"
+   ],
+   "evidenceUrl": "https://kotobank.jp/word/璧-129170",
+   "evidenceSummary": "デジタル大辞泉 へき: 1 ドーナツ形の玉(完璧・白璧) 2 すぐれたもの(双璧); ニッポニカ: 中央に円孔の玉器",
+   "decision": "MN = bi disc + excellent thing. Retained 'Sphere; Ball' wrong; flagged.",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "vocab",
+   "id": "j2727400",
+   "w": "先生",
+   "mnFilled": "NOT APPLIED — conflicted entry (source_issue present): taught content withheld per source-evidence guard; evidence finding recorded only",
+   "evidenceUrl": "https://kotobank.jp/word/先生-515802",
+   "evidenceSummary": "kotobank 先生 シーサン: 上海方言で男性一般に対する敬称",
+   "decision": "MN corrected: previous MN claimed 'boy, Okinawa dialect' — both wrong vs evidence (Shanghai-dialect honorific for men). Retained EN 'boy' narrower than evidence; flagged. [2026-10-10 correction: mn withheld for this conflicted entry; flag remains release-blocking.]",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "existingMnCorrected": "NOT APPLIED — pre-batch mn/mn_provenance restored",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "vocab",
+   "id": "j2076920",
+   "w": "手前",
+   "mnFilled": "NOT APPLIED — conflicted entry (source_issue present): taught content withheld per source-evidence guard; evidence finding recorded only",
+   "evidenceUrl": "https://kotobank.jp/word/手前-576793",
+   "evidenceSummary": "kotobank 手前 てめえ: 1 自分 2 (軽んじて)相手",
+   "decision": "Existing MN already register-aware and covers both evidenced uses; retained unchanged. [2026-10-10 correction: mn withheld for this conflicted entry; flag remains release-blocking.]",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "existingMnCorrected": "NOT APPLIED — pre-batch mn/mn_provenance restored",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "聴",
+   "w": "聴",
+   "mnFilled": "NOT APPLIED — conflicted entry (source_issue present): taught content withheld per source-evidence guard; evidence finding recorded only",
+   "evidenceUrl": "https://www.kanjipedia.jp/kanji/0004839100",
+   "evidenceSummary": "kanjipedia 聴: attentive listening + acceptance/permission; inherited 'Headstrong; Naughty' glosses NOT established",
+   "decision": "MN extended with the evidenced acceptance/permission sense; inherited Headstrong/Naughty glosses uncorroborated (flagged). [2026-10-10 correction: mn withheld for this conflicted entry; flag remains release-blocking.]",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "existingMnCorrected": "NOT APPLIED — pre-batch mn/mn_provenance restored",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  },
+  {
+   "kind": "kanji",
+   "id": "博",
+   "w": "博",
+   "mnFilled": "NOT APPLIED — conflicted entry (source_issue present): taught content withheld per source-evidence guard; evidence finding recorded only",
+   "evidenceUrl": "https://www.kanjipedia.jp/kanji/0005633600",
+   "evidenceSummary": "kanjipedia 博: breadth, 博士(abbrev), 博打(gambling); inherited 'Command; Esteem' glosses NOT established",
+   "decision": "MN rebuilt from evidenced senses (broad/scholar/doctor/gambling); dropped unsupported 'esteem'. Inherited Command/Esteem uncorroborated (flagged). [2026-10-10 correction: mn withheld for this conflicted entry; flag remains release-blocking.]",
+   "retrieved": "2026-10-10",
+   "reviewStatus": "AI-assisted; unreviewed by humans",
+   "existingMnCorrected": "NOT APPLIED — pre-batch mn/mn_provenance restored",
+   "clearanceStatus": "NOT a clearance; source_issue flags remain release-blocking (see docs/audits/2026-10-10-source-issue-adjudications.json)"
+  }
+ ]
+}

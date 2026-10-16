@@ -1,0 +1,1043 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-six-4-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit semantic categories cross-checked against Japanese entry and retained English gloss, independently unreviewed. Original uncommon senses preserved.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "d563e62066": {
+      "mn": [
+        "кино жүжгийн зохиол"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "脚本",
+        "r": "きゃくほん",
+        "en": [
+          "scenario"
+        ]
+      }
+    },
+    "003bb60074": {
+      "mn": [
+        "бодитой",
+        "субъектив бус"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "客観",
+        "r": "きゃっかん",
+        "en": [
+          "objective"
+        ]
+      }
+    },
+    "28fa5ea61e": {
+      "mn": [
+        "барьж авах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "キャッチ",
+        "r": "キャッチ",
+        "en": [
+          "catch"
+        ]
+      }
+    },
+    "010d19262d": {
+      "mn": [
+        "ажлын замнал",
+        "мэргэжлийн төрийн албан хаагч"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "キャリア",
+        "r": "キャリア",
+        "en": [
+          "career",
+          "career government employee"
+        ]
+      }
+    },
+    "85e455a3f4": {
+      "mn": [
+        "тусламж",
+        "аврах",
+        "нэмэлт хүч"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "救援",
+        "r": "きゅうえん",
+        "en": [
+          "relief",
+          "rescue",
+          "reinforcement"
+        ]
+      }
+    },
+    "9bfe4c732e": {
+      "mn": [
+        "сургуулиас түр чөлөө авах",
+        "суралцах эрх түдгэлзэх"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "休学",
+        "r": "きゅうがく",
+        "en": [
+          "temporary absence from school",
+          "suspension"
+        ]
+      }
+    },
+    "dc6d837292": {
+      "mn": [
+        "эцсийн",
+        "туйлын",
+        "хожмын"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "究極",
+        "r": "きゅうきょく",
+        "en": [
+          "ultimate",
+          "final",
+          "eventual"
+        ]
+      }
+    },
+    "844fe531a0": {
+      "mn": [
+        "давчуу",
+        "бариу",
+        "хөшүүн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "窮屈",
+        "r": "きゅうくつ",
+        "en": [
+          "narrow",
+          "tight",
+          "stiff"
+        ]
+      }
+    },
+    "007ce2885e": {
+      "mn": [
+        "ургамлын булцуу"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "球根",
+        "r": "きゅうこん",
+        "en": [
+          "(plant) bulb"
+        ]
+      }
+    },
+    "1474b01387": {
+      "mn": [
+        "тусламж",
+        "дэмжлэг",
+        "аврал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "救済",
+        "r": "きゅうさい",
+        "en": [
+          "relief",
+          "aid",
+          "rescue"
+        ]
+      }
+    },
+    "67f3849fbb": {
+      "mn": [
+        "албаны зарлага",
+        "дагалдагч",
+        "зөөгч"
+      ],
+      "topics": [
+        "people",
+        "work"
+      ],
+      "expected": {
+        "w": "給仕",
+        "r": "きゅうじ",
+        "en": [
+          "office boy (girl)",
+          "page",
+          "waiter"
+        ]
+      }
+    },
+    "355f61bfeb": {
+      "mn": [
+        "сургуулийн хоол",
+        "хоол өгөх"
+      ],
+      "topics": [
+        "food"
+      ],
+      "expected": {
+        "w": "給食",
+        "r": "きゅうしょく",
+        "en": [
+          "school lunch",
+          "providing a meal"
+        ]
+      }
+    },
+    "7752eb179f": {
+      "mn": [
+        "гал зогсоох",
+        "эвлэрлийн түр тохиролцоо"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "休戦",
+        "r": "きゅうせん",
+        "en": [
+          "truce",
+          "armistice"
+        ]
+      }
+    },
+    "ce6fddde9b": {
+      "mn": [
+        "хуучны найз",
+        "эртний нөхөрлөл"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "旧知",
+        "r": "きゅうち",
+        "en": [
+          "old friend",
+          "old friendship"
+        ]
+      }
+    },
+    "c9543e4954": {
+      "mn": [
+        "ордон"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "宮殿",
+        "r": "きゅうでん",
+        "en": [
+          "palace"
+        ]
+      }
+    },
+    "24f332f9b9": {
+      "mn": [
+        "ядуурал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "窮乏",
+        "r": "きゅうぼう",
+        "en": [
+          "poverty"
+        ]
+      }
+    },
+    "424e314e84": {
+      "mn": [
+        "толгод"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "丘陵",
+        "r": "きゅうりょう",
+        "en": [
+          "hill"
+        ]
+      }
+    },
+    "f4518f31a9": {
+      "mn": [
+        "хувь нэмэр",
+        "тус хүргэх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "寄与",
+        "r": "きよ",
+        "en": [
+          "contribution",
+          "service"
+        ]
+      }
+    },
+    "3f18aa382c": {
+      "mn": [
+        "мөр",
+        "эгнээ",
+        "шүлгийн мөр"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "行",
+        "r": "ぎょう",
+        "en": [
+          "line",
+          "row",
+          "verse"
+        ]
+      }
+    },
+    "aa7cbec229": {
+      "mn": [
+        "гайхамшиг",
+        "ер бусын зүйл"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "驚異",
+        "r": "きょうい",
+        "en": [
+          "wonder",
+          "miracle"
+        ]
+      }
+    },
+    "aae84ff017": {
+      "mn": [
+        "багш нар"
+      ],
+      "topics": [
+        "people",
+        "learning"
+      ],
+      "expected": {
+        "w": "教員",
+        "r": "きょういん",
+        "en": [
+          "teaching staff"
+        ]
+      }
+    },
+    "4ed752603d": {
+      "mn": [
+        "хичээлийн сэдэв",
+        "сургалтын хөтөлбөр"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "教科",
+        "r": "きょうか",
+        "en": [
+          "subject",
+          "curriculum"
+        ]
+      }
+    },
+    "555acd1644": {
+      "mn": [
+        "холбоо",
+        "нийгэмлэг",
+        "байгууллага"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "協会",
+        "r": "きょうかい",
+        "en": [
+          "association",
+          "society",
+          "organization"
+        ]
+      }
+    },
+    "2fc064a101": {
+      "mn": [
+        "эрэгтэй эмэгтэй хамт сурах"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "共学",
+        "r": "きょうがく",
+        "en": [
+          "coeducation"
+        ]
+      }
+    },
+    "3e9b86c219": {
+      "mn": [
+        "өрөвдөн ойлгох",
+        "сэтгэл нийлэх"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "共感",
+        "r": "きょうかん",
+        "en": [
+          "sympathy",
+          "response"
+        ]
+      }
+    },
+    "8aa1c32c13": {
+      "mn": [
+        "хурал",
+        "зөвлөлдөх",
+        "хэлэлцэх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "協議",
+        "r": "きょうぎ",
+        "en": [
+          "conference",
+          "consultation",
+          "discussion"
+        ]
+      }
+    },
+    "b8821eb7da": {
+      "mn": [
+        "орчин",
+        "нөхцөл байдал"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "境遇",
+        "r": "きょうぐう",
+        "en": [
+          "environment",
+          "circumstances"
+        ]
+      }
+    },
+    "68de5f83d6": {
+      "mn": [
+        "сургамж",
+        "сургаал",
+        "ёс суртахууны заавар"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "教訓",
+        "r": "きょうくん",
+        "en": [
+          "lesson",
+          "precept",
+          "moral instruction"
+        ]
+      }
+    },
+    "cfe443b2a2": {
+      "mn": [
+        "хатуу",
+        "хүчтэй",
+        "буултгүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "強硬",
+        "r": "きょうこう",
+        "en": [
+          "firm",
+          "vigorous",
+          "unbending"
+        ]
+      }
+    },
+    "47dee1039f": {
+      "mn": [
+        "хүчээр хийх",
+        "албадан хэрэгжүүлэх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "強行",
+        "r": "きょうこう",
+        "en": [
+          "forcing",
+          "enforcement"
+        ]
+      }
+    },
+    "2d26656cd1": {
+      "mn": [
+        "сургалтын материал"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "教材",
+        "r": "きょうざい",
+        "en": [
+          "teaching materials"
+        ]
+      }
+    },
+    "9569eb17f4": {
+      "mn": [
+        "муу ургац",
+        "ургац алдах"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "凶作",
+        "r": "きょうさく",
+        "en": [
+          "bad harvest",
+          "poor crop"
+        ]
+      }
+    },
+    "f2e6012f18": {
+      "mn": [
+        "коммунизм"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "共産",
+        "r": "きょうさん",
+        "en": [
+          "communism"
+        ]
+      }
+    },
+    "2284a3924c": {
+      "mn": [
+        "наймаачин",
+        "худалдаачин"
+      ],
+      "topics": [
+        "people",
+        "work"
+      ],
+      "expected": {
+        "w": "業者",
+        "r": "ぎょうしゃ",
+        "en": [
+          "trader",
+          "merchant"
+        ]
+      }
+    },
+    "5287564058": {
+      "mn": [
+        "хүлээн авах",
+        "зөвшөөрөх",
+        "хүртэн таашаах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "享受",
+        "r": "きょうじゅ",
+        "en": [
+          "reception",
+          "acceptance",
+          "enjoyment"
+        ]
+      }
+    },
+    "307287bc5f": {
+      "mn": [
+        "сургалт",
+        "заавар"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "教習",
+        "r": "きょうしゅう",
+        "en": [
+          "training",
+          "instruction"
+        ]
+      }
+    },
+    "2c40858d7a": {
+      "mn": [
+        "өнгөрснийг санах",
+        "нутаг санах"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "郷愁",
+        "r": "きょうしゅう",
+        "en": [
+          "nostalgia",
+          "homesickness"
+        ]
+      }
+    },
+    "edb3e0745a": {
+      "mn": [
+        "багшлах эрхийн гэрчилгээ",
+        "багшийн мэргэжил"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "教職",
+        "r": "きょうしょく",
+        "en": [
+          "teaching certificate",
+          "the teaching profession"
+        ]
+      }
+    },
+    "28430d8ffb": {
+      "mn": [
+        "зугаацах",
+        "баярлан цэнгэх"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "興じる",
+        "r": "きょうじる",
+        "en": [
+          "to amuse oneself",
+          "to make merry"
+        ]
+      }
+    },
+    "dad79e7a91": {
+      "mn": [
+        "үүрэг",
+        "албадлага",
+        "хүчлэх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "強制",
+        "r": "きょうせい",
+        "en": [
+          "obligation",
+          "coercion",
+          "compulsion"
+        ]
+      }
+    },
+    "c6048749d9": {
+      "mn": [
+        "төрийн захиргаа"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "行政",
+        "r": "ぎょうせい",
+        "en": [
+          "administration"
+        ]
+      }
+    },
+    "957a5df166": {
+      "mn": [
+        "амжилт",
+        "гүйцэтгэл",
+        "үр дүн"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "業績",
+        "r": "ぎょうせき",
+        "en": [
+          "achievement",
+          "performance",
+          "results"
+        ]
+      }
+    },
+    "7706bb62ac": {
+      "mn": [
+        "хамт орших"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "共存",
+        "r": "きょうぞん",
+        "en": [
+          "coexistence"
+        ]
+      }
+    },
+    "f773197117": {
+      "mn": [
+        "хамтын ажиллагаа",
+        "эвлэрүүлэх",
+        "эв зохицол"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "協調",
+        "r": "きょうちょう",
+        "en": [
+          "co-operation",
+          "conciliation",
+          "harmony"
+        ]
+      }
+    },
+    "cc44c69a73": {
+      "mn": [
+        "тохиролцоо",
+        "гэрээ",
+        "хэлэлцээр"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "協定",
+        "r": "きょうてい",
+        "en": [
+          "arrangement",
+          "pact",
+          "agreement"
+        ]
+      }
+    },
+    "40679c4e7e": {
+      "mn": [
+        "заналхийлэл",
+        "сүрдүүлэг",
+        "албадлага"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "脅迫",
+        "r": "きょうはく",
+        "en": [
+          "threat",
+          "menace",
+          "coercion"
+        ]
+      }
+    },
+    "6ac4e94627": {
+      "mn": [
+        "бизнес",
+        "хэрэг ажил",
+        "үүрэг"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "業務",
+        "r": "ぎょうむ",
+        "en": [
+          "business",
+          "affairs",
+          "duties"
+        ]
+      }
+    },
+    "bb9d56bf5e": {
+      "mn": [
+        "резонанс",
+        "сэтгэл нийлэх"
+      ],
+      "topics": [
+        "technology",
+        "feelings"
+      ],
+      "expected": {
+        "w": "共鳴",
+        "r": "きょうめい",
+        "en": [
+          "resonance",
+          "sympathy"
+        ]
+      }
+    },
+    "f5a08cfe03": {
+      "mn": [
+        "төрсөн газар",
+        "нутаг"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "郷里",
+        "r": "きょうり",
+        "en": [
+          "birth-place",
+          "home town"
+        ]
+      }
+    },
+    "f76e437e26": {
+      "mn": [
+        "хүчтэй",
+        "эрчимтэй",
+        "хүнд"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "強烈",
+        "r": "きょうれつ",
+        "en": [
+          "strong",
+          "intense",
+          "severe"
+        ]
+      }
+    },
+    "40d2a7c07d": {
+      "mn": [
+        "бүгд найрамдах үзэл",
+        "хамтын ажиллагаа"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "共和",
+        "r": "きょうわ",
+        "en": [
+          "republicanism",
+          "cooperation"
+        ]
+      }
+    },
+    "cd2faccb83": {
+      "mn": [
+        "ая",
+        "хөгжмийн бүтээл"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "曲",
+        "r": "きょく",
+        "en": [
+          "tune",
+          "piece of music"
+        ]
+      }
+    },
+    "bce14973f2": {
+      "mn": [
+        "шогийн ноён"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "玉",
+        "r": "ぎょく",
+        "en": [
+          "king (shogi)"
+        ]
+      }
+    },
+    "155a94d80b": {
+      "mn": [
+        "хязгаарлах",
+        "тодорхой газарт төвлөрүүлэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "局限",
+        "r": "きょくげん",
+        "en": [
+          "limit",
+          "localize"
+        ]
+      }
+    },
+    "5f5902801b": {
+      "mn": [
+        "туйлын",
+        "туйл"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "極端",
+        "r": "きょくたん",
+        "en": [
+          "extreme",
+          "extremity"
+        ]
+      }
+    },
+    "49ed2b2eec": {
+      "mn": [
+        "оршин суух"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "居住",
+        "r": "きょじゅう",
+        "en": [
+          "residence"
+        ]
+      }
+    },
+    "ec9c5c966c": {
+      "mn": [
+        "татгалзах",
+        "няцаах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "拒絶",
+        "r": "きょぜつ",
+        "en": [
+          "refusal",
+          "rejection"
+        ]
+      }
+    },
+    "47507ec0a9": {
+      "mn": [
+        "загасчны завь"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "漁船",
+        "r": "ぎょせん",
+        "en": [
+          "fishing boat"
+        ]
+      }
+    },
+    "1c0fc99847": {
+      "mn": [
+        "загасчдын тосгон"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "漁村",
+        "r": "ぎょそん",
+        "en": [
+          "fishing village"
+        ]
+      }
+    },
+    "521d19d407": {
+      "mn": [
+        "үгүйсгэл",
+        "хориг тавих",
+        "татгалзал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "拒否",
+        "r": "きょひ",
+        "en": [
+          "denial",
+          "veto",
+          "rejection"
+        ]
+      }
+    }
+  }
+}

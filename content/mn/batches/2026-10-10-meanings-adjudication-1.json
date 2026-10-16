@@ -1,0 +1,858 @@
+{
+ "provenance": {
+  "id": "mn-meanings-adjudication-batch-1-2026-10-10",
+  "createdAt": "2026-10-10",
+  "author": "Arena coding assistant",
+  "method": "AI-assisted Mongolian meanings from independent Japanese dictionary lookups (kotobank デジタル大辞泉/精選版日本国語大辞典/普及版字通; kanjipedia 角川新字源 改訂新版; goo国語辞書; jitenon; Weblio古語) retrieved 2026-10-10. Scope: entries WITHOUT source conflicts only. The 10 source-warned entries are deliberately EXCLUDED — conflicted senses stay visibly release-blocking (empty/unchanged mn + source_issue) until directly verifiable authoritative independent evidence for the exact spelling, reading AND sense is recorded with source/version/URL and reviewed by a human; findings for those entries live in docs/audits/2026-10-10-meaning-evidence.json only. Japanese spellings/readings and English source strings preserved unchanged. Two included entries (何々/どれどれ, 弾き応え) carry PARTIAL evidence (composition + retained gloss) and are marked for human review. reviewStatus: unreviewed.",
+  "source": "docs/audits/2026-10-10-meaning-evidence.json",
+  "sourceSnapshot": "1c8d8f2aca959be2694bd65e3de13dd1e422a97f",
+  "license": "CC-BY-SA-4.0",
+  "reviewStatus": "unreviewed"
+ },
+ "vocab": {
+  "4ec7fe1166": {
+   "mn": [
+    "аль нь вэ (онцолж асуух)"
+   ],
+   "expected": {
+    "w": "何々",
+    "r": "どれどれ",
+    "en": [
+     "which (emphatic)"
+    ]
+   },
+   "noteEn": "EVIDENCE PARTIAL: MN translated from retained sense of the idiomatic interrogative; W/R pairing 何々/どれどれ as recorded in source. Human review recommended."
+  },
+  "ee708f5bbd": {
+   "mn": [
+    "нийт дүнгээр",
+    "хавтгай дарвалзсан металл",
+    "хугацаа сунгах",
+    "урьдчилсан арилжаа"
+   ],
+   "expected": {
+    "w": "延べ",
+    "r": "のべ",
+    "en": [
+     "futures",
+     "credit (buying)",
+     "stretching"
+    ]
+   },
+   "noteEn": "MN follows evidenced aggregate/flattened-metal/extension/延べ取引 senses; retained 'credit (buying)' maps loosely to 延べ取引 (deferred/futures dealing)."
+  },
+  "c6304d0283": {
+   "mn": [
+    "хэд дахин болох харьцаа",
+    "өрсөлдөх харьцаа",
+    "томруулах хүч"
+   ],
+   "expected": {
+    "w": "倍率",
+    "r": "ばいりつ",
+    "en": [
+     "diameter",
+     "magnification"
+    ]
+   },
+   "noteEn": "MN = ratio/competition-rate/magnification. Retained EN 'diameter' is not an evidenced sense of 倍率 and is flagged; source string preserved."
+  },
+  "02e6ac02bf": {
+   "mn": [
+    "хувцасны өлгүүр",
+    "татах утасны хавчаар",
+    "өлсгөлөн"
+   ],
+   "expected": {
+    "w": "ハンガー",
+    "r": "ハンガー",
+    "en": [
+     "hangar",
+     "(coat) hanger",
+     "hunger"
+    ]
+   },
+   "noteEn": "MN separates hanger senses + hunger. Retained EN 'hangar' (aircraft shed) is not evidenced under this headword and is flagged; source string preserved."
+  },
+  "21d892acef": {
+   "mn": [
+    "-р (дараалал заах)",
+    "кабуки тоглолтын анги"
+   ],
+   "expected": {
+    "w": "番目",
+    "r": "ばんめ",
+    "en": [
+     "cardinal number suffix"
+    ]
+   },
+   "noteEn": "MN = ordinal suffix + kabuki classification. Retained EN 'cardinal number suffix' misnames an ORDINAL suffix; flagged, source preserved."
+  },
+  "f3c62d6d70": {
+   "mn": [
+    "амьсгал авах завсарлага",
+    "богино агшин",
+    "амьсгаа авалгүй",
+    "бага зэргийн хүч хөдөлмөр"
+   ],
+   "expected": {
+    "w": "一息",
+    "r": "ひといき",
+    "en": [
+     "puffy",
+     "a breath",
+     "a pause"
+    ]
+   },
+   "noteEn": "MN covers four evidenced senses. Retained EN 'puffy' is not evidenced and is flagged; source preserved."
+  },
+  "d3286be832": {
+   "mn": [
+    "бусдын хараа, олны нүд",
+    "хүмүүсийн зорчих хөдөлгөөн"
+   ],
+   "expected": {
+    "w": "人目",
+    "r": "ひとめ",
+    "en": [
+     "glimpse",
+     "public gaze"
+    ]
+   },
+   "noteEn": "MN = others' eyes + people's coming and going. Retained 'glimpse' is a loose gloss only; flagged lightly."
+  },
+  "eda690b2a4": {
+   "mn": [
+    "барааны төрөл",
+    "ургамал, малаас сорт, омог"
+   ],
+   "expected": {
+    "w": "品種",
+    "r": "ひんしゅ",
+    "en": [
+     "brand",
+     "kind",
+     "description"
+    ]
+   },
+   "noteEn": "MN = kinds of goods + breed/cultivar. Retained 'brand; kind; description' is inexact ('description' unsupported); flagged."
+  },
+  "ad9000928d": {
+   "mn": [
+    "чичрүүлэх",
+    "гуйвуулах"
+   ],
+   "expected": {
+    "w": "震わせる",
+    "r": "ふるわせる",
+    "en": [
+     "to be shaking",
+     "to be trembling"
+    ]
+   },
+   "noteEn": "MN = causative 'to make tremble/quiver' (retained EN wrongly gives intransitive 'to be shaking'); JA/EN preserved, MN teaches the evidenced transitive sense."
+  },
+  "47e4de1f65": {
+   "mn": [
+    "хос, хоёр бүрдэлтэй багц",
+    "хоёр хүний бүрэлдэхүүн"
+   ],
+   "expected": {
+    "w": "ペア",
+    "r": "ペア",
+    "en": [
+     "pair",
+     "pear"
+    ]
+   },
+   "noteEn": "MN = pair senses only. Retained EN 'pear' belongs to headword ペアー and is flagged; source preserved."
+  },
+  "28bbcaef7c": {
+   "mn": [
+    "хохирол нөхөн төлөх",
+    "мөнгөөр барагдуулах"
+   ],
+   "expected": {
+    "w": "弁償",
+    "r": "べんしょう",
+    "en": [
+     "next word",
+     "compensation",
+     "reparation"
+    ]
+   },
+   "noteEn": "MN = recompense/compensate. Retained EN 'next word' is a junk gloss and is flagged; source preserved."
+  },
+  "e482d02cda": {
+   "mn": [
+    "жинхэнэ ёс, журам",
+    "жинхэнэ хэлбэрээр"
+   ],
+   "expected": {
+    "w": "本格",
+    "r": "ほんかく",
+    "en": [
+     "propriety",
+     "fundamental rules"
+    ]
+   },
+   "noteEn": "MN = the evidenced 'authentic original form/style' senses. Retained 'propriety' is a loose gloss only."
+  },
+  "97b08ab1d6": {
+   "mn": [
+    "чин сэтгэл, ноцтой байдал",
+    "тоглоомын дүрмээр хожсон зүйл авах"
+   ],
+   "expected": {
+    "w": "本気",
+    "r": "ほんき",
+    "en": [
+     "seriousness",
+     "truth",
+     "sanctity"
+    ]
+   },
+   "noteEn": "MN = earnestness + the menko game-rule sense. Retained 'truth; sanctity' unsupported and flagged; source preserved."
+  },
+  "7d2fc5b5b0": {
+   "mn": [
+    "бүрмөсөн, огт",
+    "яг л ... мэт"
+   ],
+   "expected": {
+    "w": "丸っきり",
+    "r": "まるっきり",
+    "en": [
+     "completely",
+     "perfectly",
+     "just as if"
+    ]
+   },
+   "noteEn": "MN = entirely/at all + just as if (retained en maps)."
+  },
+  "b93e0a31d0": {
+   "mn": [
+    "соёл төлөвшөөгүй",
+    "эзэмшээгүй газар",
+    "судлагдаагүй салбар",
+    "дэлбээрлээгүй"
+   ],
+   "expected": {
+    "w": "未開",
+    "r": "みかい",
+    "en": [
+     "savage land",
+     "backward region",
+     "uncivilized"
+    ]
+   },
+   "noteEn": "MN covers four evidenced senses; retained 'savage land; backward region; uncivilized' narrower."
+  },
+  "084bab949b": {
+   "mn": [
+    "дүүргэх, дүүргэн хангах",
+    "сэтгэл хангалуун болгох"
+   ],
+   "expected": {
+    "w": "満たす",
+    "r": "みたす",
+    "en": [
+     "to satisfy",
+     "to ingratiate",
+     "to fill"
+    ]
+   },
+   "noteEn": "MN = fill up + satisfy (retained en maps; 'to ingratiate' is a loose gloss)."
+  },
+  "cfaa0c9c42": {
+   "mn": [
+    "зам зааж аваачих",
+    "удирдан хөтлөх",
+    "нэг тийш чиглүүлэх",
+    "дүгнэлтэд хүргэх"
+   ],
+   "expected": {
+    "w": "導く",
+    "r": "みちびく",
+    "en": [
+     "to be guided",
+     "to be shown"
+    ]
+   },
+   "noteEn": "MN = transitive evidenced senses; retained EN wrongly lists intransitive 'to be guided'."
+  },
+  "f3f52aaa64": {
+   "mn": [
+    "ард түмэн эрх мэдэлтэй байдал",
+    "ардчиллын үзэл",
+    "ардын тэргүүн (түүхэн)"
+   ],
+   "expected": {
+    "w": "民主",
+    "r": "みんしゅ",
+    "en": [
+     "democratic",
+     "the head of the nation"
+    ]
+   },
+   "noteEn": "MN = modern democracy senses + labeled historical 'ruler of the people' sense."
+  },
+  "78fbae6020": {
+   "mn": [
+    "ардын ёс заншил, уламжлалт"
+   ],
+   "expected": {
+    "w": "民俗",
+    "r": "みんぞく",
+    "en": [
+     "people",
+     "race",
+     "nation"
+    ]
+   },
+   "noteEn": "MN = folk customs. Retained 'people; race; nation' is not the みんぞく sense and is flagged."
+  },
+  "88c5764dde": {
+   "mn": [
+    "үрэлгэн зарлага",
+    "хэрэггүй зүйлд үрэх"
+   ],
+   "expected": {
+    "w": "無駄遣い",
+    "r": "むだづかい",
+    "en": [
+     "waste money on",
+     "squander money on",
+     "flog a dead horse"
+    ]
+   },
+   "noteEn": "MN = squandering; retained en maps ('flog a dead horse' is idiom-junk, flagged)."
+  },
+  "957434f95c": {
+   "mn": [
+    "эелдэг зөөлөн",
+    "зөөлөн, даруу зан"
+   ],
+   "expected": {
+    "w": "優",
+    "r": "やさ",
+    "en": [
+     "gentle",
+     "affectionate"
+    ]
+   },
+   "noteEn": "MN = gentle/gracious (prefixal and adjectival uses)."
+  },
+  "d0cc8bf9a9": {
+   "mn": [
+    "чийдэн, гэрлийн чийдэн",
+    "тосон чийдэн"
+   ],
+   "expected": {
+    "w": "ランプ",
+    "r": "ランプ",
+    "en": [
+     "lamp",
+     "ramp",
+     "headlight"
+    ]
+   },
+   "noteEn": "MN = lamp/light. Retained 'ramp' is not evidenced under ランプ and is flagged."
+  },
+  "e91d9f8a96": {
+   "mn": [
+    "хүрээ, жааз",
+    "хязгаар"
+   ],
+   "expected": {
+    "w": "枠",
+    "r": "わく",
+    "en": [
+     "frame",
+     "slide"
+    ]
+   },
+   "noteEn": "MN = frame + limits. Retained 'slide' is junk and is flagged."
+  },
+  "j2599040": {
+   "mn": [
+    "цэргийг хуваан байршуулах",
+    "салан байрлах ангийн байр"
+   ],
+   "expected": {
+    "w": "分屯",
+    "r": "ぶんとん",
+    "en": [
+     "vice-",
+     "sub-"
+    ]
+   },
+   "noteEn": "MN = split-stationing (military). Retained 'vice-; sub-' is not evidenced and is flagged."
+  },
+  "j1684450": {
+   "mn": [
+    "нэхэмжлэлд хариу мэтгэлцэх"
+   ],
+   "expected": {
+    "w": "応訴",
+    "r": "おうそ",
+    "en": [
+     "countersuit"
+    ]
+   },
+   "noteEn": "MN = defend/respond to a lawsuit as defendant (retained 'countersuit' conflates 反訴)."
+  },
+  "j2618190": {
+   "mn": [
+    "тоглоход мэдрэгдэх таатай эсэргүүцэл",
+    "сорилт болж чадахуйц сөрөг хүч"
+   ],
+   "expected": {
+    "w": "弾き応え",
+    "r": "ひきごたえ",
+    "en": [
+     "worthiness as an opponent or challenge"
+    ]
+   },
+   "noteEn": "EVIDENCE PARTIAL: MN translated from composition and retained sense; human review recommended."
+  }
+ },
+ "kanji": {
+  "庄": {
+   "mn": [
+    "эзэмшлийн газар",
+    "харш, эзэмшил"
+   ],
+   "expected": {
+    "k": "庄",
+    "en": [
+     "Level",
+     "In The Country",
+     "Manor"
+    ]
+   },
+   "noteEn": "MN = manor/estate (retained 'Level; In The Country' junk, flagged)."
+  },
+  "鵬": {
+   "mn": [
+    "домгийн том угалз шувуу"
+   ],
+   "expected": {
+    "k": "鵬",
+    "en": [
+     "Phoenix"
+    ]
+   },
+   "noteEn": "MN = mythical giant peng bird (retained 'Phoenix' is a loose identification, flagged)."
+  },
+  "紳": {
+   "mn": [
+    "сургалттай язгууртан",
+    "өргөн дээлийн бүс"
+   ],
+   "expected": {
+    "k": "紳",
+    "en": [
+     "Sire",
+     "Good Belt",
+     "Gentleman"
+    ]
+   },
+   "noteEn": "MN = gentleman + original wide-sash sense. Retained 'Sire; Good Belt; Gentleman' mixture partially junk."
+  },
+  "幣": {
+   "mn": [
+    "бурханд өргөх даавуу, өргөл",
+    "мөнгө, тэмдэгт мөнгө"
+   ],
+   "expected": {
+    "k": "幣",
+    "en": [
+     "Cash",
+     "Bad Habit",
+     "Humble Prefix"
+    ]
+   },
+   "noteEn": "MN = ritual offering cloth + currency. Retained 'Cash; Bad Habit; Humble Prefix' mostly junk, flagged."
+  },
+  "堺": {
+   "mn": [
+    "хязгаар, зааг"
+   ],
+   "expected": {
+    "k": "堺",
+    "en": [
+     "World"
+    ]
+   },
+   "noteEn": "MN = boundary (retained 'World' is wrong; source preserved)."
+  },
+  "瑞": {
+   "mn": [
+    "сайны билэг тэмдэг",
+    "сайхан, цэвэрхэн"
+   ],
+   "expected": {
+    "k": "瑞",
+    "en": [
+     "Congratulations"
+    ]
+   },
+   "noteEn": "MN = auspicious sign + fine/fresh. Retained 'Congratulations' is a loose gloss."
+  },
+  "秦": {
+   "mn": [
+    "Шинь (эртний Хятад улс)",
+    "Хата (Японы овог)"
+   ],
+   "expected": {
+    "k": "秦",
+    "en": [
+     "Manchu Dynasty",
+     "Name Given To Naturalized Foreigners"
+    ]
+   },
+   "noteEn": "MN = Qin state + Hata clan. Retained 'Manchu Dynasty' is wrong (Manchu = 満洲); flagged."
+  },
+  "薩": {
+   "mn": [
+    "бодьсадва (дуудлагын үсэг)",
+    "Сацума (газрын нэр)"
+   ],
+   "expected": {
+    "k": "薩",
+    "en": [
+     "Salvation",
+     "Buddha"
+    ]
+   },
+   "noteEn": "MN = sattva transliteration + Satsuma. Retained 'Salvation; Buddha' loose, flagged."
+  },
+  "擬": {
+   "mn": [
+    "дуурайлган хийх, дууриах",
+    "тооцоолох, тааварлах",
+    "хуурамч, дууриамал"
+   ],
+   "expected": {
+    "k": "擬",
+    "en": [
+     "Mimic",
+     "Aim (a Gun) At",
+     "Nominate"
+    ]
+   },
+   "noteEn": "MN = imitate/estimate/sham. Retained 'Mimic; Aim (a Gun) At; Nominate' partially junk."
+  },
+  "菩": {
+   "mn": [
+    "бодь (Буддын номын дуудлага)",
+    "өргөл дэвсэх даавуу (түүхэн)"
+   ],
+   "expected": {
+    "k": "菩",
+    "en": [
+     "Kind Of Grass",
+     "Sacred Tree"
+    ]
+   },
+   "noteEn": "MN = bodhi transliteration + historical mat sense. Retained 'Kind Of Grass; Sacred Tree' loose."
+  },
+  "牟": {
+   "mn": [
+    "үхэр дуугарах авиа",
+    "нүдний хүүхэн хараа",
+    "шунах, булаан авах"
+   ],
+   "expected": {
+    "k": "牟",
+    "en": [
+     "Pupil (eye)",
+     "Moo (cow Sound)"
+    ]
+   },
+   "noteEn": "MN = moo + pupil (eye, 牟子) + covet. Retained 'Moo (cow Sound); Pupil (eye)' maps."
+  },
+  "錫": {
+   "mn": [
+    "цагаан тугалган",
+    "ламын таяг",
+    "хайрлан өгөх"
+   ],
+   "expected": {
+    "k": "錫",
+    "en": [
+     "Copper",
+     "Tin"
+    ]
+   },
+   "noteEn": "MN = tin + staff + bestow. Retained 'Copper; Tin' — copper is wrong (銅=copper); flagged."
+  },
+  "芹": {
+   "mn": [
+    "сэри ногоо (Сери овгийн олон наст ногоо)"
+   ],
+   "expected": {
+    "k": "芹",
+    "en": [
+     "Parsley"
+    ]
+   },
+   "noteEn": "MN = seri (Japanese parsley / water dropwort). Retained 'Parsley' approximate."
+  },
+  "鮎": {
+   "mn": [
+    "аюу загас (сэлгэн нуурын загас)",
+    "(Хятад) намаз загас"
+   ],
+   "expected": {
+    "k": "鮎",
+    "en": [
+     "Freshwater Trout",
+     "Smelt"
+    ]
+   },
+   "noteEn": "MN = sweetfish (ayu) + Chinese catfish sense. Retained 'Freshwater Trout; Smelt' is not the Japanese sense; flagged."
+  },
+  "宵": {
+   "mn": [
+    "үдшийн эхэн",
+    "үдэш, шөнө"
+   ],
+   "expected": {
+    "k": "宵",
+    "en": [
+     "Wee Hours",
+     "Evening",
+     "Early Night"
+    ]
+   },
+   "noteEn": "MN = early evening + night. Retained 'Wee Hours' is wrong (wee hours = 未明); flagged."
+  },
+  "蛋": {
+   "mn": [
+    "шувууны өндөг",
+    "өмнөд Хятадын усан амьдралтай овог"
+   ],
+   "expected": {
+    "k": "蛋",
+    "en": [
+     "Barbarian",
+     "Egg"
+    ]
+   },
+   "noteEn": "MN = egg + Tanka people. Retained 'Barbarian; Egg' — 'Barbarian' is a crude gloss of 蛋民, flagged."
+  },
+  "檀": {
+   "mn": [
+    "чандан мод",
+    "маймод (галсан мод)",
+    "өглөгийн дуудлага"
+   ],
+   "expected": {
+    "k": "檀",
+    "en": [
+     "Cedar",
+     "Sandlewood",
+     "Spindle Tree"
+    ]
+   },
+   "noteEn": "MN = sandalwood + spindle tree + dana. Retained 'Cedar' is wrong (cedar=杉/檜); flagged."
+  },
+  "脊": {
+   "mn": [
+    "нуруу, нугалма",
+    "биеийн өндөр"
+   ],
+   "expected": {
+    "k": "脊",
+    "en": [
+     "Stature",
+     "Height"
+    ]
+   },
+   "noteEn": "MN = spine/back + stature. Retained 'Stature; Height' partial."
+  },
+  "抒": {
+   "mn": [
+    "илэрхийлэх, дэлгэн ярих",
+    "гаргаж авах"
+   ],
+   "expected": {
+    "k": "抒",
+    "en": [
+     "Tell",
+     "10**24"
+    ]
+   },
+   "noteEn": "MN = express/put forth. Retained 'Tell; 10**24' — 10^24 is junk (KANJIDIC artifact); flagged."
+  },
+  "鍾": {
+   "mn": [
+    "төвлөрүүлэх, цуглуулах",
+    "дарсны сав, хундага",
+    "хонх"
+   ],
+   "expected": {
+    "k": "鍾",
+    "en": [
+     "Spindle",
+     "Gather",
+     "Collect"
+    ]
+   },
+   "noteEn": "MN = gather + sake vessel + bell. Retained 'Spindle; Gather; Collect' — 'Spindle' junk; flagged."
+  },
+  "𠮟": {
+   "mn": [
+    "зэмлэх, буруутгах"
+   ],
+   "expected": {
+    "k": "𠮟",
+    "en": []
+   },
+   "noteEn": "MN = scold/blame. Retained EN gloss is EMPTY; MN established from kanjipedia evidence."
+  },
+  "剝": {
+   "mn": [
+    "хуулж хуулах, арьс салгах",
+    "хальтрах, хуулрах"
+   ],
+   "expected": {
+    "k": "剝",
+    "en": []
+   },
+   "noteEn": "MN = peel/strip + come off. Retained EN gloss is EMPTY; MN established from kanjipedia evidence."
+  },
+  "竣": {
+   "mn": [
+    "дуусгах, дуусах",
+    "тогтож үлдэх"
+   ],
+   "expected": {
+    "k": "竣",
+    "en": [
+     "End",
+     "Finish"
+    ]
+   },
+   "noteEn": "MN = finish + remain (retained 'End; Finish' partial)."
+  },
+  "椋": {
+   "mn": [
+    "мүк мод (Улмас овгийн намхан мод)"
+   ],
+   "expected": {
+    "k": "椋",
+    "en": [
+     "Type Of Deciduous Tree",
+     "Grey Starling"
+    ]
+   },
+   "noteEn": "MN = muku tree. Retained 'Grey Starling' comes from compound 椋鳥 only; flagged."
+  },
+  "瑚": {
+   "mn": [
+    "бурханд өргөх сав (瑚璉)",
+    "шүр"
+   ],
+   "expected": {
+    "k": "瑚",
+    "en": [
+     "Ancestral Offering Receptacle",
+     "Coral"
+    ]
+   },
+   "noteEn": "MN = ritual vessel + coral."
+  },
+  "嵩": {
+   "mn": [
+    "эзлэхүүн, хэмжээ",
+    "өндөр газар",
+    "нэр хүнд, жин"
+   ],
+   "expected": {
+    "k": "嵩",
+    "en": [
+     "Be Aggravated",
+     "Grow Worse",
+     "Grow Bulky"
+    ]
+   },
+   "noteEn": "MN = volume + high place + dignity."
+  },
+  "詮": {
+   "mn": [
+    "эцэстээ, аргагүй",
+    "арга, арга зам",
+    "ил тод, тодорхой"
+   ],
+   "expected": {
+    "k": "詮",
+    "en": [
+     "Discussion",
+     "Methods Called For",
+     "Selection"
+    ]
+   },
+   "noteEn": "MN = after all + method + clear. Retained 'Discussion; Methods Called For; Selection' partial."
+  },
+  "諄": {
+   "mn": [
+    "хэт их яриатай, халшрамтгай",
+    "хэт амтлаг, тод өнгөтэй",
+    "нинжин, итгэлт"
+   ],
+   "expected": {
+    "k": "諄",
+    "en": [
+     "Tedious"
+    ]
+   },
+   "noteEn": "MN = pesky/persistent + heavy flavor + earnest (ねんごろ). Retained 'Tedious' partial."
+  },
+  "叡": {
+   "mn": [
+    "ухаалаг, билигт",
+    "тэнгэрлэг эзэнтэй холбогдох"
+   ],
+   "expected": {
+    "k": "叡",
+    "en": [
+     "Intelligence",
+     "Imperial"
+    ]
+   },
+   "noteEn": "MN = wise + imperial honorific."
+  },
+  "麿": {
+   "mn": [
+    "би (түүхэн язгуурт хаяг)",
+    "нэрний хүндэтгэлийн нэмэлт"
+   ],
+   "expected": {
+    "k": "麿",
+    "en": [
+     "I",
+     "You",
+     "(kokuji)"
+    ]
+   },
+   "noteEn": "MN = archaic 'I' + name suffix. Retained 'I; You; (kokuji)' — 'You' unsupported; flagged."
+  },
+  "璧": {
+   "mn": [
+    "хөндий тойрог чулуу (эртний бэлэг)",
+    "онцгой сайхан зүйл"
+   ],
+   "expected": {
+    "k": "璧",
+    "en": [
+     "Sphere",
+     "Ball"
+    ]
+   },
+   "noteEn": "MN = bi disc + excellent thing. Retained 'Sphere; Ball' wrong; flagged."
+  }
+ }
+}

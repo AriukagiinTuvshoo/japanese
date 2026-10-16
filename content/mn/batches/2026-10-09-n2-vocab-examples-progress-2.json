@@ -1,0 +1,433 @@
+{
+  "provenance": {
+    "id": "mn-n2-vocab-examples-progress-2-oct9",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian compared with exact Japanese and retained English; stable record and headword/pattern guards; independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n2.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "0823382f19": {
+      "expected": {
+        "w": "雨戸",
+        "r": "あまど",
+        "en": [
+          "sliding storm door"
+        ]
+      },
+      "examples": {
+        "嵐が雨戸をがたがたとならした。": {
+          "en": "The storm rattled the shutters.",
+          "mn": "Шуурга цонхны хаалтыг тачигнуулсан."
+        }
+      }
+    },
+    "e34ae82b35": {
+      "expected": {
+        "w": "甘やかす",
+        "r": "あまやかす",
+        "en": [
+          "to pamper",
+          "to spoil"
+        ]
+      },
+      "examples": {
+        "私は甘やかされた子供は嫌いだ。": {
+          "en": "I don't like spoiled children.",
+          "mn": "Би эрхлүүлж эвдсэн хүүхдэд дургүй."
+        },
+        "子供たちを甘やかしてはいけない。": {
+          "en": "Don't spoil the children.",
+          "mn": "Хүүхдүүдийг хэт эрхлүүлж болохгүй."
+        }
+      }
+    },
+    "89251f222d": {
+      "expected": {
+        "w": "余る",
+        "r": "あまる",
+        "en": [
+          "to remain",
+          "to be left over",
+          "to be in excess"
+        ]
+      },
+      "examples": {
+        "日本では米が、ヨーロッパではワインが余っている。": {
+          "en": "Japan has a surplus of rice, Europe of wine.",
+          "mn": "Японд будаа, Европт дарс илүүддэг."
+        },
+        "かわいさ余って憎さ百倍。": {
+          "en": "The greatest hate springs from the greatest love.",
+          "mn": "Их хайрласнаас их үзэн ядалт төрдөг."
+        }
+      }
+    },
+    "796332c2c7": {
+      "expected": {
+        "w": "編物",
+        "r": "あみもの",
+        "en": [
+          "knitting",
+          "web"
+        ]
+      },
+      "examples": {
+        "彼女はせっせと編み物に精を出していた。": {
+          "en": "She was busy with her knitting.",
+          "mn": "Тэр сүлжмэлээ идэвхтэй хийж байв."
+        },
+        "彼女は編み物に夢中になっている。": {
+          "en": "She is absorbed in knitting.",
+          "mn": "Тэр сүлжмэлдээ улайрсан байна."
+        }
+      }
+    },
+    "fb73ee2899": {
+      "expected": {
+        "w": "編む",
+        "r": "あむ",
+        "en": [
+          "to knit"
+        ]
+      },
+      "examples": {
+        "彼女は自分で編んだセーターを着ていた。": {
+          "en": "She wore a sweater that she'd knitted herself.",
+          "mn": "Тэр өөрөө сүлжсэн цамцаа өмссөн байв."
+        },
+        "彼女は毛糸でセーターを編んでいる。": {
+          "en": "She is knitting a sweater.",
+          "mn": "Тэр ноосон утсаар цамц сүлжиж байна."
+        }
+      }
+    },
+    "488070d93a": {
+      "expected": {
+        "w": "危うい",
+        "r": "あやうい",
+        "en": [
+          "dangerous",
+          "critical",
+          "grave"
+        ]
+      },
+      "examples": {
+        "危うい所を助かった。": {
+          "en": "I had a narrow escape.",
+          "mn": "Би аюулаас арайхийн мултарсан."
+        },
+        "危ういところで少女は湖でおぼれそうになった。": {
+          "en": "It was a close call when the little girl almost drowned in the lake.",
+          "mn": "Бяцхан охин нууранд живэх шахсан нь тун аюултай байлаа."
+        }
+      }
+    },
+    "36d05281eb": {
+      "expected": {
+        "w": "怪しい",
+        "r": "あやしい",
+        "en": [
+          "suspicious",
+          "dubious",
+          "doubtful"
+        ]
+      },
+      "examples": {
+        "空が怪しい。雨が降るかな。": {
+          "en": "The sky looks ominous. I wonder if it will rain.",
+          "mn": "Тэнгэр эвгүй харагдаж байна. Бороо орох болов уу?"
+        },
+        "みんな奴は怪しいと思っている。": {
+          "en": "We are all suspicious about him.",
+          "mn": "Бид бүгд түүнийг сэжиглэж байна."
+        }
+      }
+    },
+    "c171dadc4a": {
+      "expected": {
+        "w": "荒い",
+        "r": "あらい",
+        "en": [
+          "rough",
+          "rude",
+          "wild"
+        ]
+      },
+      "examples": {
+        "僕のボスは人使いが荒いんだ。": {
+          "en": "My boss is a slave driver.",
+          "mn": "Манай дарга хүмүүсийг хайр найргүй ажиллуулдаг."
+        },
+        "彼は金使いが荒い。": {
+          "en": "He is free with his money.",
+          "mn": "Тэр мөнгөө замбараагүй үрдэг."
+        }
+      }
+    },
+    "1c9be68b8f": {
+      "expected": {
+        "w": "粗い",
+        "r": "あらい",
+        "en": [
+          "coarse",
+          "rough"
+        ]
+      },
+      "examples": {
+        "彼女のドレスはきめの粗いウールでできていた。": {
+          "en": "Her dress was made of coarse wool.",
+          "mn": "Түүний даашинз бүдүүн ширхэгтэй ноосоор хийгдсэн байв."
+        },
+        "その物体の表面はかなり粗い。": {
+          "en": "The surface of the object is fairly rough.",
+          "mn": "Тэр зүйлийн гадаргуу нэлээд барзгар."
+        }
+      }
+    },
+    "2c37f1e65a": {
+      "expected": {
+        "w": "争う",
+        "r": "あらそう",
+        "en": [
+          "to dispute",
+          "to argue",
+          "to be at variance"
+        ]
+      },
+      "examples": {
+        "１０チームが賞を得ようと争った。": {
+          "en": "Ten teams competed for the prize.",
+          "mn": "Арван баг шагналын төлөө өрсөлдсөн."
+        },
+        "私は一等賞をめざして彼と争った。": {
+          "en": "I competed with him for the first prize.",
+          "mn": "Би тэргүүн байрын төлөө түүнтэй өрсөлдсөн."
+        }
+      }
+    },
+    "ba30b2fc1e": {
+      "expected": {
+        "w": "改めて",
+        "r": "あらためて",
+        "en": [
+          "another time",
+          "again",
+          "over again"
+        ]
+      },
+      "examples": {
+        "改めて言う事はない。": {
+          "en": "I have nothing particular to say.",
+          "mn": "Дахин хэлэх зүйл алга."
+        },
+        "いずれ改めてお伺いいたします。": {
+          "en": "I will call on you again.",
+          "mn": "Би дараа дахин очно."
+        }
+      }
+    },
+    "554088a0dc": {
+      "expected": {
+        "w": "改める",
+        "r": "あらためる",
+        "en": [
+          "to change",
+          "to alter",
+          "to reform"
+        ]
+      },
+      "examples": {
+        "どうして考えを改めたのですか。": {
+          "en": "What made you change your mind?",
+          "mn": "Яагаад бодлоо өөрчилсөн бэ?"
+        },
+        "改めるのに遅すぎるということはない。": {
+          "en": "It is never too late to mend.",
+          "mn": "Засаж залруулахад хэзээ ч оройтдоггүй."
+        }
+      }
+    },
+    "173f8d3f42": {
+      "expected": {
+        "w": "著す",
+        "r": "あらわす",
+        "en": [
+          "to write",
+          "to publish"
+        ]
+      },
+      "examples": {
+        "有名作家はまたベストセラー書を著した。": {
+          "en": "The famous author created another best-selling book.",
+          "mn": "Алдарт зохиолч дахин нэг шилдэг борлуулалттай ном бичсэн."
+        },
+        "彼は２冊の本を著している。": {
+          "en": "He has written two books.",
+          "mn": "Тэр хоёр ном бичсэн."
+        }
+      }
+    },
+    "89034be6d9": {
+      "expected": {
+        "w": "有難い",
+        "r": "ありがたい",
+        "en": [
+          "grateful",
+          "thankful",
+          "welcome"
+        ]
+      },
+      "examples": {
+        "どんなインプットでもいただければありがたいです。": {
+          "en": "Any input would be appreciated!",
+          "mn": "Ямар ч санал өгвөл талархана."
+        },
+        "お手伝いいただければたいへん有り難いと思います。": {
+          "en": "I'd be very grateful if you'd help me.",
+          "mn": "Тусалбал тань маш их талархана."
+        }
+      }
+    },
+    "8c1e168b75": {
+      "expected": {
+        "w": "あれこれ",
+        "r": "あれこれ",
+        "en": [
+          "one thing or another",
+          "this and that",
+          "this or that"
+        ]
+      },
+      "examples": {
+        "もうかれこれ１０時です。": {
+          "en": "It is almost ten o'clock.",
+          "mn": "Одоо бараг арван цаг болж байна."
+        },
+        "彼らはあれこれと話をしています。": {
+          "en": "They are talking about this and that.",
+          "mn": "Тэд энэ тэрийг ярилцаж байна."
+        }
+      }
+    },
+    "4fcdca6105": {
+      "expected": {
+        "w": "あわただしい",
+        "r": "あわただしい",
+        "en": [
+          "busy",
+          "hurried",
+          "confused"
+        ]
+      },
+      "examples": {
+        "飛行機の辺りで人の動きがあわただしかった。": {
+          "en": "There was much activity around the plane.",
+          "mn": "Онгоцны эргэн тойронд хүмүүс завгүй хөдөлж байв."
+        },
+        "トムは気難しい顔で、人々があわただしくドアから出て行くのを見ていた。": {
+          "en": "Tom watched them hurry through the doors, a disagreeable expression on his face.",
+          "mn": "Том дургүйцсэн царайтайгаар хүмүүс хаалгаар яаран гарахыг харж байв."
+        }
+      }
+    },
+    "dedd8df548": {
+      "expected": {
+        "w": "あわてる",
+        "r": "あわてる",
+        "en": [
+          "to become confused"
+        ]
+      },
+      "examples": {
+        "その質問で彼はすっかりあわてた。": {
+          "en": "The question threw him off his balance.",
+          "mn": "Тэр асуултаас болж тэр бүр сандарсан."
+        },
+        "物事をあわててすると、間違いをします。": {
+          "en": "You make mistakes if you do things in a hurry.",
+          "mn": "Юмыг яарч хийвэл алдаа гаргадаг."
+        }
+      }
+    },
+    "96370a1ce3": {
+      "expected": {
+        "w": "案外",
+        "r": "あんがい",
+        "en": [
+          "unexpectedly"
+        ]
+      },
+      "examples": {
+        "ピクニックは案外つまらなかった。": {
+          "en": "The picnic was a disappointment.",
+          "mn": "Зугаалга санаандгүй уйтгартай байлаа."
+        },
+        "あの人は案外いい人かもしれない。": {
+          "en": "He may be a good man for all I know.",
+          "mn": "Тэр санаандгүй сайн хүн ч байж магадгүй."
+        }
+      }
+    },
+    "02304543b5": {
+      "expected": {
+        "w": "アンテナ",
+        "r": "アンテナ",
+        "en": [
+          "antenna"
+        ]
+      },
+      "examples": {
+        "このアンテナを屋根につけると画面がはっきりする。": {
+          "en": "You'll get a clear picture with this antenna on the roof.",
+          "mn": "Энэ антеныг дээвэрт тавибал дүрс тод болно."
+        },
+        "その男はアンテナを取り付けようとした。": {
+          "en": "The man tried to install his own antenna.",
+          "mn": "Тэр эр антенаа суурилуулахыг оролдсон."
+        }
+      }
+    },
+    "f90c31a922": {
+      "expected": {
+        "w": "言い出す",
+        "r": "いいだす",
+        "en": [
+          "to start talking",
+          "to speak",
+          "to tell"
+        ]
+      },
+      "examples": {
+        "これはだれかの言い出したことかい。": {
+          "en": "Was this somebody else's idea?",
+          "mn": "Энэ хэн нэгний гаргасан санаа юу?"
+        },
+        "そんな事言い出すとは思わなかったよ。": {
+          "en": "I didn't expect that to come from you.",
+          "mn": "Чамайг тийм зүйл хэлнэ гэж бодсонгүй."
+        }
+      }
+    },
+    "319bcb97fb": {
+      "expected": {
+        "w": "言い付ける",
+        "r": "いいつける",
+        "en": [
+          "to tell",
+          "to tell on (someone)",
+          "to order"
+        ]
+      },
+      "examples": {
+        "彼はちゃんと私が言いつけておいたとおりにやった。": {
+          "en": "He did exactly as I had told him.",
+          "mn": "Тэр яг миний захиснаар хийсэн."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,407 @@
+{
+  "provenance": {
+    "id": "mn-n5-examples-recovery-1-2026-10-09",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian sentences compared with exact Japanese and retained English. Original source wording and IDs preserved; independent human review pending.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n5.json at cac78c79587f6fb6d5f93a158790258c24b351e8",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "7c134ec812": {
+      "expected": {
+        "w": "同じ",
+        "r": "おなじ",
+        "en": [
+          "same"
+        ]
+      },
+      "examples": {
+        "この木はあの木とほぼ同じ高さだ。": {
+          "en": "This tree is about as high as that one.",
+          "mn": "Энэ мод тэр модтой бараг адил өндөртэй."
+        },
+        "マイクとトムは同じクラスです。": {
+          "en": "Mike and Tom are in the same class.",
+          "mn": "Майк, Том хоёр нэг ангид сурдаг."
+        }
+      }
+    },
+    "c6f43a8cc3": {
+      "expected": {
+        "w": "お兄さん",
+        "r": "おにいさん",
+        "en": [
+          "(honorable) older brother"
+        ]
+      },
+      "examples": {
+        "私はあなたのお兄さんより年上です。": {
+          "en": "I'm older than your brother.",
+          "mn": "Би таны ахаас насаар ах."
+        }
+      }
+    },
+    "af378a4c86": {
+      "expected": {
+        "w": "お姉さん",
+        "r": "おねえさん",
+        "en": [
+          "(honorable) older sister"
+        ]
+      },
+      "examples": {
+        "あなたのお姉さんは今何をしているの？": {
+          "en": "What's your older sister doing now?",
+          "mn": "Эгч чинь одоо юу хийж байгаа вэ?"
+        },
+        "お姉さんによろしくね。": {
+          "en": "Say hello to your sister for me.",
+          "mn": "Эгчидээ миний өмнөөс мэнд хүргээрэй."
+        }
+      }
+    },
+    "4df6eda2a2": {
+      "expected": {
+        "w": "お願いします",
+        "r": "おねがいします",
+        "en": [
+          "please"
+        ]
+      },
+      "examples": {
+        "ファーストクラスでお願いします。": {
+          "en": "I'd like to travel first-class.",
+          "mn": "Нэгдүгээр зэрэглэлээр зорчмоор байна."
+        },
+        "できれば、６時半でお願いします。": {
+          "en": "Six-thirty, it's possible.",
+          "mn": "Боломжтой бол зургаа гучид байвал зүгээр байна."
+        }
+      }
+    },
+    "12d9487797": {
+      "expected": {
+        "w": "おばあさん",
+        "r": "おばあさん",
+        "en": [
+          "grandmother",
+          "female senior-citizen"
+        ]
+      },
+      "examples": {
+        "トムのおばあさんは元気そうですよ。": {
+          "en": "Tom's grandmother looks healthy.",
+          "mn": "Томын эмээ эрүүл саруул харагдаж байна."
+        },
+        "私は一人のおばあさんに会った。": {
+          "en": "I met an old woman.",
+          "mn": "Би нэгэн настай эмэгтэйтэй уулзсан."
+        }
+      }
+    },
+    "03d7b15720": {
+      "expected": {
+        "w": "伯母さん",
+        "r": "おばさん",
+        "en": [
+          "aunt"
+        ]
+      },
+      "examples": {
+        "叔母さんを訪ねた時はすごいごちそうだったね。": {
+          "en": "What a feast we had when we visited my aunt!",
+          "mn": "Авга эгчийндээ очиход ёстой сайхан дайлуулсан шүү!"
+        },
+        "これクララ叔母さんのと同じネックレスじゃない？": {
+          "en": "Isn't this the same necklace that Aunt Clara wears?",
+          "mn": "Энэ чинь Клара эгчийн зүүдэгтэй адилхан зүүлт биш үү?"
+        }
+      }
+    },
+    "36bff8d879": {
+      "expected": {
+        "w": "おはよう",
+        "r": "おはよう",
+        "en": [
+          "(abbreviation) Good morning"
+        ]
+      },
+      "examples": {
+        "おはよう。ご飯をよそっても良いかしら？": {
+          "en": "Morning. Shall I dish up?",
+          "mn": "Өглөөний мэнд. Хоолыг аягалаад өгөх үү?"
+        },
+        "やぁ、トム。おはよう。": {
+          "en": "Hello, Tom. Good morning.",
+          "mn": "Сайн уу, Том. Өглөөний мэнд."
+        }
+      }
+    },
+    "f347485004": {
+      "expected": {
+        "w": "お風呂",
+        "r": "おふろ",
+        "en": [
+          "bath"
+        ]
+      },
+      "examples": {
+        "私はほとんど毎日お風呂に入ります。": {
+          "en": "I take a bath almost every day.",
+          "mn": "Би бараг өдөр бүр усанд ордог."
+        },
+        "お風呂はありませんでした。": {
+          "en": "There was no bathroom.",
+          "mn": "Угаалгын өрөө байгаагүй."
+        }
+      }
+    },
+    "7a073616e5": {
+      "expected": {
+        "w": "お弁当",
+        "r": "おべんとう",
+        "en": [
+          "boxed lunch"
+        ]
+      },
+      "examples": {
+        "彼は今日、お弁当を持って来た。": {
+          "en": "He brought his lunch today.",
+          "mn": "Тэр өнөөдөр өдрийн хоолоо авчирсан."
+        },
+        "お弁当食べたんでしょう。": {
+          "en": "You have eaten lunch, haven't you?",
+          "mn": "Өдрийн хоолоо идсэн биз дээ?"
+        }
+      }
+    },
+    "dad2d16220": {
+      "expected": {
+        "w": "覚える",
+        "r": "おぼえる",
+        "en": [
+          "to remember"
+        ]
+      },
+      "examples": {
+        "日本語は外人にとって覚えにくい。": {
+          "en": "It is hard for foreigners to learn Japanese.",
+          "mn": "Гадаад хүмүүст япон хэл сурахад хэцүү байдаг."
+        },
+        "どこでそんなこと覚えてきたんだ。": {
+          "en": "Where did you get the idea?",
+          "mn": "Чи ийм юмыг хаанаас сурсан юм бэ?"
+        }
+      }
+    },
+    "ae5d1778d1": {
+      "expected": {
+        "w": "おまわりさん",
+        "r": "おまわりさん",
+        "en": [
+          "friendly term for policeman"
+        ]
+      },
+      "examples": {
+        "すみません、おまわりさん。ここはどこですか。": {
+          "en": "Excuse me, officer, where are we now?",
+          "mn": "Уучлаарай, цагдаа аа, бид одоо хаана байна вэ?"
+        },
+        "おまわりさんに道を尋ねなさい。": {
+          "en": "Ask the policeman the way.",
+          "mn": "Цагдаагаас зам асуугаарай."
+        }
+      }
+    },
+    "cdfb776826": {
+      "expected": {
+        "w": "重い",
+        "r": "おもい",
+        "en": [
+          "heavy"
+        ]
+      },
+      "examples": {
+        "トムはジャックよりも１０ポンド重い。": {
+          "en": "Tom is heavier than Jack by ten pounds.",
+          "mn": "Том Жэкийнхээс арван фунтээр илүү жинтэй."
+        },
+        "この本はあの本ほど重くない。": {
+          "en": "This book isn't as heavy as that book.",
+          "mn": "Энэ ном тэр ном шиг хүнд биш."
+        }
+      }
+    },
+    "2568873ebd": {
+      "expected": {
+        "w": "おもしろい",
+        "r": "おもしろい",
+        "en": [
+          "interesting"
+        ]
+      },
+      "examples": {
+        "スケートはとてもおもしろかった。": {
+          "en": "We had a lot of fun skating.",
+          "mn": "Тэшүүрээр гулгахад их хөгжилтэй байсан."
+        },
+        "これはとってもおもしろい本です。": {
+          "en": "This is a very interesting book.",
+          "mn": "Энэ бол маш сонирхолтой ном."
+        }
+      }
+    },
+    "3c5bb8f223": {
+      "expected": {
+        "w": "泳ぐ",
+        "r": "およぐ",
+        "en": [
+          "to swim"
+        ]
+      },
+      "examples": {
+        "トムはすぐに泳げるようになるよ。": {
+          "en": "Tom will be able to swim soon.",
+          "mn": "Том удахгүй сэлж чаддаг болно."
+        },
+        "ハリーはなんとかその川を泳ぎきった。": {
+          "en": "Harry managed to swim across the river.",
+          "mn": "Харри яаж ийгээд тэр голыг сэлж гарсан."
+        }
+      }
+    },
+    "ae00442122": {
+      "expected": {
+        "w": "降りる",
+        "r": "おりる",
+        "en": [
+          "to get off",
+          "to descend"
+        ]
+      },
+      "examples": {
+        "ここで降りましょう。": {
+          "en": "Let's get off here.",
+          "mn": "Энд бууцгаая."
+        },
+        "スリッパでロビーに降りたらだめだよ。": {
+          "en": "You're not supposed to wear your slippers down to the lobby.",
+          "mn": "Гэрийн шаахайтайгаа доод давхрын үүдний танхимд бууж болохгүй шүү."
+        }
+      }
+    },
+    "d7960dc78d": {
+      "expected": {
+        "w": "終る",
+        "r": "おわる",
+        "en": [
+          "to finish"
+        ]
+      },
+      "examples": {
+        "そのコンサートは十時に終わった。": {
+          "en": "The concert came to an end at ten o'clock.",
+          "mn": "Тэр тоглолт арван цагт дууссан."
+        },
+        "今日は終わりにしましょう。": {
+          "en": "Let's call it a day.",
+          "mn": "Өнөөдөр ингээд дуусгацгаая."
+        }
+      }
+    },
+    "cdea017272": {
+      "expected": {
+        "w": "音楽",
+        "r": "おんがく",
+        "en": [
+          "music"
+        ]
+      },
+      "examples": {
+        "この音楽を聞いてくつろぎなさい。": {
+          "en": "Listen to this music and relax.",
+          "mn": "Энэ хөгжмийг сонсоод тайвшраарай."
+        },
+        "ダンス音楽のレコードをかけてくれないか。": {
+          "en": "Will you play some dance records?",
+          "mn": "Бүжгийн хөгжимтэй пянз тавьж өгөх үү?"
+        }
+      }
+    },
+    "980a922ad3": {
+      "expected": {
+        "w": "女",
+        "r": "おんな",
+        "en": [
+          "woman"
+        ]
+      },
+      "examples": {
+        "人は男か女のどちらかである。": {
+          "en": "A person is either male or female.",
+          "mn": "Хүн эрэгтэй эсвэл эмэгтэй байдаг."
+        },
+        "あの女のおしゃべりはまったくきりがない。": {
+          "en": "How that woman runs on!",
+          "mn": "Тэр эмэгтэйн яриа ерөөсөө дуусахгүй юм!"
+        }
+      }
+    },
+    "e6afab391a": {
+      "expected": {
+        "w": "女の子",
+        "r": "おんなのこ",
+        "en": [
+          "girl"
+        ]
+      },
+      "examples": {
+        "女の子はほとんどみんなやさしい。": {
+          "en": "Almost all girls are kind.",
+          "mn": "Бараг бүх охид эелдэг."
+        },
+        "ほかの女の子たちはどこにいるの。": {
+          "en": "Where are the other girls?",
+          "mn": "Бусад охид хаана байгаа вэ?"
+        }
+      }
+    },
+    "31a803c7f5": {
+      "expected": {
+        "w": "外国",
+        "r": "がいこく",
+        "en": [
+          "foreign country"
+        ]
+      },
+      "examples": {
+        "あなたは外国の本を持っていますか。": {
+          "en": "Do you have any foreign books?",
+          "mn": "Танд гадаадын ном бий юү?"
+        },
+        "ひとりで外国へ出かけてみなさい。": {
+          "en": "You must go to a foreign country for yourself.",
+          "mn": "Ганцаараа гадаад улс руу яваад үзээрэй."
+        }
+      }
+    },
+    "70f1678111": {
+      "expected": {
+        "w": "外国人",
+        "r": "がいこくじん",
+        "en": [
+          "foreigner"
+        ]
+      },
+      "examples": {
+        "その外国人はかなりうまく日本語を話す。": {
+          "en": "The foreigner speaks Japanese fairly well.",
+          "mn": "Тэр гадаад хүн японоор нэлээд сайн ярьдаг."
+        }
+      }
+    }
+  }
+}

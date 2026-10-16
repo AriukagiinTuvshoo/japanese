@@ -1,0 +1,406 @@
+{
+  "provenance": {
+    "id": "mn-n5-examples-recovery-2-2026-10-09",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian sentences compared with exact Japanese and retained English. Original source wording and IDs preserved; independent human review pending.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n5.json at cac78c79587f6fb6d5f93a158790258c24b351e8",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "70f1678111": {
+      "expected": {
+        "w": "外国人",
+        "r": "がいこくじん",
+        "en": [
+          "foreigner"
+        ]
+      },
+      "examples": {
+        "その外国人はまるで母語のように日本語を話した。": {
+          "en": "The foreigner spoke Japanese as if it were her mother tongue.",
+          "mn": "Тэр гадаад хүн япон хэлийг яг эх хэл шигээ ярьсан."
+        }
+      }
+    },
+    "2120ff505c": {
+      "expected": {
+        "w": "会社",
+        "r": "かいしゃ",
+        "en": [
+          "company"
+        ]
+      },
+      "examples": {
+        "ビルは三年前にこの会社に入った。": {
+          "en": "Bill joined our company three years ago.",
+          "mn": "Билл гурван жилийн өмнө энэ компанид орсон."
+        },
+        "会社をクビにならなきゃいいけどね。": {
+          "en": "I hope I can hold on to my job.",
+          "mn": "Ажлаасаа халагдахгүй байгаасай."
+        }
+      }
+    },
+    "7cb27c411e": {
+      "expected": {
+        "w": "階段",
+        "r": "かいだん",
+        "en": [
+          "stairs"
+        ]
+      },
+      "examples": {
+        "その階段を上ってはいけません。": {
+          "en": "You must not go up the stairs.",
+          "mn": "Тэр шатаар өгсөж болохгүй."
+        },
+        "先生は階段をかけ上がった。": {
+          "en": "The teacher ran up the stairs.",
+          "mn": "Багш шатаар гүйж өгссөн."
+        }
+      }
+    },
+    "a771d4f949": {
+      "expected": {
+        "w": "買い物",
+        "r": "かいもの",
+        "en": [
+          "shopping"
+        ]
+      },
+      "examples": {
+        "１日おきに買い物に行く。": {
+          "en": "I go shopping every other day.",
+          "mn": "Би өнжөөд нэг дэлгүүр ордог."
+        },
+        "ジェーンは買い物に出かけている。": {
+          "en": "Jane is out shopping.",
+          "mn": "Жэйн юм худалдаж авахаар гарсан."
+        }
+      }
+    },
+    "bdb125e5c6": {
+      "expected": {
+        "w": "買う",
+        "r": "かう",
+        "en": [
+          "to buy"
+        ]
+      },
+      "examples": {
+        "買うかどうかはあなたしだいです。": {
+          "en": "It is up to you whether to buy it or not.",
+          "mn": "Авах эсэх нь танаас л шалтгаална."
+        },
+        "外国から買わなくてはなりません。": {
+          "en": "We have to buy them from abroad.",
+          "mn": "Бид гадаадаас худалдаж авах хэрэгтэй."
+        }
+      }
+    },
+    "8ea4b03d7f": {
+      "expected": {
+        "w": "返す",
+        "r": "かえす",
+        "en": [
+          "to return something"
+        ]
+      },
+      "examples": {
+        "車はいつ返したらいいでしょうか。": {
+          "en": "When should I return the car?",
+          "mn": "Машиныг хэзээ буцааж өгөх вэ?"
+        },
+        "いつこれを返していただけますか。": {
+          "en": "When will this be returned to me?",
+          "mn": "Үүнийг надад хэзээ буцааж өгөх вэ?"
+        }
+      }
+    },
+    "1d22f1d023": {
+      "expected": {
+        "w": "帰る",
+        "r": "かえる",
+        "en": [
+          "to go back"
+        ]
+      },
+      "examples": {
+        "「帰ろ」「マックよってかない？」": {
+          "en": "\"Let's head back.\" \"Shall we drop by McDonald's?\"",
+          "mn": "«Буцацгаая.» «Макдоналдсаар дайрах уу?»"
+        },
+        "父はちょうど帰ってきたところだ。": {
+          "en": "My father has just come home.",
+          "mn": "Аав саяхан гэртээ ирлээ."
+        }
+      }
+    },
+    "687082e55c": {
+      "expected": {
+        "w": "かかる",
+        "r": "かかる",
+        "en": [
+          "to take time or money"
+        ]
+      },
+      "examples": {
+        "どうしたらエンジンがかかりますか。": {
+          "en": "How can I start the engine?",
+          "mn": "Хөдөлгүүрийг яаж асаах вэ?"
+        },
+        "それはほとんど終わりかかっています。": {
+          "en": "It's almost over.",
+          "mn": "Энэ бараг дуусаж байна."
+        }
+      }
+    },
+    "e2d6576c76": {
+      "expected": {
+        "w": "かぎ",
+        "r": "かぎ",
+        "en": [
+          "key"
+        ]
+      },
+      "examples": {
+        "車のカギをなくしちゃった。": {
+          "en": "I've lost my car key.",
+          "mn": "Машиныхаа түлхүүрийг гээчихлээ."
+        },
+        "ドアのカギをなくしたので家に入れない。": {
+          "en": "I lost the door key, so I can't enter the house.",
+          "mn": "Хаалганы түлхүүрээ гээсэн болохоор гэртээ орж чадахгүй байна."
+        }
+      }
+    },
+    "f7c7f35d9e": {
+      "expected": {
+        "w": "書く",
+        "r": "かく",
+        "en": [
+          "to write"
+        ]
+      },
+      "examples": {
+        "すぐに書かなければなりませんか。": {
+          "en": "Should I fill it in now?",
+          "mn": "Одоо шууд бичих ёстой юу?"
+        },
+        "これらの語をノートに書きなさい。": {
+          "en": "Write these words in your notebook.",
+          "mn": "Эдгээр үгийг дэвтэртээ бичээрэй."
+        }
+      }
+    },
+    "452102ad0a": {
+      "expected": {
+        "w": "学生",
+        "r": "がくせい",
+        "en": [
+          "student"
+        ]
+      },
+      "examples": {
+        "学生の半数が休んでいた。": {
+          "en": "Half the students were absent.",
+          "mn": "Сурагчдын тал нь хичээлдээ ирээгүй байсан."
+        },
+        "ルシーはアメリカからきた学生だ。": {
+          "en": "Lucy is a student from America.",
+          "mn": "Люси бол Америкаас ирсэн оюутан."
+        }
+      }
+    },
+    "0ce2b98d3b": {
+      "expected": {
+        "w": "かける",
+        "r": "かける",
+        "en": [
+          "to call by phone"
+        ]
+      },
+      "examples": {
+        "１０円で電話がかけられますか。": {
+          "en": "Can I make a phone call for ten yen?",
+          "mn": "Арван иенээр утсаар ярьж болох уу?"
+        },
+        "コックさんは少しもかけていない。": {
+          "en": "The cook hasn't put any on it.",
+          "mn": "Тогооч үүн дээр өчүүхнийг ч нэмээгүй байна."
+        }
+      }
+    },
+    "6f54881e59": {
+      "expected": {
+        "w": "傘",
+        "r": "かさ",
+        "en": [
+          "umbrella"
+        ]
+      },
+      "examples": {
+        "タクシーに傘を忘れてしまった。": {
+          "en": "I left my umbrella in the cab.",
+          "mn": "Би шүхрээ таксинд орхичихжээ."
+        },
+        "傘をもっていかなくてはならない。": {
+          "en": "I've got to take an umbrella with me.",
+          "mn": "Би шүхрээ авч явах хэрэгтэй."
+        }
+      }
+    },
+    "1122cac409": {
+      "expected": {
+        "w": "貸す",
+        "r": "かす",
+        "en": [
+          "to lend"
+        ]
+      },
+      "examples": {
+        "ホッチキスを貸してくれませんか。": {
+          "en": "Will you please lend me a stapler?",
+          "mn": "Үдэгчээ түр зээлдүүлж болох уу?"
+        },
+        "ヘアドライヤーを貸してください。": {
+          "en": "Can I borrow your hair drier?",
+          "mn": "Үс хатаагчаа түр зээлдүүлээч."
+        }
+      }
+    },
+    "c1a28465a2": {
+      "expected": {
+        "w": "風",
+        "r": "かぜ",
+        "en": [
+          "wind"
+        ]
+      },
+      "examples": {
+        "ただの風のいたずらだよ。": {
+          "en": "It's just a trick of the wind.",
+          "mn": "Зүгээр л салхины тоглоом шүү дээ."
+        }
+      }
+    },
+    "c9b5da4d10": {
+      "expected": {
+        "w": "風邪",
+        "r": "かぜ",
+        "en": [
+          "a cold"
+        ]
+      },
+      "examples": {
+        "ただの風邪でしょう。": {
+          "en": "You probably just have a cold.",
+          "mn": "Зүгээр л ханиад хүрсэн байх."
+        },
+        "かぜがなおるのに３週間かかった。": {
+          "en": "It took three weeks for me to get over my cold.",
+          "mn": "Ханиадаасаа эдгэхэд гурван долоо хоног болсон."
+        }
+      }
+    },
+    "1c9db63bdc": {
+      "expected": {
+        "w": "家族",
+        "r": "かぞく",
+        "en": [
+          "family"
+        ]
+      },
+      "examples": {
+        "あなたの家族はきっと親切でしょう。": {
+          "en": "Your family must be very nice.",
+          "mn": "Танай гэр бүлийнхэн их сайхан сэтгэлтэй хүмүүс байх."
+        },
+        "家族について聞いてもいいですか。": {
+          "en": "May I ask about your family?",
+          "mn": "Танай гэр бүлийн талаар асууж болох уу?"
+        }
+      }
+    },
+    "e34295f3e1": {
+      "expected": {
+        "w": "方",
+        "r": "かた",
+        "en": [
+          "person",
+          "way of doing"
+        ]
+      },
+      "examples": {
+        "こちらはあなたがお話しになるお方です。": {
+          "en": "This is the man for you to speak to.",
+          "mn": "Таны ярилцах хүн энэ байна."
+        },
+        "お話になる方のお名前は。": {
+          "en": "Who do you want to speak to?",
+          "mn": "Та хэнтэй ярихыг хүсэж байна вэ?"
+        }
+      }
+    },
+    "dd8ac16bd2": {
+      "expected": {
+        "w": "学校",
+        "r": "がっこう",
+        "en": [
+          "school"
+        ]
+      },
+      "examples": {
+        "この学校はたくさんの生徒がいます。": {
+          "en": "This school has many students.",
+          "mn": "Энэ сургууль олон сурагчтай."
+        },
+        "学校を出たあと、どうするつもり？": {
+          "en": "What are you going to do after you leave school?",
+          "mn": "Сургуулиа төгсөөд яах бодолтой байна вэ?"
+        }
+      }
+    },
+    "613c41bd1d": {
+      "expected": {
+        "w": "カップ",
+        "r": "カップ",
+        "en": [
+          "cup"
+        ]
+      },
+      "examples": {
+        "テーブルの上にカップがある。": {
+          "en": "There is a cup on the table.",
+          "mn": "Ширээн дээр аяга байна."
+        },
+        "このカップは金でできている。": {
+          "en": "The cup is made of gold.",
+          "mn": "Энэ аяга алтаар хийгдсэн."
+        }
+      }
+    },
+    "66eeeb818b": {
+      "expected": {
+        "w": "家庭",
+        "r": "かてい",
+        "en": [
+          "household"
+        ]
+      },
+      "examples": {
+        "食事は家庭で食べますか、外食ですか。": {
+          "en": "Do you eat at home or eat out?",
+          "mn": "Та гэртээ хооллодог уу, гадуур хооллодог уу?"
+        },
+        "あなたの家庭のことを書いて下さい。": {
+          "en": "Please write about your home.",
+          "mn": "Гэр бүлийнхээ тухай бичээрэй."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,5259 @@
+{
+  "checkedAt": "2026-10-09",
+  "author": "Arena coding assistant",
+  "method": "Read-only exact headword+reading or literal lookup; English senses, restrictions and tags extracted from pinned SQLite. Original records retained. No independent human approval.",
+  "source": {
+    "id": "jamdict-data-1.5",
+    "packageVersion": "1.5",
+    "compiledDateAsDeclared": "2021-04-17",
+    "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+    "artifactSha256": "a4247dd9bb3148ab17c1b32fc56d7a7f1c35293b0d6ff2838c811f896d13f415",
+    "databaseSha256": "871fb170e94088f1b6edbf7cf1646c1bf5dc487212846f42b1b6051024b3e7a0",
+    "packageUrl": "https://pypi.org/project/jamdict-data/1.5/",
+    "dictionaryOwner": "James William Breen and the Electronic Dictionary Research and Development Group",
+    "dictionaryLicense": "CC-BY-SA-3.0",
+    "packageLicense": "MIT",
+    "licenseUrl": "https://www.edrdg.org/edrdg/licence.html",
+    "databaseMetadata": {
+      "jmdict.version": "1.08",
+      "jmdict.url": "http://www.csse.monash.edu.au/~jwb/edict.html",
+      "generator": "jamdict",
+      "generator_version": "0.1a8",
+      "generator_url": "https://github.com/neocl/jamdict",
+      "jmnedict.version": "1.08",
+      "jmnedict.url": "https://www.edrdg.org/enamdict/enamdict_doc.html",
+      "jmnedict.date": "2020-05-29",
+      "kanjidic2.version": "1.6",
+      "kanjidic2.url": "https://www.edrdg.org/wiki/index.php/KANJIDIC_Project",
+      "kanjidic2.date": "April 2008"
+    }
+  },
+  "limitations": [
+    "Package compile date is not a known JMdict lexical snapshot date; metadata has no jmdict.date.",
+    "KANJIDIC2 metadata reports April 2008; package compiled in 2021. Not current authoritative-direct validation.",
+    "The repository fetch-sources.mjs uses this exact version for JMdict. External retrieval is genuine, but not independent corroboration of its suspect entries.",
+    "Ten existing warnings retained, including claims challenged by this snapshot; evidence requires adjudication, not silent correction.",
+    "62 meanings still withheld. Current upstream direct asset download was blocked; no modern independent source or human review acquired."
+  ],
+  "counts": {
+    "missingMeaningsAudited": 62,
+    "sourceWarningsAudited": 10,
+    "uniqueRecords": 67,
+    "activeCorrections": 0
+  },
+  "records": [
+    {
+      "kind": "vocab",
+      "level": "n5",
+      "key": "j2076920",
+      "expected": {
+        "w": "手前",
+        "r": "てめえ",
+        "en": [
+          "I",
+          "me",
+          "oneself"
+        ]
+      },
+      "missingMeaning": false,
+      "existingWarning": "てめえ is not the standard てまえ reading. MN includes the rude second-person sense alongside self-reference; register must be reviewed.",
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 2076920,
+          "spellings": [
+            "手前"
+          ],
+          "readings": [
+            "てめえ",
+            "テメー"
+          ],
+          "spellingInfo": [
+            {
+              "text": "手前",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "てめえ",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            },
+            {
+              "text": "テメー",
+              "nokanji": true,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 119457,
+              "englishGlosses": [
+                "you"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "pronoun"
+              ],
+              "misc": [
+                "word usually written using kana alone",
+                "derogatory",
+                "male term or language"
+              ],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 119458,
+              "englishGlosses": [
+                "I",
+                "me",
+                "oneself"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "pronoun"
+              ],
+              "misc": [
+                "word usually written using kana alone",
+                "male term or language"
+              ],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Exact entry 2076920 includes you (derogatory, male term) and I/me/oneself (male term). Preserve てめえ reading; self-reference versus second-person teaching/register remains unreviewed."
+    },
+    {
+      "kind": "vocab",
+      "level": "n5",
+      "key": "j2727400",
+      "expected": {
+        "w": "先生",
+        "r": "シーサン",
+        "en": [
+          "boy"
+        ]
+      },
+      "missingMeaning": false,
+      "existingWarning": "Dialectal reading シーサン and gloss boy retained; do not substitute standard せんせい/teacher. Confirm dialect attribution in the upstream dictionary before independent review.",
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 2727400,
+          "spellings": [
+            "先生"
+          ],
+          "readings": [
+            "シーサン"
+          ],
+          "spellingInfo": [
+            {
+              "text": "先生",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "シーサン",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 185651,
+              "englishGlosses": [
+                "boy"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [
+                "honorific or respectful (sonkeigo) language"
+              ],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Exact entry 2727400 includes シーサン and boy with honorific/respectful tag but no dialect tag. Does not establish dialect attribution; no substitution with せんせい."
+    },
+    {
+      "kind": "vocab",
+      "level": "n5",
+      "key": "j1448900",
+      "expected": {
+        "w": "中身",
+        "r": "あてみ",
+        "en": [
+          "blow to a vital point of a person's body",
+          "striking techniques (judo)"
+        ]
+      },
+      "missingMeaning": false,
+      "existingWarning": "Source headword 中身 with reading あてみ conflicts with normal spelling 当て身 for the English blow/striking sense. MN follows the supplied reading/English; do not claim the headword is verified. Needs upstream dictionary correction, not silent overwrite.",
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 1448900,
+          "spellings": [
+            "当て身",
+            "中身",
+            "当身"
+          ],
+          "readings": [
+            "あてみ"
+          ],
+          "spellingInfo": [
+            {
+              "text": "当て身",
+              "info": []
+            },
+            {
+              "text": "中身",
+              "info": []
+            },
+            {
+              "text": "当身",
+              "info": [
+                "irregular okurigana usage"
+              ]
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "あてみ",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 53388,
+              "englishGlosses": [
+                "blow to a vital point of a person's body",
+                "striking techniques (judo)"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [
+                "martial arts"
+              ],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Exact entry 1448900 includes 中身 alongside 当て身/当身 and あてみ with martial-arts glosses. Earlier categorical spelling-conflict warning is challenged. Variant usage remains unreviewed."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "e05bb17edd",
+      "expected": {
+        "w": "気品",
+        "r": "きひん",
+        "en": [
+          "aroma"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": "Unresolved Japanese/English conflict: 気品/きひん denotes elegance/dignity, not retained English aroma. Earlier AI-authored MN aroma sense withdrawn from active data; original Japanese/reading/English and batch audit retained. Requires independent dictionary/source review.",
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 1222540,
+          "spellings": [
+            "気品"
+          ],
+          "readings": [
+            "きひん"
+          ],
+          "spellingInfo": [
+            {
+              "text": "気品",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "きひん",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 25276,
+              "englishGlosses": [
+                "elegance",
+                "refinement",
+                "grace",
+                "dignity"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 25277,
+              "englishGlosses": [
+                "aroma"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Snapshot entry 1222540 explicitly includes aroma as a second sense; previous categorical mismatch warning is challenged, not confirmed. Modern sense/register and suitability of the example remain unreviewed."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "4ec7fe1166",
+      "expected": {
+        "w": "何々",
+        "r": "どれどれ",
+        "en": [
+          "which (emphatic)"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [],
+      "lookupStatus": "no exact spelling/reading match",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "2e8753951c",
+      "expected": {
+        "w": "悪い",
+        "r": "にくい",
+        "en": [
+          "hateful",
+          "abominable",
+          "poor-looking"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": "悪い/にくい is a spelling/reading mismatch with hateful/abominable gloss; standard にくい uses 憎い. Original source retained; translation withheld pending dictionary evidence.",
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 1403390,
+          "spellings": [
+            "憎い",
+            "悪い"
+          ],
+          "readings": [
+            "にくい"
+          ],
+          "spellingInfo": [
+            {
+              "text": "憎い",
+              "info": []
+            },
+            {
+              "text": "悪い",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "にくい",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 47625,
+              "englishGlosses": [
+                "hateful",
+                "abominable",
+                "poor-looking",
+                "detestable"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "adjective (keiyoushi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 47626,
+              "englishGlosses": [
+                "amazing",
+                "fantastic",
+                "admirable",
+                "lovely",
+                "wonderful"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "adjective (keiyoushi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": [
+                "often with irony"
+              ]
+            }
+          ]
+        },
+        {
+          "entrySeq": 2772730,
+          "spellings": [
+            "難い",
+            "悪い"
+          ],
+          "readings": [
+            "にくい",
+            "がたい"
+          ],
+          "spellingInfo": [
+            {
+              "text": "難い",
+              "info": []
+            },
+            {
+              "text": "悪い",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "にくい",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            },
+            {
+              "text": "がたい",
+              "nokanji": false,
+              "restrictions": [
+                "難い"
+              ],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 190344,
+              "englishGlosses": [
+                "difficult to ...",
+                "hard to ..."
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "suffix",
+                "adjective (keiyoushi)"
+              ],
+              "misc": [
+                "word usually written using kana alone"
+              ],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": [
+                "after -masu stem of verb"
+              ]
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Snapshot entry 1403390 includes 悪い spelling and にくい reading with hateful/abominable/poor-looking. Earlier mismatch claim is challenged; separate entry 2772730 has different senses. No automatic respelling."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "64e8f7eda0",
+      "expected": {
+        "w": "熱量",
+        "r": "ねつりょう",
+        "en": [
+          "temperature"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": "熱量/ねつりょう means quantity of heat, not retained English temperature (温度). Translation withheld; source correction needs evidence.",
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 1468010,
+          "spellings": [
+            "熱量"
+          ],
+          "readings": [
+            "ねつりょう"
+          ],
+          "spellingInfo": [
+            {
+              "text": "熱量",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "ねつりょう",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 55731,
+              "englishGlosses": [
+                "quantity of heat",
+                "heat value",
+                "calorific value",
+                "calories"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 55732,
+              "englishGlosses": [
+                "(degree of) enthusiasm",
+                "zeal",
+                "passion"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Snapshot entry 1468010 lists quantity/calorific value of heat and enthusiasm, not temperature. Source correction still required; retained English not overwritten."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "ee708f5bbd",
+      "expected": {
+        "w": "延べ",
+        "r": "のべ",
+        "en": [
+          "futures",
+          "credit (buying)",
+          "stretching"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 1176380,
+          "spellings": [
+            "延べ"
+          ],
+          "readings": [
+            "のべ"
+          ],
+          "spellingInfo": [
+            {
+              "text": "延べ",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "のべ",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 19615,
+              "englishGlosses": [
+                "futures"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 19616,
+              "englishGlosses": [
+                "credit (buying)"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 19617,
+              "englishGlosses": [
+                "stretching"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 19618,
+              "englishGlosses": [
+                "total (preceding counter, unit, etc.)",
+                "aggregate",
+                "gross"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "prefix"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "c6304d0283",
+      "expected": {
+        "w": "倍率",
+        "r": "ばいりつ",
+        "en": [
+          "diameter",
+          "magnification"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 1473340,
+          "spellings": [
+            "倍率"
+          ],
+          "readings": [
+            "ばいりつ"
+          ],
+          "spellingInfo": [
+            {
+              "text": "倍率",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "ばいりつ",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 56392,
+              "englishGlosses": [
+                "magnification",
+                "leverage",
+                "amplification",
+                "scaling factor",
+                "scale factor"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 56393,
+              "englishGlosses": [
+                "competitiveness rating (e.g. for university entrance)",
+                "applicant-to-acceptance ratio"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": [
+                "25% acceptance would be a 倍率 of 4"
+              ]
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "02e6ac02bf",
+      "expected": {
+        "w": "ハンガー",
+        "r": "ハンガー",
+        "en": [
+          "hangar",
+          "(coat) hanger",
+          "hunger"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 1096430,
+          "spellings": [],
+          "readings": [
+            "ハンガー"
+          ],
+          "spellingInfo": [],
+          "readingInfo": [
+            {
+              "text": "ハンガー",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 10650,
+              "englishGlosses": [
+                "(aircraft) hangar"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 10651,
+              "englishGlosses": [
+                "(coat) hanger"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 10652,
+              "englishGlosses": [
+                "hunger"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "21d892acef",
+      "expected": {
+        "w": "番目",
+        "r": "ばんめ",
+        "en": [
+          "cardinal number suffix"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 1482410,
+          "spellings": [
+            "番目",
+            "番め"
+          ],
+          "readings": [
+            "ばんめ"
+          ],
+          "spellingInfo": [
+            {
+              "text": "番目",
+              "info": []
+            },
+            {
+              "text": "番め",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "ばんめ",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 57516,
+              "englishGlosses": [
+                "indicates position in a sequence"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "counter"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 57517,
+              "englishGlosses": [
+                "divisions of a kabuki performance"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "f3c62d6d70",
+      "expected": {
+        "w": "一息",
+        "r": "ひといき",
+        "en": [
+          "puffy",
+          "a breath",
+          "a pause"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 1164390,
+          "spellings": [
+            "一息"
+          ],
+          "readings": [
+            "ひといき"
+          ],
+          "spellingInfo": [
+            {
+              "text": "一息",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "ひといき",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 18117,
+              "englishGlosses": [
+                "one breath"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 18118,
+              "englishGlosses": [
+                "time of one breath"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 18119,
+              "englishGlosses": [
+                "pause",
+                "break",
+                "rest",
+                "breather"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 18120,
+              "englishGlosses": [
+                "(doing in) one go",
+                "doing without stopping"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": [
+                "as 一息に"
+              ]
+            },
+            {
+              "snapshotSenseId": 18121,
+              "englishGlosses": [
+                "small amount of effort",
+                "a little more effort"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "d3286be832",
+      "expected": {
+        "w": "人目",
+        "r": "ひとめ",
+        "en": [
+          "glimpse",
+          "public gaze"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 1580760,
+          "spellings": [
+            "人目",
+            "人眼"
+          ],
+          "readings": [
+            "ひとめ",
+            "じんもく"
+          ],
+          "spellingInfo": [
+            {
+              "text": "人目",
+              "info": []
+            },
+            {
+              "text": "人眼",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "ひとめ",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            },
+            {
+              "text": "じんもく",
+              "nokanji": false,
+              "restrictions": [
+                "人目"
+              ],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 69534,
+              "englishGlosses": [
+                "(public) notice",
+                "attention",
+                "public eye",
+                "public gaze"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "eda690b2a4",
+      "expected": {
+        "w": "品種",
+        "r": "ひんしゅ",
+        "en": [
+          "brand",
+          "kind",
+          "description"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 1490620,
+          "spellings": [
+            "品種"
+          ],
+          "readings": [
+            "ひんしゅ"
+          ],
+          "spellingInfo": [
+            {
+              "text": "品種",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "ひんしゅ",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 58507,
+              "englishGlosses": [
+                "kind (of goods)",
+                "brand"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 58508,
+              "englishGlosses": [
+                "(taxonomical) form"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 58509,
+              "englishGlosses": [
+                "breed",
+                "cultivar"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "ed2719ab9d",
+      "expected": {
+        "w": "ファン",
+        "r": "ファン",
+        "en": [
+          "fan",
+          "fun"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": "ファン supports fan, but retained English fun normally corresponds to ファンではなく楽しみ. Gloss mixture withheld pending source sense audit.",
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 1108540,
+          "spellings": [],
+          "readings": [
+            "ファン",
+            "フアン"
+          ],
+          "spellingInfo": [],
+          "readingInfo": [
+            {
+              "text": "ファン",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            },
+            {
+              "text": "フアン",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 11961,
+              "englishGlosses": [
+                "fan",
+                "enthusiast",
+                "lover (of)"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 11962,
+              "englishGlosses": [
+                "fan (e.g. electric)"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        },
+        {
+          "entrySeq": 2833260,
+          "spellings": [
+            "翻",
+            "飜"
+          ],
+          "readings": [
+            "ハン",
+            "ファン"
+          ],
+          "spellingInfo": [
+            {
+              "text": "翻",
+              "info": []
+            },
+            {
+              "text": "飜",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "ハン",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            },
+            {
+              "text": "ファン",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 203412,
+              "englishGlosses": [
+                "han",
+                "fan",
+                "unit that doubles the score of a hand"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "counter"
+              ],
+              "misc": [],
+              "field": [
+                "mahjong"
+              ],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        },
+        {
+          "entrySeq": 2844127,
+          "spellings": [],
+          "readings": [
+            "ファン"
+          ],
+          "spellingInfo": [],
+          "readingInfo": [
+            {
+              "text": "ファン",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 214527,
+              "englishGlosses": [
+                "fun"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Snapshot has separate exact ファン entries 1108540 (fan) and 2844127 (fun). Earlier blanket rejection of fun is challenged; sense selection and examples still require review."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "0101791a03",
+      "expected": {
+        "w": "フォーム",
+        "r": "フォーム",
+        "en": [
+          "foam",
+          "form"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": "フォーム normally supports form, while foam normally uses フォーム only in specific technical loans; unsupported mixed senses withheld pending dictionary evidence.",
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 1110340,
+          "spellings": [],
+          "readings": [
+            "フォーム"
+          ],
+          "spellingInfo": [],
+          "readingInfo": [
+            {
+              "text": "フォーム",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 12148,
+              "englishGlosses": [
+                "foam"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 12149,
+              "englishGlosses": [
+                "form"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Snapshot entry 1110340 explicitly lists foam and form as separate senses. Earlier warning is challenged. Examples contain longer words (ユニフォーム/リフォーム), not evidence for all senses."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "ad9000928d",
+      "expected": {
+        "w": "震わせる",
+        "r": "ふるわせる",
+        "en": [
+          "to be shaking",
+          "to be trembling"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 1366330,
+          "spellings": [
+            "震わせる"
+          ],
+          "readings": [
+            "ふるわせる"
+          ],
+          "spellingInfo": [
+            {
+              "text": "震わせる",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "ふるわせる",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 43008,
+              "englishGlosses": [
+                "to (make something) quiver",
+                "to shake",
+                "to tremble",
+                "to vibrate"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "Ichidan verb",
+                "transitive verb"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "47e4de1f65",
+      "expected": {
+        "w": "ペア",
+        "r": "ペア",
+        "en": [
+          "pair",
+          "pear"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 1120690,
+          "spellings": [],
+          "readings": [
+            "ペア",
+            "ペヤ",
+            "ペアー"
+          ],
+          "spellingInfo": [],
+          "readingInfo": [
+            {
+              "text": "ペア",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            },
+            {
+              "text": "ペヤ",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            },
+            {
+              "text": "ペアー",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 13251,
+              "englishGlosses": [
+                "pair"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 13252,
+              "englishGlosses": [
+                "pair-oared boat"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 13253,
+              "englishGlosses": [
+                "pear"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "28bbcaef7c",
+      "expected": {
+        "w": "弁償",
+        "r": "べんしょう",
+        "en": [
+          "next word",
+          "compensation",
+          "reparation"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 1512980,
+          "spellings": [
+            "弁償"
+          ],
+          "readings": [
+            "べんしょう"
+          ],
+          "spellingInfo": [
+            {
+              "text": "弁償",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "べんしょう",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 61231,
+              "englishGlosses": [
+                "reimbursement",
+                "compensation",
+                "reparation",
+                "indemnity"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)",
+                "noun or participle which takes the aux. verb suru"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "e482d02cda",
+      "expected": {
+        "w": "本格",
+        "r": "ほんかく",
+        "en": [
+          "propriety",
+          "fundamental rules"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 1522310,
+          "spellings": [
+            "本格"
+          ],
+          "readings": [
+            "ほんかく"
+          ],
+          "spellingInfo": [
+            {
+              "text": "本格",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "ほんかく",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 62339,
+              "englishGlosses": [
+                "original method or procedure"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 62340,
+              "englishGlosses": [
+                "serious",
+                "orthodox",
+                "classical",
+                "genuine"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun or verb acting prenominally"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "97b08ab1d6",
+      "expected": {
+        "w": "本気",
+        "r": "ほんき",
+        "en": [
+          "seriousness",
+          "truth",
+          "sanctity"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 1522370,
+          "spellings": [
+            "本気"
+          ],
+          "readings": [
+            "ほんき"
+          ],
+          "spellingInfo": [
+            {
+              "text": "本気",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "ほんき",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 62348,
+              "englishGlosses": [
+                "seriousness",
+                "earnestness",
+                "truth",
+                "sanctity"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)",
+                "nouns which may take the genitive case particle 'no'",
+                "adjectival nouns or quasi-adjectives (keiyodoshi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": [
+                "usu. 本気で"
+              ]
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "7d2fc5b5b0",
+      "expected": {
+        "w": "丸っきり",
+        "r": "まるっきり",
+        "en": [
+          "completely",
+          "perfectly",
+          "just as if"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 1216270,
+          "spellings": [
+            "丸っきり",
+            "丸っ切り"
+          ],
+          "readings": [
+            "まるっきり"
+          ],
+          "spellingInfo": [
+            {
+              "text": "丸っきり",
+              "info": []
+            },
+            {
+              "text": "丸っ切り",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "まるっきり",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 24511,
+              "englishGlosses": [
+                "completely",
+                "absolutely",
+                "totally",
+                "(not) at all"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "adverb (fukushi)"
+              ],
+              "misc": [
+                "word usually written using kana alone"
+              ],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "b93e0a31d0",
+      "expected": {
+        "w": "未開",
+        "r": "みかい",
+        "en": [
+          "savage land",
+          "backward region",
+          "uncivilized"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 1527190,
+          "spellings": [
+            "未開"
+          ],
+          "readings": [
+            "みかい"
+          ],
+          "spellingInfo": [
+            {
+              "text": "未開",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "みかい",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 62953,
+              "englishGlosses": [
+                "uncivilized",
+                "uncivilised",
+                "primitive",
+                "savage"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "nouns which may take the genitive case particle 'no'",
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 62954,
+              "englishGlosses": [
+                "undeveloped (land)",
+                "unexplored (territory, field, etc.)"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "nouns which may take the genitive case particle 'no'",
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 62955,
+              "englishGlosses": [
+                "unbloomed (flower)"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "nouns which may take the genitive case particle 'no'",
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "084bab949b",
+      "expected": {
+        "w": "満たす",
+        "r": "みたす",
+        "en": [
+          "to satisfy",
+          "to ingratiate",
+          "to fill"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 1526670,
+          "spellings": [
+            "満たす",
+            "充たす"
+          ],
+          "readings": [
+            "みたす"
+          ],
+          "spellingInfo": [
+            {
+              "text": "満たす",
+              "info": []
+            },
+            {
+              "text": "充たす",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "みたす",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 62881,
+              "englishGlosses": [
+                "to satisfy (conditions, one's appetite, etc.)",
+                "to meet (e.g. demands)",
+                "to fulfill",
+                "to gratify"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "Godan verb with 'su' ending",
+                "transitive verb"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 62882,
+              "englishGlosses": [
+                "to fill (e.g. a cup)",
+                "to pack",
+                "to supply"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "Godan verb with 'su' ending",
+                "transitive verb"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "cfaa0c9c42",
+      "expected": {
+        "w": "導く",
+        "r": "みちびく",
+        "en": [
+          "to be guided",
+          "to be shown"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 1453680,
+          "spellings": [
+            "導く"
+          ],
+          "readings": [
+            "みちびく"
+          ],
+          "spellingInfo": [
+            {
+              "text": "導く",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "みちびく",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 53974,
+              "englishGlosses": [
+                "to guide",
+                "to lead",
+                "to show the way",
+                "to conduct"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "Godan verb with 'ku' ending",
+                "transitive verb"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 53975,
+              "englishGlosses": [
+                "to derive",
+                "to deduce"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "Godan verb with 'ku' ending",
+                "transitive verb"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "f3f52aaa64",
+      "expected": {
+        "w": "民主",
+        "r": "みんしゅ",
+        "en": [
+          "democratic",
+          "the head of the nation"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 1528790,
+          "spellings": [
+            "民主"
+          ],
+          "readings": [
+            "みんしゅ"
+          ],
+          "spellingInfo": [
+            {
+              "text": "民主",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "みんしゅ",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 63135,
+              "englishGlosses": [
+                "democracy",
+                "popular sovereignty"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 63136,
+              "englishGlosses": [
+                "Democratic Party (esp. DPJ)"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [
+                "abbreviation"
+              ],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "78fbae6020",
+      "expected": {
+        "w": "民俗",
+        "r": "みんぞく",
+        "en": [
+          "people",
+          "race",
+          "nation"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 1604745,
+          "spellings": [
+            "民俗"
+          ],
+          "readings": [
+            "みんぞく"
+          ],
+          "spellingInfo": [
+            {
+              "text": "民俗",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "みんぞく",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 73114,
+              "englishGlosses": [
+                "folk customs",
+                "folkways",
+                "ethnic customs"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "88c5764dde",
+      "expected": {
+        "w": "無駄遣い",
+        "r": "むだづかい",
+        "en": [
+          "waste money on",
+          "squander money on",
+          "flog a dead horse"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 1530520,
+          "spellings": [
+            "無駄遣い",
+            "無駄使い",
+            "無駄づかい",
+            "むだ遣い",
+            "むだ使い",
+            "徒遣い"
+          ],
+          "readings": [
+            "むだづかい"
+          ],
+          "spellingInfo": [
+            {
+              "text": "無駄遣い",
+              "info": []
+            },
+            {
+              "text": "無駄使い",
+              "info": [
+                "word containing irregular kanji usage"
+              ]
+            },
+            {
+              "text": "無駄づかい",
+              "info": []
+            },
+            {
+              "text": "むだ遣い",
+              "info": []
+            },
+            {
+              "text": "むだ使い",
+              "info": [
+                "word containing irregular kanji usage"
+              ]
+            },
+            {
+              "text": "徒遣い",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "むだづかい",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 63357,
+              "englishGlosses": [
+                "waste (of money, time, etc.)",
+                "squandering",
+                "frittering away"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)",
+                "noun or participle which takes the aux. verb suru"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "957434f95c",
+      "expected": {
+        "w": "優",
+        "r": "やさ",
+        "en": [
+          "gentle",
+          "affectionate"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 1539020,
+          "spellings": [
+            "優"
+          ],
+          "readings": [
+            "やさ"
+          ],
+          "spellingInfo": [
+            {
+              "text": "優",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "やさ",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 64444,
+              "englishGlosses": [
+                "gentle",
+                "affectionate"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "prefix"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "d0cc8bf9a9",
+      "expected": {
+        "w": "ランプ",
+        "r": "ランプ",
+        "en": [
+          "lamp",
+          "ramp",
+          "headlight"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 1140360,
+          "spellings": [],
+          "readings": [
+            "ランプ"
+          ],
+          "spellingInfo": [],
+          "readingInfo": [
+            {
+              "text": "ランプ",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 15292,
+              "englishGlosses": [
+                "lamp",
+                "light"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        },
+        {
+          "entrySeq": 2195100,
+          "spellings": [
+            "洋灯",
+            "洋燈"
+          ],
+          "readings": [
+            "ようとう",
+            "ランプ"
+          ],
+          "spellingInfo": [
+            {
+              "text": "洋灯",
+              "info": []
+            },
+            {
+              "text": "洋燈",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "ようとう",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            },
+            {
+              "text": "ランプ",
+              "nokanji": false,
+              "restrictions": [],
+              "info": [
+                "gikun (meaning as reading) or jukujikun (special kanji reading)"
+              ]
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 131907,
+              "englishGlosses": [
+                "lamp"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        },
+        {
+          "entrySeq": 2754570,
+          "spellings": [
+            "ＬＡＭＰ"
+          ],
+          "readings": [
+            "ランプ"
+          ],
+          "spellingInfo": [
+            {
+              "text": "ＬＡＭＰ",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "ランプ",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 188491,
+              "englishGlosses": [
+                "LAMP",
+                "solution stack of free, open source software"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [
+                "computing"
+              ],
+              "dialect": [],
+              "SenseInfo": [
+                "from initials of Linux, Apache, MySQL, PHP"
+              ]
+            }
+          ]
+        },
+        {
+          "entrySeq": 2842180,
+          "spellings": [],
+          "readings": [
+            "ランプ"
+          ],
+          "spellingInfo": [],
+          "readingInfo": [
+            {
+              "text": "ランプ",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 212468,
+              "englishGlosses": [
+                "ramp"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        },
+        {
+          "entrySeq": 2842181,
+          "spellings": [],
+          "readings": [
+            "ランプ",
+            "ラム"
+          ],
+          "spellingInfo": [],
+          "readingInfo": [
+            {
+              "text": "ランプ",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            },
+            {
+              "text": "ラム",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 212469,
+              "englishGlosses": [
+                "rump"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [
+                "food, cooking"
+              ],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "e91d9f8a96",
+      "expected": {
+        "w": "枠",
+        "r": "わく",
+        "en": [
+          "frame",
+          "slide"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 1562610,
+          "spellings": [
+            "枠",
+            "框"
+          ],
+          "readings": [
+            "わく"
+          ],
+          "spellingInfo": [
+            {
+              "text": "枠",
+              "info": []
+            },
+            {
+              "text": "框",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "わく",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 67326,
+              "englishGlosses": [
+                "frame",
+                "framework"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)",
+                "noun, used as a suffix"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 67327,
+              "englishGlosses": [
+                "border",
+                "box"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)",
+                "noun, used as a suffix"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 67328,
+              "englishGlosses": [
+                "limit",
+                "restriction",
+                "quota"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)",
+                "noun, used as a suffix"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 67329,
+              "englishGlosses": [
+                "category",
+                "bracket",
+                "class"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)",
+                "noun, used as a suffix"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 67330,
+              "englishGlosses": [
+                "time slot (in a broadcasting schedule)"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)",
+                "noun, used as a suffix"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 67331,
+              "englishGlosses": [
+                "live stream",
+                "live (online) broadcast"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)",
+                "noun, used as a suffix"
+              ],
+              "misc": [
+                "Internet slang"
+              ],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            },
+            {
+              "snapshotSenseId": 67332,
+              "englishGlosses": [
+                "spool (of thread)",
+                "reel"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "j2599040",
+      "expected": {
+        "w": "分屯",
+        "r": "ぶんとん",
+        "en": [
+          "vice-",
+          "sub-"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 2599040,
+          "spellings": [
+            "分屯"
+          ],
+          "readings": [
+            "ぶんとん"
+          ],
+          "spellingInfo": [
+            {
+              "text": "分屯",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "ぶんとん",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 172528,
+              "englishGlosses": [
+                "vice-",
+                "sub-"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "prefix"
+              ],
+              "misc": [],
+              "field": [
+                "military"
+              ],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Exact sequence repeats vice-/sub- for 分屯. Same artifact is used by source pipeline; repetition is NOT independent verification of this suspect entry."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "j1684450",
+      "expected": {
+        "w": "応訴",
+        "r": "おうそ",
+        "en": [
+          "countersuit"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 1684450,
+          "spellings": [
+            "応訴"
+          ],
+          "readings": [
+            "おうそ"
+          ],
+          "spellingInfo": [
+            {
+              "text": "応訴",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "おうそ",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 81700,
+              "englishGlosses": [
+                "countersuit"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)",
+                "noun or participle which takes the aux. verb suru"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Exact sequence repeats countersuit for 応訴. Same artifact is used by source pipeline; repetition is NOT independent verification of this suspect gloss."
+    },
+    {
+      "kind": "vocab",
+      "level": "n1",
+      "key": "j2618190",
+      "expected": {
+        "w": "弾き応え",
+        "r": "ひきごたえ",
+        "en": [
+          "worthiness as an opponent or challenge"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "exactHeadwordReadingCandidates": [
+        {
+          "entrySeq": 2618190,
+          "spellings": [
+            "弾き応え"
+          ],
+          "readings": [
+            "ひきごたえ"
+          ],
+          "spellingInfo": [
+            {
+              "text": "弾き応え",
+              "info": []
+            }
+          ],
+          "readingInfo": [
+            {
+              "text": "ひきごたえ",
+              "nokanji": false,
+              "restrictions": [],
+              "info": []
+            }
+          ],
+          "senses": [
+            {
+              "snapshotSenseId": 174486,
+              "englishGlosses": [
+                "worthiness as an opponent or challenge"
+              ],
+              "stagk": [],
+              "stagr": [],
+              "pos": [
+                "noun (common) (futsuumeishi)"
+              ],
+              "misc": [],
+              "field": [],
+              "dialect": [],
+              "SenseInfo": []
+            }
+          ]
+        }
+      ],
+      "lookupStatus": "exact spelling/reading found",
+      "assessment": "Exact sequence repeats worthiness as an opponent or challenge for 弾き応え. Same artifact is used by source pipeline; repetition is NOT independent verification of this suspect gloss."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "聴",
+      "expected": {
+        "k": "聴",
+        "on": [
+          "ちょう",
+          "てい"
+        ],
+        "kun": [
+          "き.く",
+          "ゆる.す"
+        ],
+        "en": [
+          "Listen",
+          "Headstrong",
+          "Naughty"
+        ]
+      },
+      "missingMeaning": false,
+      "existingWarning": "The inherited glosses Headstrong and Naughty are not taught as standard modern senses of 聴. Primary Japanese sense 聞く: listen attentively. English source retained for audit.",
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "聴",
+        "englishGlosses": [
+          "listen",
+          "headstrong",
+          "naughty",
+          "careful inquiry"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "ting1"
+          ],
+          [
+            "korean_r",
+            "cheong"
+          ],
+          [
+            "korean_h",
+            "청"
+          ],
+          [
+            "vietnam",
+            "Thính"
+          ],
+          [
+            "ja_on",
+            "チョウ"
+          ],
+          [
+            "ja_on",
+            "テイ"
+          ],
+          [
+            "ja_kun",
+            "き.く"
+          ],
+          [
+            "ja_kun",
+            "ゆる.す"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "KANJIDIC2 snapshot repeats listen/headstrong/naughty. Repetition within shared source lineage is not independent justification for modern teaching senses."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "博",
+      "expected": {
+        "k": "博",
+        "on": [
+          "はく",
+          "ばく"
+        ],
+        "kun": [],
+        "en": [
+          "Dr.",
+          "Command",
+          "Esteem"
+        ]
+      },
+      "missingMeaning": false,
+      "existingWarning": "Inherited gloss Command is ambiguous; Mongolian teaches broad learning, scholar/doctor and esteem. Original source remains unchanged.",
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "博",
+        "englishGlosses": [
+          "Dr.",
+          "command",
+          "esteem",
+          "win acclaim",
+          "Ph.D.",
+          "exposition",
+          "fair"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "bo2"
+          ],
+          [
+            "korean_r",
+            "bag"
+          ],
+          [
+            "korean_h",
+            "박"
+          ],
+          [
+            "vietnam",
+            "Bác"
+          ],
+          [
+            "ja_on",
+            "ハク"
+          ],
+          [
+            "ja_on",
+            "バク"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "KANJIDIC2 snapshot repeats Dr./command/esteem; does not disambiguate command or independently justify its Mongolian rendering."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "庄",
+      "expected": {
+        "k": "庄",
+        "on": [
+          "しょう",
+          "そ",
+          "そう"
+        ],
+        "kun": [],
+        "en": [
+          "Level",
+          "In The Country",
+          "Manor"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "庄",
+        "englishGlosses": [
+          "level",
+          "in the country",
+          "manor",
+          "village",
+          "hamlet"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "zhuang1"
+          ],
+          [
+            "korean_r",
+            "jang"
+          ],
+          [
+            "korean_h",
+            "장"
+          ],
+          [
+            "vietnam",
+            "Trang"
+          ],
+          [
+            "ja_on",
+            "ショウ"
+          ],
+          [
+            "ja_on",
+            "ソ"
+          ],
+          [
+            "ja_on",
+            "ソウ"
+          ],
+          [
+            "ja_on",
+            "ホウ"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "鵬",
+      "expected": {
+        "k": "鵬",
+        "on": [
+          "ほう"
+        ],
+        "kun": [
+          "おおとり"
+        ],
+        "en": [
+          "Phoenix"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "鵬",
+        "englishGlosses": [
+          "phoenix"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "peng2"
+          ],
+          [
+            "korean_r",
+            "bung"
+          ],
+          [
+            "korean_h",
+            "붕"
+          ],
+          [
+            "vietnam",
+            "Bằng"
+          ],
+          [
+            "ja_on",
+            "ホウ"
+          ],
+          [
+            "ja_kun",
+            "おおとり"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "紳",
+      "expected": {
+        "k": "紳",
+        "on": [
+          "しん"
+        ],
+        "kun": [],
+        "en": [
+          "Sire",
+          "Good Belt",
+          "Gentleman"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "紳",
+        "englishGlosses": [
+          "sire",
+          "good belt",
+          "gentleman"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "shen1"
+          ],
+          [
+            "korean_r",
+            "sin"
+          ],
+          [
+            "korean_h",
+            "신"
+          ],
+          [
+            "vietnam",
+            "Thân"
+          ],
+          [
+            "ja_on",
+            "シン"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "幣",
+      "expected": {
+        "k": "幣",
+        "on": [
+          "へい"
+        ],
+        "kun": [
+          "ぬさ"
+        ],
+        "en": [
+          "Cash",
+          "Bad Habit",
+          "Humble Prefix"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "幣",
+        "englishGlosses": [
+          "cash",
+          "bad habit",
+          "humble prefix",
+          "gift",
+          "Shinto offerings of cloth",
+          "rope",
+          "cut paper"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "bi4"
+          ],
+          [
+            "korean_r",
+            "pye"
+          ],
+          [
+            "korean_h",
+            "폐"
+          ],
+          [
+            "vietnam",
+            "Tệ"
+          ],
+          [
+            "ja_on",
+            "ヘイ"
+          ],
+          [
+            "ja_kun",
+            "ぬさ"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "堺",
+      "expected": {
+        "k": "堺",
+        "on": [
+          "かい"
+        ],
+        "kun": [
+          "さかい"
+        ],
+        "en": [
+          "World"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "堺",
+        "englishGlosses": [
+          "world"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "jie4"
+          ],
+          [
+            "korean_r",
+            "gye"
+          ],
+          [
+            "korean_h",
+            "계"
+          ],
+          [
+            "vietnam",
+            "Giới"
+          ],
+          [
+            "ja_on",
+            "カイ"
+          ],
+          [
+            "ja_kun",
+            "さかい"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "瑞",
+      "expected": {
+        "k": "瑞",
+        "on": [
+          "ずい",
+          "すい"
+        ],
+        "kun": [
+          "みず-",
+          "しるし"
+        ],
+        "en": [
+          "Congratulations"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "瑞",
+        "englishGlosses": [
+          "congratulations"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "rui4"
+          ],
+          [
+            "korean_r",
+            "seo"
+          ],
+          [
+            "korean_h",
+            "서"
+          ],
+          [
+            "vietnam",
+            "Thụy"
+          ],
+          [
+            "ja_on",
+            "ズイ"
+          ],
+          [
+            "ja_on",
+            "スイ"
+          ],
+          [
+            "ja_kun",
+            "みず-"
+          ],
+          [
+            "ja_kun",
+            "しるし"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "秦",
+      "expected": {
+        "k": "秦",
+        "on": [
+          "しん"
+        ],
+        "kun": [
+          "はた"
+        ],
+        "en": [
+          "Manchu Dynasty",
+          "Name Given To Naturalized Foreigners"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "秦",
+        "englishGlosses": [
+          "Manchu dynasty",
+          "name given to naturalized foreigners"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "qin2"
+          ],
+          [
+            "korean_r",
+            "jin"
+          ],
+          [
+            "korean_h",
+            "진"
+          ],
+          [
+            "vietnam",
+            "Tần"
+          ],
+          [
+            "ja_on",
+            "シン"
+          ],
+          [
+            "ja_kun",
+            "はた"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "薩",
+      "expected": {
+        "k": "薩",
+        "on": [
+          "さつ",
+          "さち"
+        ],
+        "kun": [],
+        "en": [
+          "Salvation",
+          "Buddha"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "薩",
+        "englishGlosses": [
+          "salvation",
+          "Buddha"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "sa4"
+          ],
+          [
+            "korean_r",
+            "sal"
+          ],
+          [
+            "korean_h",
+            "살"
+          ],
+          [
+            "vietnam",
+            "Tát"
+          ],
+          [
+            "ja_on",
+            "サツ"
+          ],
+          [
+            "ja_on",
+            "サチ"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "擬",
+      "expected": {
+        "k": "擬",
+        "on": [
+          "ぎ"
+        ],
+        "kun": [
+          "まが.い",
+          "もど.き"
+        ],
+        "en": [
+          "Mimic",
+          "Aim (a Gun) At",
+          "Nominate"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "擬",
+        "englishGlosses": [
+          "mimic",
+          "aim (a gun) at",
+          "nominate",
+          "imitate"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "ni3"
+          ],
+          [
+            "korean_r",
+            "eui"
+          ],
+          [
+            "korean_h",
+            "의"
+          ],
+          [
+            "vietnam",
+            "Nghĩ"
+          ],
+          [
+            "ja_on",
+            "ギ"
+          ],
+          [
+            "ja_kun",
+            "まが.い"
+          ],
+          [
+            "ja_kun",
+            "もど.き"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "菩",
+      "expected": {
+        "k": "菩",
+        "on": [
+          "ぼ"
+        ],
+        "kun": [],
+        "en": [
+          "Kind Of Grass",
+          "Sacred Tree"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "菩",
+        "englishGlosses": [
+          "kind of grass",
+          "sacred tree"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "pu2"
+          ],
+          [
+            "korean_r",
+            "bo"
+          ],
+          [
+            "korean_h",
+            "보"
+          ],
+          [
+            "vietnam",
+            "Bồ"
+          ],
+          [
+            "ja_on",
+            "ボ"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "牟",
+      "expected": {
+        "k": "牟",
+        "on": [
+          "ぼう",
+          "む"
+        ],
+        "kun": [],
+        "en": [
+          "Pupil (eye)",
+          "Moo (cow Sound)"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "牟",
+        "englishGlosses": [
+          "pupil (eye)",
+          "moo (cow sound)"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "mou2"
+          ],
+          [
+            "pinyin",
+            "mu4"
+          ],
+          [
+            "korean_r",
+            "mo"
+          ],
+          [
+            "korean_h",
+            "모"
+          ],
+          [
+            "vietnam",
+            "Mưu"
+          ],
+          [
+            "vietnam",
+            "Mâu"
+          ],
+          [
+            "ja_on",
+            "ボウ"
+          ],
+          [
+            "ja_on",
+            "ム"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "錫",
+      "expected": {
+        "k": "錫",
+        "on": [
+          "せき",
+          "しゃく"
+        ],
+        "kun": [
+          "すず",
+          "たま.う"
+        ],
+        "en": [
+          "Copper",
+          "Tin"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "錫",
+        "englishGlosses": [
+          "copper",
+          "tin"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "xi2"
+          ],
+          [
+            "pinyin",
+            "xi1"
+          ],
+          [
+            "korean_r",
+            "seog"
+          ],
+          [
+            "korean_h",
+            "석"
+          ],
+          [
+            "vietnam",
+            "Tích"
+          ],
+          [
+            "ja_on",
+            "セキ"
+          ],
+          [
+            "ja_on",
+            "シャク"
+          ],
+          [
+            "ja_kun",
+            "すず"
+          ],
+          [
+            "ja_kun",
+            "たま.う"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "芹",
+      "expected": {
+        "k": "芹",
+        "on": [
+          "きん"
+        ],
+        "kun": [
+          "せり"
+        ],
+        "en": [
+          "Parsley"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "芹",
+        "englishGlosses": [
+          "parsley"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "qin2"
+          ],
+          [
+            "korean_r",
+            "geun"
+          ],
+          [
+            "korean_h",
+            "근"
+          ],
+          [
+            "vietnam",
+            "Cần"
+          ],
+          [
+            "ja_on",
+            "キン"
+          ],
+          [
+            "ja_kun",
+            "せり"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "鮎",
+      "expected": {
+        "k": "鮎",
+        "on": [
+          "でん",
+          "ねん"
+        ],
+        "kun": [
+          "あゆ",
+          "なまず"
+        ],
+        "en": [
+          "Freshwater Trout",
+          "Smelt"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "鮎",
+        "englishGlosses": [
+          "freshwater trout",
+          "smelt"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "nian2"
+          ],
+          [
+            "korean_r",
+            "jeom"
+          ],
+          [
+            "korean_h",
+            "점"
+          ],
+          [
+            "vietnam",
+            "Niêm"
+          ],
+          [
+            "ja_on",
+            "デン"
+          ],
+          [
+            "ja_on",
+            "ネン"
+          ],
+          [
+            "ja_kun",
+            "あゆ"
+          ],
+          [
+            "ja_kun",
+            "なまず"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "宵",
+      "expected": {
+        "k": "宵",
+        "on": [
+          "しょう"
+        ],
+        "kun": [
+          "よい"
+        ],
+        "en": [
+          "Wee Hours",
+          "Evening",
+          "Early Night"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "宵",
+        "englishGlosses": [
+          "wee hours",
+          "evening",
+          "early night"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "xiao1"
+          ],
+          [
+            "korean_r",
+            "so"
+          ],
+          [
+            "korean_h",
+            "소"
+          ],
+          [
+            "vietnam",
+            "Tiêu"
+          ],
+          [
+            "ja_on",
+            "ショウ"
+          ],
+          [
+            "ja_kun",
+            "よい"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "蛋",
+      "expected": {
+        "k": "蛋",
+        "on": [
+          "たん"
+        ],
+        "kun": [],
+        "en": [
+          "Barbarian",
+          "Egg"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "蛋",
+        "englishGlosses": [
+          "barbarian",
+          "egg"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "dan4"
+          ],
+          [
+            "korean_r",
+            "dan"
+          ],
+          [
+            "korean_h",
+            "단"
+          ],
+          [
+            "vietnam",
+            "Đản"
+          ],
+          [
+            "ja_on",
+            "タン"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "檀",
+      "expected": {
+        "k": "檀",
+        "on": [
+          "だん",
+          "たん"
+        ],
+        "kun": [
+          "まゆみ"
+        ],
+        "en": [
+          "Cedar",
+          "Sandlewood",
+          "Spindle Tree"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "檀",
+        "englishGlosses": [
+          "cedar",
+          "sandlewood",
+          "spindle tree"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "tan2"
+          ],
+          [
+            "korean_r",
+            "dan"
+          ],
+          [
+            "korean_h",
+            "단"
+          ],
+          [
+            "vietnam",
+            "Đàn"
+          ],
+          [
+            "ja_on",
+            "ダン"
+          ],
+          [
+            "ja_on",
+            "タン"
+          ],
+          [
+            "ja_kun",
+            "まゆみ"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "脊",
+      "expected": {
+        "k": "脊",
+        "on": [
+          "せき"
+        ],
+        "kun": [
+          "せ",
+          "せい"
+        ],
+        "en": [
+          "Stature",
+          "Height"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "脊",
+        "englishGlosses": [
+          "stature",
+          "height"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "ji2"
+          ],
+          [
+            "pinyin",
+            "ji3"
+          ],
+          [
+            "korean_r",
+            "cheog"
+          ],
+          [
+            "korean_h",
+            "척"
+          ],
+          [
+            "vietnam",
+            "Tích"
+          ],
+          [
+            "ja_on",
+            "セキ"
+          ],
+          [
+            "ja_kun",
+            "せ"
+          ],
+          [
+            "ja_kun",
+            "せい"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "抒",
+      "expected": {
+        "k": "抒",
+        "on": [
+          "じょ",
+          "しょ"
+        ],
+        "kun": [
+          "く.む",
+          "の.べる"
+        ],
+        "en": [
+          "Tell",
+          "10**24"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "抒",
+        "englishGlosses": [
+          "tell",
+          "10**24"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "shu1"
+          ],
+          [
+            "korean_r",
+            "seo"
+          ],
+          [
+            "korean_r",
+            "jeo"
+          ],
+          [
+            "korean_h",
+            "서"
+          ],
+          [
+            "korean_h",
+            "저"
+          ],
+          [
+            "vietnam",
+            "Trữ"
+          ],
+          [
+            "ja_on",
+            "ジョ"
+          ],
+          [
+            "ja_on",
+            "ショ"
+          ],
+          [
+            "ja_kun",
+            "く.む"
+          ],
+          [
+            "ja_kun",
+            "の.べる"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "鍾",
+      "expected": {
+        "k": "鍾",
+        "on": [
+          "しょう",
+          "しゅ"
+        ],
+        "kun": [
+          "あつ.める",
+          "さかずき",
+          "かね"
+        ],
+        "en": [
+          "Spindle",
+          "Gather",
+          "Collect"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "鍾",
+        "englishGlosses": [
+          "spindle",
+          "gather",
+          "collect"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "zhong1"
+          ],
+          [
+            "korean_r",
+            "jong"
+          ],
+          [
+            "korean_h",
+            "종"
+          ],
+          [
+            "vietnam",
+            "Chung"
+          ],
+          [
+            "ja_on",
+            "ショウ"
+          ],
+          [
+            "ja_on",
+            "シュ"
+          ],
+          [
+            "ja_kun",
+            "あつ.める"
+          ],
+          [
+            "ja_kun",
+            "さかずき"
+          ],
+          [
+            "ja_kun",
+            "かね"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "𠮟",
+      "expected": {
+        "k": "𠮟",
+        "on": [],
+        "kun": [],
+        "en": []
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "𠮟",
+        "englishGlosses": [],
+        "readings": []
+      },
+      "lookupStatus": "no literal/gloss match",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "剝",
+      "expected": {
+        "k": "剝",
+        "on": [
+          "はく"
+        ],
+        "kun": [
+          "はぐ",
+          "むく",
+          "はげる"
+        ],
+        "en": []
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "剝",
+        "englishGlosses": [],
+        "readings": [
+          [
+            "pinyin",
+            "bo1"
+          ],
+          [
+            "pinyin",
+            "bao1"
+          ],
+          [
+            "ja_on",
+            "ハク"
+          ],
+          [
+            "ja_kun",
+            "はぐ"
+          ],
+          [
+            "ja_kun",
+            "むく"
+          ],
+          [
+            "ja_kun",
+            "はげる"
+          ]
+        ]
+      },
+      "lookupStatus": "no literal/gloss match",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "竣",
+      "expected": {
+        "k": "竣",
+        "on": [
+          "どう",
+          "しゅん"
+        ],
+        "kun": [
+          "わらわ",
+          "わらべ",
+          "おわ.る"
+        ],
+        "en": [
+          "End",
+          "Finish"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "竣",
+        "englishGlosses": [
+          "end",
+          "finish"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "jun4"
+          ],
+          [
+            "korean_r",
+            "jun"
+          ],
+          [
+            "korean_r",
+            "jeon"
+          ],
+          [
+            "korean_h",
+            "준"
+          ],
+          [
+            "korean_h",
+            "전"
+          ],
+          [
+            "vietnam",
+            "Thuân"
+          ],
+          [
+            "vietnam",
+            "Thuyên"
+          ],
+          [
+            "ja_on",
+            "ドウ"
+          ],
+          [
+            "ja_on",
+            "シュン"
+          ],
+          [
+            "ja_kun",
+            "わらわ"
+          ],
+          [
+            "ja_kun",
+            "わらべ"
+          ],
+          [
+            "ja_kun",
+            "おわ.る"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "椋",
+      "expected": {
+        "k": "椋",
+        "on": [
+          "りょう"
+        ],
+        "kun": [
+          "むく"
+        ],
+        "en": [
+          "Type Of Deciduous Tree",
+          "Grey Starling"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "椋",
+        "englishGlosses": [
+          "type of deciduous tree",
+          "grey starling"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "liang2"
+          ],
+          [
+            "korean_r",
+            "ryang"
+          ],
+          [
+            "korean_h",
+            "량"
+          ],
+          [
+            "vietnam",
+            "Lương"
+          ],
+          [
+            "ja_on",
+            "リョウ"
+          ],
+          [
+            "ja_kun",
+            "むく"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "瑚",
+      "expected": {
+        "k": "瑚",
+        "on": [
+          "こ",
+          "ご"
+        ],
+        "kun": [],
+        "en": [
+          "Ancestral Offering Receptacle",
+          "Coral"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "瑚",
+        "englishGlosses": [
+          "ancestral offering receptacle",
+          "coral"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "hu2"
+          ],
+          [
+            "korean_r",
+            "ho"
+          ],
+          [
+            "korean_h",
+            "호"
+          ],
+          [
+            "vietnam",
+            "Hô"
+          ],
+          [
+            "vietnam",
+            "Hồ"
+          ],
+          [
+            "ja_on",
+            "コ"
+          ],
+          [
+            "ja_on",
+            "ゴ"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "嵩",
+      "expected": {
+        "k": "嵩",
+        "on": [
+          "すう",
+          "しゅう"
+        ],
+        "kun": [
+          "かさ",
+          "かさ.む",
+          "たか.い"
+        ],
+        "en": [
+          "Be Aggravated",
+          "Grow Worse",
+          "Grow Bulky"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "嵩",
+        "englishGlosses": [
+          "be aggravated",
+          "grow worse",
+          "grow bulky",
+          "swell"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "song1"
+          ],
+          [
+            "korean_r",
+            "sung"
+          ],
+          [
+            "korean_h",
+            "숭"
+          ],
+          [
+            "vietnam",
+            "Tung"
+          ],
+          [
+            "ja_on",
+            "スウ"
+          ],
+          [
+            "ja_on",
+            "シュウ"
+          ],
+          [
+            "ja_kun",
+            "かさ"
+          ],
+          [
+            "ja_kun",
+            "かさ.む"
+          ],
+          [
+            "ja_kun",
+            "たか.い"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "詮",
+      "expected": {
+        "k": "詮",
+        "on": [
+          "せん"
+        ],
+        "kun": [
+          "せん.ずる",
+          "かい",
+          "あき.らか"
+        ],
+        "en": [
+          "Discussion",
+          "Methods Called For",
+          "Selection"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "詮",
+        "englishGlosses": [
+          "discussion",
+          "methods called for",
+          "selection",
+          "result"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "quan2"
+          ],
+          [
+            "korean_r",
+            "jeon"
+          ],
+          [
+            "korean_h",
+            "전"
+          ],
+          [
+            "vietnam",
+            "Thuyên"
+          ],
+          [
+            "ja_on",
+            "セン"
+          ],
+          [
+            "ja_kun",
+            "せん.ずる"
+          ],
+          [
+            "ja_kun",
+            "かい"
+          ],
+          [
+            "ja_kun",
+            "あき.らか"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "諄",
+      "expected": {
+        "k": "諄",
+        "on": [
+          "しゅん"
+        ],
+        "kun": [
+          "ひちくど.い",
+          "くど.い",
+          "くどくど",
+          "ねんご.ろ"
+        ],
+        "en": [
+          "Tedious"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "諄",
+        "englishGlosses": [
+          "tedious"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "zhun1"
+          ],
+          [
+            "korean_r",
+            "sun"
+          ],
+          [
+            "korean_h",
+            "순"
+          ],
+          [
+            "vietnam",
+            "Truân"
+          ],
+          [
+            "ja_on",
+            "シュン"
+          ],
+          [
+            "ja_kun",
+            "ひちくど.い"
+          ],
+          [
+            "ja_kun",
+            "くど.い"
+          ],
+          [
+            "ja_kun",
+            "くどくど"
+          ],
+          [
+            "ja_kun",
+            "ねんご.ろ"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "叡",
+      "expected": {
+        "k": "叡",
+        "on": [
+          "えい"
+        ],
+        "kun": [
+          "あき.らか"
+        ],
+        "en": [
+          "Intelligence",
+          "Imperial"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "叡",
+        "englishGlosses": [
+          "intelligence",
+          "imperial"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "rui4"
+          ],
+          [
+            "korean_r",
+            "ye"
+          ],
+          [
+            "korean_h",
+            "예"
+          ],
+          [
+            "vietnam",
+            "Duệ"
+          ],
+          [
+            "ja_on",
+            "エイ"
+          ],
+          [
+            "ja_kun",
+            "あき.らか"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "麿",
+      "expected": {
+        "k": "麿",
+        "on": [],
+        "kun": [
+          "まろ"
+        ],
+        "en": [
+          "I",
+          "You",
+          "(kokuji)"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "麿",
+        "englishGlosses": [
+          "I",
+          "you",
+          "(kokuji)"
+        ],
+        "readings": [
+          [
+            "korean_r",
+            "ma"
+          ],
+          [
+            "korean_h",
+            "마"
+          ],
+          [
+            "vietnam",
+            "Ma"
+          ],
+          [
+            "ja_kun",
+            "まろ"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    },
+    {
+      "kind": "kanji",
+      "level": "n1",
+      "key": "璧",
+      "expected": {
+        "k": "璧",
+        "on": [
+          "へき"
+        ],
+        "kun": [
+          "たま"
+        ],
+        "en": [
+          "Sphere",
+          "Ball"
+        ]
+      },
+      "missingMeaning": true,
+      "existingWarning": null,
+      "evidenceSource": "jamdict-data-1.5",
+      "artifactUrl": "https://files.pythonhosted.org/packages/97/a5/075928aed2b3b70459fc1db396397dfa6714d266c143c51af9b648551a4e/jamdict_data-1.5.tar.gz",
+      "dictionaryLicense": "CC-BY-SA-3.0",
+      "decision": "blocked; no active fields changed; independent source/semantic review required",
+      "kanjidic2": {
+        "literal": "璧",
+        "englishGlosses": [
+          "sphere",
+          "ball"
+        ],
+        "readings": [
+          [
+            "pinyin",
+            "bi4"
+          ],
+          [
+            "korean_r",
+            "byeog"
+          ],
+          [
+            "korean_h",
+            "벽"
+          ],
+          [
+            "vietnam",
+            "Bích"
+          ],
+          [
+            "ja_on",
+            "ヘキ"
+          ],
+          [
+            "ja_kun",
+            "たま"
+          ]
+        ]
+      },
+      "lookupStatus": "literal with English glosses found",
+      "assessment": "Exact external snapshot extract only. Match/nonmatch and repeated historical glosses do not certify modern meaning, reading, source correctness or a Mongolian translation. Remains withheld for independent review."
+    }
+  ]
+}

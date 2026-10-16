@@ -1,0 +1,244 @@
+{
+  "provenance": {
+    "id": "mn-n4-examples-corpus-1-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian examples compared to exact Japanese and retained English; stable ID, spelling, reading, English and sentence guards. Independent human semantic review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n4.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "4fff6d0441": {
+      "expected": {
+        "w": "あ",
+        "r": "あ",
+        "en": [
+          "Ah"
+        ]
+      },
+      "examples": {
+        "あ！まずい！ガソリンが切れてきた。": {
+          "en": "Oh, no! We're running out of gas.",
+          "mn": "Өө, болохоо байлаа! Бензин дуусаж байна."
+        },
+        "あ、上書きしちゃった。": {
+          "en": "Uh oh, I saved over it.",
+          "mn": "Өө, өмнөх файлаа дарж хадгалчихлаа."
+        }
+      }
+    },
+    "6a4011f27f": {
+      "expected": {
+        "w": "ああ",
+        "r": "ああ",
+        "en": [
+          "like that"
+        ]
+      },
+      "examples": {
+        "ある人はこうだと言い、またある人はああだと言う。": {
+          "en": "One man says this, another that.",
+          "mn": "Нэг хүн ингэж хэлнэ, өөр нэг нь тэгж хэлнэ."
+        },
+        "ああ、ああいうふうにやるんだな。": {
+          "en": "Oh, so that's how you do it.",
+          "mn": "Аан, тэгж хийдэг юм байна."
+        }
+      }
+    },
+    "c3c3ac9f48": {
+      "expected": {
+        "w": "あいさつする",
+        "r": "あいさつする",
+        "en": [
+          "to greet"
+        ]
+      },
+      "examples": {
+        "私にあいさつするような人はいない。": {
+          "en": "There is no one to greet me.",
+          "mn": "Надтай мэндлэх хүн алга."
+        },
+        "お別れのあいさつに来ました。": {
+          "en": "I've come to say goodbye.",
+          "mn": "Би салах ёс хийхээр ирлээ."
+        }
+      }
+    },
+    "d1a343e501": {
+      "expected": {
+        "w": "間",
+        "r": "あいだ",
+        "en": [
+          "a space"
+        ]
+      },
+      "examples": {
+        "二人の間がしっくり行かない。": {
+          "en": "They don't get along together.",
+          "mn": "Тэр хоёрын харилцаа тааруу байна."
+        },
+        "テニスは学生の間で大変人気がある。": {
+          "en": "Tennis is very popular among students.",
+          "mn": "Оюутнуудын дунд теннис маш алдартай."
+        }
+      }
+    },
+    "54e1f7a772": {
+      "expected": {
+        "w": "合う",
+        "r": "あう",
+        "en": [
+          "to match"
+        ]
+      },
+      "examples": {
+        "このチョッキは前が合わない。": {
+          "en": "This waistcoat won't meet at the front.",
+          "mn": "Энэ хантаазны урд хэсэг нийлж хаагдахгүй байна."
+        },
+        "この白いコートはあなたによく合うでしょう。": {
+          "en": "This white coat will look very nice on you.",
+          "mn": "Энэ цагаан хүрэм танд их зохино."
+        }
+      }
+    },
+    "2a6a55be8d": {
+      "expected": {
+        "w": "あかちゃん",
+        "r": "あかちゃん",
+        "en": [
+          "infant"
+        ]
+      },
+      "examples": {
+        "その赤ちゃんは歯が生えはじめている。": {
+          "en": "The baby is cutting his teeth.",
+          "mn": "Тэр хүүхдийн шүд ургаж эхэлж байна."
+        },
+        "この赤ちゃんは男ですか女ですか。": {
+          "en": "Is this baby a he or a she?",
+          "mn": "Энэ хүүхэд хүү юу, охин уу?"
+        }
+      }
+    },
+    "4a3152836b": {
+      "expected": {
+        "w": "上がる",
+        "r": "あがる",
+        "en": [
+          "to rise"
+        ]
+      },
+      "examples": {
+        "車のバッテリーが上がってるよ。": {
+          "en": "The car battery is dead.",
+          "mn": "Машины зай суучихсан байна."
+        },
+        "やがて雨は上がると思う。": {
+          "en": "I hope it will clear up soon.",
+          "mn": "Удахгүй бороо зогсох байх гэж бодож байна."
+        }
+      }
+    },
+    "e877021bf4": {
+      "expected": {
+        "w": "赤ん坊",
+        "r": "あかんぼう",
+        "en": [
+          "baby"
+        ]
+      },
+      "examples": {
+        "うちの赤ん坊は口をきくようになってきました。": {
+          "en": "Our baby is learning to speak.",
+          "mn": "Манай хүүхэд ярьж сурч эхэлж байна."
+        },
+        "赤ん坊はまだ歩くことができない。": {
+          "en": "The baby is not capable of walking yet.",
+          "mn": "Хүүхэд хараахан алхаж чадахгүй байна."
+        }
+      }
+    },
+    "91f0d5ac9e": {
+      "expected": {
+        "w": "空く",
+        "r": "あく",
+        "en": [
+          "to open",
+          "to become empty"
+        ]
+      },
+      "examples": {
+        "放課後は空いてますか？": {
+          "en": "Are you free after school?",
+          "mn": "Хичээлийн дараа завтай юу?"
+        },
+        "いつも何曜日なら空いていますか？": {
+          "en": "What day are you usually free?",
+          "mn": "Та ихэвчлэн долоо хоногийн аль өдөр завтай байдаг вэ?"
+        }
+      }
+    },
+    "628b6b8e9d": {
+      "expected": {
+        "w": "アクセサリー",
+        "r": "アクセサリー",
+        "en": [
+          "accessory"
+        ]
+      },
+      "examples": {
+        "この服にはどんなアクセサリーを付けるの？": {
+          "en": "What sort of jewelry are you going to wear with this dress?",
+          "mn": "Энэ даашинзтай ямар гоёл зүүх вэ?"
+        },
+        "彼女は服にアクセサリーを付けている。": {
+          "en": "She is wearing accessories.",
+          "mn": "Тэр эмэгтэй хувцсандаа гоёл зүүсэн байна."
+        }
+      }
+    },
+    "f935952fed": {
+      "expected": {
+        "w": "浅い",
+        "r": "あさい",
+        "en": [
+          "shallow",
+          "superficial"
+        ]
+      },
+      "examples": {
+        "この川はあそこで浅くなっている。": {
+          "en": "This river becomes shallow at that point.",
+          "mn": "Энэ гол тэр хэсэгтээ гүехэн болдог."
+        },
+        "この学校のカリキュラムは広く浅い。": {
+          "en": "The curriculum of this school is wide and shallow.",
+          "mn": "Энэ сургуулийн сургалтын хөтөлбөр өргөн хүрээтэй боловч гүнзгий биш."
+        }
+      }
+    },
+    "590fa58ca9": {
+      "expected": {
+        "w": "味",
+        "r": "あじ",
+        "en": [
+          "flavour"
+        ]
+      },
+      "examples": {
+        "このチーズはピリッとした味がする。": {
+          "en": "This cheese has a sharp taste.",
+          "mn": "Энэ бяслаг хурц амттай."
+        },
+        "その魚はさけのような味だった。": {
+          "en": "The fish tasted like salmon.",
+          "mn": "Тэр загас яргай шиг амттай байсан."
+        }
+      }
+    }
+  }
+}

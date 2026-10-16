@@ -1,0 +1,1062 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-six-2-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit semantic categories cross-checked against Japanese entry and retained English gloss, independently unreviewed. Original uncommon senses preserved.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "8ac22c99b5": {
+      "mn": [
+        "хоолой",
+        "гуурс"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "管",
+        "r": "かん",
+        "en": [
+          "pipe",
+          "tube"
+        ]
+      }
+    },
+    "e36dea4beb": {
+      "mn": [
+        "төрх",
+        "харагдах байдал",
+        "үзэгдэл"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "観",
+        "r": "かん",
+        "en": [
+          "look",
+          "appearance",
+          "spectacle"
+        ]
+      }
+    },
+    "982393851b": {
+      "mn": [
+        "байшин",
+        "танхим",
+        "барилга"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "館",
+        "r": "かん",
+        "en": [
+          "house",
+          "hall",
+          "building"
+        ]
+      }
+    },
+    "3032faf776": {
+      "mn": [
+        "хорт хавдар"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "癌",
+        "r": "がん",
+        "en": [
+          "cancer"
+        ]
+      }
+    },
+    "8d1c155181": {
+      "mn": [
+        "хялбар байдал",
+        "амар",
+        "төстэй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "簡易",
+        "r": "かんい",
+        "en": [
+          "simplicity",
+          "easiness",
+          "quasi-"
+        ]
+      }
+    },
+    "c1fa0bdbba": {
+      "mn": [
+        "нүд судлал"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "眼科",
+        "r": "がんか",
+        "en": [
+          "ophthalmology"
+        ]
+      }
+    },
+    "229675dfd1": {
+      "mn": [
+        "гүн мэдрэмж",
+        "хүчтэй сэтгэл хөдлөл"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "感慨",
+        "r": "かんがい",
+        "en": [
+          "strong feelings",
+          "deep emotion"
+        ]
+      }
+    },
+    "fd76167657": {
+      "mn": [
+        "хүйтэн",
+        "хяруу",
+        "жихүүн"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "寒気",
+        "r": "かんき",
+        "en": [
+          "cold",
+          "frost",
+          "chill"
+        ]
+      }
+    },
+    "fdf92d887d": {
+      "mn": [
+        "нүдний алим"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "眼球",
+        "r": "がんきゅう",
+        "en": [
+          "eyeball"
+        ]
+      }
+    },
+    "208f1c892d": {
+      "mn": [
+        "нүдний шил"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "眼鏡",
+        "r": "がんきょう",
+        "en": [
+          "spectacles",
+          "glasses"
+        ]
+      }
+    },
+    "32936b686e": {
+      "mn": [
+        "товч байдал",
+        "хураангуй байдал",
+        "энгийн байдал"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "簡潔",
+        "r": "かんけつ",
+        "en": [
+          "brevity",
+          "conciseness",
+          "simplicity"
+        ]
+      }
+    },
+    "604ed9d75d": {
+      "mn": [
+        "задлан шийдэх",
+        "ангижруулах",
+        "эх үндэс рүү буцах"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "還元",
+        "r": "かんげん",
+        "en": [
+          "resolution",
+          "reduction",
+          "return to origins"
+        ]
+      }
+    },
+    "48c30478f7": {
+      "mn": [
+        "хятад үг",
+        "хятад гаралтай япон үг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "漢語",
+        "r": "かんご",
+        "en": [
+          "Chinese word",
+          "Sino-Japanese word"
+        ]
+      }
+    },
+    "46452a33da": {
+      "mn": [
+        "асаргаа",
+        "цэргийн сувилагч"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "看護",
+        "r": "かんご",
+        "en": [
+          "nursing",
+          "(army) nurse"
+        ]
+      }
+    },
+    "3a51656702": {
+      "mn": [
+        "зөрүүд зан",
+        "гөжүүд байдал"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "頑固",
+        "r": "がんこ",
+        "en": [
+          "stubbornness",
+          "obstinacy"
+        ]
+      }
+    },
+    "83c370d019": {
+      "mn": [
+        "хэвлэн нийтлэх",
+        "хэвлэл"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "刊行",
+        "r": "かんこう",
+        "en": [
+          "publication",
+          "issue"
+        ]
+      }
+    },
+    "d093342f1e": {
+      "mn": [
+        "заншсан үйл",
+        "дадал",
+        "уламжлалт үйл явдал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "慣行",
+        "r": "かんこう",
+        "en": [
+          "customary practice",
+          "habit",
+          "traditional event"
+        ]
+      }
+    },
+    "473f338072": {
+      "mn": [
+        "зөвлөгөө",
+        "зөвлөмж",
+        "анхааруулан сануулах"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "勧告",
+        "r": "かんこく",
+        "en": [
+          "advice",
+          "counsel",
+          "remonstrance"
+        ]
+      }
+    },
+    "0af3e8ffd5": {
+      "mn": [
+        "хөрвүүлэх",
+        "өөрчлөх",
+        "сольж тооцох"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "換算",
+        "r": "かんさん",
+        "en": [
+          "conversion",
+          "change",
+          "exchange"
+        ]
+      }
+    },
+    "2d92e8aee6": {
+      "mn": [
+        "ажиглалт",
+        "хамгаалалт",
+        "хяналт"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "監視",
+        "r": "かんし",
+        "en": [
+          "observation",
+          "guarding",
+          "inspection"
+        ]
+      }
+    },
+    "159cb0134a": {
+      "mn": [
+        "уламжлалт заншил"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "慣習",
+        "r": "かんしゅう",
+        "en": [
+          "usual (historical) custom"
+        ]
+      }
+    },
+    "d880e351b3": {
+      "mn": [
+        "үзэгчид",
+        "ажиглагчид",
+        "танхимын үзэгчид"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "観衆",
+        "r": "かんしゅう",
+        "en": [
+          "spectators",
+          "onlookers",
+          "members of the audience"
+        ]
+      }
+    },
+    "d49401e144": {
+      "mn": [
+        "бичгээр гаргасан өргөдөл хүсэлт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "願書",
+        "r": "がんしょ",
+        "en": [
+          "written application or petition"
+        ]
+      }
+    },
+    "7911d71bb7": {
+      "mn": [
+        "хөндлөн нөлөө",
+        "оролцоо"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "干渉",
+        "r": "かんしょう",
+        "en": [
+          "interference",
+          "intervention"
+        ]
+      }
+    },
+    "fb0ee55a03": {
+      "mn": [
+        "бат бөх",
+        "хатуу",
+        "чийрэг"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "頑丈",
+        "r": "がんじょう",
+        "en": [
+          "solid",
+          "firm",
+          "stout"
+        ]
+      }
+    },
+    "d2365542f9": {
+      "mn": [
+        "хүрэлцэх мэдрэмж",
+        "мэдрэмж",
+        "сэрэл"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "感触",
+        "r": "かんしょく",
+        "en": [
+          "sense of touch",
+          "feeling",
+          "sensation"
+        ]
+      }
+    },
+    "a8c2f09a8d": {
+      "mn": [
+        "чухал",
+        "үндсэн",
+        "шийдвэрлэх"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "肝心",
+        "r": "かんじん",
+        "en": [
+          "essential",
+          "fundamental",
+          "crucial"
+        ]
+      }
+    },
+    "929ca03092": {
+      "mn": [
+        "уухай",
+        "баярын хашхираан"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "歓声",
+        "r": "かんせい",
+        "en": [
+          "cheer",
+          "shout of joy"
+        ]
+      }
+    },
+    "1545c39a58": {
+      "mn": [
+        "гаалийн татвар",
+        "тариф"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "関税",
+        "r": "かんぜい",
+        "en": [
+          "customs",
+          "duty",
+          "tariff"
+        ]
+      }
+    },
+    "0f7cd622f7": {
+      "mn": [
+        "хад чулуу"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "岩石",
+        "r": "がんせき",
+        "en": [
+          "rock"
+        ]
+      }
+    },
+    "c6ca8a3635": {
+      "mn": [
+        "гол шугам",
+        "үндсэн зам"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "幹線",
+        "r": "かんせん",
+        "en": [
+          "main line",
+          "trunk line"
+        ]
+      }
+    },
+    "eac47f495f": {
+      "mn": [
+        "халдвар",
+        "халдвар тархах"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "感染",
+        "r": "かんせん",
+        "en": [
+          "infection",
+          "contagion"
+        ]
+      }
+    },
+    "459d66f088": {
+      "mn": [
+        "энгийн байдал",
+        "энгийн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "簡素",
+        "r": "かんそ",
+        "en": [
+          "simplicity",
+          "plain"
+        ]
+      }
+    },
+    "bc4a6899c9": {
+      "mn": [
+        "үзэл бодлын өнцөг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "観点",
+        "r": "かんてん",
+        "en": [
+          "point of view"
+        ]
+      }
+    },
+    "aa35e35b5e": {
+      "mn": [
+        "мэдрэх чадвар",
+        "газар хөдлөлтийн хүч"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "感度",
+        "r": "かんど",
+        "en": [
+          "sensitivity",
+          "severity (quake)"
+        ]
+      }
+    },
+    "337e74cd80": {
+      "mn": [
+        "заль",
+        "хуурч шалгалт өгөх"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "カンニング",
+        "r": "カンニング",
+        "en": [
+          "cunning",
+          "cheat"
+        ]
+      }
+    },
+    "56d8ac0eb8": {
+      "mn": [
+        "хаанчлалын эхний жил"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "元年",
+        "r": "がんねん",
+        "en": [
+          "first year (of a specific reign)"
+        ]
+      }
+    },
+    "0db42a387a": {
+      "mn": [
+        "удирдлага",
+        "удирдах ажилтнууд",
+        "удирдагчид"
+      ],
+      "topics": [
+        "people",
+        "work"
+      ],
+      "expected": {
+        "w": "幹部",
+        "r": "かんぶ",
+        "en": [
+          "management",
+          "(executive) staff",
+          "leaders"
+        ]
+      }
+    },
+    "3c07e35ffe": {
+      "mn": [
+        "төгс байдал",
+        "бүрэн байдал",
+        "өө сэвгүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "完璧",
+        "r": "かんぺき",
+        "en": [
+          "perfection",
+          "completeness",
+          "flawless"
+        ]
+      }
+    },
+    "b1f166bc1d": {
+      "mn": [
+        "өршөөл",
+        "уучлал",
+        "тэвчээр"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "勘弁",
+        "r": "かんべん",
+        "en": [
+          "pardon",
+          "forgiveness",
+          "forbearance"
+        ]
+      }
+    },
+    "42ee85789e": {
+      "mn": [
+        "гүн мэдрэмж",
+        "үгээр илэрхийлшгүй мэдрэмж",
+        "сэтгэл догдолсон"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "感無量",
+        "r": "かんむりょう",
+        "en": [
+          "deep feeling",
+          "inexpressible feeling",
+          "filled with emotion"
+        ]
+      }
+    },
+    "11d82217b9": {
+      "mn": [
+        "урилга",
+        "элсүүлэх",
+        "дэмжлэг хүсэх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "勧誘",
+        "r": "かんゆう",
+        "en": [
+          "invitation",
+          "solicitation",
+          "canvassing"
+        ]
+      }
+    },
+    "012a1c2c8f": {
+      "mn": [
+        "оролцоо",
+        "оролцох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "関与",
+        "r": "かんよ",
+        "en": [
+          "participation",
+          "taking part in",
+          "participating in"
+        ]
+      }
+    },
+    "ca9c938e99": {
+      "mn": [
+        "тэвчээр",
+        "хүлээцтэй байдал",
+        "өгөөмөр зан"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "寛容",
+        "r": "かんよう",
+        "en": [
+          "forbearance",
+          "tolerance",
+          "generosity"
+        ]
+      }
+    },
+    "7dd8b9ee0b": {
+      "mn": [
+        "нийтлэг",
+        "заншсан"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "慣用",
+        "r": "かんよう",
+        "en": [
+          "common",
+          "customary"
+        ]
+      }
+    },
+    "bad0f9f7f6": {
+      "mn": [
+        "анхнаасаа",
+        "үндсэндээ",
+        "уг чанартаа"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "元来",
+        "r": "がんらい",
+        "en": [
+          "originally",
+          "primarily",
+          "essentially"
+        ]
+      }
+    },
+    "41eaf268bc": {
+      "mn": [
+        "үзэх"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "観覧",
+        "r": "かんらん",
+        "en": [
+          "viewing"
+        ]
+      }
+    },
+    "e5967381ed": {
+      "mn": [
+        "түшмэл",
+        "төрийн захиргааны аппарат"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "官僚",
+        "r": "かんりょう",
+        "en": [
+          "bureaucrat",
+          "bureaucracy"
+        ]
+      }
+    },
+    "3fdc1ebe22": {
+      "mn": [
+        "заншил",
+        "өмнөх жишиг",
+        "уламжлал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "慣例",
+        "r": "かんれい",
+        "en": [
+          "custom",
+          "precedent",
+          "of convention"
+        ]
+      }
+    },
+    "73311cdf3b": {
+      "mn": [
+        "жаран насны төрсөн өдөр"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "還暦",
+        "r": "かんれき",
+        "en": [
+          "60th birthday"
+        ]
+      }
+    },
+    "b78add3bf7": {
+      "mn": [
+        "сүр төрх",
+        "эрхэмсэг байдал"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "貫禄",
+        "r": "かんろく",
+        "en": [
+          "presence",
+          "dignity"
+        ]
+      }
+    },
+    "9ee07e82bb": {
+      "mn": [
+        "хөнгөрөл",
+        "зөөлрүүлэлт"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "緩和",
+        "r": "かんわ",
+        "en": [
+          "relief",
+          "mitigation"
+        ]
+      }
+    },
+    "529c76a4cf": {
+      "mn": [
+        "үе",
+        "хугацаа"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "期",
+        "r": "き",
+        "en": [
+          "period",
+          "time"
+        ]
+      }
+    },
+    "f1134267ba": {
+      "mn": [
+        "цэвэр",
+        "шингэлээгүй",
+        "түүхий"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "生",
+        "r": "き",
+        "en": [
+          "pure",
+          "undiluted",
+          "raw"
+        ]
+      }
+    },
+    "f5be5f6d73": {
+      "mn": [
+        "хуулийн төсөл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "議案",
+        "r": "ぎあん",
+        "en": [
+          "legislative bill"
+        ]
+      }
+    },
+    "967f7bc52a": {
+      "mn": [
+        "гэмтэл",
+        "хор",
+        "аюул"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "危害",
+        "r": "きがい",
+        "en": [
+          "injury",
+          "harm",
+          "danger"
+        ]
+      }
+    },
+    "69d9557e28": {
+      "mn": [
+        "төлөвлөлт",
+        "төсөл"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "企画",
+        "r": "きかく",
+        "en": [
+          "planning",
+          "project"
+        ]
+      }
+    },
+    "fb232e065c": {
+      "mn": [
+        "стандарт",
+        "хэм хэмжээ"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "規格",
+        "r": "きかく",
+        "en": [
+          "standard",
+          "norm"
+        ]
+      }
+    },
+    "a9458f13be": {
+      "mn": [
+        "гоёж хувцаслах"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "着飾る",
+        "r": "きかざる",
+        "en": [
+          "to dress up"
+        ]
+      }
+    },
+    "f5725dfb67": {
+      "mn": [
+        "зүрхшээх",
+        "ичингүйрэх",
+        "биеэ барих"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "気兼ね",
+        "r": "きがね",
+        "en": [
+          "hesitance",
+          "diffidence",
+          "feeling constraint"
+        ]
+      }
+    }
+  }
+}

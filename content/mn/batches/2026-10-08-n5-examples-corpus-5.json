@@ -1,0 +1,358 @@
+{
+  "provenance": {
+    "id": "mn-n5-examples-corpus-5-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian examples compared to exact Japanese and retained English; stable ID, spelling, reading, English and sentence guards. Independent human semantic review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n5.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "96845304fd": {
+      "expected": {
+        "w": "置く",
+        "r": "おく",
+        "en": [
+          "to put"
+        ]
+      },
+      "examples": {
+        "それをテーブルの上に置きなさい。": {
+          "en": "Lay it on the table.",
+          "mn": "Түүнийг ширээн дээр тавь."
+        },
+        "バッグはどこに置けばいいですか。": {
+          "en": "Where can I put my bag?",
+          "mn": "Цүнхээ хаана тавьж болох вэ?"
+        }
+      }
+    },
+    "6c4661d672": {
+      "expected": {
+        "w": "奥さん",
+        "r": "おくさん",
+        "en": [
+          "(honorable) wife"
+        ]
+      },
+      "examples": {
+        "奥さんがどこかに出かけているらしいから。": {
+          "en": "I think his wife is going out of town.",
+          "mn": "Түүний эхнэр хаа нэгтээ явсан бололтой юм."
+        },
+        "奥さんがカンカンだぞ。": {
+          "en": "Your wife is mad at you.",
+          "mn": "Таны эхнэр маш их уурласан байна шүү."
+        }
+      }
+    },
+    "f843b00173": {
+      "expected": {
+        "w": "お酒",
+        "r": "おさけ",
+        "en": [
+          "alcohol",
+          "rice wine"
+        ]
+      },
+      "examples": {
+        "マイクはお酒をやめたの？": {
+          "en": "Is Mike off the bottle?",
+          "mn": "Майк архи уухаа больсон уу?"
+        },
+        "お酒を飲んでもいいですか。": {
+          "en": "Can I drink alcohol?",
+          "mn": "Би согтууруулах ундаа ууж болох уу?"
+        }
+      }
+    },
+    "101d46a061": {
+      "expected": {
+        "w": "お皿",
+        "r": "おさら",
+        "en": [
+          "plate",
+          "dish"
+        ]
+      },
+      "examples": {
+        "スープを入れるくぼんだお皿がありますか。": {
+          "en": "Do you have a bowl for soup?",
+          "mn": "Шөл хийх гүн аяга байна уу?"
+        },
+        "私はお皿を洗ってからテレビを見た。": {
+          "en": "I watched TV after I washed the dishes.",
+          "mn": "Би аяга тавгаа угаасныхаа дараа зурагт үзсэн."
+        }
+      }
+    },
+    "1b89f0f993": {
+      "expected": {
+        "w": "お祖父さん",
+        "r": "おじいさん",
+        "en": [
+          "grandfather",
+          "male senior citizen"
+        ]
+      },
+      "examples": {
+        "おじいさんはとてもゆっくりと話す。": {
+          "en": "Grandfather speaks very slowly.",
+          "mn": "Өвөө маш удаан ярьдаг."
+        },
+        "おじいさんの世話をする。": {
+          "en": "I take care of my grandfather.",
+          "mn": "Би өвөөгөө асардаг."
+        }
+      }
+    },
+    "f2fa049fdd": {
+      "expected": {
+        "w": "教える",
+        "r": "おしえる",
+        "en": [
+          "to teach",
+          "to tell"
+        ]
+      },
+      "examples": {
+        "生年月日を教えてくださいますか？": {
+          "en": "May I have your birth date?",
+          "mn": "Та төрсөн он сар өдрөө хэлж өгч болох уу?"
+        },
+        "あの学校では中国語を教えている。": {
+          "en": "They teach Chinese at that school.",
+          "mn": "Тэр сургуульд хятад хэл заадаг."
+        }
+      }
+    },
+    "ce8facdf69": {
+      "expected": {
+        "w": "押す",
+        "r": "おす",
+        "en": [
+          "to push",
+          "to stamp something"
+        ]
+      },
+      "examples": {
+        "シャッターを押してくれますか。": {
+          "en": "Could you press this button?",
+          "mn": "Зургийн аппаратын товчийг дарж өгч болох уу?"
+        },
+        "このボタンを押せばいいのですよ。": {
+          "en": "Push the button here.",
+          "mn": "Энэ товчийг дарахад болно."
+        }
+      }
+    },
+    "a082687f7a": {
+      "expected": {
+        "w": "遅い",
+        "r": "おそい",
+        "en": [
+          "late",
+          "slow"
+        ]
+      },
+      "examples": {
+        "遅くなっても何もないよりはまし。": {
+          "en": "Better late than never.",
+          "mn": "Оройтсон ч огт үгүйгээс дээр."
+        },
+        "そういうわけで遅くなったのです。": {
+          "en": "That's why I was late.",
+          "mn": "Тийм учраас би хоцорсон юм."
+        }
+      }
+    },
+    "edca336b1f": {
+      "expected": {
+        "w": "お茶",
+        "r": "おちゃ",
+        "en": [
+          "green tea"
+        ]
+      },
+      "examples": {
+        "３時はお茶にしよう。": {
+          "en": "Let's have tea at 3:00.",
+          "mn": "Гурван цагт цай ууцгаая."
+        },
+        "お茶かコーヒーでもいかがですか。": {
+          "en": "Would you like tea or coffee?",
+          "mn": "Цай эсвэл кофе уух уу?"
+        }
+      }
+    },
+    "75a36b034c": {
+      "expected": {
+        "w": "お手洗い",
+        "r": "おてあらい",
+        "en": [
+          "bathroom"
+        ]
+      },
+      "examples": {
+        "お手洗いはどこですか。": {
+          "en": "Where's the restroom?",
+          "mn": "Ариун цэврийн өрөө хаана вэ?"
+        },
+        "お手洗いはどこか教えて下さいませんか。": {
+          "en": "Could you show me where the bathroom is?",
+          "mn": "Ариун цэврийн өрөө хаана байгааг зааж өгч болох уу?"
+        }
+      }
+    },
+    "89807c7c22": {
+      "expected": {
+        "w": "お父さん",
+        "r": "おとうさん",
+        "en": [
+          "(honorable) father"
+        ]
+      },
+      "examples": {
+        "お父さんからことづけがあります。": {
+          "en": "I have a message for you from your father.",
+          "mn": "Ааваас тань танд хэлүүлэх үг байна."
+        },
+        "お父さんとキャッチボールをしたよ。": {
+          "en": "I played catch with my father.",
+          "mn": "Би аавтайгаа бөмбөг шидэлцэж тоглосон."
+        }
+      }
+    },
+    "db32745bbc": {
+      "expected": {
+        "w": "弟",
+        "r": "おとうと",
+        "en": [
+          "younger brother"
+        ]
+      },
+      "examples": {
+        "弟のことなんかほっときなさい。": {
+          "en": "Leave him alone.",
+          "mn": "Дүүгээ зүгээр орхичих."
+        },
+        "マイクは弟にひどいいたずらをした。": {
+          "en": "Mike played a bad trick on his brother.",
+          "mn": "Майк дүүдээ муухай тоглоом хийсэн."
+        }
+      }
+    },
+    "2fd7d45c8d": {
+      "expected": {
+        "w": "男",
+        "r": "おとこ",
+        "en": [
+          "man"
+        ]
+      },
+      "examples": {
+        "その男とつきあってはいけないよ。": {
+          "en": "You must have nothing to do with the man.",
+          "mn": "Тэр эртэй битгий харилц."
+        },
+        "おまえを一人前の男にしてやろう。": {
+          "en": "I will make a man of you.",
+          "mn": "Би чамайг жинхэнэ эр хүн болгоно."
+        }
+      }
+    },
+    "6f664d3ded": {
+      "expected": {
+        "w": "男の子",
+        "r": "おとこのこ",
+        "en": [
+          "boy"
+        ]
+      },
+      "examples": {
+        "あのハンサムな男の子を見て。": {
+          "en": "Look at that good-looking boy.",
+          "mn": "Тэр царайлаг хүүг хар даа."
+        },
+        "男の子のいたずらはしょうがない。": {
+          "en": "Boys will be boys.",
+          "mn": "Хөвгүүдийн сахилгагүйтлийг яалтай билээ."
+        }
+      }
+    },
+    "f0f3826045": {
+      "expected": {
+        "w": "一昨日",
+        "r": "おととい",
+        "en": [
+          "day before yesterday"
+        ]
+      },
+      "examples": {
+        "一昨日、彼は学校を休んだかもしれない。": {
+          "en": "He may have absented himself from school the day before yesterday.",
+          "mn": "Уржигдар тэр хичээлдээ яваагүй байж магадгүй."
+        },
+        "一昨日から、雨が降ったりやんだりしている。": {
+          "en": "It has been raining on and off since the day before yesterday.",
+          "mn": "Уржигдраас хойш бороо үе үе орж байна."
+        }
+      }
+    },
+    "b75778f0ce": {
+      "expected": {
+        "w": "一昨年",
+        "r": "おととし",
+        "en": [
+          "year before last"
+        ]
+      },
+      "examples": {
+        "彼女は、一昨年よりもはるかに暮らし向きがよい。": {
+          "en": "She's far better off than she was the year before last.",
+          "mn": "Түүний амьдрал уржнангийнхаас хавьгүй дээр болсон."
+        }
+      }
+    },
+    "6f5049e2d4": {
+      "expected": {
+        "w": "大人",
+        "r": "おとな",
+        "en": [
+          "adult"
+        ]
+      },
+      "examples": {
+        "大人だけこの映画が見える。": {
+          "en": "Only adults can see this film.",
+          "mn": "Энэ киног зөвхөн насанд хүрэгчид үзэж болно."
+        },
+        "この本は大人によく読まれている。": {
+          "en": "This is a book often read by adults.",
+          "mn": "Энэ номыг насанд хүрэгчид их уншдаг."
+        }
+      }
+    },
+    "3707072a6b": {
+      "expected": {
+        "w": "おなか",
+        "r": "おなか",
+        "en": [
+          "stomach"
+        ]
+      },
+      "examples": {
+        "何かおなかに入れてから出かけなさい。": {
+          "en": "You should put something in your stomach before you go.",
+          "mn": "Гарахаасаа өмнө юм идээрэй."
+        },
+        "ううん、もういいよ。お腹いっぱい。": {
+          "en": "No, thank you. I'm full.",
+          "mn": "Үгүй ээ, баярлалаа. Би цадсан."
+        }
+      }
+    }
+  }
+}

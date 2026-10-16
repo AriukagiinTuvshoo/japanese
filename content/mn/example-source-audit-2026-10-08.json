@@ -1,0 +1,52 @@
+{
+  "createdAt": "2026-10-08",
+  "author": "Arena coding assistant",
+  "method": "Internal Japanese/English comparison, not external verification",
+  "records": [
+    {
+      "id": "6dbf756da1",
+      "expected": {
+        "w": "致す",
+        "r": "いたす",
+        "en": [
+          "(humble) to do"
+        ]
+      },
+      "ja": "別紙の注文書の通り注文いたします。",
+      "en": "I have enclosed your order form.",
+      "level": "n4",
+      "reason": "Japanese orders according to attached form, English states enclosed form; not equivalent.",
+      "decision": "withheld; original source unchanged; independent evidence required"
+    },
+    {
+      "id": "76d4bcd098",
+      "expected": {
+        "w": "うち",
+        "r": "うち",
+        "en": [
+          "within"
+        ]
+      },
+      "ja": "教会は私の家とあなたの家の中にあります。",
+      "en": "The church is between my house and yours.",
+      "level": "n4",
+      "reason": "Japanese 中 wording needs sentence-source review for between sense.",
+      "decision": "withheld; original source unchanged; independent evidence required"
+    },
+    {
+      "id": "9099d4615b",
+      "expected": {
+        "w": "親",
+        "r": "おや",
+        "en": [
+          "parents"
+        ]
+      },
+      "ja": "私たちは親をあてにしてはいけない。",
+      "en": "We should not depend on your parents.",
+      "level": "n4",
+      "reason": "Japanese our parents and English your parents differ; withheld.",
+      "decision": "withheld; original source unchanged; independent evidence required"
+    }
+  ]
+}

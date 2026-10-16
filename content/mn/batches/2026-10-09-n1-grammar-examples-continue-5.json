@@ -1,0 +1,150 @@
+{
+  "provenance": {
+    "id": "mn-n1-grammar-examples-continue-5-2026-10-09",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian compared with exact Japanese and retained English; stable record and headword/pattern guards; independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/grammar/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "grammar": {
+    "o-kagiri-ni": {
+      "expected": {
+        "p": "〜を限りに",
+        "en": "as of (and no longer); for the last time; at the top of (one's voice)"
+      },
+      "examples": {
+        "彼はこの試合を限りに、現役を引退すると発表した。": {
+          "en": "He announced that this game would be his last before retiring.",
+          "mn": "Тэр энэ тоглолтыг сүүлчийнхээ болгож зодог тайлна гэж зарласан."
+        },
+        "遭難者は声を限りに助けを求めたが、誰にも届かなかった。": {
+          "en": "The stranded climber cried out for help at the top of his voice, but no one heard him.",
+          "mn": "Гацсан уулчин хамаг чадлаараа тусламж дуудсан ч хэнд ч сонсогдоогүй."
+        }
+      }
+    },
+    "o-motte": {
+      "expected": {
+        "p": "〜をもって",
+        "en": "with; by means of; as of (a time)"
+      },
+      "examples": {
+        "以上をもちまして、本日の説明会を終了いたします。": {
+          "en": "With that, we conclude today's information session.",
+          "mn": "Ингээд өнөөдрийн мэдээллийн уулзалтыг өндөрлөе."
+        },
+        "選考の結果は、後日書面をもってお知らせいたします。": {
+          "en": "The selection results will be sent to you in writing at a later date.",
+          "mn": "Шалгаруулалтын үр дүнг дараа нь бичгээр мэдэгдэнэ."
+        },
+        "彼はその圧倒的な実力をもって、並み居る強豪を次々と打ち破った。": {
+          "en": "With his overwhelming ability, he defeated one formidable rival after another.",
+          "mn": "Тэр илт давуу чадвараараа хүчтэй өрсөлдөгчдийг нэг нэгээр нь ялсан."
+        }
+      }
+    },
+    "o-mono-tomo-sezu": {
+      "expected": {
+        "p": "〜をものともせず",
+        "en": "in defiance of; undaunted by"
+      },
+      "examples": {
+        "選手たちは激しい雨をものともせず、最後まで全力で戦い抜いた。": {
+          "en": "Undaunted by the heavy rain, the players fought with all their might to the end.",
+          "mn": "Тамирчид ширүүн бороог үл ажран эцэс хүртэл хамаг хүчээрээ өрсөлдсөн."
+        },
+        "彼女は周囲の反対をものともせず、単身で海外へ渡った。": {
+          "en": "Undeterred by the objections of those around her, she went abroad alone.",
+          "mn": "Тэр бусдын эсэргүүцлийг үл тоон ганцаараа гадаад явсан."
+        },
+        "救助隊は余震の危険をものともせずに、倒壊した建物に入っていった。": {
+          "en": "Heedless of the danger of aftershocks, the rescue team went into the collapsed building.",
+          "mn": "Аврах баг дахин газар хөдлөх аюулаас үл эмээн нурсан барилгад орсон."
+        }
+      }
+    },
+    "o-yoso-ni": {
+      "expected": {
+        "p": "〜をよそに",
+        "en": "ignoring; paying no heed to; oblivious to"
+      },
+      "examples": {
+        "親の心配をよそに、息子は連日夜遅くまで遊び歩いている。": {
+          "en": "Heedless of his parents' worry, their son is out until late every night.",
+          "mn": "Хүү эцэг эхийнхээ санаа зовохыг үл тоон орой болгон зугаалж явдаг."
+        },
+        "住民の反対をよそに、高層マンションの建設が始まった。": {
+          "en": "Construction of the high-rise condominium began despite residents' opposition.",
+          "mn": "Оршин суугчдын эсэргүүцлийг үл тоон өндөр орон сууцны барилга эхэлсэн."
+        },
+        "世間の騒ぎをよそに、当の本人はのんびりと釣りを楽しんでいた。": {
+          "en": "Oblivious to all the public fuss, the man at the center of it was leisurely enjoying some fishing.",
+          "mn": "Олны шуугианыг үл тоон тухайн хүн тайван загасчилж байв."
+        }
+      }
+    },
+    "n-ga-tame-ni": {
+      "expected": {
+        "p": "〜んがため(に)",
+        "en": "in order to; for the sake of (strong resolve)"
+      },
+      "examples": {
+        "彼は夢をかなえんがため、全財産をなげうって留学した。": {
+          "en": "To realize his dream, he gave up everything he owned to study abroad.",
+          "mn": "Тэр мөрөөдлөө биелүүлэхийн төлөө бүх хөрөнгөө зарцуулж гадаадад сурсан."
+        },
+        "勝たんがための卑劣な手段は、スポーツマンシップに反する。": {
+          "en": "Resorting to underhanded tactics just to win goes against sportsmanship.",
+          "mn": "Зөвхөн ялахын тулд бузар арга хэрэглэх нь спортын ёс зүйд харш."
+        },
+        "真実を明らかにせんがために、記者たちは危険を顧みず取材を続けた。": {
+          "en": "To bring the truth to light, the reporters kept reporting regardless of the danger.",
+          "mn": "Үнэнийг ил болгохын төлөө сэтгүүлчид аюулыг үл харгалзан сурвалжлагаа үргэлжлүүлсэн."
+        }
+      }
+    },
+    "n-bakari": {
+      "expected": {
+        "p": "〜んばかり",
+        "en": "as if about to; almost (to the point of)"
+      },
+      "examples": {
+        "優勝が決まった瞬間、スタジアムは割れんばかりの拍手に包まれた。": {
+          "en": "The moment the championship was decided, the stadium was filled with deafening applause.",
+          "mn": "Аварга тодорсон мөчид цэнгэлдэх хүрээлэн нүргэлсэн алга ташилтаар дүүрсэн."
+        },
+        "彼女は今にも泣き出さんばかりの顔で、事情を説明した。": {
+          "en": "Looking as though she might burst into tears at any moment, she explained what had happened.",
+          "mn": "Тэр одоо л уйлах гэж байгаа мэт царайтайгаар учрыг тайлбарласан."
+        },
+        "課長は「君のせいだ」と言わんばかりに、私をにらみつけた。": {
+          "en": "The section chief glared at me as if to say, 'This is your fault.'",
+          "mn": "Хэлтсийн дарга «чиний буруу» гэх шиг над руу ширтсэн."
+        }
+      }
+    },
+    "ue-wa": {
+      "expected": {
+        "p": "〜うえは",
+        "en": "now that; since (one must)"
+      },
+      "examples": {
+        "引き受けたうえは、最後まで責任を持ってやり遂げるつもりだ。": {
+          "en": "Now that I've taken it on, I intend to see it through responsibly to the end.",
+          "mn": "Хүлээж авсан болохоор эцэс хүртэл нь хариуцлагатай гүйцээх бодолтой."
+        },
+        "契約を結んだうえは、条件は必ず守っていただきます。": {
+          "en": "Now that the contract has been signed, we'll expect you to abide by its terms.",
+          "mn": "Гэрээ байгуулсан тул нөхцөлүүдийг заавал мөрдөхийг шаардана."
+        },
+        "こうなったうえは、正直にすべてを話すしかない。": {
+          "en": "Now that it has come to this, there's nothing for it but to tell everything honestly.",
+          "mn": "Ийм болсон хойно бүгдийг үнэнээр хэлэхээс өөр аргагүй."
+        }
+      }
+    }
+  }
+}

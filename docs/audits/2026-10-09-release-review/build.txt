@@ -1,0 +1,48 @@
+
+> nihongo-dojo@3.0.0 build
+> tsc -b --noEmit && vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 90 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                            1.63 kB │ gzip:   0.93 kB
+dist/assets/index-CglZfQ1B.css            61.27 kB │ gzip:  10.71 kB
+dist/assets/Account-DY5eG1rS.js            1.05 kB │ gzip:   0.63 kB
+dist/assets/About-BYwK5k7g.js              1.79 kB │ gzip:   0.83 kB
+dist/assets/ReadingList-1haW9iE2.js        2.87 kB │ gzip:   1.31 kB
+dist/assets/Mistakes-D8zzJXBd.js           2.98 kB │ gzip:   1.29 kB
+dist/assets/ListeningList-BzlJ887g.js      3.36 kB │ gzip:   1.46 kB
+dist/assets/Review-hUP4KbB3.js             3.54 kB │ gzip:   1.59 kB
+dist/assets/XRayText-DzGEO90_.js           3.61 kB │ gzip:   1.74 kB
+dist/assets/GrammarList-CvH6WqOH.js        4.49 kB │ gzip:   1.93 kB
+dist/assets/Achievements-0fAxmPRz.js       4.92 kB │ gzip:   1.84 kB
+dist/assets/ReadingDetail-D1QN42aZ.js      5.40 kB │ gzip:   2.07 kB
+dist/assets/Quiz-BUDl3Yfj.js               5.51 kB │ gzip:   2.18 kB
+dist/assets/Writing-CMID2go8.js            5.79 kB │ gzip:   2.25 kB
+dist/assets/GrammarDetail-CTR_0Eot.js      6.54 kB │ gzip:   2.39 kB
+dist/assets/levels-DU2kXVbS.js             7.37 kB │ gzip:   2.46 kB
+dist/assets/Dictionary-Ba_vmM4a.js         7.46 kB │ gzip:   2.75 kB
+dist/assets/Kana-C66CH-Od.js               8.24 kB │ gzip:   3.00 kB
+dist/assets/StrokePad-DJhcv2uW.js          9.05 kB │ gzip:   3.86 kB
+dist/assets/KanjiDetail-Zaj-VfAc.js        9.26 kB │ gzip:   3.29 kB
+dist/assets/Plan-oQayuEu-.js               9.26 kB │ gzip:   3.07 kB
+dist/assets/KanjiList-BODxjCpL.js          9.28 kB │ gzip:   3.46 kB
+dist/assets/Placement-I-oVIh7i.js          9.30 kB │ gzip:   3.13 kB
+dist/assets/MockExam-wWbTO9SG.js           9.41 kB │ gzip:   2.98 kB
+dist/assets/ListeningDetail-DhLYZsnq.js   10.64 kB │ gzip:   3.63 kB
+dist/assets/Admin-g5K6wWAG.js             11.09 kB │ gzip:   3.81 kB
+dist/assets/react-ByNFwixe.js             11.21 kB │ gzip:   4.03 kB
+dist/assets/QuizRunner-DEsRSuDO.js        11.92 kB │ gzip:   3.97 kB
+dist/assets/Session-DYyJBiaN.js           12.01 kB │ gzip:   4.12 kB
+dist/assets/Progress-DynnpkYB.js          12.17 kB │ gzip:   3.85 kB
+dist/assets/WordDetail-BziMrryt.js        12.26 kB │ gzip:   3.88 kB
+dist/assets/study-ChYZBMah.js             13.40 kB │ gzip:   4.31 kB
+dist/assets/Vocabulary-DCrjLPlY.js        16.91 kB │ gzip:   5.59 kB
+dist/assets/Home-BP8r7BxM.js              17.01 kB │ gzip:   5.31 kB
+dist/assets/categories-CrcVBj4m.js       184.14 kB │ gzip:  50.10 kB
+dist/assets/index-BEIq_vIS.js            370.86 kB │ gzip: 118.51 kB
+✓ built in 5.18s
+
+EXIT=0

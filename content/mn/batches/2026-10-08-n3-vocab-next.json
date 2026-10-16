@@ -1,0 +1,1078 @@
+{
+  "provenance": {
+    "id": "mn-n3-vocab-next-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit topics cross-checked individually against retained Japanese headwords/readings and English glosses, including alternate dictionary readings. Independently unreviewed.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n3.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j1308540": {
+      "mn": [
+        "хотын захиргаа"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "市政",
+        "r": "しせい",
+        "en": [
+          "municipal government"
+        ]
+      }
+    },
+    "j1458600": {
+      "mn": [
+        "дотоод хэрэг",
+        "дотоод удирдлага"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "内政",
+        "r": "ないせい",
+        "en": [
+          "domestic affairs",
+          "internal administration"
+        ]
+      }
+    },
+    "j2410580": {
+      "mn": [
+        "зөвлөлдөх",
+        "ярилцаж хэлэлцэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "議す",
+        "r": "ぎす",
+        "en": [
+          "to consult (somebody)",
+          "to talk something over"
+        ]
+      }
+    },
+    "j2842257": {
+      "mn": [
+        "хамт",
+        "дагалдан",
+        "хүмүүсээс бүрдсэн бүлгээр"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "連れ",
+        "r": "づれ",
+        "en": [
+          "in the company of",
+          "accompanied by ...",
+          "as a group comprising ..."
+        ]
+      }
+    },
+    "j2410190": {
+      "mn": [
+        "нүүр нүүрээ харах",
+        "өөдөөс харсан байх",
+        "ирээдүй рүү чиглэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "対す",
+        "r": "たいす",
+        "en": [
+          "to face (each other)",
+          "to be facing",
+          "to be directed toward (the future, etc.)"
+        ]
+      }
+    },
+    "j1401110": {
+      "mn": [
+        "харьцангуй байдал",
+        "харьцангуй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "相対",
+        "r": "そうたい",
+        "en": [
+          "relativity",
+          "relative"
+        ]
+      }
+    },
+    "j1284320": {
+      "mn": [
+        "хамт",
+        "байдал",
+        "нөхцөл"
+      ],
+      "topics": [
+        "people",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "合い",
+        "r": "あい",
+        "en": [
+          "together",
+          "condition",
+          "situation"
+        ]
+      }
+    },
+    "j1284460": {
+      "mn": [
+        "хэмнэл хурдыг тааруулах",
+        "нийлүүлэх",
+        "нэгтгэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "合す",
+        "r": "あわす",
+        "en": [
+          "to match (rhythm, speed, etc.)",
+          "to join together",
+          "to unite"
+        ]
+      }
+    },
+    "j1302200": {
+      "mn": [
+        "төрийн хэрэгт оролцох",
+        "рицүрёо тогтолцооны төрийн зөвлөх"
+      ],
+      "topics": [
+        "society",
+        "people"
+      ],
+      "expected": {
+        "w": "参議",
+        "r": "さんぎ",
+        "en": [
+          "participation in government",
+          "state councillor (in the ritsuryo system)",
+          "state councilor"
+        ]
+      }
+    },
+    "j1633740": {
+      "mn": [
+        "хууль",
+        "дүрэм",
+        "журам"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "定め",
+        "r": "さだめ",
+        "en": [
+          "law",
+          "rule",
+          "regulation"
+        ]
+      }
+    },
+    "j1310290": {
+      "mn": [
+        "салбар",
+        "дэд хэсэг"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "支部",
+        "r": "しぶ",
+        "en": [
+          "branch",
+          "subdivision"
+        ]
+      }
+    },
+    "j1199340": {
+      "mn": [
+        "сүмогийн маваши бүс",
+        "бүс",
+        "ууцны өмсгөл"
+      ],
+      "topics": [
+        "arts",
+        "daily"
+      ],
+      "expected": {
+        "w": "回し",
+        "r": "まわし",
+        "en": [
+          "mawashi",
+          "belt",
+          "loincloth"
+        ]
+      }
+    },
+    "j1605260": {
+      "mn": [
+        "тэнүүчлэн явах"
+      ],
+      "topics": [
+        "actions",
+        "places"
+      ],
+      "expected": {
+        "w": "回る",
+        "r": "もとおる",
+        "en": [
+          "to wander around"
+        ]
+      }
+    },
+    "j1586070": {
+      "mn": [
+        "татагдах байдал",
+        "зохицол",
+        "хүмүүсийн хоорондын нийцэл"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "相性",
+        "r": "あいしょう",
+        "en": [
+          "affinity",
+          "compatibility",
+          "chemistry (between people)"
+        ]
+      }
+    },
+    "j2115450": {
+      "mn": [
+        "хэн нэгэнтэй зөвлөлдөх",
+        "ярилцан хэлэлцэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "議する",
+        "r": "ぎする",
+        "en": [
+          "to consult somebody",
+          "to talk something over"
+        ]
+      }
+    },
+    "j1400650": {
+      "mn": [
+        "маргаан",
+        "хэрүүл",
+        "ажил хаялт"
+      ],
+      "topics": [
+        "society",
+        "work"
+      ],
+      "expected": {
+        "w": "争議",
+        "r": "そうぎ",
+        "en": [
+          "dispute",
+          "quarrel",
+          "strike"
+        ]
+      }
+    },
+    "j1559280": {
+      "mn": [
+        "хэрээр",
+        "дагаад"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "連れて",
+        "r": "つれて",
+        "en": [
+          "as",
+          "in proportion to"
+        ]
+      }
+    },
+    "j2136050": {
+      "mn": [
+        "хэрээр",
+        "хамт",
+        "дагуу"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "に連れ",
+        "r": "につれ",
+        "en": [
+          "as (X, then Y)",
+          "with",
+          "in accordance with"
+        ]
+      }
+    },
+    "j2835737": {
+      "mn": [
+        "хамт яваа хүн",
+        "хань"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "お連れ",
+        "r": "おつれ",
+        "en": [
+          "companion",
+          "company"
+        ]
+      }
+    },
+    "j2785990": {
+      "mn": [
+        "сонгох",
+        "шилэх",
+        "шийдэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "選び",
+        "r": "えらび",
+        "en": [
+          "choosing",
+          "selecting",
+          "deciding (on)"
+        ]
+      }
+    },
+    "j1458150": {
+      "mn": [
+        "дотогшоо зан"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "内向",
+        "r": "ないこう",
+        "en": [
+          "introversion"
+        ]
+      }
+    },
+    "j2567590": {
+      "mn": [
+        "чиглэн",
+        "эсрэг",
+        "талаар"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "に対し",
+        "r": "にたいし",
+        "en": [
+          "towards",
+          "against",
+          "regarding"
+        ]
+      }
+    },
+    "j1372970": {
+      "mn": [
+        "хэд хэдэн удаа",
+        "цөөн удаа"
+      ],
+      "topics": [
+        "quantity",
+        "time"
+      ],
+      "expected": {
+        "w": "数回",
+        "r": "すうかい",
+        "en": [
+          "several times",
+          "a few times"
+        ]
+      }
+    },
+    "j1461110": {
+      "mn": [
+        "дүрвэгч",
+        "нүүлгэн шилжүүлэгдсэн хүн",
+        "ямар нэг зүйл дутсанаас хүндрэлтэй байгаа хүн"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "難民",
+        "r": "なんみん",
+        "en": [
+          "refugee",
+          "displaced person",
+          "person inconvenienced by (lack of something)"
+        ]
+      }
+    },
+    "j1226120": {
+      "mn": [
+        "парламентын суудал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "議席",
+        "r": "ぎせき",
+        "en": [
+          "parliamentary seat"
+        ]
+      }
+    },
+    "j1157230": {
+      "mn": [
+        "хамт хийх"
+      ],
+      "topics": [
+        "actions",
+        "people"
+      ],
+      "expected": {
+        "w": "し合う",
+        "r": "しあう",
+        "en": [
+          "to do together"
+        ]
+      }
+    },
+    "j1284440": {
+      "mn": [
+        "нэгтгэх",
+        "нийлбэрлэх",
+        "хослуулах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "合する",
+        "r": "がっする",
+        "en": [
+          "to join together",
+          "to sum up",
+          "to combine"
+        ]
+      }
+    },
+    "j2272450": {
+      "mn": [
+        "жинхэнэ",
+        "бодит",
+        "цусан төрлийн"
+      ],
+      "topics": [
+        "descriptions",
+        "people"
+      ],
+      "expected": {
+        "w": "実の",
+        "r": "じつの",
+        "en": [
+          "true",
+          "real",
+          "blood-related"
+        ]
+      }
+    },
+    "j1644120": {
+      "mn": [
+        "холбоотны хүчин",
+        "Холбоотнууд"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "連合軍",
+        "r": "れんごうぐん",
+        "en": [
+          "allied forces",
+          "the Allies (e.g. in WWII)"
+        ]
+      }
+    },
+    "j1630630": {
+      "mn": [
+        "тохиролцоо",
+        "дүрэм"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "決め",
+        "r": "きめ",
+        "en": [
+          "agreement",
+          "rule"
+        ]
+      }
+    },
+    "j1699840": {
+      "mn": [
+        "олны хурал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "衆議",
+        "r": "しゅうぎ",
+        "en": [
+          "mass meeting"
+        ]
+      }
+    },
+    "j2410100": {
+      "mn": [
+        "илэрхийлэх",
+        "харуулах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "表す",
+        "r": "ひょうす",
+        "en": [
+          "to express",
+          "to show"
+        ]
+      }
+    },
+    "j1700830": {
+      "mn": [
+        "хотжилт"
+      ],
+      "topics": [
+        "places",
+        "society"
+      ],
+      "expected": {
+        "w": "都市化",
+        "r": "としか",
+        "en": [
+          "urbanization",
+          "urbanisation"
+        ]
+      }
+    },
+    "j2835977": {
+      "mn": [
+        "эзэн хааны ордны дотор",
+        "эзэн хааны ордны хэрэг эрхлэх газар"
+      ],
+      "topics": [
+        "places",
+        "society"
+      ],
+      "expected": {
+        "w": "宮内",
+        "r": "くない",
+        "en": [
+          "inside the Imperial Palace",
+          "Department of the Imperial Household"
+        ]
+      }
+    },
+    "j1293700": {
+      "mn": [
+        "хамгийн",
+        "туйлын"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "最も",
+        "r": "もっとも",
+        "en": [
+          "most",
+          "extremely"
+        ]
+      }
+    },
+    "j2079370": {
+      "mn": [
+        "хэрээр",
+        "хамт",
+        "дагуу"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "に連れて",
+        "r": "につれて",
+        "en": [
+          "as (X, then Y)",
+          "with",
+          "in accordance with"
+        ]
+      }
+    },
+    "j1395110": {
+      "mn": [
+        "бүрэн эрх",
+        "бүх эрх мэдэл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "全権",
+        "r": "ぜんけん",
+        "en": [
+          "plenipotentiary powers",
+          "full authority"
+        ]
+      }
+    },
+    "j1254390": {
+      "mn": [
+        "шийдвэр гаргах эрх",
+        "шийдвэрт санал хэлэх эрх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "決定権",
+        "r": "けっていけん",
+        "en": [
+          "right to decide",
+          "having say (in a decision)"
+        ]
+      }
+    },
+    "j2563800": {
+      "mn": [
+        "бодлоготой холбоотой",
+        "бодлогод үндэслэсэн",
+        "бодлогод хамаарах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "政策関連",
+        "r": "せいさくかんれん",
+        "en": [
+          "policy-related",
+          "policy based",
+          "policy relevant"
+        ]
+      }
+    },
+    "j1399630": {
+      "mn": [
+        "таамаглал",
+        "төсөөлөл",
+        "урьдчилсан таамаг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "想定",
+        "r": "そうてい",
+        "en": [
+          "hypothesis",
+          "supposition",
+          "assumption"
+        ]
+      }
+    },
+    "j1610930": {
+      "mn": [
+        "дотогшоо",
+        "бүрэг"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "内向的",
+        "r": "ないこうてき",
+        "en": [
+          "introverted",
+          "withdrawn"
+        ]
+      }
+    },
+    "j1199590": {
+      "mn": [
+        "дурсамж",
+        "өнгөрснийг эргэн санах",
+        "эргэцүүлэл"
+      ],
+      "topics": [
+        "feelings",
+        "time"
+      ],
+      "expected": {
+        "w": "回想",
+        "r": "かいそう",
+        "en": [
+          "recollection",
+          "retrospection",
+          "reflection"
+        ]
+      }
+    },
+    "j1009800": {
+      "mn": [
+        "чиглэн",
+        "эсрэг",
+        "талаар"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "に対して",
+        "r": "にたいして",
+        "en": [
+          "towards",
+          "against",
+          "regarding"
+        ]
+      }
+    },
+    "j1009810": {
+      "mn": [
+        "талаарх",
+        "доторх",
+        "чиглэсэн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "に対する",
+        "r": "にたいする",
+        "en": [
+          "regarding",
+          "in",
+          "to"
+        ]
+      }
+    },
+    "j1577030": {
+      "mn": [
+        "өөрчлөгдөн болох",
+        "хувиргах",
+        "өөрчлөх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "化す",
+        "r": "かす",
+        "en": [
+          "to change into",
+          "to convert to",
+          "to transform"
+        ]
+      }
+    },
+    "j2527190": {
+      "mn": [
+        "өөрийгөө хувиргах",
+        "өөр дүрд орох",
+        "дүрээ нуух"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "化け",
+        "r": "ばけ",
+        "en": [
+          "transforming oneself",
+          "taking on another form",
+          "disguising oneself"
+        ]
+      }
+    },
+    "j1390310": {
+      "mn": [
+        "дайны ялалт",
+        "ялах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "戦勝",
+        "r": "せんしょう",
+        "en": [
+          "winning a war",
+          "victory"
+        ]
+      }
+    },
+    "j1706770": {
+      "mn": [
+        "тулалдаанд ялах",
+        "ялалт",
+        "ялсан тулалдаан"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "勝戦",
+        "r": "かちいくさ",
+        "en": [
+          "winning a battle",
+          "victory",
+          "victorious battle"
+        ]
+      }
+    },
+    "j1448940": {
+      "mn": [
+        "тухайн яригдаж буй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "当の",
+        "r": "とうの",
+        "en": [
+          "the ... in question"
+        ]
+      }
+    },
+    "j1385400": {
+      "mn": [
+        "нэгдэл",
+        "холбох",
+        "үгийн хувилал"
+      ],
+      "topics": [
+        "actions",
+        "learning"
+      ],
+      "expected": {
+        "w": "接合",
+        "r": "せつごう",
+        "en": [
+          "union",
+          "joining",
+          "conjugation"
+        ]
+      }
+    },
+    "j1006870": {
+      "mn": [
+        "үнэндээ"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "その実",
+        "r": "そのじつ",
+        "en": [
+          "in fact"
+        ]
+      }
+    },
+    "j1605860": {
+      "mn": [
+        "хураангуй",
+        "товч агуулга"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "要約",
+        "r": "ようやく",
+        "en": [
+          "summary",
+          "digest"
+        ]
+      }
+    },
+    "j1254280": {
+      "mn": [
+        "зөвшөөрөл",
+        "батлах"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "決裁",
+        "r": "けっさい",
+        "en": [
+          "sanction",
+          "approval"
+        ]
+      }
+    },
+    "j2424680": {
+      "mn": [
+        "холбоотой",
+        "тухай"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "関して",
+        "r": "かんして",
+        "en": [
+          "in relation to"
+        ]
+      }
+    },
+    "j2567600": {
+      "mn": [
+        "холбогдох",
+        "холбоотой"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "に関し",
+        "r": "にかんし",
+        "en": [
+          "related to",
+          "in relation to"
+        ]
+      }
+    },
+    "j1643910": {
+      "mn": [
+        "сонгуульд ялагдах",
+        "сонгогдохгүй үлдэх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "落選",
+        "r": "らくせん",
+        "en": [
+          "election loss",
+          "rejection"
+        ]
+      }
+    },
+    "j1449110": {
+      "mn": [
+        "эхлэл",
+        "эхлэх үе",
+        "анхны үе"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "当初",
+        "r": "とうしょ",
+        "en": [
+          "beginning",
+          "start",
+          "outset"
+        ]
+      }
+    },
+    "j1612360": {
+      "mn": [
+        "харьцангуй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "割合に",
+        "r": "わりあいに",
+        "en": [
+          "comparatively"
+        ]
+      }
+    },
+    "j1460900": {
+      "mn": [
+        "саад",
+        "тотгор",
+        "бэрхшээл"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "難関",
+        "r": "なんかん",
+        "en": [
+          "barrier",
+          "obstacle",
+          "difficulty"
+        ]
+      }
+    },
+    "j1394470": {
+      "mn": [
+        "сайн засаглал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "善政",
+        "r": "ぜんせい",
+        "en": [
+          "good government"
+        ]
+      }
+    }
+  }
+}

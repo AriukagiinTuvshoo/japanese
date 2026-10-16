@@ -1,0 +1,1071 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-persist-6-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses cross-checked against exact Japanese spelling, reading and retained English; explicit semantic topic assignments. Independent human review outstanding; suspect sources withheld.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "83127f9e88": {
+      "mn": [
+        "аялагчдыг хонуулах хувийн гэр буудал"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "民宿",
+        "r": "みんしゅく",
+        "en": [
+          "private home providing lodging for travelers"
+        ]
+      }
+    },
+    "f95af79628": {
+      "mn": [
+        "ард түмэн",
+        "угсаатан",
+        "үндэстэн"
+      ],
+      "topics": [
+        "society",
+        "people"
+      ],
+      "expected": {
+        "w": "民族",
+        "r": "みんぞく",
+        "en": [
+          "people",
+          "race",
+          "nation"
+        ]
+      }
+    },
+    "c4641cd0b3": {
+      "mn": [
+        "утгагүй зүйл",
+        "утгагүй байх"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "無意味",
+        "r": "むいみ",
+        "en": [
+          "nonsense",
+          "no meaning"
+        ]
+      }
+    },
+    "f15bb22d8e": {
+      "mn": [
+        "уур амьсгал",
+        "сэтгэлийн байдал"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "ムード",
+        "r": "ムード",
+        "en": [
+          "mood"
+        ]
+      }
+    },
+    "abe619fbd8": {
+      "mn": [
+        "чиглэл",
+        "байрлал",
+        "харсан зүг"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "向き",
+        "r": "むき",
+        "en": [
+          "direction",
+          "situation",
+          "exposure"
+        ]
+      }
+    },
+    "edaccd91e0": {
+      "mn": [
+        "дуу цөөтэй",
+        "яриа багатай"
+      ],
+      "topics": [
+        "people",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "無口",
+        "r": "むくち",
+        "en": [
+          "reticence"
+        ]
+      }
+    },
+    "47fbf8e6d0": {
+      "mn": [
+        "… зориулсан",
+        "… чиглэсэн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "向け",
+        "r": "むけ",
+        "en": [
+          "for ~",
+          "oriented towards ~"
+        ]
+      }
+    },
+    "f6bb133d94": {
+      "mn": [
+        "хүргэн"
+      ],
+      "topics": [
+        "people",
+        "relationships"
+      ],
+      "expected": {
+        "w": "婿",
+        "r": "むこ",
+        "en": [
+          "son-in-law"
+        ]
+      }
+    },
+    "8c2103a006": {
+      "mn": [
+        "хүчингүй",
+        "нөлөөгүй",
+        "ашиглах боломжгүй"
+      ],
+      "topics": [
+        "society",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "無効",
+        "r": "むこう",
+        "en": [
+          "invalid",
+          "no effect",
+          "unavailable"
+        ]
+      }
+    },
+    "e167b2659b": {
+      "mn": [
+        "чимээгүй байх",
+        "үг дуугүй"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "無言",
+        "r": "むごん",
+        "en": [
+          "silence"
+        ]
+      }
+    },
+    "10d56dc624": {
+      "mn": [
+        "гэмгүй",
+        "цайлган",
+        "гэнэн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "無邪気",
+        "r": "むじゃき",
+        "en": [
+          "innocence",
+          "simple-mindedness"
+        ]
+      }
+    },
+    "4d0b322af9": {
+      "mn": [
+        "зулгаах",
+        "түүж авах",
+        "урж авах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "毟る",
+        "r": "むしる",
+        "en": [
+          "to pluck",
+          "to pick",
+          "to tear"
+        ]
+      }
+    },
+    "7fe8112793": {
+      "mn": [
+        "төгсгөл",
+        "дүгнэлт",
+        "нэгдэл"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "結び",
+        "r": "むすび",
+        "en": [
+          "ending",
+          "conclusion",
+          "union"
+        ]
+      }
+    },
+    "0c228be627": {
+      "mn": [
+        "холбоо",
+        "харилцаа"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "結び付き",
+        "r": "むすびつき",
+        "en": [
+          "connection",
+          "relation"
+        ]
+      }
+    },
+    "4856036a33": {
+      "mn": [
+        "холбоотой байх",
+        "нэгдэн нийлэх"
+      ],
+      "topics": [
+        "actions",
+        "relationships"
+      ],
+      "expected": {
+        "w": "結び付く",
+        "r": "むすびつく",
+        "en": [
+          "to be connected or related",
+          "to join together"
+        ]
+      }
+    },
+    "d89704e126": {
+      "mn": [
+        "нэгтгэх",
+        "холбох",
+        "уяж тогтоох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "結び付ける",
+        "r": "むすびつける",
+        "en": [
+          "to combine",
+          "to join",
+          "to tie on"
+        ]
+      }
+    },
+    "037267ccd8": {
+      "mn": [
+        "утасгүй холбоо",
+        "радио"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "無線",
+        "r": "むせん",
+        "en": [
+          "wireless",
+          "radio"
+        ]
+      }
+    },
+    "c90e42cede": {
+      "mn": [
+        "зөвшөөрөлгүй",
+        "мэдэгдэлгүй"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "無断",
+        "r": "むだん",
+        "en": [
+          "without permission",
+          "without notice"
+        ]
+      }
+    },
+    "a256653cab": {
+      "mn": [
+        "мэдлэггүй байдал",
+        "мунхаглал"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "無知",
+        "r": "むち",
+        "en": [
+          "ignorance"
+        ]
+      }
+    },
+    "5a1c5f8bb5": {
+      "mn": [
+        "утгагүй",
+        "үндэслэлгүй",
+        "хэтэрсэн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "無茶",
+        "r": "むちゃ",
+        "en": [
+          "absurd",
+          "unreasonable",
+          "excessive"
+        ]
+      }
+    },
+    "55bc6ede70": {
+      "mn": [
+        "эмх замбараагүй",
+        "холилдсон",
+        "будилсан"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "無茶苦茶",
+        "r": "むちゃくちゃ",
+        "en": [
+          "confused",
+          "jumbled",
+          "mixed up"
+        ]
+      }
+    },
+    "8c40174a35": {
+      "mn": [
+        "хоосон",
+        "үр дүнгүй",
+        "дэмий"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "空しい",
+        "r": "むなしい",
+        "en": [
+          "vacant",
+          "futile",
+          "vain"
+        ]
+      }
+    },
+    "305f477ff6": {
+      "mn": [
+        "харамсал",
+        "гомдолтой харамсах"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "無念",
+        "r": "むねん",
+        "en": [
+          "chagrin",
+          "regret"
+        ]
+      }
+    },
+    "28d427532a": {
+      "mn": [
+        "чадваргүй байдал",
+        "чадамжгүй байдал"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "無能",
+        "r": "むのう",
+        "en": [
+          "inefficiency",
+          "incompetence"
+        ]
+      }
+    },
+    "7a146a885e": {
+      "mn": [
+        "үндэслэлгүйгээр",
+        "учиргүй",
+        "бодлогогүйгээр"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "無闇に",
+        "r": "むやみに",
+        "en": [
+          "unreasonably",
+          "absurdly",
+          "recklessly"
+        ]
+      }
+    },
+    "b43cf88b29": {
+      "mn": [
+        "хэрэггүй",
+        "үр ашиггүй",
+        "шаардлагагүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "無用",
+        "r": "むよう",
+        "en": [
+          "useless",
+          "futility",
+          "needlessness"
+        ]
+      }
+    },
+    "a1a3c1e34b": {
+      "mn": [
+        "сүрэглэн бөөгнөрөх",
+        "цуглах"
+      ],
+      "topics": [
+        "nature",
+        "people",
+        "actions"
+      ],
+      "expected": {
+        "w": "群がる",
+        "r": "むらがる",
+        "en": [
+          "to swarm",
+          "to gather"
+        ]
+      }
+    },
+    "7f13f5edd2": {
+      "mn": [
+        "мэдээж",
+        "угаасаа"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "無論",
+        "r": "むろん",
+        "en": [
+          "of course",
+          "naturally"
+        ]
+      }
+    },
+    "76a17f8fb8": {
+      "mn": [
+        "нутгийн алдарт бүтээгдэхүүн"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "名産",
+        "r": "めいさん",
+        "en": [
+          "noted product"
+        ]
+      }
+    },
+    "7d367ef36a": {
+      "mn": [
+        "нэр",
+        "нэршил"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "名称",
+        "r": "めいしょう",
+        "en": [
+          "name"
+        ]
+      }
+    },
+    "c8935df87f": {
+      "mn": [
+        "байгаа онох",
+        "онолт"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "命中",
+        "r": "めいちゅう",
+        "en": [
+          "a hit"
+        ]
+      }
+    },
+    "41432923e5": {
+      "mn": [
+        "илэрхий",
+        "ил",
+        "тодорхой"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "明白",
+        "r": "めいはく",
+        "en": [
+          "obvious",
+          "overt",
+          "plainly"
+        ]
+      }
+    },
+    "1c86d23476": {
+      "mn": [
+        "нэрийн бүртгэл",
+        "нэрсийн жагсаалт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "名簿",
+        "r": "めいぼ",
+        "en": [
+          "register of names"
+        ]
+      }
+    },
+    "b2d9553d2b": {
+      "mn": [
+        "нэр төр",
+        "алдар",
+        "нэр хүнд"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "名誉",
+        "r": "めいよ",
+        "en": [
+          "honor",
+          "credit",
+          "prestige"
+        ]
+      }
+    },
+    "7f1212c5b6": {
+      "mn": [
+        "тодорхой байдал",
+        "тод"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "明瞭",
+        "r": "めいりょう",
+        "en": [
+          "clarity"
+        ]
+      }
+    },
+    "97072c51a7": {
+      "mn": [
+        "гэрэлтэй",
+        "тод",
+        "цоглог"
+      ],
+      "topics": [
+        "descriptions",
+        "feelings"
+      ],
+      "expected": {
+        "w": "明朗",
+        "r": "めいろう",
+        "en": [
+          "bright",
+          "clear",
+          "cheerful"
+        ]
+      }
+    },
+    "98f763f2b9": {
+      "mn": [
+        "үйлдвэрлэгч",
+        "үйлдвэрлэгч компани"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "メーカー",
+        "r": "メーカー",
+        "en": [
+          "maker"
+        ]
+      }
+    },
+    "1ffaa51309": {
+      "mn": [
+        "жин"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "目方",
+        "r": "めかた",
+        "en": [
+          "weight"
+        ]
+      }
+    },
+    "9f9849e508": {
+      "mn": [
+        "ивээл",
+        "хишиг"
+      ],
+      "topics": [
+        "feelings",
+        "society"
+      ],
+      "expected": {
+        "w": "恵み",
+        "r": "めぐみ",
+        "en": [
+          "blessing"
+        ]
+      }
+    },
+    "46e1610514": {
+      "mn": [
+        "ивээх",
+        "өршөөл энэрэл үзүүлэх"
+      ],
+      "topics": [
+        "feelings",
+        "actions"
+      ],
+      "expected": {
+        "w": "恵む",
+        "r": "めぐむ",
+        "en": [
+          "to bless",
+          "to show mercy to"
+        ]
+      }
+    },
+    "647bdea783": {
+      "mn": [
+        "гайхалтай",
+        "сүртэй",
+        "онцгой анзаарагдам"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "目覚しい",
+        "r": "めざましい",
+        "en": [
+          "brilliant",
+          "splendid",
+          "striking"
+        ]
+      }
+    },
+    "d6278ccc96": {
+      "mn": [
+        "сэрэх"
+      ],
+      "topics": [
+        "daily",
+        "actions"
+      ],
+      "expected": {
+        "w": "目覚める",
+        "r": "めざめる",
+        "en": [
+          "to wake up"
+        ]
+      }
+    },
+    "e9948598ba": {
+      "mn": [
+        "эм амьтан"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "雌",
+        "r": "めす",
+        "en": [
+          "female (animal)"
+        ]
+      }
+    },
+    "7f47da093d": {
+      "mn": [
+        "дуудах",
+        "дуудан ирүүлэх",
+        "өмсөх (хүндэтгэлийн хэллэг)"
+      ],
+      "topics": [
+        "learning",
+        "daily",
+        "actions"
+      ],
+      "expected": {
+        "w": "召す",
+        "r": "めす",
+        "en": [
+          "to call",
+          "to send for",
+          "to put on"
+        ]
+      }
+    },
+    "6bbabf5f58": {
+      "mn": [
+        "харц",
+        "нүдний илэрхийлэл",
+        "нүд"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "目付き",
+        "r": "めつき",
+        "en": [
+          "look",
+          "expression of the eyes",
+          "eyes"
+        ]
+      }
+    },
+    "012f6788c4": {
+      "mn": [
+        "зурвас",
+        "мэдээ"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "メッセージ",
+        "r": "メッセージ",
+        "en": [
+          "message"
+        ]
+      }
+    },
+    "f8ce45a1e1": {
+      "mn": [
+        "мөхөл",
+        "сүйрэл",
+        "задрал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "滅亡",
+        "r": "めつぼう",
+        "en": [
+          "downfall",
+          "ruin",
+          "collapse"
+        ]
+      }
+    },
+    "264dbc7769": {
+      "mn": [
+        "мэдээллийн хэрэгсэл"
+      ],
+      "topics": [
+        "learning",
+        "technology"
+      ],
+      "expected": {
+        "w": "メディア",
+        "r": "メディア",
+        "en": [
+          "media"
+        ]
+      }
+    },
+    "bb06602638": {
+      "mn": [
+        "хэмжүүрийн хуваарь",
+        "шаталсан тэмдэглэгээ"
+      ],
+      "topics": [
+        "quantity",
+        "technology"
+      ],
+      "expected": {
+        "w": "目盛",
+        "r": "めもり",
+        "en": [
+          "scale",
+          "gradations"
+        ]
+      }
+    },
+    "08fe449685": {
+      "mn": [
+        "аялгуу"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "メロディー",
+        "r": "メロディー",
+        "en": [
+          "melody"
+        ]
+      }
+    },
+    "9f6a0cdf6c": {
+      "mn": [
+        "биечлэн уулзах",
+        "уулзалт"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "面会",
+        "r": "めんかい",
+        "en": [
+          "interview"
+        ]
+      }
+    },
+    "7169d757fd": {
+      "mn": [
+        "үүргээс чөлөөлөх",
+        "буруутгалгүй болгох",
+        "чөлөөлөлт"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "免除",
+        "r": "めんじょ",
+        "en": [
+          "exemption",
+          "exoneration",
+          "discharge"
+        ]
+      }
+    },
+    "29000d2970": {
+      "mn": [
+        "… руу харж байрлах",
+        "… тал руу харсан байх"
+      ],
+      "topics": [
+        "places",
+        "actions"
+      ],
+      "expected": {
+        "w": "面する",
+        "r": "めんする",
+        "en": [
+          "to face on",
+          "to look out on to"
+        ]
+      }
+    },
+    "1dd4a1423d": {
+      "mn": [
+        "нэр нүүр",
+        "нэр төр",
+        "нэр хүнд"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "面目",
+        "r": "めんぼく",
+        "en": [
+          "face",
+          "honour",
+          "reputation"
+        ]
+      }
+    },
+    "ac2fe3732a": {
+      "mn": [
+        "бий болгох",
+        "байгуулах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "設ける",
+        "r": "もうける",
+        "en": [
+          "to create",
+          "to establish"
+        ]
+      }
+    },
+    "b843d494ba": {
+      "mn": [
+        "санал тавих",
+        "санал болгох"
+      ],
+      "topics": [
+        "work",
+        "actions"
+      ],
+      "expected": {
+        "w": "申し入れる",
+        "r": "もうしいれる",
+        "en": [
+          "to propose",
+          "to suggest"
+        ]
+      }
+    },
+    "c6ce77ca05": {
+      "mn": [
+        "өргөдөл",
+        "бүртгүүлэх хүсэлт",
+        "хүсэлт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "申し込み",
+        "r": "もうしこみ",
+        "en": [
+          "application",
+          "entry",
+          "request"
+        ]
+      }
+    },
+    "5aa2622835": {
+      "mn": [
+        "санал",
+        "хүсэлт",
+        "шаардлага"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "申出",
+        "r": "もうしで",
+        "en": [
+          "proposal",
+          "request",
+          "claim"
+        ]
+      }
+    },
+    "ba2699e0fa": {
+      "mn": [
+        "мэдэгдэх",
+        "хэлэх",
+        "санал гаргах"
+      ],
+      "topics": [
+        "learning",
+        "actions"
+      ],
+      "expected": {
+        "w": "申し出る",
+        "r": "もうしでる",
+        "en": [
+          "to report to",
+          "to tell",
+          "to suggest"
+        ]
+      }
+    },
+    "ab6f675ec9": {
+      "mn": [
+        "эсэргүүцэх зүйл",
+        "дутагдал"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "申し分",
+        "r": "もうしぶん",
+        "en": [
+          "objection",
+          "shortcomings"
+        ]
+      }
+    }
+  }
+}

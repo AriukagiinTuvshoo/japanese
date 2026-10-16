@@ -1,0 +1,1084 @@
+{
+  "provenance": {
+    "id": "mn-n4-vocab-more-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit topics cross-checked individually against retained Japanese headwords/readings and English glosses, including alternate dictionary readings. Independently unreviewed.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n4.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j1304560": {
+      "mn": [
+        "илүү цагийн ажил"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "残業",
+        "r": "ざんぎょう",
+        "en": [
+          "overtime (work)"
+        ]
+      }
+    },
+    "j1553660": {
+      "mn": [
+        "хоёр гар",
+        "хоёр гарын мөч",
+        "арав"
+      ],
+      "topics": [
+        "body",
+        "quantity"
+      ],
+      "expected": {
+        "w": "両手",
+        "r": "りょうて",
+        "en": [
+          "both hands",
+          "both arms",
+          "ten"
+        ]
+      }
+    },
+    "j1478730": {
+      "mn": [
+        "тогтоох",
+        "нотлох",
+        "тодруулах"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "判明",
+        "r": "はんめい",
+        "en": [
+          "establishing",
+          "proving",
+          "ascertaining"
+        ]
+      }
+    },
+    "j1342860": {
+      "mn": [
+        "анхлан суралцагч"
+      ],
+      "topics": [
+        "learning",
+        "people"
+      ],
+      "expected": {
+        "w": "初心者",
+        "r": "しょしんしゃ",
+        "en": [
+          "beginner"
+        ]
+      }
+    },
+    "j1412270": {
+      "mn": [
+        "эд зүйл",
+        "бараа",
+        "бүтээгдэхүүн"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "代物",
+        "r": "しろもの",
+        "en": [
+          "article",
+          "goods",
+          "product"
+        ]
+      }
+    },
+    "j1451370": {
+      "mn": [
+        "хөдлөх хөрөнгө",
+        "хувийн эд зүйл"
+      ],
+      "topics": [
+        "work",
+        "daily"
+      ],
+      "expected": {
+        "w": "動産",
+        "r": "どうさん",
+        "en": [
+          "personal property",
+          "personal effects"
+        ]
+      }
+    },
+    "j1633830": {
+      "mn": [
+        "хүнд байдал",
+        "бэрх нөхцөл"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "難場",
+        "r": "なんば",
+        "en": [
+          "predicament",
+          "difficult situation"
+        ]
+      }
+    },
+    "j1292400": {
+      "mn": [
+        "дахин нээх",
+        "үргэлжлүүлэх",
+        "дахин эхлэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "再開",
+        "r": "さいかい",
+        "en": [
+          "reopening",
+          "resumption",
+          "restarting"
+        ]
+      }
+    },
+    "j1302110": {
+      "mn": [
+        "оролцогч",
+        "тэмцээнд оролцогч"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "参加者",
+        "r": "さんかしゃ",
+        "en": [
+          "participant",
+          "entrant"
+        ]
+      }
+    },
+    "j1267170": {
+      "mn": [
+        "түүхэн үйл явдал",
+        "эртний хэрэг",
+        "уламжлал"
+      ],
+      "topics": [
+        "society",
+        "time"
+      ],
+      "expected": {
+        "w": "故事",
+        "r": "こじ",
+        "en": [
+          "historical event",
+          "ancient event",
+          "tradition"
+        ]
+      }
+    },
+    "j1186990": {
+      "mn": [
+        "химийн нэгдэл"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "化合物",
+        "r": "かごうぶつ",
+        "en": [
+          "compound"
+        ]
+      }
+    },
+    "j1627660": {
+      "mn": [
+        "шүүмжлэгч",
+        "тойм бичигч"
+      ],
+      "topics": [
+        "people",
+        "arts"
+      ],
+      "expected": {
+        "w": "評者",
+        "r": "ひょうしゃ",
+        "en": [
+          "critic",
+          "reviewer"
+        ]
+      }
+    },
+    "j1647340": {
+      "mn": [
+        "байгаль",
+        "байгалийн ертөнц",
+        "байгалийн хүрээ"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "自然界",
+        "r": "しぜんかい",
+        "en": [
+          "nature",
+          "the natural world",
+          "realm of nature"
+        ]
+      }
+    },
+    "j1324350": {
+      "mn": [
+        "залуу эрэгтэй",
+        "залуу эмэгтэй",
+        "залуус"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "若者",
+        "r": "わかもの",
+        "en": [
+          "young man",
+          "young woman",
+          "young people"
+        ]
+      }
+    },
+    "j1763590": {
+      "mn": [
+        "хөрсний үржил шим",
+        "хөрсний чанар",
+        "хөрсний өгөөж"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "地味",
+        "r": "ちみ",
+        "en": [
+          "soil fertility",
+          "soil quality",
+          "productivity of the soil"
+        ]
+      }
+    },
+    "j1985070": {
+      "mn": [
+        "явах",
+        "орхин гарах",
+        "хөдөлж эхлэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "お立ち",
+        "r": "おたち",
+        "en": [
+          "departure",
+          "leaving",
+          "starting"
+        ]
+      }
+    },
+    "j2016360": {
+      "mn": [
+        "ялангуяа",
+        "онцгойлон",
+        "чин сэтгэлээсээ"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "立てて",
+        "r": "たてて",
+        "en": [
+          "especially",
+          "particularly",
+          "wholeheartedly"
+        ]
+      }
+    },
+    "j2721460": {
+      "mn": [
+        "сүмд биеийн хүчний ажил хийдэг доод зэрэглэлийн лам",
+        "сүмийн эрэгтэй ажилтан"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "能力",
+        "r": "のうりき",
+        "en": [
+          "low-ranking priest who does manual labour at a temple",
+          "male temple employee"
+        ]
+      }
+    },
+    "j1202460": {
+      "mn": [
+        "харагдах орчин задгай болох",
+        "дэлгэрэх",
+        "зам буюу харагдац чөлөөтэй болох"
+      ],
+      "topics": [
+        "actions",
+        "places"
+      ],
+      "expected": {
+        "w": "開ける",
+        "r": "ひらける",
+        "en": [
+          "to open out (of a view, scenery, etc.)",
+          "to spread out",
+          "to become clear (of a road, visibility, etc.)"
+        ]
+      }
+    },
+    "j1223270": {
+      "mn": [
+        "сэтгүүлчдийн бүлэг",
+        "хэвлэлийн сурвалжлагчид"
+      ],
+      "topics": [
+        "people",
+        "work"
+      ],
+      "expected": {
+        "w": "記者団",
+        "r": "きしゃだん",
+        "en": [
+          "press group",
+          "press corps",
+          "group of reporters"
+        ]
+      }
+    },
+    "j1240390": {
+      "mn": [
+        "туйлын бүс",
+        "туйл",
+        "хамгийн алс газар"
+      ],
+      "topics": [
+        "places",
+        "nature"
+      ],
+      "expected": {
+        "w": "極地",
+        "r": "きょくち",
+        "en": [
+          "polar regions",
+          "the pole",
+          "farthest land"
+        ]
+      }
+    },
+    "j1328290": {
+      "mn": [
+        "зохицуулалт",
+        "төлөвлөгөө",
+        "хөтөлбөр"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "手はず",
+        "r": "てはず",
+        "en": [
+          "arrangements",
+          "plan",
+          "programme"
+        ]
+      }
+    },
+    "j1598320": {
+      "mn": [
+        "бариул",
+        "хашлага",
+        "шатны бариул"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "手すり",
+        "r": "てすり",
+        "en": [
+          "handrail",
+          "railing",
+          "banister"
+        ]
+      }
+    },
+    "j1698480": {
+      "mn": [
+        "гараа хөдөлгөх байдал"
+      ],
+      "topics": [
+        "body",
+        "actions"
+      ],
+      "expected": {
+        "w": "手つき",
+        "r": "てつき",
+        "en": [
+          "manner of using one's hands"
+        ]
+      }
+    },
+    "j2407970": {
+      "mn": [
+        "энэ арга",
+        "энэ маяг",
+        "ийм төрлийн зүйл"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "この手",
+        "r": "このて",
+        "en": [
+          "this way (of doing)",
+          "this method",
+          "this sort (of thing)"
+        ]
+      }
+    },
+    "j2829760": {
+      "mn": [
+        "тийм төрлийн",
+        "тэр арга",
+        "тэр нүүдэл"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "その手",
+        "r": "そのて",
+        "en": [
+          "that kind of",
+          "that way",
+          "that move"
+        ]
+      }
+    },
+    "j2389200": {
+      "mn": [
+        "хандлага",
+        "үйл ажиллагааны чиглэл",
+        "чиг баримжаа"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "方向性",
+        "r": "ほうこうせい",
+        "en": [
+          "trend",
+          "course of action",
+          "direction"
+        ]
+      }
+    },
+    "j1532540": {
+      "mn": [
+        "маргааш өглөө"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "明朝",
+        "r": "みょうちょう",
+        "en": [
+          "tomorrow morning"
+        ]
+      }
+    },
+    "j1516960": {
+      "mn": [
+        "дөрвөлжин"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "方形",
+        "r": "ほうけい",
+        "en": [
+          "square"
+        ]
+      }
+    },
+    "j1303500": {
+      "mn": [
+        "хурал тарах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "散会",
+        "r": "さんかい",
+        "en": [
+          "adjournment"
+        ]
+      }
+    },
+    "j1377600": {
+      "mn": [
+        "шударга хүн"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "正直者",
+        "r": "しょうじきもの",
+        "en": [
+          "honest person"
+        ]
+      }
+    },
+    "j2845675": {
+      "mn": [
+        "Жүчхэ үзэл",
+        "бие даах үзэл",
+        "Хойд Солонгосын Жүчхэ тоолол"
+      ],
+      "topics": [
+        "society",
+        "time"
+      ],
+      "expected": {
+        "w": "主体",
+        "r": "チュチェ",
+        "en": [
+          "Juche (North Korean political ideology)",
+          "self-reliance",
+          "Juche (North Korean calendar)"
+        ]
+      }
+    },
+    "j1281090": {
+      "mn": [
+        "сэтгэх арга"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "考え方",
+        "r": "かんがえかた",
+        "en": [
+          "way of thinking"
+        ]
+      }
+    },
+    "j1591920": {
+      "mn": [
+        "чадвартай хүн"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "切手",
+        "r": "きれて",
+        "en": [
+          "man of ability"
+        ]
+      }
+    },
+    "j2424100": {
+      "mn": [
+        "бива буюу шамисэний хөг тохируулах чих"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "転手",
+        "r": "てんじゅ",
+        "en": [
+          "tuning peg (on a biwa or shamisen)"
+        ]
+      }
+    },
+    "j1401810": {
+      "mn": [
+        "удирдах",
+        "хянах",
+        "удирдагч"
+      ],
+      "topics": [
+        "work",
+        "people"
+      ],
+      "expected": {
+        "w": "総理",
+        "r": "そうり",
+        "en": [
+          "leading",
+          "overseeing",
+          "leader"
+        ]
+      }
+    },
+    "j1710720": {
+      "mn": [
+        "зочин"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "訪問者",
+        "r": "ほうもんしゃ",
+        "en": [
+          "visitor"
+        ]
+      }
+    },
+    "j1328080": {
+      "mn": [
+        "гар хөл",
+        "мөч",
+        "дуулгавартай туслагч"
+      ],
+      "topics": [
+        "body",
+        "people"
+      ],
+      "expected": {
+        "w": "手足",
+        "r": "てあし",
+        "en": [
+          "hands and feet",
+          "limbs",
+          "person at one's beck and call"
+        ]
+      }
+    },
+    "j1305950": {
+      "mn": [
+        "хэрэглэх арга",
+        "харьцах байдал",
+        "туслах ажилтныг удирдах"
+      ],
+      "topics": [
+        "work",
+        "actions"
+      ],
+      "expected": {
+        "w": "使い方",
+        "r": "つかいかた",
+        "en": [
+          "way to use something",
+          "treatment",
+          "management (of help)"
+        ]
+      }
+    },
+    "j1492580": {
+      "mn": [
+        "хачнаар",
+        "сониноор",
+        "нууцлаг байдлаар"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "不思議に",
+        "r": "ふしぎに",
+        "en": [
+          "strangely",
+          "oddly",
+          "mysteriously"
+        ]
+      }
+    },
+    "j1505550": {
+      "mn": [
+        "захидлаар харилцах",
+        "захидал солилцох"
+      ],
+      "topics": [
+        "learning",
+        "relationships"
+      ],
+      "expected": {
+        "w": "文通",
+        "r": "ぶんつう",
+        "en": [
+          "correspondence",
+          "exchange of letters"
+        ]
+      }
+    },
+    "j1490700": {
+      "mn": [
+        "барааны нэр төрөл",
+        "бараа",
+        "эд зүйлийн жагсаалт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "品目",
+        "r": "ひんもく",
+        "en": [
+          "item",
+          "commodity",
+          "list of articles"
+        ]
+      }
+    },
+    "j2828540": {
+      "mn": [
+        "хийн төлбөр"
+      ],
+      "topics": [
+        "daily",
+        "work"
+      ],
+      "expected": {
+        "w": "ガス代",
+        "r": "ガスだい",
+        "en": [
+          "gas bill"
+        ]
+      }
+    },
+    "j1223950": {
+      "mn": [
+        "босож зогсох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "起立",
+        "r": "きりつ",
+        "en": [
+          "standing up"
+        ]
+      }
+    },
+    "j2024730": {
+      "mn": [
+        "гэрэлтэй газар",
+        "гэрэл",
+        "ил тод байдал"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "明るみ",
+        "r": "あかるみ",
+        "en": [
+          "bright place",
+          "the light",
+          "the open"
+        ]
+      }
+    },
+    "j1584920": {
+      "mn": [
+        "урьдчилан хэлэх",
+        "зөгнөл",
+        "таамаг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "予言",
+        "r": "よげん",
+        "en": [
+          "prediction",
+          "prophecy",
+          "prognostication"
+        ]
+      }
+    },
+    "j1183740": {
+      "mn": [
+        "тоглолт",
+        "хөгжмийн концерт"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "音楽会",
+        "r": "おんがくかい",
+        "en": [
+          "concert",
+          "recital"
+        ]
+      }
+    },
+    "j1377530": {
+      "mn": [
+        "жинхэнэ мөн чанар",
+        "жинхэнэ дүр",
+        "үнэн төрх"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "正体",
+        "r": "しょうたい",
+        "en": [
+          "true character",
+          "true form",
+          "true colors (colours)"
+        ]
+      }
+    },
+    "j1202870": {
+      "mn": [
+        "шинэ дэлгүүр нээх",
+        "өдөр тутам дэлгүүрээ нээх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "開店",
+        "r": "かいてん",
+        "en": [
+          "opening a new shop",
+          "opening a shop (for the day)"
+        ]
+      }
+    },
+    "j1683670": {
+      "mn": [
+        "хамтарсан компани"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "合弁会社",
+        "r": "ごうべんがいしゃ",
+        "en": [
+          "joint venture or concern"
+        ]
+      }
+    },
+    "j2124950": {
+      "mn": [
+        "хэрэглэгчдийн нийгэм"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "消費社会",
+        "r": "しょうひしゃかい",
+        "en": [
+          "consumer society"
+        ]
+      }
+    },
+    "j2272810": {
+      "mn": [
+        "гол",
+        "үндсэн",
+        "тэргүүлэх"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "主な",
+        "r": "おもな",
+        "en": [
+          "chief",
+          "main",
+          "principal"
+        ]
+      }
+    },
+    "j1270290": {
+      "mn": [
+        "хамтын ажиллагаа",
+        "хамтран ажиллах"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "ご協力",
+        "r": "ごきょうりょく",
+        "en": [
+          "cooperation",
+          "collaboration"
+        ]
+      }
+    },
+    "j1600500": {
+      "mn": [
+        "зорчигч",
+        "унаач",
+        "сайн унаач"
+      ],
+      "topics": [
+        "people",
+        "places"
+      ],
+      "expected": {
+        "w": "乗手",
+        "r": "のりて",
+        "en": [
+          "passenger",
+          "rider",
+          "good rider"
+        ]
+      }
+    },
+    "j1312150": {
+      "mn": [
+        "хараа",
+        "харах чадвар",
+        "харааны хурц байдал"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "視力",
+        "r": "しりょく",
+        "en": [
+          "eyesight",
+          "vision",
+          "visual acuity"
+        ]
+      }
+    },
+    "j1984090": {
+      "mn": [
+        "төвөг",
+        "чирэгдэл"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "お手数",
+        "r": "おてすう",
+        "en": [
+          "trouble",
+          "bother"
+        ]
+      }
+    },
+    "j1309960": {
+      "mn": [
+        "удирдагч",
+        "чиглүүлэгч",
+        "зөвлөх"
+      ],
+      "topics": [
+        "people",
+        "learning"
+      ],
+      "expected": {
+        "w": "指導者",
+        "r": "しどうしゃ",
+        "en": [
+          "leader",
+          "guide",
+          "mentor"
+        ]
+      }
+    },
+    "j1679500": {
+      "mn": [
+        "паспорт зэрэг баримт олгох"
+      ],
+      "topics": [
+        "work",
+        "society"
+      ],
+      "expected": {
+        "w": "発給",
+        "r": "はっきゅう",
+        "en": [
+          "issuance (e.g. of a passport)",
+          "issuing"
+        ]
+      }
+    },
+    "j1310280": {
+      "mn": [
+        "захирагч",
+        "удирдагч",
+        "эрх баригч"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "支配者",
+        "r": "しはいしゃ",
+        "en": [
+          "governor",
+          "leader",
+          "ruler"
+        ]
+      }
+    },
+    "j1004550": {
+      "mn": [
+        "чадах",
+        "боломжтой байх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "事ができる",
+        "r": "ことができる",
+        "en": [
+          "to be able (to)",
+          "to be possible (to)"
+        ]
+      }
+    }
+  }
+}

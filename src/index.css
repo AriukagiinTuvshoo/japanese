@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+/* ==================================================================
+   NIHONGO DŌJŌ — ДИЗАЙНЫ СИСТЕМ
+   Япон цаас (和紙), бэх (墨), тамга (朱) өнгөн дээр тогтоосон.
+   Зорилго: тайван, уншихад хялбар, «төлбөртэй бүтээгдэхүүн»-ийн мэдрэмж.
+   ================================================================== */
+
+@theme {
+  --font-sans: "Manrope", "Noto Sans JP", system-ui, sans-serif;
+  --font-jp: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+  --font-mincho: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* 和紙 — цаас */
+  --color-washi-50: #fcfaf5;
+  --color-washi-100: #f7f2e8;
+  --color-washi-200: #eee6d6;
+  --color-washi-300: #e0d4bd;
+  --color-washi-400: #c6b696;
+  --color-washi-500: #a39271;
+
+  /* 墨 — бэх */
+  --color-sumi-950: #121110;
+  --color-sumi-900: #1c1b18;
+  --color-sumi-800: #2a2824;
+  --color-sumi-700: #3e3b35;
+  --color-sumi-600: #58544b;
+  --color-sumi-500: #78736a;
+  --color-sumi-400: #9b968c;
+  --color-sumi-300: #b8b3a9;
+
+  /* 朱 — улаан */
+  --color-shu-50: #fdf1ee;
+  --color-shu-100: #f9dcd4;
+  --color-shu-200: #f3b9ab;
+  --color-shu-400: #e0654c;
+  --color-shu-500: #cc4630;
+  --color-shu-600: #ac3622;
+  --color-shu-700: #8a2b1b;
+
+  /* 藍 — хөх */
+  --color-ai-50: #eef2f8;
+  --color-ai-100: #d9e2ef;
+  --color-ai-200: #b6c8e0;
+  --color-ai-400: #4b6e9e;
+  --color-ai-500: #2f5385;
+  --color-ai-600: #213e66;
+  --color-ai-700: #182e4c;
+
+  /* 抹茶 — ногоон */
+  --color-matcha-50: #f1f5ea;
+  --color-matcha-100: #dfe9cf;
+  --color-matcha-200: #c3d6a6;
+  --color-matcha-400: #84a75a;
+  --color-matcha-500: #688c45;
+  --color-matcha-600: #527037;
+
+  /* 金 — алт */
+  --color-kin-50: #fbf4e3;
+  --color-kin-100: #f3e3ba;
+  --color-kin-400: #d2a84a;
+  --color-kin-500: #b88a2d;
+  --color-kin-600: #936c20;
+
+  /* 紫 — нил ягаан */
+  --color-murasaki-50: #f5f0f8;
+  --color-murasaki-100: #e6dbee;
+  --color-murasaki-400: #8b65a6;
+  --color-murasaki-500: #6f4b89;
+  --color-murasaki-600: #573b6c;
+
+  --animate-rise: rise 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-pop: pop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  --animate-fade: fade 0.25s ease both;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes pop {
+  from { opacity: 0; transform: scale(0.94); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes shake {
+  0%, 100% { transform: none; }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+@keyframes ink {
+  from { stroke-dashoffset: var(--len, 300); }
+  to { stroke-dashoffset: 0; }
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    margin: 0;
+    background: var(--color-washi-100);
+    color: var(--color-sumi-900);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection { background: var(--color-shu-500); color: #fff; }
+  :focus-visible { outline: 2px solid var(--color-ai-500); outline-offset: 2px; border-radius: 4px; }
+
+  /* Япон бичгийн уншилт */
+  ruby { ruby-align: center; }
+  ruby rt {
+    font-size: 0.5em;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--color-sumi-500);
+    font-family: var(--font-jp);
+    user-select: none;
+  }
+
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-thumb {
+    background: color-mix(in srgb, var(--color-sumi-500) 35%, transparent);
+    border-radius: 99px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: color-mix(in srgb, var(--color-sumi-500) 55%, transparent); background-clip: content-box; }
+  ::-webkit-scrollbar-track { background: transparent; }
+
+  input[type="range"] { accent-color: var(--color-shu-500); }
+}
+
+@layer utilities {
+  .tabnum { font-variant-numeric: tabular-nums; }
+  .washi {
+    background-color: var(--color-washi-100);
+    background-image:
+      radial-gradient(circle at 12% 8%, rgba(204, 70, 48, 0.035), transparent 45%),
+      radial-gradient(circle at 88% 4%, rgba(47, 83, 133, 0.04), transparent 40%);
+  }
+  .card {
+    background: color-mix(in srgb, #fff 78%, var(--color-washi-50));
+    border: 1px solid color-mix(in srgb, var(--color-sumi-900) 9%, transparent);
+    border-radius: 1.1rem;
+    box-shadow: 0 1px 2px rgba(28, 27, 24, 0.04), 0 6px 18px -12px rgba(28, 27, 24, 0.16);
+  }
+  .card-flat {
+    background: color-mix(in srgb, #fff 70%, var(--color-washi-50));
+    border: 1px solid color-mix(in srgb, var(--color-sumi-900) 8%, transparent);
+    border-radius: 1rem;
+  }
+  .hanko {
+    box-shadow: 0 2px 0 color-mix(in srgb, var(--color-shu-700) 70%, transparent);
+  }
+  .seigaiha {
+    background-image: radial-gradient(circle at 50% 100%, transparent 9px, currentColor 10px, currentColor 11px, transparent 12px);
+    background-size: 22px 12px;
+    background-repeat: repeat;
+  }
+  .grid-paper {
+    background-image:
+      linear-gradient(color-mix(in srgb, var(--color-sumi-900) 6%, transparent) 1px, transparent 1px),
+      linear-gradient(90deg, color-mix(in srgb, var(--color-sumi-900) 6%, transparent) 1px, transparent 1px);
+    background-size: 25% 25%;
+  }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { scrollbar-width: none; }
+  /* Уншлагын текст — япон хэлэнд тохирсон мөрийн зай */
+  .prose-jp { line-height: 2.1; letter-spacing: 0.01em; }
+  .prose-jp p { margin-bottom: 1.15rem; }
+}
+
+@media print {
+  .no-print { display: none !important; }
+}

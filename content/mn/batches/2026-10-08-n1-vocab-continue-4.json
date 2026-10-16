@@ -1,0 +1,1048 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-continue-4-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit semantic categories cross-checked against Japanese entry and retained English gloss, independently unreviewed. Original uncommon senses preserved.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "82e39c46a6": {
+      "mn": [
+        "шат",
+        "гишгүүр"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "梯子",
+        "r": "ていし",
+        "en": [
+          "ladder",
+          "stairs"
+        ]
+      }
+    },
+    "b12f437f19": {
+      "mn": [
+        "танилцуулах",
+        "үзүүлэх",
+        "санал болгох"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "提示",
+        "r": "ていじ",
+        "en": [
+          "presentation",
+          "exhibit",
+          "suggest"
+        ]
+      }
+    },
+    "d525e3a83a": {
+      "mn": [
+        "иж бүрдэл хоол",
+        "өдрийн тусгай хоол"
+      ],
+      "topics": [
+        "food"
+      ],
+      "expected": {
+        "w": "定食",
+        "r": "ていしょく",
+        "en": [
+          "set meal",
+          "special (of the day)"
+        ]
+      }
+    },
+    "f6de4ac7bc": {
+      "mn": [
+        "залруулга",
+        "засвар"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "訂正",
+        "r": "ていせい",
+        "en": [
+          "correction",
+          "revision"
+        ]
+      }
+    },
+    "f25d2a8993": {
+      "mn": [
+        "зогсонги байдал",
+        "гацалт",
+        "түгжрэл"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "停滞",
+        "r": "ていたい",
+        "en": [
+          "stagnation",
+          "tie-up",
+          "congestion"
+        ]
+      }
+    },
+    "89c0c2a328": {
+      "mn": [
+        "харш",
+        "сууц"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "邸宅",
+        "r": "ていたく",
+        "en": [
+          "mansion",
+          "residence"
+        ]
+      }
+    },
+    "df4eaa5b9f": {
+      "mn": [
+        "цаасан салфетка"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "ティッシュペーパー",
+        "r": "ティッシュペーパー",
+        "en": [
+          "tissue paper"
+        ]
+      }
+    },
+    "0d7b0235f9": {
+      "mn": [
+        "тэтгэвэрт гарах нас"
+      ],
+      "topics": [
+        "work",
+        "time"
+      ],
+      "expected": {
+        "w": "定年",
+        "r": "ていねん",
+        "en": [
+          "retirement age"
+        ]
+      }
+    },
+    "4634e54c9a": {
+      "mn": [
+        "далан",
+        "усны хаалт"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "堤防",
+        "r": "ていぼう",
+        "en": [
+          "bank",
+          "weir"
+        ]
+      }
+    },
+    "0c72f993c8": {
+      "mn": [
+        "өгөгдөл"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "データ",
+        "r": "データ",
+        "en": [
+          "data"
+        ]
+      }
+    },
+    "b54b2396f3": {
+      "mn": [
+        "хэт оройтсон",
+        "оройтсон эмчилгээ"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "手遅れ",
+        "r": "ておくれ",
+        "en": [
+          "too late",
+          "belated treatment"
+        ]
+      }
+    },
+    "bcaa9a7e21": {
+      "mn": [
+        "асар том"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "でかい",
+        "r": "でかい",
+        "en": [
+          "huge"
+        ]
+      }
+    },
+    "8bfa06b980": {
+      "mn": [
+        "холбоос",
+        "ул мөр",
+        "сэжүүр"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "手掛かり",
+        "r": "てがかり",
+        "en": [
+          "contact",
+          "trail",
+          "scent"
+        ]
+      }
+    },
+    "608257c42c": {
+      "mn": [
+        "хариуцан хийх",
+        "удирдах",
+        "ажиллах"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "手掛ける",
+        "r": "てがける",
+        "en": [
+          "to handle",
+          "to manage",
+          "to work with"
+        ]
+      }
+    },
+    "3551552ed7": {
+      "mn": [
+        "амар",
+        "энгийн",
+        "албан бус"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "手軽",
+        "r": "てがる",
+        "en": [
+          "easy",
+          "simple",
+          "informal"
+        ]
+      }
+    },
+    "a50ce976f1": {
+      "mn": [
+        "төстэй",
+        "хэв шинжийн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "的",
+        "r": "てき",
+        "en": [
+          "-like",
+          "typical"
+        ]
+      }
+    },
+    "a188a8c649": {
+      "mn": [
+        "дасан зохицох",
+        "нийцүүлэх",
+        "тохирох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "適応",
+        "r": "てきおう",
+        "en": [
+          "adaptation",
+          "accommodation",
+          "conformity"
+        ]
+      }
+    },
+    "3d2ff7e701": {
+      "mn": [
+        "тохиромжтой байдал"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "適宜",
+        "r": "てきぎ",
+        "en": [
+          "suitability"
+        ]
+      }
+    },
+    "e0b835d42a": {
+      "mn": [
+        "авьяас",
+        "тохирох чадвар"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "適性",
+        "r": "てきせい",
+        "en": [
+          "aptitude"
+        ]
+      }
+    },
+    "d43a9fda61": {
+      "mn": [
+        "чадвартай эр",
+        "хавдар",
+        "ургацаг"
+      ],
+      "topics": [
+        "people",
+        "body"
+      ],
+      "expected": {
+        "w": "出来物",
+        "r": "できもの",
+        "en": [
+          "able man",
+          "tumour",
+          "growth"
+        ]
+      }
+    },
+    "be922b216d": {
+      "mn": [
+        "дуусаж гарах",
+        "гар дээр юу ч үлдэхгүй болох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "出切る",
+        "r": "できる",
+        "en": [
+          "to be out of",
+          "to have no more at hand"
+        ]
+      }
+    },
+    "6a2c9761cf": {
+      "mn": [
+        "гүйцэтгэл",
+        "ур чадвар",
+        "эв дүй"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "手際",
+        "r": "てぎわ",
+        "en": [
+          "performance",
+          "skill",
+          "tact"
+        ]
+      }
+    },
+    "b3e5a1f6cc": {
+      "mn": [
+        "санамсаргүй таарах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "出くわす",
+        "r": "でくわす",
+        "en": [
+          "to happen to meet",
+          "to come across"
+        ]
+      }
+    },
+    "6f8843433d": {
+      "mn": [
+        "чимэглэл"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "デコレーション",
+        "r": "デコレーション",
+        "en": [
+          "decoration"
+        ]
+      }
+    },
+    "dd601f9a30": {
+      "mn": [
+        "амттан"
+      ],
+      "topics": [
+        "food"
+      ],
+      "expected": {
+        "w": "デザート",
+        "r": "デザート",
+        "en": [
+          "dessert"
+        ]
+      }
+    },
+    "221e4e0f2e": {
+      "mn": [
+        "дизайн",
+        "загвар"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "デザイン",
+        "r": "デザイン",
+        "en": [
+          "design"
+        ]
+      }
+    },
+    "e6a3f2b972": {
+      "mn": [
+        "үйл явц",
+        "журам",
+        "протокол"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "手順",
+        "r": "てじゅん",
+        "en": [
+          "process",
+          "procedure",
+          "protocol"
+        ]
+      }
+    },
+    "69b1fa0cc4": {
+      "mn": [
+        "гав",
+        "гарын гав"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "手錠",
+        "r": "てじょう",
+        "en": [
+          "handcuffs",
+          "manacles"
+        ]
+      }
+    },
+    "37cffd52d1": {
+      "mn": [
+        "нүүдлийн тоо",
+        "төвөг"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "手数",
+        "r": "てすう",
+        "en": [
+          "number of moves",
+          "trouble"
+        ]
+      }
+    },
+    "74d5bfd2bf": {
+      "mn": [
+        "ойр",
+        "гарын дор",
+        "танил"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "手近",
+        "r": "てぢか",
+        "en": [
+          "near",
+          "handy",
+          "familiar"
+        ]
+      }
+    },
+    "0b8c036a0e": {
+      "mn": [
+        "гарцаагүй",
+        "лавтай",
+        "эргэлзээгүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "てっきり",
+        "r": "てっきり",
+        "en": [
+          "surely",
+          "certainly",
+          "beyond doubt"
+        ]
+      }
+    },
+    "b1491faa86": {
+      "mn": [
+        "төмөр ба ган"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "鉄鋼",
+        "r": "てっこう",
+        "en": [
+          "iron and steel"
+        ]
+      }
+    },
+    "20886c9138": {
+      "mn": [
+        "ноорог зураг"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "デッサン",
+        "r": "デッサン",
+        "en": [
+          "rough sketch (fr: dessin)"
+        ]
+      }
+    },
+    "5975722676": {
+      "mn": [
+        "гүн шингэх",
+        "нэвтрэх",
+        "өөрийгөө зориулах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "徹する",
+        "r": "てっする",
+        "en": [
+          "to sink in",
+          "to penetrate",
+          "to devote oneself"
+        ]
+      }
+    },
+    "c710a69f99": {
+      "mn": [
+        "төмрийн хаягдал"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "鉄片",
+        "r": "てっぺん",
+        "en": [
+          "iron scraps"
+        ]
+      }
+    },
+    "c3e581afc7": {
+      "mn": [
+        "төмөр саваа",
+        "лоом",
+        "гимнастикийн хөндлөвч"
+      ],
+      "topics": [
+        "daily",
+        "arts"
+      ],
+      "expected": {
+        "w": "鉄棒",
+        "r": "てつぼう",
+        "en": [
+          "iron rod",
+          "crowbar",
+          "horizontal bar (gymnastics)"
+        ]
+      }
+    },
+    "e1ea2bb61d": {
+      "mn": [
+        "тохируулга",
+        "эцсийн засвар"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "出直し",
+        "r": "でなおし",
+        "en": [
+          "adjustment",
+          "touch up"
+        ]
+      }
+    },
+    "8d4d7b12ab": {
+      "mn": [
+        "алганы дотор"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "掌",
+        "r": "てのひら",
+        "en": [
+          "the palm"
+        ]
+      }
+    },
+    "a4eceaa662": {
+      "mn": [
+        "зохицуулалт",
+        "цагдаагийн эрэн хайх ажил"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "手配",
+        "r": "てはい",
+        "en": [
+          "arrangement",
+          "search (by police)"
+        ]
+      }
+    },
+    "a98d722351": {
+      "mn": [
+        "бэлтгэл зохицуулалт",
+        "төлөвлөгөө",
+        "хөтөлбөр"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "手筈",
+        "r": "てはず",
+        "en": [
+          "arrangement",
+          "plan",
+          "programme"
+        ]
+      }
+    },
+    "dfce23b181": {
+      "mn": [
+        "заавар",
+        "хөтөч",
+        "танилцуулга"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "手引き",
+        "r": "てびき",
+        "en": [
+          "guidance",
+          "guide",
+          "introduction"
+        ]
+      }
+    },
+    "1149c0fbcc": {
+      "mn": [
+        "үлгэр загвар",
+        "жишээ"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "手本",
+        "r": "てほん",
+        "en": [
+          "model",
+          "pattern"
+        ]
+      }
+    },
+    "384a40ef0e": {
+      "mn": [
+        "бэлтгэл",
+        "зохицуулалт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "手回し",
+        "r": "てまわし",
+        "en": [
+          "preparations",
+          "arrangements"
+        ]
+      }
+    },
+    "4ac77d3574": {
+      "mn": [
+        "гар дээр",
+        "ойр",
+        "гэрт"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "手元",
+        "r": "てもと",
+        "en": [
+          "on hand",
+          "at hand",
+          "at home"
+        ]
+      }
+    },
+    "74326edf30": {
+      "mn": [
+        "үзүүлэн танилцуулах"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "デモンストレーション",
+        "r": "デモンストレーション",
+        "en": [
+          "demonstration"
+        ]
+      }
+    },
+    "91bce7894c": {
+      "mn": [
+        "ойх",
+        "гэрэл буцааж тусгах"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "照り返す",
+        "r": "てりかえす",
+        "en": [
+          "to reflect",
+          "to throw back light"
+        ]
+      }
+    },
+    "fca7216c97": {
+      "mn": [
+        "телекс холбоо",
+        "бичгийн цахилгаан холбооны солилцоо"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "テレックス",
+        "r": "テレックス",
+        "en": [
+          "telex",
+          "teletypewriter exchange"
+        ]
+      }
+    },
+    "3efeebae61": {
+      "mn": [
+        "ажил хуваарилах"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "手分け",
+        "r": "てわけ",
+        "en": [
+          "division of labour"
+        ]
+      }
+    },
+    "1941689b4f": {
+      "mn": [
+        "дэлгүүр",
+        "худалдааны газар",
+        "байгууллага"
+      ],
+      "topics": [
+        "work",
+        "places"
+      ],
+      "expected": {
+        "w": "店",
+        "r": "てん",
+        "en": [
+          "store",
+          "shop",
+          "establishment"
+        ]
+      }
+    },
+    "6ff25789fe": {
+      "mn": [
+        "хөдөө",
+        "хөдөөгийн нутаг"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "田園",
+        "r": "でんえん",
+        "en": [
+          "country",
+          "rural districts"
+        ]
+      }
+    },
+    "dea89b7d91": {
+      "mn": [
+        "гал асаах",
+        "асаалт",
+        "гал тавих"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "点火",
+        "r": "てんか",
+        "en": [
+          "ignition",
+          "lighting",
+          "set fire to"
+        ]
+      }
+    },
+    "5b19240e41": {
+      "mn": [
+        "эргэлт",
+        "тойрон эргэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "転回",
+        "r": "てんかい",
+        "en": [
+          "revolution",
+          "rotation"
+        ]
+      }
+    },
+    "10919d474c": {
+      "mn": [
+        "хөрвүүлэх",
+        "өөр чиглэлд шилжүүлэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "転換",
+        "r": "てんかん",
+        "en": [
+          "convert",
+          "divert"
+        ]
+      }
+    },
+    "f3edf4d6f4": {
+      "mn": [
+        "нүүх",
+        "сууцаа солих"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "転居",
+        "r": "てんきょ",
+        "en": [
+          "moving",
+          "changing residence"
+        ]
+      }
+    },
+    "f9c618271f": {
+      "mn": [
+        "ажлын шилжилт",
+        "дамжуулалт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "転勤",
+        "r": "てんきん",
+        "en": [
+          "transfer",
+          "transmission"
+        ]
+      }
+    },
+    "3893318870": {
+      "mn": [
+        "үзлэг",
+        "шинжилгээ",
+        "шалгалт"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "点検",
+        "r": "てんけん",
+        "en": [
+          "inspection",
+          "examination",
+          "checking"
+        ]
+      }
+    },
+    "89781dc3a2": {
+      "mn": [
+        "цахилгааны эх үүсвэр",
+        "асаах товч"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "電源",
+        "r": "でんげん",
+        "en": [
+          "source of electricity",
+          "power (button on TV, etc.)"
+        ]
+      }
+    },
+    "06898872e1": {
+      "mn": [
+        "сургуулиа солих"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "転校",
+        "r": "てんこう",
+        "en": [
+          "change schools"
+        ]
+      }
+    },
+    "4548e5ac9d": {
+      "mn": [
+        "диваажин",
+        "тэнгэрийн орон"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "天国",
+        "r": "てんごく",
+        "en": [
+          "paradise",
+          "heaven",
+          "Kingdom of Heaven"
+        ]
+      }
+    },
+    "99b2e77abf": {
+      "mn": [
+        "зурвас",
+        "аман мэдээ",
+        "дамжуулсан үг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "伝言",
+        "r": "でんごん",
+        "en": [
+          "message",
+          "verbal message",
+          "word (from someone)"
+        ]
+      }
+    }
+  }
+}

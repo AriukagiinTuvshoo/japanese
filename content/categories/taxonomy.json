@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "method": "English whole-word multilabel rules; unmatched entries are unclassified, never Other. Rule matches are suggestions, not semantic review.",
+  "groups": [
+    {
+      "id": "relationships",
+      "mn": "Хайр · харилцаа",
+      "en": "Love & relationships",
+      "pattern": "\\b(love|lover|lovers|loving|beloved|romance|romantic|romantically|affection|affectionate|marry|married|marriage|wedding|spouse|husband|wife|boyfriend|girlfriend|fiancé|fiancée|kiss|kissing|hug|hugging|courtship|divorce|divorced|friendship|sweetheart|dating)\\b"
+    },
+    {
+      "id": "people",
+      "mn": "Хүмүүс · гэр бүл",
+      "en": "People & family",
+      "pattern": "\\b(person|people|man|men|woman|women|child|children|family|mother|father|friend|friends|teacher|student|son|daughter|brother|sister|parent|parents|ancestor|ancestors|clan|surname|relative|relatives)\\b"
+    },
+    {
+      "id": "time",
+      "mn": "Цаг хугацаа",
+      "en": "Time",
+      "pattern": "\\b(time|day|days|week|month|year|hour|minute|morning|evening|today|tomorrow|yesterday|season|age|date|calendar|past|future|duration)\\b"
+    },
+    {
+      "id": "places",
+      "mn": "Газар · аялал",
+      "en": "Places & travel",
+      "pattern": "\\b(place|city|country|station|school|hospital|shop|store|house|room|building|road|street|travel|journey|trip|airport|train|bus|vehicle|car|transport|village|town|temple|shrine|province)\\b"
+    },
+    {
+      "id": "food",
+      "mn": "Хоол · ундаа",
+      "en": "Food & drink",
+      "pattern": "\\b(food|eat|eating|drink|drinking|rice|meat|fish|fruit|vegetable|tea|coffee|meal|restaurant|taste|cook|cooking|kitchen|bread|soup|milk|sugar|salt|flour|beer|wine|sake)\\b"
+    },
+    {
+      "id": "nature",
+      "mn": "Байгаль",
+      "en": "Nature",
+      "pattern": "\\b(weather|rain|snow|wind|sky|sea|river|mountain|tree|flower|animal|bird|sun|moon|plant|plants|forest|stone|rock|earth|soil|water|fire|grass|island|ocean|insect|dog|cat|horse|cow)\\b"
+    },
+    {
+      "id": "body",
+      "mn": "Бие · эрүүл мэнд",
+      "en": "Body & health",
+      "pattern": "\\b(body|head|face|eye|eyes|ear|mouth|hand|foot|heart|health|ill|illness|medicine|medical|disease|pain|blood|bone|skin|hair|muscle|tooth|teeth|nose|finger|leg|arm|breath|surgery)\\b"
+    },
+    {
+      "id": "learning",
+      "mn": "Суралцах · хэл",
+      "en": "Learning & language",
+      "pattern": "\\b(study|learn|learning|school|exam|book|read|reading|write|writing|word|language|question|answer|education|science|knowledge|letter|text|literature|dictionary|research)\\b"
+    },
+    {
+      "id": "work",
+      "mn": "Ажил · худалдаа",
+      "en": "Work & commerce",
+      "pattern": "\\b(work|job|company|office|business|money|buy|sell|price|trade|commerce|industry|factory|bank|salary|pay|payment|tax|profit|cost|expense|employment|employee|labor|labour|occupation)\\b"
+    },
+    {
+      "id": "daily",
+      "mn": "Өдөр тутмын амьдрал",
+      "en": "Daily life",
+      "pattern": "\\b(clothes|clothing|wear|sleep|wake|bath|clean|home|everyday|daily|furniture|bed|chair|table|door|window|laundry|shoe|shoes|hat|coat|bag|umbrella)\\b"
+    },
+    {
+      "id": "society",
+      "mn": "Нийгэм · хууль",
+      "en": "Society & law",
+      "pattern": "\\b(society|social|law|legal|politics|political|government|nation|national|public|war|army|military|police|crime|criminal|court|right|rights|duty|religion|religious|faith|citizen|vote|election|rule|regulation)\\b"
+    },
+    {
+      "id": "feelings",
+      "mn": "Сэтгэл хөдлөл",
+      "en": "Feelings",
+      "pattern": "\\b(feeling|feelings|emotion|emotional|happy|happiness|sad|sadness|anger|angry|fear|afraid|worry|anxiety|joy|hope|desire|wish|regret|envy|jealous|lonely|loneliness|shame|pride|surprise|surprised|disgust)\\b"
+    },
+    {
+      "id": "arts",
+      "mn": "Урлаг · чөлөөт цаг",
+      "en": "Arts & leisure",
+      "pattern": "\\b(art|arts|music|musical|song|sing|singing|dance|dancing|sport|sports|game|games|play|playing|film|movie|theater|theatre|painting|picture|poem|poetry|festival|hobby|leisure)\\b"
+    },
+    {
+      "id": "technology",
+      "mn": "Технологи · багаж",
+      "en": "Technology & tools",
+      "pattern": "\\b(machine|machinery|tool|tools|computer|phone|telephone|electric|electricity|electronic|technology|engine|device|equipment|metal|iron|steel|copper|wire|battery|camera)\\b"
+    },
+    {
+      "id": "quantity",
+      "mn": "Тоо · хэмжээ",
+      "en": "Numbers & measures",
+      "pattern": "\\b(number|numbers|quantity|amount|count|counting|counter|measure|measurement|meter|metre|liter|litre|weight|length|height|width|distance|percent|percentage|half|double|hundred|thousand|million|billion|one|two|three|four|five|six|seven|eight|nine|ten)\\b"
+    },
+    {
+      "id": "actions",
+      "mn": "Үйлдэл",
+      "en": "Actions",
+      "pattern": "\\b(to|do|make|go|come|see|hear|speak|take|give|use|walk|run|move|open|close)\\b"
+    },
+    {
+      "id": "descriptions",
+      "mn": "Шинж чанар",
+      "en": "Descriptions",
+      "pattern": "\\b(adjective|beautiful|large|small|good|bad|new|old|hot|cold|easy|difficult|strong|weak|big|little|long|short|high|low|fast|slow|deep|shallow|bright|dark|heavy|light|wide|narrow|red|blue|white|black|green|yellow|color|colour)\\b"
+    }
+  ]
+}

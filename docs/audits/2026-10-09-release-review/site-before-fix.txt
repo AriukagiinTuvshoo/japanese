@@ -1,0 +1,41 @@
+
+> nihongo-dojo@3.0.0 test:site-browser
+> node scripts/test-site-browser.mjs
+
+mn: route home rendered
+mn: route vocab?level=N5 rendered
+mn: route kanji?level=N5 rendered
+mn: route grammar?level=N5 rendered
+mn: route reading rendered
+mn: route listening rendered
+mn: route review rendered
+mn: route quiz rendered
+mn: route mock rendered
+mn: route placement rendered
+mn: route dict rendered
+mn: route plan rendered
+mn: route progress rendered
+mn: route achievements rendered
+mn: route account rendered
+mn: route kana rendered
+mn: route mistakes rendered
+mn: route about rendered
+mn: route write/日 rendered
+mn: route not-a-page rendered
+mn: 201 added vocabulary example translations rendered
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+locator.click: Timeout 15000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'EN', exact: true }).visible().first()
+
+    at /home/user/japanese/scripts/test-site-browser.mjs:111:103 {
+  log: [
+    "  - waiting for getByRole('button', { name: 'EN', exact: true }).visible().first()"
+  ],
+  name: 'TimeoutError'
+}
+
+Node.js v22.22.3

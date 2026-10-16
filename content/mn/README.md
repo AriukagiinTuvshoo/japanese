@@ -1,0 +1,19 @@
+# Mongolian translation provenance and licensing
+
+OpenJLPT: **evanclan and contributors**, https://github.com/evanclan/OpenJLPT, CC-BY-SA-4.0. This repository retains original Japanese patterns, readings, English meanings and examples and adds Mongolian translations. New OpenJLPT-derived Mongolian text is an adaptation distributed under **CC-BY-SA-4.0**: https://creativecommons.org/licenses/by-sa/4.0/ . Credit the source and translators, identify changes, and distribute adaptations under that license. This license applies to derived learning content, not automatically to all application code. Original KanjiVG CC-BY-SA-3.0, kanji-data MIT and upstream dictionary/example obligations remain applicable.
+
+New batches in `batches/` record author, date, source snapshot, method, license, and actual review status. `mn_provenance` links public records to the public provenance manifest. Batch IDs and entry IDs are stable; indices are not accepted. `npm run translations:apply` applies all batches without replacing retained English/Japanese/examples; `data:build` reapplies them after upstream generation.
+
+The 2026-10-08 batches were AI-authored by the Arena coding assistant. **No independent human review is claimed.** Older `drafts/`, `drafts-pending/`, and JSON translations predate this session; their authorship and review histories are not established. They are preserved, not relabeled as human-reviewed. Pending TSVs must not be blindly imported: some glosses need accuracy review and are index-based.
+
+Category taxonomy rules and overrides live in `content/categories/`. Rules use whole-word matching, allow multiple groups, and never hide unclassified entries under “Other”. Override keys are stable vocabulary IDs or kanji characters. Validate appropriateness manually as well as structurally.
+
+See `docs/CONTENT-STATUS.md` and `content/coverage-report.json` for exact remaining work.
+
+`legacy-baseline.json` records exact baseline translations, not invented provenance. Unknown authorship stays legacy/unreviewed. Only unchanged baseline text is exempt from new-batch provenance checks; modifications and new supporting translations require provenance. The 6,503-record baseline gap remains documented.
+
+## Pinned dictionary license clarification — 2026-10-09
+
+The actual `jamdict-data` **1.5** archive used by `fetch-sources.mjs` declares its bundled JMdict/KANJIDIC2/JMnedict dictionaries **CC-BY-SA-3.0**, not 4.0. Package code is MIT. Dictionary copyright: James William Breen and the Electronic Dictionary Research and Development Group. The full packaged dictionary license is retained in [`docs/licenses/jamdict-data-1.5-dictionaries.md`](../../docs/licenses/jamdict-data-1.5-dictionaries.md); it links the source and CC BY-SA 3.0 deed/code. Public attribution and the fetch manifest now distinguish this source license from the CC-BY-SA-4.0 label on new adaptations. Existing source records and translation provenance are preserved; no claim that the upstream artifact was relicensed to 4.0.
+
+Exact archive URL, SHA-256, declared compile date, SQLite metadata and 67 entry-level extracts (62 withheld meanings overlapping five of ten warnings) are recorded in [`docs/audits/2026-10-09-dictionary-evidence.json`](../../docs/audits/2026-10-09-dictionary-evidence.json). Reproduce using `python scripts/audit-dictionary.py DATABASE ARCHIVE`. This is genuine external retrieval of an EDRDG-derived redistribution, **not an independent modern source**: the extended vocabulary pipeline uses this same artifact. Repeating its suspect glosses does not resolve those entries. All 62 meanings and ten warnings stay blocked. Some historical warnings are challenged by the extracted senses; adjudication is still outstanding. No source field or meaning is automatically corrected by the audit.

@@ -1,0 +1,1059 @@
+{
+  "provenance": {
+    "id": "mn-n1-kanji-large-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit semantic categories cross-checked against Japanese entry and retained English gloss, independently unreviewed. Original uncommon senses preserved.",
+    "source": "https://github.com/davidluzgouveia/kanji-data",
+    "sourceSnapshot": "public/data/kanji/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "kanji": {
+    "旭": {
+      "mn": [
+        "мандах нар",
+        "өглөөний нар"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "k": "旭",
+        "en": [
+          "Rising Sun",
+          "Morning Sun"
+        ]
+      }
+    },
+    "恩": {
+      "mn": [
+        "ивээл",
+        "сайхан сэтгэл",
+        "ач тус"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "k": "恩",
+        "en": [
+          "Grace",
+          "Kindness",
+          "Goodness"
+        ]
+      }
+    },
+    "騰": {
+      "mn": [
+        "дээш үсрэх",
+        "харайх",
+        "өсөх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "k": "騰",
+        "en": [
+          "Leaping Up",
+          "Jumping Up",
+          "Rising"
+        ]
+      }
+    },
+    "往": {
+      "mn": [
+        "аялал",
+        "аялах",
+        "хөөх"
+      ],
+      "topics": [
+        "places",
+        "actions"
+      ],
+      "expected": {
+        "k": "往",
+        "en": [
+          "Journey",
+          "Travel",
+          "Chase Away"
+        ]
+      }
+    },
+    "豆": {
+      "mn": [
+        "шош",
+        "вандуй",
+        "намхан хүн"
+      ],
+      "topics": [
+        "food",
+        "people"
+      ],
+      "expected": {
+        "k": "豆",
+        "en": [
+          "Beans",
+          "Pea",
+          "Midget"
+        ]
+      }
+    },
+    "遂": {
+      "mn": [
+        "гүйцээх",
+        "биелүүлэх",
+        "хүрэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "k": "遂",
+        "en": [
+          "Consummate",
+          "Accomplish",
+          "Attain"
+        ]
+      }
+    },
+    "狂": {
+      "mn": [
+        "солиотой хүн",
+        "галзуу",
+        "ухаан самуурсан"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "k": "狂",
+        "en": [
+          "Lunatic",
+          "Insane",
+          "Crazy"
+        ]
+      }
+    },
+    "栃": {
+      "mn": [
+        "морин хүрэн мод",
+        "Японд бүтээсэн ханз"
+      ],
+      "topics": [
+        "nature",
+        "learning"
+      ],
+      "expected": {
+        "k": "栃",
+        "en": [
+          "Horse Chestnut",
+          "(kokuji)"
+        ]
+      }
+    },
+    "岐": {
+      "mn": [
+        "салаалах",
+        "замын салаа",
+        "үйл явдлын талбар"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "k": "岐",
+        "en": [
+          "Branch Off",
+          "Fork In Road",
+          "Scene"
+        ]
+      }
+    },
+    "陛": {
+      "mn": [
+        "эрхэм дээдэс",
+        "хаан ширээний шат"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "k": "陛",
+        "en": [
+          "Highness",
+          "Steps (of Throne)"
+        ]
+      }
+    },
+    "緯": {
+      "mn": [
+        "хөндлөн",
+        "нэхээсний хөндлөн утас",
+        "баруун зүүн"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "k": "緯",
+        "en": [
+          "Horizontal",
+          "Woof",
+          "Left & Right"
+        ]
+      }
+    },
+    "培": {
+      "mn": [
+        "ургуулж арчлах",
+        "бойжуулах"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "k": "培",
+        "en": [
+          "Cultivate",
+          "Foster"
+        ]
+      }
+    },
+    "衰": {
+      "mn": [
+        "буурах",
+        "доройтох",
+        "сулрах"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "k": "衰",
+        "en": [
+          "Decline",
+          "Wane",
+          "Weaken"
+        ]
+      }
+    },
+    "艇": {
+      "mn": [
+        "сэлүүрт завь",
+        "жижиг завь"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "k": "艇",
+        "en": [
+          "Rowboat",
+          "Small Boat"
+        ]
+      }
+    },
+    "屈": {
+      "mn": [
+        "бууж өгөх",
+        "нугалах",
+        "шантрах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "k": "屈",
+        "en": [
+          "Yield",
+          "Bend",
+          "Flinch"
+        ]
+      }
+    },
+    "径": {
+      "mn": [
+        "диаметр",
+        "жим",
+        "арга"
+      ],
+      "topics": [
+        "quantity",
+        "places"
+      ],
+      "expected": {
+        "k": "径",
+        "en": [
+          "Diameter",
+          "Path",
+          "Method"
+        ]
+      }
+    },
+    "淡": {
+      "mn": [
+        "шингэн",
+        "бүдэг",
+        "цайвар"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "k": "淡",
+        "en": [
+          "Thin",
+          "Faint",
+          "Pale"
+        ]
+      }
+    },
+    "抽": {
+      "mn": [
+        "сугалж авах",
+        "татах",
+        "ялган авах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "k": "抽",
+        "en": [
+          "Pluck",
+          "Pull",
+          "Extract"
+        ]
+      }
+    },
+    "披": {
+      "mn": [
+        "ил гаргах",
+        "нээх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "k": "披",
+        "en": [
+          "Expose",
+          "Open"
+        ]
+      }
+    },
+    "廷": {
+      "mn": [
+        "шүүх",
+        "эзэн хааны ордон",
+        "төрийн алба"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "k": "廷",
+        "en": [
+          "Courts",
+          "Imperial Court",
+          "Government Office"
+        ]
+      }
+    },
+    "錦": {
+      "mn": [
+        "хоргой",
+        "гоёмсог хувцас",
+        "алдар хүнд"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "k": "錦",
+        "en": [
+          "Brocade",
+          "Fine Dress",
+          "Honors"
+        ]
+      }
+    },
+    "准": {
+      "mn": [
+        "төстэй",
+        "хагас",
+        "туслах зэрэглэл"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "k": "准",
+        "en": [
+          "Quasi-",
+          "Semi-",
+          "Associate"
+        ]
+      }
+    },
+    "暑": {
+      "mn": [
+        "бүгчим",
+        "халуун",
+        "зуны халуун"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "k": "暑",
+        "en": [
+          "Sultry",
+          "Hot",
+          "Summer Heat"
+        ]
+      }
+    },
+    "磯": {
+      "mn": [
+        "далайн эрэг",
+        "наран шарлагын эрэг"
+      ],
+      "topics": [
+        "places",
+        "nature"
+      ],
+      "expected": {
+        "k": "磯",
+        "en": [
+          "Seashore",
+          "Beach"
+        ]
+      }
+    },
+    "奨": {
+      "mn": [
+        "зоригжуулах",
+        "шавдуулах",
+        "урамшуулах"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "k": "奨",
+        "en": [
+          "Exhort",
+          "Urge",
+          "Encourage"
+        ]
+      }
+    },
+    "浸": {
+      "mn": [
+        "дүрэгдсэн",
+        "дэвтээх",
+        "дүрэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "k": "浸",
+        "en": [
+          "Immersed",
+          "Soak",
+          "Dip"
+        ]
+      }
+    },
+    "剰": {
+      "mn": [
+        "илүүдэл",
+        "нэмэлт"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "k": "剰",
+        "en": [
+          "Surplus",
+          "Besides"
+        ]
+      }
+    },
+    "胆": {
+      "mn": [
+        "цөсний хүүдий",
+        "зориг",
+        "зүрх зориг"
+      ],
+      "topics": [
+        "body",
+        "feelings"
+      ],
+      "expected": {
+        "k": "胆",
+        "en": [
+          "Gall Bladder",
+          "Courage",
+          "Pluck"
+        ]
+      }
+    },
+    "繊": {
+      "mn": [
+        "нарийхан",
+        "нарийн",
+        "нимгэн кимоно"
+      ],
+      "topics": [
+        "descriptions",
+        "daily"
+      ],
+      "expected": {
+        "k": "繊",
+        "en": [
+          "Slender",
+          "Fine",
+          "Thin Kimono"
+        ]
+      }
+    },
+    "駒": {
+      "mn": [
+        "одой морь",
+        "морь",
+        "унага"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "k": "駒",
+        "en": [
+          "Pony",
+          "Horse",
+          "Colt"
+        ]
+      }
+    },
+    "虚": {
+      "mn": [
+        "хоосон",
+        "хоосрол",
+        "бэлтгэлгүй байдал"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "k": "虚",
+        "en": [
+          "Void",
+          "Emptiness",
+          "Unpreparedness"
+        ]
+      }
+    },
+    "孜": {
+      "mn": [
+        "хичээнгүй байдал"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "k": "孜",
+        "en": [
+          "Industriousness"
+        ]
+      }
+    },
+    "霊": {
+      "mn": [
+        "сүнс",
+        "сэтгэл сүнс"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "k": "霊",
+        "en": [
+          "Spirits",
+          "Soul"
+        ]
+      }
+    },
+    "帳": {
+      "mn": [
+        "дэвтэр",
+        "дансны дэвтэр",
+        "цомог"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "k": "帳",
+        "en": [
+          "Notebook",
+          "Account Book",
+          "Album"
+        ]
+      }
+    },
+    "悔": {
+      "mn": [
+        "гэмших",
+        "харамсах"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "k": "悔",
+        "en": [
+          "Repent",
+          "Regret"
+        ]
+      }
+    },
+    "諭": {
+      "mn": [
+        "зэмлэх",
+        "сургамжлах",
+        "үүрэг өгөх"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "k": "諭",
+        "en": [
+          "Rebuke",
+          "Admonish",
+          "Charge"
+        ]
+      }
+    },
+    "惨": {
+      "mn": [
+        "өрөвдөлтэй",
+        "гамшиг",
+        "харгислал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "k": "惨",
+        "en": [
+          "Wretched",
+          "Disaster",
+          "Cruelty"
+        ]
+      }
+    },
+    "虐": {
+      "mn": [
+        "дарангуйлах",
+        "дарлах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "k": "虐",
+        "en": [
+          "Tyrannize",
+          "Oppress"
+        ]
+      }
+    },
+    "翻": {
+      "mn": [
+        "эргүүлэх",
+        "хөмрөх",
+        "намирах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "k": "翻",
+        "en": [
+          "Flip",
+          "Turn Over",
+          "Wave"
+        ]
+      }
+    },
+    "墜": {
+      "mn": [
+        "осолдож унах",
+        "доош унах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "k": "墜",
+        "en": [
+          "Crash",
+          "Fall (down)"
+        ]
+      }
+    },
+    "沼": {
+      "mn": [
+        "намгархаг газар",
+        "нуур",
+        "намаг"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "k": "沼",
+        "en": [
+          "Marsh",
+          "Lake",
+          "Bog"
+        ]
+      }
+    },
+    "据": {
+      "mn": [
+        "байрлуулах",
+        "суурь тавих",
+        "суурилуулах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "k": "据",
+        "en": [
+          "Set",
+          "Lay A Foundation",
+          "Install"
+        ]
+      }
+    },
+    "肥": {
+      "mn": [
+        "бордоо",
+        "таргалах",
+        "үржил шимтэй"
+      ],
+      "topics": [
+        "nature",
+        "body"
+      ],
+      "expected": {
+        "k": "肥",
+        "en": [
+          "Fertilizer",
+          "Get Fat",
+          "Fertile"
+        ]
+      }
+    },
+    "徐": {
+      "mn": [
+        "аажмаар",
+        "удаан",
+        "тайван зориуд"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "k": "徐",
+        "en": [
+          "Gradually",
+          "Slowly",
+          "Deliberately"
+        ]
+      }
+    },
+    "糖": {
+      "mn": [
+        "элсэн чихэр"
+      ],
+      "topics": [
+        "food"
+      ],
+      "expected": {
+        "k": "糖",
+        "en": [
+          "Sugar"
+        ]
+      }
+    },
+    "搭": {
+      "mn": [
+        "суух",
+        "тээврийн хэрэгсэлд ачих",
+        "унах"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "k": "搭",
+        "en": [
+          "Board",
+          "Load (a Vehicle)",
+          "Ride"
+        ]
+      }
+    },
+    "盾": {
+      "mn": [
+        "бамбай",
+        "сүлдийн бамбай",
+        "шалтаг"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "k": "盾",
+        "en": [
+          "Shield",
+          "Escutcheon",
+          "Pretext"
+        ]
+      }
+    },
+    "脈": {
+      "mn": [
+        "судас",
+        "лугшилт",
+        "найдвар"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "k": "脈",
+        "en": [
+          "Vein",
+          "Pulse",
+          "Hope"
+        ]
+      }
+    },
+    "滝": {
+      "mn": [
+        "хүрхрээ",
+        "боргио",
+        "цувран буух ус"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "k": "滝",
+        "en": [
+          "Waterfall",
+          "Rapids",
+          "Cascade"
+        ]
+      }
+    },
+    "軌": {
+      "mn": [
+        "дугуйн мөр",
+        "дугуй",
+        "зам мөр"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "k": "軌",
+        "en": [
+          "Rut",
+          "Wheel",
+          "Track"
+        ]
+      }
+    },
+    "俵": {
+      "mn": [
+        "уут",
+        "боодол",
+        "шуудай"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "k": "俵",
+        "en": [
+          "Bag",
+          "Bale",
+          "Sack"
+        ]
+      }
+    },
+    "妨": {
+      "mn": [
+        "саад хийх",
+        "хориглох",
+        "тээг болох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "k": "妨",
+        "en": [
+          "Disturb",
+          "Prevent",
+          "Hamper"
+        ]
+      }
+    },
+    "盧": {
+      "mn": [
+        "овоохой"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "k": "盧",
+        "en": [
+          "Hut"
+        ]
+      }
+    },
+    "擦": {
+      "mn": [
+        "үрэх",
+        "зүлгэх",
+        "маажих"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "k": "擦",
+        "en": [
+          "Grate",
+          "Rub",
+          "Scratch"
+        ]
+      }
+    },
+    "鯨": {
+      "mn": [
+        "халим"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "k": "鯨",
+        "en": [
+          "Whale"
+        ]
+      }
+    },
+    "荘": {
+      "mn": [
+        "зуслангийн байшин",
+        "дэн буудал",
+        "жижиг байшин"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "k": "荘",
+        "en": [
+          "Villa",
+          "Inn",
+          "Cottage"
+        ]
+      }
+    },
+    "諾": {
+      "mn": [
+        "зөвшөөрөл",
+        "санал нийлэх",
+        "тохиролцоо"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "k": "諾",
+        "en": [
+          "Consent",
+          "Assent",
+          "Agreement"
+        ]
+      }
+    },
+    "雷": {
+      "mn": [
+        "тэнгэрийн дуу",
+        "аянга"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "k": "雷",
+        "en": [
+          "Thunder",
+          "Lightning Bolt"
+        ]
+      }
+    },
+    "漂": {
+      "mn": [
+        "хөвөн урсах",
+        "усан дээр хөвөх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "k": "漂",
+        "en": [
+          "Drift",
+          "Float (on Liquid)"
+        ]
+      }
+    },
+    "懐": {
+      "mn": [
+        "өвөр халаас",
+        "мэдрэмж",
+        "сэтгэл"
+      ],
+      "topics": [
+        "feelings",
+        "daily"
+      ],
+      "expected": {
+        "k": "懐",
+        "en": [
+          "Pocket",
+          "Feelings",
+          "Heart"
+        ]
+      }
+    }
+  }
+}

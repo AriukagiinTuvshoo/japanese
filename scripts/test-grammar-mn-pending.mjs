@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import ts from 'typescript';
+const source = fs.readFileSync('src/lib/i18n.ts','utf8');
+const js = ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2020}}).outputText;
+const {grammarMeaning,grammarMnMissing,MN_PENDING} = await import(`data:text/javascript;base64,${Buffer.from(js).toString('base64')}`);
+const missing = {en:'on the occasion of',mn:null};
+assert.equal(grammarMeaning(missing,'mn'),MN_PENDING);
+assert.equal(grammarMeaning(missing,'en'),missing.en);
+assert.equal(grammarMnMissing(missing),true);
+assert.equal(grammarMeaning({...missing,mn:'... үед'},'mn'),'... үед');
+console.log('Actual grammar helpers reject English fallback in MN mode.');

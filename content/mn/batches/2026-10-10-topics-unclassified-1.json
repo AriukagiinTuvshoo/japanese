@@ -1,0 +1,10272 @@
+{
+ "provenance": {
+  "id": "mn-topics-unclassified-batch-1-2026-10-10",
+  "createdAt": "2026-10-10",
+  "author": "Arena coding assistant",
+  "method": "AI-assisted topic classification for previously unclassified entries, derived from each entry's retained English source gloss and Japanese spelling/reading; 1–2 specific taxonomy groups per entry matching the existing convention. EXCLUDED: entries with source conflicts (e05bb17edd, 64e8f7eda0, ed2719ab9d, 0101791a03) — their contested senses cannot ground topic tags; they stay visibly release-blocking as unclassified until adjudicated. reviewStatus: unreviewed (structural mapping only; manual linguistic appropriateness review pending).",
+  "source": "https://github.com/evanclan/OpenJLPT",
+  "sourceSnapshot": "public/data/vocab/n5..n1.json and kanji n5..n1.json at 1c8d8f2aca959be2694bd65e3de13dd1e422a97f",
+  "license": "CC-BY-SA-4.0",
+  "reviewStatus": "unreviewed"
+ },
+ "vocab": {
+  "00077af4b5": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "0011c40f28": {
+   "topics": [
+    "work",
+    "descriptions"
+   ]
+  },
+  "002731ca75": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "0082c76475": {
+   "topics": [
+    "places",
+    "nature"
+   ]
+  },
+  "008afba684": {
+   "topics": [
+    "places"
+   ]
+  },
+  "009c03bfe9": {
+   "topics": [
+    "actions",
+    "arts"
+   ]
+  },
+  "00b4506e25": {
+   "topics": [
+    "people"
+   ]
+  },
+  "01106fe229": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "013c3a92d2": {
+   "topics": [
+    "arts",
+    "body"
+   ]
+  },
+  "01471202a4": {
+   "topics": [
+    "places"
+   ]
+  },
+  "01558111d1": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "0164f687ce": {
+   "topics": [
+    "places",
+    "descriptions"
+   ]
+  },
+  "0167b18f74": {
+   "topics": [
+    "nature",
+    "descriptions"
+   ]
+  },
+  "018b71a3e2": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "018cb37372": {
+   "topics": [
+    "places"
+   ]
+  },
+  "01cfbc11d9": {
+   "topics": [
+    "places"
+   ]
+  },
+  "01dda94e77": {
+   "topics": [
+    "quantity",
+    "descriptions"
+   ]
+  },
+  "02214493b2": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "0221781ce9": {
+   "topics": [
+    "society",
+    "daily"
+   ]
+  },
+  "02424c2277": {
+   "topics": [
+    "society"
+   ]
+  },
+  "0294bdc5ab": {
+   "topics": [
+    "technology",
+    "people"
+   ]
+  },
+  "02ebf395f2": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "0336d92dcd": {
+   "topics": [
+    "body"
+   ]
+  },
+  "033919f239": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "036cf72d91": {
+   "topics": [
+    "people",
+    "arts"
+   ]
+  },
+  "037925a6d6": {
+   "topics": [
+    "body",
+    "feelings"
+   ]
+  },
+  "037c2ecb86": {
+   "topics": [
+    "body"
+   ]
+  },
+  "037cf136b2": {
+   "topics": [
+    "daily",
+    "technology"
+   ]
+  },
+  "04380e6c35": {
+   "topics": [
+    "daily",
+    "technology"
+   ]
+  },
+  "0440a8bd4f": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "04428b9eb4": {
+   "topics": [
+    "people",
+    "work"
+   ]
+  },
+  "04ee2e546f": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "050f3bbfac": {
+   "topics": [
+    "places"
+   ]
+  },
+  "0512a67641": {
+   "topics": [
+    "daily",
+    "work"
+   ]
+  },
+  "0525f8593c": {
+   "topics": [
+    "daily",
+    "technology"
+   ]
+  },
+  "05717efa73": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "05b951102a": {
+   "topics": [
+    "time",
+    "quantity"
+   ]
+  },
+  "05f3c84284": {
+   "topics": [
+    "quantity",
+    "descriptions"
+   ]
+  },
+  "060e802c68": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "06171296c0": {
+   "topics": [
+    "learning",
+    "daily"
+   ]
+  },
+  "0632807791": {
+   "topics": [
+    "society",
+    "technology"
+   ]
+  },
+  "0696f63fdf": {
+   "topics": [
+    "work"
+   ]
+  },
+  "06b85de79a": {
+   "topics": [
+    "places",
+    "descriptions"
+   ]
+  },
+  "07458cd0ba": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "07ced3db7b": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "07f0baa471": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "07f4ebd73d": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "07f5677ad2": {
+   "topics": [
+    "time",
+    "work"
+   ]
+  },
+  "08440c8ace": {
+   "topics": [
+    "society"
+   ]
+  },
+  "086ada9b06": {
+   "topics": [
+    "descriptions",
+    "time"
+   ]
+  },
+  "08f3d1eb54": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "08f58c3770": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "09049312f0": {
+   "topics": [
+    "quantity"
+   ]
+  },
+  "0948f5e8f0": {
+   "topics": [
+    "arts",
+    "body"
+   ]
+  },
+  "0973ea4445": {
+   "topics": [
+    "descriptions",
+    "feelings"
+   ]
+  },
+  "0989459c37": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "09aaedaccc": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "0a23863840": {
+   "topics": [
+    "people",
+    "body"
+   ]
+  },
+  "0a2e1c93de": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "0aa9e30a0b": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "0ac7cfded0": {
+   "topics": [
+    "society"
+   ]
+  },
+  "0adf15ff3f": {
+   "topics": [
+    "body"
+   ]
+  },
+  "0aedc1119d": {
+   "topics": [
+    "technology",
+    "nature"
+   ]
+  },
+  "0b36d0c00b": {
+   "topics": [
+    "arts"
+   ]
+  },
+  "0b3f7b2cf0": {
+   "topics": [
+    "people",
+    "relationships"
+   ]
+  },
+  "0b885a1c38": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "0ba966a4cb": {
+   "topics": [
+    "feelings",
+    "society"
+   ]
+  },
+  "0bae48705e": {
+   "topics": [
+    "work",
+    "places"
+   ]
+  },
+  "0c8eee4cc2": {
+   "topics": [
+    "places"
+   ]
+  },
+  "0c96de4f87": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "0cbc5fcb97": {
+   "topics": [
+    "work"
+   ]
+  },
+  "0ce645af89": {
+   "topics": [
+    "feelings",
+    "relationships"
+   ]
+  },
+  "0d5bf3cdac": {
+   "topics": [
+    "arts",
+    "learning"
+   ]
+  },
+  "0d6665ee3b": {
+   "topics": [
+    "body",
+    "places"
+   ]
+  },
+  "0db578581a": {
+   "topics": [
+    "arts"
+   ]
+  },
+  "0dbafbe052": {
+   "topics": [
+    "arts"
+   ]
+  },
+  "0e1d889990": {
+   "topics": [
+    "work",
+    "places"
+   ]
+  },
+  "0e1f5e1a46": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "0e2bb18941": {
+   "topics": [
+    "places",
+    "nature"
+   ]
+  },
+  "0e2efb14b6": {
+   "topics": [
+    "arts"
+   ]
+  },
+  "0e7597cf73": {
+   "topics": [
+    "learning",
+    "feelings"
+   ]
+  },
+  "0e79e4a9e2": {
+   "topics": [
+    "food"
+   ]
+  },
+  "0ebede63ff": {
+   "topics": [
+    "people"
+   ]
+  },
+  "0edcf936db": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "0f0d43dcdb": {
+   "topics": [
+    "descriptions",
+    "places"
+   ]
+  },
+  "0f4b2590f6": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "0f621ef0a0": {
+   "topics": [
+    "places",
+    "arts"
+   ]
+  },
+  "0f8d581ad8": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "0fcdbb8d5f": {
+   "topics": [
+    "arts"
+   ]
+  },
+  "0fe3697d0a": {
+   "topics": [
+    "arts",
+    "learning"
+   ]
+  },
+  "1038a70c3e": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "108e74b73c": {
+   "topics": [
+    "arts"
+   ]
+  },
+  "10adbed302": {
+   "topics": [
+    "food"
+   ]
+  },
+  "10b368ca88": {
+   "topics": [
+    "arts",
+    "learning"
+   ]
+  },
+  "10df370c17": {
+   "topics": [
+    "nature",
+    "people"
+   ]
+  },
+  "1151601f8e": {
+   "topics": [
+    "places"
+   ]
+  },
+  "11516bf5bf": {
+   "topics": [
+    "people",
+    "arts"
+   ]
+  },
+  "115a9cef87": {
+   "topics": [
+    "places"
+   ]
+  },
+  "116a3145bb": {
+   "topics": [
+    "body"
+   ]
+  },
+  "116b451dd9": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "11ac991f58": {
+   "topics": [
+    "descriptions",
+    "learning"
+   ]
+  },
+  "11e095629c": {
+   "topics": [
+    "places",
+    "nature"
+   ]
+  },
+  "121e30ca31": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "1224c14c05": {
+   "topics": [
+    "society",
+    "work"
+   ]
+  },
+  "1279de76d3": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "1357988d61": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "1357fa159f": {
+   "topics": [
+    "learning",
+    "work"
+   ]
+  },
+  "135ed2fc45": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "1400d67422": {
+   "topics": [
+    "arts"
+   ]
+  },
+  "140a214a45": {
+   "topics": [
+    "arts"
+   ]
+  },
+  "144ace6a3f": {
+   "topics": [
+    "places"
+   ]
+  },
+  "144c1b4945": {
+   "topics": [
+    "work",
+    "society"
+   ]
+  },
+  "145a15c354": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "149aa63e77": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "14b9469de2": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "14d9875a05": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "1558d7ee11": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "157b440b95": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "159326fcca": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "159906d23f": {
+   "topics": [
+    "body",
+    "descriptions"
+   ]
+  },
+  "15a5796d8c": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "15bfdc638d": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "15d4ea5f82": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "15de07120f": {
+   "topics": [
+    "daily",
+    "technology"
+   ]
+  },
+  "1655402893": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "16c5e91008": {
+   "topics": [
+    "technology",
+    "arts"
+   ]
+  },
+  "16dd291b4d": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "172c14a0d6": {
+   "topics": [
+    "places",
+    "descriptions"
+   ]
+  },
+  "1782d38488": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "180d018762": {
+   "topics": [
+    "society"
+   ]
+  },
+  "183905b21d": {
+   "topics": [
+    "time"
+   ]
+  },
+  "1845cb2477": {
+   "topics": [
+    "quantity",
+    "descriptions"
+   ]
+  },
+  "18597d193c": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "186847c962": {
+   "topics": [
+    "feelings"
+   ]
+  },
+  "18ce3e646d": {
+   "topics": [
+    "technology",
+    "daily"
+   ]
+  },
+  "19130f8b0c": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "191d9697e6": {
+   "topics": [
+    "nature",
+    "places"
+   ]
+  },
+  "1928069f96": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "192b09d71f": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "192cd7a066": {
+   "topics": [
+    "descriptions",
+    "body"
+   ]
+  },
+  "1935a3f544": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "1974a3d703": {
+   "topics": [
+    "time",
+    "quantity"
+   ]
+  },
+  "1994007f1d": {
+   "topics": [
+    "food",
+    "technology"
+   ]
+  },
+  "19a41952db": {
+   "topics": [
+    "time"
+   ]
+  },
+  "19b3644127": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "19d6f3a783": {
+   "topics": [
+    "learning",
+    "quantity"
+   ]
+  },
+  "1a3e85188c": {
+   "topics": [
+    "places",
+    "nature"
+   ]
+  },
+  "1a5423f529": {
+   "topics": [
+    "technology",
+    "food"
+   ]
+  },
+  "1a83326bf0": {
+   "topics": [
+    "feelings"
+   ]
+  },
+  "1ad5c766ea": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "1adc698333": {
+   "topics": [
+    "learning",
+    "places"
+   ]
+  },
+  "1b04830825": {
+   "topics": [
+    "feelings"
+   ]
+  },
+  "1b67b6cb7e": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "1b81bc4fc4": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "1bc14dcb79": {
+   "topics": [
+    "technology",
+    "places"
+   ]
+  },
+  "1bc27bd981": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "1c91d6bc15": {
+   "topics": [
+    "technology",
+    "daily"
+   ]
+  },
+  "1cda943bec": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "1d48dc95a3": {
+   "topics": [
+    "descriptions",
+    "technology"
+   ]
+  },
+  "1d4ec7c2db": {
+   "topics": [
+    "society",
+    "people"
+   ]
+  },
+  "1d5c12f6ef": {
+   "topics": [
+    "nature",
+    "food"
+   ]
+  },
+  "1dbd51644b": {
+   "topics": [
+    "feelings",
+    "society"
+   ]
+  },
+  "1dbd5b263b": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "1dc344813d": {
+   "topics": [
+    "places",
+    "society"
+   ]
+  },
+  "1dd7773559": {
+   "topics": [
+    "nature",
+    "learning"
+   ]
+  },
+  "1e16b1d46a": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "1e1cd4e481": {
+   "topics": [
+    "people",
+    "arts"
+   ]
+  },
+  "1e21784548": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "1e3d7c44ae": {
+   "topics": [
+    "learning",
+    "descriptions"
+   ]
+  },
+  "1e77167484": {
+   "topics": [
+    "arts"
+   ]
+  },
+  "1ea7451e69": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "1f4b2dd59b": {
+   "topics": [
+    "work"
+   ]
+  },
+  "1f52678a32": {
+   "topics": [
+    "feelings",
+    "descriptions"
+   ]
+  },
+  "1f7fbc010f": {
+   "topics": [
+    "body",
+    "descriptions"
+   ]
+  },
+  "1fc733c113": {
+   "topics": [
+    "quantity",
+    "descriptions"
+   ]
+  },
+  "1fca295d01": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "1fd3fc74f0": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "205f3a5a29": {
+   "topics": [
+    "actions",
+    "people"
+   ]
+  },
+  "206cb49bde": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "20d7554878": {
+   "topics": [
+    "places",
+    "nature"
+   ]
+  },
+  "20f1c0d4bc": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "20f327da61": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "20fbba9af9": {
+   "topics": [
+    "descriptions",
+    "nature"
+   ]
+  },
+  "210e2fdd0b": {
+   "topics": [
+    "work",
+    "actions"
+   ]
+  },
+  "212095a8b4": {
+   "topics": [
+    "work"
+   ]
+  },
+  "2125719689": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "2128a2cade": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "216a25fa32": {
+   "topics": [
+    "quantity"
+   ]
+  },
+  "21706ca86c": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "21e0ebdfb3": {
+   "topics": [
+    "quantity",
+    "descriptions"
+   ]
+  },
+  "21f2e9018e": {
+   "topics": [
+    "time"
+   ]
+  },
+  "227cc6a89a": {
+   "topics": [
+    "quantity",
+    "learning"
+   ]
+  },
+  "22bdd6c98d": {
+   "topics": [
+    "places"
+   ]
+  },
+  "22def1bae6": {
+   "topics": [
+    "technology",
+    "descriptions"
+   ]
+  },
+  "2306950c03": {
+   "topics": [
+    "technology",
+    "daily"
+   ]
+  },
+  "23425c2306": {
+   "topics": [
+    "places"
+   ]
+  },
+  "235bb74e62": {
+   "topics": [
+    "society",
+    "body"
+   ]
+  },
+  "2367d9c063": {
+   "topics": [
+    "learning",
+    "quantity"
+   ]
+  },
+  "23dbfc6d80": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "2418b0bd40": {
+   "topics": [
+    "places",
+    "technology"
+   ]
+  },
+  "24194e1918": {
+   "topics": [
+    "places",
+    "learning"
+   ]
+  },
+  "24727f461e": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "24c7b38c0b": {
+   "topics": [
+    "work",
+    "descriptions"
+   ]
+  },
+  "24e21e954d": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "24fa33d1a4": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "24fd735f83": {
+   "topics": [
+    "work"
+   ]
+  },
+  "251266e6d5": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "25190a5f67": {
+   "topics": [
+    "people",
+    "arts"
+   ]
+  },
+  "256e7a9058": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "25867f6e37": {
+   "topics": [
+    "body",
+    "learning"
+   ]
+  },
+  "2594292c24": {
+   "topics": [
+    "nature",
+    "learning"
+   ]
+  },
+  "25a3345e54": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "265aa93d86": {
+   "topics": [
+    "people",
+    "feelings"
+   ]
+  },
+  "26ac2e6e2c": {
+   "topics": [
+    "arts",
+    "technology"
+   ]
+  },
+  "26c040c009": {
+   "topics": [
+    "technology",
+    "society"
+   ]
+  },
+  "26e15c1ade": {
+   "topics": [
+    "arts",
+    "body"
+   ]
+  },
+  "26f92d8772": {
+   "topics": [
+    "society",
+    "learning"
+   ]
+  },
+  "270816b6b9": {
+   "topics": [
+    "learning",
+    "places"
+   ]
+  },
+  "271078ced6": {
+   "topics": [
+    "arts",
+    "feelings"
+   ]
+  },
+  "271ffb6876": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "272904801e": {
+   "topics": [
+    "society"
+   ]
+  },
+  "2777c0a5f5": {
+   "topics": [
+    "people",
+    "work"
+   ]
+  },
+  "277ec2a708": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "2797d01152": {
+   "topics": [
+    "people",
+    "work"
+   ]
+  },
+  "27a6e0b315": {
+   "topics": [
+    "descriptions",
+    "technology"
+   ]
+  },
+  "27ccf826bb": {
+   "topics": [
+    "learning",
+    "feelings"
+   ]
+  },
+  "27e7e5471c": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "28631b73ea": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "28a5ee1cda": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "28dddd721c": {
+   "topics": [
+    "time"
+   ]
+  },
+  "28e78ea570": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "29010ee3b0": {
+   "topics": [
+    "food",
+    "time"
+   ]
+  },
+  "2932bfdf1f": {
+   "topics": [
+    "learning",
+    "society"
+   ]
+  },
+  "29490c099e": {
+   "topics": [
+    "nature",
+    "technology"
+   ]
+  },
+  "2950903972": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "29d4d2cb7d": {
+   "topics": [
+    "society"
+   ]
+  },
+  "2a27b7f164": {
+   "topics": [
+    "arts"
+   ]
+  },
+  "2a534a4917": {
+   "topics": [
+    "work",
+    "learning"
+   ]
+  },
+  "2afa66abdb": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "2b565b647a": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "2b990c61a0": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "2b9cc873fb": {
+   "topics": [
+    "time"
+   ]
+  },
+  "2bf06d30d9": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "2bf1b2ef65": {
+   "topics": [
+    "nature",
+    "places"
+   ]
+  },
+  "2c104d9ef9": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "2c62d0aba0": {
+   "topics": [
+    "actions",
+    "places"
+   ]
+  },
+  "2c83788ca8": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "2caf48afc9": {
+   "topics": [
+    "daily",
+    "body"
+   ]
+  },
+  "2cc68f1162": {
+   "topics": [
+    "descriptions",
+    "learning"
+   ]
+  },
+  "2d0315cd73": {
+   "topics": [
+    "quantity",
+    "technology"
+   ]
+  },
+  "2d389db4db": {
+   "topics": [
+    "learning",
+    "descriptions"
+   ]
+  },
+  "2d670c3944": {
+   "topics": [
+    "places"
+   ]
+  },
+  "2dbb8dd1b2": {
+   "topics": [
+    "feelings",
+    "descriptions"
+   ]
+  },
+  "2e1b2d5c37": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "2e9324e58b": {
+   "topics": [
+    "people",
+    "food"
+   ]
+  },
+  "2ebc49d99b": {
+   "topics": [
+    "places",
+    "society"
+   ]
+  },
+  "2ee08a024a": {
+   "topics": [
+    "nature",
+    "descriptions"
+   ]
+  },
+  "2f149505a1": {
+   "topics": [
+    "technology",
+    "society"
+   ]
+  },
+  "2f2bfb723b": {
+   "topics": [
+    "people",
+    "relationships"
+   ]
+  },
+  "2f4c977989": {
+   "topics": [
+    "food",
+    "daily"
+   ]
+  },
+  "30088243fb": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "302bc4694a": {
+   "topics": [
+    "daily",
+    "technology"
+   ]
+  },
+  "30381aa09c": {
+   "topics": [
+    "quantity",
+    "learning"
+   ]
+  },
+  "3086a4fcb2": {
+   "topics": [
+    "society",
+    "feelings"
+   ]
+  },
+  "318006f78a": {
+   "topics": [
+    "body"
+   ]
+  },
+  "318139be02": {
+   "topics": [
+    "feelings",
+    "body"
+   ]
+  },
+  "31c272208c": {
+   "topics": [
+    "food"
+   ]
+  },
+  "31f9300fb0": {
+   "topics": [
+    "relationships",
+    "feelings"
+   ]
+  },
+  "321ba5716a": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "3263a2c4ee": {
+   "topics": [
+    "nature",
+    "places"
+   ]
+  },
+  "327bccbebd": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "32a8b1d784": {
+   "topics": [
+    "technology",
+    "learning"
+   ]
+  },
+  "32bd2e24f7": {
+   "topics": [
+    "daily",
+    "actions"
+   ]
+  },
+  "32fc7863a8": {
+   "topics": [
+    "food"
+   ]
+  },
+  "3303a98af1": {
+   "topics": [
+    "people",
+    "relationships"
+   ]
+  },
+  "3384dae78d": {
+   "topics": [
+    "descriptions",
+    "learning"
+   ]
+  },
+  "33875d6135": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "33cd091e92": {
+   "topics": [
+    "body"
+   ]
+  },
+  "344ec73c51": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "34669ba2b8": {
+   "topics": [
+    "places",
+    "technology"
+   ]
+  },
+  "347f2ce155": {
+   "topics": [
+    "descriptions",
+    "time"
+   ]
+  },
+  "3485a5b479": {
+   "topics": [
+    "people",
+    "relationships"
+   ]
+  },
+  "34b4191f3c": {
+   "topics": [
+    "technology",
+    "places"
+   ]
+  },
+  "35b2b01bf1": {
+   "topics": [
+    "places",
+    "work"
+   ]
+  },
+  "35c17c9820": {
+   "topics": [
+    "food",
+    "nature"
+   ]
+  },
+  "363e985c77": {
+   "topics": [
+    "people",
+    "work"
+   ]
+  },
+  "365fe85edb": {
+   "topics": [
+    "descriptions",
+    "work"
+   ]
+  },
+  "3675b2a9f8": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "36794aa72e": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "368baf2dfb": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "36b8c3f521": {
+   "topics": [
+    "people",
+    "time"
+   ]
+  },
+  "36e8d19bfd": {
+   "topics": [
+    "time",
+    "quantity"
+   ]
+  },
+  "370b10e13a": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "37126e35d7": {
+   "topics": [
+    "people",
+    "arts"
+   ]
+  },
+  "371f1b3f39": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "372efcc496": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "373d6e5184": {
+   "topics": [
+    "technology",
+    "nature"
+   ]
+  },
+  "3767dad3d1": {
+   "topics": [
+    "nature",
+    "learning"
+   ]
+  },
+  "3786c907e1": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "379f6158b5": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "37d7aac8f2": {
+   "topics": [
+    "places",
+    "learning"
+   ]
+  },
+  "38272461d1": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "3836c2c8bd": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "385564b693": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "3861eaa614": {
+   "topics": [
+    "work",
+    "society"
+   ]
+  },
+  "38664919d1": {
+   "topics": [
+    "time"
+   ]
+  },
+  "38beffc458": {
+   "topics": [
+    "work"
+   ]
+  },
+  "38dd5eb4a0": {
+   "topics": [
+    "arts",
+    "daily"
+   ]
+  },
+  "3931046230": {
+   "topics": [
+    "places",
+    "descriptions"
+   ]
+  },
+  "3963aabbaa": {
+   "topics": [
+    "feelings",
+    "actions"
+   ]
+  },
+  "39b0ac16ca": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "39eebded13": {
+   "topics": [
+    "quantity",
+    "society"
+   ]
+  },
+  "3a27cdfca7": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "3a37cfc263": {
+   "topics": [
+    "places",
+    "daily"
+   ]
+  },
+  "3a3ca43df5": {
+   "topics": [
+    "people",
+    "work"
+   ]
+  },
+  "3a3de4c3fe": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "3a94a8d62a": {
+   "topics": [
+    "technology",
+    "learning"
+   ]
+  },
+  "3a9abb8ed5": {
+   "topics": [
+    "people",
+    "work"
+   ]
+  },
+  "3ac53ba33d": {
+   "topics": [
+    "daily",
+    "technology"
+   ]
+  },
+  "3adb9ea016": {
+   "topics": [
+    "learning",
+    "work"
+   ]
+  },
+  "3b1eafd858": {
+   "topics": [
+    "technology",
+    "daily"
+   ]
+  },
+  "3b48c1cc8f": {
+   "topics": [
+    "work"
+   ]
+  },
+  "3bddae5639": {
+   "topics": [
+    "society"
+   ]
+  },
+  "3c2e8a5848": {
+   "topics": [
+    "work",
+    "daily"
+   ]
+  },
+  "3c5ff54bea": {
+   "topics": [
+    "quantity"
+   ]
+  },
+  "3c6f24a260": {
+   "topics": [
+    "arts"
+   ]
+  },
+  "3c701afc3b": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "3c936d0cf2": {
+   "topics": [
+    "descriptions",
+    "society"
+   ]
+  },
+  "3cda3baabf": {
+   "topics": [
+    "arts",
+    "descriptions"
+   ]
+  },
+  "3cffc75454": {
+   "topics": [
+    "work"
+   ]
+  },
+  "3d1e878581": {
+   "topics": [
+    "places",
+    "nature"
+   ]
+  },
+  "3d9a6a01ea": {
+   "topics": [
+    "work"
+   ]
+  },
+  "3da2e90e4a": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "3db08b983b": {
+   "topics": [
+    "arts",
+    "learning"
+   ]
+  },
+  "3dbdf1b28b": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "3dcf2b70c5": {
+   "topics": [
+    "work",
+    "arts"
+   ]
+  },
+  "3e2c1c64f4": {
+   "topics": [
+    "work"
+   ]
+  },
+  "3e43a1afad": {
+   "topics": [
+    "descriptions",
+    "body"
+   ]
+  },
+  "3efa32e22e": {
+   "topics": [
+    "people"
+   ]
+  },
+  "3f4f5fb76e": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "3f6acc49f6": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "3f77054caf": {
+   "topics": [
+    "quantity",
+    "technology"
+   ]
+  },
+  "3fb57d175d": {
+   "topics": [
+    "actions",
+    "body"
+   ]
+  },
+  "3fc07b1856": {
+   "topics": [
+    "people"
+   ]
+  },
+  "3fc7930042": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "3fcbb04d16": {
+   "topics": [
+    "daily",
+    "technology"
+   ]
+  },
+  "40312166c1": {
+   "topics": [
+    "feelings",
+    "body"
+   ]
+  },
+  "4072da73db": {
+   "topics": [
+    "feelings"
+   ]
+  },
+  "40b4a7cb92": {
+   "topics": [
+    "time"
+   ]
+  },
+  "40e9454453": {
+   "topics": [
+    "descriptions",
+    "places"
+   ]
+  },
+  "4100983d28": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "413bbde60b": {
+   "topics": [
+    "places",
+    "nature"
+   ]
+  },
+  "415ca8e1aa": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "41ad5f20ad": {
+   "topics": [
+    "society",
+    "descriptions"
+   ]
+  },
+  "41e221bc4d": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "4209a354cb": {
+   "topics": [
+    "work",
+    "society"
+   ]
+  },
+  "421f9be199": {
+   "topics": [
+    "places"
+   ]
+  },
+  "42d77d4da9": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "42d999cbab": {
+   "topics": [
+    "technology",
+    "places"
+   ]
+  },
+  "42fbc7ed06": {
+   "topics": [
+    "technology",
+    "society"
+   ]
+  },
+  "43b76d54d8": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "43db81a024": {
+   "topics": [
+    "body",
+    "descriptions"
+   ]
+  },
+  "43f9074428": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "440279fbf1": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "4418a98992": {
+   "topics": [
+    "food",
+    "time"
+   ]
+  },
+  "449d9624b4": {
+   "topics": [
+    "daily",
+    "work"
+   ]
+  },
+  "44bc159936": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "44dc163d37": {
+   "topics": [
+    "quantity",
+    "learning"
+   ]
+  },
+  "44e52d6c83": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "44e8eb23ad": {
+   "topics": [
+    "learning",
+    "descriptions"
+   ]
+  },
+  "44fc3e10df": {
+   "topics": [
+    "nature",
+    "places"
+   ]
+  },
+  "4523ccb200": {
+   "topics": [
+    "learning",
+    "technology"
+   ]
+  },
+  "4548e205d7": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "457b919489": {
+   "topics": [
+    "feelings"
+   ]
+  },
+  "4601135013": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "46735bd09f": {
+   "topics": [
+    "descriptions",
+    "quantity"
+   ]
+  },
+  "46adc4e436": {
+   "topics": [
+    "society",
+    "actions"
+   ]
+  },
+  "4713a549bc": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "47b2831015": {
+   "topics": [
+    "descriptions",
+    "learning"
+   ]
+  },
+  "47e4de1f65": {
+   "topics": [
+    "quantity"
+   ]
+  },
+  "47fca052ff": {
+   "topics": [
+    "technology",
+    "society"
+   ]
+  },
+  "4831341731": {
+   "topics": [
+    "society",
+    "descriptions"
+   ]
+  },
+  "4833b06f7b": {
+   "topics": [
+    "learning",
+    "feelings"
+   ]
+  },
+  "48385111dd": {
+   "topics": [
+    "arts",
+    "society"
+   ]
+  },
+  "4845859c7b": {
+   "topics": [
+    "society",
+    "descriptions"
+   ]
+  },
+  "48519b5fef": {
+   "topics": [
+    "arts",
+    "daily"
+   ]
+  },
+  "4886c70b26": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "4937331a58": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "4976326eba": {
+   "topics": [
+    "body"
+   ]
+  },
+  "49827ea986": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "49b24ec6dc": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "49b450eac3": {
+   "topics": [
+    "food",
+    "work"
+   ]
+  },
+  "4a1cdc1692": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "4a77dc412c": {
+   "topics": [
+    "learning",
+    "arts"
+   ]
+  },
+  "4aa59e0065": {
+   "topics": [
+    "nature",
+    "places"
+   ]
+  },
+  "4ab329eb4e": {
+   "topics": [
+    "places",
+    "technology"
+   ]
+  },
+  "4ae649a9ef": {
+   "topics": [
+    "body",
+    "society"
+   ]
+  },
+  "4b0f18eaab": {
+   "topics": [
+    "places",
+    "daily"
+   ]
+  },
+  "4b1cb88257": {
+   "topics": [
+    "actions",
+    "people"
+   ]
+  },
+  "4b4adfa7dc": {
+   "topics": [
+    "learning",
+    "society"
+   ]
+  },
+  "4b716aefb8": {
+   "topics": [
+    "time",
+    "work"
+   ]
+  },
+  "4bd8d92e08": {
+   "topics": [
+    "quantity"
+   ]
+  },
+  "4c0d39020a": {
+   "topics": [
+    "descriptions",
+    "technology"
+   ]
+  },
+  "4c123afdff": {
+   "topics": [
+    "daily",
+    "work"
+   ]
+  },
+  "4c256eea03": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "4cacf4f050": {
+   "topics": [
+    "technology",
+    "learning"
+   ]
+  },
+  "4caf52bf1b": {
+   "topics": [
+    "society"
+   ]
+  },
+  "4d2dd03405": {
+   "topics": [
+    "food",
+    "daily"
+   ]
+  },
+  "4dc1084ef7": {
+   "topics": [
+    "learning",
+    "descriptions"
+   ]
+  },
+  "4ddbf879b9": {
+   "topics": [
+    "body",
+    "society"
+   ]
+  },
+  "4e0ee519ff": {
+   "topics": [
+    "daily",
+    "learning"
+   ]
+  },
+  "4e4af58c4d": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "4e8fe5911e": {
+   "topics": [
+    "body",
+    "daily"
+   ]
+  },
+  "4e92bfed96": {
+   "topics": [
+    "time",
+    "people"
+   ]
+  },
+  "4ec440ca2b": {
+   "topics": [
+    "descriptions",
+    "people"
+   ]
+  },
+  "4ec7fe1166": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "4f0c39291a": {
+   "topics": [
+    "descriptions",
+    "food"
+   ]
+  },
+  "4f27080665": {
+   "topics": [
+    "nature",
+    "time"
+   ]
+  },
+  "4f7250c237": {
+   "topics": [
+    "arts"
+   ]
+  },
+  "4f7398ac14": {
+   "topics": [
+    "work"
+   ]
+  },
+  "4f949d1f9d": {
+   "topics": [
+    "food",
+    "nature"
+   ]
+  },
+  "4fa73fd5b1": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "503bf9a13e": {
+   "topics": [
+    "work"
+   ]
+  },
+  "50463fe8e3": {
+   "topics": [
+    "food",
+    "work"
+   ]
+  },
+  "504b53204a": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "5083117601": {
+   "topics": [
+    "places",
+    "technology"
+   ]
+  },
+  "5099ac7aef": {
+   "topics": [
+    "places",
+    "arts"
+   ]
+  },
+  "50c0503d3d": {
+   "topics": [
+    "quantity"
+   ]
+  },
+  "50ff1ec9f1": {
+   "topics": [
+    "learning",
+    "arts"
+   ]
+  },
+  "510fabace9": {
+   "topics": [
+    "body",
+    "food"
+   ]
+  },
+  "5123dd1f49": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "5132190319": {
+   "topics": [
+    "people"
+   ]
+  },
+  "514bf3a4fb": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "519deff273": {
+   "topics": [
+    "work"
+   ]
+  },
+  "51d4f339b1": {
+   "topics": [
+    "feelings",
+    "learning"
+   ]
+  },
+  "524a699a99": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "525af6640e": {
+   "topics": [
+    "arts",
+    "technology"
+   ]
+  },
+  "526a0047ad": {
+   "topics": [
+    "nature",
+    "body"
+   ]
+  },
+  "52ce5488e0": {
+   "topics": [
+    "places",
+    "technology"
+   ]
+  },
+  "52d1950fe6": {
+   "topics": [
+    "places"
+   ]
+  },
+  "52d4f9b548": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "5315a22cf3": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "533668820b": {
+   "topics": [
+    "nature",
+    "body"
+   ]
+  },
+  "5339e0154c": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "534cb7e2f0": {
+   "topics": [
+    "society"
+   ]
+  },
+  "539a42f789": {
+   "topics": [
+    "technology",
+    "places"
+   ]
+  },
+  "53e1ba680a": {
+   "topics": [
+    "society",
+    "people"
+   ]
+  },
+  "5441f9df9d": {
+   "topics": [
+    "people",
+    "learning"
+   ]
+  },
+  "547660574d": {
+   "topics": [
+    "actions",
+    "society"
+   ]
+  },
+  "5489cdb398": {
+   "topics": [
+    "places",
+    "daily"
+   ]
+  },
+  "54e840405e": {
+   "topics": [
+    "time"
+   ]
+  },
+  "5543a2efce": {
+   "topics": [
+    "technology",
+    "daily"
+   ]
+  },
+  "5550472e9a": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "5562be30ed": {
+   "topics": [
+    "places"
+   ]
+  },
+  "55b369ffb6": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "55b77976ae": {
+   "topics": [
+    "body"
+   ]
+  },
+  "55c4301a2c": {
+   "topics": [
+    "quantity",
+    "learning"
+   ]
+  },
+  "55f903839c": {
+   "topics": [
+    "quantity"
+   ]
+  },
+  "56092bf6de": {
+   "topics": [
+    "relationships",
+    "actions"
+   ]
+  },
+  "5610f4c4d8": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "56d7bebebd": {
+   "topics": [
+    "work"
+   ]
+  },
+  "56e2434245": {
+   "topics": [
+    "society",
+    "learning"
+   ]
+  },
+  "57054ddfeb": {
+   "topics": [
+    "descriptions",
+    "time"
+   ]
+  },
+  "57119864ae": {
+   "topics": [
+    "body",
+    "places"
+   ]
+  },
+  "571736e080": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "573b247c42": {
+   "topics": [
+    "places"
+   ]
+  },
+  "576d64fbe4": {
+   "topics": [
+    "daily",
+    "arts"
+   ]
+  },
+  "576dd99374": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "57726876db": {
+   "topics": [
+    "food",
+    "nature"
+   ]
+  },
+  "579b318330": {
+   "topics": [
+    "society"
+   ]
+  },
+  "57c138744d": {
+   "topics": [
+    "people",
+    "learning"
+   ]
+  },
+  "585f7c3b7f": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "5880c88977": {
+   "topics": [
+    "people",
+    "descriptions"
+   ]
+  },
+  "588115d0bc": {
+   "topics": [
+    "places",
+    "learning"
+   ]
+  },
+  "5884288fe1": {
+   "topics": [
+    "time"
+   ]
+  },
+  "58a624504d": {
+   "topics": [
+    "places",
+    "society"
+   ]
+  },
+  "58e01c0b72": {
+   "topics": [
+    "body",
+    "feelings"
+   ]
+  },
+  "5900f7f854": {
+   "topics": [
+    "people",
+    "learning"
+   ]
+  },
+  "5929a15e3a": {
+   "topics": [
+    "time"
+   ]
+  },
+  "597a6eed85": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "598e1dd07c": {
+   "topics": [
+    "feelings"
+   ]
+  },
+  "59ac3278b5": {
+   "topics": [
+    "quantity"
+   ]
+  },
+  "59d7b934c6": {
+   "topics": [
+    "places",
+    "quantity"
+   ]
+  },
+  "59d84a5ff9": {
+   "topics": [
+    "learning",
+    "nature"
+   ]
+  },
+  "5a25bbe9d4": {
+   "topics": [
+    "descriptions",
+    "work"
+   ]
+  },
+  "5a7dba68c7": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "5a83b6e9ae": {
+   "topics": [
+    "learning",
+    "arts"
+   ]
+  },
+  "5a93587f3a": {
+   "topics": [
+    "descriptions",
+    "work"
+   ]
+  },
+  "5ac33a4880": {
+   "topics": [
+    "arts",
+    "quantity"
+   ]
+  },
+  "5ae490b220": {
+   "topics": [
+    "time"
+   ]
+  },
+  "5af15108d0": {
+   "topics": [
+    "food",
+    "work"
+   ]
+  },
+  "5b0d9b6282": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "5b13a6dd8f": {
+   "topics": [
+    "places",
+    "technology"
+   ]
+  },
+  "5b1670aea6": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "5b36334b8a": {
+   "topics": [
+    "time"
+   ]
+  },
+  "5b445da9d8": {
+   "topics": [
+    "people",
+    "learning"
+   ]
+  },
+  "5b77043dfc": {
+   "topics": [
+    "arts"
+   ]
+  },
+  "5ba5398076": {
+   "topics": [
+    "nature",
+    "work"
+   ]
+  },
+  "5be448e6cb": {
+   "topics": [
+    "feelings",
+    "body"
+   ]
+  },
+  "5c180d80bf": {
+   "topics": [
+    "arts",
+    "body"
+   ]
+  },
+  "5c2b71ef11": {
+   "topics": [
+    "society",
+    "learning"
+   ]
+  },
+  "5c66cff518": {
+   "topics": [
+    "relationships",
+    "time"
+   ]
+  },
+  "5cc54de84b": {
+   "topics": [
+    "people",
+    "descriptions"
+   ]
+  },
+  "5cf06f835b": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "5cf71aab8a": {
+   "topics": [
+    "body"
+   ]
+  },
+  "5d1b7e0ebd": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "5d1c14bede": {
+   "topics": [
+    "places"
+   ]
+  },
+  "5dbdfa6e94": {
+   "topics": [
+    "technology",
+    "arts"
+   ]
+  },
+  "5de51daefa": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "5df242e3b0": {
+   "topics": [
+    "society",
+    "learning"
+   ]
+  },
+  "5e124cf29c": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "5e47be51f8": {
+   "topics": [
+    "learning",
+    "society"
+   ]
+  },
+  "5e5a5dfee9": {
+   "topics": [
+    "people",
+    "relationships"
+   ]
+  },
+  "5e99c7d855": {
+   "topics": [
+    "body"
+   ]
+  },
+  "5efa5daa2b": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "5f1b31cdeb": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "5f300646e4": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "5f30ae15e7": {
+   "topics": [
+    "food"
+   ]
+  },
+  "5fc011d141": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "5fc0847a6d": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "5fd1b52022": {
+   "topics": [
+    "places",
+    "technology"
+   ]
+  },
+  "5fe5d25c22": {
+   "topics": [
+    "work"
+   ]
+  },
+  "5ff53bdd4b": {
+   "topics": [
+    "quantity",
+    "learning"
+   ]
+  },
+  "607a46e623": {
+   "topics": [
+    "people",
+    "work"
+   ]
+  },
+  "60bb4e1af0": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "60c76df858": {
+   "topics": [
+    "actions",
+    "body"
+   ]
+  },
+  "60eed96a97": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "60f3531d47": {
+   "topics": [
+    "people"
+   ]
+  },
+  "611ba7e8a3": {
+   "topics": [
+    "technology",
+    "daily"
+   ]
+  },
+  "61ab117796": {
+   "topics": [
+    "arts"
+   ]
+  },
+  "61adbb37f4": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "62053b0356": {
+   "topics": [
+    "body",
+    "technology"
+   ]
+  },
+  "620d3a74b1": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "623af5309f": {
+   "topics": [
+    "food",
+    "nature"
+   ]
+  },
+  "626076af0e": {
+   "topics": [
+    "learning",
+    "technology"
+   ]
+  },
+  "628bff4e9f": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "629536cb8c": {
+   "topics": [
+    "descriptions",
+    "technology"
+   ]
+  },
+  "629999f7f5": {
+   "topics": [
+    "feelings"
+   ]
+  },
+  "62a7044caf": {
+   "topics": [
+    "society",
+    "people"
+   ]
+  },
+  "630eb88cfd": {
+   "topics": [
+    "society"
+   ]
+  },
+  "632ef3b0ff": {
+   "topics": [
+    "arts"
+   ]
+  },
+  "6366942bd5": {
+   "topics": [
+    "body",
+    "feelings"
+   ]
+  },
+  "637071aa35": {
+   "topics": [
+    "quantity"
+   ]
+  },
+  "63d9f749c6": {
+   "topics": [
+    "work",
+    "daily"
+   ]
+  },
+  "649455971d": {
+   "topics": [
+    "food",
+    "learning"
+   ]
+  },
+  "64df1b8125": {
+   "topics": [
+    "work",
+    "descriptions"
+   ]
+  },
+  "654dd204be": {
+   "topics": [
+    "descriptions",
+    "learning"
+   ]
+  },
+  "6556dc10d1": {
+   "topics": [
+    "quantity"
+   ]
+  },
+  "656aeb8ae3": {
+   "topics": [
+    "daily",
+    "arts"
+   ]
+  },
+  "658366a1aa": {
+   "topics": [
+    "people",
+    "learning"
+   ]
+  },
+  "658b7e4c12": {
+   "topics": [
+    "technology",
+    "nature"
+   ]
+  },
+  "65dfe9149d": {
+   "topics": [
+    "quantity",
+    "daily"
+   ]
+  },
+  "65f02872e4": {
+   "topics": [
+    "arts",
+    "feelings"
+   ]
+  },
+  "660ecbecc6": {
+   "topics": [
+    "places",
+    "technology"
+   ]
+  },
+  "661ea203b7": {
+   "topics": [
+    "daily",
+    "nature"
+   ]
+  },
+  "66c155bf9f": {
+   "topics": [
+    "nature",
+    "places"
+   ]
+  },
+  "66c46c763c": {
+   "topics": [
+    "nature",
+    "places"
+   ]
+  },
+  "66d7ecadb1": {
+   "topics": [
+    "people",
+    "arts"
+   ]
+  },
+  "66feace6f2": {
+   "topics": [
+    "technology",
+    "places"
+   ]
+  },
+  "6711714ac5": {
+   "topics": [
+    "work",
+    "nature"
+   ]
+  },
+  "67174ad4d8": {
+   "topics": [
+    "body",
+    "places"
+   ]
+  },
+  "67256ba69a": {
+   "topics": [
+    "descriptions",
+    "learning"
+   ]
+  },
+  "676b358d1e": {
+   "topics": [
+    "body"
+   ]
+  },
+  "67bcdaaad0": {
+   "topics": [
+    "descriptions",
+    "technology"
+   ]
+  },
+  "67f5a63d23": {
+   "topics": [
+    "actions",
+    "society"
+   ]
+  },
+  "689b74b685": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "68ab7ff29a": {
+   "topics": [
+    "people",
+    "work"
+   ]
+  },
+  "68e07cbe30": {
+   "topics": [
+    "people",
+    "learning"
+   ]
+  },
+  "690e64a697": {
+   "topics": [
+    "time"
+   ]
+  },
+  "6937ebd690": {
+   "topics": [
+    "daily",
+    "technology"
+   ]
+  },
+  "69417b0273": {
+   "topics": [
+    "learning",
+    "society"
+   ]
+  },
+  "699d51dfa0": {
+   "topics": [
+    "quantity",
+    "learning"
+   ]
+  },
+  "69eff96c44": {
+   "topics": [
+    "quantity",
+    "learning"
+   ]
+  },
+  "6a1c8b9047": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "6a521aa0cd": {
+   "topics": [
+    "body"
+   ]
+  },
+  "6a5672e8e2": {
+   "topics": [
+    "body",
+    "descriptions"
+   ]
+  },
+  "6aa4147162": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "6ab2cd6a84": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "6aeb3b9da0": {
+   "topics": [
+    "people",
+    "work"
+   ]
+  },
+  "6b29a1b6dd": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "6b381a57b1": {
+   "topics": [
+    "nature",
+    "descriptions"
+   ]
+  },
+  "6b3917013d": {
+   "topics": [
+    "nature",
+    "learning"
+   ]
+  },
+  "6b8002d0f8": {
+   "topics": [
+    "arts",
+    "learning"
+   ]
+  },
+  "6b94607e2f": {
+   "topics": [
+    "quantity"
+   ]
+  },
+  "6baf342ae6": {
+   "topics": [
+    "technology",
+    "food"
+   ]
+  },
+  "6c0f869b21": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "6cb86b20fc": {
+   "topics": [
+    "learning",
+    "arts"
+   ]
+  },
+  "6d746d9525": {
+   "topics": [
+    "arts",
+    "daily"
+   ]
+  },
+  "6de846a293": {
+   "topics": [
+    "daily",
+    "arts"
+   ]
+  },
+  "6e42efe14d": {
+   "topics": [
+    "nature",
+    "time"
+   ]
+  },
+  "6e4b411496": {
+   "topics": [
+    "society",
+    "people"
+   ]
+  },
+  "6e524d6fdc": {
+   "topics": [
+    "nature",
+    "daily"
+   ]
+  },
+  "6e68ac9baf": {
+   "topics": [
+    "descriptions",
+    "feelings"
+   ]
+  },
+  "6ea8615b30": {
+   "topics": [
+    "feelings",
+    "body"
+   ]
+  },
+  "6ebaee5c4f": {
+   "topics": [
+    "learning",
+    "descriptions"
+   ]
+  },
+  "6ef434075e": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "6f9035b499": {
+   "topics": [
+    "arts",
+    "technology"
+   ]
+  },
+  "6f97791279": {
+   "topics": [
+    "descriptions",
+    "time"
+   ]
+  },
+  "6fbd0014e7": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "6fdfa5e5ee": {
+   "topics": [
+    "nature",
+    "descriptions"
+   ]
+  },
+  "7044f13335": {
+   "topics": [
+    "relationships",
+    "people"
+   ]
+  },
+  "7108cb5a35": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "71229cb421": {
+   "topics": [
+    "work",
+    "places"
+   ]
+  },
+  "7148c1e090": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "714f782649": {
+   "topics": [
+    "descriptions",
+    "work"
+   ]
+  },
+  "71689664c6": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "71ea9ed1fe": {
+   "topics": [
+    "descriptions",
+    "technology"
+   ]
+  },
+  "720253f6e8": {
+   "topics": [
+    "body"
+   ]
+  },
+  "72b0b5f639": {
+   "topics": [
+    "daily",
+    "places"
+   ]
+  },
+  "731e27d6bb": {
+   "topics": [
+    "learning",
+    "work"
+   ]
+  },
+  "7341f5936d": {
+   "topics": [
+    "places"
+   ]
+  },
+  "73a68467f0": {
+   "topics": [
+    "nature",
+    "learning"
+   ]
+  },
+  "73d9a1776d": {
+   "topics": [
+    "society",
+    "descriptions"
+   ]
+  },
+  "7430f801c4": {
+   "topics": [
+    "work"
+   ]
+  },
+  "7456693bdd": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "7460e55135": {
+   "topics": [
+    "people",
+    "arts"
+   ]
+  },
+  "74be6d8f27": {
+   "topics": [
+    "arts",
+    "actions"
+   ]
+  },
+  "74d028f694": {
+   "topics": [
+    "time"
+   ]
+  },
+  "753c588c58": {
+   "topics": [
+    "arts",
+    "learning"
+   ]
+  },
+  "754bddf3a2": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "7582c1d86e": {
+   "topics": [
+    "descriptions",
+    "nature"
+   ]
+  },
+  "758bbc40fb": {
+   "topics": [
+    "work",
+    "society"
+   ]
+  },
+  "7624d1daae": {
+   "topics": [
+    "places"
+   ]
+  },
+  "766c710757": {
+   "topics": [
+    "body",
+    "society"
+   ]
+  },
+  "76a8947aac": {
+   "topics": [
+    "places",
+    "daily"
+   ]
+  },
+  "76b200a366": {
+   "topics": [
+    "places",
+    "technology"
+   ]
+  },
+  "76b7811036": {
+   "topics": [
+    "nature",
+    "technology"
+   ]
+  },
+  "76dfc8fd35": {
+   "topics": [
+    "society",
+    "learning"
+   ]
+  },
+  "76fae7e09d": {
+   "topics": [
+    "feelings",
+    "society"
+   ]
+  },
+  "771ae04338": {
+   "topics": [
+    "technology",
+    "places"
+   ]
+  },
+  "772e03ca49": {
+   "topics": [
+    "body",
+    "time"
+   ]
+  },
+  "778765a79e": {
+   "topics": [
+    "nature",
+    "body"
+   ]
+  },
+  "77a024455d": {
+   "topics": [
+    "learning",
+    "feelings"
+   ]
+  },
+  "77d2529580": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "77f1be66cb": {
+   "topics": [
+    "society"
+   ]
+  },
+  "77ff01a624": {
+   "topics": [
+    "places"
+   ]
+  },
+  "7864a376ed": {
+   "topics": [
+    "arts",
+    "people"
+   ]
+  },
+  "7864bfeb34": {
+   "topics": [
+    "descriptions",
+    "technology"
+   ]
+  },
+  "7890b85fc7": {
+   "topics": [
+    "work"
+   ]
+  },
+  "789cb27c85": {
+   "topics": [
+    "feelings"
+   ]
+  },
+  "789e5505bb": {
+   "topics": [
+    "learning",
+    "nature"
+   ]
+  },
+  "78ee271a60": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "793da2875f": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "7942f6b1d6": {
+   "topics": [
+    "descriptions",
+    "feelings"
+   ]
+  },
+  "7985190c1e": {
+   "topics": [
+    "descriptions",
+    "technology"
+   ]
+  },
+  "79891aefd2": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "7a955fffce": {
+   "topics": [
+    "quantity"
+   ]
+  },
+  "7ad4368b60": {
+   "topics": [
+    "work",
+    "arts"
+   ]
+  },
+  "7b0e6a6d8d": {
+   "topics": [
+    "places",
+    "work"
+   ]
+  },
+  "7b15a55572": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "7b32f8b552": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "7b3793ce89": {
+   "topics": [
+    "people",
+    "work"
+   ]
+  },
+  "7b89bdd9ec": {
+   "topics": [
+    "arts",
+    "people"
+   ]
+  },
+  "7c2c754f5f": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "7c391cdd2b": {
+   "topics": [
+    "people",
+    "places"
+   ]
+  },
+  "7c8c318865": {
+   "topics": [
+    "body"
+   ]
+  },
+  "7cc70dbcb0": {
+   "topics": [
+    "learning",
+    "arts"
+   ]
+  },
+  "7ce9d61e4c": {
+   "topics": [
+    "time"
+   ]
+  },
+  "7cf7579e19": {
+   "topics": [
+    "nature",
+    "learning"
+   ]
+  },
+  "7d18731cba": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "7d2fc5b5b0": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "7d7ffe5b69": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "7da22b4d75": {
+   "topics": [
+    "places",
+    "technology"
+   ]
+  },
+  "7e5a40bce6": {
+   "topics": [
+    "learning",
+    "descriptions"
+   ]
+  },
+  "7e5bf1e539": {
+   "topics": [
+    "work"
+   ]
+  },
+  "7ea8d83553": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "7eb56880eb": {
+   "topics": [
+    "nature",
+    "learning"
+   ]
+  },
+  "7eedda811b": {
+   "topics": [
+    "places",
+    "technology"
+   ]
+  },
+  "7f7ef4abe8": {
+   "topics": [
+    "people"
+   ]
+  },
+  "7f83598742": {
+   "topics": [
+    "places",
+    "descriptions"
+   ]
+  },
+  "7fa5916da9": {
+   "topics": [
+    "descriptions",
+    "learning"
+   ]
+  },
+  "7fa68b5b8f": {
+   "topics": [
+    "work",
+    "places"
+   ]
+  },
+  "7feb0c183f": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "800c70f3e1": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "802a1fbd95": {
+   "topics": [
+    "body",
+    "feelings"
+   ]
+  },
+  "8058eb2a5b": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "807a25ac9e": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "808b166fab": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "8093d21731": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "8098fd19b1": {
+   "topics": [
+    "technology",
+    "arts"
+   ]
+  },
+  "80c3be3aaf": {
+   "topics": [
+    "body",
+    "food"
+   ]
+  },
+  "811101e739": {
+   "topics": [
+    "feelings",
+    "learning"
+   ]
+  },
+  "813ca3b6fc": {
+   "topics": [
+    "feelings",
+    "society"
+   ]
+  },
+  "818ef1c8d8": {
+   "topics": [
+    "people",
+    "arts"
+   ]
+  },
+  "81a3e89786": {
+   "topics": [
+    "technology",
+    "daily"
+   ]
+  },
+  "823b048f98": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "82611a8f51": {
+   "topics": [
+    "places",
+    "arts"
+   ]
+  },
+  "828b802390": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "829f937932": {
+   "topics": [
+    "actions",
+    "relationships"
+   ]
+  },
+  "831bd5addd": {
+   "topics": [
+    "places"
+   ]
+  },
+  "832440ef33": {
+   "topics": [
+    "places"
+   ]
+  },
+  "832f591208": {
+   "topics": [
+    "technology",
+    "society"
+   ]
+  },
+  "833372d072": {
+   "topics": [
+    "learning",
+    "places"
+   ]
+  },
+  "84096d1b94": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "841aaee779": {
+   "topics": [
+    "nature",
+    "body"
+   ]
+  },
+  "8476b331d5": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "847b06de33": {
+   "topics": [
+    "society",
+    "places"
+   ]
+  },
+  "84fca05588": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "8598ddba78": {
+   "topics": [
+    "feelings",
+    "learning"
+   ]
+  },
+  "85d0866116": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "85d4d0e2b9": {
+   "topics": [
+    "learning",
+    "arts"
+   ]
+  },
+  "87333c0d40": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "875ea64454": {
+   "topics": [
+    "society",
+    "body"
+   ]
+  },
+  "881b8fe898": {
+   "topics": [
+    "learning",
+    "descriptions"
+   ]
+  },
+  "88267f6d71": {
+   "topics": [
+    "learning",
+    "descriptions"
+   ]
+  },
+  "88273999d5": {
+   "topics": [
+    "descriptions",
+    "feelings"
+   ]
+  },
+  "88947a7f87": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "88a032d58a": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "88cf21661c": {
+   "topics": [
+    "learning",
+    "technology"
+   ]
+  },
+  "89564cdaf0": {
+   "topics": [
+    "actions",
+    "relationships"
+   ]
+  },
+  "8966975727": {
+   "topics": [
+    "time"
+   ]
+  },
+  "8976ba117a": {
+   "topics": [
+    "places",
+    "food"
+   ]
+  },
+  "89acdd2f72": {
+   "topics": [
+    "relationships",
+    "body"
+   ]
+  },
+  "89b43cf72a": {
+   "topics": [
+    "feelings",
+    "learning"
+   ]
+  },
+  "89d19700e5": {
+   "topics": [
+    "people",
+    "nature"
+   ]
+  },
+  "89e5aee43f": {
+   "topics": [
+    "actions",
+    "society"
+   ]
+  },
+  "8a35b4b03d": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "8ad5593989": {
+   "topics": [
+    "quantity",
+    "learning"
+   ]
+  },
+  "8ae84a079b": {
+   "topics": [
+    "descriptions",
+    "arts"
+   ]
+  },
+  "8af1f36bd4": {
+   "topics": [
+    "work",
+    "places"
+   ]
+  },
+  "8b180f444a": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "8bdbbb4bf4": {
+   "topics": [
+    "quantity",
+    "feelings"
+   ]
+  },
+  "8c7a0c5f8b": {
+   "topics": [
+    "food"
+   ]
+  },
+  "8c876afbf5": {
+   "topics": [
+    "places"
+   ]
+  },
+  "8cb1bad29a": {
+   "topics": [
+    "people",
+    "work"
+   ]
+  },
+  "8d0e3e599c": {
+   "topics": [
+    "technology",
+    "places"
+   ]
+  },
+  "8d0f952e4c": {
+   "topics": [
+    "food",
+    "arts"
+   ]
+  },
+  "8d3e656e69": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "8d4e493846": {
+   "topics": [
+    "body",
+    "food"
+   ]
+  },
+  "8d527d10b8": {
+   "topics": [
+    "body"
+   ]
+  },
+  "8d67659ba3": {
+   "topics": [
+    "places",
+    "arts"
+   ]
+  },
+  "8d8f0273ec": {
+   "topics": [
+    "daily",
+    "places"
+   ]
+  },
+  "8dd4e6c718": {
+   "topics": [
+    "nature",
+    "technology"
+   ]
+  },
+  "8de88c21d5": {
+   "topics": [
+    "places"
+   ]
+  },
+  "8dea07a859": {
+   "topics": [
+    "body",
+    "nature"
+   ]
+  },
+  "8e02fa0ef4": {
+   "topics": [
+    "places"
+   ]
+  },
+  "8e0346a626": {
+   "topics": [
+    "places",
+    "technology"
+   ]
+  },
+  "8e592c506e": {
+   "topics": [
+    "time"
+   ]
+  },
+  "8e641697a9": {
+   "topics": [
+    "time",
+    "work"
+   ]
+  },
+  "8e9d8bfa84": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "8eae03ec6e": {
+   "topics": [
+    "body"
+   ]
+  },
+  "8f4da6b41b": {
+   "topics": [
+    "daily",
+    "places"
+   ]
+  },
+  "8fb52e4502": {
+   "topics": [
+    "daily",
+    "relationships"
+   ]
+  },
+  "900819c1c2": {
+   "topics": [
+    "technology",
+    "daily"
+   ]
+  },
+  "900eaa8fd0": {
+   "topics": [
+    "society",
+    "actions"
+   ]
+  },
+  "9041da3ded": {
+   "topics": [
+    "arts",
+    "learning"
+   ]
+  },
+  "908a7a4f49": {
+   "topics": [
+    "body"
+   ]
+  },
+  "90910eca9c": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "909e6bb3f1": {
+   "topics": [
+    "descriptions",
+    "technology"
+   ]
+  },
+  "91695e543a": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "9182744c76": {
+   "topics": [
+    "arts",
+    "daily"
+   ]
+  },
+  "91e25df095": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "92387d38a4": {
+   "topics": [
+    "learning",
+    "arts"
+   ]
+  },
+  "92b4c96bb2": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "92deae32a1": {
+   "topics": [
+    "body",
+    "places"
+   ]
+  },
+  "92f24db03c": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "9300833dab": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "930ef80781": {
+   "topics": [
+    "places",
+    "technology"
+   ]
+  },
+  "932013dd52": {
+   "topics": [
+    "time",
+    "learning"
+   ]
+  },
+  "936ab44960": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "93d1d2e9ef": {
+   "topics": [
+    "people",
+    "learning"
+   ]
+  },
+  "941786efa7": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "9424213f90": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "944327c467": {
+   "topics": [
+    "quantity"
+   ]
+  },
+  "94696ff83d": {
+   "topics": [
+    "arts",
+    "descriptions"
+   ]
+  },
+  "947efd8771": {
+   "topics": [
+    "food",
+    "daily"
+   ]
+  },
+  "94b721726e": {
+   "topics": [
+    "work"
+   ]
+  },
+  "94c462cd78": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "94cb3c6d1f": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "94cd75297e": {
+   "topics": [
+    "time"
+   ]
+  },
+  "94d9c6d53a": {
+   "topics": [
+    "daily",
+    "work"
+   ]
+  },
+  "950bd50c42": {
+   "topics": [
+    "places",
+    "society"
+   ]
+  },
+  "9544a3940b": {
+   "topics": [
+    "people",
+    "descriptions"
+   ]
+  },
+  "954f0401d2": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "9575772ddd": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "95806db8ce": {
+   "topics": [
+    "arts"
+   ]
+  },
+  "958095fe66": {
+   "topics": [
+    "work",
+    "learning"
+   ]
+  },
+  "959f0678ac": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "95c33dd7eb": {
+   "topics": [
+    "actions",
+    "relationships"
+   ]
+  },
+  "966b2f8873": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "96bd500096": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "96d4a7e009": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "970f95c9c4": {
+   "topics": [
+    "descriptions",
+    "daily"
+   ]
+  },
+  "9714cc8a70": {
+   "topics": [
+    "time",
+    "learning"
+   ]
+  },
+  "9726004c78": {
+   "topics": [
+    "people",
+    "work"
+   ]
+  },
+  "973d4dd61b": {
+   "topics": [
+    "technology",
+    "work"
+   ]
+  },
+  "9768eacb27": {
+   "topics": [
+    "learning",
+    "descriptions"
+   ]
+  },
+  "976f457eb1": {
+   "topics": [
+    "time",
+    "work"
+   ]
+  },
+  "97ccdb5cad": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "97ddf0dc45": {
+   "topics": [
+    "technology",
+    "arts"
+   ]
+  },
+  "9821841c8a": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "9839e7b9df": {
+   "topics": [
+    "places",
+    "nature"
+   ]
+  },
+  "9844f0cd5b": {
+   "topics": [
+    "work",
+    "places"
+   ]
+  },
+  "9953c1ba78": {
+   "topics": [
+    "places"
+   ]
+  },
+  "997f2be694": {
+   "topics": [
+    "people",
+    "relationships"
+   ]
+  },
+  "999ca0b1df": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "99e2fbab02": {
+   "topics": [
+    "arts",
+    "learning"
+   ]
+  },
+  "9a1aa9c141": {
+   "topics": [
+    "daily",
+    "food"
+   ]
+  },
+  "9a206ab4e7": {
+   "topics": [
+    "society"
+   ]
+  },
+  "9a2b28ced4": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "9a583397de": {
+   "topics": [
+    "nature",
+    "places"
+   ]
+  },
+  "9a61747e5d": {
+   "topics": [
+    "work"
+   ]
+  },
+  "9a8a4d8fa3": {
+   "topics": [
+    "nature",
+    "places"
+   ]
+  },
+  "9a9e81c6ea": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "9ad41551a9": {
+   "topics": [
+    "learning",
+    "arts"
+   ]
+  },
+  "9af40a4fd4": {
+   "topics": [
+    "people"
+   ]
+  },
+  "9b428ad249": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "9b7b87e488": {
+   "topics": [
+    "arts",
+    "learning"
+   ]
+  },
+  "9b927494b7": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "9b9b6c1212": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "9ba2a9c365": {
+   "topics": [
+    "people"
+   ]
+  },
+  "9bc707785c": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "9bcbb07770": {
+   "topics": [
+    "places",
+    "society"
+   ]
+  },
+  "9be6756fdb": {
+   "topics": [
+    "learning",
+    "quantity"
+   ]
+  },
+  "9bf00b9ce5": {
+   "topics": [
+    "daily",
+    "arts"
+   ]
+  },
+  "9c3026b5c1": {
+   "topics": [
+    "learning",
+    "technology"
+   ]
+  },
+  "9c34d52658": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "9c3ddb98b7": {
+   "topics": [
+    "technology",
+    "arts"
+   ]
+  },
+  "9c851c43f7": {
+   "topics": [
+    "descriptions",
+    "society"
+   ]
+  },
+  "9cb6ca65c9": {
+   "topics": [
+    "work",
+    "places"
+   ]
+  },
+  "9ce542fed7": {
+   "topics": [
+    "places",
+    "descriptions"
+   ]
+  },
+  "9ce64c5023": {
+   "topics": [
+    "people",
+    "arts"
+   ]
+  },
+  "9d4204d1c1": {
+   "topics": [
+    "society",
+    "actions"
+   ]
+  },
+  "9d47958486": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "9d6bea343d": {
+   "topics": [
+    "people",
+    "descriptions"
+   ]
+  },
+  "9d761dba21": {
+   "topics": [
+    "places"
+   ]
+  },
+  "9d947bdc2b": {
+   "topics": [
+    "body",
+    "learning"
+   ]
+  },
+  "9dda296d47": {
+   "topics": [
+    "places",
+    "descriptions"
+   ]
+  },
+  "9e70421c16": {
+   "topics": [
+    "people",
+    "descriptions"
+   ]
+  },
+  "9eb3e2a34e": {
+   "topics": [
+    "food",
+    "nature"
+   ]
+  },
+  "9ebc3edd19": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "9ebfa7ef3b": {
+   "topics": [
+    "arts"
+   ]
+  },
+  "9ece254a41": {
+   "topics": [
+    "technology",
+    "arts"
+   ]
+  },
+  "9ed2e741fa": {
+   "topics": [
+    "body",
+    "nature"
+   ]
+  },
+  "9ede43e44c": {
+   "topics": [
+    "daily",
+    "food"
+   ]
+  },
+  "9ee0d57fa7": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "9f5b58ff5e": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "9f66a0ca11": {
+   "topics": [
+    "places"
+   ]
+  },
+  "9f7b77e398": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "9fbf209387": {
+   "topics": [
+    "daily",
+    "technology"
+   ]
+  },
+  "9ff6bba172": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "a0b0016c62": {
+   "topics": [
+    "people"
+   ]
+  },
+  "a0bf0a33e1": {
+   "topics": [
+    "technology",
+    "daily"
+   ]
+  },
+  "a0ca1d13fa": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "a0fe12d09a": {
+   "topics": [
+    "learning",
+    "work"
+   ]
+  },
+  "a101c852f4": {
+   "topics": [
+    "nature",
+    "body"
+   ]
+  },
+  "a1093c8201": {
+   "topics": [
+    "food",
+    "nature"
+   ]
+  },
+  "a10dbb12a8": {
+   "topics": [
+    "descriptions",
+    "work"
+   ]
+  },
+  "a19d9e358c": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "a1c09f1a02": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "a1ee5baecb": {
+   "topics": [
+    "work"
+   ]
+  },
+  "a210fab631": {
+   "topics": [
+    "learning",
+    "technology"
+   ]
+  },
+  "a272d2c2a2": {
+   "topics": [
+    "technology",
+    "learning"
+   ]
+  },
+  "a2838ec535": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "a2b132d4cd": {
+   "topics": [
+    "nature",
+    "learning"
+   ]
+  },
+  "a2b35e78c0": {
+   "topics": [
+    "daily",
+    "learning"
+   ]
+  },
+  "a34e91aa05": {
+   "topics": [
+    "places"
+   ]
+  },
+  "a39cf53f66": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "a3aeb9c735": {
+   "topics": [
+    "relationships",
+    "actions"
+   ]
+  },
+  "a3c0999c5c": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "a4ae5b5899": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "a509bf3d8a": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "a58604399c": {
+   "topics": [
+    "society"
+   ]
+  },
+  "a588d2a3e0": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "a5b0e18f8b": {
+   "topics": [
+    "quantity",
+    "society"
+   ]
+  },
+  "a5c6236db2": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "a5d2ff7c14": {
+   "topics": [
+    "places",
+    "food"
+   ]
+  },
+  "a663b5a2f5": {
+   "topics": [
+    "society"
+   ]
+  },
+  "a689dc3fbb": {
+   "topics": [
+    "places",
+    "technology"
+   ]
+  },
+  "a6aca833ca": {
+   "topics": [
+    "descriptions",
+    "time"
+   ]
+  },
+  "a6c7a41684": {
+   "topics": [
+    "technology",
+    "society"
+   ]
+  },
+  "a6da3499d8": {
+   "topics": [
+    "quantity",
+    "daily"
+   ]
+  },
+  "a6db149a73": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "a6e18afc55": {
+   "topics": [
+    "places",
+    "technology"
+   ]
+  },
+  "a6ec708ec6": {
+   "topics": [
+    "arts",
+    "descriptions"
+   ]
+  },
+  "a707d72877": {
+   "topics": [
+    "body"
+   ]
+  },
+  "a70c18ed83": {
+   "topics": [
+    "body"
+   ]
+  },
+  "a7273380c4": {
+   "topics": [
+    "actions",
+    "relationships"
+   ]
+  },
+  "a75e6df041": {
+   "topics": [
+    "people",
+    "work"
+   ]
+  },
+  "a765e5f8a1": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "a786043e89": {
+   "topics": [
+    "society"
+   ]
+  },
+  "a7941c36e8": {
+   "topics": [
+    "arts",
+    "places"
+   ]
+  },
+  "a7ccd8db86": {
+   "topics": [
+    "learning",
+    "feelings"
+   ]
+  },
+  "a7cee32023": {
+   "topics": [
+    "arts",
+    "learning"
+   ]
+  },
+  "a8044edb4d": {
+   "topics": [
+    "learning",
+    "descriptions"
+   ]
+  },
+  "a86f29464a": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "a88999f659": {
+   "topics": [
+    "work"
+   ]
+  },
+  "a8dbeaa8a0": {
+   "topics": [
+    "descriptions",
+    "work"
+   ]
+  },
+  "a913d4b1f6": {
+   "topics": [
+    "learning",
+    "actions"
+   ]
+  },
+  "a99283c8e3": {
+   "topics": [
+    "learning",
+    "descriptions"
+   ]
+  },
+  "a9b5d114ca": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "aa2fbac408": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "aa6e296421": {
+   "topics": [
+    "descriptions",
+    "time"
+   ]
+  },
+  "aa9dd05f1c": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "aadc90550f": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "ab44e5ba85": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "ab46c02abb": {
+   "topics": [
+    "work",
+    "places"
+   ]
+  },
+  "ab4a133262": {
+   "topics": [
+    "quantity",
+    "descriptions"
+   ]
+  },
+  "ab742a2e6a": {
+   "topics": [
+    "people",
+    "relationships"
+   ]
+  },
+  "ab8c8581e1": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "aba27902d4": {
+   "topics": [
+    "learning",
+    "technology"
+   ]
+  },
+  "abed633dee": {
+   "topics": [
+    "technology",
+    "learning"
+   ]
+  },
+  "abfa120074": {
+   "topics": [
+    "quantity",
+    "descriptions"
+   ]
+  },
+  "ac2bf15305": {
+   "topics": [
+    "work",
+    "people"
+   ]
+  },
+  "ace0d91c72": {
+   "topics": [
+    "food",
+    "daily"
+   ]
+  },
+  "ad05abb348": {
+   "topics": [
+    "descriptions",
+    "learning"
+   ]
+  },
+  "ad08892426": {
+   "topics": [
+    "food",
+    "body"
+   ]
+  },
+  "ad34685b00": {
+   "topics": [
+    "body",
+    "places"
+   ]
+  },
+  "ad4b92d6f8": {
+   "topics": [
+    "daily",
+    "technology"
+   ]
+  },
+  "ad6b662376": {
+   "topics": [
+    "body"
+   ]
+  },
+  "ad94c2b563": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "adad28a5c4": {
+   "topics": [
+    "technology",
+    "time"
+   ]
+  },
+  "adfb442111": {
+   "topics": [
+    "food",
+    "work"
+   ]
+  },
+  "ae08e25e3d": {
+   "topics": [
+    "daily",
+    "arts"
+   ]
+  },
+  "ae0b1c0956": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "ae0de59adb": {
+   "topics": [
+    "learning",
+    "quantity"
+   ]
+  },
+  "ae53d68d3c": {
+   "topics": [
+    "quantity",
+    "learning"
+   ]
+  },
+  "ae9df9c93b": {
+   "topics": [
+    "food",
+    "technology"
+   ]
+  },
+  "aee461222c": {
+   "topics": [
+    "learning",
+    "technology"
+   ]
+  },
+  "af2a981df0": {
+   "topics": [
+    "technology",
+    "places"
+   ]
+  },
+  "af5bfb11d1": {
+   "topics": [
+    "learning",
+    "nature"
+   ]
+  },
+  "af617a11ed": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "afd6358788": {
+   "topics": [
+    "places",
+    "descriptions"
+   ]
+  },
+  "aff4676eed": {
+   "topics": [
+    "actions",
+    "learning"
+   ]
+  },
+  "b1173f76cf": {
+   "topics": [
+    "time"
+   ]
+  },
+  "b124ea636d": {
+   "topics": [
+    "society"
+   ]
+  },
+  "b13a18ea0f": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "b16728beb7": {
+   "topics": [
+    "learning",
+    "feelings"
+   ]
+  },
+  "b16f84d958": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "b18b85729e": {
+   "topics": [
+    "society",
+    "arts"
+   ]
+  },
+  "b1905d8e82": {
+   "topics": [
+    "places"
+   ]
+  },
+  "b1a974f767": {
+   "topics": [
+    "places",
+    "work"
+   ]
+  },
+  "b1baf28297": {
+   "topics": [
+    "people",
+    "work"
+   ]
+  },
+  "b21d464467": {
+   "topics": [
+    "technology",
+    "daily"
+   ]
+  },
+  "b24bac20d7": {
+   "topics": [
+    "descriptions",
+    "body"
+   ]
+  },
+  "b250983bb5": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "b27701113c": {
+   "topics": [
+    "technology",
+    "learning"
+   ]
+  },
+  "b27ee03550": {
+   "topics": [
+    "nature",
+    "places"
+   ]
+  },
+  "b2dc319b19": {
+   "topics": [
+    "body",
+    "work"
+   ]
+  },
+  "b2fea90627": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "b321aa2d85": {
+   "topics": [
+    "learning",
+    "descriptions"
+   ]
+  },
+  "b341907305": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "b3718fbb1d": {
+   "topics": [
+    "time"
+   ]
+  },
+  "b3dd7a37d3": {
+   "topics": [
+    "work"
+   ]
+  },
+  "b3f892f900": {
+   "topics": [
+    "quantity",
+    "descriptions"
+   ]
+  },
+  "b4340dadc2": {
+   "topics": [
+    "daily",
+    "descriptions"
+   ]
+  },
+  "b434efd06b": {
+   "topics": [
+    "time",
+    "nature"
+   ]
+  },
+  "b440e7ed66": {
+   "topics": [
+    "feelings",
+    "actions"
+   ]
+  },
+  "b453cd7ae1": {
+   "topics": [
+    "daily",
+    "technology"
+   ]
+  },
+  "b465e5e854": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "b46671b57e": {
+   "topics": [
+    "society",
+    "actions"
+   ]
+  },
+  "b4863250e1": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "b50c4ba582": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "b52e17197f": {
+   "topics": [
+    "feelings",
+    "body"
+   ]
+  },
+  "b556900c26": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "b5a566b9f3": {
+   "topics": [
+    "learning",
+    "feelings"
+   ]
+  },
+  "b5cc2a03d3": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "b5d6202e3f": {
+   "topics": [
+    "descriptions",
+    "quantity"
+   ]
+  },
+  "b5fcd0d05f": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "b65f34f69e": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "b696809e2d": {
+   "topics": [
+    "places",
+    "daily"
+   ]
+  },
+  "b6e9e55b54": {
+   "topics": [
+    "people",
+    "relationships"
+   ]
+  },
+  "b6f29d6b8e": {
+   "topics": [
+    "learning",
+    "descriptions"
+   ]
+  },
+  "b72fd7bd28": {
+   "topics": [
+    "arts",
+    "society"
+   ]
+  },
+  "b73454fdf2": {
+   "topics": [
+    "learning",
+    "descriptions"
+   ]
+  },
+  "b7459622cc": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "b749687d68": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "b7517a4f00": {
+   "topics": [
+    "learning",
+    "feelings"
+   ]
+  },
+  "b778777901": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "b780931140": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "b7fdaa59f1": {
+   "topics": [
+    "arts",
+    "technology"
+   ]
+  },
+  "b83a39027b": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "b859574f86": {
+   "topics": [
+    "arts",
+    "society"
+   ]
+  },
+  "b86c6df29f": {
+   "topics": [
+    "places",
+    "arts"
+   ]
+  },
+  "b8aa097506": {
+   "topics": [
+    "nature",
+    "daily"
+   ]
+  },
+  "b8ca72ea13": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "b8fdf48b47": {
+   "topics": [
+    "people",
+    "relationships"
+   ]
+  },
+  "b937b60491": {
+   "topics": [
+    "people",
+    "technology"
+   ]
+  },
+  "b96dc58373": {
+   "topics": [
+    "time"
+   ]
+  },
+  "b974c316fc": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "b9a3269966": {
+   "topics": [
+    "arts",
+    "learning"
+   ]
+  },
+  "b9ac4b3de8": {
+   "topics": [
+    "learning",
+    "body"
+   ]
+  },
+  "b9dca7d4d5": {
+   "topics": [
+    "food",
+    "work"
+   ]
+  },
+  "ba23b13843": {
+   "topics": [
+    "time"
+   ]
+  },
+  "ba3c545884": {
+   "topics": [
+    "descriptions",
+    "learning"
+   ]
+  },
+  "ba4823a59d": {
+   "topics": [
+    "places",
+    "technology"
+   ]
+  },
+  "ba569eb176": {
+   "topics": [
+    "learning",
+    "daily"
+   ]
+  },
+  "ba7c821566": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "bb1448841b": {
+   "topics": [
+    "descriptions",
+    "learning"
+   ]
+  },
+  "bb1d4f2a63": {
+   "topics": [
+    "places"
+   ]
+  },
+  "bb4b5f7ee0": {
+   "topics": [
+    "places"
+   ]
+  },
+  "bb70fb905e": {
+   "topics": [
+    "arts",
+    "learning"
+   ]
+  },
+  "bba5fd08c0": {
+   "topics": [
+    "society",
+    "learning"
+   ]
+  },
+  "bc5751f35d": {
+   "topics": [
+    "learning",
+    "technology"
+   ]
+  },
+  "bcab821414": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "bcadb9720d": {
+   "topics": [
+    "arts"
+   ]
+  },
+  "bcaec73ef9": {
+   "topics": [
+    "descriptions",
+    "arts"
+   ]
+  },
+  "bcc0ebf62f": {
+   "topics": [
+    "descriptions",
+    "learning"
+   ]
+  },
+  "bd66318647": {
+   "topics": [
+    "people"
+   ]
+  },
+  "bd67aff522": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "be7febc64a": {
+   "topics": [
+    "places",
+    "work"
+   ]
+  },
+  "be926ffe0c": {
+   "topics": [
+    "learning",
+    "work"
+   ]
+  },
+  "beaa5599c2": {
+   "topics": [
+    "places",
+    "food"
+   ]
+  },
+  "bec9e3995a": {
+   "topics": [
+    "people",
+    "places"
+   ]
+  },
+  "bf2843b87f": {
+   "topics": [
+    "places",
+    "quantity"
+   ]
+  },
+  "bf39c2aae9": {
+   "topics": [
+    "nature",
+    "technology"
+   ]
+  },
+  "bf49440897": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "bf4dea448b": {
+   "topics": [
+    "people",
+    "descriptions"
+   ]
+  },
+  "c0959c1346": {
+   "topics": [
+    "society",
+    "arts"
+   ]
+  },
+  "c11357e446": {
+   "topics": [
+    "daily",
+    "places"
+   ]
+  },
+  "c11c243ec5": {
+   "topics": [
+    "food"
+   ]
+  },
+  "c139bcdcb4": {
+   "topics": [
+    "technology",
+    "work"
+   ]
+  },
+  "c14d253e1f": {
+   "topics": [
+    "descriptions",
+    "places"
+   ]
+  },
+  "c18796bfd9": {
+   "topics": [
+    "time"
+   ]
+  },
+  "c1935c3827": {
+   "topics": [
+    "descriptions",
+    "time"
+   ]
+  },
+  "c1a788035c": {
+   "topics": [
+    "food",
+    "daily"
+   ]
+  },
+  "c1abd3cd68": {
+   "topics": [
+    "learning",
+    "arts"
+   ]
+  },
+  "c1c984fbb4": {
+   "topics": [
+    "feelings",
+    "society"
+   ]
+  },
+  "c2522be364": {
+   "topics": [
+    "places",
+    "society"
+   ]
+  },
+  "c28e06990a": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "c2946190ea": {
+   "topics": [
+    "places",
+    "learning"
+   ]
+  },
+  "c305d4a6e1": {
+   "topics": [
+    "food",
+    "daily"
+   ]
+  },
+  "c327a33164": {
+   "topics": [
+    "work",
+    "daily"
+   ]
+  },
+  "c3a05b3d90": {
+   "topics": [
+    "places",
+    "nature"
+   ]
+  },
+  "c3ca467b1d": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "c42fa0cf5f": {
+   "topics": [
+    "time"
+   ]
+  },
+  "c448158575": {
+   "topics": [
+    "people",
+    "relationships"
+   ]
+  },
+  "c48e028d88": {
+   "topics": [
+    "time",
+    "society"
+   ]
+  },
+  "c4956951f6": {
+   "topics": [
+    "places",
+    "society"
+   ]
+  },
+  "c4ac694960": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "c4b4192429": {
+   "topics": [
+    "technology",
+    "daily"
+   ]
+  },
+  "c4c39fdeb4": {
+   "topics": [
+    "body",
+    "food"
+   ]
+  },
+  "c50a6711ac": {
+   "topics": [
+    "learning",
+    "society"
+   ]
+  },
+  "c596d41666": {
+   "topics": [
+    "food",
+    "work"
+   ]
+  },
+  "c5ce96af8e": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "c6304d0283": {
+   "topics": [
+    "quantity",
+    "learning"
+   ]
+  },
+  "c65db80738": {
+   "topics": [
+    "actions",
+    "learning"
+   ]
+  },
+  "c6607d94a5": {
+   "topics": [
+    "society",
+    "work"
+   ]
+  },
+  "c660f5b541": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "c6bc56d6df": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "c6c6f28738": {
+   "topics": [
+    "daily",
+    "food"
+   ]
+  },
+  "c72bbc5aaa": {
+   "topics": [
+    "learning",
+    "descriptions"
+   ]
+  },
+  "c76123f3f7": {
+   "topics": [
+    "descriptions",
+    "quantity"
+   ]
+  },
+  "c78f53bc65": {
+   "topics": [
+    "descriptions",
+    "actions"
+   ]
+  },
+  "c795debc35": {
+   "topics": [
+    "places",
+    "work"
+   ]
+  },
+  "c7b727d62a": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "c7d468b06d": {
+   "topics": [
+    "people"
+   ]
+  },
+  "c8170be9cc": {
+   "topics": [
+    "nature",
+    "places"
+   ]
+  },
+  "c8291517d8": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "c8370d28b0": {
+   "topics": [
+    "work"
+   ]
+  },
+  "c84ab5b83d": {
+   "topics": [
+    "body",
+    "society"
+   ]
+  },
+  "c864ff58da": {
+   "topics": [
+    "people",
+    "work"
+   ]
+  },
+  "c8ba548f8f": {
+   "topics": [
+    "people"
+   ]
+  },
+  "c8ca17553a": {
+   "topics": [
+    "nature",
+    "society"
+   ]
+  },
+  "c971fe970b": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "c974175389": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "c9a230646c": {
+   "topics": [
+    "technology",
+    "nature"
+   ]
+  },
+  "ca33fac1ae": {
+   "topics": [
+    "work"
+   ]
+  },
+  "ca5e766ec3": {
+   "topics": [
+    "technology",
+    "places"
+   ]
+  },
+  "ca6d480a55": {
+   "topics": [
+    "society"
+   ]
+  },
+  "cae492d243": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "cb012edb7f": {
+   "topics": [
+    "places",
+    "technology"
+   ]
+  },
+  "cb1e6d49fa": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "cb31a190dc": {
+   "topics": [
+    "places",
+    "food"
+   ]
+  },
+  "cb50e02845": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "cbaa0ef1a5": {
+   "topics": [
+    "places",
+    "learning"
+   ]
+  },
+  "cbeffe12e0": {
+   "topics": [
+    "arts"
+   ]
+  },
+  "cbf87a9c47": {
+   "topics": [
+    "places",
+    "food"
+   ]
+  },
+  "cc5f0dfb05": {
+   "topics": [
+    "quantity",
+    "learning"
+   ]
+  },
+  "cc9839ab1b": {
+   "topics": [
+    "descriptions",
+    "learning"
+   ]
+  },
+  "cd33b27e9a": {
+   "topics": [
+    "relationships"
+   ]
+  },
+  "cd34099f98": {
+   "topics": [
+    "work",
+    "arts"
+   ]
+  },
+  "cd42c9314f": {
+   "topics": [
+    "technology",
+    "daily"
+   ]
+  },
+  "cd86540645": {
+   "topics": [
+    "society",
+    "arts"
+   ]
+  },
+  "cdb26b7f16": {
+   "topics": [
+    "places"
+   ]
+  },
+  "cde24ec2dd": {
+   "topics": [
+    "people",
+    "body"
+   ]
+  },
+  "ce509fd4c7": {
+   "topics": [
+    "society",
+    "people"
+   ]
+  },
+  "cea0736426": {
+   "topics": [
+    "arts",
+    "people"
+   ]
+  },
+  "cea6de0386": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "ceb20bf4f8": {
+   "topics": [
+    "actions",
+    "descriptions"
+   ]
+  },
+  "cec3699484": {
+   "topics": [
+    "nature",
+    "food"
+   ]
+  },
+  "ced987ab59": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "ceee9cc545": {
+   "topics": [
+    "actions",
+    "relationships"
+   ]
+  },
+  "cf1e430209": {
+   "topics": [
+    "descriptions",
+    "society"
+   ]
+  },
+  "cf7176ee78": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "cfaaf0ad82": {
+   "topics": [
+    "descriptions",
+    "quantity"
+   ]
+  },
+  "cfadc86524": {
+   "topics": [
+    "quantity",
+    "learning"
+   ]
+  },
+  "cfe52cc622": {
+   "topics": [
+    "technology",
+    "daily"
+   ]
+  },
+  "d019c7013c": {
+   "topics": [
+    "work",
+    "arts"
+   ]
+  },
+  "d0522fe2ab": {
+   "topics": [
+    "people",
+    "work"
+   ]
+  },
+  "d0cc8bf9a9": {
+   "topics": [
+    "technology",
+    "places"
+   ]
+  },
+  "d0cc9588b9": {
+   "topics": [
+    "learning",
+    "work"
+   ]
+  },
+  "d0f1d715ac": {
+   "topics": [
+    "body"
+   ]
+  },
+  "d11bb9a972": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "d11ea557fa": {
+   "topics": [
+    "work"
+   ]
+  },
+  "d16c7a5e1e": {
+   "topics": [
+    "learning",
+    "descriptions"
+   ]
+  },
+  "d17214b7e4": {
+   "topics": [
+    "descriptions",
+    "body"
+   ]
+  },
+  "d222155dec": {
+   "topics": [
+    "daily",
+    "arts"
+   ]
+  },
+  "d22b11ab41": {
+   "topics": [
+    "work",
+    "arts"
+   ]
+  },
+  "d2573d60e7": {
+   "topics": [
+    "people",
+    "work"
+   ]
+  },
+  "d2a6a01df9": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "d2f232cacf": {
+   "topics": [
+    "learning",
+    "places"
+   ]
+  },
+  "d2fd46f58a": {
+   "topics": [
+    "people",
+    "work"
+   ]
+  },
+  "d312849382": {
+   "topics": [
+    "people",
+    "daily"
+   ]
+  },
+  "d320c18c4b": {
+   "topics": [
+    "quantity",
+    "learning"
+   ]
+  },
+  "d340763501": {
+   "topics": [
+    "technology",
+    "places"
+   ]
+  },
+  "d3548d2342": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "d3602e8ff5": {
+   "topics": [
+    "daily",
+    "food"
+   ]
+  },
+  "d36392ec5a": {
+   "topics": [
+    "people"
+   ]
+  },
+  "d374033b31": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "d39e3de050": {
+   "topics": [
+    "descriptions",
+    "quantity"
+   ]
+  },
+  "d4066d7551": {
+   "topics": [
+    "work"
+   ]
+  },
+  "d46254efba": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "d49f6c4d95": {
+   "topics": [
+    "descriptions",
+    "time"
+   ]
+  },
+  "d4a0853377": {
+   "topics": [
+    "places",
+    "work"
+   ]
+  },
+  "d4f22b4480": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "d5004218c7": {
+   "topics": [
+    "nature",
+    "places"
+   ]
+  },
+  "d5a063f643": {
+   "topics": [
+    "work"
+   ]
+  },
+  "d64b87f0c2": {
+   "topics": [
+    "people",
+    "work"
+   ]
+  },
+  "d6b975f68f": {
+   "topics": [
+    "descriptions",
+    "arts"
+   ]
+  },
+  "d74252cb1f": {
+   "topics": [
+    "places"
+   ]
+  },
+  "d7dd2c0312": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "d7eae9c8d3": {
+   "topics": [
+    "work"
+   ]
+  },
+  "d811ee3160": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "d84448f0f9": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "d875131b8a": {
+   "topics": [
+    "places",
+    "learning"
+   ]
+  },
+  "d879d1dee2": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "d88434279f": {
+   "topics": [
+    "arts",
+    "daily"
+   ]
+  },
+  "d93ec9aaed": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "d9627ee0f6": {
+   "topics": [
+    "people",
+    "places"
+   ]
+  },
+  "da17d2355a": {
+   "topics": [
+    "technology",
+    "places"
+   ]
+  },
+  "daad7873f5": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "dad6329f85": {
+   "topics": [
+    "time",
+    "work"
+   ]
+  },
+  "db08c76b78": {
+   "topics": [
+    "places"
+   ]
+  },
+  "db4d84d6b0": {
+   "topics": [
+    "feelings",
+    "learning"
+   ]
+  },
+  "db7f32ec4c": {
+   "topics": [
+    "arts",
+    "quantity"
+   ]
+  },
+  "dbb7b4bbd4": {
+   "topics": [
+    "quantity",
+    "descriptions"
+   ]
+  },
+  "dbe0f53624": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "dc0c86c6c1": {
+   "topics": [
+    "arts",
+    "society"
+   ]
+  },
+  "dc6aa5133f": {
+   "topics": [
+    "descriptions",
+    "learning"
+   ]
+  },
+  "dc7b2d1515": {
+   "topics": [
+    "descriptions",
+    "society"
+   ]
+  },
+  "dc7f5a8762": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "dc94ba57ca": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "dcd1a67561": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "dcd3581fc6": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "dcdfb791b5": {
+   "topics": [
+    "descriptions",
+    "feelings"
+   ]
+  },
+  "dce7ebe444": {
+   "topics": [
+    "places",
+    "descriptions"
+   ]
+  },
+  "dd28831d22": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "ddd21016f5": {
+   "topics": [
+    "arts",
+    "society"
+   ]
+  },
+  "ddedf2e7ba": {
+   "topics": [
+    "feelings",
+    "learning"
+   ]
+  },
+  "ddff5ba694": {
+   "topics": [
+    "learning",
+    "people"
+   ]
+  },
+  "de0c594c1b": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "de314c95de": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "de68433b8d": {
+   "topics": [
+    "actions",
+    "body"
+   ]
+  },
+  "de8f13d5c6": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "de963dc33f": {
+   "topics": [
+    "body"
+   ]
+  },
+  "de97947c0c": {
+   "topics": [
+    "quantity",
+    "work"
+   ]
+  },
+  "dedefd0d0c": {
+   "topics": [
+    "technology",
+    "work"
+   ]
+  },
+  "dee0d769c7": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "df1a94a798": {
+   "topics": [
+    "nature",
+    "places"
+   ]
+  },
+  "df62e316d7": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "df68a4c0c8": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "e008354e7b": {
+   "topics": [
+    "people",
+    "relationships"
+   ]
+  },
+  "e06471a78e": {
+   "topics": [
+    "work"
+   ]
+  },
+  "e065923d1c": {
+   "topics": [
+    "places",
+    "feelings"
+   ]
+  },
+  "e06f642257": {
+   "topics": [
+    "learning",
+    "descriptions"
+   ]
+  },
+  "e0a7a58f49": {
+   "topics": [
+    "work",
+    "daily"
+   ]
+  },
+  "e0b3c0db0c": {
+   "topics": [
+    "technology",
+    "work"
+   ]
+  },
+  "e0d0db3ebf": {
+   "topics": [
+    "learning",
+    "body"
+   ]
+  },
+  "e0e16ed29e": {
+   "topics": [
+    "food",
+    "work"
+   ]
+  },
+  "e0e4e819c0": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "e0f08f770f": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "e119a69b33": {
+   "topics": [
+    "technology",
+    "learning"
+   ]
+  },
+  "e13f41237b": {
+   "topics": [
+    "technology",
+    "learning"
+   ]
+  },
+  "e1483430fd": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "e20620f561": {
+   "topics": [
+    "places"
+   ]
+  },
+  "e25f2eacb5": {
+   "topics": [
+    "work"
+   ]
+  },
+  "e28c9da90d": {
+   "topics": [
+    "body"
+   ]
+  },
+  "e29166535b": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "e2a46f8f00": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "e2bac0fcd6": {
+   "topics": [
+    "places",
+    "descriptions"
+   ]
+  },
+  "e2cd3d1a33": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "e2dc364bee": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "e318eece72": {
+   "topics": [
+    "people",
+    "work"
+   ]
+  },
+  "e32542ef92": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "e351a6f3de": {
+   "topics": [
+    "work"
+   ]
+  },
+  "e380a00f33": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "e3be9063f5": {
+   "topics": [
+    "descriptions",
+    "learning"
+   ]
+  },
+  "e3cd081438": {
+   "topics": [
+    "quantity",
+    "learning"
+   ]
+  },
+  "e3d8bfb183": {
+   "topics": [
+    "daily",
+    "nature"
+   ]
+  },
+  "e4b01b085c": {
+   "topics": [
+    "technology",
+    "society"
+   ]
+  },
+  "e4c2d40066": {
+   "topics": [
+    "descriptions",
+    "learning"
+   ]
+  },
+  "e4d4b6fd93": {
+   "topics": [
+    "food",
+    "nature"
+   ]
+  },
+  "e4e5715dc0": {
+   "topics": [
+    "learning",
+    "descriptions"
+   ]
+  },
+  "e557f5d546": {
+   "topics": [
+    "places",
+    "arts"
+   ]
+  },
+  "e56d2cca3c": {
+   "topics": [
+    "descriptions",
+    "nature"
+   ]
+  },
+  "e629f38882": {
+   "topics": [
+    "food"
+   ]
+  },
+  "e688cdb877": {
+   "topics": [
+    "technology",
+    "time"
+   ]
+  },
+  "e6a8e069db": {
+   "topics": [
+    "technology",
+    "society"
+   ]
+  },
+  "e6e567643f": {
+   "topics": [
+    "body"
+   ]
+  },
+  "e731b88993": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "e73cc9df41": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "e7a5df28c0": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "e7eeb8eff1": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "e810d0494c": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "e86411a2e0": {
+   "topics": [
+    "people",
+    "work"
+   ]
+  },
+  "e874aef53b": {
+   "topics": [
+    "actions",
+    "descriptions"
+   ]
+  },
+  "e8c040a956": {
+   "topics": [
+    "nature",
+    "daily"
+   ]
+  },
+  "e8e0e10e57": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "e9022c75fe": {
+   "topics": [
+    "time"
+   ]
+  },
+  "e904c4fcb0": {
+   "topics": [
+    "people",
+    "arts"
+   ]
+  },
+  "e91d9f8a96": {
+   "topics": [
+    "technology",
+    "descriptions"
+   ]
+  },
+  "e93cf3d679": {
+   "topics": [
+    "technology",
+    "nature"
+   ]
+  },
+  "e9427e3ec2": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "e96e1a98b6": {
+   "topics": [
+    "food"
+   ]
+  },
+  "e976328667": {
+   "topics": [
+    "places",
+    "technology"
+   ]
+  },
+  "e9c84791a6": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "e9efe8313d": {
+   "topics": [
+    "technology",
+    "places"
+   ]
+  },
+  "ea25add742": {
+   "topics": [
+    "arts",
+    "learning"
+   ]
+  },
+  "ea45ce4bc8": {
+   "topics": [
+    "people",
+    "relationships"
+   ]
+  },
+  "ea7888aea6": {
+   "topics": [
+    "work"
+   ]
+  },
+  "ea79d21fe4": {
+   "topics": [
+    "places",
+    "technology"
+   ]
+  },
+  "ead095a7d5": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "eb52e01373": {
+   "topics": [
+    "places"
+   ]
+  },
+  "eb85283cf4": {
+   "topics": [
+    "body"
+   ]
+  },
+  "ebafd320d0": {
+   "topics": [
+    "society"
+   ]
+  },
+  "ebf84be776": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "ec37aba7e2": {
+   "topics": [
+    "learning",
+    "arts"
+   ]
+  },
+  "ec5e038faf": {
+   "topics": [
+    "time"
+   ]
+  },
+  "ec666f2c30": {
+   "topics": [
+    "food",
+    "society"
+   ]
+  },
+  "ec83c27906": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "ec98265fb1": {
+   "topics": [
+    "technology",
+    "work"
+   ]
+  },
+  "ecf1cc2a23": {
+   "topics": [
+    "feelings"
+   ]
+  },
+  "ed2023474e": {
+   "topics": [
+    "descriptions",
+    "technology"
+   ]
+  },
+  "ed26fceabd": {
+   "topics": [
+    "society"
+   ]
+  },
+  "ed560b721e": {
+   "topics": [
+    "food"
+   ]
+  },
+  "eda690b2a4": {
+   "topics": [
+    "descriptions",
+    "work"
+   ]
+  },
+  "eda767b81b": {
+   "topics": [
+    "technology",
+    "places"
+   ]
+  },
+  "edb85f7f58": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "edba3a49e1": {
+   "topics": [
+    "places",
+    "technology"
+   ]
+  },
+  "edba4848b0": {
+   "topics": [
+    "descriptions",
+    "learning"
+   ]
+  },
+  "eddf7e2d4e": {
+   "topics": [
+    "arts",
+    "learning"
+   ]
+  },
+  "ee708f5bbd": {
+   "topics": [
+    "work"
+   ]
+  },
+  "ee82459309": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "eea1f873b2": {
+   "topics": [
+    "time",
+    "work"
+   ]
+  },
+  "ef159e6567": {
+   "topics": [
+    "food"
+   ]
+  },
+  "ef51ee87ac": {
+   "topics": [
+    "daily",
+    "technology"
+   ]
+  },
+  "ef6d8917c7": {
+   "topics": [
+    "people",
+    "learning"
+   ]
+  },
+  "ef9bb7868b": {
+   "topics": [
+    "nature",
+    "places"
+   ]
+  },
+  "efc3e4fab9": {
+   "topics": [
+    "work"
+   ]
+  },
+  "efca806408": {
+   "topics": [
+    "quantity",
+    "learning"
+   ]
+  },
+  "f0070e59ed": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "f00e187c45": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "f01cb21b79": {
+   "topics": [
+    "arts",
+    "body"
+   ]
+  },
+  "f0857f2b13": {
+   "topics": [
+    "quantity",
+    "learning"
+   ]
+  },
+  "f0b3458a80": {
+   "topics": [
+    "nature",
+    "descriptions"
+   ]
+  },
+  "f10cd927a7": {
+   "topics": [
+    "nature",
+    "people"
+   ]
+  },
+  "f1135a84c1": {
+   "topics": [
+    "work"
+   ]
+  },
+  "f1250de70c": {
+   "topics": [
+    "society",
+    "descriptions"
+   ]
+  },
+  "f1577088c4": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "f15c9822d2": {
+   "topics": [
+    "people",
+    "body"
+   ]
+  },
+  "f1bbdd1149": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "f1f3f6775d": {
+   "topics": [
+    "arts",
+    "food"
+   ]
+  },
+  "f1ff353185": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "f219e922cc": {
+   "topics": [
+    "places",
+    "descriptions"
+   ]
+  },
+  "f26561e17b": {
+   "topics": [
+    "learning",
+    "descriptions"
+   ]
+  },
+  "f28c668862": {
+   "topics": [
+    "work"
+   ]
+  },
+  "f28cffe595": {
+   "topics": [
+    "arts",
+    "learning"
+   ]
+  },
+  "f2a911f897": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "f2df5d4d53": {
+   "topics": [
+    "places",
+    "technology"
+   ]
+  },
+  "f319ccd9ac": {
+   "topics": [
+    "food"
+   ]
+  },
+  "f33e48aa94": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "f3ca36a754": {
+   "topics": [
+    "society",
+    "technology"
+   ]
+  },
+  "f48b6d18cb": {
+   "topics": [
+    "learning",
+    "quantity"
+   ]
+  },
+  "f49b31d33f": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "f4b9298167": {
+   "topics": [
+    "learning",
+    "nature"
+   ]
+  },
+  "f4fd9f8f66": {
+   "topics": [
+    "places",
+    "food"
+   ]
+  },
+  "f52c85beb6": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "f54f6bb59e": {
+   "topics": [
+    "learning",
+    "arts"
+   ]
+  },
+  "f552dae66e": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "f554d2951b": {
+   "topics": [
+    "people",
+    "arts"
+   ]
+  },
+  "f59cd43bb0": {
+   "topics": [
+    "arts"
+   ]
+  },
+  "f5b7534060": {
+   "topics": [
+    "descriptions",
+    "time"
+   ]
+  },
+  "f5d1e73974": {
+   "topics": [
+    "feelings",
+    "society"
+   ]
+  },
+  "f65e7b378c": {
+   "topics": [
+    "learning",
+    "technology"
+   ]
+  },
+  "f687c4a424": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "f699a2ccb4": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "f6e95ffedb": {
+   "topics": [
+    "people"
+   ]
+  },
+  "f71c5d995e": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "f76eb1bd74": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "f77ef3c0e5": {
+   "topics": [
+    "work"
+   ]
+  },
+  "f7a2ae495f": {
+   "topics": [
+    "arts",
+    "places"
+   ]
+  },
+  "f7b7058565": {
+   "topics": [
+    "learning",
+    "descriptions"
+   ]
+  },
+  "f7eb9ecbff": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "f805c3046f": {
+   "topics": [
+    "arts",
+    "society"
+   ]
+  },
+  "f83c71668d": {
+   "topics": [
+    "food",
+    "technology"
+   ]
+  },
+  "f84a6eb064": {
+   "topics": [
+    "people",
+    "arts"
+   ]
+  },
+  "f865797384": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "f86edd9d41": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "f898b4b8d2": {
+   "topics": [
+    "arts",
+    "descriptions"
+   ]
+  },
+  "f8acb92221": {
+   "topics": [
+    "society",
+    "descriptions"
+   ]
+  },
+  "f8dd76ee4c": {
+   "topics": [
+    "relationships",
+    "technology"
+   ]
+  },
+  "f98e192838": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "f998ef10bc": {
+   "topics": [
+    "arts"
+   ]
+  },
+  "f9a5606644": {
+   "topics": [
+    "descriptions",
+    "work"
+   ]
+  },
+  "f9ea0cc185": {
+   "topics": [
+    "food",
+    "body"
+   ]
+  },
+  "fa1efb5872": {
+   "topics": [
+    "technology",
+    "learning"
+   ]
+  },
+  "fa35b044bd": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "fa4c3baabd": {
+   "topics": [
+    "daily",
+    "technology"
+   ]
+  },
+  "fa520c5357": {
+   "topics": [
+    "places",
+    "daily"
+   ]
+  },
+  "fa769c0e9b": {
+   "topics": [
+    "descriptions",
+    "quantity"
+   ]
+  },
+  "fa78df043e": {
+   "topics": [
+    "body"
+   ]
+  },
+  "fad45b8c0a": {
+   "topics": [
+    "learning",
+    "arts"
+   ]
+  },
+  "fb23ffb300": {
+   "topics": [
+    "people",
+    "relationships"
+   ]
+  },
+  "fb2679c1c0": {
+   "topics": [
+    "people",
+    "places"
+   ]
+  },
+  "fb8a8984be": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "fb8c3bd96c": {
+   "topics": [
+    "places",
+    "body"
+   ]
+  },
+  "fbb67f254a": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "fbbdf50bbb": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "fbc4e2c947": {
+   "topics": [
+    "places"
+   ]
+  },
+  "fbe9c362bd": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "fbeac8c220": {
+   "topics": [
+    "places"
+   ]
+  },
+  "fbf1b7618e": {
+   "topics": [
+    "people",
+    "learning"
+   ]
+  },
+  "fbf3bca708": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "fc1d99931b": {
+   "topics": [
+    "time"
+   ]
+  },
+  "fc4bbe285e": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "fcbac4861d": {
+   "topics": [
+    "places",
+    "descriptions"
+   ]
+  },
+  "fcdc62db50": {
+   "topics": [
+    "people",
+    "descriptions"
+   ]
+  },
+  "fd699d42d8": {
+   "topics": [
+    "technology",
+    "descriptions"
+   ]
+  },
+  "fdef6c9ac9": {
+   "topics": [
+    "work"
+   ]
+  },
+  "fee426e7d0": {
+   "topics": [
+    "places"
+   ]
+  },
+  "ff42db8965": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "ff8407332d": {
+   "topics": [
+    "technology",
+    "places"
+   ]
+  },
+  "ffe3908e99": {
+   "topics": [
+    "society"
+   ]
+  },
+  "fffb310ed7": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "j2599040": {
+   "topics": [
+    "descriptions",
+    "society"
+   ]
+  },
+  "j2618190": {
+   "topics": [
+    "arts",
+    "descriptions"
+   ]
+  }
+ },
+ "kanji": {
+  "並": {
+   "topics": [
+    "places"
+   ]
+  },
+  "乗": {
+   "topics": [
+    "actions",
+    "quantity"
+   ]
+  },
+  "乾": {
+   "topics": [
+    "nature",
+    "descriptions"
+   ]
+  },
+  "了": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "争": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "互": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "亡": {
+   "topics": [
+    "people",
+    "body"
+   ]
+  },
+  "介": {
+   "topics": [
+    "actions",
+    "food"
+   ]
+  },
+  "仏": {
+   "topics": [
+    "society",
+    "places"
+   ]
+  },
+  "他": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "令": {
+   "topics": [
+    "society"
+   ]
+  },
+  "件": {
+   "topics": [
+    "society"
+   ]
+  },
+  "企": {
+   "topics": [
+    "work"
+   ]
+  },
+  "伸": {
+   "topics": [
+    "actions",
+    "descriptions"
+   ]
+  },
+  "似": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "位": {
+   "topics": [
+    "society"
+   ]
+  },
+  "佐": {
+   "topics": [
+    "people",
+    "actions"
+   ]
+  },
+  "余": {
+   "topics": [
+    "descriptions",
+    "quantity"
+   ]
+  },
+  "例": {
+   "topics": [
+    "learning",
+    "society"
+   ]
+  },
+  "供": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "依": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "便": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "保": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "倒": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "偉": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "停": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "側": {
+   "topics": [
+    "places",
+    "actions"
+   ]
+  },
+  "備": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "傾": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "僅": {
+   "topics": [
+    "quantity"
+   ]
+  },
+  "優": {
+   "topics": [
+    "feelings",
+    "descriptions"
+   ]
+  },
+  "兆": {
+   "topics": [
+    "quantity"
+   ]
+  },
+  "兵": {
+   "topics": [
+    "society"
+   ]
+  },
+  "凍": {
+   "topics": [
+    "nature",
+    "descriptions"
+   ]
+  },
+  "処": {
+   "topics": [
+    "actions",
+    "work"
+   ]
+  },
+  "刊": {
+   "topics": [
+    "learning",
+    "actions"
+   ]
+  },
+  "列": {
+   "topics": [
+    "places",
+    "society"
+   ]
+  },
+  "判": {
+   "topics": [
+    "society"
+   ]
+  },
+  "到": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "刷": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "券": {
+   "topics": [
+    "work"
+   ]
+  },
+  "刺": {
+   "topics": [
+    "nature",
+    "actions"
+   ]
+  },
+  "刻": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "剝": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "割": {
+   "topics": [
+    "quantity",
+    "actions"
+   ]
+  },
+  "助": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "努": {
+   "topics": [
+    "work"
+   ]
+  },
+  "効": {
+   "topics": [
+    "descriptions",
+    "work"
+   ]
+  },
+  "勝": {
+   "topics": [
+    "arts",
+    "actions"
+   ]
+  },
+  "募": {
+   "topics": [
+    "work",
+    "society"
+   ]
+  },
+  "勤": {
+   "topics": [
+    "work"
+   ]
+  },
+  "匂": {
+   "topics": [
+    "nature",
+    "body"
+   ]
+  },
+  "包": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "卒": {
+   "topics": [
+    "learning",
+    "society"
+   ]
+  },
+  "占": {
+   "topics": [
+    "society"
+   ]
+  },
+  "印": {
+   "topics": [
+    "work",
+    "descriptions"
+   ]
+  },
+  "卵": {
+   "topics": [
+    "food",
+    "nature"
+   ]
+  },
+  "厳": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "及": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "双": {
+   "topics": [
+    "quantity"
+   ]
+  },
+  "反": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "収": {
+   "topics": [
+    "work",
+    "actions"
+   ]
+  },
+  "叡": {
+   "topics": [
+    "learning",
+    "society"
+   ]
+  },
+  "叫": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "召": {
+   "topics": [
+    "actions",
+    "relationships"
+   ]
+  },
+  "可": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "叱": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "史": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "向": {
+   "topics": [
+    "places"
+   ]
+  },
+  "君": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "否": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "吸": {
+   "topics": [
+    "actions",
+    "body"
+   ]
+  },
+  "吹": {
+   "topics": [
+    "actions",
+    "body"
+   ]
+  },
+  "告": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "周": {
+   "topics": [
+    "quantity"
+   ]
+  },
+  "命": {
+   "topics": [
+    "society",
+    "feelings"
+   ]
+  },
+  "咲": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "嗅": {
+   "topics": [
+    "body",
+    "nature"
+   ]
+  },
+  "器": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "因": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "困": {
+   "topics": [
+    "feelings"
+   ]
+  },
+  "固": {
+   "topics": [
+    "descriptions",
+    "body"
+   ]
+  },
+  "園": {
+   "topics": [
+    "places",
+    "nature"
+   ]
+  },
+  "圧": {
+   "topics": [
+    "actions",
+    "descriptions"
+   ]
+  },
+  "在": {
+   "topics": [
+    "places"
+   ]
+  },
+  "坂": {
+   "topics": [
+    "places",
+    "nature"
+   ]
+  },
+  "均": {
+   "topics": [
+    "quantity",
+    "descriptions"
+   ]
+  },
+  "型": {
+   "topics": [
+    "descriptions",
+    "technology"
+   ]
+  },
+  "埋": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "城": {
+   "topics": [
+    "places"
+   ]
+  },
+  "域": {
+   "topics": [
+    "places",
+    "quantity"
+   ]
+  },
+  "堺": {
+   "topics": [
+    "places"
+   ]
+  },
+  "塁": {
+   "topics": [
+    "places",
+    "society"
+   ]
+  },
+  "塔": {
+   "topics": [
+    "places"
+   ]
+  },
+  "塗": {
+   "topics": [
+    "arts",
+    "technology"
+   ]
+  },
+  "増": {
+   "topics": [
+    "quantity",
+    "actions"
+   ]
+  },
+  "士": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "声": {
+   "topics": [
+    "body"
+   ]
+  },
+  "変": {
+   "topics": [
+    "descriptions",
+    "actions"
+   ]
+  },
+  "夢": {
+   "topics": [
+    "feelings"
+   ]
+  },
+  "央": {
+   "topics": [
+    "places",
+    "descriptions"
+   ]
+  },
+  "失": {
+   "topics": [
+    "actions",
+    "descriptions"
+   ]
+  },
+  "好": {
+   "topics": [
+    "feelings",
+    "descriptions"
+   ]
+  },
+  "姿": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "存": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "季": {
+   "topics": [
+    "time"
+   ]
+  },
+  "孫": {
+   "topics": [
+    "people",
+    "relationships"
+   ]
+  },
+  "守": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "完": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "宛": {
+   "topics": [
+    "places"
+   ]
+  },
+  "宝": {
+   "topics": [
+    "work"
+   ]
+  },
+  "客": {
+   "topics": [
+    "people",
+    "work"
+   ]
+  },
+  "害": {
+   "topics": [
+    "body"
+   ]
+  },
+  "容": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "寄": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "富": {
+   "topics": [
+    "work",
+    "descriptions"
+   ]
+  },
+  "察": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "審": {
+   "topics": [
+    "society"
+   ]
+  },
+  "封": {
+   "topics": [
+    "work"
+   ]
+  },
+  "専": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "将": {
+   "topics": [
+    "society",
+    "people"
+   ]
+  },
+  "尊": {
+   "topics": [
+    "feelings",
+    "descriptions"
+   ]
+  },
+  "尻": {
+   "topics": [
+    "body"
+   ]
+  },
+  "届": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "展": {
+   "topics": [
+    "arts",
+    "actions"
+   ]
+  },
+  "岡": {
+   "topics": [
+    "places",
+    "nature"
+   ]
+  },
+  "岸": {
+   "topics": [
+    "places",
+    "nature"
+   ]
+  },
+  "崎": {
+   "topics": [
+    "places",
+    "nature"
+   ]
+  },
+  "嵩": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "差": {
+   "topics": [
+    "descriptions",
+    "quantity"
+   ]
+  },
+  "布": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "席": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "帯": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "常": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "帽": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "干": {
+   "topics": [
+    "descriptions",
+    "nature"
+   ]
+  },
+  "幼": {
+   "topics": [
+    "people"
+   ]
+  },
+  "幾": {
+   "topics": [
+    "quantity"
+   ]
+  },
+  "底": {
+   "topics": [
+    "places"
+   ]
+  },
+  "座": {
+   "topics": [
+    "daily",
+    "actions"
+   ]
+  },
+  "庫": {
+   "topics": [
+    "places",
+    "work"
+   ]
+  },
+  "庭": {
+   "topics": [
+    "places",
+    "nature"
+   ]
+  },
+  "延": {
+   "topics": [
+    "time",
+    "actions"
+   ]
+  },
+  "弁": {
+   "topics": [
+    "technology",
+    "nature"
+   ]
+  },
+  "式": {
+   "topics": [
+    "society",
+    "descriptions"
+   ]
+  },
+  "引": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "形": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "影": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "彼": {
+   "topics": [
+    "people"
+   ]
+  },
+  "御": {
+   "topics": [
+    "society",
+    "descriptions"
+   ]
+  },
+  "必": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "忘": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "忙": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "快": {
+   "topics": [
+    "feelings"
+   ]
+  },
+  "怖": {
+   "topics": [
+    "feelings"
+   ]
+  },
+  "想": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "態": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "憎": {
+   "topics": [
+    "feelings"
+   ]
+  },
+  "戻": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "打": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "批": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "抒": {
+   "topics": [
+    "actions",
+    "quantity"
+   ]
+  },
+  "投": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "抗": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "折": {
+   "topics": [
+    "actions",
+    "body"
+   ]
+  },
+  "抜": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "押": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "担": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "招": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "拡": {
+   "topics": [
+    "actions",
+    "descriptions"
+   ]
+  },
+  "拭": {
+   "topics": [
+    "daily",
+    "actions"
+   ]
+  },
+  "拾": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "挙": {
+   "topics": [
+    "actions",
+    "work"
+   ]
+  },
+  "挟": {
+   "topics": [
+    "actions",
+    "descriptions"
+   ]
+  },
+  "振": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "捕": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "捜": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "捨": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "掃": {
+   "topics": [
+    "daily",
+    "actions"
+   ]
+  },
+  "授": {
+   "topics": [
+    "learning",
+    "actions"
+   ]
+  },
+  "掘": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "掛": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "探": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "接": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "推": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "換": {
+   "topics": [
+    "actions",
+    "time"
+   ]
+  },
+  "援": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "損": {
+   "topics": [
+    "work",
+    "descriptions"
+   ]
+  },
+  "摘": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "撃": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "擬": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "攻": {
+   "topics": [
+    "actions",
+    "society"
+   ]
+  },
+  "故": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "敗": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "散": {
+   "topics": [
+    "actions",
+    "work"
+   ]
+  },
+  "敬": {
+   "topics": [
+    "feelings"
+   ]
+  },
+  "整": {
+   "topics": [
+    "actions",
+    "work"
+   ]
+  },
+  "斬": {
+   "topics": [
+    "society",
+    "actions"
+   ]
+  },
+  "断": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "昇": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "星": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "晩": {
+   "topics": [
+    "time"
+   ]
+  },
+  "景": {
+   "topics": [
+    "nature",
+    "places"
+   ]
+  },
+  "晴": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "暗": {
+   "topics": [
+    "nature",
+    "descriptions"
+   ]
+  },
+  "暴": {
+   "topics": [
+    "feelings"
+   ]
+  },
+  "更": {
+   "topics": [
+    "time"
+   ]
+  },
+  "替": {
+   "topics": [
+    "work",
+    "actions"
+   ]
+  },
+  "未": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "材": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "束": {
+   "topics": [
+    "quantity"
+   ]
+  },
+  "条": {
+   "topics": [
+    "society"
+   ]
+  },
+  "板": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "枕": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "枝": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "枯": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "柔": {
+   "topics": [
+    "descriptions",
+    "feelings"
+   ]
+  },
+  "柱": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "栄": {
+   "topics": [
+    "work",
+    "descriptions"
+   ]
+  },
+  "株": {
+   "topics": [
+    "work"
+   ]
+  },
+  "核": {
+   "topics": [
+    "learning",
+    "technology"
+   ]
+  },
+  "格": {
+   "topics": [
+    "society"
+   ]
+  },
+  "桁": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "案": {
+   "topics": [
+    "work"
+   ]
+  },
+  "棒": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "検": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "極": {
+   "topics": [
+    "places",
+    "descriptions"
+   ]
+  },
+  "構": {
+   "topics": [
+    "actions",
+    "descriptions"
+   ]
+  },
+  "様": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "模": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "横": {
+   "topics": [
+    "places",
+    "descriptions"
+   ]
+  },
+  "橋": {
+   "topics": [
+    "places",
+    "technology"
+   ]
+  },
+  "欠": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "次": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "欧": {
+   "topics": [
+    "places"
+   ]
+  },
+  "欲": {
+   "topics": [
+    "feelings"
+   ]
+  },
+  "残": {
+   "topics": [
+    "quantity",
+    "food"
+   ]
+  },
+  "段": {
+   "topics": [
+    "places",
+    "quantity"
+   ]
+  },
+  "殺": {
+   "topics": [
+    "society",
+    "actions"
+   ]
+  },
+  "殿": {
+   "topics": [
+    "people",
+    "places"
+   ]
+  },
+  "毒": {
+   "topics": [
+    "body"
+   ]
+  },
+  "氷": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "汗": {
+   "topics": [
+    "body"
+   ]
+  },
+  "汚": {
+   "topics": [
+    "descriptions",
+    "nature"
+   ]
+  },
+  "池": {
+   "topics": [
+    "nature",
+    "places"
+   ]
+  },
+  "沈": {
+   "topics": [
+    "actions",
+    "nature"
+   ]
+  },
+  "沢": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "沸": {
+   "topics": [
+    "food",
+    "actions"
+   ]
+  },
+  "油": {
+   "topics": [
+    "food",
+    "technology"
+   ]
+  },
+  "況": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "泉": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "泊": {
+   "topics": [
+    "places",
+    "actions"
+   ]
+  },
+  "波": {
+   "topics": [
+    "nature",
+    "places"
+   ]
+  },
+  "泳": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "洗": {
+   "topics": [
+    "daily",
+    "actions"
+   ]
+  },
+  "派": {
+   "topics": [
+    "society"
+   ]
+  },
+  "流": {
+   "topics": [
+    "nature",
+    "descriptions"
+   ]
+  },
+  "浜": {
+   "topics": [
+    "places",
+    "nature"
+   ]
+  },
+  "浴": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "消": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "涙": {
+   "topics": [
+    "body",
+    "feelings"
+   ]
+  },
+  "液": {
+   "topics": [
+    "food",
+    "nature"
+   ]
+  },
+  "涼": {
+   "topics": [
+    "nature",
+    "descriptions"
+   ]
+  },
+  "混": {
+   "topics": [
+    "actions",
+    "descriptions"
+   ]
+  },
+  "清": {
+   "topics": [
+    "descriptions",
+    "daily"
+   ]
+  },
+  "渡": {
+   "topics": [
+    "places",
+    "actions"
+   ]
+  },
+  "温": {
+   "topics": [
+    "nature",
+    "descriptions"
+   ]
+  },
+  "測": {
+   "topics": [
+    "quantity"
+   ]
+  },
+  "港": {
+   "topics": [
+    "places"
+   ]
+  },
+  "湖": {
+   "topics": [
+    "nature",
+    "places"
+   ]
+  },
+  "湾": {
+   "topics": [
+    "nature",
+    "places"
+   ]
+  },
+  "湿": {
+   "topics": [
+    "nature",
+    "descriptions"
+   ]
+  },
+  "満": {
+   "topics": [
+    "descriptions",
+    "quantity"
+   ]
+  },
+  "溶": {
+   "topics": [
+    "nature",
+    "actions"
+   ]
+  },
+  "溺": {
+   "topics": [
+    "actions",
+    "feelings"
+   ]
+  },
+  "滴": {
+   "topics": [
+    "nature",
+    "quantity"
+   ]
+  },
+  "漁": {
+   "topics": [
+    "food",
+    "work"
+   ]
+  },
+  "潰": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "激": {
+   "topics": [
+    "feelings",
+    "descriptions"
+   ]
+  },
+  "灰": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "炭": {
+   "topics": [
+    "nature",
+    "technology"
+   ]
+  },
+  "然": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "焼": {
+   "topics": [
+    "food",
+    "actions"
+   ]
+  },
+  "煎": {
+   "topics": [
+    "food",
+    "actions"
+   ]
+  },
+  "煙": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "照": {
+   "topics": [
+    "nature",
+    "actions"
+   ]
+  },
+  "熱": {
+   "topics": [
+    "body",
+    "nature"
+   ]
+  },
+  "燃": {
+   "topics": [
+    "nature",
+    "actions"
+   ]
+  },
+  "燥": {
+   "topics": [
+    "nature",
+    "descriptions"
+   ]
+  },
+  "爪": {
+   "topics": [
+    "body",
+    "nature"
+   ]
+  },
+  "版": {
+   "topics": [
+    "learning",
+    "technology"
+   ]
+  },
+  "状": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "狙": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "独": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "率": {
+   "topics": [
+    "quantity"
+   ]
+  },
+  "玉": {
+   "topics": [
+    "arts"
+   ]
+  },
+  "珍": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "球": {
+   "topics": [
+    "arts"
+   ]
+  },
+  "瑚": {
+   "topics": [
+    "society",
+    "nature"
+   ]
+  },
+  "瑞": {
+   "topics": [
+    "feelings"
+   ]
+  },
+  "璧": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "環": {
+   "topics": [
+    "quantity",
+    "descriptions"
+   ]
+  },
+  "瓦": {
+   "topics": [
+    "technology",
+    "quantity"
+   ]
+  },
+  "瓶": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "甘": {
+   "topics": [
+    "food",
+    "descriptions"
+   ]
+  },
+  "由": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "畑": {
+   "topics": [
+    "places",
+    "food"
+   ]
+  },
+  "留": {
+   "topics": [
+    "actions",
+    "society"
+   ]
+  },
+  "畜": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "略": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "異": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "疑": {
+   "topics": [
+    "feelings"
+   ]
+  },
+  "疲": {
+   "topics": [
+    "body"
+   ]
+  },
+  "療": {
+   "topics": [
+    "body"
+   ]
+  },
+  "登": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "皆": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "皿": {
+   "topics": [
+    "food",
+    "daily"
+   ]
+  },
+  "盗": {
+   "topics": [
+    "society"
+   ]
+  },
+  "盟": {
+   "topics": [
+    "society",
+    "relationships"
+   ]
+  },
+  "直": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "督": {
+   "topics": [
+    "work",
+    "society"
+   ]
+  },
+  "砂": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "破": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "硬": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "確": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "磨": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "示": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "礼": {
+   "topics": [
+    "society"
+   ]
+  },
+  "祝": {
+   "topics": [
+    "society",
+    "feelings"
+   ]
+  },
+  "神": {
+   "topics": [
+    "society",
+    "feelings"
+   ]
+  },
+  "票": {
+   "topics": [
+    "society"
+   ]
+  },
+  "祭": {
+   "topics": [
+    "arts",
+    "society"
+   ]
+  },
+  "禁": {
+   "topics": [
+    "society"
+   ]
+  },
+  "福": {
+   "topics": [
+    "feelings"
+   ]
+  },
+  "科": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "種": {
+   "topics": [
+    "nature",
+    "descriptions"
+   ]
+  },
+  "稽": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "積": {
+   "topics": [
+    "quantity"
+   ]
+  },
+  "突": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "章": {
+   "topics": [
+    "learning",
+    "arts"
+   ]
+  },
+  "竣": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "競": {
+   "topics": [
+    "arts",
+    "work"
+   ]
+  },
+  "竹": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "笑": {
+   "topics": [
+    "feelings",
+    "actions"
+   ]
+  },
+  "符": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "第": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "等": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "筒": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "策": {
+   "topics": [
+    "work",
+    "society"
+   ]
+  },
+  "箱": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "築": {
+   "topics": [
+    "technology",
+    "actions"
+   ]
+  },
+  "簡": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "籍": {
+   "topics": [
+    "society"
+   ]
+  },
+  "籠": {
+   "topics": [
+    "daily",
+    "actions"
+   ]
+  },
+  "精": {
+   "topics": [
+    "descriptions",
+    "society"
+   ]
+  },
+  "糸": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "系": {
+   "topics": [
+    "relationships",
+    "technology"
+   ]
+  },
+  "純": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "素": {
+   "topics": [
+    "descriptions",
+    "learning"
+   ]
+  },
+  "細": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "紹": {
+   "topics": [
+    "actions",
+    "relationships"
+   ]
+  },
+  "組": {
+   "topics": [
+    "society",
+    "actions"
+   ]
+  },
+  "結": {
+   "topics": [
+    "actions",
+    "work"
+   ]
+  },
+  "絡": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "統": {
+   "topics": [
+    "society",
+    "descriptions"
+   ]
+  },
+  "絶": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "維": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "綿": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "緒": {
+   "topics": [
+    "time",
+    "descriptions"
+   ]
+  },
+  "編": {
+   "topics": [
+    "learning",
+    "daily"
+   ]
+  },
+  "績": {
+   "topics": [
+    "work"
+   ]
+  },
+  "織": {
+   "topics": [
+    "daily",
+    "technology"
+   ]
+  },
+  "缶": {
+   "topics": [
+    "technology",
+    "daily"
+   ]
+  },
+  "置": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "群": {
+   "topics": [
+    "people",
+    "nature"
+   ]
+  },
+  "義": {
+   "topics": [
+    "society"
+   ]
+  },
+  "翌": {
+   "topics": [
+    "time"
+   ]
+  },
+  "耕": {
+   "topics": [
+    "food",
+    "work"
+   ]
+  },
+  "肩": {
+   "topics": [
+    "body"
+   ]
+  },
+  "肯": {
+   "topics": [
+    "actions",
+    "feelings"
+   ]
+  },
+  "育": {
+   "topics": [
+    "people",
+    "actions"
+   ]
+  },
+  "胃": {
+   "topics": [
+    "body"
+   ]
+  },
+  "胸": {
+   "topics": [
+    "body"
+   ]
+  },
+  "能": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "脂": {
+   "topics": [
+    "body",
+    "food"
+   ]
+  },
+  "脳": {
+   "topics": [
+    "body",
+    "learning"
+   ]
+  },
+  "腰": {
+   "topics": [
+    "body"
+   ]
+  },
+  "腹": {
+   "topics": [
+    "body"
+   ]
+  },
+  "膝": {
+   "topics": [
+    "body"
+   ]
+  },
+  "臓": {
+   "topics": [
+    "body"
+   ]
+  },
+  "臣": {
+   "topics": [
+    "people",
+    "society"
+   ]
+  },
+  "舟": {
+   "topics": [
+    "places"
+   ]
+  },
+  "航": {
+   "topics": [
+    "places",
+    "actions"
+   ]
+  },
+  "般": {
+   "topics": [
+    "actions",
+    "descriptions"
+   ]
+  },
+  "船": {
+   "topics": [
+    "places"
+   ]
+  },
+  "芯": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "芹": {
+   "topics": [
+    "food",
+    "nature"
+   ]
+  },
+  "若": {
+   "topics": [
+    "people",
+    "descriptions"
+   ]
+  },
+  "荒": {
+   "topics": [
+    "descriptions",
+    "nature"
+   ]
+  },
+  "荷": {
+   "topics": [
+    "places",
+    "actions"
+   ]
+  },
+  "葉": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "蒸": {
+   "topics": [
+    "food",
+    "nature"
+   ]
+  },
+  "蓋": {
+   "topics": [
+    "daily",
+    "technology"
+   ]
+  },
+  "蔵": {
+   "topics": [
+    "places",
+    "work"
+   ]
+  },
+  "薩": {
+   "topics": [
+    "society"
+   ]
+  },
+  "藤": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "蛋": {
+   "topics": [
+    "food"
+   ]
+  },
+  "融": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "衛": {
+   "topics": [
+    "society"
+   ]
+  },
+  "被": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "裁": {
+   "topics": [
+    "daily",
+    "society"
+   ]
+  },
+  "装": {
+   "topics": [
+    "daily",
+    "actions"
+   ]
+  },
+  "裏": {
+   "topics": [
+    "places",
+    "descriptions"
+   ]
+  },
+  "製": {
+   "topics": [
+    "technology",
+    "work"
+   ]
+  },
+  "観": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "角": {
+   "topics": [
+    "quantity",
+    "places"
+   ]
+  },
+  "触": {
+   "topics": [
+    "actions",
+    "feelings"
+   ]
+  },
+  "討": {
+   "topics": [
+    "society",
+    "actions"
+   ]
+  },
+  "訪": {
+   "topics": [
+    "actions",
+    "relationships"
+   ]
+  },
+  "許": {
+   "topics": [
+    "society",
+    "actions"
+   ]
+  },
+  "証": {
+   "topics": [
+    "society"
+   ]
+  },
+  "評": {
+   "topics": [
+    "learning",
+    "work"
+   ]
+  },
+  "詮": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "誌": {
+   "topics": [
+    "work",
+    "learning"
+   ]
+  },
+  "認": {
+   "topics": [
+    "actions",
+    "learning"
+   ]
+  },
+  "説": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "課": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "諄": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "談": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "請": {
+   "topics": [
+    "actions",
+    "work"
+   ]
+  },
+  "論": {
+   "topics": [
+    "learning"
+   ]
+  },
+  "諦": {
+   "topics": [
+    "actions",
+    "learning"
+   ]
+  },
+  "諸": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "謎": {
+   "topics": [
+    "arts"
+   ]
+  },
+  "講": {
+   "topics": [
+    "learning",
+    "society"
+   ]
+  },
+  "警": {
+   "topics": [
+    "society"
+   ]
+  },
+  "護": {
+   "topics": [
+    "society",
+    "actions"
+   ]
+  },
+  "谷": {
+   "topics": [
+    "nature",
+    "places"
+   ]
+  },
+  "豊": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "貝": {
+   "topics": [
+    "food",
+    "nature"
+   ]
+  },
+  "負": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "貧": {
+   "topics": [
+    "work",
+    "descriptions"
+   ]
+  },
+  "貨": {
+   "topics": [
+    "work"
+   ]
+  },
+  "責": {
+   "topics": [
+    "actions",
+    "society"
+   ]
+  },
+  "賞": {
+   "topics": [
+    "arts",
+    "work"
+   ]
+  },
+  "賢": {
+   "topics": [
+    "learning",
+    "descriptions"
+   ]
+  },
+  "超": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "跡": {
+   "topics": [
+    "descriptions",
+    "places"
+   ]
+  },
+  "蹴": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "軟": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "軽": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "輪": {
+   "topics": [
+    "technology",
+    "quantity"
+   ]
+  },
+  "辺": {
+   "topics": [
+    "places"
+   ]
+  },
+  "込": {
+   "topics": [
+    "descriptions",
+    "quantity"
+   ]
+  },
+  "迎": {
+   "topics": [
+    "actions",
+    "relationships"
+   ]
+  },
+  "迷": {
+   "topics": [
+    "feelings"
+   ]
+  },
+  "追": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "退": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "逃": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "逆": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "達": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "違": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "遜": {
+   "topics": [
+    "descriptions",
+    "feelings"
+   ]
+  },
+  "遠": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "遣": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "適": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "遺": {
+   "topics": [
+    "actions"
+   ]
+  },
+  "郊": {
+   "topics": [
+    "places"
+   ]
+  },
+  "郵": {
+   "topics": [
+    "work"
+   ]
+  },
+  "針": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "鉱": {
+   "topics": [
+    "nature",
+    "technology"
+   ]
+  },
+  "鋭": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "録": {
+   "topics": [
+    "technology"
+   ]
+  },
+  "鍋": {
+   "topics": [
+    "daily"
+   ]
+  },
+  "鍾": {
+   "topics": [
+    "actions",
+    "technology"
+   ]
+  },
+  "閉": {
+   "topics": [
+    "actions",
+    "descriptions"
+   ]
+  },
+  "阪": {
+   "topics": [
+    "places"
+   ]
+  },
+  "降": {
+   "topics": [
+    "actions",
+    "nature"
+   ]
+  },
+  "除": {
+   "topics": [
+    "actions",
+    "quantity"
+   ]
+  },
+  "陽": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "隅": {
+   "topics": [
+    "places"
+   ]
+  },
+  "隙": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "際": {
+   "topics": [
+    "time",
+    "places"
+   ]
+  },
+  "雄": {
+   "topics": [
+    "people",
+    "nature"
+   ]
+  },
+  "雇": {
+   "topics": [
+    "work"
+   ]
+  },
+  "雑": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "離": {
+   "topics": [
+    "actions",
+    "relationships"
+   ]
+  },
+  "雲": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "零": {
+   "topics": [
+    "quantity",
+    "actions"
+   ]
+  },
+  "震": {
+   "topics": [
+    "nature",
+    "body"
+   ]
+  },
+  "静": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "非": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "韓": {
+   "topics": [
+    "places"
+   ]
+  },
+  "響": {
+   "topics": [
+    "arts",
+    "body"
+   ]
+  },
+  "順": {
+   "topics": [
+    "society",
+    "descriptions"
+   ]
+  },
+  "預": {
+   "topics": [
+    "work"
+   ]
+  },
+  "頼": {
+   "topics": [
+    "relationships",
+    "actions"
+   ]
+  },
+  "額": {
+   "topics": [
+    "body"
+   ]
+  },
+  "願": {
+   "topics": [
+    "society",
+    "feelings"
+   ]
+  },
+  "類": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "飛": {
+   "topics": [
+    "actions",
+    "nature"
+   ]
+  },
+  "香": {
+   "topics": [
+    "nature",
+    "society"
+   ]
+  },
+  "駐": {
+   "topics": [
+    "places",
+    "people"
+   ]
+  },
+  "鮎": {
+   "topics": [
+    "food",
+    "nature"
+   ]
+  },
+  "鮮": {
+   "topics": [
+    "descriptions"
+   ]
+  },
+  "鳴": {
+   "topics": [
+    "nature",
+    "actions"
+   ]
+  },
+  "鵬": {
+   "topics": [
+    "nature"
+   ]
+  },
+  "麦": {
+   "topics": [
+    "food",
+    "nature"
+   ]
+  },
+  "麿": {
+   "topics": [
+    "people"
+   ]
+  },
+  "𠮟": {
+   "topics": [
+    "actions"
+   ]
+  }
+ }
+}

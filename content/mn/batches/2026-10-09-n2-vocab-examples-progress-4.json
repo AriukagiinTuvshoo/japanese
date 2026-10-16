@@ -1,0 +1,461 @@
+{
+  "provenance": {
+    "id": "mn-n2-vocab-examples-progress-4-oct9",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian compared with exact Japanese and retained English; stable record and headword/pattern guards; independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n2.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "8c9eb6e298": {
+      "expected": {
+        "w": "いつのまにか",
+        "r": "いつのまにか",
+        "en": [
+          "before one knows",
+          "unnoticed",
+          "unawares"
+        ]
+      },
+      "examples": {
+        "いつのまにか夏も過ぎてしまった。": {
+          "en": "Summer has gone all too soon.",
+          "mn": "Нэг мэдэхэд зун өнгөрчихсөн."
+        }
+      }
+    },
+    "2c3f94c2e7": {
+      "expected": {
+        "w": "移転",
+        "r": "いてん",
+        "en": [
+          "moving",
+          "transfer",
+          "demise"
+        ]
+      },
+      "examples": {
+        "ご移転の際はお知らせ下さい。": {
+          "en": "If you change your address, please let me know.",
+          "mn": "Нүүхдээ надад мэдэгдээрэй."
+        },
+        "新しいビルへの移転にわくわくしてます。": {
+          "en": "We are excited about the move to the new building.",
+          "mn": "Шинэ барилга руу нүүх гэж байгаадаа догдолж байна."
+        }
+      }
+    },
+    "354b630662": {
+      "expected": {
+        "w": "井戸",
+        "r": "いど",
+        "en": [
+          "water well"
+        ]
+      },
+      "examples": {
+        "井戸には少しの水も無かった。": {
+          "en": "There was no water in the well.",
+          "mn": "Худагт дусал ч ус байгаагүй."
+        },
+        "真相は井戸の底にあり探りにくい。": {
+          "en": "Truth is difficult to find at the bottom of a well.",
+          "mn": "Үнэн худгийн ёроолд байдаг тул олоход хэцүү."
+        }
+      }
+    },
+    "8ca2ab5e1d": {
+      "expected": {
+        "w": "従姉妹",
+        "r": "いとこ",
+        "en": [
+          "cousin (female)"
+        ]
+      },
+      "examples": {
+        "従姉妹の連絡先を教えられなくてごめん。": {
+          "en": "I'm sorry I haven't been able to give you my cousin's contact info.",
+          "mn": "Үеэлийнхээ холбоо барих мэдээллийг өгч чадаагүйд уучлаарай."
+        },
+        "彼の従姉妹は、名前は忘れたが、看護婦だった。": {
+          "en": "His cousin, whose name I forget, was a nurse.",
+          "mn": "Түүний үеэл, нэрийг нь мартсан ч, сувилагч байсан."
+        }
+      }
+    },
+    "d46e97a030": {
+      "expected": {
+        "w": "威張る",
+        "r": "いばる",
+        "en": [
+          "to be proud",
+          "to swagger"
+        ]
+      },
+      "examples": {
+        "あの人はあまり威張るから好きになれない。": {
+          "en": "That man is too boastful for my liking.",
+          "mn": "Тэр хүн хэт бардам тул надад таалагддаггүй."
+        },
+        "彼女には威張った様子がある。": {
+          "en": "She has an important air about her.",
+          "mn": "Тэр ихэмсэг байдалтай."
+        }
+      }
+    },
+    "608f79c4f1": {
+      "expected": {
+        "w": "嫌がる",
+        "r": "いやがる",
+        "en": [
+          "to hate",
+          "to dislike"
+        ]
+      },
+      "examples": {
+        "彼は誤りを認めるのを嫌がらない。": {
+          "en": "He feels no reluctance in acknowledging errors.",
+          "mn": "Тэр алдаагаа хүлээн зөвшөөрөхөөс дургүйцдэггүй."
+        },
+        "彼は飛行機で旅行をするのを嫌がった。": {
+          "en": "He objected to traveling by plane.",
+          "mn": "Тэр онгоцоор аялахыг хүсээгүй."
+        }
+      }
+    },
+    "17c46940e9": {
+      "expected": {
+        "w": "いよいよ",
+        "r": "いよいよ",
+        "en": [
+          "more and more",
+          "all the more",
+          "increasingly"
+        ]
+      },
+      "examples": {
+        "いよいよ千載一遇のチャンスがめぐってきた。": {
+          "en": "At last, a chance in a million arrived.",
+          "mn": "Эцэст нь маш ховор боломж ирлээ."
+        },
+        "雨はやむどころかいよいよひどくなった。": {
+          "en": "Instead of stopping, the rain increased.",
+          "mn": "Бороо зогсох нь байтугай улам ширүүссэн."
+        }
+      }
+    },
+    "82a3b17d15": {
+      "expected": {
+        "w": "煎る",
+        "r": "いる",
+        "en": [
+          "to parch",
+          "to fry"
+        ]
+      },
+      "examples": {
+        "彼はコーヒー豆をいっている。": {
+          "en": "He is roasting coffee beans.",
+          "mn": "Тэр кофены үр хуурч байна."
+        }
+      }
+    },
+    "228ab529ea": {
+      "expected": {
+        "w": "炒る",
+        "r": "いる",
+        "en": [
+          "to roast",
+          "to parch",
+          "to toast"
+        ]
+      },
+      "examples": {
+        "彼はコーヒー豆をいっている。": {
+          "en": "He is roasting coffee beans.",
+          "mn": "Тэр кофены үр хуурч байна."
+        }
+      }
+    },
+    "c1294618e7": {
+      "expected": {
+        "w": "入れ物",
+        "r": "いれもの",
+        "en": [
+          "container",
+          "case",
+          "receptacle"
+        ]
+      },
+      "examples": {
+        "眼窩とは、目をいれている骨のいれもののことです。": {
+          "en": "The eye socket is the bone receptacle in which the eye fits.",
+          "mn": "Нүдний ухархай гэдэг нь нүд байрладаг ясны хөндий юм."
+        }
+      }
+    },
+    "a7cee32023": {
+      "expected": {
+        "w": "インキ",
+        "r": "インキ",
+        "en": [
+          "ink"
+        ]
+      },
+      "examples": {
+        "印刷インキが不足している。": {
+          "en": "Printing ink is in short supply.",
+          "mn": "Хэвлэлийн бэх дутагдаж байна."
+        },
+        "ペンとインキで書きなさい。": {
+          "en": "Write with pen and ink.",
+          "mn": "Үзэг, бэхээр бич."
+        }
+      }
+    },
+    "b1eb46ec35": {
+      "expected": {
+        "w": "インタビュー",
+        "r": "インタビュー",
+        "en": [
+          "interview"
+        ]
+      },
+      "examples": {
+        "彼がインタビューで言ったことは理にかなっている。": {
+          "en": "What he said in his interview makes sense.",
+          "mn": "Ярилцлагад түүний хэлсэн зүйл үндэслэлтэй."
+        },
+        "彼は首相にインタビューした。": {
+          "en": "He had an interview with the Prime Minister.",
+          "mn": "Тэр ерөнхий сайдтай ярилцлага хийсэн."
+        }
+      }
+    },
+    "1cda943bec": {
+      "expected": {
+        "w": "引力",
+        "r": "いんりょく",
+        "en": [
+          "gravity"
+        ]
+      },
+      "examples": {
+        "ニュートンは引力の法則を確立した。": {
+          "en": "Newton established the law of gravity.",
+          "mn": "Ньютон таталцлын хуулийг тогтоосон."
+        },
+        "引力によって物体が重さを持つようになる。": {
+          "en": "Gravity causes objects to have weight.",
+          "mn": "Таталцлын улмаас биетүүд жинтэй байдаг."
+        }
+      }
+    },
+    "2a68d3e319": {
+      "expected": {
+        "w": "ウーマン",
+        "r": "ウーマン",
+        "en": [
+          "woman"
+        ]
+      },
+      "examples": {
+        "彼女はウーマンリブ運動の指導者だと言われている。": {
+          "en": "She is said to be a leader in the women's liberation movement.",
+          "mn": "Тэр эмэгтэйчүүдийн эрх чөлөөний хөдөлгөөний удирдагч гэдэг."
+        },
+        "ウーマン・リブは底辺は広いが、非公式な民衆の運動である。": {
+          "en": "Women's Liberation is a broad-based but informal popular movement.",
+          "mn": "Эмэгтэйчүүдийн эрх чөлөөний хөдөлгөөн нь өргөн суурьтай ч албан бус олон нийтийн хөдөлгөөн."
+        }
+      }
+    },
+    "b453cd7ae1": {
+      "expected": {
+        "w": "ウール",
+        "r": "ウール",
+        "en": [
+          "wool"
+        ]
+      },
+      "examples": {
+        "彼はウールと綿の区別がつかない。": {
+          "en": "He cannot tell wool from cotton.",
+          "mn": "Тэр ноос, хөвөн хоёрыг ялгаж чаддаггүй."
+        },
+        "彼はウールのセーターを着ている。": {
+          "en": "He wears a wool sweater.",
+          "mn": "Тэр ноосон цамц өмсдөг."
+        }
+      }
+    },
+    "d2573d60e7": {
+      "expected": {
+        "w": "ウエートレス",
+        "r": "ウエートレス",
+        "en": [
+          "waitress"
+        ]
+      },
+      "examples": {
+        "ウエートレスはテーブルの上に白いテーブルクロスをかけた。": {
+          "en": "The waitress spread a white cloth over the table.",
+          "mn": "Зөөгч эмэгтэй ширээн дээр цагаан бүтээлэг дэлгэсэн."
+        }
+      }
+    },
+    "c7ba433c9d": {
+      "expected": {
+        "w": "植木",
+        "r": "うえき",
+        "en": [
+          "garden shrubs",
+          "trees",
+          "potted plant"
+        ]
+      },
+      "examples": {
+        "母は植木の世話をよくする人だ。": {
+          "en": "My mother looks after the plants well.",
+          "mn": "Ээж ургамлаа сайн арчилдаг."
+        },
+        "私は植木が好きだ。": {
+          "en": "I like a garden tree.",
+          "mn": "Би цэцэрлэгийн модонд дуртай."
+        }
+      }
+    },
+    "c20bb40c25": {
+      "expected": {
+        "w": "飢える",
+        "r": "うえる",
+        "en": [
+          "to starve"
+        ]
+      },
+      "examples": {
+        "彼は飢えた者に食を与えた。": {
+          "en": "He furnished food to the hungry.",
+          "mn": "Тэр өлссөн хүмүүст хоол өгсөн."
+        },
+        "世界では多くの人が飢えている。": {
+          "en": "A lot of people are starving in the world.",
+          "mn": "Дэлхийд олон хүн өлсөж байна."
+        }
+      }
+    },
+    "155ca82293": {
+      "expected": {
+        "w": "浮かぶ",
+        "r": "うかぶ",
+        "en": [
+          "to float",
+          "to rise to surface",
+          "to come to mind"
+        ]
+      },
+      "examples": {
+        "浮かんだと思うとまた沈む。": {
+          "en": "Now it rises, now it sinks.",
+          "mn": "Хөвж гарснаа дахиад живдэг."
+        },
+        "１枚の落ち葉が水面に浮かんでいた。": {
+          "en": "A fallen leaf floated on the surface of the water.",
+          "mn": "Унасан навч усны гадаргуу дээр хөвж байв."
+        }
+      }
+    },
+    "0fd77d7f82": {
+      "expected": {
+        "w": "浮かべる",
+        "r": "うかべる",
+        "en": [
+          "to float",
+          "to express",
+          "to look (sad, glad)"
+        ]
+      },
+      "examples": {
+        "彼は小さな船を水に浮かべている。": {
+          "en": "He is sailing a little boat on the water.",
+          "mn": "Тэр жижиг завийг усанд хөвүүлж байна."
+        },
+        "彼女はむっつりとした表情を浮かべていた。": {
+          "en": "She had a sullen look on her face.",
+          "mn": "Тэр дүнсгэр царай гаргасан байв."
+        }
+      }
+    },
+    "3d9613a286": {
+      "expected": {
+        "w": "浮く",
+        "r": "うく",
+        "en": [
+          "to float",
+          "to become merry",
+          "to become loose"
+        ]
+      },
+      "examples": {
+        "それから彼女はあおむけに浮いていた。": {
+          "en": "Then she was floating on her back.",
+          "mn": "Дараа нь тэр дээш харан хөвж байсан."
+        },
+        "白い雲が夏の青空に浮いている。": {
+          "en": "A white cloud is floating in the blue summer sky.",
+          "mn": "Зуны хөх тэнгэрт цагаан үүл хөвж байна."
+        }
+      }
+    },
+    "a4847f22e0": {
+      "expected": {
+        "w": "承る",
+        "r": "うけたまわる",
+        "en": [
+          "(humble) to hear",
+          "to be told",
+          "to know"
+        ]
+      },
+      "examples": {
+        "展示会へのご招待、本日ありがたく承りました。": {
+          "en": "Today, we received your invitation to the exhibition with pleasure.",
+          "mn": "Өнөөдөр үзэсгэлэнгийн урилгыг тань талархан хүлээн авлаа."
+        }
+      }
+    },
+    "503bf9a13e": {
+      "expected": {
+        "w": "受取",
+        "r": "うけとり",
+        "en": [
+          "receipt"
+        ]
+      },
+      "examples": {
+        "お受け取りくださって幸いに存じます。": {
+          "en": "It was gracious of you to accept.",
+          "mn": "Хүлээн авсан тань их сайхан байна."
+        }
+      }
+    },
+    "7b66979a25": {
+      "expected": {
+        "w": "受け持つ",
+        "r": "うけもつ",
+        "en": [
+          "to take (be in) charge of"
+        ]
+      },
+      "examples": {
+        "費用を受け持つ者に決定権がある。": {
+          "en": "He who pays the piper calls the tune.",
+          "mn": "Зардлыг хариуцсан хүн шийдвэр гаргах эрхтэй."
+        }
+      }
+    }
+  }
+}

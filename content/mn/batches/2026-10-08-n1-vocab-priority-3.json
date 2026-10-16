@@ -1,0 +1,1034 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-priority-3-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit semantic categories cross-checked against Japanese entry and retained English gloss, independently unreviewed. Original uncommon senses preserved.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "3b8b02f40f": {
+      "mn": [
+        "гадаад төрх",
+        "нүүрний шинж",
+        "царай"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "顔付き",
+        "r": "かおつき",
+        "en": [
+          "(outward) looks",
+          "features",
+          "face"
+        ]
+      }
+    },
+    "f89fe48d9d": {
+      "mn": [
+        "хичээлээс гадуурх"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "課外",
+        "r": "かがい",
+        "en": [
+          "extracurricular"
+        ]
+      }
+    },
+    "b3c4614300": {
+      "mn": [
+        "нийтлэх",
+        "хэвлэх",
+        "өгүүлэл тавих"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "掲げる",
+        "r": "かかげる",
+        "en": [
+          "to publish",
+          "to print",
+          "to carry (an article)"
+        ]
+      }
+    },
+    "408b1b2559": {
+      "mn": [
+        "гутлын өсгий"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "踵",
+        "r": "かかと",
+        "en": [
+          "(shoe) heel"
+        ]
+      }
+    },
+    "e21caf00ad": {
+      "mn": [
+        "бичиж авах",
+        "цээж бичиг хийх",
+        "тэмдэглэл авах"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "書き取る",
+        "r": "かきとる",
+        "en": [
+          "to write down",
+          "to take dictation",
+          "to take notes"
+        ]
+      }
+    },
+    "2bde908249": {
+      "mn": [
+        "хутгах",
+        "эргүүлэн холих",
+        "нэгжиж онгичих"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "掻き回す",
+        "r": "かきまわす",
+        "en": [
+          "to stir up",
+          "to churn",
+          "to ransack"
+        ]
+      }
+    },
+    "d3c0bd8213": {
+      "mn": [
+        "уран зохиолын сайхан хэллэг"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "佳句",
+        "r": "かく",
+        "en": [
+          "beautiful passage of literature"
+        ]
+      }
+    },
+    "15569a3a2f": {
+      "mn": [
+        "зураас"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "画",
+        "r": "かく",
+        "en": [
+          "stroke"
+        ]
+      }
+    },
+    "9c29728f70": {
+      "mn": [
+        "байр суурь",
+        "зан чанар",
+        "тийн ялгал"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "格",
+        "r": "かく",
+        "en": [
+          "status",
+          "character",
+          "case"
+        ]
+      }
+    },
+    "0fc3c4aca9": {
+      "mn": [
+        "цөм",
+        "гол хэсэг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "核",
+        "r": "かく",
+        "en": [
+          "nucleus",
+          "kernel"
+        ]
+      }
+    },
+    "b913b671ea": {
+      "mn": [
+        "өнцөг",
+        "шогийн тэмээ хүү"
+      ],
+      "topics": [
+        "quantity",
+        "arts"
+      ],
+      "expected": {
+        "w": "角",
+        "r": "かく",
+        "en": [
+          "angle",
+          "bishop (shogi)"
+        ]
+      }
+    },
+    "939c8fef9e": {
+      "mn": [
+        "дутагдах",
+        "хагалах",
+        "цуурах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "欠く",
+        "r": "かく",
+        "en": [
+          "to lack",
+          "to break",
+          "to crack"
+        ]
+      }
+    },
+    "ca1ba3dd2f": {
+      "mn": [
+        "урлаг ба шинжлэх ухаан",
+        "ерөнхий боловсрол"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "学芸",
+        "r": "がくげい",
+        "en": [
+          "arts and sciences",
+          "liberal arts"
+        ]
+      }
+    },
+    "1bd65ccbfc": {
+      "mn": [
+        "чанарын ялгаа",
+        "зөрүү"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "格差",
+        "r": "かくさ",
+        "en": [
+          "qualitative difference",
+          "disparity"
+        ]
+      }
+    },
+    "81d5fdffc8": {
+      "mn": [
+        "тархалт",
+        "диффуз"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "拡散",
+        "r": "かくさん",
+        "en": [
+          "scattering",
+          "diffusion"
+        ]
+      }
+    },
+    "768e199110": {
+      "mn": [
+        "их сургууль төгсөгч",
+        "бакалавр"
+      ],
+      "topics": [
+        "learning",
+        "people"
+      ],
+      "expected": {
+        "w": "学士",
+        "r": "がくし",
+        "en": [
+          "university graduate"
+        ]
+      }
+    },
+    "7d0a45022f": {
+      "mn": [
+        "төрөл бүр",
+        "бүх төрөл"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "各種",
+        "r": "かくしゅ",
+        "en": [
+          "every kind",
+          "all sorts"
+        ]
+      }
+    },
+    "bca7171d6e": {
+      "mn": [
+        "хоёр долоо хоног тутам"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "隔週",
+        "r": "かくしゅう",
+        "en": [
+          "every other week"
+        ]
+      }
+    },
+    "764a72663e": {
+      "mn": [
+        "итгэл үнэмшил",
+        "баттай итгэл"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "確信",
+        "r": "かくしん",
+        "en": [
+          "conviction",
+          "confidence"
+        ]
+      }
+    },
+    "9b8758c027": {
+      "mn": [
+        "шинэчлэл",
+        "шинэ санаа"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "革新",
+        "r": "かくしん",
+        "en": [
+          "reform",
+          "innovation"
+        ]
+      }
+    },
+    "645ccfe3be": {
+      "mn": [
+        "онол"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "学説",
+        "r": "がくせつ",
+        "en": [
+          "theory"
+        ]
+      }
+    },
+    "5dd7bb9fa5": {
+      "mn": [
+        "математикийн тодорхойлолт",
+        "шийдвэр",
+        "эцэслэн тогтоох"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "確定",
+        "r": "かくてい",
+        "en": [
+          "definition (math)",
+          "decision",
+          "settlement"
+        ]
+      }
+    },
+    "829c94e4bb": {
+      "mn": [
+        "коктейль"
+      ],
+      "topics": [
+        "food"
+      ],
+      "expected": {
+        "w": "カクテル",
+        "r": "カクテル",
+        "en": [
+          "cocktail"
+        ]
+      }
+    },
+    "8dbc359e88": {
+      "mn": [
+        "олж авах",
+        "эзэмшил"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "獲得",
+        "r": "かくとく",
+        "en": [
+          "acquisition",
+          "possession"
+        ]
+      }
+    },
+    "0213bc7a8e": {
+      "mn": [
+        "хөгжмийн нот"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "楽譜",
+        "r": "がくふ",
+        "en": [
+          "score (music)"
+        ]
+      }
+    },
+    "9354298dbe": {
+      "mn": [
+        "баталгаа",
+        "хангах",
+        "хадгалах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "確保",
+        "r": "かくほ",
+        "en": [
+          "guarantee",
+          "ensure",
+          "maintain"
+        ]
+      }
+    },
+    "af4552502c": {
+      "mn": [
+        "хувьсгал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "革命",
+        "r": "かくめい",
+        "en": [
+          "revolution"
+        ]
+      }
+    },
+    "4c51a40f31": {
+      "mn": [
+        "батлан тогтоох",
+        "үндэслэн байгуулах"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "確立",
+        "r": "かくりつ",
+        "en": [
+          "establishment"
+        ]
+      }
+    },
+    "6714738f83": {
+      "mn": [
+        "боловсролын түүх"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "学歴",
+        "r": "がくれき",
+        "en": [
+          "academic background"
+        ]
+      }
+    },
+    "f0b5d3fde5": {
+      "mn": [
+        "зээлээр худалдах",
+        "зээл"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "掛け",
+        "r": "かけ",
+        "en": [
+          "credit"
+        ]
+      }
+    },
+    "5b0b01155c": {
+      "mn": [
+        "бооцоо",
+        "мөрийтэй тоглоом",
+        "эрсдэл"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "賭け",
+        "r": "かけ",
+        "en": [
+          "betting",
+          "gambling",
+          "a gamble"
+        ]
+      }
+    },
+    "c5d3aaf44b": {
+      "mn": [
+        "хадан цохио"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "崖",
+        "r": "がけ",
+        "en": [
+          "cliff"
+        ]
+      }
+    },
+    "661af4249f": {
+      "mn": [
+        "хурдан гүйх",
+        "гүйлтийн алхаа"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "駆け足",
+        "r": "かけあし",
+        "en": [
+          "running fast",
+          "double time"
+        ]
+      }
+    },
+    "50a82211b1": {
+      "mn": [
+        "өрхийн эдийн засаг",
+        "гэр бүлийн санхүү"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "家計",
+        "r": "かけい",
+        "en": [
+          "household economy",
+          "family finances"
+        ]
+      }
+    },
+    "ee23d690d0": {
+      "mn": [
+        "сар тоолох дагавар"
+      ],
+      "topics": [
+        "time",
+        "quantity"
+      ],
+      "expected": {
+        "w": "ヶ月",
+        "r": "かげつ",
+        "en": [
+          "counter for months"
+        ]
+      }
+    },
+    "cfb357ec03": {
+      "mn": [
+        "гүйлтийн уралдаан"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "駆けっこ",
+        "r": "かけっこ",
+        "en": [
+          "(foot) race"
+        ]
+      }
+    },
+    "b5f8d282d1": {
+      "mn": [
+        "уралдан гүйх",
+        "давхих",
+        "шогших"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "駆ける",
+        "r": "かける",
+        "en": [
+          "to run (race, esp. horse)",
+          "to gallop",
+          "to canter"
+        ]
+      }
+    },
+    "7860c45396": {
+      "mn": [
+        "бооцоо тавих",
+        "мөрий тавих",
+        "эрсдэлд оруулах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "賭ける",
+        "r": "かける",
+        "en": [
+          "to wager",
+          "to bet",
+          "to risk"
+        ]
+      }
+    },
+    "27629e72c4": {
+      "mn": [
+        "үйлдвэрлэл",
+        "боловсруулалт",
+        "боловсруулж өөрчлөх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "加工",
+        "r": "かこう",
+        "en": [
+          "manufacturing",
+          "processing",
+          "treatment"
+        ]
+      }
+    },
+    "f1aeb32800": {
+      "mn": [
+        "химийн нэгдэх урвал"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "化合",
+        "r": "かごう",
+        "en": [
+          "chemical combination"
+        ]
+      }
+    },
+    "0830cb0b68": {
+      "mn": [
+        "салхин тээрэм",
+        "салхин эргүүлэг"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "風車",
+        "r": "かざぐるま",
+        "en": [
+          "windmill",
+          "pinwheel"
+        ]
+      }
+    },
+    "b3f3b18c7d": {
+      "mn": [
+        "овортой байх",
+        "барихад эвгүй том байх",
+        "хэмжээ ихсэх"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "嵩張る",
+        "r": "かさばる",
+        "en": [
+          "to be bulky",
+          "to be unwieldy",
+          "to grow voluminous"
+        ]
+      }
+    },
+    "10e649caaa": {
+      "mn": [
+        "хуримтлагдах",
+        "нэмэгдэх"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "嵩む",
+        "r": "かさむ",
+        "en": [
+          "to pile up",
+          "to increase"
+        ]
+      }
+    },
+    "904529718c": {
+      "mn": [
+        "тансаг байдал",
+        "сүр жавхлан",
+        "нарийн эмзэг"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "華奢",
+        "r": "かしゃ",
+        "en": [
+          "luxury",
+          "pomp",
+          "delicate"
+        ]
+      }
+    },
+    "4641b96f3b": {
+      "mn": [
+        "хэсэг",
+        "газар",
+        "цэг"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "箇所",
+        "r": "かしょ",
+        "en": [
+          "passage",
+          "place",
+          "point"
+        ]
+      }
+    },
+    "35398ed297": {
+      "mn": [
+        "түлэгдэлт",
+        "халуун шингэнд түлэгдэх"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "火傷",
+        "r": "かしょう",
+        "en": [
+          "burn",
+          "scald"
+        ]
+      }
+    },
+    "c283e8c6ea": {
+      "mn": [
+        "зүйлчилсэн хэлбэр",
+        "жагсаан бичих"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "箇条書き",
+        "r": "かじょうがき",
+        "en": [
+          "itemized form",
+          "itemization"
+        ]
+      }
+    },
+    "807c84bfa5": {
+      "mn": [
+        "бүдэг",
+        "балархай",
+        "сул"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "微か",
+        "r": "かすか",
+        "en": [
+          "faint",
+          "dim",
+          "weak"
+        ]
+      }
+    },
+    "6f92f7e305": {
+      "mn": [
+        "бүдэг болох",
+        "манантай болох"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "霞む",
+        "r": "かすむ",
+        "en": [
+          "to grow hazy",
+          "to be misty"
+        ]
+      }
+    },
+    "a5a7b2d6d5": {
+      "mn": [
+        "хувирах",
+        "өөрчлөх",
+        "өөр дүрд оруулах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "化する",
+        "r": "かする",
+        "en": [
+          "to change into",
+          "to convert into",
+          "to transform"
+        ]
+      }
+    },
+    "6ba1bae967": {
+      "mn": [
+        "хөнгөхөн шүргэх",
+        "хувиас нь авах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "擦る",
+        "r": "かする",
+        "en": [
+          "to touch lightly",
+          "to take a percentage (from)"
+        ]
+      }
+    },
+    "f5120815d3": {
+      "mn": [
+        "Ангараг гараг"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "火星",
+        "r": "かせい",
+        "en": [
+          "Mars (planet)"
+        ]
+      }
+    },
+    "5b0765a40d": {
+      "mn": [
+        "чулуужсан үлдэгдэл",
+        "чулуужих",
+        "чулуужилт"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "化石",
+        "r": "かせき",
+        "en": [
+          "fossil",
+          "petrifaction",
+          "fossilization"
+        ]
+      }
+    },
+    "fc3ea58ad0": {
+      "mn": [
+        "нийлэг утас"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "化繊",
+        "r": "かせん",
+        "en": [
+          "synthetic fibres"
+        ]
+      }
+    },
+    "9f60aaa2a3": {
+      "mn": [
+        "гол мөрөн"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "河川",
+        "r": "かせん",
+        "en": [
+          "rivers"
+        ]
+      }
+    },
+    "deed4a1ac8": {
+      "mn": [
+        "хүн ам цөөрөх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "過疎",
+        "r": "かそ",
+        "en": [
+          "depopulation"
+        ]
+      }
+    },
+    "af871ac284": {
+      "mn": [
+        "хэт их",
+        "илүүдэл"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "過多",
+        "r": "かた",
+        "en": [
+          "excess",
+          "superabundance"
+        ]
+      }
+    },
+    "712db68fb8": {
+      "mn": [
+        "хэцүү",
+        "бэрх"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "難い",
+        "r": "かたい",
+        "en": [
+          "difficult",
+          "hard"
+        ]
+      }
+    },
+    "f61f8da3d3": {
+      "mn": [
+        "сэдэв",
+        "гол сэдэв",
+        "даалгавар"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "課題",
+        "r": "かだい",
+        "en": [
+          "subject",
+          "theme",
+          "task"
+        ]
+      }
+    },
+    "9f4f812711": {
+      "mn": [
+        "хариу дурлалгүй хайр"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "片思い",
+        "r": "かたおもい",
+        "en": [
+          "unrequited love"
+        ]
+      }
+    }
+  }
+}

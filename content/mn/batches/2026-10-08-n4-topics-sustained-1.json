@@ -1,0 +1,266 @@
+{
+  "provenance": {
+    "id": "mn-n4-topics-sustained-1-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "Explicit topic assignments compared to exact retained Japanese headwords, readings and English. No catch-all; independent semantic review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n4.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "4c9297421b": {
+      "expected": {
+        "w": "ガラス",
+        "r": "ガラス",
+        "en": [
+          "a glass pane"
+        ]
+      },
+      "topics": [
+        "daily",
+        "technology"
+      ]
+    },
+    "6345553664": {
+      "expected": {
+        "w": "彼ら",
+        "r": "かれら",
+        "en": [
+          "they"
+        ]
+      },
+      "topics": [
+        "people"
+      ]
+    },
+    "374a0aa749": {
+      "expected": {
+        "w": "看護婦",
+        "r": "かんごふ",
+        "en": [
+          "female nurse"
+        ]
+      },
+      "topics": [
+        "people",
+        "work"
+      ]
+    },
+    "ab366b6c9d": {
+      "expected": {
+        "w": "気",
+        "r": "き",
+        "en": [
+          "spirit",
+          "mood"
+        ]
+      },
+      "topics": [
+        "feelings"
+      ]
+    },
+    "3f4f3a3b9d": {
+      "expected": {
+        "w": "機会",
+        "r": "きかい",
+        "en": [
+          "opportunity"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "fcca18b129": {
+      "expected": {
+        "w": "規則",
+        "r": "きそく",
+        "en": [
+          "regulations"
+        ]
+      },
+      "topics": [
+        "society"
+      ]
+    },
+    "b284605582": {
+      "expected": {
+        "w": "きっと",
+        "r": "きっと",
+        "en": [
+          "surely"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "4d5b12c74c": {
+      "expected": {
+        "w": "絹",
+        "r": "きぬ",
+        "en": [
+          "silk"
+        ]
+      },
+      "topics": [
+        "daily"
+      ]
+    },
+    "42f05076b3": {
+      "expected": {
+        "w": "気分",
+        "r": "きぶん",
+        "en": [
+          "mood"
+        ]
+      },
+      "topics": [
+        "feelings"
+      ]
+    },
+    "a2a012c05f": {
+      "expected": {
+        "w": "着物",
+        "r": "きもの",
+        "en": [
+          "kimono"
+        ]
+      },
+      "topics": [
+        "daily"
+      ]
+    },
+    "cb029e617e": {
+      "expected": {
+        "w": "客",
+        "r": "きゃく",
+        "en": [
+          "guest",
+          "customer"
+        ]
+      },
+      "topics": [
+        "people",
+        "work"
+      ]
+    },
+    "7a7b79370f": {
+      "expected": {
+        "w": "教会",
+        "r": "きょうかい",
+        "en": [
+          "church"
+        ]
+      },
+      "topics": [
+        "places",
+        "society"
+      ]
+    },
+    "23ea485338": {
+      "expected": {
+        "w": "興味",
+        "r": "きょうみ",
+        "en": [
+          "an interest"
+        ]
+      },
+      "topics": [
+        "feelings"
+      ]
+    },
+    "a70d257a61": {
+      "expected": {
+        "w": "空気",
+        "r": "くうき",
+        "en": [
+          "air",
+          "atmosphere"
+        ]
+      },
+      "topics": [
+        "nature"
+      ]
+    },
+    "78c6412e35": {
+      "expected": {
+        "w": "首",
+        "r": "くび",
+        "en": [
+          "neck"
+        ]
+      },
+      "topics": [
+        "body"
+      ]
+    },
+    "7db3da6e1b": {
+      "expected": {
+        "w": "雲",
+        "r": "くも",
+        "en": [
+          "cloud"
+        ]
+      },
+      "topics": [
+        "nature"
+      ]
+    },
+    "5079fc5daf": {
+      "expected": {
+        "w": "経済",
+        "r": "けいざい",
+        "en": [
+          "finance",
+          "economy"
+        ]
+      },
+      "topics": [
+        "work",
+        "society"
+      ]
+    },
+    "8426193f36": {
+      "expected": {
+        "w": "ケーキ",
+        "r": "ケーキ",
+        "en": [
+          "cake"
+        ]
+      },
+      "topics": [
+        "food"
+      ]
+    },
+    "a200494cec": {
+      "expected": {
+        "w": "景色",
+        "r": "けしき",
+        "en": [
+          "scene",
+          "landscape"
+        ]
+      },
+      "topics": [
+        "places",
+        "nature"
+      ]
+    },
+    "ba1b3c0d13": {
+      "expected": {
+        "w": "消しゴム",
+        "r": "けしゴム",
+        "en": [
+          "eraser"
+        ]
+      },
+      "topics": [
+        "learning",
+        "daily"
+      ]
+    }
+  }
+}

@@ -1,0 +1,1076 @@
+{
+  "provenance": {
+    "id": "mn-n3-vocab-middle-b-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit topics cross-checked individually against retained Japanese headwords/readings and English glosses, including alternate dictionary readings. Independently unreviewed.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n3.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j1330970": {
+      "mn": [
+        "ургацын гарц",
+        "ургацын хэмжээ"
+      ],
+      "topics": [
+        "food",
+        "nature"
+      ],
+      "expected": {
+        "w": "収量",
+        "r": "しゅうりょう",
+        "en": [
+          "yield",
+          "size of harvest"
+        ]
+      }
+    },
+    "j1485630": {
+      "mn": [
+        "бэлтгэл",
+        "хангалт",
+        "хамгаалалт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "備え",
+        "r": "そなえ",
+        "en": [
+          "preparation",
+          "provision",
+          "guarding"
+        ]
+      }
+    },
+    "j1612470": {
+      "mn": [
+        "амархан"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "難なく",
+        "r": "なんなく",
+        "en": [
+          "easily"
+        ]
+      }
+    },
+    "j2068730": {
+      "mn": [
+        "тавь",
+        "байрлуул",
+        "үлдээ"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "置きなさい",
+        "r": "おきなさい",
+        "en": [
+          "put",
+          "place",
+          "leave"
+        ]
+      }
+    },
+    "j2827915": {
+      "mn": [
+        "тэгж хийж болно",
+        "тэгсэн нь дээр",
+        "тэгэхэд зүгээр"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "置けばいい",
+        "r": "おけばいい",
+        "en": [
+          "it's OK to ...",
+          "it's best to ...",
+          "it's alright to ..."
+        ]
+      }
+    },
+    "j1889110": {
+      "mn": [
+        "мэргэжлийн ажил",
+        "мэргэжил"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "専門職",
+        "r": "せんもんしょく",
+        "en": [
+          "professional job",
+          "profession"
+        ]
+      }
+    },
+    "j1350200": {
+      "mn": [
+        "идэвхгүй",
+        "сөрөг",
+        "хуучинсаг"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "消極",
+        "r": "しょうきょく",
+        "en": [
+          "passive",
+          "negative",
+          "conservative"
+        ]
+      }
+    },
+    "j2410180": {
+      "mn": [
+        "гэмтээх",
+        "сүйтгэх",
+        "хор хүргэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "害す",
+        "r": "がいす",
+        "en": [
+          "to injure",
+          "to damage",
+          "to harm"
+        ]
+      }
+    },
+    "j1539070": {
+      "mn": [
+        "агуу",
+        "маш сайн",
+        "гарамгай"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "優れた",
+        "r": "すぐれた",
+        "en": [
+          "great",
+          "excellent",
+          "outstanding"
+        ]
+      }
+    },
+    "j1854150": {
+      "mn": [
+        "онцгой их",
+        "илт",
+        "хавьгүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "優れて",
+        "r": "すぐれて",
+        "en": [
+          "exceedingly",
+          "conspicuously",
+          "by far"
+        ]
+      }
+    },
+    "j1473110": {
+      "mn": [
+        "утсан холболт"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "配線",
+        "r": "はいせん",
+        "en": [
+          "wiring"
+        ]
+      }
+    },
+    "j1581570": {
+      "mn": [
+        "хувцас солих өрөө"
+      ],
+      "topics": [
+        "places",
+        "daily"
+      ],
+      "expected": {
+        "w": "脱衣所",
+        "r": "だついじょ",
+        "en": [
+          "changing room (at a bathhouse, swimming pool, etc.)"
+        ]
+      }
+    },
+    "j1250630": {
+      "mn": [
+        "зарлалын самбар",
+        "мэдээллийн самбар"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "掲示板",
+        "r": "けいじばん",
+        "en": [
+          "bulletin board",
+          "display board",
+          "notice board"
+        ]
+      }
+    },
+    "j1631690": {
+      "mn": [
+        "татгалзах",
+        "хүлээн авахгүй байх"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "お断り",
+        "r": "おことわり",
+        "en": [
+          "declining",
+          "nonacceptance",
+          "declination"
+        ]
+      }
+    },
+    "j1009730": {
+      "mn": [
+        "түүнээс илүү биш",
+        "ердөө",
+        "зөвхөн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "に過ぎない",
+        "r": "にすぎない",
+        "en": [
+          "no more than",
+          "just",
+          "only"
+        ]
+      }
+    },
+    "j1192980": {
+      "mn": [
+        "жимсний цэцэрлэг",
+        "жимсний аж ахуй"
+      ],
+      "topics": [
+        "nature",
+        "food"
+      ],
+      "expected": {
+        "w": "果樹園",
+        "r": "かじゅえん",
+        "en": [
+          "orchard",
+          "fruit farm"
+        ]
+      }
+    },
+    "j1382590": {
+      "mn": [
+        "саван"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "石けん",
+        "r": "せっけん",
+        "en": [
+          "soap"
+        ]
+      }
+    },
+    "j2620220": {
+      "mn": [
+        "зөвшөөрөлгүй таслах",
+        "мэдэгдэлгүй чөлөө авах"
+      ],
+      "topics": [
+        "learning",
+        "work"
+      ],
+      "expected": {
+        "w": "無断欠席",
+        "r": "むだんけっせき",
+        "en": [
+          "truancy",
+          "absence without leave"
+        ]
+      }
+    },
+    "j1160550": {
+      "mn": [
+        "хүмүүжүүлэх",
+        "өсгөх"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "育て",
+        "r": "そだて",
+        "en": [
+          "bringing up",
+          "raising"
+        ]
+      }
+    },
+    "j1552200": {
+      "mn": [
+        "харвах од",
+        "унах од",
+        "солир"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "流れ星",
+        "r": "ながれぼし",
+        "en": [
+          "shooting star",
+          "falling star",
+          "meteor"
+        ]
+      }
+    },
+    "j1866610": {
+      "mn": [
+        "асуудалгүй",
+        "хамаагүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "構わない",
+        "r": "かまわない",
+        "en": [
+          "no problem",
+          "it doesn't matter"
+        ]
+      }
+    },
+    "j1852840": {
+      "mn": [
+        "айлчлал",
+        "очих",
+        "хавар зэрэг ирэх"
+      ],
+      "topics": [
+        "time",
+        "places"
+      ],
+      "expected": {
+        "w": "訪れ",
+        "r": "おとずれ",
+        "en": [
+          "visit",
+          "call",
+          "arrival (e.g. of spring)"
+        ]
+      }
+    },
+    "j2164600": {
+      "mn": [
+        "Кообэ хот"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "神戸",
+        "r": "こうべ",
+        "en": [
+          "Kobe (city)"
+        ]
+      }
+    },
+    "j1354720": {
+      "mn": [
+        "унаж явах",
+        "уналт",
+        "будаг тархах байдал"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "乗り",
+        "r": "のり",
+        "en": [
+          "riding",
+          "ride",
+          "spread (of paints)"
+        ]
+      }
+    },
+    "j2405100": {
+      "mn": [
+        "зуурмаг хэлбэртэй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "ペースト状",
+        "r": "ペーストじょう",
+        "en": [
+          "paste (form)"
+        ]
+      }
+    },
+    "j1705010": {
+      "mn": [
+        "дулаан тусгаарлалт"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "断熱",
+        "r": "だんねつ",
+        "en": [
+          "insulation"
+        ]
+      }
+    },
+    "j1945740": {
+      "mn": [
+        "ослын шат",
+        "аврах гарцын шат"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "非常階段",
+        "r": "ひじょうかいだん",
+        "en": [
+          "emergency staircase",
+          "emergency stairs"
+        ]
+      }
+    },
+    "j1299050": {
+      "mn": [
+        "алах",
+        "хүний амь хөнөөх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "殺害",
+        "r": "さつがい",
+        "en": [
+          "killing",
+          "murder"
+        ]
+      }
+    },
+    "j1487540": {
+      "mn": [
+        "зайлшгүй",
+        "чухал",
+        "шаардлагатай"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "必須",
+        "r": "ひっす",
+        "en": [
+          "indispensable",
+          "essential",
+          "requisite"
+        ]
+      }
+    },
+    "j1442140": {
+      "mn": [
+        "оймсны утас задрах"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "伝線",
+        "r": "でんせん",
+        "en": [
+          "run (in a stocking)"
+        ]
+      }
+    },
+    "j1418300": {
+      "mn": [
+        "хайгуулын баг",
+        "экспедицийн баг"
+      ],
+      "topics": [
+        "people",
+        "places"
+      ],
+      "expected": {
+        "w": "探検隊",
+        "r": "たんけんたい",
+        "en": [
+          "exploration party",
+          "expedition team"
+        ]
+      }
+    },
+    "j1419670": {
+      "mn": [
+        "мөхөл",
+        "тасралт",
+        "холбоо тасрах"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "断絶",
+        "r": "だんぜつ",
+        "en": [
+          "extinction",
+          "discontinuation",
+          "interruption"
+        ]
+      }
+    },
+    "j1945810": {
+      "mn": [
+        "урлагийн худалдаачин",
+        "урлагийн бүтээлийн дэлгүүр"
+      ],
+      "topics": [
+        "arts",
+        "work"
+      ],
+      "expected": {
+        "w": "美術商",
+        "r": "びじゅつしょう",
+        "en": [
+          "art dealer",
+          "fine art(s) shop"
+        ]
+      }
+    },
+    "j1883220": {
+      "mn": [
+        "ажилд орох"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "職に就く",
+        "r": "しょくにつく",
+        "en": [
+          "to take up employment"
+        ]
+      }
+    },
+    "j1279670": {
+      "mn": [
+        "асуудалгүй",
+        "хамаагүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "構いません",
+        "r": "かまいません",
+        "en": [
+          "no problem",
+          "it doesn't matter"
+        ]
+      }
+    },
+    "j1560040": {
+      "mn": [
+        "тээврийн маршрут",
+        "шугам",
+        "байгууллагын баримтлах чиглэл"
+      ],
+      "topics": [
+        "places",
+        "work"
+      ],
+      "expected": {
+        "w": "路線",
+        "r": "ろせん",
+        "en": [
+          "route (bus, train, air, etc.)",
+          "line",
+          "line (taken by a group, organization, etc.)"
+        ]
+      }
+    },
+    "j1597120": {
+      "mn": [
+        "жишээ",
+        "зүйрлэл",
+        "адилтгал"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "例え",
+        "r": "たとえ",
+        "en": [
+          "example",
+          "simile",
+          "metaphor"
+        ]
+      }
+    },
+    "j2176410": {
+      "mn": [
+        "урьдын",
+        "ердийн",
+        "дурдсан"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "例の",
+        "r": "れいの",
+        "en": [
+          "the usual",
+          "as it always is",
+          "said"
+        ]
+      }
+    },
+    "j2713240": {
+      "mn": [
+        "өмнөх жишиг",
+        "жишээ"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "例し",
+        "r": "ためし",
+        "en": [
+          "precedent",
+          "example"
+        ]
+      }
+    },
+    "j1506050": {
+      "mn": [
+        "түүнчлэн",
+        "мөн",
+        "тэгсэн ч"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "然も",
+        "r": "しかも",
+        "en": [
+          "moreover",
+          "furthermore",
+          "nevertheless"
+        ]
+      }
+    },
+    "j1883170": {
+      "mn": [
+        "ажил хайх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "職探し",
+        "r": "しょくさがし",
+        "en": [
+          "job hunting",
+          "job searching"
+        ]
+      }
+    },
+    "j1264610": {
+      "mn": [
+        "хязгаар",
+        "хэмжээ",
+        "зааг"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "限り",
+        "r": "かぎり",
+        "en": [
+          "limit",
+          "limits",
+          "bounds"
+        ]
+      }
+    },
+    "j1590320": {
+      "mn": [
+        "таамаглал",
+        "урьдчилсан таамаг",
+        "төсөөлөл"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "仮説",
+        "r": "かせつ",
+        "en": [
+          "hypothesis",
+          "supposition",
+          "assumption"
+        ]
+      }
+    },
+    "j1643270": {
+      "mn": [
+        "үлдсэн",
+        "үлдэгдэл",
+        "тэмцээнд хэвээр байна"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "残った",
+        "r": "のこった",
+        "en": [
+          "remaining",
+          "leftover",
+          "you're still in it!"
+        ]
+      }
+    },
+    "j2763540": {
+      "mn": [
+        "бэлтгэж",
+        "тохиолдолд",
+        "угтаж"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "に備えて",
+        "r": "にそなえて",
+        "en": [
+          "in preparation (for)",
+          "in case (of)",
+          "in the lead-up (to)"
+        ]
+      }
+    },
+    "j2566570": {
+      "mn": [
+        "боолчлол"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "奴隷制",
+        "r": "どれいせい",
+        "en": [
+          "slavery"
+        ]
+      }
+    },
+    "j1585070": {
+      "mn": [
+        "унасан навч",
+        "навчны хаягдал",
+        "навч унах"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "落葉",
+        "r": "おちば",
+        "en": [
+          "fallen leaves",
+          "leaf litter",
+          "falling leaves"
+        ]
+      }
+    },
+    "j1441840": {
+      "mn": [
+        "хана эрэг голын дагуу",
+        "хажуугаар",
+        "дагаж"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "伝い",
+        "r": "づたい",
+        "en": [
+          "along (wall, coast, river, etc.)",
+          "alongside",
+          "following"
+        ]
+      }
+    },
+    "j1441860": {
+      "mn": [
+        "домог",
+        "уламжлал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "伝え",
+        "r": "つたえ",
+        "en": [
+          "legend",
+          "tradition"
+        ]
+      }
+    },
+    "j1417790": {
+      "mn": [
+        "бие даан",
+        "ганцаараа",
+        "тус тусдаа"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "単独で",
+        "r": "たんどくで",
+        "en": [
+          "independently",
+          "individually",
+          "separately"
+        ]
+      }
+    },
+    "j1548530": {
+      "mn": [
+        "алдаа",
+        "орхигдсон зүйл",
+        "үр дүн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "落ち",
+        "r": "おち",
+        "en": [
+          "slip",
+          "omission",
+          "outcome"
+        ]
+      }
+    },
+    "j2512880": {
+      "mn": [
+        "орхигдсон зүйл",
+        "бичихээ мартсан зүйл",
+        "урхи"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "落し",
+        "r": "おとし",
+        "en": [
+          "missing item",
+          "something one forgot to write down",
+          "trap"
+        ]
+      }
+    },
+    "j1628250": {
+      "mn": [
+        "настай хос",
+        "ахмад хос"
+      ],
+      "topics": [
+        "people",
+        "relationships"
+      ],
+      "expected": {
+        "w": "老夫婦",
+        "r": "ろうふうふ",
+        "en": [
+          "old couple",
+          "elderly couple"
+        ]
+      }
+    },
+    "j1483750": {
+      "mn": [
+        "туйлдан ядрах"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "疲れ果て",
+        "r": "つかれはて",
+        "en": [
+          "being tired out"
+        ]
+      }
+    },
+    "j2146440": {
+      "mn": [
+        "дурлах",
+        "хайрлах",
+        "сонирхогч байх"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "好き",
+        "r": "ずき",
+        "en": [
+          "love of",
+          "affection for",
+          "enthusiast for"
+        ]
+      }
+    },
+    "j2146450": {
+      "mn": [
+        "дуртай байх",
+        "таалах",
+        "таалалд нийцэх"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "好み",
+        "r": "ごのみ",
+        "en": [
+          "being fond of",
+          "having a liking for",
+          "to the liking of"
+        ]
+      }
+    },
+    "j1428220": {
+      "mn": [
+        "албадан хөдөлмөртэй хорих ял"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "懲役",
+        "r": "ちょうえき",
+        "en": [
+          "penal servitude",
+          "imprisonment with hard labor (hard labour)"
+        ]
+      }
+    },
+    "j2525660": {
+      "mn": [
+        "хүчээр тулгах",
+        "албадлага"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "押し付け",
+        "r": "おしつけ",
+        "en": [
+          "imposition (i.e. of rules, of a decision)",
+          "compulsion"
+        ]
+      }
+    },
+    "j2835317": {
+      "mn": [
+        "бүдэг",
+        "тодорхойгүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "ぼう然",
+        "r": "ぼうぜん",
+        "en": [
+          "vague"
+        ]
+      }
+    },
+    "j1830860": {
+      "mn": [
+        "сүсэг бишрэл",
+        "хүндэтгэн шүтэх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "敬神",
+        "r": "けいしん",
+        "en": [
+          "piety",
+          "reverence"
+        ]
+      }
+    }
+  }
+}
