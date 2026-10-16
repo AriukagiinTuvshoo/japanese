@@ -22,7 +22,13 @@ export interface Example {
   fg?: string;
   en?: string;
   mn?: string | null;
+  mn_provenance?: string;
   ts?: number;
+}
+
+export interface TranslationProvenanceRecord {
+  id: string;
+  reviewStatus?: string;
 }
 
 export interface Vocab {
