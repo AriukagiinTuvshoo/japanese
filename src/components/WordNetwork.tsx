@@ -5,7 +5,7 @@ import { loadFullData } from "../lib/data";
 import type { Kanji, Level, Vocab } from "../lib/types";
 import { LEVELS } from "../lib/types";
 import { MQ_LABEL } from "../lib/text";
-import { Card, Chip, LevelBadge, SectionTitle, Spinner, SpeakButton } from "./ui";
+import { Card, Chip, ErrorBox, LevelBadge, SectionTitle, Spinner, SpeakButton } from "./ui";
 import { useStore } from "../lib/store";
 import { MN_PENDING, ui, vocabMeaning } from "../lib/i18n";
 
@@ -23,9 +23,13 @@ export function WordNetwork({ level }: { level: Level }) {
   const [center, setCenter] = useState<string | null>(null);
   const [query, setQuery] = useState("");
   const [memoryNote, setMemoryNote] = useState("");
+  const [loadError, setLoadError] = useState<unknown>(null);
+  const [loadAttempt, setLoadAttempt] = useState(0);
 
   useEffect(() => {
     let active = true;
+    setData(null);
+    setLoadError(null);
     loadFullData().then((d) => {
       if (!active) return;
       setData(d);
@@ -37,11 +41,14 @@ export function WordNetwork({ level }: { level: Level }) {
       }
       const best = [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
       setCenter(best[0]?.[0] ?? "日");
-    }).catch(() => {
-      if (active) setData(null);
+    }).catch((error: unknown) => {
+      if (active) {
+        setData(null);
+        setLoadError(error);
+      }
     });
     return () => { active = false; };
-  }, [level]);
+  }, [level, loadAttempt]);
 
   useEffect(() => {
     setMemoryNote(center ? doc.mnemonics[center] ?? "" : "");
@@ -121,6 +128,9 @@ export function WordNetwork({ level }: { level: Level }) {
       })
     : [];
 
+  if (loadError) {
+    return <ErrorBox error={loadError} lang={language} retry={() => setLoadAttempt((attempt) => attempt + 1)} />;
+  }
   if (!data) return <Spinner label={t.wordNetworkLoading} lang={language} />;
 
   const centerMeaning = model?.kanji
