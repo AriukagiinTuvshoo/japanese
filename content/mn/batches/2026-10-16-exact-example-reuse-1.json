@@ -1,0 +1,421 @@
+{
+  "provenance": {
+    "id": "mn-exact-example-reuse-2026-10-16-1",
+    "createdAt": "2026-10-16",
+    "author": "Arena coding assistant",
+    "method": "Exact sentence reuse only: the retained Japanese sentence and retained English source text match byte-for-byte with a previously translated example elsewhere in the same corpus. No new Mongolian wording was generated; the prior translation provenance is preserved in reusedFrom. The reused text remains unreviewed by a human linguist.",
+    "source": "https://github.com/evanclan/OpenJLPT (retained Japanese/English example sentence pairs)",
+    "sourceSnapshot": "dbcdfc41395e05be57cd7efdc9175b258997da2f",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "2676514561": {
+      "expected": {
+        "w": "みんな",
+        "r": "みんな",
+        "en": [
+          "everyone"
+        ]
+      },
+      "examples": {
+        "女の子はほとんどみんなやさしい。": {
+          "en": "Almost all girls are kind.",
+          "mn": "Бараг бүх охид эелдэг.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "e6afab391a",
+              "provenance": "mn-n5-examples-recovery-1-2026-10-09"
+            }
+          ]
+        }
+      }
+    },
+    "508131fe89": {
+      "expected": {
+        "w": "スリッパ",
+        "r": "スリッパ",
+        "en": [
+          "slippers"
+        ]
+      },
+      "examples": {
+        "スリッパでロビーに降りたらだめだよ。": {
+          "en": "You're not supposed to wear your slippers down to the lobby.",
+          "mn": "Гэрийн шаахайтайгаа доод давхрын үүдний танхимд бууж болохгүй шүү.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "ae00442122",
+              "provenance": "mn-n5-examples-recovery-1-2026-10-09"
+            }
+          ]
+        }
+      }
+    },
+    "f71c69492e": {
+      "expected": {
+        "w": "ほか",
+        "r": "ほか",
+        "en": [
+          "other",
+          "the rest"
+        ]
+      },
+      "examples": {
+        "ほかの女の子たちはどこにいるの。": {
+          "en": "Where are the other girls?",
+          "mn": "Бусад охид хаана байгаа вэ?",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "e6afab391a",
+              "provenance": "mn-n5-examples-recovery-1-2026-10-09"
+            }
+          ]
+        }
+      }
+    },
+    "278c1e0e04": {
+      "expected": {
+        "w": "ノート",
+        "r": "ノート",
+        "en": [
+          "notebook",
+          "exercise book"
+        ]
+      },
+      "examples": {
+        "これらの語をノートに書きなさい。": {
+          "en": "Write these words in your notebook.",
+          "mn": "Эдгээр үгийг дэвтэртээ бичээрэй.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "f7c7f35d9e",
+              "provenance": "mn-n5-examples-recovery-2-2026-10-09"
+            }
+          ]
+        }
+      }
+    },
+    "b284605582": {
+      "expected": {
+        "w": "きっと",
+        "r": "きっと",
+        "en": [
+          "surely"
+        ]
+      },
+      "examples": {
+        "あなたの家族はきっと親切でしょう。": {
+          "en": "Your family must be very nice.",
+          "mn": "Танай гэр бүлийнхэн их сайхан сэтгэлтэй хүмүүс байх.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "1c9db63bdc",
+              "provenance": "mn-n5-examples-recovery-2-2026-10-09"
+            }
+          ]
+        }
+      }
+    },
+    "c904982ded": {
+      "expected": {
+        "w": "親切",
+        "r": "しんせつ",
+        "en": [
+          "kindness"
+        ]
+      },
+      "examples": {
+        "あなたの家族はきっと親切でしょう。": {
+          "en": "Your family must be very nice.",
+          "mn": "Танай гэр бүлийнхэн их сайхан сэтгэлтэй хүмүүс байх.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "1c9db63bdc",
+              "provenance": "mn-n5-examples-recovery-2-2026-10-09"
+            }
+          ]
+        }
+      }
+    },
+    "af7459ef1e": {
+      "expected": {
+        "w": "生徒",
+        "r": "せいと",
+        "en": [
+          "pupil"
+        ]
+      },
+      "examples": {
+        "この学校はたくさんの生徒がいます。": {
+          "en": "This school has many students.",
+          "mn": "Энэ сургууль олон сурагчтай.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "dd8ac16bd2",
+              "provenance": "mn-n5-examples-recovery-2-2026-10-09"
+            }
+          ]
+        }
+      }
+    },
+    "31893e4378": {
+      "expected": {
+        "w": "レストラン",
+        "r": "レストラン",
+        "en": [
+          "restaurant"
+        ]
+      },
+      "examples": {
+        "このレストランのカレーはうまいよ。": {
+          "en": "The curry at this restaurant is good.",
+          "mn": "Энэ зоогийн газрын карри амттай шүү.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "9decc44f4e",
+              "provenance": "mn-examples-batch-1-2026-10-10"
+            }
+          ]
+        }
+      }
+    },
+    "4d76d06d84": {
+      "expected": {
+        "w": "町",
+        "r": "まち",
+        "en": [
+          "town",
+          "city"
+        ]
+      },
+      "examples": {
+        "その町はロンドンのすぐ北にある。": {
+          "en": "The town lies just above London.",
+          "mn": "Тэр хот Лондоноос хойш талд оршдог.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "fa320a51ea",
+              "provenance": "mn-examples-batch-1-2026-10-10"
+            }
+          ]
+        }
+      }
+    },
+    "23911a0718": {
+      "expected": {
+        "w": "弾く",
+        "r": "ひく",
+        "en": [
+          "to play an instrument with strings",
+          "including piano"
+        ]
+      },
+      "examples": {
+        "ギターをひくのはおもしろい。": {
+          "en": "Playing the guitar is fun.",
+          "mn": "Гитар тоглох сонирхолтой.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "4fb1c0d758",
+              "provenance": "mn-examples-batch-1-2026-10-10"
+            }
+          ]
+        }
+      }
+    },
+    "799b7cabe0": {
+      "expected": {
+        "w": "それから",
+        "r": "それから",
+        "en": [
+          "after that"
+        ]
+      },
+      "examples": {
+        "それからすっきりきれいにしてくれ。": {
+          "en": "Then clean it really well.",
+          "mn": "Тэгээд сайтар цэвэрлээд өгөөрэй.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "43cd9825f0",
+              "provenance": "mn-examples-batch-2-2026-10-10"
+            }
+          ]
+        },
+        "それから先の話を聞きたい。": {
+          "en": "I'd like to know the rest of the story.",
+          "mn": "Цаашдын яриаг сонсмоор байна.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "20fcc4f54f",
+              "provenance": "mn-examples-batch-3-2026-10-10"
+            }
+          ]
+        }
+      }
+    },
+    "b8da4537a2": {
+      "expected": {
+        "w": "くださる",
+        "r": "くださる",
+        "en": [
+          "(respectful) to give"
+        ]
+      },
+      "examples": {
+        "来てくださってどうもありがとう。": {
+          "en": "Thank you for coming.",
+          "mn": "Ирсэнд баярлалаа.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "2e2abd26ca",
+              "provenance": "mn-examples-batch-2-2026-10-10"
+            }
+          ]
+        }
+      }
+    },
+    "44f773f94f": {
+      "expected": {
+        "w": "すっかり",
+        "r": "すっかり",
+        "en": [
+          "completely"
+        ]
+      },
+      "examples": {
+        "先生はまたすっかり元気になった。": {
+          "en": "The teacher got quite well again.",
+          "mn": "Багш дахин бүрэн эрүүл саруул болсон.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "442c4aa1ca",
+              "provenance": "mn-examples-batch-2-2026-10-10"
+            }
+          ]
+        }
+      }
+    },
+    "358fc382cb": {
+      "expected": {
+        "w": "年",
+        "r": "とし",
+        "en": [
+          "year"
+        ]
+      },
+      "examples": {
+        "今年もよい年でありますように。": {
+          "en": "May the new year bring you happiness!",
+          "mn": "Энэ жил ч гэсэн сайхан жил болог!",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "0020b9ee4e",
+              "provenance": "mn-examples-batch-3-2026-10-10"
+            }
+          ]
+        }
+      }
+    },
+    "d33540fe8e": {
+      "expected": {
+        "w": "では",
+        "r": "では",
+        "en": [
+          "with that..."
+        ]
+      },
+      "examples": {
+        "では今晩またね、さようなら。": {
+          "en": "See you tonight, then. Cheers!",
+          "mn": "Тэгвэл өнөөдөр орой уулзъя. Баяртай!",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "0a1f511640",
+              "provenance": "mn-examples-batch-3-2026-10-10"
+            }
+          ]
+        }
+      }
+    },
+    "34108268e1": {
+      "expected": {
+        "w": "二",
+        "r": "に",
+        "en": [
+          "two"
+        ]
+      },
+      "examples": {
+        "二、三デメリットがありますね。": {
+          "en": "There are a few disadvantages to it.",
+          "mn": "Хоёр, гурван сул тал бий шүү.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "5cb07674a3",
+              "provenance": "mn-examples-batch-3-2026-10-10"
+            }
+          ]
+        }
+      }
+    },
+    "1000ee441a": {
+      "expected": {
+        "w": "四つ",
+        "r": "よっつ",
+        "en": [
+          "four"
+        ]
+      },
+      "examples": {
+        "その紙を四つ折りにしなさい。": {
+          "en": "Fold the paper in four.",
+          "mn": "Тэр цаасыг дөрөв нугал.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n4",
+              "id": "ac3d1de39a",
+              "provenance": "mn-n4-examples-sustained-5-2026-10-08"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
