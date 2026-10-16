@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { cn } from "../utils/cn";
 import { href, navigate } from "../lib/router";
 import { useStore } from "../lib/store";
-import { loadFullData } from "../lib/data";
+import { loadFullData, loadTranslationProvenance } from "../lib/data";
 import type { Vocab } from "../lib/types";
 import { MQ_LABEL, TYPE_LABEL, LEVEL_LABEL, stripFurigana, toRomaji } from "../lib/text";
 import { GRADES, cardStage, previewIntervals, retrievability } from "../lib/srs";
@@ -18,6 +18,7 @@ export default function WordDetail({ id }: { id: string }) {
   const t = ui[language];
   const [data, setData] = useState<Awaited<ReturnType<typeof loadFullData>> | null>(null);
   const [tab, setTab] = useState<"overview" | "examples" | "network" | "source">("overview");
+  const [translationReview, setTranslationReview] = useState<Record<string, string>>({});
   const [mnemonic, setMnemonic] = useState("");
 
   useEffect(() => {
@@ -27,6 +28,17 @@ export default function WordDetail({ id }: { id: string }) {
   useEffect(() => {
     setMnemonic(doc.mnemonics[id] ?? "");
   }, [id, doc.mnemonics]);
+
+  useEffect(() => {
+    if (tab !== "examples") return;
+    let active = true;
+    loadTranslationProvenance().then((records) => {
+      if (active) setTranslationReview(Object.fromEntries(records.map((record) => [record.id, record.reviewStatus ?? ""])));
+    }).catch(() => {
+      if (active) setTranslationReview({});
+    });
+    return () => { active = false; };
+  }, [tab]);
 
   const v: Vocab | undefined = data?.byId.get(id);
   const card = doc.srs[id];
@@ -291,12 +303,19 @@ export default function WordDetail({ id }: { id: string }) {
                     <SpeakButton text={stripFurigana(e.ja)} />
                   </div>
                   {language === "mn" && e.mn && <p className="mt-2 text-[13px] text-sumi-600">{e.mn}</p>}
+                  {e.mn && (
+                    <p className="mt-2 text-[11px] leading-relaxed text-sumi-400">
+                      {!e.mn_provenance || !translationReview[e.mn_provenance]
+                        ? t.exampleMnReviewUnknown
+                        : translationReview[e.mn_provenance] === "reviewed"
+                          ? t.exampleMnReviewed
+                          : t.exampleMnNeedsReview}
+                    </p>
+                  )}
                   {e.en && <p className="mt-2 text-[13px] text-sumi-600">{e.en}</p>}
                   <p className="mt-2 text-[11px] text-sumi-400">
-                    {language === "mn"
-                      ? (e.mn
-                        ? <>{t.mnLabel}: {e.mn}</>
-                        : <>{t.mnMissing}<a href={href("admin")} className="font-bold text-ai-600 underline underline-offset-4">{t.add}</a></>)
+                    {language === "mn" && !e.mn
+                      ? <>{t.mnMissing}<a href={href("admin")} className="font-bold text-ai-600 underline underline-offset-4">{t.add}</a></>
                       : null}
                     {e.ts ? ` · Tatoeba #${e.ts}` : ""}
                   </p>
