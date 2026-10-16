@@ -1818,5 +1818,15 @@
     "sourceSnapshot": "bf69e575260b834d0f0dd8c69dab04241e53d6ec",
     "license": "CC-BY-SA-4.0",
     "reviewStatus": "unreviewed"
+  },
+  {
+    "id": "mn-exact-example-reuse-2026-10-16-1",
+    "createdAt": "2026-10-16",
+    "author": "Arena coding assistant",
+    "method": "Exact sentence reuse only: the retained Japanese sentence and retained English source text match byte-for-byte with a previously translated example elsewhere in the same corpus. No new Mongolian wording was generated; the prior translation provenance is preserved in reusedFrom. The reused text remains unreviewed by a human linguist.",
+    "source": "https://github.com/evanclan/OpenJLPT (retained Japanese/English example sentence pairs)",
+    "sourceSnapshot": "dbcdfc41395e05be57cd7efdc9175b258997da2f",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
   }
 ]
