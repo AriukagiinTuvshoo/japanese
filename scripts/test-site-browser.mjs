@@ -96,6 +96,19 @@ try {
   },{ch:centerCharacter,note:originalNote});
   console.log(`${language}: word network links, explanation, and memory persistence passed`);
 
+  // A failed corpus request must show a retryable error rather than an endless spinner.
+  await context.route('**/data/index/meta.json', route => route.abort());
+  await page.goto(`${origin}/#/vocab?level=N5&tab=network`);
+  const errorHeading = language === 'en' ? 'Failed to load' : 'Ачаалахад алдаа гарлаа';
+  const retryLabel = language === 'en' ? 'Try again' : 'Дахин оролдох';
+  await page.getByText(errorHeading,{exact:true}).waitFor();
+  await page.getByRole('button',{name:retryLabel,exact:true}).waitFor();
+  await context.unroute('**/data/index/meta.json');
+  await page.getByRole('button',{name:retryLabel,exact:true}).click();
+  await page.getByRole('heading',{name:t.wordNetworkTitle,exact:true}).waitFor();
+  await page.locator('main svg[role="img"]').waitFor();
+  console.log(`${language}: word network error and retry flow passed`);
+
   const firstWord=firstWords[0],nextWord=firstWords[1];
   await page.goto(`${origin}/#/vocab/${firstWord.id}`);
   await page.getByRole('heading',{name:firstWord.w,exact:true}).waitFor();
