@@ -381,25 +381,30 @@ for(const r of references.records) {
  assert.match(r.version,/not established/);assert.match(r.decision,/blocked/);
 }
 
-const oct16ExamplesBatch = read('content/mn/batches/2026-10-16-n5-examples-idiomatic-1.json');
-assert.equal(oct16ExamplesBatch.provenance.reviewStatus, 'unreviewed');
-assert.equal(oct16ExamplesBatch.provenance.license, 'CC-BY-SA-4.0');
-assert.ok(read('public/data/index/translations.json').some(p => p.id === oct16ExamplesBatch.provenance.id),
-  'N5 example translations must be registered in the provenance index');
-let oct16ExampleCount = 0;
-for (const [id, record] of Object.entries(oct16ExamplesBatch.vocab)) {
-  const entry = allVocab.find(e => e.id === id);
-  assert.ok(entry, `N5 example batch entry exists: ${id}`);
-  assert.deepEqual(Object.keys(record.expected).sort(), ['en', 'r', 'w']);
-  for (const [field, expected] of Object.entries(record.expected)) assert.deepEqual(entry[field], expected);
-  for (const [ja, mn] of Object.entries(record.examples)) {
-    const matches = entry.ex.filter(ex => ex.ja === ja);
-    assert.equal(matches.length, 1, `${id}: sentence-keyed example must be unique`);
-    assert.ok(matches[0].en, `${id}/${ja}: English source must remain intact`);
-    assert.equal(matches[0].mn, mn);
-    assert.equal(matches[0].mn_provenance, oct16ExamplesBatch.provenance.id);
-    assert.ok(validMn(mn), `${id}/${ja}: Mongolian translation must pass structural validation`);
-    oct16ExampleCount++;
+for (const [batchFile, expectedCount] of [
+  ['2026-10-16-n5-examples-idiomatic-1.json', 20],
+  ['2026-10-16-n5-examples-idiomatic-2.json', 21],
+]) {
+  const oct16ExamplesBatch = read(`content/mn/batches/${batchFile}`);
+  assert.equal(oct16ExamplesBatch.provenance.reviewStatus, 'unreviewed');
+  assert.equal(oct16ExamplesBatch.provenance.license, 'CC-BY-SA-4.0');
+  assert.ok(read('public/data/index/translations.json').some(p => p.id === oct16ExamplesBatch.provenance.id),
+    'N5 example translations must be registered in the provenance index');
+  let oct16ExampleCount = 0;
+  for (const [id, record] of Object.entries(oct16ExamplesBatch.vocab)) {
+    const entry = allVocab.find(e => e.id === id);
+    assert.ok(entry, `N5 example batch entry exists: ${id}`);
+    assert.deepEqual(Object.keys(record.expected).sort(), ['en', 'r', 'w']);
+    for (const [field, expected] of Object.entries(record.expected)) assert.deepEqual(entry[field], expected);
+    for (const [ja, mn] of Object.entries(record.examples)) {
+      const matches = entry.ex.filter(ex => ex.ja === ja);
+      assert.equal(matches.length, 1, `${id}: sentence-keyed example must be unique`);
+      assert.ok(matches[0].en, `${id}/${ja}: English source must remain intact`);
+      assert.equal(matches[0].mn, mn);
+      assert.equal(matches[0].mn_provenance, oct16ExamplesBatch.provenance.id);
+      assert.ok(validMn(mn), `${id}/${ja}: Mongolian translation must pass structural validation`);
+      oct16ExampleCount++;
+    }
   }
+  assert.equal(oct16ExampleCount, expectedCount, 'each N5 translation batch must remain bounded and source-keyed');
 }
-assert.equal(oct16ExampleCount, 20, 'N5 translation batch must remain bounded and source-keyed');
