@@ -1,0 +1,123 @@
+{
+  "provenance": {
+    "id": "mn-n5-examples-2026-10-16-batch-10",
+    "createdAt": "2026-10-16",
+    "author": "OpenAI ChatGPT",
+    "method": "AI-assisted Mongolian translations matched to exact retained Japanese example sentences and checked against their existing English source. Japanese and English source text is preserved verbatim. Remaining apparent source-English mismatches are intentionally withheld pending review. This batch has not been independently human-reviewed.",
+    "source": "OpenJLPT-distributed Tatoeba examples (Japanese/English source); Mongolian translations authored by OpenAI ChatGPT",
+    "sourceSnapshot": "c2a6402950c8c0c709bec565e0bc325e19e9937a",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "b48d0c99d4": {
+      "expected": {
+        "w": "せっけん",
+        "r": "せっけん",
+        "en": [
+          "economy"
+        ]
+      },
+      "examples": {
+        "せっけんだらけの手で私にさわらないで。": {
+          "mn": "Саван болсон гараараа надад битгий хүр.",
+          "en": "Don't touch me with your soapy hands."
+        },
+        "せっけんで手を洗いました。": {
+          "mn": "Би гараа савандаж угаасан.",
+          "en": "I washed my hands with soap."
+        }
+      }
+    },
+    "69d0d632fa": {
+      "expected": {
+        "w": "できる",
+        "r": "できる",
+        "en": [
+          "to be able to"
+        ]
+      },
+      "examples": {
+        "あの二人はどうもできているらしい。": {
+          "mn": "Тэр хоёр үерхдэг бололтой.",
+          "en": "They seem to be in love with each other."
+        }
+      }
+    },
+    "d2cb14f88a": {
+      "expected": {
+        "w": "どうも",
+        "r": "どうも",
+        "en": [
+          "thanks"
+        ]
+      },
+      "examples": {
+        "あの二人はどうもできているらしい。": {
+          "mn": "Тэр хоёр үерхдэг бололтой.",
+          "en": "They seem to be in love with each other."
+        }
+      }
+    },
+    "542f39c93d": {
+      "expected": {
+        "w": "はい",
+        "r": "はい",
+        "en": [
+          "yes"
+        ]
+      },
+      "examples": {
+        "はい、外出しませんでした。": {
+          "mn": "Тийм ээ, би гадуур гараагүй.",
+          "en": "No, I didn't go out."
+        }
+      }
+    },
+    "ec5bd86b72": {
+      "expected": {
+        "w": "左",
+        "r": "ひだり",
+        "en": [
+          "left hand side"
+        ]
+      },
+      "examples": {
+        "入るお金が右から左へと出てしまう。": {
+          "mn": "Орж ирсэн мөнгө тэр дороо гараад явчихдаг.",
+          "en": "I spend money as soon as I get it."
+        }
+      }
+    },
+    "0e8f798dbf": {
+      "expected": {
+        "w": "本",
+        "r": "ほん",
+        "en": [
+          "book"
+        ]
+      },
+      "examples": {
+        "ウイスキーを１本持っています。": {
+          "mn": "Надад нэг шил виски байна.",
+          "en": "I have a bottle of whiskey."
+        }
+      }
+    },
+    "83da293775": {
+      "expected": {
+        "w": "弱い",
+        "r": "よわい",
+        "en": [
+          "weak"
+        ]
+      },
+      "examples": {
+        "それを言われると弱いなあ。": {
+          "mn": "Тэгж хэлэхээр чинь татгалзаж чадахгүй нь.",
+          "en": "That sure puts me on the spot."
+        }
+      }
+    }
+  }
+}
