@@ -587,3 +587,24 @@ for (const [id, record] of Object.entries(oct16N4Examples7.vocab)) {
   }
 }
 assert.equal(oct16N4Count7, 41, 'seventh N4 batch must be bounded and source-keyed');
+
+const oct16N4Examples8 = read('content/mn/batches/2026-10-16-n4-examples-idiomatic-8.json');
+assert.equal(oct16N4Examples8.provenance.reviewStatus, 'unreviewed');
+assert.ok(read('public/data/index/translations.json').some(p => p.id === oct16N4Examples8.provenance.id));
+let oct16N4Count8 = 0;
+for (const [id, record] of Object.entries(oct16N4Examples8.vocab)) {
+  const entry = allVocab.find(e => e.id === id);
+  assert.ok(entry);
+  assert.deepEqual(Object.keys(record.expected).sort(), ['en', 'r', 'w']);
+  for (const [field, expected] of Object.entries(record.expected)) assert.deepEqual(entry[field], expected);
+  for (const [ja, mn] of Object.entries(record.examples)) {
+    const matches = entry.ex.filter(ex => ex.ja === ja);
+    assert.equal(matches.length, 1);
+    assert.ok(matches[0].en);
+    assert.equal(matches[0].mn, mn);
+    assert.equal(matches[0].mn_provenance, oct16N4Examples8.provenance.id);
+    assert.ok(validMn(mn));
+    oct16N4Count8++;
+  }
+}
+assert.equal(oct16N4Count8, 40, 'eighth N4 batch must be source-keyed');
