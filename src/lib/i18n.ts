@@ -51,8 +51,8 @@ export const ui = {
     bulkAdd: (n: number) => `+ ${n} үгийг SRS-д нэмэх`,
     // word detail
     meaning: "Утга", backToVocab: "← Үгийн сан", backToKanji: "← Ханз", backToGrammar: "← Дүрэм",
-    favIn: "★ Дуртайд", favAdd2: "☆ Дуртайд нэмэх", writePractice: "✍️ Бичих дасгал", review2: "復 Давтлага",
-    extPool: "Өргөтгөсөн сан", transitive: "他動詞 — төлөөний үйл үг", intransitive: "自動詞 — эсрэг төлөөний",
+    favIn: "★ Дуртайд", favAdd2: "☆ Дуртайд нэмэх", writePractice: "✍️ Бичих дасгал", review2: "復 Давтах",
+    extPool: "Өргөтгөсөн сан", transitive: "他動詞 — тусах үйл үг", intransitive: "自動詞 — эс тусах үйл үг",
     slow: "🐢 Удаан", normal: "🔊 Хэвийн", fast: "⏩ Хурдан",
     enSource: "Англи эх сурвалж", mnUnreviewed: "Монгол орчуулга хараахан хянагдаагүй — ", translate: "орчуулах",
     composingKanji: "Бүрдүүлэгч ханз", memoryState: "Санах ойн төлөв",
