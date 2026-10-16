@@ -64,7 +64,7 @@ export default function GrammarDetail({ id, level }: { id: string; level?: Level
           <Chip tone="murasaki">{t.grammarChip}</Chip>
           {g.jlpt !== g.lvl && <Chip tone="sumi">JLPT {g.jlpt}</Chip>}
         </div>
-        <h1 className="mt-4 font-jp text-[2.1rem] font-extrabold leading-tight">{grammarLabel(g.p)}</h1>
+        <h1 className="mt-4 font-jp text-[2.1rem] font-extrabold leading-tight">{grammarLabel(g.p, language)}</h1>
         {g.mn ? (
           <p className="mt-4 text-[1.15rem] font-bold leading-relaxed text-sumi-900">{g.mn}</p>
         ) : (

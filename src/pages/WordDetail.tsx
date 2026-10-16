@@ -34,16 +34,35 @@ export default function WordDetail({ id }: { id: string }) {
   const mq = v ? MQ_LABEL[language][v.mq] : null;
   const fav = doc.favorites.includes(id);
 
-  const related = useMemo(() => {
+  const relatedGroups = useMemo(() => {
     if (!data || !v) return [];
-    const out = new Map<string, Vocab>();
-    for (const ch of v.kd) {
-      for (const w of data.wordsByKanji.get(ch) ?? []) {
-        if (w.id !== v.id && out.size < 18) out.set(w.id, w);
-      }
-    }
-    return [...out.values()].sort((a, b) => a.lvl.localeCompare(b.lvl)).slice(0, 12);
-  }, [data, v]);
+    const used = new Set<string>([v.id]);
+    return v.kd.slice(0, 3).map((char) => {
+      const kanji = data.kanjiByChar.get(char);
+      const candidates = [...(data.wordsByKanji.get(char) ?? [])]
+        .filter((word) => word.id !== v.id)
+        .sort((a, b) => {
+          const sameLevel = Number(b.lvl === v.lvl) - Number(a.lvl === v.lvl);
+          const aOverlap = a.kd.filter((ch) => v.kd.includes(ch)).length;
+          const bOverlap = b.kd.filter((ch) => v.kd.includes(ch)).length;
+          return sameLevel || bOverlap - aOverlap ||
+            Number(a.lvl.slice(1)) - Number(b.lvl.slice(1)) ||
+            a.w.localeCompare(b.w);
+        });
+      const words = candidates.filter((word) => !used.has(word.id)).slice(0, 4);
+      words.forEach((word) => used.add(word.id));
+      return {
+        char,
+        level: kanji?.lvl ?? v.lvl,
+        meaning: language === "en"
+          ? (kanji?.en.join(", ") || kanji?.mn.join(", ") || "")
+          : (kanji?.mn.join(", ") || kanji?.en.join(", ") || ""),
+        words,
+      };
+    }).filter((group) => group.words.length > 0);
+  }, [data, v, language]);
+
+  const related = useMemo(() => relatedGroups.flatMap((group) => group.words), [relatedGroups]);
 
   if (!data) return <Spinner label="Үг ачаалж байна…" />;
   if (!v) {
@@ -293,25 +312,46 @@ export default function WordDetail({ id }: { id: string }) {
 
       {tab === "network" && (
         <Card>
-          <SectionTitle
-            jp="関連語"
-            title={t.relatedTab}
-            sub={v.kd.length ? t.relatedSub(v.kd.join("」「")) : t.noKanjiWord}
-          />
+          <SectionTitle jp="連想マップ" title={t.relatedTab} sub={t.relatedMapIntro} />
           {related.length === 0 ? (
             <Empty icon="網" title={t.relatedNotFound} />
           ) : (
-            <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
-              {related.map((w) => (
-                <a key={w.id} href={href("vocab", w.id)} className="card-flat flex items-center gap-3 px-3.5 py-3 transition hover:-translate-y-0.5 hover:border-shu-300">
-                  <span className="font-jp text-[15.5px] font-bold text-sumi-900">{w.w}</span>
-                  <span className="min-w-0 flex-1">
-                    <span className="block truncate text-[12.5px] text-sumi-700">{language === "en" ? (w.en.join("; ") || w.mn?.join(", ")) : (w.mn?.join(", ") || w.en.join("; "))}</span>
-                    <span className="block font-jp text-[10.5px] text-sumi-400">{w.r}</span>
-                  </span>
-                  <LevelBadge level={w.lvl} size="sm" />
-                </a>
-              ))}
+            <div className="space-y-5">
+              <div className="mx-auto max-w-xl rounded-2xl border border-shu-200 bg-shu-50/70 px-4 py-5 text-center">
+                <p className="font-jp text-[1.8rem] font-extrabold leading-tight text-sumi-900">{v.w}</p>
+                <p className="mt-1 font-jp text-[12px] text-sumi-500">{v.r}</p>
+                <p className="mt-2 text-[13px] font-semibold text-sumi-800">
+                  {language === "en" ? v.en.join("; ") : (v.mn?.join("、") || t.mnMissing)}
+                </p>
+                <p className="mt-2 text-[10.5px] font-bold uppercase tracking-[0.15em] text-sumi-400">{t.meaningLabel} · {v.lvl}</p>
+              </div>
+
+              <div className="grid gap-4 md:grid-cols-2">
+                {relatedGroups.map((group) => (
+                  <section key={group.char} className="rounded-2xl border border-sumi-900/10 bg-white/60 p-3.5 sm:p-4">
+                    <a href={href("kanji", group.char)} className="flex items-center gap-3 rounded-xl bg-sumi-900/[0.035] px-3 py-2.5 transition hover:bg-shu-50">
+                      <span className="font-mincho text-[2rem] font-bold leading-none text-shu-700">{group.char}</span>
+                      <span className="min-w-0 flex-1">
+                        <span className="block text-[10px] font-bold uppercase tracking-wide text-sumi-400">{t.sharedKanji}</span>
+                        <span className="block truncate text-[12.5px] font-semibold text-sumi-800">{group.meaning || "—"}</span>
+                      </span>
+                      <LevelBadge level={group.level} size="sm" />
+                    </a>
+                    <div className="ml-3 mt-3 space-y-2 border-l-2 border-shu-200 pl-3">
+                      {group.words.map((w) => (
+                        <a key={w.id} href={href("vocab", w.id)} className="flex items-center gap-3 rounded-xl border border-sumi-900/8 bg-white px-3 py-2.5 transition hover:border-shu-300 hover:bg-shu-50/60">
+                          <span className="min-w-0 flex-1">
+                            <span className="block truncate font-jp text-[15px] font-bold text-sumi-900">{w.w}</span>
+                            <span className="mt-0.5 block truncate text-[12px] text-sumi-700">{language === "en" ? (w.en.join("; ") || w.mn?.join(", ")) : (w.mn?.join("、") || w.en.join("; "))}</span>
+                            <span className="mt-0.5 block font-jp text-[10.5px] text-sumi-400">{w.r}</span>
+                          </span>
+                          <LevelBadge level={w.lvl} size="sm" />
+                        </a>
+                      ))}
+                    </div>
+                  </section>
+                ))}
+              </div>
             </div>
           )}
         </Card>

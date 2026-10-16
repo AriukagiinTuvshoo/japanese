@@ -8,10 +8,11 @@ export const LEVELS: Level[] = ["N5", "N4", "N3", "N2", "N1"];
 
 /** Монгол орчуулгын чанарын төлөв (content policy). */
 export type MnQuality =
-  | "curated"   // хүн хянасан, батлагдсан
-  | "auto"      // EN→MN нэр томьёоны сангаас автоматаар
-  | "derived"   // ханзны утгуудаас зөвлөмж
-  | "none";     // байхгүй — эх сурвалжийн англи утга харуулна
+  | "curated"   // хүн хянаж баталгаажуулсан
+  | "draft"     // Монгол драфт — хүн хараахан хянаагүй
+  | "auto"      // EN→MN нэр томьёоны сангаас автоматаар санал болгосон
+  | "derived"   // ханзны утгуудаас гаргасан санал
+  | "none";     // Монгол орчуулга байхгүй — эх сурвалжийн англи утгыг харуулна
 
 export type VocabTier = "jlpt" | "ext-example" | "ext-frequency";
 export type PosType = "v" | "i" | "na" | "adj" | "adv" | "exp" | "pn" | "ctr" | "n" | "other";
