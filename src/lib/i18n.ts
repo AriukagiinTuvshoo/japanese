@@ -81,7 +81,7 @@ export const ui = {
     levelByJlpt: "JLPT-ийн албан жагсаалт", levelByDerived: "Ханзны түвшнээс гаргасан (derived)",
     transStatus: "Орчуулгын төлөв", examplesRow: "Жишээ өгүүлбэр", viewAllSources: "Бүх эх сурвалж харах →",
     fixTranslation: "Орчуулга засах →",
-    extChip: "Өргөтгөсөн сан", vtChip: "他動詞 — төлөөний үйл үг", viChip: "自動詞 — эсрэг төлөөний",
+    extChip: "Өргөтгөсөн сан", vtChip: "他動詞 — тусах үйл үг", viChip: "自動詞 — эс тусах үйл үг",
     readingStudio: "Уншлагын сан", lessonsUnit: "хичээл", doneUnit: "дуусгасан", allLevelsBtn: "Бүх түвшин", thisLevelBtn: "Зөвхөн энэ түвшин",
     readingSearchPh: "Гарчиг, сэдэв, текстээс хайх…", noLessons: "Уншлагын хичээл олдсонгүй",
     noLessonsSub: "Энэ түвшинд хичээл хараахан нэмэгдээгүй. «Бүх түвшин» сонгож үзээрэй.",
