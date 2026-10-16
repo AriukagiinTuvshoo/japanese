@@ -7,7 +7,7 @@
       "vocab": {
         "entries": 1074,
         "missingMeanings": 0,
-        "missingExamples": 699,
+        "missingExamples": 678,
         "missingForms": 0,
         "unclassified": 0,
         "invalidCategories": 0,
@@ -181,7 +181,7 @@
   },
   "totals": {
     "missingMeanings": 5,
-    "missingExamples": 12499,
+    "missingExamples": 12478,
     "missingForms": 0,
     "unclassified": 4,
     "invalidCategories": 0,
