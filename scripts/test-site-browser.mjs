@@ -110,6 +110,13 @@ try {
   await page.locator('main svg[role="img"]').waitFor();
   console.log(`${language}: word network error and retry flow passed`);
 
+  await page.goto(`${origin}/#/vocab/d9c88143a2`);
+  await page.getByRole("heading",{name:"シャワー",exact:true}).waitFor();
+  await page.getByRole("button",{name:t.examplesTab,exact:true}).click();
+  await page.getByText("Шүршүүрт оръё.",{exact:true}).waitFor();
+  await page.getByText(t.exampleMnNeedsReview,{exact:true}).waitFor();
+  console.log(`${language}: example translation review status is visible`);
+
   const firstWord=firstWords[0],nextWord=firstWords[1];
   await page.goto(`${origin}/#/vocab/${firstWord.id}`);
   await page.getByRole('heading',{name:firstWord.w,exact:true}).waitFor();
