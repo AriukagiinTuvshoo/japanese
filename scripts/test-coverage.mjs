@@ -371,6 +371,36 @@ for(let i=1;i<=2;i++) {
  }
  assert.equal(n,40);
 }
+
+const oct16Reuse = read('content/mn/batches/2026-10-16-exact-example-reuse-1.json');
+assert.equal(oct16Reuse.provenance.reviewStatus, 'unreviewed');
+assert.ok(read('public/data/index/translations.json').some(p => p.id === oct16Reuse.provenance.id));
+let oct16ReuseCount = 0;
+for (const [id, record] of Object.entries(oct16Reuse.vocab)) {
+  const target = allVocab.find(e => e.id === id);
+  assert.ok(target);
+  assert.deepEqual(Object.keys(record.expected).sort(), ['en', 'r', 'w']);
+  for (const [field, value] of Object.entries(record.expected)) assert.deepEqual(target[field], value);
+  for (const [ja, value] of Object.entries(record.examples)) {
+    const ex = target.ex.filter(x => x.ja === ja);
+    assert.equal(ex.length, 1);
+    assert.equal(ex[0].en, value.en);
+    assert.equal(ex[0].mn, value.mn);
+    assert.equal(ex[0].mn_provenance, oct16Reuse.provenance.id);
+    assert.ok(validMn(value.mn));
+    assert.ok(value.reusedFrom.length > 0);
+    for (const origin of value.reusedFrom) {
+      assert.equal(origin.kind, 'vocab');
+      const sourceFile = read(`public/data/vocab/${origin.level}.json`);
+      const source = sourceFile.find(e => e.id === origin.id);
+      assert.ok(source);
+      assert.ok(source.ex.some(x => x.ja === ja && x.en === value.en && x.mn === value.mn && x.mn_provenance === origin.provenance));
+    }
+    oct16ReuseCount++;
+  }
+}
+assert.equal(oct16ReuseCount, 18, 'Exact reuse must match Japanese and English source pairs and retain origin provenance');
+
 const references=read('docs/audits/2026-10-09-independent-reference-checks.json');
 assert.deepEqual(references.counts,{records:10,activeCorrections:0,clearedWarnings:0});
 for(const r of references.records) {
