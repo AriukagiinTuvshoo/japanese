@@ -439,3 +439,25 @@ for (const [batchFile, expectedCount] of [
   }
   assert.equal(oct16ExampleCount, expectedCount, 'each N5 translation batch must remain bounded and source-keyed');
 }
+
+const oct16N4Examples = read('content/mn/batches/2026-10-16-n4-examples-idiomatic-1.json');
+assert.equal(oct16N4Examples.provenance.reviewStatus, 'unreviewed');
+assert.equal(oct16N4Examples.provenance.license, 'CC-BY-SA-4.0');
+assert.ok(read('public/data/index/translations.json').some(p => p.id === oct16N4Examples.provenance.id));
+let oct16N4Count = 0;
+for (const [id, record] of Object.entries(oct16N4Examples.vocab)) {
+  const entry = allVocab.find(e => e.id === id);
+  assert.ok(entry, `N4 example batch entry exists: ${id}`);
+  assert.deepEqual(Object.keys(record.expected).sort(), ['en', 'r', 'w']);
+  for (const [field, expected] of Object.entries(record.expected)) assert.deepEqual(entry[field], expected);
+  for (const [ja, mn] of Object.entries(record.examples)) {
+    const matches = entry.ex.filter(ex => ex.ja === ja);
+    assert.equal(matches.length, 1, `${id}: source sentence must be unique`);
+    assert.ok(matches[0].en);
+    assert.equal(matches[0].mn, mn);
+    assert.equal(matches[0].mn_provenance, oct16N4Examples.provenance.id);
+    assert.ok(validMn(mn));
+    oct16N4Count++;
+  }
+}
+assert.equal(oct16N4Count, 20, 'N4 translation batch must remain bounded and source-keyed');
