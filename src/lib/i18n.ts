@@ -31,7 +31,7 @@ export const ui = {
     listTab: "Жагсаалт", learnTab: "Суралцах горим", networkTab: "Үгийн сүлжээ", statsTab: "Статистик",
     wordNetworkTitle: "Үгийн сүлжээ", wordNetworkSubtitle: "Төв ханзтай үгс болон тэдгээртэй хамт ордог бусад ханзыг холбоосоор харуулна.",
     wordNetworkLoading: "Үгийн холбоосыг бэлтгэж байна…",
-    wordNetworkRelationNote: "Холбоос нь ханз давхцаж байгааг харуулна. Холбоотой үгс заавал ижил утгатай гэсэн үг биш."
+    wordNetworkRelationNote: "Холбоос нь ханз давхцаж байгааг харуулна. Холбоотой үгс заавал ижил утгатай гэсэн үг биш.",
     wordsUnit: "үг", toReview: "давтах",
     searchIn: "Хайх — ханз, кана, ромажи, монгол, англи…",
     sortSource: "Эх дараалал", sortKana: "А-Я (кана)", sortRandom: "Санамсаргүй",
@@ -558,7 +558,7 @@ export const ui = {
     listTab: "List", learnTab: "Learn mode", networkTab: "Word network", statsTab: "Stats",
     wordNetworkTitle: "Word network", wordNetworkSubtitle: "Explore words containing this kanji and the other kanji that connect them.",
     wordNetworkLoading: "Building word connections…",
-    wordNetworkRelationNote: "A link means the items share a kanji. Connected words are not necessarily synonyms or close in meaning."
+    wordNetworkRelationNote: "A link means the items share a kanji. Connected words are not necessarily synonyms or close in meaning.",
     wordsUnit: "words", toReview: "to review",
     searchIn: "Search — kanji, kana, romaji, English, Mongolian…",
     sortSource: "Default order", sortKana: "Kana A–あ", sortRandom: "Random",
