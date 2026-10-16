@@ -98,7 +98,8 @@ try {
 
   // A failed corpus request must show a retryable error rather than an endless spinner.
   await context.route('**/data/index/meta.json', route => route.abort());
-  await page.goto(`${origin}/#/vocab?level=N5&tab=network`);
+  // Reload to reset module-level data caches before inducing the load failure.
+  await page.reload();
   const errorHeading = language === 'en' ? 'Failed to load' : 'Ачаалахад алдаа гарлаа';
   const retryLabel = language === 'en' ? 'Try again' : 'Дахин оролдох';
   await page.getByText(errorHeading,{exact:true}).waitFor();
