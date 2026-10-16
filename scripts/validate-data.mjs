@@ -20,7 +20,7 @@ const DATA = path.join(ROOT, "public/data");
 const MN = path.join(ROOT, "content/mn");
 const LEVELS = ["N5", "N4", "N3", "N2", "N1"];
 const VOCAB_TIERS = new Set(["jlpt", "ext-example", "ext-frequency"]);
-const MQ = new Set(["none", "draft", "curated"]);
+const MQ = new Set(["none", "draft", "curated", "auto", "derived"]);
 const CYRILLIC = /[\u0400-\u04FF]/;
 const errors = [];
 const warnings = [];
@@ -61,6 +61,7 @@ for (const lv of LEVELS) {
     if (typeof e.w !== "string" || !e.w) err(`${where}: w байхгүй`);
     if (typeof e.r !== "string" || !e.r) err(`${where}: r (уншлага) байхгүй`);
     if (!Array.isArray(e.en) || e.en.length === 0) err(`${where}: en (англи утга) хоосон`);
+    if (!Array.isArray(e.kd)) err(`${where}: kd (агуулсан ханз) массив биш`);
     if (e.lvl !== lv) err(`${where}: lvl=${e.lvl}, файл=${lv}`);
     if (!VOCAB_TIERS.has(e.tier)) err(`${where}: tier буруу (${e.tier})`);
     if (!MQ.has(e.mq)) err(`${where}: mq буруу (${e.mq})`);
@@ -118,6 +119,7 @@ for (const lv of LEVELS) {
     if (e.mn != null && !Array.isArray(e.mn)) err(`${where}: mn массив биш`);
     else {
       if (e.mq !== "none" && mn.length === 0) err(`${where}: mq=${e.mq} боловч mn хоосон`);
+      if (e.mq === "none" && mn.length > 0) err(`${where}: mq=none боловч mn утгатай`);
       for (const g of mn) {
         if (typeof g !== "string" || g.trim() === "" || g.trim() === "-") err(`${where}: хоосон/"-" монгол утга`);
         else if (!CYRILLIC.test(g)) warn(`${where}: монгол утга кирилл биш: "${g}"`);
@@ -144,12 +146,24 @@ for (const lv of LEVELS) {
   if (s && typeof s === "object") for (const k of Object.keys(s)) strokeKeys.add(k);
 }
 const kanjiSet = new Set(allKanji.map((e) => e.k));
+// Cross-check word→kanji links. Rare or extended characters may be outside the
+// shipped JLPT kanji set, so report these as warnings rather than failing builds.
+const missingVocabKanji = [];
+for (const v of allVocab) {
+  for (const ch of Array.isArray(v.kd) ? v.kd : []) {
+    if (!kanjiSet.has(ch)) missingVocabKanji.push(`${v.w} → ${ch}`);
+  }
+}
+if (missingVocabKanji.length) {
+  warn(`Үгийн сангийн ханзны холбоос тасарсан: ${missingVocabKanji.length} (жишээ: ${missingVocabKanji.slice(0, 8).join(", ")})`);
+}
 const missingStroke = [...kanjiSet].filter((k) => !strokeKeys.has(k));
 if (missingStroke.length) warn(`stroke өгөгдөлгүй kanji: ${missingStroke.length} ширхэг (жишээ: ${missingStroke.slice(0, 5).join(" ")})`);
 
 // --- Grammar --------------------------------------------------------------------
 let grammarCount = 0;
 const grammarIds = new Set();
+const allGrammar = [];
 for (const lv of LEVELS) {
   const arr = readJson(path.join(DATA, `grammar/${lv.toLowerCase()}.json`));
   if (!Array.isArray(arr)) {
@@ -157,19 +171,48 @@ for (const lv of LEVELS) {
     continue;
   }
   grammarCount += arr.length;
+  if (meta && meta.counts.byLevel.grammar?.[lv] !== arr.length) err(`grammar ${lv}: файл ${arr.length} ≠ meta ${meta.counts.byLevel.grammar?.[lv]}`);
   for (const g of arr) {
     if (grammarIds.has(g.id)) err(`grammar id давхардсан: ${g.id}`);
     grammarIds.add(g.id);
     if (g.lvl !== lv) err(`grammar ${g.id}: lvl=${g.lvl}, файл=${lv}`);
+    if (!Array.isArray(g.related)) err(`grammar ${g.id}: related массив биш`);
+    allGrammar.push(g);
   }
 }
+const brokenGrammarLinks = [];
+for (const g of allGrammar) {
+  for (const target of Array.isArray(g.related) ? g.related : []) {
+    if (typeof target !== "string" || !grammarIds.has(target)) brokenGrammarLinks.push(`${g.id} → ${String(target)}`);
+  }
+}
+if (brokenGrammarLinks.length) {
+  warn(`Дүрмийн холбоосын ID олдсонгүй: ${brokenGrammarLinks.length} (жишээ: ${brokenGrammarLinks.slice(0, 8).join(", ")})`);
+}
 if (meta && meta.counts.grammar !== grammarCount) err(`grammar нийт ${grammarCount} ≠ meta ${meta.counts.grammar}`);
+const curatedVocab = allVocab.filter((v) => v.mq === "curated");
+if (meta && meta.counts.vocabMnCurated !== curatedVocab.length) {
+  err(`vocabMnCurated: meta ${meta.counts.vocabMnCurated} ≠ curated ${curatedVocab.length}`);
+}
+for (const lv of LEVELS) {
+  const actual = curatedVocab.filter((v) => v.lvl === lv).length;
+  if (meta?.counts?.byLevel?.vocabMn && meta.counts.byLevel.vocabMn[lv] !== actual) {
+    err(`vocabMn ${lv}: meta ${meta.counts.byLevel.vocabMn[lv]} ≠ curated ${actual}`);
+  }
+}
 
 // --- Search index -----------------------------------------------------------------
 if (search) {
   if (search.v?.length !== allVocab.length) err(`search.v ${search.v?.length} ≠ vocab ${allVocab.length}`);
   if (search.k?.length !== allKanji.length) err(`search.k ${search.k?.length} ≠ kanji ${allKanji.length}`);
   if (search.g?.length !== grammarCount) err(`search.g ${search.g?.length} ≠ grammar ${grammarCount}`);
+  const vocabIds = new Set(allVocab.map((v) => v.id));
+  const indexedVocab = Array.isArray(search.v) ? search.v : [];
+  const missingVocabIndex = indexedVocab.filter((row) => !Array.isArray(row) || !vocabIds.has(row[5])).length;
+  if (missingVocabIndex) err(`search.v: бодит үгтэй холбогдоогүй ID ${missingVocabIndex}`);
+  const indexedGrammar = Array.isArray(search.g) ? search.g : [];
+  const missingGrammarIndex = indexedGrammar.filter((row) => !Array.isArray(row) || !grammarIds.has(row[3])).length;
+  if (missingGrammarIndex) err(`search.g: бодит дүрэмтэй холбогдоогүй ID ${missingGrammarIndex}`);
 }
 
 // --- UI i18n: EN block must contain zero Cyrillic ---------------------------------
@@ -193,7 +236,7 @@ try {
 }
 
 // --- Report -------------------------------------------------------------------------
-console.log(`vocab ${allVocab.length} (draft ${draftVocab.length}), kanji ${allKanji.length} (draft ${draftKanji.length}), grammar ${grammarCount}`);
+console.log(`vocab ${allVocab.length} (curated ${curatedVocab.length}, draft ${draftVocab.length}), kanji ${allKanji.length} (draft ${draftKanji.length}), grammar ${grammarCount}`);
 for (const w of warnings.slice(0, 30)) console.log("  WARN ", w);
 if (warnings.length > 30) console.log(`  ... өөр ${warnings.length - 30} анхааруулга`);
 for (const e of errors.slice(0, 50)) console.log("  ERROR", e);
