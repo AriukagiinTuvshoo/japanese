@@ -1,0 +1,286 @@
+{
+  "provenance": {
+    "id": "mn-n2-grammar-examples-oct9-1",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian compared with exact Japanese and retained English; stable record and headword/pattern guards; independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/grammar/n2.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "grammar": {
+    "ni-oujite": {
+      "expected": {
+        "p": "〜に応じて",
+        "en": "according to; depending on; in response to"
+      },
+      "examples": {
+        "この奨学金は、家庭の収入に応じて支給額が変わる。": {
+          "en": "The amount of this scholarship varies according to household income.",
+          "mn": "Энэ тэтгэлгийн хэмжээ өрхийн орлогоос хамаарч өөрчлөгддөг."
+        },
+        "お客様のご予算に応じたプランをご提案いたします。": {
+          "en": "We will propose a plan that suits your budget.",
+          "mn": "Таны төсөвт тохирсон төлөвлөгөө санал болгоё."
+        },
+        "会社は社員の要望に応じて、在宅勤務の制度を導入した。": {
+          "en": "In response to employees' requests, the company introduced a work-from-home system.",
+          "mn": "Ажилтнуудын хүсэлтийн дагуу компани гэрээс ажиллах тогтолцоо нэвтрүүлсэн."
+        }
+      }
+    },
+    "ni-hanshite": {
+      "expected": {
+        "p": "〜に反して",
+        "en": "contrary to; against; in violation of"
+      },
+      "examples": {
+        "大方の予想に反して、無名の新人が優勝した。": {
+          "en": "Contrary to most people's predictions, an unknown newcomer won the championship.",
+          "mn": "Олонхын таамгаас зөрж, нэр нь танигдаагүй шинэ тамирчин аварга болсон."
+        },
+        "本人の意思に反して、彼は地方の支店に異動させられた。": {
+          "en": "Against his own wishes, he was transferred to a regional branch.",
+          "mn": "Өөрийнх нь хүсэл зоригийн эсрэг түүнийг орон нутгийн салбарт шилжүүлсэн."
+        },
+        "たとえ上司の指示であっても、法律に反することはすべきではない。": {
+          "en": "Even if your boss tells you to, you shouldn't do anything that goes against the law.",
+          "mn": "Даргын заавар байсан ч хууль зөрчих зүйл хийж болохгүй."
+        }
+      }
+    },
+    "ni-motozuite": {
+      "expected": {
+        "p": "〜に基づいて",
+        "en": "based on; on the basis of"
+      },
+      "examples": {
+        "この映画は実際に起きた事件に基づいて制作された。": {
+          "en": "This film was made based on an incident that actually happened.",
+          "mn": "Энэ киног бодитоор болсон хэрэгт үндэслэн бүтээсэн."
+        },
+        "アンケートの結果に基づき、来年度の計画を見直すことにした。": {
+          "en": "Based on the survey results, we decided to revise next year's plan.",
+          "mn": "Санал асуулгын үр дүнд үндэслэн ирэх жилийн төлөвлөгөөг шинэчлэхээр шийдсэн."
+        },
+        "科学的な根拠に基づいた判断が求められている。": {
+          "en": "Decisions grounded in scientific evidence are called for.",
+          "mn": "Шинжлэх ухааны нотолгоонд тулгуурласан шийдвэр шаардлагатай байна."
+        }
+      }
+    },
+    "ni-watatte": {
+      "expected": {
+        "p": "〜にわたって",
+        "en": "over; throughout; spanning (a whole period or area)"
+      },
+      "examples": {
+        "工事は三か月にわたって行われる予定だ。": {
+          "en": "The construction is scheduled to take place over three months.",
+          "mn": "Барилгын ажил гурван сарын турш үргэлжлэхээр төлөвлөгдсөн."
+        },
+        "昨夜の大雪で、関東地方の広い範囲にわたって交通が乱れた。": {
+          "en": "Last night's heavy snow disrupted transportation over a wide area of the Kanto region.",
+          "mn": "Өчигдөр шөнийн их цаснаас болж Канто нутгийн өргөн хүрээнд тээвэр саатсан."
+        },
+        "両国の首脳は、二日間にわたる会談を終えた。": {
+          "en": "The leaders of the two countries concluded two days of talks.",
+          "mn": "Хоёр улсын удирдагчид хоёр өдрийн хэлэлцээгээ дуусгасан."
+        }
+      }
+    },
+    "ni-sotte": {
+      "expected": {
+        "p": "〜に沿って",
+        "en": "along; in line with; following"
+      },
+      "examples": {
+        "川に沿って桜並木が二キロほど続いている。": {
+          "en": "A row of cherry trees stretches for about two kilometers along the river.",
+          "mn": "Голын дагуу сакура моддын эгнээ хоёр километр орчим үргэлжилдэг."
+        },
+        "マニュアルに沿って作業を進めてください。": {
+          "en": "Please proceed with the work according to the manual.",
+          "mn": "Зааврын дагуу ажлаа үргэлжлүүлээрэй."
+        },
+        "お客様のご要望に沿ったデザインを考えます。": {
+          "en": "We will come up with a design that meets the customer's wishes.",
+          "mn": "Үйлчлүүлэгчийн хүсэлд нийцсэн загвар бодож олно."
+        }
+      }
+    },
+    "ni-kuwaete": {
+      "expected": {
+        "p": "〜に加えて",
+        "en": "in addition to; on top of"
+      },
+      "examples": {
+        "今年は猛暑に加えて雨不足が続き、野菜の価格が高騰している。": {
+          "en": "This year, on top of the extreme heat, there has been a prolonged lack of rain, and vegetable prices have soared.",
+          "mn": "Энэ жил хэт халууны дээр бороо удаан ороогүй тул ногооны үнэ огцом өссөн."
+        },
+        "この仕事には、語学力に加えて交渉力も必要だ。": {
+          "en": "This job requires negotiating skills in addition to language ability.",
+          "mn": "Энэ ажилд хэлний чадвараас гадна хэлэлцээр хийх чадвар хэрэгтэй."
+        }
+      }
+    },
+    "o-megutte": {
+      "expected": {
+        "p": "〜をめぐって",
+        "en": "over; concerning; surrounding (an issue of dispute)"
+      },
+      "examples": {
+        "新しい空港の建設をめぐって、住民の意見が二つに分かれている。": {
+          "en": "Residents are divided over the construction of a new airport.",
+          "mn": "Шинэ нисэх буудал барих асуудлаар оршин суугчдын санал хоёр хуваагдсан."
+        },
+        "父の遺産をめぐって、兄弟の間でもめごとが起きた。": {
+          "en": "A dispute broke out between the siblings over their father's inheritance.",
+          "mn": "Аавын өв хөрөнгийг тойрон ах дүү нарын хооронд маргаан гарсан."
+        },
+        "首相の発言をめぐる議論は、今も続いている。": {
+          "en": "The debate surrounding the prime minister's remarks is still going on.",
+          "mn": "Ерөнхий сайдын хэлсэн үгийг тойрсон хэлэлцүүлэг одоо ч үргэлжилж байна."
+        }
+      }
+    },
+    "o-tsuujite-o-tooshite": {
+      "expected": {
+        "p": "〜を通じて / 〜を通して",
+        "en": "through; via; by way of; throughout (a period)"
+      },
+      "examples": {
+        "共通の友人を通じて、今の妻と知り合った。": {
+          "en": "I got to know my wife through a mutual friend.",
+          "mn": "Би дундын найзаараа дамжуулан эхнэртэйгээ танилцсан."
+        },
+        "ボランティア活動を通して、地域の人々とのつながりが深まった。": {
+          "en": "Through volunteer work, my ties with people in the community grew stronger.",
+          "mn": "Сайн дурын ажлаар дамжин нутгийн хүмүүстэй харилцах холбоо минь бэхэжсэн."
+        },
+        "この地域は一年を通じて雨が少ない。": {
+          "en": "This region gets little rain throughout the year.",
+          "mn": "Энэ нутагт жилийн турш бороо бага ордог."
+        }
+      }
+    },
+    "o-kikkake-ni": {
+      "expected": {
+        "p": "〜をきっかけに",
+        "en": "taking the opportunity of; triggered by; with ... as the start"
+      },
+      "examples": {
+        "大学時代の留学をきっかけに、国際協力の仕事に興味を持つようになった。": {
+          "en": "Studying abroad in college got me interested in international cooperation work.",
+          "mn": "Оюутан байхдаа гадаадад сурсан нь олон улсын хамтын ажиллагааны ажил сонирхох эхлэл болсон."
+        },
+        "引っ越したのをきっかけに、家具をすべて買い替えた。": {
+          "en": "I took the move as a chance to replace all my furniture.",
+          "mn": "Нүүснээ далимдуулан бүх тавилгаа сольсон."
+        }
+      }
+    },
+    "o-nozoite": {
+      "expected": {
+        "p": "〜を除いて",
+        "en": "except; excluding; apart from"
+      },
+      "examples": {
+        "年末年始を除いて、図書館は毎日開いている。": {
+          "en": "The library is open every day except during the New Year holidays.",
+          "mn": "Шинэ жилийн амралтаас бусад үед номын сан өдөр бүр нээлттэй."
+        },
+        "一部の地域を除き、明日は全国的に晴れるでしょう。": {
+          "en": "Except for some areas, it will be sunny nationwide tomorrow.",
+          "mn": "Зарим нутгаас бусад газарт маргааш улс даяар нартай байна."
+        },
+        "この件について知っているのは、私を除いて三人しかいない。": {
+          "en": "Apart from me, only three people know about this.",
+          "mn": "Надаас гадна энэ тухай мэдэх хүн ердөө гуравхан бий."
+        }
+      }
+    },
+    "ka-no-you-da": {
+      "expected": {
+        "p": "〜かのようだ",
+        "en": "as if; as though (when it isn't really so)"
+      },
+      "examples": {
+        "彼はまるで何も知らないかのような顔をしていた。": {
+          "en": "He wore a look as if he knew nothing at all.",
+          "mn": "Тэр юу ч мэдэхгүй мэт царай гаргасан."
+        },
+        "三月なのに、真冬に戻ったかのような寒さだ。": {
+          "en": "It's March, yet it's so cold it feels as if we'd gone back to midwinter.",
+          "mn": "Гуравдугаар сар боловч ид өвөлдөө буцсан мэт хүйтэн байна."
+        },
+        "その記者は、うわさをまるで事実であるかのように報じた。": {
+          "en": "The reporter reported the rumor as though it were fact.",
+          "mn": "Тэр сэтгүүлч цуу яриаг үнэн баримт мэт мэдээлсэн."
+        }
+      }
+    },
+    "kanenai": {
+      "expected": {
+        "p": "〜かねない",
+        "en": "could well; might (lead to something bad)"
+      },
+      "examples": {
+        "そんな無理な運転をしていたら、大事故を起こしかねない。": {
+          "en": "If you keep driving that recklessly, you could end up causing a serious accident.",
+          "mn": "Ийм болгоомжгүй жолоодоод байвал том осол гаргаж мэднэ."
+        },
+        "不用意な一言が、会社の信用を失うことにつながりかねない。": {
+          "en": "A careless remark could end up costing the company its credibility.",
+          "mn": "Болгоомжгүй ганц үг компанийн нэр хүндийг алдагдуулж мэднэ."
+        },
+        "あの人なら、平気でうそをつきかねない。": {
+          "en": "He's just the kind of person who might lie without batting an eye.",
+          "mn": "Тэр хүн сийхгүй худал хэлж мэдэх л хүн."
+        }
+      }
+    },
+    "kaneru": {
+      "expected": {
+        "p": "〜かねる",
+        "en": "cannot; be unable to (polite refusal); find it hard to"
+      },
+      "examples": {
+        "申し訳ございませんが、そのご質問にはお答えしかねます。": {
+          "en": "I'm very sorry, but I'm unable to answer that question.",
+          "mn": "Уучлаарай, тэр асуултад хариулах боломжгүй байна."
+        },
+        "個人情報に関するお問い合わせには、お電話では対応いたしかねます。": {
+          "en": "We are unable to respond to inquiries about personal information by phone.",
+          "mn": "Хувийн мэдээллийн тухай лавлагаанд утсаар хариу өгөх боломжгүй."
+        },
+        "彼のやり方には、どうしても賛成しかねる。": {
+          "en": "I just can't bring myself to agree with his methods.",
+          "mn": "Түүний арга барилтай яагаад ч санал нийлж чадахгүй."
+        }
+      }
+    },
+    "zu-ni-wa-irarenai": {
+      "expected": {
+        "p": "〜ずにはいられない",
+        "en": "can't help doing; can't resist doing"
+      },
+      "examples": {
+        "あまりにひどいニュースに、怒りを感じずにはいられなかった。": {
+          "en": "I couldn't help feeling angry at such terrible news.",
+          "mn": "Тийм аймшигтай мэдээ сонсоод уурлахгүй байж чадсангүй."
+        },
+        "彼女の苦労話を聞いて、泣かずにはいられなかった。": {
+          "en": "Hearing about the hardships she'd been through, I couldn't help crying.",
+          "mn": "Түүний туулсан зовлонг сонсоод уйлахгүй байж чадсангүй."
+        },
+        "このシリーズは、一度読み始めたら最後まで読まずにはいられない。": {
+          "en": "Once you start this series, you can't stop until you've read it to the end.",
+          "mn": "Энэ цувралыг нэг уншиж эхэлбэл төгсгөл хүртэл нь уншихгүй байж чадахгүй."
+        }
+      }
+    }
+  }
+}

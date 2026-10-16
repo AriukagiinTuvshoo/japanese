@@ -1,0 +1,58 @@
+{
+  "provenance": {
+    "id": "mn-n1-source-audit-steady-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "Source conflict audit; no Mongolian sense assigned to unresolved entries; independent review required.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "2e8753951c": {
+      "expected": {
+        "w": "悪い",
+        "r": "にくい",
+        "en": [
+          "hateful",
+          "abominable",
+          "poor-looking"
+        ]
+      },
+      "sourceNote": "悪い/にくい is a spelling/reading mismatch with hateful/abominable gloss; standard にくい uses 憎い. Original source retained; translation withheld pending dictionary evidence."
+    },
+    "64e8f7eda0": {
+      "expected": {
+        "w": "熱量",
+        "r": "ねつりょう",
+        "en": [
+          "temperature"
+        ]
+      },
+      "sourceNote": "熱量/ねつりょう means quantity of heat, not retained English temperature (温度). Translation withheld; source correction needs evidence."
+    },
+    "ed2719ab9d": {
+      "expected": {
+        "w": "ファン",
+        "r": "ファン",
+        "en": [
+          "fan",
+          "fun"
+        ]
+      },
+      "sourceNote": "ファン supports fan, but retained English fun normally corresponds to ファンではなく楽しみ. Gloss mixture withheld pending source sense audit."
+    },
+    "0101791a03": {
+      "expected": {
+        "w": "フォーム",
+        "r": "フォーム",
+        "en": [
+          "foam",
+          "form"
+        ]
+      },
+      "sourceNote": "フォーム normally supports form, while foam normally uses フォーム only in specific technical loans; unsupported mixed senses withheld pending dictionary evidence."
+    }
+  }
+}

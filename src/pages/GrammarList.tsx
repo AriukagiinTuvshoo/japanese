@@ -5,7 +5,7 @@ import { useStore } from "../lib/store";
 import { loadGrammar } from "../lib/data";
 import type { Grammar, Level } from "../lib/types";
 import { grammarLabel, LEVEL_LABEL } from "../lib/text";
-import { Bar, Card, Chip, Empty, Input, LevelBadge, Pager, Select, Spinner } from "../components/ui";
+import { Bar, Card, Chip, Empty, ErrorBox, Input, LevelBadge, Pager, Select, Spinner } from "../components/ui";
 import { MN_PENDING, grammarMnMissing, ui } from "../lib/i18n";
 
 const PER_PAGE = 40;
@@ -17,16 +17,22 @@ export default function GrammarList() {
   const t = ui[language];
   const level = (query.level as Level) || (doc.profile.current === "zero" ? doc.profile.target : doc.profile.current);
   const [items, setItems] = useState<Grammar[] | null>(null);
+  const [error, setError] = useState<unknown>(null);
+  const [attempt, setAttempt] = useState(0);
   const [q, setQ] = useState("");
   const [state, setState] = useState<"all" | "todo" | "done">("all");
   const [sort, setSort] = useState<"default" | "pattern">("default");
   const [page, setPage] = useState(1);
 
   useEffect(() => {
+    let active = true;
     setItems(null);
-    loadGrammar(level).then(setItems);
+    setError(null);
+    loadGrammar(level).then(value => { if (active) setItems(value); })
+      .catch(err => { if (active) setError(err); });
     setPage(1);
-  }, [level]);
+    return () => { active = false; };
+  }, [level, attempt]);
 
   const filtered = useMemo(() => {
     if (!items) return [];
@@ -76,7 +82,8 @@ export default function GrammarList() {
         )}
       </Card>
 
-      {!items && <Spinner label={t.loadingGrammar} lang={language} />}
+      {error != null && <ErrorBox error={error} lang={language} retry={() => setAttempt(n => n + 1)} />}
+      {!error && !items && <Spinner label={t.loadingGrammar} lang={language} />}
       {items && filtered.length === 0 && <Empty icon="無" title={t.grammarNotFound} />}
 
       {filtered.length > 0 && (

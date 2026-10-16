@@ -150,7 +150,7 @@ export default function Dictionary({ q: initial }: { q?: string }) {
                         </span>
                       </a>
                       <LevelBadge level={v.lvl as never} size="sm" />
-                      <SpeakButton text={v.w} className="!h-7 !w-7" />
+                      <SpeakButton text={v.w} className="!h-11 !w-11 sm:!h-7 sm:!w-7" />
                       <button onClick={() => actions.grade(v.id, 2, { isNew: !has })}
                         className={cn("grid h-7 w-7 place-items-center rounded-lg border text-[13px] transition",
                           has ? "border-matcha-200 bg-matcha-50 text-matcha-600" : "border-sumi-900/10 bg-white/70 text-sumi-400 hover:border-matcha-400")}

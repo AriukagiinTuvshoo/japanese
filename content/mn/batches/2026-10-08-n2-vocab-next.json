@@ -1,0 +1,1097 @@
+{
+  "provenance": {
+    "id": "mn-n2-vocab-next-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit topics cross-checked individually against retained Japanese headwords/readings and English glosses, including alternate dictionary readings. Independently unreviewed.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n2.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j1446030": {
+      "mn": [
+        "фракц",
+        "нам",
+        "бүлэглэл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "党派",
+        "r": "とうは",
+        "en": [
+          "faction",
+          "party",
+          "clique"
+        ]
+      }
+    },
+    "j1770560": {
+      "mn": [
+        "захирагч",
+        "удирдагч",
+        "консул"
+      ],
+      "topics": [
+        "society",
+        "people"
+      ],
+      "expected": {
+        "w": "統領",
+        "r": "とうりょう",
+        "en": [
+          "ruler",
+          "leader",
+          "consul"
+        ]
+      }
+    },
+    "j1641920": {
+      "mn": [
+        "бэлтгэл",
+        "хангалт",
+        "байгуулалт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "設け",
+        "r": "もうけ",
+        "en": [
+          "preparation",
+          "provision",
+          "establishment"
+        ]
+      }
+    },
+    "j2035080": {
+      "mn": [
+        "хуучин нэртэй",
+        "өмнөх",
+        "өөрчилсөн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "改め",
+        "r": "あらため",
+        "en": [
+          "former (e.g. name)",
+          "previous",
+          "changed"
+        ]
+      }
+    },
+    "j1201170": {
+      "mn": [
+        "өөрчлөлт",
+        "хуурамчаар засварлах",
+        "хуурамч болгох"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "改ざん",
+        "r": "かいざん",
+        "en": [
+          "alteration",
+          "falsification",
+          "faking"
+        ]
+      }
+    },
+    "j1946690": {
+      "mn": [
+        "дархан газар",
+        "амьтны нөөц газар",
+        "байгалийн хамгаалалттай газар"
+      ],
+      "topics": [
+        "nature",
+        "places"
+      ],
+      "expected": {
+        "w": "保護区",
+        "r": "ほごく",
+        "en": [
+          "sanctuary",
+          "reserve (for wild animals)",
+          "nature preserve"
+        ]
+      }
+    },
+    "j1626580": {
+      "mn": [
+        "бууралт",
+        "багасалт",
+        "уналт"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "減り",
+        "r": "へり",
+        "en": [
+          "decrease",
+          "reduction",
+          "fall"
+        ]
+      }
+    },
+    "j1263260": {
+      "mn": [
+        "татвар бууруулах"
+      ],
+      "topics": [
+        "work",
+        "society"
+      ],
+      "expected": {
+        "w": "減税",
+        "r": "げんぜい",
+        "en": [
+          "tax reduction"
+        ]
+      }
+    },
+    "j1298300": {
+      "mn": [
+        "далд төлөвлөгөө",
+        "тактик",
+        "арга мэх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "策略",
+        "r": "さくりゃく",
+        "en": [
+          "scheme",
+          "tactic",
+          "stratagem"
+        ]
+      }
+    },
+    "j2551760": {
+      "mn": [
+        "арьсан",
+        "арьсаар хавтасласан",
+        "арьсаар хийсэн"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "革製",
+        "r": "かわせい",
+        "en": [
+          "leather",
+          "leather-bound",
+          "leathern"
+        ]
+      }
+    },
+    "j1263350": {
+      "mn": [
+        "биеийн жин хасах",
+        "жин бууруулах",
+        "тоо хэмжээ буурах"
+      ],
+      "topics": [
+        "body",
+        "quantity"
+      ],
+      "expected": {
+        "w": "減量",
+        "r": "げんりょう",
+        "en": [
+          "loss in weight (esp. body weight)",
+          "weight reduction",
+          "loss in quantity"
+        ]
+      }
+    },
+    "j1446300": {
+      "mn": [
+        "хөлдөх",
+        "үнэ цалин хөрөнгө царцаах",
+        "түр хориг"
+      ],
+      "topics": [
+        "nature",
+        "work"
+      ],
+      "expected": {
+        "w": "凍結",
+        "r": "とうけつ",
+        "en": [
+          "freezing (e.g. water)",
+          "freezing (prices, wages, assets, etc.)",
+          "moratorium"
+        ]
+      }
+    },
+    "j1760390": {
+      "mn": [
+        "арьсаар бүрсэн"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "革張り",
+        "r": "かわばり",
+        "en": [
+          "leather-covered"
+        ]
+      }
+    },
+    "j1382210": {
+      "mn": [
+        "гаалийн тариф",
+        "татварын хувь"
+      ],
+      "topics": [
+        "work",
+        "society"
+      ],
+      "expected": {
+        "w": "税率",
+        "r": "ぜいりつ",
+        "en": [
+          "tariff",
+          "tax rate"
+        ]
+      }
+    },
+    "j2843136": {
+      "mn": [
+        "мужийн татвар"
+      ],
+      "topics": [
+        "work",
+        "society"
+      ],
+      "expected": {
+        "w": "州税",
+        "r": "しゅうぜい",
+        "en": [
+          "state tax"
+        ]
+      }
+    },
+    "j1003950": {
+      "mn": [
+        "тэмцээн",
+        "харьцуулалт",
+        "өрсөлдөөн"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "比べ",
+        "r": "くらべ",
+        "en": [
+          "contest",
+          "comparison",
+          "competition"
+        ]
+      }
+    },
+    "j1009840": {
+      "mn": [
+        "харьцуулахад"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "に比べ",
+        "r": "にくらべ",
+        "en": [
+          "compared to"
+        ]
+      }
+    },
+    "j2538600": {
+      "mn": [
+        "томилох",
+        "үүрэг оноох",
+        "нэрлэн тогтоох"
+      ],
+      "topics": [
+        "actions",
+        "work"
+      ],
+      "expected": {
+        "w": "補する",
+        "r": "ほする",
+        "en": [
+          "to appoint",
+          "to assign",
+          "to designate"
+        ]
+      }
+    },
+    "j1538620": {
+      "mn": [
+        "газрын тосны цооног"
+      ],
+      "topics": [
+        "technology",
+        "nature"
+      ],
+      "expected": {
+        "w": "油井",
+        "r": "ゆせい",
+        "en": [
+          "oil well"
+        ]
+      }
+    },
+    "j1008900": {
+      "mn": [
+        "харьцуулахад"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "と比べて",
+        "r": "とくらべて",
+        "en": [
+          "compared with"
+        ]
+      }
+    },
+    "j1227010": {
+      "mn": [
+        "таагүй нөхцөл",
+        "бэрхшээл"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "逆境",
+        "r": "ぎゃっきょう",
+        "en": [
+          "adverse circumstances",
+          "adversity"
+        ]
+      }
+    },
+    "j1181190": {
+      "mn": [
+        "Европ"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "欧州",
+        "r": "おうしゅう",
+        "en": [
+          "Europe"
+        ]
+      }
+    },
+    "j2433090": {
+      "mn": [
+        "жирэмсний шинжилгээ"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "妊娠検査",
+        "r": "にんしんけんさ",
+        "en": [
+          "pregnancy test"
+        ]
+      }
+    },
+    "j2675860": {
+      "mn": [
+        "мөрөндөө үүрэх",
+        "даах",
+        "хариуцах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "担い",
+        "r": "にない",
+        "en": [
+          "carrying (on one's shoulder)",
+          "bearing",
+          "shouldering"
+        ]
+      }
+    },
+    "j1512120": {
+      "mn": [
+        "хүрэхэд хэцүү газар",
+        "алслагдсан газар"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "辺ぴ",
+        "r": "へんぴ",
+        "en": [
+          "hard to reach place",
+          "remote place"
+        ]
+      }
+    },
+    "j2842190": {
+      "mn": [
+        "хажуу",
+        "зах",
+        "усны эрэг"
+      ],
+      "topics": [
+        "places",
+        "nature"
+      ],
+      "expected": {
+        "w": "辺り",
+        "r": "ほとり",
+        "en": [
+          "side (esp. of a waterbody)",
+          "edge",
+          "bank"
+        ]
+      }
+    },
+    "j1205680": {
+      "mn": [
+        "цөмийн зэвсэглэл"
+      ],
+      "topics": [
+        "society",
+        "technology"
+      ],
+      "expected": {
+        "w": "核武装",
+        "r": "かくぶそう",
+        "en": [
+          "nuclear arms"
+        ]
+      }
+    },
+    "j1854920": {
+      "mn": [
+        "өөрчлөлт",
+        "шилжилт",
+        "хариу бэлэг"
+      ],
+      "topics": [
+        "actions",
+        "daily"
+      ],
+      "expected": {
+        "w": "移り",
+        "r": "うつり",
+        "en": [
+          "change",
+          "transition",
+          "return present"
+        ]
+      }
+    },
+    "j2646930": {
+      "mn": [
+        "магтах",
+        "сайшаах",
+        "өргөмжлөх"
+      ],
+      "topics": [
+        "actions",
+        "feelings"
+      ],
+      "expected": {
+        "w": "賞する",
+        "r": "しょうする",
+        "en": [
+          "to praise",
+          "to extol",
+          "to laud"
+        ]
+      }
+    },
+    "j1004750": {
+      "mn": [
+        "энэ хавь",
+        "энд орчим",
+        "энэ цэг"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "この辺",
+        "r": "このへん",
+        "en": [
+          "this area",
+          "around here",
+          "this point"
+        ]
+      }
+    },
+    "j2600500": {
+      "mn": [
+        "тэр хавь",
+        "тэнд ойр",
+        "ойролцоогоор"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "その辺",
+        "r": "そのへん",
+        "en": [
+          "around there",
+          "near there",
+          "or thereabouts"
+        ]
+      }
+    },
+    "j1389880": {
+      "mn": [
+        "мэргэшил",
+        "тусгай чиглэл",
+        "судлах салбар"
+      ],
+      "topics": [
+        "learning",
+        "work"
+      ],
+      "expected": {
+        "w": "専門",
+        "r": "せんもん",
+        "en": [
+          "speciality",
+          "specialty",
+          "subject of study"
+        ]
+      }
+    },
+    "j2613410": {
+      "mn": [
+        "гэрээгээр тогтмол төлөх төлбөр",
+        "сар долоо хоногоор тооцох"
+      ],
+      "topics": [
+        "work",
+        "time"
+      ],
+      "expected": {
+        "w": "極め",
+        "r": "ぎめ",
+        "en": [
+          "contracted regular payment, e.g. monthly, weekly, etc.",
+          "by the (month, week, etc.)"
+        ]
+      }
+    },
+    "j1231950": {
+      "mn": [
+        "асар их мөнгө",
+        "их хэмжээний мөнгө",
+        "асар их хэмжээ"
+      ],
+      "topics": [
+        "work",
+        "quantity"
+      ],
+      "expected": {
+        "w": "巨額",
+        "r": "きょがく",
+        "en": [
+          "huge sum (esp. of money)",
+          "enormous sum",
+          "massive amount"
+        ]
+      }
+    },
+    "j1666030": {
+      "mn": [
+        "байгаль орчны бохирдол"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "環境汚染",
+        "r": "かんきょうおせん",
+        "en": [
+          "environmental pollution"
+        ]
+      }
+    },
+    "j1216850": {
+      "mn": [
+        "далд санаа",
+        "далд утга",
+        "уян хатан боломж"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "含み",
+        "r": "ふくみ",
+        "en": [
+          "implication",
+          "hidden meaning",
+          "latitude"
+        ]
+      }
+    },
+    "j2072970": {
+      "mn": [
+        "тэр хавь",
+        "ойролцоо",
+        "тэр нутаг"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "その辺り",
+        "r": "そのあたり",
+        "en": [
+          "thereabouts",
+          "vicinity",
+          "that area"
+        ]
+      }
+    },
+    "j2759480": {
+      "mn": [
+        "энэ хавь",
+        "энд орчим"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "この辺り",
+        "r": "このあたり",
+        "en": [
+          "this area",
+          "around here"
+        ]
+      }
+    },
+    "j1591960": {
+      "mn": [
+        "туйлд хүрэх",
+        "хязгаарт хүрэх",
+        "дуусах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "極まる",
+        "r": "きわまる",
+        "en": [
+          "to reach an extreme",
+          "to reach a limit",
+          "to terminate"
+        ]
+      }
+    },
+    "j1484440": {
+      "mn": [
+        "гамшигт өртөх",
+        "хохирол амсах"
+      ],
+      "topics": [
+        "society",
+        "nature"
+      ],
+      "expected": {
+        "w": "被災",
+        "r": "ひさい",
+        "en": [
+          "being a victim of (some disaster)",
+          "suffering from"
+        ]
+      }
+    },
+    "j1205700": {
+      "mn": [
+        "цөмийн зэвсэг"
+      ],
+      "topics": [
+        "society",
+        "technology"
+      ],
+      "expected": {
+        "w": "核兵器",
+        "r": "かくへいき",
+        "en": [
+          "nuclear weapon"
+        ]
+      }
+    },
+    "j1781350": {
+      "mn": [
+        "тоосгон өрлөг"
+      ],
+      "topics": [
+        "daily",
+        "work"
+      ],
+      "expected": {
+        "w": "レンガ造り",
+        "r": "レンガづくり",
+        "en": [
+          "brickwork"
+        ]
+      }
+    },
+    "j1592510": {
+      "mn": [
+        "хэсэг хүмүүс",
+        "олон хүн",
+        "бөөн хүн"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "群衆",
+        "r": "ぐんしゅう",
+        "en": [
+          "group (of people)",
+          "crowd",
+          "horde"
+        ]
+      }
+    },
+    "j2429160": {
+      "mn": [
+        "даавуу мод зэргийг залгах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "接ぐ",
+        "r": "はぐ",
+        "en": [
+          "to join (cloth, wood, etc.)"
+        ]
+      }
+    },
+    "j1295520": {
+      "mn": [
+        "жижиг",
+        "нарийн",
+        "дэлгэрэнгүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "細か",
+        "r": "こまか",
+        "en": [
+          "small",
+          "fine",
+          "detailed"
+        ]
+      }
+    },
+    "j2719870": {
+      "mn": [
+        "жижиг",
+        "нарийн",
+        "өчүүхэн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "細い",
+        "r": "こまい",
+        "en": [
+          "small",
+          "fine",
+          "minute"
+        ]
+      }
+    },
+    "j1216280": {
+      "mn": [
+        "үнэхээр",
+        "бүхэлдээ",
+        "бүрэн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "丸で",
+        "r": "まるで",
+        "en": [
+          "quite",
+          "entirely",
+          "completely"
+        ]
+      }
+    },
+    "j2348290": {
+      "mn": [
+        "тоймлох"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "丸め",
+        "r": "まるめ",
+        "en": [
+          "rounding"
+        ]
+      }
+    },
+    "j1562810": {
+      "mn": [
+        "булангийн эрэг",
+        "тохойн эрэг"
+      ],
+      "topics": [
+        "places",
+        "nature"
+      ],
+      "expected": {
+        "w": "湾岸",
+        "r": "わんがん",
+        "en": [
+          "gulf coast",
+          "bay coast"
+        ]
+      }
+    },
+    "j2510090": {
+      "mn": [
+        "бүртгэх",
+        "бичиж тэмдэглэх"
+      ],
+      "topics": [
+        "actions",
+        "learning"
+      ],
+      "expected": {
+        "w": "録する",
+        "r": "ろくする",
+        "en": [
+          "to record"
+        ]
+      }
+    },
+    "j1550970": {
+      "mn": [
+        "хөөрөлт"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "離陸",
+        "r": "りりく",
+        "en": [
+          "takeoff"
+        ]
+      }
+    },
+    "j1419440": {
+      "mn": [
+        "сум",
+        "буудлагын сум",
+        "их бууны сум"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "弾丸",
+        "r": "だんがん",
+        "en": [
+          "bullet",
+          "shot",
+          "shell"
+        ]
+      }
+    },
+    "j1403480": {
+      "mn": [
+        "дотор эрхтэн",
+        "хэвлийн эрхтэн",
+        "гэдэс"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "臓器",
+        "r": "ぞうき",
+        "en": [
+          "internal organs",
+          "viscera",
+          "intestines"
+        ]
+      }
+    },
+    "j1217050": {
+      "mn": [
+        "усан боомтын тавцан",
+        "усан зогсоол",
+        "ус руу түрсэн зогсоол"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "岸壁",
+        "r": "がんぺき",
+        "en": [
+          "quay",
+          "wharf",
+          "jetty"
+        ]
+      }
+    },
+    "j1557680": {
+      "mn": [
+        "өчүүхэн",
+        "үл ялих",
+        "өчүүхэн бага"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "零細",
+        "r": "れいさい",
+        "en": [
+          "insignificant",
+          "trifling",
+          "paltry"
+        ]
+      }
+    },
+    "j2762260": {
+      "mn": [
+        "зэрэгцэн",
+        "хажуу хажуугаараа",
+        "эгнэн"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "並んで",
+        "r": "ならんで",
+        "en": [
+          "alongside",
+          "side-by-side",
+          "abreast"
+        ]
+      }
+    },
+    "j1374370": {
+      "mn": [
+        "хоолой",
+        "усан суваг"
+      ],
+      "topics": [
+        "nature",
+        "places"
+      ],
+      "expected": {
+        "w": "瀬戸",
+        "r": "せと",
+        "en": [
+          "strait",
+          "channel"
+        ]
+      }
+    },
+    "j2182880": {
+      "mn": [
+        "анхнаасаа",
+        "төрөлхийн",
+        "огт"
+      ],
+      "topics": [
+        "descriptions",
+        "time"
+      ],
+      "expected": {
+        "w": "根から",
+        "r": "ねから",
+        "en": [
+          "since the beginning",
+          "natural-born (salesman, etc.)",
+          "absolutely (not)"
+        ]
+      }
+    },
+    "j1214120": {
+      "mn": [
+        "үлээвэр ба чавхдаст хөгжим",
+        "хөгжим"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "管弦",
+        "r": "かんげん",
+        "en": [
+          "wind and string instruments",
+          "music"
+        ]
+      }
+    },
+    "j1290040": {
+      "mn": [
+        "төрөлхийн",
+        "бүр эхнээсээ",
+        "бүхэлдээ"
+      ],
+      "topics": [
+        "descriptions",
+        "time"
+      ],
+      "expected": {
+        "w": "根っから",
+        "r": "ねっから",
+        "en": [
+          "by nature",
+          "from the very beginning",
+          "through and through"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,1268 @@
+{
+  "provenance": {
+    "id": "mn-n3-examples-2026-10-16-batch-5",
+    "createdAt": "2026-10-16",
+    "author": "OpenAI ChatGPT",
+    "method": "AI-assisted Mongolian translations matched to exact retained Japanese example sentences and checked against the accompanying English source. Japanese/English source text and lexical fields preserved. This batch has not been independently human-reviewed.",
+    "source": "OpenJLPT-distributed Tatoeba examples (Japanese/English source); Mongolian translations authored by OpenAI ChatGPT",
+    "sourceSnapshot": "8a8c120ff2fe120e8b86acb827e639409e54eefe",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "33875d6135": {
+      "expected": {
+        "w": "家事",
+        "r": "かじ",
+        "en": [
+          "housework",
+          "domestic chores"
+        ]
+      },
+      "examples": {
+        "妻の活動は家事に限られている。": {
+          "mn": "Эхнэрийн хийдэг ажил гэрийн ажлаар л хязгаарлагддаг.",
+          "en": "A wife's activities are confined to domestic matters."
+        }
+      }
+    },
+    "d26324d28a": {
+      "expected": {
+        "w": "賢い",
+        "r": "かしこい",
+        "en": [
+          "wise",
+          "clever",
+          "smart"
+        ]
+      },
+      "examples": {
+        "あなたは何と賢い生徒なのでしょう。": {
+          "mn": "Та ямар ухаалаг сурагч вэ!",
+          "en": "What a clever student you are!"
+        },
+        "偉人が必ずしも賢いとは限らない。": {
+          "mn": "Агуу хүмүүс заавал ухаалаг байдаг гэсэн үг биш.",
+          "en": "Great men are not always wise."
+        }
+      }
+    },
+    "f554d2951b": {
+      "expected": {
+        "w": "歌手",
+        "r": "かしゅ",
+        "en": [
+          "singer"
+        ]
+      },
+      "examples": {
+        "その歌手は若者たちのアイドルだ。": {
+          "mn": "Тэр дуучин залуусын шүтээн юм.",
+          "en": "That singer is a teenage idol."
+        },
+        "彼女が歌手だなんてとんでもない。": {
+          "mn": "Түүнийг дуучин гэх нь огт тохирохгүй.",
+          "en": "She is anything but a singer."
+        }
+      }
+    },
+    "44d7586ff3": {
+      "expected": {
+        "w": "数",
+        "r": "かず",
+        "en": [
+          "number",
+          "figure"
+        ]
+      },
+      "examples": {
+        "旅行者の数が近年大きく増加した。": {
+          "mn": "Сүүлийн жилүүдэд аялагчдын тоо эрс нэмэгдсэн.",
+          "en": "The number of tourists has increased greatly in recent years."
+        },
+        "市内を走る自動車の数が増えた。": {
+          "mn": "Хот дотор явдаг автомашины тоо нэмэгджээ.",
+          "en": "The number of cars driven in the city has increased."
+        }
+      }
+    },
+    "d45fe050fc": {
+      "expected": {
+        "w": "稼ぐ",
+        "r": "かせぐ",
+        "en": [
+          "to earn income",
+          "to labor"
+        ]
+      },
+      "examples": {
+        "彼は使い切れない程のお金を稼ぐ。": {
+          "mn": "Тэр зарцуулж барахгүй их мөнгө олдог.",
+          "en": "He earns more money than he can spend."
+        },
+        "私は自分の生活費を稼がなくてはならない。": {
+          "mn": "Би амьжиргааныхаа зардлыг өөрөө олох ёстой.",
+          "en": "I've got to earn my own living."
+        }
+      }
+    },
+    "c3b808e41e": {
+      "expected": {
+        "w": "数える",
+        "r": "かぞえる",
+        "en": [
+          "to count"
+        ]
+      },
+      "examples": {
+        "あの子は２０まで数えられる。": {
+          "mn": "Тэр хүүхэд хорь хүртэл тоолж чадна.",
+          "en": "That child can count to twenty."
+        },
+        "目を閉じて、１０まで数えなさい。": {
+          "mn": "Нүдээ аниад арав хүртэл тоолоорой.",
+          "en": "Close your eyes, and count to ten."
+        }
+      }
+    },
+    "1d48dc95a3": {
+      "expected": {
+        "w": "型",
+        "r": "かた",
+        "en": [
+          "mold",
+          "model",
+          "style"
+        ]
+      },
+      "examples": {
+        "その像は型に入れられて作られた。": {
+          "mn": "Тэр хөшөөг хэвэнд цутгаж хийсэн.",
+          "en": "The statue was cast in a mold."
+        },
+        "特にお望みの型はございますか。": {
+          "mn": "Танд тусгайлан хүссэн загвар бий юу?",
+          "en": "Do you have any particular style in mind?"
+        }
+      }
+    },
+    "d0f1d715ac": {
+      "expected": {
+        "w": "肩",
+        "r": "かた",
+        "en": [
+          "shoulder"
+        ]
+      },
+      "examples": {
+        "肩が痛い。": {
+          "mn": "Мөр өвдөж байна.",
+          "en": "I have a pain in the shoulder."
+        },
+        "彼女は母の肩に頭をもたせかけた。": {
+          "mn": "Тэр эмэгтэй толгойгоо ээжийнхээ мөрөн дээр налуулжээ.",
+          "en": "She rested her head on her mother's shoulder."
+        }
+      }
+    },
+    "cae9ac1779": {
+      "expected": {
+        "w": "硬い",
+        "r": "かたい",
+        "en": [
+          "solid",
+          "hard (esp. metal, stone)",
+          "unpolished writing"
+        ]
+      },
+      "examples": {
+        "卵は硬くゆでてください。": {
+          "mn": "Өндгийг хатуу болтол нь чанаж өгнө үү.",
+          "en": "Boil the eggs hard."
+        },
+        "ダイヤモンドほど硬いものはない。": {
+          "mn": "Алмаз шиг хатуу зүйл үгүй.",
+          "en": "Nothing is as hard as a diamond."
+        }
+      }
+    },
+    "d9627ee0f6": {
+      "expected": {
+        "w": "方々",
+        "r": "かたがた",
+        "en": [
+          "persons",
+          "this and that",
+          "here and there"
+        ]
+      },
+      "examples": {
+        "わからなかったら方々の人に聞いた方がいいよ。": {
+          "mn": "Мэдэхгүй бол эргэн тойрныхноосоо асуусан нь дээр.",
+          "en": "If you don't know, you had better ask around."
+        },
+        "あの人たちが昨日あなたが会った方々ですか。": {
+          "mn": "Тэд өчигдөр таны уулзсан хүмүүс мөн үү?",
+          "en": "Are those the people you saw yesterday?"
+        }
+      }
+    },
+    "c34db201ec": {
+      "expected": {
+        "w": "語る",
+        "r": "かたる",
+        "en": [
+          "to talk",
+          "to tell",
+          "to recite"
+        ]
+      },
+      "examples": {
+        "行動は言葉よりも声高く語る。": {
+          "mn": "Үйлдэл үгнээс илүү чанга ярьдаг.",
+          "en": "Actions speak louder than words."
+        },
+        "父が戦争の体験談を語ってくれた。": {
+          "mn": "Аав надад дайны үеийн туршлагаасаа ярьж өгсөн.",
+          "en": "My father told me about his experiences during the war."
+        }
+      }
+    },
+    "24c7b38c0b": {
+      "expected": {
+        "w": "価値",
+        "r": "かち",
+        "en": [
+          "value",
+          "worth",
+          "merit"
+        ]
+      },
+      "examples": {
+        "この本にはある程度の価値はあります。": {
+          "mn": "Энэ ном тодорхой хэмжээнд үнэ цэнтэй.",
+          "en": "This book has a certain value."
+        },
+        "彼は非常に価値のある発見をした。": {
+          "mn": "Тэр маш үнэ цэнтэй нээлт хийсэн.",
+          "en": "He made a very valuable discovery."
+        }
+      }
+    },
+    "74be6d8f27": {
+      "expected": {
+        "w": "勝ち",
+        "r": "かち",
+        "en": [
+          "win",
+          "victory"
+        ]
+      },
+      "examples": {
+        "試合は彼の勝ちに終わった。": {
+          "mn": "Тэмцээн түүний ялалтаар өндөрлөв.",
+          "en": "The match ended in victory for him."
+        }
+      }
+    },
+    "ca8605d113": {
+      "expected": {
+        "w": "がっかり",
+        "r": "がっかり",
+        "en": [
+          "feel disappointed",
+          "be dejected",
+          "lose heart"
+        ]
+      },
+      "examples": {
+        "その知らせにはがっかりだ。": {
+          "mn": "Тэр мэдээнд сэтгэл гонсойлоо.",
+          "en": "I am disappointed at the news."
+        },
+        "私は息子にはがっかりしています。": {
+          "mn": "Би хүүдээ сэтгэл дундуур байна.",
+          "en": "I am disappointed in my son."
+        }
+      }
+    },
+    "0973ea4445": {
+      "expected": {
+        "w": "活気",
+        "r": "かっき",
+        "en": [
+          "energy",
+          "liveliness"
+        ]
+      },
+      "examples": {
+        "若者はたいてい活気に満ちている。": {
+          "mn": "Залуус ихэвчлэн эрч хүчээр дүүрэн байдаг.",
+          "en": "Young people are usually full of energy."
+        }
+      }
+    },
+    "5bd15630c9": {
+      "expected": {
+        "w": "学期",
+        "r": "がっき",
+        "en": [
+          "term (school)"
+        ]
+      },
+      "examples": {
+        "前学期は成績がよかった。": {
+          "mn": "Өмнөх улиралд миний дүн сайн байсан.",
+          "en": "I had a good report last term."
+        },
+        "今学期は政治学を取っていますか。": {
+          "mn": "Та энэ улиралд улс төр судлалын хичээл үзэж байгаа юу?",
+          "en": "Are you taking politics this semester?"
+        }
+      }
+    },
+    "791cdda968": {
+      "expected": {
+        "w": "活動",
+        "r": "かつどう",
+        "en": [
+          "action",
+          "activity"
+        ]
+      },
+      "examples": {
+        "彼女は多くの学校の活動に参加する。": {
+          "mn": "Тэр сургуулийн олон үйл ажиллагаанд оролцдог.",
+          "en": "She participates in many school activities."
+        },
+        "彼はいつもばたばたと活動している。": {
+          "mn": "Тэр үргэлж л завгүй, хөдөлгөөнтэй байдаг.",
+          "en": "He is always up and doing."
+        }
+      }
+    },
+    "70a5d45f7c": {
+      "expected": {
+        "w": "活用",
+        "r": "かつよう",
+        "en": [
+          "conjugation",
+          "practical use"
+        ]
+      },
+      "examples": {
+        "彼はその機会を最大限に活用した。": {
+          "mn": "Тэр тухайн боломжийг бүрэн ашигласан.",
+          "en": "He made the most of the chance."
+        },
+        "機会は常に最大限に活用すべきだ。": {
+          "mn": "Боломжийг үргэлж дээд зэргээр ашиглах хэрэгтэй.",
+          "en": "One should always make the most of one's opportunities."
+        }
+      }
+    },
+    "bef84d4151": {
+      "expected": {
+        "w": "悲しむ",
+        "r": "かなしむ",
+        "en": [
+          "to be sad",
+          "to mourn for",
+          "to regret"
+        ]
+      },
+      "examples": {
+        "悲しんでいる彼女をそっとしておきなさい。": {
+          "mn": "Гуниглаж байгаа түүнийг тайван орхи.",
+          "en": "Do not obtrude upon her sorrow."
+        },
+        "悲しむことなんてないでしょう。": {
+          "mn": "Гуниглах хэрэг юу байна даа.",
+          "en": "Why should you be sad?"
+        }
+      }
+    },
+    "f7eb9ecbff": {
+      "expected": {
+        "w": "必ずしも",
+        "r": "かならずしも",
+        "en": [
+          "(not) always",
+          "(not) necessarily",
+          "(not) all"
+        ]
+      },
+      "examples": {
+        "金持ちが必ずしも幸福とは限らない。": {
+          "mn": "Баян хүн заавал аз жаргалтай байдаггүй.",
+          "en": "The rich are not always happy."
+        },
+        "人は必ずしも見かけ通りではない。": {
+          "mn": "Хүн гаднаа харагдаж байгаагаараа заавал байдаггүй.",
+          "en": "A man is not always what he seems."
+        }
+      }
+    },
+    "7634c5903a": {
+      "expected": {
+        "w": "かなり",
+        "r": "かなり",
+        "en": [
+          "considerably",
+          "fairly",
+          "quite"
+        ]
+      },
+      "examples": {
+        "彼女はかなりの洋服を持っている。": {
+          "mn": "Тэр нэлээд олон хувцастай.",
+          "en": "She has quite a lot of clothes."
+        },
+        "この大学はかなり生徒数が少ない。": {
+          "mn": "Энэ их сургуулийн оюутны тоо харьцангуй цөөн.",
+          "en": "There is a fairly small number of students at this university."
+        }
+      }
+    },
+    "2f10aed466": {
+      "expected": {
+        "w": "金",
+        "r": "かね",
+        "en": [
+          "money"
+        ]
+      },
+      "examples": {
+        "母は子供たちに金をわけてやった。": {
+          "mn": "Ээж хүүхдүүддээ мөнгө хувааж өгсөн.",
+          "en": "The mother divided the money among her children."
+        },
+        "彼女にだまされてその金を渡した。": {
+          "mn": "Би түүнд хууртагдаж, мөнгөө өгсөн.",
+          "en": "She fooled me into giving her the money."
+        }
+      }
+    },
+    "06381dbe4c": {
+      "expected": {
+        "w": "金持ち",
+        "r": "かねもち",
+        "en": [
+          "rich man"
+        ]
+      },
+      "examples": {
+        "金持ちが必ずしも幸福とは限らない。": {
+          "mn": "Баян хүн заавал аз жаргалтай байдаггүй.",
+          "en": "The rich are not always happy."
+        },
+        "彼女は金持ちなのに幸せではない。": {
+          "mn": "Тэр баян атлаа аз жаргалтай биш.",
+          "en": "For all her riches, she's not happy."
+        }
+      }
+    },
+    "6bf6a2e393": {
+      "expected": {
+        "w": "可能",
+        "r": "かのう",
+        "en": [
+          "possible",
+          "practicable",
+          "feasible"
+        ]
+      },
+      "examples": {
+        "男の子へのしつけは可能である。": {
+          "mn": "Хөвгүүдэд зөв хүмүүжил олгох боломжтой.",
+          "en": "Boys can be trained to behave."
+        },
+        "その動物を育てることは可能ですか。": {
+          "mn": "Тэр амьтныг өсгөх боломжтой юу?",
+          "en": "Is it possible for me to raise the animal?"
+        }
+      }
+    },
+    "562f63004e": {
+      "expected": {
+        "w": "株",
+        "r": "かぶ",
+        "en": [
+          "share",
+          "stock",
+          "stump (of tree)"
+        ]
+      },
+      "examples": {
+        "彼は大金を株に投資した。": {
+          "mn": "Тэр хувьцаанд их хэмжээний мөнгө оруулсан.",
+          "en": "He invested a lot of money in stocks."
+        },
+        "学生間では彼の株が急に上がった。": {
+          "mn": "Оюутнуудын дунд түүний нэр хүнд огцом өссөн.",
+          "en": "His stock with the students has soared."
+        }
+      }
+    },
+    "11ae7695a1": {
+      "expected": {
+        "w": "被る",
+        "r": "かぶる",
+        "en": [
+          "to put on (one's head)",
+          "to wear",
+          "to have on"
+        ]
+      },
+      "examples": {
+        "その機械はほこりをかぶっていた。": {
+          "mn": "Тэр машин тоосонд дарагдсан байв.",
+          "en": "The machine was coated with dust."
+        },
+        "教室では帽子を被るべきではない。": {
+          "mn": "Ангид малгай өмсөх ёсгүй.",
+          "en": "Your hat should not be worn in the classroom."
+        }
+      }
+    },
+    "f55f2622af": {
+      "expected": {
+        "w": "我慢",
+        "r": "がまん",
+        "en": [
+          "patience",
+          "endurance",
+          "perseverance"
+        ]
+      },
+      "examples": {
+        "この寒さは我慢出来ないな。": {
+          "mn": "Энэ хүйтнийг тэсэхийн аргагүй юм.",
+          "en": "I can't put up with this cold."
+        },
+        "彼は熱さにがまんできなかった。": {
+          "mn": "Тэр халууныг тэсвэрлэж чадсангүй.",
+          "en": "He couldn't bear the heat."
+        }
+      }
+    },
+    "ed26fceabd": {
+      "expected": {
+        "w": "神",
+        "r": "かみ",
+        "en": [
+          "god"
+        ]
+      },
+      "examples": {
+        "人間は神ほど万能ではない。": {
+          "mn": "Хүн бурхан шиг бүхнийг чаддаггүй.",
+          "en": "Man is not as almighty as God."
+        },
+        "彼らは神の手の中にいるのである。": {
+          "mn": "Тэд бурхны гарт байдаг.",
+          "en": "They are in the hands of the gods."
+        }
+      }
+    },
+    "1e21784548": {
+      "expected": {
+        "w": "雷",
+        "r": "かみなり",
+        "en": [
+          "thunder"
+        ]
+      },
+      "examples": {
+        "子供達は雷におびえた。": {
+          "mn": "Хүүхдүүд аянга нүргэлэхээс айсан.",
+          "en": "The thunder scared the children."
+        },
+        "私はその家に雷が落ちるのを見た。": {
+          "mn": "Би тэр байшинд аянга буухыг харсан.",
+          "en": "I saw the house struck by lightning."
+        }
+      }
+    },
+    "1156b71b99": {
+      "expected": {
+        "w": "髪の毛",
+        "r": "かみのけ",
+        "en": [
+          "hair (head)"
+        ]
+      },
+      "examples": {
+        "どこで髪の毛を切ったの。": {
+          "mn": "Чи хаана үсээ засуулсан бэ?",
+          "en": "Where did you get your hair cut?"
+        },
+        "髪の毛を切ってもらった方がいい。": {
+          "mn": "Үсээ засуулсан нь дээр.",
+          "en": "You had better have your hair cut."
+        }
+      }
+    },
+    "1dfbcdd475": {
+      "expected": {
+        "w": "科目",
+        "r": "かもく",
+        "en": [
+          "(school) subject",
+          "curriculum",
+          "course"
+        ]
+      },
+      "examples": {
+        "どの科目が一番好きですか。": {
+          "mn": "Чи аль хичээлд хамгийн дуртай вэ?",
+          "en": "Which subject do you like best?"
+        },
+        "学校ではどんな科目を勉強しますか。": {
+          "mn": "Сургууль дээр ямар хичээлүүд үздэг вэ?",
+          "en": "What subjects do you study at school?"
+        }
+      }
+    },
+    "91e25df095": {
+      "expected": {
+        "w": "かもしれない",
+        "r": "かもしれない",
+        "en": [
+          "may",
+          "might",
+          "perhaps"
+        ]
+      },
+      "examples": {
+        "あなたの言うことは正しいかもしれない。": {
+          "mn": "Таны хэлж байгаа зөв байж магадгүй.",
+          "en": "You could be right, I suppose."
+        },
+        "列車に乗り遅れたのかもしれない。": {
+          "mn": "Тэр галт тэргэндээ амжиж суугаагүй байж магадгүй.",
+          "en": "He may have missed the train."
+        }
+      }
+    },
+    "5929a15e3a": {
+      "expected": {
+        "w": "火曜",
+        "r": "かよう",
+        "en": [
+          "(abbreviation) Tuesday"
+        ]
+      },
+      "examples": {
+        "火曜の朝までにすべて終えなければならないのです。": {
+          "mn": "Мягмар гарагийн өглөө гэхэд бүхнийг дуусгах ёстой.",
+          "en": "We must finish everything before Tuesday morning."
+        },
+        "来週の月曜と火曜は連休だ。": {
+          "mn": "Ирэх долоо хоногийн даваа, мягмар гарагт дараалсан амралтын өдрүүд тохионо.",
+          "en": "Next Monday and Tuesday are consecutive holidays."
+        }
+      }
+    },
+    "8ce4616a78": {
+      "expected": {
+        "w": "空",
+        "r": "から",
+        "en": [
+          "emptiness",
+          "being empty"
+        ]
+      },
+      "examples": {
+        "ほとんど空なのでガソリンを入れなくてはなりません。": {
+          "mn": "Шатахууны сав бараг хоосон тул бензин хийх хэрэгтэй.",
+          "en": "I need to put some gas in the car, as it's almost empty."
+        },
+        "その箱は空であることがわかった。": {
+          "mn": "Тэр хайрцаг хоосон болохыг мэдлээ.",
+          "en": "I found the box empty."
+        }
+      }
+    },
+    "2bbdd79021": {
+      "expected": {
+        "w": "刈る",
+        "r": "かる",
+        "en": [
+          "to cut (hair)",
+          "to mow (grass)",
+          "to harvest"
+        ]
+      },
+      "examples": {
+        "彼らはジャックの髪の刈り方をひやかした。": {
+          "mn": "Тэд Жэкийн үс засалтыг шоолжээ.",
+          "en": "They made fun of Jack's haircut."
+        },
+        "私は散髪屋で髪を刈ってもらった。": {
+          "mn": "Би үсчинд үсээ засуулсан.",
+          "en": "I had my hair cut at the barber's."
+        }
+      }
+    },
+    "5c1b91aae6": {
+      "expected": {
+        "w": "河",
+        "r": "かわ",
+        "en": [
+          "river",
+          "stream"
+        ]
+      },
+      "examples": {
+        "この河はニューオリンズまで続いている。": {
+          "mn": "Энэ гол Нью-Орлеан хүртэл үргэлжилдэг.",
+          "en": "This river flows all the way to New Orleans."
+        },
+        "この河で泳ぐのは危ない。": {
+          "mn": "Энэ голд сэлэх нь аюултай.",
+          "en": "It's dangerous to swim in this river."
+        }
+      }
+    },
+    "3fcbb04d16": {
+      "expected": {
+        "w": "革",
+        "r": "かわ",
+        "en": [
+          "leather"
+        ]
+      },
+      "examples": {
+        "くつは革でつくられている。": {
+          "mn": "Гутлыг арьсаар хийдэг.",
+          "en": "The shoes are made of leather."
+        },
+        "このバッグは革でできています。": {
+          "mn": "Энэ цүнх арьсаар хийгдсэн.",
+          "en": "This bag is made of leather."
+        }
+      }
+    },
+    "39baa3eb87": {
+      "expected": {
+        "w": "皮",
+        "r": "かわ",
+        "en": [
+          "skin",
+          "hide",
+          "leather"
+        ]
+      },
+      "examples": {
+        "動物の皮は毛でおおわれている。": {
+          "mn": "Амьтны арьс үсээр хучигдсан байдаг.",
+          "en": "The skin of animals is covered with hair."
+        },
+        "彼らは腹の皮がよじれるほど笑った。": {
+          "mn": "Тэд гэдэс нь өвдтөл инээлдсэн.",
+          "en": "They split their sides laughing."
+        }
+      }
+    },
+    "fea8ab21fe": {
+      "expected": {
+        "w": "かわいらしい",
+        "r": "かわいらしい",
+        "en": [
+          "lovely",
+          "sweet"
+        ]
+      },
+      "examples": {
+        "兄は私にかわいらしい人形をくれました。": {
+          "mn": "Ах надад хөөрхөн хүүхэлдэй өгсөн.",
+          "en": "My brother gave me a cute doll."
+        },
+        "彼女は本当にかわいらしく見える。": {
+          "mn": "Тэр үнэхээр хөөрхөн харагддаг.",
+          "en": "She really looks pretty."
+        }
+      }
+    },
+    "89b43cf72a": {
+      "expected": {
+        "w": "勘",
+        "r": "かん",
+        "en": [
+          "perception",
+          "intuition",
+          "the sixth sense"
+        ]
+      },
+      "examples": {
+        "その新聞記者はニュースを嗅ぎつける鋭い勘を持っている。": {
+          "mn": "Тэр сэтгүүлч мэдээг олж мэдэх онцгой зөн совинтой.",
+          "en": "The newsman has a nose for news."
+        }
+      }
+    },
+    "40c44d898e": {
+      "expected": {
+        "w": "缶",
+        "r": "かん",
+        "en": [
+          "can",
+          "tin"
+        ]
+      },
+      "examples": {
+        "この缶にはおよそ４ガロン入る。": {
+          "mn": "Энэ лаазанд ойролцоогоор дөрвөн галлон шингэнэ.",
+          "en": "This can holds about 4 gallons."
+        },
+        "ビールをもう１缶いただけますか。": {
+          "mn": "Дахиад нэг лааз шар айраг өгч болох уу?",
+          "en": "Could I get one more beer, please?"
+        }
+      }
+    },
+    "4833b06f7b": {
+      "expected": {
+        "w": "考え",
+        "r": "かんがえ",
+        "en": [
+          "thinking",
+          "thought",
+          "ideas"
+        ]
+      },
+      "examples": {
+        "あなたの考えを言ってください。": {
+          "mn": "Та юу гэж бодож байгаагаа хэлнэ үү.",
+          "en": "Please tell me what you think."
+        },
+        "父さんは考えを変えると思うかい。": {
+          "mn": "Аав бодлоо өөрчилнө гэж чи бодож байна уу?",
+          "en": "Do you think Dad will change his mind?"
+        }
+      }
+    },
+    "cdbee06a30": {
+      "expected": {
+        "w": "感覚",
+        "r": "かんかく",
+        "en": [
+          "sense",
+          "sensation"
+        ]
+      },
+      "examples": {
+        "私は指に感覚が無かった。": {
+          "mn": "Миний хуруунууд мэдээгүй болсон.",
+          "en": "I had no feeling in my fingers."
+        },
+        "彼は死ぬまでユーモアの感覚を持ち続けた。": {
+          "mn": "Тэр нас барах хүртлээ хошин мэдрэмжээ хадгалсан.",
+          "en": "He kept his sense of humor until the day he died."
+        }
+      }
+    },
+    "7460e55135": {
+      "expected": {
+        "w": "観客",
+        "r": "かんきゃく",
+        "en": [
+          "audience",
+          "spectator(s)"
+        ]
+      },
+      "examples": {
+        "そのショーで観客は大喜びだった。": {
+          "mn": "Тэр шоу үзэгчдэд маш их таалагдсан.",
+          "en": "The audience was very much entertained by the show."
+        },
+        "観客は金切り声を上げて逃げ去った。": {
+          "mn": "Үзэгчид орилолдон зугтан одов.",
+          "en": "With a scream, the spectators scattered."
+        }
+      }
+    },
+    "c8ca17553a": {
+      "expected": {
+        "w": "環境",
+        "r": "かんきょう",
+        "en": [
+          "environment",
+          "circumstance"
+        ]
+      },
+      "examples": {
+        "彼は新しい環境にすばやく慣れた。": {
+          "mn": "Тэр шинэ орчиндоо хурдан дассан.",
+          "en": "He quickly accustomed himself to his new surroundings."
+        },
+        "環境の変化から新種の発生をみた。": {
+          "mn": "Орчны өөрчлөлтөөс шинэ зүйлүүд үүссэн.",
+          "en": "Environmental changes gave rise to new species."
+        }
+      }
+    },
+    "26061bc72e": {
+      "expected": {
+        "w": "歓迎",
+        "r": "かんげい",
+        "en": [
+          "welcome",
+          "reception"
+        ]
+      },
+      "examples": {
+        "あなたはうちのクラスで歓迎されています。": {
+          "mn": "Таныг манай ангид таатайгаар хүлээн авдаг.",
+          "en": "You are welcomed in our class."
+        },
+        "彼を訪れるたびに私は歓迎された。": {
+          "mn": "Би түүн дээр очих бүрдээ найрсгаар угтуулдаг байсан.",
+          "en": "I was welcomed whenever I visited him."
+        }
+      }
+    },
+    "d883d813ef": {
+      "expected": {
+        "w": "観光",
+        "r": "かんこう",
+        "en": [
+          "sightseeing"
+        ]
+      },
+      "examples": {
+        "観光ガイドは雇えますか。": {
+          "mn": "Аяллын хөтөч хөлслөх боломжтой юу?",
+          "en": "Is there a tour guide available?"
+        },
+        "カナダは観光にはすばらしい所だ。": {
+          "mn": "Канад бол аялал жуулчлалд тохиромжтой сайхан газар.",
+          "en": "Canada is a great place for sightseeing."
+        }
+      }
+    },
+    "888b58c5e4": {
+      "expected": {
+        "w": "観察",
+        "r": "かんさつ",
+        "en": [
+          "observation",
+          "survey"
+        ]
+      },
+      "examples": {
+        "科学は観察に基づいている。": {
+          "mn": "Шинжлэх ухаан ажиглалтад тулгуурладаг.",
+          "en": "Science rests upon observation."
+        },
+        "野鳥を観察するのはとても面白い。": {
+          "mn": "Зэрлэг шувууд ажиглах нь маш сонирхолтой.",
+          "en": "Watching wild birds is great fun."
+        }
+      }
+    },
+    "884dd65596": {
+      "expected": {
+        "w": "感じ",
+        "r": "かんじ",
+        "en": [
+          "feeling",
+          "sense",
+          "impression"
+        ]
+      },
+      "examples": {
+        "その部屋は居心地の良い感じがした。": {
+          "mn": "Тэр өрөө тухтай мэдрэмж төрүүлж байв.",
+          "en": "The room had a nice cozy feel."
+        },
+        "私立の学校はどういう感じですか。": {
+          "mn": "Хувийн сургууль ямар байдаг вэ?",
+          "en": "How is it in a private school?"
+        }
+      }
+    },
+    "56f1bac262": {
+      "expected": {
+        "w": "感謝",
+        "r": "かんしゃ",
+        "en": [
+          "thanks",
+          "gratitude"
+        ]
+      },
+      "examples": {
+        "ご協力に感謝します。": {
+          "mn": "Хамтран ажилласанд тань баярлалаа.",
+          "en": "I appreciate your cooperation."
+        },
+        "ご親切にしていただき感謝します。": {
+          "mn": "Сайхан сэтгэл гаргасанд тань талархаж байна.",
+          "en": "I acknowledge your kindness."
+        }
+      }
+    },
+    "f15c9822d2": {
+      "expected": {
+        "w": "患者",
+        "r": "かんじゃ",
+        "en": [
+          "a patient"
+        ]
+      },
+      "examples": {
+        "私はあなたの第一号の患者になるわ。": {
+          "mn": "Би таны анхны өвчтөн болно.",
+          "en": "I'll be your first patient."
+        },
+        "患者は日に日によくなっていった。": {
+          "mn": "Өвчтөний бие өдөр ирэх тусам сайжирч байв.",
+          "en": "The patient was recovering daily."
+        }
+      }
+    },
+    "38914b5058": {
+      "expected": {
+        "w": "勘定",
+        "r": "かんじょう",
+        "en": [
+          "calculation",
+          "counting",
+          "consideration"
+        ]
+      },
+      "examples": {
+        "勘定は合計５００ドルになる。": {
+          "mn": "Төлбөр нийт 500 доллар болно.",
+          "en": "The bill amounts to 500 dollars."
+        },
+        "勘定は全部で５０ドルになります。": {
+          "mn": "Нийт төлбөр 50 доллар болно.",
+          "en": "The bill amounts to fifty dollars."
+        }
+      }
+    },
+    "c2dcadfe14": {
+      "expected": {
+        "w": "感情",
+        "r": "かんじょう",
+        "en": [
+          "emotion(s)",
+          "feeling(s)",
+          "sentiment"
+        ]
+      },
+      "examples": {
+        "声の調子が感情を伝える事もある。": {
+          "mn": "Дууны өнгө аяс сэтгэл хөдлөлийг илэрхийлж болдог.",
+          "en": "Tone of voice can indicate feelings."
+        },
+        "彼は人間としての感情を欠いていた。": {
+          "mn": "Түүнд хүний сэтгэл хөдлөл дутагдаж байв.",
+          "en": "He was devoid of human feeling."
+        }
+      }
+    },
+    "b333744018": {
+      "expected": {
+        "w": "感じる",
+        "r": "かんじる",
+        "en": [
+          "to feel",
+          "to sense",
+          "to experience"
+        ]
+      },
+      "examples": {
+        "私はときどき悲しく感じる。": {
+          "mn": "Би хааяа гунигтай санагддаг.",
+          "en": "I feel sad every now and then."
+        },
+        "彼女はいくぶん疲れを感じていた。": {
+          "mn": "Тэр эмэгтэй бага зэрэг ядарсан байлаа.",
+          "en": "She was feeling kind of tired."
+        }
+      }
+    },
+    "847a57a03d": {
+      "expected": {
+        "w": "感心",
+        "r": "かんしん",
+        "en": [
+          "admiration",
+          "Well done!"
+        ]
+      },
+      "examples": {
+        "私はむすこの才能にいささか感心している。": {
+          "mn": "Би хүүгийнхээ авьяас чадварыг багагүй биширдэг.",
+          "en": "I have a good opinion of my son's ability."
+        },
+        "あなたの新車に感心しないではいられない。": {
+          "mn": "Таны шинэ машиныг бишрэхгүй байхын аргагүй.",
+          "en": "I cannot help admiring your new car."
+        }
+      }
+    },
+    "4072da73db": {
+      "expected": {
+        "w": "関心",
+        "r": "かんしん",
+        "en": [
+          "concern",
+          "interest"
+        ]
+      },
+      "examples": {
+        "私は美術に非常な関心を抱いています。": {
+          "mn": "Би дүрслэх урлагийг ихэд сонирхдог.",
+          "en": "I am deeply interested in art."
+        },
+        "君は政治に関心をもっているかい。": {
+          "mn": "Чи улс төр сонирхдог уу?",
+          "en": "Are you concerned with politics?"
+        }
+      }
+    },
+    "556dac7db6": {
+      "expected": {
+        "w": "関する",
+        "r": "かんする",
+        "en": [
+          "to concern",
+          "to be related"
+        ]
+      },
+      "examples": {
+        "彼女は動物に関する本を書いた。": {
+          "mn": "Тэр амьтдын тухай ном бичсэн.",
+          "en": "She wrote a book about animals."
+        },
+        "私は動物に関する本を読んでいる。": {
+          "mn": "Би амьтдын тухай ном уншиж байна.",
+          "en": "I am reading a book about animals."
+        }
+      }
+    },
+    "a380b73ffa": {
+      "expected": {
+        "w": "完成",
+        "r": "かんせい",
+        "en": [
+          "complete",
+          "completion",
+          "perfection"
+        ]
+      },
+      "examples": {
+        "新しい鉄道はまだ完成していない。": {
+          "mn": "Шинэ төмөр зам хараахан дуусаагүй байна.",
+          "en": "The new railway is not completed yet."
+        },
+        "私はこの計画をぜひ完成させたい。": {
+          "mn": "Би энэ төлөвлөгөөг заавал дуусгахыг хүсэж байна.",
+          "en": "I intend to carry this project through to completion."
+        }
+      }
+    },
+    "51ed2ee220": {
+      "expected": {
+        "w": "完全",
+        "r": "かんぜん",
+        "en": [
+          "perfection",
+          "completeness"
+        ]
+      },
+      "examples": {
+        "完全を求めるとかえって失敗する。": {
+          "mn": "Төгс төгөлдөрийг хөөцөлдвөл харин ч бүтэлгүйтэж магадгүй.",
+          "en": "The best is often the enemy of the good."
+        },
+        "彼は完全だなんてとんでもない。": {
+          "mn": "Тэр төгс хүн огт биш.",
+          "en": "He is far from perfect."
+        }
+      }
+    },
+    "90ae05137c": {
+      "expected": {
+        "w": "感動",
+        "r": "かんどう",
+        "en": [
+          "being deeply moved",
+          "excitement",
+          "impression"
+        ]
+      },
+      "examples": {
+        "その小説を読んで深く感動した。": {
+          "mn": "Тэр романыг уншаад гүн сэтгэл хөдөлсөн.",
+          "en": "I was deeply moved by that novel."
+        },
+        "必ずその光景に感動するだろう。": {
+          "mn": "Тэр дүр зургийг хараад заавал сэтгэл хөдөлнө.",
+          "en": "You will never fail to be moved by the sight."
+        }
+      }
+    },
+    "13e4d7359c": {
+      "expected": {
+        "w": "監督",
+        "r": "かんとく",
+        "en": [
+          "supervision",
+          "control",
+          "superintendence"
+        ]
+      },
+      "examples": {
+        "その店は警察の監督のもとにある。": {
+          "mn": "Тэр дэлгүүр цагдаагийн хяналтад байдаг.",
+          "en": "The shop is kept under police supervision."
+        },
+        "彼女が監督を非難するのが聞かれた。": {
+          "mn": "Түүнийг менежерийг шүүмжилж байхыг сонсжээ.",
+          "en": "She was heard to criticize the manager."
+        }
+      }
+    },
+    "8a5bd5d9d1": {
+      "expected": {
+        "w": "管理",
+        "r": "かんり",
+        "en": [
+          "control",
+          "management (e.g. of a business)"
+        ]
+      },
+      "examples": {
+        "彼に財産管理を任せた。": {
+          "mn": "Би түүнд хөрөнгийн удирдлагыг даатгасан.",
+          "en": "I entrusted my property to him."
+        },
+        "その公園は市に管理されている。": {
+          "mn": "Тэр цэцэрлэгт хүрээлэнг хотын захиргаа хариуцдаг.",
+          "en": "The park is governed by the city."
+        }
+      }
+    },
+    "d3adca2034": {
+      "expected": {
+        "w": "完了",
+        "r": "かんりょう",
+        "en": [
+          "completion",
+          "conclusion"
+        ]
+      },
+      "examples": {
+        "君たちいつ準備は完了するつもりだい。": {
+          "mn": "Та нар бэлтгэлээ хэзээ дуусгах гэж байна?",
+          "en": "When will you complete the preparations?"
+        }
+      }
+    }
+  }
+}

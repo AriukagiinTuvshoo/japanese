@@ -1,0 +1,716 @@
+{
+  "provenance": {
+    "id": "mn-n3kanji-n2vocab-topics-continue-2026-10-09",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "Explicit topic assignments compared to exact retained Japanese headwords, readings and English. No catch-all; independent semantic review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/kanji/n3.json and public/data/vocab/n2.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "kanji": {
+    "成": {
+      "expected": {
+        "k": "成",
+        "on": [
+          "せい",
+          "じょう"
+        ],
+        "kun": [
+          "な.る",
+          "な.す",
+          "-な.す"
+        ],
+        "en": [
+          "Turn Into",
+          "Become",
+          "Get"
+        ]
+      },
+      "topics": [
+        "actions"
+      ]
+    },
+    "都": {
+      "expected": {
+        "k": "都",
+        "on": [
+          "と",
+          "つ"
+        ],
+        "kun": [
+          "みやこ"
+        ],
+        "en": [
+          "Metropolis",
+          "Capital",
+          "All"
+        ]
+      },
+      "topics": [
+        "places",
+        "quantity"
+      ]
+    },
+    "和": {
+      "expected": {
+        "k": "和",
+        "on": [
+          "わ",
+          "お",
+          "か"
+        ],
+        "kun": [
+          "やわ.らぐ",
+          "やわ.らげる",
+          "なご.む",
+          "なご.やか"
+        ],
+        "en": [
+          "Harmony",
+          "Japanese Style",
+          "Peace"
+        ]
+      },
+      "topics": [
+        "relationships",
+        "society"
+      ]
+    },
+    "平": {
+      "expected": {
+        "k": "平",
+        "on": [
+          "へい",
+          "びょう",
+          "ひょう"
+        ],
+        "kun": [
+          "たい.ら",
+          "-だいら",
+          "ひら",
+          "ひら-"
+        ],
+        "en": [
+          "Even",
+          "Flat",
+          "Peace"
+        ]
+      },
+      "topics": [
+        "descriptions",
+        "society"
+      ]
+    },
+    "加": {
+      "expected": {
+        "k": "加",
+        "on": [
+          "か"
+        ],
+        "kun": [
+          "くわ.える",
+          "くわ.わる"
+        ],
+        "en": [
+          "Add",
+          "Addition",
+          "Increase"
+        ]
+      },
+      "topics": [
+        "quantity",
+        "actions"
+      ]
+    },
+    "続": {
+      "expected": {
+        "k": "続",
+        "on": [
+          "ぞく",
+          "しょく",
+          "こう"
+        ],
+        "kun": [
+          "つづ.く",
+          "つづ.ける",
+          "つぐ.ない"
+        ],
+        "en": [
+          "Continue",
+          "Series",
+          "Sequel"
+        ]
+      },
+      "topics": [
+        "time",
+        "actions"
+      ]
+    },
+    "進": {
+      "expected": {
+        "k": "進",
+        "on": [
+          "しん"
+        ],
+        "kun": [
+          "すす.む",
+          "すす.める"
+        ],
+        "en": [
+          "Advance",
+          "Proceed",
+          "Progress"
+        ]
+      },
+      "topics": [
+        "actions"
+      ]
+    },
+    "記": {
+      "expected": {
+        "k": "記",
+        "on": [
+          "き"
+        ],
+        "kun": [
+          "しる.す"
+        ],
+        "en": [
+          "Scribe",
+          "Account",
+          "Narrative"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "支": {
+      "expected": {
+        "k": "支",
+        "on": [
+          "し"
+        ],
+        "kun": [
+          "ささ.える",
+          "つか.える",
+          "か.う"
+        ],
+        "en": [
+          "Branch",
+          "Support",
+          "Sustain"
+        ]
+      },
+      "topics": [
+        "relationships",
+        "actions"
+      ]
+    },
+    "点": {
+      "expected": {
+        "k": "点",
+        "on": [
+          "てん"
+        ],
+        "kun": [
+          "つ.ける",
+          "つ.く",
+          "た.てる",
+          "さ.す"
+        ],
+        "en": [
+          "Spot",
+          "Point",
+          "Mark"
+        ]
+      },
+      "topics": [
+        "quantity",
+        "places"
+      ]
+    },
+    "報": {
+      "expected": {
+        "k": "報",
+        "on": [
+          "ほう"
+        ],
+        "kun": [
+          "むく.いる"
+        ],
+        "en": [
+          "Report",
+          "News",
+          "Reward"
+        ]
+      },
+      "topics": [
+        "learning",
+        "work"
+      ]
+    },
+    "済": {
+      "expected": {
+        "k": "済",
+        "on": [
+          "さい",
+          "せい"
+        ],
+        "kun": [
+          "す.む",
+          "-ず.み",
+          "-ずみ",
+          "す.まない"
+        ],
+        "en": [
+          "Settle (debt, Etc.)",
+          "Relieve (burden)",
+          "Finish"
+        ]
+      },
+      "topics": [
+        "work",
+        "actions"
+      ]
+    },
+    "活": {
+      "expected": {
+        "k": "活",
+        "on": [
+          "かつ"
+        ],
+        "kun": [
+          "い.きる",
+          "い.かす",
+          "い.ける"
+        ],
+        "en": [
+          "Lively",
+          "Resuscitation",
+          "Being Helped"
+        ]
+      },
+      "topics": [
+        "body",
+        "descriptions"
+      ]
+    },
+    "原": {
+      "expected": {
+        "k": "原",
+        "on": [
+          "げん"
+        ],
+        "kun": [
+          "はら"
+        ],
+        "en": [
+          "Meadow",
+          "Original",
+          "Primitive"
+        ]
+      },
+      "topics": [
+        "nature",
+        "descriptions"
+      ]
+    },
+    "共": {
+      "expected": {
+        "k": "共",
+        "on": [
+          "きょう"
+        ],
+        "kun": [
+          "とも",
+          "とも.に",
+          "-ども"
+        ],
+        "en": [
+          "Together",
+          "Both",
+          "Neither"
+        ]
+      },
+      "topics": [
+        "relationships",
+        "quantity"
+      ]
+    },
+    "得": {
+      "expected": {
+        "k": "得",
+        "on": [
+          "とく"
+        ],
+        "kun": [
+          "え.る",
+          "う.る"
+        ],
+        "en": [
+          "Gain",
+          "Get",
+          "Find"
+        ]
+      },
+      "topics": [
+        "actions"
+      ]
+    },
+    "解": {
+      "expected": {
+        "k": "解",
+        "on": [
+          "かい",
+          "げ"
+        ],
+        "kun": [
+          "と.く",
+          "と.かす",
+          "と.ける",
+          "ほど.く"
+        ],
+        "en": [
+          "Unravel",
+          "Notes",
+          "Key"
+        ]
+      },
+      "topics": [
+        "learning",
+        "actions"
+      ]
+    },
+    "交": {
+      "expected": {
+        "k": "交",
+        "on": [
+          "こう"
+        ],
+        "kun": [
+          "まじ.わる",
+          "まじ.える",
+          "ま.じる",
+          "まじ.る"
+        ],
+        "en": [
+          "Mingle",
+          "Mixing",
+          "Association"
+        ]
+      },
+      "topics": [
+        "relationships",
+        "actions"
+      ]
+    },
+    "資": {
+      "expected": {
+        "k": "資",
+        "on": [
+          "し"
+        ],
+        "kun": [],
+        "en": [
+          "Assets",
+          "Resources",
+          "Capital"
+        ]
+      },
+      "topics": [
+        "work"
+      ]
+    },
+    "予": {
+      "expected": {
+        "k": "予",
+        "on": [
+          "よ",
+          "しゃ"
+        ],
+        "kun": [
+          "あらかじ.め"
+        ],
+        "en": [
+          "Beforehand",
+          "Previous",
+          "Myself"
+        ]
+      },
+      "topics": [
+        "time",
+        "people"
+      ]
+    }
+  },
+  "vocab": {
+    "79169045a2": {
+      "expected": {
+        "w": "アイデア",
+        "r": "アイデア",
+        "en": [
+          "idea"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "f4f844d9b9": {
+      "expected": {
+        "w": "アクセント",
+        "r": "アクセント",
+        "en": [
+          "accent"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "817ab81f5e": {
+      "expected": {
+        "w": "明け方",
+        "r": "あけがた",
+        "en": [
+          "dawn"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "c6ff7af051": {
+      "expected": {
+        "w": "足跡",
+        "r": "あしあと",
+        "en": [
+          "footprints"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "d3825b176d": {
+      "expected": {
+        "w": "宛名",
+        "r": "あてな",
+        "en": [
+          "address",
+          "direction"
+        ]
+      },
+      "topics": [
+        "places",
+        "learning"
+      ]
+    },
+    "cab6203141": {
+      "expected": {
+        "w": "脂",
+        "r": "あぶら",
+        "en": [
+          "fat",
+          "tallow",
+          "lard"
+        ]
+      },
+      "topics": [
+        "food",
+        "body"
+      ]
+    },
+    "3741d0a778": {
+      "expected": {
+        "w": "あらすじ",
+        "r": "あらすじ",
+        "en": [
+          "outline",
+          "summary"
+        ]
+      },
+      "topics": [
+        "learning",
+        "arts"
+      ]
+    },
+    "96370a1ce3": {
+      "expected": {
+        "w": "案外",
+        "r": "あんがい",
+        "en": [
+          "unexpectedly"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "02304543b5": {
+      "expected": {
+        "w": "アンテナ",
+        "r": "アンテナ",
+        "en": [
+          "antenna"
+        ]
+      },
+      "topics": [
+        "technology"
+      ]
+    },
+    "9711352afe": {
+      "expected": {
+        "w": "意義",
+        "r": "いぎ",
+        "en": [
+          "meaning",
+          "significance"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "363c73e228": {
+      "expected": {
+        "w": "幾分",
+        "r": "いくぶん",
+        "en": [
+          "somewhat"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "e73024b2eb": {
+      "expected": {
+        "w": "以後",
+        "r": "いご",
+        "en": [
+          "after this",
+          "from now on",
+          "hereafter"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "f485f00a3a": {
+      "expected": {
+        "w": "以降",
+        "r": "いこう",
+        "en": [
+          "on and after",
+          "hereafter",
+          "thereafter"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "99ff21adbb": {
+      "expected": {
+        "w": "一応",
+        "r": "いちおう",
+        "en": [
+          "once",
+          "tentatively",
+          "in outline"
+        ]
+      },
+      "topics": [
+        "time",
+        "learning"
+      ]
+    },
+    "28ba375980": {
+      "expected": {
+        "w": "一段と",
+        "r": "いちだんと",
+        "en": [
+          "greater",
+          "more",
+          "further"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "b1205d9b83": {
+      "expected": {
+        "w": "一斉",
+        "r": "いっせい",
+        "en": [
+          "simultaneous",
+          "all at once"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "2fac4509a1": {
+      "expected": {
+        "w": "緯度",
+        "r": "いど",
+        "en": [
+          "latitude (nav.)"
+        ]
+      },
+      "topics": [
+        "places",
+        "quantity"
+      ]
+    },
+    "8ca2ab5e1d": {
+      "expected": {
+        "w": "従姉妹",
+        "r": "いとこ",
+        "en": [
+          "cousin (female)"
+        ]
+      },
+      "topics": [
+        "people",
+        "relationships"
+      ]
+    },
+    "17c46940e9": {
+      "expected": {
+        "w": "いよいよ",
+        "r": "いよいよ",
+        "en": [
+          "more and more",
+          "all the more",
+          "increasingly"
+        ]
+      },
+      "topics": [
+        "quantity",
+        "time"
+      ]
+    },
+    "c1294618e7": {
+      "expected": {
+        "w": "入れ物",
+        "r": "いれもの",
+        "en": [
+          "container",
+          "case",
+          "receptacle"
+        ]
+      },
+      "topics": [
+        "daily"
+      ]
+    }
+  }
+}

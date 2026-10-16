@@ -1,0 +1,94 @@
+{
+  "provenance": {
+    "id": "mn-n2-grammar-examples-progress-3-oct9",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian compared with exact Japanese and retained English; stable record and headword/pattern guards; independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/grammar/n2.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "grammar": {
+    "ni-sakidatte": {
+      "expected": {
+        "p": "〜に先立って",
+        "en": "prior to; before"
+      },
+      "examples": {
+        "試合開始に先立ち、全員で黙とうをささげた。": {
+          "en": "Before the start of the match, everyone observed a moment of silence.",
+          "mn": "Тоглолт эхлэхээс өмнө бүгд дуугүй хүндэтгэл үзүүлсэн."
+        }
+      }
+    },
+    "ni-shiro-ni-seyo": {
+      "expected": {
+        "p": "〜にしろ / 〜にせよ",
+        "en": "even if; whether ... or ...; in any case"
+      },
+      "examples": {
+        "たとえ冗談にしろ、そんなことを言うべきではない。": {
+          "en": "Even if it was a joke, you shouldn't say something like that.",
+          "mn": "Тоглоом байсан ч тийм зүйл хэлж болохгүй."
+        },
+        "参加するにせよしないにせよ、今週中に返事をください。": {
+          "en": "Whether you take part or not, please reply by the end of this week.",
+          "mn": "Оролцох ч бай, үгүй ч бай энэ долоо хоногт хариу өгөөрэй."
+        },
+        "いずれにせよ、もう一度話し合う必要がある。": {
+          "en": "In any case, we need to talk it over again.",
+          "mn": "Ямар ч байсан дахин ярилцах хэрэгтэй."
+        }
+      }
+    },
+    "ni-sureba-ni-shitara": {
+      "expected": {
+        "p": "〜にすれば / 〜にしたら",
+        "en": "from the standpoint of; for (someone), (it would seem)"
+      },
+      "examples": {
+        "子どもにすれば、親の小言はうるさいだけなのだろう。": {
+          "en": "From a child's point of view, parents' nagging is probably just annoying.",
+          "mn": "Хүүхдийн хувьд эцэг эхийн үглэлт зүгээр л төвөгтэй санагддаг байх."
+        },
+        "毎日遅くまで残業させられる社員にしたら、たまったものではない。": {
+          "en": "For employees made to work late every day, it's unbearable.",
+          "mn": "Өдөр бүр орой болтол илүү цагаар ажиллуулдаг ажилтнуудад тэвчихийн аргагүй."
+        }
+      }
+    },
+    "ni-soui-nai": {
+      "expected": {
+        "p": "〜に相違ない",
+        "en": "without doubt; must be; surely"
+      },
+      "examples": {
+        "この筆跡は、父のものに相違ない。": {
+          "en": "This handwriting is without doubt my father's.",
+          "mn": "Энэ бичгийн хэв аавынх мөн нь гарцаагүй."
+        },
+        "彼の証言が事実なら、事件の背後には別の人物がいるに相違ない。": {
+          "en": "If his testimony is true, there must be someone else behind the incident.",
+          "mn": "Түүний мэдүүлэг үнэн бол хэргийн цаана өөр хүн байгаа нь гарцаагүй."
+        }
+      }
+    },
+    "ni-koshita-koto-wa-nai": {
+      "expected": {
+        "p": "〜に越したことはない",
+        "en": "it's best to; nothing is better than"
+      },
+      "examples": {
+        "どんなに健康でも、定期的に検診を受けるに越したことはない。": {
+          "en": "No matter how healthy you are, it's best to get regular checkups.",
+          "mn": "Хэчнээн эрүүл байсан ч тогтмол үзлэг хийлгэсэн нь дээр."
+        },
+        "旅行の荷物は、軽いに越したことはない。": {
+          "en": "When you travel, the lighter your luggage, the better.",
+          "mn": "Аяллын ачаа хөнгөн байх тусмаа сайн."
+        }
+      }
+    }
+  }
+}

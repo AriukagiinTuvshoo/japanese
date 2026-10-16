@@ -1,0 +1,157 @@
+{
+  "provenance": {
+    "id": "mn-n5-example-translation-batch-2026-10-16-1",
+    "createdAt": "2026-10-16",
+    "author": "Arena coding assistant",
+    "method": "AI-assisted, sentence-keyed Mongolian translations drafted from retained Japanese and English example pairs. Japanese and English source fields are preserved. Naturalness and semantic accuracy still require human review; reviewStatus: unreviewed.",
+    "source": "https://github.com/evanclan/OpenJLPT (retained Japanese/English examples; Mongolian translations added in this repository)",
+    "sourceSnapshot": "979a03679e6f4dcbb7f50fcb3abf8fb6dc194365",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "d9c88143a2": {
+      "examples": {
+        "シャワーにするわ。": "Шүршүүрт оръё."
+      },
+      "expected": {
+        "w": "シャワー",
+        "r": "シャワー",
+        "en": [
+          "shower"
+        ]
+      }
+    },
+    "db9f5d4422": {
+      "examples": {
+        "その会は十時に終わった。": "Тэр арга хэмжээ арван цагт дууссан.",
+        "日本に来てから十年になります。": "Японд ирснээс хойш арван жил болж байна."
+      },
+      "expected": {
+        "w": "十",
+        "r": "じゅう",
+        "en": [
+          "ten"
+        ]
+      }
+    },
+    "5bae559507": {
+      "examples": {
+        "それは授業の終わりだった。": "Тэр бол хичээлийн төгсгөл байлаа.",
+        "そんなに授業をさぼっちゃダメよ。": "Хичээлээ тэгж их тасалж болохгүй шүү."
+      },
+      "expected": {
+        "w": "授業",
+        "r": "じゅぎょう",
+        "en": [
+          "lesson",
+          "class work"
+        ]
+      }
+    },
+    "4daa103d7d": {
+      "examples": {
+        "宿題はもうやってしまいましたか。": "Гэрийн даалгавраа аль хэдийн хийж дуусгасан уу?",
+        "やるべき宿題がたくさんあります。": "Хийх ёстой гэрийн даалгавар их байна."
+      },
+      "expected": {
+        "w": "宿題",
+        "r": "しゅくだい",
+        "en": [
+          "homework"
+        ]
+      }
+    },
+    "1763fc412a": {
+      "examples": {
+        "あなたは上手にバスケットボールができますか。": "Та сагсан бөмбөгийг сайн тоглож чаддаг уу?",
+        "マイクは日本語を話すのが上手だ。": "Майк япон хэлээр сайн ярьдаг."
+      },
+      "expected": {
+        "w": "上手",
+        "r": "じょうず",
+        "en": [
+          "skillful"
+        ]
+      }
+    },
+    "50525927ee": {
+      "examples": {
+        "このロープはとてもじょうぶだ。": "Энэ олс маш бөх бат.",
+        "彼は丈夫だったそうです。": "Тэр бие сайтай байсан гэдэг."
+      },
+      "expected": {
+        "w": "丈夫",
+        "r": "じょうぶ",
+        "en": [
+          "strong",
+          "durable"
+        ]
+      }
+    },
+    "9476d7966d": {
+      "examples": {
+        "同社は醤油その他の食品を生産する。": "Тус компани шар буурцгийн сүмс болон бусад хүнсний бүтээгдэхүүн үйлдвэрлэдэг."
+      },
+      "expected": {
+        "w": "しょうゆ",
+        "r": "しょうゆ",
+        "en": [
+          "soy sauce"
+        ]
+      }
+    },
+    "dcc87a37fb": {
+      "examples": {
+        "食堂はセルフサービスでした。": "Хоолны газар өөртөө үйлчлэх хэлбэртэй байсан.",
+        "食堂は何時にあきますか。": "Хоолны газар хэдэн цагт нээгддэг вэ?"
+      },
+      "expected": {
+        "w": "食堂",
+        "r": "しょくどう",
+        "en": [
+          "dining hall"
+        ]
+      }
+    },
+    "1fcb2fece8": {
+      "examples": {
+        "ぼくは知らないし、気にもしない。": "Би мэдэхгүй, бас тоохгүй.",
+        "ブラウンさんを知らないのですか。": "Та Браун гуайг танихгүй юм уу?"
+      },
+      "expected": {
+        "w": "知る",
+        "r": "しる",
+        "en": [
+          "to know"
+        ]
+      }
+    },
+    "98eace7008": {
+      "examples": {
+        "黒に黒をたしても白にはならぬ。": "Хар дээр хар нэмлээ гээд цагаан болохгүй.",
+        "赤白まだらのタオルを一本ください。": "Улаан, цагаан алагласан нэг алчуур өгнө үү."
+      },
+      "expected": {
+        "w": "白",
+        "r": "しろ",
+        "en": [
+          "white"
+        ]
+      }
+    },
+    "8997f64f52": {
+      "examples": {
+        "白いベルトがついてるのがいいな。": "Цагаан бүстэй нь таалагдаж байна.",
+        "それはここからでは白く見える。": "Эндээс харахад тэр цагаан харагдаж байна."
+      },
+      "expected": {
+        "w": "白い",
+        "r": "しろい",
+        "en": [
+          "white"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,1083 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-steady-4-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses with Japanese spelling/reading and retained English cross-check; explicit semantic topic evidence. Independently unreviewed; unresolved source conflicts withheld.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "cfdafe64c4": {
+      "mn": [
+        "дайны ялагдал",
+        "дайнд ялагдах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "敗戦",
+        "r": "はいせん",
+        "en": [
+          "defeat",
+          "losing a war"
+        ]
+      }
+    },
+    "e52ae45f67": {
+      "mn": [
+        "нөөц хүч байрлуулах",
+        "хуваарилан байрлуулах"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "配置",
+        "r": "はいち",
+        "en": [
+          "arrangement (of resources)",
+          "disposition"
+        ]
+      }
+    },
+    "9a048b8df1": {
+      "mn": [
+        "тараах",
+        "түгээх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "配布",
+        "r": "はいふ",
+        "en": [
+          "distribution"
+        ]
+      }
+    },
+    "ec7bd683ba": {
+      "mn": [
+        "хуваарилалт",
+        "ногдох хэсэг"
+      ],
+      "topics": [
+        "quantity",
+        "work"
+      ],
+      "expected": {
+        "w": "配分",
+        "r": "はいぶん",
+        "en": [
+          "distribution",
+          "allotment"
+        ]
+      }
+    },
+    "672ae372a7": {
+      "mn": [
+        "анхаарч үзэх",
+        "санаа тавих",
+        "урьдчилан бодолцох"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "配慮",
+        "r": "はいりょ",
+        "en": [
+          "consideration",
+          "concern",
+          "forethought"
+        ]
+      }
+    },
+    "1819ab5ac3": {
+      "mn": [
+        "дараалуулан байрлуулах",
+        "массив (програмчлалд)"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "配列",
+        "r": "はいれつ",
+        "en": [
+          "arrangement",
+          "array (programming)"
+        ]
+      }
+    },
+    "a15b42b14f": {
+      "mn": [
+        "гялалзах",
+        "үзэмжтэй харагдах",
+        "гоё харагдах"
+      ],
+      "topics": [
+        "descriptions",
+        "actions"
+      ],
+      "expected": {
+        "w": "映える",
+        "r": "はえる",
+        "en": [
+          "to shine",
+          "to look attractive",
+          "to look pretty"
+        ]
+      }
+    },
+    "373d4785f7": {
+      "mn": [
+        "эвдрэл",
+        "сүйтгэл"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "破壊",
+        "r": "はかい",
+        "en": [
+          "destruction"
+        ]
+      }
+    },
+    "0d807d23a0": {
+      "mn": [
+        "ажил урагшлах",
+        "ахиц гарах",
+        "дэвших"
+      ],
+      "topics": [
+        "work",
+        "actions"
+      ],
+      "expected": {
+        "w": "捗る",
+        "r": "はかどる",
+        "en": [
+          "to make progress",
+          "to move right ahead (with the work)",
+          "to advance"
+        ]
+      }
+    },
+    "59c95b5d68": {
+      "mn": [
+        "зуурдын",
+        "түрхэн зуурын",
+        "богино настай"
+      ],
+      "topics": [
+        "time",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "はかない",
+        "r": "はかない",
+        "en": [
+          "fleeting",
+          "transient",
+          "short-lived"
+        ]
+      }
+    },
+    "58a5941703": {
+      "mn": [
+        "утгагүй",
+        "тэнэг гэмээр"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "馬鹿馬鹿しい",
+        "r": "ばかばかしい",
+        "en": [
+          "stupid"
+        ]
+      }
+    },
+    "396285155e": {
+      "mn": [
+        "санал зөвлөгөө авах",
+        "зөвлөлдөх"
+      ],
+      "topics": [
+        "work",
+        "actions"
+      ],
+      "expected": {
+        "w": "諮る",
+        "r": "はかる",
+        "en": [
+          "to consult with",
+          "to confer"
+        ]
+      }
+    },
+    "a8376ded3d": {
+      "mn": [
+        "сэдэх",
+        "оролдох",
+        "төлөвлөх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "図る",
+        "r": "はかる",
+        "en": [
+          "to plot",
+          "to attempt",
+          "to plan"
+        ]
+      }
+    },
+    "fd8bebdc50": {
+      "mn": [
+        "цуцлах",
+        "хүчингүй болгох",
+        "гэрээ зөрчин цуцлах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "破棄",
+        "r": "はき",
+        "en": [
+          "revocation",
+          "annulment",
+          "breaking (e.g. treaty)"
+        ]
+      }
+    },
+    "ccd39dd447": {
+      "mn": [
+        "хоноглосон шөнийн тоог илэрхийлэх дагавар"
+      ],
+      "topics": [
+        "quantity",
+        "time",
+        "places"
+      ],
+      "expected": {
+        "w": "泊",
+        "r": "はく",
+        "en": [
+          "counter for nights of a stay"
+        ]
+      }
+    },
+    "3f2e377124": {
+      "mn": [
+        "хуулж авах",
+        "хальслах",
+        "урж хуулан авах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "剥ぐ",
+        "r": "はぐ",
+        "en": [
+          "to tear off",
+          "to peel off",
+          "to rip off"
+        ]
+      }
+    },
+    "d5abf5baa9": {
+      "mn": [
+        "хавчлага",
+        "хавчин гадуурхах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "迫害",
+        "r": "はくがい",
+        "en": [
+          "persecution"
+        ]
+      }
+    },
+    "8996248374": {
+      "mn": [
+        "сул дорой байдал",
+        "сул",
+        "хүч муутай"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "薄弱",
+        "r": "はくじゃく",
+        "en": [
+          "feebleness",
+          "weakness",
+          "weak"
+        ]
+      }
+    },
+    "10bd68b7e8": {
+      "mn": [
+        "үнэнээ хүлээх",
+        "хэргээ хүлээх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "白状",
+        "r": "はくじょう",
+        "en": [
+          "confession"
+        ]
+      }
+    },
+    "988a31e98d": {
+      "mn": [
+        "тодорхойгүй",
+        "бүдэг",
+        "хоёрдмол"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "漠然",
+        "r": "ばくぜん",
+        "en": [
+          "obscure",
+          "vague",
+          "equivocal"
+        ]
+      }
+    },
+    "5f88d07bc6": {
+      "mn": [
+        "бөмбөг",
+        "тэсрэх бөмбөг"
+      ],
+      "topics": [
+        "society",
+        "technology"
+      ],
+      "expected": {
+        "w": "爆弾",
+        "r": "ばくだん",
+        "en": [
+          "bomb"
+        ]
+      }
+    },
+    "79dbad028d": {
+      "mn": [
+        "тэсэлгээ",
+        "дэлбэрэлт",
+        "дэлбэлж нураах"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "爆破",
+        "r": "ばくは",
+        "en": [
+          "blast",
+          "explosion",
+          "blow up"
+        ]
+      }
+    },
+    "bb5ca4e9bd": {
+      "mn": [
+        "илчлэх",
+        "нууцыг задлах",
+        "ил болгох"
+      ],
+      "topics": [
+        "learning",
+        "society"
+      ],
+      "expected": {
+        "w": "暴露",
+        "r": "ばくろ",
+        "en": [
+          "disclosure",
+          "exposure",
+          "revelation"
+        ]
+      }
+    },
+    "7ea060b767": {
+      "mn": [
+        "урамшуулах",
+        "зоригжуулах",
+        "дуугаа чангаруулах"
+      ],
+      "topics": [
+        "feelings",
+        "actions"
+      ],
+      "expected": {
+        "w": "励ます",
+        "r": "はげます",
+        "en": [
+          "to encourage",
+          "to cheer",
+          "to raise (the voice)"
+        ]
+      }
+    },
+    "2ea4ecdaab": {
+      "mn": [
+        "шаргуу зүтгэх",
+        "өөрийгөө дайчлах",
+        "хичээх"
+      ],
+      "topics": [
+        "work",
+        "actions"
+      ],
+      "expected": {
+        "w": "励む",
+        "r": "はげむ",
+        "en": [
+          "to be zealous",
+          "to brace oneself",
+          "to endeavour"
+        ]
+      }
+    },
+    "1b0c715111": {
+      "mn": [
+        "хуурах",
+        "элэгдэж арилах",
+        "өнгө гандах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "剥げる",
+        "r": "はげる",
+        "en": [
+          "to come off",
+          "to be worn off",
+          "to fade"
+        ]
+      }
+    },
+    "c59d6e396d": {
+      "mn": [
+        "дүрээ хувирган үзэгдэх",
+        "өөр дүрд хувилах",
+        "муудаж өөрчлөгдөх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "化ける",
+        "r": "ばける",
+        "en": [
+          "to appear in disguise",
+          "to take the form of",
+          "to change for the worse"
+        ]
+      }
+    },
+    "8cd57dd5b8": {
+      "mn": [
+        "илгээх",
+        "томилон явуулах"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "派遣",
+        "r": "はけん",
+        "en": [
+          "dispatch",
+          "send"
+        ]
+      }
+    },
+    "9eb0cbae51": {
+      "mn": [
+        "ичгүүр",
+        "ичих сэтгэл"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "恥",
+        "r": "はじ",
+        "en": [
+          "shame",
+          "embarrassment"
+        ]
+      }
+    },
+    "08fac022a1": {
+      "mn": [
+        "хуруугаар няслах",
+        "няслах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "弾く",
+        "r": "はじく",
+        "en": [
+          "to flip",
+          "to snap"
+        ]
+      }
+    },
+    "47d9978eab": {
+      "mn": [
+        "эхлэл",
+        "эхлэх үе",
+        "үүсэл"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "始め",
+        "r": "はじめ",
+        "en": [
+          "beginning",
+          "start",
+          "origin"
+        ]
+      }
+    },
+    "58733f2d10": {
+      "mn": [
+        "унтлагын хувцас"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "パジャマ",
+        "r": "パジャマ",
+        "en": [
+          "pajamas",
+          "pyjamas"
+        ]
+      }
+    },
+    "fd0167bb1a": {
+      "mn": [
+        "багана",
+        "шон"
+      ],
+      "topics": [
+        "daily",
+        "technology"
+      ],
+      "expected": {
+        "w": "柱",
+        "r": "はしら",
+        "en": [
+          "pillar",
+          "post"
+        ]
+      }
+    },
+    "29adcf634d": {
+      "mn": [
+        "ичингүйрэх",
+        "ичимхий байх",
+        "ичээд улайх"
+      ],
+      "topics": [
+        "feelings",
+        "actions"
+      ],
+      "expected": {
+        "w": "恥じらう",
+        "r": "はじらう",
+        "en": [
+          "to feel shy",
+          "to be bashful",
+          "to blush"
+        ]
+      }
+    },
+    "9b14b42627": {
+      "mn": [
+        "ичих",
+        "ичгүүр мэдрэх"
+      ],
+      "topics": [
+        "feelings",
+        "actions"
+      ],
+      "expected": {
+        "w": "恥じる",
+        "r": "はじる",
+        "en": [
+          "to feel ashamed"
+        ]
+      }
+    },
+    "e6a2f28faa": {
+      "mn": [
+        "гүүр тавих",
+        "зуучлах"
+      ],
+      "topics": [
+        "places",
+        "relationships"
+      ],
+      "expected": {
+        "w": "橋渡し",
+        "r": "はしわたし",
+        "en": [
+          "bridge building",
+          "mediation"
+        ]
+      }
+    },
+    "27f69b4df3": {
+      "mn": [
+        "бадамлянхуа"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "蓮",
+        "r": "はす",
+        "en": [
+          "lotus"
+        ]
+      }
+    },
+    "aec7b25baf": {
+      "mn": [
+        "үсрэх",
+        "ойх",
+        "бөмбөг мэт дэгдэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "弾む",
+        "r": "はずむ",
+        "en": [
+          "to spring",
+          "to bound",
+          "to bounce"
+        ]
+      }
+    },
+    "39752dcb45": {
+      "mn": [
+        "эвдрэл",
+        "гэмтэл"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "破損",
+        "r": "はそん",
+        "en": [
+          "damage"
+        ]
+      }
+    },
+    "31ce220a2e": {
+      "mn": [
+        "нэхмэлийн суурь машин"
+      ],
+      "topics": [
+        "technology",
+        "work"
+      ],
+      "expected": {
+        "w": "機",
+        "r": "はた",
+        "en": [
+          "loom"
+        ]
+      }
+    },
+    "a4108bfef5": {
+      "mn": [
+        "хөл нүцгэн"
+      ],
+      "topics": [
+        "body",
+        "daily"
+      ],
+      "expected": {
+        "w": "裸足",
+        "r": "はだし",
+        "en": [
+          "barefoot"
+        ]
+      }
+    },
+    "2177b63eb2": {
+      "mn": [
+        "биелүүлэх",
+        "гүйцээх",
+        "гүйцэтгэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "果たす",
+        "r": "はたす",
+        "en": [
+          "to accomplish",
+          "to fulfill",
+          "to carry out"
+        ]
+      }
+    },
+    "5fa4cbe539": {
+      "mn": [
+        "тэнгэрийн гэсгээл",
+        "хараал",
+        "үйлийн үрийн шийтгэл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "罰",
+        "r": "ばち",
+        "en": [
+          "(divine) punishment",
+          "curse",
+          "retribution"
+        ]
+      }
+    },
+    "5c73b68e41": {
+      "mn": [
+        "зөгийн бал"
+      ],
+      "topics": [
+        "food"
+      ],
+      "expected": {
+        "w": "蜂蜜",
+        "r": "はちみつ",
+        "en": [
+          "honey"
+        ]
+      }
+    },
+    "548a31eef6": {
+      "mn": [
+        "пачинко буюу төмөр бөмбөгөөр тоглодог япон тоглоом"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "パチンコ",
+        "r": "パチンコ",
+        "en": [
+          "pachinko (Japanese pinball)"
+        ]
+      }
+    },
+    "8517e2459f": {
+      "mn": [
+        "анхны",
+        "шинэ"
+      ],
+      "topics": [
+        "time",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "初",
+        "r": "はつ",
+        "en": [
+          "first",
+          "new"
+        ]
+      }
+    },
+    "9298e216ea": {
+      "mn": [
+        "хөдлөх",
+        "эхлэх",
+        "буун дуу тоолох дагавар"
+      ],
+      "topics": [
+        "places",
+        "time",
+        "quantity"
+      ],
+      "expected": {
+        "w": "発",
+        "r": "はつ",
+        "en": [
+          "departure",
+          "beginning",
+          "counter for gunshots"
+        ]
+      }
+    },
+    "e685744c25": {
+      "mn": [
+        "биеийн өсөлт",
+        "бойжилт"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "発育",
+        "r": "はついく",
+        "en": [
+          "(physical) growth",
+          "development"
+        ]
+      }
+    },
+    "7444ba3ed5": {
+      "mn": [
+        "соёололт",
+        "нахиа гарах"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "発芽",
+        "r": "はつが",
+        "en": [
+          "burgeoning"
+        ]
+      }
+    },
+    "ef477d1ab9": {
+      "mn": [
+        "малталт",
+        "ухаж гаргах",
+        "булшнаас гаргах"
+      ],
+      "topics": [
+        "work",
+        "society"
+      ],
+      "expected": {
+        "w": "発掘",
+        "r": "はっくつ",
+        "en": [
+          "excavation",
+          "exhumation"
+        ]
+      }
+    },
+    "65fb50ee7c": {
+      "mn": [
+        "үг хэлэх",
+        "хэлсэн үг",
+        "санал"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "発言",
+        "r": "はつげん",
+        "en": [
+          "utterance",
+          "speech",
+          "proposal"
+        ]
+      }
+    },
+    "bbc31b510f": {
+      "mn": [
+        "энгэрийн тэмдэг",
+        "тэмдэг"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "バッジ",
+        "r": "バッジ",
+        "en": [
+          "badge"
+        ]
+      }
+    },
+    "f50d895a2a": {
+      "mn": [
+        "дэгдэлт",
+        "үүсэх",
+        "тохиолдох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "発生",
+        "r": "はっせい",
+        "en": [
+          "outbreak",
+          "spring forth",
+          "occurrence"
+        ]
+      }
+    },
+    "3089867b81": {
+      "mn": [
+        "бейсболын цохиур",
+        "хүнсний зүйл хийх хавтгай тавиур сав"
+      ],
+      "topics": [
+        "arts",
+        "food"
+      ],
+      "expected": {
+        "w": "バット",
+        "r": "バット",
+        "en": [
+          "bat",
+          "vat"
+        ]
+      }
+    },
+    "52a27aec4f": {
+      "mn": [
+        "өвчин эхлэх",
+        "өвчин илрэх"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "発病",
+        "r": "はつびょう",
+        "en": [
+          "attack (disease)"
+        ]
+      }
+    },
+    "45f5de7d2d": {
+      "mn": [
+        "анх удаа сонссон зүйл"
+      ],
+      "topics": [
+        "learning",
+        "time"
+      ],
+      "expected": {
+        "w": "初耳",
+        "r": "はつみみ",
+        "en": [
+          "something heard for the first time"
+        ]
+      }
+    },
+    "750951d516": {
+      "mn": [
+        "төгсгөл",
+        "зах хязгаар",
+        "хязгаар"
+      ],
+      "topics": [
+        "places",
+        "quantity"
+      ],
+      "expected": {
+        "w": "果て",
+        "r": "はて",
+        "en": [
+          "the end",
+          "the extremity",
+          "the limit(s)"
+        ]
+      }
+    },
+    "3573716a63": {
+      "mn": [
+        "дуусах",
+        "төгсөх",
+        "туйлдах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "果てる",
+        "r": "はてる",
+        "en": [
+          "to end",
+          "to be finished",
+          "to be exhausted"
+        ]
+      }
+    },
+    "b493e331ab": {
+      "mn": [
+        "туйлдаж ядрах",
+        "сульдах"
+      ],
+      "topics": [
+        "body",
+        "actions"
+      ],
+      "expected": {
+        "w": "ばてる",
+        "r": "ばてる",
+        "en": [
+          "to be exhausted",
+          "to be worn out"
+        ]
+      }
+    },
+    "3122744f68": {
+      "mn": [
+        "цагдаагийн эргүүлийн машин"
+      ],
+      "topics": [
+        "society",
+        "places"
+      ],
+      "expected": {
+        "w": "パトカー",
+        "r": "パトカー",
+        "en": [
+          "patrol car"
+        ]
+      }
+    }
+  }
+}

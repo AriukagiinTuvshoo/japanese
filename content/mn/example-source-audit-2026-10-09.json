@@ -1,0 +1,86 @@
+{
+  "createdAt": "2026-10-09",
+  "author": "Arena coding assistant",
+  "method": "Internal sentence comparison only; not authoritative dictionary verification.",
+  "records": [
+    {
+      "id": "956a0a55ec",
+      "expected": {
+        "w": "あぶる",
+        "r": "あぶる",
+        "en": [
+          "to scorch"
+        ]
+      },
+      "ja": "それは油であぶられた。",
+      "en": "That was cooked in oil.",
+      "level": "n2",
+      "reason": "Japanese あぶる roasting/heating versus English cooked in oil needs verification.",
+      "decision": "withheld; original Japanese and English retained"
+    },
+    {
+      "id": "9b0fdc64d8",
+      "expected": {
+        "w": "安易",
+        "r": "あんい",
+        "en": [
+          "easy-going"
+        ]
+      },
+      "ja": "彼は彼女を安易な餌で誘き寄せた。",
+      "en": "He lured her with trinkets.",
+      "level": "n2",
+      "reason": "Japanese easy bait versus English trinkets is not an exact meaning match.",
+      "decision": "withheld; original Japanese and English retained"
+    },
+    {
+      "id": "d56c7f55f8",
+      "expected": {
+        "w": "一定",
+        "r": "いってい",
+        "en": [
+          "fixed",
+          "settled",
+          "definite"
+        ]
+      },
+      "ja": "金利自由化の方向性を一定するのはむずかしいことです。",
+      "en": "It is difficult to peg the direction of interest deregulation.",
+      "level": "n2",
+      "reason": "Unnatural Japanese wording and retained English peg direction need sentence-source review.",
+      "decision": "withheld; original Japanese and English retained"
+    },
+    {
+      "id": "a4847f22e0",
+      "expected": {
+        "w": "承る",
+        "r": "うけたまわる",
+        "en": [
+          "(humble) to hear",
+          "to be told",
+          "to know"
+        ]
+      },
+      "ja": "ご用は承っておりますか。",
+      "en": "Is anybody waiting on you?",
+      "level": "n2",
+      "reason": "Honorific receive/inquire versus English waiting on needs context review.",
+      "decision": "withheld; original Japanese and English retained"
+    },
+    {
+      "id": "503bf9a13e",
+      "expected": {
+        "w": "受取",
+        "r": "うけとり",
+        "en": [
+          "receipt"
+        ]
+      },
+      "ja": "招待状お受け取りをお知らせください。",
+      "en": "Please respond at your earliest convenience.",
+      "level": "n2",
+      "reason": "Japanese acknowledge receiving invitation versus English respond at earliest convenience is not equivalent.",
+      "decision": "withheld; original Japanese and English retained"
+    }
+  ]
+}

@@ -84,6 +84,8 @@ export default function Placement() {
 
   const finish = () => {
     const detail: Record<string, Level> = {};
+    const sub: Record<string, "beginner" | "mid" | "advanced"> = {};
+    const acc: Record<string, number> = {};
     for (const [kind, v] of Object.entries(byKind)) {
       let best: Level = "N5";
       for (const l of LEVELS) {
@@ -91,6 +93,11 @@ export default function Placement() {
         if (r && r.c / r.t >= 0.6) best = l;
       }
       detail[kind] = best;
+      const total = Object.values(v.perLevel).reduce((a, r) => a + r.t, 0);
+      const corr = Object.values(v.perLevel).reduce((a, r) => a + r.c, 0);
+      const ratio = total ? corr / total : 0;
+      acc[kind] = Math.round(ratio * 100) / 100;
+      sub[kind] = ratio >= 0.7 ? "advanced" : ratio >= 0.4 ? "mid" : "beginner";
     }
     const scores = Object.values(byKind).map((v) => {
       let best = 0;
@@ -102,7 +109,12 @@ export default function Placement() {
     });
     const avg = scores.reduce((a, b) => a + b, 0) / Math.max(1, scores.length);
     const overall = avg < 1 ? "zero" : LEVELS[Math.max(0, Math.min(4, Math.round(avg) - 1))];
-    actions.setPlacement(overall, detail);
+    const overallRatio = qs.length
+      ? qs.reduce((a, q, i) => a + (answers[i] === q.answer ? 1 : 0), 0) / qs.length
+      : 0;
+    sub.overall = overallRatio >= 0.7 ? "advanced" : overallRatio >= 0.4 ? "mid" : "beginner";
+    acc.overall = Math.round(overallRatio * 100) / 100;
+    actions.setPlacement(overall, detail, { sub, acc });
     setStage("result");
   };
 
@@ -138,6 +150,15 @@ export default function Placement() {
                   ? t.zeroAdvice
                   : t.levelAdvice(LEVEL_LABEL[language][overall as Level])}
               </p>
+              {doc.placement?.sub?.overall && (
+                <p className="mt-2 flex flex-wrap items-center gap-2">
+                  <Chip tone="murasaki">
+                    {t.placementSubTitle}:{" "}
+                    {doc.placement.sub.overall === "advanced" ? t.subAdvanced : doc.placement.sub.overall === "mid" ? t.subMid : t.subBeginner}
+                  </Chip>
+                  <span className="text-[11.5px] text-sumi-500">{t.placementSubNote}</span>
+                </p>
+              )}
             </div>
           </div>
 
@@ -155,9 +176,17 @@ export default function Placement() {
                   <p className="mt-1.5 flex items-center gap-2">
                     <span className="font-mono text-[1.5rem] font-extrabold leading-none">{l ?? "—"}</span>
                     {l && <LevelBadge level={l} size="sm" />}
+                    {doc.placement?.sub?.[k] && (
+                      <Chip tone="ai">
+                        {doc.placement.sub[k] === "advanced" ? t.subAdvanced : doc.placement.sub[k] === "mid" ? t.subMid : t.subBeginner}
+                      </Chip>
+                    )}
                   </p>
                   <p className="mt-2 font-mono text-[11.5px] tabnum text-sumi-500">{t.correct2N(corr, total)}</p>
                   <Bar value={corr / Math.max(1, total)} tone="ai" className="mt-2" height={5} />
+                  {doc.placement?.acc?.[k] !== undefined && (
+                    <p className="mt-1.5 text-[11px] text-sumi-400">{Math.round(doc.placement.acc[k] * 100)}%</p>
+                  )}
                 </div>
               );
             })}
@@ -180,6 +209,21 @@ export default function Placement() {
                 );
               })}
             </ul>
+          </div>
+
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            <div className="rounded-2xl border border-sumi-900/10 bg-white/60 p-4">
+              <p className="text-[13px] font-extrabold">{t.scoreExplTitle}</p>
+              <p className="mt-1.5 text-[12.5px] leading-relaxed text-sumi-600">{t.scoreExplBody}</p>
+            </div>
+            <div className="rounded-2xl border border-sumi-900/10 bg-white/60 p-4">
+              <p className="text-[13px] font-extrabold">{t.coverageTitle}</p>
+              <p className="mt-1.5 text-[12.5px] leading-relaxed text-sumi-600">{t.coverageBody}</p>
+            </div>
+          </div>
+          <div className="mt-3 rounded-2xl border border-kin-100 bg-kin-50/60 p-4">
+            <p className="text-[13px] font-extrabold text-kin-700">{t.nextSteps}</p>
+            <p className="mt-1.5 text-[12.5px] leading-relaxed text-kin-700">{t.retestHint}</p>
           </div>
 
           <div className="mt-5 flex flex-wrap gap-2">

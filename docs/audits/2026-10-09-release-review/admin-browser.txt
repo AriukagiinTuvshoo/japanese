@@ -1,0 +1,8 @@
+
+> nihongo-dojo@3.0.0 test:admin-browser
+> ADMIN_TEST_START_SERVER=1 node scripts/test-admin-browser.mjs
+
+About mn: all 5 source descriptions and pinned dictionary attribution passed (real static metadata).
+Admin mn: overview/queue loading/error/retry/empty/populated, import validation/error/busy/success passed (mock API).
+About en: all 5 source descriptions and pinned dictionary attribution passed (real static metadata).
+Admin en: overview/queue loading/error/retry/empty/populated, import validation/error/busy/success passed (mock API).

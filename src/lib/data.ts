@@ -6,7 +6,7 @@
  * Ижил хүсэлтийг давхар илгээхгүйн тулд promise-уудыг кэшлэнэ.
  */
 import type {
-  DataMeta, Grammar, Kanji, Level, ListeningLesson, ReadingPassage, SearchIndex, StrokeMap, Vocab, CurriculumPlan,
+  DataMeta, Grammar, Kanji, Level, ListeningLesson, ReadingPassage, SearchIndex, StrokeMap, Vocab, CurriculumPlan, TranslationProvenanceRecord,
 } from "./types";
 import { LEVELS } from "./types";
 
@@ -38,6 +38,7 @@ export const loadKanji = (lvl: Level) => get<Kanji[]>(`/data/kanji/${slug(lvl)}.
 export const loadGrammar = (lvl: Level) => get<Grammar[]>(`/data/grammar/${slug(lvl)}.json`);
 export const loadStrokes = (lvl: Level) => get<StrokeMap>(`/data/strokes/${slug(lvl)}.json`);
 export const loadSearchIndex = () => get<SearchIndex>("/data/index/search.json");
+export const loadTranslationProvenance = () => get<TranslationProvenanceRecord[]>("/data/index/translations.json");
 
 /** Бүх түвшний үгийг нэгтгэнэ (SRS, хайлт, курс). */
 export async function loadAllVocab(): Promise<Vocab[]> {

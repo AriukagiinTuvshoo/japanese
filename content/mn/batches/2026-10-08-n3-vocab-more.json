@@ -1,0 +1,1090 @@
+{
+  "provenance": {
+    "id": "mn-n3-vocab-more-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit topics cross-checked individually against retained Japanese headwords/readings and English glosses, including alternate dictionary readings. Independently unreviewed.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n3.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j1277760": {
+      "mn": [
+        "тохиромжтой",
+        "ашигтай",
+        "таатай"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "好都合",
+        "r": "こうつごう",
+        "en": [
+          "convenient",
+          "favorable",
+          "favourable"
+        ]
+      }
+    },
+    "j1357340": {
+      "mn": [
+        "колоничлох"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "植民",
+        "r": "しょくみん",
+        "en": [
+          "colonization",
+          "colonisation"
+        ]
+      }
+    },
+    "j1561790": {
+      "mn": [
+        "маргааны өнгө аяс",
+        "гол санаа",
+        "чиг хандлага"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "論調",
+        "r": "ろんちょう",
+        "en": [
+          "tone (of argument)",
+          "tenor",
+          "drift"
+        ]
+      }
+    },
+    "j1750600": {
+      "mn": [
+        "уур амьсгал",
+        "сэтгэлийн өнгө",
+        "мэдрэмж"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "情調",
+        "r": "じょうちょう",
+        "en": [
+          "atmosphere",
+          "mood",
+          "sentiment"
+        ]
+      }
+    },
+    "j1489360": {
+      "mn": [
+        "илэрхийлэх",
+        "харуулах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "表する",
+        "r": "ひょうする",
+        "en": [
+          "to express",
+          "to show"
+        ]
+      }
+    },
+    "j1444720": {
+      "mn": [
+        "Америк руу явах"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "渡米",
+        "r": "とべい",
+        "en": [
+          "going to the United States"
+        ]
+      }
+    },
+    "j2836568": {
+      "mn": [
+        "тооллын суурь",
+        "тооллын систем",
+        "тоолох тогтолцоо"
+      ],
+      "topics": [
+        "quantity",
+        "learning"
+      ],
+      "expected": {
+        "w": "進法",
+        "r": "しんほう",
+        "en": [
+          "base- (e.g. base-2)",
+          "numeral system",
+          "counting system"
+        ]
+      }
+    },
+    "j1285250": {
+      "mn": [
+        "хамтарсан удирдлага",
+        "хамтарсан сан",
+        "нийлмэл дэлбээтэй байх"
+      ],
+      "topics": [
+        "work",
+        "nature"
+      ],
+      "expected": {
+        "w": "合弁",
+        "r": "ごうべん",
+        "en": [
+          "joint management",
+          "pool",
+          "gamopetalous"
+        ]
+      }
+    },
+    "j1510900": {
+      "mn": [
+        "амьтан сүнс дүрээ хувиргах",
+        "ад чөтгөр",
+        "сүнс"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "変化",
+        "r": "へんげ",
+        "en": [
+          "shapeshifting (of an animal or spirit)",
+          "goblin",
+          "ghost"
+        ]
+      }
+    },
+    "j1706420": {
+      "mn": [
+        "практик",
+        "бодитой",
+        "ажил хэрэгч"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "実際的",
+        "r": "じっさいてき",
+        "en": [
+          "practical",
+          "realistic",
+          "pragmatic"
+        ]
+      }
+    },
+    "j1627960": {
+      "mn": [
+        "зардал",
+        "зарлага"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "要り",
+        "r": "いり",
+        "en": [
+          "expense",
+          "expenses"
+        ]
+      }
+    },
+    "j1914670": {
+      "mn": [
+        "товчхондоо",
+        "гол нь",
+        "хамгийн чухал нь"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "要は",
+        "r": "ようは",
+        "en": [
+          "in short",
+          "the point is",
+          "the important thing is"
+        ]
+      }
+    },
+    "j2410120": {
+      "mn": [
+        "хэрэгтэй байх",
+        "шаардах",
+        "хугацаа зарцуулах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "要す",
+        "r": "ようす",
+        "en": [
+          "to need",
+          "to require",
+          "to take"
+        ]
+      }
+    },
+    "j1254330": {
+      "mn": [
+        "аваргын тоглолт",
+        "шигшээ",
+        "шийдвэрлэх шат"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "決勝戦",
+        "r": "けっしょうせん",
+        "en": [
+          "championship game",
+          "finals (of a tournament)",
+          "deciding round"
+        ]
+      }
+    },
+    "j1308660": {
+      "mn": [
+        "зах зээлд худалдах",
+        "худалдаанд гаргах",
+        "арилжааны зориулалттай"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "市販",
+        "r": "しはん",
+        "en": [
+          "selling on the market (in the marketplace, in stores, etc.)",
+          "making something commercially available",
+          "commercial (e.g. software)"
+        ]
+      }
+    },
+    "j1321120": {
+      "mn": [
+        "үнэндээ",
+        "бодитоор",
+        "үнэхээр"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "実際に",
+        "r": "じっさいに",
+        "en": [
+          "actually",
+          "really",
+          "truly"
+        ]
+      }
+    },
+    "j1740920": {
+      "mn": [
+        "төсвийн бодлого"
+      ],
+      "topics": [
+        "society",
+        "work"
+      ],
+      "expected": {
+        "w": "財政政策",
+        "r": "ざいせいせいさく",
+        "en": [
+          "fiscal policy"
+        ]
+      }
+    },
+    "j1395600": {
+      "mn": [
+        "бүх тасалбар"
+      ],
+      "topics": [
+        "arts",
+        "quantity"
+      ],
+      "expected": {
+        "w": "全席",
+        "r": "ぜんせき",
+        "en": [
+          "all tickets"
+        ]
+      }
+    },
+    "j2118230": {
+      "mn": [
+        "хянах",
+        "захирах",
+        "давамгайлах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "制す",
+        "r": "せいす",
+        "en": [
+          "to control",
+          "to command",
+          "to get the better of"
+        ]
+      }
+    },
+    "j1642700": {
+      "mn": [
+        "эдгэрэлт"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "治り",
+        "r": "なおり",
+        "en": [
+          "recovery"
+        ]
+      }
+    },
+    "j1395620": {
+      "mn": [
+        "бүхэлдээ",
+        "тэр чигтээ",
+        "бүрэн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "全然",
+        "r": "ぜんぜん",
+        "en": [
+          "wholly",
+          "entirely",
+          "completely"
+        ]
+      }
+    },
+    "j1820640": {
+      "mn": [
+        "ургамлын өдөөлтийн зүг чиглэсэн өсөлт"
+      ],
+      "topics": [
+        "nature",
+        "learning"
+      ],
+      "expected": {
+        "w": "向性",
+        "r": "こうせい",
+        "en": [
+          "tropism"
+        ]
+      }
+    },
+    "j1284850": {
+      "mn": [
+        "хамт байрлах",
+        "бэлтгэлийн цугларалт",
+        "дотуур байр"
+      ],
+      "topics": [
+        "places",
+        "arts"
+      ],
+      "expected": {
+        "w": "合宿",
+        "r": "がっしゅく",
+        "en": [
+          "lodging together",
+          "training camp",
+          "boarding house"
+        ]
+      }
+    },
+    "j1262250": {
+      "mn": [
+        "анхны шүүхийн шийдвэр",
+        "өмнөх шатны шийдвэр"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "原判決",
+        "r": "げんはんけつ",
+        "en": [
+          "original judgement",
+          "judgment in prior instance"
+        ]
+      }
+    },
+    "j1198970": {
+      "mn": [
+        "шийдэл",
+        "шийдвэрлэх арга"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "解決策",
+        "r": "かいけつさく",
+        "en": [
+          "solution",
+          "solution strategy"
+        ]
+      }
+    },
+    "j1375610": {
+      "mn": [
+        "болох",
+        "хувирах",
+        "өсөх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "成る",
+        "r": "なる",
+        "en": [
+          "to become",
+          "to get",
+          "to grow"
+        ]
+      }
+    },
+    "j2611370": {
+      "mn": [
+        "дэвших"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "成り",
+        "r": "なり",
+        "en": [
+          "being promoted"
+        ]
+      }
+    },
+    "j1459540": {
+      "mn": [
+        "гэр бүлийн хүрээ",
+        "өөрийн хүрээлэл",
+        "ойр хүмүүс"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "内輪",
+        "r": "うちわ",
+        "en": [
+          "family circle",
+          "one's circle (of friends, co-workers, etc.)",
+          "one's fellows"
+        ]
+      }
+    },
+    "j1608110": {
+      "mn": [
+        "Хэйсэйн эрин үе (1989 оны 1 сарын 8–2019 оны 4 сарын 30)"
+      ],
+      "topics": [
+        "time",
+        "society"
+      ],
+      "expected": {
+        "w": "平成",
+        "r": "へいせい",
+        "en": [
+          "Heisei era (1989.1.8-2019.4.30)"
+        ]
+      }
+    },
+    "j1830810": {
+      "mn": [
+        "бэлгийн мэдрэмж"
+      ],
+      "topics": [
+        "body",
+        "feelings"
+      ],
+      "expected": {
+        "w": "性感",
+        "r": "せいかん",
+        "en": [
+          "sexual feelings"
+        ]
+      }
+    },
+    "j1342630": {
+      "mn": [
+        "эхэн үе",
+        "анхны шат",
+        "эхний"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "初期",
+        "r": "しょき",
+        "en": [
+          "early (days)",
+          "initial stage",
+          "initial"
+        ]
+      }
+    },
+    "j2238360": {
+      "mn": [
+        "жимслэх",
+        "ургац өгөх"
+      ],
+      "topics": [
+        "nature",
+        "food"
+      ],
+      "expected": {
+        "w": "実がなる",
+        "r": "みがなる",
+        "en": [
+          "to bear fruit",
+          "to produce a crop"
+        ]
+      }
+    },
+    "j2420240": {
+      "mn": [
+        "наргилын самар"
+      ],
+      "topics": [
+        "food",
+        "nature"
+      ],
+      "expected": {
+        "w": "ヤシの実",
+        "r": "ヤシのみ",
+        "en": [
+          "coconut"
+        ]
+      }
+    },
+    "j2451270": {
+      "mn": [
+        "авах",
+        "авагч",
+        "цуглуулах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "取り",
+        "r": "とり",
+        "en": [
+          "taking",
+          "taker",
+          "collecting"
+        ]
+      }
+    },
+    "j2809750": {
+      "mn": [
+        "маш",
+        "их"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "取っ",
+        "r": "とっ",
+        "en": [
+          "very",
+          "much"
+        ]
+      }
+    },
+    "j1009740": {
+      "mn": [
+        "холбоотой",
+        "талаар",
+        "хувьд"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "に関して",
+        "r": "にかんして",
+        "en": [
+          "related to",
+          "in relation to",
+          "as far as ... is concerned"
+        ]
+      }
+    },
+    "j1449190": {
+      "mn": [
+        "жам ёсны",
+        "зөв",
+        "зохистой"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "当然",
+        "r": "とうぜん",
+        "en": [
+          "natural",
+          "right",
+          "proper"
+        ]
+      }
+    },
+    "j1158960": {
+      "mn": [
+        "хууль бус",
+        "хориотой",
+        "хууль зөрчсөн"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "違法",
+        "r": "いほう",
+        "en": [
+          "illegal",
+          "illicit",
+          "unlawful"
+        ]
+      }
+    },
+    "j1517260": {
+      "mn": [
+        "хууль дүрэм",
+        "хууль тогтоомж"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "法規",
+        "r": "ほうき",
+        "en": [
+          "laws and regulations",
+          "legislation"
+        ]
+      }
+    },
+    "j1506920": {
+      "mn": [
+        "чин сэтгэлээсээ",
+        "хичээнгүйлэн даруухнаар"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "平に",
+        "r": "ひらに",
+        "en": [
+          "earnestly",
+          "humbly"
+        ]
+      }
+    },
+    "j2839880": {
+      "mn": [
+        "тал",
+        "өндөрлөг тал",
+        "тэгш өндөрлөг"
+      ],
+      "topics": [
+        "places",
+        "nature"
+      ],
+      "expected": {
+        "w": "平ら",
+        "r": "だいら",
+        "en": [
+          "plain",
+          "plateau",
+          "tableland"
+        ]
+      }
+    },
+    "j1294300": {
+      "mn": [
+        "хамгийн сайн",
+        "төгс тохирох"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "最良",
+        "r": "さいりょう",
+        "en": [
+          "the best",
+          "ideal"
+        ]
+      }
+    },
+    "j1382180": {
+      "mn": [
+        "татварын ажил"
+      ],
+      "topics": [
+        "work",
+        "society"
+      ],
+      "expected": {
+        "w": "税務",
+        "r": "ぜいむ",
+        "en": [
+          "taxation business"
+        ]
+      }
+    },
+    "j1751830": {
+      "mn": [
+        "нүүлгэн шилжүүлэгдсэн хүмүүс",
+        "дүрвэгчид"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "避難民",
+        "r": "ひなんみん",
+        "en": [
+          "evacuees",
+          "displaced persons",
+          "refugees"
+        ]
+      }
+    },
+    "j1599120": {
+      "mn": [
+        "арилжаа",
+        "хэлцэл",
+        "бизнес"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "取引",
+        "r": "とりひき",
+        "en": [
+          "transactions",
+          "dealings",
+          "business"
+        ]
+      }
+    },
+    "j1507260": {
+      "mn": [
+        "тал",
+        "задгай тал",
+        "хээр тал"
+      ],
+      "topics": [
+        "places",
+        "nature"
+      ],
+      "expected": {
+        "w": "平原",
+        "r": "へいげん",
+        "en": [
+          "plain",
+          "moor",
+          "prairie"
+        ]
+      }
+    },
+    "j1659120": {
+      "mn": [
+        "алдаршил",
+        "таалал",
+        "дэмжлэг"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "受け",
+        "r": "うけ",
+        "en": [
+          "popularity",
+          "favour",
+          "favor"
+        ]
+      }
+    },
+    "j2021210": {
+      "mn": [
+        "хамт хүртэх",
+        "оролцох",
+        "хамтрах"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "相伴",
+        "r": "しょうばん",
+        "en": [
+          "partaking",
+          "participating",
+          "taking part in"
+        ]
+      }
+    },
+    "j1435580": {
+      "mn": [
+        "товлосон цаг",
+        "цагийн хүснэгт",
+        "хуваарь"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "定刻",
+        "r": "ていこく",
+        "en": [
+          "appointed time",
+          "timetable",
+          "schedule"
+        ]
+      }
+    },
+    "j1578410": {
+      "mn": [
+        "одоогоор оршин байх",
+        "амьд байх",
+        "хадгалагдан үлдэх"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "現存",
+        "r": "げんぞん",
+        "en": [
+          "existing",
+          "living",
+          "extant"
+        ]
+      }
+    },
+    "j1706910": {
+      "mn": [
+        "тээврийн ажил гүйцэтгэх"
+      ],
+      "topics": [
+        "work",
+        "places"
+      ],
+      "expected": {
+        "w": "乗務",
+        "r": "じょうむ",
+        "en": [
+          "doing transport-related work"
+        ]
+      }
+    },
+    "j1392230": {
+      "mn": [
+        "хөгжим сонгох",
+        "дуу сонгох"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "選曲",
+        "r": "せんきょく",
+        "en": [
+          "selection of music",
+          "song selection"
+        ]
+      }
+    },
+    "j2841005": {
+      "mn": [
+        "өгөгдлийг цахим хэлбэрт оруулах"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "データ化",
+        "r": "データか",
+        "en": [
+          "digitization",
+          "digitalization"
+        ]
+      }
+    },
+    "j1560610": {
+      "mn": [
+        "хөдөлмөр",
+        "ажил"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "労務",
+        "r": "ろうむ",
+        "en": [
+          "labor",
+          "labour",
+          "work"
+        ]
+      }
+    },
+    "j1557060": {
+      "mn": [
+        "хүйтэн дайн"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "冷戦",
+        "r": "れいせん",
+        "en": [
+          "cold war"
+        ]
+      }
+    },
+    "j1254230": {
+      "mn": [
+        "далан сэтрэх",
+        "цөмрөлт",
+        "нуралт"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "決壊",
+        "r": "けっかい",
+        "en": [
+          "burst (e.g. dam, embankment, levee)",
+          "breach",
+          "collapse"
+        ]
+      }
+    },
+    "j1329810": {
+      "mn": [
+        "зурвас хүлээн авах",
+        "радио телевизийн хүлээн авалт"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "受信",
+        "r": "じゅしん",
+        "en": [
+          "receiving (a message, letter, email, etc.)",
+          "reception (radio, TV, etc.)"
+        ]
+      }
+    },
+    "j1610070": {
+      "mn": [
+        "гарцаагүй",
+        "ямар ч нөхцөлгүй",
+        "огт үгүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "絶対に",
+        "r": "ぜったいに",
+        "en": [
+          "absolutely",
+          "unconditionally",
+          "never (with neg. verb)"
+        ]
+      }
+    },
+    "j1560510": {
+      "mn": [
+        "үйлдвэрчний эвлэл"
+      ],
+      "topics": [
+        "work",
+        "society"
+      ],
+      "expected": {
+        "w": "労働組合",
+        "r": "ろうどうくみあい",
+        "en": [
+          "labor union",
+          "labour union",
+          "trade union"
+        ]
+      }
+    },
+    "j1458510": {
+      "mn": [
+        "нууц",
+        "нууцлал",
+        "хувийн нууц"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "内緒",
+        "r": "ないしょ",
+        "en": [
+          "secrecy",
+          "confidentiality",
+          "privacy"
+        ]
+      }
+    }
+  }
+}

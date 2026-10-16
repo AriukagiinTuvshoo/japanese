@@ -1,0 +1,3 @@
+test:browser exit=0
+test:admin-browser exit=0
+test:site-browser exit=0

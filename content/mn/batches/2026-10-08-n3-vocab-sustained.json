@@ -1,0 +1,1080 @@
+{
+  "provenance": {
+    "id": "mn-n3-vocab-sustained-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit topics cross-checked individually against retained Japanese headwords/readings and English glosses, including alternate dictionary readings. Independently unreviewed.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n3.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j1607170": {
+      "mn": [
+        "гацах",
+        "тээглэх",
+        "хавчуулагдах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "支える",
+        "r": "つかえる",
+        "en": [
+          "to stick",
+          "to get stuck",
+          "to get caught"
+        ]
+      }
+    },
+    "j1470700": {
+      "mn": [
+        "хөдөө аж ахуйн бүтээгдэхүүн"
+      ],
+      "topics": [
+        "food",
+        "nature"
+      ],
+      "expected": {
+        "w": "農産",
+        "r": "のうさん",
+        "en": [
+          "agricultural products"
+        ]
+      }
+    },
+    "j1334410": {
+      "mn": [
+        "хуваарилалт",
+        "зориулан олгох"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "充当",
+        "r": "じゅうとう",
+        "en": [
+          "allocation",
+          "appropriation"
+        ]
+      }
+    },
+    "j1349820": {
+      "mn": [
+        "Шоовагийн эрин үе (1926 оны 12 сарын 25–1989 оны 1 сарын 7)",
+        "Шооваг санагдуулах",
+        "Шоовагийн үеийг дурсах"
+      ],
+      "topics": [
+        "time",
+        "society"
+      ],
+      "expected": {
+        "w": "昭和",
+        "r": "しょうわ",
+        "en": [
+          "Shōwa era (1926.12.25-1989.1.7)",
+          "reminiscent of the Shōwa era",
+          "Shōwa-nostalgic"
+        ]
+      }
+    },
+    "j2255110": {
+      "mn": [
+        "хүүхэд төрүүлэх",
+        "төрөх",
+        "үйлдвэрлэх"
+      ],
+      "topics": [
+        "actions",
+        "body"
+      ],
+      "expected": {
+        "w": "産する",
+        "r": "さんする",
+        "en": [
+          "to bear (a child)",
+          "to be born",
+          "to produce"
+        ]
+      }
+    },
+    "j1252520": {
+      "mn": [
+        "дохиолол",
+        "анхааруулга"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "警報",
+        "r": "けいほう",
+        "en": [
+          "alarm",
+          "warning"
+        ]
+      }
+    },
+    "j1373160": {
+      "mn": [
+        "тоон утга",
+        "тоон өгөгдөл",
+        "хэмжүүрийн заалт"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "数値",
+        "r": "すうち",
+        "en": [
+          "numerical value",
+          "numerics",
+          "reading (on a meter, etc.)"
+        ]
+      }
+    },
+    "j1156180": {
+      "mn": [
+        "итгэмжлэх",
+        "хариуцуулах",
+        "эрх шилжүүлэх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "委任",
+        "r": "いにん",
+        "en": [
+          "entrusting",
+          "charge",
+          "delegation"
+        ]
+      }
+    },
+    "j1309660": {
+      "mn": [
+        "заах",
+        "үзүүлэх",
+        "чиглүүлэн заах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "指示す",
+        "r": "さししめす",
+        "en": [
+          "to indicate",
+          "to show",
+          "to point to"
+        ]
+      }
+    },
+    "j2132700": {
+      "mn": [
+        "зөрчил шийдвэрлэх",
+        "маргаан зохицуулах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "紛争解決",
+        "r": "ふんそうかいけつ",
+        "en": [
+          "conflict resolution",
+          "dispute resolution"
+        ]
+      }
+    },
+    "j2577050": {
+      "mn": [
+        "но театрт баггүй тоглох"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "直面",
+        "r": "ひためん",
+        "en": [
+          "performing without a mask (noh)"
+        ]
+      }
+    },
+    "j1214380": {
+      "mn": [
+        "товч байдал",
+        "хураангуй байдал",
+        "хялбаршуулалт"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "簡約",
+        "r": "かんやく",
+        "en": [
+          "conciseness",
+          "brevity",
+          "simplification"
+        ]
+      }
+    },
+    "j1554030": {
+      "mn": [
+        "хоёр тал",
+        "хоёр талтай"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "両面",
+        "r": "りょうめん",
+        "en": [
+          "both sides",
+          "two sides",
+          "double-sided"
+        ]
+      }
+    },
+    "j1316690": {
+      "mn": [
+        "аажмаар",
+        "дарааллаар",
+        "ээлжээр"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "次第に",
+        "r": "しだいに",
+        "en": [
+          "gradually (progress into a state)",
+          "in sequence",
+          "in order"
+        ]
+      }
+    },
+    "j1666720": {
+      "mn": [
+        "Персийн булангийн дайн"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "湾岸戦争",
+        "r": "わんがんせんそう",
+        "en": [
+          "the Gulf War"
+        ]
+      }
+    },
+    "j1854830": {
+      "mn": [
+        "уг гарлаас хүмүүжил чухал",
+        "өссөн орчин нь гарал угсаанаас илүү нөлөөтэй"
+      ],
+      "topics": [
+        "people",
+        "learning"
+      ],
+      "expected": {
+        "w": "氏より育ち",
+        "r": "うじよりそだち",
+        "en": [
+          "nurture over nature",
+          "how one is brought up matters more than one's origins"
+        ]
+      }
+    },
+    "j1405010": {
+      "mn": [
+        "түргэн бичлэг",
+        "стенограф"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "速記",
+        "r": "そっき",
+        "en": [
+          "shorthand",
+          "stenography"
+        ]
+      }
+    },
+    "j1239680": {
+      "mn": [
+        "го буюу шогийн өргийн байдал",
+        "тоглоомын явц",
+        "хэргийн нэг тал"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "局面",
+        "r": "きょくめん",
+        "en": [
+          "position in a game of go or shogi",
+          "state of the game",
+          "aspect of an affair"
+        ]
+      }
+    },
+    "j1445010": {
+      "mn": [
+        "Токиогийн захиргаа"
+      ],
+      "topics": [
+        "society",
+        "places"
+      ],
+      "expected": {
+        "w": "都庁",
+        "r": "とちょう",
+        "en": [
+          "Tokyo Government Office"
+        ]
+      }
+    },
+    "j1801070": {
+      "mn": [
+        "хянах эрх",
+        "давамгайлал",
+        "бүрэн эрх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "支配権",
+        "r": "しはいけん",
+        "en": [
+          "right of control",
+          "supremacy",
+          "sovereignty"
+        ]
+      }
+    },
+    "j1611790": {
+      "mn": [
+        "зөвшөөрөл",
+        "хүлээн зөвшөөрөх",
+        "үнэлэн таних"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "認め",
+        "r": "みとめ",
+        "en": [
+          "approval",
+          "acceptance",
+          "recognition"
+        ]
+      }
+    },
+    "j2239030": {
+      "mn": [
+        "авахад хэцүү",
+        "хийхэд бэрх"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "取り難い",
+        "r": "とりにくい",
+        "en": [
+          "difficult (to obtain, receive permission, access, etc.)",
+          "tough (to do, etc.)"
+        ]
+      }
+    },
+    "j1386270": {
+      "mn": [
+        "хэмжээ хязгаар",
+        "өөрийгөө барих",
+        "тэвчээр"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "節制",
+        "r": "せっせい",
+        "en": [
+          "moderation",
+          "self-restraint",
+          "temperance"
+        ]
+      }
+    },
+    "j1008830": {
+      "mn": [
+        "хамт",
+        "цуг"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "と共に",
+        "r": "とともに",
+        "en": [
+          "together with"
+        ]
+      }
+    },
+    "j1478510": {
+      "mn": [
+        "шүүгч",
+        "захиргааны шүүгч"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "判官",
+        "r": "はんがん",
+        "en": [
+          "judge",
+          "magistrate"
+        ]
+      }
+    },
+    "j1870270": {
+      "mn": [
+        "хамтарсан үйлдэл"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "共働",
+        "r": "きょうどう",
+        "en": [
+          "coaction"
+        ]
+      }
+    },
+    "j2675060": {
+      "mn": [
+        "сүм бунхан булш зэрэгт очих"
+      ],
+      "topics": [
+        "society",
+        "places"
+      ],
+      "expected": {
+        "w": "参り",
+        "r": "まいり",
+        "en": [
+          "visit (to a religious site, e.g. shrine, temple, grave)"
+        ]
+      }
+    },
+    "j2135510": {
+      "mn": [
+        "чадахгүй",
+        "боломжгүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "得ない",
+        "r": "えない",
+        "en": [
+          "unable to...",
+          "cannot ..."
+        ]
+      }
+    },
+    "j2122420": {
+      "mn": [
+        "тусад нь хадгалах",
+        "нөөцөд байлгах",
+        "авч үлдэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "取っておく",
+        "r": "とっておく",
+        "en": [
+          "to set aside",
+          "to keep in reserve",
+          "to hold on to"
+        ]
+      }
+    },
+    "j1198920": {
+      "mn": [
+        "сулрах",
+        "зангилаа тайлагдах",
+        "задарч салах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "解ける",
+        "r": "ほどける",
+        "en": [
+          "to come loose",
+          "to come untied",
+          "to come undone"
+        ]
+      }
+    },
+    "j2006240": {
+      "mn": [
+        "ойлгох",
+        "утгыг нь мэдрэх",
+        "тайлбарлах"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "解する",
+        "r": "かいする",
+        "en": [
+          "to understand",
+          "to appreciate",
+          "to interpret"
+        ]
+      }
+    },
+    "j1639500": {
+      "mn": [
+        "үр нөлөө",
+        "үйлчлэл",
+        "үр дүнтэй байдал"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "利き",
+        "r": "きき",
+        "en": [
+          "effectiveness",
+          "efficacy",
+          "efficaciousness"
+        ]
+      }
+    },
+    "j2139640": {
+      "mn": [
+        "хэрэгтэй байх",
+        "шаардах",
+        "шаардлагатай болох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "必要とする",
+        "r": "ひつようとする",
+        "en": [
+          "to need",
+          "to call for",
+          "to require"
+        ]
+      }
+    },
+    "j1397450": {
+      "mn": [
+        "иж бүрдэл",
+        "бүлэг хүмүүс",
+        "анги"
+      ],
+      "topics": [
+        "quantity",
+        "people"
+      ],
+      "expected": {
+        "w": "組み",
+        "r": "くみ",
+        "en": [
+          "set (of items)",
+          "group (of people)",
+          "class (of students)"
+        ]
+      }
+    },
+    "j1631130": {
+      "mn": [
+        "холилдсон",
+        "хутгалдсан"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "交じり",
+        "r": "まじり",
+        "en": [
+          "mixed",
+          "mingled"
+        ]
+      }
+    },
+    "j1307510": {
+      "mn": [
+        "эхнээсээ"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "初めから",
+        "r": "はじめから",
+        "en": [
+          "from the beginning"
+        ]
+      }
+    },
+    "j1399500": {
+      "mn": [
+        "хөгжим тоглох",
+        "тоглох арга",
+        "хөгжим дээрх гарын хүрэлт"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "奏法",
+        "r": "そうほう",
+        "en": [
+          "playing (instrument)",
+          "playing method",
+          "touch"
+        ]
+      }
+    },
+    "j1296320": {
+      "mn": [
+        "эрсдэлтэй",
+        "аюултай",
+        "осолтой"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "際どい",
+        "r": "きわどい",
+        "en": [
+          "risky",
+          "dangerous",
+          "hazardous"
+        ]
+      }
+    },
+    "j1657790": {
+      "mn": [
+        "тэр үед"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "際して",
+        "r": "さいして",
+        "en": [
+          "when"
+        ]
+      }
+    },
+    "j2736250": {
+      "mn": [
+        "байх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "在す",
+        "r": "まします",
+        "en": [
+          "to be"
+        ]
+      }
+    },
+    "j1343370": {
+      "mn": [
+        "орлогын албан татвар"
+      ],
+      "topics": [
+        "work",
+        "society"
+      ],
+      "expected": {
+        "w": "所得税",
+        "r": "しょとくぜい",
+        "en": [
+          "income tax"
+        ]
+      }
+    },
+    "j1603520": {
+      "mn": [
+        "бүдэг",
+        "тодорхойгүй",
+        "балархай"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "側か",
+        "r": "ほのか",
+        "en": [
+          "faint",
+          "indistinct",
+          "dim"
+        ]
+      }
+    },
+    "j1196210": {
+      "mn": [
+        "хэт итгэх",
+        "чадварыг хэт үнэлэх"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "過信",
+        "r": "かしん",
+        "en": [
+          "trusting too much",
+          "overestimating ability"
+        ]
+      }
+    },
+    "j1293280": {
+      "mn": [
+        "дахин хөрөнгө оруулах"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "再投資",
+        "r": "さいとうし",
+        "en": [
+          "reinvest"
+        ]
+      }
+    },
+    "j2741830": {
+      "mn": [
+        "бүхнийг өөр хүнд даатгах"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "任せ",
+        "r": "まかせ",
+        "en": [
+          "leaving everything up to someone else"
+        ]
+      }
+    },
+    "j1631240": {
+      "mn": [
+        "сайн үр дүн"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "好成績",
+        "r": "こうせいせき",
+        "en": [
+          "good results"
+        ]
+      }
+    },
+    "j1645220": {
+      "mn": [
+        "төрж буй эмэгтэй",
+        "төрөх гэж буй эмэгтэй",
+        "дөнгөж төрсөн эмэгтэй"
+      ],
+      "topics": [
+        "people",
+        "body"
+      ],
+      "expected": {
+        "w": "産婦",
+        "r": "さんぷ",
+        "en": [
+          "woman in childbirth",
+          "woman who is just about to give birth",
+          "woman who has just given birth"
+        ]
+      }
+    },
+    "j1626750": {
+      "mn": [
+        "ажил хаах",
+        "сургууль тарах",
+        "ажлаас гарах"
+      ],
+      "topics": [
+        "time",
+        "work"
+      ],
+      "expected": {
+        "w": "引け",
+        "r": "ひけ",
+        "en": [
+          "close (e.g. of business)",
+          "leaving (e.g. school)",
+          "retiring"
+        ]
+      }
+    },
+    "j2026830": {
+      "mn": [
+        "таталт",
+        "ивээл дэмжлэг",
+        "нөлөө"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "引き",
+        "r": "ひき",
+        "en": [
+          "pull",
+          "patronage",
+          "influence"
+        ]
+      }
+    },
+    "j1229340": {
+      "mn": [
+        "хүсэлт",
+        "уриалга",
+        "шаардлага"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "求め",
+        "r": "もとめ",
+        "en": [
+          "request",
+          "appeal",
+          "claim"
+        ]
+      }
+    },
+    "j1008570": {
+      "mn": [
+        "тэгсэн ч",
+        "гэвч",
+        "гэсэн ч"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "所が",
+        "r": "ところが",
+        "en": [
+          "even so",
+          "however",
+          "still"
+        ]
+      }
+    },
+    "j1343110": {
+      "mn": [
+        "дашрамд",
+        "нээрээ",
+        "тэгсэн ч"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "所で",
+        "r": "ところで",
+        "en": [
+          "by the way",
+          "incidentally",
+          "even if"
+        ]
+      }
+    },
+    "j2009220": {
+      "mn": [
+        "огт биш",
+        "харин ч эсрэг",
+        "ерөөсөө үгүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "所か",
+        "r": "どころか",
+        "en": [
+          "far from",
+          "anything but",
+          "not at all"
+        ]
+      }
+    },
+    "j2097010": {
+      "mn": [
+        "тэгтэл",
+        "удалгүй"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "所へ",
+        "r": "ところへ",
+        "en": [
+          "thereupon",
+          "shortly thereafter"
+        ]
+      }
+    },
+    "j2600340": {
+      "mn": [
+        "дараа нь",
+        "тэгээд",
+        "үүний дараа"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "次に",
+        "r": "つぎに",
+        "en": [
+          "next",
+          "then",
+          "after that"
+        ]
+      }
+    },
+    "j1355370": {
+      "mn": [
+        "хөлгийн баг"
+      ],
+      "topics": [
+        "people",
+        "places"
+      ],
+      "expected": {
+        "w": "乗組",
+        "r": "のりくみ",
+        "en": [
+          "crew"
+        ]
+      }
+    },
+    "j2685050": {
+      "mn": [
+        "гэрээр хүүхэд асрах үйлчилгээ үзүүлэгч"
+      ],
+      "topics": [
+        "people",
+        "work"
+      ],
+      "expected": {
+        "w": "保育ママ",
+        "r": "ほいくママ",
+        "en": [
+          "family day care provider"
+        ]
+      }
+    },
+    "j1512310": {
+      "mn": [
+        "хариу",
+        "буцаалт",
+        "эргэн төлөлт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "返報",
+        "r": "へんぽう",
+        "en": [
+          "requital",
+          "return",
+          "repayment"
+        ]
+      }
+    },
+    "j1513300": {
+      "mn": [
+        "ясли",
+        "хүүхдийн цэцэрлэг",
+        "сургуулийн өмнөх байгууллага"
+      ],
+      "topics": [
+        "learning",
+        "places"
+      ],
+      "expected": {
+        "w": "保育園",
+        "r": "ほいくえん",
+        "en": [
+          "nursery school",
+          "day nursery",
+          "preschool"
+        ]
+      }
+    },
+    "j2533030": {
+      "mn": [
+        "энхийн нөхцөл",
+        "энхийн гэрээний болзол"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "講和条件",
+        "r": "こうわじょうけん",
+        "en": [
+          "peace terms",
+          "conditions of peace"
+        ]
+      }
+    }
+  }
+}

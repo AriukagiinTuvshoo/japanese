@@ -1,0 +1,1089 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-persist-2-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses cross-checked against exact Japanese spelling, reading and retained English; explicit semantic topic assignments. Independent human review outstanding; suspect sources withheld.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "5b99825c62": {
+      "mn": [
+        "эхлэл",
+        "гарааны цэг",
+        "төлбөрийн баримт бичиж олгох"
+      ],
+      "topics": [
+        "time",
+        "work"
+      ],
+      "expected": {
+        "w": "振り出し",
+        "r": "ふりだし",
+        "en": [
+          "outset",
+          "starting point",
+          "drawing or issuing (draft)"
+        ]
+      }
+    },
+    "f64c527a25": {
+      "mn": [
+        "муу чанар",
+        "сахилгагүй этгээд",
+        "дорд байдал"
+      ],
+      "topics": [
+        "descriptions",
+        "society"
+      ],
+      "expected": {
+        "w": "不良",
+        "r": "ふりょう",
+        "en": [
+          "badness",
+          "delinquent",
+          "inferiority"
+        ]
+      }
+    },
+    "bfcaf39312": {
+      "mn": [
+        "хөвөх хүч",
+        "хөвүүлэх чадал"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "浮力",
+        "r": "ふりょく",
+        "en": [
+          "buoyancy",
+          "floating power"
+        ]
+      }
+    },
+    "fb44d951d9": {
+      "mn": [
+        "зэвсгийн хүч",
+        "цэргийн хүч"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "武力",
+        "r": "ぶりょく",
+        "en": [
+          "armed might",
+          "military power",
+          "the sword"
+        ]
+      }
+    },
+    "4036541a77": {
+      "mn": [
+        "цэнхэр"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "ブルー",
+        "r": "ブルー",
+        "en": [
+          "blue"
+        ]
+      }
+    },
+    "5f87b1f4e5": {
+      "mn": [
+        "эелдэг бус",
+        "бүдүүлэг"
+      ],
+      "topics": [
+        "relationships",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "無礼",
+        "r": "ぶれい",
+        "en": [
+          "impolite",
+          "rude"
+        ]
+      }
+    },
+    "5ecbf5fb51": {
+      "mn": [
+        "хавсралт",
+        "нэмэлт"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "付録",
+        "r": "ふろく",
+        "en": [
+          "appendix",
+          "supplement"
+        ]
+      }
+    },
+    "8dab8e36d8": {
+      "mn": [
+        "урд тал",
+        "хүлээн авах хэсэг"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "フロント",
+        "r": "フロント",
+        "en": [
+          "front"
+        ]
+      }
+    },
+    "9e39f13090": {
+      "mn": [
+        "минут"
+      ],
+      "topics": [
+        "time",
+        "quantity"
+      ],
+      "expected": {
+        "w": "分",
+        "r": "ふん",
+        "en": [
+          "minute"
+        ]
+      }
+    },
+    "488c0046f9": {
+      "mn": [
+        "эгдүүцэл",
+        "дургүйцэн бухимдах"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "憤慨",
+        "r": "ふんがい",
+        "en": [
+          "indignation",
+          "resentment"
+        ]
+      }
+    },
+    "fdb85e4f99": {
+      "mn": [
+        "соёлын өв",
+        "соёлын үнэт зүйл"
+      ],
+      "topics": [
+        "society",
+        "arts"
+      ],
+      "expected": {
+        "w": "文化財",
+        "r": "ぶんかざい",
+        "en": [
+          "cultural assets",
+          "cultural property"
+        ]
+      }
+    },
+    "cf01dd19c5": {
+      "mn": [
+        "хөдөлмөрийн хуваарь",
+        "мэргэшсэн ажил",
+        "дамжлагаар үйлдвэрлэх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "分業",
+        "r": "ぶんぎょう",
+        "en": [
+          "division of labor",
+          "specialization",
+          "assembly-line production"
+        ]
+      }
+    },
+    "a988a95058": {
+      "mn": [
+        "бичгийн хэл",
+        "утга зохиолын хэл"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "文語",
+        "r": "ぶんご",
+        "en": [
+          "written language",
+          "literary language"
+        ]
+      }
+    },
+    "0736fad52a": {
+      "mn": [
+        "тархалт",
+        "төвлөрлийг сааруулах",
+        "дисперс (статистикт)"
+      ],
+      "topics": [
+        "quantity",
+        "learning"
+      ],
+      "expected": {
+        "w": "分散",
+        "r": "ぶんさん",
+        "en": [
+          "dispersion",
+          "decentralization",
+          "variance (statistics)"
+        ]
+      }
+    },
+    "84ad27c633": {
+      "mn": [
+        "бутархайн хүртвэр",
+        "молекул"
+      ],
+      "topics": [
+        "quantity",
+        "learning"
+      ],
+      "expected": {
+        "w": "分子",
+        "r": "ぶんし",
+        "en": [
+          "numerator",
+          "molecule"
+        ]
+      }
+    },
+    "f832961b4a": {
+      "mn": [
+        "юм алдах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "紛失",
+        "r": "ふんしつ",
+        "en": [
+          "losing something"
+        ]
+      }
+    },
+    "a54d1e0237": {
+      "mn": [
+        "оргилон гарах",
+        "олгойдон гарах",
+        "цацагдан гарах"
+      ],
+      "topics": [
+        "nature",
+        "actions"
+      ],
+      "expected": {
+        "w": "噴出",
+        "r": "ふんしゅつ",
+        "en": [
+          "spewing",
+          "gushing",
+          "spouting"
+        ]
+      }
+    },
+    "e0a5244310": {
+      "mn": [
+        "баримт бичиг",
+        "бичвэр",
+        "захидал"
+      ],
+      "topics": [
+        "learning",
+        "work"
+      ],
+      "expected": {
+        "w": "文書",
+        "r": "ぶんしょ",
+        "en": [
+          "document",
+          "writing",
+          "letter"
+        ]
+      }
+    },
+    "b94b6e4b5c": {
+      "mn": [
+        "маргаан",
+        "зөрчил",
+        "тэмцэл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "紛争",
+        "r": "ふんそう",
+        "en": [
+          "dispute",
+          "trouble",
+          "strife"
+        ]
+      }
+    },
+    "b09d417ce5": {
+      "mn": [
+        "элбэг",
+        "арвин",
+        "харамгүй"
+      ],
+      "topics": [
+        "descriptions",
+        "quantity"
+      ],
+      "expected": {
+        "w": "ふんだん",
+        "r": "ふんだん",
+        "en": [
+          "plentiful",
+          "abundant",
+          "lavish"
+        ]
+      }
+    },
+    "911f332826": {
+      "mn": [
+        "хуваарилалт",
+        "үүргийг хувааж авах"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "分担",
+        "r": "ぶんたん",
+        "en": [
+          "apportionment",
+          "sharing"
+        ]
+      }
+    },
+    "3066b28376": {
+      "mn": [
+        "шаргуу тэмцэл",
+        "их чармайлт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "奮闘",
+        "r": "ふんとう",
+        "en": [
+          "hard struggle",
+          "strenuous effort"
+        ]
+      }
+    },
+    "58baea5308": {
+      "mn": [
+        "хуваах",
+        "хуваарилан өгөх"
+      ],
+      "topics": [
+        "quantity",
+        "work"
+      ],
+      "expected": {
+        "w": "分配",
+        "r": "ぶんぱい",
+        "en": [
+          "division",
+          "sharing"
+        ]
+      }
+    },
+    "8d3323ee2e": {
+      "mn": [
+        "бутархайн хуваарь"
+      ],
+      "topics": [
+        "quantity",
+        "learning"
+      ],
+      "expected": {
+        "w": "分母",
+        "r": "ぶんぼ",
+        "en": [
+          "denominator"
+        ]
+      }
+    },
+    "253ca04e94": {
+      "mn": [
+        "нарийн нунтаг"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "粉末",
+        "r": "ふんまつ",
+        "en": [
+          "fine powder"
+        ]
+      }
+    },
+    "292ff50e0a": {
+      "mn": [
+        "салгах",
+        "тусгаарлах",
+        "ангилан салгах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "分離",
+        "r": "ぶんり",
+        "en": [
+          "separation",
+          "detachment",
+          "segregation"
+        ]
+      }
+    },
+    "0b85c689e9": {
+      "mn": [
+        "хагарал",
+        "хуваагдал",
+        "задрал"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "分裂",
+        "r": "ぶんれつ",
+        "en": [
+          "split",
+          "division",
+          "break up"
+        ]
+      }
+    },
+    "054813c4c2": {
+      "mn": [
+        "зэвсэг",
+        "байлдааны зэвсэг хэрэгсэл"
+      ],
+      "topics": [
+        "society",
+        "technology"
+      ],
+      "expected": {
+        "w": "兵器",
+        "r": "へいき",
+        "en": [
+          "arms",
+          "weapons",
+          "ordinance"
+        ]
+      }
+    },
+    "13b937a41a": {
+      "mn": [
+        "зэрэгцээ",
+        "зэрэг явагдах",
+        "мөр зэрэгцсэн"
+      ],
+      "topics": [
+        "quantity",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "平行",
+        "r": "へいこう",
+        "en": [
+          "(going) side by side",
+          "concurrent",
+          "abreast"
+        ]
+      }
+    },
+    "be2f217a46": {
+      "mn": [
+        "амаа хамхих"
+      ],
+      "topics": [
+        "body",
+        "actions"
+      ],
+      "expected": {
+        "w": "閉口",
+        "r": "へいこう",
+        "en": [
+          "shut mouth"
+        ]
+      }
+    },
+    "96f4c03038": {
+      "mn": [
+        "хаах",
+        "хаалт",
+        "үйл ажиллагааг зогсоох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "閉鎖",
+        "r": "へいさ",
+        "en": [
+          "closing",
+          "closure",
+          "shutdown"
+        ]
+      }
+    },
+    "9dc5cc6d2d": {
+      "mn": [
+        "цэрэг"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "兵士",
+        "r": "へいし",
+        "en": [
+          "soldier"
+        ]
+      }
+    },
+    "b680cdac8a": {
+      "mn": [
+        "хэвийн",
+        "ердийн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "平常",
+        "r": "へいじょう",
+        "en": [
+          "normal",
+          "usual"
+        ]
+      }
+    },
+    "680cb55781": {
+      "mn": [
+        "квадрат",
+        "талбайн нэгжийн квадрат хэмжээ"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "平方",
+        "r": "へいほう",
+        "en": [
+          "square (e.g. metre)",
+          "square"
+        ]
+      }
+    },
+    "b5f04f79ca": {
+      "mn": [
+        "зэрэгцүүлэн байрлуулах",
+        "параллель",
+        "мөр зэрэгцэх"
+      ],
+      "topics": [
+        "quantity",
+        "technology"
+      ],
+      "expected": {
+        "w": "並列",
+        "r": "へいれつ",
+        "en": [
+          "arrangement",
+          "parallel",
+          "abreast"
+        ]
+      }
+    },
+    "ef321ac2d3": {
+      "mn": [
+        "суурь",
+        "басс хөгжим"
+      ],
+      "topics": [
+        "arts",
+        "technology"
+      ],
+      "expected": {
+        "w": "ベース",
+        "r": "ベース",
+        "en": [
+          "base",
+          "bass"
+        ]
+      }
+    },
+    "e9b4b3b383": {
+      "mn": [
+        "цочин ухрах",
+        "няцах",
+        "аргагүй болох"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "辟易",
+        "r": "へきえき",
+        "en": [
+          "wince",
+          "shrink back",
+          "succumbing to"
+        ]
+      }
+    },
+    "e596a0fd8b": {
+      "mn": [
+        "долигонож бөхөлзөх",
+        "маш их өлсөх"
+      ],
+      "topics": [
+        "body",
+        "relationships"
+      ],
+      "expected": {
+        "w": "ぺこぺこ",
+        "r": "ぺこぺこ",
+        "en": [
+          "fawn",
+          "be very hungry"
+        ]
+      }
+    },
+    "4f4b90bb7c": {
+      "mn": [
+        "хамгийн сайн",
+        "хантааз"
+      ],
+      "topics": [
+        "daily",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "ベスト",
+        "r": "ベスト",
+        "en": [
+          "best",
+          "vest"
+        ]
+      }
+    },
+    "507250c924": {
+      "mn": [
+        "хамгийн их борлуулалттай ном буюу бүтээгдэхүүн"
+      ],
+      "topics": [
+        "learning",
+        "work"
+      ],
+      "expected": {
+        "w": "ベストセラー",
+        "r": "ベストセラー",
+        "en": [
+          "best-seller"
+        ]
+      }
+    },
+    "5e62793d87": {
+      "mn": [
+        "хол зайтай байх",
+        "тусгаарлагдах"
+      ],
+      "topics": [
+        "places",
+        "actions"
+      ],
+      "expected": {
+        "w": "隔たる",
+        "r": "へだたる",
+        "en": [
+          "to be distant"
+        ]
+      }
+    },
+    "b144d145c3": {
+      "mn": [
+        "өөрийгөө даруусган ярьж сонсогчоо хүндэтгэх"
+      ],
+      "topics": [
+        "relationships",
+        "actions"
+      ],
+      "expected": {
+        "w": "謙る",
+        "r": "へりくだる",
+        "en": [
+          "to deprecate oneself and praise the listener"
+        ]
+      }
+    },
+    "08d086f265": {
+      "mn": [
+        "дамжин өнгөрөх",
+        "хугацаа өнгөрөх",
+        "биеэр туулах"
+      ],
+      "topics": [
+        "time",
+        "actions"
+      ],
+      "expected": {
+        "w": "経る",
+        "r": "へる",
+        "en": [
+          "to pass",
+          "to elapse",
+          "to experience"
+        ]
+      }
+    },
+    "0b6b5995e3": {
+      "mn": [
+        "тал",
+        "ханзны зүүн талын түлхүүр",
+        "нэг тал руу хэлбийх"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "偏",
+        "r": "へん",
+        "en": [
+          "side",
+          "left radical of a character",
+          "inclining"
+        ]
+      }
+    },
+    "c88c1274da": {
+      "mn": [
+        "эмхэтгэл",
+        "найруулан засварлах",
+        "бүрэн шүлэг"
+      ],
+      "topics": [
+        "learning",
+        "arts"
+      ],
+      "expected": {
+        "w": "編",
+        "r": "へん",
+        "en": [
+          "compilation",
+          "editing",
+          "completed poem"
+        ]
+      }
+    },
+    "f675bf9b01": {
+      "mn": [
+        "тайлбар",
+        "өөрийгөө зөвтгөх",
+        "өмгөөлөл"
+      ],
+      "topics": [
+        "learning",
+        "relationships"
+      ],
+      "expected": {
+        "w": "弁解",
+        "r": "べんかい",
+        "en": [
+          "explanation",
+          "justification",
+          "defence"
+        ]
+      }
+    },
+    "089d39b41c": {
+      "mn": [
+        "өөрчлөлт",
+        "шинэчлэл",
+        "хувьсгал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "変革",
+        "r": "へんかく",
+        "en": [
+          "change",
+          "reform",
+          "revolution"
+        ]
+      }
+    },
+    "8a4aed3134": {
+      "mn": [
+        "буцаан өгөх",
+        "эргүүлэн сэргээх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "返還",
+        "r": "へんかん",
+        "en": [
+          "return",
+          "restoration"
+        ]
+      }
+    },
+    "03a1f21cc6": {
+      "mn": [
+        "тохиромж",
+        "хэрэгцээнд нийцүүлэх",
+        "ашигтай тал"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "便宜",
+        "r": "べんぎ",
+        "en": [
+          "convenience",
+          "accommodation",
+          "advantage"
+        ]
+      }
+    },
+    "dc0f4efe6a": {
+      "mn": [
+        "өрөөсгөл үзэл",
+        "явцуу бодол"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "偏見",
+        "r": "へんけん",
+        "en": [
+          "prejudice",
+          "narrow view"
+        ]
+      }
+    },
+    "025f4f4271": {
+      "mn": [
+        "өмгөөлөл",
+        "шүүхэд өмгөөлж ярих",
+        "дэмжин хамгаалах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "弁護",
+        "r": "べんご",
+        "en": [
+          "defense",
+          "pleading",
+          "advocacy"
+        ]
+      }
+    },
+    "217987ecba": {
+      "mn": [
+        "өр төлөх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "返済",
+        "r": "へんさい",
+        "en": [
+          "repayment"
+        ]
+      }
+    },
+    "3354109d5e": {
+      "mn": [
+        "өөрчлөлт",
+        "шилжилт",
+        "хувьсал"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "変遷",
+        "r": "へんせん",
+        "en": [
+          "change",
+          "transition",
+          "vicissitudes"
+        ]
+      }
+    },
+    "5138ac69ee": {
+      "mn": [
+        "хариу",
+        "хариулт"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "返答",
+        "r": "へんとう",
+        "en": [
+          "reply"
+        ]
+      }
+    },
+    "b32623c224": {
+      "mn": [
+        "өөрчлөлт",
+        "хэлбэлзэл"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "変動",
+        "r": "へんどう",
+        "en": [
+          "change",
+          "fluctuation"
+        ]
+      }
+    },
+    "fbb73368e3": {
+      "mn": [
+        "хэлэлцүүлэг",
+        "мэтгэлцээн",
+        "үндэслэлтэй маргаан"
+      ],
+      "topics": [
+        "learning",
+        "society"
+      ],
+      "expected": {
+        "w": "弁論",
+        "r": "べんろん",
+        "en": [
+          "discussion",
+          "debate",
+          "argument"
+        ]
+      }
+    },
+    "d05c2603fa": {
+      "mn": [
+        "ургамлын түрүү",
+        "тарианы толгой"
+      ],
+      "topics": [
+        "nature",
+        "food"
+      ],
+      "expected": {
+        "w": "穂",
+        "r": "ほ",
+        "en": [
+          "ear (of plant)",
+          "head (of plant)"
+        ]
+      }
+    },
+    "bbe8e8b83e": {
+      "mn": [
+        "хүүхэд асрах",
+        "бойжуулах",
+        "өсгөх"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "保育",
+        "r": "ほいく",
+        "en": [
+          "nursing",
+          "nurturing",
+          "rearing"
+        ]
+      }
+    },
+    "952a11bf16": {
+      "mn": [
+        "бойкот",
+        "эсэргүүцэн оролцохоос татгалзах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "ボイコット",
+        "r": "ボイコット",
+        "en": [
+          "boycott"
+        ]
+      }
+    },
+    "2402c719ec": {
+      "mn": [
+        "гол санаа",
+        "цэг",
+        "оноо"
+      ],
+      "topics": [
+        "learning",
+        "quantity"
+      ],
+      "expected": {
+        "w": "ポイント",
+        "r": "ポイント",
+        "en": [
+          "point"
+        ]
+      }
+    }
+  }
+}

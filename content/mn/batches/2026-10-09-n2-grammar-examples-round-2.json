@@ -1,0 +1,302 @@
+{
+  "provenance": {
+    "id": "mn-n2-grammar-examples-oct9-2",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian compared with exact Japanese and retained English; stable record and headword/pattern guards; independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/grammar/n2.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "grammar": {
+    "zaru-o-enai": {
+      "expected": {
+        "p": "〜ざるを得ない",
+        "en": "have no choice but to; cannot help but"
+      },
+      "examples": {
+        "予算が足りないので、計画を縮小せざるを得ない。": {
+          "en": "The budget is insufficient, so we have no choice but to scale back the plan.",
+          "mn": "Төсөв хүрэлцэхгүй тул төлөвлөгөөгөө багасгахаас өөр аргагүй."
+        },
+        "上司の命令だったので、気が進まなくても行かざるを得なかった。": {
+          "en": "It was my boss's order, so I had to go even though I didn't feel like it.",
+          "mn": "Даргын тушаал байсан тул хүсээгүй ч явахаас өөр аргагүй байлаа."
+        },
+        "彼の努力だけは認めざるを得ない。": {
+          "en": "I have to admit, at least, that he made an effort.",
+          "mn": "Ядаж түүний хичээл зүтгэлийг хүлээн зөвшөөрөхөөс өөр аргагүй."
+        }
+      }
+    },
+    "te-wa-irarenai": {
+      "expected": {
+        "p": "〜てはいられない",
+        "en": "can't afford to (keep) doing; can't just"
+      },
+      "examples": {
+        "締め切りが迫っているので、のんびりしてはいられない。": {
+          "en": "The deadline is approaching, so I can't afford to take it easy.",
+          "mn": "Хугацаа дөхөж байгаа тул тайван суух аргагүй."
+        },
+        "困っている人を見ると、黙ってはいられない性格だ。": {
+          "en": "I'm the type who can't stay quiet when I see someone in trouble.",
+          "mn": "Хүнд байдалд орсон хүн хараад дуугүй байж чаддаггүй зантай."
+        }
+      }
+    },
+    "mono-ka": {
+      "expected": {
+        "p": "〜ものか",
+        "en": "no way (will I); as if; I'll never"
+      },
+      "examples": {
+        "あんな失礼な店には、二度と行くものか。": {
+          "en": "No way am I ever going to that rude shop again.",
+          "mn": "Тийм бүдүүлэг үйлчилгээтэй дэлгүүрт дахиж хэзээ ч очихгүй!"
+        },
+        "一度や二度失敗したくらいで、諦めるもんか。": {
+          "en": "As if I'd give up just because I failed once or twice.",
+          "mn": "Ганц хоёр удаа бүтэлгүйтлээ гээд бууж өгөхгүй!"
+        },
+        "あの人の気持ちなんて、君に分かるものか。": {
+          "en": "As if you could understand how she feels.",
+          "mn": "Тэр хүний сэтгэлийг чи яаж ойлгох юм бэ!"
+        }
+      }
+    },
+    "mono-no": {
+      "expected": {
+        "p": "〜ものの",
+        "en": "although; even though (but the expected result doesn't follow)"
+      },
+      "examples": {
+        "免許は取ったものの、怖くてまだ一度も運転していない。": {
+          "en": "Although I got my license, I'm too scared and still haven't driven once.",
+          "mn": "Жолооны үнэмлэх авсан ч айсандаа нэг ч удаа машин бариагүй."
+        },
+        "新しい制度は導入されたものの、十分に活用されていないのが現状だ。": {
+          "en": "Although the new system has been introduced, the reality is that it isn't being fully used.",
+          "mn": "Шинэ тогтолцоо нэвтэрсэн ч бүрэн ашиглахгүй байгаа нь бодит байдал."
+        },
+        "この部屋は駅から近いものの、日当たりが悪いのが難点だ。": {
+          "en": "This apartment is close to the station, but its drawback is that it gets little sunlight.",
+          "mn": "Энэ байр өртөөнд ойр ч нар муу тусдаг нь сул тал."
+        }
+      }
+    },
+    "mono-nara": {
+      "expected": {
+        "p": "〜ものなら",
+        "en": "if (it were possible); if only one could"
+      },
+      "examples": {
+        "できるものなら、学生時代に戻ってもう一度やり直したい。": {
+          "en": "If only I could, I'd go back to my student days and do it all over again.",
+          "mn": "Боломжтойсон бол оюутан үедээ буцаж, бүхнийг дахин эхлэхсэн."
+        },
+        "行けるものなら行きたいが、その日はどうしても仕事を休めない。": {
+          "en": "I'd go if I could, but I just can't take that day off work.",
+          "mn": "Чадвал очмоор байгаа ч тэр өдөр ажлаасаа чөлөө авч яагаад ч чадахгүй."
+        },
+        "止められるものなら止めてみろ。": {
+          "en": "Stop me if you can.",
+          "mn": "Зогсоож чадвал зогсоогоод үз!"
+        }
+      }
+    },
+    "kurai-nara-gurai-nara": {
+      "expected": {
+        "p": "〜くらいなら / 〜ぐらいなら",
+        "en": "rather than; if it comes to (doing that), I'd rather"
+      },
+      "examples": {
+        "あんな人に頭を下げるくらいなら、会社を辞めたほうがましだ。": {
+          "en": "I'd rather quit my job than bow my head to someone like him.",
+          "mn": "Тийм хүнд бөхөлзөхийн оронд ажлаасаа гарсан нь дээр."
+        },
+        "途中で投げ出すぐらいなら、最初から引き受けないほうがいい。": {
+          "en": "If you're going to give up halfway, it's better not to take it on in the first place.",
+          "mn": "Дундаас нь орхих гэж байгаа бол анхнаасаа хүлээж аваагүй нь дээр."
+        }
+      }
+    },
+    "mono-ga-aru": {
+      "expected": {
+        "p": "〜ものがある",
+        "en": "there is something (about it that is) ...; it really is"
+      },
+      "examples": {
+        "この画家の初期の作品には、見る人の心を強く打つものがある。": {
+          "en": "There is something in this painter's early works that deeply moves the viewer.",
+          "mn": "Энэ зураачийн эхэн үеийн бүтээлд үзэгчийн сэтгэлийг хүчтэй хөдөлгөх зүйл бий."
+        },
+        "毎日二時間かけて通勤するのは、正直つらいものがある。": {
+          "en": "Honestly, commuting two hours every day is pretty tough.",
+          "mn": "Өдөр бүр хоёр цаг зарцуулан ажилдаа явах үнэндээ амаргүй."
+        },
+        "若い選手たちの成長ぶりには、目を見張るものがある。": {
+          "en": "The progress of the young players is truly remarkable.",
+          "mn": "Залуу тамирчдын өсөлт хөгжил үнэхээр гайхалтай."
+        }
+      }
+    },
+    "koto-ka": {
+      "expected": {
+        "p": "〜ことか",
+        "en": "how ...!; how much ...!"
+      },
+      "examples": {
+        "この日が来るのを、どれほど待ち望んだことか。": {
+          "en": "How long I've waited for this day to come!",
+          "mn": "Энэ өдрийг ирэхийг хэчнээн удаан хүлээсэн гээч!"
+        },
+        "一人暮らしを始めて、家族のありがたさを何度感じたことか。": {
+          "en": "Since I started living alone, I can't count how many times I've felt grateful for my family.",
+          "mn": "Ганцаараа амьдарч эхэлснээс хойш гэр бүлийнхээ ачийг хэдэн ч удаа мэдэрсэн юм бэ!"
+        },
+        "無事だと聞いて、どんなに安心したことか。": {
+          "en": "What a relief it was to hear you were safe!",
+          "mn": "Чамайг эсэн мэнд гэж сонсоод ямар их тайвширсан гээч!"
+        }
+      }
+    },
+    "koto-ni-wa": {
+      "expected": {
+        "p": "〜ことに（は）",
+        "en": "(emotion)-ly; what is (surprising, sad, etc.) is that"
+      },
+      "examples": {
+        "驚いたことに、彼は会社を辞めてパン屋を開いたそうだ。": {
+          "en": "Surprisingly, I heard he quit his company and opened a bakery.",
+          "mn": "Гайхалтай нь тэр компаниасаа гарч, талхны дэлгүүр нээсэн гэнэ."
+        },
+        "残念なことに、その美しい建物は来月取り壊されることになった。": {
+          "en": "Sadly, it has been decided that the beautiful building will be torn down next month.",
+          "mn": "Харамсалтай нь тэр үзэсгэлэнтэй барилгыг ирэх сард нураахаар болжээ."
+        },
+        "うれしいことには、応募作品が予想の倍以上も集まった。": {
+          "en": "To our delight, we received more than twice as many entries as expected.",
+          "mn": "Баярлууштай нь ирсэн бүтээл хүлээж байснаас хоёр дахин ч олон байв."
+        }
+      }
+    },
+    "koto-dakara": {
+      "expected": {
+        "p": "〜ことだから",
+        "en": "knowing (someone); since it's (someone), surely"
+      },
+      "examples": {
+        "几帳面な彼のことだから、書類はもう準備してあるだろう。": {
+          "en": "Knowing how meticulous he is, he's probably got the documents ready already.",
+          "mn": "Тэр нямбай хүн тул бичиг баримтаа аль хэдийн бэлдсэн байх."
+        },
+        "あの子のことだから、きっとどこかで寄り道をしているんだよ。": {
+          "en": "Knowing that kid, I bet they've stopped off somewhere on the way.",
+          "mn": "Тэр хүүхдийн занг бодоход замдаа хаа нэгтээ саатсан байх даа."
+        }
+      }
+    },
+    "koto-naku": {
+      "expected": {
+        "p": "〜ことなく",
+        "en": "without (doing); without ever"
+      },
+      "examples": {
+        "彼は三十年間、一日も休むことなく店を開け続けた。": {
+          "en": "For thirty years, he kept his shop open without taking a single day off.",
+          "mn": "Тэр гучин жил нэг ч өдөр амралгүй дэлгүүрээ нээсэн."
+        },
+        "失敗を恐れることなく、新しいことに挑戦してほしい。": {
+          "en": "I want you to take on new challenges without fearing failure.",
+          "mn": "Бүтэлгүйтэхээс айлгүй шинэ зүйлд сорьж үзээсэй гэж хүсэж байна."
+        }
+      }
+    },
+    "koto-kara": {
+      "expected": {
+        "p": "〜ことから",
+        "en": "from the fact that; because; judging from"
+      },
+      "examples": {
+        "この坂は、昔から桜の名所であることから「桜坂」と呼ばれている。": {
+          "en": "This slope is called 'Sakura-zaka' because it has long been a famous spot for cherry blossoms.",
+          "mn": "Энэ энгэр эртнээс сакурагаар алдартай байсан учраас «Сакура-зака» гэж нэрлэгддэг."
+        },
+        "現場に靴の跡が残っていたことから、犯人は外から侵入したと考えられる。": {
+          "en": "Given the footprints left at the scene, the culprit is thought to have entered from outside.",
+          "mn": "Хэргийн газарт гутлын мөр үлдсэн тул гэмт этгээд гаднаас нэвтэрсэн гэж үзэж байна."
+        }
+      }
+    },
+    "nai-koto-ni-wa": {
+      "expected": {
+        "p": "〜ないことには",
+        "en": "unless; if ... not (then it can't happen)"
+      },
+      "examples": {
+        "実際に会って話してみないことには、どんな人か分からない。": {
+          "en": "You can't tell what someone is like unless you actually meet and talk to them.",
+          "mn": "Үнэхээр уулзаж ярилцахгүй бол ямар хүн болохыг нь мэдэхгүй."
+        },
+        "社長の許可が出ないことには、このプロジェクトは始められない。": {
+          "en": "We can't start this project unless the president gives permission.",
+          "mn": "Захирлын зөвшөөрөл гарахгүй бол энэ төслийг эхлүүлж болохгүй."
+        }
+      }
+    },
+    "koto-wa-ga": {
+      "expected": {
+        "p": "〜ことは〜が",
+        "en": "it's true that ..., but; (I) do ..., but"
+      },
+      "examples": {
+        "あの映画、見たことは見たけど、途中で寝てしまった。": {
+          "en": "I did watch that movie, but I fell asleep halfway through.",
+          "mn": "Тэр киног үзсэн нь үзсэн, гэхдээ дунд нь унтчихсан."
+        },
+        "この部屋は広いことは広いが、駅からかなり遠い。": {
+          "en": "This apartment is spacious, sure, but it's quite far from the station.",
+          "mn": "Энэ байр уужим нь уужим ч өртөөнөөс нэлээд хол."
+        },
+        "彼の説明は、分かることは分かるが、納得はできない。": {
+          "en": "I do understand his explanation, but I'm not convinced.",
+          "mn": "Түүний тайлбарыг ойлгох нь ойлгож байгаа ч зөвшөөрч чадахгүй."
+        }
+      }
+    },
+    "ageku": {
+      "expected": {
+        "p": "〜あげく",
+        "en": "after (a long, troublesome process); in the end"
+      },
+      "examples": {
+        "さんざん迷ったあげく、結局どちらも買わなかった。": {
+          "en": "After agonizing over it for ages, in the end I didn't buy either.",
+          "mn": "Баахан эргэлзсэний эцэст алийг нь ч аваагүй."
+        },
+        "長時間の話し合いのあげく、計画は白紙に戻された。": {
+          "en": "After hours of discussion, the plan was scrapped altogether.",
+          "mn": "Олон цаг ярилцсаны эцэст төлөвлөгөөг бүрэн цуцалсан."
+        },
+        "彼は無理を重ねたあげく、体を壊して入院してしまった。": {
+          "en": "After pushing himself too hard for too long, he ruined his health and ended up in the hospital.",
+          "mn": "Тэр удаан хугацаанд өөрийгөө хэт хүчилсний эцэст биеэ муутгаж, эмнэлэгт хэвтсэн."
+        }
+      }
+    },
+    "amari-ni": {
+      "expected": {
+        "p": "〜あまり（に）",
+        "en": "so much that; out of excessive; because of too much"
+      },
+      "examples": {
+        "彼女は緊張のあまり、スピーチの内容を忘れてしまった。": {
+          "en": "She was so nervous that she forgot what she was going to say in her speech.",
+          "mn": "Тэр хэт сандарсандаа хэлэх үгээ мартчихсан."
+        }
+      }
+    }
+  }
+}

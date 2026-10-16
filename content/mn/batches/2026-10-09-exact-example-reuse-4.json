@@ -1,0 +1,37 @@
+{
+  "provenance": {
+    "id": "mn-exact-example-reuse-4-2026-10-09",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "Exact Japanese AND English duplicate match; AI compared all reused Mongolian sentences to source. Prior translation origin retained per sentence. No independent human review. Folding ambiguity and disputed headword excluded.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n5..n1.json at cac78c79587f6fb6d5f93a158790258c24b351e8",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "cefdf0c77c": {
+      "expected": {
+        "w": "レンタカー",
+        "r": "レンタカー",
+        "en": [
+          "hire car (lit: rent-a-car)"
+        ]
+      },
+      "examples": {
+        "キャロルはレンタカーを運転しています。": {
+          "en": "Carol is driving a rent-a-car.",
+          "mn": "Кэрол түрээсийн машин жолоодож байна.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n4",
+              "id": "44f33984fb",
+              "provenance": "mn-n4-examples-sustained-3-2026-10-08"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

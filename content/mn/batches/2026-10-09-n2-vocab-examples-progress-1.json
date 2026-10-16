@@ -1,0 +1,433 @@
+{
+  "provenance": {
+    "id": "mn-n2-vocab-examples-progress-1-oct9",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian compared with exact Japanese and retained English; stable record and headword/pattern guards; independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n2.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "a542a76c28": {
+      "expected": {
+        "w": "あくまで",
+        "r": "あくまで",
+        "en": [
+          "to the end",
+          "to the last",
+          "stubbornly"
+        ]
+      },
+      "examples": {
+        "彼はその計画にあくまで反対した。": {
+          "en": "He opposed the plan to the last.",
+          "mn": "Тэр төлөвлөгөөг эцсээ хүртэл эсэргүүцсэн."
+        },
+        "席があくまでしばらく待つしかない。": {
+          "en": "We can do nothing but wait for a while until the seats are available.",
+          "mn": "Суудал сулартал хэсэг хүлээхээс өөр аргагүй."
+        }
+      }
+    },
+    "817ab81f5e": {
+      "expected": {
+        "w": "明け方",
+        "r": "あけがた",
+        "en": [
+          "dawn"
+        ]
+      },
+      "examples": {
+        "その事故は明け方に起こった。": {
+          "en": "The accident occurred at dawn.",
+          "mn": "Тэр осол үүрээр болсон."
+        },
+        "僕らは明け方に起きるために早く寝た。": {
+          "en": "We hit the hay early in order to get up at dawn.",
+          "mn": "Бид үүрээр босохын тулд эрт унтсан."
+        }
+      }
+    },
+    "8c256fc677": {
+      "expected": {
+        "w": "挙げる",
+        "r": "あげる",
+        "en": [
+          "to raise",
+          "to fly"
+        ]
+      },
+      "examples": {
+        "質問があれば右手を挙げて下さい。": {
+          "en": "If you have a question, please raise your right hand.",
+          "mn": "Асуух зүйл байвал баруун гараа өргөөрэй."
+        },
+        "彼女は歌手として名を挙げた。": {
+          "en": "She made a name for herself as a singer.",
+          "mn": "Тэр дуучны хувьд нэрд гарсан."
+        }
+      }
+    },
+    "d4d89391b7": {
+      "expected": {
+        "w": "揚げる",
+        "r": "あげる",
+        "en": [
+          "to lift",
+          "to fry"
+        ]
+      },
+      "examples": {
+        "彼はたこを揚げた。": {
+          "en": "He flew a kite.",
+          "mn": "Тэр цаасан шувуу нисгэсэн."
+        },
+        "この鶏肉はよく揚げられている。": {
+          "en": "This chicken is fried well.",
+          "mn": "Энэ тахианы махыг сайн шарсан байна."
+        }
+      }
+    },
+    "36c77eda04": {
+      "expected": {
+        "w": "憧れる",
+        "r": "あこがれる",
+        "en": [
+          "to long for",
+          "to yearn after",
+          "to admire"
+        ]
+      },
+      "examples": {
+        "あの人達は都会の生活にあこがれている。": {
+          "en": "They are longing for city life.",
+          "mn": "Тэд хотын амьдралыг мөрөөддөг."
+        },
+        "彼は彼らが名声に憧れていると思った。": {
+          "en": "He thought of them yearning for fame.",
+          "mn": "Тэр тэднийг алдар нэр хүсэж байна гэж бодсон."
+        }
+      }
+    },
+    "c6ff7af051": {
+      "expected": {
+        "w": "足跡",
+        "r": "あしあと",
+        "en": [
+          "footprints"
+        ]
+      },
+      "examples": {
+        "足跡が床に残っていた。": {
+          "en": "Footprints were left on the floor.",
+          "mn": "Шалан дээр хөлийн мөр үлдсэн байв."
+        },
+        "テーブルに猫の足跡が付いている。": {
+          "en": "There are footprints of a cat on the table.",
+          "mn": "Ширээн дээр муурын хөлийн мөр байна."
+        }
+      }
+    },
+    "e62d8e80cc": {
+      "expected": {
+        "w": "味わう",
+        "r": "あじわう",
+        "en": [
+          "to taste",
+          "to savor",
+          "to relish"
+        ]
+      },
+      "examples": {
+        "あのテーマパークでスリルを味わった。": {
+          "en": "We had a thrilling time at the theme park.",
+          "mn": "Бид тэр зугаа цэнгэлийн хүрээлэнд сэтгэл догдлом мөчийг мэдэрсэн."
+        },
+        "私は口で味わい、食べ、そして飲む。": {
+          "en": "I taste, eat and drink with my mouth.",
+          "mn": "Би амаараа амталж, идэж, уудаг."
+        }
+      }
+    },
+    "eafba17b69": {
+      "expected": {
+        "w": "預かる",
+        "r": "あずかる",
+        "en": [
+          "to keep in custody",
+          "to receive on deposit",
+          "to take charge of"
+        ]
+      },
+      "examples": {
+        "４時まで荷物を預かっていただけませんか。": {
+          "en": "Could you keep my bags here until four?",
+          "mn": "Миний ачааг дөрвөн цаг хүртэл хадгалж өгч болох уу?"
+        },
+        "荷物を預かって欲しいのですが。": {
+          "en": "Would you keep this baggage, please?",
+          "mn": "Энэ ачааг хадгалж өгнө үү."
+        }
+      }
+    },
+    "4d006aea23": {
+      "expected": {
+        "w": "暖まる",
+        "r": "あたたまる",
+        "en": [
+          "to warm up",
+          "to get warm"
+        ]
+      },
+      "examples": {
+        "ここにお掛けになって暖まってください。": {
+          "en": "Sit down here and warm yourself.",
+          "mn": "Энд сууж дулаацаарай."
+        },
+        "暖まるまでエンジンをかけておきなさい。": {
+          "en": "Run the engine till it gets warm.",
+          "mn": "Хөдөлгүүрийг халах хүртэл нь асаалттай байлга."
+        }
+      }
+    },
+    "a7a7a09d5d": {
+      "expected": {
+        "w": "暖める",
+        "r": "あたためる",
+        "en": [
+          "to warm",
+          "to heat"
+        ]
+      },
+      "examples": {
+        "ミルクを温めてくれませんか。": {
+          "en": "Will you warm the milk, please?",
+          "mn": "Сүү халааж өгч болох уу?"
+        },
+        "彼女は冷えたスープを夕食に暖めた。": {
+          "en": "She heated up the cold soup for supper.",
+          "mn": "Тэр оройн хоолонд хүйтэн шөлийг халаасан."
+        }
+      }
+    },
+    "ac69e2e6fa": {
+      "expected": {
+        "w": "あたりまえ",
+        "r": "あたりまえ",
+        "en": [
+          "usual",
+          "common",
+          "ordinary"
+        ]
+      },
+      "examples": {
+        "この問題はあたりまえのやり方では解決しない。": {
+          "en": "You cannot solve this problem in an ordinary way.",
+          "mn": "Энэ асуудлыг ердийн аргаар шийдэж болохгүй."
+        },
+        "早起きは彼には当たり前のことだ。": {
+          "en": "Early rising is with him a matter of course.",
+          "mn": "Эрт босох нь түүний хувьд хэвийн зүйл."
+        }
+      }
+    },
+    "18818a506e": {
+      "expected": {
+        "w": "あちらこちら",
+        "r": "あちらこちら",
+        "en": [
+          "here and there"
+        ]
+      },
+      "examples": {
+        "ヨーロッパをあちらこちら旅行した。": {
+          "en": "I traveled about Europe.",
+          "mn": "Би Европын энд тэнд аялсан."
+        },
+        "その犬はあちらこちらに頭を向けた。": {
+          "en": "The dog turned its head this way and that.",
+          "mn": "Нохой толгойгоо ийш тийш эргүүлсэн."
+        }
+      }
+    },
+    "a059581841": {
+      "expected": {
+        "w": "厚かましい",
+        "r": "あつかましい",
+        "en": [
+          "impudent",
+          "shameless",
+          "brazen"
+        ]
+      },
+      "examples": {
+        "彼は厚かましくも助けを求めてきた。": {
+          "en": "He had the cheek to ask me to help him.",
+          "mn": "Тэр ичих ч үгүй надаас тусламж хүссэн."
+        },
+        "厚かましくも私に出て行けと言った。": {
+          "en": "He had the face to tell me to clear off.",
+          "mn": "Тэр ичих ч үгүй намайг зайл гэж хэлсэн."
+        }
+      }
+    },
+    "869960843c": {
+      "expected": {
+        "w": "圧縮",
+        "r": "あっしゅく",
+        "en": [
+          "compression",
+          "condensation",
+          "pressure"
+        ]
+      },
+      "examples": {
+        "その気体は圧縮されてボンベに詰め込まれた。": {
+          "en": "The gas was compressed into a gas cylinder.",
+          "mn": "Хийг шахаж баллонд хийсэн."
+        },
+        "圧縮したファイルを添付で送ってください。": {
+          "en": "Send it to me as a compressed file.",
+          "mn": "Шахсан файлыг хавсралтаар явуулаарай."
+        }
+      }
+    },
+    "d3825b176d": {
+      "expected": {
+        "w": "宛名",
+        "r": "あてな",
+        "en": [
+          "address",
+          "direction"
+        ]
+      },
+      "examples": {
+        "この手紙は宛名が違っている。": {
+          "en": "This letter is wrongly addressed.",
+          "mn": "Энэ захианы хүлээн авагчийн хаяг буруу байна."
+        },
+        "郵便の宛名ははっきり正確に。": {
+          "en": "Please address your mail clearly and correctly.",
+          "mn": "Шуудангийн хаягаа тодорхой, зөв бичээрэй."
+        }
+      }
+    },
+    "83df753526": {
+      "expected": {
+        "w": "あてはまる",
+        "r": "あてはまる",
+        "en": [
+          "to be applicable",
+          "to come under (a category)",
+          "to fulfill"
+        ]
+      },
+      "examples": {
+        "この規則は１年生には当てはまらない。": {
+          "en": "This rule doesn't apply to first-year students.",
+          "mn": "Энэ дүрэм нэгдүгээр курсын оюутнуудад хамаарахгүй."
+        },
+        "その規則はこの場合に当てはまる。": {
+          "en": "The rule holds good in this case.",
+          "mn": "Энэ тохиолдолд тэр дүрэм үйлчилнэ."
+        }
+      }
+    },
+    "a5a037fa3e": {
+      "expected": {
+        "w": "あてはめる",
+        "r": "あてはめる",
+        "en": [
+          "to apply",
+          "to adapt"
+        ]
+      },
+      "examples": {
+        "この規則は貴方には当てはめることはできない。": {
+          "en": "This rule cannot be applied to you.",
+          "mn": "Энэ дүрмийг танд хэрэглэж болохгүй."
+        },
+        "彼はこの理論をこの場合にあてはめた。": {
+          "en": "He applied this theory to his case.",
+          "mn": "Тэр энэ онолыг энэ тохиолдолд хэрэглэсэн."
+        }
+      }
+    },
+    "f87fab18b5": {
+      "expected": {
+        "w": "暴れる",
+        "r": "あばれる",
+        "en": [
+          "to act violently",
+          "to rage",
+          "to struggle"
+        ]
+      },
+      "examples": {
+        "少年たちは２階でどたばた暴れていた。": {
+          "en": "The boys were banging about upstairs.",
+          "mn": "Хөвгүүд дээд давхарт түчигнэн бужигнаж байв."
+        },
+        "部屋の中で暴れまわってはいけない。": {
+          "en": "Don't run about wildly in the room.",
+          "mn": "Өрөөн дотор дураараа бужигнан гүйж болохгүй."
+        }
+      }
+    },
+    "cab6203141": {
+      "expected": {
+        "w": "脂",
+        "r": "あぶら",
+        "en": [
+          "fat",
+          "tallow",
+          "lard"
+        ]
+      },
+      "examples": {
+        "肌が脂っぽいのです。": {
+          "en": "I have greasy skin.",
+          "mn": "Миний арьс тослог."
+        }
+      }
+    },
+    "956a0a55ec": {
+      "expected": {
+        "w": "あぶる",
+        "r": "あぶる",
+        "en": [
+          "to scorch"
+        ]
+      },
+      "examples": {
+        "彼は濡れた服を火にあぶってかわかした。": {
+          "en": "He dried his wet clothes by the fire.",
+          "mn": "Тэр нойтон хувцсаа галд ээж хатаасан."
+        }
+      }
+    },
+    "3365ac796d": {
+      "expected": {
+        "w": "あふれる",
+        "r": "あふれる",
+        "en": [
+          "to flood",
+          "to overflow",
+          "to brim over"
+        ]
+      },
+      "examples": {
+        "その街は活気にあふれていた。": {
+          "en": "The town was full of activity.",
+          "mn": "Тэр хот амьд хөдөлгөөнөөр дүүрэн байв."
+        },
+        "市場は安い輸入品であふれている。": {
+          "en": "The market is glutted with cheap imports.",
+          "mn": "Зах хямд импортын бараагаар дүүрчээ."
+        }
+      }
+    }
+  }
+}

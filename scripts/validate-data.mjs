@@ -95,7 +95,7 @@ for (const e of draftVocab) {
     warn(`vocab-draft.json-д байхгүй: ${key}`);
     continue;
   }
-  if ((e.mn ?? [])[0] !== vocabDraft[key]) warn(`драфт зөрүү ${key}: data="${e.mn[0]}" draft="${vocabDraft[key]}"`);
+  if ((e.mn ?? []).join("; ") !== vocabDraft[key] && (e.mn ?? [])[0] !== vocabDraft[key]) warn(`драфт зөрүү ${key}: data="${e.mn[0]}" draft="${vocabDraft[key]}"`);
 }
 
 // --- Kanji ---------------------------------------------------------------------
@@ -146,14 +146,11 @@ for (const lv of LEVELS) {
   if (s && typeof s === "object") for (const k of Object.keys(s)) strokeKeys.add(k);
 }
 const kanjiSet = new Set(allKanji.map((e) => e.k));
-
-// Cross-reference audit: a vocabulary item's kanji links should point to
-// kanji entries we actually ship. Extended words may contain rare/out-of-scope
-// characters, so missing links are warnings rather than build-blocking errors.
+// Cross-check word→kanji links. Rare or extended characters may be outside the
+// shipped JLPT kanji set, so report these as warnings rather than failing builds.
 const missingVocabKanji = [];
 for (const v of allVocab) {
-  if (!Array.isArray(v.kd)) continue;
-  for (const ch of v.kd) {
+  for (const ch of Array.isArray(v.kd) ? v.kd : []) {
     if (!kanjiSet.has(ch)) missingVocabKanji.push(`${v.w} → ${ch}`);
   }
 }
@@ -183,10 +180,6 @@ for (const lv of LEVELS) {
     allGrammar.push(g);
   }
 }
-
-// Grammar links are expected to reference IDs in the same shipped grammar
-// corpus. Keep unknown external labels visible as warnings until sources are
-// normalized; they must never be silently treated as working links.
 const brokenGrammarLinks = [];
 for (const g of allGrammar) {
   for (const target of Array.isArray(g.related) ? g.related : []) {
@@ -197,24 +190,6 @@ if (brokenGrammarLinks.length) {
   warn(`Дүрмийн холбоосын ID олдсонгүй: ${brokenGrammarLinks.length} (жишээ: ${brokenGrammarLinks.slice(0, 8).join(", ")})`);
 }
 if (meta && meta.counts.grammar !== grammarCount) err(`grammar нийт ${grammarCount} ≠ meta ${meta.counts.grammar}`);
-
-// --- Search index -----------------------------------------------------------------
-if (search) {
-  if (search.v?.length !== allVocab.length) err(`search.v ${search.v?.length} ≠ vocab ${allVocab.length}`);
-  if (search.k?.length !== allKanji.length) err(`search.k ${search.k?.length} ≠ kanji ${allKanji.length}`);
-  if (search.g?.length !== grammarCount) err(`search.g ${search.g?.length} ≠ grammar ${grammarCount}`);
-
-  const vocabIds = new Set(allVocab.map((v) => v.id));
-  const indexedVocab = Array.isArray(search.v) ? search.v : [];
-  const missingVocabIndex = indexedVocab.filter((row) => !Array.isArray(row) || !vocabIds.has(row[5])).length;
-  if (missingVocabIndex) err(`search.v: бодит үгтэй холбогдоогүй ID ${missingVocabIndex}`);
-
-  const indexedGrammar = Array.isArray(search.g) ? search.g : [];
-  const missingGrammarIndex = indexedGrammar.filter((row) => !Array.isArray(row) || !grammarIds.has(row[3])).length;
-  if (missingGrammarIndex) err(`search.g: бодит дүрэмтэй холбогдоогүй ID ${missingGrammarIndex}`);
-}
-
-// Metadata should count only genuinely human-reviewed vocabulary, not drafts.
 const curatedVocab = allVocab.filter((v) => v.mq === "curated");
 if (meta && meta.counts.vocabMnCurated !== curatedVocab.length) {
   err(`vocabMnCurated: meta ${meta.counts.vocabMnCurated} ≠ curated ${curatedVocab.length}`);
@@ -224,6 +199,20 @@ for (const lv of LEVELS) {
   if (meta?.counts?.byLevel?.vocabMn && meta.counts.byLevel.vocabMn[lv] !== actual) {
     err(`vocabMn ${lv}: meta ${meta.counts.byLevel.vocabMn[lv]} ≠ curated ${actual}`);
   }
+}
+
+// --- Search index -----------------------------------------------------------------
+if (search) {
+  if (search.v?.length !== allVocab.length) err(`search.v ${search.v?.length} ≠ vocab ${allVocab.length}`);
+  if (search.k?.length !== allKanji.length) err(`search.k ${search.k?.length} ≠ kanji ${allKanji.length}`);
+  if (search.g?.length !== grammarCount) err(`search.g ${search.g?.length} ≠ grammar ${grammarCount}`);
+  const vocabIds = new Set(allVocab.map((v) => v.id));
+  const indexedVocab = Array.isArray(search.v) ? search.v : [];
+  const missingVocabIndex = indexedVocab.filter((row) => !Array.isArray(row) || !vocabIds.has(row[5])).length;
+  if (missingVocabIndex) err(`search.v: бодит үгтэй холбогдоогүй ID ${missingVocabIndex}`);
+  const indexedGrammar = Array.isArray(search.g) ? search.g : [];
+  const missingGrammarIndex = indexedGrammar.filter((row) => !Array.isArray(row) || !grammarIds.has(row[3])).length;
+  if (missingGrammarIndex) err(`search.g: бодит дүрэмтэй холбогдоогүй ID ${missingGrammarIndex}`);
 }
 
 // --- UI i18n: EN block must contain zero Cyrillic ---------------------------------
@@ -247,11 +236,11 @@ try {
 }
 
 // --- Report -------------------------------------------------------------------------
+console.log(`vocab ${allVocab.length} (curated ${curatedVocab.length}, draft ${draftVocab.length}), kanji ${allKanji.length} (draft ${draftKanji.length}), grammar ${grammarCount}`);
 const vocabExamples = allVocab.flatMap((v) => Array.isArray(v.ex) ? v.ex : []);
 const grammarExamples = allGrammar.flatMap((g) => Array.isArray(g.ex) ? g.ex : []);
 const translatedVocabExamples = vocabExamples.filter((e) => typeof e.mn === "string" && e.mn.trim()).length;
 const translatedGrammarExamples = grammarExamples.filter((e) => typeof e.mn === "string" && e.mn.trim()).length;
-console.log(`vocab ${allVocab.length} (curated ${curatedVocab.length}, draft ${draftVocab.length}), kanji ${allKanji.length} (draft ${draftKanji.length}), grammar ${grammarCount}`);
 console.log(`Монгол жишээ орчуулга: үгийн сан ${translatedVocabExamples}/${vocabExamples.length}, дүрэм ${translatedGrammarExamples}/${grammarExamples.length}`);
 for (const w of warnings.slice(0, 30)) console.log("  WARN ", w);
 if (warnings.length > 30) console.log(`  ... өөр ${warnings.length - 30} анхааруулга`);

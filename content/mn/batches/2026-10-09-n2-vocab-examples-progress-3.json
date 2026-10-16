@@ -1,0 +1,459 @@
+{
+  "provenance": {
+    "id": "mn-n2-vocab-examples-progress-3-oct9",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian compared with exact Japanese and retained English; stable record and headword/pattern guards; independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n2.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "319bcb97fb": {
+      "expected": {
+        "w": "言い付ける",
+        "r": "いいつける",
+        "en": [
+          "to tell",
+          "to tell on (someone)",
+          "to order"
+        ]
+      },
+      "examples": {
+        "あなたが彼に言いつけたって私はちっともかまわない。": {
+          "en": "You can tell him for all I care.",
+          "mn": "Чи түүнд хов хүргэсэн ч надад огт хамаагүй."
+        }
+      }
+    },
+    "9711352afe": {
+      "expected": {
+        "w": "意義",
+        "r": "いぎ",
+        "en": [
+          "meaning",
+          "significance"
+        ]
+      },
+      "examples": {
+        "彼は重大な意義のある決定を下した。": {
+          "en": "He has made a significant decision.",
+          "mn": "Тэр чухал ач холбогдолтой шийдвэр гаргасан."
+        },
+        "私はしばしば人生の意義について深く考えることがある。": {
+          "en": "I often meditate on the meaning of life.",
+          "mn": "Би амьдралын утга учрыг олонтаа гүн боддог."
+        }
+      }
+    },
+    "c6399cbbfd": {
+      "expected": {
+        "w": "生き生き",
+        "r": "いきいき",
+        "en": [
+          "vividly",
+          "lively"
+        ]
+      },
+      "examples": {
+        "彼は生き生きとした想像力を持っている。": {
+          "en": "He has a very vivid imagination.",
+          "mn": "Тэр маш тод төсөөлөх чадвартай."
+        },
+        "雨で木の葉が生き生きして見える。": {
+          "en": "The leaves look fresh in the rain.",
+          "mn": "Бороонд модны навч сэргэг харагдаж байна."
+        }
+      }
+    },
+    "ad6b4ebbf6": {
+      "expected": {
+        "w": "いきなり",
+        "r": "いきなり",
+        "en": [
+          "abruptly",
+          "suddenly",
+          "all of a sudden"
+        ]
+      },
+      "examples": {
+        "そのタクシーはいきなり左に曲がった。": {
+          "en": "The taxi abruptly turned left.",
+          "mn": "Такси гэнэт зүүн тийш эргэсэн."
+        },
+        "いきなり解雇を言い渡された。": {
+          "en": "I was discharged without notice.",
+          "mn": "Намайг урьдчилан мэдэгдэлгүй халсан."
+        }
+      }
+    },
+    "3308b2d953": {
+      "expected": {
+        "w": "育児",
+        "r": "いくじ",
+        "en": [
+          "childcare",
+          "nursing",
+          "upbringing"
+        ]
+      },
+      "examples": {
+        "ほんの一握りの男性しか育児休暇を取りたがらない。": {
+          "en": "Only a handful of men want to take childcare leave.",
+          "mn": "Цөөхөн эрэгтэй л хүүхэд асрах чөлөө авахыг хүсдэг."
+        }
+      }
+    },
+    "363c73e228": {
+      "expected": {
+        "w": "幾分",
+        "r": "いくぶん",
+        "en": [
+          "somewhat"
+        ]
+      },
+      "examples": {
+        "この問題は私にとっては幾分難しい。": {
+          "en": "This problem is difficult for me to some degree.",
+          "mn": "Энэ асуудал надад зарим талаар хэцүү."
+        },
+        "そのケーキは幾分レモンの味がした。": {
+          "en": "There was some taste of lemon in the cake.",
+          "mn": "Тэр бялуу бага зэрэг нимбэгийн амттай байв."
+        }
+      }
+    },
+    "85d99f2057": {
+      "expected": {
+        "w": "生け花",
+        "r": "いけばな",
+        "en": [
+          "flower arrangement"
+        ]
+      },
+      "examples": {
+        "彼女は生け花の大家になった。": {
+          "en": "She has made herself master of flower arranging.",
+          "mn": "Тэр цэцэг чимэглэх урлагийн мастер болсон."
+        },
+        "母は生け花を教えている。": {
+          "en": "My mother teaches flower arranging.",
+          "mn": "Ээж цэцэг чимэглэх урлаг заадаг."
+        }
+      }
+    },
+    "e73024b2eb": {
+      "expected": {
+        "w": "以後",
+        "r": "いご",
+        "en": [
+          "after this",
+          "from now on",
+          "hereafter"
+        ]
+      },
+      "examples": {
+        "以後こんなことはいたしません。": {
+          "en": "I'll never do this again.",
+          "mn": "Цаашид ийм зүйл хийхгүй."
+        },
+        "それ以後彼女に会っていません。": {
+          "en": "I haven't seen her since then.",
+          "mn": "Тэр цагаас хойш түүнтэй уулзаагүй."
+        }
+      }
+    },
+    "f485f00a3a": {
+      "expected": {
+        "w": "以降",
+        "r": "いこう",
+        "en": [
+          "on and after",
+          "hereafter",
+          "thereafter"
+        ]
+      },
+      "examples": {
+        "それ以降彼は辛い一生を送った。": {
+          "en": "He led a hard life after that.",
+          "mn": "Тэр цагаас хойш тэр хүнд амьдрал туулсан."
+        },
+        "９時以降に電話した方が安いですか。": {
+          "en": "Is it cheaper to call after 9:00?",
+          "mn": "Есөн цагаас хойш утасдах нь хямд уу?"
+        }
+      }
+    },
+    "7102632d8f": {
+      "expected": {
+        "w": "イコール",
+        "r": "イコール",
+        "en": [
+          "equal"
+        ]
+      },
+      "examples": {
+        "彼らは宗教イコール教会に行くことだと考えている。": {
+          "en": "They equate religion with church-going.",
+          "mn": "Тэд шашин гэдгийг сүмд явахтай адилтгадаг."
+        },
+        "俺は関係無い、イコール、いなくていい。だから、ここから出ていく何と言われようとも！": {
+          "en": "It's nothing to do with me, equals, I don't have to be here. So I'm getting out of here, whatever anybody says!",
+          "mn": "Надад хамаагүй, өөрөөр хэлбэл энд байх хэрэггүй. Тиймээс хэн юу ч хэлсэн би явна!"
+        }
+      }
+    },
+    "3966c8755c": {
+      "expected": {
+        "w": "勇ましい",
+        "r": "いさましい",
+        "en": [
+          "brave",
+          "valiant",
+          "gallant"
+        ]
+      },
+      "examples": {
+        "一人で原始林へ乗り込もうとは君はなんて勇ましいんだ。": {
+          "en": "How brave of you to go alone into the primaeval forest!",
+          "mn": "Онгон ой руу ганцаараа орно гэдэг чи ямар зоригтой юм бэ!"
+        },
+        "彼女は勇ましかった。": {
+          "en": "She was brave.",
+          "mn": "Тэр зоригтой байсан."
+        }
+      }
+    },
+    "05292c6357": {
+      "expected": {
+        "w": "衣食住",
+        "r": "いしょくじゅう",
+        "en": [
+          "necessities of life (food, clothing, etc.)"
+        ]
+      },
+      "examples": {
+        "私達が生きていくためには衣食住が必要です。": {
+          "en": "We need food, clothes and a home in order to live.",
+          "mn": "Амьдрахын тулд хоол, хувцас, орон байр хэрэгтэй."
+        },
+        "子供は衣食住を親に依存している。": {
+          "en": "Children depend on their parents for food, clothing and shelter.",
+          "mn": "Хүүхдүүд хоол, хувцас, орон байраар эцэг эхээсээ хамааралтай."
+        }
+      }
+    },
+    "9332146c42": {
+      "expected": {
+        "w": "意地悪",
+        "r": "いじわる",
+        "en": [
+          "malicious",
+          "ill-tempered",
+          "unkind"
+        ]
+      },
+      "examples": {
+        "友達に意地悪をしてはいけません。": {
+          "en": "Don't be unkind to your friends.",
+          "mn": "Найзууддаа муухай хандаж болохгүй."
+        },
+        "人前で彼を冷やかすなんて君は意地悪だ。": {
+          "en": "It is mean of you to ridicule him in public.",
+          "mn": "Түүнийг олны өмнө шоолох нь чиний муухай зан."
+        }
+      }
+    },
+    "ca1d593e5e": {
+      "expected": {
+        "w": "いちいち",
+        "r": "いちいち",
+        "en": [
+          "one by one",
+          "separately"
+        ]
+      },
+      "examples": {
+        "ジョンが品物をいちいち手に取って見た。": {
+          "en": "John picked up the articles one by one and examined them.",
+          "mn": "Жон бараануудыг нэг нэгээр нь авч үзсэн."
+        },
+        "彼は私のしたことにいちいち文句を言う。": {
+          "en": "He finds faults with everything I do.",
+          "mn": "Тэр миний хийсэн бүх зүйлд гомдоллодог."
+        }
+      }
+    },
+    "99ff21adbb": {
+      "expected": {
+        "w": "一応",
+        "r": "いちおう",
+        "en": [
+          "once",
+          "tentatively",
+          "in outline"
+        ]
+      },
+      "examples": {
+        "ええ、先方から一応返事はありました。": {
+          "en": "Yeah, there was some sort of reply from them.",
+          "mn": "Тийм ээ, тэднээс ямар ч гэсэн хариу ирсэн."
+        },
+        "過去問がもしあるならば一応目を通すほうがいいと思います。": {
+          "en": "If there are past exam questions then I think it would be best to give them a quick look over.",
+          "mn": "Өмнөх шалгалтын асуулт байвал ерөнхийд нь харах хэрэгтэй гэж бодож байна."
+        }
+      }
+    },
+    "28ba375980": {
+      "expected": {
+        "w": "一段と",
+        "r": "いちだんと",
+        "en": [
+          "greater",
+          "more",
+          "further"
+        ]
+      },
+      "examples": {
+        "冬は暗くなるのが一段と早くなる。": {
+          "en": "It becomes dark much earlier in winter.",
+          "mn": "Өвөл илүү эрт харанхуй болдог."
+        },
+        "前よりまた一段ときれいになったね。": {
+          "en": "You're much prettier than I remember.",
+          "mn": "Чи өмнөхөөсөө бүр ч үзэсгэлэнтэй болжээ."
+        }
+      }
+    },
+    "9299dcd9c4": {
+      "expected": {
+        "w": "一流",
+        "r": "いちりゅう",
+        "en": [
+          "first class",
+          "top grade",
+          "foremost"
+        ]
+      },
+      "examples": {
+        "こんな一流選手が相手では勝ち目がない。": {
+          "en": "We have no chance against those top players.",
+          "mn": "Ийм шилдэг тамирчидтай өрсөлдвөл ялах найдлагагүй."
+        },
+        "彼らはその作家を一流だと思った。": {
+          "en": "They looked on the writer as first-rate.",
+          "mn": "Тэд тэр зохиолчийг шилдэг гэж үзсэн."
+        }
+      }
+    },
+    "84ce1b3469": {
+      "expected": {
+        "w": "一昨年",
+        "r": "いっさくねん",
+        "en": [
+          "year before last"
+        ]
+      },
+      "examples": {
+        "彼女は、一昨年よりもはるかに暮らし向きがよい。": {
+          "en": "She's far better off than she was the year before last.",
+          "mn": "Түүний амьдрал уржнангийнхаас хавьгүй дээр болсон."
+        }
+      }
+    },
+    "b1205d9b83": {
+      "expected": {
+        "w": "一斉",
+        "r": "いっせい",
+        "en": [
+          "simultaneous",
+          "all at once"
+        ]
+      },
+      "examples": {
+        "彼らは一斉に立ち上がった。": {
+          "en": "They stood up simultaneously.",
+          "mn": "Тэд зэрэг босож ирсэн."
+        },
+        "彼らは一斉にスタートした。": {
+          "en": "They started all at once.",
+          "mn": "Тэд бүгд нэгэн зэрэг эхэлсэн."
+        }
+      }
+    },
+    "e2c0c40491": {
+      "expected": {
+        "w": "一旦",
+        "r": "いったん",
+        "en": [
+          "once",
+          "for a moment",
+          "one morning"
+        ]
+      },
+      "examples": {
+        "いったんしたことは元どおりにならない。": {
+          "en": "What is done cannot be undone.",
+          "mn": "Нэгэнт хийсэн зүйлийг буцааж болохгүй."
+        },
+        "いったん始めたら、やり続けてください。": {
+          "en": "Once you start, carry it on.",
+          "mn": "Нэг эхэлсэн бол үргэлжлүүлээрэй."
+        }
+      }
+    },
+    "d56c7f55f8": {
+      "expected": {
+        "w": "一定",
+        "r": "いってい",
+        "en": [
+          "fixed",
+          "settled",
+          "definite"
+        ]
+      },
+      "examples": {
+        "彼は口座の中の一定額を子供用に用いた。": {
+          "en": "He had some money in an account that he'd set aside for his kids.",
+          "mn": "Тэр хүүхдүүддээ зориулж дансныхаа тодорхой мөнгийг хэрэглэсэн."
+        }
+      }
+    },
+    "b95d04294a": {
+      "expected": {
+        "w": "いってらっしゃい",
+        "r": "いってらっしゃい",
+        "en": [
+          "have a good day",
+          "take care",
+          "see you"
+        ]
+      },
+      "examples": {
+        "そう、いいわよ。いってらっしゃい。でも運転には気を付けてね。": {
+          "en": "Oh, OK. See you. But drive carefully.",
+          "mn": "За, болно. Сайн яваарай. Гэхдээ болгоомжтой жолоодоорой."
+        }
+      }
+    },
+    "8c9eb6e298": {
+      "expected": {
+        "w": "いつのまにか",
+        "r": "いつのまにか",
+        "en": [
+          "before one knows",
+          "unnoticed",
+          "unawares"
+        ]
+      },
+      "examples": {
+        "いつの間にかボブは外へ出ていた。": {
+          "en": "Bob went out before I knew it.",
+          "mn": "Нэг мэдэхэд Боб гадаа гарсан байв."
+        }
+      }
+    }
+  }
+}

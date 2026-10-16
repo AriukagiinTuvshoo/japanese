@@ -2,11 +2,12 @@ import { useEffect, useMemo, useState } from "react";
 import { cn } from "../utils/cn";
 import { href, navigate } from "../lib/router";
 import { useStore } from "../lib/store";
-import { loadFullData } from "../lib/data";
+import { loadFullData, loadTranslationProvenance } from "../lib/data";
 import type { Vocab } from "../lib/types";
 import { MQ_LABEL, TYPE_LABEL, LEVEL_LABEL, stripFurigana, toRomaji } from "../lib/text";
 import { GRADES, cardStage, previewIntervals, retrievability } from "../lib/srs";
-import { MN_PENDING, ui } from "../lib/i18n";
+import { MN_PENDING, ui, vocabMeaning } from "../lib/i18n";
+import { EntryNavigator } from "../components/EntryNavigator";
 import {
   Bar, Button, Card, Chip, Empty, Furigana, LevelBadge, SectionTitle, SpeakButton, Spinner, Tabs, speak,
 } from "../components/ui";
@@ -17,6 +18,7 @@ export default function WordDetail({ id }: { id: string }) {
   const t = ui[language];
   const [data, setData] = useState<Awaited<ReturnType<typeof loadFullData>> | null>(null);
   const [tab, setTab] = useState<"overview" | "examples" | "network" | "source">("overview");
+  const [translationReview, setTranslationReview] = useState<Record<string, string>>({});
   const [mnemonic, setMnemonic] = useState("");
 
   useEffect(() => {
@@ -26,6 +28,17 @@ export default function WordDetail({ id }: { id: string }) {
   useEffect(() => {
     setMnemonic(doc.mnemonics[id] ?? "");
   }, [id, doc.mnemonics]);
+
+  useEffect(() => {
+    if (tab !== "examples") return;
+    let active = true;
+    loadTranslationProvenance().then((records) => {
+      if (active) setTranslationReview(Object.fromEntries(records.map((record) => [record.id, record.reviewStatus ?? ""])));
+    }).catch(() => {
+      if (active) setTranslationReview({});
+    });
+    return () => { active = false; };
+  }, [tab]);
 
   const v: Vocab | undefined = data?.byId.get(id);
   const card = doc.srs[id];
@@ -64,7 +77,7 @@ export default function WordDetail({ id }: { id: string }) {
 
   const related = useMemo(() => relatedGroups.flatMap((group) => group.words), [relatedGroups]);
 
-  if (!data) return <Spinner label="Үг ачаалж байна…" />;
+  if (!data) return <Spinner label={t.loadingVocab} lang={language} />;
   if (!v) {
     return (
       <Empty
@@ -75,6 +88,11 @@ export default function WordDetail({ id }: { id: string }) {
       />
     );
   }
+
+  const siblings = data.vocabByLevel[v.lvl];
+  const currentIndex = siblings.findIndex((word) => word.id === v.id);
+  const previousWord = currentIndex > 0 ? siblings[currentIndex - 1] : null;
+  const nextWord = currentIndex >= 0 && currentIndex < siblings.length - 1 ? siblings[currentIndex + 1] : null;
 
   return (
     <div className="space-y-6">
@@ -89,6 +107,16 @@ export default function WordDetail({ id }: { id: string }) {
           <Button size="sm" onClick={() => navigate(`review?level=${v.lvl}`)}>{t.review2}</Button>
         </div>
       </div>
+
+      <EntryNavigator
+        previous={previousWord ? { href: href("vocab", previousWord.id), title: previousWord.w, subtitle: vocabMeaning(previousWord, language) } : null}
+        next={nextWord ? { href: href("vocab", nextWord.id), title: nextWord.w, subtitle: vocabMeaning(nextWord, language) } : null}
+        previousLabel={t.previousWord}
+        nextLabel={t.nextWord}
+        positionLabel={t.entryPosition(currentIndex + 1, siblings.length)}
+      />
+
+      {v.source_issue && <p role="alert" className="rounded-xl bg-kin-50 p-4 text-sm text-kin-700">{t.sourceReviewWarning}</p>}
 
       {/* ── үндсэн карт ── */}
       <Card className="overflow-hidden p-0">
@@ -157,7 +185,7 @@ export default function WordDetail({ id }: { id: string }) {
                         <span className="font-mincho text-[26px] font-bold leading-none text-sumi-900">{ch}</span>
                         <span className="min-w-0">
                           <span className="block text-[12.5px] font-bold text-sumi-800">
-                            {language === "en" ? (k?.en.join(", ") || k?.mn?.join(", ") || "—") : (k?.mn?.join(", ") || k?.en.join(", ") || "—")}
+                            {language === "en" ? (k?.en.join(", ") || "—") : (k?.mn?.join(", ") || MN_PENDING)}
                           </span>
                           <span className="block text-[10.5px] text-sumi-400">
                             音 {k?.on.slice(0, 2).join("・") || "—"} · 訓 {k?.kun.slice(0, 2).join("・") || "—"}
@@ -294,12 +322,19 @@ export default function WordDetail({ id }: { id: string }) {
                     <SpeakButton text={stripFurigana(e.ja)} />
                   </div>
                   {language === "mn" && e.mn && <p className="mt-2 text-[13px] text-sumi-600">{e.mn}</p>}
+                  {e.mn && (
+                    <p className="mt-2 text-[11px] leading-relaxed text-sumi-400">
+                      {!e.mn_provenance || !translationReview[e.mn_provenance]
+                        ? t.exampleMnReviewUnknown
+                        : translationReview[e.mn_provenance] === "reviewed"
+                          ? t.exampleMnReviewed
+                          : t.exampleMnNeedsReview}
+                    </p>
+                  )}
                   {e.en && <p className="mt-2 text-[13px] text-sumi-600">{e.en}</p>}
                   <p className="mt-2 text-[11px] text-sumi-400">
-                    {language === "mn"
-                      ? (e.mn
-                        ? <>{t.mnLabel}: {e.mn}</>
-                        : <>{t.mnMissing}<a href={href("admin")} className="font-bold text-ai-600 underline underline-offset-4">{t.add}</a></>)
+                    {language === "mn" && !e.mn
+                      ? <>{t.mnMissing}<a href={href("admin")} className="font-bold text-ai-600 underline underline-offset-4">{t.add}</a></>
                       : null}
                     {e.ts ? ` · Tatoeba #${e.ts}` : ""}
                   </p>
@@ -323,7 +358,7 @@ export default function WordDetail({ id }: { id: string }) {
                 <p className="mt-2 text-[13px] font-semibold text-sumi-800">
                   {language === "en" ? v.en.join("; ") : (v.mn?.join("、") || t.mnMissing)}
                 </p>
-                <p className="mt-2 text-[10.5px] font-bold uppercase tracking-[0.15em] text-sumi-400">{t.meaningLabel} · {v.lvl}</p>
+                <p className="mt-2 text-[10.5px] font-bold uppercase tracking-[0.15em] text-sumi-400">{t.meaning} · {v.lvl}</p>
               </div>
 
               <div className="grid gap-4 md:grid-cols-2">
@@ -363,7 +398,7 @@ export default function WordDetail({ id }: { id: string }) {
           <div className="space-y-3">
             <Info l={t.srcPool} v={v.src === "openjlpt" ? "OpenJLPT (JLPT N5–N1)" : "JMdict (jamdict-data)"} />
             <Info l={t.srcId} v={v.sid} />
-            <Info l={t.license} v={v.src === "openjlpt" ? "CC-BY-SA-4.0" : "CC-BY-SA-4.0 (JMdict)"} />
+            <Info l={t.license} v={v.src === "openjlpt" ? "CC-BY-SA-4.0" : "CC-BY-SA-3.0 (jamdict-data 1.5 dictionary) · MIT (package)"} />
             <Info l={t.levelBy} v={v.tier === "jlpt" ? t.levelByJlpt : t.levelByDerived} />
             <Info l={t.transStatus} v={mq?.text ?? "—"} />
             <Info l={t.examplesRow} v={v.ex.length ? "Tatoeba (CC BY 2.0 FR)" : "—"} />

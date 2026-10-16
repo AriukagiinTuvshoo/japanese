@@ -1,0 +1,155 @@
+{
+  "provenance": {
+    "id": "mn-n4-example-translation-batch-2026-10-16-1",
+    "createdAt": "2026-10-16",
+    "author": "Arena coding assistant",
+    "method": "AI-assisted Mongolian example translations drafted against retained Japanese and English pairs. Japanese and English source fields are preserved. The translations remain unreviewed by a human linguist and require independent language review before release.",
+    "source": "https://github.com/evanclan/OpenJLPT (retained Japanese/English example sentences; Mongolian translations added in this repository)",
+    "sourceSnapshot": "e8d64b60529aa96e54e082e902285a49831a96c1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "83af91b7eb": {
+      "expected": {
+        "w": "会議",
+        "r": "かいぎ",
+        "en": [
+          "meeting"
+        ]
+      },
+      "examples": {
+        "会議は終わりに近づきつつあった。": "Хурал төгсгөлдөө дөхөж байлаа.",
+        "会議に彼は現れましたか。": "Тэр хуралд ирсэн үү?"
+      }
+    },
+    "93ff1a80c2": {
+      "expected": {
+        "w": "会議室",
+        "r": "かいぎしつ",
+        "en": [
+          "meeting room"
+        ]
+      },
+      "examples": {
+        "クラブの会員は会議室に集まった。": "Клубын гишүүд хурлын өрөөнд цугларсан.",
+        "会議室は現在使用中です。": "Хурлын өрөө одоо ашиглагдаж байна."
+      }
+    },
+    "7508a7d366": {
+      "expected": {
+        "w": "会場",
+        "r": "かいじょう",
+        "en": [
+          "assembly hall or meeting place"
+        ]
+      },
+      "examples": {
+        "私たちは会場の後ろに座った。": "Бид танхимын ард суусан.",
+        "音楽会場では物音１つ聞こえなかった。": "Концертын танхимд ямар ч чимээ сонсогдсонгүй."
+      }
+    },
+    "81b9c23c14": {
+      "expected": {
+        "w": "会話",
+        "r": "かいわ",
+        "en": [
+          "conversation"
+        ]
+      },
+      "examples": {
+        "その作家は会話を書くのがうまい。": "Тэр зохиолч харилцан яриа бичихдээ сайн.",
+        "私たちの会話はいつもけんかで終わる。": "Бидний яриа үргэлж хэрүүлээр дуусдаг."
+      }
+    },
+    "64e3e16740": {
+      "expected": {
+        "w": "変える",
+        "r": "かえる",
+        "en": [
+          "to change"
+        ]
+      },
+      "examples": {
+        "なんで彼は考えを変えたのか。": "Тэр яагаад бодлоо өөрчилсөн юм бол?",
+        "父さんは考えを変えると思うかい。": "Аав бодлоо өөрчилнө гэж чи бодож байна уу?"
+      }
+    },
+    "ea150f3d48": {
+      "expected": {
+        "w": "科学",
+        "r": "かがく",
+        "en": [
+          "science"
+        ]
+      },
+      "examples": {
+        "私は、ずっと科学を習っている。": "Би шинжлэх ухаан үзсээр байгаа.",
+        "天文学は天体の科学である。": "Одон орон судлал бол тэнгэрийн биетийг судалдаг шинжлэх ухаан юм."
+      }
+    },
+    "2c7db27d62": {
+      "expected": {
+        "w": "鏡",
+        "r": "かがみ",
+        "en": [
+          "mirror"
+        ]
+      },
+      "examples": {
+        "少女は立って鏡をのぞきこんだ。": "Охин босоод толинд шагайж харлаа."
+      }
+    },
+    "2d6f99582c": {
+      "expected": {
+        "w": "飾る",
+        "r": "かざる",
+        "en": [
+          "to decorate"
+        ]
+      },
+      "examples": {
+        "その広間は日本画で飾られていた。": "Тэр том танхимыг япон уран зургаар чимэглэсэн байв.",
+        "私たち自身が部屋を飾ったのです。": "Өрөөг бид өөрсдөө чимэглэсэн юм."
+      }
+    },
+    "b64af0c4f7": {
+      "expected": {
+        "w": "火事",
+        "r": "かじ",
+        "en": [
+          "fire"
+        ]
+      },
+      "examples": {
+        "その火事はおととい発生した。": "Тэр гал уржигдар гарсан.",
+        "火事の時にはこの出口を使ってください。": "Гал гарсан үед энэ гарцаар гараарай."
+      }
+    },
+    "b3c360789e": {
+      "expected": {
+        "w": "ガソリン",
+        "r": "ガソリン",
+        "en": [
+          "petrol"
+        ]
+      },
+      "examples": {
+        "この車はあまりガソリンを食わない。": "Энэ машин бензин бага зарцуулдаг."
+      }
+    },
+    "57c68573b7": {
+      "expected": {
+        "w": "ガソリンスタンド",
+        "r": "ガソリンスタンド",
+        "en": [
+          "petrol station"
+        ]
+      },
+      "examples": {
+        "この辺にガソリンスタンドはありますか。": "Энд ойрхон шатахуун түгээх станц бий юу?",
+        "左に曲がるとガソリンスタンドがある。": "Зүүн тийш эргэвэл шатахуун түгээх станц бий."
+      }
+    }
+  }
+}

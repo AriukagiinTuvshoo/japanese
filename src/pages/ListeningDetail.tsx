@@ -7,7 +7,7 @@ import { lessonById } from "../lib/data";
 import type { ListeningLesson } from "../lib/types";
 import { FALLBACK_LESSONS } from "../data/listening-fallback";
 import { stripFurigana } from "../lib/text";
-import { Button, Card, Chip, Empty, LevelBadge, SectionTitle, SpeakButton, Tabs } from "../components/ui";
+import { Button, Card, Chip, Empty, LevelBadge, SectionTitle, SpeakButton, Tabs, speak } from "../components/ui";
 import { XRayText } from "../components/XRayText";
 
 export default function ListeningDetail({ id }: { id: string }) {
@@ -19,7 +19,17 @@ export default function ListeningDetail({ id }: { id: string }) {
   const [answers, setAnswers] = useState<(number | null)[]>([]);
   const [revealed, setRevealed] = useState(false);
   const [speed, setSpeed] = useState(1);
+  const [speaking, setSpeaking] = useState(false);
+  const [audioError, setAudioError] = useState("");
   const [inView, setInView] = useState(false);
+  /** Давталтын бодлого: шалгалтын горимд мөр/бүтэн уншилт тус бүр 2 удаа. */
+  const [plays, setPlays] = useState<Record<string, number>>({});
+  const examReplay = doc.profile.replayPolicy === "exam";
+  const playOnce = (key: string, run: () => void) => {
+    if (examReplay && (plays[key] ?? 0) >= 2) return;
+    setPlays((p) => ({ ...p, [key]: (p[key] ?? 0) + 1 }));
+    run();
+  };
   const holder = useRef<HTMLDivElement>(null);
 
   useEffect(() => { setAnswers((lesson?.questions ?? []).map(() => null)); setRevealed(false); }, [lesson]);
@@ -28,10 +38,13 @@ export default function ListeningDetail({ id }: { id: string }) {
     // Видеог зөвхөн харагдах үед ачаална (хөнгөн, хурдан)
     const el = holder.current;
     if (!el) return;
+    if (!lesson?.youtubeId) { setInView(true); return; }
     const obs = new IntersectionObserver(([e]) => setInView(e.isIntersecting), { threshold: 0.15 });
     obs.observe(el);
     return () => obs.disconnect();
-  }, []);
+  }, [lesson?.youtubeId]);
+
+  useEffect(() => () => { window.speechSynthesis?.cancel(); }, []);
 
   if (!lesson) {
     return <Empty icon="聴" title={t.lessonNotFound} sub={id} action={<Button onClick={() => navigate("listening")}>{t.backListening}</Button>} />;
@@ -39,32 +52,47 @@ export default function ListeningDetail({ id }: { id: string }) {
 
   const correct = lesson.questions.reduce((a, q, i) => a + (answers[i] === q.a ? 1 : 0), 0);
   const isDone = doc.listeningDone.includes(id);
+  const playTts = () => {
+    setAudioError("");
+    if (!window.speechSynthesis || typeof SpeechSynthesisUtterance === "undefined") {
+      setAudioError(language === "en" ? "Japanese speech is unavailable in this browser." : "Энэ браузерт япон хэлний дуу хоолой боломжгүй байна.");
+      return;
+    }
+    setSpeaking(true);
+    speak(lesson.transcript.map((line) => stripFurigana(line.ja)).join("。"), speed, {
+      lang: "ja-JP",
+      onend: () => setSpeaking(false),
+      onerror: () => setSpeaking(false),
+    });
+  };
+  const stopTts = () => { window.speechSynthesis?.cancel(); setSpeaking(false); };
 
   return (
     <div className="space-y-6">
       <div className="flex flex-wrap items-center gap-2">
         <Button size="sm" variant="ghost" onClick={() => navigate(`listening?level=${lesson.level}`)}>{t.backListening}</Button>
         <LevelBadge level={lesson.level} size="sm" />
-        <Chip tone="sumi">{lesson.topic}</Chip>
+        <Chip tone="sumi">{language === "en" ? (lesson.topicEn ?? lesson.topic) : lesson.topic}</Chip>
         <span className="text-[12px] text-sumi-400">{lesson.minutes} {t.minutes}</span>
         <div className="ml-auto flex gap-2">
-          {isDone ? <Button size="sm" variant="soft">✓ Дуусгасан</Button>
-            : <Button size="sm" onClick={() => actions.markListening(id)}>✓ Дуусгах</Button>}
+          {isDone ? <Button size="sm" variant="soft">{t.doneBtn}</Button>
+            : <Button size="sm" onClick={() => actions.markListening(id)}>{t.markDone}</Button>}
         </div>
       </div>
 
       <div>
         <p className="font-jp text-[11.5px] tracking-[0.3em] text-shu-500">聴解 · {lesson.level}</p>
-        <h1 className="mt-1 font-jp text-[1.8rem] font-extrabold leading-tight tracking-tight">{lesson.titleJp ?? lesson.title}</h1>
-        <p className="mt-1.5 text-[14px] font-semibold text-sumi-600">{lesson.title}</p>
-        <p className="mt-1 text-[12.5px] text-sumi-400">{lesson.channel}</p>
+        <h1 className="mt-1 font-jp text-[1.8rem] font-extrabold leading-tight tracking-tight"><XRayText text={lesson.titleJpFuri ?? lesson.titleJp ?? lesson.title} showFurigana={doc.profile.furigana} /></h1>
+        <p className="mt-1.5 text-[14px] font-semibold text-sumi-600">{language === "en" ? (lesson.titleEn ?? lesson.title) : lesson.title}</p>
+        {lesson.youtubeId && <p className="mt-1 text-[12.5px] text-sumi-400">{lesson.channel}</p>}
       </div>
 
+      <p role="status" className="rounded-xl border border-kin-200 bg-kin-50 p-3 text-[13px]">{language === "en" ? "Unreviewed practice content: translations, readings and answer keys need semantic review. Not eligible for mock-exam scoring." : "Хянаагүй дасгалын контент: орчуулга, уншлага, хариуны түлхүүрийг утгын хувьд нягтлах шаардлагатай. Жишиг шалгалтын оноонд ашиглахгүй."}</p>
       <div className="grid gap-5 lg:grid-cols-[1fr_320px]">
         <div className="space-y-5">
           <Card className="overflow-hidden p-0" >
-            <div ref={holder} className="aspect-video w-full bg-sumi-900">
-              {inView ? (
+            <div ref={holder} className={`grid aspect-video w-full place-items-center ${lesson.youtubeId ? "bg-sumi-900" : "bg-ai-50"}`}>
+              {lesson.youtubeId ? (inView ? (
                 <iframe
                   title={lesson.title}
                   src={`https://www.youtube.com/embed/${lesson.youtubeId}?rel=0&modestbranding=1`}
@@ -75,10 +103,20 @@ export default function ListeningDetail({ id }: { id: string }) {
                 />
               ) : (
                 <div className="grid h-full place-items-center text-[13px] text-washi-300">{t.videoLoading}</div>
+              )) : (
+                <div className="flex flex-col items-center gap-4 p-5 text-center">
+                  <span className="font-mincho text-6xl text-ai-500">聴</span>
+                  <p className="text-[13px] font-semibold text-sumi-600">{language === "en" ? "Listen to the Japanese passage" : "Япон өгүүлбэрүүдийг сонсоорой"}</p>
+                  <Button disabled={!speaking && examReplay && (plays.full ?? 0) >= 2} onClick={speaking ? stopTts : () => playOnce("full", playTts)}>
+                    {speaking ? (language === "en" ? "Stop" : "Зогсоох") : (language === "en" ? "▶ Play audio" : "▶ Аудио сонсох")}
+                    {examReplay && !speaking && <span className="ml-2 font-mono text-[11px] tabnum">{plays.full ?? 0}/2</span>}
+                  </Button>
+                  {audioError && <p role="alert" className="text-[12px] text-shu-700">{audioError}</p>}
+                </div>
               )}
             </div>
             <div className="flex flex-wrap items-center gap-3 border-t border-sumi-900/8 px-4 py-3">
-              <div className="flex items-center gap-1 rounded-xl bg-sumi-900/5 p-1">
+              {!lesson.youtubeId && <div className="flex items-center gap-1 rounded-xl bg-sumi-900/5 p-1">
                 {[0.75, 1, 1.25, 1.5].map((s) => (
                   <button key={s} onClick={() => setSpeed(s)}
                     className={cn("rounded-lg px-2.5 py-1.5 font-mono text-[11.5px] font-bold transition",
@@ -86,48 +124,50 @@ export default function ListeningDetail({ id }: { id: string }) {
                     {s}×
                   </button>
                 ))}
-              </div>
-              <span className="text-[11.5px] text-sumi-400">
-                {t.speedNote}
-              </span>
-              <a href={`https://www.youtube.com/watch?v=${lesson.youtubeId}`} target="_blank" rel="noreferrer noopener"
+              </div>}
+              {!lesson.youtubeId && <span className="text-[11.5px] text-sumi-400">{language === "en" ? "Playback speed" : "Сонсох хурд"}</span>}
+              {examReplay && !lesson.youtubeId && (
+                <span className="flex items-center gap-2">
+                  <Chip tone="kin">{t.replayExamChip}</Chip>
+                  <button onClick={() => setPlays({})} className="text-[11.5px] font-bold text-ai-600 underline underline-offset-4">
+                    {t.replayReset}
+                  </button>
+                </span>
+              )}
+              {lesson.youtubeId && <a href={`https://www.youtube.com/watch?v=${lesson.youtubeId}`} target="_blank" rel="noreferrer noopener"
                 className="ml-auto text-[12px] font-bold text-ai-600 underline underline-offset-4">
-                YouTube дээр нээх ↗
-              </a>
+                {t.openOnYt}
+              </a>}
             </div>
           </Card>
 
           <Tabs value={tab} onChange={setTab} items={[
-            { id: "lesson", label: "Хичээл", icon: "学" },
-            { id: "transcript", label: "Транскрипт", icon: "文", badge: lesson.transcript.length || undefined },
-            { id: "questions", label: "Асуулт", icon: "問", badge: lesson.questions.length || undefined },
-            { id: "shadow", label: "Дуу дагах", icon: "影" },
+            { id: "lesson", label: t.lessonTab, icon: "学" },
+            { id: "transcript", label: t.transcriptTab, icon: "文", badge: lesson.transcript.length || undefined },
+            { id: "questions", label: t.questionsTab, icon: "問", badge: lesson.questions.length || undefined },
+            { id: "shadow", label: t.shadowTab, icon: "影" },
           ]} />
 
           {tab === "transcript" && (
             <Card>
-              <SectionTitle jp="スクリプト" title="Транскрипт"
-                sub="Үг дээр дарж утгыг хараад SRS-д нэмээрэй. Текст нь хичээлийн бодит агуулгаас." />
+              <SectionTitle jp="スクリプト" title={t.transcriptTitle}
+                sub={t.transcriptSub} />
               <div className="space-y-3.5">
                 {lesson.transcript.map((line, i) => (
                   <div key={i} className="flex items-start gap-3 border-b border-sumi-900/6 pb-3.5 last:border-0">
                     <button
-                      onClick={() => {
-                        const u = new SpeechSynthesisUtterance(stripFurigana(line.ja));
-                        u.lang = "ja-JP";
-                        u.rate = 0.9;
-                        window.speechSynthesis.cancel();
-                        window.speechSynthesis.speak(u);
-                      }}
-                      className="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-lg border border-sumi-900/10 bg-white/70 text-[12px] text-sumi-500 hover:border-ai-400 hover:text-ai-600"
+                      onClick={() => playOnce(`l${i}`, () => speak(stripFurigana(line.ja), 0.9, { lang: "ja-JP" }))}
+                      disabled={examReplay && (plays[`l${i}`] ?? 0) >= 2}
+                      className={cn("mt-0.5 grid h-11 w-11 shrink-0 place-items-center rounded-lg border border-sumi-900/10 bg-white/70 text-[12px] text-sumi-500 hover:border-ai-400 hover:text-ai-600 sm:h-7 sm:w-7",
+                        examReplay && (plays[`l${i}`] ?? 0) >= 2 && "opacity-40")}
                       title={t.readAloud}>
-                      🔊
+                      🔊{examReplay && <span className="ml-0.5 font-mono text-[9px] tabnum">{plays[`l${i}`] ?? 0}/2</span>}
                     </button>
                     <div className="min-w-0 flex-1">
                       <p className="text-[15.5px] leading-relaxed">
                         <XRayText text={line.ja} showFurigana={doc.profile.furigana} />
                       </p>
-                      {line.mn && <p className="mt-1 text-[13px] font-semibold text-sumi-700">{line.mn}</p>}
+                      {(language === "en" ? line.en : line.mn) && <p className="mt-1 text-[13px] font-semibold text-sumi-700">{language === "en" ? line.en : line.mn}</p>}
                     </div>
                   </div>
                 ))}
@@ -144,9 +184,8 @@ export default function ListeningDetail({ id }: { id: string }) {
                     {lesson.questions.map((q, qi) => (
                       <div key={qi} className="rounded-2xl border border-sumi-900/10 bg-white/60 p-4">
                         <p className="text-[14.5px] font-bold">
-                          <span className="mr-2 font-mono text-sumi-400">{qi + 1}.</span>{q.q}
+                          <span className="mr-2 font-mono text-sumi-400">{qi + 1}.</span>{language === "en" ? (q.promptEn ?? q.q) : (q.mn ?? q.q)}
                         </p>
-                        {q.mn && <p className="mt-1 text-[12.5px] text-sumi-500">{q.mn}</p>}
                         <div className="mt-3 space-y-2">
                           {q.opts.map((o, oi) => {
                             const picked = answers[qi] === oi;
@@ -162,12 +201,12 @@ export default function ListeningDetail({ id }: { id: string }) {
                                   revealed && right ? "bg-matcha-500 text-white" : picked ? "bg-ai-500 text-white" : "bg-sumi-900/6 text-sumi-500")}>
                                   {String.fromCharCode(65 + oi)}
                                 </span>
-                                {o}
+                                {language === "en" ? (q.optsEn?.[oi] ?? o) : o}
                               </button>
                             );
                           })}
                         </div>
-                        {revealed && q.why && <p className="mt-3 rounded-xl bg-sumi-900/[0.045] px-3.5 py-2.5 text-[12.5px] text-sumi-600">{q.why}</p>}
+                        {revealed && (language === "en" ? q.whyEn : q.why) && <p className="mt-3 rounded-xl bg-sumi-900/[0.045] px-3.5 py-2.5 text-[12.5px] text-sumi-600">{language === "en" ? q.whyEn : q.why}</p>}
                       </div>
                     ))}
                   </div>
@@ -189,8 +228,8 @@ export default function ListeningDetail({ id }: { id: string }) {
 
           {tab === "shadow" && (
             <Card>
-              <SectionTitle jp="シャドーイング" title="Дуу дагах (shadowing)"
-                sub="1. Сонсох → 2. Дагаж хэлэх → 3. Бичиж авах → 4. Харьцуулах" />
+              <SectionTitle jp="シャドーイング" title={t.shadowingTitle}
+                sub={t.shadowingSub} />
               <div className="space-y-3">
                 {(lesson.shadowing?.length ? lesson.shadowing : lesson.transcript.slice(0, 6).map((t) => stripFurigana(t.ja))).map((line, i) => (
                   <ShadowRow key={i} text={line} index={i} />
@@ -199,10 +238,7 @@ export default function ListeningDetail({ id }: { id: string }) {
               <div className="mt-5 rounded-2xl border border-ai-100 bg-ai-50/60 p-4 text-[12.5px] leading-relaxed text-ai-700">
                 <p className="font-bold">{t.howToShadow}</p>
                 <ol className="mt-2 list-inside list-decimal space-y-1">
-                  <li>Дээрх 🔊 товчоор мөр бүрийг сонсоод, дуугаа оруулах 💬 товчоор давтан хэл</li>
-                  <li>Хөтөч микрофоныг асуух болно — зөвшөөрнө үү</li>
-                  <li>Бичлэгээ эргүүлж сонсоод, эх дуудлагатай харьцуул</li>
-                  <li>Тод дуудлага, урт гийгүүлэгчид (っ), удаан эгшигт анхаар</li>
+                  {t.shadowSteps.split("|").map((step) => <li key={step}>{step}</li>)}
                 </ol>
               </div>
             </Card>
@@ -210,17 +246,17 @@ export default function ListeningDetail({ id }: { id: string }) {
 
           {tab === "lesson" && (
             <Card>
-              <SectionTitle jp="この動画について" title={t.aboutLesson} />
+              <SectionTitle jp="この練習について" title={lesson.youtubeId ? t.aboutLesson : (language === "en" ? "About this exercise" : "Дасгалын тухай")} />
               <p className="text-[13.5px] leading-relaxed text-sumi-600">
-                {lesson.channel} сувгийн видеог ашиглан {lesson.level} түвшний сонсголын дасгал.
-                Транскрипт, үгийн сан, асуултууд нь бидний боловсруулсан нэмэлт сургалтын материал —
-                видеоны эрх нь эзэндээ хадгалагдана.
+                {lesson.youtubeId
+                  ? t.aboutLessonBody(lesson.channel, lesson.level)
+                  : (language === "en" ? "Original Japanese sentences are read aloud with your browser’s Japanese speech voice." : "Энэ хичээлийн япон өгүүлбэрийг браузерын япон хэлний дуу хоолойгоор уншуулна.")}
               </p>
               <div className="mt-5 grid gap-3 sm:grid-cols-3">
                 {[
-                  { l: "Түвшин", v: lesson.level },
-                  { l: "Сэдэв", v: lesson.topic },
-                  { l: "Үргэлжлэх", v: `${lesson.minutes} мин` },
+                  { l: t.level, v: lesson.level },
+                  { l: t.topicRow, v: language === "en" ? (lesson.topicEn ?? lesson.topic) : lesson.topic },
+                  { l: t.durationRow, v: `${lesson.minutes} ${t.minutes}` },
                 ].map((x) => (
                   <div key={x.l} className="card-flat px-4 py-3">
                     <p className="text-[11px] font-bold uppercase tracking-wide text-sumi-400">{x.l}</p>
@@ -242,19 +278,23 @@ export default function ListeningDetail({ id }: { id: string }) {
         <div className="space-y-5">
           <Card>
             <p className="text-[13px] font-extrabold">{t.lessonWords}</p>
-            <p className="mt-1 text-[11.5px] text-sumi-500">{t.tapToSrs}</p>
+            <p className="mt-1 text-[11.5px] text-sumi-500">{language === "en" ? "Known words move to the bottom." : "Мэддэг үг доош шилжинэ."}</p>
             <div className="mt-3 space-y-2">
-              {lesson.vocab.map((v, i) => {
-                const inSrs = Object.values(doc.srs).length > 0;
-                void inSrs;
+              {[...lesson.vocab]
+                .sort((a, b) => Number(doc.knownWords.includes(`${a.w}|${a.r}`)) - Number(doc.knownWords.includes(`${b.w}|${b.r}`)))
+                .map((v, i) => {
+                const known = doc.knownWords.includes(`${v.w}|${v.r}`);
                 return (
-                  <div key={i} className="flex items-center gap-2.5 rounded-xl bg-sumi-900/[0.04] px-3 py-2.5">
+                  <div key={`${v.w}|${v.r}|${i}`} className="flex flex-wrap items-center gap-2.5 rounded-xl bg-sumi-900/[0.04] px-3 py-2.5">
                     <div className="min-w-0 flex-1">
                       <p className="font-jp text-[14.5px] font-bold">{v.w}</p>
                       <p className="font-jp text-[11px] text-sumi-400">{v.r}</p>
                     </div>
-                    <span className="max-w-[130px] truncate text-[12px] text-sumi-600">{v.mn}</span>
-                    <SpeakButton text={v.w} className="!h-7 !w-7" />
+                    <span className="max-w-[130px] truncate text-[12px] text-sumi-600">{language === "en" ? (v.en ?? v.mn) : v.mn}</span>
+                    <SpeakButton text={v.w} className="!h-11 !w-11 sm:!h-7 sm:!w-7" />
+                    <Button size="sm" variant={known ? "soft" : "outline"} onClick={() => actions.toggleKnownWord(`${v.w}|${v.r}`)}>
+                      {known ? (language === "en" ? "✓ Known" : "✓ Мэднэ") : (language === "en" ? "Review" : "Давтах")}
+                    </Button>
                   </div>
                 );
               })}
@@ -319,7 +359,7 @@ function ShadowRow({ text, index }: { text: string; index: number }) {
         <p className="min-w-0 flex-1 font-jp text-[14.5px] font-semibold">{text}</p>
       </div>
       <div className="mt-2.5 flex flex-wrap items-center gap-2">
-        <SpeakButton text={text} className="!h-7 !w-auto !px-2.5" label={t.listen} />
+        <SpeakButton text={text} className="!h-11 !w-auto sm:!h-7 sm:!px-2.5" label={t.listen} />
         {!recording ? (
           <Button size="sm" variant="outline" onClick={start}>{t.recordBtn}</Button>
         ) : (

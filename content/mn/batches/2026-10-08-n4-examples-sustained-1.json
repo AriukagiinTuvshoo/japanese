@@ -1,0 +1,394 @@
+{
+  "provenance": {
+    "id": "mn-n4-examples-sustained-1-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian compared with exact Japanese sentence and retained English; stable entry w/r/en guards. Suspect sentences withheld. Independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n4.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "97bdb63259": {
+      "expected": {
+        "w": "アジア",
+        "r": "アジア",
+        "en": [
+          "Asia"
+        ]
+      },
+      "examples": {
+        "ヨーロッパはアジアより人口が少ない。": {
+          "en": "Europe has a smaller population than Asia.",
+          "mn": "Европын хүн ам Азийнхаас цөөн."
+        },
+        "アジアはオーストラリアよりはるかに大きい。": {
+          "en": "Asia is much larger than Australia.",
+          "mn": "Ази Австралиас хавьгүй том."
+        }
+      }
+    },
+    "4c3461199c": {
+      "expected": {
+        "w": "明日",
+        "r": "あす",
+        "en": [
+          "tomorrow"
+        ]
+      },
+      "examples": {
+        "あしたは一日中ひまです。": {
+          "en": "I'll be free all day tomorrow.",
+          "mn": "Маргааш би өдөржин завтай."
+        },
+        "明日は雨天ではなかろうかと思う。": {
+          "en": "I'm afraid it will be rainy tomorrow.",
+          "mn": "Маргааш бороотой байх болов уу гэж санаа зовж байна."
+        }
+      }
+    },
+    "7fe5e36942": {
+      "expected": {
+        "w": "遊び",
+        "r": "あそび",
+        "en": [
+          "play"
+        ]
+      },
+      "examples": {
+        "今度の旅行は仕事じゃなくて遊びです。": {
+          "en": "Our next trip is for pleasure, not for work.",
+          "mn": "Дараагийн аялал маань ажил биш, амралт зугаалгын аялал."
+        },
+        "人生は楽しみや遊びばかりでない。": {
+          "en": "Life is not all fun and games.",
+          "mn": "Амьдрал дандаа зугаа цэнгэл, тоглоом биш."
+        }
+      }
+    },
+    "8c98c01eff": {
+      "expected": {
+        "w": "集まる",
+        "r": "あつまる",
+        "en": [
+          "to gather"
+        ]
+      },
+      "examples": {
+        "通りに人がたくさん集まっている。": {
+          "en": "There is a crowd of people on the street.",
+          "mn": "Гудамжинд олон хүн цугласан байна."
+        },
+        "たくさんの学生がそこに集まった。": {
+          "en": "Dozens of students gathered there.",
+          "mn": "Тэнд олон оюутан цугларсан."
+        }
+      }
+    },
+    "b00801af22": {
+      "expected": {
+        "w": "集める",
+        "r": "あつめる",
+        "en": [
+          "to collect something"
+        ]
+      },
+      "examples": {
+        "毎週月曜日にゴミを集めにきます。": {
+          "en": "They collect our garbage every Monday.",
+          "mn": "Даваа гараг бүр манай хогийг ачдаг."
+        },
+        "ケンは古いコインを集めている。": {
+          "en": "Ken collects old coins.",
+          "mn": "Кен хуучин зоос цуглуулдаг."
+        }
+      }
+    },
+    "c1fb180c70": {
+      "expected": {
+        "w": "アナウンサー",
+        "r": "アナウンサー",
+        "en": [
+          "announcer"
+        ]
+      },
+      "examples": {
+        "アナウンサーは早口が出来る。": {
+          "en": "The announcer can talk rapidly.",
+          "mn": "Нэвтрүүлэгч хурдан ярьж чаддаг."
+        },
+        "あの子のお母さんはアナウンサーです。": {
+          "en": "The mother of that child is an announcer.",
+          "mn": "Тэр хүүхдийн ээж нэвтрүүлэгч."
+        }
+      }
+    },
+    "0fa879c73d": {
+      "expected": {
+        "w": "アフリカ",
+        "r": "アフリカ",
+        "en": [
+          "Africa"
+        ]
+      },
+      "examples": {
+        "アフリカにはたくさんの自然がある。": {
+          "en": "Africa has a lot of nature.",
+          "mn": "Африкт байгалийн орчин их бий."
+        },
+        "これらの鳥は冬には北アフリカに渡る。": {
+          "en": "These birds migrate to North Africa in winter.",
+          "mn": "Эдгээр шувуу өвөл Хойд Африк руу нүүдэллэдэг."
+        }
+      }
+    },
+    "b921645383": {
+      "expected": {
+        "w": "アメリカ",
+        "r": "アメリカ",
+        "en": [
+          "America"
+        ]
+      },
+      "examples": {
+        "私は去年の秋にアメリカにいった。": {
+          "en": "I went to America last fall.",
+          "mn": "Би өнгөрсөн намар Америк явсан."
+        },
+        "私はアメリカにいったことがない。": {
+          "en": "I have never gone to America.",
+          "mn": "Би Америкт хэзээ ч очиж байгаагүй."
+        }
+      }
+    },
+    "1056f23586": {
+      "expected": {
+        "w": "謝る",
+        "r": "あやまる",
+        "en": [
+          "to apologize"
+        ]
+      },
+      "examples": {
+        "私は彼女に謝らなければならない。": {
+          "en": "I must make an apology to her.",
+          "mn": "Би түүнээс уучлал гуйх ёстой."
+        },
+        "たとえ悪くなくても、謝るべきだ。": {
+          "en": "Even if you are not to blame, you should apologize.",
+          "mn": "Буруугүй байсан ч уучлал гуйх хэрэгтэй."
+        }
+      }
+    },
+    "ab0767b2f7": {
+      "expected": {
+        "w": "アルコール",
+        "r": "アルコール",
+        "en": [
+          "alcohol"
+        ]
+      },
+      "examples": {
+        "このビールはアルコール分が５％だ。": {
+          "en": "This beer contains 5% alcohol.",
+          "mn": "Энэ шар айраг таван хувийн спирттэй."
+        },
+        "アルコールの入ってない飲み物はありますか。": {
+          "en": "Do you have any non-alcoholic drinks?",
+          "mn": "Спиртгүй ундаа байна уу?"
+        }
+      }
+    },
+    "d06643e4e1": {
+      "expected": {
+        "w": "安心",
+        "r": "あんしん",
+        "en": [
+          "relief"
+        ]
+      },
+      "examples": {
+        "あいつに仕事を任せておけば安心だ。": {
+          "en": "You can trust him with any job.",
+          "mn": "Түүнд ажил даатгавал санаа амар байж болно."
+        },
+        "私はそのことについては安心している。": {
+          "en": "I feel at ease about it.",
+          "mn": "Тэр асуудалд би санаа амар байна."
+        }
+      }
+    },
+    "160a8399af": {
+      "expected": {
+        "w": "安全",
+        "r": "あんぜん",
+        "en": [
+          "safety"
+        ]
+      },
+      "examples": {
+        "私たちは思っているほど安全ではない。": {
+          "en": "We are not all that safe.",
+          "mn": "Бид бодож байгаа шигээ аюулгүй биш."
+        },
+        "この川で泳ぐのは、安全ですか。": {
+          "en": "Is it safe to swim in this river?",
+          "mn": "Энэ голд сэлэхэд аюулгүй юу?"
+        }
+      }
+    },
+    "367da027cb": {
+      "expected": {
+        "w": "あんな",
+        "r": "あんな",
+        "en": [
+          "such"
+        ]
+      },
+      "examples": {
+        "あんないい男そうそういないぞ！！": {
+          "en": "There aren't many blokes that nice!",
+          "mn": "Тийм сайн залуу ховор шүү!"
+        },
+        "あんなカッコいい男、そうはいない。": {
+          "en": "Guys that handsome are few and far between.",
+          "mn": "Тийм царайлаг залуу тун ховор."
+        }
+      }
+    },
+    "52a79a5d69": {
+      "expected": {
+        "w": "案内",
+        "r": "あんない",
+        "en": [
+          "to guide"
+        ]
+      },
+      "examples": {
+        "私をあちこちに案内してください。": {
+          "en": "Please show me around.",
+          "mn": "Надад энд тэндхийн газрыг үзүүлж өгөөч."
+        },
+        "このあたりを案内いたしましょう。": {
+          "en": "May I show you around?",
+          "mn": "Энэ хавийг танд үзүүлж өгье."
+        }
+      }
+    },
+    "629362dbfc": {
+      "expected": {
+        "w": "以下",
+        "r": "いか",
+        "en": [
+          "less than"
+        ]
+      },
+      "examples": {
+        "それは千円以下では買えません。": {
+          "en": "You can't buy it under 1,000 yen.",
+          "mn": "Үүнийг мянган иенээс доош үнээр авч болохгүй."
+        },
+        "以下の通り注文いたします。": {
+          "en": "I would like to place an order for the following.",
+          "mn": "Доор дурдсаны дагуу захиалга өгье."
+        }
+      }
+    },
+    "da4198f39c": {
+      "expected": {
+        "w": "以外",
+        "r": "いがい",
+        "en": [
+          "with the exception of"
+        ]
+      },
+      "examples": {
+        "その仕事以外ならなんでもやる。": {
+          "en": "I'll do anything but that job.",
+          "mn": "Тэр ажлаас бусад юуг ч хийнэ."
+        },
+        "青空以外には何も見られなかった。": {
+          "en": "Nothing was to be seen but the blue sky.",
+          "mn": "Хөх тэнгэрээс өөр юу ч харагдсангүй."
+        }
+      }
+    },
+    "20044dd689": {
+      "expected": {
+        "w": "医学",
+        "r": "いがく",
+        "en": [
+          "medical science"
+        ]
+      },
+      "examples": {
+        "二人の医者が医学の話をしていた。": {
+          "en": "Two doctors were talking shop.",
+          "mn": "Хоёр эмч анагаахын тухай ярьж байв."
+        },
+        "私はアメリカで医学を学ぶつもりだったんですが。": {
+          "en": "I intended to study medicine in America.",
+          "mn": "Би Америкт анагаах ухаан сурах бодолтой байсан юмсан."
+        }
+      }
+    },
+    "db01fd59d7": {
+      "expected": {
+        "w": "生きる",
+        "r": "いきる",
+        "en": [
+          "to live"
+        ]
+      },
+      "examples": {
+        "生きるものはすべていつかは死ぬ。": {
+          "en": "All living things die some day.",
+          "mn": "Амьд бүхэн хэзээ нэгэн цагт үхдэг."
+        },
+        "人間は食物なしでは生きられない。": {
+          "en": "We cannot exist without food.",
+          "mn": "Хүн хоол хүнсгүйгээр амьдарч чадахгүй."
+        }
+      }
+    },
+    "ba5a03baf1": {
+      "expected": {
+        "w": "意見",
+        "r": "いけん",
+        "en": [
+          "opinion"
+        ]
+      },
+      "examples": {
+        "ここではどんどん意見をおっしゃってかまいません。": {
+          "en": "You can speak out freely here.",
+          "mn": "Энд та саналаа чөлөөтэй хэлж болно."
+        },
+        "私はそれがよい意見だと思います。": {
+          "en": "I consider that a good opinion.",
+          "mn": "Би үүнийг сайн санал гэж бодож байна."
+        }
+      }
+    },
+    "372ce69caf": {
+      "expected": {
+        "w": "石",
+        "r": "いし",
+        "en": [
+          "stone"
+        ]
+      },
+      "examples": {
+        "私にはこの石は持ち上がらない。": {
+          "en": "I cannot lift this stone.",
+          "mn": "Би энэ чулууг өргөж чадахгүй."
+        },
+        "私にはこの石を持ち上げる力がない。": {
+          "en": "I have no strength to lift this stone.",
+          "mn": "Надад энэ чулууг өргөх хүч алга."
+        }
+      }
+    }
+  }
+}

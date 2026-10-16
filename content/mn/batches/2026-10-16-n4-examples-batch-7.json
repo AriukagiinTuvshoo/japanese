@@ -1,0 +1,953 @@
+{
+  "provenance": {
+    "id": "mn-n4-examples-2026-10-16-batch-7",
+    "createdAt": "2026-10-16",
+    "author": "OpenAI ChatGPT",
+    "method": "AI-assisted Mongolian translations matched to exact retained Japanese example sentences and checked against the accompanying English source. Japanese/English source text and lexical fields preserved. Three source-audit-protected sentences and apparent source-English mismatches were excluded. This batch has not been independently human-reviewed.",
+    "source": "OpenJLPT-distributed Tatoeba examples (Japanese/English source); Mongolian translations authored by OpenAI ChatGPT",
+    "sourceSnapshot": "d828f58518f305aa0eaa58e6dc12e68773556660",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "3597362058": {
+      "expected": {
+        "w": "貿易",
+        "r": "ぼうえき",
+        "en": [
+          "trade"
+        ]
+      },
+      "examples": {
+        "日本は貿易に頼っている。": {
+          "mn": "Япон улс гадаад худалдаанаас ихээхэн хамаардаг.",
+          "en": "Japan depends on foreign trade."
+        },
+        "イギリス人はそのころ茶の貿易を始めた。": {
+          "mn": "Англичууд тэр үед цайны худалдаа эрхэлж эхэлсэн.",
+          "en": "The English entered into the tea trade at that time."
+        }
+      }
+    },
+    "6365c5ac47": {
+      "expected": {
+        "w": "帰り",
+        "r": "かえり",
+        "en": [
+          "return"
+        ]
+      },
+      "examples": {
+        "犬は少なくとも主人の帰りを待った。": {
+          "mn": "Нохой ядаж л эзнээ буцаж ирэхийг удаан хүлээсэн.",
+          "en": "The dog waited day after day for its master's return."
+        }
+      }
+    },
+    "97a079585a": {
+      "expected": {
+        "w": "砂",
+        "r": "すな",
+        "en": [
+          "sand"
+        ]
+      },
+      "examples": {
+        "後ろ足で砂をかけるようなことをした。": {
+          "mn": "Тэр намайг басамжилж, доромжлох үйлдэл хийсэн.",
+          "en": "He raised his heel against me."
+        }
+      }
+    },
+    "b43872b197": {
+      "expected": {
+        "w": "直る",
+        "r": "なおる",
+        "en": [
+          "to be fixed",
+          "to be repaired"
+        ]
+      },
+      "examples": {
+        "いったい、いつになったらそのケチは直るの？": {
+          "mn": "Чи ер нь хэзээ харамч зангаа болих юм бэ?",
+          "en": "When will you ever loosen your purse strings?"
+        }
+      }
+    },
+    "9eaa627a73": {
+      "expected": {
+        "w": "文法",
+        "r": "ぶんぽう",
+        "en": [
+          "grammar"
+        ]
+      },
+      "examples": {
+        "あなたはもっと文法を勉強しなくてはいけない。": {
+          "mn": "Чи дүрмээ илүү сайн судлах хэрэгтэй.",
+          "en": "You must study grammar more."
+        }
+      }
+    },
+    "f271b97de9": {
+      "expected": {
+        "w": "別",
+        "r": "べつ",
+        "en": [
+          "different"
+        ]
+      },
+      "examples": {
+        "また別のときにチェスをしましょう。": {
+          "mn": "Дараа өөр үед шатар тоглоцгооё.",
+          "en": "Let's play chess another time."
+        }
+      }
+    },
+    "e5cfcfab45": {
+      "expected": {
+        "w": "ベル",
+        "r": "ベル",
+        "en": [
+          "bell"
+        ]
+      },
+      "examples": {
+        "私が学校に着くか着かぬうちにベルがなった。": {
+          "mn": "Намайг сургуульд хүрч очихтой зэрэгцэн хонх дуугарсан.",
+          "en": "I had hardly reached the school when the bell rang."
+        }
+      }
+    },
+    "0f80788417": {
+      "expected": {
+        "w": "変",
+        "r": "へん",
+        "en": [
+          "strange"
+        ]
+      },
+      "examples": {
+        "そのオレンジは後味が変だった。": {
+          "mn": "Тэр жүржийн амтны дараах мэдрэмж сонин байв.",
+          "en": "The orange left a strange taste in my mouth."
+        },
+        "その男の行動はとても変だった。": {
+          "mn": "Тэр эрэгтэйн авир маш хачин байсан.",
+          "en": "The man's behavior was very odd."
+        }
+      }
+    },
+    "ff9e385277": {
+      "expected": {
+        "w": "返事",
+        "r": "へんじ",
+        "en": [
+          "reply"
+        ]
+      },
+      "examples": {
+        "すぐ返事をしてもらいたいと思っています。": {
+          "mn": "Та надад аль болох хурдан хариу өгнө гэж найдаж байна.",
+          "en": "I hope you will answer me soon."
+        },
+        "まだ手紙の返事をもらっていない。": {
+          "mn": "Би захидалдаа одоо хүртэл хариу аваагүй байна.",
+          "en": "I haven't had a reply to my letter."
+        }
+      }
+    },
+    "96799b1b11": {
+      "expected": {
+        "w": "放送",
+        "r": "ほうそう",
+        "en": [
+          "to broadcast"
+        ]
+      },
+      "examples": {
+        "ニュースは毎時放送しています。": {
+          "mn": "Мэдээг цаг тутамд нэвтрүүлдэг.",
+          "en": "We broadcast news on the hour."
+        },
+        "そのショーは午後７時に放送される。": {
+          "mn": "Тэр шоу оройн долоон цагт цацагдана.",
+          "en": "The show will be on the air at 7 p.m."
+        }
+      }
+    },
+    "845a23790b": {
+      "expected": {
+        "w": "法律",
+        "r": "ほうりつ",
+        "en": [
+          "law"
+        ]
+      },
+      "examples": {
+        "この法律はすべての人に適用される。": {
+          "mn": "Энэ хууль хүн бүрд үйлчилнэ.",
+          "en": "This law applies to everybody."
+        }
+      }
+    },
+    "1587d6fbcf": {
+      "expected": {
+        "w": "僕",
+        "r": "ぼく",
+        "en": [
+          "I (used by males)"
+        ]
+      },
+      "examples": {
+        "僕をかもだと思っているんだろう。": {
+          "mn": "Чи намайг амархан хууртдаг тэнэг гэж бодож байгаа биз дээ?",
+          "en": "You take me for a sucker, don't you?"
+        },
+        "僕は何をやっても悪運が強いんだ。": {
+          "mn": "Би юу хийсэн ч азгүй явдал тохиолдоод байдаг.",
+          "en": "I've got the devil's own luck in everything."
+        }
+      }
+    },
+    "72df46ea9c": {
+      "expected": {
+        "w": "星",
+        "r": "ほし",
+        "en": [
+          "star"
+        ]
+      },
+      "examples": {
+        "ドアには大きな金色の星がついていました。": {
+          "mn": "Хаалган дээр том алтан од байв.",
+          "en": "There was a big gold star on the door."
+        },
+        "星は町の明かりでかすんで見える。": {
+          "mn": "Хотын гэрлээс болж одод бүдэг харагддаг.",
+          "en": "The stars look dim because of the city lights."
+        }
+      }
+    },
+    "b3f18d07d4": {
+      "expected": {
+        "w": "ほど",
+        "r": "ほど",
+        "en": [
+          "extent"
+        ]
+      },
+      "examples": {
+        "スージーほど上手にピアノをひけるとよいのだが。": {
+          "mn": "Сюзи шиг төгөлдөр хуур сайн тоглож чаддаг болоосой.",
+          "en": "I wish I could play the piano as well as Susie."
+        },
+        "ここから３キロほど川上に村が１つある。": {
+          "mn": "Эндээс голын эх өөд гурван километр орчимд нэг тосгон бий.",
+          "en": "There is a village about three kilometers up the river from here."
+        }
+      }
+    },
+    "7e5b1397b9": {
+      "expected": {
+        "w": "ほとんど",
+        "r": "ほとんど",
+        "en": [
+          "mostly"
+        ]
+      },
+      "examples": {
+        "ケイトは中国語をほとんど話せない。": {
+          "mn": "Кейт хятадаар бараг ярьж чаддаггүй.",
+          "en": "Kate can hardly speak Chinese."
+        },
+        "用意がほとんど出来ていなかった。": {
+          "mn": "Бэлтгэл бараг хангагдаагүй байсан.",
+          "en": "I was hardly prepared."
+        }
+      }
+    },
+    "9097d5cc39": {
+      "expected": {
+        "w": "ほめる",
+        "r": "ほめる",
+        "en": [
+          "to praise"
+        ]
+      },
+      "examples": {
+        "ヘレンはみんなにほめられて顔を赤くした。": {
+          "mn": "Хелен хүн бүрийн магтаалыг сонсоод нүүр нь улайв.",
+          "en": "Helen blushed at their praise."
+        },
+        "あなたは先生にほめられましたか。": {
+          "mn": "Чамайг багш магтсан уу?",
+          "en": "Were you praised by the teacher?"
+        }
+      }
+    },
+    "36dc0ccd26": {
+      "expected": {
+        "w": "翻訳",
+        "r": "ほんやく",
+        "en": [
+          "translation"
+        ]
+      },
+      "examples": {
+        "彼女はそれを一語一語翻訳した。": {
+          "mn": "Тэр үүнийг үг бүрээр нь орчуулсан.",
+          "en": "She translated it word for word."
+        },
+        "これをフランス語に翻訳してくれないか。": {
+          "mn": "Үүнийг франц хэл рүү орчуулж өгч болох уу?",
+          "en": "Will you translate this into French?"
+        }
+      }
+    },
+    "7c74c440e5": {
+      "expected": {
+        "w": "参る",
+        "r": "まいる",
+        "en": [
+          "(humble) to go",
+          "to come"
+        ]
+      },
+      "examples": {
+        "ジョーはその女の子にすっかり参っている。": {
+          "mn": "Жо тэр охинд бүр ухаангүй дурлажээ.",
+          "en": "Joe's nuts about the girl."
+        },
+        "あの問題には参ったよ。": {
+          "mn": "Тэр асуудал намайг үнэхээр мухардалд оруулсан.",
+          "en": "That problem has really got me."
+        }
+      }
+    },
+    "cb6d7546fb": {
+      "expected": {
+        "w": "負ける",
+        "r": "まける",
+        "en": [
+          "to lose"
+        ]
+      },
+      "examples": {
+        "３対０で彼には負けています。": {
+          "mn": "Би түүнд 0:3-аар ялагдаж байна.",
+          "en": "He's beating me, three to zip."
+        },
+        "私は友人の前で負けたくなかった。": {
+          "mn": "Би найзуудынхаа өмнө ялагдахыг хүсээгүй.",
+          "en": "I didn't want to be defeated in front of my friends."
+        }
+      }
+    },
+    "d3422596a8": {
+      "expected": {
+        "w": "まじめ",
+        "r": "まじめ",
+        "en": [
+          "serious"
+        ]
+      },
+      "examples": {
+        "サムは仕事に関してまじめです。": {
+          "mn": "Сэм ажилдаа нухацтай ханддаг.",
+          "en": "Sam is serious about his work."
+        },
+        "トムは勉強にまじめでない。": {
+          "mn": "Том хичээлдээ нухацтай ханддаггүй.",
+          "en": "Tom is not serious about his studies."
+        }
+      }
+    },
+    "9c0ee7cfcc": {
+      "expected": {
+        "w": "まず",
+        "r": "まず",
+        "en": [
+          "first of all"
+        ]
+      },
+      "examples": {
+        "バリウムをまず一口飲んでください。": {
+          "mn": "Эхлээд барийн уусмалаас нэг балга ууна уу.",
+          "en": "First, swallow one dose of barium."
+        },
+        "まず私に話させてください。": {
+          "mn": "Юуны өмнө надад ярих боломж олгоно уу.",
+          "en": "Please let me speak first."
+        }
+      }
+    },
+    "0fa3edce9b": {
+      "expected": {
+        "w": "または",
+        "r": "または",
+        "en": [
+          "or",
+          "otherwise"
+        ]
+      },
+      "examples": {
+        "紅茶またはコーヒーはいかが？": {
+          "mn": "Хар цай эсвэл кофе уух уу?",
+          "en": "Would you like some tea or coffee?"
+        },
+        "ビュッフェ、またはカフェテリアは９号車にあります。": {
+          "mn": "Буфет эсвэл цайны газар 9-р вагонд бий.",
+          "en": "The buffet or the cafeteria is in Car 9."
+        }
+      }
+    },
+    "91094911c0": {
+      "expected": {
+        "w": "間違える",
+        "r": "まちがえる",
+        "en": [
+          "to make a mistake"
+        ]
+      },
+      "examples": {
+        "急いで物事をすると間違えますよ。": {
+          "mn": "Юмыг яаран хийвэл алдаа гаргана шүү.",
+          "en": "You make mistakes if you do things in a hurry."
+        },
+        "マーガリンをバターと間違えたの？": {
+          "mn": "Маргариныг цөцгийн тостой андуурсан уу?",
+          "en": "Did you mistake the margarine for butter?"
+        }
+      }
+    },
+    "675232ef05": {
+      "expected": {
+        "w": "間に合う",
+        "r": "まにあう",
+        "en": [
+          "to be in time for"
+        ]
+      },
+      "examples": {
+        "急げば何とか間に合うと思います。": {
+          "mn": "Яарвал амжиж чадна гэж бодож байна.",
+          "en": "I think we'll make it if we hurry."
+        },
+        "急がないと電車に間に合わないよ。": {
+          "mn": "Яарахгүй бол галт тэргэндээ амжихгүй шүү.",
+          "en": "Hurry up, or you will miss the train."
+        }
+      }
+    },
+    "f71b64fa1e": {
+      "expected": {
+        "w": "周り",
+        "r": "まわり",
+        "en": [
+          "surroundings"
+        ]
+      },
+      "examples": {
+        "周りを見渡しなさい。": {
+          "mn": "Эргэн тойрноо сайтар ажигла.",
+          "en": "Look about you."
+        },
+        "犬がテーブルの周りを歩いている。": {
+          "mn": "Нохой ширээний эргэн тойронд явж байна.",
+          "en": "The dog is walking around the table."
+        }
+      }
+    },
+    "b7644eb3fc": {
+      "expected": {
+        "w": "回る",
+        "r": "まわる",
+        "en": [
+          "to go around"
+        ]
+      },
+      "examples": {
+        "私たちは車の後ろに回って押した。": {
+          "mn": "Бид машины ард гарч ирээд түлхсэн.",
+          "en": "We got behind the car and pushed."
+        },
+        "お昼を少し回った時に彼が来た。": {
+          "mn": "Үдээс жаахан өнгөрсний дараа тэр ирсэн.",
+          "en": "He came a little after noon."
+        }
+      }
+    },
+    "8077c744a0": {
+      "expected": {
+        "w": "漫画",
+        "r": "まんが",
+        "en": [
+          "comic"
+        ]
+      },
+      "examples": {
+        "仕事中に漫画の本を読むのはやめること。": {
+          "mn": "Ажиллаж байхдаа манга уншихаа боль.",
+          "en": "Stop reading comic books while working."
+        },
+        "私は漫画を読みます。": {
+          "mn": "Би манга уншдаг.",
+          "en": "I read comic books."
+        }
+      }
+    },
+    "59944588a8": {
+      "expected": {
+        "w": "真ん中",
+        "r": "まんなか",
+        "en": [
+          "middle"
+        ]
+      },
+      "examples": {
+        "トラックが道の真ん中に止まっていた。": {
+          "mn": "Ачааны машин замын голд зогсож байв.",
+          "en": "A truck was standing in the middle of the road."
+        },
+        "私は人ごみの真ん中に古い知人を見かけた。": {
+          "mn": "Би олны дундаас эртний танилаа олж харсан.",
+          "en": "I caught sight of an old acquaintance in the middle of the crowd."
+        }
+      }
+    },
+    "0c27b9183f": {
+      "expected": {
+        "w": "見える",
+        "r": "みえる",
+        "en": [
+          "to be in sight"
+        ]
+      },
+      "examples": {
+        "すべてのものがすばらしく見えた。": {
+          "mn": "Бүх зүйл гайхалтай харагдаж байв.",
+          "en": "Everything looked nice."
+        },
+        "あそこに赤い家が見えるでしょう。": {
+          "mn": "Тэнд улаан байшин харагдаж байгаа биз дээ.",
+          "en": "You will see a red house over there."
+        }
+      }
+    },
+    "07a76f9be7": {
+      "expected": {
+        "w": "湖",
+        "r": "みずうみ",
+        "en": [
+          "lake"
+        ]
+      },
+      "examples": {
+        "湖の深さはどのくらいですか。": {
+          "mn": "Нуур хэр гүн бэ?",
+          "en": "What is the depth of the lake?"
+        },
+        "そのホテルは湖のすぐ近くだった。": {
+          "mn": "Тэр зочид буудал нуурын яг хажууд байв.",
+          "en": "The hotel was hard by the lake."
+        }
+      }
+    },
+    "fcf790e186": {
+      "expected": {
+        "w": "味噌",
+        "r": "みそ",
+        "en": [
+          "bean paste"
+        ]
+      },
+      "examples": {
+        "この電子辞書は携帯しやすいところが味噌です。": {
+          "mn": "Энэ цахим толь бичгийн гол давуу тал нь авч явахад хялбар байдаг.",
+          "en": "The good thing about this electronic dictionary is that it's easy to carry."
+        }
+      }
+    },
+    "a4e2dc046c": {
+      "expected": {
+        "w": "見つかる",
+        "r": "みつかる",
+        "en": [
+          "to be discovered"
+        ]
+      },
+      "examples": {
+        "運悪く仕事が見つからなかった。": {
+          "mn": "Азгүйтэж, ажил олж чадсангүй.",
+          "en": "He had no luck in finding work."
+        },
+        "同じ物はどこにでも見つかります。": {
+          "mn": "Ижил зүйл хаана ч олддог.",
+          "en": "You can find the same thing anywhere."
+        }
+      }
+    },
+    "64f85b7fdf": {
+      "expected": {
+        "w": "見つける",
+        "r": "みつける",
+        "en": [
+          "to discover"
+        ]
+      },
+      "examples": {
+        "ぼくはこの本を古本屋で見つけた。": {
+          "mn": "Би энэ номыг хуучин номын дэлгүүрээс олсон.",
+          "en": "I came across this book in a secondhand bookstore."
+        },
+        "すっごくいいものを見つけたよ！": {
+          "mn": "Би үнэхээр гайхалтай зүйл оллоо!",
+          "en": "I've found something amazing!"
+        }
+      }
+    },
+    "eb7247f404": {
+      "expected": {
+        "w": "皆",
+        "r": "みな",
+        "en": [
+          "everybody"
+        ]
+      },
+      "examples": {
+        "私の親族は皆この町に住んでいる。": {
+          "mn": "Миний бүх төрөл садан энэ хотод амьдардаг.",
+          "en": "All my relatives live in this city."
+        },
+        "父は皆で電車を待とうといった。": {
+          "mn": "Аав бүгдээрээ галт тэрэг хүлээе гэж хэлсэн.",
+          "en": "My father insisted on our waiting for the train."
+        }
+      }
+    },
+    "221e63cb1e": {
+      "expected": {
+        "w": "港",
+        "r": "みなと",
+        "en": [
+          "harbour"
+        ]
+      },
+      "examples": {
+        "その船はいま港にある。": {
+          "mn": "Тэр хөлөг онгоц одоо боомтод байна.",
+          "en": "The ship is now in the harbor."
+        },
+        "たくさんのヨットが港にはいってる。": {
+          "mn": "Олон дарвуулт завь боомтод орж ирж байна.",
+          "en": "Many yachts are in the harbor."
+        }
+      }
+    },
+    "6978e278b2": {
+      "expected": {
+        "w": "向かう",
+        "r": "むかう",
+        "en": [
+          "to face"
+        ]
+      },
+      "examples": {
+        "あなたは何処へ向かっているのですか。": {
+          "mn": "Та хаашаа явж байна вэ?",
+          "en": "Where are you bound for?"
+        },
+        "秋にはたくさんの鳥が南に向かう。": {
+          "mn": "Намар олон шувуу өмнө зүг рүү нисдэг.",
+          "en": "In the fall, many birds head for the south."
+        }
+      }
+    },
+    "1687840ea3": {
+      "expected": {
+        "w": "迎える",
+        "r": "むかえる",
+        "en": [
+          "to go out to meet"
+        ]
+      },
+      "examples": {
+        "６時にホテルに車で迎えて下さい。": {
+          "mn": "Зургаан цагт буудлаас машинаар тосож аваарай.",
+          "en": "Please pick me up at the hotel at six o'clock."
+        },
+        "よいお年をお迎えください。": {
+          "mn": "Шинэ оноо сайхан угтаарай.",
+          "en": "I wish you a Happy New Year."
+        }
+      }
+    },
+    "58cd37c48b": {
+      "expected": {
+        "w": "昔",
+        "r": "むかし",
+        "en": [
+          "olden days",
+          "former"
+        ]
+      },
+      "examples": {
+        "この本を読むたびに昔を思い出す。": {
+          "mn": "Энэ номыг унших бүрдээ би өнгөрсөн үеэ санадаг.",
+          "en": "I never read this book without being reminded of my old days."
+        },
+        "この古い建物は昔、きれいだった。": {
+          "mn": "Энэ хуучин барилга урьд нь үзэсгэлэнтэй байсан.",
+          "en": "This old building has seen better days."
+        }
+      }
+    },
+    "505c1fd62e": {
+      "expected": {
+        "w": "虫",
+        "r": "むし",
+        "en": [
+          "insect"
+        ]
+      },
+      "examples": {
+        "鳥は虫を探していた。": {
+          "mn": "Шувуу өт хорхой хайж байв.",
+          "en": "The bird was looking for worms."
+        },
+        "その虫はまだ生きているんだ。": {
+          "mn": "Тэр шавж одоо ч амьд байгаа.",
+          "en": "The bug is still alive."
+        }
+      }
+    },
+    "88be7d523a": {
+      "expected": {
+        "w": "息子",
+        "r": "むすこ",
+        "en": [
+          "(humble) son"
+        ]
+      },
+      "examples": {
+        "母親は息子にやかましく言って聞かせた。": {
+          "mn": "Ээж нь хүүдээ учирлан, дахин дахин хэлж ойлгуулсан.",
+          "en": "The mother whipped sense into her boy."
+        },
+        "息子はないものねだりをしている。": {
+          "mn": "Миний хүү байхгүй зүйлийг ч нэхээд байна.",
+          "en": "My son asks for the moon."
+        }
+      }
+    },
+    "5c27cba3be": {
+      "expected": {
+        "w": "娘",
+        "r": "むすめ",
+        "en": [
+          "(humble) daughter"
+        ]
+      },
+      "examples": {
+        "私はヘレンカートライトの娘です。": {
+          "mn": "Би Хелен Картрайтын охин байна.",
+          "en": "I'm Helen Cartwright's daughter."
+        },
+        "その娘たちのだれも学生ではない。": {
+          "mn": "Тэдгээр охидын хэн нь ч оюутан биш.",
+          "en": "None of the girls are students."
+        }
+      }
+    },
+    "3d1727a56f": {
+      "expected": {
+        "w": "無理",
+        "r": "むり",
+        "en": [
+          "impossible"
+        ]
+      },
+      "examples": {
+        "それは無理な注文だ。": {
+          "mn": "Энэ бол биелүүлэхэд боломжгүй шаардлага.",
+          "en": "Your demands are unreasonable."
+        },
+        "悪いけど、どうしたって無理だわ。": {
+          "mn": "Уучлаарай, яаж ч оролдсон боломжгүй.",
+          "en": "I'm sorry, but it's just not possible."
+        }
+      }
+    },
+    "d9c64cdfa1": {
+      "expected": {
+        "w": "召し上がる",
+        "r": "めしあがる",
+        "en": [
+          "(polite) to eat"
+        ]
+      },
+      "examples": {
+        "ここで召し上がりますか、それともお持ち帰りですか。": {
+          "mn": "Эндээ идэх үү, эсвэл авч явах уу?",
+          "en": "Is this to eat here, or to go?"
+        },
+        "ぜひパイをお召し上がりください。": {
+          "mn": "Заавал пирогоос амсаарай.",
+          "en": "You have to have a piece of pie."
+        }
+      }
+    },
+    "6307098126": {
+      "expected": {
+        "w": "珍しい",
+        "r": "めずらしい",
+        "en": [
+          "rare"
+        ]
+      },
+      "examples": {
+        "これは珍しい種類の魚です。": {
+          "mn": "Энэ бол ховор төрлийн загас.",
+          "en": "This is a strange kind of fish."
+        },
+        "町中で、珍しい物を見つけました。": {
+          "mn": "Би хот дотроос сонин зүйл олсон.",
+          "en": "I found something interesting in the town."
+        }
+      }
+    },
+    "5434f0c376": {
+      "expected": {
+        "w": "申し上げる",
+        "r": "もうしあげる",
+        "en": [
+          "(humble) to say",
+          "to tell"
+        ]
+      },
+      "examples": {
+        "お礼の申し上げようもありません。": {
+          "mn": "Танд талархаж баршгүй.",
+          "en": "I can never thank you enough."
+        },
+        "いますぐは何も申し上げられません。": {
+          "mn": "Яг одоо би юу ч хэлж чадахгүй.",
+          "en": "I am unable to say anything offhand."
+        }
+      }
+    },
+    "8e7b945555": {
+      "expected": {
+        "w": "申す",
+        "r": "もうす",
+        "en": [
+          "(humble) to be called",
+          "to say"
+        ]
+      },
+      "examples": {
+        "こちらはスミスと申します。ジョンソンさんはおいででしょうか。": {
+          "mn": "Смит байна. Жонсон гуай байна уу?",
+          "en": "This is Mr Smith speaking. Is Mr Johnson in?"
+        },
+        "アンドレアと申します。": {
+          "mn": "Намайг Андреа гэдэг.",
+          "en": "My name is Andrea."
+        }
+      }
+    },
+    "0f494574f0": {
+      "expected": {
+        "w": "もうすぐ",
+        "r": "もうすぐ",
+        "en": [
+          "soon"
+        ]
+      },
+      "examples": {
+        "明るくなってきた。もうすぐ朝だ。": {
+          "mn": "Үүр цайж байна. Удахгүй өглөө болно.",
+          "en": "It's getting light. Morning is coming."
+        },
+        "この車はもうすぐスクラップだ。": {
+          "mn": "Энэ машин удахгүй хаягдал болно.",
+          "en": "This car will soon have to go for scrap."
+        }
+      }
+    },
+    "bbaeab9c94": {
+      "expected": {
+        "w": "もし",
+        "r": "もし",
+        "en": [
+          "if"
+        ]
+      },
+      "examples": {
+        "もし電話がなったら出てくれますか。": {
+          "mn": "Утас дуугарвал авч болох уу?",
+          "en": "If the telephone rings, can you answer it?"
+        },
+        "もし金があれば、それが買えるのに。": {
+          "mn": "Хэрэв мөнгөтэй байсан бол үүнийг авч чадах байлаа.",
+          "en": "If I had money, I could buy it."
+        }
+      }
+    },
+    "a695a20c52": {
+      "expected": {
+        "w": "もちろん",
+        "r": "もちろん",
+        "en": [
+          "of course"
+        ]
+      },
+      "examples": {
+        "もちろん町でコンサートはありました。": {
+          "mn": "Мэдээж, хотод концертууд болсон.",
+          "en": "Of course, there were concerts in the town."
+        }
+      }
+    },
+    "6e13cee4dc": {
+      "expected": {
+        "w": "もっとも",
+        "r": "もっとも",
+        "en": [
+          "extremely"
+        ]
+      },
+      "examples": {
+        "ケンは三人のなかでもっとも速く走ります。": {
+          "mn": "Кен гурвын дундаас хамгийн хурдан гүйдэг.",
+          "en": "Ken runs fastest of the three."
+        },
+        "もっともやさしい問題から始めた方がいい。": {
+          "mn": "Хамгийн амархан асуултуудаас эхэлсэн нь дээр.",
+          "en": "You had better begin with easier questions."
+        }
+      }
+    },
+    "c858640672": {
+      "expected": {
+        "w": "戻る",
+        "r": "もどる",
+        "en": [
+          "to turn back"
+        ]
+      },
+      "examples": {
+        "やってしまったことは元に戻らない。": {
+          "mn": "Нэгэнт хийсэн зүйлийг буцаах боломжгүй.",
+          "en": "What is done cannot be undone."
+        },
+        "少し戻ってみたらいいんじゃない。": {
+          "mn": "Жаахан буцаад үзвэл яасан юм.",
+          "en": "We'd better go back a little."
+        }
+      }
+    }
+  }
+}

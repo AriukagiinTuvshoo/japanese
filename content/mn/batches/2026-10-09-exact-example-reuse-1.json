@@ -1,0 +1,935 @@
+{
+  "provenance": {
+    "id": "mn-exact-example-reuse-1-2026-10-09",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "Exact Japanese AND English duplicate match; AI compared all reused Mongolian sentences to source. Prior translation origin retained per sentence. No independent human review. Folding ambiguity and disputed headword excluded.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n5..n1.json at cac78c79587f6fb6d5f93a158790258c24b351e8",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "c6f43a8cc3": {
+      "expected": {
+        "w": "お兄さん",
+        "r": "おにいさん",
+        "en": [
+          "(honorable) older brother"
+        ]
+      },
+      "examples": {
+        "あなたを見るとお兄さんを思い出します。": {
+          "en": "You remind me of your brother.",
+          "mn": "Таныг харахаар ах тань санаанд ордог.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n4",
+              "id": "3e4c1468c7",
+              "provenance": "mn-n4-examples-sustained-5-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "c1a28465a2": {
+      "expected": {
+        "w": "風",
+        "r": "かぜ",
+        "en": [
+          "wind"
+        ]
+      },
+      "examples": {
+        "カーテンが風になびいた。": {
+          "en": "The curtains blew in the wind.",
+          "mn": "Хөшиг салхинд намирав.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n4",
+              "id": "cbbc4c3524",
+              "provenance": "mn-n4-examples-sustained-5-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "22836046e2": {
+      "expected": {
+        "w": "木",
+        "r": "き",
+        "en": [
+          "tree",
+          "wood"
+        ]
+      },
+      "examples": {
+        "木はたとえあってもほとんどない。": {
+          "en": "There were few, if any, trees.",
+          "mn": "Мод байсан ч бараг үгүйтэй адил цөөн байв.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "ac08788418",
+              "provenance": "mn-n5-examples-corpus-1-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "a36841ba49": {
+      "expected": {
+        "w": "ください",
+        "r": "ください",
+        "en": [
+          "please"
+        ]
+      },
+      "examples": {
+        "話があったら電話をかけて下さい。": {
+          "en": "If you want to speak to me, please call me up.",
+          "mn": "Надтай ярих зүйл байвал утасдаарай.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "ac08788418",
+              "provenance": "mn-n5-examples-corpus-1-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "72c04ce067": {
+      "expected": {
+        "w": "クラス",
+        "r": "クラス",
+        "en": [
+          "class"
+        ]
+      },
+      "examples": {
+        "あいつはクラスでいちばんのまぬけだ。": {
+          "en": "He is the dumbest kid in the class.",
+          "mn": "Тэр ангийнхаа хамгийн тэнэг хүүхэд.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "cb96f363df",
+              "provenance": "mn-n5-examples-corpus-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "6313cc9cb5": {
+      "expected": {
+        "w": "これ",
+        "r": "これ",
+        "en": [
+          "this"
+        ]
+      },
+      "examples": {
+        "これは兄です。かっこいいですね。": {
+          "en": "This is my brother. Handsome, isn't he?",
+          "mn": "Энэ миний ах. Царайлаг байгаа биз?",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "4aab699864",
+              "provenance": "mn-n5-examples-corpus-1-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "ec6fd2f845": {
+      "expected": {
+        "w": "死ぬ",
+        "r": "しぬ",
+        "en": [
+          "to die"
+        ]
+      },
+      "examples": {
+        "その少年は死んだものとしてあきらめられた。": {
+          "en": "The boy was given up for dead.",
+          "mn": "Тэр хүүг нас барсан гэж үзээд найдлагаа алдсан.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n3",
+              "id": "8ff67241d3",
+              "provenance": "mn-n3-examples-sustained-1-2026-10-08"
+            }
+          ]
+        },
+        "生きるものはすべていつかは死ぬ。": {
+          "en": "All living things die some day.",
+          "mn": "Амьд бүхэн хэзээ нэгэн цагт үхдэг.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n4",
+              "id": "db01fd59d7",
+              "provenance": "mn-n4-examples-sustained-1-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "814bdc2cec": {
+      "expected": {
+        "w": "先生",
+        "r": "せんせい",
+        "en": [
+          "teacher",
+          "doctor"
+        ]
+      },
+      "examples": {
+        "校長が先生の後ろから入ってきた。": {
+          "en": "The principal came in after the teacher.",
+          "mn": "Захирал багшийн араас орж ирсэн.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "93bdc81dd9",
+              "provenance": "mn-n5-examples-corpus-3-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "2d5a93eb11": {
+      "expected": {
+        "w": "タクシー",
+        "r": "タクシー",
+        "en": [
+          "taxi"
+        ]
+      },
+      "examples": {
+        "そのタクシーはいきなり左に曲がった。": {
+          "en": "The taxi abruptly turned left.",
+          "mn": "Такси гэнэт зүүн тийш эргэсэн.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n2",
+              "id": "ad6b4ebbf6",
+              "provenance": "mn-n2-vocab-examples-progress-3-oct9"
+            }
+          ]
+        }
+      }
+    },
+    "ff161262dd": {
+      "expected": {
+        "w": "テーブル",
+        "r": "テーブル",
+        "en": [
+          "table"
+        ]
+      },
+      "examples": {
+        "テーブルの上にリンゴがあります。": {
+          "en": "There is an apple on the table.",
+          "mn": "Ширээн дээр алим байна.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "08a3ed212d",
+              "provenance": "mn-n5-examples-corpus-3-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "679e34031e": {
+      "expected": {
+        "w": "天気",
+        "r": "てんき",
+        "en": [
+          "weather"
+        ]
+      },
+      "examples": {
+        "一日いい天気になりそうですよ。": {
+          "en": "I think it's going to be a nice day.",
+          "mn": "Өдөржин цаг агаар сайхан байх шинжтэй.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "1cfccd0cdd",
+              "provenance": "mn-n5-examples-corpus-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "5480c153dc": {
+      "expected": {
+        "w": "どちら",
+        "r": "どちら",
+        "en": [
+          "which of two"
+        ]
+      },
+      "examples": {
+        "どちらの本があなたのものですか。": {
+          "en": "Which book is yours?",
+          "mn": "Аль ном нь таных вэ?",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "afdf384f68",
+              "provenance": "mn-n5-examples-corpus-1-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "a3679ee665": {
+      "expected": {
+        "w": "とても",
+        "r": "とても",
+        "en": [
+          "very"
+        ]
+      },
+      "examples": {
+        "それらはとても大きなりんごです。": {
+          "en": "They are very big apples.",
+          "mn": "Тэд маш том алимнууд.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "3a2de0afca",
+              "provenance": "mn-n5-examples-corpus-4-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "3669c65744": {
+      "expected": {
+        "w": "鶏肉",
+        "r": "とりにく",
+        "en": [
+          "chicken meat"
+        ]
+      },
+      "examples": {
+        "この鶏肉はよく揚げられている。": {
+          "en": "This chicken is fried well.",
+          "mn": "Энэ тахианы махыг сайн шарсан байна.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n2",
+              "id": "d4d89391b7",
+              "provenance": "mn-n2-vocab-examples-progress-1-oct9"
+            }
+          ]
+        }
+      }
+    },
+    "390ac6443d": {
+      "expected": {
+        "w": "歯",
+        "r": "は",
+        "en": [
+          "tooth"
+        ]
+      },
+      "examples": {
+        "その赤ちゃんは歯が生えはじめている。": {
+          "en": "The baby is cutting his teeth.",
+          "mn": "Тэр хүүхдийн шүд ургаж эхэлж байна.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n4",
+              "id": "2a6a55be8d",
+              "provenance": "mn-n4-examples-corpus-1-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "28111455cd": {
+      "expected": {
+        "w": "パーティー",
+        "r": "パーティー",
+        "en": [
+          "party"
+        ]
+      },
+      "examples": {
+        "パーティーはいつにしましょうか。": {
+          "en": "When shall we have the party?",
+          "mn": "Үдэшлэгээ хэзээ хийх вэ?",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "fac6fc0838",
+              "provenance": "mn-n5-examples-corpus-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "c428d02d43": {
+      "expected": {
+        "w": "入る",
+        "r": "はいる",
+        "en": [
+          "to enter",
+          "to contain"
+        ]
+      },
+      "examples": {
+        "校長が先生の後ろから入ってきた。": {
+          "en": "The principal came in after the teacher.",
+          "mn": "Захирал багшийн араас орж ирсэн.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "93bdc81dd9",
+              "provenance": "mn-n5-examples-corpus-3-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "1ed0362cc3": {
+      "expected": {
+        "w": "話",
+        "r": "はなし",
+        "en": [
+          "talk",
+          "story"
+        ]
+      },
+      "examples": {
+        "話があったら電話をかけて下さい。": {
+          "en": "If you want to speak to me, please call me up.",
+          "mn": "Надтай ярих зүйл байвал утасдаарай.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "ac08788418",
+              "provenance": "mn-n5-examples-corpus-1-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "ee3206bb3f": {
+      "expected": {
+        "w": "ハンカチ",
+        "r": "ハンカチ",
+        "en": [
+          "handkerchief"
+        ]
+      },
+      "examples": {
+        "このハンカチはいくらですか。": {
+          "en": "How much is this handkerchief?",
+          "mn": "Энэ нусны алчуур ямар үнэтэй вэ?",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "4fc98c6938",
+              "provenance": "mn-n5-examples-corpus-2-2026-10-08"
+            }
+          ]
+        },
+        "私はハンカチにアイロンをかけた。": {
+          "en": "I ironed my handkerchiefs.",
+          "mn": "Би нусны алчууруудаа индүүдсэн.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n3",
+              "id": "15ffb31b53",
+              "provenance": "mn-n3-examples-sustained-1-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "7a9ce8e2df": {
+      "expected": {
+        "w": "暇",
+        "r": "ひま",
+        "en": [
+          "free time"
+        ]
+      },
+      "examples": {
+        "あしたは一日中ひまです。": {
+          "en": "I'll be free all day tomorrow.",
+          "mn": "Маргааш би өдөржин завтай.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "115ec83476",
+              "provenance": "mn-n5-example-final-2-2026-10-08"
+            },
+            {
+              "kind": "vocab",
+              "level": "n4",
+              "id": "4c3461199c",
+              "provenance": "mn-n4-examples-sustained-1-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "dd1183b005": {
+      "expected": {
+        "w": "ペン",
+        "r": "ペン",
+        "en": [
+          "pen"
+        ]
+      },
+      "examples": {
+        "ペンとインキで書きなさい。": {
+          "en": "Write with pen and ink.",
+          "mn": "Үзэг, бэхээр бич.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n2",
+              "id": "a7cee32023",
+              "provenance": "mn-n2-vocab-examples-progress-4-oct9"
+            }
+          ]
+        }
+      }
+    },
+    "23ec5a0b3d": {
+      "expected": {
+        "w": "ホテル",
+        "r": "ホテル",
+        "en": [
+          "hotel"
+        ]
+      },
+      "examples": {
+        "ヒルトンホテルまでいくらですか。": {
+          "en": "How much is the fare to the Hilton Hotel?",
+          "mn": "Хилтон зочид буудал хүртэлх унааны хөлс хэд вэ?",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "4fc98c6938",
+              "provenance": "mn-n5-examples-corpus-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "0e8f798dbf": {
+      "expected": {
+        "w": "本",
+        "r": "ほん",
+        "en": [
+          "book"
+        ]
+      },
+      "examples": {
+        "本をさかさまに入れないで下さい。": {
+          "en": "Don't put the books in the shelf upside down.",
+          "mn": "Номуудыг доош нь харуулж битгий хий.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "6d824d5110",
+              "provenance": "mn-n5-examples-corpus-3-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "039a696225": {
+      "expected": {
+        "w": "毎日",
+        "r": "まいにち",
+        "en": [
+          "every day"
+        ]
+      },
+      "examples": {
+        "毎日うっとうしくていやですね。": {
+          "en": "Don't you just hate this weather?",
+          "mn": "Өдөр бүр ийм бүрхэг байхаар дургүй хүрмээр юм, тийм ээ?",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "eda751e069",
+              "provenance": "mn-n5-examples-corpus-3-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "b19034ded1": {
+      "expected": {
+        "w": "まずい",
+        "r": "まずい",
+        "en": [
+          "unpleasant"
+        ]
+      },
+      "examples": {
+        "あ！まずい！ガソリンが切れてきた。": {
+          "en": "Oh, no! We're running out of gas.",
+          "mn": "Өө, болохоо байлаа! Бензин дуусаж байна.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n4",
+              "id": "4fff6d0441",
+              "provenance": "mn-n4-examples-corpus-1-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "a8f5f4c59e": {
+      "expected": {
+        "w": "もっと",
+        "r": "もっと",
+        "en": [
+          "more"
+        ]
+      },
+      "examples": {
+        "もっと大きいサイズはありますか。": {
+          "en": "Do you have a larger size?",
+          "mn": "Илүү том хэмжээтэй нь байна уу?",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "8fa5a63fc7",
+              "provenance": "mn-n5-examples-corpus-4-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "d980cb1531": {
+      "expected": {
+        "w": "ゆっくりと",
+        "r": "ゆっくりと",
+        "en": [
+          "slowly"
+        ]
+      },
+      "examples": {
+        "おじいさんはとてもゆっくりと話す。": {
+          "en": "Grandfather speaks very slowly.",
+          "mn": "Өвөө маш удаан ярьдаг.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "1b89f0f993",
+              "provenance": "mn-n5-examples-corpus-5-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "7a4ef637be": {
+      "expected": {
+        "w": "来週",
+        "r": "らいしゅう",
+        "en": [
+          "next week"
+        ]
+      },
+      "examples": {
+        "来週はうちへいらしゃいませんか。": {
+          "en": "Won't you come and see me next week?",
+          "mn": "Ирэх долоо хоногт манайд ирэхгүй юу?",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n4",
+              "id": "76d4bcd098",
+              "provenance": "mn-n4-examples-sustained-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "2ba96bef9a": {
+      "expected": {
+        "w": "旅行",
+        "r": "りょこう",
+        "en": [
+          "travel"
+        ]
+      },
+      "examples": {
+        "いつ旅行においでになりますか。": {
+          "en": "When will you go on a journey?",
+          "mn": "Та хэзээ аялалд явах вэ?",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "fac6fc0838",
+              "provenance": "mn-n5-examples-corpus-2-2026-10-08"
+            },
+            {
+              "kind": "vocab",
+              "level": "n4",
+              "id": "53c76e5c6e",
+              "provenance": "mn-n4-examples-sustained-3-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "b3c360789e": {
+      "expected": {
+        "w": "ガソリン",
+        "r": "ガソリン",
+        "en": [
+          "petrol"
+        ]
+      },
+      "examples": {
+        "あ！まずい！ガソリンが切れてきた。": {
+          "en": "Oh, no! We're running out of gas.",
+          "mn": "Өө, болохоо байлаа! Бензин дуусаж байна.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n4",
+              "id": "4fff6d0441",
+              "provenance": "mn-n4-examples-corpus-1-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "0c49fbf17c": {
+      "expected": {
+        "w": "校長",
+        "r": "こうちょう",
+        "en": [
+          "headmaster"
+        ]
+      },
+      "examples": {
+        "校長が先生の後ろから入ってきた。": {
+          "en": "The principal came in after the teacher.",
+          "mn": "Захирал багшийн араас орж ирсэн.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "93bdc81dd9",
+              "provenance": "mn-n5-examples-corpus-3-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "bdab237e0d": {
+      "expected": {
+        "w": "ごみ",
+        "r": "ごみ",
+        "en": [
+          "rubbish"
+        ]
+      },
+      "examples": {
+        "毎週月曜日にゴミを集めにきます。": {
+          "en": "They collect our garbage every Monday.",
+          "mn": "Даваа гараг бүр манай хогийг ачдаг.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n4",
+              "id": "b00801af22",
+              "provenance": "mn-n4-examples-sustained-1-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "dd89673ae0": {
+      "expected": {
+        "w": "字",
+        "r": "じ",
+        "en": [
+          "character"
+        ]
+      },
+      "examples": {
+        "字と字の間の空きをもっと広くしなさい。": {
+          "en": "Leave more space between characters.",
+          "mn": "Үсэг хоорондын зайг илүү өргөн болго.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n3",
+              "id": "03e5958da6",
+              "provenance": "mn-n3-examples-sustained-1-2026-10-08"
+            },
+            {
+              "kind": "vocab",
+              "level": "n2",
+              "id": "b286c3e278",
+              "provenance": "mn-n2-vocab-examples-oct9-1"
+            }
+          ]
+        }
+      }
+    },
+    "c904982ded": {
+      "expected": {
+        "w": "親切",
+        "r": "しんせつ",
+        "en": [
+          "kindness"
+        ]
+      },
+      "examples": {
+        "とても親切にしていただきました。": {
+          "en": "You've been very good to me.",
+          "mn": "Та надад их сайхан хандсан.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n4",
+              "id": "47cc7185d5",
+              "provenance": "mn-n4-examples-sustained-2-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "6701f8cbba": {
+      "expected": {
+        "w": "過ぎる",
+        "r": "すぎる",
+        "en": [
+          "to exceed"
+        ]
+      },
+      "examples": {
+        "いつのまにか夏も過ぎてしまった。": {
+          "en": "Summer has gone all too soon.",
+          "mn": "Нэг мэдэхэд зун өнгөрчихсөн.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n2",
+              "id": "8c9eb6e298",
+              "provenance": "mn-n2-vocab-examples-progress-4-oct9"
+            }
+          ]
+        }
+      }
+    },
+    "cdabcdd725": {
+      "expected": {
+        "w": "ぬれる",
+        "r": "ぬれる",
+        "en": [
+          "to get wet"
+        ]
+      },
+      "examples": {
+        "木のおかげで雨にぬれずにすんだ。": {
+          "en": "The trees kept me out of the rain.",
+          "mn": "Модны ачаар би бороонд норсонгүй.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "277a58c9df",
+              "provenance": "mn-n5-examples-corpus-1-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "916e92f3da": {
+      "expected": {
+        "w": "引き出し",
+        "r": "ひきだし",
+        "en": [
+          "drawer",
+          "drawing out"
+        ]
+      },
+      "examples": {
+        "それは引き出しに入れておきました。": {
+          "en": "I put it in the drawer.",
+          "mn": "Би түүнийг шургуулганд хийсэн.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n5",
+              "id": "6d824d5110",
+              "provenance": "mn-n5-examples-corpus-3-2026-10-08"
+            }
+          ]
+        }
+      }
+    },
+    "f271b97de9": {
+      "expected": {
+        "w": "別",
+        "r": "べつ",
+        "en": [
+          "different"
+        ]
+      },
+      "examples": {
+        "いう事と行う事はまったく別だ。": {
+          "en": "To say is one thing, and to do quite another.",
+          "mn": "Хэлэх, хийх хоёр огт өөр.",
+          "reusedFrom": [
+            {
+              "kind": "vocab",
+              "level": "n4",
+              "id": "2139fab218",
+              "provenance": "mn-n4-examples-sustained-4-2026-10-08"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

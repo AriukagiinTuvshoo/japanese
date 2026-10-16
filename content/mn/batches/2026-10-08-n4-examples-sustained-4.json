@@ -1,0 +1,397 @@
+{
+  "provenance": {
+    "id": "mn-n4-examples-sustained-4-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian compared with exact Japanese sentence and retained English; stable entry w/r/en guards. Suspect sentences withheld. Independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n4.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "a58874b751": {
+      "expected": {
+        "w": "お金持ち",
+        "r": "おかねもち",
+        "en": [
+          "rich man"
+        ]
+      },
+      "examples": {
+        "どうしたらお金持ちになれるのかしら？": {
+          "en": "How can I become rich?",
+          "mn": "Яаж баян болох юм бол?"
+        },
+        "叔母は非常なお金持ちだからといって、それだけ幸せというわけではない。": {
+          "en": "My aunt is none the happier for her great wealth.",
+          "mn": "Нагац эгч маань их баян ч тэр хэрээр аз жаргалтай гэсэн үг биш."
+        }
+      }
+    },
+    "4cfa8f43e2": {
+      "expected": {
+        "w": "億",
+        "r": "おく",
+        "en": [
+          "one hundred million"
+        ]
+      },
+      "examples": {
+        "１０億人の人たちが英語を話しています。": {
+          "en": "One billion people speak English.",
+          "mn": "Нэг тэрбум хүн англиар ярьдаг."
+        },
+        "地球はおよそ５０億年前に生まれた。": {
+          "en": "The earth came into existence about five thousand million years ago.",
+          "mn": "Дэлхий ойролцоогоор таван тэрбум жилийн өмнө үүссэн."
+        }
+      }
+    },
+    "1065d7145c": {
+      "expected": {
+        "w": "屋上",
+        "r": "おくじょう",
+        "en": [
+          "rooftop"
+        ]
+      },
+      "examples": {
+        "デパートの屋上にアドバルーンが上がっている。": {
+          "en": "There is an advertising balloon flying above the department store.",
+          "mn": "Их дэлгүүрийн дээвэр дээр сурталчилгааны бөмбөлөг хөөрч байна."
+        },
+        "青空を見たくなったら、屋上に行きます。": {
+          "en": "I go up to the rooftop when I want to see the blue sky.",
+          "mn": "Хөх тэнгэр хармаар санагдвал дээвэр дээр гардаг."
+        }
+      }
+    },
+    "ba001e2f36": {
+      "expected": {
+        "w": "贈り物",
+        "r": "おくりもの",
+        "en": [
+          "gift"
+        ]
+      },
+      "examples": {
+        "ジェニーは贈り物をありがとうと言った。": {
+          "en": "Jenny thanked me for the gift.",
+          "mn": "Женни бэлэг өгсөнд баярлалаа гэж хэлсэн."
+        },
+        "私はおじによい贈り物をもらった。": {
+          "en": "I was given a nice present by my uncle.",
+          "mn": "Би авга ахаасаа сайхан бэлэг авсан."
+        }
+      }
+    },
+    "af1dae5588": {
+      "expected": {
+        "w": "送る",
+        "r": "おくる",
+        "en": [
+          "to send"
+        ]
+      },
+      "examples": {
+        "この手紙を日本に送ってくれませんか。": {
+          "en": "Could you send this letter to Japan?",
+          "mn": "Энэ захиаг Япон руу явуулж өгч болох уу?"
+        },
+        "車で家まで送ってもらえませんか？": {
+          "en": "Will you drive me home?",
+          "mn": "Намайг машинаар гэрт хүргээд өгөх үү?"
+        }
+      }
+    },
+    "ae8ce3986c": {
+      "expected": {
+        "w": "遅れる",
+        "r": "おくれる",
+        "en": [
+          "to be late"
+        ]
+      },
+      "examples": {
+        "電車はほとんど一時間遅れだった。": {
+          "en": "The train was almost an hour behind time.",
+          "mn": "Галт тэрэг бараг нэг цаг хоцорсон."
+        },
+        "月曜日にはバスはたいてい遅れる。": {
+          "en": "On Mondays, the buses are late more often than not.",
+          "mn": "Даваа гарагт автобус ихэвчлэн хоцордог."
+        }
+      }
+    },
+    "99de4451f7": {
+      "expected": {
+        "w": "起す",
+        "r": "おこす",
+        "en": [
+          "to wake"
+        ]
+      },
+      "examples": {
+        "病気の子供はベッドの上で体を起こした。": {
+          "en": "The sick child sat up in bed.",
+          "mn": "Өвчтэй хүүхэд орон дээрээ өндийн суув."
+        },
+        "明日の朝6時に起こしてください。": {
+          "en": "Please wake me up at six tomorrow morning.",
+          "mn": "Маргааш өглөө зургаан цагт намайг сэрээгээрэй."
+        }
+      }
+    },
+    "2139fab218": {
+      "expected": {
+        "w": "行う",
+        "r": "おこなう",
+        "en": [
+          "to do"
+        ]
+      },
+      "examples": {
+        "いう事と行う事はまったく別だ。": {
+          "en": "To say is one thing, and to do quite another.",
+          "mn": "Хэлэх, хийх хоёр огт өөр."
+        },
+        "彼女はやむえず一人で行った。": {
+          "en": "She reluctantly went by herself.",
+          "mn": "Тэр арга буюу ганцаараа явсан."
+        }
+      }
+    },
+    "2e0f32c097": {
+      "expected": {
+        "w": "怒る",
+        "r": "おこる",
+        "en": [
+          "to get angry",
+          "to be angry"
+        ]
+      },
+      "examples": {
+        "それをそのままにしておきなさい。そうしないと怒られますよ。": {
+          "en": "Leave it as it is, or you will be scolded.",
+          "mn": "Үүнийг тэр хэвээр нь орхи. Үгүй бол загнуулна шүү."
+        },
+        "父は私のことを怒っているんです。": {
+          "en": "Father is angry with me.",
+          "mn": "Аав надад уурласан байна."
+        }
+      }
+    },
+    "3787755f33": {
+      "expected": {
+        "w": "押し入れ",
+        "r": "おしいれ",
+        "en": [
+          "closet"
+        ]
+      },
+      "examples": {
+        "強盗はその子供を押し入れに閉じ込めた。": {
+          "en": "The burglar shut the child in the closet.",
+          "mn": "Хулгайч хүүхдийг ханын шүүгээнд хорьсон."
+        },
+        "私は押入れに閉じ込められるのがこわかった。": {
+          "en": "I was afraid of being put into a closet.",
+          "mn": "Би ханын шүүгээнд хоригдохоос айж байсан."
+        }
+      }
+    },
+    "1f5a7d8e07": {
+      "expected": {
+        "w": "お嬢さん",
+        "r": "おじょうさん",
+        "en": [
+          "young lady"
+        ]
+      },
+      "examples": {
+        "お嬢さんは試験に合格なさったそうですね。": {
+          "en": "Your daughter passed the examination, I hear.",
+          "mn": "Танай охин шалгалтаа давсан гэж сонслоо."
+        },
+        "お嬢さんに会わせていただきたい。": {
+          "en": "I ask to see your daughter.",
+          "mn": "Охинтой тань уулзахыг хүсэж байна."
+        }
+      }
+    },
+    "6693b4e9f7": {
+      "expected": {
+        "w": "お宅",
+        "r": "おたく",
+        "en": [
+          "(polite) your house"
+        ]
+      },
+      "examples": {
+        "近いうちにお宅にうかがいます。": {
+          "en": "We'll visit you one of these days.",
+          "mn": "Бид ойрын өдрүүдэд танайд очно."
+        },
+        "お宅の店は何時まであいていますか。": {
+          "en": "How late are you open?",
+          "mn": "Танай дэлгүүр хэдэн цаг хүртэл ажилладаг вэ?"
+        }
+      }
+    },
+    "981ee66f59": {
+      "expected": {
+        "w": "落ちる",
+        "r": "おちる",
+        "en": [
+          "to fall or drop"
+        ]
+      },
+      "examples": {
+        "勉強しないと試験に落ちるよ。": {
+          "en": "If you don't study, you will fail the exam.",
+          "mn": "Хичээл хийхгүй бол шалгалтад унана шүү."
+        },
+        "サーバーが落ちていた。": {
+          "en": "The server was down.",
+          "mn": "Сервер ажиллахгүй байсан."
+        }
+      }
+    },
+    "050024e2d9": {
+      "expected": {
+        "w": "おっしゃる",
+        "r": "おっしゃる",
+        "en": [
+          "(respectful) to say"
+        ]
+      },
+      "examples": {
+        "全くおっしゃる通りです。": {
+          "en": "You are absolutely right.",
+          "mn": "Та яг зөв хэллээ."
+        },
+        "あなたがメールでおっしゃることは全て正当です。価格を除いては。": {
+          "en": "Everything you said in your mail is just right - except the price.",
+          "mn": "Таны цахим захидалдаа хэлсэн бүхэн зөв, үнээс бусад нь."
+        }
+      }
+    },
+    "b8630e0875": {
+      "expected": {
+        "w": "夫",
+        "r": "おっと",
+        "en": [
+          "husband"
+        ]
+      },
+      "examples": {
+        "妻は夫より長生きするものだ。": {
+          "en": "Wives usually outlive husbands.",
+          "mn": "Эхнэрүүд ихэвчлэн нөхрүүдээсээ урт насалдаг."
+        },
+        "夫はいつもベッドで本を読むんです。": {
+          "en": "My husband is always reading in bed.",
+          "mn": "Манай нөхөр дандаа орондоо ном уншдаг."
+        }
+      }
+    },
+    "f2c38f9517": {
+      "expected": {
+        "w": "おつり",
+        "r": "おつり",
+        "en": [
+          "change from purchase",
+          "balance"
+        ]
+      },
+      "examples": {
+        "１ドルでおつりがありますか。": {
+          "en": "Have you got change for a dollar?",
+          "mn": "Нэг долларын задгай мөнгө байна уу?"
+        },
+        "あの店でおつりをごまかされた。": {
+          "en": "They short-changed me at that store.",
+          "mn": "Тэр дэлгүүрт надад хариулт мөнгө дутуу өгсөн."
+        }
+      }
+    },
+    "c6815e7618": {
+      "expected": {
+        "w": "音",
+        "r": "おと",
+        "en": [
+          "sound",
+          "note"
+        ]
+      },
+      "examples": {
+        "ここから海の音が聞こえる。": {
+          "en": "We can hear the ocean from here.",
+          "mn": "Эндээс далайн чимээ сонсогддог."
+        },
+        "彼女はピアノで高い音を出した。": {
+          "en": "She struck high notes on the piano.",
+          "mn": "Тэр төгөлдөр хуураар өндөр өнгийн авиа гаргасан."
+        }
+      }
+    },
+    "f786333cf9": {
+      "expected": {
+        "w": "落す",
+        "r": "おとす",
+        "en": [
+          "to drop"
+        ]
+      },
+      "examples": {
+        "リストから私の名を落とさないで下さい。": {
+          "en": "Don't take my name off your list.",
+          "mn": "Миний нэрийг жагсаалтаас битгий хас."
+        },
+        "そのコップを落すな。": {
+          "en": "Don't drop that cup.",
+          "mn": "Тэр аягыг битгий унага."
+        }
+      }
+    },
+    "8c636a46f4": {
+      "expected": {
+        "w": "踊り",
+        "r": "おどり",
+        "en": [
+          "a dance"
+        ]
+      },
+      "examples": {
+        "私のガールフレンドは踊りがうまい。": {
+          "en": "My girlfriend is a good dancer.",
+          "mn": "Миний найз охин сайн бүжиглэдэг."
+        },
+        "私は彼女は踊りが上手だと思います。": {
+          "en": "I think she is a good dancer.",
+          "mn": "Би түүнийг сайн бүжиглэдэг гэж боддог."
+        }
+      }
+    },
+    "3280103eb8": {
+      "expected": {
+        "w": "踊る",
+        "r": "おどる",
+        "en": [
+          "to dance"
+        ]
+      },
+      "examples": {
+        "なぜ彼と踊らなかったの？": {
+          "en": "Why didn't you dance with him?",
+          "mn": "Яагаад түүнтэй бүжиглээгүй юм бэ?"
+        },
+        "パーティでは大いに歌い踊りました。": {
+          "en": "We did a lot of singing and dancing at the party.",
+          "mn": "Бид үдэшлэг дээр их дуулж бүжиглэсэн."
+        }
+      }
+    }
+  }
+}

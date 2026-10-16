@@ -1,0 +1,1017 @@
+{
+  "provenance": {
+    "id": "mn-n2-vocab-middle-a-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit topics cross-checked individually against retained Japanese headwords/readings and English glosses, including alternate dictionary readings. Independently unreviewed.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n2.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j2832794": {
+      "mn": [
+        "цусан төрлийн холбоотой байх"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "血を分ける",
+        "r": "ちをわける",
+        "en": [
+          "to be related by blood"
+        ]
+      }
+    },
+    "j1691330": {
+      "mn": [
+        "монопол шинжтэй"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "独占的",
+        "r": "どくせんてき",
+        "en": [
+          "monopolistic"
+        ]
+      }
+    },
+    "j1247820": {
+      "mn": [
+        "цэргийн тойрог"
+      ],
+      "topics": [
+        "society",
+        "places"
+      ],
+      "expected": {
+        "w": "軍管区",
+        "r": "ぐんかんく",
+        "en": [
+          "military district"
+        ]
+      }
+    },
+    "j1168410": {
+      "mn": [
+        "сэтгэгдэл төрүүлэм",
+        "онцгой",
+        "дурсамжтай"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "印象的",
+        "r": "いんしょうてき",
+        "en": [
+          "impressive",
+          "striking",
+          "memorable"
+        ]
+      }
+    },
+    "j2843618": {
+      "mn": [
+        "шашны урсгалын салбар",
+        "сургуулийн салбар"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "門派",
+        "r": "もんぱ",
+        "en": [
+          "division of a religious sect",
+          "branch of a school"
+        ]
+      }
+    },
+    "j1201110": {
+      "mn": [
+        "дахин зохион байгуулалт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "改編",
+        "r": "かいへん",
+        "en": [
+          "reorganization",
+          "reorganisation"
+        ]
+      }
+    },
+    "j1248590": {
+      "mn": [
+        "цэргийн хүч",
+        "их цэрэг",
+        "цэргүүд"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "軍勢",
+        "r": "ぐんぜい",
+        "en": [
+          "military forces",
+          "hosts",
+          "troops"
+        ]
+      }
+    },
+    "j1291440": {
+      "mn": [
+        "виз",
+        "паспорт баталгаажуулах",
+        "тамгалах"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "査証",
+        "r": "さしょう",
+        "en": [
+          "visa",
+          "endorsing (e.g. a passport)",
+          "stamping"
+        ]
+      }
+    },
+    "j1331940": {
+      "mn": [
+        "өөрийгөө шинэчлэх"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "修改",
+        "r": "しゅうかい",
+        "en": [
+          "personal reformation"
+        ]
+      }
+    },
+    "j1708560": {
+      "mn": [
+        "ерөнхий заалт",
+        "ерөнхий дүрэм"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "総則",
+        "r": "そうそく",
+        "en": [
+          "general provisions",
+          "general rules"
+        ]
+      }
+    },
+    "j2383820": {
+      "mn": [
+        "стандарт",
+        "стандартчилсан",
+        "дундаж"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "標準的",
+        "r": "ひょうじゅんてき",
+        "en": [
+          "standard",
+          "standardized",
+          "average"
+        ]
+      }
+    },
+    "j1513650": {
+      "mn": [
+        "хамгаалалтын гаалийн татвар"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "保護税",
+        "r": "ほごぜい",
+        "en": [
+          "protective duty"
+        ]
+      }
+    },
+    "j2163450": {
+      "mn": [
+        "Гауссын тархалт",
+        "хэвийн тархалт"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "ガウス分布",
+        "r": "ガウスぶんぷ",
+        "en": [
+          "Gaussian distribution",
+          "normal distribution"
+        ]
+      }
+    },
+    "j1857240": {
+      "mn": [
+        "ёслолын",
+        "албан ёсны"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "改まった",
+        "r": "あらたまった",
+        "en": [
+          "ceremonious",
+          "formal"
+        ]
+      }
+    },
+    "j2345370": {
+      "mn": [
+        "хуудас дахин дугаарлах",
+        "шинэ хуудас",
+        "хуудас шилжүүлэх команд"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "改ページ",
+        "r": "かいページ",
+        "en": [
+          "repagination",
+          "new page",
+          "form feed"
+        ]
+      }
+    },
+    "j1558160": {
+      "mn": [
+        "түүхэн",
+        "түүхийн",
+        "уламжлалт"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "歴史的",
+        "r": "れきしてき",
+        "en": [
+          "historic",
+          "historical",
+          "traditional"
+        ]
+      }
+    },
+    "j1247720": {
+      "mn": [
+        "цэргийн хуаран"
+      ],
+      "topics": [
+        "society",
+        "places"
+      ],
+      "expected": {
+        "w": "軍営",
+        "r": "ぐんえい",
+        "en": [
+          "military camp"
+        ]
+      }
+    },
+    "j1520500": {
+      "mn": [
+        "батлан хамгаалах яам"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "防総省",
+        "r": "ぼうそうしょう",
+        "en": [
+          "Department of Defense (Defence)"
+        ]
+      }
+    },
+    "j1654830": {
+      "mn": [
+        "бүхнийг багтаасан",
+        "бүх талын",
+        "ерөнхий"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "総括的",
+        "r": "そうかつてき",
+        "en": [
+          "all-inclusive",
+          "all-embracing",
+          "overall"
+        ]
+      }
+    },
+    "j1530580": {
+      "mn": [
+        "барьцаагүй зээл"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "無担保",
+        "r": "むたんぽ",
+        "en": [
+          "unsecured (loan)"
+        ]
+      }
+    },
+    "j1176650": {
+      "mn": [
+        "нэмэлт хүч"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "援軍",
+        "r": "えんぐん",
+        "en": [
+          "reinforcement"
+        ]
+      }
+    },
+    "j1398600": {
+      "mn": [
+        "бүтээлч"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "創造的",
+        "r": "そうぞうてき",
+        "en": [
+          "creative"
+        ]
+      }
+    },
+    "j2517310": {
+      "mn": [
+        "хэмжээгээр ялгах",
+        "зэрэглэх"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "分粒",
+        "r": "ぶんりゅう",
+        "en": [
+          "sizing",
+          "grading"
+        ]
+      }
+    },
+    "j1503670": {
+      "mn": [
+        "үйлт нэр"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "分詞",
+        "r": "ぶんし",
+        "en": [
+          "participle"
+        ]
+      }
+    },
+    "j1255360": {
+      "mn": [
+        "удам",
+        "угсаа",
+        "гэр бүлийн удам"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "血統",
+        "r": "けっとう",
+        "en": [
+          "lineage",
+          "pedigree",
+          "family line"
+        ]
+      }
+    },
+    "j1200990": {
+      "mn": [
+        "засвар шинэчлэлт",
+        "дахин зохион байгуулалт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "改装",
+        "r": "かいそう",
+        "en": [
+          "remodelling",
+          "remodeling",
+          "reorganization"
+        ]
+      }
+    },
+    "j1625500": {
+      "mn": [
+        "цэрэг илгээх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "派兵",
+        "r": "はへい",
+        "en": [
+          "dispatch of troops",
+          "despatch of troops"
+        ]
+      }
+    },
+    "j2057990": {
+      "mn": [
+        "гэрлээгүй эрэгтэй"
+      ],
+      "topics": [
+        "people",
+        "relationships"
+      ],
+      "expected": {
+        "w": "総角",
+        "r": "チョンガー",
+        "en": [
+          "bachelor"
+        ]
+      }
+    },
+    "j1889450": {
+      "mn": [
+        "ерөнхий менежер",
+        "ерөнхий эрхлэгч",
+        "ерөнхий найруулагч"
+      ],
+      "topics": [
+        "people",
+        "work"
+      ],
+      "expected": {
+        "w": "総監督",
+        "r": "そうかんとく",
+        "en": [
+          "general manager",
+          "general superintendent",
+          "general director (of a film, etc.)"
+        ]
+      }
+    },
+    "j1200770": {
+      "mn": [
+        "бүртгэлтэй тамгаа өөрчлөх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "改印",
+        "r": "かいいん",
+        "en": [
+          "changing one's registered seal"
+        ]
+      }
+    },
+    "j1337760": {
+      "mn": [
+        "улс төрийн намыг цэвэрлэх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "粛党",
+        "r": "しゅくとう",
+        "en": [
+          "cleaning up (political party)"
+        ]
+      }
+    },
+    "j1614760": {
+      "mn": [
+        "хуучин урсгал",
+        "хуучин хэв маяг"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "旧派",
+        "r": "きゅうは",
+        "en": [
+          "old school",
+          "old style"
+        ]
+      }
+    },
+    "j1918280": {
+      "mn": [
+        "нарийн ширхэгтэй хэсгийн эзлэх хувь"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "細粒分",
+        "r": "さいりゅうぶん",
+        "en": [
+          "fine particle fraction"
+        ]
+      }
+    },
+    "j1201080": {
+      "mn": [
+        "шинэчлэх буюу цуцлах",
+        "өөрчлөх буюу хүчингүй болгох",
+        "засварлах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "改廃",
+        "r": "かいはい",
+        "en": [
+          "reform and (or) abolition",
+          "alteration or repeal",
+          "revision"
+        ]
+      }
+    },
+    "j1794680": {
+      "mn": [
+        "бэлгэдлийн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "象徴的",
+        "r": "しょうちょうてき",
+        "en": [
+          "symbolic"
+        ]
+      }
+    },
+    "j2521280": {
+      "mn": [
+        "ойлголт",
+        "ухаарч ойлгох"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "領略",
+        "r": "りょうりゃく",
+        "en": [
+          "understanding",
+          "comprehending"
+        ]
+      }
+    },
+    "j1590860": {
+      "mn": [
+        "үзлэг",
+        "аудит",
+        "дүгнэлт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "監査",
+        "r": "かんさ",
+        "en": [
+          "inspection",
+          "audit",
+          "judgement"
+        ]
+      }
+    },
+    "j1232030": {
+      "mn": [
+        "макро түвшний",
+        "өргөн хүрээний",
+        "бүхнийг хамарсан"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "巨視的",
+        "r": "きょしてき",
+        "en": [
+          "macroscopic",
+          "comprehensive",
+          "all-including"
+        ]
+      }
+    },
+    "j2152010": {
+      "mn": [
+        "цөмийн байгууламж"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "核施設",
+        "r": "かくしせつ",
+        "en": [
+          "nuclear facility"
+        ]
+      }
+    },
+    "j1389630": {
+      "mn": [
+        "эзлэн түрэмгийлэгч хүчин",
+        "эзлэгч арми"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "占領軍",
+        "r": "せんりょうぐん",
+        "en": [
+          "occupation forces",
+          "occupation army"
+        ]
+      }
+    },
+    "j1446820": {
+      "mn": [
+        "Шиманэ муж"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "島根県",
+        "r": "しまねけん",
+        "en": [
+          "Shimane prefecture (Chūgoku area)"
+        ]
+      }
+    },
+    "j1401560": {
+      "mn": [
+        "бүх хүчээр довтлох",
+        "ерөнхий давшилт"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "総攻撃",
+        "r": "そうこうげき",
+        "en": [
+          "all-out attack",
+          "general offensive"
+        ]
+      }
+    },
+    "j1398540": {
+      "mn": [
+        "байгуулах",
+        "үүсгэн байгуулах",
+        "зохион байгуулах"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "創設",
+        "r": "そうせつ",
+        "en": [
+          "establishment",
+          "founding",
+          "organization"
+        ]
+      }
+    },
+    "j1513350": {
+      "mn": [
+        "хадгалалтын гэрчилгээ"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "保管証",
+        "r": "ほかんしょう",
+        "en": [
+          "certificate of custody"
+        ]
+      }
+    },
+    "j2018140": {
+      "mn": [
+        "төрийн хэлтсүүд",
+        "яам агентлагууд"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "府省",
+        "r": "ふしょう",
+        "en": [
+          "government departments",
+          "ministries and agencies"
+        ]
+      }
+    },
+    "j1202080": {
+      "mn": [
+        "үнс"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "灰分",
+        "r": "かいぶん",
+        "en": [
+          "ash"
+        ]
+      }
+    },
+    "j1228400": {
+      "mn": [
+        "Миязаки муж"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "宮崎県",
+        "r": "みやざきけん",
+        "en": [
+          "Miyazaki prefecture (Kyushu)"
+        ]
+      }
+    },
+    "j2090680": {
+      "mn": [
+        "Хооэн эрин үе (1135 оны 4 сарын 27–1141 оны 7 сарын 10)"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "保延",
+        "r": "ほうえん",
+        "en": [
+          "Hōen era (1135.4.27-1141.7.10)"
+        ]
+      }
+    },
+    "j1365920": {
+      "mn": [
+        "архинд дуртай хүн",
+        "амттанаас архийг илүүд үздэг хүн",
+        "халуун ногоонд дуртай хүн"
+      ],
+      "topics": [
+        "food",
+        "people"
+      ],
+      "expected": {
+        "w": "辛党",
+        "r": "からとう",
+        "en": [
+          "drinker",
+          "person fond of alcohol (as opposed to sweets)",
+          "person fond of spicy food"
+        ]
+      }
+    },
+    "j1156090": {
+      "mn": [
+        "даатгах",
+        "хариуцуулах",
+        "таашаалд автах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "委ねる",
+        "r": "ゆだねる",
+        "en": [
+          "to entrust (a matter) to",
+          "to leave to",
+          "to abandon oneself to (e.g. pleasure)"
+        ]
+      }
+    },
+    "j1292340": {
+      "mn": [
+        "зассан төлөвлөгөө",
+        "шинэчилсэн төсөл"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "再案",
+        "r": "さいあん",
+        "en": [
+          "revised plan",
+          "revised draft"
+        ]
+      }
+    },
+    "j1502370": {
+      "mn": [
+        "Францын эзэмшил",
+        "Францын нутаг"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "仏領",
+        "r": "ふつりょう",
+        "en": [
+          "French possession",
+          "French territory"
+        ]
+      }
+    },
+    "j1809800": {
+      "mn": [
+        "мужийн захирамж"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "県令",
+        "r": "けんれい",
+        "en": [
+          "prefectural ordinance"
+        ]
+      }
+    },
+    "j2679240": {
+      "mn": [
+        "бүлгүүдэд хуваах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "群に分ける",
+        "r": "ぐんにわける",
+        "en": [
+          "to divide into groups"
+        ]
+      }
+    },
+    "j1755980": {
+      "mn": [
+        "шударга ёсны төлөөх арми"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "義軍",
+        "r": "ぎぐん",
+        "en": [
+          "righteous army"
+        ]
+      }
+    },
+    "j1200980": {
+      "mn": [
+        "дахин оршуулах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "改葬",
+        "r": "かいそう",
+        "en": [
+          "reburial"
+        ]
+      }
+    },
+    "j1724020": {
+      "mn": [
+        "бичил шинжилгээ"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "微量分析",
+        "r": "びりょうぶんせき",
+        "en": [
+          "microanalysis"
+        ]
+      }
+    },
+    "j2630460": {
+      "mn": [
+        "Орионы Ригель од",
+        "Бета Орионис"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "源氏星",
+        "r": "げんじぼし",
+        "en": [
+          "Rigel (star in the constellation Orion)",
+          "Beta Orionis",
+          "Beta Ori"
+        ]
+      }
+    },
+    "j2092350": {
+      "mn": [
+        "Жоохоо эрин үе (1074 оны 8 сарын 23–1077 оны 11 сарын 17)"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "承保",
+        "r": "じょうほう",
+        "en": [
+          "Jōhō era (1074.8.23-1077.11.17)",
+          "Shōho era",
+          "Shōhō era"
+        ]
+      }
+    },
+    "j2758430": {
+      "mn": [
+        "анхдагч",
+        "үндсэн",
+        "суурь"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "根源的",
+        "r": "こんげんてき",
+        "en": [
+          "primordial",
+          "fundamental",
+          "basic"
+        ]
+      }
+    }
+  }
+}

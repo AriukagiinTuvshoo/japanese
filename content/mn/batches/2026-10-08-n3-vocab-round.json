@@ -1,0 +1,1086 @@
+{
+  "provenance": {
+    "id": "mn-n3-vocab-round-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit topics cross-checked individually against retained Japanese headwords/readings and English glosses, including alternate dictionary readings. Independently unreviewed.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n3.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j1527840": {
+      "mn": [
+        "тодорхойлоогүй",
+        "заагаагүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "未定義",
+        "r": "みていぎ",
+        "en": [
+          "undefined",
+          "unspecified"
+        ]
+      }
+    },
+    "j1389720": {
+      "mn": [
+        "дайн зарлах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "宣戦",
+        "r": "せんせん",
+        "en": [
+          "declaration of war"
+        ]
+      }
+    },
+    "j1483140": {
+      "mn": [
+        "найз залуу",
+        "тэр эрэгтэй",
+        "түүнийг"
+      ],
+      "topics": [
+        "relationships",
+        "people"
+      ],
+      "expected": {
+        "w": "彼氏",
+        "r": "かれし",
+        "en": [
+          "boyfriend",
+          "he",
+          "him"
+        ]
+      }
+    },
+    "j1394930": {
+      "mn": [
+        "бүрэн сүйрэл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "全壊",
+        "r": "ぜんかい",
+        "en": [
+          "complete destruction"
+        ]
+      }
+    },
+    "j1527160": {
+      "mn": [
+        "шийдээгүй",
+        "шийдвэр гараагүй",
+        "шийдвэрлэгдээгүй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "未解決",
+        "r": "みかいけつ",
+        "en": [
+          "unsettled",
+          "pending",
+          "unresolved"
+        ]
+      }
+    },
+    "j1205610": {
+      "mn": [
+        "цөмийн дайн"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "核戦争",
+        "r": "かくせんそう",
+        "en": [
+          "nuclear warfare"
+        ]
+      }
+    },
+    "j1309860": {
+      "mn": [
+        "индекс",
+        "индексийн тоо",
+        "зэрэг илтгэгч"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "指数",
+        "r": "しすう",
+        "en": [
+          "index",
+          "index number",
+          "exponent (e.g. in floating-point representation)"
+        ]
+      }
+    },
+    "j1294210": {
+      "mn": [
+        "хамгийн богино"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "最短",
+        "r": "さいたん",
+        "en": [
+          "shortest"
+        ]
+      }
+    },
+    "j2510060": {
+      "mn": [
+        "эвтэй байх",
+        "дуу хоолойгоо нийлүүлэх"
+      ],
+      "topics": [
+        "relationships",
+        "actions"
+      ],
+      "expected": {
+        "w": "和する",
+        "r": "わする",
+        "en": [
+          "to get along",
+          "to add (one's own concordant voice, etc.)"
+        ]
+      }
+    },
+    "j1525310": {
+      "mn": [
+        "үхлийн ор",
+        "нас барах мөч"
+      ],
+      "topics": [
+        "time",
+        "body"
+      ],
+      "expected": {
+        "w": "末期",
+        "r": "まつご",
+        "en": [
+          "deathbed",
+          "hour of death"
+        ]
+      }
+    },
+    "j1390600": {
+      "mn": [
+        "стратеги",
+        "тактик"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "戦略",
+        "r": "せんりゃく",
+        "en": [
+          "strategy",
+          "tactics"
+        ]
+      }
+    },
+    "j1640590": {
+      "mn": [
+        "анхдагч",
+        "зам нээгч",
+        "анхны суурьшигч"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "草分け",
+        "r": "くさわけ",
+        "en": [
+          "pathfinder",
+          "trailblazer",
+          "early settler"
+        ]
+      }
+    },
+    "j2527270": {
+      "mn": [
+        "нэмж",
+        "үүнээс гадна",
+        "түүнчлэн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "加えて",
+        "r": "くわえて",
+        "en": [
+          "additionally",
+          "in addition",
+          "moreover"
+        ]
+      }
+    },
+    "j1390430": {
+      "mn": [
+        "сөнөөгч онгоц"
+      ],
+      "topics": [
+        "technology",
+        "society"
+      ],
+      "expected": {
+        "w": "戦闘機",
+        "r": "せんとうき",
+        "en": [
+          "fighter (aircraft)"
+        ]
+      }
+    },
+    "j1507540": {
+      "mn": [
+        "тайван",
+        "сандардаггүй",
+        "хүйтэн хөндий"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "平然",
+        "r": "へいぜん",
+        "en": [
+          "calm",
+          "composed",
+          "cool"
+        ]
+      }
+    },
+    "j1310080": {
+      "mn": [
+        "дэмжлэг",
+        "тулгуур",
+        "түшиг"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "支え",
+        "r": "ささえ",
+        "en": [
+          "support",
+          "stay",
+          "prop"
+        ]
+      }
+    },
+    "j1237980": {
+      "mn": [
+        "цээж",
+        "хөх"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "胸部",
+        "r": "きょうぶ",
+        "en": [
+          "chest",
+          "breast"
+        ]
+      }
+    },
+    "j1543770": {
+      "mn": [
+        "захиалгатай",
+        "эзэнтэй"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "予約済み",
+        "r": "よやくずみ",
+        "en": [
+          "reserved",
+          "engaged"
+        ]
+      }
+    },
+    "j1490990": {
+      "mn": [
+        "ядуу хүмүүс",
+        "ядуус"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "貧民",
+        "r": "ひんみん",
+        "en": [
+          "poor people",
+          "the poor"
+        ]
+      }
+    },
+    "j1277600": {
+      "mn": [
+        "сайн боломж",
+        "завшаан"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "好機",
+        "r": "こうき",
+        "en": [
+          "good opportunity",
+          "chance"
+        ]
+      }
+    },
+    "j1981950": {
+      "mn": [
+        "бие биеэ хайрлах",
+        "харилцан энхрийлэх",
+        "бэлгийн харьцаанд орох"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "愛し合う",
+        "r": "あいしあう",
+        "en": [
+          "to love one another",
+          "to be affectionate towards each other",
+          "to have sex"
+        ]
+      }
+    },
+    "j2410690": {
+      "mn": [
+        "хүүхэд төрүүлэх",
+        "төрөх",
+        "үйлдвэрлэх"
+      ],
+      "topics": [
+        "actions",
+        "body"
+      ],
+      "expected": {
+        "w": "産す",
+        "r": "さんす",
+        "en": [
+          "to bear (a child)",
+          "to be born",
+          "to produce"
+        ]
+      }
+    },
+    "j1290210": {
+      "mn": [
+        "сэтгэлийн хат",
+        "зориг",
+        "шийдэмгий байдал"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "根性",
+        "r": "こんじょう",
+        "en": [
+          "willpower",
+          "guts",
+          "determination"
+        ]
+      }
+    },
+    "j1365000": {
+      "mn": [
+        "харьяат",
+        "улсын иргэн"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "臣民",
+        "r": "しんみん",
+        "en": [
+          "subject",
+          "national"
+        ]
+      }
+    },
+    "j1401270": {
+      "mn": [
+        "дагалдах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "相伴う",
+        "r": "あいともなう",
+        "en": [
+          "to accompany"
+        ]
+      }
+    },
+    "j1396030": {
+      "mn": [
+        "ерөнхийдөө",
+        "нийтэд нь",
+        "нийтлэг байдлаар"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "全般に",
+        "r": "ぜんぱんに",
+        "en": [
+          "in general",
+          "overall",
+          "generally"
+        ]
+      }
+    },
+    "j1215960": {
+      "mn": [
+        "үе мөч"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "関節",
+        "r": "かんせつ",
+        "en": [
+          "joint (knee, elbow, etc.)"
+        ]
+      }
+    },
+    "j1304450": {
+      "mn": [
+        "түр",
+        "урьдчилсан",
+        "түр тогтоосон"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "暫定",
+        "r": "ざんてい",
+        "en": [
+          "provisional",
+          "temporary",
+          "tentative"
+        ]
+      }
+    },
+    "j1272460": {
+      "mn": [
+        "огтлолцлын цэг"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "交点",
+        "r": "こうてん",
+        "en": [
+          "point of intersection"
+        ]
+      }
+    },
+    "j1642330": {
+      "mn": [
+        "шагнал",
+        "хариу төлөөс",
+        "үр дүн"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "報い",
+        "r": "むくい",
+        "en": [
+          "reward",
+          "recompense",
+          "return"
+        ]
+      }
+    },
+    "j1449290": {
+      "mn": [
+        "будилах",
+        "эргэлзэх",
+        "эвгүйрхэх"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "当惑",
+        "r": "とうわく",
+        "en": [
+          "bewilderment",
+          "perplexity",
+          "embarrassment"
+        ]
+      }
+    },
+    "j2542450": {
+      "mn": [
+        "дараа нь",
+        "удаах",
+        "дараах"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "続いて",
+        "r": "つづいて",
+        "en": [
+          "subsequently",
+          "next",
+          "after ..."
+        ]
+      }
+    },
+    "j2768100": {
+      "mn": [
+        "дараалан",
+        "тасралтгүй",
+        "ээлжлэн"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "続けて",
+        "r": "つづけて",
+        "en": [
+          "successively",
+          "continuously",
+          "in a row"
+        ]
+      }
+    },
+    "j2198630": {
+      "mn": [
+        "зохицуулсан",
+        "шийдсэн",
+        "дуусгасан"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "済み",
+        "r": "ずみ",
+        "en": [
+          "arranged",
+          "taken care of",
+          "settled"
+        ]
+      }
+    },
+    "j1329790": {
+      "mn": [
+        "шагнал хүртэх"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "受賞",
+        "r": "じゅしょう",
+        "en": [
+          "winning (a prize)"
+        ]
+      }
+    },
+    "j2399750": {
+      "mn": [
+        "сайн дураар",
+        "дуртайяа",
+        "өөрийн хүслээр"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "進んで",
+        "r": "すすんで",
+        "en": [
+          "voluntarily",
+          "willingly",
+          "of one's own free will"
+        ]
+      }
+    },
+    "j1009820": {
+      "mn": [
+        "тохиолдуулан",
+        "тэр үед"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "に当たって",
+        "r": "にあたって",
+        "en": [
+          "on the occasion of",
+          "at the time of"
+        ]
+      }
+    },
+    "j1448930": {
+      "mn": [
+        "дүрэмд тохирох",
+        "хамаарах",
+        "ангилалд багтах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "当てはまる",
+        "r": "あてはまる",
+        "en": [
+          "to apply (a rule)",
+          "to be applicable",
+          "to come under (a category)"
+        ]
+      }
+    },
+    "j1586530": {
+      "mn": [
+        "хэрэглэх",
+        "тохируулах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "当てはめる",
+        "r": "あてはめる",
+        "en": [
+          "to apply",
+          "to adapt"
+        ]
+      }
+    },
+    "j2019390": {
+      "mn": [
+        "найдах",
+        "хүлээх",
+        "итгэл тавих"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "当てにする",
+        "r": "あてにする",
+        "en": [
+          "to count on",
+          "to expect",
+          "to put confidence in"
+        ]
+      }
+    },
+    "j1375720": {
+      "mn": [
+        "биелэлт",
+        "гүйцэлдэлт",
+        "хэрэгжилт"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "成就",
+        "r": "じょうじゅ",
+        "en": [
+          "fulfillment",
+          "fulfilment",
+          "realization"
+        ]
+      }
+    },
+    "j1483430": {
+      "mn": [
+        "шүүмжлэлтэй",
+        "буруутган дүгнэдэг"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "批判的",
+        "r": "ひはんてき",
+        "en": [
+          "critical",
+          "judgmental"
+        ]
+      }
+    },
+    "j1552340": {
+      "mn": [
+        "зулбалт",
+        "дутуу төрөх"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "流産",
+        "r": "りゅうざん",
+        "en": [
+          "miscarriage",
+          "abortive birth"
+        ]
+      }
+    },
+    "j1454500": {
+      "mn": [
+        "чадах",
+        "боломжтой байх",
+        "олж авах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "得る",
+        "r": "うる",
+        "en": [
+          "to be able to ...",
+          "can ...",
+          "to get"
+        ]
+      }
+    },
+    "j1596790": {
+      "mn": [
+        "энх тайван",
+        "амгалан байдал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "太平",
+        "r": "たいへい",
+        "en": [
+          "peace",
+          "tranquility",
+          "tranquillity"
+        ]
+      }
+    },
+    "j1009600": {
+      "mn": [
+        "хувьд",
+        "зориулж",
+        "байр сууриас нь"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "に取って",
+        "r": "にとって",
+        "en": [
+          "to",
+          "for",
+          "from the standpoint of"
+        ]
+      }
+    },
+    "j1012940": {
+      "mn": [
+        "өгч авах",
+        "захидал солилцох",
+        "харилцан маргах"
+      ],
+      "topics": [
+        "learning",
+        "actions"
+      ],
+      "expected": {
+        "w": "やり取り",
+        "r": "やりとり",
+        "en": [
+          "giving and taking",
+          "exchange (of letters)",
+          "arguing back and forth"
+        ]
+      }
+    },
+    "j2107160": {
+      "mn": [
+        "бичиж тэмдэглэх",
+        "тэмдэглэх",
+        "санах"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "記する",
+        "r": "きする",
+        "en": [
+          "to write down",
+          "to note",
+          "to remember"
+        ]
+      }
+    },
+    "j1395390": {
+      "mn": [
+        "бүхэлдээ шатах",
+        "галд бүрэн сүйдэх"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "全焼",
+        "r": "ぜんしょう",
+        "en": [
+          "burned down",
+          "entirely destroyed"
+        ]
+      }
+    },
+    "j1198900": {
+      "mn": [
+        "тайлах",
+        "зангилаа тайлах",
+        "суллах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "解く",
+        "r": "ほどく",
+        "en": [
+          "to undo",
+          "to untie",
+          "to unfasten"
+        ]
+      }
+    },
+    "j1632920": {
+      "mn": [
+        "задлах",
+        "тайлах",
+        "орооцолдоог гаргах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "解す",
+        "r": "ほぐす",
+        "en": [
+          "to unravel",
+          "to untie",
+          "to untangle"
+        ]
+      }
+    },
+    "j1251210": {
+      "mn": [
+        "удирдлагын баг"
+      ],
+      "topics": [
+        "work",
+        "people"
+      ],
+      "expected": {
+        "w": "経営陣",
+        "r": "けいえいじん",
+        "en": [
+          "the management ranks"
+        ]
+      }
+    },
+    "j1517500": {
+      "mn": [
+        "хууль тогтоомж",
+        "парламентын хууль"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "法令",
+        "r": "ほうれい",
+        "en": [
+          "laws and ordinances",
+          "acts (of parliament, congress, etc.)"
+        ]
+      }
+    },
+    "j1782630": {
+      "mn": [
+        "ойлголтын",
+        "санааны",
+        "хийсвэр"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "観念的",
+        "r": "かんねんてき",
+        "en": [
+          "conceptual",
+          "ideational",
+          "notional"
+        ]
+      }
+    },
+    "j1604750": {
+      "mn": [
+        "өөдөс харсан",
+        "эсрэг",
+        "гудамжны цаана"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "向い",
+        "r": "むかい",
+        "en": [
+          "facing",
+          "opposite",
+          "across the street"
+        ]
+      }
+    },
+    "j1875990": {
+      "mn": [
+        "дайтаж буй орнууд эвлэрэх"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "講和",
+        "r": "こうわ",
+        "en": [
+          "reconciliation (between warring nations)"
+        ]
+      }
+    },
+    "j1296330": {
+      "mn": [
+        "тохиолдолд",
+        "тэр үед",
+        "энэ үед"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "際に",
+        "r": "さいに",
+        "en": [
+          "in case of",
+          "at that time",
+          "at this time"
+        ]
+      }
+    },
+    "j1461040": {
+      "mn": [
+        "дутагдал",
+        "сул тал"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "難点",
+        "r": "なんてん",
+        "en": [
+          "fault",
+          "weakness"
+        ]
+      }
+    },
+    "j2827450": {
+      "mn": [
+        "хичээнгүй",
+        "ажилсаг",
+        "ухамсартай"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "忠実",
+        "r": "まめ",
+        "en": [
+          "diligent",
+          "hardworking",
+          "conscientious"
+        ]
+      }
+    },
+    "j2016470": {
+      "mn": [
+        "тэгэх гээд байдаг",
+        "өртөмтгий",
+        "хандлагатай"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "勝ち",
+        "r": "がち",
+        "en": [
+          "apt to (do)",
+          "liable to",
+          "prone to"
+        ]
+      }
+    }
+  }
+}

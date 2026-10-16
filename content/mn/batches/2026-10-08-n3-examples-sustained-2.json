@@ -1,0 +1,235 @@
+{
+  "provenance": {
+    "id": "mn-n3-examples-sustained-2-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian compared with exact Japanese sentence and retained English; stable entry w/r/en guards. Suspect sentences withheld. Independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n3.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "264ec34f18": {
+      "expected": {
+        "w": "与える",
+        "r": "あたえる",
+        "en": [
+          "to give",
+          "to present",
+          "to award"
+        ]
+      },
+      "examples": {
+        "彼は娘にたくさんのお金を与えた。": {
+          "en": "He gave his daughter quite a lot of money.",
+          "mn": "Тэр охиндоо нэлээд их мөнгө өгсөн."
+        },
+        "彼は多くの才能を与えられている。": {
+          "en": "He is endowed with many talents.",
+          "mn": "Түүнд олон авьяас заяасан."
+        }
+      }
+    },
+    "a0ea038f9b": {
+      "expected": {
+        "w": "辺り",
+        "r": "あたり",
+        "en": [
+          "vicinity",
+          "nearby"
+        ]
+      },
+      "examples": {
+        "昔この辺りにホテルがあったんだ。": {
+          "en": "There used to be a hotel about here.",
+          "mn": "Энэ хавьд урьд нь зочид буудал байсан."
+        },
+        "お前の物をその辺りに散らかすな。": {
+          "en": "Don't scatter your things about.",
+          "mn": "Юмаа тэр хавиар битгий тарааж тавь."
+        }
+      }
+    },
+    "0c74b17f50": {
+      "expected": {
+        "w": "当たる",
+        "r": "あたる",
+        "en": [
+          "to be hit",
+          "to be successful",
+          "to be equivalent to"
+        ]
+      },
+      "examples": {
+        "私は顔に冷たい風が当たるのを感じた。": {
+          "en": "I felt a cold wind on my face.",
+          "mn": "Нүүрэнд хүйтэн салхи үлээхийг мэдэрсэн."
+        },
+        "福引きでカメラが当たった。": {
+          "en": "I got a camera in a lottery.",
+          "mn": "Би сугалаагаар зургийн аппарат хожсон."
+        }
+      }
+    },
+    "66c159592d": {
+      "expected": {
+        "w": "あちこち",
+        "r": "あちこち",
+        "en": [
+          "here and there"
+        ]
+      },
+      "examples": {
+        "本が部屋のあちこちに散らばっていた。": {
+          "en": "There were books lying about the room.",
+          "mn": "Өрөөний энд тэнд ном хөглөрч байв."
+        },
+        "あてもなくあちこちを歩き回った。": {
+          "en": "I walked aimlessly about the street.",
+          "mn": "Би зорилгогүй энд тэнд тэнүүчилсэн."
+        }
+      }
+    },
+    "c0dfcb262d": {
+      "expected": {
+        "w": "扱う",
+        "r": "あつかう",
+        "en": [
+          "to handle",
+          "to deal with",
+          "to treat"
+        ]
+      },
+      "examples": {
+        "心理学は人間の感情を扱う。": {
+          "en": "Psychology deals with human emotions.",
+          "mn": "Сэтгэл судлал хүний сэтгэл хөдлөлийг судалдаг."
+        },
+        "この問題は私が扱います。": {
+          "en": "I will deal with this problem.",
+          "mn": "Энэ асуудлыг би хариуцна."
+        }
+      }
+    },
+    "b22ceca000": {
+      "expected": {
+        "w": "集まり",
+        "r": "あつまり",
+        "en": [
+          "gathering",
+          "meeting",
+          "assembly"
+        ]
+      },
+      "examples": {
+        "ごく内輪の集まりなのです。": {
+          "en": "It's quite an informal meeting.",
+          "mn": "Энэ бол зөвхөн дотнын хүмүүсийн цугларалт."
+        },
+        "このパーティーは親しい人の集まりです。": {
+          "en": "This party is an intimate gathering.",
+          "mn": "Энэ үдэшлэг дотнын хүмүүсийн уулзалт."
+        }
+      }
+    },
+    "bd36844c24": {
+      "expected": {
+        "w": "当てる",
+        "r": "あてる",
+        "en": [
+          "to hit",
+          "to apply a patch"
+        ]
+      },
+      "examples": {
+        "かろうじて車に当てられずにすんだ。": {
+          "en": "I narrowly escaped being hit by a car.",
+          "mn": "Би машинд мөргүүлэхээс арайхийн зайлсхийсэн."
+        },
+        "この薬品は日光に当てないようにしなさい。": {
+          "en": "Don't expose this chemical to direct sunlight.",
+          "mn": "Энэ химийн бодисыг нарны шууд гэрэлд бүү байлга."
+        }
+      }
+    },
+    "57c650defa": {
+      "expected": {
+        "w": "あと",
+        "r": "あと",
+        "en": [
+          "trace",
+          "tracks",
+          "remains"
+        ]
+      },
+      "examples": {
+        "その女性の顔には悲しみの跡があった。": {
+          "en": "The woman's face was marked with grief.",
+          "mn": "Тэр эмэгтэйн нүүрэнд гунигийн ул мөр байв."
+        },
+        "多少あとが残るかもしれません。": {
+          "en": "There may be some scars.",
+          "mn": "Жаахан сорви үлдэж магадгүй."
+        }
+      }
+    },
+    "4f1b6b6e36": {
+      "expected": {
+        "w": "穴",
+        "r": "あな",
+        "en": [
+          "hole"
+        ]
+      },
+      "examples": {
+        "注意して！道路に穴があいてるよ。": {
+          "en": "Look out! There's a hole in the road.",
+          "mn": "Болгоомжлоорой! Замд нүх байна."
+        },
+        "彼女はその穴から外をのぞいた。": {
+          "en": "She looked out through the hole.",
+          "mn": "Тэр нүхээр гадагш харав."
+        }
+      }
+    },
+    "064aac92d9": {
+      "expected": {
+        "w": "油",
+        "r": "あぶら",
+        "en": [
+          "oil"
+        ]
+      },
+      "examples": {
+        "オリーブの実から油が取れます。": {
+          "en": "Oil is extracted from olives.",
+          "mn": "Оливын жимснээс тос гаргаж авдаг."
+        },
+        "私の服は油で汚れていた。": {
+          "en": "My clothes were dirty with oil.",
+          "mn": "Миний хувцас тосоор бохирдсон байв."
+        }
+      }
+    },
+    "8399cefa4f": {
+      "expected": {
+        "w": "誤り",
+        "r": "あやまり",
+        "en": [
+          "error"
+        ]
+      },
+      "examples": {
+        "私の誤りは彼の怒りを招いた。": {
+          "en": "My mistake incurred his anger.",
+          "mn": "Миний алдаа түүний уурыг хүргэсэн."
+        },
+        "彼の説明は誤りであると判明した。": {
+          "en": "What he said turned out to be false.",
+          "mn": "Түүний тайлбар буруу болох нь тогтоогдсон."
+        }
+      }
+    }
+  }
+}

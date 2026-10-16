@@ -1,0 +1,286 @@
+{
+  "provenance": {
+    "id": "mn-n1-grammar-examples-continue-2-2026-10-09",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian compared with exact Japanese and retained English; stable record and headword/pattern guards; independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/grammar/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "grammar": {
+    "to-mo-naku-to-mo-nashi-ni": {
+      "expected": {
+        "p": "〜ともなく / 〜ともなしに",
+        "en": "without meaning to; idly; (with question words) no particular"
+      },
+      "examples": {
+        "電車の中で、隣の二人の会話を聞くともなく聞いていた。": {
+          "en": "On the train, I was half-listening to the conversation of the two people next to me.",
+          "mn": "Галт тэргэнд хажуугийн хоёр хүний яриаг зориуд биш, хальт сонсож байв."
+        },
+        "窓の外を見るともなしに眺めていると、雪がちらつき始めた。": {
+          "en": "As I gazed idly out of the window, snow began to fall.",
+          "mn": "Цонхоор зүгээр ширтэж байтал цас бударч эхэлсэн."
+        },
+        "どこからともなく、焼き魚のいい匂いが漂ってきた。": {
+          "en": "From somewhere or other came the pleasant smell of grilled fish.",
+          "mn": "Хаа нэгтээгээс шарсан загасны сайхан үнэр үнэртэв."
+        }
+      }
+    },
+    "nai-made-mo": {
+      "expected": {
+        "p": "〜ないまでも",
+        "en": "even if not (to that extent), at least"
+      },
+      "examples": {
+        "毎日とは言わないまでも、週に一度くらいは実家に電話しなさい。": {
+          "en": "I won't say every day, but at least call home once a week.",
+          "mn": "Өдөр бүр гэж хэлэхгүй ч долоо хоногт нэг удаа гэр рүүгээ утасдаарай."
+        },
+        "優勝はできないまでも、せめて決勝までは勝ち進みたい。": {
+          "en": "Even if we can't win the championship, I'd at least like to make it to the final.",
+          "mn": "Аварга болж чадахгүй ч ядаж шигшээд хүрмээр байна."
+        },
+        "完璧には理解できないまでも、大まかな流れはつかんでおくべきだ。": {
+          "en": "Even if you can't understand it perfectly, you should at least grasp the general flow.",
+          "mn": "Бүрэн ойлгохгүй ч ерөнхий явцыг нь мэдэж авах хэрэгтэй."
+        }
+      }
+    },
+    "nai-mono-de-mo-nai": {
+      "expected": {
+        "p": "〜ないものでもない",
+        "en": "it's not impossible that; might (under some conditions)"
+      },
+      "examples": {
+        "条件次第では、その仕事を引き受けないものでもない。": {
+          "en": "Depending on the terms, I might be willing to take on the job.",
+          "mn": "Нөхцөлөөс хамаарч тэр ажлыг хүлээж авч болох юм."
+        },
+        "今から全力で走れば、終電に間に合わないものでもない。": {
+          "en": "If we run flat out now, it's not impossible we'll catch the last train.",
+          "mn": "Одоо хамаг хүчээрээ гүйвэл сүүлчийн галт тэргэнд амжих боломжгүй биш."
+        },
+        "彼の言い分も分からないものでもないが、やはり規則は規則だ。": {
+          "en": "I can see his point to some extent, but rules are rules.",
+          "mn": "Түүний учрыг зарим талаар ойлгож байгаа ч дүрэм бол дүрэм."
+        }
+      }
+    },
+    "nagara-ni-nagara-no": {
+      "expected": {
+        "p": "〜ながらに / 〜ながらの",
+        "en": "as (it was); while remaining; since (birth)"
+      },
+      "examples": {
+        "この町には、昔ながらの手作りの和菓子屋が今も残っている。": {
+          "en": "This town still has an old-fashioned shop that makes Japanese sweets by hand.",
+          "mn": "Энэ хотод уламжлалт аргаар гараар япон амттан хийдэг дэлгүүр одоо ч бий."
+        },
+        "被害者の母親は、涙ながらに事件当日の様子を語った。": {
+          "en": "The victim's mother tearfully described what happened on the day of the incident.",
+          "mn": "Хохирогчийн ээж хэрэг болсон өдрийг нулимстай ярьсан."
+        },
+        "彼女は生まれながらに優れた音感を持っていた。": {
+          "en": "She had an excellent ear for pitch from birth.",
+          "mn": "Тэр төрөлхийн хөгжмийн өнгө сайн ялгадаг байв."
+        }
+      }
+    },
+    "nakushite-wa": {
+      "expected": {
+        "p": "〜なくして(は)",
+        "en": "without (something essential), (cannot)"
+      },
+      "examples": {
+        "地域住民の理解なくして、この計画の成功はあり得ない。": {
+          "en": "Without the understanding of local residents, this project cannot succeed.",
+          "mn": "Нутгийн оршин суугчдын ойлголт дэмжлэггүйгээр энэ төлөвлөгөө амжилтгүй."
+        },
+        "失敗なくしては、本当の成長は得られない。": {
+          "en": "Without failure, there can be no real growth.",
+          "mn": "Бүтэлгүйтэлгүйгээр жинхэнэ өсөлт байхгүй."
+        },
+        "多くの支援者の協力なくしては、この映画は完成しなかっただろう。": {
+          "en": "Without the cooperation of many supporters, this film would never have been finished.",
+          "mn": "Олон дэмжигчийн туслалцаагүй бол энэ кино дуусахгүй байсан байх."
+        }
+      }
+    },
+    "nashi-ni-wa": {
+      "expected": {
+        "p": "〜なしに(は)",
+        "en": "without"
+      },
+      "examples": {
+        "彼は何の連絡もなしに、三日間会社を休んだ。": {
+          "en": "He stayed away from work for three days without any notice.",
+          "mn": "Тэр юу ч мэдэгдэлгүй гурван өдөр ажилдаа ирээгүй."
+        },
+        "事前の許可なしには、この区域に立ち入ることはできません。": {
+          "en": "You may not enter this area without prior permission.",
+          "mn": "Урьдчилсан зөвшөөрөлгүй энэ бүсэд нэвтэрч болохгүй."
+        },
+        "この話は、涙なしには聞けない。": {
+          "en": "You can't listen to this story without shedding tears.",
+          "mn": "Энэ түүхийг нулимсгүй сонсож чадахгүй."
+        }
+      }
+    },
+    "nara-iza-shirazu-wa-iza-shirazu": {
+      "expected": {
+        "p": "〜ならいざしらず / 〜はいざしらず",
+        "en": "it may be different for ..., but; I don't know about ..., but"
+      },
+      "examples": {
+        "子どもならいざしらず、大人がこんな簡単な漢字も読めないとは情けない。": {
+          "en": "It would be one thing for a child, but it's shameful that an adult can't read such simple kanji.",
+          "mn": "Хүүхэд бол өөр хэрэг, том хүн ийм энгийн ханз уншиж чадахгүй нь ичгэвтэр."
+        },
+        "昔はいざしらず、今の時代に手書きの履歴書にこだわる必要はないだろう。": {
+          "en": "Things may have been different in the past, but nowadays there's no need to insist on handwritten résumés.",
+          "mn": "Урьд цагт өөр байсан ч өнөөдөр гараар бичсэн намтрыг заавал шаардах хэрэггүй байх."
+        },
+        "素人ならいざしらず、プロの料理人が塩と砂糖を間違えるなんて。": {
+          "en": "Maybe for an amateur, but a professional chef mixing up salt and sugar?",
+          "mn": "Сонирхогч бол өөр хэрэг, мэргэжлийн тогооч давс, сахар андуурна гэдэг!"
+        }
+      }
+    },
+    "nara-mada-shimo": {
+      "expected": {
+        "p": "〜ならまだしも",
+        "en": "if it were ..., it would be one thing (but)"
+      },
+      "examples": {
+        "一度ならまだしも、同じミスを三度も繰り返すのは問題だ。": {
+          "en": "Once would be one thing, but repeating the same mistake three times is a problem.",
+          "mn": "Нэг удаа бол өөр хэрэг, нэг алдааг гурван удаа давтах нь асуудал."
+        },
+        "遅刻するならまだしも、連絡もせずに休むのは社会人として失格だ。": {
+          "en": "Being late is one thing, but skipping work without even calling is unacceptable for a working adult.",
+          "mn": "Хоцрох бол өөр хэрэг, мэдэгдэлгүй ажил таслах нь ажил эрхлэгчийн хувьд зохисгүй."
+        },
+        "冗談で言うならまだしも、本気でそう思っているのなら問題だ。": {
+          "en": "If you were joking, that'd be one thing, but if you really think that, it's a problem.",
+          "mn": "Тоглож хэлсэн бол өөр хэрэг, үнэхээр тэгж бодож байгаа бол асуудал."
+        }
+      }
+    },
+    "nari": {
+      "expected": {
+        "p": "〜なり",
+        "en": "as soon as; the moment"
+      },
+      "examples": {
+        "娘は学校から帰ってくるなり、自分の部屋に閉じこもってしまった。": {
+          "en": "The moment my daughter got home from school, she shut herself up in her room.",
+          "mn": "Охин сургуулиас ирэнгүүтээ өрөөндөө түгжигдсэн."
+        },
+        "彼は受話器を取るなり、大声で怒鳴り始めた。": {
+          "en": "As soon as he picked up the phone, he started shouting.",
+          "mn": "Тэр утсаа авмагц чанга хашгирч эхэлсэн."
+        },
+        "父は一口食べるなり、「懐かしい味だ」とつぶやいた。": {
+          "en": "My father took one bite and immediately murmured, 'This tastes like the old days.'",
+          "mn": "Аав нэг амсаад л «хуучны амт байна» гэж бувтнасан."
+        }
+      }
+    },
+    "nari-nari": {
+      "expected": {
+        "p": "〜なり〜なり",
+        "en": "either A or B; A or B or whatever"
+      },
+      "examples": {
+        "分からないことがあれば、先生に聞くなり辞書で調べるなりしなさい。": {
+          "en": "If there's something you don't understand, either ask your teacher or look it up in a dictionary.",
+          "mn": "Ойлгохгүй зүйл байвал багшаасаа асуу эсвэл тольд хар."
+        },
+        "週末は、映画なり買い物なり、好きなことをして過ごすといい。": {
+          "en": "On the weekend, spend your time doing whatever you like — a movie, shopping, anything.",
+          "mn": "Амралтын өдрөөр кино үзэх, дэлгүүр хэсэх зэрэг дуртай зүйлээ хий."
+        },
+        "結果が出たら、電話なりメールなりで知らせてください。": {
+          "en": "When the results come out, please let me know by phone, email or whatever.",
+          "mn": "Үр дүн гарвал утас, цахим шуудан зэргээр мэдэгдээрэй."
+        }
+      }
+    },
+    "nari-ni-nari-no": {
+      "expected": {
+        "p": "〜なりに / 〜なりの",
+        "en": "in one's own way; as far as (one's limits) allow"
+      },
+      "examples": {
+        "子どもは子どもなりに、親のことを心配しているものだ。": {
+          "en": "Children, in their own way, worry about their parents.",
+          "mn": "Хүүхдүүд өөрсдийнхөөрөө эцэг эхдээ санаа зовдог."
+        },
+        "自分なりに努力したつもりだが、結果は思わしくなかった。": {
+          "en": "I thought I'd tried my best in my own way, but the results were disappointing.",
+          "mn": "Өөрийнхөөрөө хичээсэн гэж бодсон ч үр дүн сайн байгаагүй."
+        },
+        "狭い部屋には狭いなりの良さがある。": {
+          "en": "A small room has its own merits precisely because it's small.",
+          "mn": "Жижиг өрөөнд жижиг байхын өөрийн давуу тал бий."
+        }
+      }
+    },
+    "ni-wa-ataranai": {
+      "expected": {
+        "p": "〜には当たらない",
+        "en": "there's no need to; it's not worth (being surprised, etc.)"
+      },
+      "examples": {
+        "彼の実力を考えれば、今回の優勝は驚くには当たらない。": {
+          "en": "Considering his ability, his victory this time is nothing to be surprised about.",
+          "mn": "Түүний чадварыг бодвол энэ удаагийн түрүүлэлтэд гайхах хэрэггүй."
+        },
+        "新人のうちは誰でも失敗するものだから、それほど責めるには当たらない。": {
+          "en": "Everyone makes mistakes as a newcomer, so there's no need to blame him that much.",
+          "mn": "Шинэ хүн болгон алдаа гаргадаг тул түүнийг ингэж их буруутгах хэрэггүй."
+        },
+        "多少の遅れは想定内であり、心配するには当たらない。": {
+          "en": "A slight delay was expected, so there's no cause for concern.",
+          "mn": "Жаахан саатал гарна гэж тооцсон тул санаа зовох хэрэггүй."
+        }
+      }
+    },
+    "ni-atte": {
+      "expected": {
+        "p": "〜にあって",
+        "en": "in (a situation or position); at (a time)"
+      },
+      "examples": {
+        "物価が上がり続ける状況にあって、家計の見直しは避けられない。": {
+          "en": "With prices continuing to rise, reviewing household finances is unavoidable.",
+          "mn": "Үнэ өссөөр байгаа үед өрхийн санхүүгээ эргэн харахаас өөр аргагүй."
+        },
+        "彼女は逆境にあっても、決して笑顔を絶やさなかった。": {
+          "en": "Even in adversity, she never stopped smiling.",
+          "mn": "Тэр бэрхшээлд байсан ч инээмсэглэлээ алдаагүй."
+        },
+        "責任ある立場にあっては、軽率な言動は慎むべきだ。": {
+          "en": "When you're in a position of responsibility, you should refrain from careless words and actions.",
+          "mn": "Хариуцлагатай албан тушаалд байвал болчимгүй үг, үйлдлээс зайлсхийх хэрэгтэй."
+        }
+      }
+    },
+    "ni-kataku-nai": {
+      "expected": {
+        "p": "〜に難くない",
+        "en": "it's not hard to (imagine, understand)"
+      },
+      "examples": {
+        "突然家族を失った遺族の悲しみは、想像に難くない。": {
+          "en": "It is not hard to imagine the grief of those who suddenly lost their loved ones.",
+          "mn": "Гэнэт хайртай хүмүүсээ алдсан гэр бүлийнхний гунигийг төсөөлөхөд хэцүү биш."
+        }
+      }
+    }
+  }
+}

@@ -24,9 +24,11 @@ export interface SyncDoc {
 
 export class ApiError extends Error {
   status: number;
-  constructor(status: number, message: string) {
+  unavailable: boolean;
+  constructor(status: number, message: string, unavailable = false) {
     super(message);
     this.status = status;
+    this.unavailable = unavailable;
   }
 }
 
@@ -48,8 +50,24 @@ async function req<T>(path: string, init: RequestInit = {}, timeoutMs = 12_000):
       },
     });
     const text = await res.text();
-    const body = text ? (JSON.parse(text) as Record<string, unknown>) : {};
-    if (!res.ok) throw new ApiError(res.status, (body.error as string) ?? `HTTP ${res.status}`);
+    let body: Record<string, unknown> = {};
+    if (text.trim()) {
+      try {
+        const parsed: unknown = JSON.parse(text);
+        if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) throw new Error("Expected JSON object");
+        body = parsed as Record<string, unknown>;
+      } catch {
+        throw new ApiError(
+          res.status,
+          "API JSON бус хариу буцаалаа. Байршуулсан API-г шалгаад дахин оролдоно уу. / The API returned a non-JSON response. Check the deployed API and try again.",
+          true,
+        );
+      }
+    }
+    if (!res.ok) {
+      const message = typeof body.error === "string" ? body.error : `API хүсэлт амжилтгүй (HTTP ${res.status}) / API request failed (HTTP ${res.status})`;
+      throw new ApiError(res.status, message, [404, 405, 501, 503].includes(res.status));
+    }
     return body as T;
   } finally {
     clearTimeout(timer);

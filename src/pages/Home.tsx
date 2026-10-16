@@ -241,12 +241,12 @@ export default function Home() {
       </Card>
 
       {/* ── үргэлжлүүлэх ── */}
-      <div className="grid gap-5 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
         <Card className="lg:col-span-2">
           <SectionTitle
             jp="続きから"
             title={t.continueTitle}
-            right={<a href={href("review")} className="text-[12.5px] font-bold text-ai-600 underline underline-offset-4">{t.srsLink}</a>}
+            right={<a href={href("review")} className="inline-flex min-h-[28px] items-center px-1.5 py-1.5 text-[12.5px] font-bold text-ai-600 underline underline-offset-4">{t.srsLink}</a>}
           />
           <div className="grid gap-3 sm:grid-cols-2">
             {resume && <ResumeCard id={resume.id} />}
@@ -256,7 +256,7 @@ export default function Home() {
                 k="読"
                 tone="ai"
                 title={nextReading.titleJp}
-                sub={`${nextReading.title} · ${nextReading.minutes} ${t.minutes}`}
+                sub={`${language === "en" ? (nextReading.titleEn ?? nextReading.title) : nextReading.title} · ${nextReading.minutes} ${t.minutes}`}
                 badge={nextReading.level}
               />
             )}
@@ -265,8 +265,8 @@ export default function Home() {
                 to={`listening/${nextLesson.id}`}
                 k="聴"
                 tone="murasaki"
-                title={nextLesson.title}
-                sub={`${nextLesson.channel} · ${nextLesson.minutes} ${t.minutes}`}
+                title={nextLesson.titleJp ?? nextLesson.title}
+                sub={`${language === "en" ? (nextLesson.titleEn ?? nextLesson.title) : nextLesson.title} · ${nextLesson.minutes} ${t.minutes}`}
                 badge={nextLesson.level}
               />
             )}
@@ -473,7 +473,7 @@ function TaskCard({
     matcha: "bg-matcha-50 text-matcha-600", murasaki: "bg-murasaki-50 text-murasaki-600", kin: "bg-kin-50 text-kin-600",
   };
   return (
-    <a href={href(to)} className="card-flat flex items-start gap-3 p-4 transition hover:-translate-y-0.5 hover:border-shu-300">
+    <a href={href(to)} className="card-flat flex min-w-0 items-start gap-3 p-4 transition hover:-translate-y-0.5 hover:border-shu-300">
       <span className={cn("grid h-10 w-10 shrink-0 place-items-center rounded-xl font-mincho text-[18px] font-bold", tones[tone])}>{k}</span>
       <span className="min-w-0 flex-1">
         <span className="block truncate text-[13.5px] font-bold text-sumi-900">{title}</span>

@@ -1,0 +1,511 @@
+{
+  "provenance": {
+    "id": "mn-n4-topics-recovery-2-2026-10-09",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "Explicit semantic assignments compared with exact Japanese, readings and retained English. Multiple topics where justified; no default catch-all. Independent human review pending.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n4.json at cac78c79587f6fb6d5f93a158790258c24b351e8",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "270801de39": {
+      "expected": {
+        "w": "スクリーン",
+        "r": "スクリーン",
+        "en": [
+          "screen"
+        ]
+      },
+      "topics": [
+        "technology",
+        "arts"
+      ]
+    },
+    "44f773f94f": {
+      "expected": {
+        "w": "すっかり",
+        "r": "すっかり",
+        "en": [
+          "completely"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "d2937b2999": {
+      "expected": {
+        "w": "ステーキ",
+        "r": "ステーキ",
+        "en": [
+          "steak"
+        ]
+      },
+      "topics": [
+        "food"
+      ]
+    },
+    "9071f08832": {
+      "expected": {
+        "w": "ステレオ",
+        "r": "ステレオ",
+        "en": [
+          "stereo"
+        ]
+      },
+      "topics": [
+        "technology",
+        "arts"
+      ]
+    },
+    "97a079585a": {
+      "expected": {
+        "w": "砂",
+        "r": "すな",
+        "en": [
+          "sand"
+        ]
+      },
+      "topics": [
+        "nature"
+      ]
+    },
+    "9776ccd07d": {
+      "expected": {
+        "w": "隅",
+        "r": "すみ",
+        "en": [
+          "corner",
+          "nook"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "745024b527": {
+      "expected": {
+        "w": "すり",
+        "r": "すり",
+        "en": [
+          "pickpocket"
+        ]
+      },
+      "topics": [
+        "people",
+        "society"
+      ]
+    },
+    "416c1b3679": {
+      "expected": {
+        "w": "すると",
+        "r": "すると",
+        "en": [
+          "then"
+        ]
+      },
+      "topics": [
+        "time",
+        "learning"
+      ]
+    },
+    "1e4db2ac9d": {
+      "expected": {
+        "w": "西洋",
+        "r": "せいよう",
+        "en": [
+          "western countries"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "bfe54303cd": {
+      "expected": {
+        "w": "世界",
+        "r": "せかい",
+        "en": [
+          "the world"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "d11d9a6207": {
+      "expected": {
+        "w": "席",
+        "r": "せき",
+        "en": [
+          "seat"
+        ]
+      },
+      "topics": [
+        "daily"
+      ]
+    },
+    "bdf6b26213": {
+      "expected": {
+        "w": "ぜひ",
+        "r": "ぜひ",
+        "en": [
+          "without fail"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "da94019cdd": {
+      "expected": {
+        "w": "線",
+        "r": "せん",
+        "en": [
+          "line"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "ba20bc66d0": {
+      "expected": {
+        "w": "ぜんぜん",
+        "r": "ぜんぜん",
+        "en": [
+          "not entirely (used in a negative sentence)"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "9b3ce398bd": {
+      "expected": {
+        "w": "先輩",
+        "r": "せんぱい",
+        "en": [
+          "senior"
+        ]
+      },
+      "topics": [
+        "people",
+        "relationships"
+      ]
+    },
+    "14363682cb": {
+      "expected": {
+        "w": "祖父",
+        "r": "そふ",
+        "en": [
+          "grandfather"
+        ]
+      },
+      "topics": [
+        "people",
+        "relationships"
+      ]
+    },
+    "0f0ed38b4c": {
+      "expected": {
+        "w": "祖母",
+        "r": "そぼ",
+        "en": [
+          "grandmother"
+        ]
+      },
+      "topics": [
+        "people",
+        "relationships"
+      ]
+    },
+    "67c8e8ac31": {
+      "expected": {
+        "w": "それで",
+        "r": "それで",
+        "en": [
+          "because of that"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "074e70b529": {
+      "expected": {
+        "w": "それに",
+        "r": "それに",
+        "en": [
+          "moreover"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "0039e17a55": {
+      "expected": {
+        "w": "そろそろ",
+        "r": "そろそろ",
+        "en": [
+          "gradually",
+          "soon"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "d1cca83038": {
+      "expected": {
+        "w": "そんなに",
+        "r": "そんなに",
+        "en": [
+          "so much",
+          "like that"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "c0afe72b73": {
+      "expected": {
+        "w": "大体",
+        "r": "だいたい",
+        "en": [
+          "generally"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "a174ca4443": {
+      "expected": {
+        "w": "タイプ",
+        "r": "タイプ",
+        "en": [
+          "type",
+          "style"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "b442490fff": {
+      "expected": {
+        "w": "大分",
+        "r": "だいぶ",
+        "en": [
+          "greatly"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "14d52a91d3": {
+      "expected": {
+        "w": "台風",
+        "r": "たいふう",
+        "en": [
+          "typhoon"
+        ]
+      },
+      "topics": [
+        "nature"
+      ]
+    },
+    "ced135c81e": {
+      "expected": {
+        "w": "だから",
+        "r": "だから",
+        "en": [
+          "so",
+          "therefore"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "b5579bc4a6": {
+      "expected": {
+        "w": "畳",
+        "r": "たたみ",
+        "en": [
+          "Japanese straw mat"
+        ]
+      },
+      "topics": [
+        "daily"
+      ]
+    },
+    "1cda12dd3f": {
+      "expected": {
+        "w": "例えば",
+        "r": "たとえば",
+        "en": [
+          "for example"
+        ]
+      },
+      "topics": [
+        "learning"
+      ]
+    },
+    "9c96fd3cb4": {
+      "expected": {
+        "w": "棚",
+        "r": "たな",
+        "en": [
+          "shelves"
+        ]
+      },
+      "topics": [
+        "daily"
+      ]
+    },
+    "ebaf7ce5e4": {
+      "expected": {
+        "w": "たまに",
+        "r": "たまに",
+        "en": [
+          "occasionally"
+        ]
+      },
+      "topics": [
+        "time"
+      ]
+    },
+    "43965bbba0": {
+      "expected": {
+        "w": "力",
+        "r": "ちから",
+        "en": [
+          "strength",
+          "power"
+        ]
+      },
+      "topics": [
+        "body"
+      ]
+    },
+    "f527f52c5c": {
+      "expected": {
+        "w": "ちっとも",
+        "r": "ちっとも",
+        "en": [
+          "not at all (used with a negative verb)"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "36f583c207": {
+      "expected": {
+        "w": "駐車場",
+        "r": "ちゅうしゃじょう",
+        "en": [
+          "parking lot"
+        ]
+      },
+      "topics": [
+        "places"
+      ]
+    },
+    "16db6a0f53": {
+      "expected": {
+        "w": "地理",
+        "r": "ちり",
+        "en": [
+          "geography"
+        ]
+      },
+      "topics": [
+        "places",
+        "learning"
+      ]
+    },
+    "7d940762d2": {
+      "expected": {
+        "w": "都合",
+        "r": "つごう",
+        "en": [
+          "circumstances",
+          "convenience"
+        ]
+      },
+      "topics": [
+        "descriptions"
+      ]
+    },
+    "342df55815": {
+      "expected": {
+        "w": "つもり",
+        "r": "つもり",
+        "en": [
+          "intention"
+        ]
+      },
+      "topics": [
+        "feelings"
+      ]
+    },
+    "02dea2f4f6": {
+      "expected": {
+        "w": "テニス",
+        "r": "テニス",
+        "en": [
+          "tennis"
+        ]
+      },
+      "topics": [
+        "arts"
+      ]
+    },
+    "be7c090b8e": {
+      "expected": {
+        "w": "手袋",
+        "r": "てぶくろ",
+        "en": [
+          "glove"
+        ]
+      },
+      "topics": [
+        "daily"
+      ]
+    },
+    "67fb8c065d": {
+      "expected": {
+        "w": "点",
+        "r": "てん",
+        "en": [
+          "point",
+          "dot"
+        ]
+      },
+      "topics": [
+        "quantity"
+      ]
+    },
+    "84e17fcbc2": {
+      "expected": {
+        "w": "電報",
+        "r": "でんぽう",
+        "en": [
+          "telegram"
+        ]
+      },
+      "topics": [
+        "technology",
+        "learning"
+      ]
+    }
+  }
+}

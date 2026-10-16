@@ -1,0 +1,1067 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-sustain-4-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses cross-checked against exact Japanese spelling, reading and retained English; explicit semantic topic assignments. Independent human review outstanding; suspect sources withheld.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "49dae9ac22": {
+      "mn": [
+        "хичээл"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "レッスン",
+        "r": "レッスン",
+        "en": [
+          "lesson"
+        ]
+      }
+    },
+    "c7e4c9b610": {
+      "mn": [
+        "хатагтай"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "レディー",
+        "r": "レディー",
+        "en": [
+          "lady"
+        ]
+      }
+    },
+    "bfef822f66": {
+      "mn": [
+        "хөшүүрэг",
+        "элэг"
+      ],
+      "topics": [
+        "technology",
+        "body"
+      ],
+      "expected": {
+        "w": "レバー",
+        "r": "レバー",
+        "en": [
+          "lever",
+          "liver"
+        ]
+      }
+    },
+    "101cdef592": {
+      "mn": [
+        "дурлал",
+        "хайр сэтгэл",
+        "хайрлах хүсэл"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "恋愛",
+        "r": "れんあい",
+        "en": [
+          "love",
+          "love-making",
+          "passion"
+        ]
+      }
+    },
+    "1338a3f47d": {
+      "mn": [
+        "дараалсан амралтын өдрүүд"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "連休",
+        "r": "れんきゅう",
+        "en": [
+          "consecutive holidays"
+        ]
+      }
+    },
+    "ca31bf8db3": {
+      "mn": [
+        "цар хүрээ",
+        "зуух"
+      ],
+      "topics": [
+        "quantity",
+        "daily"
+      ],
+      "expected": {
+        "w": "レンジ",
+        "r": "レンジ",
+        "en": [
+          "range",
+          "stove"
+        ]
+      }
+    },
+    "7d28bc070c": {
+      "mn": [
+        "өдөр бүр",
+        "олон өдөр дараалан"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "連日",
+        "r": "れんじつ",
+        "en": [
+          "every day",
+          "prolonged"
+        ]
+      }
+    },
+    "dfe344f4e2": {
+      "mn": [
+        "эв санааны нэгдэл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "連帯",
+        "r": "れんたい",
+        "en": [
+          "solidarity"
+        ]
+      }
+    },
+    "cefdf0c77c": {
+      "mn": [
+        "түрээсийн машин"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "レンタカー",
+        "r": "レンタカー",
+        "en": [
+          "hire car (lit: rent-a-car)"
+        ]
+      }
+    },
+    "04743e6a41": {
+      "mn": [
+        "хамт ажиллагсад",
+        "хамт олон",
+        "бүлэг хүмүүс"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "連中",
+        "r": "れんちゅう",
+        "en": [
+          "colleagues",
+          "company",
+          "a lot"
+        ]
+      }
+    },
+    "543a56fe74": {
+      "mn": [
+        "рентген",
+        "рентген туяа"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "レントゲン",
+        "r": "レントゲン",
+        "en": [
+          "X-ray (lit: Roentgen)"
+        ]
+      }
+    },
+    "c3ae5da496": {
+      "mn": [
+        "улсуудын холбоо",
+        "холбооны улс"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "連邦",
+        "r": "れんぽう",
+        "en": [
+          "commonwealth",
+          "federation of states"
+        ]
+      }
+    },
+    "1487ab7edb": {
+      "mn": [
+        "холбоо",
+        "эвлэл",
+        "эвсэл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "連盟",
+        "r": "れんめい",
+        "en": [
+          "league",
+          "union",
+          "alliance"
+        ]
+      }
+    },
+    "205f841138": {
+      "mn": [
+        "өтөл насны доройтол",
+        "хөгшрөлтийн сулрал"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "老衰",
+        "r": "ろうすい",
+        "en": [
+          "senility",
+          "senile decay"
+        ]
+      }
+    },
+    "3b514433e9": {
+      "mn": [
+        "чангаар унших",
+        "уран уншлага"
+      ],
+      "topics": [
+        "learning",
+        "arts"
+      ],
+      "expected": {
+        "w": "朗読",
+        "r": "ろうどく",
+        "en": [
+          "reading aloud",
+          "recitation"
+        ]
+      }
+    },
+    "edc9704d84": {
+      "mn": [
+        "үрэлгэн байдал",
+        "тансаглан үрэх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "浪費",
+        "r": "ろうひ",
+        "en": [
+          "waste",
+          "extravagance"
+        ]
+      }
+    },
+    "59cc1aa388": {
+      "mn": [
+        "хөдөлмөр",
+        "чармайлт",
+        "зүтгэл"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "労力",
+        "r": "ろうりょく",
+        "en": [
+          "labour",
+          "effort",
+          "toil"
+        ]
+      }
+    },
+    "b083c2fe68": {
+      "mn": [
+        "олс"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "ロープ",
+        "r": "ロープ",
+        "en": [
+          "rope"
+        ]
+      }
+    },
+    "6098e9e230": {
+      "mn": [
+        "хангалттай сайн",
+        "зохистой"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "碌な",
+        "r": "ろくな",
+        "en": [
+          "satisfactory",
+          "decent"
+        ]
+      }
+    },
+    "7533eeec58": {
+      "mn": [
+        "сайтар",
+        "хангалттай",
+        "хүрэлцэхүйц"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "碌に",
+        "r": "ろくに",
+        "en": [
+          "well",
+          "enough",
+          "sufficient"
+        ]
+      }
+    },
+    "c98b46666a": {
+      "mn": [
+        "илэн далангүй",
+        "шууд",
+        "илт"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "露骨",
+        "r": "ろこつ",
+        "en": [
+          "frank",
+          "blunt",
+          "plain"
+        ]
+      }
+    },
+    "077aaeea47": {
+      "mn": [
+        "романтик",
+        "хайр сэтгэлийн"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "ロマンチック",
+        "r": "ロマンチック",
+        "en": [
+          "romantic"
+        ]
+      }
+    },
+    "0168723c14": {
+      "mn": [
+        "хэлэлцүүлэг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "論議",
+        "r": "ろんぎ",
+        "en": [
+          "discussion"
+        ]
+      }
+    },
+    "0a58b5edbf": {
+      "mn": [
+        "логик",
+        "учир зүйн холбоо"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "論理",
+        "r": "ろんり",
+        "en": [
+          "logic"
+        ]
+      }
+    },
+    "b4527d4c3b": {
+      "mn": [
+        "нийлбэр",
+        "эв зохицол",
+        "энх тайван"
+      ],
+      "topics": [
+        "quantity",
+        "relationships",
+        "society"
+      ],
+      "expected": {
+        "w": "和",
+        "r": "わ",
+        "en": [
+          "sum",
+          "harmony",
+          "peace"
+        ]
+      }
+    },
+    "58c834514c": {
+      "mn": [
+        "гараг"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "惑星",
+        "r": "わくせい",
+        "en": [
+          "planet"
+        ]
+      }
+    },
+    "5989bb1293": {
+      "mn": [
+        "ур чадвар",
+        "арга техник"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "技",
+        "r": "わざ",
+        "en": [
+          "art",
+          "technique"
+        ]
+      }
+    },
+    "bc47957953": {
+      "mn": [
+        "зориуд",
+        "тусгайлан",
+        "зориуд цаг гаргаж"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "わざわざ",
+        "r": "わざわざ",
+        "en": [
+          "expressly",
+          "specially",
+          "doing something especially rather than incidentally"
+        ]
+      }
+    },
+    "99dd5e0ee7": {
+      "mn": [
+        "төвөгтэй",
+        "ядаргаатай",
+        "будлиантай"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "煩わしい",
+        "r": "わずらわしい",
+        "en": [
+          "troublesome",
+          "annoying",
+          "complicated"
+        ]
+      }
+    },
+    "421caf025d": {
+      "mn": [
+        "нүүдлийн шувуу"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "渡り鳥",
+        "r": "わたりどり",
+        "en": [
+          "migratory bird",
+          "bird of passage"
+        ]
+      }
+    },
+    "dfecf73c10": {
+      "mn": [
+        "ватт"
+      ],
+      "topics": [
+        "quantity",
+        "technology"
+      ],
+      "expected": {
+        "w": "ワット",
+        "r": "ワット",
+        "en": [
+          "watt"
+        ]
+      }
+    },
+    "aa88f39126": {
+      "mn": [
+        "уучлал гуйх"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "詫び",
+        "r": "わび",
+        "en": [
+          "apology"
+        ]
+      }
+    },
+    "95c85f85f2": {
+      "mn": [
+        "япон хэв маяг"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "和風",
+        "r": "わふう",
+        "en": [
+          "Japanese style"
+        ]
+      }
+    },
+    "0e1d3f747e": {
+      "mn": [
+        "япон бичвэр",
+        "япон өгүүлбэр"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "和文",
+        "r": "わぶん",
+        "en": [
+          "Japanese text",
+          "sentence in Japanese"
+        ]
+      }
+    },
+    "87ec2157d1": {
+      "mn": [
+        "сүрэл"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "藁",
+        "r": "わら",
+        "en": [
+          "straw"
+        ]
+      }
+    },
+    "cfd02fb96e": {
+      "mn": [
+        "хуваарилалт",
+        "даалгавар",
+        "ногдуулсан хэсэг"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "割り当て",
+        "r": "わりあて",
+        "en": [
+          "allotment",
+          "assignment",
+          "allocation"
+        ]
+      }
+    },
+    "fd65caed2e": {
+      "mn": [
+        "дундуур нь орох",
+        "дайран орох",
+        "чихэж орох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "割り込む",
+        "r": "わりこむ",
+        "en": [
+          "to cut in",
+          "to thrust oneself into",
+          "to wedge oneself in"
+        ]
+      }
+    },
+    "0bc587dbfe": {
+      "mn": [
+        "муу этгээд",
+        "зальтай хүн",
+        "танхай этгээд"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "悪者",
+        "r": "わるもの",
+        "en": [
+          "bad fellow",
+          "rascal",
+          "ruffian"
+        ]
+      }
+    },
+    "j1254630": {
+      "mn": [
+        "холбоо",
+        "харилцаа"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "結びつき",
+        "r": "むすびつき",
+        "en": [
+          "connection",
+          "relation"
+        ]
+      }
+    },
+    "j1219010": {
+      "mn": [
+        "гол тулгуур",
+        "цөм",
+        "үндсэн хэсэг"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "基幹",
+        "r": "きかん",
+        "en": [
+          "mainstay",
+          "nucleus",
+          "key"
+        ]
+      }
+    },
+    "j1208950": {
+      "mn": [
+        "хувьцааны үнэ"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "株価",
+        "r": "かぶか",
+        "en": [
+          "stock prices"
+        ]
+      }
+    },
+    "j1218110": {
+      "mn": [
+        "төлөвлөгөө",
+        "оролдлого",
+        "хэрэгжүүлэх ажил"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "企て",
+        "r": "くわだて",
+        "en": [
+          "plan",
+          "attempt",
+          "undertaking"
+        ]
+      }
+    },
+    "j1232490": {
+      "mn": [
+        "бүгдээрээ",
+        "бүхэлд нь",
+        "нийтээрээ"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "挙げて",
+        "r": "あげて",
+        "en": [
+          "all",
+          "whole",
+          "en masse"
+        ]
+      }
+    },
+    "j1257950": {
+      "mn": [
+        "баталгаажуулалт",
+        "шалгаж нотлох"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "検証",
+        "r": "けんしょう",
+        "en": [
+          "verification",
+          "inspection"
+        ]
+      }
+    },
+    "j1168060": {
+      "mn": [
+        "тэмдэг",
+        "дохио",
+        "бэлгэдэл"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "証し",
+        "r": "しるし",
+        "en": [
+          "mark",
+          "sign",
+          "symbol"
+        ]
+      }
+    },
+    "j1009760": {
+      "mn": [
+        "… үндэслэн",
+        "… суурилан"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "に基づいて",
+        "r": "にもとづいて",
+        "en": [
+          "based on",
+          "on the basis of"
+        ]
+      }
+    },
+    "j1310350": {
+      "mn": [
+        "буян",
+        "өглөг"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "施し",
+        "r": "ほどこし",
+        "en": [
+          "charity",
+          "almsgiving"
+        ]
+      }
+    },
+    "j1365720": {
+      "mn": [
+        "дохио зангаа",
+        "гарын хөдөлгөөн",
+        "хөдөлгөөн"
+      ],
+      "topics": [
+        "body",
+        "learning"
+      ],
+      "expected": {
+        "w": "身振",
+        "r": "みぶり",
+        "en": [
+          "gesture",
+          "gesticulation",
+          "motion"
+        ]
+      }
+    },
+    "j2013120": {
+      "mn": [
+        "… гэж үзэх",
+        "… өнцгөөс харах",
+        "… хэмээн тооцох"
+      ],
+      "topics": [
+        "actions",
+        "learning"
+      ],
+      "expected": {
+        "w": "視する",
+        "r": "しする",
+        "en": [
+          "to take a view or perspective",
+          "to regard as",
+          "to consider to be"
+        ]
+      }
+    },
+    "j1427760": {
+      "mn": [
+        "суналт",
+        "таталцсан чанар",
+        "уян харимхай чанар"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "張り",
+        "r": "はり",
+        "en": [
+          "stretch",
+          "tension",
+          "resilience"
+        ]
+      }
+    },
+    "j1312070": {
+      "mn": [
+        "харах ба сонсох",
+        "анхаарал",
+        "сонирхол"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "視聴",
+        "r": "しちょう",
+        "en": [
+          "looking and listening",
+          "attention",
+          "interest"
+        ]
+      }
+    },
+    "j1512850": {
+      "mn": [
+        "өмгөөлөгч",
+        "хуульч"
+      ],
+      "topics": [
+        "people",
+        "society"
+      ],
+      "expected": {
+        "w": "弁護士",
+        "r": "べんごし",
+        "en": [
+          "lawyer",
+          "attorney"
+        ]
+      }
+    },
+    "j1356550": {
+      "mn": [
+        "гэрээний заалт",
+        "зүйл",
+        "нөхцөл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "条項",
+        "r": "じょうこう",
+        "en": [
+          "clause",
+          "article",
+          "stipulations"
+        ]
+      }
+    },
+    "j1392550": {
+      "mn": [
+        "тод",
+        "хурц сэтгэгдэл төрүүлэх"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "鮮烈",
+        "r": "せんれつ",
+        "en": [
+          "vivid",
+          "striking"
+        ]
+      }
+    },
+    "j1376130": {
+      "mn": [
+        "бэлтгэл",
+        "зохицуулалт",
+        "гүйцэтгэл"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "整え",
+        "r": "ととのえ",
+        "en": [
+          "preparation",
+          "arrangement",
+          "execution"
+        ]
+      }
+    },
+    "j1619690": {
+      "mn": [
+        "үзэсгэлэн",
+        "үзүүлбэр"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "展覧",
+        "r": "てんらん",
+        "en": [
+          "exhibition",
+          "show"
+        ]
+      }
+    },
+    "j1520010": {
+      "mn": [
+        "тэлэлт",
+        "хөөх",
+        "өсөлт"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "膨張",
+        "r": "ぼうちょう",
+        "en": [
+          "expansion",
+          "swelling",
+          "increase"
+        ]
+      }
+    },
+    "j1371070": {
+      "mn": [
+        "санал болгох",
+        "нэр дэвшигчийг дэмжих",
+        "нэр дэвшүүлэх"
+      ],
+      "topics": [
+        "society",
+        "actions"
+      ],
+      "expected": {
+        "w": "推す",
+        "r": "おす",
+        "en": [
+          "to recommend",
+          "to endorse (e.g. a candidate)",
+          "to nominate"
+        ]
+      }
+    },
+    "j1270650": {
+      "mn": [
+        "удаан холбоо бариагүй байх",
+        "бичих залгах уулзахгүй удах",
+        "удаан чимээгүй байх"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "ご無沙汰",
+        "r": "ごぶさた",
+        "en": [
+          "not writing or contacting for a while",
+          "neglecting (failing) to write (call, visit, etc.)",
+          "long silence"
+        ]
+      }
+    },
+    "j2013190": {
+      "mn": [
+        "салалт",
+        "сонирхол буурах",
+        "хараат бус болох"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "離れ",
+        "r": "はなれ",
+        "en": [
+          "separation from",
+          "loss of interest in",
+          "independence of"
+        ]
+      }
+    }
+  }
+}

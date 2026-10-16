@@ -1,0 +1,72 @@
+
+> nihongo-dojo@3.0.0 test
+> npm run test:routes && npm run test:coverage && npm run test:retention && node scripts/test-grammar-mn-pending.mjs && npm run test:study && npm run test:runner-browser
+
+
+> nihongo-dojo@3.0.0 test:routes
+> node scripts/test-routes.mjs
+
+✓ #/grammar/ni-saishite → arg is ni-saishite
+✓ #/grammar/ni-saishite → name grammar
+✓ #/grammar/ni-saishite?level=N2 → arg
+✓ #/grammar/ni-saishite?level=N2 → level N2
+✓ lowercase level=n2 normalised
+✓ invalid level ignored
+✓ #/grammar → no arg (list)
+✓ #/grammar?level=N2 → no arg (list)
+✓ #/grammar?level=N2 → level N2
+✓ #/vocab/ada066edfd → arg
+✓ #/kanji/%E6%97%A5 → decoded arg
+✓ #/write/%E6%97%A5 → decoded arg
+✓ #/reading/r1 → arg
+✓ #/listening/l1 → arg
+✓ #/admin/content → arg is tab
+✓ href grammar with level
+✓ round-trip name
+✓ round-trip arg
+✓ round-trip level
+✓ href without level
+✓ legacy %3F form → name grammar
+✓ legacy %3F form → level N2
+✓ ni-saishite exists in N2 data
+
+✅ All route regression tests passed.
+
+> nihongo-dojo@3.0.0 test:coverage
+> node scripts/test-coverage.mjs
+
+Coverage regression checks passed (does not assert release completeness).
+
+> nihongo-dojo@3.0.0 test:retention
+> node scripts/test-source-retention.mjs
+
+Retained 13673 original entries, example source text, strokes and legacy drafts. j1693050 remains valid Mongolian.
+Actual grammar helpers reject English fallback in MN mode.
+
+> nihongo-dojo@3.0.0 test:study
+> node scripts/test-study.mjs
+
+N5/mn: stable bilingual keys, unique options, mixed quotas, Japanese drills, full-exam block and scoring checks passed
+N5/en: stable bilingual keys, unique options, mixed quotas, Japanese drills, full-exam block and scoring checks passed
+N4/mn: stable bilingual keys, unique options, mixed quotas, Japanese drills, full-exam block and scoring checks passed
+N4/en: stable bilingual keys, unique options, mixed quotas, Japanese drills, full-exam block and scoring checks passed
+N3/mn: stable bilingual keys, unique options, mixed quotas, Japanese drills, full-exam block and scoring checks passed
+N3/en: stable bilingual keys, unique options, mixed quotas, Japanese drills, full-exam block and scoring checks passed
+N2/mn: stable bilingual keys, unique options, mixed quotas, Japanese drills, full-exam block and scoring checks passed
+N2/en: stable bilingual keys, unique options, mixed quotas, Japanese drills, full-exam block and scoring checks passed
+N1/mn: stable bilingual keys, unique options, mixed quotas, Japanese drills, full-exam block and scoring checks passed
+N1/en: stable bilingual keys, unique options, mixed quotas, Japanese drills, full-exam block and scoring checks passed
+No out-of-scope restriction fallback.
+
+> nihongo-dojo@3.0.0 test:runner-browser
+> node scripts/test-runner-browser.mjs
+
+6:11:05 AM [vite] http proxy error: /api/health
+Error: connect ECONNREFUSED 127.0.0.1:8787
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+6:11:06 AM [vite] http proxy error: /api/health
+Error: connect ECONNREFUSED 127.0.0.1:8787
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+Real React runner: keyboard focus guard, hidden-answer styling, live language state, timeout exactly-once callback/log and retry passed.

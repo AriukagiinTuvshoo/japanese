@@ -130,6 +130,13 @@ export default function Writing({ char }: { char?: string }) {
             </Card>
 
             <Card>
+              <p className="text-[13px] font-extrabold">{t.writingHowTitle}</p>
+              <p className="mt-2 text-[12px] leading-relaxed text-sumi-600">{t.writingHowBody}</p>
+              <p className="mt-3 text-[13px] font-extrabold">{t.writingSelfCheckTitle}</p>
+              <p className="mt-1.5 text-[12px] leading-relaxed text-sumi-600">{t.writingSelfCheckBody}</p>
+            </Card>
+
+            <Card>
               <p className="text-[13px] font-extrabold">{t.progressLabel}</p>
               <div className="mt-3 space-y-3">
                 <div>

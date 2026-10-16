@@ -1,0 +1,1081 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-close-1-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses cross-checked against exact Japanese spelling, reading and retained English; explicit semantic topic assignments. Independent human review outstanding; suspect sources withheld.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n1.json JMdict-derived records at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j1323500": {
+      "mn": [
+        "саад",
+        "тээг",
+        "төвөг"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "邪魔",
+        "r": "じゃま",
+        "en": [
+          "hindrance",
+          "obstacle",
+          "nuisance"
+        ]
+      }
+    },
+    "j1322410": {
+      "mn": [
+        "ташуугаар",
+        "хазгайгаар"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "斜めに",
+        "r": "ななめに",
+        "en": [
+          "diagonally",
+          "obliquely",
+          "slantingly"
+        ]
+      }
+    },
+    "j2265620": {
+      "mn": [
+        "сийлбэр",
+        "сийлж бичих",
+        "тод сийлсэн мэт төрх"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "彫り",
+        "r": "ほり",
+        "en": [
+          "carving",
+          "engraving",
+          "chiselled features"
+        ]
+      }
+    },
+    "j1434040": {
+      "mn": [
+        "загас барих",
+        "дэгээгээр загасчлах",
+        "анхаарал татах өгөөш"
+      ],
+      "topics": [
+        "arts",
+        "learning"
+      ],
+      "expected": {
+        "w": "釣り",
+        "r": "つり",
+        "en": [
+          "fishing",
+          "angling",
+          "clickbaiting"
+        ]
+      }
+    },
+    "j2157330": {
+      "mn": [
+        "саад",
+        "хөндлөнгөөс орох"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "お邪魔",
+        "r": "おじゃま",
+        "en": [
+          "hindrance",
+          "intrusion"
+        ]
+      }
+    },
+    "j1295180": {
+      "mn": [
+        "бутрах",
+        "хагарах",
+        "бутарсан зүйл"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "砕け",
+        "r": "くだけ",
+        "en": [
+          "breaking (into pieces)",
+          "shattering",
+          "something that has been broken into pieces"
+        ]
+      }
+    },
+    "j1418070": {
+      "mn": [
+        "уй гашуу",
+        "харуусал"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "嘆き",
+        "r": "なげき",
+        "en": [
+          "grief",
+          "lamentation"
+        ]
+      }
+    },
+    "j1270770": {
+      "mn": [
+        "харна уу (хүндэтгэлийн хэллэг)"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "ご覧なさい",
+        "r": "ごらんなさい",
+        "en": [
+          "see"
+        ]
+      }
+    },
+    "j1602650": {
+      "mn": [
+        "тонгойх",
+        "бөхийх",
+        "мөргөж хэвтэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "伏す",
+        "r": "ふす",
+        "en": [
+          "to bend down",
+          "to bow down",
+          "to prostrate oneself"
+        ]
+      }
+    },
+    "j2130700": {
+      "mn": [
+        "ойлгоход амар",
+        "энгийн",
+        "дотно"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "砕けた",
+        "r": "くだけた",
+        "en": [
+          "easy (e.g. explanation, description)",
+          "plain",
+          "familiar"
+        ]
+      }
+    },
+    "j1575400": {
+      "mn": [
+        "нян",
+        "бактери"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "ばい菌",
+        "r": "ばいきん",
+        "en": [
+          "germ",
+          "germs",
+          "bacteria"
+        ]
+      }
+    },
+    "j1453860": {
+      "mn": [
+        "агуй",
+        "агуйн систем"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "洞窟",
+        "r": "どうくつ",
+        "en": [
+          "cavern",
+          "cave",
+          "cave system"
+        ]
+      }
+    },
+    "j1500180": {
+      "mn": [
+        "явган суух",
+        "бөхийх",
+        "тонгойх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "伏する",
+        "r": "ふくする",
+        "en": [
+          "to crouch",
+          "to stoop",
+          "to bend down"
+        ]
+      }
+    },
+    "j1952930": {
+      "mn": [
+        "согтолт",
+        "мансуурал",
+        "унаанд дотор муухайрах"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "酔い",
+        "r": "よい",
+        "en": [
+          "drunkenness",
+          "intoxication",
+          "motion sickness"
+        ]
+      }
+    },
+    "j1002690": {
+      "mn": [
+        "Обон буюу өвөг дээдсээ дурсах баяр"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "お盆",
+        "r": "おぼん",
+        "en": [
+          "O-Bon",
+          "Obon",
+          "Bon Festival"
+        ]
+      }
+    },
+    "j1224070": {
+      "mn": [
+        "өлсгөлөн",
+        "өлбөрөх"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "飢え",
+        "r": "うえ",
+        "en": [
+          "hunger",
+          "starvation"
+        ]
+      }
+    },
+    "j2236240": {
+      "mn": [
+        "исгэгч мөөгөнцрийн эс"
+      ],
+      "topics": [
+        "food",
+        "learning"
+      ],
+      "expected": {
+        "w": "イースト菌",
+        "r": "イーストきん",
+        "en": [
+          "yeast cell"
+        ]
+      }
+    },
+    "j1633840": {
+      "mn": [
+        "… мэт",
+        "… шиг",
+        "… адил"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "如き",
+        "r": "ごとき",
+        "en": [
+          "like",
+          "as if",
+          "the same as"
+        ]
+      }
+    },
+    "j1429610": {
+      "mn": [
+        "шаврын үсрэлт",
+        "тоглолтын төгсгөл",
+        "тарах үе"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "跳ね",
+        "r": "はね",
+        "en": [
+          "splashes (usu. of mud)",
+          "close (e.g. of a theatrical performance)",
+          "breakup"
+        ]
+      }
+    },
+    "j1370860": {
+      "mn": [
+        "дүрэх сүмс",
+        "унжих",
+        "унжсан хэсэг"
+      ],
+      "topics": [
+        "food",
+        "daily"
+      ],
+      "expected": {
+        "w": "垂れ",
+        "r": "たれ",
+        "en": [
+          "sauce (esp. soy or mirin-based dipping sauce)",
+          "hanging",
+          "something hanging (flap, lappet, etc.)"
+        ]
+      }
+    },
+    "j1150130": {
+      "mn": [
+        "өрөвдөх сэтгэл",
+        "энэрэл"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "哀れみ",
+        "r": "あわれみ",
+        "en": [
+          "pity",
+          "compassion"
+        ]
+      }
+    },
+    "j2765970": {
+      "mn": [
+        "хүлээс",
+        "журам",
+        "хязгаар"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "縛り",
+        "r": "しばり",
+        "en": [
+          "binding",
+          "regulation",
+          "limit"
+        ]
+      }
+    },
+    "j1609020": {
+      "mn": [
+        "залхалт",
+        "уйдалт",
+        "уйтгар"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "飽き",
+        "r": "あき",
+        "en": [
+          "weariness",
+          "boredom",
+          "tedium"
+        ]
+      }
+    },
+    "j1328710": {
+      "mn": [
+        "ан агнах",
+        "жимс түүх",
+        "хураах"
+      ],
+      "topics": [
+        "nature",
+        "work"
+      ],
+      "expected": {
+        "w": "狩り",
+        "r": "かり",
+        "en": [
+          "hunting",
+          "harvesting (e.g. berries, fruit)",
+          "picking"
+        ]
+      }
+    },
+    "j2633130": {
+      "mn": [
+        "давтах",
+        "ган хатаах",
+        "дасгалжуулах"
+      ],
+      "topics": [
+        "technology",
+        "learning"
+      ],
+      "expected": {
+        "w": "鍛え",
+        "r": "きたえ",
+        "en": [
+          "forging",
+          "tempering",
+          "drilling"
+        ]
+      }
+    },
+    "j1267550": {
+      "mn": [
+        "хушга"
+      ],
+      "topics": [
+        "food"
+      ],
+      "expected": {
+        "w": "胡桃",
+        "r": "くるみ",
+        "en": [
+          "walnut (Juglans spp., esp. Juglans regia)"
+        ]
+      }
+    },
+    "j1469540": {
+      "mn": [
+        "шөрмөс суналт",
+        "үе мушгих гэмтэл"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "捻挫",
+        "r": "ねんざ",
+        "en": [
+          "sprain",
+          "twist",
+          "wrench"
+        ]
+      }
+    },
+    "j1291480": {
+      "mn": [
+        "хэрэг явдал",
+        "байдал",
+        "тохиолдол"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "沙汰",
+        "r": "さた",
+        "en": [
+          "affair",
+          "state",
+          "incident"
+        ]
+      }
+    },
+    "j1416860": {
+      "mn": [
+        "хүн бүр",
+        "хэн ч",
+        "хэн ч үгүй (үгүйсгэлтэй)"
+      ],
+      "topics": [
+        "people",
+        "learning"
+      ],
+      "expected": {
+        "w": "誰も",
+        "r": "だれも",
+        "en": [
+          "everyone",
+          "anyone",
+          "no one"
+        ]
+      }
+    },
+    "j1445650": {
+      "mn": [
+        "боол",
+        "зарц",
+        "боолчлол"
+      ],
+      "topics": [
+        "society",
+        "people"
+      ],
+      "expected": {
+        "w": "奴隷",
+        "r": "どれい",
+        "en": [
+          "slave",
+          "servant",
+          "slavery"
+        ]
+      }
+    },
+    "j1416850": {
+      "mn": [
+        "хэн ч",
+        "хүн бүр"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "誰でも",
+        "r": "だれでも",
+        "en": [
+          "anyone",
+          "anybody",
+          "everyone"
+        ]
+      }
+    },
+    "j1631830": {
+      "mn": [
+        "тэгсэн атлаа",
+        "хэдий ч (зэмлэсэн өнгө аястай)"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "癖に",
+        "r": "くせに",
+        "en": [
+          "and yet",
+          "though",
+          "when"
+        ]
+      }
+    },
+    "j2771310": {
+      "mn": [
+        "хуурсан хоол"
+      ],
+      "topics": [
+        "food"
+      ],
+      "expected": {
+        "w": "炒め",
+        "r": "いため",
+        "en": [
+          "fried dish"
+        ]
+      }
+    },
+    "j1004710": {
+      "mn": [
+        "сүүлийн үед",
+        "өнөө үед",
+        "одоо"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "この頃",
+        "r": "このごろ",
+        "en": [
+          "these days",
+          "nowadays",
+          "now"
+        ]
+      }
+    },
+    "j2547920": {
+      "mn": [
+        "тэр үед",
+        "тэр өдрүүдэд",
+        "тэр агшинд"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "その頃",
+        "r": "そのころ",
+        "en": [
+          "at that time",
+          "in those days",
+          "at that moment"
+        ]
+      }
+    },
+    "j1260500": {
+      "mn": [
+        "цоожлох"
+      ],
+      "topics": [
+        "actions",
+        "daily"
+      ],
+      "expected": {
+        "w": "鍵をかける",
+        "r": "かぎをかける",
+        "en": [
+          "to lock"
+        ]
+      }
+    },
+    "j1952290": {
+      "mn": [
+        "хавдалт",
+        "буглаа"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "腫れ",
+        "r": "はれ",
+        "en": [
+          "swelling",
+          "boil"
+        ]
+      }
+    },
+    "j1389960": {
+      "mn": [
+        "шовх",
+        "хурц",
+        "өндөр хурц дуу"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "尖った",
+        "r": "とがった",
+        "en": [
+          "pointed",
+          "sharp",
+          "sharp (e.g. voice)"
+        ]
+      }
+    },
+    "j1391560": {
+      "mn": [
+        "будааны жигнэмэг",
+        "сэнбэй"
+      ],
+      "topics": [
+        "food"
+      ],
+      "expected": {
+        "w": "煎餅",
+        "r": "せんべい",
+        "en": [
+          "rice cracker",
+          "senbei",
+          "Japanese cracker"
+        ]
+      }
+    },
+    "j1599760": {
+      "mn": [
+        "үнэр",
+        "анхилуун үнэр"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "匂い",
+        "r": "におい",
+        "en": [
+          "odour",
+          "odor",
+          "scent"
+        ]
+      }
+    },
+    "j1504170": {
+      "mn": [
+        "даалгавар",
+        "хуваарилалт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "分賦",
+        "r": "ぶんぷ",
+        "en": [
+          "assignment",
+          "allocation"
+        ]
+      }
+    },
+    "j1504070": {
+      "mn": [
+        "бүлэглэл",
+        "салбар",
+        "шашны урсгал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "分派",
+        "r": "ぶんぱ",
+        "en": [
+          "faction",
+          "branch",
+          "sect"
+        ]
+      }
+    },
+    "j1586970": {
+      "mn": [
+        "хувь тэнцүүлэн хуваах",
+        "харьцаагаар хуваарилах"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "案分",
+        "r": "あんぶん",
+        "en": [
+          "proportional division",
+          "proportional distribution"
+        ]
+      }
+    },
+    "j1180020": {
+      "mn": [
+        "чадалдаа тохирсон",
+        "зохистой",
+        "үндэслэлтэй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "応分",
+        "r": "おうぶん",
+        "en": [
+          "according to one's abilities",
+          "appropriate",
+          "reasonable"
+        ]
+      }
+    },
+    "j1617840": {
+      "mn": [
+        "үзлэг",
+        "шалгалт",
+        "газар дээрх судалгаа"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "検分",
+        "r": "けんぶん",
+        "en": [
+          "inspection",
+          "examination",
+          "survey"
+        ]
+      }
+    },
+    "j1881370": {
+      "mn": [
+        "самурайн зэрэг дэв"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "士分",
+        "r": "しぶん",
+        "en": [
+          "status of samurai"
+        ]
+      }
+    },
+    "j1503940": {
+      "mn": [
+        "тасаг",
+        "баг"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "分隊",
+        "r": "ぶんたい",
+        "en": [
+          "squad",
+          "team"
+        ]
+      }
+    },
+    "j2829135": {
+      "mn": [
+        "тоос гөвөх",
+        "тоос арилгах",
+        "алгадах"
+      ],
+      "topics": [
+        "actions",
+        "daily"
+      ],
+      "expected": {
+        "w": "叩く",
+        "r": "はたく",
+        "en": [
+          "to dust",
+          "to remove dust",
+          "to slap"
+        ]
+      }
+    },
+    "j1503460": {
+      "mn": [
+        "тусгайлан салгаж илгээх",
+        "жижиг анги томилох"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "分遣",
+        "r": "ぶんけん",
+        "en": [
+          "detachment",
+          "detail"
+        ]
+      }
+    },
+    "j1636000": {
+      "mn": [
+        "үндэс хувааж үржүүлэх"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "株分け",
+        "r": "かぶわけ",
+        "en": [
+          "root division"
+        ]
+      }
+    },
+    "j1946390": {
+      "mn": [
+        "салан тусгаарлагчид"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "分離派",
+        "r": "ぶんりは",
+        "en": [
+          "separatists",
+          "secessionists"
+        ]
+      }
+    },
+    "j1896890": {
+      "mn": [
+        "Фүживара овог"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "藤氏",
+        "r": "とうし",
+        "en": [
+          "Fujiwara family"
+        ]
+      }
+    },
+    "j2742680": {
+      "mn": [
+        "шингэний эсэргүүцлээр ширхэг ангилах"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "分級",
+        "r": "ぶんきゅう",
+        "en": [
+          "classification (of particles, using fluid resistance)"
+        ]
+      }
+    },
+    "j1503550": {
+      "mn": [
+        "хэсэгчлэн нийтлэх"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "分載",
+        "r": "ぶんさい",
+        "en": [
+          "publishing part by part (e.g. in a magazine)"
+        ]
+      }
+    },
+    "j1834310": {
+      "mn": [
+        "хуваах",
+        "салгах",
+        "тусгаарлах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "振分け",
+        "r": "ふりわけ",
+        "en": [
+          "divide",
+          "parting",
+          "separating"
+        ]
+      }
+    },
+    "j1969290": {
+      "mn": [
+        "молийн хувь"
+      ],
+      "topics": [
+        "quantity",
+        "learning"
+      ],
+      "expected": {
+        "w": "モル分率",
+        "r": "モルぶんりつ",
+        "en": [
+          "molar fraction"
+        ]
+      }
+    },
+    "j1612930": {
+      "mn": [
+        "нэвт норсон",
+        "шалба нойтон"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "びしょ濡れ",
+        "r": "びしょぬれ",
+        "en": [
+          "sopping wet",
+          "dripping wet",
+          "sodden"
+        ]
+      }
+    },
+    "j1503920": {
+      "mn": [
+        "үе хэсэг болгон хуваах",
+        "сегментчлэл"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "分節",
+        "r": "ぶんせつ",
+        "en": [
+          "articulation"
+        ]
+      }
+    },
+    "j2517320": {
+      "mn": [
+        "ялгагч",
+        "салгах төхөөрөмж"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "分離器",
+        "r": "ぶんりき",
+        "en": [
+          "separator",
+          "extractor"
+        ]
+      }
+    },
+    "j2517340": {
+      "mn": [
+        "задлан шинжилгээний",
+        "аналитик"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "分析的",
+        "r": "ぶんせきてき",
+        "en": [
+          "analytical",
+          "analytic"
+        ]
+      }
+    }
+  }
+}

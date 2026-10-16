@@ -1,0 +1,821 @@
+{
+  "provenance": {
+    "id": "mn-n3-examples-2026-10-16-batch-3",
+    "createdAt": "2026-10-16",
+    "author": "OpenAI ChatGPT",
+    "method": "AI-assisted Mongolian translations matched to exact retained Japanese example sentences and checked against the accompanying English source. Japanese/English source text and lexical fields preserved. This batch has not been independently human-reviewed.",
+    "source": "OpenJLPT-distributed Tatoeba examples (Japanese/English source); Mongolian translations authored by OpenAI ChatGPT",
+    "sourceSnapshot": "c9296eff816982721f4ce4883a601ac0694718cb",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "140d8ab306": {
+      "expected": {
+        "w": "いけない",
+        "r": "いけない",
+        "en": [
+          "must not do",
+          "bad",
+          "wrong"
+        ]
+      },
+      "examples": {
+        "友人は助け合わなければいけない。": {
+          "mn": "Найзууд бие биедээ туслах ёстой.",
+          "en": "Friends should help one another."
+        }
+      }
+    },
+    "b5fcd0d05f": {
+      "expected": {
+        "w": "泉",
+        "r": "いずみ",
+        "en": [
+          "spring",
+          "fountain"
+        ]
+      },
+      "examples": {
+        "泉はおよそ１７０フィートの高さまで温水を吹き出す。": {
+          "mn": "Усан оргилуур халуун усыг ойролцоогоор 170 фут өндөрт цацруулдаг.",
+          "en": "The fountain sends hot water to a height of 170 feet."
+        },
+        "その男は知識の泉ともいうべき人だった。": {
+          "mn": "Тэр хүн бол мэдлэгийн ундарга гэж хэлж болох хүн байв.",
+          "en": "The man was a fountain of knowledge."
+        }
+      }
+    },
+    "5d347b309a": {
+      "expected": {
+        "w": "いたずら",
+        "r": "いたずら",
+        "en": [
+          "tease",
+          "prank",
+          "trick"
+        ]
+      },
+      "examples": {
+        "私はいたずらな子供を大目に見る事ができない。": {
+          "mn": "Би сахилгагүй хүүхдүүдийн үйлдлийг өршөөж чаддаггүй.",
+          "en": "I cannot be tolerant of naughty children."
+        }
+      }
+    },
+    "0cbc5fcb97": {
+      "expected": {
+        "w": "いち",
+        "r": "いち",
+        "en": [
+          "market",
+          "fair"
+        ]
+      },
+      "examples": {
+        "市は月曜ごとに立つ。": {
+          "mn": "Зах даваа гараг бүр болдог.",
+          "en": "The market is held every Monday."
+        }
+      }
+    },
+    "9a184ecb80": {
+      "expected": {
+        "w": "一体",
+        "r": "いったい",
+        "en": [
+          "one object",
+          "one body",
+          "what on earth?"
+        ]
+      },
+      "examples": {
+        "一体どこで彼に会ったんだ。": {
+          "mn": "Чи түүнтэй чухам хаана уулзсан юм бэ?",
+          "en": "Where on earth did you meet him?"
+        }
+      }
+    },
+    "10f3cfd7c0": {
+      "expected": {
+        "w": "一致",
+        "r": "いっち",
+        "en": [
+          "coincidence",
+          "agreement",
+          "conformity"
+        ]
+      },
+      "examples": {
+        "彼は言葉と行動が一致していない。": {
+          "mn": "Түүний үг, үйлдэл хоёр хоорондоо нийцдэггүй.",
+          "en": "His actions do not correspond with his words."
+        },
+        "会議は金曜に開くことで一致した。": {
+          "mn": "Хурлыг баасан гарагт хийхээр санал нэгдсэн.",
+          "en": "It has been agreed that the meeting will be held on Friday."
+        }
+      }
+    },
+    "8b9b33028c": {
+      "expected": {
+        "w": "いつでも",
+        "r": "いつでも",
+        "en": [
+          "(at) any time",
+          "always",
+          "at all times"
+        ]
+      },
+      "examples": {
+        "私はいつでも喜んでお手伝いします。": {
+          "mn": "Би хэзээд дуртайяа тусална.",
+          "en": "I am always ready to help you."
+        }
+      }
+    },
+    "b65151eaec": {
+      "expected": {
+        "w": "一般",
+        "r": "いっぱん",
+        "en": [
+          "general",
+          "liberal",
+          "universal"
+        ]
+      },
+      "examples": {
+        "その理論はまだ一般に認められていない。": {
+          "mn": "Тэр онолыг одоогоор нийтээр хүлээн зөвшөөрөөгүй байна.",
+          "en": "The theory is not accepted yet."
+        },
+        "一般入場料は大人が７ドルです。": {
+          "mn": "Ерөнхий тасалбар насанд хүрэгчдэд 7 долларын үнэтэй.",
+          "en": "General admission is $7 for adults."
+        }
+      }
+    },
+    "25664c20f9": {
+      "expected": {
+        "w": "一方",
+        "r": "いっぽう",
+        "en": [
+          "on the other hand",
+          "meanwhile",
+          "only"
+        ]
+      },
+      "examples": {
+        "一方は赤で、また一方は白である。": {
+          "mn": "Нэг нь улаан, нөгөө нь цагаан.",
+          "en": "One is red and the other is white."
+        }
+      }
+    },
+    "ff86f2105c": {
+      "expected": {
+        "w": "いつまでも",
+        "r": "いつまでも",
+        "en": [
+          "forever",
+          "for good",
+          "eternally"
+        ]
+      },
+      "examples": {
+        "私はいつまでもあなたを忘れません。": {
+          "mn": "Би чамайг хэзээ ч мартахгүй.",
+          "en": "I'll never forget you."
+        }
+      }
+    },
+    "3fec9b37a7": {
+      "expected": {
+        "w": "移動",
+        "r": "いどう",
+        "en": [
+          "removal",
+          "migration",
+          "movement"
+        ]
+      },
+      "examples": {
+        "白鳥は当地からフロリダに移動する。": {
+          "mn": "Хунгууд эндээс Флорида руу нүүдэллэдэг.",
+          "en": "The swans migrate from here to Florida."
+        }
+      }
+    },
+    "3485a5b479": {
+      "expected": {
+        "w": "従兄弟",
+        "r": "いとこ",
+        "en": [
+          "cousin (male)"
+        ]
+      },
+      "examples": {
+        "彼は私の兄ではなくて、いとこである。": {
+          "mn": "Тэр миний төрсөн ах биш, үеэл маань.",
+          "en": "He isn't my brother. He's my cousin."
+        }
+      }
+    },
+    "f034b79d36": {
+      "expected": {
+        "w": "稲",
+        "r": "いね",
+        "en": [
+          "rice-plant"
+        ]
+      },
+      "examples": {
+        "稲は雨の多い地域で作られる。": {
+          "mn": "Цагаан будааг хур тунадас ихтэй бүс нутагт тарьдаг.",
+          "en": "Rice is grown in rainy regions."
+        }
+      }
+    },
+    "19f535bb08": {
+      "expected": {
+        "w": "居眠り",
+        "r": "いねむり",
+        "en": [
+          "dozing",
+          "nodding off"
+        ]
+      },
+      "examples": {
+        "授業中に居眠りすることは許しません。": {
+          "mn": "Хичээлийн үеэр дуг хийхийг би зөвшөөрдөггүй.",
+          "en": "I do not allow sleeping in class."
+        }
+      }
+    },
+    "c84ab5b83d": {
+      "expected": {
+        "w": "命",
+        "r": "いのち",
+        "en": [
+          "command",
+          "decree",
+          "life"
+        ]
+      },
+      "examples": {
+        "その犬は少女の命を救った。": {
+          "mn": "Тэр нохой охины амийг аварсан.",
+          "en": "The dog saved the girl's life."
+        }
+      }
+    },
+    "dc23b8e07b": {
+      "expected": {
+        "w": "違反",
+        "r": "いはん",
+        "en": [
+          "violation (of law)",
+          "transgression",
+          "infringement"
+        ]
+      },
+      "examples": {
+        "それはルール違反です。": {
+          "mn": "Энэ бол дүрэм зөрчсөн хэрэг.",
+          "en": "It's against the rules."
+        }
+      }
+    },
+    "fcdd7c0d87": {
+      "expected": {
+        "w": "衣服",
+        "r": "いふく",
+        "en": [
+          "clothes"
+        ]
+      },
+      "examples": {
+        "母は衣服にたくさんのお金を使う。": {
+          "mn": "Ээж хувцсанд их мөнгө зарцуулдаг.",
+          "en": "My mother spends a lot of money on clothes."
+        }
+      }
+    },
+    "da1e1e97a8": {
+      "expected": {
+        "w": "居間",
+        "r": "いま",
+        "en": [
+          "living room (western style)"
+        ]
+      },
+      "examples": {
+        "彼らは居間でお茶を飲んでいます。": {
+          "mn": "Тэд зочны өрөөнд цай ууж байна.",
+          "en": "They are having tea in the living room."
+        }
+      }
+    },
+    "8e8763b3a8": {
+      "expected": {
+        "w": "今にも",
+        "r": "いまにも",
+        "en": [
+          "at any time",
+          "soon"
+        ]
+      },
+      "examples": {
+        "トムは今にもここに来るはずです。": {
+          "mn": "Том одоохон энд ирэх ёстой.",
+          "en": "Tom should be here any minute."
+        }
+      }
+    },
+    "b96dc58373": {
+      "expected": {
+        "w": "以来",
+        "r": "いらい",
+        "en": [
+          "since",
+          "henceforth"
+        ]
+      },
+      "examples": {
+        "１９８８年以来トムに会っていません。": {
+          "mn": "Би 1988 оноос хойш Томтой уулзаагүй.",
+          "en": "I haven't seen Tom since 1988."
+        }
+      }
+    },
+    "9654422570": {
+      "expected": {
+        "w": "依頼",
+        "r": "いらい",
+        "en": [
+          "request",
+          "commission",
+          "dispatch"
+        ]
+      },
+      "examples": {
+        "彼女は彼に資金を集めるように依頼した。": {
+          "mn": "Тэр түүнээс хөрөнгө босгохыг хүссэн.",
+          "en": "She asked him to raise the funds."
+        }
+      }
+    },
+    "99f743f623": {
+      "expected": {
+        "w": "いらいら",
+        "r": "いらいら",
+        "en": [
+          "getting nervous",
+          "irritation"
+        ]
+      },
+      "examples": {
+        "ビルは試験のことでいらいらしている。": {
+          "mn": "Билл шалгалтаас болоод бухимдаж байна.",
+          "en": "Bill is nervous about the exam."
+        }
+      }
+    },
+    "3bbedbe5a9": {
+      "expected": {
+        "w": "医療",
+        "r": "いりょう",
+        "en": [
+          "medical care",
+          "medical treatment"
+        ]
+      },
+      "examples": {
+        "その子は病院で適切な医療を受ける必要がある。": {
+          "mn": "Тэр хүүхэд эмнэлэгт зохих эмчилгээ авах шаардлагатай.",
+          "en": "He needs proper medical attention at a hospital."
+        }
+      }
+    },
+    "35b6339af7": {
+      "expected": {
+        "w": "岩",
+        "r": "いわ",
+        "en": [
+          "rock",
+          "crag"
+        ]
+      },
+      "examples": {
+        "この岩は何に似ていますか。": {
+          "mn": "Энэ хад юутай төстэй вэ?",
+          "en": "What does this rock look like?"
+        }
+      }
+    },
+    "474dad1005": {
+      "expected": {
+        "w": "祝い",
+        "r": "いわい",
+        "en": [
+          "celebration",
+          "festival"
+        ]
+      },
+      "examples": {
+        "父は誕生日の祝いに時計をくれた。": {
+          "mn": "Аав төрсөн өдрөөр минь бугуйн цаг бэлэглэсэн.",
+          "en": "My father gave me a watch for my birthday."
+        }
+      }
+    },
+    "0b8faff812": {
+      "expected": {
+        "w": "祝う",
+        "r": "いわう",
+        "en": [
+          "to congratulate",
+          "to celebrate"
+        ]
+      },
+      "examples": {
+        "彼らはプレゼントでクリスマスを祝う。": {
+          "mn": "Тэд Христийн мэндэлсний баярыг бэлэг солилцон тэмдэглэдэг.",
+          "en": "They celebrate Christmas with presents."
+        }
+      }
+    },
+    "753c588c58": {
+      "expected": {
+        "w": "インク",
+        "r": "インク",
+        "en": [
+          "ink"
+        ]
+      },
+      "examples": {
+        "あなたの名前はインクで書かなければならない。": {
+          "mn": "Та нэрээ бэхээр бичих ёстой.",
+          "en": "You must write your name in ink."
+        }
+      }
+    },
+    "c943d4f77a": {
+      "expected": {
+        "w": "印刷",
+        "r": "いんさつ",
+        "en": [
+          "printing"
+        ]
+      },
+      "examples": {
+        "そのニュースは急いで印刷された。": {
+          "mn": "Тэр мэдээг яаравчлан хэвлэсэн.",
+          "en": "The news was rushed into print."
+        }
+      }
+    },
+    "ddedf2e7ba": {
+      "expected": {
+        "w": "印象",
+        "r": "いんしょう",
+        "en": [
+          "impression"
+        ]
+      },
+      "examples": {
+        "私はその演説から強い印象を受けた。": {
+          "mn": "Тэр илтгэл надад хүчтэй сэтгэгдэл төрүүлсэн.",
+          "en": "I was greatly impressed by the speech."
+        }
+      }
+    },
+    "5514dc4a90": {
+      "expected": {
+        "w": "引退",
+        "r": "いんたい",
+        "en": [
+          "retire"
+        ]
+      },
+      "examples": {
+        "私は引退しようと決心しています。": {
+          "mn": "Би тэтгэвэрт гарахаар шийдээд байна.",
+          "en": "I have decided to retire."
+        }
+      }
+    },
+    "1c2d4445fd": {
+      "expected": {
+        "w": "引用",
+        "r": "いんよう",
+        "en": [
+          "quotation",
+          "citation"
+        ]
+      },
+      "examples": {
+        "彼はよく聖書から引用する。": {
+          "mn": "Тэр Библиэс байнга эш татдаг.",
+          "en": "He often quotes the Bible."
+        }
+      }
+    },
+    "ae7bf4b275": {
+      "expected": {
+        "w": "受け取る",
+        "r": "うけとる",
+        "en": [
+          "to receive",
+          "to get",
+          "to accept"
+        ]
+      },
+      "examples": {
+        "この贈り物は受け取れません。": {
+          "mn": "Би энэ бэлгийг хүлээн авч чадахгүй.",
+          "en": "I cannot accept this gift."
+        }
+      }
+    },
+    "bb0ec0bbd4": {
+      "expected": {
+        "w": "動かす",
+        "r": "うごかす",
+        "en": [
+          "to move",
+          "to shift"
+        ]
+      },
+      "examples": {
+        "ここからあそこへこの石を動かして下さい。": {
+          "mn": "Энэ чулууг эндээс тийш нь хөдөлгөнө үү.",
+          "en": "Please move this stone from here to there."
+        }
+      }
+    },
+    "fbbdf50bbb": {
+      "expected": {
+        "w": "兎",
+        "r": "うさぎ",
+        "en": [
+          "rabbit",
+          "hare",
+          "cony"
+        ]
+      },
+      "examples": {
+        "ウサギの耳はキツネの耳より長い。": {
+          "mn": "Туулайн чих үнэгний чихнээс урт.",
+          "en": "The ears of a rabbit are longer than those of a fox."
+        }
+      }
+    },
+    "c06233b95e": {
+      "expected": {
+        "w": "牛",
+        "r": "うし",
+        "en": [
+          "cattle",
+          "cow"
+        ]
+      },
+      "examples": {
+        "今までに本物の牛を見たことがない。": {
+          "mn": "Би одоог хүртэл жинхэнэ үхэр харж байгаагүй.",
+          "en": "I've never seen a real cow."
+        }
+      }
+    },
+    "13fe04cb12": {
+      "expected": {
+        "w": "失う",
+        "r": "うしなう",
+        "en": [
+          "to lose",
+          "to part with"
+        ]
+      },
+      "examples": {
+        "彼は職を失うことを心配している。": {
+          "mn": "Тэр ажлаа алдахаас санаа зовж байна.",
+          "en": "He is worried about losing his job."
+        }
+      }
+    },
+    "2594292c24": {
+      "expected": {
+        "w": "宇宙",
+        "r": "うちゅう",
+        "en": [
+          "universe",
+          "cosmos",
+          "space"
+        ]
+      },
+      "examples": {
+        "宇宙には限りはない。": {
+          "mn": "Орчлон ертөнцөд хязгаар гэж үгүй.",
+          "en": "There is no limit to the universe."
+        }
+      }
+    },
+    "e729fb355f": {
+      "expected": {
+        "w": "訴える",
+        "r": "うったえる",
+        "en": [
+          "to sue (a person)",
+          "to resort to",
+          "to appeal to"
+        ]
+      },
+      "examples": {
+        "その患者はいつも頭が痛いと訴えている。": {
+          "mn": "Тэр өвчтөн толгой нь өвдөж байгаагаа байнга хэлдэг.",
+          "en": "The patient is always complaining of a headache."
+        }
+      }
+    },
+    "92871301e1": {
+      "expected": {
+        "w": "奪う",
+        "r": "うばう",
+        "en": [
+          "to snatch away"
+        ]
+      },
+      "examples": {
+        "その不幸が彼女から理性を奪った。": {
+          "mn": "Тэр золгүй явдал түүний ухаан санааг булаасан.",
+          "en": "The misfortune deprived her of her reason."
+        }
+      }
+    },
+    "a8a4d2c95f": {
+      "expected": {
+        "w": "馬",
+        "r": "うま",
+        "en": [
+          "horse",
+          "promoted bishop (shogi)"
+        ]
+      },
+      "examples": {
+        "馬に乗ることができますか？": {
+          "mn": "Та морь унаж чаддаг уу?",
+          "en": "Can you ride a horse?"
+        }
+      }
+    },
+    "1af1b6c3ed": {
+      "expected": {
+        "w": "生まれ",
+        "r": "うまれ",
+        "en": [
+          "birth",
+          "birth-place"
+        ]
+      },
+      "examples": {
+        "私は生まれも育ちも東京だ。": {
+          "mn": "Би Токиод төрж, өссөн.",
+          "en": "I was born and raised in Tokyo."
+        }
+      }
+    },
+    "8320d2162f": {
+      "expected": {
+        "w": "梅",
+        "r": "うめ",
+        "en": [
+          "plum",
+          "plum-tree",
+          "lowest (of a three-tier ranking system)"
+        ]
+      },
+      "examples": {
+        "梅の花は3月に咲く。": {
+          "mn": "Чавганы цэцэг гуравдугаар сард дэлгэрдэг.",
+          "en": "Plum blossoms come out in March."
+        }
+      }
+    },
+    "5d48460042": {
+      "expected": {
+        "w": "裏切る",
+        "r": "うらぎる",
+        "en": [
+          "to betray",
+          "to turn traitor to",
+          "to double-cross"
+        ]
+      },
+      "examples": {
+        "私が信じていた人が私を裏切った。": {
+          "mn": "Миний итгэж байсан хүн надаас урвасан.",
+          "en": "The man I trusted betrayed me."
+        }
+      }
+    },
+    "ed41514a67": {
+      "expected": {
+        "w": "売れる",
+        "r": "うれる",
+        "en": [
+          "to be sold"
+        ]
+      },
+      "examples": {
+        "この本は最近よく売れている。": {
+          "mn": "Энэ ном сүүлийн үед их борлогдож байна.",
+          "en": "This book is selling well these days."
+        }
+      }
+    },
+    "19d224b10d": {
+      "expected": {
+        "w": "噂",
+        "r": "うわさ",
+        "en": [
+          "rumour",
+          "report",
+          "gossip"
+        ]
+      },
+      "examples": {
+        "人の噂って当てにならないからな。": {
+          "mn": "Хүний яриа, хов живд итгэх аргагүй шүү дээ.",
+          "en": "You can't trust rumors."
+        }
+      }
+    },
+    "1a83326bf0": {
+      "expected": {
+        "w": "運",
+        "r": "うん",
+        "en": [
+          "fortune",
+          "luck"
+        ]
+      },
+      "examples": {
+        "７は運のよい数だと言われる。": {
+          "mn": "Долоог азтай тоо гэж үздэг.",
+          "en": "Seven is said to be a lucky number."
+        }
+      }
+    },
+    "881624f8c3": {
+      "expected": {
+        "w": "永遠",
+        "r": "えいえん",
+        "en": [
+          "eternity",
+          "perpetuity",
+          "immortality"
+        ]
+      },
+      "examples": {
+        "若さは永遠ではないということを忘れてはならない。": {
+          "mn": "Залуу нас мөнхийн биш гэдгийг мартаж болохгүй.",
+          "en": "Keep in mind that youth is not eternal."
+        }
+      }
+    },
+    "c1aeb94b13": {
+      "expected": {
+        "w": "永久",
+        "r": "えいきゅう",
+        "en": [
+          "eternity",
+          "perpetuity",
+          "immortality"
+        ]
+      },
+      "examples": {
+        "彼は永久に日本を離れた。": {
+          "mn": "Тэр Японоос бүрмөсөн явсан.",
+          "en": "He left Japan for good."
+        }
+      }
+    },
+    "ef5af5c903": {
+      "expected": {
+        "w": "影響",
+        "r": "えいきょう",
+        "en": [
+          "influence",
+          "effect"
+        ]
+      },
+      "examples": {
+        "多くのテレビ番組が子供たちに悪い影響を与えている。": {
+          "mn": "Олон телевизийн нэвтрүүлэг хүүхдүүдэд муугаар нөлөөлдөг.",
+          "en": "Many TV programs have a bad influence on children."
+        }
+      }
+    }
+  }
+}

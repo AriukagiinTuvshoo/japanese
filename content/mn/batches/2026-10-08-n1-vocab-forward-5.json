@@ -1,0 +1,1058 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-forward-5-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit semantic categories cross-checked against Japanese entry and retained English gloss, independently unreviewed. Original uncommon senses preserved.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "9ed7e63ed9": {
+      "mn": [
+        "байнгын ажилд авах",
+        "хөлслөх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "雇用",
+        "r": "こよう",
+        "en": [
+          "employment (long term)",
+          "hire"
+        ]
+      }
+    },
+    "c0e7e3b80a": {
+      "mn": [
+        "хуанли",
+        "цаг тооны бичиг"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "暦",
+        "r": "こよみ",
+        "en": [
+          "calendar",
+          "almanac"
+        ]
+      }
+    },
+    "3a5cd1a9d3": {
+      "mn": [
+        "харна уу",
+        "оролдоод үзнэ үү"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "御覧なさい",
+        "r": "ごらんなさい",
+        "en": [
+          "(please) look",
+          "(please) try to do"
+        ]
+      }
+    },
+    "67ac742b83": {
+      "mn": [
+        "тусгаарлагдах",
+        "аргагүй байдал"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "孤立",
+        "r": "こりつ",
+        "en": [
+          "isolation",
+          "helplessness"
+        ]
+      }
+    },
+    "a95ab44097": {
+      "mn": [
+        "туршлагаас сургамж авах",
+        "дургүй хүрэх"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "懲りる",
+        "r": "こりる",
+        "en": [
+          "to learn by experience",
+          "to be disgusted with"
+        ]
+      }
+    },
+    "2c6219aa10": {
+      "mn": [
+        "сүнс",
+        "сэтгэл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "魂",
+        "r": "こん",
+        "en": [
+          "soul",
+          "spirit"
+        ]
+      }
+    },
+    "62859af8b4": {
+      "mn": [
+        "тэвчээр",
+        "тууштай байдал",
+        "эрч хүч"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "根気",
+        "r": "こんき",
+        "en": [
+          "patience",
+          "perseverance",
+          "energy"
+        ]
+      }
+    },
+    "957d019486": {
+      "mn": [
+        "үндэслэл",
+        "суурь"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "根拠",
+        "r": "こんきょ",
+        "en": [
+          "basis",
+          "foundation"
+        ]
+      }
+    },
+    "44a0f24b42": {
+      "mn": [
+        "холимог угсаа",
+        "холимог эцэг эхтэй"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "混血",
+        "r": "こんけつ",
+        "en": [
+          "mixed race",
+          "mixed parentage"
+        ]
+      }
+    },
+    "18beab6691": {
+      "mn": [
+        "холбоо",
+        "контакт линз"
+      ],
+      "topics": [
+        "technology",
+        "body"
+      ],
+      "expected": {
+        "w": "コンタクト",
+        "r": "コンタクト",
+        "en": [
+          "contact",
+          "contact lens"
+        ]
+      }
+    },
+    "c480536422": {
+      "mn": [
+        "шавж",
+        "хорхой"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "昆虫",
+        "r": "こんちゅう",
+        "en": [
+          "insect",
+          "bug"
+        ]
+      }
+    },
+    "2cb6f0e01a": {
+      "mn": [
+        "үндэс",
+        "суурь",
+        "тулгуур"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "根底",
+        "r": "こんてい",
+        "en": [
+          "root",
+          "basis",
+          "foundation"
+        ]
+      }
+    },
+    "976ec4b001": {
+      "mn": [
+        "уралдаан"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "コンテスト",
+        "r": "コンテスト",
+        "en": [
+          "contest"
+        ]
+      }
+    },
+    "f854a31f4a": {
+      "mn": [
+        "андуурал",
+        "холих",
+        "нэгтгэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "混同",
+        "r": "こんどう",
+        "en": [
+          "confusion",
+          "mixing",
+          "merger"
+        ]
+      }
+    },
+    "a8e0cc0d2a": {
+      "mn": [
+        "ялгарал",
+        "эсрэгцэл"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "コントラスト",
+        "r": "コントラスト",
+        "en": [
+          "contrast"
+        ]
+      }
+    },
+    "ed839ead49": {
+      "mn": [
+        "хяналт",
+        "удирдлага"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "コントロール",
+        "r": "コントロール",
+        "en": [
+          "control"
+        ]
+      }
+    },
+    "bcd1069fd5": {
+      "mn": [
+        "луужин",
+        "гортиг"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "コンパス",
+        "r": "コンパス",
+        "en": [
+          "compass"
+        ]
+      }
+    },
+    "3356c0b63c": {
+      "mn": [
+        "үүсэл",
+        "эх сурвалж",
+        "үндэс"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "根本",
+        "r": "こんぽん",
+        "en": [
+          "origin",
+          "source",
+          "foundation"
+        ]
+      }
+    },
+    "c78ec3cd4b": {
+      "mn": [
+        "ялгаа",
+        "зөрүү"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "差異",
+        "r": "さい",
+        "en": [
+          "difference",
+          "disparity"
+        ]
+      }
+    },
+    "dbe3b4e73e": {
+      "mn": [
+        "дахин",
+        "давтан"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "再",
+        "r": "さい",
+        "en": [
+          "re-",
+          "again",
+          "repeated"
+        ]
+      }
+    },
+    "fe783aee7a": {
+      "mn": [
+        "настай",
+        "нас"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "歳",
+        "r": "さい",
+        "en": [
+          "... years old",
+          "age (of) ..."
+        ]
+      }
+    },
+    "a22764c8da": {
+      "mn": [
+        "хөрөнгө",
+        "эд баялаг"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "財",
+        "r": "ざい",
+        "en": [
+          "fortune",
+          "riches"
+        ]
+      }
+    },
+    "d41ecf3cab": {
+      "mn": [
+        "дахин уулзах",
+        "уулзалт",
+        "эргэн нэгдэх"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "再会",
+        "r": "さいかい",
+        "en": [
+          "another meeting",
+          "meeting again",
+          "reunion"
+        ]
+      }
+    },
+    "7ec70ac5e6": {
+      "mn": [
+        "гамшиг",
+        "гай",
+        "золгүй явдал"
+      ],
+      "topics": [
+        "nature",
+        "society"
+      ],
+      "expected": {
+        "w": "災害",
+        "r": "さいがい",
+        "en": [
+          "calamity",
+          "disaster",
+          "misfortune"
+        ]
+      }
+    },
+    "a5a31448e1": {
+      "mn": [
+        "савханцар",
+        "бактери",
+        "нян"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "細菌",
+        "r": "さいきん",
+        "en": [
+          "bacillus",
+          "bacterium",
+          "germ"
+        ]
+      }
+    },
+    "e5e4f44fbe": {
+      "mn": [
+        "ажил",
+        "ур хийц",
+        "арга мэх"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "細工",
+        "r": "さいく",
+        "en": [
+          "work",
+          "craftsmanship",
+          "tactics"
+        ]
+      }
+    },
+    "fb51ca7096": {
+      "mn": [
+        "уурхайн олборлолт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "採掘",
+        "r": "さいくつ",
+        "en": [
+          "mining"
+        ]
+      }
+    },
+    "d67fdd7582": {
+      "mn": [
+        "мөчлөг"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "サイクル",
+        "r": "サイクル",
+        "en": [
+          "cycle"
+        ]
+      }
+    },
+    "9f4d23f1c8": {
+      "mn": [
+        "санал хураалт",
+        "нэр дуудаж санал авах"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "採決",
+        "r": "さいけつ",
+        "en": [
+          "vote",
+          "roll call"
+        ]
+      }
+    },
+    "25a859b79f": {
+      "mn": [
+        "дахин барих",
+        "сэргээн босгох",
+        "сэргээх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "再建",
+        "r": "さいけん",
+        "en": [
+          "rebuilding",
+          "reconstruction",
+          "rehabilitation"
+        ]
+      }
+    },
+    "17a6158213": {
+      "mn": [
+        "дахин гарч ирэх",
+        "дахин бүтээх",
+        "буцах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "再現",
+        "r": "さいげん",
+        "en": [
+          "reappearance",
+          "reproduction",
+          "return"
+        ]
+      }
+    },
+    "0ef81c896f": {
+      "mn": [
+        "санхүүгийн эх үүсвэр",
+        "нөөц",
+        "санхүү"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "財源",
+        "r": "ざいげん",
+        "en": [
+          "source of funds",
+          "resources",
+          "finances"
+        ]
+      }
+    },
+    "ee78c61579": {
+      "mn": [
+        "нөөц",
+        "барааны үлдэгдэл"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "在庫",
+        "r": "ざいこ",
+        "en": [
+          "stockpile",
+          "stock"
+        ]
+      }
+    },
+    "992688e92e": {
+      "mn": [
+        "ашиг"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "採算",
+        "r": "さいさん",
+        "en": [
+          "profit"
+        ]
+      }
+    },
+    "ee81c93b87": {
+      "mn": [
+        "цуглуулах",
+        "хураах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "採集",
+        "r": "さいしゅう",
+        "en": [
+          "collecting",
+          "gathering"
+        ]
+      }
+    },
+    "d0b0e94e2a": {
+      "mn": [
+        "хэмжээ"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "サイズ",
+        "r": "サイズ",
+        "en": [
+          "size"
+        ]
+      }
+    },
+    "6d41c419f1": {
+      "mn": [
+        "дахин тоглуулах",
+        "нөхөн төлжих",
+        "сэхээх"
+      ],
+      "topics": [
+        "technology",
+        "body"
+      ],
+      "expected": {
+        "w": "再生",
+        "r": "さいせい",
+        "en": [
+          "playback",
+          "regeneration",
+          "resuscitation"
+        ]
+      }
+    },
+    "dcfa49f3a3": {
+      "mn": [
+        "эдийн засаг",
+        "санхүүгийн хэрэг"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "財政",
+        "r": "ざいせい",
+        "en": [
+          "economy",
+          "financial affairs"
+        ]
+      }
+    },
+    "92f3050d57": {
+      "mn": [
+        "хамгийн сайн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "最善",
+        "r": "さいぜん",
+        "en": [
+          "the very best"
+        ]
+      }
+    },
+    "55e72078ed": {
+      "mn": [
+        "хүлээн авах",
+        "сонгох",
+        "сонголт"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "採択",
+        "r": "さいたく",
+        "en": [
+          "adoption",
+          "selection",
+          "choice"
+        ]
+      }
+    },
+    "702d98a819": {
+      "mn": [
+        "тариалах",
+        "ургуулах"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "栽培",
+        "r": "さいばい",
+        "en": [
+          "cultivation"
+        ]
+      }
+    },
+    "b00accb0cc": {
+      "mn": [
+        "эргэн ирэх",
+        "өвчин сэдрэх",
+        "дахин гарах"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "再発",
+        "r": "さいはつ",
+        "en": [
+          "return",
+          "relapse",
+          "reoccurrence"
+        ]
+      }
+    },
+    "25fc642064": {
+      "mn": [
+        "биологийн эс"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "細胞",
+        "r": "さいぼう",
+        "en": [
+          "cell (biology)"
+        ]
+      }
+    },
+    "b5a3ad85f1": {
+      "mn": [
+        "хэрэглэх",
+        "нэвтрүүлэх"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "採用",
+        "r": "さいよう",
+        "en": [
+          "use",
+          "adopt"
+        ]
+      }
+    },
+    "6172efbca8": {
+      "mn": [
+        "таслах",
+        "замыг хаах",
+        "саад болох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "遮る",
+        "r": "さえぎる",
+        "en": [
+          "to interrupt",
+          "to intercept",
+          "to obstruct"
+        ]
+      }
+    },
+    "03c235eae3": {
+      "mn": [
+        "шувуу дуулах",
+        "жиргэх"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "囀る",
+        "r": "さえずる",
+        "en": [
+          "to sing",
+          "to chirp",
+          "to twitter"
+        ]
+      }
+    },
+    "acd16e281c": {
+      "mn": [
+        "тод болох",
+        "тайван тунгалаг болох",
+        "хүйтэн болох"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "冴える",
+        "r": "さえる",
+        "en": [
+          "to be clear",
+          "to be serene",
+          "to be cold"
+        ]
+      }
+    },
+    "7afe63bc18": {
+      "mn": [
+        "саваа",
+        "угаалга хатаах шон"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "竿",
+        "r": "さお",
+        "en": [
+          "rod",
+          "pole (e.g. for drying laundry)"
+        ]
+      }
+    },
+    "c9a5908139": {
+      "mn": [
+        "хөгжин цэцэглэх",
+        "өсөж дэвжих"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "栄える",
+        "r": "さかえる",
+        "en": [
+          "to prosper",
+          "to flourish"
+        ]
+      }
+    },
+    "86ff79ee1d": {
+      "mn": [
+        "тооцооны зөрүү",
+        "үнийн ялгаа",
+        "зөрүү"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "差額",
+        "r": "さがく",
+        "en": [
+          "balance",
+          "difference",
+          "margin"
+        ]
+      }
+    },
+    "24b670d6d3": {
+      "mn": [
+        "дарсны аяга"
+      ],
+      "topics": [
+        "food"
+      ],
+      "expected": {
+        "w": "杯",
+        "r": "さかずき",
+        "en": [
+          "wine cups"
+        ]
+      }
+    },
+    "83d4b6e60d": {
+      "mn": [
+        "гар дээр зогсох",
+        "толгой дээр зогсох"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "逆立ち",
+        "r": "さかだち",
+        "en": [
+          "handstand",
+          "headstand"
+        ]
+      }
+    },
+    "4ae5663b6a": {
+      "mn": [
+        "хөгжин дэвжих",
+        "цэцэглэх",
+        "амьтан хээлтэх"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "盛る",
+        "r": "さかる",
+        "en": [
+          "to prosper",
+          "to flourish",
+          "to copulate (animals)"
+        ]
+      }
+    },
+    "2f52c4d5d8": {
+      "mn": [
+        "залилан",
+        "луйвар"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "詐欺",
+        "r": "さぎ",
+        "en": [
+          "fraud",
+          "swindle"
+        ]
+      }
+    },
+    "eff14d6855": {
+      "mn": [
+        "өмнө",
+        "түрүүн",
+        "урд"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "先に",
+        "r": "さきに",
+        "en": [
+          "before",
+          "earlier than",
+          "ahead"
+        ]
+      }
+    },
+    "9314be824f": {
+      "mn": [
+        "бүтээл",
+        "ургац"
+      ],
+      "topics": [
+        "arts",
+        "nature"
+      ],
+      "expected": {
+        "w": "作",
+        "r": "さく",
+        "en": [
+          "a work",
+          "a harvest"
+        ]
+      }
+    },
+    "98daf18614": {
+      "mn": [
+        "хашаа",
+        "модон хашлага"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "柵",
+        "r": "さく",
+        "en": [
+          "fence",
+          "paling"
+        ]
+      }
+    },
+    "2349af2f2f": {
+      "mn": [
+        "төлөвлөгөө",
+        "бодлого"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "策",
+        "r": "さく",
+        "en": [
+          "plan",
+          "policy"
+        ]
+      }
+    },
+    "ec75c990a9": {
+      "mn": [
+        "хасалт",
+        "бууралт",
+        "таналт"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "削減",
+        "r": "さくげん",
+        "en": [
+          "cut",
+          "reduction",
+          "curtailment"
+        ]
+      }
+    },
+    "f6f4d393a1": {
+      "mn": [
+        "алдаа"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "錯誤",
+        "r": "さくご",
+        "en": [
+          "mistake"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,1068 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-steady-2-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses with Japanese spelling/reading and retained English cross-check; explicit semantic topic evidence. Independently unreviewed; unresolved source conflicts withheld.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "db403717e5": {
+      "mn": [
+        "юунаас ч илүү",
+        "хамгийн сайн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "何より",
+        "r": "なにより",
+        "en": [
+          "most",
+          "best"
+        ]
+      }
+    },
+    "9cf8caaf7c": {
+      "mn": [
+        "амны алчуур",
+        "салфетка"
+      ],
+      "topics": [
+        "daily",
+        "food"
+      ],
+      "expected": {
+        "w": "ナプキン",
+        "r": "ナプキン",
+        "en": [
+          "napkin"
+        ]
+      }
+    },
+    "e12aa3df38": {
+      "mn": [
+        "нэрийн пайз",
+        "нэрийн зүүлт"
+      ],
+      "topics": [
+        "work",
+        "daily"
+      ],
+      "expected": {
+        "w": "名札",
+        "r": "なふだ",
+        "en": [
+          "name plate",
+          "name tag"
+        ]
+      }
+    },
+    "ba1748f1df": {
+      "mn": [
+        "түүхий загас буюу цусны үнэртэй"
+      ],
+      "topics": [
+        "food",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "生臭い",
+        "r": "なまぐさい",
+        "en": [
+          "smelling of fish or blood",
+          "fish or meat"
+        ]
+      }
+    },
+    "64ae2006dd": {
+      "mn": [
+        "бүлээн",
+        "идэвх зүтгэл сул"
+      ],
+      "topics": [
+        "body",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "生温い",
+        "r": "なまぬるい",
+        "en": [
+          "lukewarm",
+          "halfhearted"
+        ]
+      }
+    },
+    "432e75bc0b": {
+      "mn": [
+        "амьд бие махбод",
+        "мах цустай бие"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "生身",
+        "r": "なまみ",
+        "en": [
+          "living flesh",
+          "flesh and blood",
+          "the quick"
+        ]
+      }
+    },
+    "6c7a3fe563": {
+      "mn": [
+        "хар тугалга"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "鉛",
+        "r": "なまり",
+        "en": [
+          "lead (the metal)"
+        ]
+      }
+    },
+    "d39ee7b933": {
+      "mn": [
+        "дундаж",
+        "дунд зэрэг",
+        "ердийн"
+      ],
+      "topics": [
+        "quantity",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "並み",
+        "r": "なみ",
+        "en": [
+          "average",
+          "medium",
+          "common"
+        ]
+      }
+    },
+    "26e6475d25": {
+      "mn": [
+        "толигор",
+        "гөлгөр"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "滑らか",
+        "r": "なめらか",
+        "en": [
+          "smoothness",
+          "glassiness"
+        ]
+      }
+    },
+    "3917b83619": {
+      "mn": [
+        "долоох",
+        "амтлах",
+        "биеэр үзэх"
+      ],
+      "topics": [
+        "actions",
+        "food"
+      ],
+      "expected": {
+        "w": "なめる",
+        "r": "なめる",
+        "en": [
+          "to lick",
+          "to taste",
+          "to experience"
+        ]
+      }
+    },
+    "bad8c2fee2": {
+      "mn": [
+        "сэтгэл татам",
+        "гунигтай",
+        "сульдсан"
+      ],
+      "topics": [
+        "feelings",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "悩ましい",
+        "r": "なやましい",
+        "en": [
+          "seductive",
+          "melancholy",
+          "languid"
+        ]
+      }
+    },
+    "e9cfb54883": {
+      "mn": [
+        "зовоох",
+        "тарчлаах",
+        "шаналгах"
+      ],
+      "topics": [
+        "feelings",
+        "actions"
+      ],
+      "expected": {
+        "w": "悩ます",
+        "r": "なやます",
+        "en": [
+          "to afflict",
+          "to torment",
+          "to harass"
+        ]
+      }
+    },
+    "64d39b7bc3": {
+      "mn": [
+        "зовлон",
+        "санаа зовнил",
+        "шаналал"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "悩み",
+        "r": "なやみ",
+        "en": [
+          "trouble(s)",
+          "worry",
+          "distress"
+        ]
+      }
+    },
+    "c4be7bde99": {
+      "mn": [
+        "дасгах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "慣らす",
+        "r": "ならす",
+        "en": [
+          "to accustom"
+        ]
+      }
+    },
+    "c35361ecb7": {
+      "mn": [
+        "гаршуулах",
+        "номхруулах"
+      ],
+      "topics": [
+        "nature",
+        "actions"
+      ],
+      "expected": {
+        "w": "馴らす",
+        "r": "ならす",
+        "en": [
+          "to domesticate",
+          "to tame"
+        ]
+      }
+    },
+    "2ee52d40e1": {
+      "mn": [
+        "мөн",
+        "түүнчлэн"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "並びに",
+        "r": "ならびに",
+        "en": [
+          "and"
+        ]
+      }
+    },
+    "3837730fa3": {
+      "mn": [
+        "байгуулагдах",
+        "бүрдэх",
+        "хэрэгжих боломжтой байх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "成り立つ",
+        "r": "なりたつ",
+        "en": [
+          "to conclude",
+          "to consist of",
+          "to be practical (logical, feasible, viable)"
+        ]
+      }
+    },
+    "c88fd01898": {
+      "mn": [
+        "аль болох",
+        "боломжтой бол"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "なるたけ",
+        "r": "なるたけ",
+        "en": [
+          "as much as possible",
+          "if possible"
+        ]
+      }
+    },
+    "8d6d7688de": {
+      "mn": [
+        "дадал",
+        "туршлага"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "慣れ",
+        "r": "なれ",
+        "en": [
+          "practice",
+          "experience"
+        ]
+      }
+    },
+    "6bd687836f": {
+      "mn": [
+        "хэт дотно мэт харьцдаг"
+      ],
+      "topics": [
+        "relationships",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "馴れ馴れしい",
+        "r": "なれなれしい",
+        "en": [
+          "over-familiar"
+        ]
+      }
+    },
+    "67f7a8d49f": {
+      "mn": [
+        "өмнөд",
+        "урд зүг"
+      ],
+      "topics": [
+        "places"
+      ],
+      "expected": {
+        "w": "南",
+        "r": "なん",
+        "en": [
+          "south"
+        ]
+      }
+    },
+    "855ce6b835": {
+      "mn": [
+        "бэрхшээл",
+        "зовлон",
+        "доголдол"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "難",
+        "r": "なん",
+        "en": [
+          "difficulty",
+          "hardships",
+          "defect"
+        ]
+      }
+    },
+    "2cd8f09df7": {
+      "mn": [
+        "… гэх мэт",
+        "… мэтийн юм (голох өнгө аястай байж болно)"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "なんか",
+        "r": "なんか",
+        "en": [
+          "things like ...",
+          "or something like that .. (often derogatory)"
+        ]
+      }
+    },
+    "7432246708": {
+      "mn": [
+        "утгагүй зүйл",
+        "дэмий үг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "ナンセンス",
+        "r": "ナンセンス",
+        "en": [
+          "nonsense"
+        ]
+      }
+    },
+    "0e04473eff": {
+      "mn": [
+        "нэг л",
+        "ямар нэгэн байдлаар",
+        "жаахан"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "何だか",
+        "r": "なんだか",
+        "en": [
+          "a little",
+          "somewhat",
+          "somehow"
+        ]
+      }
+    },
+    "9bd5945236": {
+      "mn": [
+        "элдэв янзын юм",
+        "энэ тэр"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "なんだかんだ",
+        "r": "なんだかんだ",
+        "en": [
+          "something or other"
+        ]
+      }
+    },
+    "fcc6b37129": {
+      "mn": [
+        "ямар … вэ",
+        "хэчнээн … вэ"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "何て",
+        "r": "なんて",
+        "en": [
+          "how...!",
+          "what...!"
+        ]
+      }
+    },
+    "73baff290d": {
+      "mn": [
+        "юу",
+        "ямар",
+        "юу ч байсан"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "何と",
+        "r": "なんと",
+        "en": [
+          "what",
+          "how",
+          "whatever"
+        ]
+      }
+    },
+    "ecb2bd27c4": {
+      "mn": [
+        "ямар ч",
+        "юу ч",
+        "юу л бол юу"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "何なり",
+        "r": "なんなり",
+        "en": [
+          "any",
+          "anything",
+          "whatever"
+        ]
+      }
+    },
+    "b68826cd51": {
+      "mn": [
+        "ачаалал",
+        "тээш",
+        "ачаа"
+      ],
+      "topics": [
+        "places",
+        "work"
+      ],
+      "expected": {
+        "w": "荷",
+        "r": "に",
+        "en": [
+          "load",
+          "baggage",
+          "cargo"
+        ]
+      }
+    },
+    "0a44c1f364": {
+      "mn": [
+        "маш төстэй байх"
+      ],
+      "topics": [
+        "descriptions",
+        "actions"
+      ],
+      "expected": {
+        "w": "似通う",
+        "r": "にかよう",
+        "en": [
+          "to resemble closely"
+        ]
+      }
+    },
+    "0225c64108": {
+      "mn": [
+        "батга"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "にきび",
+        "r": "にきび",
+        "en": [
+          "pimple",
+          "acne"
+        ]
+      }
+    },
+    "b89194a740": {
+      "mn": [
+        "цэцэглэн хөгжих",
+        "олны хөлтэй байх",
+        "наймаа сайн байх"
+      ],
+      "topics": [
+        "work",
+        "actions"
+      ],
+      "expected": {
+        "w": "賑わう",
+        "r": "にぎわう",
+        "en": [
+          "to prosper",
+          "to flourish",
+          "to do thriving business"
+        ]
+      }
+    },
+    "a7c3dfe336": {
+      "mn": [
+        "үзэн ядалт"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "憎しみ",
+        "r": "にくしみ",
+        "en": [
+          "hatred"
+        ]
+      }
+    },
+    "5a16d4bb86": {
+      "mn": [
+        "цусан холбоо",
+        "цусан төрөл"
+      ],
+      "topics": [
+        "people",
+        "relationships"
+      ],
+      "expected": {
+        "w": "肉親",
+        "r": "にくしん",
+        "en": [
+          "blood relationship",
+          "blood relative"
+        ]
+      }
+    },
+    "2499a79801": {
+      "mn": [
+        "бие махбод",
+        "махан бие"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "肉体",
+        "r": "にくたい",
+        "en": [
+          "the body",
+          "the flesh"
+        ]
+      }
+    },
+    "81115b78b4": {
+      "mn": [
+        "зугтах",
+        "оргон гарах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "逃げ出す",
+        "r": "にげだす",
+        "en": [
+          "to run away",
+          "to escape from"
+        ]
+      }
+    },
+    "0de9f6ef1f": {
+      "mn": [
+        "баруун зүгийн нар",
+        "үдээс хойш тусах нар"
+      ],
+      "topics": [
+        "nature",
+        "time"
+      ],
+      "expected": {
+        "w": "西日",
+        "r": "にしび",
+        "en": [
+          "westering sun"
+        ]
+      }
+    },
+    "fdb80c541c": {
+      "mn": [
+        "бэх зэрэг уусаж тархах",
+        "балартах",
+        "нэвчин тархах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "滲む",
+        "r": "にじむ",
+        "en": [
+          "to run",
+          "to blur",
+          "to spread"
+        ]
+      }
+    },
+    "6465bd7862": {
+      "mn": [
+        "дуураймал",
+        "хуурамч зүйл",
+        "хуурамчаар үйлдсэн зүйл"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "贋物",
+        "r": "にせもの",
+        "en": [
+          "imitation",
+          "counterfeit",
+          "forgery"
+        ]
+      }
+    },
+    "b91e19a03b": {
+      "mn": [
+        "өдөр шөнөгүй",
+        "үргэлж"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "日夜",
+        "r": "にちや",
+        "en": [
+          "day and night",
+          "always"
+        ]
+      }
+    },
+    "f3e15d0ae8": {
+      "mn": [
+        "ачаа баглах",
+        "боодол болгох",
+        "хайрцаглах"
+      ],
+      "topics": [
+        "places",
+        "work"
+      ],
+      "expected": {
+        "w": "荷造り",
+        "r": "にづくり",
+        "en": [
+          "packing",
+          "baling",
+          "crating"
+        ]
+      }
+    },
+    "70608dfcae": {
+      "mn": [
+        "өдрийн хөлс",
+        "өдрийн нэмэгдэл"
+      ],
+      "topics": [
+        "work",
+        "time"
+      ],
+      "expected": {
+        "w": "日当",
+        "r": "にっとう",
+        "en": [
+          "daily allowance"
+        ]
+      }
+    },
+    "c88c8e2462": {
+      "mn": [
+        "мөрөндөө үүрэх",
+        "үүрэг хариуцлага хүлээх",
+        "буу мөрлөх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "担う",
+        "r": "になう",
+        "en": [
+          "to carry on shoulder",
+          "to bear (burden)",
+          "to shoulder (gun)"
+        ]
+      }
+    },
+    "a5fb8ab81f": {
+      "mn": [
+        "чадвар муудах",
+        "мэдрэмж сулрах",
+        "мохох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "鈍る",
+        "r": "にぶる",
+        "en": [
+          "to become less capable",
+          "to grow dull",
+          "to become blunt"
+        ]
+      }
+    },
+    "b481bbc58e": {
+      "mn": [
+        "… хэдий ч",
+        "тэгсэн ч"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "にも拘らず",
+        "r": "にもかかわらず",
+        "en": [
+          "in spite of",
+          "nevertheless"
+        ]
+      }
+    },
+    "35e0c31550": {
+      "mn": [
+        "утгын нарийн ялгаа",
+        "өнгө аяс"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "ニュアンス",
+        "r": "ニュアンス",
+        "en": [
+          "nuance"
+        ]
+      }
+    },
+    "c2bed1715c": {
+      "mn": [
+        "шинэ"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "ニュー",
+        "r": "ニュー",
+        "en": [
+          "new"
+        ]
+      }
+    },
+    "cd6328c488": {
+      "mn": [
+        "олж авах",
+        "гартаа оруулах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "入手",
+        "r": "にゅうしゅ",
+        "en": [
+          "obtaining",
+          "coming to hand"
+        ]
+      }
+    },
+    "340d51444a": {
+      "mn": [
+        "уралдаанд шагналт байр эзлэх"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "入賞",
+        "r": "にゅうしょう",
+        "en": [
+          "winning a prize or place (in a contest)"
+        ]
+      }
+    },
+    "7e1cd0971f": {
+      "mn": [
+        "усанд орох"
+      ],
+      "topics": [
+        "body",
+        "daily"
+      ],
+      "expected": {
+        "w": "入浴",
+        "r": "にゅうよく",
+        "en": [
+          "bathe",
+          "bathing"
+        ]
+      }
+    },
+    "921b6cc773": {
+      "mn": [
+        "шээс"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "尿",
+        "r": "にょう",
+        "en": [
+          "urine"
+        ]
+      }
+    },
+    "013e8ffafb": {
+      "mn": [
+        "танин мэдэх",
+        "ойлгож ухамсарлах"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "認識",
+        "r": "にんしき",
+        "en": [
+          "recognition",
+          "cognizance"
+        ]
+      }
+    },
+    "483fe21dee": {
+      "mn": [
+        "хүнлэг сэтгэл",
+        "бусдыг ойлгох сэтгэл",
+        "сайхан сэтгэл"
+      ],
+      "topics": [
+        "feelings",
+        "relationships"
+      ],
+      "expected": {
+        "w": "人情",
+        "r": "にんじょう",
+        "en": [
+          "humanity",
+          "empathy",
+          "kindness"
+        ]
+      }
+    },
+    "f91583d66a": {
+      "mn": [
+        "үр тогтох",
+        "жирэмслэлт"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "妊娠",
+        "r": "にんしん",
+        "en": [
+          "conception",
+          "pregnancy"
+        ]
+      }
+    },
+    "5419458333": {
+      "mn": [
+        "үүрэг",
+        "гүйцэтгэх ажил",
+        "албан үүрэг"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "任務",
+        "r": "にんむ",
+        "en": [
+          "duty",
+          "function",
+          "office"
+        ]
+      }
+    },
+    "513b728441": {
+      "mn": [
+        "томилгоо",
+        "нэр дэвшүүлэн томилох",
+        "шашны албан тушаалд томилох"
+      ],
+      "topics": [
+        "work",
+        "society"
+      ],
+      "expected": {
+        "w": "任命",
+        "r": "にんめい",
+        "en": [
+          "appointment",
+          "nomination",
+          "ordination"
+        ]
+      }
+    },
+    "d82897d470": {
+      "mn": [
+        "орхих",
+        "хасах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "抜かす",
+        "r": "ぬかす",
+        "en": [
+          "to omit",
+          "to leave out"
+        ]
+      }
+    },
+    "1190b0f9c4": {
+      "mn": [
+        "сэм гарах",
+        "зугтан гарах",
+        "бусдаас илүү гарах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "抜け出す",
+        "r": "ぬけだす",
+        "en": [
+          "to slip out",
+          "to sneak away",
+          "to excel"
+        ]
+      }
+    },
+    "44894d8fd0": {
+      "mn": [
+        "хулгай"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "盗み",
+        "r": "ぬすみ",
+        "en": [
+          "stealing"
+        ]
+      }
+    }
+  }
+}

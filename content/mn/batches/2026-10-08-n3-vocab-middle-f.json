@@ -1,0 +1,371 @@
+{
+  "provenance": {
+    "id": "mn-n3-vocab-middle-f-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit topics cross-checked individually against retained Japanese headwords/readings and English glosses, including alternate dictionary readings. Independently unreviewed.",
+    "source": "https://github.com/neocl/jamdict",
+    "sourceSnapshot": "public/data/vocab/n3.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "j2639790": {
+      "mn": [
+        "түр зогсолт",
+        "завсарлага",
+        "тасралт"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "途絶え",
+        "r": "とだえ",
+        "en": [
+          "pause",
+          "intermission",
+          "break"
+        ]
+      }
+    },
+    "j1612910": {
+      "mn": [
+        "утгагүй",
+        "мунхаг",
+        "тэнэг"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "馬鹿らしい",
+        "r": "ばからしい",
+        "en": [
+          "absurd",
+          "foolish",
+          "stupid"
+        ]
+      }
+    },
+    "j1475850": {
+      "mn": [
+        "олноороо нирхийтэл инээх",
+        "инээд алдах",
+        "чанга инээд"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "爆笑",
+        "r": "ばくしょう",
+        "en": [
+          "roar of laughter (from multiple people)",
+          "burst of laughter",
+          "uproarious laughter"
+        ]
+      }
+    },
+    "j2542470": {
+      "mn": [
+        "чи үүндээ харамсана",
+        "хариуг чинь өгнө",
+        "харж байгаарай"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "覚えてろ",
+        "r": "おぼえてろ",
+        "en": [
+          "You'll regret this!",
+          "I'll get you for this",
+          "Just you wait"
+        ]
+      }
+    },
+    "j1303600": {
+      "mn": [
+        "тараах",
+        "цацах",
+        "шүрших"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "散布",
+        "r": "さんぷ",
+        "en": [
+          "dissemination",
+          "scattering",
+          "sprinkling"
+        ]
+      }
+    },
+    "j2566530": {
+      "mn": [
+        "ердийнхөөс халуун усан ванн"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "熱湯",
+        "r": "あつゆ",
+        "en": [
+          "warmer than usual bath"
+        ]
+      }
+    },
+    "j1742260": {
+      "mn": [
+        "тусгал",
+        "ойсон гэрэл",
+        "ойсон дулаан"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "照り返し",
+        "r": "てりかえし",
+        "en": [
+          "reflection",
+          "reflected light",
+          "reflected heat"
+        ]
+      }
+    },
+    "j1181450": {
+      "mn": [
+        "титэм",
+        "хааны титэм",
+        "лонхны таг"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "王冠",
+        "r": "おうかん",
+        "en": [
+          "crown",
+          "diadem",
+          "bottle cap"
+        ]
+      }
+    },
+    "j1497380": {
+      "mn": [
+        "хөвөх",
+        "хөвөх чадвар",
+        "загасны хөвүүр"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "浮き",
+        "r": "うき",
+        "en": [
+          "floating",
+          "buoyancy",
+          "fishing float"
+        ]
+      }
+    },
+    "j1524060": {
+      "mn": [
+        "Сатан",
+        "чөтгөр",
+        "харанхуйн эзэн"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "魔王",
+        "r": "まおう",
+        "en": [
+          "Satan",
+          "the Devil",
+          "the Prince of Darkness"
+        ]
+      }
+    },
+    "j1303440": {
+      "mn": [
+        "тараах",
+        "сурталчилгааны хуудас"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "散らし",
+        "r": "ちらし",
+        "en": [
+          "scattering",
+          "leaflets"
+        ]
+      }
+    },
+    "j2139790": {
+      "mn": [
+        "найдвартай байх"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "頼りになる",
+        "r": "たよりになる",
+        "en": [
+          "to be reliable"
+        ]
+      }
+    },
+    "j1180130": {
+      "mn": [
+        "түлхэлт",
+        "түлхэх",
+        "жин"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "押し",
+        "r": "おし",
+        "en": [
+          "push",
+          "pushing",
+          "weight"
+        ]
+      }
+    },
+    "j1862260": {
+      "mn": [
+        "уурласан царай"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "怒った顔",
+        "r": "おこったかお",
+        "en": [
+          "angry face (countenance)"
+        ]
+      }
+    },
+    "j1381830": {
+      "mn": [
+        "нам гүм",
+        "чимээгүй байдал",
+        "аниргүй байдал"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "静けさ",
+        "r": "しずけさ",
+        "en": [
+          "stillness",
+          "silence",
+          "hush"
+        ]
+      }
+    },
+    "j2119870": {
+      "mn": [
+        "тайван",
+        "чимээгүй",
+        "зөөлөн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "静かに",
+        "r": "しずかに",
+        "en": [
+          "calmly",
+          "quietly",
+          "gently"
+        ]
+      }
+    },
+    "j1445780": {
+      "mn": [
+        "нуран унах",
+        "уналт",
+        "үхэл"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "倒れ",
+        "r": "たおれ",
+        "en": [
+          "collapse",
+          "collapsing",
+          "death"
+        ]
+      }
+    },
+    "j1218770": {
+      "mn": [
+        "дуртайяа",
+        "баяртайгаар"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "喜んで",
+        "r": "よろこんで",
+        "en": [
+          "with pleasure ..."
+        ]
+      }
+    },
+    "j1287310": {
+      "mn": [
+        "үр тариа"
+      ],
+      "topics": [
+        "food"
+      ],
+      "expected": {
+        "w": "穀類",
+        "r": "こくるい",
+        "en": [
+          "grains"
+        ]
+      }
+    },
+    "j1561000": {
+      "mn": [
+        "нас ахих",
+        "хөгшрөх"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "老け",
+        "r": "ふけ",
+        "en": [
+          "aging",
+          "ageing"
+        ]
+      }
+    }
+  }
+}

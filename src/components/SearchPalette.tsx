@@ -101,7 +101,7 @@ export function SearchPalette({ onClose }: { onClose: () => void }) {
         onClick={(e) => e.stopPropagation()}
         className="washi w-full max-w-2xl animate-pop overflow-hidden rounded-2xl border border-sumi-900/12 shadow-2xl"
       >
-        <div className="flex items-center gap-3 border-b border-sumi-900/10 bg-white/70 px-4 py-3">
+        <div className="flex flex-wrap items-center gap-3 border-b border-sumi-900/10 bg-white/70 px-4 py-3">
           <span className="text-[16px] text-sumi-400">🔎</span>
           <input
             ref={inputRef}
@@ -109,7 +109,7 @@ export function SearchPalette({ onClose }: { onClose: () => void }) {
             onChange={(e) => setQ(e.target.value)}
             onKeyDown={onKey}
             placeholder={t.searchPh}
-            className="h-8 flex-1 bg-transparent text-[15px] font-semibold outline-none placeholder:font-medium placeholder:text-sumi-400"
+            className="h-8 min-h-11 sm:min-h-0 w-full flex-1 bg-transparent text-[15px] font-semibold outline-none placeholder:font-medium placeholder:text-sumi-400"
           />
           <div className="flex gap-1">
             {(["all", "v", "k", "g"] as const).map((f) => (
@@ -117,7 +117,7 @@ export function SearchPalette({ onClose }: { onClose: () => void }) {
                 key={f}
                 onClick={() => setFilter(f)}
                 className={cn(
-                  "h-7 rounded-lg px-2 text-[11.5px] font-bold transition",
+                  "h-11 min-h-11 min-w-11 sm:h-7 sm:min-h-0 sm:min-w-0 rounded-lg px-3 sm:px-2 text-[11.5px] font-bold transition",
                   filter === f ? "bg-sumi-900 text-washi-50" : "bg-sumi-900/6 text-sumi-500 hover:text-sumi-800",
                 )}
               >
@@ -125,7 +125,7 @@ export function SearchPalette({ onClose }: { onClose: () => void }) {
               </button>
             ))}
           </div>
-          <kbd className="rounded-md border border-sumi-900/12 bg-white px-1.5 py-0.5 font-mono text-[10px] font-bold text-sumi-400">ESC</kbd>
+          <kbd className="hidden rounded-md border sm:inline border-sumi-900/12 bg-white px-1.5 py-0.5 font-mono text-[10px] font-bold text-sumi-400">ESC</kbd>
         </div>
 
         <div className="max-h-[58vh] overflow-y-auto">

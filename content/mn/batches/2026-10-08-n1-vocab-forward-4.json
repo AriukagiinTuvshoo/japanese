@@ -1,0 +1,1028 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-forward-4-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses and explicit semantic categories cross-checked against Japanese entry and retained English gloss, independently unreviewed. Original uncommon senses preserved.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "20cbd33590": {
+      "mn": [
+        "төрийн өмч"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "国有",
+        "r": "こくゆう",
+        "en": [
+          "national ownership"
+        ]
+      }
+    },
+    "503535b26b": {
+      "mn": [
+        "диваажин"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "極楽",
+        "r": "ごくらく",
+        "en": [
+          "paradise"
+        ]
+      }
+    },
+    "5c0448565e": {
+      "mn": [
+        "НҮБ",
+        "Нэгдсэн Үндэстний Байгууллага"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "国連",
+        "r": "こくれん",
+        "en": [
+          "U.N.",
+          "United Nations"
+        ]
+      }
+    },
+    "4517275aaf": {
+      "mn": [
+        "бараан хүрэн",
+        "умбра"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "焦げ茶",
+        "r": "こげちゃ",
+        "en": [
+          "dark brown",
+          "umber"
+        ]
+      }
+    },
+    "5f7deb61d1": {
+      "mn": [
+        "үгийн үндэс",
+        "үгийн гарал",
+        "үгийн гарвал судлал"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "語源",
+        "r": "ごげん",
+        "en": [
+          "word root",
+          "word derivation",
+          "etymology"
+        ]
+      }
+    },
+    "f167fd3a76": {
+      "mn": [
+        "тус тусын",
+        "салангид"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "箇箇",
+        "r": "ここ",
+        "en": [
+          "individual",
+          "separate"
+        ]
+      }
+    },
+    "1cd105911f": {
+      "mn": [
+        "хувь хувь",
+        "нэг нэгээр"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "個々",
+        "r": "ここ",
+        "en": [
+          "individual",
+          "one by one"
+        ]
+      }
+    },
+    "c5b7fedcbd": {
+      "mn": [
+        "мэдрэмж",
+        "сэрэл",
+        "сэтгэл санаа"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "心地",
+        "r": "ここち",
+        "en": [
+          "feeling",
+          "sensation",
+          "mood"
+        ]
+      }
+    },
+    "ed188cc69e": {
+      "mn": [
+        "хөлдөөх",
+        "царцаах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "凝らす",
+        "r": "こごらす",
+        "en": [
+          "to freeze",
+          "to congeal"
+        ]
+      }
+    },
+    "308f45926c": {
+      "mn": [
+        "царцах",
+        "хөлдөх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "凝る",
+        "r": "こごる",
+        "en": [
+          "to congeal",
+          "to freeze"
+        ]
+      }
+    },
+    "9589a1d266": {
+      "mn": [
+        "мэдлэг",
+        "мэдээлэл"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "心得",
+        "r": "こころえ",
+        "en": [
+          "knowledge",
+          "information"
+        ]
+      }
+    },
+    "af3cf61840": {
+      "mn": [
+        "бэлэн байдал",
+        "санаа",
+        "зорилго"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "心掛け",
+        "r": "こころがけ",
+        "en": [
+          "readiness",
+          "intention",
+          "aim"
+        ]
+      }
+    },
+    "38c615c6c4": {
+      "mn": [
+        "санаандаа байлгах",
+        "хийхийг зорих"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "心掛ける",
+        "r": "こころがける",
+        "en": [
+          "to bear in mind",
+          "to aim to do"
+        ]
+      }
+    },
+    "4f051504c2": {
+      "mn": [
+        "хүсэл",
+        "зорилго",
+        "сэдэл"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "志",
+        "r": "こころざし",
+        "en": [
+          "will",
+          "intention",
+          "motive"
+        ]
+      }
+    },
+    "75e0818207": {
+      "mn": [
+        "төлөвлөх",
+        "зорих",
+        "тэмүүлэх"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "志す",
+        "r": "こころざす",
+        "en": [
+          "to plan",
+          "to intend",
+          "to aspire to"
+        ]
+      }
+    },
+    "b5288189c7": {
+      "mn": [
+        "зориг оруулах",
+        "итгэл төрүүлэх"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "心強い",
+        "r": "こころづよい",
+        "en": [
+          "heartening",
+          "reassuring"
+        ]
+      }
+    },
+    "8f0629d530": {
+      "mn": [
+        "аргагүй",
+        "ганцаардсан",
+        "найдваргүй"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "心細い",
+        "r": "こころぼそい",
+        "en": [
+          "helpless",
+          "forlorn",
+          "hopeless"
+        ]
+      }
+    },
+    "ee9b218794": {
+      "mn": [
+        "туршилт",
+        "оролдлого"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "試み",
+        "r": "こころみ",
+        "en": [
+          "trial",
+          "experiment"
+        ]
+      }
+    },
+    "6c07b898b1": {
+      "mn": [
+        "оролдох",
+        "турших"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "試みる",
+        "r": "こころみる",
+        "en": [
+          "to try",
+          "to test"
+        ]
+      }
+    },
+    "ec9c326594": {
+      "mn": [
+        "тааламжтай",
+        "зохистой"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "快い",
+        "r": "こころよい",
+        "en": [
+          "pleasant",
+          "agreeable"
+        ]
+      }
+    },
+    "6c00760239": {
+      "mn": [
+        "алдааны зөрүү"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "誤差",
+        "r": "ごさ",
+        "en": [
+          "error"
+        ]
+      }
+    },
+    "894fa9572b": {
+      "mn": [
+        "байх (эелдэг хэлбэр)",
+        "оршин байх"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "ございます",
+        "r": "ございます",
+        "en": [
+          "to be (polite)",
+          "to exist"
+        ]
+      }
+    },
+    "67f434000e": {
+      "mn": [
+        "өнчин хүүхэд"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "孤児",
+        "r": "こじ",
+        "en": [
+          "orphan"
+        ]
+      }
+    },
+    "b10eceb833": {
+      "mn": [
+        "төвөгтэй болох",
+        "муудах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "拗れる",
+        "r": "こじれる",
+        "en": [
+          "to get complicated",
+          "to grow worse"
+        ]
+      }
+    },
+    "0114b5768e": {
+      "mn": [
+        "талийгаач",
+        "хуучны найз"
+      ],
+      "topics": [
+        "people"
+      ],
+      "expected": {
+        "w": "故人",
+        "r": "こじん",
+        "en": [
+          "the deceased",
+          "old friend"
+        ]
+      }
+    },
+    "d190ba203b": {
+      "mn": [
+        "модны орой"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "梢",
+        "r": "こずえ",
+        "en": [
+          "treetop"
+        ]
+      }
+    },
+    "2afb17f34b": {
+      "mn": [
+        "өвөрмөц чанар",
+        "зан чанар",
+        "онцлог"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "個性",
+        "r": "こせい",
+        "en": [
+          "individuality",
+          "personality",
+          "idiosyncrasy"
+        ]
+      }
+    },
+    "a5f0701fd1": {
+      "mn": [
+        "хүн амын бүртгэл",
+        "өрхийн бүртгэл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "戸籍",
+        "r": "こせき",
+        "en": [
+          "census",
+          "family register"
+        ]
+      }
+    },
+    "63898c1dc6": {
+      "mn": [
+        "зоос",
+        "задгай мөнгө"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "小銭",
+        "r": "こぜに",
+        "en": [
+          "coins",
+          "small change"
+        ]
+      }
+    },
+    "edf6cae070": {
+      "mn": [
+        "хатуу бие"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "固体",
+        "r": "こたい",
+        "en": [
+          "solid (body)"
+        ]
+      }
+    },
+    "d99e36feff": {
+      "mn": [
+        "эртний үе"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "古代",
+        "r": "こだい",
+        "en": [
+          "ancient times"
+        ]
+      }
+    },
+    "708be70d5e": {
+      "mn": [
+        "даах",
+        "тэсэх",
+        "тэвчих"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "堪える",
+        "r": "こたえる",
+        "en": [
+          "to bear",
+          "to stand",
+          "to endure"
+        ]
+      }
+    },
+    "e642ca265e": {
+      "mn": [
+        "халаагууртай ширээ",
+        "шалны хонхортой нүүрсэн халаагуур"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "こたつ",
+        "r": "こたつ",
+        "en": [
+          "table with heater",
+          "(orig) charcoal brazier in a floor well"
+        ]
+      }
+    },
+    "c2b11f0429": {
+      "mn": [
+        "хэт анхаарах",
+        "нарийн шаардлага тавих",
+        "санаа тавих"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "こだわる",
+        "r": "こだわる",
+        "en": [
+          "to fuss over",
+          "to be particular about",
+          "to be concerned about"
+        ]
+      }
+    },
+    "7878bde6a2": {
+      "mn": [
+        "хэтрүүлэг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "誇張",
+        "r": "こちょう",
+        "en": [
+          "exaggeration"
+        ]
+      }
+    },
+    "3b5b1c60b8": {
+      "mn": [
+        "арга эв",
+        "ур чадвар"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "骨",
+        "r": "こつ",
+        "en": [
+          "knack",
+          "skill"
+        ]
+      }
+    },
+    "0fe2f2817d": {
+      "mn": [
+        "инээдтэй",
+        "хөгжилтэй",
+        "хошин"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "滑稽",
+        "r": "こっけい",
+        "en": [
+          "funny",
+          "humorous",
+          "comical"
+        ]
+      }
+    },
+    "adcfdcee87": {
+      "mn": [
+        "дипломат харилцаа"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "国交",
+        "r": "こっこう",
+        "en": [
+          "diplomatic relations"
+        ]
+      }
+    },
+    "4951764bd4": {
+      "mn": [
+        "эртний эдлэл"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "骨董品",
+        "r": "こっとうひん",
+        "en": [
+          "curio"
+        ]
+      }
+    },
+    "241e01eeea": {
+      "mn": [
+        "бэхлэх",
+        "тогтоох"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "固定",
+        "r": "こてい",
+        "en": [
+          "fixation"
+        ]
+      }
+    },
+    "3ebdf0c56a": {
+      "mn": [
+        "тус бүр"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "毎",
+        "r": "ごと",
+        "en": [
+          "each respectively"
+        ]
+      }
+    },
+    "341be3b6a2": {
+      "mn": [
+        "хэрэг",
+        "зүйл",
+        "асуудал"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "事柄",
+        "r": "ことがら",
+        "en": [
+          "matter",
+          "thing",
+          "affair"
+        ]
+      }
+    },
+    "b538b0f211": {
+      "mn": [
+        "тусгаарлагдал",
+        "ганцаардал",
+        "ганцаараа байх"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "孤独",
+        "r": "こどく",
+        "en": [
+          "isolation",
+          "loneliness",
+          "solitude"
+        ]
+      }
+    },
+    "751e056741": {
+      "mn": [
+        "бүгд",
+        "бүхэлдээ"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "悉く",
+        "r": "ことごとく",
+        "en": [
+          "altogether",
+          "entirely"
+        ]
+      }
+    },
+    "6675231d1f": {
+      "mn": [
+        "мэдэгдэл",
+        "дам сонссон үг"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "言伝",
+        "r": "ことづて",
+        "en": [
+          "declaration",
+          "hearsay"
+        ]
+      }
+    },
+    "4d20ba9a5b": {
+      "mn": [
+        "ялангуяа",
+        "юуны өмнө"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "殊に",
+        "r": "ことに",
+        "en": [
+          "especially",
+          "above all"
+        ]
+      }
+    },
+    "26bcaec009": {
+      "mn": [
+        "нөхцөл байдлаас шалтгаалан"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "事によると",
+        "r": "ことによると",
+        "en": [
+          "depending on the circumstances"
+        ]
+      }
+    },
+    "24c85203c2": {
+      "mn": [
+        "үйрмэг",
+        "маш жижиг хэсгүүд"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "粉々",
+        "r": "こなごな",
+        "en": [
+          "in very small pieces"
+        ]
+      }
+    },
+    "e9e9721946": {
+      "mn": [
+        "сайхан",
+        "таалагдахуйц",
+        "хүсэмжтэй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "好ましい",
+        "r": "このましい",
+        "en": [
+          "nice",
+          "likeable",
+          "desirable"
+        ]
+      }
+    },
+    "e1c5561520": {
+      "mn": [
+        "го тоглох хөлөг"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "碁盤",
+        "r": "ごばん",
+        "en": [
+          "Go board"
+        ]
+      }
+    },
+    "e822eb5d76": {
+      "mn": [
+        "тусгай тохиолдол",
+        "тус тусдаа"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "個別",
+        "r": "こべつ",
+        "en": [
+          "particular case"
+        ]
+      }
+    },
+    "f3bcf28ff0": {
+      "mn": [
+        "сурталчилгаа"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "コマーシャル",
+        "r": "コマーシャル",
+        "en": [
+          "a commercial"
+        ]
+      }
+    },
+    "6c9978c0ad": {
+      "mn": [
+        "хуурах",
+        "хуурамчаар үйлдэх",
+        "буруу дүрслэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "誤魔化す",
+        "r": "ごまかす",
+        "en": [
+          "to deceive",
+          "to falsify",
+          "to misrepresent"
+        ]
+      }
+    },
+    "d3a2b00ef3": {
+      "mn": [
+        "найрсаг"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "細やか",
+        "r": "こまやか",
+        "en": [
+          "friendly"
+        ]
+      }
+    },
+    "d21eb02cf1": {
+      "mn": [
+        "харилцаа холбоо"
+      ],
+      "topics": [
+        "relationships"
+      ],
+      "expected": {
+        "w": "コミュニケーション",
+        "r": "コミュニケーション",
+        "en": [
+          "communication"
+        ]
+      }
+    },
+    "fcaabc719d": {
+      "mn": [
+        "хөл ихтэй байх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "混む",
+        "r": "こむ",
+        "en": [
+          "to be crowded"
+        ]
+      }
+    },
+    "c9d5fa3c62": {
+      "mn": [
+        "багтаах",
+        "дотор нь хийх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "込める",
+        "r": "こめる",
+        "en": [
+          "to include",
+          "to put into"
+        ]
+      }
+    },
+    "969ea280e7": {
+      "mn": [
+        "тайлбар",
+        "санал"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "コメント",
+        "r": "コメント",
+        "en": [
+          "comment"
+        ]
+      }
+    },
+    "8f4523a0a1": {
+      "mn": [
+        "өөрийгөө тусгаарлах",
+        "дотор хоригдох",
+        "далд утгаар багтах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "こもる",
+        "r": "こもる",
+        "en": [
+          "to seclude oneself",
+          "to be confined in",
+          "to be implied"
+        ]
+      }
+    },
+    "771504a003": {
+      "mn": [
+        "онцлог",
+        "уламжлал",
+        "өвөрмөц"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "固有",
+        "r": "こゆう",
+        "en": [
+          "characteristic",
+          "tradition",
+          "peculiar"
+        ]
+      }
+    }
+  }
+}

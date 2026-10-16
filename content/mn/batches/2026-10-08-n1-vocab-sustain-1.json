@@ -1,0 +1,1063 @@
+{
+  "provenance": {
+    "id": "mn-n1-vocab-sustain-1-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian senses cross-checked against exact Japanese spelling, reading and retained English; explicit semantic topic assignments. Independent human review outstanding; suspect sources withheld.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n1.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "9332d2b39b": {
+      "mn": [
+        "сэтгэл гутрал",
+        "гуниг",
+        "урамгүй байдал"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "憂鬱",
+        "r": "ゆううつ",
+        "en": [
+          "depression",
+          "melancholy",
+          "dejection"
+        ]
+      }
+    },
+    "a3b8e30808": {
+      "mn": [
+        "ашигтай",
+        "үр өгөөжтэй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "有益",
+        "r": "ゆうえき",
+        "en": [
+          "beneficial",
+          "profitable"
+        ]
+      }
+    },
+    "1cd603aec5": {
+      "mn": [
+        "давуу байдал",
+        "давамгайлах",
+        "илүү байх"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "優越",
+        "r": "ゆうえつ",
+        "en": [
+          "supremacy",
+          "predominance",
+          "being superior to"
+        ]
+      }
+    },
+    "9bfec07e36": {
+      "mn": [
+        "эр зориг",
+        "баатарлаг чанар",
+        "эрэлхэг зан"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "勇敢",
+        "r": "ゆうかん",
+        "en": [
+          "bravery",
+          "heroism",
+          "gallantry"
+        ]
+      }
+    },
+    "4d88022d0e": {
+      "mn": [
+        "органик"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "有機",
+        "r": "ゆうき",
+        "en": [
+          "organic"
+        ]
+      }
+    },
+    "ae14eee163": {
+      "mn": [
+        "үдшийн бүрий",
+        "оройн гэгээ"
+      ],
+      "topics": [
+        "time"
+      ],
+      "expected": {
+        "w": "夕暮れ",
+        "r": "ゆうぐれ",
+        "en": [
+          "evening",
+          "(evening) twilight"
+        ]
+      }
+    },
+    "24ed1f170c": {
+      "mn": [
+        "санхүүжилт",
+        "зээл"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "融資",
+        "r": "ゆうし",
+        "en": [
+          "financing",
+          "loan"
+        ]
+      }
+    },
+    "929201b027": {
+      "mn": [
+        "мөнгө зээлдүүлэх",
+        "хэрэгцээнд нийцүүлэх",
+        "уян хатан байдал"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "融通",
+        "r": "ゆうずう",
+        "en": [
+          "lending (money)",
+          "accommodation",
+          "adaptability"
+        ]
+      }
+    },
+    "08f7ce07ce": {
+      "mn": [
+        "эзэмших",
+        "ямар нэг чанартай байх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "有する",
+        "r": "ゆうする",
+        "en": [
+          "to own",
+          "to be endowed with"
+        ]
+      }
+    },
+    "863a435217": {
+      "mn": [
+        "давуу байдал",
+        "давамгай хүч"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "優勢",
+        "r": "ゆうせい",
+        "en": [
+          "superiority",
+          "superior power",
+          "predominance"
+        ]
+      }
+    },
+    "c3a437cd2e": {
+      "mn": [
+        "давуу эрх олгох",
+        "тэргүүлэх ач холбогдол"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "優先",
+        "r": "ゆうせん",
+        "en": [
+          "preference",
+          "priority"
+        ]
+      }
+    },
+    "6f6756c48e": {
+      "mn": [
+        "чиглүүлэх",
+        "хөтлөх",
+        "индукц"
+      ],
+      "topics": [
+        "learning",
+        "actions"
+      ],
+      "expected": {
+        "w": "誘導",
+        "r": "ゆうどう",
+        "en": [
+          "guidance",
+          "leading",
+          "induction"
+        ]
+      }
+    },
+    "9dd17b71a5": {
+      "mn": [
+        "дэгжин байдал",
+        "боловсронгуй чанар",
+        "гоо сайхан"
+      ],
+      "topics": [
+        "arts",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "優美",
+        "r": "ゆうび",
+        "en": [
+          "grace",
+          "refinement",
+          "elegance"
+        ]
+      }
+    },
+    "cf54ac0087": {
+      "mn": [
+        "ирээдүйтэй",
+        "найдвар төрүүлсэн"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "有望",
+        "r": "ゆうぼう",
+        "en": [
+          "good prospects",
+          "full of hope",
+          "promising"
+        ]
+      }
+    },
+    "599056196d": {
+      "mn": [
+        "нүүдлийн мал аж ахуй"
+      ],
+      "topics": [
+        "work",
+        "nature"
+      ],
+      "expected": {
+        "w": "遊牧",
+        "r": "ゆうぼく",
+        "en": [
+          "nomadism"
+        ]
+      }
+    },
+    "911636ba99": {
+      "mn": [
+        "нар жаргах үеийн улаан туяа"
+      ],
+      "topics": [
+        "nature",
+        "time"
+      ],
+      "expected": {
+        "w": "夕焼け",
+        "r": "ゆうやけ",
+        "en": [
+          "sunset"
+        ]
+      }
+    },
+    "ce08ad9623": {
+      "mn": [
+        "нөлөөтэй",
+        "нэртэй",
+        "хүчтэй"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "有力",
+        "r": "ゆうりょく",
+        "en": [
+          "influence",
+          "prominence",
+          "potent"
+        ]
+      }
+    },
+    "6a42957468": {
+      "mn": [
+        "сүнс",
+        "хий үзэгдэл"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "幽霊",
+        "r": "ゆうれい",
+        "en": [
+          "ghost",
+          "specter",
+          "apparition"
+        ]
+      }
+    },
+    "ed498ffde0": {
+      "mn": [
+        "уруу таталт",
+        "сэтгэл татах зүйл",
+        "өгөөш"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "誘惑",
+        "r": "ゆうわく",
+        "en": [
+          "temptation",
+          "allurement",
+          "lure"
+        ]
+      }
+    },
+    "46b8b4d1cc": {
+      "mn": [
+        "гажих",
+        "мурийх",
+        "хазайх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "歪む",
+        "r": "ゆがむ",
+        "en": [
+          "to warp",
+          "to swerve",
+          "to deflect"
+        ]
+      }
+    },
+    "e7fd16d05d": {
+      "mn": [
+        "сэгсрэх",
+        "доргиох",
+        "ганхуулах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "揺さぶる",
+        "r": "ゆさぶる",
+        "en": [
+          "to shake",
+          "to jolt",
+          "to rock"
+        ]
+      }
+    },
+    "8db345d3da": {
+      "mn": [
+        "нөөц боломж",
+        "хүрэлцээ",
+        "зай завсар"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "ゆとり",
+        "r": "ゆとり",
+        "en": [
+          "reserve",
+          "affluence",
+          "room"
+        ]
+      }
+    },
+    "59589f7029": {
+      "mn": [
+        "өвөрмөц",
+        "цорын ганц"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "ユニーク",
+        "r": "ユニーク",
+        "en": [
+          "unique"
+        ]
+      }
+    },
+    "3f164ca482": {
+      "mn": [
+        "дүрэмт хувцас"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "ユニフォーム",
+        "r": "ユニフォーム",
+        "en": [
+          "uniform"
+        ]
+      }
+    },
+    "4c2d901737": {
+      "mn": [
+        "хуруугаараа заах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "指差す",
+        "r": "ゆびさす",
+        "en": [
+          "to point at"
+        ]
+      }
+    },
+    "b9e2b22bf7": {
+      "mn": [
+        "нум"
+      ],
+      "topics": [
+        "technology"
+      ],
+      "expected": {
+        "w": "弓",
+        "r": "ゆみ",
+        "en": [
+          "bow (and arrow)"
+        ]
+      }
+    },
+    "c0a35530c1": {
+      "mn": [
+        "савлах",
+        "ганхах",
+        "чичрэх"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "揺らぐ",
+        "r": "ゆらぐ",
+        "en": [
+          "to swing",
+          "to sway",
+          "to shake"
+        ]
+      }
+    },
+    "182fdae0a6": {
+      "mn": [
+        "сулрах",
+        "суларч тавирах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "緩む",
+        "r": "ゆるむ",
+        "en": [
+          "to become loose",
+          "to slacken"
+        ]
+      }
+    },
+    "31e870b11a": {
+      "mn": [
+        "суллах",
+        "удаашруулах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "緩める",
+        "r": "ゆるめる",
+        "en": [
+          "to loosen",
+          "to slow down"
+        ]
+      }
+    },
+    "0814ddbb40": {
+      "mn": [
+        "уян зөөлөн",
+        "хатуу бус"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "緩やか",
+        "r": "ゆるやか",
+        "en": [
+          "lenient"
+        ]
+      }
+    },
+    "9413788b34": {
+      "mn": [
+        "ертөнц",
+        "нийгэм",
+        "үе"
+      ],
+      "topics": [
+        "society",
+        "time"
+      ],
+      "expected": {
+        "w": "世",
+        "r": "よ",
+        "en": [
+          "world",
+          "society",
+          "age"
+        ]
+      }
+    },
+    "53a8f3fc5e": {
+      "mn": [
+        "гол хүчин зүйл",
+        "үндсэн шалтгаан"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "要因",
+        "r": "よういん",
+        "en": [
+          "primary factor",
+          "main cause"
+        ]
+      }
+    },
+    "e298035599": {
+      "mn": [
+        "уусмал"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "溶液",
+        "r": "ようえき",
+        "en": [
+          "solution (liquid)"
+        ]
+      }
+    },
+    "2058b2a543": {
+      "mn": [
+        "ажил хэрэг",
+        "ирсэн зорилго"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "用件",
+        "r": "ようけん",
+        "en": [
+          "business"
+        ]
+      }
+    },
+    "76255d35db": {
+      "mn": [
+        "хамгаалалт",
+        "асаргаа",
+        "хамгаалан халамжлах"
+      ],
+      "topics": [
+        "body"
+      ],
+      "expected": {
+        "w": "養護",
+        "r": "ようご",
+        "en": [
+          "protection",
+          "nursing",
+          "protective care"
+        ]
+      }
+    },
+    "78ecbbf24b": {
+      "mn": [
+        "бичих цаас",
+        "бөглөх маягт"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "用紙",
+        "r": "ようし",
+        "en": [
+          "blank form"
+        ]
+      }
+    },
+    "9f069bc7a9": {
+      "mn": [
+        "хэв маяг",
+        "хэлбэр",
+        "загвар"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "様式",
+        "r": "ようしき",
+        "en": [
+          "style",
+          "form",
+          "pattern"
+        ]
+      }
+    },
+    "08791814c0": {
+      "mn": [
+        "шаардах",
+        "хэрэгтэй болох",
+        "хугацаа зарцуулах"
+      ],
+      "topics": [
+        "actions",
+        "time"
+      ],
+      "expected": {
+        "w": "要する",
+        "r": "ようする",
+        "en": [
+          "to demand",
+          "to require",
+          "to take"
+        ]
+      }
+    },
+    "16f829442e": {
+      "mn": [
+        "шаардлага",
+        "хүсэлт"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "要請",
+        "r": "ようせい",
+        "en": [
+          "claim",
+          "demand",
+          "request"
+        ]
+      }
+    },
+    "64cae32b6b": {
+      "mn": [
+        "сургаж бэлтгэх",
+        "хөгжүүлэх"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "養成",
+        "r": "ようせい",
+        "en": [
+          "training",
+          "development"
+        ]
+      }
+    },
+    "a9dbd9e8d9": {
+      "mn": [
+        "байдал",
+        "төрх"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "様相",
+        "r": "ようそう",
+        "en": [
+          "aspect"
+        ]
+      }
+    },
+    "724de6838a": {
+      "mn": [
+        "эд хэрэглэл",
+        "хангамж",
+        "хэсэг эд анги"
+      ],
+      "topics": [
+        "daily"
+      ],
+      "expected": {
+        "w": "用品",
+        "r": "ようひん",
+        "en": [
+          "articles",
+          "supplies",
+          "parts"
+        ]
+      }
+    },
+    "7f3a84fff7": {
+      "mn": [
+        "өрнөдийн хэв маяг"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "洋風",
+        "r": "ようふう",
+        "en": [
+          "western style"
+        ]
+      }
+    },
+    "47f993e9c4": {
+      "mn": [
+        "хэрэглэх заавар",
+        "хэрэглэх дүрэм"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "用法",
+        "r": "ようほう",
+        "en": [
+          "directions",
+          "rules of use"
+        ]
+      }
+    },
+    "ee2d6b3118": {
+      "mn": [
+        "шаардлага",
+        "хүсэлт"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "要望",
+        "r": "ようぼう",
+        "en": [
+          "demand for",
+          "request"
+        ]
+      }
+    },
+    "72b86a5ca6": {
+      "mn": [
+        "чөлөөт цаг",
+        "завтай цаг"
+      ],
+      "topics": [
+        "arts",
+        "time"
+      ],
+      "expected": {
+        "w": "余暇",
+        "r": "よか",
+        "en": [
+          "leisure",
+          "leisure time",
+          "spare time"
+        ]
+      }
+    },
+    "7492881f35": {
+      "mn": [
+        "урьдчилан мэдрэх",
+        "зөн совин"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "予感",
+        "r": "よかん",
+        "en": [
+          "presentiment",
+          "premonition"
+        ]
+      }
+    },
+    "de99ebd20d": {
+      "mn": [
+        "нэмэлт үзүүлбэр",
+        "зугаа цэнгэл"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "余興",
+        "r": "よきょう",
+        "en": [
+          "side show",
+          "entertainment"
+        ]
+      }
+    },
+    "145570d162": {
+      "mn": [
+        "банкны хадгаламж",
+        "банкны данс"
+      ],
+      "topics": [
+        "work"
+      ],
+      "expected": {
+        "w": "預金",
+        "r": "よきん",
+        "en": [
+          "deposit",
+          "bank account"
+        ]
+      }
+    },
+    "192c16376f": {
+      "mn": [
+        "хязгаарлалт",
+        "дарамт",
+        "дарлал"
+      ],
+      "topics": [
+        "society"
+      ],
+      "expected": {
+        "w": "抑圧",
+        "r": "よくあつ",
+        "en": [
+          "check",
+          "restraint",
+          "oppression"
+        ]
+      }
+    },
+    "073662256e": {
+      "mn": [
+        "угаалгын өрөө",
+        "усанд орох өрөө"
+      ],
+      "topics": [
+        "daily",
+        "places"
+      ],
+      "expected": {
+        "w": "浴室",
+        "r": "よくしつ",
+        "en": [
+          "bathroom",
+          "bath"
+        ]
+      }
+    },
+    "0484e1a526": {
+      "mn": [
+        "хязгаарлан дарах",
+        "даран барих"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "抑制",
+        "r": "よくせい",
+        "en": [
+          "suppression"
+        ]
+      }
+    },
+    "34d33913ff": {
+      "mn": [
+        "шунахай"
+      ],
+      "topics": [
+        "feelings",
+        "descriptions"
+      ],
+      "expected": {
+        "w": "欲深い",
+        "r": "よくふかい",
+        "en": [
+          "greedy"
+        ]
+      }
+    },
+    "cdc0ed51d0": {
+      "mn": [
+        "хүсэл",
+        "дур хүсэл"
+      ],
+      "topics": [
+        "feelings"
+      ],
+      "expected": {
+        "w": "欲望",
+        "r": "よくぼう",
+        "en": [
+          "desire",
+          "appetite"
+        ]
+      }
+    },
+    "a22c4bd92f": {
+      "mn": [
+        "ёкозүна буюу сүмогийн аваргын дээд цол"
+      ],
+      "topics": [
+        "arts"
+      ],
+      "expected": {
+        "w": "横綱",
+        "r": "よこづな",
+        "en": [
+          "sumo grand champion"
+        ]
+      }
+    },
+    "0180e8874e": {
+      "mn": [
+        "зэгс"
+      ],
+      "topics": [
+        "nature"
+      ],
+      "expected": {
+        "w": "葦",
+        "r": "よし",
+        "en": [
+          "reed",
+          "bulrush"
+        ]
+      }
+    },
+    "fdb1756f8e": {
+      "mn": [
+        "сайн муу",
+        "давуу сул тал",
+        "чанар"
+      ],
+      "topics": [
+        "descriptions"
+      ],
+      "expected": {
+        "w": "善し悪し",
+        "r": "よしあし",
+        "en": [
+          "good or bad",
+          "merits or demerits",
+          "quality"
+        ]
+      }
+    },
+    "a59bbff012": {
+      "mn": [
+        "хүлээлт",
+        "таамаг",
+        "урьдчилсан төсөөлөл"
+      ],
+      "topics": [
+        "learning"
+      ],
+      "expected": {
+        "w": "予想",
+        "r": "よそう",
+        "en": [
+          "expectation",
+          "anticipation",
+          "prediction"
+        ]
+      }
+    },
+    "c685b4940c": {
+      "mn": [
+        "өөр тийш харах",
+        "хажуу тийш харах"
+      ],
+      "topics": [
+        "actions"
+      ],
+      "expected": {
+        "w": "余所見",
+        "r": "よそみ",
+        "en": [
+          "looking away",
+          "looking aside"
+        ]
+      }
+    },
+    "794e0d078e": {
+      "mn": [
+        "зай",
+        "боломж",
+        "нөөц хэмжээ"
+      ],
+      "topics": [
+        "quantity"
+      ],
+      "expected": {
+        "w": "余地",
+        "r": "よち",
+        "en": [
+          "place",
+          "room",
+          "margin"
+        ]
+      }
+    }
+  }
+}

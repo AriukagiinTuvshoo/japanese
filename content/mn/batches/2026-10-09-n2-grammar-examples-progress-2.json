@@ -1,0 +1,302 @@
+{
+  "provenance": {
+    "id": "mn-n2-grammar-examples-progress-2-oct9",
+    "createdAt": "2026-10-09",
+    "author": "Arena coding assistant",
+    "method": "AI-authored natural Mongolian compared with exact Japanese and retained English; stable record and headword/pattern guards; independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/grammar/n2.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "grammar": {
+    "you-ga-nai": {
+      "expected": {
+        "p": "〜ようがない",
+        "en": "there's no way to; cannot possibly (no means available)"
+      },
+      "examples": {
+        "連絡先が分からないので、知らせようがない。": {
+          "en": "I don't have his contact details, so there's no way to let him know.",
+          "mn": "Холбоо барих хаягийг нь мэдэхгүй тул мэдэгдэх аргагүй."
+        },
+        "これだけ証拠がそろっていては、言い訳のしようがない。": {
+          "en": "With this much evidence, there's no way to make excuses.",
+          "mn": "Ийм их нотолгоотой байхад шалтаг хэлэх аргагүй."
+        },
+        "壊れた部品がもう生産されていないので、直しようがない。": {
+          "en": "The broken part is no longer made, so there's no way to fix it.",
+          "mn": "Эвдэрсэн эд ангийг үйлдвэрлэхээ больсон тул засах аргагүй."
+        }
+      }
+    },
+    "you-de-wa": {
+      "expected": {
+        "p": "〜ようでは",
+        "en": "if (you are like this / keep doing this), (it's no good)"
+      },
+      "examples": {
+        "こんな簡単なミスをするようでは、大きな仕事は任せられない。": {
+          "en": "If you make simple mistakes like this, we can't trust you with big jobs.",
+          "mn": "Ийм энгийн алдаа гаргаж байвал том ажил даатгаж болохгүй."
+        },
+        "毎朝遅刻しているようでは、信頼を得られないよ。": {
+          "en": "If you're late every morning, you won't earn anyone's trust.",
+          "mn": "Өглөө бүр хоцроод байвал итгэл олж чадахгүй шүү."
+        }
+      }
+    },
+    "te-naranai": {
+      "expected": {
+        "p": "〜てならない",
+        "en": "can't help (feeling); feel terribly; extremely"
+      },
+      "examples": {
+        "故郷の母のことが心配でならない。": {
+          "en": "I can't stop worrying about my mother back home.",
+          "mn": "Нутагт байгаа ээждээ маш их санаа зовж байна."
+        },
+        "あのとき本当のことを言わなかったのが、悔やまれてならない。": {
+          "en": "I bitterly regret not telling the truth back then.",
+          "mn": "Тэр үед үнэнийг хэлээгүйдээ туйлын их харамсаж байна."
+        },
+        "この計画には何か裏があるような気がしてならない。": {
+          "en": "I can't shake the feeling that there's something behind this plan.",
+          "mn": "Энэ төлөвлөгөөний цаана ямар нэг далд зүйл байгаа мэт бодол салахаа болилоо."
+        }
+      }
+    },
+    "te-koso": {
+      "expected": {
+        "p": "〜てこそ",
+        "en": "only by (doing); only when"
+      },
+      "examples": {
+        "自分で経験してこそ、本当の意味で理解できるのだ。": {
+          "en": "Only by experiencing it yourself can you truly understand it.",
+          "mn": "Өөрөө туулж байж л жинхэнэ утгаар нь ойлгоно."
+        },
+        "お互いに協力し合ってこそ、チームは強くなる。": {
+          "en": "A team only becomes strong when its members work together.",
+          "mn": "Бие биетэйгээ хамтарч байж л баг хүчтэй болдог."
+        }
+      }
+    },
+    "te-kara-de-nai-to": {
+      "expected": {
+        "p": "〜てからでないと",
+        "en": "not until (after doing); only after"
+      },
+      "examples": {
+        "実物を見てからでないと、買うかどうか決められない。": {
+          "en": "I can't decide whether to buy it until I've seen the real thing.",
+          "mn": "Бодит барааг нь харахаас нааш авах эсэхээ шийдэж чадахгүй."
+        },
+        "この薬は、医師に相談してからでなければ服用しないでください。": {
+          "en": "Please do not take this medicine until you have consulted a doctor.",
+          "mn": "Эмчтэй зөвлөлдөхөөс өмнө энэ эмийг бүү уугаарай."
+        }
+      }
+    },
+    "te-irai": {
+      "expected": {
+        "p": "〜て以来",
+        "en": "ever since"
+      },
+      "examples": {
+        "大学を卒業して以来、彼とは一度も会っていない。": {
+          "en": "I haven't seen him once since we graduated from university.",
+          "mn": "Их сургуулиа төгссөнөөс хойш түүнтэй нэг ч уулзаагүй."
+        },
+        "この町に越してきて以来、毎朝川沿いを散歩するのが日課になっている。": {
+          "en": "Ever since I moved to this town, a morning walk along the river has been part of my routine.",
+          "mn": "Энэ хотод нүүж ирснээс хойш өглөө бүр гол дагуу алхах нь өдөр тутмын зуршил болсон."
+        },
+        "創業以来、この店は同じ味を守り続けている。": {
+          "en": "Since its founding, this shop has kept the same flavor.",
+          "mn": "Байгуулагдсан цагаасаа энэ дэлгүүр ижил амтаа хадгалж ирсэн."
+        }
+      }
+    },
+    "ni-suginai": {
+      "expected": {
+        "p": "〜に過ぎない",
+        "en": "merely; nothing more than; only"
+      },
+      "examples": {
+        "それは単なるうわさに過ぎない。": {
+          "en": "That's nothing more than a rumor.",
+          "mn": "Энэ бол ердөө цуу яриа."
+        },
+        "私は自分の仕事をしたに過ぎません。": {
+          "en": "I was merely doing my job.",
+          "mn": "Би зөвхөн ажлаа л хийсэн."
+        },
+        "今回明らかになった問題は、氷山の一角に過ぎない。": {
+          "en": "The problem that has come to light this time is merely the tip of the iceberg.",
+          "mn": "Энэ удаа илэрсэн асуудал бол мөсөн уулын орой төдий."
+        }
+      }
+    },
+    "ni-kagiru": {
+      "expected": {
+        "p": "〜に限る",
+        "en": "nothing beats; the best thing is"
+      },
+      "examples": {
+        "疲れたときは、早く寝るに限る。": {
+          "en": "When you're tired, there's nothing better than going to bed early.",
+          "mn": "Ядарсан үед эрт унтахаас сайн зүйлгүй."
+        },
+        "夏の暑い日は、冷たいビールに限る。": {
+          "en": "On a hot summer day, nothing beats a cold beer.",
+          "mn": "Зуны халуун өдөр хүйтэн шар айраг хамгийн сайхан."
+        },
+        "面倒なことには関わらないに限る。": {
+          "en": "It's best to stay out of troublesome matters.",
+          "mn": "Төвөгтэй хэрэгт оролцохгүй байсан нь дээр."
+        }
+      }
+    },
+    "ni-kagirazu": {
+      "expected": {
+        "p": "〜に限らず",
+        "en": "not only; not limited to"
+      },
+      "examples": {
+        "この遊園地は、子どもに限らず大人にも人気がある。": {
+          "en": "This amusement park is popular not only with children but with adults as well.",
+          "mn": "Энэ зугаа цэнгэлийн хүрээлэн хүүхэд төдийгүй томчуудад алдартай."
+        },
+        "日本に限らず、多くの先進国が少子化の問題を抱えている。": {
+          "en": "Not just Japan but many developed countries face a falling birthrate.",
+          "mn": "Япон төдийгүй олон хөгжингүй орон төрөлт буурах асуудалтай."
+        }
+      }
+    },
+    "ni-kagitte": {
+      "expected": {
+        "p": "〜に限って",
+        "en": "of all (times/people); precisely when; (someone) of all people wouldn't"
+      },
+      "examples": {
+        "傘を持っていない日に限って、雨が降るんだよね。": {
+          "en": "It always rains on exactly the days I don't have an umbrella.",
+          "mn": "Шүхэргүй өдөр л бороо ордог юм даа."
+        },
+        "急いでいるときに限って、電車が遅れる。": {
+          "en": "The train is always late precisely when I'm in a hurry.",
+          "mn": "Яарч байгаа үед л галт тэрэг хоцордог."
+        },
+        "うちの子に限って、そんなことをするはずがない。": {
+          "en": "My child, of all people, would never do such a thing.",
+          "mn": "Манай хүүхэд л лав тийм юм хийхгүй."
+        }
+      }
+    },
+    "ni-kagiri": {
+      "expected": {
+        "p": "〜に限り",
+        "en": "limited to; only (for)"
+      },
+      "examples": {
+        "本日ご来店のお客様に限り、全商品を二割引きいたします。": {
+          "en": "For customers visiting today only, all items are 20% off.",
+          "mn": "Зөвхөн өнөөдөр ирсэн үйлчлүүлэгчдэд бүх барааг хорин хувь хямдруулна."
+        },
+        "先着百名様に限り、記念品を差し上げます。": {
+          "en": "Commemorative gifts will be given to the first hundred people only.",
+          "mn": "Зөвхөн эхний зуун хүнд дурсгалын бэлэг өгнө."
+        },
+        "この駐車場は、住民に限り無料で利用できる。": {
+          "en": "Parking here is free for residents only.",
+          "mn": "Энэ зогсоолыг зөвхөн оршин суугчид үнэгүй ашиглаж болно."
+        }
+      }
+    },
+    "kagiri": {
+      "expected": {
+        "p": "〜かぎり",
+        "en": "as long as; as far as (to the limit of)"
+      },
+      "examples": {
+        "私の知るかぎり、彼が約束を破ったことは一度もない。": {
+          "en": "As far as I know, he has never once broken a promise.",
+          "mn": "Миний мэдэхээр тэр нэг ч удаа амлалтаа зөрчөөгүй."
+        },
+        "体が動くかぎり、この仕事を続けたい。": {
+          "en": "As long as my body keeps working, I want to continue this job.",
+          "mn": "Бие хөдөлж байгаа цагт энэ ажлаа үргэлжлүүлмээр байна."
+        },
+        "できるかぎりのことはやったので、結果がどうなっても悔いはない。": {
+          "en": "I did everything I could, so whatever the result, I have no regrets.",
+          "mn": "Чадах бүхнээ хийсэн тул үр дүн ямар ч байсан харамсахгүй."
+        }
+      }
+    },
+    "nai-kagiri": {
+      "expected": {
+        "p": "〜ないかぎり",
+        "en": "unless; as long as ... not"
+      },
+      "examples": {
+        "よほどのことがないかぎり、明日の会議には出席します。": {
+          "en": "Unless something serious comes up, I'll attend tomorrow's meeting.",
+          "mn": "Ноцтой зүйл гарахгүй бол маргаашийн хуралд оролцоно."
+        },
+        "本人が反省しないかぎり、同じ問題は何度でも起こるだろう。": {
+          "en": "Unless he genuinely reflects on it, the same problem will keep happening.",
+          "mn": "Тэр өөрөө алдаагаа эргэцүүлэхгүй бол энэ асуудал дахин дахин гарна."
+        }
+      }
+    },
+    "ni-kakete-wa": {
+      "expected": {
+        "p": "〜にかけては",
+        "en": "when it comes to; in terms of (skill)"
+      },
+      "examples": {
+        "料理の腕にかけては、うちの父は誰にも負けない。": {
+          "en": "When it comes to cooking, my father is second to none.",
+          "mn": "Хоол хийх чадвараар манай аав хэнд ч дийлдэхгүй."
+        },
+        "彼女は数字の分析にかけては、社内で右に出る者がいない。": {
+          "en": "When it comes to analyzing numbers, no one in the company can match her.",
+          "mn": "Тоон шинжилгээгээр түүнтэй компанид хэн ч эн зэрэгцэхгүй."
+        }
+      }
+    },
+    "ni-kotaete": {
+      "expected": {
+        "p": "〜にこたえて",
+        "en": "in response to; meeting (expectations, requests)"
+      },
+      "examples": {
+        "ファンの声援にこたえて、選手たちは手を振った。": {
+          "en": "The players waved in response to the fans' cheers.",
+          "mn": "Хөгжөөн дэмжигчдийн уухайд хариулан тамирчид гараа далласан."
+        },
+        "利用者の要望にこたえて、図書館の開館時間が延長された。": {
+          "en": "In response to users' requests, the library's opening hours were extended.",
+          "mn": "Хэрэглэгчдийн хүсэлтээр номын сангийн ажиллах цагийг сунгасан."
+        },
+        "彼は周囲の期待にこたえる結果を出した。": {
+          "en": "He produced results that lived up to everyone's expectations.",
+          "mn": "Тэр бусдын хүлээлтэд нийцэх үр дүн гаргасан."
+        }
+      }
+    },
+    "ni-sakidatte": {
+      "expected": {
+        "p": "〜に先立って",
+        "en": "prior to; before"
+      },
+      "examples": {
+        "新作映画の公開に先立って、完成披露試写会が開かれた。": {
+          "en": "Prior to the release of the new film, a premiere screening was held.",
+          "mn": "Шинэ кино гарахаас өмнө нээлтийн үзвэр зохион байгуулсан."
+        }
+      }
+    }
+  }
+}

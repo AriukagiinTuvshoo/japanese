@@ -1,0 +1,335 @@
+{
+  "provenance": {
+    "id": "mn-n4-examples-sustained-5-2026-10-08",
+    "createdAt": "2026-10-08",
+    "author": "Arena coding assistant",
+    "method": "AI-authored Mongolian compared with exact Japanese sentence and retained English; stable entry w/r/en guards. Suspect sentences withheld. Independent human review outstanding.",
+    "source": "https://github.com/evanclan/OpenJLPT",
+    "sourceSnapshot": "public/data/vocab/n4.json at 6cf8ca1",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "6d69734463": {
+      "expected": {
+        "w": "驚く",
+        "r": "おどろく",
+        "en": [
+          "to be surprised"
+        ]
+      },
+      "examples": {
+        "母はそのニュースを聞いて驚いた。": {
+          "en": "Mother was surprised at the news.",
+          "mn": "Ээж тэр мэдээг сонсоод гайхсан."
+        },
+        "その人はその知らせに驚きました。": {
+          "en": "The man was surprised at the news.",
+          "mn": "Тэр хүн мэдээг сонсоод гайхсан."
+        }
+      }
+    },
+    "68ff489ea4": {
+      "expected": {
+        "w": "お祭り",
+        "r": "おまつり",
+        "en": [
+          "festival"
+        ]
+      },
+      "examples": {
+        "お祭りでロブスターを食べました。": {
+          "en": "I ate lobster at the festival.",
+          "mn": "Би баяр дээр хавч идсэн."
+        },
+        "そのお祭りを見たいのですが。": {
+          "en": "I would like to see the festival.",
+          "mn": "Тэр баярыг үзмээр байна."
+        }
+      }
+    },
+    "eb615955c8": {
+      "expected": {
+        "w": "お見舞い",
+        "r": "おみまい",
+        "en": [
+          "calling on someone who is ill",
+          "enquiry"
+        ]
+      },
+      "examples": {
+        "彼女のお見舞いに行こうよ。": {
+          "en": "Why don't we go and see her in the hospital?",
+          "mn": "Эмнэлэгт очиж түүнтэй уулзвал ямар вэ?"
+        },
+        "先日、私たちは彼のお兄さんをお見舞いにいった。": {
+          "en": "The other day we went to ask after his brother.",
+          "mn": "Саяхан бид түүний ахын биеийг эргэж очсон."
+        }
+      }
+    },
+    "f586632207": {
+      "expected": {
+        "w": "お土産",
+        "r": "おみやげ",
+        "en": [
+          "souvenir"
+        ]
+      },
+      "examples": {
+        "これは北海道からのお土産です。": {
+          "en": "This is a souvenir from Hokkaido.",
+          "mn": "Энэ бол Хоккайдогийн дурсгалын бэлэг."
+        },
+        "このお土産かさばるなぁ。": {
+          "en": "These presents are really bulky.",
+          "mn": "Эдгээр бэлэг их зай эзлэх юм."
+        }
+      }
+    },
+    "3e4c1468c7": {
+      "expected": {
+        "w": "思い出す",
+        "r": "おもいだす",
+        "en": [
+          "to remember"
+        ]
+      },
+      "examples": {
+        "あなたを見るとお兄さんを思い出します。": {
+          "en": "You remind me of your brother.",
+          "mn": "Таныг харахаар ах тань санаанд ордог."
+        },
+        "私はその地名を思い出せなかった。": {
+          "en": "I couldn't think of the name of the place.",
+          "mn": "Би тэр газрын нэрийг санаж чадсангүй."
+        }
+      }
+    },
+    "bad913ed8f": {
+      "expected": {
+        "w": "思う",
+        "r": "おもう",
+        "en": [
+          "to think",
+          "to feel"
+        ]
+      },
+      "examples": {
+        "晴れだと思うよ。": {
+          "en": "I think it will be sunny.",
+          "mn": "Нартай байх болов уу гэж бодож байна."
+        },
+        "新しい車を買おうかと思っている。": {
+          "en": "I have a mind to buy a new car.",
+          "mn": "Шинэ машин авах санаатай байна."
+        }
+      }
+    },
+    "1579d0db1b": {
+      "expected": {
+        "w": "おもちゃ",
+        "r": "おもちゃ",
+        "en": [
+          "toy"
+        ]
+      },
+      "examples": {
+        "あのおもちゃは木で作られている。": {
+          "en": "That toy is made of wood.",
+          "mn": "Тэр тоглоомыг модоор хийсэн."
+        },
+        "おもちゃをひとまとめにしておきなさい。": {
+          "en": "Gather your toys together.",
+          "mn": "Тоглоомуудаа нэг дор цуглуул."
+        }
+      }
+    },
+    "721424863e": {
+      "expected": {
+        "w": "表",
+        "r": "おもて",
+        "en": [
+          "the front"
+        ]
+      },
+      "examples": {
+        "この紙はどちらが表だか見分けがつかない。": {
+          "en": "I cannot tell which is the right side of this paper.",
+          "mn": "Энэ цаасны аль нь нүүр тал болохыг ялгаж чадахгүй байна."
+        },
+        "表に出ようか。": {
+          "en": "Shall we take this outside?",
+          "mn": "Гадаа гарах уу?"
+        }
+      }
+    },
+    "9099d4615b": {
+      "expected": {
+        "w": "親",
+        "r": "おや",
+        "en": [
+          "parents"
+        ]
+      },
+      "examples": {
+        "そのことを親にいってはいけないよ。": {
+          "en": "You mustn't tell that to your parents.",
+          "mn": "Тэр тухай эцэг эхдээ хэлж болохгүй шүү."
+        }
+      }
+    },
+    "d9cf4f541d": {
+      "expected": {
+        "w": "泳ぎ方",
+        "r": "およぎかた",
+        "en": [
+          "way of swimming"
+        ]
+      },
+      "examples": {
+        "君に泳ぎ方を教えよう。": {
+          "en": "I'll tell you how to swim.",
+          "mn": "Би чамд хэрхэн сэлэхийг заая."
+        },
+        "私は泳ぎ方を知っている。": {
+          "en": "I know how to swim.",
+          "mn": "Би яаж сэлэхээ мэднэ."
+        }
+      }
+    },
+    "4806278f5b": {
+      "expected": {
+        "w": "下りる",
+        "r": "おりる",
+        "en": [
+          "to get off"
+        ]
+      },
+      "examples": {
+        "一行は、歩いてその山を下りた。": {
+          "en": "The party walked down the mountain.",
+          "mn": "Бүлгийнхэн уулнаас явган буусан."
+        },
+        "ケンが木から下りてきた。": {
+          "en": "Ken climbed down from the tree.",
+          "mn": "Кен модноос бууж ирсэн."
+        }
+      }
+    },
+    "ac3d1de39a": {
+      "expected": {
+        "w": "折る",
+        "r": "おる",
+        "en": [
+          "to break or to fold"
+        ]
+      },
+      "examples": {
+        "その紙を四つ折りにしなさい。": {
+          "en": "Fold the paper in four.",
+          "mn": "Тэр цаасыг дөрөв нугал."
+        },
+        "折ろうとしても指が弱くなりすぎていた。": {
+          "en": "Her fingers were too weak to fold it.",
+          "mn": "Нугалах гэсэн ч хуруу нь хэт сул болсон байв."
+        }
+      }
+    },
+    "12db3e5f4e": {
+      "expected": {
+        "w": "お礼",
+        "r": "おれい",
+        "en": [
+          "expression of gratitude"
+        ]
+      },
+      "examples": {
+        "息子に成り代わってお礼を申し上げます。": {
+          "en": "I thank you on behalf of my son.",
+          "mn": "Хүүгийнхээ өмнөөс танд баярлалаа гэж хэлье."
+        },
+        "何ともお礼の言葉もございません。": {
+          "en": "I have no words to express my gratitude.",
+          "mn": "Талархлаа илэрхийлэх үг олдохгүй байна."
+        }
+      }
+    },
+    "d517e5d931": {
+      "expected": {
+        "w": "折れる",
+        "r": "おれる",
+        "en": [
+          "to break or be folded"
+        ]
+      },
+      "examples": {
+        "医者は彼の折れた足をついだ。": {
+          "en": "The doctor set his broken leg.",
+          "mn": "Эмч түүний хугарсан хөлийг эвлүүлж тогтоосон."
+        },
+        "ついにバス会社が折れた。": {
+          "en": "At last, the bus company gave in.",
+          "mn": "Эцэст нь автобусны компани буулт хийсэн."
+        }
+      }
+    },
+    "19cb869e4d": {
+      "expected": {
+        "w": "終わり",
+        "r": "おわり",
+        "en": [
+          "the end"
+        ]
+      },
+      "examples": {
+        "さぁ、一日を終わりとしましょう。": {
+          "en": "Let's call it a day.",
+          "mn": "За, өнөөдрийн ажлаа дуусгацгаая."
+        },
+        "どんな長い夜にも終わりがあるものだ。": {
+          "en": "The longest night will have an end.",
+          "mn": "Хэчнээн урт шөнө ч төгсгөлтэй."
+        }
+      }
+    },
+    "cbbc4c3524": {
+      "expected": {
+        "w": "カーテン",
+        "r": "カーテン",
+        "en": [
+          "curtain"
+        ]
+      },
+      "examples": {
+        "カーテンが風になびいた。": {
+          "en": "The curtains blew in the wind.",
+          "mn": "Хөшиг салхинд намирав."
+        },
+        "カーテンはまだ上がっていなかった。": {
+          "en": "The curtain has not yet risen.",
+          "mn": "Хөшиг хараахан нээгдээгүй байв."
+        }
+      }
+    },
+    "6f4ad2115e": {
+      "expected": {
+        "w": "海岸",
+        "r": "かいがん",
+        "en": [
+          "coast"
+        ]
+      },
+      "examples": {
+        "このバスは、海岸に行きますか。": {
+          "en": "Does this bus go to the beach?",
+          "mn": "Энэ автобус далайн эрэг рүү явах уу?"
+        },
+        "海岸にはほとんど人がいなかった。": {
+          "en": "There were few people on the beach.",
+          "mn": "Далайн эрэг дээр хүн бараг байсангүй."
+        }
+      }
+    }
+  }
+}
