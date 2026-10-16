@@ -210,6 +210,33 @@ try {
    for(const ex of Object.values(r.examples)){assert.ok(body.includes(ex[language]),`${language}/${id}: example not rendered`);checked++;}
   }
   assert.equal(checked,201);console.log(`${language}: 201 added vocabulary example translations rendered`);
+
+  // Exercise the guarded N5 translation batch in the actual bilingual UI.
+  const n5Batch = JSON.parse(fs.readFileSync('content/mn/batches/2026-10-16-n5-examples-batch-1.json','utf8'));
+  const n5ById = new Map(firstWords.map(word => [word.id, word]));
+  let n5ExamplesRendered = 0;
+  for (const [id, record] of Object.entries(n5Batch.vocab)) {
+   const sourceWord = n5ById.get(id);
+   assert.ok(sourceWord, `N5 translation batch entry must exist: ${id}`);
+   assert.equal(sourceWord.w, record.expected.w, `N5 translation batch word guard: ${id}`);
+   await page.evaluate(id=>{location.hash=`#/vocab/${id}`;},id);
+   await page.getByRole('heading',{name:sourceWord.w,exact:true}).waitFor();
+   await page.getByRole('button',{name:new RegExp(t.examplesTab)}).click();
+   const exampleBody=await page.locator('main').innerText();
+   for(const [ja,mn] of Object.entries(record.examples)) {
+    const sourceExample=sourceWord.ex.find(item=>item.ja===ja);
+    assert.ok(sourceExample, `${language}/${id}: batch sentence must match source Japanese exactly`);
+    assert.equal(sourceExample.mn,mn, `${language}/${id}: applied Mongolian translation must match the provenance batch`);
+    assert.ok(sourceExample.en, `${language}/${id}: source English must be retained`);
+    assert.ok(exampleBody.includes(sourceExample.en), `${language}/${id}: source English example must render`);
+    if(language==='mn') assert.ok(exampleBody.includes(mn), `${language}/${id}: Mongolian sentence must render`);
+    else assert.ok(!exampleBody.includes(mn), `${language}/${id}: unrequested Mongolian translation should not leak into English UI`);
+    n5ExamplesRendered++;
+   }
+   await page.getByText(t.exampleMnNeedsReview,{exact:true}).waitFor();
+  }
+  assert.equal(n5ExamplesRendered,33);
+  console.log(`${language}: 33 new N5 example translations, source preservation and unreviewed-label UI passed`);
   await page.goto(`${origin}/#/vocab/j1693050`);
   await page.getByRole('heading',{name:'五十',exact:true}).waitFor();
   await page.getByRole('button',{name:new RegExp(t.sourceTab)}).click();
