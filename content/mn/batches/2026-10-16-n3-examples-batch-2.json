@@ -1,0 +1,449 @@
+{
+  "provenance": {
+    "id": "mn-n3-examples-2026-10-16-batch-2",
+    "createdAt": "2026-10-16",
+    "author": "OpenAI ChatGPT",
+    "method": "AI-assisted Mongolian translations matched to exact retained Japanese example sentences and checked against the accompanying English source. Japanese/English source text and lexical fields preserved. This batch has not been independently human-reviewed.",
+    "source": "OpenJLPT-distributed Tatoeba examples (Japanese/English source); Mongolian translations authored by OpenAI ChatGPT",
+    "sourceSnapshot": "c8477d2db2dedbcd152f0d310ccc684f55f1aef6",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "61f7afccc0": {
+      "expected": {
+        "w": "あるいは",
+        "r": "あるいは",
+        "en": [
+          "or",
+          "possibly"
+        ]
+      },
+      "examples": {
+        "あるいはそれは本当かもしれない。": {
+          "mn": "Магадгүй энэ үнэн байж болох юм.",
+          "en": "Perhaps that's true."
+        }
+      }
+    },
+    "13fdb782fe": {
+      "expected": {
+        "w": "アルバム",
+        "r": "アルバム",
+        "en": [
+          "album"
+        ]
+      },
+      "examples": {
+        "あなたのアルバムを見せてくれる？": {
+          "mn": "Цомгоо надад үзүүлэх үү?",
+          "en": "Will you show me your album?"
+        }
+      }
+    },
+    "55bea4f5f3": {
+      "expected": {
+        "w": "案",
+        "r": "あん",
+        "en": [
+          "plan",
+          "suffix meaning draft"
+        ]
+      },
+      "examples": {
+        "私には全く案がありません。": {
+          "mn": "Надад огт санаа алга.",
+          "en": "I have no plans whatever."
+        }
+      }
+    },
+    "1e8e1ca3dc": {
+      "expected": {
+        "w": "暗記",
+        "r": "あんき",
+        "en": [
+          "memorization",
+          "learning by heart"
+        ]
+      },
+      "examples": {
+        "彼はその会話を暗記しようとした。": {
+          "mn": "Тэр яриаг цээжлэх гэж оролдсон.",
+          "en": "He tried to memorize the conversation."
+        }
+      }
+    },
+    "7a5bf31b8a": {
+      "expected": {
+        "w": "安定",
+        "r": "あんてい",
+        "en": [
+          "stability",
+          "equilibrium"
+        ]
+      },
+      "examples": {
+        "彼は安定を失って倒れた。": {
+          "mn": "Тэр тэнцвэрээ алдаж унасан.",
+          "en": "He lost his balance and fell down."
+        }
+      }
+    },
+    "8f735b886b": {
+      "expected": {
+        "w": "あんなに",
+        "r": "あんなに",
+        "en": [
+          "to that extent",
+          "to that degree"
+        ]
+      },
+      "examples": {
+        "あんなに早く起きなければよかった。": {
+          "mn": "Тийм эрт босохгүй байсан нь дээр байж.",
+          "en": "I shouldn't have gotten up so early."
+        }
+      }
+    },
+    "52d4f9b548": {
+      "expected": {
+        "w": "委員",
+        "r": "いいん",
+        "en": [
+          "committee member"
+        ]
+      },
+      "examples": {
+        "委員は全員その計画に賛成である。": {
+          "mn": "Хорооны бүх гишүүн тухайн төлөвлөгөөг дэмжиж байна.",
+          "en": "The committee are all for the plan."
+        }
+      }
+    },
+    "a812d7a958": {
+      "expected": {
+        "w": "意外",
+        "r": "いがい",
+        "en": [
+          "unexpected",
+          "surprising"
+        ]
+      },
+      "examples": {
+        "問題は意外にやさしかったよ。": {
+          "mn": "Даалгавар санаанд оромгүй амархан байсан шүү.",
+          "en": "I found the problem easier than I had expected."
+        }
+      }
+    },
+    "2c62d0aba0": {
+      "expected": {
+        "w": "行き",
+        "r": "いき",
+        "en": [
+          "going"
+        ]
+      },
+      "examples": {
+        "私は歯医者行きを延ばさねばならない。": {
+          "mn": "Би шүдний эмчид очихоо хойшлуулах хэрэгтэй боллоо.",
+          "en": "I must postpone going to the dentist."
+        }
+      }
+    },
+    "5fef88ef1f": {
+      "expected": {
+        "w": "息",
+        "r": "いき",
+        "en": [
+          "breath",
+          "tone"
+        ]
+      },
+      "examples": {
+        "彼らは息がぴたりと合っている。": {
+          "mn": "Тэдний хэмнэл яг таардаг.",
+          "en": "They are a perfect match for each other."
+        }
+      }
+    },
+    "107846b167": {
+      "expected": {
+        "w": "生き物",
+        "r": "いきもの",
+        "en": [
+          "living thing",
+          "animal"
+        ]
+      },
+      "examples": {
+        "人間はいわば感情に左右される生き物である。": {
+          "mn": "Хүн гэдэг өөрөөр хэлбэл сэтгэл хөдлөлдөө захирагддаг амьд биет юм.",
+          "en": "Human beings are emotional creatures, so to speak."
+        }
+      }
+    },
+    "811101e739": {
+      "expected": {
+        "w": "意志",
+        "r": "いし",
+        "en": [
+          "will",
+          "volition"
+        ]
+      },
+      "examples": {
+        "意志を持たない事が最悪の不利だ。": {
+          "mn": "Хүсэл зориггүй байх нь хамгийн том сул тал.",
+          "en": "Having no will is the worst handicap."
+        }
+      }
+    },
+    "db4d84d6b0": {
+      "expected": {
+        "w": "意思",
+        "r": "いし",
+        "en": [
+          "intention",
+          "purpose"
+        ]
+      },
+      "examples": {
+        "にやりと笑って賛成の意思を示した。": {
+          "mn": "Тэр мушилзан инээж, зөвшөөрч буйгаа илэрхийлэв.",
+          "en": "She grinned her approval."
+        }
+      }
+    },
+    "0a23863840": {
+      "expected": {
+        "w": "医師",
+        "r": "いし",
+        "en": [
+          "doctor",
+          "physician"
+        ]
+      },
+      "examples": {
+        "医師はすぐに手術をする事に決めた。": {
+          "mn": "Эмч тэр даруй мэс засал хийхээр шийдсэн.",
+          "en": "The doctor decided to operate at once."
+        }
+      }
+    },
+    "9b83e5a1d0": {
+      "expected": {
+        "w": "維持",
+        "r": "いじ",
+        "en": [
+          "maintenance",
+          "preservation"
+        ]
+      },
+      "examples": {
+        "この車の維持は高くつく。": {
+          "mn": "Энэ машиныг арчилж, ашиглахад их зардал гардаг.",
+          "en": "It is expensive running this car."
+        }
+      }
+    },
+    "8822903a55": {
+      "expected": {
+        "w": "異常",
+        "r": "いじょう",
+        "en": [
+          "strangeness",
+          "abnormality",
+          "disorder"
+        ]
+      },
+      "examples": {
+        "受信異常があったのだと思います。": {
+          "mn": "Мэдээлэл хүлээн авах үед алдаа гарсан гэж бодож байна.",
+          "en": "There might have been an error during transmission."
+        }
+      }
+    },
+    "c42fa0cf5f": {
+      "expected": {
+        "w": "以前",
+        "r": "いぜん",
+        "en": [
+          "ago",
+          "since",
+          "before"
+        ]
+      },
+      "examples": {
+        "彼女はもはや以前の彼女ではない。": {
+          "mn": "Тэр одоо урьдынх шигээ хүн байхаа больсон.",
+          "en": "She is no longer what she used to be."
+        }
+      }
+    },
+    "474e600ef2": {
+      "expected": {
+        "w": "表す",
+        "r": "あらわす",
+        "en": [
+          "to express",
+          "to show",
+          "to reveal"
+        ]
+      },
+      "examples": {
+        "＆のマークはａｎｄの文字を表す。": {
+          "mn": "“&” тэмдэг нь “and” гэдэг үгийг илэрхийлдэг.",
+          "en": "The sign \"&\" stands for \"and\"."
+        }
+      }
+    },
+    "4601135013": {
+      "expected": {
+        "w": "板",
+        "r": "いた",
+        "en": [
+          "board",
+          "plank"
+        ]
+      },
+      "examples": {
+        "この鉄の板はすずでメッキしてある。": {
+          "mn": "Энэ төмөр хавтанг цагаан тугалгаар бүрсэн.",
+          "en": "This iron sheet is coated with tin."
+        }
+      }
+    },
+    "9620d69897": {
+      "expected": {
+        "w": "偉大",
+        "r": "いだい",
+        "en": [
+          "greatness"
+        ]
+      },
+      "examples": {
+        "母の愛は他よりも偉大である。": {
+          "mn": "Эхийн хайр бусад бүхнээс илүү агуу.",
+          "en": "Maternal love is greater than anything else."
+        }
+      }
+    },
+    "9a12c4f4e9": {
+      "expected": {
+        "w": "痛み",
+        "r": "いたみ",
+        "en": [
+          "pain",
+          "ache",
+          "sore"
+        ]
+      },
+      "examples": {
+        "ここにしつこい痛みがあります。": {
+          "mn": "Энэ хэсэгт арилахгүй, удаан үргэлжилсэн өвдөлт байна.",
+          "en": "I have a persistent pain here."
+        }
+      }
+    },
+    "b974c316fc": {
+      "expected": {
+        "w": "いずれ",
+        "r": "いずれ",
+        "en": [
+          "where",
+          "which",
+          "who"
+        ]
+      },
+      "examples": {
+        "人間はいずれ死ぬのだ。": {
+          "mn": "Хүн эцэстээ үхдэг.",
+          "en": "Man will die sooner or later."
+        }
+      }
+    },
+    "cfaaf0ad82": {
+      "expected": {
+        "w": "一度に",
+        "r": "いちどに",
+        "en": [
+          "all at once"
+        ]
+      },
+      "examples": {
+        "一度に二つのことはできないよ。": {
+          "mn": "Нэг дор хоёр зүйл хийж чадахгүй шүү дээ.",
+          "en": "I can't do two things at a time."
+        }
+      }
+    },
+    "634490494f": {
+      "expected": {
+        "w": "一家",
+        "r": "いっか",
+        "en": [
+          "a house",
+          "a home",
+          "a family"
+        ]
+      },
+      "examples": {
+        "ジョンソン一家はパーティーをするのが大好きだ。": {
+          "mn": "Жонсоны гэр бүлийнхэн үдэшлэг хийх их дуртай.",
+          "en": "The Johnsons love to have parties."
+        }
+      }
+    },
+    "f0b3458a80": {
+      "expected": {
+        "w": "一種",
+        "r": "いっしゅ",
+        "en": [
+          "a species",
+          "a kind",
+          "a variety"
+        ]
+      },
+      "examples": {
+        "記事の論調は一種の悲観論だった。": {
+          "mn": "Нийтлэлийн өнгө аяс нэг төрлийн гутранги үзэл байв.",
+          "en": "The article's tone was one of pessimism."
+        }
+      }
+    },
+    "fc1d99931b": {
+      "expected": {
+        "w": "一瞬",
+        "r": "いっしゅん",
+        "en": [
+          "a moment",
+          "an instant"
+        ]
+      },
+      "examples": {
+        "それは私にとってはらはらする一瞬だった。": {
+          "mn": "Тэр мөч миний хувьд сэтгэл түгшээсэн агшин байлаа.",
+          "en": "It was a nervous moment for me."
+        }
+      }
+    },
+    "e21a9f62b7": {
+      "expected": {
+        "w": "一生",
+        "r": "いっしょう",
+        "en": [
+          "whole life",
+          "a lifetime",
+          "all through life"
+        ]
+      },
+      "examples": {
+        "あなたは、一生勉強しなければならない。": {
+          "mn": "Чи насан туршдаа суралцах хэрэгтэй.",
+          "en": "You must study your whole life."
+        }
+      }
+    }
+  }
+}
