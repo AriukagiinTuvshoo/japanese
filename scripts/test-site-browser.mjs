@@ -212,10 +212,14 @@ try {
   assert.equal(checked,201);console.log(`${language}: 201 added vocabulary example translations rendered`);
 
   // Exercise the guarded N5 translation batch in the actual bilingual UI.
-  const n5Batch = JSON.parse(fs.readFileSync('content/mn/batches/2026-10-16-n5-examples-batch-1.json','utf8'));
+  const n5Batches = fs.readdirSync('content/mn/batches')
+   .filter(file=>/^2026-10-16-n5-examples-batch-\\d+\\.json$/.test(file))
+   .sort()
+   .map(file=>JSON.parse(fs.readFileSync(`content/mn/batches/${file}`,'utf8')));
   const n5ById = new Map(firstWords.map(word => [word.id, word]));
   let n5ExamplesRendered = 0;
-  for (const [id, record] of Object.entries(n5Batch.vocab)) {
+  for (const n5Batch of n5Batches) {
+   for (const [id, record] of Object.entries(n5Batch.vocab)) {
    const sourceWord = n5ById.get(id);
    assert.ok(sourceWord, `N5 translation batch entry must exist: ${id}`);
    assert.equal(sourceWord.w, record.expected.w, `N5 translation batch word guard: ${id}`);
@@ -234,9 +238,11 @@ try {
     n5ExamplesRendered++;
    }
    await page.getByText(t.exampleMnNeedsReview,{exact:true}).waitFor();
+   }
   }
-  assert.equal(n5ExamplesRendered,33);
-  console.log(`${language}: 33 new N5 example translations, source preservation and unreviewed-label UI passed`);
+  const expectedN5ExampleCount = n5Batches.reduce((sum,batch)=>sum+Object.values(batch.vocab).reduce((n,record)=>n+Object.keys(record.examples).length,0),0);
+  assert.equal(n5ExamplesRendered,expectedN5ExampleCount);
+  console.log(`${language}: ${expectedN5ExampleCount} guarded N5 example translations, source preservation and unreviewed-label UI passed`);
   await page.goto(`${origin}/#/vocab/j1693050`);
   await page.getByRole('heading',{name:'五十',exact:true}).waitFor();
   await page.getByRole('button',{name:new RegExp(t.sourceTab)}).click();
