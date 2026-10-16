@@ -1,0 +1,678 @@
+{
+  "provenance": {
+    "id": "mn-n3-examples-2026-10-16-batch-1",
+    "createdAt": "2026-10-16",
+    "author": "OpenAI ChatGPT",
+    "method": "AI-assisted Mongolian translations matched to exact retained Japanese example sentences and checked against the accompanying English source. Japanese/English source text and lexical fields preserved. This batch has not been independently human-reviewed.",
+    "source": "OpenJLPT-distributed Tatoeba examples (Japanese/English source); Mongolian translations authored by OpenAI ChatGPT",
+    "sourceSnapshot": "73e9f9fa74ea9a5d7c380aff9b577d3ebcd39dda",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "6c564bf1bd": {
+      "expected": {
+        "w": "嵐",
+        "r": "あらし",
+        "en": [
+          "storm",
+          "tempest"
+        ]
+      },
+      "examples": {
+        "列車が止まったのは嵐のせいだった。": {
+          "mn": "Галт тэрэг зогссон нь шуурганаас болсон.",
+          "en": "It was because of the storm that the trains were halted."
+        }
+      }
+    },
+    "69209e023f": {
+      "expected": {
+        "w": "新た",
+        "r": "あらた",
+        "en": [
+          "new",
+          "fresh",
+          "novel"
+        ]
+      },
+      "examples": {
+        "明日はまた新たな日がやってくる。": {
+          "mn": "Маргааш дахиад нэг шинэ өдөр ирнэ.",
+          "en": "Tomorrow is another day."
+        }
+      }
+    },
+    "50edc9f158": {
+      "expected": {
+        "w": "あらゆる",
+        "r": "あらゆる",
+        "en": [
+          "all",
+          "every"
+        ]
+      },
+      "examples": {
+        "私たちの方であらゆることをした。": {
+          "mn": "Бид өөрсдийн зүгээс хийж болох бүхнийг хийсэн.",
+          "en": "We did everything for our part."
+        }
+      }
+    },
+    "474e600ef2": {
+      "expected": {
+        "w": "表す",
+        "r": "あらわす",
+        "en": [
+          "to express",
+          "to show",
+          "to reveal"
+        ]
+      },
+      "examples": {
+        "このしるしは何を表していますか。": {
+          "mn": "Энэ тэмдэг юуг илэрхийлж байна вэ?",
+          "en": "What does this sign signify?"
+        }
+      }
+    },
+    "0ca5c40581": {
+      "expected": {
+        "w": "現れる",
+        "r": "あらわれる",
+        "en": [
+          "to appear",
+          "to come in sight",
+          "to become visible"
+        ]
+      },
+      "examples": {
+        "一人の女性が木の後ろから現れた。": {
+          "mn": "Нэг эмэгтэй модны цаанаас гарч ирэв.",
+          "en": "A woman appeared from behind a tree."
+        }
+      }
+    },
+    "b7185fc1f0": {
+      "expected": {
+        "w": "或",
+        "r": "ある",
+        "en": [
+          "a certain...",
+          "some..."
+        ]
+      },
+      "examples": {
+        "ある夕方、一人の男がやってきた。": {
+          "mn": "Нэгэн орой нэг эрэгтэй иржээ.",
+          "en": "One evening a man came to my house."
+        }
+      }
+    },
+    "61f7afccc0": {
+      "expected": {
+        "w": "あるいは",
+        "r": "あるいは",
+        "en": [
+          "or",
+          "possibly"
+        ]
+      },
+      "examples": {
+        "ガスで調理しますか、あるいは電気ですか。": {
+          "mn": "Та хийгээр хоол хийдэг үү, эсвэл цахилгаанаар уу?",
+          "en": "Do you cook by gas or electricity?"
+        }
+      }
+    },
+    "13fdb782fe": {
+      "expected": {
+        "w": "アルバム",
+        "r": "アルバム",
+        "en": [
+          "album"
+        ]
+      },
+      "examples": {
+        "彼は私にアルバムを見せてくれた。": {
+          "mn": "Тэр надад зургийн цомгоо үзүүлсэн.",
+          "en": "He showed me his photograph album."
+        }
+      }
+    },
+    "f1869f9942": {
+      "expected": {
+        "w": "泡",
+        "r": "あわ",
+        "en": [
+          "bubble",
+          "foam",
+          "froth"
+        ]
+      },
+      "examples": {
+        "くだける波が泡を作った。": {
+          "mn": "Хагарч цалгисан давалгаа хөөс үүсгэсэн.",
+          "en": "The breaking waves formed foam."
+        }
+      }
+    },
+    "55bea4f5f3": {
+      "expected": {
+        "w": "案",
+        "r": "あん",
+        "en": [
+          "plan",
+          "suffix meaning draft"
+        ]
+      },
+      "examples": {
+        "どちらの案がよりよいと思いますか。": {
+          "mn": "Аль төлөвлөгөө нь илүү дээр гэж бодож байна вэ?",
+          "en": "Which plan do you believe is better?"
+        }
+      }
+    },
+    "1e8e1ca3dc": {
+      "expected": {
+        "w": "暗記",
+        "r": "あんき",
+        "en": [
+          "memorization",
+          "learning by heart"
+        ]
+      },
+      "examples": {
+        "私は２０００の英単語を暗記した。": {
+          "mn": "Би англи хэлний 2,000 үг цээжилсэн.",
+          "en": "I have memorized 2,000 English words."
+        }
+      }
+    },
+    "7a5bf31b8a": {
+      "expected": {
+        "w": "安定",
+        "r": "あんてい",
+        "en": [
+          "stability",
+          "equilibrium"
+        ]
+      },
+      "examples": {
+        "今日の政治状況はそれほど安定していない。": {
+          "mn": "Өнөөгийн улс төрийн нөхцөл байдал тийм ч тогтвортой биш.",
+          "en": "The current political situation is not very stable."
+        }
+      }
+    },
+    "8f735b886b": {
+      "expected": {
+        "w": "あんなに",
+        "r": "あんなに",
+        "en": [
+          "to that extent",
+          "to that degree"
+        ]
+      },
+      "examples": {
+        "あんなに怒るなんて彼らしくない。": {
+          "mn": "Тэр ингэж их уурлах нь түүнд огт таарахгүй.",
+          "en": "It's unlike him to get so angry."
+        }
+      }
+    },
+    "0adf15ff3f": {
+      "expected": {
+        "w": "胃",
+        "r": "い",
+        "en": [
+          "stomach"
+        ]
+      },
+      "examples": {
+        "食物は胃の中で消化される。": {
+          "mn": "Хоол хүнс ходоодонд боловсордог.",
+          "en": "Food is digested in the stomach."
+        }
+      }
+    },
+    "52d4f9b548": {
+      "expected": {
+        "w": "委員",
+        "r": "いいん",
+        "en": [
+          "committee member"
+        ]
+      },
+      "examples": {
+        "委員は全員出席している。": {
+          "mn": "Хорооны бүх гишүүн хүрэлцэн ирсэн.",
+          "en": "The committee are all present."
+        }
+      }
+    },
+    "a812d7a958": {
+      "expected": {
+        "w": "意外",
+        "r": "いがい",
+        "en": [
+          "unexpected",
+          "surprising"
+        ]
+      },
+      "examples": {
+        "君にここで会うのは全く意外だ。": {
+          "mn": "Чамтай энд тааралдана гэж огт санаагүй.",
+          "en": "It is quite a surprise to see you here."
+        }
+      }
+    },
+    "2c62d0aba0": {
+      "expected": {
+        "w": "行き",
+        "r": "いき",
+        "en": [
+          "going"
+        ]
+      },
+      "examples": {
+        "小田原行きはどちらの電車ですか。": {
+          "mn": "Одавара руу явах галт тэрэг аль нь вэ?",
+          "en": "Which train is bound for Odawara?"
+        }
+      }
+    },
+    "5fef88ef1f": {
+      "expected": {
+        "w": "息",
+        "r": "いき",
+        "en": [
+          "breath",
+          "tone"
+        ]
+      },
+      "examples": {
+        "おぼれかけた人は息を吹き返した。": {
+          "mn": "Живэх шахсан хүн амь орж, дахин амьсгалж эхлэв.",
+          "en": "The man who nearly drowned began to breathe."
+        }
+      }
+    },
+    "6e68ac9baf": {
+      "expected": {
+        "w": "勢い",
+        "r": "いきおい",
+        "en": [
+          "force",
+          "vigor",
+          "energy"
+        ]
+      },
+      "examples": {
+        "あらしの勢いが弱まった。": {
+          "mn": "Шуурганы хүч суларсан.",
+          "en": "The storm abated."
+        }
+      }
+    },
+    "107846b167": {
+      "expected": {
+        "w": "生き物",
+        "r": "いきもの",
+        "en": [
+          "living thing",
+          "animal"
+        ]
+      },
+      "examples": {
+        "人は意識のある生き物だ。": {
+          "mn": "Хүн бол ухамсартай амьд биет.",
+          "en": "Man is a conscious being."
+        }
+      }
+    },
+    "811101e739": {
+      "expected": {
+        "w": "意志",
+        "r": "いし",
+        "en": [
+          "will",
+          "volition"
+        ]
+      },
+      "examples": {
+        "私は辞職する意志はまったくない。": {
+          "mn": "Би ажлаасаа гарах бодол огт алга.",
+          "en": "I have no intention of resigning."
+        }
+      }
+    },
+    "db4d84d6b0": {
+      "expected": {
+        "w": "意思",
+        "r": "いし",
+        "en": [
+          "intention",
+          "purpose"
+        ]
+      },
+      "examples": {
+        "人間は互いに言葉で意思を通じ合う。": {
+          "mn": "Хүмүүс үгээр бие биетэйгээ харилцаж, санаа бодлоо ойлголцдог.",
+          "en": "Human beings communicate with each other by means of language."
+        }
+      }
+    },
+    "0a23863840": {
+      "expected": {
+        "w": "医師",
+        "r": "いし",
+        "en": [
+          "doctor",
+          "physician"
+        ]
+      },
+      "examples": {
+        "彼は医師になるために勉強している。": {
+          "mn": "Тэр эмч болохын тулд суралцаж байгаа.",
+          "en": "He studies with a view to becoming a doctor."
+        }
+      }
+    },
+    "9b83e5a1d0": {
+      "expected": {
+        "w": "維持",
+        "r": "いじ",
+        "en": [
+          "maintenance",
+          "preservation"
+        ]
+      },
+      "examples": {
+        "車を維持するのはとても経費がかかる。": {
+          "mn": "Машинаа арчлан ашиглахад их зардал гардаг.",
+          "en": "Running a car is a great expense."
+        }
+      }
+    },
+    "adfd2f59c3": {
+      "expected": {
+        "w": "意識",
+        "r": "いしき",
+        "en": [
+          "consciousness",
+          "senses"
+        ]
+      },
+      "examples": {
+        "彼女は病院で意識を取り戻した。": {
+          "mn": "Тэр эмэгтэй эмнэлэгт ухаан орсон.",
+          "en": "She came to in hospital."
+        }
+      }
+    },
+    "8822903a55": {
+      "expected": {
+        "w": "異常",
+        "r": "いじょう",
+        "en": [
+          "strangeness",
+          "abnormality",
+          "disorder"
+        ]
+      },
+      "examples": {
+        "そんなにたくさん食べるのは異常だ。": {
+          "mn": "Ийм их идэх нь хэвийн бус.",
+          "en": "It is abnormal to eat so much."
+        }
+      }
+    },
+    "b974c316fc": {
+      "expected": {
+        "w": "いずれ",
+        "r": "いずれ",
+        "en": [
+          "where",
+          "which",
+          "who"
+        ]
+      },
+      "examples": {
+        "君の努力はいずれ報われるだろう。": {
+          "mn": "Чиний хичээл зүтгэл эцэстээ үр дүнгээ өгөх байх.",
+          "en": "Your effort will be rewarded in the long run."
+        }
+      }
+    },
+    "c42fa0cf5f": {
+      "expected": {
+        "w": "以前",
+        "r": "いぜん",
+        "en": [
+          "ago",
+          "since",
+          "before"
+        ]
+      },
+      "examples": {
+        "私は今は以前ほどテニスをしない。": {
+          "mn": "Би одоо урьдынх шигээ их теннис тоглодоггүй.",
+          "en": "I do not play tennis as much as I used to."
+        }
+      }
+    },
+    "4601135013": {
+      "expected": {
+        "w": "板",
+        "r": "いた",
+        "en": [
+          "board",
+          "plank"
+        ]
+      },
+      "examples": {
+        "その板の長さは約２メートルだ。": {
+          "mn": "Тэр хавтангийн урт ойролцоогоор хоёр метр.",
+          "en": "The board is about two meters long."
+        }
+      }
+    },
+    "9620d69897": {
+      "expected": {
+        "w": "偉大",
+        "r": "いだい",
+        "en": [
+          "greatness"
+        ]
+      },
+      "examples": {
+        "リンカーンは偉大な政治家であった。": {
+          "mn": "Линкольн агуу улс төрч байсан.",
+          "en": "Lincoln was a great statesman."
+        }
+      }
+    },
+    "9a12c4f4e9": {
+      "expected": {
+        "w": "痛み",
+        "r": "いたみ",
+        "en": [
+          "pain",
+          "ache",
+          "sore"
+        ]
+      },
+      "examples": {
+        "私は急にわきばらに痛みを感じた。": {
+          "mn": "Би гэнэт хэвлийн хажуу хэсгээр өвдсөн.",
+          "en": "I felt a sudden pain in my side."
+        }
+      }
+    },
+    "c435f396e3": {
+      "expected": {
+        "w": "至る",
+        "r": "いたる",
+        "en": [
+          "to come",
+          "to arrive"
+        ]
+      },
+      "examples": {
+        "この道は公園に至る。": {
+          "mn": "Энэ зам цэцэрлэгт хүрээлэнд хүрдэг.",
+          "en": "This road goes to the park."
+        }
+      }
+    },
+    "04d6c4bd44": {
+      "expected": {
+        "w": "位置",
+        "r": "いち",
+        "en": [
+          "place",
+          "situation",
+          "position"
+        ]
+      },
+      "examples": {
+        "彼の事務所は町の中心部に位置している。": {
+          "mn": "Түүний албан тасалгаа хотын төвд байрладаг.",
+          "en": "His office is located in the center of the town."
+        }
+      }
+    },
+    "ec2ddaa910": {
+      "expected": {
+        "w": "一時",
+        "r": "いちじ",
+        "en": [
+          "moment",
+          "time"
+        ]
+      },
+      "examples": {
+        "彼は一時ここに住んでいた。": {
+          "mn": "Тэр нэг хэсэг энд амьдарч байсан.",
+          "en": "He lived here for a time."
+        }
+      }
+    },
+    "cfaaf0ad82": {
+      "expected": {
+        "w": "一度に",
+        "r": "いちどに",
+        "en": [
+          "all at once"
+        ]
+      },
+      "examples": {
+        "一度にひとつのことをするようにしなさい。": {
+          "mn": "Нэг дор нэг л зүйл хийхийг хичээгээрэй.",
+          "en": "Try to do one thing at a time."
+        }
+      }
+    },
+    "56d7bebebd": {
+      "expected": {
+        "w": "市場",
+        "r": "いちば",
+        "en": [
+          "(the) market (as a concept)"
+        ]
+      },
+      "examples": {
+        "その町には市場がある。": {
+          "mn": "Тэр хотод зах байдаг.",
+          "en": "There is a market in the town."
+        }
+      }
+    },
+    "634490494f": {
+      "expected": {
+        "w": "一家",
+        "r": "いっか",
+        "en": [
+          "a house",
+          "a home",
+          "a family"
+        ]
+      },
+      "examples": {
+        "一家そろって散歩に出かけている。": {
+          "mn": "Гэр бүлээрээ хамт салхинд гарсан.",
+          "en": "The whole family is out for a walk."
+        }
+      }
+    },
+    "42473b9a9e": {
+      "expected": {
+        "w": "いつか",
+        "r": "いつか",
+        "en": [
+          "sometime",
+          "someday",
+          "one day"
+        ]
+      },
+      "examples": {
+        "彼女はいつかあの山に登るだろう。": {
+          "mn": "Тэр хэзээ нэгэн өдөр тэр ууланд авирах байх.",
+          "en": "She is going to climb that mountain someday."
+        }
+      }
+    },
+    "f0b3458a80": {
+      "expected": {
+        "w": "一種",
+        "r": "いっしゅ",
+        "en": [
+          "a species",
+          "a kind",
+          "a variety"
+        ]
+      },
+      "examples": {
+        "これは海に住む動物の一種である。": {
+          "mn": "Энэ бол далайд амьдардаг амьтны нэг төрөл юм.",
+          "en": "This is a kind of animal that lives in the sea."
+        }
+      }
+    },
+    "e21a9f62b7": {
+      "expected": {
+        "w": "一生",
+        "r": "いっしょう",
+        "en": [
+          "whole life",
+          "a lifetime",
+          "all through life"
+        ]
+      },
+      "examples": {
+        "彼は科学の研究に一生をささげた。": {
+          "mn": "Тэр насан туршдаа шинжлэх ухааны судалгаанд өөрийгөө зориулсан.",
+          "en": "He devoted his life to the study of science."
+        }
+      }
+    },
+    "78ee271a60": {
+      "expected": {
+        "w": "一層",
+        "r": "いっそう",
+        "en": [
+          "much more",
+          "still more",
+          "all the more"
+        ]
+      },
+      "examples": {
+        "君が一緒だったおかげで休日がいっそう楽しめた。": {
+          "mn": "Чи хамт байсан учраас амралтын өдөр бүр ч сайхан өнгөрлөө.",
+          "en": "I enjoyed the holiday all the better for being with you."
+        }
+      }
+    }
+  }
+}
