@@ -213,7 +213,7 @@ try {
 
   // Exercise the guarded N5 translation batch in the actual bilingual UI.
   const n5Batches = fs.readdirSync('content/mn/batches')
-   .filter(file=>/^2026-10-16-n5-examples-batch-\\d+\\.json$/.test(file))
+   .filter(file=>file.startsWith('2026-10-16-n5-examples-batch-') && file.endsWith('.json'))
    .sort()
    .map(file=>JSON.parse(fs.readFileSync(`content/mn/batches/${file}`,'utf8')));
   const n5ById = new Map(firstWords.map(word => [word.id, word]));
