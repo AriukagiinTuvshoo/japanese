@@ -60,6 +60,42 @@ try {
    }
    console.log(`${language}: route ${route} rendered`);
   }
+
+  // Word-network regression: the map must connect kanji and word nodes, explain
+  // that links are structural rather than synonymous, and persist the learner's
+  // own kanji memory note across navigation/reload.
+  await page.goto(`${origin}/#/vocab?level=N5&tab=network`);
+  await page.getByRole('heading',{name:t.wordNetworkTitle,exact:true}).waitFor();
+  const networkMap=page.locator('main svg[role="img"]');
+  await networkMap.waitFor();
+  assert.ok(await networkMap.locator('line').count()>0,`${language}: word network must draw relationship links`);
+  assert.ok(await networkMap.locator('a[href*="#/vocab/"]').count()>0,`${language}: word nodes must link to vocabulary details`);
+  assert.ok(await networkMap.locator('a[href*="#/kanji/"]').count()>0,`${language}: connected kanji nodes must link to kanji details`);
+  await page.getByText(t.wordNetworkRelationNote,{exact:true}).waitFor();
+  const centerCharacter=(await networkMap.locator('text[x="450"][y="280"]').textContent())?.trim();
+  assert.ok(centerCharacter,`${language}: network must expose a central kanji`);
+  const noteBox=page.getByRole('textbox',{name:t.mnemonicTitle,exact:true});
+  await noteBox.waitFor();
+  const originalNote=await noteBox.inputValue();
+  const trialNote=`network regression ${language} ${centerCharacter}`;
+  await noteBox.fill(trialNote);
+  await page.getByRole('heading',{name:t.wordNetworkTitle,exact:true}).click();
+  await page.waitForFunction(({ch,note})=>{
+    const stored=JSON.parse(localStorage.getItem('nd:doc:local')||'{}');
+    return stored.mnemonics?.[ch]===note;
+  },{ch:centerCharacter,note:trialNote});
+  await page.reload();
+  await page.getByRole('heading',{name:t.wordNetworkTitle,exact:true}).waitFor();
+  assert.equal(await page.getByRole('textbox',{name:t.mnemonicTitle,exact:true}).inputValue(),trialNote,
+    `${language}: memory note must persist on the word network`);
+  await page.getByRole('textbox',{name:t.mnemonicTitle,exact:true}).fill(originalNote);
+  await page.getByRole('heading',{name:t.wordNetworkTitle,exact:true}).click();
+  await page.waitForFunction(({ch,note})=>{
+    const stored=JSON.parse(localStorage.getItem('nd:doc:local')||'{}');
+    return (stored.mnemonics?.[ch]??'')===note;
+  },{ch:centerCharacter,note:originalNote});
+  console.log(`${language}: word network links, explanation, and memory persistence passed`);
+
   const firstWord=firstWords[0],nextWord=firstWords[1];
   await page.goto(`${origin}/#/vocab/${firstWord.id}`);
   await page.getByRole('heading',{name:firstWord.w,exact:true}).waitFor();
