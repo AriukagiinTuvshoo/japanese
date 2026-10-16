@@ -2108,5 +2108,15 @@
     "sourceSnapshot": "50e98ab464c357854577328c4abc6cd50cc0de52",
     "license": "CC-BY-SA-4.0",
     "reviewStatus": "unreviewed"
+  },
+  {
+    "id": "mn-n5-examples-2026-10-16-batch-10",
+    "createdAt": "2026-10-16",
+    "author": "OpenAI ChatGPT",
+    "method": "AI-assisted Mongolian translations matched to exact retained Japanese example sentences and checked against their existing English source. Japanese and English source text is preserved verbatim. Remaining apparent source-English mismatches are intentionally withheld pending review. This batch has not been independently human-reviewed.",
+    "source": "OpenJLPT-distributed Tatoeba examples (Japanese/English source); Mongolian translations authored by OpenAI ChatGPT",
+    "sourceSnapshot": "c2a6402950c8c0c709bec565e0bc325e19e9937a",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
   }
 ]
