@@ -414,6 +414,7 @@ for(const r of references.records) {
 for (const [batchFile, expectedCount] of [
   ['2026-10-16-n5-examples-idiomatic-1.json', 20],
   ['2026-10-16-n5-examples-idiomatic-2.json', 21],
+  ['2026-10-16-n5-examples-idiomatic-3.json', 20],
 ]) {
   const oct16ExamplesBatch = read(`content/mn/batches/${batchFile}`);
   assert.equal(oct16ExamplesBatch.provenance.reviewStatus, 'unreviewed');
