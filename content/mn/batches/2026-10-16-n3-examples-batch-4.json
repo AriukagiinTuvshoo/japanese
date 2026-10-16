@@ -1,0 +1,932 @@
+{
+  "provenance": {
+    "id": "mn-n3-examples-2026-10-16-batch-4",
+    "createdAt": "2026-10-16",
+    "author": "OpenAI ChatGPT",
+    "method": "AI-assisted Mongolian translations matched to exact retained Japanese example sentences and checked against the accompanying English source. Japanese/English source text and lexical fields preserved. This batch has not been independently human-reviewed.",
+    "source": "OpenJLPT-distributed Tatoeba examples (Japanese/English source); Mongolian translations authored by OpenAI ChatGPT",
+    "sourceSnapshot": "50e98ab464c357854577328c4abc6cd50cc0de52",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
+  },
+  "vocab": {
+    "6d74c09476": {
+      "expected": {
+        "w": "追い付く",
+        "r": "おいつく",
+        "en": [
+          "to overtake",
+          "to catch up (with)"
+        ]
+      },
+      "examples": {
+        "トムに追いつくために走らなければならなかった。": {
+          "mn": "Томыг гүйцэхийн тулд би гүйх хэрэгтэй болсон。",
+          "en": "I had to run to catch up with Tom."
+        },
+        "彼は車を加速し、私に追いついた。": {
+          "mn": "Тэр машинаа хурдасгаж, намайг гүйцэж түрүүлэв.",
+          "en": "He accelerated his car and overtook me."
+        }
+      }
+    },
+    "e0e4e819c0": {
+      "expected": {
+        "w": "王",
+        "r": "おう",
+        "en": [
+          "king",
+          "ruler",
+          "sovereign"
+        ]
+      },
+      "examples": {
+        "彼らは王の殺害をたくらんでいる。": {
+          "mn": "Тэд хааныг алахаар хуйвалдаж байна.",
+          "en": "They are plotting to kill the king."
+        },
+        "王はその音楽を大いに楽しまれた。": {
+          "mn": "Хаан тэр хөгжмийг ихэд таашаав.",
+          "en": "The king was greatly entertained by the music."
+        }
+      }
+    },
+    "a2eee93db1": {
+      "expected": {
+        "w": "追う",
+        "r": "おう",
+        "en": [
+          "to chase",
+          "to run after"
+        ]
+      },
+      "examples": {
+        "その警官は泥棒を追っていた。": {
+          "mn": "Цагдаа хулгайчийн араас хөөж байлаа.",
+          "en": "The policeman was after the thief."
+        }
+      }
+    },
+    "2b990c61a0": {
+      "expected": {
+        "w": "王様",
+        "r": "おうさま",
+        "en": [
+          "king"
+        ]
+      },
+      "examples": {
+        "その王様はいつも王冠をかぶっている。": {
+          "mn": "Тэр хаан үргэлж титэм зүүдэг.",
+          "en": "The king always wears a crown."
+        },
+        "ライオンはジャングルの王様です。": {
+          "mn": "Арслан бол ширэнгэн ойн хаан юм.",
+          "en": "The lion is the king of the jungle."
+        }
+      }
+    },
+    "800c70f3e1": {
+      "expected": {
+        "w": "王子",
+        "r": "おうじ",
+        "en": [
+          "prince"
+        ]
+      },
+      "examples": {
+        "王子は森で道に迷った。": {
+          "mn": "Ханхүү ойд төөрсөн.",
+          "en": "The prince was lost in the woods."
+        }
+      }
+    },
+    "0b5703de3f": {
+      "expected": {
+        "w": "応じる",
+        "r": "おうじる",
+        "en": [
+          "to respond",
+          "to satisfy",
+          "to accept"
+        ]
+      },
+      "examples": {
+        "私はあなたの要求に応じられない。": {
+          "mn": "Би таны хүсэлтийг биелүүлж чадахгүй.",
+          "en": "I cannot comply with your request."
+        }
+      }
+    },
+    "d41f9ccc20": {
+      "expected": {
+        "w": "横断",
+        "r": "おうだん",
+        "en": [
+          "crossing"
+        ]
+      },
+      "examples": {
+        "彼はヨットで太平洋を横断した。": {
+          "mn": "Тэр дарвуулт завиар Номхон далайг гаталсан.",
+          "en": "He crossed the Pacific Ocean in a sailboat."
+        },
+        "道路を横断する時は気を付けなさい。": {
+          "mn": "Зам хөндлөн гарахдаа болгоомжлоорой.",
+          "en": "Take care when you cross the street."
+        }
+      }
+    },
+    "4f56ad3962": {
+      "expected": {
+        "w": "終える",
+        "r": "おえる",
+        "en": [
+          "to finish"
+        ]
+      },
+      "examples": {
+        "その仕事をもう終えましたか。": {
+          "mn": "Та ажлаа аль хэдийн дуусгасан уу?",
+          "en": "Are you through with the work?"
+        },
+        "彼らは予定通りその計画を終えた。": {
+          "mn": "Тэд төлөвлөгөөгөө хуваарийн дагуу дуусгасан.",
+          "en": "They finished the project on schedule."
+        }
+      }
+    },
+    "3f4f5fb76e": {
+      "expected": {
+        "w": "大いに",
+        "r": "おおいに",
+        "en": [
+          "very",
+          "much",
+          "greatly"
+        ]
+      },
+      "examples": {
+        "私は彼を大いに尊敬しています。": {
+          "mn": "Би түүнийг ихэд хүндэлдэг.",
+          "en": "I have a great regard for him."
+        },
+        "観光客の数は近年大いに増加した。": {
+          "mn": "Сүүлийн жилүүдэд жуулчдын тоо ихээхэн өссөн.",
+          "en": "The number of tourists has increased greatly in recent years."
+        }
+      }
+    },
+    "cc4511a68f": {
+      "expected": {
+        "w": "覆う",
+        "r": "おおう",
+        "en": [
+          "to cover",
+          "to hide",
+          "to conceal"
+        ]
+      },
+      "examples": {
+        "机はほこりで覆われている。": {
+          "mn": "Ширээ тоосонд дарагдсан байна.",
+          "en": "The desk is covered with dust."
+        },
+        "その山の頂上は雪で覆われていた。": {
+          "mn": "Тэр уулын оргил цасанд хучигдсан байв.",
+          "en": "The mountain peak was covered with snow."
+        }
+      }
+    },
+    "e2608de7eb": {
+      "expected": {
+        "w": "丘",
+        "r": "おか",
+        "en": [
+          "hill",
+          "height",
+          "knoll"
+        ]
+      },
+      "examples": {
+        "その丘は見晴らしがよい。": {
+          "mn": "Тэр толгодоос орчин сайхан харагддаг.",
+          "en": "The hill commands a fine view."
+        },
+        "彼はその丘の頂上に住んでいます。": {
+          "mn": "Тэр толгодын оройд амьдардаг.",
+          "en": "He lives at the top of the hill."
+        }
+      }
+    },
+    "e32ed7196b": {
+      "expected": {
+        "w": "沖",
+        "r": "おき",
+        "en": [
+          "open sea"
+        ]
+      },
+      "examples": {
+        "その島は海岸から１マイル沖にある。": {
+          "mn": "Тэр арал эргээс нэг милийн зайд далайд оршдог.",
+          "en": "The island lies a mile off the coast."
+        }
+      }
+    },
+    "69db85c3a9": {
+      "expected": {
+        "w": "贈る",
+        "r": "おくる",
+        "en": [
+          "to send",
+          "to give to",
+          "to award to"
+        ]
+      },
+      "examples": {
+        "ドロシーは彼にすばらしい贈り物を贈った。": {
+          "mn": "Дороти түүнд гайхалтай бэлэг илгээсэн.",
+          "en": "Dorothy sent him a nice present."
+        },
+        "市長は彼に市の鍵を贈った。": {
+          "mn": "Хотын дарга түүнд хотын түлхүүр гардуулсан.",
+          "en": "The mayor presented him with the key to the city."
+        }
+      }
+    },
+    "45aa3b4b69": {
+      "expected": {
+        "w": "起こる",
+        "r": "おこる",
+        "en": [
+          "to occur",
+          "to happen"
+        ]
+      },
+      "examples": {
+        "彼は何が起こるのかと心配だった。": {
+          "mn": "Тэр юу болох бол гэж санаа зовж байлаа.",
+          "en": "He was afraid about what was going to happen."
+        }
+      }
+    },
+    "125a8eb816": {
+      "expected": {
+        "w": "幼い",
+        "r": "おさない",
+        "en": [
+          "very young",
+          "childish"
+        ]
+      },
+      "examples": {
+        "彼の考えはとても幼い。": {
+          "mn": "Түүний бодол маш хүүхдэрхүү.",
+          "en": "His way of thinking is very childish."
+        },
+        "私は、その幼い少女の手を取った。": {
+          "mn": "Би бяцхан охины гараас атгав.",
+          "en": "I took the little girl by the hand."
+        }
+      }
+    },
+    "e5d795cde2": {
+      "expected": {
+        "w": "収める",
+        "r": "おさめる",
+        "en": [
+          "to obtain",
+          "to reap",
+          "to pay"
+        ]
+      },
+      "examples": {
+        "そのアメリカ映画は大成功を収めた。": {
+          "mn": "Тэр Америк кино асар их амжилт олсон.",
+          "en": "That American movie was a great success."
+        },
+        "彼はその美しい風景をカメラに収めた。": {
+          "mn": "Тэр үзэсгэлэнт байгалийг камераар зураг болгон буулгасан.",
+          "en": "He took a picture of the beautiful landscape."
+        }
+      }
+    },
+    "1d8d5ad8d9": {
+      "expected": {
+        "w": "おしゃべり",
+        "r": "おしゃべり",
+        "en": [
+          "chattering",
+          "talk",
+          "idle talk"
+        ]
+      },
+      "examples": {
+        "彼らは天気についておしゃべりした。": {
+          "mn": "Тэд цаг агаарын талаар ярилцсан.",
+          "en": "They chatted about the weather."
+        },
+        "彼女は要するにおしゃべりなんだ。": {
+          "mn": "Тэр ер нь их чалчаа хүн.",
+          "en": "She is, in brief, a chatterbox."
+        }
+      }
+    },
+    "bd7e02e772": {
+      "expected": {
+        "w": "汚染",
+        "r": "おせん",
+        "en": [
+          "pollution",
+          "contamination"
+        ]
+      },
+      "examples": {
+        "汚染が地球を傷つけている。": {
+          "mn": "Бохирдол дэлхийд хор хөнөөл учруулж байна.",
+          "en": "Pollution is damaging our earth."
+        },
+        "大気の上空でさえ汚染されている。": {
+          "mn": "Агаар мандлын дээд давхарга хүртэл бохирдсон байна.",
+          "en": "Even the upper atmosphere is polluted."
+        }
+      }
+    },
+    "25a3345e54": {
+      "expected": {
+        "w": "おそらく",
+        "r": "おそらく",
+        "en": [
+          "perhaps"
+        ]
+      },
+      "examples": {
+        "首相はおそらく辞任するであろう。": {
+          "mn": "Ерөнхий сайд огцрох магадлалтай.",
+          "en": "The premier is likely to resign."
+        },
+        "夕刻にはおそらく雨になるだろう。": {
+          "mn": "Орой бороо орох бололтой.",
+          "en": "We may well have rain this evening."
+        }
+      }
+    },
+    "7a8059af14": {
+      "expected": {
+        "w": "恐れる",
+        "r": "おそれる",
+        "en": [
+          "to fear",
+          "to be afraid of"
+        ]
+      },
+      "examples": {
+        "大人はしばしば変化を恐れる。": {
+          "mn": "Насанд хүрэгчид өөрчлөлтөөс ихэвчлэн эмээдэг.",
+          "en": "Older people often fear change."
+        },
+        "彼らは立ち聞きされるのを恐れた。": {
+          "mn": "Тэдний яриаг хүн сонсчих вий гэж айж байлаа.",
+          "en": "They feared being overheard."
+        }
+      }
+    },
+    "1a801cd8e5": {
+      "expected": {
+        "w": "恐ろしい",
+        "r": "おそろしい",
+        "en": [
+          "terrible",
+          "dreadful"
+        ]
+      },
+      "examples": {
+        "その嵐の天候は恐ろしかった。": {
+          "mn": "Шуургатай цаг агаар аймшигтай байлаа.",
+          "en": "The stormy weather was dreadful."
+        }
+      }
+    },
+    "c2cddd519e": {
+      "expected": {
+        "w": "お互い",
+        "r": "おたがい",
+        "en": [
+          "mutual",
+          "reciprocal",
+          "each other"
+        ]
+      },
+      "examples": {
+        "彼らはお互い宿題を手伝いあった。": {
+          "mn": "Тэд гэрийн даалгавраа хийхэд бие биедээ тусалсан.",
+          "en": "They helped one another with their homework."
+        }
+      }
+    },
+    "93e1217f4a": {
+      "expected": {
+        "w": "穏やか",
+        "r": "おだやか",
+        "en": [
+          "calm",
+          "gentle",
+          "quiet"
+        ]
+      },
+      "examples": {
+        "海は穏やかに、そしてなめらかに見える。": {
+          "mn": "Далай тайван, толигор харагдана.",
+          "en": "The sea looks calm and smooth."
+        }
+      }
+    },
+    "a8a06b3e15": {
+      "expected": {
+        "w": "男の人",
+        "r": "おとこのひと",
+        "en": [
+          "man"
+        ]
+      },
+      "examples": {
+        "若い男の人がドアの前で歌っています。": {
+          "mn": "Залуу эр хаалганы өмнө дуулж байна.",
+          "en": "A young man is singing in front of the door."
+        },
+        "写真のこの男の人を知っていますか。": {
+          "mn": "Зураг дээрх энэ хүнийг таних уу?",
+          "en": "Do you know this man in the picture?"
+        }
+      }
+    },
+    "dbe7053c89": {
+      "expected": {
+        "w": "劣る",
+        "r": "おとる",
+        "en": [
+          "to fall behind",
+          "to be inferior to"
+        ]
+      },
+      "examples": {
+        "彼女は、彼より、数学において劣っている。": {
+          "mn": "Математикийн хичээлээр тэр түүнээс тааруухан.",
+          "en": "She is inferior to him in math."
+        },
+        "私は数学では彼より劣っている。": {
+          "mn": "Би математикийн хичээлээр түүнээс тааруухан.",
+          "en": "I am inferior to him in mathematics."
+        }
+      }
+    },
+    "29010ee3b0": {
+      "expected": {
+        "w": "お昼",
+        "r": "おひる",
+        "en": [
+          "lunch",
+          "noon"
+        ]
+      },
+      "examples": {
+        "お昼をおごってくれたのを覚えてますか。": {
+          "mn": "Чи надад өдрийн хоол авч өгснөө санаж байна уу?",
+          "en": "Do you remember buying me lunch?"
+        },
+        "お昼までには戻ってきなさい。": {
+          "mn": "Үдээс өмнө буцаж ирээрэй.",
+          "en": "You are supposed to be back by noon."
+        }
+      }
+    },
+    "f72e4ff411": {
+      "expected": {
+        "w": "オフィス",
+        "r": "オフィス",
+        "en": [
+          "office"
+        ]
+      },
+      "examples": {
+        "いつでも私のオフィスを訪ねなさい。": {
+          "mn": "Миний ажлын өрөөнд хүссэн үедээ ирээрэй.",
+          "en": "Call at my office at any time."
+        },
+        "オフィスに時間ぴったりについた。": {
+          "mn": "Бид оффист яг цагтаа хүрч ирсэн.",
+          "en": "We arrived at the office on time."
+        }
+      }
+    },
+    "b5422223ea": {
+      "expected": {
+        "w": "溺れる",
+        "r": "おぼれる",
+        "en": [
+          "to be drowned",
+          "to indulge in"
+        ]
+      },
+      "examples": {
+        "彼女は危うく溺れるところだった。": {
+          "mn": "Тэр эмэгтэй живэх шахсан.",
+          "en": "She came near to drowning."
+        },
+        "その少年は溺れ死ぬところだった。": {
+          "mn": "Тэр хүү живж үхэх шахсан.",
+          "en": "The boy was all but drowned."
+        }
+      }
+    },
+    "0ba966a4cb": {
+      "expected": {
+        "w": "おめでとう",
+        "r": "おめでとう",
+        "en": [
+          "Congratulations!",
+          "an auspicious occasion!"
+        ]
+      },
+      "examples": {
+        "クリスマスおめでとうございます。": {
+          "mn": "Зул сарын баярын мэнд хүргэе.",
+          "en": "I wish you a Merry Christmas."
+        },
+        "あけましておめでとうございます。": {
+          "mn": "Шинэ жилийн мэнд хүргэе.",
+          "en": "Happy New Year!"
+        }
+      }
+    },
+    "34dcc65202": {
+      "expected": {
+        "w": "お目に掛かる",
+        "r": "おめにかかる",
+        "en": [
+          "to meet (someone of higher status)"
+        ]
+      },
+      "examples": {
+        "家内もお目にかかることを楽しみにしておりますから。": {
+          "mn": "Миний эхнэр ч тантай уулзахдаа баяртай байх болно.",
+          "en": "My wife will be glad to see you, too."
+        },
+        "近いうちにお目に掛かれることでしょう。": {
+          "mn": "Удахгүй тантай уулзаж чадах байх.",
+          "en": "I'll be able to see you one of these days."
+        }
+      }
+    },
+    "77a024455d": {
+      "expected": {
+        "w": "思い出",
+        "r": "おもいで",
+        "en": [
+          "memories",
+          "recollections",
+          "reminiscence"
+        ]
+      },
+      "examples": {
+        "この旅行はいい思い出になるでしょう。": {
+          "mn": "Энэ аялал сайхан дурсамж үлдээнэ.",
+          "en": "This trip will become a pleasant memory."
+        },
+        "彼はもはや思い出の人となってしまった。": {
+          "mn": "Тэр аль хэдийн дурсамж болон үлджээ.",
+          "en": "He has become a memory."
+        }
+      }
+    },
+    "43b76d54d8": {
+      "expected": {
+        "w": "主に",
+        "r": "おもに",
+        "en": [
+          "mainly",
+          "primarily"
+        ]
+      },
+      "examples": {
+        "日本人は主に米を常食とする。": {
+          "mn": "Япончууд голчлон будаагаар хооллодог.",
+          "en": "The Japanese live mainly on rice."
+        }
+      }
+    },
+    "7942f6b1d6": {
+      "expected": {
+        "w": "思わず",
+        "r": "おもわず",
+        "en": [
+          "unintentional",
+          "spontaneous"
+        ]
+      },
+      "examples": {
+        "彼は思わず笑った。": {
+          "mn": "Тэр өөрийн эрхгүй инээв.",
+          "en": "He laughed in spite of himself."
+        },
+        "彼には思わず説得されてしまうよ。": {
+          "mn": "Тэр чамайг өөрийн эрхгүй ятгаж дөнгөдөг.",
+          "en": "He persuades you in spite of yourself."
+        }
+      }
+    },
+    "009c03bfe9": {
+      "expected": {
+        "w": "泳ぎ",
+        "r": "およぎ",
+        "en": [
+          "swimming"
+        ]
+      },
+      "examples": {
+        "このごろは子供は学校で泳ぎを習う。": {
+          "mn": "Өнөө үед хүүхдүүд сургууль дээрээ сэлж сурдаг.",
+          "en": "Children learn to swim in school today."
+        },
+        "彼は泳ぎをこわがっている。": {
+          "mn": "Тэр сэлэхээс айдаг.",
+          "en": "He is afraid of swimming."
+        }
+      }
+    },
+    "ed0978af53": {
+      "expected": {
+        "w": "およそ",
+        "r": "およそ",
+        "en": [
+          "about",
+          "roughly",
+          "as a rule"
+        ]
+      },
+      "examples": {
+        "私はおよそ３週間ここにいる。": {
+          "mn": "Би энд ойролцоогоор гурван долоо хоног байна.",
+          "en": "I have been here for about three weeks."
+        }
+      }
+    },
+    "0b4ca53eb6": {
+      "expected": {
+        "w": "及ぼす",
+        "r": "およぼす",
+        "en": [
+          "to exert",
+          "to cause",
+          "to exercise"
+        ]
+      },
+      "examples": {
+        "長雨は植物に害をおよぼす。": {
+          "mn": "Удаан үргэлжилсэн бороо ургамалд хор учруулдаг.",
+          "en": "A long spell of rainy weather is harmful to plants."
+        }
+      }
+    },
+    "23538b01de": {
+      "expected": {
+        "w": "降ろす",
+        "r": "おろす",
+        "en": [
+          "to take down",
+          "to launch",
+          "to drop"
+        ]
+      },
+      "examples": {
+        "このあたりで降ろしてください。": {
+          "mn": "Энэ хавьд буулгаж өгнө үү.",
+          "en": "Please let me off here."
+        }
+      }
+    },
+    "0ce645af89": {
+      "expected": {
+        "w": "恩",
+        "r": "おん",
+        "en": [
+          "favour",
+          "obligation",
+          "debt of gratitude"
+        ]
+      },
+      "examples": {
+        "命がある限りあなたのご恩は忘れません。": {
+          "mn": "Амьд явах хугацаандаа таны ачийг хэзээ ч мартахгүй.",
+          "en": "I shall never forget your kindness."
+        }
+      }
+    },
+    "26e15c1ade": {
+      "expected": {
+        "w": "音",
+        "r": "おん",
+        "en": [
+          "sound",
+          "note"
+        ]
+      },
+      "examples": {
+        "音を下げてくれないか。": {
+          "mn": "Дуу чимээгээ багасгаж болох уу?",
+          "en": "Can you keep the noise down?"
+        }
+      }
+    },
+    "d171dfcac5": {
+      "expected": {
+        "w": "温暖",
+        "r": "おんだん",
+        "en": [
+          "warmth"
+        ]
+      },
+      "examples": {
+        "島の天候はとても温暖です。": {
+          "mn": "Арлын уур амьсгал маш зөөлөн, дулаан.",
+          "en": "The island has a mild climate."
+        },
+        "当地の気候は東京より温暖です。": {
+          "mn": "Эндхийн уур амьсгал Токиогийнхоос дулаан.",
+          "en": "The climate here is milder than that of Tokyo."
+        }
+      }
+    },
+    "3767dad3d1": {
+      "expected": {
+        "w": "温度",
+        "r": "おんど",
+        "en": [
+          "temperature"
+        ]
+      },
+      "examples": {
+        "物質は温度によって形を変える。": {
+          "mn": "Бодис температурын нөлөөгөөр хэлбэрээ өөрчилдөг.",
+          "en": "Matter changes its form according to temperature."
+        },
+        "朝から温度が下がってきた。": {
+          "mn": "Өглөөнөөс хойш температур буурч байна.",
+          "en": "The temperature has fallen since morning."
+        }
+      }
+    },
+    "1ad5c766ea": {
+      "expected": {
+        "w": "可",
+        "r": "か",
+        "en": [
+          "passable"
+        ]
+      },
+      "examples": {
+        "この試験は辞書持ち込み可です。": {
+          "mn": "Энэ шалгалтад толь бичиг ашиглахыг зөвшөөрдөг.",
+          "en": "You can use a dictionary for this exam."
+        }
+      }
+    },
+    "dd3e8e77f0": {
+      "expected": {
+        "w": "課",
+        "r": "か",
+        "en": [
+          "counter for chapters (of a book)"
+        ]
+      },
+      "examples": {
+        "１０課から始めましょう。": {
+          "mn": "Аравдугаар хичээлээс эхэлье.",
+          "en": "Let's start with Lesson Ten."
+        },
+        "私は１時間ではその課を全部は理解できない。": {
+          "mn": "Би нэг цагийн дотор тэр хичээлийг бүхэлд нь ойлгож чадахгүй.",
+          "en": "I can't absorb all of the lesson in an hour."
+        }
+      }
+    },
+    "53e1ba680a": {
+      "expected": {
+        "w": "会",
+        "r": "かい",
+        "en": [
+          "meeting",
+          "assembly",
+          "party"
+        ]
+      },
+      "examples": {
+        "会に先立って彼らは夕食をとった。": {
+          "mn": "Уулзалтын өмнө тэд оройн хоол идсэн.",
+          "en": "Prior to the meeting, they had dinner."
+        }
+      }
+    },
+    "d630014a3f": {
+      "expected": {
+        "w": "回",
+        "r": "かい",
+        "en": [
+          "counter for occurrences"
+        ]
+      },
+      "examples": {
+        "彼女は毎週１回映画を見に行く。": {
+          "mn": "Тэр долоо хоногт нэг удаа кино үзэхээр явдаг.",
+          "en": "She goes to the movies once a week."
+        },
+        "彼は月に２～３回ゴルフをする。": {
+          "mn": "Тэр сард хоёр, гурван удаа гольф тоглодог.",
+          "en": "He plays golf two or three times a month."
+        }
+      }
+    },
+    "43db81a024": {
+      "expected": {
+        "w": "害",
+        "r": "がい",
+        "en": [
+          "injury",
+          "harm",
+          "evil influence"
+        ]
+      },
+      "examples": {
+        "ワインは本来害にならない。": {
+          "mn": "Дарс өөрөө хор хөнөөлтэй биш.",
+          "en": "Wine is not harmful in itself."
+        },
+        "害になるような本は読んではいけない。": {
+          "mn": "Хор хөнөөл учруулах ном уншиж болохгүй.",
+          "en": "You must not read such books as will do you harm."
+        }
+      }
+    },
+    "b4863250e1": {
+      "expected": {
+        "w": "会員",
+        "r": "かいいん",
+        "en": [
+          "member",
+          "the membership"
+        ]
+      },
+      "examples": {
+        "クラブの会員は会議室に集まった。": {
+          "mn": "Клубын гишүүд хурлын өрөөнд цугларсан.",
+          "en": "The club members assembled in the meeting room."
+        },
+        "このクラブの会員は５０名です。": {
+          "mn": "Энэ клуб 50 гишүүнтэй.",
+          "en": "There are fifty members in this club."
+        }
+      }
+    },
+    "7f3020dd7b": {
+      "expected": {
+        "w": "絵画",
+        "r": "かいが",
+        "en": [
+          "picture"
+        ]
+      },
+      "examples": {
+        "その絵画を見たらおもしろかった。": {
+          "mn": "Тэр зургийг харахад сонирхолтой санагдсан.",
+          "en": "I found the picture interesting."
+        },
+        "たくさんの絵画がその店にかかっている。": {
+          "mn": "Тэр дэлгүүрт олон зураг өлгөөтэй байна.",
+          "en": "Many paintings hang in the shop."
+        }
+      }
+    },
+    "5d54acd27e": {
+      "expected": {
+        "w": "海外",
+        "r": "かいがい",
+        "en": [
+          "foreign",
+          "abroad",
+          "overseas"
+        ]
+      },
+      "examples": {
+        "君はどれくらいよく海外に行きますか。": {
+          "mn": "Та гадаад руу хэр ойр ойрхон явдаг вэ?",
+          "en": "How often do you go abroad?"
+        },
+        "彼は海外で勉強しようと決心した。": {
+          "mn": "Тэр гадаадад суралцахаар шийдсэн.",
+          "en": "He made up his mind to study abroad."
+        }
+      }
+    }
+  }
+}
