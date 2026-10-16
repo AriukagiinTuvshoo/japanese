@@ -211,7 +211,7 @@ if (search) {
 
   const indexedGrammar = Array.isArray(search.g) ? search.g : [];
   const missingGrammarIndex = indexedGrammar.filter((row) => !Array.isArray(row) || !grammarIds.has(row[3])).length;
-  if (missingGrammarIndex) err(`search.g: бодит дүрэмтэй холбогдоогүй ID ${missingGrammarIndex}');
+  if (missingGrammarIndex) err(`search.g: бодит дүрэмтэй холбогдоогүй ID ${missingGrammarIndex}`);
 }
 
 // Metadata should count only genuinely human-reviewed vocabulary, not drafts.
