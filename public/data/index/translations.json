@@ -1848,5 +1848,15 @@
     "sourceSnapshot": "e8d64b60529aa96e54e082e902285a49831a96c1",
     "license": "CC-BY-SA-4.0",
     "reviewStatus": "unreviewed"
+  },
+  {
+    "id": "mn-n4-example-translation-batch-2026-10-16-2",
+    "createdAt": "2026-10-16",
+    "author": "Arena coding assistant",
+    "method": "AI-assisted Mongolian example translations drafted against retained Japanese and English pairs. Japanese and English source fields are preserved. Human review of naturalness and semantic details is still required before release.",
+    "source": "https://github.com/evanclan/OpenJLPT (retained Japanese/English example sentences; Mongolian translations added in this repository)",
+    "sourceSnapshot": "3cdb8d718acdbcd7ce54802aad4174a32441ecc3",
+    "license": "CC-BY-SA-4.0",
+    "reviewStatus": "unreviewed"
   }
 ]
