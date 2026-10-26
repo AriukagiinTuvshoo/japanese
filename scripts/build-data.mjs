@@ -260,7 +260,13 @@ function buildKanji({ openjlpt, kanjiData }, content, audit, vocabByLevel) {
     }
   }
 
-  // Сонголт: Jōyō (2136) ∪ JLPT ∪ нийтлэг хэрэглээний ханз → 2,500+
+  // үгийн санд бичигдсэн бүх ханз (холбоос тасрахгүйн тулд заавал оруулна)
+  const usedByVocab = new Set();
+  for (const lv of LEVELS) {
+    for (const v of vocabByLevel[lv]) for (const ch of v.kd ?? []) usedByVocab.add(ch);
+  }
+
+  // Сонголт: Jōyō (2136) ∪ JLPT ∪ нийтлэг хэрэглээний ханз ∪ үгд бичигдсэн ханз
   const selected = new Map();
   for (const [ch, info] of Object.entries(kanjiData)) {
     const jl = jlptOf.get(ch);
@@ -268,7 +274,7 @@ function buildKanji({ openjlpt, kanjiData }, content, audit, vocabByLevel) {
     const isJouyou = grade !== null && grade <= 8;
     const isCommon = (info.freq ?? 99999) <= 2600;
     const isWk = !!info.wk_level;
-    if (!jl && !isJouyou && !isCommon && !isWk) continue;
+    if (!jl && !isJouyou && !isCommon && !isWk && !usedByVocab.has(ch)) continue;
 
     let lv = jl?.lv ?? null;
     if (!lv) {

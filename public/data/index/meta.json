@@ -10,9 +10,9 @@
   ],
   "counts": {
     "vocab": 10461,
-    "kanji": 2686,
+    "kanji": 2794,
     "grammar": 526,
-    "strokes": 2686,
+    "strokes": 2794,
     "vocabMnCurated": 0,
     "byLevel": {
       "vocab": {
@@ -27,7 +27,7 @@
         "N4": 169,
         "N3": 387,
         "N2": 400,
-        "N1": 1646
+        "N1": 1754
       },
       "grammar": {
         "N5": 81,
@@ -45,13 +45,21 @@
       }
     },
     "vocabDraft": 7380,
-    "kanjiDraft": 1040
+    "kanjiDraft": 1040,
+    "vocabAuto": 3081,
+    "kanjiAuto": 1754,
+    "grammarAuto": 445,
+    "vocabExampleMn": 13718,
+    "vocabExampleTotal": 13718,
+    "grammarExampleMn": 1526,
+    "grammarExampleTotal": 1526,
+    "grammarCurated": 81
   },
   "content": {
     "listeningLessons": 0,
     "readingPassages": 0,
     "kanjiMnemonics": 0,
-    "grammarExplained": 0,
+    "grammarExplained": 526,
     "glossaryTerms": 0
   },
   "sources": [],

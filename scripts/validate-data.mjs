@@ -147,9 +147,9 @@ for (const lv of LEVELS) {
 }
 const kanjiSet = new Set(allKanji.map((e) => e.k));
 
-// Cross-reference audit: a vocabulary item's kanji links should point to
-// kanji entries we actually ship. Extended words may contain rare/out-of-scope
-// characters, so missing links are warnings rather than build-blocking errors.
+// Cross-reference audit: a vocabulary item's kanji links must point to kanji
+// entries we actually ship. Үг бичигдсэн ханз заавал байх ёстой тул энэ нь
+// анхааруулга биш, бүтээгдэгдэх боломжгүй алдаа (Phase 1, алхам 1).
 const missingVocabKanji = [];
 for (const v of allVocab) {
   if (!Array.isArray(v.kd)) continue;
@@ -158,7 +158,7 @@ for (const v of allVocab) {
   }
 }
 if (missingVocabKanji.length) {
-  warn(`Үгийн сангийн ханзны холбоос тасарсан: ${missingVocabKanji.length} (жишээ: ${missingVocabKanji.slice(0, 8).join(", ")})`);
+  err(`Үгийн сангийн ханзны холбоос тасарсан: ${missingVocabKanji.length} (жишээ: ${missingVocabKanji.slice(0, 8).join(", ")}) — scripts/fix-broken-kanji-links.mjs ажиллуулна уу`);
 }
 const missingStroke = [...kanjiSet].filter((k) => !strokeKeys.has(k));
 if (missingStroke.length) warn(`stroke өгөгдөлгүй kanji: ${missingStroke.length} ширхэг (жишээ: ${missingStroke.slice(0, 5).join(" ")})`);
