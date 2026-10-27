@@ -55,6 +55,18 @@ export default function About() {
                 </li>
               ))}
             </ul>
+
+            {meta.counts.mn && (
+              <div className="mt-5 rounded-xl border border-kin-200 bg-kin-50/70 p-3.5">
+                <p className="text-[12px] font-extrabold uppercase tracking-wide text-sumi-600">{t.statusLegend}</p>
+                <ul className="mt-2 space-y-1 text-[12.5px] text-sumi-700">
+                  <li>{t.statusCurated}: <b className="font-mono tabnum">{(meta.counts.mn.vocab.curated ?? 0) + (meta.counts.mn.kanji.curated ?? 0)}</b></li>
+                  <li>{t.statusDraft}: <b className="font-mono tabnum">{(meta.counts.mn.vocab.draft ?? 0).toLocaleString()}</b> {t.wordSg.toLowerCase()} · <b className="font-mono tabnum">{(meta.counts.mn.kanji.draft ?? 0).toLocaleString()}</b> {t.kanji.toLowerCase()}</li>
+                  <li>{t.statusAuto}: <b className="font-mono tabnum">{(meta.counts.mn.vocab.auto ?? 0).toLocaleString()}</b> {t.wordSg.toLowerCase()} · <b className="font-mono tabnum">{(meta.counts.mn.kanji.auto ?? 0).toLocaleString()}</b> {t.kanji.toLowerCase()}</li>
+                </ul>
+                <p className="mt-2 text-[12px] leading-relaxed text-sumi-600">{t.aboutMachineNote}</p>
+              </div>
+            )}
           </>
         )}
       </Card>

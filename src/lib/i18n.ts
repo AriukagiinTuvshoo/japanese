@@ -496,6 +496,14 @@ export const ui = {
     importOk: "Ахиц импортлогдлоо.",
     updateReady: "Шинэ хувилбар бэлэн боллоо.",
     updateNow: "Шинэчлэх",
+    statusLegend: "Орчуулгын чанарын төлөв",
+    statusAuto: "Авто санал",
+    statusDraft: "Драфт (хянагдаагүй)",
+    statusCurated: "Хянасан (хүн баталгаажуулсан)",
+    statusTotal: "Нийт",
+    aboutMachineNote:
+      "Монгол орчуулгыг англи утгаас машин тусламжтайгаар гаргасан бөгөөд хүн хянаагүй. " +
+      "Тиймээс чанарын төлөв нь auto/draft байна — алдаа гарвал тэмдэглэж, хяналтад оруулна.",
   },
   en: {
     language: "Language", home: "Dashboard", plan: "My plan", progress: "Progress & analytics",
@@ -975,6 +983,14 @@ export const ui = {
     importOk: "Progress imported.",
     updateReady: "A new version is ready.",
     updateNow: "Update",
+    statusLegend: "Translation quality status",
+    statusAuto: "Auto suggestion",
+    statusDraft: "Draft (unreviewed)",
+    statusCurated: "Reviewed (human-approved)",
+    statusTotal: "Total",
+    aboutMachineNote:
+      "Mongolian translations were produced from the English glosses with machine assistance and " +
+      "have not been reviewed by a human. Every item is therefore auto/draft — never curated.",
   },
 } as const;
 

@@ -17,6 +17,7 @@
 import { mkdir, readFile, readdir, rm, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { computeMeta } from "./meta.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = path.join(ROOT, ".cache", "sources");
@@ -445,35 +446,22 @@ async function main() {
   bytes += await write("index/search.json", idx);
 
   // ---------- нэгдсэн мета ----------
-  const meta = {
-    version: "3.0.0",
-    builtAt: new Date().toISOString(),
-    levels: LEVELS,
-    counts: {
-      vocab: LEVELS.reduce((a, l) => a + counts.vocab[l], 0),
-      kanji: LEVELS.reduce((a, l) => a + counts.kanji[l], 0),
-      grammar: LEVELS.reduce((a, l) => a + counts.grammar[l], 0),
-      strokes: strokes.found,
-      vocabMnCurated: LEVELS.reduce((a, l) => a + counts.vocabMn[l], 0),
-      byLevel: counts,
-    },
+  // scripts/meta.mjs — build-meta.mjs болон validate-data.mjs-тэй ижил тооцоо.
+  const flat = (byLv) => LEVELS.flatMap((l) => byLv[l] ?? []);
+  const meta = computeMeta({
+    vocab: flat(vocab),
+    kanji: flat(kanji),
+    grammar: flat(grammar),
+    strokesFound: strokes.found,
     content: {
-      listeningLessons: content.listening.length,
-      readingPassages: content.reading.length,
+      listening: content.listening,
+      reading: content.reading,
       kanjiMnemonics: Object.values(content.kanji).filter((k) => k.n).length,
       grammarExplained: Object.keys(content.grammar).length,
       glossaryTerms: Object.keys(content.terms).length,
+      openjlpt: sources.openjlptMeta,
     },
-    sources: Object.values(sources.lock).map((s) => ({
-      id: s.id,
-      name: s.name,
-      url: s.homepage,
-      license: s.license,
-      note: s.note,
-      retrievedAt: s.retrievedAt,
-    })),
-    openjlpt: sources.openjlptMeta,
-  };
+  });
   bytes += await write("index/meta.json", meta, { pretty: true });
 
   await writeFile(

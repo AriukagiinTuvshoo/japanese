@@ -219,11 +219,23 @@ const curatedVocab = allVocab.filter((v) => v.mq === "curated");
 if (meta && meta.counts.vocabMnCurated !== curatedVocab.length) {
   err(`vocabMnCurated: meta ${meta.counts.vocabMnCurated} ≠ curated ${curatedVocab.length}`);
 }
+// byLevel.vocabMn = Монгол утгатай (хоосон бус mn) үгийн тоо, чанарын төлвөөс үл хамаарна.
+const hasMn = (v) => Array.isArray(v.mn) && v.mn.some((m) => typeof m === "string" && m.trim());
 for (const lv of LEVELS) {
-  const actual = curatedVocab.filter((v) => v.lvl === lv).length;
+  const actual = allVocab.filter((v) => v.lvl === lv && hasMn(v)).length;
   if (meta?.counts?.byLevel?.vocabMn && meta.counts.byLevel.vocabMn[lv] !== actual) {
-    err(`vocabMn ${lv}: meta ${meta.counts.byLevel.vocabMn[lv]} ≠ curated ${actual}`);
+    err(`vocabMn ${lv}: meta ${meta.counts.byLevel.vocabMn[lv]} ≠ mn-тэй ${actual}`);
   }
+}
+
+// Чанарын төлвийн задаргаа нийттэйгээ тохирох ёстой (meta.json худал мэдээлэхгүй).
+if (meta?.counts?.mn?.vocab) {
+  const s = meta.counts.mn.vocab;
+  const sum = (s.curated ?? 0) + (s.draft ?? 0) + (s.auto ?? 0) + (s.derived ?? 0) + (s.none ?? 0);
+  if (sum !== allVocab.length) err(`meta.mn.vocab нийлбэр ${sum} ≠ vocab ${allVocab.length}`);
+}
+if (meta && (!Array.isArray(meta.sources) || meta.sources.length === 0)) {
+  err("meta.sources хоосон — лицензийн attribution (content/sources.json) заавал байх ёстой");
 }
 
 // --- UI i18n: EN block must contain zero Cyrillic ---------------------------------
