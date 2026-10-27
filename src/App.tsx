@@ -8,6 +8,7 @@ import { Spinner } from "./components/ui";
 import { ui } from "./lib/i18n";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Notices from "./components/Notices";
+import GuestMergeDialog from "./components/GuestMergeDialog";
 
 const Home = lazy(() => import("./pages/Home"));
 const Vocabulary = lazy(() => import("./pages/Vocabulary"));
@@ -103,6 +104,7 @@ export default function App() {
     <StoreProvider>
       <Router />
       <Notices />
+      <GuestMergeDialog />
     </StoreProvider>
   );
 }

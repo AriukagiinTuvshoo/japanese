@@ -11,6 +11,7 @@ import {
 } from "react";
 import { api, apiBase, backoffMs, ApiError, setToken, type Account } from "./api";
 import { mergeDocs } from "./merge";
+import { mergeGuestIntoAccount, readGuestMarker, shouldOfferGuestMerge, writeGuestMarker } from "./guest";
 import { ACHIEVEMENTS, XP, xpLevel, type AchievementInput } from "./gamification";
 import { schedule, type Card, type Grade } from "./srs";
 import { dayOffset, todayKey } from "./text";
@@ -174,6 +175,8 @@ interface Ctx {
   inputs: AchievementInput;
   unlocked: { id: string; at: number }[];
   nextAchievement: { id: string; title: string; desc: string; icon: string; pct: number } | null;
+  /** Зочин ахицыг аккаунт руу нэгтгэх санал (B2) — байвал dialog харуулна. */
+  pendingGuest: Doc | null;
   actions: Actions;
 }
 
@@ -210,6 +213,8 @@ export interface Actions {
   guestMode: () => void;
   redeemCode: (code: string) => Promise<void>;
   syncNow: () => Promise<void>;
+  /** B2: зочин ахицаа нэгтгэх (true, default) эсвэл тусад нь үлдээх (false). */
+  resolveGuestMerge: (merge: boolean) => void;
 
   exportJSON: () => string;
   importJSON: (json: string) => boolean;
@@ -226,6 +231,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const [serverAvailable, setServerAvailable] = useState(false);
   const [syncing, setSyncing] = useState<"idle" | "syncing" | "error" | "ok">("idle");
   const [lastSync, setLastSync] = useState<number | null>(null);
+  /** B2: зочиноос аккаунт руу шилжүүлэхэд хүлээгдэж буй зочин баримт. */
+  const [pendingGuest, setPendingGuest] = useState<Doc | null>(null);
 
   const rev = useRef(0);
   const lastAct = useRef(Date.now());
@@ -460,7 +467,15 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
   /* ── аккаунт солих үед документыг солих ── */
   const switchUser = useCallback((nextUid: string, nextAccount: Account | null) => {
+    // Гарахдаа одоогийн баримтаа хадгална — зочин/аккаунт аль аль нь хэвээр үлдэнэ.
     writeDoc(uid, doc);
+    // B2: зочиноос шинэ аккаунт руу шилжүүлэхэд ахиц хэзээ ч алдагдахгүй —
+    // нэгтгэх саналыг хэрэглэгч шийднэ (default = нэгтгэх), доор дуудагдана.
+    if (uid === GUEST && nextUid !== GUEST && shouldOfferGuestMerge(doc, readGuestMarker(nextUid))) {
+      setPendingGuest(doc);
+    } else {
+      setPendingGuest(null);
+    }
     setUid(nextUid);
     setAccount(nextAccount);
     localStorage.setItem(SESSION_KEY, nextUid);
@@ -645,6 +660,24 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
     syncNow: async () => { await push(true); await pull(); },
 
+    /* B2: зочин ахицыг аккаунт руу нэгтгэх / тусад нь үлдээх */
+    resolveGuestMerge: (merge) => {
+      const guest = pendingGuest;
+      if (!guest) return;
+      const language = doc.profile.language ?? "mn";
+      // Шийдвэрийг тэмдэглэнэ — дараагийн нэвтрэлтэнд дахин асуухгүй.
+      writeGuestMarker(uid, guest.updatedAt);
+      if (merge) {
+        // 1) нэгтгэхээс ӨМНӨ одоогийн аккаунтыг нөөцлө (алдааг буцаах боломж)
+        try { localStorage.setItem(backupKey(uid), JSON.stringify(doc)); } catch { /* зайгүй */ }
+        // 2) mergeDocs-аар нэгтгэнэ (зочны XP хасагдахгүй, давталтгүй — guest.test.ts)
+        setDoc(mergeGuestIntoAccount(guest, doc));
+        dirty.current = true;
+        notify("success", ui[language].guestMerged);
+      }
+      setPendingGuest(null);
+    },
+
     exportJSON: () => JSON.stringify(doc, null, 2),
 
     importJSON: (raw) => {
@@ -673,7 +706,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     },
 
     reset: () => { setDoc(freshDoc(doc.profile.name)); },
-  }), [patch, push, pull, switchUser, doc.profile.name]);
+  }), [patch, push, pull, switchUser, uid, doc, pendingGuest]);
 
   const today = doc.activity[todayKey()] ?? emptyDay();
   const levelInfo = useMemo(() => xpLevel(doc.xp), [doc.xp]);
@@ -694,6 +727,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     today, streak, levelInfo, inputs,
     unlocked: Object.entries(doc.achievements).map(([id, at]) => ({ id, at })).sort((a, b) => b.at - a.at),
     nextAchievement,
+    pendingGuest,
     actions,
   };
 
