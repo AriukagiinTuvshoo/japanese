@@ -34,11 +34,41 @@ let token: string | null = null;
 export const getToken = () => token;
 export const setToken = (t: string | null) => { token = t; };
 
+interface ApiEnv {
+  DEV?: boolean;
+  VITE_API_URL?: string;
+}
+
+/**
+ * API-ийн суурь хаяг, эсвэл `null` — backend огт тохируулаагүй.
+ * · `VITE_API_URL` байвал түүнийг ашиглана (production-д ч).
+ * · dev дээр Vite `/api`-г прокси хийдэг тул "" (same-origin).
+ * · static host (GitHub Pages) дээр backend байхгүй → `null`: хэзээ ч
+ *   дуудалт хийхгүй, тиймээс консолд 500/404 шуугиан гарахгүй.
+ */
+export function apiBase(env: ApiEnv = import.meta.env as unknown as ApiEnv): string | null {
+  const explicit = env.VITE_API_URL?.trim();
+  if (explicit) return explicit.replace(/\/+$/, "");
+  if (env.DEV) return "";
+  return null;
+}
+
+/**
+ * Бүтэлгүйтсэн health шалгалтын дараах хүлээлт: 30с → 60с → 120с … дээд тал 10 мин.
+ * Сервер байхгүй үед 60 секунд тутам давтахгүй.
+ */
+export function backoffMs(failures: number): number {
+  const n = Number.isFinite(failures) ? Math.max(0, Math.min(Math.floor(failures), 6)) : 0;
+  return Math.min(30_000 * 2 ** n, 600_000);
+}
+
 async function req<T>(path: string, init: RequestInit = {}, timeoutMs = 12_000): Promise<T> {
+  const base = apiBase();
+  if (base === null) throw new ApiError(0, "no-backend");
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), timeoutMs);
   try {
-    const res = await fetch(`/api${path}`, {
+    const res = await fetch(`${base}/api${path}`, {
       ...init,
       signal: ctrl.signal,
       headers: {

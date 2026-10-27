@@ -9,7 +9,7 @@
 import {
   createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode,
 } from "react";
-import { api, setToken, type Account } from "./api";
+import { api, apiBase, backoffMs, setToken, type Account } from "./api";
 import { ACHIEVEMENTS, XP, xpLevel, type AchievementInput } from "./gamification";
 import { schedule, type Card, type Grade } from "./srs";
 import { dayOffset, todayKey } from "./text";
@@ -235,20 +235,41 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     if (t) setToken(t);
   }, []);
 
-  /* ── серверийн бэлэн байдал ── */
+  /* ── серверийн бэлэн байдал ──
+   * Backend тохируулаагүй бол (static host) огт дуудалт хийхгүй.
+   * Бүтэлгүйтвэл чимээгүй, exponential backoff-той дахин шалгана. */
   useEffect(() => {
+    if (apiBase() === null) return;
     let alive = true;
+    let timer = 0;
+    let failures = 0;
+
+    const schedule = () => {
+      if (!alive) return;
+      window.clearTimeout(timer);
+      timer = window.setTimeout(check, backoffMs(failures));
+    };
+
     const check = async () => {
+      // offline байхад сүлжээнд хүрэх гэж оролдохгүй.
+      if (typeof navigator !== "undefined" && !navigator.onLine) {
+        if (alive) setServerAvailable(false);
+        schedule();
+        return;
+      }
       const ok = await api.health().then(() => true).catch(() => false);
-      if (alive) setServerAvailable(ok);
+      if (!alive) return;
+      setServerAvailable(ok);
+      failures = ok ? 0 : failures + 1;
       if (ok && localStorage.getItem("nd:token")) {
         const me = await api.me().catch(() => null);
         if (alive && me) setAccount(me.account);
       }
+      schedule();
     };
+
     check();
-    const t = window.setInterval(check, 60_000);
-    return () => { alive = false; window.clearInterval(t); };
+    return () => { alive = false; window.clearTimeout(timer); };
   }, []);
 
   /* ── localStorage-д хадгалах (debounce) ── */
