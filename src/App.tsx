@@ -6,6 +6,8 @@ import { routeArg, routeLevel } from "./lib/routes";
 import { useStore } from "./lib/store";
 import { Spinner } from "./components/ui";
 import { ui } from "./lib/i18n";
+import ErrorBoundary from "./components/ErrorBoundary";
+import Notices from "./components/Notices";
 
 const Home = lazy(() => import("./pages/Home"));
 const Vocabulary = lazy(() => import("./pages/Vocabulary"));
@@ -35,6 +37,8 @@ const Admin = lazy(() => import("./pages/Admin"));
 
 function Router() {
   const route = useRoute();
+  const { doc } = useStore();
+  const language = doc.profile.language ?? "mn";
   // `#/<name>/<arg>` — аргумент нь params[0] (href() ийн гаргадаг хэлбэр).
   const arg = routeArg(route);
   const level = routeLevel(route);
@@ -66,7 +70,14 @@ function Router() {
     }
   })();
 
-  return <Shell><Suspense fallback={<Spinner />}>{page}</Suspense></Shell>;
+  return (
+    <Shell>
+      {/* Нэг хуудасны алдаа бүх аппыг цайруулахгүй; route солиход boundary шинэчлэгдэнэ. */}
+      <ErrorBoundary language={language} resetKey={`${route.name}:${arg ?? ""}`}>
+        <Suspense fallback={<Spinner />}>{page}</Suspense>
+      </ErrorBoundary>
+    </Shell>
+  );
 }
 
 function NotFound({ name }: { name: string }) {
@@ -91,6 +102,7 @@ export default function App() {
   return (
     <StoreProvider>
       <Router />
+      <Notices />
     </StoreProvider>
   );
 }

@@ -13,6 +13,17 @@ import { api, setToken, type Account } from "./api";
 import { ACHIEVEMENTS, XP, xpLevel, type AchievementInput } from "./gamification";
 import { schedule, type Card, type Grade } from "./srs";
 import { dayOffset, todayKey } from "./text";
+import { notify } from "./notice";
+import { ui } from "./i18n";
+import {
+  DEFAULT_PROFILE,
+  backupKey,
+  freshDoc,
+  loadDoc,
+  parseStoredDoc,
+  saveDoc,
+  validateDoc,
+} from "./storage";
 import type { Level } from "./types";
 import type { Language } from "./i18n";
 
@@ -110,76 +121,28 @@ export interface Doc {
   updatedAt: number;
 }
 
-export const DEFAULT_PROFILE: Profile = {
-  name: "",
-  current: "zero",
-  target: "N5",
-  examDate: "",
-  dailyGoal: 30,
-  newPerDay: 12,
-  furigana: true,
-  rate: 0.95,
-  onboarded: false,
-  theme: "light",
-  romaji: false,
-  language: "mn",
-};
+export { DEFAULT_PROFILE } from "./storage";
 
 const emptyDay = (): ActivityDay => ({ xp: 0, min: 0, newCards: 0, reviews: 0, correct: 0, total: 0 });
 
-function freshDoc(name = ""): Doc {
-  return {
-    v: 3,
-    profile: { ...DEFAULT_PROFILE, name },
-    srs: {},
-    writing: {},
-    mnemonics: {},
-    favorites: [],
-    grammarDone: [],
-    readingDone: [],
-    listeningDone: [],
-    kanaBest: 0,
-    exams: [],
-    quizzes: [],
-    mistakes: [],
-    activity: {},
-    xp: 0,
-    achievements: {},
-    createdAt: Date.now(),
-    updatedAt: Date.now(),
-  };
-}
+/* ─────────────── Хадгалалт ───────────────
+ * Бүх шалгалт/шилжүүлэлт/нөөцлөлт нь `storage.ts`-д. Энд зөвхөн
+ * localStorage-тай холбох нимгэн давхарга үлдэнэ. */
 
-/* ─────────────── Хадгалалт ─────────────── */
-
-const keyFor = (uid: string) => `nd:doc:${uid}`;
 const SESSION_KEY = "nd:session";
 const GUEST = "local";
 
-function readDoc(uid: string): Doc | null {
-  try {
-    const raw = localStorage.getItem(keyFor(uid));
-    if (!raw) return null;
-    const parsed = JSON.parse(raw) as Partial<Doc>;
-    const base = freshDoc();
-    return {
-      ...base,
-      ...parsed,
-      profile: { ...base.profile, ...(parsed.profile ?? {}) },
-      srs: parsed.srs ?? {},
-      activity: parsed.activity ?? {},
-    } as Doc;
-  } catch {
-    return null;
-  }
+/** Документыг уншина; эвдэрсэн/хуучин бол мэдэгдэл өгнө. */
+function readDoc(uid: string): Doc {
+  const { doc, status } = loadDoc(uid);
+  if (status === "recovered") notify("error", ui[doc.profile.language ?? "mn"].dataRecovered);
+  else if (status === "migrated") notify("info", ui[doc.profile.language ?? "mn"].dataMigrated);
+  return doc;
 }
 
-function writeDoc(uid: string, doc: Doc) {
-  try {
-    localStorage.setItem(keyFor(uid), JSON.stringify(doc));
-  } catch {
-    /* санах ой дүүрсэн — туршилтын горимд алгасна */
-  }
+/** Хадгална; зай дүүрсэн бол чимээгүй өнгөрөхгүй — toast харуулна. */
+function writeDoc(uid: string, doc: Doc): void {
+  if (!saveDoc(uid, doc)) notify("error", ui[doc.profile.language ?? "mn"].storageFull);
 }
 
 /* ─────────────── Контекст ─────────────── */
@@ -244,7 +207,7 @@ const StoreCtx = createContext<Ctx | null>(null);
 export function StoreProvider({ children }: { children: ReactNode }) {
   const [uid, setUid] = useState<string>(() => localStorage.getItem(SESSION_KEY) ?? GUEST);
   const [account, setAccount] = useState<Account | null>(null);
-  const [doc, setDoc] = useState<Doc>(() => readDoc(localStorage.getItem(SESSION_KEY) ?? GUEST) ?? freshDoc());
+  const [doc, setDoc] = useState<Doc>(() => readDoc(localStorage.getItem(SESSION_KEY) ?? GUEST));
   const [offline, setOffline] = useState(() => !navigator.onLine);
   const [serverAvailable, setServerAvailable] = useState(false);
   const [syncing, setSyncing] = useState<"idle" | "syncing" | "error" | "ok">("idle");
@@ -405,7 +368,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     setAccount(nextAccount);
     localStorage.setItem(SESSION_KEY, nextUid);
     rev.current = 0;
-    setDoc(readDoc(nextUid) ?? freshDoc(nextAccount?.name ?? ""));
+    const loaded = readDoc(nextUid);
+    setDoc(loaded.createdAt === loaded.updatedAt ? { ...loaded, profile: { ...loaded.profile, name: loaded.profile.name || nextAccount?.name || "" } } : loaded);
   }, [uid, doc]);
 
   const patch = useCallback((fn: (d: Doc) => Doc) => setDoc((d) => ({ ...fn(d), updatedAt: Date.now() })), []);
@@ -583,14 +547,28 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     exportJSON: () => JSON.stringify(doc, null, 2),
 
     importJSON: (raw) => {
+      const language = doc.profile.language ?? "mn";
+      // 1) Хатуу шалгалт — санамсаргүй JSON ахицыг дарж бичихгүй.
+      let parsed: unknown;
       try {
-        const parsed = JSON.parse(raw) as Partial<Doc>;
-        if (!parsed || typeof parsed !== "object") return false;
-        setDoc({ ...freshDoc(), ...parsed, profile: { ...DEFAULT_PROFILE, ...(parsed.profile ?? {}) } } as Doc);
-        return true;
+        parsed = JSON.parse(raw);
       } catch {
+        notify("error", ui[language].importFailed);
         return false;
       }
+      if (!validateDoc(parsed).ok) {
+        notify("error", ui[language].importFailed);
+        return false;
+      }
+      // 2) Одоогийн ахицыг нөөцөлж, дараа нь сэргээж бичнэ.
+      try {
+        localStorage.setItem(backupKey(uid), JSON.stringify(doc));
+      } catch {
+        /* нөөцлөх зай байхгүй */
+      }
+      setDoc(parseStoredDoc(raw).doc);
+      notify("success", ui[language].importOk);
+      return true;
     },
 
     reset: () => { setDoc(freshDoc(doc.profile.name)); },
