@@ -12,6 +12,7 @@
     "data:fetch": "node scripts/fetch-sources.mjs",
     "data:build": "node scripts/build-data.mjs",
     "data:validate": "node scripts/validate-data.mjs",
+    "fonts:build": "node scripts/build-fonts.mjs",
     "data:all": "npm run data:fetch && npm run data:build && npm run data:validate",
     "test:routes": "node scripts/test-routes.mjs",
     "test": "vitest run",

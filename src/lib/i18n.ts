@@ -494,6 +494,8 @@ export const ui = {
     dataMigrated: "Хуучин хувилбарын өгөгдлийг шинэчиллээ.",
     importFailed: "Файл ахицын документ биш байна — импорт хийгдсэнгүй.",
     importOk: "Ахиц импортлогдлоо.",
+    updateReady: "Шинэ хувилбар бэлэн боллоо.",
+    updateNow: "Шинэчлэх",
   },
   en: {
     language: "Language", home: "Dashboard", plan: "My plan", progress: "Progress & analytics",
@@ -971,6 +973,8 @@ export const ui = {
     dataMigrated: "Old data was upgraded to the current format.",
     importFailed: "That file is not a progress document — nothing was imported.",
     importOk: "Progress imported.",
+    updateReady: "A new version is ready.",
+    updateNow: "Update",
   },
 } as const;
 

@@ -272,6 +272,27 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     return () => { alive = false; window.clearTimeout(timer); };
   }, []);
 
+  /* ── шинэ service worker бэлэн болсон үед "шинэчлэх" мэдэгдэл ── */
+  useEffect(() => {
+    const onUpdate = () => {
+      const t = ui[doc.profile.language ?? "mn"];
+      notify("info", t.updateReady, {
+        ttlMs: 0,
+        action: {
+          label: t.updateNow,
+          run: () => {
+            navigator.serviceWorker
+              ?.getRegistration()
+              .then((reg) => reg?.waiting?.postMessage({ type: "SKIP_WAITING" }))
+              .catch(() => {});
+          },
+        },
+      });
+    };
+    window.addEventListener("nd:sw-update", onUpdate);
+    return () => window.removeEventListener("nd:sw-update", onUpdate);
+  }, [doc.profile.language]);
+
   /* ── localStorage-д хадгалах (debounce) ── */
   useEffect(() => {
     dirty.current = true;

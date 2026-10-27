@@ -15,7 +15,9 @@ export default function Notices() {
   useEffect(() => {
     const off = subscribeNotices((n) => {
       setItems((prev) => [...prev.slice(-2), n]);
-      window.setTimeout(() => setItems((prev) => prev.filter((x) => x.id !== n.id)), 8000);
+      if (n.ttlMs) {
+        window.setTimeout(() => setItems((prev) => prev.filter((x) => x.id !== n.id)), n.ttlMs);
+      }
     });
     return off;
   }, []);
@@ -24,7 +26,7 @@ export default function Notices() {
 
   return (
     <div
-      className="pointer-events-none fixed inset-x-3 bottom-[calc(4.75rem+env(safe-area-inset-bottom))] z-[70] flex flex-col gap-2 lg:bottom-6 lg:left-auto lg:right-6 lg:w-[380px]"
+      className="pointer-events-none fixed inset-x-3 bottom-[calc(4.75rem+env(safe-area-inset-bottom))] z-[95] flex flex-col gap-2 lg:bottom-6 lg:left-auto lg:right-6 lg:w-[380px]"
       aria-live="polite"
       aria-atomic="false"
     >
@@ -41,6 +43,17 @@ export default function Notices() {
             {n.kind === "error" ? "⚠" : n.kind === "success" ? "✓" : "ℹ"}
           </span>
           <span className="flex-1 leading-snug">{n.text}</span>
+          {n.action && (
+            <button
+              onClick={() => {
+                n.action?.run();
+                setItems((prev) => prev.filter((x) => x.id !== n.id));
+              }}
+              className="shrink-0 rounded-lg border border-current/30 px-2.5 py-1 text-[12px] font-extrabold"
+            >
+              {n.action.label}
+            </button>
+          )}
           <button
             onClick={() => setItems((prev) => prev.filter((x) => x.id !== n.id))}
             className="grid h-6 w-6 shrink-0 place-items-center rounded-md text-current/70 hover:bg-black/5"
