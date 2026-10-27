@@ -12,9 +12,14 @@ import {
 import { api, apiBase, backoffMs, ApiError, setToken, type Account } from "./api";
 import { mergeDocs } from "./merge";
 import { mergeGuestIntoAccount, readGuestMarker, shouldOfferGuestMerge, writeGuestMarker } from "./guest";
+import {
+  ankiCsv, applyImport, clearUndo, loadUndo, parseImport, saveUndo,
+  type ImportMode, type ImportPreview,
+} from "./port";
+import { loadAllKanji, loadAllVocab } from "./data";
 import { ACHIEVEMENTS, XP, xpLevel, type AchievementInput } from "./gamification";
 import { schedule, type Card, type Grade } from "./srs";
-import { dayOffset, todayKey } from "./text";
+import { computeStreak, todayKey } from "./text";
 import { notify } from "./notice";
 import { ui } from "./i18n";
 import {
@@ -22,10 +27,8 @@ import {
   deviceId,
   freshDoc,
   loadDoc,
-  parseStoredDoc,
   saveDoc,
   snapshotDoc,
-  validateDoc,
 } from "./storage";
 import type { Level } from "./types";
 import type { Language } from "./i18n";
@@ -177,6 +180,10 @@ interface Ctx {
   nextAchievement: { id: string; title: string; desc: string; icon: string; pct: number } | null;
   /** Зочин ахицыг аккаунт руу нэгтгэх санал (B2) — байвал dialog харуулна. */
   pendingGuest: Doc | null;
+  /** B3: импортлох гэж буй баримтын preview (байвал modal харуулна). */
+  pendingImport: ImportPreview | null;
+  /** B3: сүүлийн импортыг буцаах боломжтой эсэх. */
+  undoAvailable: boolean;
   actions: Actions;
 }
 
@@ -215,9 +222,18 @@ export interface Actions {
   syncNow: () => Promise<void>;
   /** B2: зочин ахицаа нэгтгэх (true, default) эсвэл тусад нь үлдээх (false). */
   resolveGuestMerge: (merge: boolean) => void;
+  /** B3: импорт — файл шалгаж preview бэлдэнэ (алдаа бол null). */
+  previewImport: (json: string) => ImportPreview | null;
+  /** B3: preview-ийг хэрэгжүүлэх (merge/replace) — импортлахаас ӨМНӨ нөөцөлнө. */
+  commitImport: (mode: ImportMode) => boolean;
+  cancelImport: () => void;
+  /** B3: сүүлийн импортыг буцаах (нэг товшилт). */
+  undoImport: () => boolean;
+  exportAnkiCsv: () => Promise<string>;
 
   exportJSON: () => string;
-  importJSON: (json: string) => boolean;
+  /** Хуучин гар: шалгаж, шууд хэрэгжүүлнэ (шинэ UI preview ашиглана). */
+  importJSON: (json: string, mode?: ImportMode) => boolean;
   reset: () => void;
 }
 
@@ -233,6 +249,11 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const [lastSync, setLastSync] = useState<number | null>(null);
   /** B2: зочиноос аккаунт руу шилжүүлэхэд хүлээгдэж буй зочин баримт. */
   const [pendingGuest, setPendingGuest] = useState<Doc | null>(null);
+  /** B3: импорт preview + undo төлөв. */
+  const [pendingImport, setPendingImport] = useState<{ doc: Doc; preview: ImportPreview } | null>(null);
+  const [undoAvailable, setUndoAvailable] = useState<boolean>(() => {
+    try { return loadUndo(localStorage.getItem(SESSION_KEY) ?? GUEST) !== null; } catch { return false; }
+  });
 
   const rev = useRef(0);
   const lastAct = useRef(Date.now());
@@ -680,33 +701,78 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
     exportJSON: () => JSON.stringify(doc, null, 2),
 
-    importJSON: (raw) => {
+    /* B3: импорт — шалгалт → preview → баталгаа → undo */
+    previewImport: (raw) => {
       const language = doc.profile.language ?? "mn";
-      // 1) Хатуу шалгалт — санамсаргүй JSON ахицыг дарж бичихгүй.
-      let parsed: unknown;
-      try {
-        parsed = JSON.parse(raw);
-      } catch {
-        notify("error", ui[language].importFailed);
+      const r = parseImport(raw);
+      if (!r.ok) {
+        notify("error", r.error === "tooLarge" ? ui[language].importErrLarge
+          : r.error === "badJson" ? ui[language].importErrJson
+          : r.error === "newerVersion" ? ui[language].importErrNewer
+          : ui[language].importErrDoc);
+        return null;
+      }
+      setPendingImport({ doc: r.doc, preview: r.preview });
+      return r.preview;
+    },
+
+    commitImport: (mode) => {
+      const p = pendingImport;
+      if (!p) return false;
+      const language = doc.profile.language ?? "mn";
+      // 1) Импортлахаас ӨМНӨ буцаах нөөц (сүүлийн 1) + эх нөөц.
+      saveUndo(uid, doc);
+      setUndoAvailable(true);
+      try { localStorage.setItem(backupKey(uid), JSON.stringify(doc)); } catch { /* зайгүй */ }
+      // 2) хэрэгжүүлнэ (merge = default, нэгтгэл = хэзээ ч ажил алдахгүй)
+      setDoc(applyImport(doc, p.doc, mode));
+      setPendingImport(null);
+      dirty.current = true;
+      notify("success", ui[language].importConfirmMsg);
+      return true;
+    },
+
+    cancelImport: () => setPendingImport(null),
+
+    undoImport: () => {
+      const prev = loadUndo(uid);
+      const language = doc.profile.language ?? "mn";
+      if (!prev) { notify("info", ui[language].importUndoNone); return false; }
+      setDoc(prev);
+      clearUndo(uid);
+      setUndoAvailable(false);
+      dirty.current = true;
+      notify("success", ui[language].importUndoDone);
+      return true;
+    },
+
+    exportAnkiCsv: async () => {
+      const [vocab, kanji] = await Promise.all([loadAllVocab(), loadAllKanji()]);
+      return ankiCsv(doc, vocab, kanji);
+    },
+
+    /* Хучин гар: шалгаж шууд хэрэгжүүлнэ (previewгүй — шинэ UI preview ашиглана) */
+    importJSON: (raw, mode = "merge") => {
+      const language = doc.profile.language ?? "mn";
+      const r = parseImport(raw);
+      if (!r.ok) {
+        notify("error", r.error === "tooLarge" ? ui[language].importErrLarge
+          : r.error === "badJson" ? ui[language].importErrJson
+          : r.error === "newerVersion" ? ui[language].importErrNewer
+          : ui[language].importErrDoc);
         return false;
       }
-      if (!validateDoc(parsed).ok) {
-        notify("error", ui[language].importFailed);
-        return false;
-      }
-      // 2) Одоогийн ахицыг нөөцөлж, дараа нь сэргээж бичнэ.
-      try {
-        localStorage.setItem(backupKey(uid), JSON.stringify(doc));
-      } catch {
-        /* нөөцлөх зай байхгүй */
-      }
-      setDoc(parseStoredDoc(raw).doc);
+      saveUndo(uid, doc);
+      setUndoAvailable(true);
+      try { localStorage.setItem(backupKey(uid), JSON.stringify(doc)); } catch { /* зайгүй */ }
+      setDoc(applyImport(doc, r.doc, mode));
+      dirty.current = true;
       notify("success", ui[language].importOk);
       return true;
     },
 
     reset: () => { setDoc(freshDoc(doc.profile.name)); },
-  }), [patch, push, pull, switchUser, uid, doc, pendingGuest]);
+  }), [patch, push, pull, switchUser, uid, doc, pendingImport, undoAvailable]);
 
   const today = doc.activity[todayKey()] ?? emptyDay();
   const levelInfo = useMemo(() => xpLevel(doc.xp), [doc.xp]);
@@ -728,6 +794,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     unlocked: Object.entries(doc.achievements).map(([id, at]) => ({ id, at })).sort((a, b) => b.at - a.at),
     nextAchievement,
     pendingGuest,
+    pendingImport: pendingImport?.preview ?? null,
+    undoAvailable,
     actions,
   };
 
@@ -787,25 +855,6 @@ function tombPatch(d: Doc, keys: string[]): Partial<Doc> {
   return { tomb: { ...(d.tomb ?? {}), ...Object.fromEntries(keys.map((k) => [k, at])) } };
 }
 
-export function computeStreak(activity: Record<string, ActivityDay>) {
-  let n = 0;
-  let key = todayKey();
-  if (!(activity[key]?.xp > 0)) key = dayOffset(key, -1);
-  while (activity[key]?.xp > 0) {
-    n++;
-    key = dayOffset(key, -1);
-  }
-  return n;
-}
-
-/** Хамгийн урт цуваа (бүх түүхээс). */
-export function longestStreak(activity: Record<string, ActivityDay>) {
-  const days = Object.entries(activity).filter(([, d]) => d.xp > 0).map(([k]) => k).sort();
-  let best = 0, run = 0, prev = "";
-  for (const k of days) {
-    run = prev && dayOffset(prev, 1) === k ? run + 1 : 1;
-    best = Math.max(best, run);
-    prev = k;
-  }
-  return best;
-}
+// streak тооцоолол text.ts рүү шилжсэн (порт/импорт preview ч ашиглана) —
+// хуучин импорт хэвээр ажиллахын тулд реэкспорт хийж байна.
+export { computeStreak, longestStreak } from "./text";

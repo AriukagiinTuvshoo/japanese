@@ -2,6 +2,7 @@
 
 import type { Level } from "./types";
 import type { Language } from "./i18n";
+import type { ActivityDay } from "./store";
 
 export const HIRA_START = 0x3041;
 export const KATA_START = 0x30a1;
@@ -179,6 +180,34 @@ export function dayOffset(key: string, days: number) {
   const date = new Date(y, m - 1, d);
   date.setDate(date.getDate() + days);
   return todayKey(date);
+}
+
+/**
+ * Одоогийн өдрөөс эхлэн үргэлжилсэн өдөр (streak) — өдөр бүрт XP > 0 байх ёстой.
+ * Хураангуй/импорт/preview-д ашиглана (store.tsx бас реэкспорт хийдэг).
+ */
+export function computeStreak(activity: Record<string, ActivityDay>) {
+  let n = 0;
+  let key = todayKey();
+  if (!(activity[key]?.xp > 0)) key = dayOffset(key, -1);
+  while (activity[key]?.xp > 0) {
+    n++;
+    key = dayOffset(key, -1);
+  }
+  return n;
+}
+
+/** Хамгийн урт цуваа (бүх түүхээс). */
+export function longestStreak(activity: Record<string, ActivityDay>) {
+  const days = Object.entries(activity).filter(([, d]) => d.xp > 0).map(([k]) => k).sort();
+  let best = 0, run = 0, prev = "";
+  for (const k of days) {
+    const r = prev && dayOffset(prev, 1) === k ? run + 1 : 1;
+    best = Math.max(best, r);
+    run = r;
+    prev = k;
+  }
+  return best;
 }
 
 /** Хүн уншихад ойлгомжтой хугацаа. */

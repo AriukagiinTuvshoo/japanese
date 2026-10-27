@@ -9,6 +9,7 @@ import { ui } from "./lib/i18n";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Notices from "./components/Notices";
 import GuestMergeDialog from "./components/GuestMergeDialog";
+import ImportPreviewModal from "./components/ImportPreviewModal";
 
 const Home = lazy(() => import("./pages/Home"));
 const Vocabulary = lazy(() => import("./pages/Vocabulary"));
@@ -105,6 +106,7 @@ export default function App() {
       <Router />
       <Notices />
       <GuestMergeDialog />
+      <ImportPreviewModal />
     </StoreProvider>
   );
 }
