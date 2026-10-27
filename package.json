@@ -14,6 +14,8 @@
     "data:validate": "node scripts/validate-data.mjs",
     "data:all": "npm run data:fetch && npm run data:build && npm run data:validate",
     "test:routes": "node scripts/test-routes.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "server": "node server/index.mjs"
   },
   "dependencies": {
@@ -31,6 +33,7 @@
     "@vitejs/plugin-react": "5.1.1",
     "tailwindcss": "4.1.17",
     "typescript": "5.9.3",
-    "vite": "7.3.2"
+    "vite": "7.3.2",
+    "vitest": "^3.2.7"
   }
 }
