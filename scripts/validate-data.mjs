@@ -238,6 +238,22 @@ if (meta && (!Array.isArray(meta.sources) || meta.sources.length === 0)) {
   err("meta.sources хоосон — лицензийн attribution (content/sources.json) заавал байх ёстой");
 }
 
+// --- Япон текст дотор хялбаршуулсан хятад үсэг орох ёсгүй ------------------------------
+{
+  const { scanObject } = await import("./lib/glyphs.mjs");
+  const fields = [
+    ...allVocab.map((v, i) => [`vocab ${v.w}`, { w: v.w, r: v.r, rm: v.rm, ex: v.ex }]),
+    ...allKanji.map((k) => [`kanji ${k.k}`, { k: k.k, on: k.on, kun: k.kun, w: k.w }]),
+    ...allGrammar.map((g) => [`grammar ${g.p}`, { p: g.p, ex: g.ex }]),
+  ];
+  for (const [where, obj] of fields) {
+    const hits = scanObject(obj);
+    for (const h of hits) err(`${where}: ${h.path} дотор хялбаршуулсан хятад үсэг "${h.chars}" — "${String(h.text).slice(0, 40)}"`);
+  }
+  const badVocab = fields.filter(([, obj]) => scanObject(obj).length).length;
+  if (badVocab) err(`Хялбаршуулсан хятад үсэгтэй бичлэг: ${badVocab}`);
+}
+
 // --- UI i18n: EN block must contain zero Cyrillic ---------------------------------
 const I18N = path.join(ROOT, "src/lib/i18n.ts");
 try {
