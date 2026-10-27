@@ -7,7 +7,7 @@
  *  · эвдэрсэн утгыг **устгахгүй**, `nd:doc:<uid>:corrupt:<ts>`-д нөөцөлнө,
  *  · буцаах боломжтой хэсгийг нь сэргээнэ.
  */
-import type { ActivityDay, Doc, Profile } from "./store";
+import type { ActivityCounts, ActivityDay, Doc, Profile } from "./store";
 
 export const SCHEMA_VERSION = 3 as const;
 
@@ -67,6 +67,33 @@ const LEVELS = ["N5", "N4", "N3", "N2", "N1"] as const;
 const isLevel = (v: unknown): v is (typeof LEVELS)[number] => isStr(v) && (LEVELS as readonly string[]).includes(v);
 
 const PHASES = ["new", "learning", "review", "relearn"] as const;
+
+/** Тооны газар (хувь нэмэр/тэмдэг) — зөвхөн эерэг, хязгааргүй утгыг үлдээнэ. */
+function cleanNumberMap(v: unknown): Record<string, number> | undefined {
+  if (!isObj(v)) return undefined;
+  const out: Record<string, number> = {};
+  for (const [k, n] of Object.entries(v)) if (isNum(n)) out[k] = n;
+  return Object.keys(out).length ? out : undefined;
+}
+
+const ACTIVITY_KEYS = ["xp", "min", "newCards", "reviews", "correct", "total"] as const;
+
+/** өдрийн хувь нэмрийг шүүнэ (зөвхөн 6 тоон утгатай талбарыг үлдээнэ). */
+function cleanParts(v: unknown): Record<string, ActivityCounts> | undefined {
+  if (!isObj(v)) return undefined;
+  const out: Record<string, ActivityCounts> = {};
+  for (const [dev, counts] of Object.entries(v)) {
+    if (!isObj(counts)) continue;
+    const clean = { xp: 0, min: 0, newCards: 0, reviews: 0, correct: 0, total: 0 } as ActivityCounts;
+    let any = false;
+    for (const k of ACTIVITY_KEYS) {
+      const n = (counts as Record<string, unknown>)[k];
+      if (isNum(n)) { (clean[k] as number) = n; any = true; }
+    }
+    if (any) out[dev] = clean;
+  }
+  return Object.keys(out).length ? out : undefined;
+}
 
 /** SRS карт бүтэн эсэх. */
 function isCard(v: unknown): boolean {
@@ -188,9 +215,19 @@ export function parseStoredDoc(raw: string | null): ParseResult {
   };
 
   // Бүтэн бус activity бичлэгүүдийг бөглөнө (хуучин хувилбарт дутуу байж болно).
+  // merge-ийн `parts` хэсэг нь тоо биш, тулд шүүнэ (docs/SYNC.md §2).
   for (const [k, day] of Object.entries(doc.activity)) {
-    doc.activity[k] = { ...emptyDay(), ...(day as Partial<ActivityDay>) };
+    const raw = day as Partial<ActivityDay> & { parts?: unknown };
+    doc.activity[k] = { ...emptyDay(), ...raw, parts: cleanParts(raw.parts) };
   }
+
+  // merge-ийн нэмэлт сонголттой талбарууд — байвал хадгална, үгүй бол алгасна.
+  const profileTs = cleanNumberMap(v.profileTs);
+  if (profileTs) doc.profileTs = profileTs as Doc["profileTs"];
+  const xpParts = cleanNumberMap(v.xpParts);
+  if (xpParts) doc.xpParts = xpParts;
+  const tomb = cleanNumberMap(v.tomb);
+  if (tomb) doc.tomb = tomb;
 
   if (isObj(v.curriculum) && isStr(v.curriculum.level) && isNum(v.curriculum.days)) {
     doc.curriculum = v.curriculum as unknown as Doc["curriculum"];
@@ -252,4 +289,61 @@ export function saveDoc(uid: string, doc: Doc): boolean {
   } catch {
     return false;
   }
+}
+
+/* ─────────────── sync-ийн өмнөх нөөц (B1) ─────────────── */
+
+export const syncBackupPrefix = (uid: string) => `nd:doc:${uid}:sync:`;
+export const syncBackupKey = (uid: string, at: number) => `${syncBackupPrefix(uid)}${at}`;
+
+/**
+ * Синхрончлолын өмнө локал нөөц үүсгэнэ. Сүүлийн `keep` (3) үлдээнэ —
+ * merge болон серверийн алдаанаас болж хэрэглэгчийн ахиц алдахгүй.
+ * Нөөцлөх боломжгүй бол (quota) ч sync-ийг зогсоохгүй.
+ */
+export function snapshotDoc(uid: string, doc: Doc, keep = 3): string | null {
+  try {
+    const key = syncBackupKey(uid, Date.now());
+    localStorage.setItem(key, JSON.stringify(doc));
+    const prefix = syncBackupPrefix(uid);
+    const keys: string[] = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (k && k.startsWith(prefix)) keys.push(k);
+    }
+    keys.sort();
+    for (const old of keys.slice(0, Math.max(0, keys.length - keep))) localStorage.removeItem(old);
+    return key;
+  } catch {
+    return null;
+  }
+}
+
+/** Төхөөрөмжийн тогтмол ID — XP/өдрийн хувь нэмрийн түлхүүр (docs/SYNC.md). */
+export function deviceId(): string {
+  try {
+    let id = localStorage.getItem("nd:device");
+    if (!id) {
+      id = `dev-${Math.random().toString(36).slice(2, 10)}${Date.now().toString(36)}`;
+      localStorage.setItem("nd:device", id);
+    }
+    return id;
+  } catch {
+    return "local";
+  }
+}
+
+/** Хамгийн сүүлийн sync нөөцийг авна (Undo/сэргээлтэд). */
+export function listSyncBackups(uid: string): string[] {
+  const prefix = syncBackupPrefix(uid);
+  const keys: string[] = [];
+  try {
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (k && k.startsWith(prefix)) keys.push(k);
+    }
+  } catch {
+    /* private mode */
+  }
+  return keys.sort().reverse();
 }

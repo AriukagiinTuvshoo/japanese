@@ -9,19 +9,21 @@
 import {
   createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode,
 } from "react";
-import { api, apiBase, backoffMs, setToken, type Account } from "./api";
+import { api, apiBase, backoffMs, ApiError, setToken, type Account } from "./api";
+import { mergeDocs } from "./merge";
 import { ACHIEVEMENTS, XP, xpLevel, type AchievementInput } from "./gamification";
 import { schedule, type Card, type Grade } from "./srs";
 import { dayOffset, todayKey } from "./text";
 import { notify } from "./notice";
 import { ui } from "./i18n";
 import {
-  DEFAULT_PROFILE,
   backupKey,
+  deviceId,
   freshDoc,
   loadDoc,
   parseStoredDoc,
   saveDoc,
+  snapshotDoc,
   validateDoc,
 } from "./storage";
 import type { Level } from "./types";
@@ -78,13 +80,18 @@ export interface Profile {
   language: Language;
 }
 
-export interface ActivityDay {
+export interface ActivityCounts {
   xp: number;
   min: number;
   newCards: number;
   reviews: number;
   correct: number;
   total: number;
+}
+
+export interface ActivityDay extends ActivityCounts {
+  /** Төхөөрөмж бүрийн хувь нэмэр — merge-д хоёр талын ажил нэг удаа тоологдохгүй (docs/SYNC.md). */
+  parts?: Record<string, ActivityCounts>;
 }
 
 export interface CurriculumState {
@@ -119,6 +126,13 @@ export interface Doc {
   curriculum?: CurriculumState;
   createdAt: number;
   updatedAt: number;
+  /* ── merge-ийн нэмэлт талбарууд (сонголттой, хуучин баримт ч зүгээр бичигдэнэ) ── */
+  /** Profile тал бүрийн өөрчлөлтийн цаг (тэгш зэргэлцээг тогтооно). */
+  profileTs?: Partial<Record<keyof Profile, number>>;
+  /** XP-ийн төхөөрөмж бүрийн хувь нэмэр (grow-only, нэмэлт). */
+  xpParts?: Record<string, number>;
+  /** Устгасан зүйлийн тэмдэг: `${kind}:${id}` → устгасан цаг. */
+  tomb?: Record<string, number>;
 }
 
 export { DEFAULT_PROFILE } from "./storage";
@@ -358,42 +372,83 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     });
   }, [unlockedIds]);
 
-  /* ── Cloud sync ── */
-  const push = useCallback(async (force = false) => {
-    if (!account || !navigator.onLine) return;
-    if (!force && !dirty.current) return;
-    setSyncing("syncing");
-    try {
-      const res = await api.putSync(doc, rev.current);
-      rev.current = res.rev;
-      dirty.current = false;
-      setLastSync(Date.now());
-      setSyncing("ok");
-      window.setTimeout(() => setSyncing("idle"), 1500);
-    } catch {
-      setSyncing("error");
-    }
-  }, [account, doc]);
+  /* ── Cloud sync ──
+   * Дүрэм: docs/SYNC.md. Үндсэн зарчим —
+   *   · синкээс ӨМНӨ локал нөөц (сүүлийн 3),
+   *   · merge нь бүрэн баримтыг задалж хийнэ (server-ийг хүндэлнэ),
+   *   · 409 → дахин татаж merge → дахин илгээх (3 оролдлого),
+   *   · амжилтгүй бол локал өгөгдөл ХЭЗЭЭ Ч устгахгүй.
+   */
+  const docRef = useRef(doc);
+  docRef.current = doc;
 
-  const pull = useCallback(async () => {
-    if (!account) return;
+  const language = doc.profile.language ?? "mn";
+
+  const pull = useCallback(async (): Promise<boolean> => {
+    if (!account) return false;
     try {
       const remote = await api.getSync();
-      if (remote.rev > rev.current) {
-        rev.current = remote.rev;
-        const incoming = remote.doc as Partial<Doc> | null;
-        if (incoming && (incoming.updatedAt ?? 0) > doc.updatedAt) {
-          setDoc({ ...freshDoc(), ...incoming, profile: { ...DEFAULT_PROFILE, ...(incoming.profile ?? {}) } } as Doc);
-        }
+      if (remote.rev <= rev.current) return true;
+
+      // Нэг: синкээс өмнө локалыг нөөцлө.
+      snapshotDoc(uid, docRef.current);
+
+      // Хоёр: merge (хоёр талын ч хүчинтэй байх; remote эвдэрсэн бол local-ыг үлдээнэ).
+      const res = mergeDocs(docRef.current, remote.doc, {});
+      if (!res.remoteOk) {
+        notify("info", ui[language].syncRemoteCorrupt);
+      } else if (res.changed) {
+        notify("info", ui[language].syncMerged);
       }
+      setDoc(res.doc);
+      rev.current = remote.rev;
+      return true;
     } catch {
-      /* офлайн — дараа дахин оролдоно */
+      /* офлайн — dirty хэвээр үлдэж, дараа дахин оролдоно */
+      return false;
     }
-  }, [account, doc.updatedAt]);
+  }, [account, uid, language]);
+
+  const push = useCallback(async (force = false): Promise<boolean> => {
+    if (!account || !navigator.onLine) return false;
+    if (!force && !dirty.current) return false;
+    setSyncing("syncing");
+    for (let attempt = 0; attempt < 3; attempt++) {
+      try {
+        const res = await api.putSync(docRef.current, rev.current);
+        rev.current = res.rev;
+        dirty.current = false;
+        setLastSync(Date.now());
+        setSyncing("ok");
+        window.setTimeout(() => setSyncing("idle"), 1500);
+        return true;
+      } catch (e) {
+        const conflict = e instanceof ApiError && e.status === 409;
+        if (!conflict) {
+          // Сервер алдаатай/холбогдохгүй: локал өгөгдөл хэвээр, dirty=үлдэнэ.
+          setSyncing("error");
+          return false;
+        }
+        // 409: төхөөрөмж бусад төхөөрөмжөөс өмнө илгээсэн — татаж merge хийнэ.
+        const ok = await pull();
+        if (!ok) {
+          setSyncing("error");
+          return false;
+        }
+        await new Promise((r) => window.setTimeout(r, 300 * 2 ** attempt));
+      }
+    }
+    setSyncing("error");
+    return false;
+  }, [account, pull]);
 
   useEffect(() => {
     if (!account) return;
-    pull().then(() => push(true));
+    // Ахин татахдаа локал нөөцөө авна; амжилттай бол merge-ийн үр дүнг илгээнэ.
+    snapshotDoc(uid, docRef.current);
+    pull().then((ok) => {
+      if (ok) void push(true);
+    });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [account?.id]);
 
@@ -463,7 +518,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       return {
         ...d,
         grammarDone: want ? [...d.grammarDone, id] : d.grammarDone.filter((x) => x !== id),
-        ...(want ? bumpDayInto(d, { xp: XP.grammarDone }) : {}),
+        ...(want ? bumpDayInto(d, { xp: XP.grammarDone }) : tombPatch(d, [`grammar:${id}`])),
       };
     }),
 
@@ -491,10 +546,14 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
     setMnemonic: (kanji, text) => patch((d) => ({ ...d, mnemonics: { ...d.mnemonics, [kanji]: text } })),
 
-    toggleFavorite: (id) => patch((d) => ({
-      ...d,
-      favorites: d.favorites.includes(id) ? d.favorites.filter((x) => x !== id) : [...d.favorites, id],
-    })),
+    toggleFavorite: (id) => patch((d) => {
+      const removing = d.favorites.includes(id);
+      return {
+        ...d,
+        favorites: removing ? d.favorites.filter((x) => x !== id) : [...d.favorites, id],
+        ...(removing ? tombPatch(d, [`fav:${id}`]) : {}),
+      };
+    }),
 
     setKanaBest: (n) => patch((d) => ({ ...d, kanaBest: Math.max(d.kanaBest, n) })),
 
@@ -516,7 +575,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         .map((m) => (m.id === id ? { ...m, count: m.count - 1 } : m))
         .filter((m) => m.count > 0),
     })),
-    clearMistakes: () => patch((d) => ({ ...d, mistakes: [] })),
+    clearMistakes: () => patch((d) => ({ ...d, mistakes: [], ...tombPatch(d, d.mistakes.map((m) => `mistake:${m.id}`)) })),
 
     setPlacement: (level, detail) => patch((d) => ({
       ...d,
@@ -657,8 +716,21 @@ function bumpDayInto(d: Doc, delta: Partial<ActivityDay>): Partial<Doc> {
   const k = todayKey();
   const cur = d.activity[k] ?? emptyDay();
   const xp = delta.xp ?? 0;
+  const dev = deviceId();
+  // Төхөөрөмж бүрийн хувь нэмрийг тэмдэглэнэ — merge-ээр хоёр талын ажил
+  // нэг удаа тоологдохгүй (docs/SYNC.md §2, property тестээр баталгаажсан).
+  const prev = cur.parts?.[dev] ?? { xp: 0, min: 0, newCards: 0, reviews: 0, correct: 0, total: 0 };
+  const nextPart = {
+    xp: prev.xp + xp,
+    min: prev.min + (delta.min ?? 0),
+    newCards: prev.newCards + (delta.newCards ?? 0),
+    reviews: prev.reviews + (delta.reviews ?? 0),
+    correct: prev.correct + (delta.correct ?? 0),
+    total: prev.total + (delta.total ?? 0),
+  };
   return {
     xp: d.xp + xp,
+    xpParts: { ...(d.xpParts ?? {}), [dev]: (d.xpParts?.[dev] ?? 0) + xp },
     activity: {
       ...d.activity,
       [k]: {
@@ -668,9 +740,17 @@ function bumpDayInto(d: Doc, delta: Partial<ActivityDay>): Partial<Doc> {
         reviews: cur.reviews + (delta.reviews ?? 0),
         correct: cur.correct + (delta.correct ?? 0),
         total: cur.total + (delta.total ?? 0),
+        parts: { ...(cur.parts ?? {}), [dev]: nextPart },
       },
     },
   };
+}
+
+/** Устгасан зүйлийн тэмдэг — merge-ийн үед дахин сэргэхгүй (docs/SYNC.md). */
+function tombPatch(d: Doc, keys: string[]): Partial<Doc> {
+  if (!keys.length) return {};
+  const at = Date.now();
+  return { tomb: { ...(d.tomb ?? {}), ...Object.fromEntries(keys.map((k) => [k, at])) } };
 }
 
 export function computeStreak(activity: Record<string, ActivityDay>) {
