@@ -8,6 +8,7 @@
  *  · буцаах боломжтой хэсгийг нь сэргээнэ.
  */
 import type { ActivityCounts, ActivityDay, Doc, Profile } from "./store";
+import { backupKeepFor, bytesOf } from "./quota";
 
 export const SCHEMA_VERSION = 3 as const;
 
@@ -272,7 +273,10 @@ export function loadDoc(uid: string, now = Date.now()): { doc: Doc; status: Pars
   if (res.status === "recovered" && res.corruptRaw != null) {
     try {
       // Эвдэрсэн өгөгдлийг ХЭЗЭЭ Ч чимээгүй устгахгүй — нөөцөлнө.
+      // Копи хэтрэхгүйн тулд хамгийн сүүлийн 2 үлдээнэ (B4 quota).
       localStorage.setItem(backupKey(uid, now), res.corruptRaw);
+      const olds = backupKeys(BACKUP_PREFIX(uid)).filter((k) => k !== backupKey(uid, now));
+      for (const old of olds.slice(0, Math.max(0, olds.length - 1))) localStorage.removeItem(old);
     } catch {
       /* нөөцлөх зай байхгүй */
     }
@@ -296,23 +300,40 @@ export function saveDoc(uid: string, doc: Doc): boolean {
 export const syncBackupPrefix = (uid: string) => `nd:doc:${uid}:sync:`;
 export const syncBackupKey = (uid: string, at: number) => `${syncBackupPrefix(uid)}${at}`;
 
-/**
- * Синхрончлолын өмнө локал нөөц үүсгэнэ. Сүүлийн `keep` (3) үлдээнэ —
- * merge болон серверийн алдаанаас болж хэрэглэгчийн ахиц алдахгүй.
- * Нөөцлөх боломжгүй бол (quota) ч sync-ийг зогсоохгүй.
- */
-export function snapshotDoc(uid: string, doc: Doc, keep = 3): string | null {
+/** Тэмдэглэгдсэн бүх нөөцийн түлхүүрүүд (хэмжээгээр эрэмбэлэгдсэн). */
+function backupKeys(prefix: string): string[] {
+  const keys: string[] = [];
   try {
-    const key = syncBackupKey(uid, Date.now());
-    localStorage.setItem(key, JSON.stringify(doc));
-    const prefix = syncBackupPrefix(uid);
-    const keys: string[] = [];
     for (let i = 0; i < localStorage.length; i++) {
       const k = localStorage.key(i);
       if (k && k.startsWith(prefix)) keys.push(k);
     }
-    keys.sort();
-    for (const old of keys.slice(0, Math.max(0, keys.length - keep))) localStorage.removeItem(old);
+  } catch {
+    /* private mode */
+  }
+  return keys.sort();
+}
+
+/**
+ * Синхрончлолын өмнө локал нөөц үүсгэнэ.
+ * Хэдэн нөөц үлдээхээ **баримтын хэмжээ** тогтооно (B4, quota.ts):
+ * жижиг баримт 3, 1 МБ-аас дээш баримт 0 (основ + undo-г хадгална) —
+ * ингэж хүнд хэрэглэгч quota-г копигоор дүүргэхгүй.
+ * Нөөцлөх боломжгүй бол ч sync-ийг зогсоохгүй.
+ */
+export function snapshotDoc(uid: string, doc: Doc, keep?: number): string | null {
+  try {
+    const json = JSON.stringify(doc);
+    const limit = keep ?? backupKeepFor(bytesOf(json));
+    const prefix = syncBackupPrefix(uid);
+    if (limit <= 0) {
+      for (const old of backupKeys(prefix)) localStorage.removeItem(old);
+      return null;
+    }
+    const key = syncBackupKey(uid, Date.now());
+    localStorage.setItem(key, json);
+    const keys = backupKeys(prefix);
+    for (const old of keys.slice(0, Math.max(0, keys.length - limit))) localStorage.removeItem(old);
     return key;
   } catch {
     return null;

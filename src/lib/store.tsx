@@ -17,6 +17,7 @@ import {
   type ImportMode, type ImportPreview,
 } from "./port";
 import { loadAllKanji, loadAllVocab } from "./data";
+import { getEstimate, isNearFull, requestPersistenceOnce } from "./quota";
 import { ACHIEVEMENTS, XP, xpLevel, type AchievementInput } from "./gamification";
 import { schedule, type Card, type Grade } from "./srs";
 import { computeStreak, todayKey } from "./text";
@@ -158,8 +159,24 @@ function readDoc(uid: string): Doc {
   return doc;
 }
 
+/**
+ * B4: бичлэгээс **ӨМНӨ** хязгаарыг шалгана — хэрэглэгч бичлэг амжилтгүй
+ * болохоос өмнө мэдэж, өгөгдөө экспортлох боломжтой.
+ * `navigator.storage.estimate()` дэмжихгүй бол ямар ч нэмэлт дуудалтгүй.
+ */
+let nearFullWarned = false;
+async function warnIfNearFull(lang: Profile["language"]): Promise<void> {
+  if (nearFullWarned) return;
+  const est = await getEstimate();
+  if (!nearFullWarned && isNearFull(est)) {
+    nearFullWarned = true;
+    notify("error", ui[lang ?? "mn"].storageNearFull, { ttlMs: 12_000 });
+  }
+}
+
 /** Хадгална; зай дүүрсэн бол чимээгүй өнгөрөхгүй — toast харуулна. */
 function writeDoc(uid: string, doc: Doc): void {
+  void warnIfNearFull(doc.profile.language ?? "mn");
   if (!saveDoc(uid, doc)) notify("error", ui[doc.profile.language ?? "mn"].storageFull);
 }
 
@@ -275,6 +292,14 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const t = localStorage.getItem("nd:token");
     if (t) setToken(t);
+  }, []);
+
+  /* ── B4: тогтмол хадгалалт (нэг удаа) ──
+   * Хөтөч нөөц дүүрвэл localStorage-г автомат устгаж магадгүй;
+   * persistent storage хүссэнээр хэрэглэгчийн ахиц тэсэж үлдэнэ.
+   * Татгалзсан ч (Safari татгалздаг) апп хэвийн ажиллана. */
+  useEffect(() => {
+    void requestPersistenceOnce();
   }, []);
 
   /* ── серверийн бэлэн байдал ──
