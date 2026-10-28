@@ -26,7 +26,7 @@ export default function ImportPreviewModal() {
   ];
 
   return (
-    <Modal onClose={() => actions.cancelImport()} title={t.importPreviewTitle} lang={language}>
+    <Modal onClose={() => actions.cancelImport()} title={t.importPreviewTitle} lang={language} z="z-[85]">
       <div className="space-y-5 px-6 py-6">
         <p className="text-[13px] leading-relaxed text-sumi-600">{t.importPreviewHint}</p>
         <div className="grid gap-2">

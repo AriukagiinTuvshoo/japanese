@@ -52,13 +52,26 @@ async function loadPrecache() {
   }
 }
 
+/**
+ * Кэшэд бичихдээ `Vary`-г устгана.
+ * Яагаад: сервер (vite preview зэрэг) `Vary: Origin` илгээдэг бөгөөд үүнээс
+ * болж **сурагч/фонт/стиль** хүсэлтийн `cache.match(req)` таарахгүй —
+ * B8 e2e-д сервер устгасны дараа дахин ачаалалт хоосон дэлгэц болсон.
+ * Same-origin статик файлд Vary-ийн утга үгүй тул аюулгүй.
+ */
+async function putClean(cache, key, res) {
+  const headers = new Headers(res.headers);
+  headers.delete("vary");
+  await cache.put(key, new Response(res.body, { status: res.status, statusText: res.statusText, headers }));
+}
+
 /** Нэг ч холбоос унавал бүх суулгалтыг унагахгүй — аль болохыг нь кэшилнэ. */
 async function addAllSafe(cache, urls) {
   await Promise.all(
     urls.map(async (u) => {
       try {
         const res = await fetch(u, { cache: "reload" });
-        if (res.ok) await cache.put(u, res);
+        if (res.ok) await putClean(cache, u, res);
       } catch {
         /* сүлжээгүй / 404 — дараагийн ачаалалтад дахин оролдоно */
       }
@@ -162,10 +175,15 @@ self.addEventListener("fetch", (e) => {
       fetch(req)
         .then((res) => {
           const copy = res.clone();
-          caches.open(SHELL).then((c) => c.put(BASE, copy)).catch(() => {});
+          caches.open(SHELL).then((c) => putClean(c, BASE, copy)).catch(() => {});
           return res;
         })
-        .catch(async () => (await caches.match(BASE)) ?? (await caches.match(req)) ?? Response.error()),
+        .catch(
+          async () =>
+            (await caches.match(BASE, { ignoreVary: true })) ??
+            (await caches.match(req, { ignoreVary: true })) ??
+            Response.error(),
+        ),
     );
     return;
   }
@@ -173,21 +191,23 @@ self.addEventListener("fetch", (e) => {
   const isData = path.startsWith(`${BASE}data/`);
   e.respondWith(
     caches.open(isData ? DATA : SHELL).then(async (c) => {
-      const hit = await c.match(req);
+      // `ignoreVary: true` — дээрх putClean-тэй хамт: серверийн `Vary: Origin`
+      // офлайны match-ийг унагадаг байсан (B8-ын олж тогтоосон гол алдаа).
+      const hit = await c.match(req, { ignoreVary: true });
       // Кэшэд байвал сүлжээнд хүрэхгүй (data: cache-first, бусад: SWR).
       // Модуль скриптийн хүсэлтийг давхар `fetch(req)`-ээр дахин нээх нь
       // Chrome дээр ERR_FAILED өгдөг тул зөвхөн miss үед татна.
       if (hit) {
         if (!isData) {
           fetch(req)
-            .then((res) => { if (res.ok) return c.put(req, res.clone()); })
+            .then((res) => { if (res.ok) return putClean(c, req, res.clone()); })
             .catch(() => {});
         }
         return hit;
       }
       try {
         const res = await fetch(req);
-        if (res.ok) c.put(req, res.clone()).catch(() => {});
+        if (res.ok) putClean(c, req, res.clone()).catch(() => {});
         return res;
       } catch {
         return Response.error();

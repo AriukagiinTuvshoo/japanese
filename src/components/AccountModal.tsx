@@ -14,7 +14,7 @@ export function AccountModal({ onClose }: { onClose: () => void }) {
   const t = ui[language];
   const [tab, setTab] = useState<Tab>(account ? "account" : "account");
   return (
-    <Modal onClose={onClose} title={t.accountTitle} wide>
+    <Modal onClose={onClose} title={t.accountTitle} wide z="z-[85]">
       <div className="border-b border-sumi-900/10 px-6 py-3">
         <Tabs
           value={tab}

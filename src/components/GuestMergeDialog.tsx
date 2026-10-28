@@ -17,7 +17,7 @@ export default function GuestMergeDialog() {
   const s = guestStats(pendingGuest);
 
   return (
-    <Modal onClose={() => actions.resolveGuestMerge(false)} title={t.guestMergeTitle} lang={language}>
+    <Modal onClose={() => actions.resolveGuestMerge(false)} title={t.guestMergeTitle} lang={language} z="z-[85]">
       <div className="space-y-5 px-6 py-6">
         <p className="text-[13.5px] leading-relaxed text-sumi-700">{t.guestMergeBody}</p>
         <p className="rounded-xl bg-matcha-50 px-4 py-3 font-mono text-[13px] font-extrabold text-matcha-600">

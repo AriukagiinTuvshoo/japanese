@@ -193,8 +193,12 @@ export function Furigana({
 
 /* ─────────────── Модал ─────────────── */
 export function Modal({
-  children, onClose, title, wide, footer, lang = "mn",
-}: { children: ReactNode; onClose?: () => void; title?: string; wide?: boolean; footer?: ReactNode; lang?: "mn" | "en" }) {
+  children, onClose, title, wide, footer, lang = "mn", z = "z-[70]",
+}: {
+  children: ReactNode; onClose?: () => void; title?: string; wide?: boolean; footer?: ReactNode; lang?: "mn" | "en";
+  /** Онцлог модал (жишээ: зочин ахиц нэгтгэх) онбордог дээгүүр гарах ёстой. */
+  z?: string;
+}) {
   useEffect(() => {
     const k = (e: KeyboardEvent) => { if (e.key === "Escape") onClose?.(); };
     window.addEventListener("keydown", k);
@@ -208,7 +212,7 @@ export function Modal({
 
   return (
     <div
-      className="fixed inset-0 z-[70] grid place-items-end bg-sumi-950/55 backdrop-blur-[3px] sm:place-items-center sm:p-6"
+      className={`fixed inset-0 grid place-items-end bg-sumi-950/55 backdrop-blur-[3px] sm:place-items-center sm:p-6 ${z}`}
       onClick={onClose}
       role="dialog"
       aria-modal

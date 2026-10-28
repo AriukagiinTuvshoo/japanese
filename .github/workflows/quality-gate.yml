@@ -35,6 +35,9 @@ jobs:
       - name: TypeScript typecheck
         run: npm run typecheck
 
+      - name: Unit tests (vitest)
+        run: npm test
+
       - name: Route regression tests
         run: npm run test:routes
 
@@ -44,5 +47,33 @@ jobs:
       - name: Font coverage (every data glyph has a woff2 chunk)
         run: npm run fonts:check
 
+      - name: Service worker contract (install / activate / warm)
+        run: npm run test:sw
+
       - name: Production build
         run: npm run build
+
+  e2e:
+    name: E2E (Playwright, headless)
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      # `--with-deps` нь зөвхөн CI хост дээр (root байгаа); төгсгөл хэрэглэгч
+      # дээр зөвхөн `npx playwright install chromium` эсвэл системийн Chrome.
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Offline / update / storage / guest-merge / import-undo
+        run: npm run test:e2e
