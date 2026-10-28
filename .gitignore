@@ -13,3 +13,7 @@ server/data/
 .vscode/
 .idea/
 *.tsbuildinfo
+
+# B7 Lighthouse: raw run JSONs (medians kept in artifacts/b7-lighthouse-summary.json)
+artifacts/before/
+artifacts/after/

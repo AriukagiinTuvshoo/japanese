@@ -41,5 +41,8 @@ jobs:
       - name: Validate learning content and relationships
         run: npm run data:validate
 
+      - name: Font coverage (every data glyph has a woff2 chunk)
+        run: npm run fonts:check
+
       - name: Production build
         run: npm run build

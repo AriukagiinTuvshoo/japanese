@@ -6,10 +6,40 @@
    Зорилго: тайван, уншихад хялбар, «төлбөртэй бүтээгдэхүүн»-ийн мэдрэмж.
    ================================================================== */
 
+/* ==================================================================
+   МЕТРИК ТОХИРУУЛСАН НӨӨЦ ФОНТ (B7 — font-display: swap)
+   ---------------------------------------------------------------
+   Япон фонт ачаалагдахаас ӨМНӨ системийн нөөц фонт гарч ирдэг. Уг
+   нөөц нь мөрийн өндөр/ доод захыг өөртөө авдаг тул swap болоход
+   текст "алга болж дарж" хөдөлдөг (CLS). Дараах утгуудыг эх
+   NotoSansJP/NotoSerifJP-ээс (fontTools, upem=1000) уншиж тооцсон:
+     Noto Sans JP  : ascent 1160/1000 = 116% · descent 288/1000 = 28.8% · gap 0
+     Noto Serif JP : ascent 1151/1000 = 115.1% · descent 286/1000 = 28.6% · gap 0
+     x-ний өндөр (sans 543, serif 514) ÷ Arial (1062/2048 = 518.6) = size-adjust
+   Эдгээр нь нөөцийн мөрийг яг ижил хэмжээтэй болгоно тул CLS 0-д ойртно.
+   ================================================================== */
+@font-face {
+  font-family: "Noto Sans JP Fallback";
+  src: local("Arial");
+  size-adjust: 104.7%;
+  ascent-override: 116%;
+  descent-override: 28.8%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Noto Serif JP Fallback";
+  src: local("Arial");
+  size-adjust: 99.1%;
+  ascent-override: 115.1%;
+  descent-override: 28.6%;
+  line-gap-override: 0%;
+}
+
 @theme {
-  --font-sans: "Manrope", "Noto Sans JP", system-ui, sans-serif;
-  --font-jp: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
-  --font-mincho: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --font-sans: "Manrope", "Noto Sans JP", "Noto Sans JP Fallback", system-ui, sans-serif;
+  --font-jp: "Noto Sans JP", "Noto Sans JP Fallback", "Hiragino Sans", "Yu Gothic", sans-serif;
+  --font-mincho: "Noto Serif JP", "Noto Serif JP Fallback", "Hiragino Mincho ProN", "Yu Mincho", serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
   /* 和紙 — цаас */

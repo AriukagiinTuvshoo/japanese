@@ -18,7 +18,11 @@ const API_TARGET = process.env.API_TARGET ?? "http://127.0.0.1:8787";
  *     урьдчилан татна — эхний зураг зурах үед фонт аль хэдийн бэлэн.
  */
 function pwaBuild(): Plugin {
-  const PRELOAD = ["manrope", "noto-sans-jp"];
+  // Бүх JP chunk-ийг preload хийвэл 2+ MB шууд татагдана (хэрэггүй) —
+  // зөвхөн жижиг критик файлууд: Manrope + JP `core` (JLPT spec: preload = эдгээр).
+  const PRELOAD = /^(manrope|noto-sans-jp-core)(-[A-Za-z0-9_-]+)?\.woff2$/;
+  // SW-ийн critical-д багтах жижиг фонт (preload биш ч эхний рендерт хэрэгтэй).
+  const CRITICAL_FONT = /^(manrope|jetbrains-mono|noto-sans-jp-core)(-[A-Za-z0-9_-]+)?\.woff2$/;
   return {
     name: "nd-pwa-build",
     apply: "build",
@@ -40,18 +44,25 @@ function pwaBuild(): Plugin {
       }
 
       // Precache жагсаалт: бүх JS/CSS/фонт (lazy route chunk-ууд ч орно).
-      // SW үүнийг суулгах үед уншаад кэшлэнэ — эс бөгөөс офлайн үед
-      // lazy хуудсууд "Failed to fetch dynamically imported module" болно.
+      // `critical` = эхний зураг зурахад шаардлагатай (js/css + жижиг фонт),
+      // `warm` = бусад JP font chunk-ууд — SW install-ийг удаалгуулж
+      // **дараа нь арын горимоор** кэшилнэ (B7).
+      const isFont = (f: string) => f.endsWith(".woff2");
+      const isCriticalFont = (f: string) => CRITICAL_FONT.test(path.basename(f));
       const assets = files
         .filter((f) => /\.(js|css|woff2)$/.test(f))
         .map((f) => path.posix.join(process.env.BASE_PATH ?? "/", f));
-      fs.writeFileSync(path.join(outDir, "precache.json"), JSON.stringify({ assets }));
+      const critical = files
+        .filter((f) => (!isFont(f) && /\.(js|css)$/.test(f)) || (isFont(f) && isCriticalFont(f)))
+        .map((f) => path.posix.join(process.env.BASE_PATH ?? "/", f));
+      const warm = assets.filter((f) => !critical.includes(f));
+      fs.writeFileSync(path.join(outDir, "precache.json"), JSON.stringify({ assets, critical, warm }));
 
       const indexHtml = path.join(outDir, "index.html");
       if (!fs.existsSync(indexHtml)) return;
       let html = fs.readFileSync(indexHtml, "utf8");
       const preloads = files
-        .filter((f) => f.endsWith(".woff2") && PRELOAD.some((p) => path.basename(f).startsWith(p)))
+        .filter((f) => f.endsWith(".woff2") && PRELOAD.test(path.basename(f)))
         .map((f) => {
           const href = path.posix.join(process.env.BASE_PATH ?? "/", f);
           return `<link rel="preload" href="${href}" as="font" type="font/woff2" crossorigin>`;

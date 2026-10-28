@@ -38,6 +38,14 @@ if ("serviceWorker" in navigator && import.meta.env.PROD) {
         await navigator.serviceWorker.ready;
         window.setTimeout(() => { void warmOfflineData(); }, 2500);
 
+        // B7: үлдсэн JP font chunk-ууд (≈1.7 MB) — эхний сессийн ДАРАА
+        // арын горимоор SW-д кэшуулна. Ингээгүйгээр SW install 2+ MB
+        // татаж анхны рэндэрийг сааруулна; холбоо хязгаарлагдсан бол SW
+        // өөрөө татдаггүй (save-data/2G шалгалт sw.js дээр).
+        window.setTimeout(() => {
+          void navigator.serviceWorker.ready.then((r) => r.active?.postMessage({ type: "ND_WARM" }));
+        }, 60_000);
+
         const announce = () => window.dispatchEvent(new CustomEvent("nd:sw-update"));
         // Аль хэдийн хүлээж байгаа шинэ хувилбар байвал шууд мэдэгдэнэ.
         if (reg.waiting && navigator.serviceWorker.controller) announce();

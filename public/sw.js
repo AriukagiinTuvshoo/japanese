@@ -32,6 +32,26 @@ const FIRST_LEVEL = [
   "data/strokes/n5.json",
 ].map((p) => BASE + p);
 
+/* ── B7: precache жагсаалтыг уншина ──
+ * `critical` = эхний рендэрт шаардлагатай (js/css + manrope + jetbrains + JP core),
+ * `warm`     = бусад JP font chunk (install-д оруулахгүй — хуудас анхны
+ *              сессийн дараа `ND_WARM` мессежээр асууна). */
+async function loadPrecache() {
+  try {
+    const res = await fetch(`${BASE}precache.json`, { cache: "reload" });
+    if (!res.ok) return null;
+    const body = await res.json();
+    const toAbs = (list) => (Array.isArray(list) ? list.map((u) => new URL(u, self.location.href).href) : []);
+    const assets = toAbs(body?.assets);
+    const critical = toAbs(body?.critical);
+    const warm = toAbs(body?.warm);
+    if (!assets.length && !critical.length) return null;
+    return { assets, critical: critical.length ? critical : assets, warm };
+  } catch {
+    return null;
+  }
+}
+
 /** Нэг ч холбоос унавал бүх суулгалтыг унагахгүй — аль болохыг нь кэшилнэ. */
 async function addAllSafe(cache, urls) {
   await Promise.all(
@@ -50,17 +70,8 @@ async function addAllSafe(cache, urls) {
 async function discoverAssets() {
   // Build үед vite.config.ts `dist/precache.json` бичдэг — бүх JS/CSS/фонт,
   // lazy route chunk-уудыг оролцуулан.
-  try {
-    const res = await fetch(`${BASE}precache.json`, { cache: "reload" });
-    if (res.ok) {
-      const body = await res.json();
-      if (Array.isArray(body?.assets) && body.assets.length) {
-        return body.assets.map((u) => new URL(u, self.location.href).href);
-      }
-    }
-  } catch {
-    /* уналт — доорх fallback */
-  }
+  const pre = await loadPrecache();
+  if (pre) return pre.assets;
 
   const urls = new Set();
   try {
@@ -89,7 +100,11 @@ self.addEventListener("install", (e) => {
   e.waitUntil(
     (async () => {
       const [shell, data] = await Promise.all([caches.open(SHELL), caches.open(DATA)]);
-      await addAllSafe(shell, [...STATIC, ...(await discoverAssets())]);
+      const pre = await loadPrecache();
+      // Зөвхөн КРИТИК хэсэг: бүх JP font chunk-ийг install-д оруулбал
+      // суулгалт 2+ MB-аар удааширна (B7).
+      const core = pre ? pre.critical : await discoverAssets();
+      await addAllSafe(shell, [...STATIC, ...core]);
       await addAllSafe(data, FIRST_LEVEL);
       // Хэрэглэгч "Шинэчлэх" дарж байж идэвхждэг (main.tsx-ээс зурвас ирнэ).
     })(),
@@ -100,18 +115,38 @@ self.addEventListener("activate", (e) => {
   e.waitUntil(
     (async () => {
       const keys = await caches.keys();
+      // ХУУЧИН build-ийн кэшийг заавал устгана (кэш хувилбар бүр өөр).
       await Promise.all(
         keys
           .filter((k) => k.startsWith("nd-") && k !== SHELL && k !== DATA)
           .map((k) => caches.delete(k)),
       );
       await self.clients.claim();
+      // Арын халалт (B7) одоо МЕССЕЖЭЭР эхэлнэ (main.tsx → ND_WARM): зүгээр
+      // install-д багтуулбал анхны рэндэр 2+ MB фонтын таталттай өрсөнө.
     })(),
   );
 });
 
+/** Үлдсэн (эхний ачаалалд хэрэггүй) JP font chunk-уудыг SW кэшинэ (B7). */
+async function warmFonts() {
+  const pre = await loadPrecache();
+  if (!pre?.warm?.length) return 0;
+  const conn = typeof navigator !== "undefined" ? navigator.connection : undefined;
+  // Хязгаарлагдсан холбоонд (2G / save-data) огт татдаггүй.
+  if (conn && (conn.saveData || /(^|-)2g$/.test(conn.effectiveType || ""))) return 0;
+  const shell = await caches.open(SHELL);
+  await addAllSafe(shell, pre.warm);
+  return pre.warm.length;
+}
+
 self.addEventListener("message", (e) => {
   if (e.data?.type === "SKIP_WAITING") self.skipWaiting();
+  // B7: хуудас (main.tsx) анхны сессийн дараа арын font chunk-уудыг
+  // асуух мессеж илгээнэ → SW үүнийг waitUntil-аар кэшинэ.
+  if (e.data?.type === "ND_WARM" && typeof e.waitUntil === "function") {
+    e.waitUntil(warmFonts());
+  }
 });
 
 self.addEventListener("fetch", (e) => {
