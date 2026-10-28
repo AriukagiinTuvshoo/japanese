@@ -8,6 +8,7 @@ import { LEVEL_LABEL, todayKey, dayOffset } from "../lib/text";
 import { dueCards, memoryStats, reviewHistory, type Card as SrsCard } from "../lib/srs";
 import { Bar, Button, Card, Chip, LevelBadge, Ring, SectionTitle, Spinner, Stat } from "../components/ui";
 import { ui, type Language } from "../lib/i18n";
+import { featureEnabled } from "../lib/features";
 
 export default function Home() {
   const { doc, today, streak, levelInfo, nextAchievement } = useStore();
@@ -21,6 +22,8 @@ export default function Home() {
   }, []);
 
   const due = useMemo(() => dueCards(doc.srs), [doc.srs]);
+  /** B6: уншлага/сонсголын статистик зөвхөн тэр функцүүд нээлттэй үед. */
+  const showRL = featureEnabled("reading") || featureEnabled("listening");
   const mem = useMemo(() => memoryStats(doc.srs), [doc.srs]);
   const history = useMemo(() => reviewHistory(doc.srs, 35), [doc.srs]);
 
@@ -33,8 +36,10 @@ export default function Home() {
       { id: "review", icon: "復", label: t.reviewN, jp: "復習", target: Math.max(5, Math.round(15 * scale)), unit: t.cardUnit, done: today.reviews, to: "review", urgent: due.length },
       { id: "kanji", icon: "漢", label: t.kanji, jp: "漢字", target: Math.max(3, Math.round(10 * scale)), unit: t.kanji.toLowerCase(), done: Object.values(doc.writing).filter((w) => todayKey(new Date(w.at)) === todayKey()).length, to: `kanji?level=${level}` },
       { id: "grammar", icon: "文", label: t.grammar, jp: "文法", target: Math.max(2, Math.round(4 * scale)), unit: t.grammar.toLowerCase(), done: doc.grammarDone.length, to: `grammar?level=${level}` },
-      { id: "reading", icon: "読", label: t.reading, jp: "読解", target: 1, unit: t.lessonUnit, done: doc.readingDone.length, to: `reading?level=${level}` },
-      { id: "listening", icon: "聴", label: t.listening, jp: "聴解", target: 1, unit: t.lessonUnit, done: doc.listeningDone.length, to: `listening?level=${level}` },
+      // B6: уншлага/сонсгол функцын тэмдэг ОФФ үедээ өдрийн даалгаварт байхгүй —
+      // "0/1 дуусгасан" гэсэн худал ахиц харуулахгүйн тулд.
+      ...(featureEnabled("reading") ? [{ id: "reading", icon: "読", label: t.reading, jp: "読解", target: 1, unit: t.lessonUnit, done: doc.readingDone.length, to: `reading?level=${level}` }] : []),
+      ...(featureEnabled("listening") ? [{ id: "listening", icon: "聴", label: t.listening, jp: "聴解", target: 1, unit: t.lessonUnit, done: doc.listeningDone.length, to: `listening?level=${level}` }] : []),
     ];
   }, [goal, today, due.length, doc.writing, doc.grammarDone, doc.readingDone, doc.listeningDone, level, language]);
 
@@ -250,7 +255,7 @@ export default function Home() {
           />
           <div className="grid gap-3 sm:grid-cols-2">
             {resume && <ResumeCard id={resume.id} />}
-            {nextReading && (
+            {featureEnabled("reading") && nextReading && (
               <TaskCard
                 to={`reading/${nextReading.id}`}
                 k="読"
@@ -260,7 +265,7 @@ export default function Home() {
                 badge={nextReading.level}
               />
             )}
-            {nextLesson && (
+            {featureEnabled("listening") && nextLesson && (
               <TaskCard
                 to={`listening/${nextLesson.id}`}
                 k="聴"
@@ -413,11 +418,12 @@ export default function Home() {
 
       {/* ── эх сурвалж ── */}
       {data && (
-        <div className="grid gap-4 sm:grid-cols-4">
+        // B6: уншлага/сонсгол ОФФ үедээ "0 · 0" гэсэн худал статистик харуулахгүй.
+        <div className={cn("grid gap-4", showRL ? "sm:grid-cols-4" : "sm:grid-cols-3")}>
           <Stat label={t.vocab} value={data.counts.vocab.toLocaleString()} sub="N5 → N1" icon="語" tone="shu" />
           <Stat label={t.kanji} value={data.counts.kanji.toLocaleString()} sub={t.strokesSubStat(data.counts.strokes.toLocaleString())} icon="漢" tone="ai" />
           <Stat label={t.grammar} value={data.counts.grammar} sub={t.mnTranslated} icon="文" tone="murasaki" />
-          <Stat label={t.readingListeningStat} value={`${READING.length} · ${LISTENING.length}`} sub={t.inMongolian} icon="読" tone="matcha" />
+          {showRL && <Stat label={t.readingListeningStat} value={`${READING.length} · ${LISTENING.length}`} sub={t.inMongolian} icon="読" tone="matcha" />}
         </div>
       )}
 

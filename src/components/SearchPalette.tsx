@@ -7,6 +7,7 @@ import type { SearchIndex } from "../lib/types";
 import { Chip, LevelBadge, Spinner } from "./ui";
 import { useStore } from "../lib/store";
 import { ui } from "../lib/i18n";
+import { featureEnabled, type FeatureName } from "../lib/features";
 
 type Kind = "v" | "k" | "g";
 interface Hit { kind: Kind; main: string; sub: string; mn: string; lvl: string; id: string; score: number }
@@ -143,7 +144,7 @@ export function SearchPalette({ onClose }: { onClose: () => void }) {
                   { to: "listening", k: "聴", t: t.listeningShort },
                   { to: "review", k: "復", t: t.reviewShort },
                   { to: "mock", k: "試", t: t.mockShort },
-                ].map((s) => (
+                ].filter((s) => !(s.to === "reading" || s.to === "listening") || featureEnabled(s.to as FeatureName)).map((s) => (
                   <button
                     key={s.to}
                     onClick={() => { navigate(s.to); onClose(); }}

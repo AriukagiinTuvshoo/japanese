@@ -9,6 +9,7 @@ import { LEVEL_LABEL, todayKey } from "../lib/text";
 import { LEVEL_META } from "../data/levels";
 import { Bar, Button, Card, Chip, LevelBadge, ProgressRow, SectionTitle, Select, Spinner } from "../components/ui";
 import { ui } from "../lib/i18n";
+import { featureEnabled } from "../lib/features";
 
 export default function Plan() {
   const { doc, actions } = useStore();
@@ -57,8 +58,8 @@ export default function Plan() {
         day: d,
         vocab: v, kanji: k,
         grammar: g * 2,
-        reading: d % 3 === 0 ? 1 : 0,
-        listening: d % 2 === 0 ? 1 : 0,
+        reading: featureEnabled("reading") && d % 3 === 0 ? 1 : 0,
+        listening: featureEnabled("listening") && d % 2 === 0 ? 1 : 0,
         done: !!cur.done[d],
       });
     }
@@ -135,8 +136,8 @@ export default function Plan() {
                   <span>{t.dayVocab(s.vocab)}</span>
                   <span>{t.dayKanji(s.kanji)}</span>
                   <span>{t.dayGrammar(s.grammar)}</span>
-                  {s.reading > 0 && <span>{t.dayReading(s.reading)}</span>}
-                  {s.listening > 0 && <span>{t.dayListening(s.listening)}</span>}
+                  {featureEnabled("reading") && s.reading > 0 && <span>{t.dayReading(s.reading)}</span>}
+                  {featureEnabled("listening") && s.listening > 0 && <span>{t.dayListening(s.listening)}</span>}
                 </div>
                 <div className="ml-auto flex gap-2">
                   {s.day === curDay && !s.done && (
@@ -195,8 +196,9 @@ export default function Plan() {
                   { l: t.vocab, v: daily.vocab, t: counts.vocab, tone: "shu" as const },
                   { l: t.kanji, v: daily.kanji, t: counts.kanji, tone: "ai" as const },
                   { l: t.grammar, v: daily.grammar, t: counts.grammar, tone: "murasaki" as const },
-                  { l: t.reading, v: daily.reading, t: READING.length, tone: "matcha" as const },
-                  { l: t.listening, v: daily.listening, t: LISTENING.length, tone: "kin" as const },
+                  // B6: уншлага/сонсгол контентгүй үедээ "1 / 0" гэсэн худал төлөвлөгөө үзүүлэхгүй.
+                  ...(featureEnabled("reading") ? [{ l: t.reading, v: daily.reading, t: READING.length, tone: "matcha" as const }] : []),
+                  ...(featureEnabled("listening") ? [{ l: t.listening, v: daily.listening, t: LISTENING.length, tone: "kin" as const }] : []),
                 ].map((x) => (
                   <div key={x.l} className="card-flat px-4 py-3">
                     <ProgressRow label={x.l} value={x.v} max={Math.max(x.v, 1)} tone={x.tone} hint={t.totalHint(x.t)} />

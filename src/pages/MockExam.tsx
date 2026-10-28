@@ -12,6 +12,7 @@ import { LEVEL_META } from "../data/levels";
 import { Button, Card, Chip, LevelBadge, Ring, SectionTitle, Spinner } from "../components/ui";
 import { QuizRunner } from "../components/QuizRunner";
 import { ui } from "../lib/i18n";
+import { featureEnabled } from "../lib/features";
 
 type Stage = "pick" | "running" | "sectionResult" | "final";
 
@@ -150,8 +151,8 @@ export default function MockExam() {
             <div className="mt-3 flex flex-wrap gap-2">
               <Button size="sm" variant="outline" onClick={() => navigate(`quiz?mode=mixed&level=${level}`)}>{t.mixedDrill}</Button>
               <Button size="sm" variant="outline" onClick={() => navigate("review")}>{t.srsReviewBtn}</Button>
-              <Button size="sm" variant="outline" onClick={() => navigate(`reading?level=${level}`)}>{t.readingBtn}</Button>
-              <Button size="sm" variant="outline" onClick={() => navigate(`listening?level=${level}`)}>{t.listeningBtn}</Button>
+              {featureEnabled("reading") && <Button size="sm" variant="outline" onClick={() => navigate(`reading?level=${level}`)}>{t.readingBtn}</Button>}
+              {featureEnabled("listening") && <Button size="sm" variant="outline" onClick={() => navigate(`listening?level=${level}`)}>{t.listeningBtn}</Button>}
             </div>
           </div>
 
@@ -283,6 +284,9 @@ export default function MockExam() {
           ))}
         </div>
         <p className="mt-4 text-[12.5px] text-sumi-500">{language === "en" ? bp.noteEn : bp.note}</p>
+        <p className="mt-2 rounded-xl bg-ai-50/70 px-3.5 py-2.5 text-[12px] leading-relaxed text-ai-700">
+          {t.mockSectionNote}
+        </p>
 
         {/* B5: тэнцэх хязгаарын горим — албаны JLPT (default) эсвэл чанга 60% */}
         <div className="mt-4 flex flex-wrap items-center gap-2">

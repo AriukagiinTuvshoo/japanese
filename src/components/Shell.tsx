@@ -6,6 +6,7 @@ import { LEVELS, type Level } from "../lib/types";
 import { LEVEL_LABEL } from "../lib/text";
 import { dueCards } from "../lib/srs";
 import { ui } from "../lib/i18n";
+import { featureEnabled, type FeatureName } from "../lib/features";
 import { Bar, Button, Chip, Ring } from "./ui";
 import { SearchPalette } from "./SearchPalette";
 import { AccountModal } from "./AccountModal";
@@ -72,7 +73,7 @@ export default function Shell({ children }: { children: ReactNode }) {
     { id: "account", to: "account", k: "人", label: t.account, group: t.tools },
     { id: "about", to: "about", k: "元", label: t.sources, group: t.tools },
     { id: "admin", to: "admin", k: "管", label: t.admin, group: t.tools },
-  ];
+  ].filter((n) => !(n.id === "reading" || n.id === "listening") || featureEnabled(n.id as FeatureName));
 
   const groups = [...new Set(nav.map((n) => n.group))];
   const goalPct = Math.min(1, today.min / Math.max(1, doc.profile.dailyGoal));
