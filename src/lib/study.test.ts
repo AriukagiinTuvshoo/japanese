@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildExam, buildQuiz, EXAM_BLUEPRINTS, type QuizMode } from "./study";
+import { buildExam, buildQuiz, EXAM_BLUEPRINTS, officialSectionMin, scoreExam, sectionMin, strictSectionMin, type ExamPassMode, type QuizMode } from "./study";
 import type { Grammar, Kanji, Level, Vocab } from "./types";
 
 const levels: Level[] = ["N5", "N4", "N3", "N2", "N1"];
@@ -148,5 +148,140 @@ describe("P0-2: mock exam sizing", () => {
     const sections = buildExam(EXAM_BLUEPRINTS.N5, big, "mn");
     const ids = sections.flatMap((s) => s.questions.map((q) => q.id));
     expect(new Set(ids).size).toBe(Math.min(ids.length, new Set(ids).size));
+  });
+});
+
+/* ───────────── B5: жишиг шалгалтын тэнцэх хязгаар ─────────────
+ * Албан ёсны эх сурвалж: jlpt.jp → “Determination of pass/fail”
+ *   · Нийт: N1 100, N2 90, N3 95, N4 90, N5 80 (180-аас)
+ *   · Хэсэг бүр: 19/60 (N4–N5 нэгтгэсэн хэсэгт 38/120) — нэг ч хэсэг
+ *     доод оноонд хүрээгүй бол өндөр нийт оноотой ч ТЭНЦЭЭГҮЙ.
+ * “Strict” горим: хэсэг бүр 60% (хүсэлтээр, default биш).
+ */
+describe("B5: section thresholds", () => {
+  const modes: ExamPassMode[] = ["official", "strict"];
+
+  /** `total` оноог хэсгүүдэд хуваана: бүгд доод оноо дээш, нийт нь `total`. */
+  const scoresFor = (total: number, maxs: number[], mins: number[]): number[] => {
+    const out: number[] = [];
+    let left = total;
+    for (let i = 0; i < maxs.length; i++) {
+      const restMin = mins.slice(i + 1).reduce((a, b) => a + b, 0);
+      const v = Math.max(mins[i], Math.min(maxs[i], left - restMin));
+      out.push(v);
+      left -= v;
+    }
+    return out;
+  };
+
+  const run = (lvl: (typeof levels)[number], scores: number[], mode: ExamPassMode) =>
+    scoreExam(
+      EXAM_BLUEPRINTS[lvl],
+      EXAM_BLUEPRINTS[lvl].sections.map((s, i) => ({ section: s, correct: scores[i], total: s.max })),
+      30,
+      mode,
+    );
+
+  for (const mode of modes) {
+    for (const lvl of levels) {
+      const bp = EXAM_BLUEPRINTS[lvl];
+      const maxs = bp.sections.map((s) => s.max);
+      const mins = maxs.map((m) => sectionMin(m, mode));
+
+      it(`${lvl} (${mode}): every section at exactly the minimum passes`, () => {
+        const scored = run(lvl, mins, mode);
+        expect(scored.sections.map((s) => s.score)).toEqual(mins);
+        expect(scored.sections.every((s) => s.passedSection)).toBe(true);
+        expect(scored.sectionsPassed).toBe(true);
+        expect(scored.total).toBe(mins.reduce((a, b) => a + b, 0));
+        // Нийт дүн: минимум хэсгүүд нь бүгдийн босгыг дамжуулна уу?
+        expect(scored.passed).toBe(scored.total >= bp.passTotal);
+      });
+
+      for (let i = 0; i < bp.sections.length; i++) {
+        const label = `${lvl} (${mode}) section ${bp.sections[i].id}`;
+        it(`${label}: min−1 fails even when the total is high`, () => {
+          // Бусад хэсгүүдийг БҮРЭН авч, зөвхөн нэгийг нь min−1 болгоно.
+          const scores = [...maxs];
+          scores[i] = mins[i] - 1;
+          const others = maxs.reduce((a, b) => a + b, 0) - maxs[i];
+          const total = others + scores[i];
+          const scored = run(lvl, scores, mode);
+          expect(scored.sections[i].score).toBe(mins[i] - 1);
+          expect(scored.sections[i].passedSection).toBe(false);
+          expect(scored.sectionsPassed).toBe(false);
+          expect(scored.passed).toBe(false);
+          // Нийт оноо 100%-д ойр байсан ч ХЭСЭГЛЭЭР унасан.
+          expect(scored.total).toBeGreaterThanOrEqual(bp.passTotal);
+          expect(scored.total).toBe(total);
+        });
+
+        it(`${label}: min passes, min+1 passes`, () => {
+          const at = [...mins];
+          at[i] = mins[i];
+          const plus = [...mins];
+          plus[i] = mins[i] + 1;
+          expect(run(lvl, at, mode).sections[i].passedSection).toBe(true);
+          expect(run(lvl, plus, mode).sections[i].passedSection).toBe(true);
+        });
+      }
+
+      it(`${lvl} (${mode}): total pass/fail boundary (passTotal−1 fails, passTotal passes)`, () => {
+        const minSum = mins.reduce((a, b) => a + b, 0);
+        if (minSum > bp.passTotal - 1) {
+          // Доод оноонуудын нийт нь босгыг аль хэдийн давчихсан — ийм нөхцөлд
+          // "нийтээр унах" бараг боломжгүй (хэсэг бүр тэнцсэн л бол тэнцнэ).
+          expect(run(lvl, mins, mode).total).toBe(minSum);
+          expect(minSum).toBeGreaterThanOrEqual(bp.passTotal);
+          return;
+        }
+        const below = run(lvl, scoresFor(bp.passTotal - 1, maxs, mins), mode);
+        expect(below.sectionsPassed).toBe(true); // бүх хэсэг дээш
+        expect(below.total).toBe(bp.passTotal - 1);
+        expect(below.passed).toBe(false);
+
+        const at = run(lvl, scoresFor(bp.passTotal, maxs, mins), mode);
+        expect(at.sectionsPassed).toBe(true);
+        expect(at.total).toBe(bp.passTotal);
+        expect(at.passed).toBe(true);
+      });
+
+      it(`${lvl} (${mode}): all correct passes, all wrong fails`, () => {
+        const perfect = run(lvl, maxs, mode);
+        expect(perfect.total).toBe(180);
+        expect(perfect.passed).toBe(true);
+        const zero = run(lvl, maxs.map(() => 0), mode);
+        expect(zero.total).toBe(0);
+        expect(zero.sectionsPassed).toBe(false);
+        expect(zero.passed).toBe(false);
+      });
+    }
+  }
+
+  it("official thresholds match jlpt.jp: 19/60 and 38/120", () => {
+    expect(officialSectionMin(60)).toBe(19);
+    expect(officialSectionMin(120)).toBe(38);
+    expect(sectionMin(60, "official")).toBe(19);
+    expect(sectionMin(120, "official")).toBe(38);
+  });
+
+  it("strict mode is 60% per section and stricter than official", () => {
+    expect(strictSectionMin(60)).toBe(36);
+    expect(strictSectionMin(120)).toBe(72);
+    for (const max of [60, 120]) {
+      expect(strictSectionMin(max)).toBeGreaterThan(officialSectionMin(max));
+    }
+  });
+
+  it("official pass totals per level match the published marks", () => {
+    expect(EXAM_BLUEPRINTS.N1.passTotal).toBe(100);
+    expect(EXAM_BLUEPRINTS.N2.passTotal).toBe(90);
+    expect(EXAM_BLUEPRINTS.N3.passTotal).toBe(95);
+    expect(EXAM_BLUEPRINTS.N4.passTotal).toBe(90);
+    expect(EXAM_BLUEPRINTS.N5.passTotal).toBe(80);
+    for (const lvl of levels) {
+      const bp = EXAM_BLUEPRINTS[lvl];
+      expect(bp.sections.reduce((a, s) => a + s.max, 0)).toBe(180);
+    }
   });
 });

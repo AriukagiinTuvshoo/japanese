@@ -473,24 +473,78 @@ export function buildExam(bp: ExamBlueprint, data: { vocab: Vocab[]; kanji: Kanj
   });
 }
 
-/** Оноог бодож, тэнцсэн эсэхийг тодорхойлно (албан ёсны оноо БИШ). */
+/* ─────────── B5: тэнцэх хязгаар ───────────
+ * JLPT-ийн албан ёсны дүрэм (jlpt.jp, “Determination of pass/fail”):
+ *   · Нийт оноо ≥ бүгдийн тэнцэх оноо (N1 100, N2 90, N3 95, N4 90, N5 80 /180)
+ *   · **БАРИУЛГҮЙ** хэсэг бүр ≥ хэсгийн доод оноо — нэг ч хэсэг доод оноонд
+ *     хүрээгүй бол өндөр нийт оноотой ч ТЭНЦЭЭГҮЙ.
+ * Хэсгийн доод оноо scaled score-оор 19/60 (=31.7%), N4–N5 нэгтгэсэн
+ * хэсэгт 38/120. Манай симуляц raw → scaled хөрвүүлэлттэй тул ижил хувь
+ * (19 ÷ 60 = 38 ÷ 120) ашиглана.
+ *
+ * “Чанга” (strict) горим нь хүсэлтээр нэмсэн 60% хэсэг бүр — албаны
+ * JLPT биш, дасгалын илүү өндөр шаардлага. Усан дээр default = албаны схем.
+ */
+export type ExamPassMode = "official" | "strict";
+
+/** Албаны хэсгийн доод оноо: 19/60 хувь. */
+export const officialSectionMin = (max: number): number => Math.round((max * 19) / 60);
+/** Чанга горим: хэсэг бүр ≥ 60%. */
+export const strictSectionMin = (max: number): number => Math.round(max * 0.6);
+export const sectionMin = (max: number, mode: ExamPassMode): number =>
+  mode === "strict" ? strictSectionMin(max) : officialSectionMin(max);
+
+export interface ExamSectionScore {
+  name: string;
+  correct: number;
+  total: number;
+  score: number;
+  max: number;
+  /** Энэ хэсгийн тэнцэх доод оноо. */
+  min: number;
+  /** Хэсэг өөрөө тэнцсэн эсэх. */
+  passedSection: boolean;
+}
+
+/**
+ * Оноог бодож, тэнцсэн эсэхийг тодорхойлно.
+ * `minutes` нь UI-д шаардлагагүй ч баримтын төлөвт хадгалагддаг тул хадгална.
+ */
 export function scoreExam(
   bp: ExamBlueprint,
   results: { section: ExamSection; correct: number; total: number }[],
   minutes: number,
-): { sections: { name: string; correct: number; total: number; score: number; max: number }[]; total: number; max: number; passed: boolean } {
-  const sections = results.map((r) => ({
-    name: r.section.name,
-    correct: r.correct,
-    total: r.total,
-    score: Math.round((r.correct / Math.max(1, r.total)) * r.section.max),
-    max: r.section.max,
-  }));
+  mode: ExamPassMode = "official",
+): {
+  sections: ExamSectionScore[];
+  total: number;
+  max: number;
+  /** Бүгдийн тэнцэх оноо (JLPT албаны, түвшин тус бүр). */
+  passTotal: number;
+  passMode: ExamPassMode;
+  /** Бүх хэсэг доод оноонд хүрсэн эсэх. */
+  sectionsPassed: boolean;
+  passed: boolean;
+} {
+  const sections: ExamSectionScore[] = results.map((r) => {
+    const score = Math.round((r.correct / Math.max(1, r.total)) * r.section.max);
+    const min = sectionMin(r.section.max, mode);
+    return {
+      name: r.section.name,
+      correct: r.correct,
+      total: r.total,
+      score,
+      max: r.section.max,
+      min,
+      passedSection: score >= min,
+    };
+  });
   const total = sections.reduce((a, s) => a + s.score, 0);
   const max = sections.reduce((a, s) => a + s.max, 0);
-  const passed = total >= bp.passTotal;
+  const sectionsPassed = sections.every((s) => s.passedSection);
+  const passed = total >= bp.passTotal && sectionsPassed;
   void minutes;
-  return { sections, total, max, passed };
+  return { sections, total, max, passTotal: bp.passTotal, passMode: mode, sectionsPassed, passed };
 }
 
 export const levelFromScore = (detail: Record<string, number>): Level => {

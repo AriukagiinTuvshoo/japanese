@@ -89,7 +89,10 @@ export const XP = {
   reviewAgain: 1,
   reviewHard: 2,
   reviewGood: 3,
-  reviewEasy: 2,
+  // B5: Easy нь Good-оос ИЛҮҮ XP өгөх ёстой (хуучин утга 2 нь Good 3-аас
+  // бага байсан — сэтгэлзүйн ухагдахуунтай зөрчилдөж байв).
+  // Өмнөх XP-ийг НЭГТГЭЖ тооцохгүй (миграцийг бүрэн алгасна).
+  reviewEasy: 4,
   newCard: 2,
   quizCorrect: 4,
   quizWrong: 0,
