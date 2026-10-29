@@ -547,12 +547,4 @@ export function scoreExam(
   return { sections, total, max, passTotal: bp.passTotal, passMode: mode, sectionsPassed, passed };
 }
 
-export const levelFromScore = (detail: Record<string, number>): Level => {
-  let best: Level = "N5";
-  for (const l of LEVELS) {
-    if ((detail[l] ?? 0) >= 0.6) best = l;
-  }
-  return best;
-};
-
 export { LEVEL_META };

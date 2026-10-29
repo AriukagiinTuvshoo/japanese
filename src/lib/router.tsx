@@ -1,5 +1,5 @@
 /** Хөнгөн hash router: `#/vocab/ada066edfd?level=N5&tab=examples` */
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { parseHash, type Route } from "./routes";
 
 export { href, parseHash, routeArg, routeLevel } from "./routes";
@@ -40,32 +40,3 @@ export function useQuery() {
   return { query: route.query, set };
 }
 
-/** Дарах товчлуур (a href) — шинэ цонхонд нээхийг дэмжинэ. */
-export function useGo() {
-  return useCallback((to: string) => navigate(to), []);
-}
-
-export const titleFor = (r: Route, language: "mn" | "en" = "mn"): { title: string; sub?: string } => {
-  const map: Record<"mn" | "en", Record<string, string>> = {
-    mn: {
-      home: "Нүүр", vocab: "Үгийн сан", review: "Давталт", kanji: "Ханз", write: "Бичих дасгал",
-      grammar: "Дүрэм", reading: "Уншлага", listening: "Сонсгол", quiz: "Дасгал", mock: "Жишиг шалгалт",
-      exam: "Шалгалтын үр дүн", dict: "Толь бичиг", plan: "Төлөвлөгөө", placement: "Түвшин тогтоох",
-      progress: "Ахиц", achievements: "Амжилт", account: "Аккаунт", admin: "Удирдлага", kana: "Кана",
-      about: "Тухай",
-    },
-    en: {
-      home: "Dashboard", vocab: "Vocabulary", review: "Review", kanji: "Kanji", write: "Writing practice",
-      grammar: "Grammar", reading: "Reading", listening: "Listening", quiz: "Practice tests", mock: "JLPT mock exam",
-      exam: "Exam results", dict: "Dictionary", plan: "My plan", placement: "Placement test",
-      progress: "Progress", achievements: "Achievements", account: "Account", admin: "Content management", kana: "Kana",
-      about: "About",
-    },
-  };
-  return { title: map[language][r.name] ?? "Nihongo Dōjō" };
-};
-
-export function useIsActive() {
-  const route = useRoute();
-  return useMemo(() => (name: string) => route.name === name, [route.name]);
-}

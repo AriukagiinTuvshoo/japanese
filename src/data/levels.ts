@@ -269,38 +269,6 @@ export const LEVEL_META: Record<Level, LevelMeta> = {
   },
 };
 
-/** Тэгээс тухайн түвшин хүртэлх хуримтлагдсан цагийн дундаж */
-export const CUM_HOURS: Record<Level | "zero", number> = {
-  zero: 0,
-  N5: 410,
-  N4: 790,
-  N3: 1325,
-  N2: 2100,
-  N1: 3900,
-};
-
-/** JLPT нь жил бүр 7 ба 12-р сарын эхний ням гарагт болдог */
-export function nextJlptDates(from = new Date(), count = 3): Date[] {
-  const out: Date[] = [];
-  let y = from.getFullYear();
-  while (out.length < count) {
-    for (const m of [6, 11]) {
-      const d = new Date(y, m, 1);
-      while (d.getDay() !== 0) d.setDate(d.getDate() + 1);
-      if (d.getTime() > from.getTime()) out.push(d);
-      if (out.length >= count) break;
-    }
-    y++;
-  }
-  return out;
-}
-
-export function daysUntil(d: Date, from = new Date()) {
-  const a = new Date(from.getFullYear(), from.getMonth(), from.getDate()).getTime();
-  const b = new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime();
-  return Math.max(0, Math.round((b - a) / 864e5));
-}
-
 export function fmtDate(d: Date) {
   return `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, "0")}.${String(d.getDate()).padStart(2, "0")}`;
 }

@@ -1082,16 +1082,6 @@ export function grammarEn(g: Grammar): string {
   return Array.isArray(g.en) ? g.en.join("; ") : String(g.en ?? "");
 }
 
-/**
- * Grammar meaning in the active language.
- * - EN mode → always returns the English meaning (never null/empty for valid data).
- * - MN mode → returns g.mn when present, otherwise MN_PENDING (never English).
- */
-export function grammarMeaning(g: Grammar, language: Language): string {
-  if (language === "en") return grammarEn(g);
-  return g.mn ?? MN_PENDING;
-}
-
 /** True when the grammar item has no Mongolian translation yet. */
 export function grammarMnMissing(g: Grammar): boolean {
   return !g.mn;

@@ -354,17 +354,3 @@ export function deviceId(): string {
   }
 }
 
-/** Хамгийн сүүлийн sync нөөцийг авна (Undo/сэргээлтэд). */
-export function listSyncBackups(uid: string): string[] {
-  const prefix = syncBackupPrefix(uid);
-  const keys: string[] = [];
-  try {
-    for (let i = 0; i < localStorage.length; i++) {
-      const k = localStorage.key(i);
-      if (k && k.startsWith(prefix)) keys.push(k);
-    }
-  } catch {
-    /* private mode */
-  }
-  return keys.sort().reverse();
-}

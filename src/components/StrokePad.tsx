@@ -5,7 +5,6 @@ import {
   type CompareResult, type Stroke, type UserStroke,
 } from "../lib/stroke";
 import { Bar, Button, Chip } from "./ui";
-import { useStore } from "../lib/store";
 
 type Tool = "pen" | "erase";
 
@@ -258,13 +257,3 @@ export function StrokePad({
   );
 }
 
-/** SRS-д ханз/үг нэмэх товч. */
-export function AddToSrs({ id, asNew = true }: { id: string; asNew?: boolean }) {
-  const { doc, actions } = useStore();
-  const has = !!doc.srs[id];
-  return (
-    <Button size="sm" variant={has ? "soft" : "outline"} onClick={() => actions.grade(id, 2, { isNew: !has && asNew })}>
-      {has ? "✓ SRS-д бий" : "+ SRS-д нэмэх"}
-    </Button>
-  );
-}

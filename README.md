@@ -1,17 +1,20 @@
 # Nihongo Dōjō 道
 
-Монгол хэл дээрх япон хэлний **JLPT N5 → N1** сургалтын платформ: кана, SRS үгийн сан, ханз (зураасны дараалал), дүрэм, уншлага, сонсгол, түвшин тогтоох тест, жишиг шалгалт, хувийн төлөвлөгөө.
+Монгол хэл дээрх япон хэлний **JLPT N5 → N1** сургалтын платформ: кана, SRS үгийн сан, ханз (зураасны дараалал), дүрэм, түвшин тогтоох тест, жишиг шалгалт, хувийн төлөвлөгөө.
 
 - Бүрэн **офлайн** ажиллана (PWA) — утсанд "Install" хийж болно
-- Ахиц локал хадгалагдана; сервер байвал синк хийнэ
+- Ахиц локал хадгалагдана; сервер байвал синк хийнэ (талбар бүрийн merge дүрэм: `docs/SYNC.md`)
+- **Уншлага / Сонсгол** одоогоор агуулгын улмаас default OFF флагаар нуусан — `docs/FEATURE_GAPS.md`
 
 ## Ажиллуулах
 ```bash
 npm ci
 npm run dev          # http://localhost:5173
 npm run build        # typecheck + production build
-npm run test:routes
+npm test             # vitest (unit + property тестүүд)
+npm run test:routes  # маршрут баталгаажуулалт
 npm run data:validate
+npm run test:e2e     # Playwright: офлайн/шинэчлэл/guest merge/import (e2e/README.md)
 ```
 
 ## Нийтлэх (GitHub Pages)

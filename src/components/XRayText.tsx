@@ -3,9 +3,9 @@ import { cn } from "../utils/cn";
 import { href } from "../lib/router";
 import { useStore } from "../lib/store";
 import { loadSearchIndex } from "../lib/data";
-import { isKana, isKanji, parseFurigana, toHiragana } from "../lib/text";
+import { isKana, isKanji, parseFurigana } from "../lib/text";
 import type { SearchIndex } from "../lib/types";
-import { Button, Chip, LevelBadge, SpeakButton } from "./ui";
+import { Button, LevelBadge, SpeakButton } from "./ui";
 
 interface Token {
   text: string;
@@ -157,22 +157,4 @@ export function XRayText({ text, showFurigana = true }: { text: string; showFuri
       )}
     </div>
   );
-}
-
-/** Энгийн текстийг фуриганатай харуулах. */
-export function RubyText({ text, show = true, className }: { text: string; show?: boolean; className?: string }) {
-  const parts = parseFurigana(text);
-  return (
-    <span className={cn("font-jp", className)}>
-      {parts.map((p, i) =>
-        p.ruby && show ? <ruby key={i}>{p.base}<rt>{p.ruby}</rt></ruby> : <span key={i}>{p.base}</span>,
-      )}
-    </span>
-  );
-}
-
-/** Хирагана руу хөрвүүлж хайлт хийх товч (уншилтын тусламж). */
-export function ReadingAid({ text }: { text: string }) {
-  const kana = useMemo(() => toHiragana(text), [text]);
-  return <Chip tone="sumi">{kana}</Chip>;
 }

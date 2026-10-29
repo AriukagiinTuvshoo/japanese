@@ -210,7 +210,4 @@ export function scaleFor(size: number, padding = 0.08) {
   return { k, ox: size * padding, oy: size * padding };
 }
 
-export const toPx = (p: [number, number], t: ReturnType<typeof scaleFor>): [number, number] => [
-  t.ox + p[0] * t.k,
-  t.oy + p[1] * t.k,
-];
+

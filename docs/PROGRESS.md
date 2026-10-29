@@ -1,6 +1,6 @@
 # PROGRESS — Nihongo Dōjō
 
-Сүүлд шинэчилсэн: 2026-10-28 · Milestone A + B1–B7 дууссан (branch `fix/milestone-b`) — B8/B9 дараагийн алхам
+Сүүлд шинэчилсэн: 2026-10-29 · Milestone A + **B1–B9 бүгд дууссан** (branch `fix/milestone-b`) — дараа: Milestone C (контентын чанар)
 
 ## Фазын төлөв
 
@@ -8,7 +8,7 @@
 |---|---|---|
 | 0 — Аудит | ✅ дууссан | `docs/PHASE0_AUDIT.md` |
 | 1 — Milestone A (P0) | ✅ дууссан | `fix/p0-core`, 7 commit (доор) |
-| 1 — Milestone B (P1+) | 🔄 явцтай | B1–B7 ✅ (доор), B8 e2e + B9 цэвэрлэгээ үлдсэн |
+| 1 — Milestone B (P1+) | ✅ дууссан | B1–B9 ✅ (доор), PR нээх үлдсэн |
 | 2 — Контентын чанар | ⏳ | Хамгийн чухал; Phase 3-аас өмнө |
 | 3 — Learning engine | ⏳ | |
 | 4 — UX/A11y/Perf | ⏳ | |
@@ -31,7 +31,8 @@
 | Шалгалт | Үр дүн |
 |---|---|
 | `npm run typecheck` | ✅ exit 0 |
-| `npx vitest run` | ✅ **203 тест / 11 файл** (Milestone A-д 51/5) |
+| `npx vitest run` | ✅ **208 тест / 12 файл** (Milestone A-д 51/5) |
+| `npm run test:e2e` | ✅ 5/5 сценари (offline, SW update, corrupt storage, guest merge, import+undo) |
 | `npm run test:routes` | ✅ exit 0 |
 | `npm run data:validate` | ✅ 0 алдаа, 0 анхааруулга |
 | `npm run fonts:check` | ✅ 3,308 тэмдэгт бүгд нэг chunk-д, overlap 0 (tofu/нийлэлдэлтгүй) |
@@ -64,7 +65,9 @@
 | B4 | `db1a99a` | Хадгалалтын хязгаарыг **бичлэгээс өмнө** мэдээлнэ (80%), нэг удаа persistent storage хүснэ, нөөцийн тоог баримтын хэмжээгээр тогтооно (3/1/0) | `src/lib/quota.test.ts` (10) |
 | B5 | `fbe0a53` | Жинхэнэ JLPT дүрмээр: хэсэг бүрт ≥60% + нийт дүн, хэсгийн оноог шалгалтын дэлгэцээр харуулна; XP таблицийн эрэмбэ зассан (reviewEasy ≤ reviewGood) | `src/lib/study.test.ts`, `src/lib/gamification.test.ts` (38 шинэ) |
 | B6 | `0b9e4b1` | Уншлага/Сонсгол навигацийг **default OFF** флагаар нуусан (код үлдсэн), гүнзгий холбоос "бэлэн болоогүй" шударга хуудас; `docs/FEATURE_GAPS.md` — юу хэрэгтэйг бүрэн жагсаав | `src/lib/features.test.ts` (52) |
-| B7 | (энэ commit) | Фонт: 2 файл (2.1 MB) → **13 хэсэг unicode-range-тай**, эхний ачаалал **271 kB** (<300); serif core зөвхөн mincho-д гардаг 84 тэмдэгт; `fonts:check` (coverage) + `test:sw` (SW-ийн кэш/тэсэлгээ) npm-д оруулсан | `scripts/check-font-coverage.mjs`, `scripts/test-sw.mjs`, Lighthouse ×12 |
+| B7 | `2c52f86` | Фонт: 2 файл (2.1 MB) → **13 хэсэг unicode-range-тай**, эхний ачаалал **271 kB** (<300); serif core зөвхөн mincho-д гардаг 84 тэмдэгт; `fonts:check` (coverage) + `test:sw` (SW-ийн кэш/тэсэлгээ) npm-д оруулсан | `scripts/check-font-coverage.mjs`, `scripts/test-sw.mjs`, Lighthouse ×12 |
+| B8 | `4bd8f8c` | Playwright e2e **repo-д** (`e2e/`, `.cache` биш) + `npm run test:e2e` + CI ажил (headless, rootгүй); SW `Vary` толгой (офлайн кэшээс дутуу татдаг байсан); guest-merge диалог навигацийн давхарга дээр гардаггүй байсан; стартапын recovery мэдэгдэл `Notices`-д хүрэхгүй байсныг засав | `e2e/01–05` (5 сценари ✅), `src/lib/notice.test.ts` |
+| B9 | энэ commit | Үхсэн код устгав: `src`-аас ашиглагдаагүй **30 export/функцийг ~290 мөртэй нь** (`seeded`, `KANA_TIPS`, `getToken`, `ping`, `levelFromScore`, `LinkButton`, `useLazy`, `MemoryPanel`, …); `deadcode` шинжилгээ одоо хоосон; README онцлогийг Б6-ийн бодит төлөвтэй тааруулав; `CHANGELOG.md` нээв | `deadcode` шинжилгээ + бүх хаалга |
 
 ### B4 — Докийн хэмжээ (мергөжүүлэл, `npx vite-node scripts/measure-doc.ts`)
 

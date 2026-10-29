@@ -15,9 +15,6 @@
 import { mergeDocs } from "./merge";
 import type { Doc } from "./store";
 
-/** Зочин түлхүүр (storage.ts GUEST-тэй таарах ёстой). */
-export const GUEST_KEY = "local";
-
 /** Зочин баримтад бодит ахиц байна уу? */
 export function hasProgress(d: Doc | null | undefined): boolean {
   if (!d) return false;

@@ -364,11 +364,3 @@ function mergeAchievements(a: Record<string, number>, b: Record<string, number>)
   return out;
 }
 
-/** өдрийн parts-ийг xpParts-тэй холбож шинэчлэнэ (legacy өдрүүдэд ашиглана). */
-export function attachDayParts(day: ActivityDay, deviceId: string): ActivityDay {
-  if (day.parts && day.parts[deviceId]) return day;
-  return {
-    ...day,
-    parts: { ...(day.parts ?? {}), [deviceId]: { xp: day.xp, min: day.min, newCards: day.newCards, reviews: day.reviews, correct: day.correct, total: day.total } },
-  };
-}

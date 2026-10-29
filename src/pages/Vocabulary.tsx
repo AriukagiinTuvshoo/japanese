@@ -341,26 +341,4 @@ function LevelStats({ words }: { words: Vocab[] }) {
   );
 }
 
-/** Түвшний бүх үгийг SRS-д бөөнөөр нэмэх. */
-export function BulkAdd({ words, level }: { words: Vocab[]; level: Level }) {
-  const { actions, doc } = useStore();
-  const language = doc.profile.language ?? "mn";
-  const t = ui[language];
-  const missing = words.filter((w) => !doc.srs[w.id]);
-  return (
-    <Button
-      variant="outline"
-      size="sm"
-      disabled={!missing.length}
-      onClick={() => {
-        const first = missing.slice(0, doc.profile.newPerDay * 3);
-        first.forEach((w) => actions.grade(w.id, 2, { isNew: true }));
-        navigate(`review?level=${level}`);
-      }}
-    >
-      {t.bulkAdd(Math.min(missing.length, doc.profile.newPerDay * 3))}
-    </Button>
-  );
-}
-
 export { LEVELS };

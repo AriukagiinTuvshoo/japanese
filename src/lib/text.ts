@@ -4,9 +4,6 @@ import type { Level } from "./types";
 import type { Language } from "./i18n";
 import type { ActivityDay } from "./store";
 
-export const HIRA_START = 0x3041;
-export const KATA_START = 0x30a1;
-
 const GRAMMAR_LABELS: Record<string, string> = {
   subject: "өгүүлэгдэхүүн",
   time: "цаг хугацаа",
@@ -45,10 +42,6 @@ export function isKana(ch: string) {
   const c = ch.codePointAt(0) ?? 0;
   return (c >= 0x3041 && c <= 0x309f) || (c >= 0x30a0 && c <= 0x30ff);
 }
-export function hasKanji(s: string) {
-  return [...s].some(isKanji);
-}
-
 /** Катакана → хирагана (хайлт, уншилт харьцуулахад). */
 export function toHiragana(s: string) {
   return [...s]
@@ -253,8 +246,6 @@ export const LEVEL_LABEL: Record<Language, Record<Level, string>> = {
   },
 };
 
-export const LEVEL_JP: Record<Level, string> = { N5: "入門", N4: "基礎", N3: "中級", N2: "上級", N1: "最上級" };
-
 export const TYPE_LABEL: Record<Language, Record<string, string>> = {
   mn: {
     v: "Үйл үг",
@@ -299,9 +290,4 @@ export const MQ_LABEL: Record<Language, Record<string, { text: string; tone: "ma
   },
 };
 
-/** Түвшний тохирох POS / төрөл. */
-export function typeTone(t: string): "ai" | "matcha" | "kin" | "murasaki" | "shu" {
-  return ({ v: "shu", i: "ai", na: "murasaki", adj: "ai", adv: "matcha", exp: "kin", n: "sumi", pn: "murasaki", ctr: "kin", other: "sumi" } as const)[
-    t as "v"
-  ] ?? "sumi";
-}
+

@@ -31,7 +31,6 @@ export class ApiError extends Error {
 }
 
 let token: string | null = null;
-export const getToken = () => token;
 export const setToken = (t: string | null) => { token = t; };
 
 interface ApiEnv {
@@ -83,16 +82,6 @@ async function req<T>(path: string, init: RequestInit = {}, timeoutMs = 12_000):
     return body as T;
   } finally {
     clearTimeout(timer);
-  }
-}
-
-/** Серверт хүрч чадаж байгаа эсэх. */
-export async function ping(): Promise<boolean> {
-  try {
-    await req<{ ok: boolean }>("/health", {}, 4000);
-    return true;
-  } catch {
-    return false;
   }
 }
 
