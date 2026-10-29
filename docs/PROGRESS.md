@@ -26,14 +26,14 @@
 | P0-6 | `e7a9520` | meta.json шударга (sources 7, byLevel.vocabMn бодит, curated=0), About-д лиценз + чанарын төлөв + MT disclosure, README attribution | `data:validate` дүрэм |
 | EXTRA | `8473c47` | Хялбаршуулсан хятад үсгийн хориг (漢字/復習 vs 汉字/复习) | `src/lib/glyphs.test.ts` (3) |
 
-## Чанарын хаалга (B7-ийн дараа — 2026-10-28, бүх шалгалт нэг дор ажиллуулсан)
+## Чанарын хаалга (B9-ийн дараа — 2026-10-29, бүх шалгалт нэг дор ажиллуулсан)
 
 | Шалгалт | Үр дүн |
 |---|---|
 | `npm run typecheck` | ✅ exit 0 |
 | `npx vitest run` | ✅ **208 тест / 12 файл** (Milestone A-д 51/5) |
-| `npm run test:e2e` | ✅ 5/5 сценари (offline, SW update, corrupt storage, guest merge, import+undo) |
 | `npm run test:routes` | ✅ exit 0 |
+| `npm run test:e2e` | ✅ 5/5 сценари (offline, SW update, corrupt storage, guest merge, import+undo) |
 | `npm run data:validate` | ✅ 0 алдаа, 0 анхааруулга |
 | `npm run fonts:check` | ✅ 3,308 тэмдэгт бүгд нэг chunk-д, overlap 0 (tofu/нийлэлдэлтгүй) |
 | `npm run test:sw` | ✅ install-д зөвхөн критик, хуучин кэш устдаг, ND_WARM ажиллана |
@@ -60,14 +60,29 @@
 | # | Commit | Юу зассан | Тест |
 |---|---|---|---|
 | B1 | `896a61a` | `mergeDocs(local, remote)` цэвэр merge + `docs/SYNC.md` (талбар бүрийн дүрэм, сервер гэрээ), pull/push дээр blind `push(true)`-ийг орлож, 409 дээр дахин merge, синкын өмнө локал нөөц | `src/lib/merge.test.ts` (15, property: commutative/associative/idempotent ×500) |
-| B2 | `7d48dbe` | Зочин → аккаунт: нэвтрэхэд guest ахиц устгахаа больсон, `mergeDocs`-аар нэгтгэх санал (default ON), signOut-д локал копи үлдэнэ | `src/lib/guest.test.ts` |
+| B2 | `7d48dbe` | Зочин → аккаунт: нэвтрэхэд guest ахиц устгахаа больсон, `mergeDocs`-аар нэгтгэх санал (default ON), signOut-д локал копи үлдэнэ | `src/lib/guest.test.ts` (11) |
 | B3 | `93a9478` | Импорт preview (кард/xp/streak/өдөр/хувилбар) + merge-or-replace (default merge) + урьдчилсан нөөц + нэг товшилт Undo; Anki CSV (due+weak, UTF-8 BOM, CSV escaping) | `src/lib/port.test.ts` (17: malformed, хуучин/шинэ хувилбар, 5 MB, `__proto__`, давхар импорт, undo) |
-| B4 | `db1a99a` | Хадгалалтын хязгаарыг **бичлэгээс өмнө** мэдээлнэ (80%), нэг удаа persistent storage хүснэ, нөөцийн тоог баримтын хэмжээгээр тогтооно (3/1/0) | `src/lib/quota.test.ts` (10) |
-| B5 | `fbe0a53` | Жинхэнэ JLPT дүрмээр: хэсэг бүрт ≥60% + нийт дүн, хэсгийн оноог шалгалтын дэлгэцээр харуулна; XP таблицийн эрэмбэ зассан (reviewEasy ≤ reviewGood) | `src/lib/study.test.ts`, `src/lib/gamification.test.ts` (38 шинэ) |
-| B6 | `0b9e4b1` | Уншлага/Сонсгол навигацийг **default OFF** флагаар нуусан (код үлдсэн), гүнзгий холбоос "бэлэн болоогүй" шударга хуудас; `docs/FEATURE_GAPS.md` — юу хэрэгтэйг бүрэн жагсаав | `src/lib/features.test.ts` (52) |
+| B4 | `db1a99a` | Хадгалалтын хязгаарыг **бичлэгээс өмнө** мэдээлнэ (80%), нэг удаа persistent storage хүснэ, нөөцийн тоог баримтын хэмжээгээр тогтооно (3/1/0) | `src/lib/quota.test.ts` (15) |
+| B5 | `fbe0a53` | Дүн: **албаны JLPT схем** default (нийт ≥ түвшний бүгдийн оноо БА хэсэг бүр ≥ 19/60), 60% хэсэг бүр нь “strict” сонголт; хэсгийн оноо/доод оноо/тенцэх чипийг дэлгэцээр харуулна; XP таблицийн эрэмбэ зассан (reviewEasy 2→4) | `src/lib/study.test.ts` (100, B5 хязгаар) + `src/lib/gamification.test.ts` (4) |
+| B6 | `0b9e4b1` | Уншлага/Сонсгол навигацийг **default OFF** флагаар нуусан (код үлдсэн), гүнзгий холбоос "бэлэн болоогүй" шударга хуудас; `docs/FEATURE_GAPS.md` — юу хэрэгтэйг бүрэн жагсаав | `src/lib/features.test.ts` (5) |
 | B7 | `2c52f86` | Фонт: 2 файл (2.1 MB) → **13 хэсэг unicode-range-тай**, эхний ачаалал **271 kB** (<300); serif core зөвхөн mincho-д гардаг 84 тэмдэгт; `fonts:check` (coverage) + `test:sw` (SW-ийн кэш/тэсэлгээ) npm-д оруулсан | `scripts/check-font-coverage.mjs`, `scripts/test-sw.mjs`, Lighthouse ×12 |
 | B8 | `4bd8f8c` | Playwright e2e **repo-д** (`e2e/`, `.cache` биш) + `npm run test:e2e` + CI ажил (headless, rootгүй); SW `Vary` толгой (офлайн кэшээс дутуу татдаг байсан); guest-merge диалог навигацийн давхарга дээр гардаггүй байсан; стартапын recovery мэдэгдэл `Notices`-д хүрэхгүй байсныг засав | `e2e/01–05` (5 сценари ✅), `src/lib/notice.test.ts` |
 | B9 | энэ commit | Үхсэн код устгав: `src`-аас ашиглагдаагүй **30 export/функцийг ~290 мөртэй нь** (`seeded`, `KANA_TIPS`, `getToken`, `ping`, `levelFromScore`, `LinkButton`, `useLazy`, `MemoryPanel`, …); `deadcode` шинжилгээ одоо хоосон; README онцлогийг Б6-ийн бодит төлөвтэй тааруулав; `CHANGELOG.md` нээв | `deadcode` шинжилгээ + бүх хаалга |
+
+### B5 — JLPT тэнцэх дүрмийн эх сурвалж (verified)
+
+Иш: [JLPT — Results → “Determination of pass/fail”](https://www.jlpt.jp/sp/e/guideline/results.html)
+(2026-10-29 шалгасан; кодын тэмдэглэл: `src/lib/study.ts` ~L477).
+
+- **Албаны схем:** нийт оноо ≥ түвшний бүгдийн тэнцэх оноо — N1 100, N2 90, N3 95,
+  N4 90, N5 80 (/180) **БА** хэсэг бүр ≥ хэсгийн доод оноо (scaled 19/60 = 31.7%;
+  N4–N5 нэгтгэсэн хэсэгт 38/120 = тэр хувь). Нэг ч хэсэг доод оноонд хүрээгүй бол
+  өндөр нийт оноотой ч **тенцээгүй**.
+- **Хүсэлтээс ялгаа (чухал):** тэмдэглэлд “хэсэг бүр 60%” гэсэн боловч албаны JLPT-ийн
+  хэсгийн доод оноо 60% **биш** (31.7%). Тиймээс default = **албаны схем**, 60% нь
+  “Чанга (strict)” горимоор сонгогдоно (`ExamPassMode`). UI хоёрыг ялгаж харуулна.
+- XP: `reviewEasy` 2 → 4 (Easy одоо Good-оос бага төлөхөө больсон); retroactive миграцгүй.
+- Тест: хязгаар min−1 / min / min+1 бүх түвшинд, хэсэг нэг нь унах, бүгд зөв, бүгд буруу.
 
 ### B4 — Докийн хэмжээ (мергөжүүлэл, `npx vite-node scripts/measure-doc.ts`)
 
