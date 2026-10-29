@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   verify:
-    name: Typecheck, tests, data audit, build
+    name: Typecheck, tests, data audit, content QA, build
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -43,6 +43,13 @@ jobs:
 
       - name: Validate learning content and relationships
         run: npm run data:validate
+
+      # Контентын чанарын хатуу хаалга: схем, монгол утга, холбоос,
+      # provenance, нэр томьёо, coverage-ийн нийцэл. Хянаагүй (draft/auto)
+      # контент алдаа БИШ — гэхдээ curated болж, хүн хянасан мэт
+      # тооцогдохгүй (decisions.json-ийн approve шаардлагатай).
+      - name: Content QA (schema, provenance, terminology, coverage)
+        run: npm run content:qa
 
       - name: Font coverage (every data glyph has a woff2 chunk)
         run: npm run fonts:check
