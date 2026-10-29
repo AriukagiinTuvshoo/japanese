@@ -18,6 +18,7 @@ import { mkdir, readFile, readdir, rm, stat, writeFile } from "node:fs/promises"
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { computeMeta } from "./meta.mjs";
+import { makeAutoGloss } from "./lib/gloss.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = path.join(ROOT, ".cache", "sources");
@@ -76,30 +77,8 @@ const TYPE_MN = {
   other: "Бусад",
 };
 
-/** Шинэ үгэнд монгол орчуулга автоматаар санал болгох. */
-function makeAutoGloss(terms) {
-  const norm = (w) => w.toLowerCase().replace(/^to /, "").replace(/^a /, "").replace(/^an /, "").replace(/\(.*?\)/g, "").trim();
-  return (en = []) => {
-    if (!en.length) return null;
-    const out = [];
-    for (const gloss of en.slice(0, 2)) {
-      const g = norm(gloss);
-      if (!g) continue;
-      const parts = g.split(/\s*[,;]\s*|\s+or\s+/).flatMap((x) => x.split(/\s*\/\s*/));
-      const mapped = parts.map((part) => {
-        if (terms[part]) return terms[part];
-        const words = part.split(/\s+/);
-        const each = words.map((w) => terms[w] ?? terms[w.replace(/(s|es|ed|ing)$/, "")]);
-        return each.every(Boolean) ? each.join(" ") : null;
-      });
-      if (mapped.every(Boolean) && mapped.length) out.push(mapped.join(", "));
-    }
-    return out.length ? [...new Set(out)].slice(0, 2) : null;
-  };
-}
-
 /* ------------------------------------------------------------------ */
-/* 1. эх өгөгдөл                                                       */
+/* 1. эх өгөгдэл                                                       */
 /* ------------------------------------------------------------------ */
 async function loadSources() {
   const openjlpt = {
