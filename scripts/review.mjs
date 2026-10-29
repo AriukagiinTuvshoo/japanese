@@ -10,7 +10,7 @@
  *   АЖИЛЛАХ АЛХАМ (reviewer):
  *   1) npm run review:queue        → content/review/QUEUE.md шинэчлэнэ
  *   2) QUEUE.md-г уншиж, шийдвэрээ авна
- *   3) npm run review:mark -- <kind> <key> --action=approve|revise|reject \
+ *   3) npm run review:mark -- <kind> <key> --action=approve|revise|reject|verify \
  *                              --reviewer="<нэр>" [--note="..."] [--mn="..."]
  *   4) git diff content/review/decisions.json   → шийдвэрийг хянах/коммит
  *   5) npm run content:qa          → шалгалт 0 алдаа байх ёстой
@@ -18,7 +18,11 @@
  * ДҮРЭМ:
  *  · `--reviewer` ЗААВАЛ — хүнгүйгээр шийдвэр үүсдэггүй, "curated" хэзээ ч
  *    нотолгоогүйгээр тавигдахгүй.
- *  · action: approve (батлах) / revise (засвар санал) / reject (татгалзах).
+ *  · action: approve (батлах) / revise (засвар санал) / reject (татгалзах) /
+ *    verify (нотолгоотой шалгалт — ӨГӨГДӨЛ ӨӨРЧЛӨГДӨХГҮЙ, curated БОЛОХГҮЙ).
+ *    `verify` нь "шалгасан, боловч эцсийн хүний батламж хүлээж байна" гэсэн
+ *    утгатай: зөвхөн `approve` л curated төлөв тавьдаг. Ингэснээр автомат
+ *    шалгалтыг хүний батламж мэтээр тайлагнах эрсдэл арилна.
  *  · Шийдвэрийн файл: content/review/decisions.json
  *      "<kind>:<key>": { "action", "reviewer", "at", "note"?, "mn"? }
  *  · terms-ийг approve хийхэд content/mn/terms.json-ийн төлөв `curated`
@@ -37,7 +41,7 @@ const TERMS = path.join(ROOT, "content/mn/terms.json");
 const DATA = path.join(ROOT, "public/data");
 
 const KINDS = ["vocab", "kanji", "grammar", "terms"];
-const ACTIONS = ["approve", "revise", "reject"];
+const ACTIONS = ["approve", "revise", "reject", "verify"];
 const LEVELS = ["N5", "N4", "N3", "N2", "N1"];
 
 const readJson = (p, fallback) => {
@@ -286,6 +290,9 @@ export function cmdMark(argv) {
   console.log(`✓ ${ledgerKey}: ${action} (${reviewer}, ${decision.at})`);
   if (Object.keys(before).length) console.log(`  (өмнөх шийдвэр: ${before.action} ${before.reviewer})`);
   if (termsChanged) console.log("  content/mn/terms.json: status → curated (reviewedBy/reviewedAt бичигдлээ)");
+  if (action === "verify") {
+    console.log("  шалгалт бүртгэгдлээ — өгөгдөл/төлөв ӨӨРЧЛӨГДӨӨГҮЙ. curated болгохыг зөвхөн хүн `--action=approve`-аар шийднэ.");
+  }
   console.log(`Дараа: git diff content/review/ ${termsChanged ? "content/mn/terms.json " : ""}&& npm run content:qa`);
   return 0;
 }

@@ -107,6 +107,17 @@ describe("review.mjs — файлд суурилсан хүний хяналт",
     expect(terms.particle.mn).toBe("Тусаглал");
   });
 
+  it("mark verify: нотолгоо бичигдэхдээ өгөгдөл, статус өөрчлөгддөггүй (curated болдоггүй)", () => {
+    expect(
+      cmdMark(["terms", "particle", "--action=verify", "--reviewer=Freebuff AI reviewer", "--note=эх сурвалжтай тулгасан"]),
+    ).toBe(0);
+    const d = readDecisions()["terms:particle"];
+    expect(d).toMatchObject({ action: "verify", reviewer: "Freebuff AI reviewer" });
+    // verify нь curated болгохгүй — human approve л болгоно
+    expect(readTerms().particle.status).toBe("needs_review");
+    expect(readTerms().particle.reviewedBy).toBeUndefined();
+  });
+
   it("public/data дэх curated мөрөд заавал хүний шийдвэр шаардана (content:qa)", () => {
     // шийдвэргүй curated → алдаа
     w("public/data/vocab/n5.json", [
