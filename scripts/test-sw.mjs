@@ -71,13 +71,26 @@ function makeWorld({ oldCaches = [], precache = DEFAULT_PRECACHE, connection } =
   const fetchMock = async (url) => {
     const u = String(url);
     fetched.push(u);
+    // putClean (B8) шинэ `Headers`/`Response` ашигладаг — тэдгээргүйгээр
+    // бүх кэшилт алдаагаар дуугүй амжилтгүй болдог (catch бариулдаг).
+    const mkRes = (extra = {}) => ({
+      ok: true,
+      status: 200,
+      statusText: "OK",
+      headers: new Headers(),
+      body: null,
+      clone() {
+        return this;
+      },
+      ...extra,
+    });
     if (u.includes("precache.json")) {
-      return { ok: true, json: async () => precache };
+      return mkRes({ json: async () => precache });
     }
     if (u.includes("index/") || u.endsWith(".json")) {
-      return { ok: true, json: async () => ({}) };
+      return mkRes({ json: async () => ({}) });
     }
-    return { ok: true, clone: () => ({ ok: true }), text: async () => "<html></html>" };
+    return mkRes({ text: async () => "<html></html>" });
   };
 
   const ctx = vm.createContext({
@@ -86,6 +99,8 @@ function makeWorld({ oldCaches = [], precache = DEFAULT_PRECACHE, connection } =
     fetch: fetchMock,
     console,
     URL,
+    Headers,
+    Response,
     Promise,
     Map,
     Set,
