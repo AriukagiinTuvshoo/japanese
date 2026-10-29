@@ -17,6 +17,30 @@ const ROUTES = [
   ["#/review", "main"],
 ];
 
+/**
+ * Фонтыг `document.fonts.check()`-ээр шална.
+ *
+ * Яагаад эхлээд `document.fonts.load()` вэ: `check()` нь зөвхөн тухайн
+ * unicode-range-ийн чанк **аль хэдийн ачаалагдсан** бол true болдог. Аль
+ * нэг замд mincho (serif) текст гаргаагүй бол чанк ачаалагдахгүй — тест
+ * OS/Chromium-оос хамаарч алдаатай унана (GitHub Actions ubuntu дээр яг
+ * ингэж унасан: “Noto Serif JP (mincho) ачаалагдсан байх ёстой”).
+ * `load()` нь тухайн глифийг бодитоор татахыг шаарддаг тул шалгалт
+ * детерминистик болно; офлайн үед кэшээс ирэхгүй бол пак унана.
+ */
+const probeFonts = (page) =>
+  page.evaluate(async () => {
+    const probes = [
+      document.fonts.load('400 16px "Noto Sans JP"', "日本語"),
+      document.fonts.load('700 16px "Noto Serif JP"', "道"),
+    ].map((p) => p.catch(() => []));
+    await Promise.all(probes);
+    return {
+      sans: document.fonts.check('400 16px "Noto Sans JP"', "日本語"),
+      serif: document.fonts.check('700 16px "Noto Serif JP"', "道"),
+    };
+  });
+
 const srv = await startAll();
 let browser;
 try {
@@ -48,11 +72,7 @@ try {
     await page.goto(srv.baseURL + route, { waitUntil: "domcontentloaded" });
     await poll(() => page.evaluate(() => document.fonts.status === "loaded"), { label: `fonts loaded on ${route}` });
   }
-  const fontsOnline = await page.evaluate(() => ({
-    sans: document.fonts.check('400 16px "Noto Sans JP"', "日本語"),
-    serif: document.fonts.check('700 16px "Noto Serif JP"', "道"),
-    files: performance.getEntriesByType("resource").filter((r) => /\.woff2/.test(r.name)).length,
-  }));
+  const fontsOnline = { ...(await probeFonts(page)) };
   assert(fontsOnline.sans, "Noto Sans JP шаардлагатай үсгээр баталгаажсан байх ёстой");
   assert(fontsOnline.serif, "Noto Serif JP (mincho) ачаалагдсан байх ёстой");
 
@@ -77,10 +97,7 @@ try {
     await poll(() => page.$(sel), { label: `${route} renders offline` });
     const text = await page.textContent("body");
     assert(text && text.trim().length > 50, `${route} хоосон хуудас (white screen) байна`);
-    const fonts = await page.evaluate(() => ({
-      sans: document.fonts.check('400 16px "Noto Sans JP"', "日本語"),
-      serif: document.fonts.check('700 16px "Noto Serif JP"', "道"),
-    }));
+    const fonts = await probeFonts(page);
     assert(fonts.sans && fonts.serif, `${route}: фонт офлайнаар ачаалагдаагүй (tofu эрсдэл)`);
   }
 
