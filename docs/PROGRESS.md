@@ -1,6 +1,6 @@
 # PROGRESS — Nihongo Dōjō
 
-Сүүлд шинэчилсэн: 2026-10-29 · Milestone A + **B1–B9 бүгд дууссан** (branch `fix/milestone-b`) — дараа: Milestone C (контентын чанар)
+Сүүлд шинэчилсэн: 2026-10-29 · Milestone A + B1–B9 + **C1–C7 бүгд дууссан** (branch `feat/milestone-c`) — дараа: дараагийн milestone-ийн баталгаа шаардлагатай
 
 ## Фазын төлөв
 
@@ -9,7 +9,7 @@
 | 0 — Аудит | ✅ дууссан | `docs/PHASE0_AUDIT.md` |
 | 1 — Milestone A (P0) | ✅ дууссан | `fix/p0-core`, 7 commit (доор) |
 | 1 — Milestone B (P1+) | ✅ дууссан | B1–B9 ✅ (доор), PR нээх үлдсэн |
-| 2 — Контентын чанар | ⏳ | Хамгийн чухал; Phase 3-аас өмнө |
+| 2 — Контентын чанар | ✅ дууссан | C1–C7 ✅ (доор); хүний хяналт **файлын** workflow-оор (`review:*`), backendгүй |
 | 3 — Learning engine | ⏳ | |
 | 4 — UX/A11y/Perf | ⏳ | |
 | 5 — Backend/Ops | ⏳ | `server/` байхгүй хэвээр |
@@ -145,9 +145,72 @@
 таталт давхцсан) — уг хэмжилтийг давтан гаргаж байсан. Эцсийн тоонууд нь **build-аас ≥20 мин
 хойно** авсан, дотоод сүлжээнд сааталгүй run-уудын медиан; 3 run бүрт давтагдсан.
 
-## Мэдэгдэж байгаа, хийгдээгүй (Milestone B-д)
+## Milestone C — хийсэн ажил (branch `feat/milestone-c`)
 
-- A11y: контраст (vocab 67 зөрчил), `lang="ja"`, 44px touch target — Phase 4.
-- `content:qa`, review queue, N1/N2 контентын чанар — Phase 2.
-- Иш татсан жишээ өгүүлбэрийн хяналт (10–13% алдаа) — Phase 2.
-- `server/` (sync) — Phase 5.
+Эх үндэс: `6237c56`. **Git remote тохируулагдаагүй** тул PR нээгдээгүй, CI
+(GitHub Actions) **хэзээ ч ажиллаж байгаагүй** — quality-gate шинэ алхамууд
+зөвхөн энд нэг удаа гараар баталгаажуулав.
+
+| # | Commit | Юу хийсэн | Тест |
+|---|---|---|---|
+| C1 | `6237c56` | Суурь шалгалт: тоонуудыг дахин хэмжиж, хуучин/статистик мөрүүдийг зассан | — |
+| C2 | `41efd27` | `terms.json` **0 → 48** нэр томьёо (mn/ja/source/status; нэг япон нэр = нэг монгол нэр), auto-gloss логикийг `scripts/lib/gloss.mjs` болгон тусгаарлав | `gloss.test.mjs` (6) |
+| C3 | `81a316f` | `npm run content:qa` — контентын **хатуу** хаалга; coverage-ийн **нэгдсэн дүрэм** `scripts/lib/coverage.mjs`-д (consistency-check мөн түүнийг ушилна); алдаа / анхааруулга / мэдээлэл ялгана | `content-qa.test.mjs` (8) |
+| C4 | `c9f2319` | `review:queue/mark/status` + `content/review/decisions.json` (зөвхөн Git diff-ээр хянагдах шийдвэр); content:qa **curated → заавал approve + reviewer**-тай; Admin-ийн backendгүй товчнуудыг шударга мэдээллээр сольсон (дуураймж амжилтгүй UI арилав) | `review.test.mjs` (6), i18n MN/EN |
+| C5 | `33eddaf` | KANJIDIC2 классик зурлага → радикал (**390** нөхсөн, **21** англи WaniKani нэр солигдсон); OpenJLPT талбарын нэрийн алдаа (`on_yomi`→`onyomi`) + `[] ?? x` fallback засвар; `kanji:meta` тайлан/apply; `data:fetch` бүтэлгүйтэл арилгав | `kanji-meta.test.mjs` (14) |
+| C6 | `c84b244` | `content:qa` → `quality-gate.yml` (data:validate-ийн дараа) | — |
+| C7 | `903263e` | `test:sw`-ийн VM mock засвар (B8-аас хойш `Headers`/`Response` дутуу байснаас **хоосон кэш дээр** тэмдэглэгдэж байв) + шинэ 2 глифийг фонтод нөхөв | e2e 5/5 + бүх хаалга |
+
+### C7 — эцсийн хаалга (2026-10-29, бүгд нэг дор ажиллуулсан)
+
+| Шалгалт | Үр дүн | Нотолгоо |
+|---|---|---|
+| `npm run typecheck` | ✅ PASS (exit 0) | `tsc -b --noEmit` |
+| `npx vitest run` | ✅ PASS — **242 тест / 16 файл** (C-ийн өмнө: 208/12) | study 100, port 17, merge 15, quota 15, storage 15, **kanji-meta 14**, srs 12, guest 11, **content-qa 8**, **review 6**, **gloss 6**, api 6, features 5, notice 5, gamification 4, glyphs 3 |
+| `npm run test:routes` | ✅ PASS | бүх route regression |
+| `npm run data:validate` | ✅ PASS — 0 алдаа, 0 анхааруулга | 10,461 үг · 2,794 ханз · 526 дүрэм |
+| `npm run content:qa` | ✅ PASS — 0 алдаа, 0 анхааруулга | **шинэ** хаалга |
+| `npm run fonts:check` | ✅ PASS (C5-ийн дараа 2 глиф дутуу байсан → font дахин subset) | 3,310 тэмдэгт бүгд хэсэгтэй |
+| `npm run test:sw` | ✅ PASS (**өмнө нь унадаг байсан** — B8-ийн mock буруу) | 5 assertion |
+| `npm run build` | ✅ PASS (~15 s) | `dist/` |
+| `npm run test:e2e` | ✅ PASS — **5/5** (offline, SW update, corrupt storage, guest merge, import+undo) | headless Chromium |
+| `npm run kanji:meta` | ✅ PASS | `content/review/KANJI-META.md` шинэчлэгддэг, дахин ажиллуулбал ижил үр дүн |
+| `npm run review:queue` / `review:status` | ✅ ажиллаж байна | queue-г дахин бичээд git diff хоосон (тайлан синк); шийдвэр 0 |
+| Lint | ⛔ NOT RUN — төсөлд lint script байхгүй (ажиллуулах зүйлгүй) | `package.json` |
+
+### C — Coverage өмнө / дараа (PHASE 0 үүсгэлтэй харьцуулсан)
+
+| Хэмжүүр | Өмнө (PHASE 0) | Дараа (C) |
+|---|---|---|
+| `terms.json` нэр томьёо | **0** | **48** (33 `draft`, 15 `needs_review`, 0 `curated`) |
+| Ханз `rad` байгаа | 2,404 / 2,794 (86.0%) | **2,794 / 2,794 (100%)** |
+| Ханз `on` байгаа | 2,770 / 2,794 | 2,771 / 2,794 |
+| Ханз `kun` байгаа | 2,356 / 2,794 (84.3%) | 2,363 / 2,794 (84.6%) |
+| Дутуу metadata-тай мөр (needs-review) | 852 (рад 390 + он 24 + кун 438) | **454** (N1 328) — бүгд record тус бүрээр тайланд |
+| Үгийн сан төлөв | curated 0 / draft 7,380 / auto 3,081 | **өөрчлөөгүй** (C контентыг дахин үүсгээгүй) |
+| `curated` (хүн хянасан) | 0 | 0 — **workflow бэлэн, шийдвэр хараахан алга** |
+| Unit тест | 208 / 12 файл | **242 / 16 файл** |
+
+**Яагаад `data:build`-ийн бүрэн үр дүнгүүдийг коммитлаагүй вэ:** шинээр
+татсан эх сурвалжууд одоогийн `public/data`-аас ялгаатай (дээд түвшнийн
+өөрчлөлт), `apply-*` скриптүүдийн орчуулгууд build-аар дарагдах, мөн
+`apply-mn-drafts.mjs` **массивын байрлалаар** индекс тавьдаг тул эрэмбэ
+өөрчлөлт драфтыг буруу мөрөн дээр тавих эрсдэлтэй. Тиймээс C5 нь зөвхөн
+хоосон талбаруудыг `kanji:meta:apply`-аар мөрөөр нь дүүргэсэн (идемпотент,
+эргэлзээгүй); бүрэн rebuild нь тусдаа шийдвэр шаардана.
+
+## Мэдэгдэж байгаа, хийгдээгүй (Milestone C-ийн дараа)
+
+- **454 ханзын metadata** (N1 328) — ямар ч багтаа эх сурвалжгүй: жагсаалт
+  `content/review/KANJI-META.md`-д record тус бүрээр. Шинэ эх сурвалж
+  (KANJIDIC2-ийн бүрэн хувилбар / KanjiVG radical) эсвэл хүн шийднэ.
+- **curated = 0** — хүний хяналт ажиллаагүй: `review:*` бэлэн, одоо хүн
+  (та) `decisions.json`-д шийдвэр бичих л үлдэж байна. Terms-ийн 15 мөр
+  `needs_review`.
+- **Admin approve/reject backend** (`server/`) байхгүй — UI одоо үүнийг
+  шударга мэдээлдэг; backend = Phase 5.
+- **Git remote/PR/CI байхгүй** — quality-gate шинэ алхамууд GitHub дээр
+  хэзээ ч гүйж байгаагүй. Remote тохируулбал PR + анхны CI ажиллагаа шаардлагатай.
+- Машин орчуулгын алдаа (дээжээр ≈10–13%) — хүн хяналт (Phase 2-ийн үлдсэн хэсэг).
+- A11y (контраст, `lang="ja"`, touch target), iOS Safari бодит төхөөрөмж дээр — Phase 4.
+- `data:build` бүрэн дахин үүсгэлт болон түүний аюулгүй миграци — тусдаа шийдвэр (дээр үзсэн).
