@@ -12,6 +12,7 @@
     "data:fetch": "node scripts/fetch-sources.mjs",
     "data:build": "node scripts/build-data.mjs",
     "data:validate": "node scripts/validate-data.mjs",
+    "content:qa": "node scripts/content-qa.mjs",
     "fonts:build": "node scripts/build-fonts.mjs",
     "fonts:check": "node scripts/check-font-coverage.mjs",
     "test:sw": "node scripts/test-sw.mjs",
