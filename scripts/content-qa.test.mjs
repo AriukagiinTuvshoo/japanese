@@ -129,10 +129,20 @@ describe("content:qa — контентын чанарын хаалга", () => 
     const b = runQa({ root: noSource });
     expect(b.errors.some((e) => e.includes("мөр curated байж болохгүй"))).toBe(true);
 
-    // эх сурвалжтай curated → зөвшөөрөгдөнө
+    // эх сурвалжтай curated + хүний шийдвэр (decisions.json) → зөвшөөрөгдөнө
     const withSource = fixture({ vocab: [V({ mq: "curated" })], terms: {} });
+    mkdirSync(path.join(withSource, "content/review"), { recursive: true });
+    writeFileSync(
+      path.join(withSource, "content/review/decisions.json"),
+      JSON.stringify({ "vocab:学校|がっこう": { action: "approve", reviewer: "Бат", at: "2026-10-29" } }),
+    );
     const c = runQa({ root: withSource });
     expect(c.errors.filter((e) => e.includes("curated")).length).toBe(0);
+
+    // хүний шийдвэргүй curated → C4-ийн дүрмээр FAIL
+    const noDecision = fixture({ vocab: [V({ mq: "curated" })], terms: {} });
+    const d = runQa({ root: noDecision });
+    expect(d.errors.some((e) => e.includes("хүний шийдвэр"))).toBe(true);
   });
 
   it("5) auto болон none-ийг бүх тооцоолол ЯГ ИЖИЛ дүрмээр тоолдог", () => {

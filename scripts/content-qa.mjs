@@ -237,9 +237,26 @@ export function runQa({ root = process.cwd() } = {}) {
   );
 
   /* ── 4. чанарын төлөв + provenance (public/data) ─────────────────────── */
-  for (const [list, label, idOf] of [
-    [vocab, "public/data/vocab", (r) => `${r.w}|${r.r}`],
-    [kanji, "public/data/kanji", (r) => r.k],
+  const decisionsFile = path.join(root, "content/review/decisions.json");
+  const decisions = fs.existsSync(decisionsFile)
+    ? readJson(decisionsFile, "content/review/decisions.json", errors, null)
+    : {};
+  const ledger = decisions && typeof decisions === "object" ? decisions : {};
+  const approvedBy = (kind, key) => {
+    const d = ledger[`${kind}:${key}`];
+    return Boolean(
+      d &&
+        d.action === "approve" &&
+        typeof d.reviewer === "string" &&
+        d.reviewer.trim() &&
+        typeof d.at === "string" &&
+        d.at.trim(),
+    );
+  };
+
+  for (const [list, kind, label, idOf] of [
+    [vocab, "vocab", "public/data/vocab", (r) => `${r.w}|${r.r}`],
+    [kanji, "kanji", "public/data/kanji", (r) => r.k],
   ]) {
     for (const r of list) {
       const id = idOf(r);
@@ -247,6 +264,10 @@ export function runQa({ root = process.cwd() } = {}) {
       // curated = хүн хянасан гэдэгт эх сурвалж/баталгаа заавал
       if (r.mq === "curated" && !(typeof r.src === "string" && r.src && typeof r.sid === "string" && r.sid)) {
         E(label, id, "mq", "curated боловч эх сурвалж (src/sid) дутуу — хянагдаагүй мөр curated байж болохгүй");
+      }
+      // C4: curated мөр заавал хүний шийдвэртэй (content/review/decisions.json)
+      if (r.mq === "curated" && !approvedBy(kind, id)) {
+        E(label, id, "mq", "curated боловч хүний шийдвэр (content/review/decisions.json → approve + reviewer + at) байхгүй");
       }
       if (r.mq === "none" && hasMnValue(r.mn)) E(label, id, "mq", "none боловч монгол утга байна (төлөв үнэн бус)");
       if (r.mq !== "none" && !hasMnValue(r.mn)) E(label, id, "mn", `mq=${r.mq} боловч монгол утга хоосон`);
