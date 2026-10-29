@@ -12,6 +12,8 @@
     "data:fetch": "node scripts/fetch-sources.mjs",
     "data:build": "node scripts/build-data.mjs",
     "data:validate": "node scripts/validate-data.mjs",
+    "kanji:meta": "node scripts/kanji-meta.mjs report",
+    "kanji:meta:apply": "node scripts/kanji-meta.mjs apply",
     "content:qa": "node scripts/content-qa.mjs",
     "review:queue": "node scripts/review.mjs queue",
     "review:mark": "node scripts/review.mjs mark",

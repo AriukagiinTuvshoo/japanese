@@ -23,6 +23,12 @@ import sqlite3
 import sys
 from collections import defaultdict
 
+# Windows дээр консол cp932 байж болно: кирилл/япон мөр хэвлэхэд
+# UnicodeEncodeError гарч скрипт зогсоно. UTF-8 болгонөө.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
 CACHE = os.path.join(ROOT, ".cache", "sources")

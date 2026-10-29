@@ -19,6 +19,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { computeMeta } from "./meta.mjs";
 import { makeAutoGloss } from "./lib/gloss.mjs";
+import { firstNonEmpty, kangxiChar } from "./lib/kanji-meta.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = path.join(ROOT, ".cache", "sources");
@@ -96,7 +97,10 @@ async function loadSources() {
   const jmCandidates = (await json(path.join(SRC, "jamdict-data/candidates.json"), [])) ?? [];
   const openjlptMeta = (await json(path.join(SRC, "openjlpt/data/json/meta.json"), {})) ?? {};
   const lock = (await json(path.join(SRC, "sources.lock.json"), {})) ?? {};
-  return { openjlpt, kanjiData, jmCandidates, openjlptMeta, lock };
+  // KANJIDIC2 классик зурлагын дугаар → ханзны `rad` (scripts/lib/kanjidic_export.py).
+  // Файл байхгүй бол хуучин дүрэм үлдэнэ: 389 радикал дутуу хэвээр үлдэнэ.
+  const kanjiRadicals = (await json(path.join(SRC, "jamdict-data/kanji-radicals.json"), null))?.radicals ?? {};
+  return { openjlpt, kanjiData, jmCandidates, openjlptMeta, lock, kanjiRadicals };
 }
 
 async function loadContent() {
@@ -218,7 +222,7 @@ function buildVocab({ openjlpt, jmCandidates, kanjiData }, content, audit) {
 /* ------------------------------------------------------------------ */
 /* 3. ханз                                                             */
 /* ------------------------------------------------------------------ */
-function buildKanji({ openjlpt, kanjiData }, content, audit, vocabByLevel) {
+function buildKanji({ openjlpt, kanjiData, kanjiRadicals }, content, audit, vocabByLevel) {
   const auto = makeAutoGloss(content.terms);
   const jlptOf = new Map();
   for (const lv of LEVELS) {
@@ -272,11 +276,23 @@ function buildKanji({ openjlpt, kanjiData }, content, audit, vocabByLevel) {
   for (const [ch, info] of selected) {
     const curated = content.kanji[ch] ?? {};
     const jl = jlptOf.get(ch);
-    const readings_on = info.readings_on ?? jl?.entry?.on_yomi ?? [];
-    const readings_kun = info.readings_kun ?? jl?.entry?.kun_yomi ?? [];
+    // Канни-дулааны хоосон массив (`[] ?? x` → `[]`) алгасдаг тул эхлээд
+    // хоосон эсэхийг шалгана. OpenJLPT талбарын нэрийг анхаарна:
+    // `onyomi` / `kunyomi` (он_yomi гэж бичигдээгүй!).
+    const readings_on = firstNonEmpty(info.readings_on, jl?.entry?.onyomi);
+    const readings_kun = firstNonEmpty(info.readings_kun, jl?.entry?.kunyomi);
     const enMeanings = (info.meanings ?? jl?.entry?.meanings ?? []).slice(0, 3);
     const draftM = content.kanjiDraft[ch];
     const mn = curated.m ? [curated.m] : draftM ? [draftM] : (auto(enMeanings) ?? []);
+    // радикал: гараар тэмдэглэсэн → OpenJLPT → KANJIDIC2 (Кангийн дугаар)
+    // → kanji-data-ийн бүрдүүлэгчийн нэр (англи — хамгийн сүүлийн сонголт).
+    const nonEmpty = (v) => (typeof v === "string" && v.trim() ? v : null);
+    const radCurated = nonEmpty(curated.rad);
+    const radOpenjlpt = nonEmpty(jl?.entry?.radical);
+    const radKanjidic = kangxiChar(kanjiRadicals[ch]);
+    const radWk = nonEmpty(info.wk_radicals?.[0]);
+    const radFromKanjidic = !radCurated && !radOpenjlpt && radKanjidic != null;
+    const rad = radCurated ?? radOpenjlpt ?? radKanjidic ?? radWk ?? null;
 
     byLevel[info.lvl].push({
       k: ch,
@@ -290,10 +306,10 @@ function buildKanji({ openjlpt, kanjiData }, content, audit, vocabByLevel) {
       mq: curated.m ? "curated" : draftM ? "draft" : mn.length ? "auto" : "none",
       on: curated.on ?? readings_on.slice(0, 3),
       kun: curated.kun ?? readings_kun.slice(0, 4),
-      rad: curated.rad ?? jl?.entry?.radical ?? info.wk_radicals?.[0] ?? null,
+      rad: rad,
       w: wordsOf.get(ch) ?? [],
       mn_mem: curated.n ?? null,
-      src: jl ? "openjlpt+kanji-data" : "kanji-data",
+      src: `${jl ? "openjlpt+kanji-data" : "kanji-data"}${radFromKanjidic ? "+kanjidic2" : ""}`,
       sid: ch,
     });
     if (!curated.m) audit.mnMissingKanji.push(ch);
