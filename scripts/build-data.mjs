@@ -111,6 +111,9 @@ async function loadContent() {
     terms: (await json(path.join(CONTENT, "mn/terms.json"), {})) ?? {},
     // AI/машин драфт — хянагдаагүй. Хүний баталгаажуулсны дараа mn/vocab.json руу шилжинэ.
     vocabDraft: (await json(path.join(CONTENT, "mn/vocab-draft.json"), {})) ?? {},
+    // Machine орчуулга (түлхүүр: `бичлэг|уншлага`) — ханзны холбоос үгсийн утгад ашиглана.
+    // Эс бөгөөс apply-machine-mn-ээр орчуулсан үг англи хэвээр харагдана.
+    vocabMachine: (await json(path.join(CONTENT, "mn/machine/vocab.json"), {})) ?? {},
     kanjiDraft: (await json(path.join(CONTENT, "mn/kanji-draft.json"), {})) ?? {},
     listening: (await json(path.join(CONTENT, "listening.json"), [])) ?? [],
     reading: (await json(path.join(CONTENT, "reading.json"), [])) ?? [],
@@ -239,7 +242,14 @@ function buildKanji({ openjlpt, kanjiData, kanjiRadicals }, content, audit, voca
       for (const ch of v.kd) {
         if (!wordsOf.has(ch)) wordsOf.set(ch, []);
         const list = wordsOf.get(ch);
-        if (list.length < 14) list.push({ w: v.w, r: v.r, mn: v.mn?.[0] ?? v.en[0], lvl: v.lvl });
+        if (list.length < 14) {
+          // `v.mn` нь build-ийн үед ихэвчлэн хоосон (машин орчуулга дараа нь орно),
+          // тиймээс machine стороос ч хайна — англи руу буцаж унахгүйн тулд.
+          // Дараалал нь apply-machine-mn.mjs-тэй ижил: түлхүүрт орчуулга
+          // > glossary авто-тайлбар > англи.
+          const mn = content.vocabMachine?.[`${v.w}|${v.r}`] ?? v.mn?.[0] ?? v.en[0];
+          list.push({ w: v.w, r: v.r, mn, lvl: v.lvl });
+        }
       }
     }
   }
