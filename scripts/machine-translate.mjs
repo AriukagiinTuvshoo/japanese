@@ -53,11 +53,12 @@ async function collectSources() {
   if (task === "vocab" || task === "vex") {
     for (const lv of levels) {
       const list = await readJson(path.join(DATA, "vocab", `${lv}.json`), []);
-      list.forEach((v, i) => {
+      list.forEach((v) => {
         if (task === "vocab") {
           if (v.mq === "none" || !v.mn) {
             const src = (v.en ?? []).filter(Boolean).join("; ");
-            if (src) items.push({ key: `${lv}:${i}`, src });
+            // түлхүүр нь `бичлэг|уншлага` — эрэмбэ өөрчлөгдөхөд тогтвортой
+            if (src) items.push({ key: `${v.w}|${v.r}`, src });
           }
         } else {
           for (const e of v.ex ?? []) {
@@ -71,10 +72,10 @@ async function collectSources() {
   if (task === "kanji") {
     for (const lv of levels) {
       const list = await readJson(path.join(DATA, "kanji", `${lv}.json`), []);
-      list.forEach((k, i) => {
+      list.forEach((k) => {
         if (k.mq === "none" || !k.mn) {
           const src = (k.en ?? []).filter(Boolean).join("; ");
-          if (src) items.push({ key: `${lv}:${i}`, src });
+          if (src) items.push({ key: k.k, src });
         }
       });
     }
@@ -179,13 +180,7 @@ const store = await readJson(file, {});
 const items = await collectSources();
 
 // аль хэдийн орчуулсныг алгасна
-const todo = items.filter((it) => {
-  if (task === "vocab" || task === "kanji") {
-    const [lv, i] = it.key.split(":");
-    return store[lv]?.[i] === undefined;
-  }
-  return store[it.key] === undefined;
-});
+const todo = items.filter((it) => store[it.key] === undefined);
 
 console.log(`[${task}] нийт ${items.length}, хийхдээ ${todo.length} (өмнө хийсэн ${items.length - todo.length})`);
 if (!todo.length) {
@@ -203,12 +198,7 @@ todo.forEach((it, j) => {
   const val = out[j];
   if (!val) { fail++; return; }
   ok++;
-  if (task === "vocab" || task === "kanji") {
-    const [lv, i] = it.key.split(":");
-    (store[lv] ??= {})[i] = val;
-  } else {
-    store[it.key] = val;
-  }
+  store[it.key] = val;
 });
 
 await mkdir(OUT, { recursive: true });

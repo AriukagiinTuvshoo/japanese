@@ -178,16 +178,18 @@ for (const e of entries) {
 console.log(`Бичих дараалал: +${strokeStats.added}${strokeStats.failed.length ? `, амжилтгүй: ${strokeStats.failed.join(" ")}` : ""}`);
 if (strokeStats.failed.length) process.exitCode = 1;
 
-/* 6. machine/kanji.json-ийн индексийг дахин түлхүүрлэх -------------------- */
-const rekeyed = {};
+/* 6. machine/kanji.json-ийг ханз түлхүүрээр шинэчлэх --------------------- */
+// Эрэмбэ өөрчлөгдөхөд индекс-түлхүүр хүчингүй болдог тул формат нь ханз өөрөө.
+const rekeyed = await readJson(path.join(MACHINE, "kanji.json"), {});
 let autoCount = 0;
 for (const lv of LEVELS) {
-  const map = {};
-  byLevel[lv].forEach((k, i) => { if (k.mq === "auto") { map[i] = k.mn[0]; autoCount++; } });
-  rekeyed[slug(lv)] = map;
+  for (const k of byLevel[lv]) {
+    if (k.mq === "auto" && k.mn?.[0]) { rekeyed[k.k] = k.mn[0]; autoCount++; }
+  }
 }
-await writeFile(path.join(MACHINE, "kanji.json"), JSON.stringify(rekeyed, null, 1), "utf8");
-console.log(`machine/kanji.json дахин түлхүүрлэв: ${autoCount} бичлэг`);
+const sortKeys = (o) => Object.fromEntries(Object.entries(o).sort(([a], [b]) => (a < b ? -1 : 1)));
+await writeFile(path.join(MACHINE, "kanji.json"), JSON.stringify(sortKeys(rekeyed), null, 1), "utf8");
+console.log(`machine/kanji.json шинэчлэв: ${autoCount} бичлэг`);
 
 /* 7. ханз файлуудыг бичих ------------------------------------------------- */
 for (const lv of LEVELS) await writeJson(path.join(DATA, "kanji", `${slug(lv)}.json`), byLevel[lv]);
