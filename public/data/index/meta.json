@@ -13,7 +13,7 @@
     "kanji": 2794,
     "grammar": 526,
     "strokes": 2794,
-    "vocabMnCurated": 0,
+    "vocabMnCurated": 23,
     "byLevel": {
       "vocab": {
         "N5": 1074,
@@ -44,9 +44,9 @@
         "N1": 3690
       }
     },
-    "vocabDraft": 7380,
+    "vocabDraft": 7364,
     "kanjiDraft": 1040,
-    "vocabAuto": 3081,
+    "vocabAuto": 3074,
     "kanjiAuto": 1754,
     "grammarAuto": 0,
     "vocabExampleMn": 13718,
@@ -56,9 +56,9 @@
     "grammarCurated": 0,
     "mn": {
       "vocab": {
-        "curated": 0,
-        "draft": 7380,
-        "auto": 3081,
+        "curated": 23,
+        "draft": 7364,
+        "auto": 3074,
         "derived": 0,
         "none": 0
       },

@@ -6,7 +6,11 @@
     "example": "学生（がくせい）· 本（ほん）",
     "source": "scripts/build-data.mjs#TYPE_MN (төслийн стандарт шошго)",
     "status": "draft",
-    "seen": { "en": 20, "ja": 0, "mn": 9 },
+    "seen": {
+      "en": 20,
+      "ja": 0,
+      "mn": 9
+    },
     "variants": []
   },
   "verb": {
@@ -16,7 +20,11 @@
     "example": "食べる · 書く · 飲む",
     "source": "scripts/build-data.mjs#TYPE_MN (төслийн стандарт шошго)",
     "status": "draft",
-    "seen": { "en": 30, "ja": 0, "mn": 16 },
+    "seen": {
+      "en": 30,
+      "ja": 0,
+      "mn": 16
+    },
     "variants": []
   },
   "i-adjective": {
@@ -26,7 +34,11 @@
     "example": "高い · 高くない · 高かった",
     "source": "scripts/build-data.mjs#TYPE_MN (төслийн стандарт шошго)",
     "status": "draft",
-    "seen": { "en": 2, "ja": 0, "mn": 4 },
+    "seen": {
+      "en": 2,
+      "ja": 0,
+      "mn": 4
+    },
     "variants": []
   },
   "na-adjective": {
@@ -36,7 +48,11 @@
     "example": "静か · 静かじゃない · 静かだった",
     "source": "scripts/build-data.mjs#TYPE_MN (төслийн стандарт шошго)",
     "status": "draft",
-    "seen": { "en": 1, "ja": 0, "mn": 4 },
+    "seen": {
+      "en": 1,
+      "ja": 0,
+      "mn": 4
+    },
     "variants": []
   },
   "adjective": {
@@ -46,7 +62,11 @@
     "example": "高い · 静か",
     "source": "scripts/build-data.mjs#TYPE_MN (төслийн стандарт шошго)",
     "status": "draft",
-    "seen": { "en": 9, "ja": 0, "mn": 4 },
+    "seen": {
+      "en": 9,
+      "ja": 0,
+      "mn": 4
+    },
     "variants": []
   },
   "adverb": {
@@ -56,7 +76,11 @@
     "example": "よく · すぐ · まだ",
     "source": "scripts/build-data.mjs#TYPE_MN (төслийн стандарт шошго)",
     "status": "draft",
-    "seen": { "en": 2, "ja": 0, "mn": 1 },
+    "seen": {
+      "en": 2,
+      "ja": 0,
+      "mn": 1
+    },
     "variants": []
   },
   "counter": {
@@ -66,8 +90,17 @@
     "example": "一つ · 二冊 · 三人",
     "source": "scripts/build-data.mjs#TYPE_MN (төслийн стандарт шошго)",
     "status": "draft",
-    "seen": { "en": 69, "ja": 0, "mn": 28 },
-    "variants": [{ "text": "хэмжээний үг", "count": 0 }]
+    "seen": {
+      "en": 69,
+      "ja": 0,
+      "mn": 28
+    },
+    "variants": [
+      {
+        "text": "хэмжээний үг",
+        "count": 0
+      }
+    ]
   },
   "measure word": {
     "ja": "助数詞",
@@ -76,7 +109,11 @@
     "example": "三冊 · 五人 · 一台",
     "source": "scripts/build-data.mjs#TYPE_MN (төслийн стандарт шошго)",
     "status": "draft",
-    "seen": { "en": 0, "ja": 0, "mn": 28 },
+    "seen": {
+      "en": 0,
+      "ja": 0,
+      "mn": 28
+    },
     "variants": []
   },
   "pronoun": {
@@ -86,7 +123,11 @@
     "example": "私 · これ · そこ",
     "source": "scripts/build-data.mjs#TYPE_MN (төслийн стандарт шошго)",
     "status": "draft",
-    "seen": { "en": 6, "ja": 0, "mn": 2 },
+    "seen": {
+      "en": 6,
+      "ja": 0,
+      "mn": 2
+    },
     "variants": []
   },
   "expression": {
@@ -96,7 +137,11 @@
     "example": "～たいです · ～ましょう",
     "source": "scripts/build-data.mjs#TYPE_MN (төслийн стандарт шошго)",
     "status": "draft",
-    "seen": { "en": 11, "ja": 0, "mn": 11 },
+    "seen": {
+      "en": 11,
+      "ja": 0,
+      "mn": 11
+    },
     "variants": []
   },
   "sentence": {
@@ -106,7 +151,11 @@
     "example": "私は学生です。",
     "source": "контент дэх давтамж (public/data/grammar, content/mn)",
     "status": "draft",
-    "seen": { "en": 15, "ja": 13, "mn": 15 },
+    "seen": {
+      "en": 15,
+      "ja": 13,
+      "mn": 15
+    },
     "variants": []
   },
   "topic": {
@@ -116,7 +165,11 @@
     "example": "私は学生です。（би бол оюутан）",
     "source": "контент дэх давтамж (public/data/grammar)",
     "status": "draft",
-    "seen": { "en": 7, "ja": 0, "mn": 14 },
+    "seen": {
+      "en": 7,
+      "ja": 0,
+      "mn": 14
+    },
     "variants": []
   },
   "subject": {
@@ -126,8 +179,17 @@
     "example": "鳥が飛ぶ。",
     "source": "контент дэх давтамж (public/data/grammar)",
     "status": "draft",
-    "seen": { "en": 25, "ja": 0, "mn": 13 },
-    "variants": [{ "text": "сэдэв үг", "count": 0 }]
+    "seen": {
+      "en": 25,
+      "ja": 0,
+      "mn": 13
+    },
+    "variants": [
+      {
+        "text": "сэдэв үг",
+        "count": 0
+      }
+    ]
   },
   "object": {
     "ja": "目的語",
@@ -136,7 +198,11 @@
     "example": "本を読む。",
     "source": "proposal — монгол хэлний өгүүлбэрийн гишүүний нэр (хэргэм); контентод одоо хэрэглээгүй",
     "status": "needs_review",
-    "seen": { "en": 31, "ja": 0, "mn": 0 },
+    "seen": {
+      "en": 31,
+      "ja": 0,
+      "mn": 0
+    },
     "variants": []
   },
   "predicate": {
@@ -146,7 +212,11 @@
     "example": "私は学生です。",
     "source": "контент дэх давтамж (public/data/grammar: 1 удаа)",
     "status": "needs_review",
-    "seen": { "en": 1, "ja": 0, "mn": 1 },
+    "seen": {
+      "en": 1,
+      "ja": 0,
+      "mn": 1
+    },
     "variants": []
   },
   "adverbial": {
@@ -156,7 +226,11 @@
     "example": "学校で勉強する。",
     "source": "контент дэх давтамж (public/data/grammar: 1 удаа)",
     "status": "needs_review",
-    "seen": { "en": 1, "ja": 0, "mn": 1 },
+    "seen": {
+      "en": 1,
+      "ja": 0,
+      "mn": 1
+    },
     "variants": []
   },
   "particle": {
@@ -166,8 +240,17 @@
     "example": "学校に 行きます。",
     "source": "proposal — контентод тогтмол монгол хэрэглээ байхгүй (тусаглал=0, хэллиг=0); хүн шийднэ",
     "status": "needs_review",
-    "seen": { "en": 6, "ja": 0, "mn": 0 },
-    "variants": [{ "text": "хэллиг", "count": 0 }]
+    "seen": {
+      "en": 6,
+      "ja": 0,
+      "mn": 0
+    },
+    "variants": [
+      {
+        "text": "хэллиг",
+        "count": 0
+      }
+    ]
   },
   "topic marker": {
     "ja": "主題の助詞",
@@ -175,9 +258,15 @@
     "note": "Сэдвийг заагч тусаглал — は.",
     "example": "今日は寒いです。",
     "source": "proposal — particle-тэй адил контентод тогтмол хэрэглээгүй",
-    "status": "needs_review",
-    "seen": { "en": 0, "ja": 0, "mn": 0 },
-    "variants": []
+    "status": "curated",
+    "seen": {
+      "en": 0,
+      "ja": 0,
+      "mn": 0
+    },
+    "variants": [],
+    "reviewedBy": "Tuvshoo",
+    "reviewedAt": "2026-10-31"
   },
   "conjugation": {
     "ja": "活用",
@@ -185,9 +274,15 @@
     "note": "Үйл үг/тэмдэг нэрийн төгсгөл өөрчлөгдөх дүрэм.",
     "example": "書く → 書いて → 書いた",
     "source": "контент дэх давтамж (public/data: 1 удаа)",
-    "status": "needs_review",
-    "seen": { "en": 2, "ja": 0, "mn": 1 },
-    "variants": []
+    "status": "curated",
+    "seen": {
+      "en": 2,
+      "ja": 0,
+      "mn": 1
+    },
+    "variants": [],
+    "reviewedBy": "Tuvshoo",
+    "reviewedAt": "2026-10-31"
   },
   "plain form": {
     "ja": "普通形",
@@ -196,7 +291,11 @@
     "example": "食べる · 食べない · 食べた",
     "source": "контент дэх давтамж (public/data: 3 удаа)",
     "status": "draft",
-    "seen": { "en": 1, "ja": 0, "mn": 3 },
+    "seen": {
+      "en": 1,
+      "ja": 0,
+      "mn": 3
+    },
     "variants": []
   },
   "polite form": {
@@ -206,8 +305,17 @@
     "example": "食べます · です",
     "source": "proposal — контентод 2 өөр хувилбар (хүндэтгэсэн=3, дэгжин=6); хүн нэгийг сонгоно",
     "status": "needs_review",
-    "seen": { "en": 16, "ja": 0, "mn": 3 },
-    "variants": [{ "text": "дэгжин хэлбэр", "count": 6 }]
+    "seen": {
+      "en": 16,
+      "ja": 0,
+      "mn": 3
+    },
+    "variants": [
+      {
+        "text": "дэгжин хэлбэр",
+        "count": 6
+      }
+    ]
   },
   "honorific": {
     "ja": "敬語",
@@ -216,7 +324,11 @@
     "example": "いらっしゃる · おっしゃる",
     "source": "proposal — контентод тогтмол хэрэглээгүй; хүн шийднэ",
     "status": "needs_review",
-    "seen": { "en": 6, "ja": 0, "mn": 0 },
+    "seen": {
+      "en": 6,
+      "ja": 0,
+      "mn": 0
+    },
     "variants": []
   },
   "humble": {
@@ -226,7 +338,11 @@
     "example": "参る · 申す",
     "source": "proposal — контентод хэрэглээгүй (ишгэл=0); хүн шийднэ",
     "status": "needs_review",
-    "seen": { "en": 23, "ja": 0, "mn": 0 },
+    "seen": {
+      "en": 23,
+      "ja": 0,
+      "mn": 0
+    },
     "variants": []
   },
   "negative": {
@@ -236,7 +352,11 @@
     "example": "食べない · 食べません",
     "source": "контент дэх давтамж (public/data: 3 удаа)",
     "status": "draft",
-    "seen": { "en": 16, "ja": 0, "mn": 3 },
+    "seen": {
+      "en": 16,
+      "ja": 0,
+      "mn": 3
+    },
     "variants": []
   },
   "past tense": {
@@ -246,7 +366,11 @@
     "example": "食べた · 食べました",
     "source": "контент дэх давтамж (public/data: 4 удаа)",
     "status": "draft",
-    "seen": { "en": 0, "ja": 2, "mn": 4 },
+    "seen": {
+      "en": 0,
+      "ja": 2,
+      "mn": 4
+    },
     "variants": []
   },
   "conditional": {
@@ -256,7 +380,11 @@
     "example": "雨が降ったら、行きません。",
     "source": "контент дэх давтамж (public/data: 37 удаа)",
     "status": "draft",
-    "seen": { "en": 1, "ja": 3, "mn": 37 },
+    "seen": {
+      "en": 1,
+      "ja": 3,
+      "mn": 37
+    },
     "variants": []
   },
   "passive": {
@@ -266,7 +394,11 @@
     "example": "食べられる · 打たれる",
     "source": "proposal — контентод хэрэглээгүй; хүн шийднэ",
     "status": "needs_review",
-    "seen": { "en": 4, "ja": 4, "mn": 0 },
+    "seen": {
+      "en": 4,
+      "ja": 4,
+      "mn": 0
+    },
     "variants": []
   },
   "causative": {
@@ -275,9 +407,15 @@
     "note": "Бусдыг ямар нэг зүйл хийхэд хүргэх хэлбэр (させる).",
     "example": "食べさせる",
     "source": "proposal — контентод хэрэглээгүй; хүн шийднэ",
-    "status": "needs_review",
-    "seen": { "en": 1, "ja": 1, "mn": 0 },
-    "variants": []
+    "status": "curated",
+    "seen": {
+      "en": 1,
+      "ja": 1,
+      "mn": 0
+    },
+    "variants": [],
+    "reviewedBy": "Tuvshoo",
+    "reviewedAt": "2026-10-31"
   },
   "potential": {
     "ja": "可能形",
@@ -285,9 +423,15 @@
     "note": "Чадах/боломжтой гэдгийг илэрхийлэх хэлбэр.",
     "example": "食べられる · 食べれる",
     "source": "proposal — контентод хэрэглээгүй; хүн шийднэ",
-    "status": "needs_review",
-    "seen": { "en": 2, "ja": 2, "mn": 0 },
-    "variants": []
+    "status": "curated",
+    "seen": {
+      "en": 2,
+      "ja": 2,
+      "mn": 0
+    },
+    "variants": [],
+    "reviewedBy": "Tuvshoo",
+    "reviewedAt": "2026-10-31"
   },
   "te-form": {
     "ja": "て形",
@@ -295,9 +439,15 @@
     "note": "Үйл үгийн холбогч хэлбэр — хүсэл, зэрэгцээ, аргыг илэрхийлнэ.",
     "example": "食べて · 書いて",
     "source": "proposal — контентод хэрэглээгүй; хүн шийднэ",
-    "status": "needs_review",
-    "seen": { "en": 0, "ja": 0, "mn": 0 },
-    "variants": []
+    "status": "curated",
+    "seen": {
+      "en": 0,
+      "ja": 0,
+      "mn": 0
+    },
+    "variants": [],
+    "reviewedBy": "Tuvshoo",
+    "reviewedAt": "2026-10-31"
   },
   "vowel": {
     "ja": "母音",
@@ -306,7 +456,11 @@
     "example": "あ · い · う · え · お",
     "source": "контент дэх давтамж (kana/контент: эгш=24)",
     "status": "draft",
-    "seen": { "en": 0, "ja": 0, "mn": 24 },
+    "seen": {
+      "en": 0,
+      "ja": 0,
+      "mn": 24
+    },
     "variants": []
   },
   "consonant": {
@@ -316,7 +470,11 @@
     "example": "か行 (k-a) · さ行 (s-a)",
     "source": "proposal — контентод энэ утгыг термин маягаар баталгаажуулаагүй; хүн шийднэ",
     "status": "needs_review",
-    "seen": { "en": 0, "ja": 0, "mn": 21 },
+    "seen": {
+      "en": 0,
+      "ja": 0,
+      "mn": 21
+    },
     "variants": []
   },
   "reading": {
@@ -326,7 +484,11 @@
     "example": "日 → にち / ひ",
     "source": "контент дэх давтамж (public/data: 5+ удаа)",
     "status": "draft",
-    "seen": { "en": 8, "ja": 11, "mn": 5 },
+    "seen": {
+      "en": 8,
+      "ja": 11,
+      "mn": 5
+    },
     "variants": []
   },
   "kanji": {
@@ -336,7 +498,11 @@
     "example": "山 · 川 · 人",
     "source": "контент дэх давтамж (public/data: 5+ удаа)",
     "status": "draft",
-    "seen": { "en": 5, "ja": 5, "mn": 9 },
+    "seen": {
+      "en": 5,
+      "ja": 5,
+      "mn": 9
+    },
     "variants": []
   },
   "hiragana": {
@@ -346,7 +512,11 @@
     "example": "あ い う え お",
     "source": "контент дэх давтамж (kana: 2)",
     "status": "draft",
-    "seen": { "en": 2, "ja": 0, "mn": 2 },
+    "seen": {
+      "en": 2,
+      "ja": 0,
+      "mn": 2
+    },
     "variants": []
   },
   "katakana": {
@@ -356,7 +526,11 @@
     "example": "コーヒー · テレビ",
     "source": "контент дэх давтамж (kana: 2)",
     "status": "draft",
-    "seen": { "en": 3, "ja": 0, "mn": 2 },
+    "seen": {
+      "en": 3,
+      "ja": 0,
+      "mn": 2
+    },
     "variants": []
   },
   "pronunciation": {
@@ -366,7 +540,11 @@
     "example": "は → 「わ」 биш, дуугүй h",
     "source": "контент дэх давтамж (public/data: 13 удаа)",
     "status": "draft",
-    "seen": { "en": 2, "ja": 0, "mn": 13 },
+    "seen": {
+      "en": 2,
+      "ja": 0,
+      "mn": 13
+    },
     "variants": []
   },
   "spelling": {
@@ -376,7 +554,11 @@
     "example": "はし（橋 / 端 / 梯）",
     "source": "контент дэх давтамж (public/data: 10 удаа)",
     "status": "draft",
-    "seen": { "en": 1, "ja": 0, "mn": 10 },
+    "seen": {
+      "en": 1,
+      "ja": 0,
+      "mn": 10
+    },
     "variants": []
   },
   "grammar": {
@@ -386,7 +568,11 @@
     "example": "～てから · ～ながら",
     "source": "контент дэх давтамж (public/data: 35 удаа)",
     "status": "draft",
-    "seen": { "en": 1, "ja": 1, "mn": 35 },
+    "seen": {
+      "en": 1,
+      "ja": 1,
+      "mn": 35
+    },
     "variants": []
   },
   "usage": {
@@ -396,7 +582,11 @@
     "example": "「に」と「で」-ийн хэрэглээ ялгаатай.",
     "source": "контент дэх давтамж (public/data: 18 удаа)",
     "status": "draft",
-    "seen": { "en": 2, "ja": 0, "mn": 18 },
+    "seen": {
+      "en": 2,
+      "ja": 0,
+      "mn": 18
+    },
     "variants": []
   },
   "meaning": {
@@ -406,7 +596,11 @@
     "example": "「行く」 = явах",
     "source": "контент дэх давтамж (public/data: 61 удаа)",
     "status": "draft",
-    "seen": { "en": 13, "ja": 0, "mn": 61 },
+    "seen": {
+      "en": 13,
+      "ja": 0,
+      "mn": 61
+    },
     "variants": []
   },
   "reason": {
@@ -416,7 +610,11 @@
     "example": "雨だから、行きません。",
     "source": "контент дэх давтамж (public/data: 31 удаа)",
     "status": "draft",
-    "seen": { "en": 32, "ja": 4, "mn": 31 },
+    "seen": {
+      "en": 32,
+      "ja": 4,
+      "mn": 31
+    },
     "variants": []
   },
   "question": {
@@ -426,7 +624,11 @@
     "example": "学校に行きますか。",
     "source": "контент дэх давтамж (public/data: 30 удаа)",
     "status": "draft",
-    "seen": { "en": 26, "ja": 1, "mn": 30 },
+    "seen": {
+      "en": 26,
+      "ja": 1,
+      "mn": 30
+    },
     "variants": []
   },
   "only": {
@@ -436,7 +638,11 @@
     "example": "これだけです。",
     "source": "контент дэх давтамж (public/data: 55 удаа)",
     "status": "draft",
-    "seen": { "en": 40, "ja": 25, "mn": 55 },
+    "seen": {
+      "en": 40,
+      "ja": 25,
+      "mn": 55
+    },
     "variants": []
   },
   "while": {
@@ -446,7 +652,11 @@
     "example": "音楽を聞きながら、勉強します。",
     "source": "контент дэх давтамж (public/data: 56 удаа)",
     "status": "draft",
-    "seen": { "en": 24, "ja": 59, "mn": 56 },
+    "seen": {
+      "en": 24,
+      "ja": 59,
+      "mn": 56
+    },
     "variants": []
   },
   "before": {
@@ -456,7 +666,11 @@
     "example": "学校に行く前に、パンを買います。",
     "source": "контент дэх давтамж (public/data: 11 удаа)",
     "status": "draft",
-    "seen": { "en": 42, "ja": 13, "mn": 11 },
+    "seen": {
+      "en": 42,
+      "ja": 13,
+      "mn": 11
+    },
     "variants": []
   },
   "after": {
@@ -466,7 +680,11 @@
     "example": "ご飯を食べた後で、勉強します。",
     "source": "контент дэх давтамж (public/data: 130 удаа)",
     "status": "draft",
-    "seen": { "en": 67, "ja": 5, "mn": 130 },
+    "seen": {
+      "en": 67,
+      "ja": 5,
+      "mn": 130
+    },
     "variants": []
   },
   "try": {
@@ -475,8 +693,14 @@
     "note": "Туршиж үзэх утгыг илэрхийлэх хэлбэр.",
     "example": "食べてみてください。",
     "source": "proposal — контентод “-аж үзэх” бэлэн хэлбэрээр байхгүй; хүн шийднэ",
-    "status": "needs_review",
-    "seen": { "en": 68, "ja": 2, "mn": 0 },
-    "variants": []
+    "status": "curated",
+    "seen": {
+      "en": 68,
+      "ja": 2,
+      "mn": 0
+    },
+    "variants": [],
+    "reviewedBy": "Tuvshoo",
+    "reviewedAt": "2026-10-31"
   }
 }

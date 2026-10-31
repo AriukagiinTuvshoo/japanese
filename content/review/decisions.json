@@ -7,16 +7,32 @@
     "mn": "Байц"
   },
   "terms:causative": {
-    "action": "verify",
-    "reviewer": "Freebuff AI reviewer",
-    "at": "2026-10-29",
-    "note": "«Үйлдүүлэх хэлбэр» = 使役; монгол «үйлдүүлэхүүн хэв»-тэй нийцнэ (хэлбэр/хэв гэсэн стилийн ялгаа л бий). 例 食べさせる зөв."
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "«Үйлдүүлэх хэлбэр» = 使役; монгол «үйлдүүлэхүүн хэв»-тэй нийцнэ (хэлбэр/хэв гэсэн стилийн ялгаа л бий). 例 食べさせる зөв."
+      }
+    ]
   },
   "terms:conjugation": {
-    "action": "verify",
-    "reviewer": "Freebuff AI reviewer",
-    "at": "2026-10-29",
-    "note": "«Хувирал» = 活用; монгол хэл шинжлэлийн «үйл үгийн хувирал» гэсэн тогтсон нэртэй нийцнэ. 例 書く→書いて→書いた зөв."
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "«Хувирал» = 活用; монгол хэл шинжлэлийн «үйл үгийн хувирал» гэсэн тогтсон нэртэй нийцнэ. 例 書く→書いて→書いた зөв."
+      }
+    ]
   },
   "terms:consonant": {
     "action": "revise",
@@ -68,10 +84,18 @@
     "mn": "Эелдэг хэлбэр (дэгжин хэв)"
   },
   "terms:potential": {
-    "action": "verify",
-    "reviewer": "Freebuff AI reviewer",
-    "at": "2026-10-29",
-    "note": "«Боломжийн хэлбэр» = 可能形; утга зөв, 例 食べられる/食べれる хоёулаа (ярианы) зөв."
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "«Боломжийн хэлбэр» = 可能形; утга зөв, 例 食べられる/食べれる хоёулаа (ярианы) зөв."
+      }
+    ]
   },
   "terms:predicate": {
     "action": "revise",
@@ -81,22 +105,46 @@
     "mn": "Өгүүлэхүүн"
   },
   "terms:te-form": {
-    "action": "verify",
-    "reviewer": "Freebuff AI reviewer",
-    "at": "2026-10-29",
-    "note": "て形 → «Тэ-хэлбэр» — япон нэрийг шууд буулгасан, суралцагчид ойлгомжтой; 例 食べて・書いて зөв."
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "て形 → «Тэ-хэлбэр» — япон нэрийг шууд буулгасан, суралцагчид ойлгомжтой; 例 食べて・書いて зөв."
+      }
+    ]
   },
   "terms:topic marker": {
-    "action": "verify",
-    "reviewer": "Freebuff AI reviewer",
-    "at": "2026-10-29",
-    "note": "«Сэдвийн тусаглал» нь は-ийн үүргийг зөв тодорхойлсон; 例 今日は寒いです。 тохирно. particle-ийн эцсийн нэрээс хамаарна."
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "«Сэдвийн тусаглал» нь は-ийн үүргийг зөв тодорхойлсон; 例 今日は寒いです。 тохирно. particle-ийн эцсийн нэрээс хамаарна."
+      }
+    ]
   },
   "terms:try": {
-    "action": "verify",
-    "reviewer": "Freebuff AI reviewer",
-    "at": "2026-10-29",
-    "note": "〜てみる = «-аж үзэх» — утга зөв (туршин хийх). Контентод ашиглагдаагүй ч нэр томьёо хүчинтэй."
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "〜てみる = «-аж үзэх» — утга зөв (туршин хийх). Контентод ашиглагдаагүй ч нэр томьёо хүчинтэй."
+      }
+    ]
   },
   "terms:vowel": {
     "action": "revise",
@@ -106,10 +154,18 @@
     "mn": "Эгшиг"
   },
   "vocab:ぞんざい|ぞんざい": {
-    "action": "verify",
-    "reviewer": "Freebuff AI reviewer",
-    "at": "2026-10-29",
-    "note": "кана уншлага зөв (канжигүй үг); mn «хайхрамжгүй» = rough/careless; 例 ぞんざいな扱い → «огцом харьцсан» нийцнэ."
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "кана уншлага зөв (канжигүй үг); mn «хайхрамжгүй» = rough/careless; 例 ぞんざいな扱い → «огцом харьцсан» нийцнэ."
+      }
+    ]
   },
   "vocab:ひたすら|ひたすら": {
     "action": "revise",
@@ -126,16 +182,32 @@
     "mn": "санаатайгаар, зориуд (хичээж)"
   },
   "vocab:中断|ちゅうだん": {
-    "action": "verify",
-    "reviewer": "Freebuff AI reviewer",
-    "at": "2026-10-29",
-    "note": "уншлага зөв; mn «тасалдал; түдгэлзүүлэх; завсарлага» = interruption; 例 休暇が中断 → «амралт тасарсан» нийцнэ."
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «тасалдал; түдгэлзүүлэх; завсарлага» = interruption; 例 休暇が中断 → «амралт тасарсан» нийцнэ."
+      }
+    ]
   },
   "vocab:交渉|こうしょう": {
-    "action": "verify",
-    "reviewer": "Freebuff AI reviewer",
-    "at": "2026-10-29",
-    "note": "уншлага зөв; mn «хэлэлцээр» = negotiations; 例 労働組合は経営陣と交渉 → зөв."
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «хэлэлцээр» = negotiations; 例 労働組合は経営陣と交渉 → зөв."
+      }
+    ]
   },
   "vocab:依然|いぜん": {
     "action": "revise",
@@ -152,10 +224,18 @@
     "mn": "турхирах, урамшуулах, түргэтгэх"
   },
   "vocab:促進|そくしん": {
-    "action": "verify",
-    "reviewer": "Freebuff AI reviewer",
-    "at": "2026-10-29",
-    "note": "уншлага зөв; mn «хурдасгах» = promotion/acceleration; 例 平和を促進 → «энх тайвныг дэмжих» нийцнэ."
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «хурдасгах» = promotion/acceleration; 例 平和を促進 → «энх тайвныг дэмжих» нийцнэ."
+      }
+    ]
   },
   "vocab:保障|ほしょう": {
     "action": "revise",
@@ -165,10 +245,18 @@
     "mn": "батлан хамгаалах, баталгаа"
   },
   "vocab:優先|ゆうせん": {
-    "action": "verify",
-    "reviewer": "Freebuff AI reviewer",
-    "at": "2026-10-29",
-    "note": "уншлага зөв; mn «давуу эрх; тэргүүлэх ач холбогдол» = priority; 例 すべての任務に優先する → зөв."
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «давуу эрх; тэргүүлэх ач холбогдол» = priority; 例 すべての任務に優先する → зөв."
+      }
+    ]
   },
   "vocab:円滑|えんかつ": {
     "action": "revise",
@@ -185,10 +273,18 @@
     "mn": "сэтгэл хөндөм, гунигтай"
   },
   "vocab:削減|さくげん": {
-    "action": "verify",
-    "reviewer": "Freebuff AI reviewer",
-    "at": "2026-10-29",
-    "note": "уншлага зөв; mn «бууруулах» = cut/reduction; 例 支出を削減 → «зардлаа багасгасан» зөв."
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «бууруулах» = cut/reduction; 例 支出を削減 → «зардлаа багасгасан» зөв."
+      }
+    ]
   },
   "vocab:加入|かにゅう": {
     "action": "revise",
@@ -198,10 +294,18 @@
     "mn": "нэгдэх, (даатгалд) орох"
   },
   "vocab:動機|どうき": {
-    "action": "verify",
-    "reviewer": "Freebuff AI reviewer",
-    "at": "2026-10-29",
-    "note": "уншлага зөв; mn «сэдэл; урамшуулал» = motive/incentive; 例 動機が信用できない → зөв."
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «сэдэл; урамшуулал» = motive/incentive; 例 動機が信用できない → зөв."
+      }
+    ]
   },
   "vocab:厳しさ|きびしさ": {
     "action": "revise",
@@ -211,10 +315,18 @@
     "mn": "хатуу чанга байдал, ширүүн байдал"
   },
   "vocab:多様|たよう": {
-    "action": "verify",
-    "reviewer": "Freebuff AI reviewer",
-    "at": "2026-10-29",
-    "note": "уншлага зөв; mn «олон янз» = diverse; 例 多様なテーマ → «янз бүрийн сэдэв» зөв."
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «олон янз» = diverse; 例 多様なテーマ → «янз бүрийн сэдэв» зөв."
+      }
+    ]
   },
   "vocab:妨げ|さまたげ": {
     "action": "revise",
@@ -259,16 +371,32 @@
     "mn": "ойлгох, баримжаалах"
   },
   "vocab:指示|しじ": {
-    "action": "verify",
-    "reviewer": "Freebuff AI reviewer",
-    "at": "2026-10-29",
-    "note": "уншлага зөв; mn «заавар» = instruction; 例 гурван хүн ирэхийг надад даалгасан гэсэн утга зөв."
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «заавар» = instruction; 例 гурван хүн ирэхийг надад даалгасан гэсэн утга зөв."
+      }
+    ]
   },
   "vocab:措置|そち": {
-    "action": "verify",
-    "reviewer": "Freebuff AI reviewer",
-    "at": "2026-10-29",
-    "note": "уншлага зөв; mn «арга хэмжээ» = measure/step; 例 必要な措置を取る → зөв."
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «арга хэмжээ» = measure/step; 例 必要な措置を取る → зөв."
+      }
+    ]
   },
   "vocab:提唱|ていしょう": {
     "action": "revise",
@@ -278,16 +406,32 @@
     "mn": "санаачлага, дэвшүүлэх"
   },
   "vocab:損なう|そこなう": {
-    "action": "verify",
-    "reviewer": "Freebuff AI reviewer",
-    "at": "2026-10-29",
-    "note": "уншлага зөв; mn «гэмтээх, доройтуулах» = harm/hurt; 例 返事を出し損なった → «чадсангүй» (хоёр дахь утга) зөв."
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «гэмтээх, доройтуулах» = harm/hurt; 例 返事を出し損なった → «чадсангүй» (хоёр дахь утга) зөв."
+      }
+    ]
   },
   "vocab:明朗|めいろう": {
-    "action": "verify",
-    "reviewer": "Freebuff AI reviewer",
-    "at": "2026-10-29",
-    "note": "уншлага зөв; mn «тод; хөгжилтэй» = bright/cheerful; 例 хөгжилтэй залуу → зөв."
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «тод; хөгжилтэй» = bright/cheerful; 例 хөгжилтэй залуу → зөв."
+      }
+    ]
   },
   "vocab:本格|ほんかく": {
     "action": "revise",
@@ -297,16 +441,32 @@
     "mn": "бүрэн хэмжээний, жинхэнэ"
   },
   "vocab:極端|きょくたん": {
-    "action": "verify",
-    "reviewer": "Freebuff AI reviewer",
-    "at": "2026-10-29",
-    "note": "уншлага зөв; mn «хэт, туйлын» = extreme; 例 極端じゃないか → «хэтэрхий биш үү» зөв."
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «хэт, туйлын» = extreme; 例 極端じゃないか → «хэтэрхий биш үү» зөв."
+      }
+    ]
   },
   "vocab:活発|かっぱつ": {
-    "action": "verify",
-    "reviewer": "Freebuff AI reviewer",
-    "at": "2026-10-29",
-    "note": "уншлага зөв; mn «идэвхтэй» = active/vigor; 例 活発な討論 → «идэвхтэй хэлэлцүүлэг» нийцнэ."
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «идэвхтэй» = active/vigor; 例 活発な討論 → «идэвхтэй хэлэлцүүлэг» нийцнэ."
+      }
+    ]
   },
   "vocab:減少|げんしょう": {
     "action": "revise",
@@ -330,22 +490,46 @@
     "mn": "үүсэх, гарч ирэх, тохиолдох"
   },
   "vocab:眠たい|ねむたい": {
-    "action": "verify",
-    "reviewer": "Freebuff AI reviewer",
-    "at": "2026-10-29",
-    "note": "уншлага зөв; mn «нойрмог» = sleepy; 例 眠気を催す → «нойрмог болгосон» нийцнэ."
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «нойрмог» = sleepy; 例 眠気を催す → «нойрмог болгосон» нийцнэ."
+      }
+    ]
   },
   "vocab:緩和|かんわ": {
-    "action": "verify",
-    "reviewer": "Freebuff AI reviewer",
-    "at": "2026-10-29",
-    "note": "уншлага зөв; mn «хөнгөрүүлэх» = relief/mitigation. Жишээний «тэнцвэр» (需給関係=эрэлт нийлүүлэлтийн харьцаа) ойролцоо — жишээг сайжруулахыг зөвлөнө."
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «хөнгөрүүлэх» = relief/mitigation. Жишээний «тэнцвэр» (需給関係=эрэлт нийлүүлэлтийн харьцаа) ойролцоо — жишээг сайжруулахыг зөвлөнө."
+      }
+    ]
   },
   "vocab:群集|ぐんしゅう": {
-    "action": "verify",
-    "reviewer": "Freebuff AI reviewer",
-    "at": "2026-10-29",
-    "note": "уншлага зөв; mn «олон түмэн» = crowd; 例 群集が集まる → «цугларсан хүмүүс» зөв."
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «олон түмэн» = crowd; 例 群集が集まる → «цугларсан хүмүүс» зөв."
+      }
+    ]
   },
   "vocab:補助|ほじょ": {
     "action": "revise",
@@ -369,16 +553,32 @@
     "mn": "зохицуулалт, дүрэм"
   },
   "vocab:規模|きぼ": {
-    "action": "verify",
-    "reviewer": "Freebuff AI reviewer",
-    "at": "2026-10-29",
-    "note": "уншлага зөв; mn «хэмжээ» = scale/scope; 例 クラスの規模 → «ангийн хэмжээ» нийцнэ."
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «хэмжээ» = scale/scope; 例 クラスの規模 → «ангийн хэмжээ» нийцнэ."
+      }
+    ]
   },
   "vocab:視点|してん": {
-    "action": "verify",
-    "reviewer": "Freebuff AI reviewer",
-    "at": "2026-10-29",
-    "note": "уншлага зөв; mn «үзэл бодол, өнцөг» = point of view; 例 根拠のある視点 → нийцнэ."
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «үзэл бодол, өнцөг» = point of view; 例 根拠のある視点 → нийцнэ."
+      }
+    ]
   },
   "vocab:観点|かんてん": {
     "action": "revise",
@@ -402,10 +602,18 @@
     "mn": "ачаалал, дарамт, зардал"
   },
   "vocab:賃金|ちんぎん": {
-    "action": "verify",
-    "reviewer": "Freebuff AI reviewer",
-    "at": "2026-10-29",
-    "note": "уншлага зөв; mn «цалин» = wages; 例 賃金を払う → зөв."
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «цалин» = wages; 例 賃金を払う → зөв."
+      }
+    ]
   },
   "vocab:込める|こめる": {
     "action": "revise",
@@ -415,21 +623,45 @@
     "mn": "хийх, шингээх, цэнэглэх"
   },
   "vocab:迅速|じんそく": {
-    "action": "verify",
-    "reviewer": "Freebuff AI reviewer",
-    "at": "2026-10-29",
-    "note": "уншлага зөв; mn «хурдан» = quick/rapid; 例 迅速に対応 → «нэн даруй» нийцнэ."
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «хурдан» = quick/rapid; 例 迅速に対応 → «нэн даруй» нийцнэ."
+      }
+    ]
   },
   "vocab:達成|たっせい": {
-    "action": "verify",
-    "reviewer": "Freebuff AI reviewer",
-    "at": "2026-10-29",
-    "note": "уншлага зөв; mn «амжилт» = achievement; 例 目標を達成 → «зорилгодоо хүрсэн» зөв."
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «амжилт» = achievement; 例 目標を達成 → «зорилгодоо хүрсэн» зөв."
+      }
+    ]
   },
   "vocab:遠ざかる|とおざかる": {
-    "action": "verify",
-    "reviewer": "Freebuff AI reviewer",
-    "at": "2026-10-29",
-    "note": "уншлага зөв; mn «хол явах» = to move away; 例 岸から遠ざかる → зөв."
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «хол явах» = to move away; 例 岸から遠ざかる → зөв."
+      }
+    ]
   }
 }

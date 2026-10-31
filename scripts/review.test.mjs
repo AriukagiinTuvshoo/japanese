@@ -42,6 +42,7 @@ const readDecisions = () => JSON.parse(readFileSync(DECISIONS_FILE, "utf8"));
 
 beforeEach(() => {
   w("content/review/decisions.json", {});
+  w("content/mn/vocab.json", {});
   w("content/mn/terms.json", {
     particle: { ja: "助詞", mn: "Тусаглал", note: "тест", example: "は", source: "тест", status: "needs_review" },
   });
@@ -96,6 +97,25 @@ describe("review.mjs — файлд суурилсан хүний хяналт",
     // content:qa ч баталгаажуулна (curated нотолготой)
     const { errors } = runQa({ root });
     expect(errors.filter((e) => e.includes("terms") || e.includes("curated"))).toEqual([]);
+  });
+
+  it("mark approve (vocab): утга content/mn/vocab.json-д бичигдэнэ, өгөгдөл өөрөө curated болохгүй", () => {
+    expect(cmdMark(["vocab", "学校|がっこう", "--action=approve", "--reviewer=Бат"])).toBe(0);
+    expect(readDecisions()["vocab:学校|がっこう"]).toMatchObject({ action: "approve", reviewer: "Бат" });
+    const overrides = JSON.parse(readFileSync(path.join(root, "content/mn/vocab.json"), "utf8"));
+    expect(overrides["学校|がっこう"]).toBe("сургууль");
+    // generated JSON-ыг approve өөрөө сольж бичихгүй — `build-data.mjs` л mq=curated болгоно
+    const row = JSON.parse(readFileSync(path.join(root, "public/data/vocab/n5.json"), "utf8"))[0];
+    expect(row.mq).toBe("draft");
+  });
+
+  it("mark: дараагийн шийдвэр өмнөхийг history-д хадгална (нотолгоо устахгүй)", () => {
+    expect(cmdMark(["terms", "particle", "--action=verify", "--reviewer=Шалгагч", "--note=эх сурвалжтай"])).toBe(0);
+    expect(cmdMark(["terms", "particle", "--action=approve", "--reviewer=Бат"])).toBe(0);
+    const d = readDecisions()["terms:particle"];
+    expect(d).toMatchObject({ action: "approve", reviewer: "Бат" });
+    expect(d.history).toHaveLength(1);
+    expect(d.history[0]).toMatchObject({ action: "verify", reviewer: "Шалгагч", note: "эх сурвалжтай" });
   });
 
   it("mark revise: санал хадгалагдана, өгөгдөл өөрчлөгдөхгүй", () => {

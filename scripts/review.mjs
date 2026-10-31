@@ -38,6 +38,7 @@ const ROOT = process.env.REVIEW_ROOT
 const DECISIONS = path.join(ROOT, "content/review/decisions.json");
 const QUEUE = path.join(ROOT, "content/review/QUEUE.md");
 const TERMS = path.join(ROOT, "content/mn/terms.json");
+const VOCAB_MN = path.join(ROOT, "content/mn/vocab.json");
 const DATA = path.join(ROOT, "public/data");
 
 const KINDS = ["vocab", "kanji", "grammar", "terms"];
@@ -270,6 +271,10 @@ export function cmdMark(argv) {
   if (mn) decision.mn = mn;
 
   const before = { ...(d.decisions[ledgerKey] ?? null) };
+  // өмнөх шийдвэрийг (нотолгоотой `verify`-г оруулаад) устгахгүй — түүхэнд хадгална
+  const priorHistory = Array.isArray(before.history) ? before.history : [];
+  delete before.history;
+  if (Object.keys(before).length) decision.history = [...priorHistory, before];
   d.decisions[ledgerKey] = decision;
   const sorted = Object.fromEntries(Object.entries(d.decisions).sort(([a], [b]) => (a < b ? -1 : 1)));
   fs.mkdirSync(path.dirname(DECISIONS), { recursive: true });
@@ -287,9 +292,32 @@ export function cmdMark(argv) {
     termsChanged = true;
   }
 
+  let vocabChanged = false;
+  if (kind === "vocab" && action === "approve") {
+    /* `content/mn/vocab.json` бол хүний хянасан утгын эх сурвалж: build-data.mjs
+     * `mq: "curated"`-ыг зөвхөн эндээс үүсгэдэг. `--mn` өгөөгүй бол одоогийн
+     * (шалгасан) утгыг хэвээр бичнэ — шинэ утга зохиохгүй. */
+    const key2 = mn ? key : key;
+    const overrides = fs.existsSync(VOCAB_MN)
+      ? JSON.parse(fs.readFileSync(VOCAB_MN, "utf8"))
+      : {};
+    const current = d.vocab.find((r) => `${r.w}|${r.r}` === key);
+    const value = mn || (current?.mn ?? []).filter(Boolean).join("; ");
+    if (!value) return fail(`vocab "${key}" — монгол утга байхгүй тул curated болгох боломжгүй`);
+    overrides[key2] = value;
+    const sortedOverrides = Object.fromEntries(
+      Object.entries(overrides).sort(([a], [b]) => (a < b ? -1 : 1)),
+    );
+    fs.writeFileSync(VOCAB_MN, `${JSON.stringify(sortedOverrides, null, 2)}\n`, "utf8");
+    vocabChanged = true;
+  }
+
   console.log(`✓ ${ledgerKey}: ${action} (${reviewer}, ${decision.at})`);
   if (Object.keys(before).length) console.log(`  (өмнөх шийдвэр: ${before.action} ${before.reviewer})`);
   if (termsChanged) console.log("  content/mn/terms.json: status → curated (reviewedBy/reviewedAt бичигдлээ)");
+  if (vocabChanged) {
+    console.log("  content/mn/vocab.json: хүний хянасан утга бичигдлээ (build → mq=curated)");
+  }
   if (action === "verify") {
     console.log("  шалгалт бүртгэгдлээ — өгөгдөл/төлөв ӨӨРЧЛӨГДӨӨГҮЙ. curated болгохыг зөвхөн хүн `--action=approve`-аар шийднэ.");
   }
