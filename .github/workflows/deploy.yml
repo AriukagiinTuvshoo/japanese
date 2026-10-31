@@ -24,7 +24,13 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
+      # production-д гарч буй контент/код нь merge-ийн өмнөх PR шалгалтаас
+      # хамааралгүй (шууд push, bypass, эсвэл хуучин PR) байж болзошгүй тул
+      # deploy дээр өөрөө хаалга тавина.
+      - run: npm run typecheck
+      - run: npm test
       - run: npm run data:validate
+      - run: npm run content:qa
       - run: npm run build
         env:
           BASE_PATH: /${{ github.event.repository.name }}/
