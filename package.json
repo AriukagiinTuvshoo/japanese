@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "typecheck": "tsc -b --noEmit",
     "data:fetch": "node scripts/fetch-sources.mjs",
-    "data:build": "node scripts/build-data.mjs && node scripts/apply-machine-mn.mjs",
+    "data:build": "node scripts/build-all.mjs",
     "data:validate": "node scripts/validate-data.mjs",
     "kanji:meta": "node scripts/kanji-meta.mjs report",
     "kanji:meta:apply": "node scripts/kanji-meta.mjs apply",
