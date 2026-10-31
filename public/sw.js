@@ -1,54 +1,217 @@
-/* Nihongo Dōjō service worker: офлайн-first.
-   - /data/** JSON: cache-first (10MB контент нэг л удаа татагдана)
-   - бусад GET: stale-while-revalidate
-   - навигаци: сүлжээ байхгүй үед кэшлэгдсэн index.html
-   - /api/**: кэшлэхгүй (апп өөрөө офлайн синк хийдэг) */
-const VERSION = "v1";
+/* Nihongo Dōjō service worker — офлайн-first.
+   ------------------------------------------------------------------
+   · `VERSION` нь build бүрт `vite.config.ts`-ээр солигдоно (asset hash),
+     тиймээс шинэ deploy хуучин кэшийг заавал цэвэрлэнэ.
+   · install: app shell + N5 контент (vocab/kanji/grammar/strokes/index) +
+     build-ийн JS/CSS/фонтыг урьдчилан кэшилнэ → эхний ачааллын дараа
+     интернэтгүй ч бүрэн ажиллана.
+   · Бусад түвшний JSON: cache-first (нэг л удаа татна).
+   · /api/**: кэшлэхгүй (апп өөрөө офлайн синк хийдэг). */
+
+const VERSION = "__BUILD__";
 const SHELL = `nd-shell-${VERSION}`;
 const DATA = `nd-data-${VERSION}`;
 const BASE = new URL("./", self.location).pathname;
 
+const STATIC = [
+  BASE,
+  `${BASE}manifest.webmanifest`,
+  `${BASE}icons/icon-192.png`,
+  `${BASE}icons/icon-512.png`,
+  `${BASE}icons/apple-touch-icon.png`,
+];
+
+/* N5 нь эхлэгчдэд хамгийн чухал — суулгах үед бүрэн татагдана.
+   N4–N1 нь ашиглах үедээ кэшлэгдэнэ. */
+const FIRST_LEVEL = [
+  "data/index/meta.json",
+  "data/index/search.json",
+  "data/vocab/n5.json",
+  "data/kanji/n5.json",
+  "data/grammar/n5.json",
+  "data/strokes/n5.json",
+].map((p) => BASE + p);
+
+/* ── B7: precache жагсаалтыг уншина ──
+ * `critical` = эхний рендэрт шаардлагатай (js/css + manrope + jetbrains + JP core),
+ * `warm`     = бусад JP font chunk (install-д оруулахгүй — хуудас анхны
+ *              сессийн дараа `ND_WARM` мессежээр асууна). */
+async function loadPrecache() {
+  try {
+    const res = await fetch(`${BASE}precache.json`, { cache: "reload" });
+    if (!res.ok) return null;
+    const body = await res.json();
+    const toAbs = (list) => (Array.isArray(list) ? list.map((u) => new URL(u, self.location.href).href) : []);
+    const assets = toAbs(body?.assets);
+    const critical = toAbs(body?.critical);
+    const warm = toAbs(body?.warm);
+    if (!assets.length && !critical.length) return null;
+    return { assets, critical: critical.length ? critical : assets, warm };
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Кэшэд бичихдээ `Vary`-г устгана.
+ * Яагаад: сервер (vite preview зэрэг) `Vary: Origin` илгээдэг бөгөөд үүнээс
+ * болж **сурагч/фонт/стиль** хүсэлтийн `cache.match(req)` таарахгүй —
+ * B8 e2e-д сервер устгасны дараа дахин ачаалалт хоосон дэлгэц болсон.
+ * Same-origin статик файлд Vary-ийн утга үгүй тул аюулгүй.
+ */
+async function putClean(cache, key, res) {
+  const headers = new Headers(res.headers);
+  headers.delete("vary");
+  await cache.put(key, new Response(res.body, { status: res.status, statusText: res.statusText, headers }));
+}
+
+/** Нэг ч холбоос унавал бүх суулгалтыг унагахгүй — аль болохыг нь кэшилнэ. */
+async function addAllSafe(cache, urls) {
+  await Promise.all(
+    urls.map(async (u) => {
+      try {
+        const res = await fetch(u, { cache: "reload" });
+        if (res.ok) await putClean(cache, u, res);
+      } catch {
+        /* сүлжээгүй / 404 — дараагийн ачаалалтад дахин оролдоно */
+      }
+    }),
+  );
+}
+
+/** index.html ба CSS-ээс build-ийн asset (js/css/woff2) хаягуудыг олно. */
+async function discoverAssets() {
+  // Build үед vite.config.ts `dist/precache.json` бичдэг — бүх JS/CSS/фонт,
+  // lazy route chunk-уудыг оролцуулан.
+  const pre = await loadPrecache();
+  if (pre) return pre.assets;
+
+  const urls = new Set();
+  try {
+    const html = await fetch(BASE, { cache: "reload" }).then((r) => r.text());
+    for (const m of html.matchAll(/(?:src|href)="([^"]+\.(?:js|css|woff2))"/g)) {
+      urls.add(new URL(m[1], self.location.href).href);
+    }
+  } catch {
+    return [];
+  }
+  const cssUrls = [...urls].filter((u) => u.endsWith(".css"));
+  for (const css of cssUrls) {
+    try {
+      const text = await fetch(css, { cache: "reload" }).then((r) => r.text());
+      for (const m of text.matchAll(/url\(\s*["']?([^"')]+\.woff2)["']?\s*\)/g)) {
+        urls.add(new URL(m[1], css).href);
+      }
+    } catch {
+      /* css уншиж чадсангүй */
+    }
+  }
+  return [...urls];
+}
+
 self.addEventListener("install", (e) => {
-  e.waitUntil(caches.open(SHELL).then((c) => c.addAll([BASE, `${BASE}manifest.webmanifest`])).then(() => self.skipWaiting()));
+  e.waitUntil(
+    (async () => {
+      const [shell, data] = await Promise.all([caches.open(SHELL), caches.open(DATA)]);
+      const pre = await loadPrecache();
+      // Зөвхөн КРИТИК хэсэг: бүх JP font chunk-ийг install-д оруулбал
+      // суулгалт 2+ MB-аар удааширна (B7).
+      const core = pre ? pre.critical : await discoverAssets();
+      await addAllSafe(shell, [...STATIC, ...core]);
+      await addAllSafe(data, FIRST_LEVEL);
+      // Хэрэглэгч "Шинэчлэх" дарж байж идэвхждэг (main.tsx-ээс зурвас ирнэ).
+    })(),
+  );
 });
 
 self.addEventListener("activate", (e) => {
   e.waitUntil(
-    caches.keys()
-      .then((keys) => Promise.all(keys.filter((k) => ![SHELL, DATA].includes(k)).map((k) => caches.delete(k))))
-      .then(() => self.clients.claim())
+    (async () => {
+      const keys = await caches.keys();
+      // ХУУЧИН build-ийн кэшийг заавал устгана (кэш хувилбар бүр өөр).
+      await Promise.all(
+        keys
+          .filter((k) => k.startsWith("nd-") && k !== SHELL && k !== DATA)
+          .map((k) => caches.delete(k)),
+      );
+      await self.clients.claim();
+      // Арын халалт (B7) одоо МЕССЕЖЭЭР эхэлнэ (main.tsx → ND_WARM): зүгээр
+      // install-д багтуулбал анхны рэндэр 2+ MB фонтын таталттай өрсөнө.
+    })(),
   );
+});
+
+/** Үлдсэн (эхний ачаалалд хэрэггүй) JP font chunk-уудыг SW кэшинэ (B7). */
+async function warmFonts() {
+  const pre = await loadPrecache();
+  if (!pre?.warm?.length) return 0;
+  const conn = typeof navigator !== "undefined" ? navigator.connection : undefined;
+  // Хязгаарлагдсан холбоонд (2G / save-data) огт татдаггүй.
+  if (conn && (conn.saveData || /(^|-)2g$/.test(conn.effectiveType || ""))) return 0;
+  const shell = await caches.open(SHELL);
+  await addAllSafe(shell, pre.warm);
+  return pre.warm.length;
+}
+
+self.addEventListener("message", (e) => {
+  if (e.data?.type === "SKIP_WAITING") self.skipWaiting();
+  // B7: хуудас (main.tsx) анхны сессийн дараа арын font chunk-уудыг
+  // асуух мессеж илгээнэ → SW үүнийг waitUntil-аар кэшинэ.
+  if (e.data?.type === "ND_WARM" && typeof e.waitUntil === "function") {
+    e.waitUntil(warmFonts());
+  }
 });
 
 self.addEventListener("fetch", (e) => {
   const req = e.request;
+  if (req.method !== "GET") return;
   const url = new URL(req.url);
-  if (req.method !== "GET" || url.origin !== self.location.origin) return;
-  if (url.pathname.startsWith(`${BASE}api/`)) return;
+  if (url.origin !== self.location.origin) return;
+  const path = url.pathname;
+  if (path.startsWith(`${BASE}api/`)) return;
 
   if (req.mode === "navigate") {
-    e.respondWith(fetch(req).catch(() => caches.match(BASE)));
-    return;
-  }
-
-  if (url.pathname.startsWith(`${BASE}data/`)) {
     e.respondWith(
-      caches.open(DATA).then(async (c) => {
-        const hit = await c.match(req);
-        if (hit) return hit;
-        const res = await fetch(req);
-        if (res.ok) c.put(req, res.clone());
-        return res;
-      })
+      fetch(req)
+        .then((res) => {
+          const copy = res.clone();
+          caches.open(SHELL).then((c) => putClean(c, BASE, copy)).catch(() => {});
+          return res;
+        })
+        .catch(
+          async () =>
+            (await caches.match(BASE, { ignoreVary: true })) ??
+            (await caches.match(req, { ignoreVary: true })) ??
+            Response.error(),
+        ),
     );
     return;
   }
 
+  const isData = path.startsWith(`${BASE}data/`);
   e.respondWith(
-    caches.open(SHELL).then(async (c) => {
-      const hit = await c.match(req);
-      const net = fetch(req).then((res) => { if (res.ok) c.put(req, res.clone()); return res; }).catch(() => hit);
-      return hit || net;
-    })
+    caches.open(isData ? DATA : SHELL).then(async (c) => {
+      // `ignoreVary: true` — дээрх putClean-тэй хамт: серверийн `Vary: Origin`
+      // офлайны match-ийг унагадаг байсан (B8-ын олж тогтоосон гол алдаа).
+      const hit = await c.match(req, { ignoreVary: true });
+      // Кэшэд байвал сүлжээнд хүрэхгүй (data: cache-first, бусад: SWR).
+      // Модуль скриптийн хүсэлтийг давхар `fetch(req)`-ээр дахин нээх нь
+      // Chrome дээр ERR_FAILED өгдөг тул зөвхөн miss үед татна.
+      if (hit) {
+        if (!isData) {
+          fetch(req)
+            .then((res) => { if (res.ok) return putClean(c, req, res.clone()); })
+            .catch(() => {});
+        }
+        return hit;
+      }
+      try {
+        const res = await fetch(req);
+        if (res.ok) putClean(c, req, res.clone()).catch(() => {});
+        return res;
+      } catch {
+        return Response.error();
+      }
+    }),
   );
 });

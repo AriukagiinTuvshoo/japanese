@@ -17,6 +17,9 @@
 import { mkdir, readFile, readdir, rm, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { computeMeta } from "./meta.mjs";
+import { makeAutoGloss } from "./lib/gloss.mjs";
+import { firstNonEmpty, kangxiChar } from "./lib/kanji-meta.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = path.join(ROOT, ".cache", "sources");
@@ -75,30 +78,8 @@ const TYPE_MN = {
   other: "Бусад",
 };
 
-/** Шинэ үгэнд монгол орчуулга автоматаар санал болгох. */
-function makeAutoGloss(terms) {
-  const norm = (w) => w.toLowerCase().replace(/^to /, "").replace(/^a /, "").replace(/^an /, "").replace(/\(.*?\)/g, "").trim();
-  return (en = []) => {
-    if (!en.length) return null;
-    const out = [];
-    for (const gloss of en.slice(0, 2)) {
-      const g = norm(gloss);
-      if (!g) continue;
-      const parts = g.split(/\s*[,;]\s*|\s+or\s+/).flatMap((x) => x.split(/\s*\/\s*/));
-      const mapped = parts.map((part) => {
-        if (terms[part]) return terms[part];
-        const words = part.split(/\s+/);
-        const each = words.map((w) => terms[w] ?? terms[w.replace(/(s|es|ed|ing)$/, "")]);
-        return each.every(Boolean) ? each.join(" ") : null;
-      });
-      if (mapped.every(Boolean) && mapped.length) out.push(mapped.join(", "));
-    }
-    return out.length ? [...new Set(out)].slice(0, 2) : null;
-  };
-}
-
 /* ------------------------------------------------------------------ */
-/* 1. эх өгөгдөл                                                       */
+/* 1. эх өгөгдэл                                                       */
 /* ------------------------------------------------------------------ */
 async function loadSources() {
   const openjlpt = {
@@ -116,7 +97,10 @@ async function loadSources() {
   const jmCandidates = (await json(path.join(SRC, "jamdict-data/candidates.json"), [])) ?? [];
   const openjlptMeta = (await json(path.join(SRC, "openjlpt/data/json/meta.json"), {})) ?? {};
   const lock = (await json(path.join(SRC, "sources.lock.json"), {})) ?? {};
-  return { openjlpt, kanjiData, jmCandidates, openjlptMeta, lock };
+  // KANJIDIC2 классик зурлагын дугаар → ханзны `rad` (scripts/lib/kanjidic_export.py).
+  // Файл байхгүй бол хуучин дүрэм үлдэнэ: 389 радикал дутуу хэвээр үлдэнэ.
+  const kanjiRadicals = (await json(path.join(SRC, "jamdict-data/kanji-radicals.json"), null))?.radicals ?? {};
+  return { openjlpt, kanjiData, jmCandidates, openjlptMeta, lock, kanjiRadicals };
 }
 
 async function loadContent() {
@@ -127,6 +111,9 @@ async function loadContent() {
     terms: (await json(path.join(CONTENT, "mn/terms.json"), {})) ?? {},
     // AI/машин драфт — хянагдаагүй. Хүний баталгаажуулсны дараа mn/vocab.json руу шилжинэ.
     vocabDraft: (await json(path.join(CONTENT, "mn/vocab-draft.json"), {})) ?? {},
+    // Machine орчуулга (түлхүүр: `бичлэг|уншлага`) — ханзны холбоос үгсийн утгад ашиглана.
+    // Эс бөгөөс apply-machine-mn-ээр орчуулсан үг англи хэвээр харагдана.
+    vocabMachine: (await json(path.join(CONTENT, "mn/machine/vocab.json"), {})) ?? {},
     kanjiDraft: (await json(path.join(CONTENT, "mn/kanji-draft.json"), {})) ?? {},
     listening: (await json(path.join(CONTENT, "listening.json"), [])) ?? [],
     reading: (await json(path.join(CONTENT, "reading.json"), [])) ?? [],
@@ -238,7 +225,7 @@ function buildVocab({ openjlpt, jmCandidates, kanjiData }, content, audit) {
 /* ------------------------------------------------------------------ */
 /* 3. ханз                                                             */
 /* ------------------------------------------------------------------ */
-function buildKanji({ openjlpt, kanjiData }, content, audit, vocabByLevel) {
+function buildKanji({ openjlpt, kanjiData, kanjiRadicals }, content, audit, vocabByLevel) {
   const auto = makeAutoGloss(content.terms);
   const jlptOf = new Map();
   for (const lv of LEVELS) {
@@ -255,7 +242,14 @@ function buildKanji({ openjlpt, kanjiData }, content, audit, vocabByLevel) {
       for (const ch of v.kd) {
         if (!wordsOf.has(ch)) wordsOf.set(ch, []);
         const list = wordsOf.get(ch);
-        if (list.length < 14) list.push({ w: v.w, r: v.r, mn: v.mn?.[0] ?? v.en[0], lvl: v.lvl });
+        if (list.length < 14) {
+          // `v.mn` нь build-ийн үед ихэвчлэн хоосон (машин орчуулга дараа нь орно),
+          // тиймээс machine стороос ч хайна — англи руу буцаж унахгүйн тулд.
+          // Дараалал нь apply-machine-mn.mjs-тэй ижил: түлхүүрт орчуулга
+          // > glossary авто-тайлбар > англи.
+          const mn = content.vocabMachine?.[`${v.w}|${v.r}`] ?? v.mn?.[0] ?? v.en[0];
+          list.push({ w: v.w, r: v.r, mn, lvl: v.lvl });
+        }
       }
     }
   }
@@ -292,11 +286,23 @@ function buildKanji({ openjlpt, kanjiData }, content, audit, vocabByLevel) {
   for (const [ch, info] of selected) {
     const curated = content.kanji[ch] ?? {};
     const jl = jlptOf.get(ch);
-    const readings_on = info.readings_on ?? jl?.entry?.on_yomi ?? [];
-    const readings_kun = info.readings_kun ?? jl?.entry?.kun_yomi ?? [];
+    // Канни-дулааны хоосон массив (`[] ?? x` → `[]`) алгасдаг тул эхлээд
+    // хоосон эсэхийг шалгана. OpenJLPT талбарын нэрийг анхаарна:
+    // `onyomi` / `kunyomi` (он_yomi гэж бичигдээгүй!).
+    const readings_on = firstNonEmpty(info.readings_on, jl?.entry?.onyomi);
+    const readings_kun = firstNonEmpty(info.readings_kun, jl?.entry?.kunyomi);
     const enMeanings = (info.meanings ?? jl?.entry?.meanings ?? []).slice(0, 3);
     const draftM = content.kanjiDraft[ch];
     const mn = curated.m ? [curated.m] : draftM ? [draftM] : (auto(enMeanings) ?? []);
+    // радикал: гараар тэмдэглэсэн → OpenJLPT → KANJIDIC2 (Кангийн дугаар)
+    // → kanji-data-ийн бүрдүүлэгчийн нэр (англи — хамгийн сүүлийн сонголт).
+    const nonEmpty = (v) => (typeof v === "string" && v.trim() ? v : null);
+    const radCurated = nonEmpty(curated.rad);
+    const radOpenjlpt = nonEmpty(jl?.entry?.radical);
+    const radKanjidic = kangxiChar(kanjiRadicals[ch]);
+    const radWk = nonEmpty(info.wk_radicals?.[0]);
+    const radFromKanjidic = !radCurated && !radOpenjlpt && radKanjidic != null;
+    const rad = radCurated ?? radOpenjlpt ?? radKanjidic ?? radWk ?? null;
 
     byLevel[info.lvl].push({
       k: ch,
@@ -310,10 +316,10 @@ function buildKanji({ openjlpt, kanjiData }, content, audit, vocabByLevel) {
       mq: curated.m ? "curated" : draftM ? "draft" : mn.length ? "auto" : "none",
       on: curated.on ?? readings_on.slice(0, 3),
       kun: curated.kun ?? readings_kun.slice(0, 4),
-      rad: curated.rad ?? jl?.entry?.radical ?? info.wk_radicals?.[0] ?? null,
+      rad: rad,
       w: wordsOf.get(ch) ?? [],
       mn_mem: curated.n ?? null,
-      src: jl ? "openjlpt+kanji-data" : "kanji-data",
+      src: `${jl ? "openjlpt+kanji-data" : "kanji-data"}${radFromKanjidic ? "+kanjidic2" : ""}`,
       sid: ch,
     });
     if (!curated.m) audit.mnMissingKanji.push(ch);
@@ -445,35 +451,22 @@ async function main() {
   bytes += await write("index/search.json", idx);
 
   // ---------- нэгдсэн мета ----------
-  const meta = {
-    version: "3.0.0",
-    builtAt: new Date().toISOString(),
-    levels: LEVELS,
-    counts: {
-      vocab: LEVELS.reduce((a, l) => a + counts.vocab[l], 0),
-      kanji: LEVELS.reduce((a, l) => a + counts.kanji[l], 0),
-      grammar: LEVELS.reduce((a, l) => a + counts.grammar[l], 0),
-      strokes: strokes.found,
-      vocabMnCurated: LEVELS.reduce((a, l) => a + counts.vocabMn[l], 0),
-      byLevel: counts,
-    },
+  // scripts/meta.mjs — build-meta.mjs болон validate-data.mjs-тэй ижил тооцоо.
+  const flat = (byLv) => LEVELS.flatMap((l) => byLv[l] ?? []);
+  const meta = computeMeta({
+    vocab: flat(vocab),
+    kanji: flat(kanji),
+    grammar: flat(grammar),
+    strokesFound: strokes.found,
     content: {
-      listeningLessons: content.listening.length,
-      readingPassages: content.reading.length,
+      listening: content.listening,
+      reading: content.reading,
       kanjiMnemonics: Object.values(content.kanji).filter((k) => k.n).length,
       grammarExplained: Object.keys(content.grammar).length,
       glossaryTerms: Object.keys(content.terms).length,
+      openjlpt: sources.openjlptMeta,
     },
-    sources: Object.values(sources.lock).map((s) => ({
-      id: s.id,
-      name: s.name,
-      url: s.homepage,
-      license: s.license,
-      note: s.note,
-      retrievedAt: s.retrievedAt,
-    })),
-    openjlpt: sources.openjlptMeta,
-  };
+  });
   bytes += await write("index/meta.json", meta, { pretty: true });
 
   await writeFile(

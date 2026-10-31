@@ -2,9 +2,7 @@
 
 import type { Level } from "./types";
 import type { Language } from "./i18n";
-
-export const HIRA_START = 0x3041;
-export const KATA_START = 0x30a1;
+import type { ActivityDay } from "./store";
 
 const GRAMMAR_LABELS: Record<string, string> = {
   subject: "өгүүлэгдэхүүн",
@@ -44,10 +42,6 @@ export function isKana(ch: string) {
   const c = ch.codePointAt(0) ?? 0;
   return (c >= 0x3041 && c <= 0x309f) || (c >= 0x30a0 && c <= 0x30ff);
 }
-export function hasKanji(s: string) {
-  return [...s].some(isKanji);
-}
-
 /** Катакана → хирагана (хайлт, уншилт харьцуулахад). */
 export function toHiragana(s: string) {
   return [...s]
@@ -181,6 +175,34 @@ export function dayOffset(key: string, days: number) {
   return todayKey(date);
 }
 
+/**
+ * Одоогийн өдрөөс эхлэн үргэлжилсэн өдөр (streak) — өдөр бүрт XP > 0 байх ёстой.
+ * Хураангуй/импорт/preview-д ашиглана (store.tsx бас реэкспорт хийдэг).
+ */
+export function computeStreak(activity: Record<string, ActivityDay>) {
+  let n = 0;
+  let key = todayKey();
+  if (!(activity[key]?.xp > 0)) key = dayOffset(key, -1);
+  while (activity[key]?.xp > 0) {
+    n++;
+    key = dayOffset(key, -1);
+  }
+  return n;
+}
+
+/** Хамгийн урт цуваа (бүх түүхээс). */
+export function longestStreak(activity: Record<string, ActivityDay>) {
+  const days = Object.entries(activity).filter(([, d]) => d.xp > 0).map(([k]) => k).sort();
+  let best = 0, run = 0, prev = "";
+  for (const k of days) {
+    const r = prev && dayOffset(prev, 1) === k ? run + 1 : 1;
+    best = Math.max(best, r);
+    run = r;
+    prev = k;
+  }
+  return best;
+}
+
 /** Хүн уншихад ойлгомжтой хугацаа. */
 export function relTime(ts: number, language: Language = "mn") {
   const diff = Date.now() - ts;
@@ -223,8 +245,6 @@ export const LEVEL_LABEL: Record<Language, Record<Level, string>> = {
     N1: "Advanced",
   },
 };
-
-export const LEVEL_JP: Record<Level, string> = { N5: "入門", N4: "基礎", N3: "中級", N2: "上級", N1: "最上級" };
 
 export const TYPE_LABEL: Record<Language, Record<string, string>> = {
   mn: {
@@ -270,9 +290,4 @@ export const MQ_LABEL: Record<Language, Record<string, { text: string; tone: "ma
   },
 };
 
-/** Түвшний тохирох POS / төрөл. */
-export function typeTone(t: string): "ai" | "matcha" | "kin" | "murasaki" | "shu" {
-  return ({ v: "shu", i: "ai", na: "murasaki", adj: "ai", adv: "matcha", exp: "kin", n: "sumi", pn: "murasaki", ctr: "kin", other: "sumi" } as const)[
-    t as "v"
-  ] ?? "sumi";
-}
+

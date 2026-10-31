@@ -16,6 +16,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { coverageTable, hasMnValue, RULES_TEXT } from "./lib/coverage.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DATA = path.join(ROOT, "public/data");
@@ -36,22 +37,20 @@ const vocab = LEVELS.flatMap((l) => J(path.join(DATA, `vocab/${l.toLowerCase()}.
 const kanji = LEVELS.flatMap((l) => J(path.join(DATA, `kanji/${l.toLowerCase()}.json`)));
 const grammar = LEVELS.flatMap((l) => J(path.join(DATA, `grammar/${l.toLowerCase()}.json`)));
 
-/* ── 1. нэвтрүүлэлт ── */
+/* ── 1. нэвтрүүлэлт ──
+   ДҮРЭМ: scripts/lib/coverage.mjs (content:qa-тай ЯГ ИЖИЛ) —
+   curated+draft+auto+derived+none = нийт; auto ≠ none; hasMn төлөвөөс үл хамаарна. */
+const { rows: vocabRows, total: vocabTotal } = coverageTable({ vocab });
 const coverage = LEVELS.map((l) => {
-  const v = J(path.join(DATA, `vocab/${l.toLowerCase()}.json`));
   const k = J(path.join(DATA, `kanji/${l.toLowerCase()}.json`));
   const g = J(path.join(DATA, `grammar/${l.toLowerCase()}.json`));
-  const vm = v.filter((x) => x.mn?.length).length;
-  const km = k.filter((x) => x.mn?.length).length;
-  const gm = g.filter((x) => x.mn).length;
+  const row = vocabRows.find((r) => r.level === l);
   return {
-    l, vt: v.length, vm,
-    draft: v.filter((x) => x.mq === "draft").length,
-    curated: v.filter((x) => x.mq === "curated").length,
-    none: v.filter((x) => x.mq === "none").length,
-    kt: k.length, km, gt: g.length, gm,
-    ex: v.flatMap((x) => x.ex ?? []).length,
-    exMn: v.flatMap((x) => x.ex ?? []).filter((e) => e.mn).length,
+    l, vt: row.total, vm: row.hasMn,
+    curated: row.curated, draft: row.draft, auto: row.auto, derived: row.derived, none: row.none,
+    kt: k.length, km: k.filter((x) => hasMnValue(x.mn)).length,
+    gt: g.length, gm: g.filter((x) => x.mn).length,
+    ex: row.examples, exMn: row.exMn,
   };
 });
 
@@ -136,14 +135,19 @@ L.push("> `content/mn/REVIEW_NEEDED.md`-д оруулна уу. \"curated\" тэ
 L.push("");
 L.push("## 1. Нэвтрүүлэлт");
 L.push("");
-L.push("| Түвшин | Үг | MN утга | draft | curated | none | Ханз | Ханз MN | Дүрэм | Дүрэм MN | Жишээ | Жишээ MN |");
-L.push("|--------|----|---------|-------|---------|------|------|---------|-------|----------|--------|----------|");
+L.push("| Түвшин | Үг | MN утга | curated | draft | auto | derived | none | Ханз | Ханз MN | Дүрэм | Дүрэм MN | Жишээ | Жишээ MN |");
+L.push("|--------|----|---------|---------|-------|------|---------|------|------|---------|------|----------|--------|----------|");
 for (const c of coverage) {
-  L.push(`| ${c.l} | ${c.vt} | **${pct(c.vm, c.vt)}** | ${c.draft} | ${c.curated} | ${c.none} | ${c.kt} | ${pct(c.km, c.kt)} | ${c.gt} | ${pct(c.gm, c.gt)} | ${c.ex} | ${pct(c.exMn, c.ex)} |`);
+  L.push(`| ${c.l} | ${c.vt} | **${pct(c.vm, c.vt)}** | ${c.curated} | ${c.draft} | ${c.auto} | ${c.derived} | ${c.none} | ${c.kt} | ${pct(c.km, c.kt)} | ${c.gt} | ${pct(c.gm, c.gt)} | ${c.ex} | ${pct(c.exMn, c.ex)} |`);
 }
-const totV = coverage.reduce((a, c) => a + c.vt, 0);
-const totM = coverage.reduce((a, c) => a + c.vm, 0);
-L.push(`| **НИЙТ** | **${totV}** | **${pct(totM, totV)}** | ${coverage.reduce((a, c) => a + c.draft, 0)} | ${coverage.reduce((a, c) => a + c.curated, 0)} | ${coverage.reduce((a, c) => a + c.none, 0)} | ${coverage.reduce((a, c) => a + c.kt, 0)} | ${pct(coverage.reduce((a, c) => a + c.km, 0), coverage.reduce((a, c) => a + c.kt, 0))} | ${coverage.reduce((a, c) => a + c.gt, 0)} | ${pct(coverage.reduce((a, c) => a + c.gm, 0), coverage.reduce((a, c) => a + c.gt, 0))} | ${coverage.reduce((a, c) => a + c.ex, 0)} | 0.0% |`);
+const sum = (f) => coverage.reduce((a, c) => a + c[f], 0);
+L.push(`| **НИЙТ** | **${sum("vt")}** | **${pct(sum("vm"), sum("vt"))}** | ${sum("curated")} | ${sum("draft")} | ${sum("auto")} | ${sum("derived")} | ${sum("none")} | ${sum("kt")} | ${pct(sum("km"), sum("kt"))} | ${sum("gt")} | ${pct(sum("gm"), sum("gt"))} | ${sum("ex")} | ${pct(sum("exMn"), sum("ex"))} |`);
+L.push("");
+L.push("> Коверажийн дүрэм: `scripts/lib/coverage.mjs` — энэ тайлан болон `content:qa` ЯГ ИЖИЛ тоог гаргана.");
+L.push("");
+for (const line of RULES_TEXT.split("\n")) L.push(`- ${line}`);
+L.push("");
+void vocabTotal;
 L.push("");
 
 const sec = (n, title, count, body) => {

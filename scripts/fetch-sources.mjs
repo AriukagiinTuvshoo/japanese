@@ -73,20 +73,58 @@ const SOURCES = [
     extra: async (dir) => {
       // .xz-ээс SQLite рүү задална (нэг удаа).
       const db = path.join(dir, "jamdict.db");
-      const xz = path.join(dir, "jamdict_data-1.5", "jamdict_data", "jamdict.db.xz");
-      if (await exists(db)) return;
-      if (!(await exists(xz))) throw new Error("jamdict.db.xz олдсонгүй");
-      console.log("      jamdict.db.xz → jamdict.db задалж байна…");
-      const { stdout } = await run("python3", [
-        "-c",
-        `import lzma,shutil\nwith lzma.open(${JSON.stringify(xz)}) as f, open(${JSON.stringify(db)},'wb') as o:\n    shutil.copyfileobj(f,o,1<<20)\n`,
-      ]);
-      if (stdout) process.stdout.write(stdout);
+      if (!(await exists(db))) {
+        const xz = await findFile(dir, "jamdict.db.xz");
+        if (!xz) throw new Error("jamdict.db.xz олдсонгүй");
+        console.log("      jamdict.db.xz → jamdict.db задалж байна…");
+        const { stdout } = await run("python3", [
+          "-c",
+          `import lzma,shutil\nwith lzma.open(${JSON.stringify(xz)}) as f, open(${JSON.stringify(db)},'wb') as o:\n    shutil.copyfileobj(f,o,1<<20)\n`,
+        ]);
+        if (stdout) process.stdout.write(stdout);
+      }
+      // db-аас хамааралтай гаралтууд — build-data.mjs (кандидат үгс,
+      // KANJIDIC2 классик зурлага) эдгээргүйгээр дутуу JSON үүсгэнэ.
+      await exportIfStale(dir, "candidates.json", "jmdict_export.py");
+      await exportIfStale(dir, "kanji-radicals.json", "kanjidic_export.py");
     },
   },
 ];
 
 const exists = async (p) => !!(await stat(p).catch(() => null));
+
+/**
+ * jamdict.db-аас хамааралтай гаралтыг (candidates.json, kanji-radicals.json)
+ * шаардлагатай бол дахин үүсгэнэ. Үгүй бол build мэдээлэлгүй JSON-аас
+ * уншиж, хоосон мөрүүдийг «шүүхгүй» буюу дутуу үр дүн гаргана.
+ */
+async function exportIfStale(dir, out, script) {
+  const db = path.join(dir, "jamdict.db");
+  const outPath = path.join(dir, out);
+  const [o, d] = await Promise.all([stat(outPath).catch(() => null), stat(db).catch(() => null)]);
+  if (o && d && o.mtimeMs >= d.mtimeMs) {
+    console.log(`      ${out} — бэлэн`);
+    return;
+  }
+  console.log(`      ${out} үүсгэж байна (${script})…`);
+  const { stdout } = await run("python3", [path.join(ROOT, "scripts/lib", script)], { cwd: ROOT });
+  if (stdout) process.stdout.write(stdout);
+}
+
+/** Пакетийн дотоод хуваарилалт өөрчлөгддөг тул файлыг өөрөө хайна. */
+async function findFile(dir, name, depth = 4) {
+  if (depth < 0) return null;
+  const entries = await readdir(dir, { withFileTypes: true }).catch(() => []);
+  for (const e of entries) {
+    const p = path.join(dir, e.name);
+    if (e.isFile() && e.name === name) return p;
+    if (e.isDirectory()) {
+      const hit = await findFile(p, name, depth - 1);
+      if (hit) return hit;
+    }
+  }
+  return null;
+}
 
 async function sha256(file) {
   const { createReadStream } = await import("node:fs");
@@ -109,7 +147,11 @@ async function extract(archive, dir) {
   const staging = `${dir}.staging`;
   await rm(staging, { recursive: true, force: true });
   await mkdir(staging, { recursive: true });
-  await run("tar", ["xzf", archive, "-C", staging]);
+  // Замуудыг ROOT-тай харьцатай, POSIX хэлбэрээр өгнө: Windows дээр
+  // "C:\..." замыг GNU tar «host:path» гэж уншиж, `--force-local` нь бүх
+  // хувилбарт байдаггүй. Хоосон двоеточтой relative зам аюулгүй.
+  const rel = (p) => path.relative(ROOT, p).split(path.sep).join("/") || ".";
+  await run("tar", ["xzf", rel(archive), "-C", rel(staging)], { cwd: ROOT });
   const entries = await readdir(staging);
   const top = path.join(staging, entries[0]);
   await rm(dir, { recursive: true, force: true });
@@ -119,7 +161,9 @@ async function extract(archive, dir) {
 
 async function main() {
   await mkdir(CACHE, { recursive: true });
-  const lock = (await readFile(LOG, "utf8").then(JSON.parse).catch(() => ({}))) as Record<string, unknown>;
+  const lock = /** @type {Record<string, any>} */ (
+    (await readFile(LOG, "utf8").then(JSON.parse).catch(() => ({})))
+  );
   const force = process.argv.includes("--force");
 
   for (const s of SOURCES) {
@@ -150,7 +194,7 @@ async function main() {
       homepage: s.homepage,
       note: s.note,
       sha256: stamp,
-      retrievedAt: (lock[s.id] as { retrievedAt?: string })?.retrievedAt ?? new Date().toISOString(),
+      retrievedAt: lock[s.id]?.retrievedAt ?? new Date().toISOString(),
     };
   }
 

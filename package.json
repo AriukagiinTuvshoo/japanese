@@ -10,10 +10,22 @@
     "preview": "vite preview",
     "typecheck": "tsc -b --noEmit",
     "data:fetch": "node scripts/fetch-sources.mjs",
-    "data:build": "node scripts/build-data.mjs",
+    "data:build": "node scripts/build-all.mjs",
     "data:validate": "node scripts/validate-data.mjs",
+    "kanji:meta": "node scripts/kanji-meta.mjs report",
+    "kanji:meta:apply": "node scripts/kanji-meta.mjs apply",
+    "content:qa": "node scripts/content-qa.mjs",
+    "review:queue": "node scripts/review.mjs queue",
+    "review:mark": "node scripts/review.mjs mark",
+    "review:status": "node scripts/review.mjs status",
+    "fonts:build": "node scripts/build-fonts.mjs",
+    "fonts:check": "node scripts/check-font-coverage.mjs",
+    "test:sw": "node scripts/test-sw.mjs",
+    "test:e2e": "node e2e/run.mjs",
     "data:all": "npm run data:fetch && npm run data:build && npm run data:validate",
     "test:routes": "node scripts/test-routes.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "server": "node server/index.mjs"
   },
   "dependencies": {
@@ -29,8 +41,10 @@
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "5.1.1",
+    "playwright": "^1.56.1",
     "tailwindcss": "4.1.17",
     "typescript": "5.9.3",
-    "vite": "7.3.2"
+    "vite": "7.3.2",
+    "vitest": "^3.2.7"
   }
 }

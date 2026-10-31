@@ -219,11 +219,39 @@ const curatedVocab = allVocab.filter((v) => v.mq === "curated");
 if (meta && meta.counts.vocabMnCurated !== curatedVocab.length) {
   err(`vocabMnCurated: meta ${meta.counts.vocabMnCurated} ≠ curated ${curatedVocab.length}`);
 }
+// byLevel.vocabMn = Монгол утгатай (хоосон бус mn) үгийн тоо, чанарын төлвөөс үл хамаарна.
+const hasMn = (v) => Array.isArray(v.mn) && v.mn.some((m) => typeof m === "string" && m.trim());
 for (const lv of LEVELS) {
-  const actual = curatedVocab.filter((v) => v.lvl === lv).length;
+  const actual = allVocab.filter((v) => v.lvl === lv && hasMn(v)).length;
   if (meta?.counts?.byLevel?.vocabMn && meta.counts.byLevel.vocabMn[lv] !== actual) {
-    err(`vocabMn ${lv}: meta ${meta.counts.byLevel.vocabMn[lv]} ≠ curated ${actual}`);
+    err(`vocabMn ${lv}: meta ${meta.counts.byLevel.vocabMn[lv]} ≠ mn-тэй ${actual}`);
   }
+}
+
+// Чанарын төлвийн задаргаа нийттэйгээ тохирох ёстой (meta.json худал мэдээлэхгүй).
+if (meta?.counts?.mn?.vocab) {
+  const s = meta.counts.mn.vocab;
+  const sum = (s.curated ?? 0) + (s.draft ?? 0) + (s.auto ?? 0) + (s.derived ?? 0) + (s.none ?? 0);
+  if (sum !== allVocab.length) err(`meta.mn.vocab нийлбэр ${sum} ≠ vocab ${allVocab.length}`);
+}
+if (meta && (!Array.isArray(meta.sources) || meta.sources.length === 0)) {
+  err("meta.sources хоосон — лицензийн attribution (content/sources.json) заавал байх ёстой");
+}
+
+// --- Япон текст дотор хялбаршуулсан хятад үсэг орох ёсгүй ------------------------------
+{
+  const { scanObject } = await import("./lib/glyphs.mjs");
+  const fields = [
+    ...allVocab.map((v, i) => [`vocab ${v.w}`, { w: v.w, r: v.r, rm: v.rm, ex: v.ex }]),
+    ...allKanji.map((k) => [`kanji ${k.k}`, { k: k.k, on: k.on, kun: k.kun, w: k.w }]),
+    ...allGrammar.map((g) => [`grammar ${g.p}`, { p: g.p, ex: g.ex }]),
+  ];
+  for (const [where, obj] of fields) {
+    const hits = scanObject(obj);
+    for (const h of hits) err(`${where}: ${h.path} дотор хялбаршуулсан хятад үсэг "${h.chars}" — "${String(h.text).slice(0, 40)}"`);
+  }
+  const badVocab = fields.filter(([, obj]) => scanObject(obj).length).length;
+  if (badVocab) err(`Хялбаршуулсан хятад үсэгтэй бичлэг: ${badVocab}`);
 }
 
 // --- UI i18n: EN block must contain zero Cyrillic ---------------------------------

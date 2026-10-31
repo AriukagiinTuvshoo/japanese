@@ -266,14 +266,40 @@ export function buildQuiz(
   const kPool = poolFor(data.kanji, level);
   const gPool = poolFor(data.grammar, level);
 
-  let out: Question[] = [];
+  const out: Question[] = [];
+  const seen = new Set<string>();
 
-  const push = (q: Question | null) => { if (q) out.push(q); };
-
-  const pickVocab = (n: number) => {
-    const source = req.restrictIds?.length ? vPool.filter((v) => req.restrictIds!.includes(v.id)) : vPool;
-    return pick(source.length ? source : vPool, n);
+  /** Нэг асуулт нэмнэ. Давхардсан id, эсвэл `count` дүүрсэн бол нэмэхгүй. */
+  const add = (q: Question | null | undefined): boolean => {
+    if (!q || out.length >= count || seen.has(q.id)) return false;
+    seen.add(q.id);
+    out.push(q);
+    return true;
   };
+
+  /** `total`-ыг `parts` горимд тэнцүү хувааж, үлдэгдлийг эхэнд нь тараана. */
+  const split = (total: number, parts: number): number[] => {
+    const base = Math.floor(total / parts);
+    const rest = total % parts;
+    return Array.from({ length: parts }, (_, i) => base + (i < rest ? 1 : 0));
+  };
+
+  // Алдааны дэвтэр: зөвхөн алдсан зүйлсээс.
+  if (mode === "mistakes" && data.mistakeIds?.length) {
+    const byId = new Map(data.vocab.map((v) => [v.id, v]));
+    const byKanji = new Map(data.kanji.map((k) => [k.k, k]));
+    const byG = new Map(data.grammar.map((g) => [g.id, g]));
+    for (const id of data.mistakeIds) {
+      if (out.length >= count) break;
+      const v = byId.get(id);
+      if (v) { add(vocabQuestion(v, vPool, "vocab-jp-mn", language)); continue; }
+      const k = byKanji.get(id);
+      if (k) { add(kanjiQuestion(k, kPool, "kanji-mn", language)); continue; }
+      const g = byG.get(id);
+      if (g) add(grammarQuestion(g, gPool, language));
+    }
+    return { questions: shuffle(out, rnd).slice(0, count), mode, level };
+  }
 
   const realModes: QuizMode[] = mode === "mixed"
     ? ["vocab-jp-mn", "vocab-mn-jp", "vocab-read", "kanji-mn", "kanji-read", "grammar-mn"]
@@ -281,68 +307,72 @@ export function buildQuiz(
       ? ((data.weakKinds?.length ? data.weakKinds : ["vocab-jp-mn", "grammar-mn"]) as QuizMode[])
       : [mode];
 
-  const per = Math.max(1, Math.ceil(count / realModes.length));
+  /** Нэг горимоос `target` хүртэл асуулт үүсгэнэ (нийт `count`-ыг хэтрүүлэхгүй). */
+  const fill = (m: QuizMode, target: number): void => {
+    let made = 0;
+    const room = () => made < target && out.length < count;
+    // Хангалттай сонголт үлдээхийн тулд илүү олон каталогоос сонгоно.
+    const lookahead = (size: number) => Math.min(size, target * 4 + 8);
 
-  for (const m of realModes) {
     switch (m) {
       case "vocab-jp-mn":
       case "vocab-mn-jp":
       case "vocab-read":
-      case "vocab-listen":
-        for (const v of pickVocab(per * 2)) {
-          if (out.filter((q) => q.kind === "vocab").length >= per + out.length - out.filter((q) => q.kind === "vocab").length) break;
-          push(vocabQuestion(v, vPool, m, language));
-          if (out.length >= per) break;
+      case "vocab-listen": {
+        const restricted = req.restrictIds?.length ? vPool.filter((v) => req.restrictIds!.includes(v.id)) : [];
+        const pool = restricted.length ? restricted : vPool;
+        for (const v of pick(pool, lookahead(pool.length))) {
+          if (!room()) break;
+          if (add(vocabQuestion(v, vPool, m, language))) made++;
         }
         break;
+      }
       case "vocab-fill": {
         const withEx = vPool.filter((v) => v.ex.length && v.w.length > 1);
-        for (const v of pick(withEx, per * 3)) {
-          if (out.length >= per) break;
+        for (const v of pick(withEx, lookahead(withEx.length))) {
+          if (!room()) break;
           const q = fillBlank(v, language);
-          if (q) q.options = shuffle([v.w, ...distractors(vPool, (x) => x.id === v.id, 3, (x) => x.w).map((x) => x.w)], rnd);
-          if (q) { q.answer = q.options.indexOf(v.w); push(q); }
+          if (!q) continue;
+          q.options = shuffle([v.w, ...distractors(vPool, (x) => x.id === v.id, 3, (x) => x.w).map((x) => x.w)], rnd);
+          q.answer = q.options.indexOf(v.w);
+          if (add(q)) made++;
         }
         break;
       }
       case "kanji-mn":
       case "kanji-read":
       case "kanji-stroke":
-        for (const k of pick(kPool, per * 2)) {
-          if (out.length >= per) break;
-          push(kanjiQuestion(k, kPool, m, language));
+        for (const k of pick(kPool, lookahead(kPool.length))) {
+          if (!room()) break;
+          if (add(kanjiQuestion(k, kPool, m, language))) made++;
         }
         break;
       case "grammar-mn":
       case "grammar-use":
-        for (const g of pick(gPool, per * 2)) {
-          if (out.length >= per) break;
-          push(grammarQuestion(g, gPool, language));
+        for (const g of pick(gPool, lookahead(gPool.length))) {
+          if (!room()) break;
+          if (add(grammarQuestion(g, gPool, language))) made++;
         }
         break;
       default:
         break;
     }
-  }
+  };
 
-  // Алдааны дэвтэр / сул тал: SRS эсвэл алдаанаас тодорхой асуулт сонгоно
-  if (mode === "mistakes" && data.mistakeIds?.length) {
-    const byId = new Map(data.vocab.map((v) => [v.id, v]));
-    const byKanji = new Map(data.kanji.map((k) => [k.k, k]));
-    const byG = new Map(data.grammar.map((g) => [g.id, g]));
-    out = [];
-    for (const id of data.mistakeIds.slice(0, count)) {
-      const v = byId.get(id);
-      if (v) { push(vocabQuestion(v, vPool, "vocab-jp-mn", language)); continue; }
-      const k = byKanji.get(id);
-      if (k) { push(kanjiQuestion(k, kPool, "kanji-mn", language)); continue; }
-      const g = byG.get(id);
-      if (g) push(grammarQuestion(g, gPool, language));
+  const quotas = split(count, realModes.length);
+  realModes.forEach((m, i) => fill(m, quotas[i]));
+
+  // Зарим горим контентгүй (ж.нь MN орчуулгагүй дүрэм) бол дутууг нөхнө.
+  if (out.length < count) {
+    const topUp: QuizMode[] = ["vocab-jp-mn", "kanji-mn", "grammar-mn", "vocab-read", "vocab-mn-jp"];
+    for (let guard = 0; guard < 4 && out.length < count; guard++) {
+      const before = out.length;
+      for (const m of topUp) {
+        if (out.length >= count) break;
+        fill(m, count - out.length);
+      }
+      if (out.length === before) break; // пул бүрэн шавхагдсан
     }
-  }
-
-  if (mode === "weak" && data.weakKinds?.length) {
-    out = out.filter((q) => q);
   }
 
   return { questions: shuffle(out, rnd).slice(0, count), mode, level };
@@ -430,42 +460,91 @@ export const EXAM_BLUEPRINTS: Record<Level, ExamBlueprint> = {
 
 export function buildExam(bp: ExamBlueprint, data: { vocab: Vocab[]; kanji: Kanji[]; grammar: Grammar[] }, language: Language = "mn") {
   return bp.sections.map((sec) => {
-    const per = Math.ceil(sec.count / sec.modes.length);
+    // Хэсгийн асуултыг горимуудын хооронд тэнцүү хувааж, нийт нь ЯГ `sec.count` байна.
+    const base = Math.floor(sec.count / sec.modes.length);
+    const rest = sec.count % sec.modes.length;
     const questions: Question[] = [];
-    for (const m of sec.modes) {
-      const set = buildQuiz({ mode: m, level: bp.level, count: per, lang: language }, data);
-      questions.push(...set.questions);
-    }
-    return { section: sec, questions: shuffle(questions, rnd).slice(0, sec.count) };
+    sec.modes.forEach((m, i) => {
+      const want = base + (i < rest ? 1 : 0);
+      if (want <= 0) return;
+      questions.push(...buildQuiz({ mode: m, level: bp.level, count: want, lang: language }, data).questions);
+    });
+    return { section: sec, questions: shuffle(questions, rnd) };
   });
 }
 
-/** Оноог бодож, тэнцсэн эсэхийг тодорхойлно (албан ёсны оноо БИШ). */
+/* ─────────── B5: тэнцэх хязгаар ───────────
+ * JLPT-ийн албан ёсны дүрэм (jlpt.jp, “Determination of pass/fail”):
+ *   · Нийт оноо ≥ бүгдийн тэнцэх оноо (N1 100, N2 90, N3 95, N4 90, N5 80 /180)
+ *   · **БАРИУЛГҮЙ** хэсэг бүр ≥ хэсгийн доод оноо — нэг ч хэсэг доод оноонд
+ *     хүрээгүй бол өндөр нийт оноотой ч ТЭНЦЭЭГҮЙ.
+ * Хэсгийн доод оноо scaled score-оор 19/60 (=31.7%), N4–N5 нэгтгэсэн
+ * хэсэгт 38/120. Манай симуляц raw → scaled хөрвүүлэлттэй тул ижил хувь
+ * (19 ÷ 60 = 38 ÷ 120) ашиглана.
+ *
+ * “Чанга” (strict) горим нь хүсэлтээр нэмсэн 60% хэсэг бүр — албаны
+ * JLPT биш, дасгалын илүү өндөр шаардлага. Усан дээр default = албаны схем.
+ */
+export type ExamPassMode = "official" | "strict";
+
+/** Албаны хэсгийн доод оноо: 19/60 хувь. */
+export const officialSectionMin = (max: number): number => Math.round((max * 19) / 60);
+/** Чанга горим: хэсэг бүр ≥ 60%. */
+export const strictSectionMin = (max: number): number => Math.round(max * 0.6);
+export const sectionMin = (max: number, mode: ExamPassMode): number =>
+  mode === "strict" ? strictSectionMin(max) : officialSectionMin(max);
+
+export interface ExamSectionScore {
+  name: string;
+  correct: number;
+  total: number;
+  score: number;
+  max: number;
+  /** Энэ хэсгийн тэнцэх доод оноо. */
+  min: number;
+  /** Хэсэг өөрөө тэнцсэн эсэх. */
+  passedSection: boolean;
+}
+
+/**
+ * Оноог бодож, тэнцсэн эсэхийг тодорхойлно.
+ * `minutes` нь UI-д шаардлагагүй ч баримтын төлөвт хадгалагддаг тул хадгална.
+ */
 export function scoreExam(
   bp: ExamBlueprint,
   results: { section: ExamSection; correct: number; total: number }[],
   minutes: number,
-): { sections: { name: string; correct: number; total: number; score: number; max: number }[]; total: number; max: number; passed: boolean } {
-  const sections = results.map((r) => ({
-    name: r.section.name,
-    correct: r.correct,
-    total: r.total,
-    score: Math.round((r.correct / Math.max(1, r.total)) * r.section.max),
-    max: r.section.max,
-  }));
+  mode: ExamPassMode = "official",
+): {
+  sections: ExamSectionScore[];
+  total: number;
+  max: number;
+  /** Бүгдийн тэнцэх оноо (JLPT албаны, түвшин тус бүр). */
+  passTotal: number;
+  passMode: ExamPassMode;
+  /** Бүх хэсэг доод оноонд хүрсэн эсэх. */
+  sectionsPassed: boolean;
+  passed: boolean;
+} {
+  const sections: ExamSectionScore[] = results.map((r) => {
+    const score = Math.round((r.correct / Math.max(1, r.total)) * r.section.max);
+    const min = sectionMin(r.section.max, mode);
+    return {
+      name: r.section.name,
+      correct: r.correct,
+      total: r.total,
+      score,
+      max: r.section.max,
+      min,
+      passedSection: score >= min,
+    };
+  });
   const total = sections.reduce((a, s) => a + s.score, 0);
   const max = sections.reduce((a, s) => a + s.max, 0);
-  const passed = total >= bp.passTotal;
+  const sectionsPassed = sections.every((s) => s.passedSection);
+  const passed = total >= bp.passTotal && sectionsPassed;
   void minutes;
-  return { sections, total, max, passed };
+  return { sections, total, max, passTotal: bp.passTotal, passMode: mode, sectionsPassed, passed };
 }
-
-export const levelFromScore = (detail: Record<string, number>): Level => {
-  let best: Level = "N5";
-  for (const l of LEVELS) {
-    if ((detail[l] ?? 0) >= 0.6) best = l;
-  }
-  return best;
-};
 
 export { LEVEL_META };

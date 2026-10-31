@@ -4,16 +4,19 @@
  * `mq: "auto"` (“Авто санал”) төлөвтэйгээр тавина.
  *
  * Дүрэм:
- *   - зөвхөн одоо `mq: "none"` буюу утгагүй бичлэгт орно;
  *   - хүний драфт (`draft`) болон курац (`curated`)-ийг **хэзээ ч дарахгүй**;
+ *   - үг/ханз нь **текст түлхүүрээр** (`w|r`, ханз) тулгагдана — индексээр биш.
+ *     Эрэмбэ өөрчлөгдөхөд орчуулга өөр үг дээр наалдах эрсдэлгүй;
+ *   - түлхүүртэй орчуулга байвал авто-тайлбараас (glossary) **давуу**;
  *   - жишээ өгүүлбэрийн `mn` зөвхөн хоосон үедээ нэмэгдэнэ;
  *   - эх өгөгдөл (уншлага, түвшин, бичээс, id) өөрчлөгдөхгүй.
  *
- * Ашиглах: node scripts/apply-machine-mn.mjs
+ * Ашиглах: node scripts/apply-machine-mn.mjs  (эсвэл `npm run data:build`)
  */
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { computeMeta, readBuiltData } from "./meta.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DATA = path.join(ROOT, "public/data");
@@ -41,24 +44,49 @@ const stats = {
 const vocabStore = await readJson(path.join(M, "vocab.json"), {});
 const kanjiStore = await readJson(path.join(M, "kanji.json"), {});
 
+// Хуучин индекс-түлхүүрт формат (`{ n5: { "0": "..." } }`) эрэмбэ өөрчлөгдөхөд
+// орчуулгыг өөр бичлэг дээр тавьдаг байсан. Чимээгүй үргэлжлүүлэхгүй — зогсоно.
+for (const [name, store] of [["vocab.json", vocabStore], ["kanji.json", kanjiStore]]) {
+  for (const lv of LEVELS) {
+    if (store[lv] !== undefined) {
+      console.error(
+        `✗ content/mn/machine/${name} нь хуучин индекс-түлхүүрт форматтай (${lv}).\n` +
+          `  Текстийн түлхүүр рүү хөрвүүлнэ үү (w|r / ханз) — эс бөгөөс орчуулга буруу бичлэгт наалдана.`,
+      );
+      process.exit(1);
+    }
+  }
+}
+if (!Object.keys(vocabStore).length && !Object.keys(kanjiStore).length) {
+  console.error("✗ machine store хоосон — орчуулгыг устгахаас сэргийлж зогслоо.");
+  process.exit(1);
+}
+
 for (const lv of LEVELS) {
-  // vocab
+  // vocab — түлхүүр: `бичлэг|уншлага`
   const vp = path.join(DATA, "vocab", `${lv}.json`);
   const vocab = await readJson(vp, []);
-  vocab.forEach((v, i) => {
+  vocab.forEach((v) => {
     if (v.mq === "draft" || v.mq === "curated") { stats.vocabKept++; return; }
-    const val = vocabStore[lv]?.[i];
-    if (val && !v.mn) { v.mn = [val]; v.mq = "auto"; stats.vocabAuto++; }
+    const val = vocabStore[`${v.w}|${v.r}`];
+    if (!val) return;
+    // авто-тайлбар (glossary) байсан ч түлхүүртэй орчуулга давуу
+    if (v.mn?.[0] !== val) v.mn = [val];
+    v.mq = "auto";
+    stats.vocabAuto++;
   });
   await writeJson(vp, vocab);
 
-  // kanji
+  // kanji — түлхүүр: ханз өөрөө
   const kp = path.join(DATA, "kanji", `${lv}.json`);
   const kanji = await readJson(kp, []);
-  kanji.forEach((k, i) => {
+  kanji.forEach((k) => {
     if (k.mq === "draft" || k.mq === "curated") { stats.kanjiKept++; return; }
-    const val = kanjiStore[lv]?.[i];
-    if (val && !(k.mn?.length)) { k.mn = [val]; k.mq = "auto"; stats.kanjiAuto++; }
+    const val = kanjiStore[k.k];
+    if (!val) return;
+    if (k.mn?.[0] !== val) k.mn = [val];
+    k.mq = "auto";
+    stats.kanjiAuto++;
   });
   await writeJson(kp, kanji);
 }
@@ -107,50 +135,30 @@ for (const lv of LEVELS) {
 }
 await writeJson(path.join(DATA, "index/search.json"), { v: idxV, k: idxK, g: idxG });
 
-/* 4) meta (2-тэйц, төгсгөлд шинэ мөр үгүй — HEAD хэвээр) ---------- */
+/* 4) meta — өгөгдлөөс бүрэн дахин тооцно -------------------------- */
+// Гараар тоолуур нэмэх нь build-ийн тооцоотой зөрөх шалтгаан болдог байсан
+// (`counts.mn` хуучирч, `grammarExplained` машин орчуулгыг хүний гэж тоолж байв).
+// Иймд meta.mjs-ийн computeMeta л ашиглана — нэг л дүрэм.
 const metaPath = path.join(DATA, "index/meta.json");
-const meta = await readJson(metaPath, null);
-if (meta?.counts) {
-  const countMq = async (kind) => {
-    const out = { auto: 0, draft: 0, curated: 0, none: 0 };
-    for (const lv of LEVELS) {
-      for (const e of await readJson(path.join(DATA, kind, `${lv}.json`), [])) {
-        const q = e.mq ?? (e.mn ? "curated" : "none");
-        out[q] = (out[q] ?? 0) + 1;
-      }
-    }
-    return out;
-  };
-  const vq = await countMq("vocab");
-  const kq = await countMq("kanji");
-  // бүх тоог өгөгдлөөс дахин тоолно — дахин ажиллуулахад давхарддаггүй
-  let grammarExpl = 0, grammarAuto = 0, gexMn = 0, gexAll = 0, vexMn = 0, vexAll = 0;
-  for (const lv of LEVELS) {
-    for (const g of await readJson(path.join(DATA, "grammar", `${lv}.json`), [])) {
-      if (g.mn) {
-        grammarExpl++;
-        // machine/grammar.json-д байгаа id = машин орчуулга; үгүй бол curated
-        if (grammarStore[g.id]) grammarAuto++;
-      }
-      for (const e of g.ex ?? []) { gexAll++; if (e.mn) gexMn++; }
-    }
-    for (const v of await readJson(path.join(DATA, "vocab", `${lv}.json`), [])) {
-      for (const e of v.ex ?? []) { vexAll++; if (e.mn) vexMn++; }
-    }
-  }
-  meta.counts.vocabDraft = vq.draft;
-  meta.counts.kanjiDraft = kq.draft;
-  meta.counts.vocabAuto = vq.auto;
-  meta.counts.kanjiAuto = kq.auto;
-  meta.counts.vocabMnCurated = vq.curated;
-  meta.counts.grammarAuto = grammarAuto;
-  meta.counts.grammarCurated = grammarExpl - grammarAuto;
-  meta.counts.vocabExampleMn = vexMn;
-  meta.counts.vocabExampleTotal = vexAll;
-  meta.counts.grammarExampleMn = gexMn;
-  meta.counts.grammarExampleTotal = gexAll;
-  if (meta.content) meta.content.grammarExplained = grammarExpl;
-  await writeFile(metaPath, JSON.stringify(meta, null, 2), "utf8");
-}
+const prevMeta = (await readJson(metaPath, null)) ?? {};
+const built = readBuiltData(DATA);
+const grammarExpl = built.grammar.filter((g) => typeof g.mn === "string" && g.mn.trim()).length;
+const grammarAuto = built.grammar.filter((g) => grammarStore[g.id]).length;
+const terms = (await readJson(path.join(ROOT, "content/mn/terms.json"), {})) ?? {};
+const meta = computeMeta({
+  ...built,
+  content: {
+    listening: [],
+    reading: [],
+    kanjiMnemonics: prevMeta.content?.kanjiMnemonics ?? 0,
+    // хүний бичсэн тайлбар л — машин орчуулгыг curated мэт тоолохгүй
+    grammarExplained: grammarExpl - grammarAuto,
+    glossaryTerms: Object.keys(terms).length,
+    openjlpt: prevMeta.openjlpt,
+  },
+  builtAt: prevMeta.builtAt ?? new Date().toISOString(),
+  version: prevMeta.version ?? "3.0.0",
+});
+await writeFile(metaPath, JSON.stringify(meta, null, 2), "utf8");
 
 console.log("Машин орчуулга нэгтгэл:", stats);

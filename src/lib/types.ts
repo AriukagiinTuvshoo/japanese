@@ -123,8 +123,25 @@ export interface DataMeta {
       vocab: Record<Level, number>;
       kanji: Record<Level, number>;
       grammar: Record<Level, number>;
+      /** Монгол утгатай үгийн тоо (чанарын төлвөөс үл хамаарна). */
       vocabMn: Record<Level, number>;
     };
+    /** Чанарын төлвийн задаргаа — "100%" гэхдээ "хянагдаагүй" гэдгийг илэрхийлнэ. */
+    mn?: {
+      vocab: Record<MnQuality, number>;
+      kanji: Record<MnQuality, number>;
+      grammar: { translated: number; missing: number };
+    };
+    vocabDraft?: number;
+    kanjiDraft?: number;
+    vocabAuto?: number;
+    kanjiAuto?: number;
+    grammarAuto?: number;
+    vocabExampleMn?: number;
+    vocabExampleTotal?: number;
+    grammarExampleMn?: number;
+    grammarExampleTotal?: number;
+    grammarCurated?: number;
   };
   content: {
     listeningLessons: number;

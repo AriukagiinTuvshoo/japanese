@@ -18,9 +18,6 @@ export interface KanaItem {
 export const toKatakana = (s: string) =>
   s.replace(/[\u3041-\u3096]/g, (ch) => String.fromCharCode(ch.charCodeAt(0) + 0x60));
 
-export const toHiraganaChars = (s: string) =>
-  s.replace(/[\u30a1-\u30f6]/g, (ch) => String.fromCharCode(ch.charCodeAt(0) - 0x60));
-
 export const KANA_ROWS: KanaRow[] = [
   { id: "a", label: "あ", group: "basic", cells: [["あ", "a"], ["い", "i"], ["う", "u"], ["え", "e"], ["お", "o"]] },
   { id: "k", label: "か", group: "basic", cells: [["か", "ka"], ["き", "ki"], ["く", "ku"], ["け", "ke"], ["こ", "ko"]] },
@@ -59,9 +56,3 @@ export const ALL_KANA: KanaItem[] = KANA_ROWS.flatMap((row) =>
     .map(([h, r]) => ({ h, k: toKatakana(h), r, row: row.id, group: row.group })),
 );
 
-export const KANA_TIPS = [
-  { t: "Эхлээд хирагана", d: "Бүх дүрэм, үйл үгийн нөхцөл хираганаар бичигддэг. Катаканаг дараа нь 3–4 хоногт сурна.", tEn: "Hiragana first", dEn: "All grammar and verb conjugations are written in hiragana. Learn katakana later, in 3–4 days." },
-  { t: "Мөрөөр нь", d: "あ мөрөөс эхлээд өдөрт 2 мөр. 5 эгшгийн дараалал (a-i-u-e-o) бүх мөрөнд давтагдана.", tEn: "Row by row", dEn: "Start from the あ row, two rows a day. The 5-vowel order (a-i-u-e-o) repeats in every row." },
-  { t: "Дуудлагаар", d: "Үсэг бүрийг дарж сонсоод чангаар давт. Нүд + чих + ам гурвыг зэрэг ашиглах нь хурдан тогтоодог.", tEn: "Out loud", dEn: "Tap each character, listen and repeat out loud. Eyes + ears + mouth together makes it stick fastest." },
-  { t: "Хурдаар шалга", d: "Нэг үсгийг 1 секундээс бага хугацаанд таньдаг болсон үед л дараагийн шат руу ор.", tEn: "Test for speed", dEn: "Only move on once you recognize each character in under one second." },
-];

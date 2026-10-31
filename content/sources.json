@@ -1,0 +1,58 @@
+[
+  {
+    "id": "openjlpt",
+    "name": "OpenJLPT",
+    "url": "https://github.com/evanclan/OpenJLPT",
+    "license": "CC BY-SA 4.0",
+    "note": "JLPT N5–N1 түвшний үг, ханз, дүрмийн анхны жагсаалт.",
+    "retrievedAt": "2026-09-29"
+  },
+  {
+    "id": "jmdict",
+    "name": "JMdict",
+    "url": "https://www.edrdg.org/jmdict/j_jmdict.html",
+    "license": "CC BY-SA 4.0",
+    "note": "Япон үгийн англи утга, уншлага, хэсэг үг.",
+    "retrievedAt": "2026-09-29"
+  },
+  {
+    "id": "kanjidic",
+    "name": "KANJIDIC2",
+    "url": "https://www.edrdg.org/wiki/index.php/KANJIDIC_Project",
+    "license": "CC BY-SA 4.0",
+    "note": "Ханзны утга, он/кун уншлага, радикал.",
+    "retrievedAt": "2026-09-29"
+  },
+  {
+    "id": "kanjivg",
+    "name": "KanjiVG",
+    "url": "https://kanjivg.tagaini.net/",
+    "license": "CC BY-SA 3.0",
+    "note": "Ханзны зураасны дараалал, SVG зам.",
+    "retrievedAt": "2026-09-29"
+  },
+  {
+    "id": "tatoeba",
+    "name": "Tatoeba",
+    "url": "https://tatoeba.org",
+    "license": "CC BY 2.0 FR",
+    "note": "Жишээ өгүүлбэр (япон/англи).",
+    "retrievedAt": "2026-09-29"
+  },
+  {
+    "id": "waller",
+    "name": "JLPT lists — Jonathan Waller",
+    "url": "https://www.tanos.co.uk/jlpt/",
+    "license": "CC BY",
+    "note": "Нэмэлт JLPT үгийн жагсаалт (давхцлыг шалгахад).",
+    "retrievedAt": "2026-09-29"
+  },
+  {
+    "id": "mn-mt",
+    "name": "Монгол орчуулга (машин туслах)",
+    "url": "https://github.com/AriukagiinTuvshoo/japanese/tree/main/content/mn",
+    "license": "Төслийн дотоод контент",
+    "note": "Англи утгаас нэр томьёоны сангаар автоматаар санал болгосон орчуулга. Хүн хянаагүй тул бүх зүйл auto/draft төлөвтэй, curated = 0.",
+    "retrievedAt": "2026-10-27"
+  }
+]

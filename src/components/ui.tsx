@@ -1,9 +1,8 @@
 /** Дахин хэрэглэгдэх UI элементүүд. */
 import {
-  useEffect, useId, useRef, useState, type ButtonHTMLAttributes, type ReactNode,
+  useEffect, useState, type ButtonHTMLAttributes, type ReactNode,
 } from "react";
 import { cn } from "../utils/cn";
-import { href } from "../lib/router";
 import type { Level } from "../lib/types";
 import { parseFurigana } from "../lib/text";
 
@@ -40,16 +39,6 @@ export function Button({
     >
       {children}
     </button>
-  );
-}
-
-export function LinkButton({
-  to, variant = "ghost", size = "md", className, children,
-}: { to: string; variant?: Variant; size?: Size; className?: string; children: ReactNode }) {
-  return (
-    <a href={href(to)} className={cn("inline-flex select-none items-center justify-center font-bold transition-all", VARIANTS[variant], SIZES[size], className)}>
-      {children}
-    </a>
   );
 }
 
@@ -193,8 +182,12 @@ export function Furigana({
 
 /* ─────────────── Модал ─────────────── */
 export function Modal({
-  children, onClose, title, wide, footer, lang = "mn",
-}: { children: ReactNode; onClose?: () => void; title?: string; wide?: boolean; footer?: ReactNode; lang?: "mn" | "en" }) {
+  children, onClose, title, wide, footer, lang = "mn", z = "z-[70]",
+}: {
+  children: ReactNode; onClose?: () => void; title?: string; wide?: boolean; footer?: ReactNode; lang?: "mn" | "en";
+  /** Онцлог модал (жишээ: зочин ахиц нэгтгэх) онбордог дээгүүр гарах ёстой. */
+  z?: string;
+}) {
   useEffect(() => {
     const k = (e: KeyboardEvent) => { if (e.key === "Escape") onClose?.(); };
     window.addEventListener("keydown", k);
@@ -208,7 +201,7 @@ export function Modal({
 
   return (
     <div
-      className="fixed inset-0 z-[70] grid place-items-end bg-sumi-950/55 backdrop-blur-[3px] sm:place-items-center sm:p-6"
+      className={`fixed inset-0 grid place-items-end bg-sumi-950/55 backdrop-blur-[3px] sm:place-items-center sm:p-6 ${z}`}
       onClick={onClose}
       role="dialog"
       aria-modal
@@ -452,32 +445,3 @@ export function ProgressRow({
   );
 }
 
-/** Харагдах үед lazy ачаалах. */
-export function useLazy<T>(load: () => Promise<T>, deps: unknown[] = []) {
-  const [data, setData] = useState<T | null>(null);
-  const [error, setError] = useState<unknown>(null);
-  const [loading, setLoading] = useState(true);
-  const tick = useRef(0);
-  const id = useId();
-
-  useEffect(() => {
-    const me = ++tick.current;
-    setLoading(true);
-    setError(null);
-    load()
-      .then((d) => { if (me === tick.current) { setData(d); setLoading(false); } })
-      .catch((e) => { if (me === tick.current) { setError(e); setLoading(false); } });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, deps);
-
-  const retry = () => {
-    const me = ++tick.current;
-    setLoading(true);
-    setError(null);
-    load()
-      .then((d) => { if (me === tick.current) { setData(d); setLoading(false); } })
-      .catch((e) => { if (me === tick.current) { setError(e); setLoading(false); } });
-  };
-
-  return { data, error, loading, retry, key: id };
-}

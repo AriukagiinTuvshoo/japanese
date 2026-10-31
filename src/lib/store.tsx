@@ -9,10 +9,28 @@
 import {
   createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode,
 } from "react";
-import { api, setToken, type Account } from "./api";
+import { api, apiBase, backoffMs, ApiError, setToken, type Account } from "./api";
+import { mergeDocs } from "./merge";
+import { mergeGuestIntoAccount, readGuestMarker, shouldOfferGuestMerge, writeGuestMarker } from "./guest";
+import {
+  ankiCsv, applyImport, clearUndo, loadUndo, parseImport, saveUndo,
+  type ImportMode, type ImportPreview,
+} from "./port";
+import { loadAllKanji, loadAllVocab } from "./data";
+import { getEstimate, isNearFull, requestPersistenceOnce } from "./quota";
 import { ACHIEVEMENTS, XP, xpLevel, type AchievementInput } from "./gamification";
 import { schedule, type Card, type Grade } from "./srs";
-import { dayOffset, todayKey } from "./text";
+import { computeStreak, todayKey } from "./text";
+import { notify } from "./notice";
+import { ui } from "./i18n";
+import {
+  backupKey,
+  deviceId,
+  freshDoc,
+  loadDoc,
+  saveDoc,
+  snapshotDoc,
+} from "./storage";
 import type { Level } from "./types";
 import type { Language } from "./i18n";
 
@@ -67,13 +85,18 @@ export interface Profile {
   language: Language;
 }
 
-export interface ActivityDay {
+export interface ActivityCounts {
   xp: number;
   min: number;
   newCards: number;
   reviews: number;
   correct: number;
   total: number;
+}
+
+export interface ActivityDay extends ActivityCounts {
+  /** Төхөөрөмж бүрийн хувь нэмэр — merge-д хоёр талын ажил нэг удаа тоологдохгүй (docs/SYNC.md). */
+  parts?: Record<string, ActivityCounts>;
 }
 
 export interface CurriculumState {
@@ -108,78 +131,53 @@ export interface Doc {
   curriculum?: CurriculumState;
   createdAt: number;
   updatedAt: number;
+  /* ── merge-ийн нэмэлт талбарууд (сонголттой, хуучин баримт ч зүгээр бичигдэнэ) ── */
+  /** Profile тал бүрийн өөрчлөлтийн цаг (тэгш зэргэлцээг тогтооно). */
+  profileTs?: Partial<Record<keyof Profile, number>>;
+  /** XP-ийн төхөөрөмж бүрийн хувь нэмэр (grow-only, нэмэлт). */
+  xpParts?: Record<string, number>;
+  /** Устгасан зүйлийн тэмдэг: `${kind}:${id}` → устгасан цаг. */
+  tomb?: Record<string, number>;
 }
 
-export const DEFAULT_PROFILE: Profile = {
-  name: "",
-  current: "zero",
-  target: "N5",
-  examDate: "",
-  dailyGoal: 30,
-  newPerDay: 12,
-  furigana: true,
-  rate: 0.95,
-  onboarded: false,
-  theme: "light",
-  romaji: false,
-  language: "mn",
-};
+export { DEFAULT_PROFILE } from "./storage";
 
 const emptyDay = (): ActivityDay => ({ xp: 0, min: 0, newCards: 0, reviews: 0, correct: 0, total: 0 });
 
-function freshDoc(name = ""): Doc {
-  return {
-    v: 3,
-    profile: { ...DEFAULT_PROFILE, name },
-    srs: {},
-    writing: {},
-    mnemonics: {},
-    favorites: [],
-    grammarDone: [],
-    readingDone: [],
-    listeningDone: [],
-    kanaBest: 0,
-    exams: [],
-    quizzes: [],
-    mistakes: [],
-    activity: {},
-    xp: 0,
-    achievements: {},
-    createdAt: Date.now(),
-    updatedAt: Date.now(),
-  };
-}
+/* ─────────────── Хадгалалт ───────────────
+ * Бүх шалгалт/шилжүүлэлт/нөөцлөлт нь `storage.ts`-д. Энд зөвхөн
+ * localStorage-тай холбох нимгэн давхарга үлдэнэ. */
 
-/* ─────────────── Хадгалалт ─────────────── */
-
-const keyFor = (uid: string) => `nd:doc:${uid}`;
 const SESSION_KEY = "nd:session";
 const GUEST = "local";
 
-function readDoc(uid: string): Doc | null {
-  try {
-    const raw = localStorage.getItem(keyFor(uid));
-    if (!raw) return null;
-    const parsed = JSON.parse(raw) as Partial<Doc>;
-    const base = freshDoc();
-    return {
-      ...base,
-      ...parsed,
-      profile: { ...base.profile, ...(parsed.profile ?? {}) },
-      srs: parsed.srs ?? {},
-      activity: parsed.activity ?? {},
-    } as Doc;
-  } catch {
-    return null;
+/** Документыг уншина; эвдэрсэн/хуучин бол мэдэгдэл өгнө. */
+function readDoc(uid: string): Doc {
+  const { doc, status } = loadDoc(uid);
+  if (status === "recovered") notify("error", ui[doc.profile.language ?? "mn"].dataRecovered);
+  else if (status === "migrated") notify("info", ui[doc.profile.language ?? "mn"].dataMigrated);
+  return doc;
+}
+
+/**
+ * B4: бичлэгээс **ӨМНӨ** хязгаарыг шалгана — хэрэглэгч бичлэг амжилтгүй
+ * болохоос өмнө мэдэж, өгөгдөө экспортлох боломжтой.
+ * `navigator.storage.estimate()` дэмжихгүй бол ямар ч нэмэлт дуудалтгүй.
+ */
+let nearFullWarned = false;
+async function warnIfNearFull(lang: Profile["language"]): Promise<void> {
+  if (nearFullWarned) return;
+  const est = await getEstimate();
+  if (!nearFullWarned && isNearFull(est)) {
+    nearFullWarned = true;
+    notify("error", ui[lang ?? "mn"].storageNearFull, { ttlMs: 12_000 });
   }
 }
 
-function writeDoc(uid: string, doc: Doc) {
-  try {
-    localStorage.setItem(keyFor(uid), JSON.stringify(doc));
-  } catch {
-    /* санах ой дүүрсэн — туршилтын горимд алгасна */
-  }
+/** Хадгална; зай дүүрсэн бол чимээгүй өнгөрөхгүй — toast харуулна. */
+function writeDoc(uid: string, doc: Doc): void {
+  void warnIfNearFull(doc.profile.language ?? "mn");
+  if (!saveDoc(uid, doc)) notify("error", ui[doc.profile.language ?? "mn"].storageFull);
 }
 
 /* ─────────────── Контекст ─────────────── */
@@ -197,6 +195,12 @@ interface Ctx {
   inputs: AchievementInput;
   unlocked: { id: string; at: number }[];
   nextAchievement: { id: string; title: string; desc: string; icon: string; pct: number } | null;
+  /** Зочин ахицыг аккаунт руу нэгтгэх санал (B2) — байвал dialog харуулна. */
+  pendingGuest: Doc | null;
+  /** B3: импортлох гэж буй баримтын preview (байвал modal харуулна). */
+  pendingImport: ImportPreview | null;
+  /** B3: сүүлийн импортыг буцаах боломжтой эсэх. */
+  undoAvailable: boolean;
   actions: Actions;
 }
 
@@ -233,9 +237,20 @@ export interface Actions {
   guestMode: () => void;
   redeemCode: (code: string) => Promise<void>;
   syncNow: () => Promise<void>;
+  /** B2: зочин ахицаа нэгтгэх (true, default) эсвэл тусад нь үлдээх (false). */
+  resolveGuestMerge: (merge: boolean) => void;
+  /** B3: импорт — файл шалгаж preview бэлдэнэ (алдаа бол null). */
+  previewImport: (json: string) => ImportPreview | null;
+  /** B3: preview-ийг хэрэгжүүлэх (merge/replace) — импортлахаас ӨМНӨ нөөцөлнө. */
+  commitImport: (mode: ImportMode) => boolean;
+  cancelImport: () => void;
+  /** B3: сүүлийн импортыг буцаах (нэг товшилт). */
+  undoImport: () => boolean;
+  exportAnkiCsv: () => Promise<string>;
 
   exportJSON: () => string;
-  importJSON: (json: string) => boolean;
+  /** Хуучин гар: шалгаж, шууд хэрэгжүүлнэ (шинэ UI preview ашиглана). */
+  importJSON: (json: string, mode?: ImportMode) => boolean;
   reset: () => void;
 }
 
@@ -244,11 +259,18 @@ const StoreCtx = createContext<Ctx | null>(null);
 export function StoreProvider({ children }: { children: ReactNode }) {
   const [uid, setUid] = useState<string>(() => localStorage.getItem(SESSION_KEY) ?? GUEST);
   const [account, setAccount] = useState<Account | null>(null);
-  const [doc, setDoc] = useState<Doc>(() => readDoc(localStorage.getItem(SESSION_KEY) ?? GUEST) ?? freshDoc());
+  const [doc, setDoc] = useState<Doc>(() => readDoc(localStorage.getItem(SESSION_KEY) ?? GUEST));
   const [offline, setOffline] = useState(() => !navigator.onLine);
   const [serverAvailable, setServerAvailable] = useState(false);
   const [syncing, setSyncing] = useState<"idle" | "syncing" | "error" | "ok">("idle");
   const [lastSync, setLastSync] = useState<number | null>(null);
+  /** B2: зочиноос аккаунт руу шилжүүлэхэд хүлээгдэж буй зочин баримт. */
+  const [pendingGuest, setPendingGuest] = useState<Doc | null>(null);
+  /** B3: импорт preview + undo төлөв. */
+  const [pendingImport, setPendingImport] = useState<{ doc: Doc; preview: ImportPreview } | null>(null);
+  const [undoAvailable, setUndoAvailable] = useState<boolean>(() => {
+    try { return loadUndo(localStorage.getItem(SESSION_KEY) ?? GUEST) !== null; } catch { return false; }
+  });
 
   const rev = useRef(0);
   const lastAct = useRef(Date.now());
@@ -272,21 +294,71 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     if (t) setToken(t);
   }, []);
 
-  /* ── серверийн бэлэн байдал ── */
+  /* ── B4: тогтмол хадгалалт (нэг удаа) ──
+   * Хөтөч нөөц дүүрвэл localStorage-г автомат устгаж магадгүй;
+   * persistent storage хүссэнээр хэрэглэгчийн ахиц тэсэж үлдэнэ.
+   * Татгалзсан ч (Safari татгалздаг) апп хэвийн ажиллана. */
   useEffect(() => {
+    void requestPersistenceOnce();
+  }, []);
+
+  /* ── серверийн бэлэн байдал ──
+   * Backend тохируулаагүй бол (static host) огт дуудалт хийхгүй.
+   * Бүтэлгүйтвэл чимээгүй, exponential backoff-той дахин шалгана. */
+  useEffect(() => {
+    if (apiBase() === null) return;
     let alive = true;
+    let timer = 0;
+    let failures = 0;
+
+    const schedule = () => {
+      if (!alive) return;
+      window.clearTimeout(timer);
+      timer = window.setTimeout(check, backoffMs(failures));
+    };
+
     const check = async () => {
+      // offline байхад сүлжээнд хүрэх гэж оролдохгүй.
+      if (typeof navigator !== "undefined" && !navigator.onLine) {
+        if (alive) setServerAvailable(false);
+        schedule();
+        return;
+      }
       const ok = await api.health().then(() => true).catch(() => false);
-      if (alive) setServerAvailable(ok);
+      if (!alive) return;
+      setServerAvailable(ok);
+      failures = ok ? 0 : failures + 1;
       if (ok && localStorage.getItem("nd:token")) {
         const me = await api.me().catch(() => null);
         if (alive && me) setAccount(me.account);
       }
+      schedule();
     };
+
     check();
-    const t = window.setInterval(check, 60_000);
-    return () => { alive = false; window.clearInterval(t); };
+    return () => { alive = false; window.clearTimeout(timer); };
   }, []);
+
+  /* ── шинэ service worker бэлэн болсон үед "шинэчлэх" мэдэгдэл ── */
+  useEffect(() => {
+    const onUpdate = () => {
+      const t = ui[doc.profile.language ?? "mn"];
+      notify("info", t.updateReady, {
+        ttlMs: 0,
+        action: {
+          label: t.updateNow,
+          run: () => {
+            navigator.serviceWorker
+              ?.getRegistration()
+              .then((reg) => reg?.waiting?.postMessage({ type: "SKIP_WAITING" }))
+              .catch(() => {});
+          },
+        },
+      });
+    };
+    window.addEventListener("nd:sw-update", onUpdate);
+    return () => window.removeEventListener("nd:sw-update", onUpdate);
+  }, [doc.profile.language]);
 
   /* ── localStorage-д хадгалах (debounce) ── */
   useEffect(() => {
@@ -353,42 +425,83 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     });
   }, [unlockedIds]);
 
-  /* ── Cloud sync ── */
-  const push = useCallback(async (force = false) => {
-    if (!account || !navigator.onLine) return;
-    if (!force && !dirty.current) return;
-    setSyncing("syncing");
-    try {
-      const res = await api.putSync(doc, rev.current);
-      rev.current = res.rev;
-      dirty.current = false;
-      setLastSync(Date.now());
-      setSyncing("ok");
-      window.setTimeout(() => setSyncing("idle"), 1500);
-    } catch {
-      setSyncing("error");
-    }
-  }, [account, doc]);
+  /* ── Cloud sync ──
+   * Дүрэм: docs/SYNC.md. Үндсэн зарчим —
+   *   · синкээс ӨМНӨ локал нөөц (сүүлийн 3),
+   *   · merge нь бүрэн баримтыг задалж хийнэ (server-ийг хүндэлнэ),
+   *   · 409 → дахин татаж merge → дахин илгээх (3 оролдлого),
+   *   · амжилтгүй бол локал өгөгдөл ХЭЗЭЭ Ч устгахгүй.
+   */
+  const docRef = useRef(doc);
+  docRef.current = doc;
 
-  const pull = useCallback(async () => {
-    if (!account) return;
+  const language = doc.profile.language ?? "mn";
+
+  const pull = useCallback(async (): Promise<boolean> => {
+    if (!account) return false;
     try {
       const remote = await api.getSync();
-      if (remote.rev > rev.current) {
-        rev.current = remote.rev;
-        const incoming = remote.doc as Partial<Doc> | null;
-        if (incoming && (incoming.updatedAt ?? 0) > doc.updatedAt) {
-          setDoc({ ...freshDoc(), ...incoming, profile: { ...DEFAULT_PROFILE, ...(incoming.profile ?? {}) } } as Doc);
-        }
+      if (remote.rev <= rev.current) return true;
+
+      // Нэг: синкээс өмнө локалыг нөөцлө.
+      snapshotDoc(uid, docRef.current);
+
+      // Хоёр: merge (хоёр талын ч хүчинтэй байх; remote эвдэрсэн бол local-ыг үлдээнэ).
+      const res = mergeDocs(docRef.current, remote.doc, {});
+      if (!res.remoteOk) {
+        notify("info", ui[language].syncRemoteCorrupt);
+      } else if (res.changed) {
+        notify("info", ui[language].syncMerged);
       }
+      setDoc(res.doc);
+      rev.current = remote.rev;
+      return true;
     } catch {
-      /* офлайн — дараа дахин оролдоно */
+      /* офлайн — dirty хэвээр үлдэж, дараа дахин оролдоно */
+      return false;
     }
-  }, [account, doc.updatedAt]);
+  }, [account, uid, language]);
+
+  const push = useCallback(async (force = false): Promise<boolean> => {
+    if (!account || !navigator.onLine) return false;
+    if (!force && !dirty.current) return false;
+    setSyncing("syncing");
+    for (let attempt = 0; attempt < 3; attempt++) {
+      try {
+        const res = await api.putSync(docRef.current, rev.current);
+        rev.current = res.rev;
+        dirty.current = false;
+        setLastSync(Date.now());
+        setSyncing("ok");
+        window.setTimeout(() => setSyncing("idle"), 1500);
+        return true;
+      } catch (e) {
+        const conflict = e instanceof ApiError && e.status === 409;
+        if (!conflict) {
+          // Сервер алдаатай/холбогдохгүй: локал өгөгдөл хэвээр, dirty=үлдэнэ.
+          setSyncing("error");
+          return false;
+        }
+        // 409: төхөөрөмж бусад төхөөрөмжөөс өмнө илгээсэн — татаж merge хийнэ.
+        const ok = await pull();
+        if (!ok) {
+          setSyncing("error");
+          return false;
+        }
+        await new Promise((r) => window.setTimeout(r, 300 * 2 ** attempt));
+      }
+    }
+    setSyncing("error");
+    return false;
+  }, [account, pull]);
 
   useEffect(() => {
     if (!account) return;
-    pull().then(() => push(true));
+    // Ахин татахдаа локал нөөцөө авна; амжилттай бол merge-ийн үр дүнг илгээнэ.
+    snapshotDoc(uid, docRef.current);
+    pull().then((ok) => {
+      if (ok) void push(true);
+    });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [account?.id]);
 
@@ -400,12 +513,21 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
   /* ── аккаунт солих үед документыг солих ── */
   const switchUser = useCallback((nextUid: string, nextAccount: Account | null) => {
+    // Гарахдаа одоогийн баримтаа хадгална — зочин/аккаунт аль аль нь хэвээр үлдэнэ.
     writeDoc(uid, doc);
+    // B2: зочиноос шинэ аккаунт руу шилжүүлэхэд ахиц хэзээ ч алдагдахгүй —
+    // нэгтгэх саналыг хэрэглэгч шийднэ (default = нэгтгэх), доор дуудагдана.
+    if (uid === GUEST && nextUid !== GUEST && shouldOfferGuestMerge(doc, readGuestMarker(nextUid))) {
+      setPendingGuest(doc);
+    } else {
+      setPendingGuest(null);
+    }
     setUid(nextUid);
     setAccount(nextAccount);
     localStorage.setItem(SESSION_KEY, nextUid);
     rev.current = 0;
-    setDoc(readDoc(nextUid) ?? freshDoc(nextAccount?.name ?? ""));
+    const loaded = readDoc(nextUid);
+    setDoc(loaded.createdAt === loaded.updatedAt ? { ...loaded, profile: { ...loaded.profile, name: loaded.profile.name || nextAccount?.name || "" } } : loaded);
   }, [uid, doc]);
 
   const patch = useCallback((fn: (d: Doc) => Doc) => setDoc((d) => ({ ...fn(d), updatedAt: Date.now() })), []);
@@ -457,7 +579,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       return {
         ...d,
         grammarDone: want ? [...d.grammarDone, id] : d.grammarDone.filter((x) => x !== id),
-        ...(want ? bumpDayInto(d, { xp: XP.grammarDone }) : {}),
+        ...(want ? bumpDayInto(d, { xp: XP.grammarDone }) : tombPatch(d, [`grammar:${id}`])),
       };
     }),
 
@@ -485,10 +607,14 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
     setMnemonic: (kanji, text) => patch((d) => ({ ...d, mnemonics: { ...d.mnemonics, [kanji]: text } })),
 
-    toggleFavorite: (id) => patch((d) => ({
-      ...d,
-      favorites: d.favorites.includes(id) ? d.favorites.filter((x) => x !== id) : [...d.favorites, id],
-    })),
+    toggleFavorite: (id) => patch((d) => {
+      const removing = d.favorites.includes(id);
+      return {
+        ...d,
+        favorites: removing ? d.favorites.filter((x) => x !== id) : [...d.favorites, id],
+        ...(removing ? tombPatch(d, [`fav:${id}`]) : {}),
+      };
+    }),
 
     setKanaBest: (n) => patch((d) => ({ ...d, kanaBest: Math.max(d.kanaBest, n) })),
 
@@ -510,7 +636,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         .map((m) => (m.id === id ? { ...m, count: m.count - 1 } : m))
         .filter((m) => m.count > 0),
     })),
-    clearMistakes: () => patch((d) => ({ ...d, mistakes: [] })),
+    clearMistakes: () => patch((d) => ({ ...d, mistakes: [], ...tombPatch(d, d.mistakes.map((m) => `mistake:${m.id}`)) })),
 
     setPlacement: (level, detail) => patch((d) => ({
       ...d,
@@ -580,21 +706,98 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
     syncNow: async () => { await push(true); await pull(); },
 
+    /* B2: зочин ахицыг аккаунт руу нэгтгэх / тусад нь үлдээх */
+    resolveGuestMerge: (merge) => {
+      const guest = pendingGuest;
+      if (!guest) return;
+      const language = doc.profile.language ?? "mn";
+      // Шийдвэрийг тэмдэглэнэ — дараагийн нэвтрэлтэнд дахин асуухгүй.
+      writeGuestMarker(uid, guest.updatedAt);
+      if (merge) {
+        // 1) нэгтгэхээс ӨМНӨ одоогийн аккаунтыг нөөцлө (алдааг буцаах боломж)
+        try { localStorage.setItem(backupKey(uid), JSON.stringify(doc)); } catch { /* зайгүй */ }
+        // 2) mergeDocs-аар нэгтгэнэ (зочны XP хасагдахгүй, давталтгүй — guest.test.ts)
+        setDoc(mergeGuestIntoAccount(guest, doc));
+        dirty.current = true;
+        notify("success", ui[language].guestMerged);
+      }
+      setPendingGuest(null);
+    },
+
     exportJSON: () => JSON.stringify(doc, null, 2),
 
-    importJSON: (raw) => {
-      try {
-        const parsed = JSON.parse(raw) as Partial<Doc>;
-        if (!parsed || typeof parsed !== "object") return false;
-        setDoc({ ...freshDoc(), ...parsed, profile: { ...DEFAULT_PROFILE, ...(parsed.profile ?? {}) } } as Doc);
-        return true;
-      } catch {
+    /* B3: импорт — шалгалт → preview → баталгаа → undo */
+    previewImport: (raw) => {
+      const language = doc.profile.language ?? "mn";
+      const r = parseImport(raw);
+      if (!r.ok) {
+        notify("error", r.error === "tooLarge" ? ui[language].importErrLarge
+          : r.error === "badJson" ? ui[language].importErrJson
+          : r.error === "newerVersion" ? ui[language].importErrNewer
+          : ui[language].importErrDoc);
+        return null;
+      }
+      setPendingImport({ doc: r.doc, preview: r.preview });
+      return r.preview;
+    },
+
+    commitImport: (mode) => {
+      const p = pendingImport;
+      if (!p) return false;
+      const language = doc.profile.language ?? "mn";
+      // 1) Импортлахаас ӨМНӨ буцаах нөөц (сүүлийн 1) + эх нөөц.
+      saveUndo(uid, doc);
+      setUndoAvailable(true);
+      try { localStorage.setItem(backupKey(uid), JSON.stringify(doc)); } catch { /* зайгүй */ }
+      // 2) хэрэгжүүлнэ (merge = default, нэгтгэл = хэзээ ч ажил алдахгүй)
+      setDoc(applyImport(doc, p.doc, mode));
+      setPendingImport(null);
+      dirty.current = true;
+      notify("success", ui[language].importConfirmMsg);
+      return true;
+    },
+
+    cancelImport: () => setPendingImport(null),
+
+    undoImport: () => {
+      const prev = loadUndo(uid);
+      const language = doc.profile.language ?? "mn";
+      if (!prev) { notify("info", ui[language].importUndoNone); return false; }
+      setDoc(prev);
+      clearUndo(uid);
+      setUndoAvailable(false);
+      dirty.current = true;
+      notify("success", ui[language].importUndoDone);
+      return true;
+    },
+
+    exportAnkiCsv: async () => {
+      const [vocab, kanji] = await Promise.all([loadAllVocab(), loadAllKanji()]);
+      return ankiCsv(doc, vocab, kanji);
+    },
+
+    /* Хучин гар: шалгаж шууд хэрэгжүүлнэ (previewгүй — шинэ UI preview ашиглана) */
+    importJSON: (raw, mode = "merge") => {
+      const language = doc.profile.language ?? "mn";
+      const r = parseImport(raw);
+      if (!r.ok) {
+        notify("error", r.error === "tooLarge" ? ui[language].importErrLarge
+          : r.error === "badJson" ? ui[language].importErrJson
+          : r.error === "newerVersion" ? ui[language].importErrNewer
+          : ui[language].importErrDoc);
         return false;
       }
+      saveUndo(uid, doc);
+      setUndoAvailable(true);
+      try { localStorage.setItem(backupKey(uid), JSON.stringify(doc)); } catch { /* зайгүй */ }
+      setDoc(applyImport(doc, r.doc, mode));
+      dirty.current = true;
+      notify("success", ui[language].importOk);
+      return true;
     },
 
     reset: () => { setDoc(freshDoc(doc.profile.name)); },
-  }), [patch, push, pull, switchUser, doc.profile.name]);
+  }), [patch, push, pull, switchUser, uid, doc, pendingImport, undoAvailable]);
 
   const today = doc.activity[todayKey()] ?? emptyDay();
   const levelInfo = useMemo(() => xpLevel(doc.xp), [doc.xp]);
@@ -615,6 +818,9 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     today, streak, levelInfo, inputs,
     unlocked: Object.entries(doc.achievements).map(([id, at]) => ({ id, at })).sort((a, b) => b.at - a.at),
     nextAchievement,
+    pendingGuest,
+    pendingImport: pendingImport?.preview ?? null,
+    undoAvailable,
     actions,
   };
 
@@ -637,8 +843,21 @@ function bumpDayInto(d: Doc, delta: Partial<ActivityDay>): Partial<Doc> {
   const k = todayKey();
   const cur = d.activity[k] ?? emptyDay();
   const xp = delta.xp ?? 0;
+  const dev = deviceId();
+  // Төхөөрөмж бүрийн хувь нэмрийг тэмдэглэнэ — merge-ээр хоёр талын ажил
+  // нэг удаа тоологдохгүй (docs/SYNC.md §2, property тестээр баталгаажсан).
+  const prev = cur.parts?.[dev] ?? { xp: 0, min: 0, newCards: 0, reviews: 0, correct: 0, total: 0 };
+  const nextPart = {
+    xp: prev.xp + xp,
+    min: prev.min + (delta.min ?? 0),
+    newCards: prev.newCards + (delta.newCards ?? 0),
+    reviews: prev.reviews + (delta.reviews ?? 0),
+    correct: prev.correct + (delta.correct ?? 0),
+    total: prev.total + (delta.total ?? 0),
+  };
   return {
     xp: d.xp + xp,
+    xpParts: { ...(d.xpParts ?? {}), [dev]: (d.xpParts?.[dev] ?? 0) + xp },
     activity: {
       ...d.activity,
       [k]: {
@@ -648,30 +867,19 @@ function bumpDayInto(d: Doc, delta: Partial<ActivityDay>): Partial<Doc> {
         reviews: cur.reviews + (delta.reviews ?? 0),
         correct: cur.correct + (delta.correct ?? 0),
         total: cur.total + (delta.total ?? 0),
+        parts: { ...(cur.parts ?? {}), [dev]: nextPart },
       },
     },
   };
 }
 
-export function computeStreak(activity: Record<string, ActivityDay>) {
-  let n = 0;
-  let key = todayKey();
-  if (!(activity[key]?.xp > 0)) key = dayOffset(key, -1);
-  while (activity[key]?.xp > 0) {
-    n++;
-    key = dayOffset(key, -1);
-  }
-  return n;
+/** Устгасан зүйлийн тэмдэг — merge-ийн үед дахин сэргэхгүй (docs/SYNC.md). */
+function tombPatch(d: Doc, keys: string[]): Partial<Doc> {
+  if (!keys.length) return {};
+  const at = Date.now();
+  return { tomb: { ...(d.tomb ?? {}), ...Object.fromEntries(keys.map((k) => [k, at])) } };
 }
 
-/** Хамгийн урт цуваа (бүх түүхээс). */
-export function longestStreak(activity: Record<string, ActivityDay>) {
-  const days = Object.entries(activity).filter(([, d]) => d.xp > 0).map(([k]) => k).sort();
-  let best = 0, run = 0, prev = "";
-  for (const k of days) {
-    run = prev && dayOffset(prev, 1) === k ? run + 1 : 1;
-    best = Math.max(best, run);
-    prev = k;
-  }
-  return best;
-}
+// streak тооцоолол text.ts рүү шилжсэн (порт/импорт preview ч ашиглана) —
+// хуучин импорт хэвээр ажиллахын тулд реэкспорт хийж байна.
+export { computeStreak, longestStreak } from "./text";

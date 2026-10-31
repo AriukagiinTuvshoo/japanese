@@ -1,0 +1,334 @@
+{
+  "environment": {
+    "lighthouse": "13.6.0 (npx)",
+    "chrome": "headless=new, fresh profile per run",
+    "preset": "mobile (default: 4x CPU slowdown, simulated slow-4G)",
+    "server": "vite preview 127.0.0.1:4319 serving dist",
+    "os": "Windows 11, Node 24.15.0",
+    "runs": "median of 3 per page/state",
+    "date": "2026-10-28",
+    "note": "runs started >=20 min after npm run build (immediately-after-build runs hit OS file-scan stalls and show LCP outliers up to 17s)"
+  },
+  "pages": {
+    "home": {
+      "before": {
+        "runs": [
+          {
+            "perf": 93,
+            "lcpMs": 1525,
+            "fcpMs": 1525,
+            "cls": 0,
+            "fontTransferKB": 882,
+            "totalKB": 1034,
+            "fetchTime": "2026-10-28T02:42:00.890Z"
+          },
+          {
+            "perf": 74,
+            "lcpMs": 6909,
+            "fcpMs": 1518,
+            "cls": 0,
+            "fontTransferKB": 882,
+            "totalKB": 1034,
+            "fetchTime": "2026-10-28T02:43:11.500Z"
+          },
+          {
+            "perf": 75,
+            "lcpMs": 6910,
+            "fcpMs": 1517,
+            "cls": 0,
+            "fontTransferKB": 882,
+            "totalKB": 1034,
+            "fetchTime": "2026-10-28T02:43:27.459Z"
+          }
+        ],
+        "median": {
+          "perf": 75,
+          "lcpMs": 6909,
+          "fcpMs": 1518,
+          "cls": 0,
+          "fontTransferKB": 882,
+          "totalKB": 1034
+        }
+      },
+      "after": {
+        "runs": [
+          {
+            "perf": 85,
+            "lcpMs": 3764,
+            "fcpMs": 907,
+            "cls": 0,
+            "fontTransferKB": 271,
+            "totalKB": 433,
+            "fetchTime": "2026-10-28T05:24:55.802Z"
+          },
+          {
+            "perf": 87,
+            "lcpMs": 3732,
+            "fcpMs": 911,
+            "cls": 0,
+            "fontTransferKB": 271,
+            "totalKB": 433,
+            "fetchTime": "2026-10-28T05:25:10.033Z"
+          },
+          {
+            "perf": 89,
+            "lcpMs": 3458,
+            "fcpMs": 908,
+            "cls": 0,
+            "fontTransferKB": 271,
+            "totalKB": 433,
+            "fetchTime": "2026-10-28T05:25:24.671Z"
+          }
+        ],
+        "median": {
+          "perf": 87,
+          "lcpMs": 3732,
+          "fcpMs": 908,
+          "cls": 0,
+          "fontTransferKB": 271,
+          "totalKB": 433
+        }
+      }
+    },
+    "vocab": {
+      "before": {
+        "runs": [
+          {
+            "perf": 75,
+            "lcpMs": 6609,
+            "fcpMs": 1517,
+            "cls": 0.001,
+            "fontTransferKB": 882,
+            "totalKB": 1038,
+            "fetchTime": "2026-10-28T02:43:42.238Z"
+          },
+          {
+            "perf": 75,
+            "lcpMs": 6609,
+            "fcpMs": 1517,
+            "cls": 0.001,
+            "fontTransferKB": 882,
+            "totalKB": 1038,
+            "fetchTime": "2026-10-28T02:44:01.269Z"
+          },
+          {
+            "perf": 74,
+            "lcpMs": 6612,
+            "fcpMs": 1520,
+            "cls": 0,
+            "fontTransferKB": 882,
+            "totalKB": 1038,
+            "fetchTime": "2026-10-28T02:44:15.549Z"
+          }
+        ],
+        "median": {
+          "perf": 75,
+          "lcpMs": 6609,
+          "fcpMs": 1517,
+          "cls": 0.001,
+          "fontTransferKB": 882,
+          "totalKB": 1038
+        }
+      },
+      "after": {
+        "runs": [
+          {
+            "perf": 85,
+            "lcpMs": 3461,
+            "fcpMs": 911,
+            "cls": 0,
+            "fontTransferKB": 271,
+            "totalKB": 438,
+            "fetchTime": "2026-10-28T05:25:38.889Z"
+          },
+          {
+            "perf": 88,
+            "lcpMs": 3461,
+            "fcpMs": 911,
+            "cls": 0,
+            "fontTransferKB": 271,
+            "totalKB": 438,
+            "fetchTime": "2026-10-28T05:25:53.351Z"
+          },
+          {
+            "perf": 84,
+            "lcpMs": 3722,
+            "fcpMs": 912,
+            "cls": 0,
+            "fontTransferKB": 271,
+            "totalKB": 438,
+            "fetchTime": "2026-10-28T05:26:07.820Z"
+          }
+        ],
+        "median": {
+          "perf": 85,
+          "lcpMs": 3461,
+          "fcpMs": 911,
+          "cls": 0,
+          "fontTransferKB": 271,
+          "totalKB": 438
+        }
+      }
+    },
+    "review": {
+      "before": {
+        "runs": [
+          {
+            "perf": 75,
+            "lcpMs": 6911,
+            "fcpMs": 1519,
+            "cls": 0,
+            "fontTransferKB": 882,
+            "totalKB": 1035,
+            "fetchTime": "2026-10-28T02:44:30.744Z"
+          },
+          {
+            "perf": 73,
+            "lcpMs": 6909,
+            "fcpMs": 1517,
+            "cls": 0,
+            "fontTransferKB": 882,
+            "totalKB": 1035,
+            "fetchTime": "2026-10-28T02:44:47.257Z"
+          },
+          {
+            "perf": 75,
+            "lcpMs": 6906,
+            "fcpMs": 1514,
+            "cls": 0,
+            "fontTransferKB": 882,
+            "totalKB": 1035,
+            "fetchTime": "2026-10-28T02:45:02.838Z"
+          }
+        ],
+        "median": {
+          "perf": 75,
+          "lcpMs": 6909,
+          "fcpMs": 1517,
+          "cls": 0,
+          "fontTransferKB": 882,
+          "totalKB": 1035
+        }
+      },
+      "after": {
+        "runs": [
+          {
+            "perf": 87,
+            "lcpMs": 3459,
+            "fcpMs": 909,
+            "cls": 0,
+            "fontTransferKB": 271,
+            "totalKB": 434,
+            "fetchTime": "2026-10-28T05:26:22.637Z"
+          },
+          {
+            "perf": 87,
+            "lcpMs": 3643,
+            "fcpMs": 915,
+            "cls": 0,
+            "fontTransferKB": 271,
+            "totalKB": 434,
+            "fetchTime": "2026-10-28T05:26:36.866Z"
+          },
+          {
+            "perf": 90,
+            "lcpMs": 3459,
+            "fcpMs": 909,
+            "cls": 0,
+            "fontTransferKB": 271,
+            "totalKB": 434,
+            "fetchTime": "2026-10-28T05:26:51.101Z"
+          }
+        ],
+        "median": {
+          "perf": 87,
+          "lcpMs": 3459,
+          "fcpMs": 909,
+          "cls": 0,
+          "fontTransferKB": 271,
+          "totalKB": 434
+        }
+      }
+    },
+    "kanji": {
+      "before": {
+        "runs": [
+          {
+            "perf": 75,
+            "lcpMs": 7058,
+            "fcpMs": 1555,
+            "cls": 0,
+            "fontTransferKB": 882,
+            "totalKB": 1036,
+            "fetchTime": "2026-10-28T02:45:18.378Z"
+          },
+          {
+            "perf": 75,
+            "lcpMs": 7057,
+            "fcpMs": 1515,
+            "cls": 0,
+            "fontTransferKB": 882,
+            "totalKB": 1036,
+            "fetchTime": "2026-10-28T02:45:32.832Z"
+          },
+          {
+            "perf": 74,
+            "lcpMs": 7057,
+            "fcpMs": 1518,
+            "cls": 0,
+            "fontTransferKB": 882,
+            "totalKB": 1036,
+            "fetchTime": "2026-10-28T02:45:48.822Z"
+          }
+        ],
+        "median": {
+          "perf": 75,
+          "lcpMs": 7057,
+          "fcpMs": 1518,
+          "cls": 0,
+          "fontTransferKB": 882,
+          "totalKB": 1036
+        }
+      },
+      "after": {
+        "runs": [
+          {
+            "perf": 87,
+            "lcpMs": 3767,
+            "fcpMs": 909,
+            "cls": 0,
+            "fontTransferKB": 271,
+            "totalKB": 435,
+            "fetchTime": "2026-10-28T05:27:05.235Z"
+          },
+          {
+            "perf": 87,
+            "lcpMs": 3768,
+            "fcpMs": 1693,
+            "cls": 0,
+            "fontTransferKB": 271,
+            "totalKB": 435,
+            "fetchTime": "2026-10-28T05:27:19.470Z"
+          },
+          {
+            "perf": 85,
+            "lcpMs": 3768,
+            "fcpMs": 909,
+            "cls": 0,
+            "fontTransferKB": 271,
+            "totalKB": 435,
+            "fetchTime": "2026-10-28T05:27:33.510Z"
+          }
+        ],
+        "median": {
+          "perf": 87,
+          "lcpMs": 3768,
+          "fcpMs": 909,
+          "cls": 0,
+          "fontTransferKB": 271,
+          "totalKB": 435
+        }
+      }
+    }
+  }
+}

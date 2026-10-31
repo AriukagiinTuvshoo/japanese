@@ -1,0 +1,731 @@
+{
+  "terms:adverbial": {
+    "action": "verify",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-31",
+    "note": "revise санал хэрэгжсэн: mn=Байц · хүний эцсийн баталгаа хараахан өгөөгүй (needs_review)",
+    "history": [
+      {
+        "action": "revise",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "«Өгүүлбэрт» гэдэг нь монгол хэлний нэр биш (adverb/adverbial-ийг машин буулгасан артефакт). Цаг, газар, хэмжээг заасан гишүүнийг «байц» гэнэ. Санал: Байц.",
+        "mn": "Байц"
+      }
+    ]
+  },
+  "terms:causative": {
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "«Үйлдүүлэх хэлбэр» = 使役; монгол «үйлдүүлэхүүн хэв»-тэй нийцнэ (хэлбэр/хэв гэсэн стилийн ялгаа л бий). 例 食べさせる зөв."
+      }
+    ]
+  },
+  "terms:conjugation": {
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "«Хувирал» = 活用; монгол хэл шинжлэлийн «үйл үгийн хувирал» гэсэн тогтсон нэртэй нийцнэ. 例 書く→書いて→書いた зөв."
+      }
+    ]
+  },
+  "terms:consonant": {
+    "action": "verify",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-31",
+    "note": "revise санал хэрэгжсэн: mn=Гийгүүлэгч · хүний эцсийн баталгаа хараахан өгөөгүй (needs_review)",
+    "history": [
+      {
+        "action": "revise",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "«Тусламж дуудлага» нь 子音-ийн утга биш. Монгол хэл шинжлэлд 子音 = гийгүүлэгч, 母音 = эгшиг. Санал: Гийгүүлэгч.",
+        "mn": "Гийгүүлэгч"
+      }
+    ]
+  },
+  "terms:honorific": {
+    "action": "verify",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-31",
+    "note": "revise санал хэрэгжсэн: mn=Хүндэтгэлийн хэл · хүний эцсийн баталгаа хараахан өгөөгүй (needs_review)",
+    "history": [
+      {
+        "action": "revise",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "敬語 нь хүндэтгэл (尊敬語), даруу (謙譲語), эелдэг (丁寧語) гурвыг хамарсан систем; «Хүндэтгэх үг» хэт явцуу. Санал: Хүндэтгэлийн хэл (сонкэйго).",
+        "mn": "Хүндэтгэлийн хэл (сонкэйго)"
+      }
+    ]
+  },
+  "terms:humble": {
+    "action": "verify",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-31",
+    "note": "revise санал хэрэгжсэн: mn=Даруу хэлбэр · хүний эцсийн баталгаа хараахан өгөөгүй (needs_review)",
+    "history": [
+      {
+        "action": "revise",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "«Ишгэл үг» нь монгол хэл шинжлэлийн нэр биш, контентод ч хэрэглээ 0. 謙譲語 = өөрийн үйлдлийг дорд үзэх хэлбэр. Санал: Даруу хэлбэр (кэнжёго).",
+        "mn": "Даруу хэлбэр (кэнжёго)"
+      }
+    ]
+  },
+  "terms:object": {
+    "action": "verify",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-31",
+    "note": "revise санал хэрэгжсэн: mn=Тусагдахуун · хүний эцсийн баталгаа хараахан өгөөгүй (needs_review)",
+    "history": [
+      {
+        "action": "revise",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "«Хэргэм» нь орчин үеийн монгол хэлэнд «зэрэг/цол» гэсэн утгатай болсон тул 目的語-г заахад ойлгомжгүй. Монгол хэл шинжлэлд өгүүлбэрийн объектыг «тусагдахуун» гэнэ. Санал: Тусагдахуун.",
+        "mn": "Тусагдахуун"
+      }
+    ]
+  },
+  "terms:particle": {
+    "action": "revise",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-29",
+    "note": "«Тусаглал» нь тогтсон монгол хэл шинжлэлийн нэр биш; «туслах үг» нь 助動詞-той андуурна. Одоогийн контентод хэрэглээ 0 тул нэрийг одоо тодорхойлох нь зүйтэй. Санал: Тусаглал (постпозитив).",
+    "mn": "Тусаглал (постпозитив)"
+  },
+  "terms:passive": {
+    "action": "verify",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-31",
+    "note": "revise санал хэрэгжсэн: mn=Үйлдэгдэхүүн хэв · хүний эцсийн баталгаа хараахан өгөөгүй (needs_review)",
+    "history": [
+      {
+        "action": "revise",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "«Хүлээн авагч хэлбэр» нь 受身-г буруу тайлбарлана. Монгол хэвний систем: үйлдэхүүн / үйлдэгдэхүүн / үйлдүүлэхүүн. Санал: Үйлдэгдэхүүн хэв.",
+        "mn": "Үйлдэгдэхүүн хэв"
+      }
+    ]
+  },
+  "terms:polite form": {
+    "action": "verify",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-31",
+    "note": "revise санал хэрэгжсэн: mn=Эелдэг хэлбэр · хүний эцсийн баталгаа хараахан өгөөгүй (needs_review)",
+    "history": [
+      {
+        "action": "revise",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "丁寧語 нь です/ます-ийн эелдэг хэв; «хүндэтгэсэн» гэвэл 尊敬語 (сонкэйго)-той андуурна. Контентод «дэгжин» 6, «хүндэтгэсэн» 3 удаа — нэг нэрийг сонгох ёстой. Санал: Эелдэг хэлбэр (дэгжин хэв).",
+        "mn": "Эелдэг хэлбэр (дэгжин хэв)"
+      }
+    ]
+  },
+  "terms:potential": {
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "«Боломжийн хэлбэр» = 可能形; утга зөв, 例 食べられる/食べれる хоёулаа (ярианы) зөв."
+      }
+    ]
+  },
+  "terms:predicate": {
+    "action": "verify",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-31",
+    "note": "revise санал хэрэгжсэн: mn=Өгүүлэхүүн · хүний эцсийн баталгаа хараахан өгөөгүй (needs_review)",
+    "history": [
+      {
+        "action": "revise",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "«Тэмдэглэгээ» нь 述語-ийн утга биш (predicate ≠ marking). 例 私は学生です。 — өгүүлэхүүн нь «学生です». Санал: Өгүүлэхүүн.",
+        "mn": "Өгүүлэхүүн"
+      }
+    ]
+  },
+  "terms:te-form": {
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "て形 → «Тэ-хэлбэр» — япон нэрийг шууд буулгасан, суралцагчид ойлгомжтой; 例 食べて・書いて зөв."
+      }
+    ]
+  },
+  "terms:topic marker": {
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "«Сэдвийн тусаглал» нь は-ийн үүргийг зөв тодорхойлсон; 例 今日は寒いです。 тохирно. particle-ийн эцсийн нэрээс хамаарна."
+      }
+    ]
+  },
+  "terms:try": {
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "〜てみる = «-аж үзэх» — утга зөв (туршин хийх). Контентод ашиглагдаагүй ч нэр томьёо хүчинтэй."
+      }
+    ]
+  },
+  "terms:vowel": {
+    "action": "revise",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-29",
+    "note": "«Эгшэг» нь «эгшиг»-ийн алдаатай бичиг (тэмдэглэлд ч «5 эгшэг» гэж бичсэн). 母音 = эгшиг. Энэ бичлэг draft байсан ч алдаа нь тодорхой. Санал: Эгшиг.",
+    "mn": "Эгшиг"
+  },
+  "vocab:ぞんざい|ぞんざい": {
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "кана уншлага зөв (канжигүй үг); mn «хайхрамжгүй» = rough/careless; 例 ぞんざいな扱い → «огцом харьцсан» нийцнэ."
+      }
+    ]
+  },
+  "vocab:ひたすら|ひたすら": {
+    "action": "revise",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-29",
+    "note": "mn «чин сэтгэлээсээ» нь «нэг л зүйлд автах» утгыг алдана; мөн ex[0] (「一向に構いません」) нь ひたすら-г агуулаагүй — жишээ буруу холбогдсон.",
+    "mn": "зөвхөн нэг л зүйлд автан, чин сэтгэлээсээ"
+  },
+  "vocab:わざわざ|わざわざ": {
+    "action": "revise",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-29",
+    "note": "mn нь MT-ийн буруу холимог («санамсаргүй гэхээсээ илүүтэйгээр…»). わざわざ = зориуд хийх; ex[0].mn («бүү зов») ч буруу.",
+    "mn": "санаатайгаар, зориуд (хичээж)"
+  },
+  "vocab:中断|ちゅうだん": {
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «тасалдал; түдгэлзүүлэх; завсарлага» = interruption; 例 休暇が中断 → «амралт тасарсан» нийцнэ."
+      }
+    ]
+  },
+  "vocab:交渉|こうしょう": {
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «хэлэлцээр» = negotiations; 例 労働組合は経営陣と交渉 → зөв."
+      }
+    ]
+  },
+  "vocab:依然|いぜん": {
+    "action": "revise",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-29",
+    "note": "«хэвийн» нь 依然 биш (依然 = 相変わらず, still/as yet); ex[0] «Одоог хүртэл…» зөв тул mn-ийг түүнд нийцүүлнэ.",
+    "mn": "хэвээр, өнөө хэр"
+  },
+  "vocab:促す|うながす": {
+    "action": "revise",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-29",
+    "note": "«түлхэх» хэт явцуу; 促す = urge/promote (жишээ: 眠りを促す = унтахад хүргэх).",
+    "mn": "турхирах, урамшуулах, түргэтгэх"
+  },
+  "vocab:促進|そくしん": {
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «хурдасгах» = promotion/acceleration; 例 平和を促進 → «энх тайвныг дэмжих» нийцнэ."
+      }
+    ]
+  },
+  "vocab:保障|ほしょう": {
+    "action": "revise",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-29",
+    "note": "mn давхардсан; мөн 保障 (нийгмийн баталгаа) ба 保証 (батлан даалт) хоёрыг ялгах ёстой.",
+    "mn": "батлан хамгаалах, баталгаа"
+  },
+  "vocab:優先|ゆうせん": {
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «давуу эрх; тэргүүлэх ач холбогдол» = priority; 例 すべての任務に優先する → зөв."
+      }
+    ]
+  },
+  "vocab:円滑|えんかつ": {
+    "action": "revise",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-29",
+    "note": "«найрсаг» нь 円滑-ийн утга биш; 円滑 = smooth (ажил явц саадгүй).",
+    "mn": "жигд, саадгүй"
+  },
+  "vocab:切ない|せつない": {
+    "action": "revise",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-29",
+    "note": "«гуниг, зовлонтой» нь нэр/тэмдэг нэрийн холимог; 切ない = сэтгэл хөндөм (sentimental).",
+    "mn": "сэтгэл хөндөм, гунигтай"
+  },
+  "vocab:削減|さくげん": {
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «бууруулах» = cut/reduction; 例 支出を削減 → «зардлаа багасгасан» зөв."
+      }
+    ]
+  },
+  "vocab:加入|かにゅう": {
+    "action": "revise",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-29",
+    "note": "Үгийн утга зөв боловч ex[0].mn буруу: 「まさかの時のために…保険に加入した» = «гэнэтийн тохиолдлоос сэргийлж даатгалд орсон» — «бороотой өдөр» биш.",
+    "mn": "нэгдэх, (даатгалд) орох"
+  },
+  "vocab:動機|どうき": {
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «сэдэл; урамшуулал» = motive/incentive; 例 動機が信用できない → зөв."
+      }
+    ]
+  },
+  "vocab:厳しさ|きびしさ": {
+    "action": "revise",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-29",
+    "note": "«хүндийн зэрэг» нь 厳しさ биш — en «severity»-г «зэрэг» гэж буруу буулгасан.",
+    "mn": "хатуу чанга байдал, ширүүн байдал"
+  },
+  "vocab:多様|たよう": {
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «олон янз» = diverse; 例 多様なテーマ → «янз бүрийн сэдэв» зөв."
+      }
+    ]
+  },
+  "vocab:妨げ|さまたげ": {
+    "action": "revise",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-29",
+    "note": "mn давхардсан («саад тотгор» хоёр удаа); утга зөв, цэвэрлэх шаардлагатай.",
+    "mn": "саад, тотгор"
+  },
+  "vocab:対応|たいおう": {
+    "action": "revise",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-29",
+    "note": "Одоогийн mn 3 утгын (interaction/correspondence/coping) зөвхөн нэгийг заана; ex[0] нь «対応する» = «дүйцэх» утга.",
+    "mn": "тохирох; харилцах; арга хэмжээ авах"
+  },
+  "vocab:導入|どうにゅう": {
+    "action": "revise",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-29",
+    "note": "«тэргүүлэх» нь 導入 биш — en «leading in»-ийг шууд буулгасан MT алдаа.",
+    "mn": "нэвтрүүлэх, оруулах"
+  },
+  "vocab:尚更|なおさら": {
+    "action": "revise",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-29",
+    "note": "«арай бага» нь эсрэг утга — MT алдаа; なおさら = all the more.",
+    "mn": "бүр ч илүү"
+  },
+  "vocab:応募|おうぼ": {
+    "action": "revise",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-29",
+    "note": "«анкет» нь 応募 биш; 応募 = ажил/сургалтад өргөдөл гаргах; ex[0] зөв.",
+    "mn": "өргөдөл гаргах, элсэх"
+  },
+  "vocab:把握|はあく": {
+    "action": "revise",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-29",
+    "note": "mn-д «барих» хоёр удаа давхардсан; 把握 = grasp (ойлгох).",
+    "mn": "ойлгох, баримжаалах"
+  },
+  "vocab:指示|しじ": {
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «заавар» = instruction; 例 гурван хүн ирэхийг надад даалгасан гэсэн утга зөв."
+      }
+    ]
+  },
+  "vocab:措置|そち": {
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «арга хэмжээ» = measure/step; 例 必要な措置を取る → зөв."
+      }
+    ]
+  },
+  "vocab:提唱|ていしょう": {
+    "action": "revise",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-29",
+    "note": "«сурталчилгаа» нь 提唱-ийн утга биш; 提唱 = advocate (санаа дэвшүүлэх).",
+    "mn": "санаачлага, дэвшүүлэх"
+  },
+  "vocab:損なう|そこなう": {
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «гэмтээх, доройтуулах» = harm/hurt; 例 返事を出し損なった → «чадсангүй» (хоёр дахь утга) зөв."
+      }
+    ]
+  },
+  "vocab:明朗|めいろう": {
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «тод; хөгжилтэй» = bright/cheerful; 例 хөгжилтэй залуу → зөв."
+      }
+    ]
+  },
+  "vocab:本格|ほんかく": {
+    "action": "revise",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-29",
+    "note": "«зохистой байдал; үндсэн дүрэм» нь 本格-ийн утга биш — en «propriety»-г шууд буулгасан MT алдаа.",
+    "mn": "бүрэн хэмжээний, жинхэнэ"
+  },
+  "vocab:極端|きょくたん": {
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «хэт, туйлын» = extreme; 例 極端じゃないか → «хэтэрхий биш үү» зөв."
+      }
+    ]
+  },
+  "vocab:活発|かっぱつ": {
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «идэвхтэй» = active/vigor; 例 活発な討論 → «идэвхтэй хэлэлцүүлэг» нийцнэ."
+      }
+    ]
+  },
+  "vocab:減少|げんしょう": {
+    "action": "revise",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-29",
+    "note": "ex[0].mn буруу: 「死亡により人口は減少しつつある» = «нас баралтаас хүн ам буурч байна», «хүн ам үхэж байна» биш.",
+    "mn": "багасах, буурах"
+  },
+  "vocab:独自|どくじ": {
+    "action": "revise",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-29",
+    "note": "«эх» нь 独自 биш; 独自 = original/peculiar (өөрийн онцлогтой).",
+    "mn": "өөрийн гэсэн, бие даасан"
+  },
+  "vocab:発生|はっせい": {
+    "action": "revise",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-29",
+    "note": "«урагшлах» нь 発生 биш (MT алдаа); ex[0] нь «үүсдэг» гэсэн утгатай тул mn-ийг засна.",
+    "mn": "үүсэх, гарч ирэх, тохиолдох"
+  },
+  "vocab:眠たい|ねむたい": {
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «нойрмог» = sleepy; 例 眠気を催す → «нойрмог болгосон» нийцнэ."
+      }
+    ]
+  },
+  "vocab:緩和|かんわ": {
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «хөнгөрүүлэх» = relief/mitigation. Жишээний «тэнцвэр» (需給関係=эрэлт нийлүүлэлтийн харьцаа) ойролцоо — жишээг сайжруулахыг зөвлөнө."
+      }
+    ]
+  },
+  "vocab:群集|ぐんしゅう": {
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «олон түмэн» = crowd; 例 群集が集まる → «цугларсан хүмүүс» зөв."
+      }
+    ]
+  },
+  "vocab:補助|ほじょ": {
+    "action": "revise",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-29",
+    "note": "mn-д «тусламж» давхардсан; 補助 = assistance/subsidy.",
+    "mn": "тусламж, нэмэгдэл"
+  },
+  "vocab:覆す|くつがえす": {
+    "action": "revise",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-29",
+    "note": "«эргүүлэх» биш; 覆す = overturn (шийдвэр, үзэл санаа).",
+    "mn": "хүчингүй болгох, эвдэх"
+  },
+  "vocab:規制|きせい": {
+    "action": "revise",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-29",
+    "note": "«хязгаарлалт» хэт явцуу; 規制 = regulation. ex[0] «замын хөдөлгөөний дүрэм» зөв.",
+    "mn": "зохицуулалт, дүрэм"
+  },
+  "vocab:規模|きぼ": {
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «хэмжээ» = scale/scope; 例 クラスの規模 → «ангийн хэмжээ» нийцнэ."
+      }
+    ]
+  },
+  "vocab:視点|してん": {
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «үзэл бодол, өнцөг» = point of view; 例 根拠のある視点 → нийцнэ."
+      }
+    ]
+  },
+  "vocab:観点|かんてん": {
+    "action": "revise",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-29",
+    "note": "mn ойролцоо зөв боловч ex[0].mn буруу: 「見るようになった» = «үзэх болсон», «харахаар ирсэн» биш.",
+    "mn": "үзэл бодол, өнцөг"
+  },
+  "vocab:課題|かだい": {
+    "action": "revise",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-29",
+    "note": "«сэдэв» нь 課題-ийн гол утга биш; ex[0] «гэрийн даалгавар» зөв тул mn-ийг тэр утгад нийцүүлнэ.",
+    "mn": "даалгавар, тулгамдсан асуудал"
+  },
+  "vocab:負担|ふたん": {
+    "action": "revise",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-29",
+    "note": "«цэнэглэх» нь 負担 биш — en «charge»-ийг шууд буулгасан MT алдаа.",
+    "mn": "ачаалал, дарамт, зардал"
+  },
+  "vocab:賃金|ちんぎん": {
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «цалин» = wages; 例 賃金を払う → зөв."
+      }
+    ]
+  },
+  "vocab:込める|こめる": {
+    "action": "revise",
+    "reviewer": "Freebuff AI reviewer",
+    "at": "2026-10-29",
+    "note": "«хийх» хэт ерөнхий тул утга ялгарахгүй; 込める = put into (сэтгэл, сум).",
+    "mn": "хийх, шингээх, цэнэглэх"
+  },
+  "vocab:迅速|じんそく": {
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «хурдан» = quick/rapid; 例 迅速に対応 → «нэн даруй» нийцнэ."
+      }
+    ]
+  },
+  "vocab:達成|たっせい": {
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «амжилт» = achievement; 例 目標を達成 → «зорилгодоо хүрсэн» зөв."
+      }
+    ]
+  },
+  "vocab:遠ざかる|とおざかる": {
+    "action": "approve",
+    "reviewer": "Tuvshoo",
+    "at": "2026-10-31",
+    "note": "Хүний батламж: maintainer 2026-10-31-нд AI-ийн шалгалтын нотолгоог хүлээн зөвшөөрч батлав (өмнөх нотолгоо: history).",
+    "history": [
+      {
+        "action": "verify",
+        "reviewer": "Freebuff AI reviewer",
+        "at": "2026-10-29",
+        "note": "уншлага зөв; mn «хол явах» = to move away; 例 岸から遠ざかる → зөв."
+      }
+    ]
+  }
+}

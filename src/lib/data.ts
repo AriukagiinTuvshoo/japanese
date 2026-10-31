@@ -51,11 +51,6 @@ export async function loadAllKanji(): Promise<Kanji[]> {
   return all.flat();
 }
 
-export async function loadAllGrammar(): Promise<Grammar[]> {
-  const all = await Promise.all(LEVELS.map(loadGrammar));
-  return all.flat();
-}
-
 /** Апп-ийн бүх контентыг нэг удаа ачаална (SRS, curriculum-д хэрэгтэй). */
 export interface FullData {
   meta: DataMeta;
@@ -134,17 +129,6 @@ export function shuffle<T>(arr: T[], rand: () => number = Math.random): T[] {
     [a[i], a[j]] = [a[j], a[i]];
   }
   return a;
-}
-
-/** Deterministic санамсаргүй (тест/шалгалтыг тогтвортой болгох). */
-export function seeded(seed: number) {
-  let s = seed >>> 0 || 1;
-  return () => {
-    s ^= s << 13; s >>>= 0;
-    s ^= s >> 17;
-    s ^= s << 5; s >>>= 0;
-    return s / 4294967296;
-  };
 }
 
 export function pick<T>(arr: T[], n: number, rand: () => number = Math.random): T[] {

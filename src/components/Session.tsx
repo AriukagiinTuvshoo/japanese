@@ -3,7 +3,7 @@ import { cn } from "../utils/cn";
 import { href, navigate } from "../lib/router";
 import { useStore } from "../lib/store";
 import { loadFullData, shuffle } from "../lib/data";
-import { GRADES, dueCards, memoryStats, previewIntervals, retrievability, type Grade } from "../lib/srs";
+import { GRADES, dueCards, previewIntervals, retrievability, type Grade } from "../lib/srs";
 import { MQ_LABEL, TYPE_LABEL, stripFurigana } from "../lib/text";
 import { MN_PENDING, ui, type Language } from "../lib/i18n";
 import type { Kanji, Level, Vocab } from "../lib/types";
@@ -415,34 +415,4 @@ export function kanjiToItem(k: Kanji, _d: Direction, language: Language = "mn"):
     audio: k.k,
     word: k,
   };
-}
-
-/* ─────────────── Тойм самбар ─────────────── */
-export function MemoryPanel() {
-  const { doc } = useStore();
-  const language = doc.profile.language ?? "mn";
-  const t = ui[language];
-  const mem = useMemo(() => memoryStats(doc.srs), [doc.srs]);
-  return (
-    <Card>
-      <SectionTitle jp="記憶" title={t.memoryTitle} />
-      <div className="grid gap-4 sm:grid-cols-2">
-        {[
-          { l: t.totalReviewsRow, v: mem.reviews.toLocaleString(), s: t.lapsesSub(mem.lapses) },
-          { l: t.accuracyRow, v: `${Math.round(mem.accuracy * 100)}%`, s: t.accSub },
-          { l: t.retentionRow, v: `${Math.round(mem.retention * 100)}%`, s: t.retSub },
-          { l: t.forgettingRow, v: `${Math.round(mem.forgettingRate * 100)}%`, s: t.fSub },
-        ].map((x) => (
-          <div key={x.l} className="card-flat px-4 py-3.5">
-            <p className="text-[11.5px] font-bold uppercase tracking-wide text-sumi-400">{x.l}</p>
-            <p className="mt-1 font-mono text-[1.3rem] font-extrabold tabnum leading-none">{x.v}</p>
-            <p className="mt-1 text-[11.5px] text-sumi-500">{x.s}</p>
-          </div>
-        ))}
-      </div>
-      <p className="mt-4 rounded-xl bg-sumi-900/4 px-3.5 py-3 text-[12.5px] leading-relaxed text-sumi-600">
-        {t.mistakesNote(doc.mistakes.length)}
-      </p>
-    </Card>
-  );
 }

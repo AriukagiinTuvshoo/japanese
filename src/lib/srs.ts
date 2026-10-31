@@ -47,6 +47,13 @@ export interface Card {
 const MIN = 60_000;
 const DAY = 86_400_000;
 
+/** Алдсаны дараах богино алхам (минут). */
+export const RELEARN_MIN = 10;
+/** Тогтвортой байдлын дээд хязгаар (өдөр) — 10 жил. */
+export const MAX_STABILITY = 3650;
+/** Fuzz зөвхөн үүнээс урт интервалд (±5%). */
+export const FUZZ_MIN_DAYS = 3;
+
 export const newCard = (): Card => ({
   due: 0, st: 0, df: 5, n: 0, l: 0, last: 0, ph: "new", streak: 0, h: [],
 });
@@ -99,29 +106,34 @@ export function schedule(prev: Card | undefined, g: Grade): Card {
   } else {
     const boost = { 1: 1.18, 2: 2.35, 3: 3.6 }[g];
     const hardPenalty = 1 - (c.df - 1) * 0.035;
-    c.st = Math.max(0.6, c.st * boost * hardPenalty);
+    c.st = Math.min(MAX_STABILITY, Math.max(0.6, c.st * boost * hardPenalty));
   }
 
   // ── төлөв ба интервал ──────────────────────────────────────
   if (g === 0) {
+    // Алдсан → богино алхам. Fuzz энд ХЭЗЭЭ Ч хамаарахгүй (өмнө нь 10 минутыг
+    // хэдэн өдрөөр дарж бичдэг байсан — P0-1).
     c.ph = c.n > 1 ? "relearn" : "learning";
     c.streak = 0;
-    c.due = now + 10 * MIN;
-  } else {
-    c.streak = (c.streak ?? 0) + 1;
-    c.ph = "review";
-    // Анхны суралцах үед Anki шиг богино алхмууд
-    if (c.n === 1 && g === 1) c.due = now + 10 * MIN;
-    else if (c.n <= 2 && g === 1) c.due = now + DAY;
-    else c.due = now + Math.max(1, Math.round(c.st)) * DAY;
+    c.due = now + RELEARN_MIN * MIN;
+    return c;
   }
 
-  // Fuzz: нэг өдөрт хэт олон карт хуримтлагдахаас сэргийлнэ (±5%)
-  if (c.st > 3) {
+  c.streak = (c.streak ?? 0) + 1;
+  c.ph = "review";
+
+  let days: number;
+  if (c.n === 1 && g === 1) days = 0; // 10 мин — Anki шиг богино алхам
+  else if (c.n <= 2 && g === 1) days = 1;
+  else days = Math.max(1, Math.round(c.st));
+
+  // Fuzz нь зөвхөн урт хугацааны давталтад, нэг өдөрт хуримтлахаас сэргийлнэ (±5%).
+  if (days >= FUZZ_MIN_DAYS) {
     const fuzz = 1 + (Math.random() - 0.5) * 0.1;
-    c.due = now + Math.max(1, Math.round(c.st * fuzz)) * DAY;
+    days = Math.max(FUZZ_MIN_DAYS, Math.round(days * fuzz));
   }
 
+  c.due = days === 0 ? now + RELEARN_MIN * MIN : now + days * DAY;
   return c;
 }
 

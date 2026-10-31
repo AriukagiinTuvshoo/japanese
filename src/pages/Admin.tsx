@@ -1,7 +1,9 @@
 import { useCallback, useEffect, useState } from "react";
-import { api, type AdminOverview, type QueueItem } from "../lib/api";
+import { api, apiBase, type AdminOverview, type QueueItem } from "../lib/api";
 import { navigate } from "../lib/router";
 import { Button, Card, Chip, ErrorBox, Input, PageHeader, Select, SectionTitle, Spinner, Stat, Tabs } from "../components/ui";
+import { ui } from "../lib/i18n";
+import { useStore } from "../lib/store";
 
 type Tab = "overview" | "queue" | "import";
 
@@ -12,9 +14,60 @@ const ORIGIN_LABEL: Record<QueueItem["origin"], { text: string; tone: "matcha" |
   ai: { text: "AI санал · pending", tone: "ai" },
 };
 
+/**
+ * Backend байхгүй үед гардаг самбар.
+ *
+ * Одоогийн UI-ийн ажиллагаа (C4-ийн судалгаа):
+ *  · Тойм/Дараалал/Импорт гурвын аль нь ч `/api/admin/*` руу fetch хийдэг.
+ *  · `server/` энэ репод байхгүй тул бүх дуудалт `ApiError` буцна → ErrorBox.
+ *  · Товчнууд хэзээ ч амжилттай болсон дүр эсгээгүй, гэхдээ хуучин дэд
+ *    гарчиг "Approve хийвэл нийтлэгдэнэ" гэж амлаж байсан — одоо тодорхой
+ *    тайлбарлаагүй байна.
+ *  · Шийдвэрийг үнэхээр хадгалдаг зүйл: `scripts/review.mjs` (файл → Git →
+ *    content:qa). Тэр урсгалыг доор харуулна.
+ */
+function NoBackendPanel({ language }: { language: "mn" | "en" }) {
+  const t = ui[language];
+  const steps: { label: string; cmd: string }[] = [
+    { label: t.adminFileStep1, cmd: "npm run review:queue" },
+    { label: t.adminFileStep2, cmd: 'npm run review:mark -- terms particle --action=approve --reviewer="<нэр>"' },
+    { label: t.adminFileStep3, cmd: "git diff content/review/" },
+    { label: t.adminFileStep4, cmd: "npm run content:qa" },
+  ];
+  return (
+    <div className="mx-auto max-w-5xl space-y-5">
+      <PageHeader jp="管理" title="Админ · Агуулгын удирдлага" sub={t.adminNoBackendTitle} />
+      <Card>
+        <SectionTitle title={t.adminNoBackendTitle} sub="server/ — Phase 5" />
+        <p className="text-[13.5px] leading-relaxed text-sumi-700">{t.adminNoBackendBody}</p>
+      </Card>
+      <Card>
+        <SectionTitle title={t.adminFileReviewTitle} sub={t.adminFileReviewBody} />
+        <ol className="space-y-2.5">
+          {steps.map((s) => (
+            <li key={s.cmd} className="rounded-xl border border-sumi-900/10 bg-sumi-50/50 p-3">
+              <p className="text-[13px] font-bold text-sumi-700">{s.label}</p>
+              <code className="mt-1 block overflow-x-auto font-mono text-[12px] text-ai-700">{s.cmd}</code>
+            </li>
+          ))}
+        </ol>
+        <p className="mt-3 text-[12.5px] text-sumi-500">Дэлгэрэнгүй: content/review/README.md</p>
+      </Card>
+    </div>
+  );
+}
+
 export default function Admin({ tab = "overview" }: { tab?: string }) {
+  const { doc } = useStore();
+  const language = doc.profile.language ?? "mn";
   const current: Tab = tab === "queue" || tab === "import" ? tab : "overview";
   const setTab = (t: Tab) => navigate(`admin/${t}`, { keepScroll: true });
+
+  /* C4: backend байхгүй үед (apiBase() === null → статик build, GitHub Pages)
+   * функцүүдийг дуудаж үзээд ErrorBox харуулахын оронд шударга тайлбар +
+   * одоо ажиллаж буй ФАЙЛД суурилсан workflow-г харуулна. Approve/Reject
+   * амжилттай мэт харагдах UI-г үлдээхгүй. */
+  if (apiBase() === null) return <NoBackendPanel language={language} />;
 
   return (
     <div className="mx-auto max-w-5xl">

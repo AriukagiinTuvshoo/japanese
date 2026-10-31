@@ -14,7 +14,7 @@ export function AccountModal({ onClose }: { onClose: () => void }) {
   const t = ui[language];
   const [tab, setTab] = useState<Tab>(account ? "account" : "account");
   return (
-    <Modal onClose={onClose} title={t.accountTitle} wide>
+    <Modal onClose={onClose} title={t.accountTitle} wide z="z-[85]">
       <div className="border-b border-sumi-900/10 px-6 py-3">
         <Tabs
           value={tab}
@@ -253,7 +253,7 @@ function Toggle({ label, sub, on, onChange }: { label: string; sub?: string; on:
 }
 
 export function SyncPanel() {
-  const { doc, account, actions, syncing, lastSync, serverAvailable } = useStore();
+  const { doc, account, actions, syncing, lastSync, serverAvailable, undoAvailable } = useStore();
   const language = doc.profile.language ?? "mn";
   const t = ui[language];
   const fileRef = useRef<HTMLInputElement>(null);
@@ -271,6 +271,24 @@ export function SyncPanel() {
     a.click();
     URL.revokeObjectURL(a.href);
     setMsg(t.backupSaved);
+  };
+
+  /** B3: Anki CSV — давталт/сул картууд (UTF-8 BOM). */
+  const exportCsv = async () => {
+    try {
+      const csv = await actions.exportAnkiCsv();
+      const body = csv.replace(/^\uFEFF/, "").trim();
+      if (!body.includes("\n")) { setMsg(t.ankiCsvEmpty); return; }
+      const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = `nihongo-dojo-anki-${new Date().toISOString().slice(0, 10)}.csv`;
+      a.click();
+      URL.revokeObjectURL(a.href);
+      setMsg(t.ankiCsvDone);
+    } catch {
+      setMsg(t.errPrefix("CSV"));
+    }
   };
 
   const makeCode = async () => {
@@ -349,13 +367,18 @@ export function SyncPanel() {
         <div className="mt-3 flex flex-wrap gap-2">
           <Button size="sm" variant="dark" onClick={exportData}>{t.downloadBtn}</Button>
           <Button size="sm" variant="outline" onClick={() => fileRef.current?.click()}>{t.restoreBtn}</Button>
+          <Button size="sm" variant="outline" onClick={exportCsv}>{t.ankiCsvBtn}</Button>
           <input ref={fileRef} type="file" accept="application/json" className="hidden"
             onChange={async (e) => {
               const f = e.target.files?.[0];
               if (!f) return;
-              const ok = actions.importJSON(await f.text());
-              setMsg(ok ? t.restoreOk : t.restoreBad);
+              // B3: шалгаж preview modal-д үзүүлнэ (default = нэгтгэх).
+              actions.previewImport(await f.text());
+              e.target.value = "";
             }} />
+          {undoAvailable && (
+            <Button size="sm" variant="ghost" onClick={() => actions.undoImport()}>{t.importUndoBtn}</Button>
+          )}
           <Button size="sm" variant="danger" className="ml-auto"
             onClick={() => { if (window.confirm(t.resetConfirm)) { actions.reset(); setMsg(t.resetDone); } }}>
             {t.resetBtn}
