@@ -17,7 +17,8 @@
  *
  * ── АЛДАА vs АНХУУРУУЛГА ────────────────────────────────────────────────────
  *   ERROR → exit 1 (CI зогсооно): буруу төлөв, хоосон монгол утга, хүчингүй
- *           холбоос, эх сурвалж/review баталгаагүй curated, нэр томьёо зөрөлдөх
+ *           холбоос, эх сурвалж/review баталгаагүй curated, нэр томьёо зөрөлдөх,
+ *           англи хэвээр үлдсэн хэрэглэгчид харагдах утга
  *   WARN  → зөвхөн мэдээлнэ: хувилбар нэр, латин үсэгтэй монгол утга, уртадсан утга
  */
 import fs from "node:fs";
@@ -33,6 +34,13 @@ import {
 
 const CYRILLIC = /[\u0400-\u04FF]/;
 const LATIN = /[A-Za-z]/;
+
+/**
+ * Хэрэглэгчид харагдах утга англи хэвээр үлдсэн эсэх (кирилл огт байхгүй + латин).
+ * Ийм утга нь монгол хэлтэй UI-д англи fallback болж гардаг — жишээ нь ханзны
+ * холбоос үгсийн `mn` нь "tomorrow" байсан (11,418 бичлэгт зассан).
+ */
+const looksEnglish = (t) => typeof t === "string" && t.trim() !== "" && !CYRILLIC.test(t) && LATIN.test(t);
 const VALID_STATUS = new Set(["curated", "draft", "needs_review"]);
 
 /** JSON уншина; алдааг `errors`-д file түвшинд бичнэ. */
@@ -271,6 +279,23 @@ export function runQa({ root = process.cwd() } = {}) {
       }
       if (r.mq === "none" && hasMnValue(r.mn)) E(label, id, "mq", "none боловч монгол утга байна (төлөв үнэн бус)");
       if (r.mq !== "none" && !hasMnValue(r.mn)) E(label, id, "mn", `mq=${r.mq} боловч монгол утга хоосон`);
+      // UI-д харагдах утга англи үлдвэл монгол хэлтэй хэрэглэгчид ойлгомжгүй
+      if (looksEnglish(r.mn?.[0])) E(label, id, "mn", `монгол утга англи байна: "${r.mn[0]}"`);
+      for (const e of r.ex ?? []) {
+        if (looksEnglish(e.mn)) E(label, id, "ex.mn", `жишээний орчуулга англи байна: "${e.ja}"`);
+      }
+      for (const w of r.w ?? []) {
+        if (looksEnglish(w.mn)) E(label, id, "w.mn", `холбоос үгийн утга англи байна: "${w.w}"`);
+      }
+    }
+  }
+
+  // дүрэм: тайлбар болон жишээний орчуулга ч мөн адил монгол байх ёстой
+  for (const g of grammar) {
+    const id = g.id ?? g.p;
+    if (looksEnglish(g.mn)) E("public/data/grammar", id, "mn", `дүрмийн тайлбар англи байна: "${g.p}"`);
+    for (const e of g.ex ?? []) {
+      if (looksEnglish(e.mn)) E("public/data/grammar", id, "ex.mn", `жишээний орчуулга англи байна: "${e.ja}"`);
     }
   }
 

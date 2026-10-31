@@ -220,6 +220,41 @@ describe("content:qa — контентын чанарын хаалга", () => 
     expect(duplicateJsonKeys('{"a":1,"b":2}')).toEqual([]);
   });
 
+  it("англи хэвээр үлдсэн харагдах утга → FAIL (үг, холбоос үг, жишээ, дүрэм)", () => {
+    const kanjiBase = { k: "学", lvl: "N5", mq: "draft", mn: ["суралцах"], en: ["study"], on: ["ガク"], kun: [], rad: null, w: [], src: "kanjidic", sid: "k1", ex: [] };
+
+    // үгийн утга англи
+    const vEn = fixture({ vocab: [V({ mn: ["school"] })], terms: {} });
+    expect(runQa({ root: vEn }).errors.some((e) => e.includes("монгол утга англи байна"))).toBe(true);
+
+    // ханзны холбоос үгийн утга англи (11,418 бичлэгтэй ижил алдаа)
+    const wEn = fixture({
+      vocab: [V()],
+      kanji: [{ ...kanjiBase, w: [{ w: "学生", r: "がくせい", mn: "student", lvl: "N5" }] }],
+      terms: {},
+    });
+    expect(runQa({ root: wEn }).errors.some((e) => e.includes("холбоос үгийн утга англи байна"))).toBe(true);
+
+    // жишээ өгүүлбэрийн орчуулга англи
+    const exEn = fixture({
+      vocab: [V({ ex: [{ ja: "学校に行く。", fg: "", en: ["go to school"], ts: 1, mn: "go to school" }] })],
+      terms: {},
+    });
+    expect(runQa({ root: exEn }).errors.some((e) => e.includes("жишээний орчуулга англи байна"))).toBe(true);
+
+    // дүрмийн тайлбар англи
+    const gEn = fixture({
+      vocab: [V()],
+      grammar: [{ id: "wa", p: "〜は", lvl: "N5", mn: "topic marker", en: ["topic"], related: [], src: "openjlpt" }],
+      terms: {},
+    });
+    expect(runQa({ root: gEn }).errors.some((e) => e.includes("дүрмийн тайлбар англи байна"))).toBe(true);
+
+    // кирилл агуулсан утга алдаа болохгүй (латин холимог зөвшөөрөгдөнө)
+    const mixed = fixture({ vocab: [V({ mn: ["N5 түвшний үг"] })], terms: {} });
+    expect(runQa({ root: mixed }).errors.some((e) => e.includes("англи байна"))).toBe(false);
+  });
+
   it("covareжийн дүрэм тайлбарлагдсан байдаг (content:qa-н гаралтад)", () => {
     expect(RULES_TEXT).toContain("auto ≠ none");
     expect(RULES_TEXT).toContain("нийт");
