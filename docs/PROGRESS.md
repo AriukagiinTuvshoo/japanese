@@ -263,7 +263,7 @@
 | `test:routes` / `fonts:check` / `test:sw` | ✅ PASS |
 | `build` | ✅ PASS |
 | `test:e2e` | ✅ **5/5** |
-| GitHub Actions (PR #17) | ⛔ NOT RUN — push хийгээгүй |
+| GitHub Actions (PR #17) | ✅ **PASS** — run [41174461848](https://github.com/AriukagiinTuvshoo/japanese/actions/runs/41174461848), head `c0cea2e`, хоёр job бүгд success |
 
 ### D5 — Үлдсэн ажил
 
@@ -271,4 +271,9 @@
 - **10,432 бичлэг** (үг/ханз) хүний хяналтад ороогүй (`curated` 0.3%).
 - Rebuild нь `.cache/sources/` шаарддаг тул CI дээр `data:build`-ийн
   идемпотентыг шалгах боломжгүй — эх сурвалжийг CI-д бэлтгэх шаардлагатай.
-- Branch `feat/milestone-d1-review` push хийгдээгүй; PR #17 draft хэвээр.
+- Branch `feat/milestone-d1-review` push хийгдсэн; PR #17 нь `c0cea2e`-г зааж байна
+  (35 commit, 141 файл, mergeable clean). Дараагийн commit бүр FF push хийгдэнэ.
+- **`main` хөндөгдөөгүй** — `deploy.yml` зөвхөн main push-д ажилладаг тул production
+  сайт хуучин хэвээр (merge хийхэд л deploy эхэлнэ).
+- PR-ийн тайлбарыг GitHub API-аар шинэчлэх боломжгүй (token/`gh` CLI байхгүй) —
+  гар аргаар эсвэл backend token-той орчинд шинэчилнэ.
