@@ -69,9 +69,9 @@ export default function ReadingDetail({ id }: { id: string }) {
           </div>
           <div className="prose-jp p-6 sm:p-9">
             {passage.body.map((para, i) => (
-              <p key={i} className="font-jp text-[17px] leading-[2.15] text-sumi-900">
+              <div key={i} className="font-jp text-[17px] leading-[2.15] text-sumi-900">
                 <XRayText text={para} showFurigana={doc.profile.furigana} />
-              </p>
+              </div>
             ))}
           </div>
           {passage.source && (

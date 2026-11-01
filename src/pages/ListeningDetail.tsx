@@ -124,9 +124,9 @@ export default function ListeningDetail({ id }: { id: string }) {
                       🔊
                     </button>
                     <div className="min-w-0 flex-1">
-                      <p className="text-[15.5px] leading-relaxed">
+                      <div className="text-[15.5px] leading-relaxed">
                         <XRayText text={line.ja} showFurigana={doc.profile.furigana} />
-                      </p>
+                      </div>
                       {line.mn && <p className="mt-1 text-[13px] font-semibold text-sumi-700">{line.mn}</p>}
                     </div>
                   </div>
