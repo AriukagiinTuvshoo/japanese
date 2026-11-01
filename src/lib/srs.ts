@@ -150,7 +150,8 @@ export function schedule(prev: Card | undefined, g: Grade, opts: ScheduleOptions
     c.st = ST_FIRST[g];
   } else {
     const hardPenalty = 1 - (c.df - 1) * 0.035;
-    c.st = Math.max(0.6, c.st * ST_BOOST[g] * hardPenalty);
+    // Дээд хязгаар: интервал 365 хоногоос хэтрэхгүй тул үүнээс том st-д утгагүй.
+    c.st = Math.min(MAX_INTERVAL_DAYS, Math.max(0.6, c.st * ST_BOOST[g] * hardPenalty));
   }
   c.streak = (c.streak ?? 0) + 1;
   c.ph = "review";

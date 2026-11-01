@@ -118,6 +118,8 @@ describe("schedule — interval cap and determinism", () => {
     expect(days).toBeGreaterThan(0);
     expect(days).toBeLessThanOrEqual(MAX_INTERVAL_DAYS + 0.001);
     expect(Number.isFinite(c.st)).toBe(true);
+    // Stability must stay finite and meaningful instead of exploding past the cap.
+    expect(c.st).toBeLessThanOrEqual(MAX_INTERVAL_DAYS);
   });
 
   it("is deterministic for the same card and grade (preview must not drift)", () => {
