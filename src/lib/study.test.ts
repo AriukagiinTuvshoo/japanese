@@ -30,6 +30,14 @@ describe("reading (読解) questions", () => {
     expect(set.questions.every((q) => q.kind === "reading")).toBe(true);
   });
 
+  it("covers every level that ships a passage", () => {
+    for (const level of ["N5", "N4", "N3", "N2", "N1"] as const) {
+      const set = buildQuiz({ mode: "reading", level, count: 4 }, data);
+      expect(set.questions.length, level).toBeGreaterThan(0);
+      expect(set.questions.every((q) => q.passage && q.passage.length > 0)).toBe(true);
+    }
+  });
+
   it("shows the passage text with every question", () => {
     const set = buildQuiz({ mode: "reading", level: "N2", count: 4 }, data);
     for (const q of set.questions) {
@@ -88,6 +96,51 @@ describe("mock exam blueprint", () => {
     const read = sections.find((s) => s.section.id === "read")!;
     expect(read.questions).toHaveLength(read.section.count);
     expect(read.questions.some((q) => q.kind === "reading")).toBe(false);
+  });
+});
+
+describe("N5–N1 blueprint integrity", () => {
+  const LEVELS = ["N5", "N4", "N3", "N2", "N1"] as const;
+
+  it("builds every planned section with exactly the planned number of questions", () => {
+    for (const level of LEVELS) {
+      const bp = EXAM_BLUEPRINTS[level];
+      const built = buildExam(bp, data, "mn");
+      expect(built).toHaveLength(bp.sections.length);
+      for (const [i, sec] of built.entries()) {
+        expect(sec.section.id).toBe(bp.sections[i].id);
+        expect(sec.questions).toHaveLength(bp.sections[i].count);
+        expect(sec.questions.length).toBeGreaterThan(0);
+      }
+    }
+  });
+
+  it("keeps every question at the blueprint level", () => {
+    for (const level of LEVELS) {
+      for (const sec of buildExam(EXAM_BLUEPRINTS[level], data, "mn")) {
+        for (const q of sec.questions) expect(q.level).toBe(level);
+      }
+    }
+  });
+
+  it("puts real passage questions in every section that asks for reading", () => {
+    for (const level of LEVELS) {
+      for (const sec of buildExam(EXAM_BLUEPRINTS[level], data, "mn")) {
+        if (!sec.section.modes.includes("reading")) continue;
+        const reading = sec.questions.filter((q) => q.kind === "reading");
+        expect(reading.length, `${level} ${sec.section.id}`).toBeGreaterThan(0);
+        for (const q of reading) expect(q.passage?.length ?? 0).toBeGreaterThan(0);
+      }
+    }
+  });
+
+  it("has a coherent time and score budget", () => {
+    for (const level of LEVELS) {
+      const bp = EXAM_BLUEPRINTS[level];
+      expect(bp.sections.reduce((a, s) => a + s.minutes, 0)).toBeLessThanOrEqual(bp.minutes);
+      expect(bp.sections.every((s) => s.max === 60 || s.max === 120)).toBe(true);
+      expect(bp.passTotal).toBeGreaterThan(0);
+    }
   });
 });
 
