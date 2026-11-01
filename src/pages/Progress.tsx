@@ -6,6 +6,7 @@ import { loadFullData } from "../lib/data";
 import { LEVELS } from "../lib/types";
 import { dayOffset, todayKey, LEVEL_LABEL } from "../lib/text";
 import { cardStage, memoryStats, retrievability } from "../lib/srs";
+import { dayAccuracy, weakestAreas } from "../lib/stats";
 import { QUIZ_MODES } from "../lib/study";
 import { Bar, Button, Card, Chip, LevelBadge, Ring, SectionTitle, Spinner, Stat, Tabs } from "../components/ui";
 import { ui } from "../lib/i18n";
@@ -41,14 +42,8 @@ export default function Progress() {
     });
   }, [meta, doc.srs, doc.grammarDone]);
 
-  const weakKinds = useMemo(() => {
-    const m = new Map<string, { c: number; t: number }>();
-    for (const q of doc.quizzes) {
-      const cur = m.get(q.kind) ?? { c: 0, t: 0 };
-      cur.c += q.correct; cur.t += q.total; m.set(q.kind, cur);
-    }
-    return [...m.entries()].map(([k, v]) => ({ kind: k, pct: v.c / Math.max(1, v.t), total: v.t })).sort((a, b) => a.pct - b.pct);
-  }, [doc.quizzes]);
+  // Дасгал ба шалгалтын хэсгүүдийг НЭГ жагсаалтад нэгтгэж сул талыг тодорхойлно.
+  const weakKinds = useMemo(() => weakestAreas(doc.quizzes, doc.exams), [doc.quizzes, doc.exams]);
 
   const weakWords = useMemo(() => {
     if (!meta) return [];
@@ -64,11 +59,14 @@ export default function Progress() {
   }, [meta, doc.srs]);
 
   const days = useMemo(() => {
-    const out: { key: string; xp: number; min: number; reviews: number; correct: number; total: number }[] = [];
+    const out: { key: string; xp: number; min: number; reviews: number; correct: number; total: number; acc: number | null }[] = [];
     for (let i = 27; i >= 0; i--) {
       const k = dayOffset(todayKey(), -i);
       const d = doc.activity[k];
-      out.push({ key: k, xp: d?.xp ?? 0, min: d?.min ?? 0, reviews: d?.reviews ?? 0, correct: d?.correct ?? 0, total: d?.total ?? 0 });
+      out.push({
+        key: k, xp: d?.xp ?? 0, min: d?.min ?? 0, reviews: d?.reviews ?? 0,
+        correct: d?.correct ?? 0, total: d?.total ?? 0, acc: dayAccuracy(d),
+      });
     }
     return out;
   }, [doc.activity]);
@@ -260,10 +258,10 @@ export default function Progress() {
                       <div className="flex items-baseline justify-between">
                         <span className="text-[13px] font-bold text-sumi-700">{meta2 ? (language === "en" ? meta2.labelEn : meta2.label) : w.kind}</span>
                         <span className="font-mono text-[12px] font-bold tabnum text-sumi-500">
-                          {Math.round(w.pct * 100)}% · {w.total}
+                          {Math.round(w.accuracy * 100)}% · {w.total}
                         </span>
                       </div>
-                      <Bar value={w.pct} tone={w.pct >= 0.7 ? "matcha" : w.pct >= 0.5 ? "kin" : "shu"} className="mt-1.5" height={6} />
+                      <Bar value={w.accuracy} tone={w.accuracy >= 0.7 ? "matcha" : w.accuracy >= 0.5 ? "kin" : "shu"} className="mt-1.5" height={6} />
                     </div>
                   );
                 })}
@@ -302,7 +300,7 @@ export default function Progress() {
                       <td className="py-2 text-right font-mono tabnum">{doc.activity[d.key]?.newCards ?? 0}</td>
                       <td className="py-2 text-right font-mono tabnum">{d.reviews}</td>
                       <td className="py-2 text-right font-mono tabnum">
-                        {d.total ? `${Math.round((d.correct / d.total) * 100)}%` : "—"}
+                        {d.acc === null ? "—" : `${Math.round(d.acc * 100)}%`}
                       </td>
                     </tr>
                   ))}
