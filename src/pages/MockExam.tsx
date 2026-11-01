@@ -2,8 +2,8 @@ import { useEffect, useMemo, useState } from "react";
 import { cn } from "../utils/cn";
 import { navigate, useQuery } from "../lib/router";
 import { useStore } from "../lib/store";
-import { loadFullData } from "../lib/data";
-import { EXAM_BLUEPRINTS, buildExam, scoreExam, type ExamSection } from "../lib/study";
+import { READING, loadFullData } from "../lib/data";
+import { EXAM_BLUEPRINTS, buildExam, scoreExam, sectionPassMark, type ExamSection } from "../lib/study";
 import type { Question } from "../lib/study";
 import type { Level } from "../lib/types";
 import { LEVELS } from "../lib/types";
@@ -16,7 +16,7 @@ import { ui } from "../lib/i18n";
 type Stage = "pick" | "running" | "sectionResult" | "final";
 
 export default function MockExam() {
-  const { doc } = useStore();
+  const { doc, actions } = useStore();
   const language = doc.profile.language ?? "mn";
   const t = ui[language];
   const { query } = useQuery();
@@ -27,6 +27,7 @@ export default function MockExam() {
   const [results, setResults] = useState<{ section: ExamSection; correct: number; total: number }[]>([]);
   const [, setAnswers] = useState<(number | null)[]>([]);
   const [loading, setLoading] = useState(false);
+  const [finishedMinutes, setFinishedMinutes] = useState<number | null>(null);
   const startAt = useMemo(() => Date.now(), [sections]);
 
   const bp = EXAM_BLUEPRINTS[level];
@@ -37,10 +38,11 @@ export default function MockExam() {
   const start = async () => {
     setLoading(true);
     const data = await loadFullData();
-    const built = buildExam(bp, { vocab: data.vocab, kanji: data.kanji, grammar: data.grammar }, language);
+    const built = buildExam(bp, { vocab: data.vocab, kanji: data.kanji, grammar: data.grammar, reading: READING }, language);
     setSections(built);
     setSecIdx(0);
     setResults([]);
+    setFinishedMinutes(null);
     setStage("running");
     setLoading(false);
   };
@@ -50,13 +52,34 @@ export default function MockExam() {
   const onFinishSection = (r: { correct: number; total: number }) => {
     const next = [...results, { section: current.section, correct: r.correct, total: r.total }];
     setResults(next);
-    if (secIdx + 1 < sections.length) setStage("sectionResult");
-    else setStage("final");
+
+    if (next.length < sections.length) {
+      setStage("sectionResult");
+      return;
+    }
+
+    /* Бүх хэсэг дууссан үед л түүхэнд бүртгэнэ — хагас шалгалт дүн гэж хадгалахгүй. */
+    const minutes = Math.max(1, Math.round((Date.now() - startAt) / 60000));
+    const scored = scoreExam(bp, next, minutes);
+    setFinishedMinutes(minutes);
+    actions.recordExam({
+      id: `ex-${Date.now()}`,
+      level,
+      at: Date.now(),
+      sections: scored.sections,
+      total: scored.total,
+      max: scored.max,
+      passed: scored.passed,
+      minutes,
+      mock: true,
+    });
+    setStage("final");
   };
 
   /* ── эцсийн үр дүн ── */
   if (stage === "final") {
-    const scored = scoreExam(bp, results, Math.round((Date.now() - startAt) / 60000));
+    const minutesTaken = finishedMinutes ?? Math.max(1, Math.round((Date.now() - startAt) / 60000));
+    const scored = scoreExam(bp, results, minutesTaken);
     const weakest = [...scored.sections].sort((a, b) => a.score / a.max - b.score / b.max)[0];
     const verdict = scored.total >= bp.passTotal
       ? t.verdictPass
@@ -83,8 +106,18 @@ export default function MockExam() {
                 {t.examNote}
               </p>
               <p className="mt-2 text-[12.5px] text-sumi-500">
-                {t.spentPre(Math.round((Date.now() - startAt) / 60000), bp.passTotal, scored.max)}
+                {t.spentPre(minutesTaken, bp.passTotal, scored.max)}
               </p>
+              {scored.failed.length > 0 && (
+                <div className="mt-3 rounded-xl border border-shu-200 bg-shu-50 p-3">
+                  <p className="text-[12.5px] font-extrabold text-shu-700">{t.sectionFloorTitle}</p>
+                  <ul className="mt-1 space-y-0.5">
+                    {scored.failed.map((f) => (
+                      <li key={f.name} className="text-[12.5px] text-shu-700">{t.sectionFloor(f.name, f.score, f.mark)}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
 
@@ -237,7 +270,7 @@ export default function MockExam() {
               <div className="min-w-0 flex-1">
                 <p className="text-[13.5px] font-extrabold">{language === "en" ? s.nameEn ?? s.name : s.name} <span className="font-jp text-sumi-400">{s.jp}</span></p>
                 <p className="mt-0.5 text-[12px] text-sumi-500">
-                  {s.count} {t.qUnit} · {s.minutes} {t.minutes} · {t.maxScore} {s.max}
+                  {s.count} {t.qUnit} · {s.minutes} {t.minutes} · {t.maxScore} {s.max} · {t.sectionMin} {sectionPassMark(s.max)}
                 </p>
               </div>
             </div>

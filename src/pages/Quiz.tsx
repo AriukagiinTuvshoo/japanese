@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { cn } from "../utils/cn";
 import { navigate, useQuery } from "../lib/router";
 import { useStore } from "../lib/store";
-import { loadFullData } from "../lib/data";
+import { READING, loadFullData } from "../lib/data";
 import { QUIZ_MODES, buildQuiz, type QuizMode, type QuizSet } from "../lib/study";
 import type { Level } from "../lib/types";
 import { LEVELS } from "../lib/types";
@@ -42,7 +42,7 @@ export default function Quiz() {
     const data = await loadFullData();
     const result = buildQuiz(
       { mode: m, level, count: m === "mistakes" ? Math.max(5, doc.mistakes.length) : count, lang: language },
-      { vocab: data.vocab, kanji: data.kanji, grammar: data.grammar, weakKinds, mistakeIds: doc.mistakes.map((x) => x.id) },
+      { vocab: data.vocab, kanji: data.kanji, grammar: data.grammar, reading: READING, weakKinds, mistakeIds: doc.mistakes.map((x) => x.id) },
     );
     if (!result.questions.length) {
       setLoading(false);

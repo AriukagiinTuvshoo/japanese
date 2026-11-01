@@ -8,7 +8,7 @@
 import { LEVEL_META } from "../data/levels";
 import type { Language } from "./i18n";
 import { MN_PENDING, grammarEn } from "./i18n";
-import type { Grammar, Kanji, Level, Vocab } from "./types";
+import type { Grammar, Kanji, Level, ReadingPassage, Vocab } from "./types";
 import { LEVELS } from "./types";
 import { pick, shuffle } from "./data";
 
@@ -24,6 +24,8 @@ export interface Question {
   refKanji?: string;
   options: string[];
   answer: number;
+  /** Уншиж ойлгох асуултад харуулах эх текст (мөрүүдээр). */
+  passage?: string[];
   /** Зөв хариултын тайлбар (монгол). */
   explain?: string;
   example?: { ja: string; mn?: string; en?: string };
@@ -76,6 +78,7 @@ export const QUIZ_MODES: { id: QuizMode; label: string; desc: string; labelEn: s
   { id: "kanji-stroke", label: "Зурлагын тоо", desc: "Хэдэн зурлагатай вэ", labelEn: "Stroke count", descEn: "How many strokes", icon: "筆", tone: "kin" },
   { id: "grammar-mn", label: "Дүрмийн утга", desc: "Дүрмийн утгыг таа", labelEn: "Grammar meaning", descEn: "Pick the pattern meaning", icon: "文", tone: "murasaki" },
   { id: "grammar-use", label: "Дүрэм хэрэглээ", desc: "Зөв өгүүлбэрийг сонго", labelEn: "Grammar usage", descEn: "Pick the correct sentence", icon: "用", tone: "matcha" },
+  { id: "reading", label: "Уншиж ойлголт", desc: "Эх уншиж асуултад хариул", labelEn: "Reading comprehension", descEn: "Read a passage and answer", icon: "読", tone: "ai" },
   { id: "mixed", label: "Холимог", desc: "Бүх төрлөөс хольж", labelEn: "Mixed", descEn: "All kinds combined", icon: "混", tone: "shu" },
   { id: "weak", label: "Сул тал", desc: "Алдаж буй зүйлсээ давт", labelEn: "Weak points", descEn: "Drill what you miss", icon: "弱", tone: "shu" },
   { id: "mistakes", label: "Алдааны дэвтэр", desc: "Алдсан асуултуудаа", labelEn: "Mistake log", descEn: "The ones you got wrong", icon: "誤", tone: "kin" },
@@ -256,9 +259,47 @@ export interface QuizSet {
   level: Level;
 }
 
+/** Уншиж ойлголт (読解) — эх текст бүрээс түүний асуултуудыг үүсгэнэ. */
+function readingQuestions(
+  passages: ReadingPassage[],
+  level: Level,
+  count: number,
+  language: Language,
+): Question[] {
+  const pool = passages.filter((p) => p.level === level && p.questions.length > 0);
+  if (!pool.length) return [];
+
+  const out: Question[] = [];
+  for (const p of pick(pool, pool.length, rnd)) {
+    p.questions.forEach((q, i) => {
+      if (out.length >= count) return;
+      // Сонголтын байрлалыг холино — зөв хариулт үргэлж эхэнд байхгүй.
+      const order = shuffle(q.opts.map((_, k) => k), rnd);
+      out.push({
+        id: `r-${p.id}-${i}`,
+        kind: "reading",
+        level: p.level,
+        passage: p.body,
+        prompt: q.q,
+        promptSub: language === "en" ? undefined : q.mn,
+        options: order.map((k) => q.opts[k]),
+        answer: order.indexOf(q.a),
+        explain: q.why,
+        section: SECTION_LABEL[language]["Уншлага"] ?? "Уншлага",
+      });
+    });
+    if (out.length >= count) break;
+  }
+  return out;
+}
+
 export function buildQuiz(
   req: QuizRequest,
-  data: { vocab: Vocab[]; kanji: Kanji[]; grammar: Grammar[]; weakKinds?: string[]; mistakeIds?: string[] },
+  data: {
+    vocab: Vocab[]; kanji: Kanji[]; grammar: Grammar[];
+    reading?: ReadingPassage[];
+    weakKinds?: string[]; mistakeIds?: string[];
+  },
 ): QuizSet {
   const { mode, level, count } = req;
   const language: Language = req.lang ?? "mn";
@@ -319,6 +360,9 @@ export function buildQuiz(
           if (out.length >= per) break;
           push(grammarQuestion(g, gPool, language));
         }
+        break;
+      case "reading":
+        for (const q of readingQuestions(data.reading ?? [], level, per, language)) push(q);
         break;
       default:
         break;
@@ -381,7 +425,7 @@ export const EXAM_BLUEPRINTS: Record<Level, ExamBlueprint> = {
   N5: {
     level: "N5", title: "N5 жишиг шалгалт", titleEn: "N5 mock exam", minutes: 35, passTotal: 80,
     sections: [
-      { id: "lang", name: "Хэлний мэдлэг · Уншлага", nameEn: "Language Knowledge · Reading", jp: "言語知識・読解", count: 20, minutes: 20, modes: ["vocab-jp-mn", "vocab-read", "kanji-mn", "grammar-mn"], max: 120 },
+      { id: "lang", name: "Хэлний мэдлэг · Уншлага", nameEn: "Language Knowledge · Reading", jp: "言語知識・読解", count: 20, minutes: 20, modes: ["reading", "vocab-jp-mn", "vocab-read", "kanji-mn", "grammar-mn"], max: 120 },
       { id: "listen", name: "Сонсгол", nameEn: "Listening", jp: "聴解", count: 10, minutes: 15, modes: ["vocab-listen"], max: 60 },
     ],
     note: "N5-д 800 орчим үг, 100 ханз шаардлагатай.",
@@ -390,7 +434,7 @@ export const EXAM_BLUEPRINTS: Record<Level, ExamBlueprint> = {
   N4: {
     level: "N4", title: "N4 жишиг шалгалт", titleEn: "N4 mock exam", minutes: 50, passTotal: 90,
     sections: [
-      { id: "lang", name: "Хэлний мэдлэг · Уншлага", nameEn: "Language Knowledge · Reading", jp: "言語知識・読解", count: 24, minutes: 30, modes: ["vocab-jp-mn", "vocab-read", "vocab-fill", "grammar-mn"], max: 120 },
+      { id: "lang", name: "Хэлний мэдлэг · Уншлага", nameEn: "Language Knowledge · Reading", jp: "言語知識・読解", count: 24, minutes: 30, modes: ["reading", "vocab-jp-mn", "vocab-read", "vocab-fill", "grammar-mn"], max: 120 },
       { id: "listen", name: "Сонсгол", nameEn: "Listening", jp: "聴解", count: 12, minutes: 20, modes: ["vocab-listen"], max: 60 },
     ],
     note: "N4-д 1,500 орчим үг, 300 ханз шаардлагатай.",
@@ -400,7 +444,7 @@ export const EXAM_BLUEPRINTS: Record<Level, ExamBlueprint> = {
     level: "N3", title: "N3 жишиг шалгалт", titleEn: "N3 mock exam", minutes: 70, passTotal: 95,
     sections: [
       { id: "lang", name: "Хэлний мэдлэг", nameEn: "Language Knowledge", jp: "言語知識", count: 18, minutes: 25, modes: ["vocab-jp-mn", "vocab-read", "kanji-read", "grammar-mn"], max: 60 },
-      { id: "read", name: "Уншлага", nameEn: "Reading", jp: "読解", count: 10, minutes: 25, modes: ["vocab-fill", "grammar-mn"], max: 60 },
+      { id: "read", name: "Уншлага", nameEn: "Reading", jp: "読解", count: 10, minutes: 25, modes: ["reading", "vocab-fill", "grammar-mn"], max: 60 },
       { id: "listen", name: "Сонсгол", nameEn: "Listening", jp: "聴解", count: 12, minutes: 20, modes: ["vocab-listen"], max: 60 },
     ],
     note: "N3-д 3,750 орчим үг, 650 ханз шаардлагатай. Оноо бүр 60-аас дээш байх ёстой.",
@@ -410,7 +454,7 @@ export const EXAM_BLUEPRINTS: Record<Level, ExamBlueprint> = {
     level: "N2", title: "N2 жишиг шалгалт", titleEn: "N2 mock exam", minutes: 85, passTotal: 90,
     sections: [
       { id: "lang", name: "Хэлний мэдлэг", nameEn: "Language Knowledge", jp: "言語知識", count: 20, minutes: 30, modes: ["vocab-jp-mn", "vocab-read", "kanji-read", "grammar-mn"], max: 60 },
-      { id: "read", name: "Уншлага", nameEn: "Reading", jp: "読解", count: 12, minutes: 30, modes: ["vocab-fill", "grammar-mn"], max: 60 },
+      { id: "read", name: "Уншлага", nameEn: "Reading", jp: "読解", count: 12, minutes: 30, modes: ["reading", "vocab-fill", "grammar-mn"], max: 60 },
       { id: "listen", name: "Сонсгол", nameEn: "Listening", jp: "聴解", count: 12, minutes: 25, modes: ["vocab-listen"], max: 60 },
     ],
     note: "N2 бол Японы ихэнх компанид шаарддаг түвшин.",
@@ -420,7 +464,7 @@ export const EXAM_BLUEPRINTS: Record<Level, ExamBlueprint> = {
     level: "N1", title: "N1 жишиг шалгалт", titleEn: "N1 mock exam", minutes: 95, passTotal: 100,
     sections: [
       { id: "lang", name: "Хэлний мэдлэг", nameEn: "Language Knowledge", jp: "言語知識", count: 22, minutes: 35, modes: ["vocab-jp-mn", "vocab-read", "kanji-read", "grammar-mn"], max: 60 },
-      { id: "read", name: "Уншлага", nameEn: "Reading", jp: "読解", count: 14, minutes: 35, modes: ["vocab-fill", "grammar-mn"], max: 60 },
+      { id: "read", name: "Уншлага", nameEn: "Reading", jp: "読解", count: 14, minutes: 35, modes: ["reading", "vocab-fill", "grammar-mn"], max: 60 },
       { id: "listen", name: "Сонсгол", nameEn: "Listening", jp: "聴解", count: 12, minutes: 25, modes: ["vocab-listen"], max: 60 },
     ],
     note: "N1 нь сонин, эссэ, хийсвэр сэдвийн текстийг бүрэн ойлгох түвшин.",
@@ -428,24 +472,71 @@ export const EXAM_BLUEPRINTS: Record<Level, ExamBlueprint> = {
   },
 };
 
-export function buildExam(bp: ExamBlueprint, data: { vocab: Vocab[]; kanji: Kanji[]; grammar: Grammar[] }, language: Language = "mn") {
+/** `total` асуултыг `n` горимд аль болох тэнцүү хуваана. */
+function splitCount(total: number, n: number): number[] {
+  const base = Math.floor(total / n);
+  const rem = total - base * n;
+  return Array.from({ length: n }, (_, i) => base + (i < rem ? 1 : 0));
+}
+
+export function buildExam(
+  bp: ExamBlueprint,
+  data: { vocab: Vocab[]; kanji: Kanji[]; grammar: Grammar[]; reading?: ReadingPassage[] },
+  language: Language = "mn",
+) {
   return bp.sections.map((sec) => {
-    const per = Math.ceil(sec.count / sec.modes.length);
-    const questions: Question[] = [];
-    for (const m of sec.modes) {
-      const set = buildQuiz({ mode: m, level: bp.level, count: per, lang: language }, data);
-      questions.push(...set.questions);
+    /* Горим бүрд квот өгнө — эс бөгөөс shuffle+slice нэг горимыг бүхэлд
+       хасаж, жишээ нь уншлагын асуулт шалгалтад огт орохгүй байсан. */
+    const quotas = splitCount(sec.count, sec.modes.length);
+    const blocks = sec.modes.map((m, i) =>
+      quotas[i] > 0 ? buildQuiz({ mode: m, level: bp.level, count: quotas[i], lang: language }, data).questions : [],
+    );
+    const questions: Question[] = blocks.flatMap((b, i) => b.slice(0, quotas[i]));
+
+    /* Тухайн түвшинд контент хүрэлцэхгүй бол бусад төрлөөс нөхнө. */
+    let short = sec.count - questions.length;
+    if (short > 0) {
+      const seen = new Set(questions.map((q) => q.id));
+      for (let round = 0; round < 3 && short > 0; round++) {
+        for (const m of sec.modes) {
+          if (short <= 0) break;
+          const extra = buildQuiz({ mode: m, level: bp.level, count: short + sec.count, lang: language }, data).questions;
+          for (const q of extra) {
+            if (short <= 0) break;
+            if (seen.has(q.id)) continue;
+            seen.add(q.id);
+            questions.push(q);
+            short -= 1;
+          }
+        }
+      }
     }
+
     return { section: sec, questions: shuffle(questions, rnd).slice(0, sec.count) };
   });
 }
+
+/**
+ * Хэсгийн доод оноо — JLPT-ийн 基準点 (60 оноотой хэсэгт 19).
+ * Албан ёсны оноо БИШ, гэхдээ жинхэнэ дүрмийн хэлбэрийг дуурайна:
+ * нийт оноо хүрсэн ч нэг хэсэг доод хязгаараас доош бол тэнцэхгүй.
+ */
+export const SECTION_PASS_RATIO = 19 / 60;
+export const sectionPassMark = (max: number) => Math.round(max * SECTION_PASS_RATIO);
 
 /** Оноог бодож, тэнцсэн эсэхийг тодорхойлно (албан ёсны оноо БИШ). */
 export function scoreExam(
   bp: ExamBlueprint,
   results: { section: ExamSection; correct: number; total: number }[],
   minutes: number,
-): { sections: { name: string; correct: number; total: number; score: number; max: number }[]; total: number; max: number; passed: boolean } {
+): {
+  sections: { name: string; correct: number; total: number; score: number; max: number }[];
+  total: number;
+  max: number;
+  passed: boolean;
+  /** Доод оноонд хүрээгүй хэсгүүд. */
+  failed: { name: string; score: number; mark: number }[];
+} {
   const sections = results.map((r) => ({
     name: r.section.name,
     correct: r.correct,
@@ -455,9 +546,20 @@ export function scoreExam(
   }));
   const total = sections.reduce((a, s) => a + s.score, 0);
   const max = sections.reduce((a, s) => a + s.max, 0);
-  const passed = total >= bp.passTotal;
+  const failed = sections
+    .filter((s) => s.score < sectionPassMark(s.max))
+    .map((s) => ({ name: s.name, score: s.score, mark: sectionPassMark(s.max) }));
+  const passed = total >= bp.passTotal && failed.length === 0;
   void minutes;
-  return { sections, total, max, passed };
+  return { sections, total, max, passed, failed };
+}
+
+/** Шалгалтын асуултын тоо (оноо биш) — өдрийн статистик үүгээр бодогдоно. */
+export function examTotals(sections: { correct: number; total: number }[]) {
+  return sections.reduce(
+    (a, s) => ({ correct: a.correct + s.correct, total: a.total + s.total }),
+    { correct: 0, total: 0 },
+  );
 }
 
 export const levelFromScore = (detail: Record<string, number>): Level => {

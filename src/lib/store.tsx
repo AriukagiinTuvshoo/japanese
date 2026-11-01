@@ -16,6 +16,7 @@ import {
 } from "./doc";
 import { ACHIEVEMENTS, XP, xpLevel, type AchievementInput } from "./gamification";
 import { schedule, type Grade } from "./srs";
+import { examTotals } from "./study";
 import { backupKeyOf, decodeDoc, docKeyOf, mergeDocs, normalizeDocValue, readDoc, writeDoc } from "./storage";
 import { dayOffset, todayKey } from "./text";
 import type { Level } from "./types";
@@ -360,11 +361,19 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       ...bumpDayInto(d, { correct: r.correct, total: r.total, xp: r.correct * XP.quizCorrect, min: r.minutes }),
     })),
 
-    recordExam: (r) => patch((d) => ({
-      ...d,
-      exams: [r, ...d.exams].slice(0, 60),
-      ...bumpDayInto(d, { xp: r.total * XP.examQuestion + (r.passed ? XP.examPass : 0), min: r.minutes, correct: r.total, total: r.max }),
-    })),
+    recordExam: (r) => {
+      // Өдрийн нарийвчлалыг АСУУЛТЫН тоогоор бодно — оноо (max 180) биш.
+      const counts = examTotals(r.sections);
+      patch((d) => ({
+        ...d,
+        exams: [r, ...d.exams].slice(0, 60),
+        ...bumpDayInto(d, {
+          xp: counts.total * XP.examQuestion + (r.passed ? XP.examPass : 0),
+          min: r.minutes,
+          ...counts,
+        }),
+      }));
+    },
 
     toggleGrammar: (id, _level, on) => patch((d) => {
       const has = d.grammarDone.includes(id);

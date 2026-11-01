@@ -206,6 +206,16 @@ export function QuizRunner({
 
       {/* ── асуулт ── */}
       <div key={q.id} className="card mt-5 animate-rise p-6 sm:p-7">
+        {q.passage && q.passage.length > 0 && (
+          <div className="mb-5 rounded-xl border border-sumi-900/8 bg-sumi-900/[0.03] p-4">
+            <p className="mb-2 text-[11px] font-bold uppercase tracking-wide text-sumi-400">{t.readingPassageLabel}</p>
+            {q.passage.map((line, li) => (
+              <p key={li} className="mt-2 first:mt-0">
+                <Furigana text={line} show={doc.profile.furigana} className="text-[15.5px] leading-[1.95] text-sumi-900" />
+              </p>
+            ))}
+          </div>
+        )}
         <div className="flex items-start gap-4">
           {q.audio ? (
             <button
