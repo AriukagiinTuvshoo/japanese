@@ -9,6 +9,7 @@ import { ui } from "../lib/i18n";
 import { Bar, Button, Chip, Ring } from "./ui";
 import { SearchPalette } from "./SearchPalette";
 import { AccountModal } from "./AccountModal";
+import { StorageNotice } from "./StorageNotice";
 
 interface NavItem {
   id: string;
@@ -258,6 +259,7 @@ export default function Shell({ children }: { children: ReactNode }) {
       {/* ── Content ── */}
       <main className="lg:pl-[268px]">
         <div key={route.hash.split("?")[0]} className="mx-auto max-w-[1240px] animate-rise px-4 pb-32 pt-6 sm:px-6 sm:pt-8 lg:pb-16">
+          <StorageNotice />
           {children}
         </div>
       </main>

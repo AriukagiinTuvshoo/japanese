@@ -5,10 +5,14 @@
  * хүндрэл (difficulty), сэргээх магадлал (retrievability) гэсэн 3
  * параметртэй. Интервалыг тэдгээрээс бодож гаргана.
  *
- *   Again (0) → алдсан    → 10 мин, тогтвортой байдал огцом буурна
- *   Hard  (1) → хүнд      → ~1 өдөр, бага зэрэг өснө
- *   Good  (2) → хэвийн    → хуваарь ёсоор (эхэндээ 4 өдөр)
- *   Easy  (3) → амархан   → огцом урт (эхэндээ 12 өдөр)
+ *   Again (0) → алдсан    → 10 мин (relearning), тогтвортой байдал огцом буурна
+ *   Hard  (1) → хүнд      → шинэ картад 10 мин, дараа нь ~1 өдөр
+ *   Good  (2) → хэвийн    → хуваарь ёсоор (шинэ картад 1 өдөр)
+ *   Easy  (3) → амархан   → огцом урт (шинэ картад ~3 өдөр)
+ *
+ * Дээд хязгаар: MAX_INTERVAL_DAYS (365 хоног). Fuzz нь зөвхөн 3+ хоногийн
+ * интервалд, зөвхөн зөв хариултад, карт бүрд тогтмол (deterministic) байна —
+ * ингэснээр урьдчилсан харуулсан хугацаа бодит хуваарьтайгаа яг таарна.
  *
  * Зөвхөн интервал хадгалахаас гадна retention / accuracy / confidence /
  * forgetting rate-ыг тооцоолж, сул үгсийг автоматаар илрүүлнэ.
@@ -47,6 +51,47 @@ export interface Card {
 const MIN = 60_000;
 const DAY = 86_400_000;
 
+/** Давталтын интервалын дээд хязгаар (хоног). */
+export const MAX_INTERVAL_DAYS = 365;
+/** «Again» дарахад буцах богино алхам (минут). */
+export const RELEARN_MIN = 10;
+/** Fuzz зөвхөн энэ хэмжээнээс урт интервалд хэрэглэгдэнэ (хоног). */
+const FUZZ_MIN_DAYS = 3;
+
+const DF_DELTA: Record<Grade, number> = { 0: 1.35, 1: 0.35, 2: -0.15, 3: -0.7 };
+const ST_FIRST: Record<Grade, number> = { 0: 0.15, 1: 0.6, 2: 1.4, 3: 3.2 };
+const ST_BOOST: Record<Grade, number> = { 0: 1, 1: 1.18, 2: 2.35, 3: 3.6 };
+
+export interface ScheduleOptions {
+  /** Цаг (тест болон preview-д тогтмол болгоход). */
+  now?: number;
+}
+
+/** Тогтмол 0..1 утга — ижил оролтод үргэлж ижил (Math.random биш). */
+function hash32(parts: number[]): number {
+  let h = 2166136261 >>> 0;
+  for (const p of parts) {
+    h = (h ^ (p | 0)) >>> 0;
+    h = Math.imul(h, 16777619) >>> 0;
+  }
+  h = (h ^ (h >>> 16)) >>> 0;
+  return h / 4294967296;
+}
+
+/**
+ * ±5% fuzz — карт бүрд тогтмол. Оролт нь зөвхөн тухайн картын өөрийн төлөв
+ * тул preview болон бодит үнэлгээ ижил интервал гаргана.
+ */
+function fuzzFactor(prev: Card | undefined, g: Grade): number {
+  const seed = hash32([
+    (prev?.n ?? 0) * 7919,
+    Math.floor((prev?.last ?? 0) / MIN),
+    Math.round((prev?.st ?? 0) * 1000),
+    g * 104_729,
+  ]);
+  return 0.95 + seed * 0.1;
+}
+
 export const newCard = (): Card => ({
   due: 0, st: 0, df: 5, n: 0, l: 0, last: 0, ph: "new", streak: 0, h: [],
 });
@@ -76,52 +121,51 @@ export function retrievability(c: Card, at = Date.now()) {
  * @param prev өмнөх карт (байхгүй бол шинэ)
  * @param g үнэлгээ
  */
-export function schedule(prev: Card | undefined, g: Grade): Card {
-  const c = prev ? { ...prev } : newCard();
-  const now = Date.now();
-  const wasNew = c.ph === "new";
+export function schedule(prev: Card | undefined, g: Grade, opts: ScheduleOptions = {}): Card {
+  const now = opts.now ?? Date.now();
+  const c: Card = prev ? { ...prev } : newCard();
+  const prevPhase = c.ph;
+  const wasNew = prevPhase === "new";
+  const wasGraduated = prevPhase === "review";
 
   c.n += 1;
   c.last = now;
   c.h = [...c.h, g].slice(-12);
+  c.df = Math.min(10, Math.max(1, c.df + DF_DELTA[g]));
 
-  // ── хүндрэл ────────────────────────────────────────────────
-  const dfDelta = { 0: 1.35, 1: 0.35, 2: -0.15, 3: -0.7 }[g];
-  c.df = Math.min(10, Math.max(1, c.df + dfDelta));
-
-  // ── тогтвортой байдал ──────────────────────────────────────
-  if (wasNew || c.ph === "learning" || c.ph === "relearn" || c.st < 0.5) {
-    c.st = { 0: 0.15, 1: 0.6, 2: 1.4, 3: 3.2 }[g];
-  } else if (g === 0) {
-    c.l += 1;
-    c.streak = 0;
-    c.st = Math.max(0.15, c.st * 0.35);
-  } else {
-    const boost = { 1: 1.18, 2: 2.35, 3: 3.6 }[g];
-    const hardPenalty = 1 - (c.df - 1) * 0.035;
-    c.st = Math.max(0.6, c.st * boost * hardPenalty);
-  }
-
-  // ── төлөв ба интервал ──────────────────────────────────────
+  /* ── Again: үргэлж богино relearning алхам. Fuzz хэрэглэхгүй. ── */
   if (g === 0) {
-    c.ph = c.n > 1 ? "relearn" : "learning";
+    // Нэг удаагийн алдалт = нэг lapse. Relearning дотор дахин «Again»
+    // дарахад lapse дахин нэмэгдэхгүй (Anki-гийн зан төлөв).
+    if (wasGraduated) c.l += 1;
     c.streak = 0;
-    c.due = now + 10 * MIN;
+    c.st = wasNew ? ST_FIRST[0] : Math.max(0.15, c.st * 0.35);
+    c.ph = wasNew || prevPhase === "learning" ? "learning" : "relearn";
+    c.due = now + RELEARN_MIN * MIN;
+    return c;
+  }
+
+  /* ── тогтвортой байдал ── */
+  if (wasNew || prevPhase === "learning" || prevPhase === "relearn" || c.st < 0.5) {
+    c.st = ST_FIRST[g];
   } else {
-    c.streak = (c.streak ?? 0) + 1;
-    c.ph = "review";
-    // Анхны суралцах үед Anki шиг богино алхмууд
-    if (c.n === 1 && g === 1) c.due = now + 10 * MIN;
-    else if (c.n <= 2 && g === 1) c.due = now + DAY;
-    else c.due = now + Math.max(1, Math.round(c.st)) * DAY;
+    const hardPenalty = 1 - (c.df - 1) * 0.035;
+    c.st = Math.max(0.6, c.st * ST_BOOST[g] * hardPenalty);
+  }
+  c.streak = (c.streak ?? 0) + 1;
+  c.ph = "review";
+
+  /* ── интервал ── */
+  // Шинэ картын эхний «Хүнд» — Anki шиг богино алхам.
+  if (c.n === 1 && g === 1) {
+    c.due = now + 10 * MIN;
+    return c;
   }
 
-  // Fuzz: нэг өдөрт хэт олон карт хуримтлагдахаас сэргийлнэ (±5%)
-  if (c.st > 3) {
-    const fuzz = 1 + (Math.random() - 0.5) * 0.1;
-    c.due = now + Math.max(1, Math.round(c.st * fuzz)) * DAY;
-  }
-
+  let days = c.n <= 2 && g === 1 ? 1 : Math.max(1, Math.round(c.st));
+  if (days >= FUZZ_MIN_DAYS) days = Math.max(1, Math.round(days * fuzzFactor(prev, g)));
+  days = Math.min(MAX_INTERVAL_DAYS, days);
+  c.due = now + days * DAY;
   return c;
 }
 
@@ -139,8 +183,14 @@ export function intervalLabel(c: Card, language: "mn" | "en" = "mn") {
 }
 
 /** Хэрэглэгчид дараагийн үнэлгээ бүрт ямар интервал гарахыг урьдчилан харуулна. */
-export function previewIntervals(prev: Card | undefined, language: "mn" | "en" = "mn") {
-  return ([0, 1, 2, 3] as Grade[]).map((g) => ({ g, label: intervalLabel(schedule(prev, g), language) }));
+export function previewIntervals(
+  prev: Card | undefined,
+  language: "mn" | "en" = "mn",
+  opts: ScheduleOptions = {},
+) {
+  const now = opts.now ?? Date.now();
+  // Бүх үнэлгээг нэг цаг дээр бодно — render бүрд ижил хариу гарна.
+  return ([0, 1, 2, 3] as Grade[]).map((g) => ({ g, label: intervalLabel(schedule(prev, g, { now }), language) }));
 }
 
 /* ─────────────── Санах ойн шинжилгээ ─────────────── */

@@ -10,176 +10,43 @@ import {
   createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode,
 } from "react";
 import { api, setToken, type Account } from "./api";
+import {
+  SCHEMA_VERSION, emptyDay, freshDoc,
+  type ActivityDay, type Doc, type ExamRecord, type Mistake, type Profile, type QuizRecord,
+} from "./doc";
 import { ACHIEVEMENTS, XP, xpLevel, type AchievementInput } from "./gamification";
-import { schedule, type Card, type Grade } from "./srs";
+import { schedule, type Grade } from "./srs";
+import { backupKeyOf, decodeDoc, docKeyOf, mergeDocs, normalizeDocValue, readDoc, writeDoc } from "./storage";
 import { dayOffset, todayKey } from "./text";
 import type { Level } from "./types";
-import type { Language } from "./i18n";
 
 /* ─────────────── Төрлүүд ─────────────── */
 
-export interface ExamRecord {
-  id: string;
-  level: Level;
-  at: number;
-  sections: { name: string; correct: number; total: number; score: number; max: number }[];
-  total: number;
-  max: number;
-  passed: boolean;
-  minutes: number;
-  mock: boolean;
+export type { ActivityDay, CurriculumState, Doc, ExamRecord, Mistake, Profile, QuizRecord } from "./doc";
+
+/** Хадгалалтын ноцтой байдал — хэрэглэгчид мэдэгдэх зорилготой. */
+export interface StorageIssue {
+  kind: "corrupt" | "future" | "quota" | "error";
+  raw?: string;
+  backupKey?: string;
+  futureVersion?: number;
+  detail?: string;
 }
 
-export interface QuizRecord {
-  at: number;
-  kind: string;
-  level: Level;
-  correct: number;
-  total: number;
-  minutes: number;
-}
-
-export interface Mistake {
-  id: string;
-  kind: string;
-  level: Level;
-  prompt: string;
-  answer: string;
-  given: string;
-  note?: string;
-  at: number;
-  count: number;
-}
-
-export interface Profile {
-  name: string;
-  current: Level | "zero";
-  target: Level;
-  examDate: string;
-  dailyGoal: number;
-  newPerDay: number;
-  furigana: boolean;
-  rate: number;
-  onboarded: boolean;
-  theme: "light" | "sepia";
-  romaji: boolean;
-  /** UI and learning-content language. Stored with the profile and synced. */
-  language: Language;
-}
-
-export interface ActivityDay {
-  xp: number;
-  min: number;
-  newCards: number;
-  reviews: number;
-  correct: number;
-  total: number;
-}
-
-export interface CurriculumState {
-  level: Level;
-  days: number;
-  startedAt: number;
-  /** day → дууссан эсэх */
-  done: Record<number, { at: number; vocab: number; kanji: number; grammar: number; reading: number; listening: number }>;
-}
-
-export interface Doc {
-  v: 3;
-  profile: Profile;
-  srs: Record<string, Card>;
-  /** ханз бичих дасгалын үр дүн */
-  writing: Record<string, { best: number; tries: number; at: number }>;
-  /** хэрэглэгчийн өөрийн мнемоник */
-  mnemonics: Record<string, string>;
-  /** таалагдсан үг/ханз/дүрэм */
-  favorites: string[];
-  grammarDone: string[];
-  readingDone: string[];
-  listeningDone: string[];
-  kanaBest: number;
-  exams: ExamRecord[];
-  quizzes: QuizRecord[];
-  placement?: { level: Level | "zero"; at: number; detail: Record<string, Level> };
-  mistakes: Mistake[];
-  activity: Record<string, ActivityDay>;
-  xp: number;
-  achievements: Record<string, number>;
-  curriculum?: CurriculumState;
-  createdAt: number;
-  updatedAt: number;
-}
-
-export const DEFAULT_PROFILE: Profile = {
-  name: "",
-  current: "zero",
-  target: "N5",
-  examDate: "",
-  dailyGoal: 30,
-  newPerDay: 12,
-  furigana: true,
-  rate: 0.95,
-  onboarded: false,
-  theme: "light",
-  romaji: false,
-  language: "mn",
-};
-
-const emptyDay = (): ActivityDay => ({ xp: 0, min: 0, newCards: 0, reviews: 0, correct: 0, total: 0 });
-
-function freshDoc(name = ""): Doc {
-  return {
-    v: 3,
-    profile: { ...DEFAULT_PROFILE, name },
-    srs: {},
-    writing: {},
-    mnemonics: {},
-    favorites: [],
-    grammarDone: [],
-    readingDone: [],
-    listeningDone: [],
-    kanaBest: 0,
-    exams: [],
-    quizzes: [],
-    mistakes: [],
-    activity: {},
-    xp: 0,
-    achievements: {},
-    createdAt: Date.now(),
-    updatedAt: Date.now(),
-  };
-}
-
-/* ─────────────── Хадгалалт ─────────────── */
-
-const keyFor = (uid: string) => `nd:doc:${uid}`;
 const SESSION_KEY = "nd:session";
 const GUEST = "local";
 
-function readDoc(uid: string): Doc | null {
-  try {
-    const raw = localStorage.getItem(keyFor(uid));
-    if (!raw) return null;
-    const parsed = JSON.parse(raw) as Partial<Doc>;
-    const base = freshDoc();
-    return {
-      ...base,
-      ...parsed,
-      profile: { ...base.profile, ...(parsed.profile ?? {}) },
-      srs: parsed.srs ?? {},
-      activity: parsed.activity ?? {},
-    } as Doc;
-  } catch {
-    return null;
+/** Анхны уншилт — гэмтсэн/шинэ хувилбарын өгөгдлийг хэзээ ч дарж бичихгүй. */
+function loadInitial(uid: string): { doc: Doc; issue: StorageIssue | null } {
+  const res = readDoc(localStorage, uid);
+  if (res.status === "ok" && res.doc) return { doc: res.doc, issue: null };
+  if (res.status === "future") {
+    return { doc: freshDoc(), issue: { kind: "future", raw: res.raw, futureVersion: res.futureVersion } };
   }
-}
-
-function writeDoc(uid: string, doc: Doc) {
-  try {
-    localStorage.setItem(keyFor(uid), JSON.stringify(doc));
-  } catch {
-    /* санах ой дүүрсэн — туршилтын горимд алгасна */
+  if (res.status === "corrupt") {
+    return { doc: freshDoc(), issue: { kind: "corrupt", raw: res.raw, backupKey: res.backupKey } };
   }
+  return { doc: freshDoc(), issue: null };
 }
 
 /* ─────────────── Контекст ─────────────── */
@@ -197,6 +64,8 @@ interface Ctx {
   inputs: AchievementInput;
   unlocked: { id: string; at: number }[];
   nextAchievement: { id: string; title: string; desc: string; icon: string; pct: number } | null;
+  /** Хадгалалтын асуудал (гэмтсэн/шинэ хувилбар/дүүрсэн) — байхгүй бол null. */
+  storageIssue: StorageIssue | null;
   actions: Actions;
 }
 
@@ -237,6 +106,11 @@ export interface Actions {
   exportJSON: () => string;
   importJSON: (json: string) => boolean;
   reset: () => void;
+
+  /* хадгалалт */
+  downloadBackup: () => void;
+  startFresh: () => void;
+  dismissIssue: () => void;
 }
 
 const StoreCtx = createContext<Ctx | null>(null);
@@ -244,7 +118,14 @@ const StoreCtx = createContext<Ctx | null>(null);
 export function StoreProvider({ children }: { children: ReactNode }) {
   const [uid, setUid] = useState<string>(() => localStorage.getItem(SESSION_KEY) ?? GUEST);
   const [account, setAccount] = useState<Account | null>(null);
-  const [doc, setDoc] = useState<Doc>(() => readDoc(localStorage.getItem(SESSION_KEY) ?? GUEST) ?? freshDoc());
+  const bootRef = useRef<{ doc: Doc; issue: StorageIssue | null } | null>(null);
+  if (!bootRef.current) bootRef.current = loadInitial(localStorage.getItem(SESSION_KEY) ?? GUEST);
+  const boot = bootRef.current;
+  const [doc, setDoc] = useState<Doc>(boot.doc);
+  const [storageIssue, setStorageIssue] = useState<StorageIssue | null>(boot.issue);
+  // Actions-ийн identity-г тогтвортой барихын тулд хамгийн сүүлийн баримтыг ref-д хадгална.
+  const docRef = useRef(doc);
+  docRef.current = doc;
   const [offline, setOffline] = useState(() => !navigator.onLine);
   const [serverAvailable, setServerAvailable] = useState(false);
   const [syncing, setSyncing] = useState<"idle" | "syncing" | "error" | "ok">("idle");
@@ -291,9 +172,41 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   /* ── localStorage-д хадгалах (debounce) ── */
   useEffect(() => {
     dirty.current = true;
-    const t = window.setTimeout(() => writeDoc(uid, doc), 350);
+    const t = window.setTimeout(() => {
+      const res = writeDoc(localStorage, uid, doc);
+      if (res.ok) {
+        setStorageIssue((cur) => (cur && (cur.kind === "quota" || cur.kind === "error") ? null : cur));
+        return;
+      }
+      // «blocked» = диск дээр гэмтсэн/шинэ хувилбарын өгөгдөл байна.
+      // Түүнийг анхны уншилтад аль хэдийн мэдэгдсэн тул дахин дарж бичихгүй.
+      if (res.reason === "blocked") return;
+      setStorageIssue({ kind: res.reason === "quota" ? "quota" : "error", detail: res.message });
+    }, 350);
     return () => window.clearTimeout(t);
   }, [doc, uid]);
+
+  /* ── бусад таб өгөгдөл бичсэн бол нэгтгэх (одоогийн табыг хэзээ ч дарж бичихгүй) ── */
+  useEffect(() => {
+    const onStorage = (e: StorageEvent) => {
+      if (e.key !== docKeyOf(uid) || !e.newValue) return;
+      const res = decodeDoc(e.newValue);
+      if (!res.ok) {
+        setStorageIssue(
+          res.reason === "future"
+            ? { kind: "future", raw: e.newValue, futureVersion: res.futureVersion }
+            : { kind: "corrupt", raw: e.newValue },
+        );
+        return;
+      }
+      setDoc((prev) => {
+        const merged = mergeDocs(prev, res.doc);
+        return JSON.stringify(merged) === JSON.stringify(prev) ? prev : merged;
+      });
+    };
+    window.addEventListener("storage", onStorage);
+    return () => window.removeEventListener("storage", onStorage);
+  }, [uid]);
 
   /* ── идэвхтэй минутыг тоолох ── */
   useEffect(() => {
@@ -376,10 +289,9 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       const remote = await api.getSync();
       if (remote.rev > rev.current) {
         rev.current = remote.rev;
-        const incoming = remote.doc as Partial<Doc> | null;
-        if (incoming && (incoming.updatedAt ?? 0) > doc.updatedAt) {
-          setDoc({ ...freshDoc(), ...incoming, profile: { ...DEFAULT_PROFILE, ...(incoming.profile ?? {}) } } as Doc);
-        }
+        // Серверээс ирсэн баримтыг ч гэсэн схемээр шалгаж, хувилбарыг шилжүүлнэ.
+        const incoming = normalizeDocValue(remote.doc);
+        if (incoming && incoming.updatedAt > doc.updatedAt) setDoc(incoming);
       }
     } catch {
       /* офлайн — дараа дахин оролдоно */
@@ -400,12 +312,16 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
   /* ── аккаунт солих үед документыг солих ── */
   const switchUser = useCallback((nextUid: string, nextAccount: Account | null) => {
-    writeDoc(uid, doc);
+    writeDoc(localStorage, uid, doc);
     setUid(nextUid);
     setAccount(nextAccount);
     localStorage.setItem(SESSION_KEY, nextUid);
     rev.current = 0;
-    setDoc(readDoc(nextUid) ?? freshDoc(nextAccount?.name ?? ""));
+    const next = loadInitial(nextUid);
+    // Шинэ (бөглөгдөөгүй) баримтад бүртгэлийн нэрийг онооно.
+    const name = next.doc.profile.name || nextAccount?.name || "";
+    setDoc(next.doc.profile.name === name ? next.doc : { ...next.doc, profile: { ...next.doc.profile, name } });
+    setStorageIssue(next.issue);
   }, [uid, doc]);
 
   const patch = useCallback((fn: (d: Doc) => Doc) => setDoc((d) => ({ ...fn(d), updatedAt: Date.now() })), []);
@@ -580,21 +496,56 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
     syncNow: async () => { await push(true); await pull(); },
 
-    exportJSON: () => JSON.stringify(doc, null, 2),
+    exportJSON: () => JSON.stringify({ ...docRef.current, v: SCHEMA_VERSION }, null, 2),
 
     importJSON: (raw) => {
+      // Зөвхөн баталгаажсан баримт хүлээж авна; одоогийнхыг нөөцөлж хадгална.
+      const res = decodeDoc(raw);
+      if (!res.ok) return false;
       try {
-        const parsed = JSON.parse(raw) as Partial<Doc>;
-        if (!parsed || typeof parsed !== "object") return false;
-        setDoc({ ...freshDoc(), ...parsed, profile: { ...DEFAULT_PROFILE, ...(parsed.profile ?? {}) } } as Doc);
-        return true;
+        localStorage.setItem(backupKeyOf(uid, `pre-import-${Date.now()}`), JSON.stringify(docRef.current));
       } catch {
-        return false;
+        /* нөөц хадгалагдахгүй бол ч урьдчилсан баталгаажуулалт хамгаална */
       }
+      const next = { ...res.doc, updatedAt: Date.now() };
+      writeDoc(localStorage, uid, next, { allowOverwrite: true });
+      setDoc(next);
+      setStorageIssue(null);
+      return true;
     },
 
-    reset: () => { setDoc(freshDoc(doc.profile.name)); },
-  }), [patch, push, pull, switchUser, doc.profile.name]);
+    reset: () => {
+      const next = freshDoc(docRef.current.profile.name);
+      writeDoc(localStorage, uid, next, { allowOverwrite: true });
+      setDoc(next);
+      setStorageIssue(null);
+    },
+
+    /* ── хадгалалтын мэдэгдэл ── */
+    downloadBackup: () => {
+      const raw = storageIssue?.raw;
+      if (!raw) return;
+      const url = URL.createObjectURL(new Blob([raw], { type: "application/json" }));
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `nihongo-dojo-backup-${todayKey()}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+    },
+
+    startFresh: () => {
+      const next = freshDoc(docRef.current.profile.name);
+      const res = writeDoc(localStorage, uid, next, { allowOverwrite: true });
+      if (!res.ok) {
+        setStorageIssue({ kind: res.reason === "quota" ? "quota" : "error", detail: res.message });
+        return;
+      }
+      setDoc(next);
+      setStorageIssue(null);
+    },
+
+    dismissIssue: () => setStorageIssue(null),
+  }), [patch, push, pull, switchUser, uid, storageIssue]);
 
   const today = doc.activity[todayKey()] ?? emptyDay();
   const levelInfo = useMemo(() => xpLevel(doc.xp), [doc.xp]);
@@ -615,6 +566,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     today, streak, levelInfo, inputs,
     unlocked: Object.entries(doc.achievements).map(([id, at]) => ({ id, at })).sort((a, b) => b.at - a.at),
     nextAchievement,
+    storageIssue,
     actions,
   };
 

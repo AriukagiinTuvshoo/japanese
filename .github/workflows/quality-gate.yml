@@ -35,6 +35,9 @@ jobs:
       - name: TypeScript typecheck
         run: npm run typecheck
 
+      - name: Unit tests (SRS, storage)
+        run: npm test
+
       - name: Route regression tests
         run: npm run test:routes
 
