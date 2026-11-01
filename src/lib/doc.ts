@@ -12,6 +12,20 @@ import type { Level } from "./types";
 /** Хадгалагдсан баримтын одоогийн схем хувилбар. */
 export const SCHEMA_VERSION = 4;
 
+/** Картын урд талын чиглэл. */
+export type Direction = "jp-mn" | "mn-jp" | "listen" | "write";
+
+/** Үнэлгээний горим — 4 түвшний SRS эсвэл «мэднэ / мэдэхгүй» 2 товч. */
+export type GradingMode = "srs" | "binary";
+
+/** Flashcard сессийн тохиргоо — reload хийсний дараа хэвээр үлдэнэ. */
+export interface SessionPrefs {
+  grading: GradingMode;
+  direction: Direction;
+  count: number;
+  onlyDue: boolean;
+}
+
 export interface ExamRecord {
   id: string;
   level: Level;
@@ -59,6 +73,8 @@ export interface Profile {
   romaji: boolean;
   /** UI and learning-content language. Stored with the profile and synced. */
   language: Language;
+  /** Flashcard сессийн тохиргоо (чиглэл, тоо, зөвхөн хугацаа дууссан, үнэлгээний горим). */
+  session: SessionPrefs;
 }
 
 export interface ActivityDay {
@@ -118,6 +134,7 @@ export const DEFAULT_PROFILE: Profile = {
   theme: "light",
   romaji: false,
   language: "mn",
+  session: { grading: "srs", direction: "jp-mn", count: 20, onlyDue: false },
 };
 
 export const emptyDay = (): ActivityDay => ({
@@ -127,7 +144,7 @@ export const emptyDay = (): ActivityDay => ({
 export function freshDoc(name = ""): Doc {
   return {
     v: SCHEMA_VERSION,
-    profile: { ...DEFAULT_PROFILE, name },
+    profile: { ...DEFAULT_PROFILE, name, session: { ...DEFAULT_PROFILE.session } },
     srs: {},
     writing: {},
     mnemonics: {},

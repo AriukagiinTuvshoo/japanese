@@ -1,9 +1,11 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { cn } from "../utils/cn";
 import { href, navigate } from "../lib/router";
 import { useStore } from "../lib/store";
 import { loadFullData, shuffle } from "../lib/data";
 import { GRADES, dueCards, memoryStats, previewIntervals, retrievability, type Grade } from "../lib/srs";
+import { binaryToGrade, makeOnce } from "../lib/flashcard";
+import type { Direction, GradingMode } from "../lib/doc";
 import { MQ_LABEL, TYPE_LABEL, stripFurigana } from "../lib/text";
 import { MN_PENDING, ui, type Language } from "../lib/i18n";
 import type { Kanji, Level, Vocab } from "../lib/types";
@@ -11,8 +13,8 @@ import {
   Bar, Button, Card, Chip, Furigana, LevelBadge, Ring, SectionTitle, SpeakButton, speak,
 } from "./ui";
 
+export type { Direction, GradingMode } from "../lib/doc";
 export type SessionKind = "vocab" | "kanji" | "mixed";
-type Direction = "jp-mn" | "mn-jp" | "listen" | "write";
 
 export interface SessionItem {
   id: string;
@@ -29,16 +31,20 @@ export interface SessionItem {
 
 /* ─────────────── Тохиргоо ─────────────── */
 export function SessionSetup({ kind = "vocab", level }: { kind?: SessionKind; level: Level }) {
-  const { doc } = useStore();
+  const { doc, actions } = useStore();
   const language = doc.profile.language ?? "mn";
   const t = ui[language];
-  const [direction, setDirection] = useState<Direction>("jp-mn");
-  const [count, setCount] = useState(20);
-  const [onlyDue, setOnlyDue] = useState(false);
+  const prefs = doc.profile.session;
+  const [direction, setDirection] = useState<Direction>(prefs.direction);
+  const [count, setCount] = useState(prefs.count);
+  const [onlyDue, setOnlyDue] = useState(prefs.onlyDue);
+  const [grading, setGrading] = useState<GradingMode>(prefs.grading);
   const [run, setRun] = useState<SessionItem[] | null>(null);
   const [loading, setLoading] = useState(false);
 
   const start = useCallback(async () => {
+    // Тохиргоог профайлд хадгална — дараагийн удаа ижил тохиргоотой эхэлнэ.
+    actions.patchProfile({ session: { direction, count, onlyDue, grading } });
     setLoading(true);
     const data = await loadFullData();
     let items: SessionItem[] = [];
@@ -72,13 +78,14 @@ export function SessionSetup({ kind = "vocab", level }: { kind?: SessionKind; le
     items = shuffle(items).slice(0, count).map((it) => ({ ...it, ...flip(it, direction) }));
     setRun(items);
     setLoading(false);
-  }, [kind, level, doc.srs, doc.profile.newPerDay, count, onlyDue, direction, language]);
+  }, [kind, level, doc.srs, doc.profile.newPerDay, count, onlyDue, direction, language, grading, actions]);
 
   if (run) {
     return (
       <Session
         items={run}
         direction={direction}
+        grading={grading}
         onExit={() => setRun(null)}
         onFinish={() => {}}
       />
@@ -117,6 +124,27 @@ export function SessionSetup({ kind = "vocab", level }: { kind?: SessionKind; le
                 </button>
               ))}
             </div>
+          </div>
+
+          <div>
+            <p className="text-[12.5px] font-bold text-sumi-700">{t.gradingLabel}</p>
+            <div className="mt-2 grid gap-2 sm:grid-cols-2">
+              {([
+                { id: "binary", title: t.gradingBinary, k: "2" },
+                { id: "srs", title: t.gradingSrs, k: "4" },
+              ] as const).map((o) => (
+                <button
+                  key={o.id}
+                  onClick={() => setGrading(o.id)}
+                  className={cn("flex items-center gap-3 rounded-xl border p-3 text-left transition",
+                    grading === o.id ? "border-ai-400 bg-ai-50" : "border-sumi-900/10 bg-white/70 hover:border-sumi-900/25")}
+                >
+                  <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-sumi-900 font-mono text-[13px] font-bold text-washi-50">{o.k}</span>
+                  <span className="text-[13px] font-bold text-sumi-900">{o.title}</span>
+                </button>
+              ))}
+            </div>
+            <p className="mt-1.5 text-[11px] leading-relaxed text-sumi-400">{t.gradingHint}</p>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
@@ -176,10 +204,12 @@ function Row({ l, v, tone }: { l: string; v: number | string; tone: "shu" | "ai"
 
 /* ─────────────── Сесс ─────────────── */
 export function Session({
-  items, direction = "jp-mn", onExit, onFinish,
+  items, direction = "jp-mn", grading, onExit, onFinish,
 }: {
   items: SessionItem[];
   direction?: Direction;
+  /** «srs» = 4 түвшин, «binary» = мэднэ / мэдэхгүй. Өгөөгүй бол профайлын тохиргоо. */
+  grading?: GradingMode;
   onExit: () => void;
   onFinish?: (r: { total: number; again: number; minutes: number }) => void;
 }) {
@@ -188,16 +218,28 @@ export function Session({
   const t = ui[language];
   const [idx, setIdx] = useState(0);
   const [revealed, setRevealed] = useState(false);
+  const [mode, setMode] = useState<GradingMode>(grading ?? doc.profile.session.grading);
   const [stats, setStats] = useState({ again: 0, hard: 0, good: 0, easy: 0 });
   const [finished, setFinished] = useState(false);
   const started = useMemo(() => Date.now(), []);
+  // Нэг картыг зөвхөн нэг удаа үнэлнэ — давхар дарахад SRS/XP давхар бичигдэхгүй.
+  const guard = useRef(makeOnce());
+  useEffect(() => {
+    guard.current = makeOnce();
+  }, [items]);
 
   const item = items[idx];
   const card = item ? doc.srs[item.id] : undefined;
   const previews = useMemo(() => previewIntervals(card, language), [card, language]);
 
+  const toggleMode = useCallback(() => {
+    const next: GradingMode = mode === "binary" ? "srs" : "binary";
+    setMode(next);
+    actions.patchProfile({ session: { ...doc.profile.session, grading: next } });
+  }, [mode, actions, doc.profile.session]);
+
   const grade = useCallback((g: Grade) => {
-    if (!item) return;
+    if (!item || !guard.current(item.id)) return;
     actions.grade(item.id, g, { isNew: !card, level: item.level });
     setStats((s) => ({ ...s, [["again", "hard", "good", "easy"][g]]: (s as never as Record<string, number>)[["again", "hard", "good", "easy"][g]] + 1 } as typeof s));
     if (idx + 1 >= items.length) {
@@ -211,8 +253,12 @@ export function Session({
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
+      if (isEditable(e.target)) return;
       if (e.key === " " || e.key === "Enter") { e.preventDefault(); if (!revealed) setRevealed(true); else grade(2); }
       if (revealed && ["1", "2", "3", "4"].includes(e.key)) grade((Number(e.key) - 1) as Grade);
+      // 2 товчны горим: Z = мэдэхгүй (Again), X = мэднэ (Good).
+      if (revealed && (e.key === "z" || e.key === "Z")) grade(binaryToGrade("unknown"));
+      if (revealed && (e.key === "x" || e.key === "X")) grade(binaryToGrade("know"));
       if (e.key === "Escape") onExit();
     };
     window.addEventListener("keydown", onKey);
@@ -241,14 +287,27 @@ export function Session({
             <span className="font-mono text-[1.2rem] font-extrabold tabnum">{Math.round(acc * 100)}%</span>
           </Ring>
         </div>
-        <div className="mt-5 grid grid-cols-4 gap-2">
-          {GRADES.map((g) => (
-            <div key={g.g} className="card-flat px-2 py-3">
-              <p className="text-[11px] font-bold text-sumi-500">{language === "en" ? g.en : g.mn}</p>
-              <p className="mt-1 font-mono text-[16px] font-extrabold tabnum">{stats[["again", "hard", "good", "easy"][g.g] as "again"]}</p>
+        {mode === "binary" ? (
+          <div className="mt-5 grid grid-cols-2 gap-2">
+            <div className="card-flat px-2 py-3">
+              <p className="text-[11px] font-bold text-sumi-500">{t.gradeUnknown}</p>
+              <p className="mt-1 font-mono text-[16px] font-extrabold tabnum">{stats.again}</p>
             </div>
-          ))}
-        </div>
+            <div className="card-flat px-2 py-3">
+              <p className="text-[11px] font-bold text-sumi-500">{t.gradeKnow}</p>
+              <p className="mt-1 font-mono text-[16px] font-extrabold tabnum">{stats.good}</p>
+            </div>
+          </div>
+        ) : (
+          <div className="mt-5 grid grid-cols-4 gap-2">
+            {GRADES.map((g) => (
+              <div key={g.g} className="card-flat px-2 py-3">
+                <p className="text-[11px] font-bold text-sumi-500">{language === "en" ? g.en : g.mn}</p>
+                <p className="mt-1 font-mono text-[16px] font-extrabold tabnum">{stats[["again", "hard", "good", "easy"][g.g] as "again"]}</p>
+              </div>
+            ))}
+          </div>
+        )}
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <Button onClick={onExit}>{t.retry2}</Button>
           <Button variant="outline" onClick={() => navigate("progress")}>{t.viewProgress}</Button>
@@ -268,6 +327,13 @@ export function Session({
         <div className="min-w-0 flex-1">
           <Bar value={idx / items.length} tone="ai" height={5} />
         </div>
+        <button
+          onClick={toggleMode}
+          title={t.gradingLabel}
+          className="shrink-0 rounded-lg border border-sumi-900/10 bg-white/70 px-2 py-1 text-[10.5px] font-bold text-sumi-600 transition hover:border-sumi-900/25"
+        >
+          {mode === "binary" ? t.gradingBinary : t.gradingSrs}
+        </button>
         <span className="font-mono text-[12px] font-bold tabnum text-sumi-500">{idx + 1}/{items.length}</span>
       </div>
 
@@ -341,37 +407,73 @@ export function Session({
               </div>
             )}
 
-            <div className="mt-6 grid grid-cols-4 gap-2">
-              {GRADES.map((g, i) => (
+            {mode === "binary" ? (
+              <div className="mt-6 grid grid-cols-2 gap-3">
                 <button
-                  key={g.g}
-                  onClick={() => grade(g.g)}
-                  className={cn(
-                    "rounded-xl border-2 px-2 py-3 text-center transition hover:-translate-y-0.5",
-                    g.tone === "shu" ? "border-shu-100 bg-shu-50 hover:border-shu-400"
-                      : g.tone === "kin" ? "border-kin-100 bg-kin-50 hover:border-kin-400"
-                        : g.tone === "matcha" ? "border-matcha-100 bg-matcha-50 hover:border-matcha-400"
-                          : "border-ai-100 bg-ai-50 hover:border-ai-400",
-                  )}
+                  onClick={() => grade(binaryToGrade("unknown"))}
+                  className="rounded-xl border-2 border-shu-100 bg-shu-50 px-3 py-4 text-center transition hover:-translate-y-0.5 hover:border-shu-400"
                 >
-                  <span className={cn("block text-[13.5px] font-extrabold",
-                    g.tone === "shu" ? "text-shu-700" : g.tone === "kin" ? "text-kin-600" : g.tone === "matcha" ? "text-matcha-600" : "text-ai-600")}>
-                    {language === "en" ? g.en : g.mn}
-                  </span>
-                  <span className="mt-0.5 block font-mono text-[10.5px] text-sumi-500">{previews[i]?.label}</span>
-                  <span className="mt-0.5 block font-mono text-[9.5px] text-sumi-300">{i + 1}</span>
+                  <span className="block text-[14px] font-extrabold text-shu-700">{t.gradeUnknown}</span>
+                  <span className="mt-0.5 block font-mono text-[10.5px] text-sumi-500">{previews[0]?.label}</span>
+                  <span className="mt-0.5 block font-mono text-[9.5px] text-sumi-300">Z</span>
                 </button>
-              ))}
-            </div>
+                <button
+                  onClick={() => grade(binaryToGrade("know"))}
+                  className="rounded-xl border-2 border-matcha-100 bg-matcha-50 px-3 py-4 text-center transition hover:-translate-y-0.5 hover:border-matcha-400"
+                >
+                  <span className="block text-[14px] font-extrabold text-matcha-600">{t.gradeKnow}</span>
+                  <span className="mt-0.5 block font-mono text-[10.5px] text-sumi-500">{previews[2]?.label}</span>
+                  <span className="mt-0.5 block font-mono text-[9.5px] text-sumi-300">X</span>
+                </button>
+              </div>
+            ) : (
+              <div className="mt-6 grid grid-cols-4 gap-2">
+                {GRADES.map((g, i) => (
+                  <button
+                    key={g.g}
+                    onClick={() => grade(g.g)}
+                    className={cn(
+                      "rounded-xl border-2 px-2 py-3 text-center transition hover:-translate-y-0.5",
+                      g.tone === "shu" ? "border-shu-100 bg-shu-50 hover:border-shu-400"
+                        : g.tone === "kin" ? "border-kin-100 bg-kin-50 hover:border-kin-400"
+                          : g.tone === "matcha" ? "border-matcha-100 bg-matcha-50 hover:border-matcha-400"
+                            : "border-ai-100 bg-ai-50 hover:border-ai-400",
+                    )}
+                  >
+                    <span className={cn("block text-[13.5px] font-extrabold",
+                      g.tone === "shu" ? "text-shu-700" : g.tone === "kin" ? "text-kin-600" : g.tone === "matcha" ? "text-matcha-600" : "text-ai-600")}>
+                      {language === "en" ? g.en : g.mn}
+                    </span>
+                    <span className="mt-0.5 block font-mono text-[10.5px] text-sumi-500">{previews[i]?.label}</span>
+                    <span className="mt-0.5 block font-mono text-[9.5px] text-sumi-300">{i + 1}</span>
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
         )}
       </Card>
 
       <p className="mt-3 text-center text-[11.5px] text-sumi-400">
-        <kbd className="font-mono">Space</kbd> {t.kbReveal} · <kbd className="font-mono">1–4</kbd> {t.kbRate} · <kbd className="font-mono">Esc</kbd> {t.kbExit}
+        {mode === "binary" ? (
+          <>
+            <kbd className="font-mono">Space</kbd> {t.kbReveal} · <kbd className="font-mono">Z</kbd>/<kbd className="font-mono">X</kbd> {t.kbBinary} · <kbd className="font-mono">Esc</kbd> {t.kbExit}
+          </>
+        ) : (
+          <>
+            <kbd className="font-mono">Space</kbd> {t.kbReveal} · <kbd className="font-mono">1–4</kbd> {t.kbRate} · <kbd className="font-mono">Esc</kbd> {t.kbExit}
+          </>
+        )}
       </p>
     </div>
   );
+}
+
+/** Input, textarea, select, contenteditable дотор товчлуурын shortcut ажиллахгүй. */
+function isEditable(target: EventTarget | null): boolean {
+  const el = target as HTMLElement | null;
+  if (!el || typeof el.tagName !== "string") return false;
+  return el.tagName === "INPUT" || el.tagName === "TEXTAREA" || el.tagName === "SELECT" || el.isContentEditable;
 }
 
 const frontIsJapanese = (d: Direction) => d === "jp-mn" || d === "listen";

@@ -119,6 +119,20 @@ function normalizeProfile(raw: unknown): Profile {
     theme,
     romaji: bool(raw.romaji, DEFAULT_PROFILE.romaji),
     language: raw.language === "en" ? "en" : "mn",
+    session: normalizeSession(raw.session),
+  };
+}
+
+/** Flashcard сессийн тохиргоо — танихгүй утгыг анхны утгаар солино. */
+function normalizeSession(raw: unknown): Profile["session"] {
+  if (!isRecord(raw)) return { ...DEFAULT_PROFILE.session };
+  const direction = raw.direction;
+  return {
+    grading: raw.grading === "binary" ? "binary" : "srs",
+    direction:
+      direction === "mn-jp" || direction === "listen" || direction === "write" ? direction : "jp-mn",
+    count: clamp(int(raw.count, DEFAULT_PROFILE.session.count), 5, 80),
+    onlyDue: bool(raw.onlyDue, false),
   };
 }
 

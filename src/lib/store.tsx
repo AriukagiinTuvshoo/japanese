@@ -15,6 +15,7 @@ import {
   type ActivityDay, type Doc, type ExamRecord, type Mistake, type Profile, type QuizRecord,
 } from "./doc";
 import { ACHIEVEMENTS, XP, xpLevel, type AchievementInput } from "./gamification";
+import { applyGrade } from "./flashcard";
 import { schedule, type Grade } from "./srs";
 import { examTotals } from "./study";
 import { backupKeyOf, decodeDoc, docKeyOf, mergeDocs, normalizeDocValue, readDoc, writeDoc } from "./storage";
@@ -332,13 +333,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     patchProfile: (p) => patch((d) => ({ ...d, profile: { ...d.profile, ...p } })),
 
     grade: (id, g, meta) => patch((d) => {
-      const card = schedule(d.srs[id], g);
-      const gain = [XP.reviewAgain, XP.reviewHard, XP.reviewGood, XP.reviewEasy][g] + (meta?.isNew ? XP.newCard : 0);
-      return {
-        ...d,
-        srs: { ...d.srs, [id]: card },
-        ...bumpDayInto(d, { xp: gain, reviews: 1, newCards: meta?.isNew ? 1 : 0, correct: g > 0 ? 1 : 0, total: 1 }),
-      };
+      return applyGrade(d, id, g, { isNew: meta?.isNew });
     }),
 
     gradeMany: (items) => patch((d) => {
