@@ -7,7 +7,7 @@ import { LEVELS } from "../lib/types";
 import { dayOffset, todayKey, LEVEL_LABEL } from "../lib/text";
 import { cardStage, memoryStats, retrievability } from "../lib/srs";
 import { dayAccuracy, weakestAreas } from "../lib/stats";
-import { QUIZ_MODES } from "../lib/study";
+import { quizModeLabel } from "../lib/study";
 import { Bar, Button, Card, Chip, LevelBadge, Ring, SectionTitle, Spinner, Stat, Tabs } from "../components/ui";
 import { ui } from "../lib/i18n";
 
@@ -252,11 +252,10 @@ export default function Progress() {
             ) : (
               <div className="space-y-3.5">
                 {weakKinds.map((w) => {
-                  const meta2 = QUIZ_MODES.find((q) => q.id === w.kind);
                   return (
                     <div key={w.kind}>
                       <div className="flex items-baseline justify-between">
-                        <span className="text-[13px] font-bold text-sumi-700">{meta2 ? (language === "en" ? meta2.labelEn : meta2.label) : w.kind}</span>
+                        <span className="text-[13px] font-bold text-sumi-700">{quizModeLabel(w.kind, language)}</span>
                         <span className="font-mono text-[12px] font-bold tabnum text-sumi-500">
                           {Math.round(w.accuracy * 100)}% · {w.total}
                         </span>
@@ -307,6 +306,28 @@ export default function Progress() {
                 </tbody>
               </table>
             </div>
+          </Card>
+
+          <Card>
+            <SectionTitle jp="練習履歴" title={t.quizHistory} />
+            {doc.quizzes.length === 0 ? (
+              <p className="text-[13px] text-sumi-500">{t.noQuizzes}</p>
+            ) : (
+              <div className="space-y-2.5">
+                {doc.quizzes.slice(0, 20).map((q) => (
+                  <div key={`${q.at}-${q.kind}-${q.total}`} className="flex flex-wrap items-center gap-3 rounded-xl border border-sumi-900/8 bg-white/60 px-4 py-3">
+                    <LevelBadge level={q.level} size="sm" />
+                    <span className="text-[13px] font-bold text-sumi-800">{quizModeLabel(q.kind, language)}</span>
+                    <span className="font-mono text-[13px] font-bold tabnum">{t.correctN(q.correct, q.total)}</span>
+                    <span className="text-[11.5px] text-sumi-400">{q.minutes} {t.minutes}</span>
+                    <span className="ml-auto text-[11.5px] text-sumi-400">
+                      {new Date(q.at).toLocaleDateString(language === "en" ? "en-US" : "mn-MN")}
+                    </span>
+                    <Bar value={q.total > 0 ? q.correct / q.total : 0} tone={q.correct / Math.max(1, q.total) >= 0.7 ? "matcha" : q.correct / Math.max(1, q.total) >= 0.5 ? "kin" : "shu"} className="w-full sm:ml-0 sm:w-32" height={5} />
+                  </div>
+                ))}
+              </div>
+            )}
           </Card>
 
           <Card>

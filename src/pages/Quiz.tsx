@@ -3,7 +3,8 @@ import { cn } from "../utils/cn";
 import { navigate, useQuery } from "../lib/router";
 import { useStore } from "../lib/store";
 import { READING, loadFullData } from "../lib/data";
-import { QUIZ_MODES, buildQuiz, type QuizMode, type QuizSet } from "../lib/study";
+import { QUIZ_MODES, buildQuiz, quizModeLabel, type QuizMode, type QuizSet } from "../lib/study";
+import { weakKinds as weakKindStats } from "../lib/stats";
 import type { Level } from "../lib/types";
 import { LEVELS } from "../lib/types";
 import { Button, Card, Chip, LevelBadge, SectionTitle, Select, Spinner } from "../components/ui";
@@ -16,25 +17,22 @@ const TONES: Record<string, string> = {
 };
 
 export default function Quiz() {
-  const { doc } = useStore();
+  const { doc, actions } = useStore();
   const language = doc.profile.language ?? "mn";
   const t = ui[language];
   const { query, set } = useQuery();
   const level = (query.level as Level) || (doc.profile.current === "zero" ? doc.profile.target : doc.profile.current);
   const mode = (query.mode as QuizMode) || null;
-  const [count, setCount] = useState(15);
+  const count = doc.profile.quiz.count;
   const [set_, setSet] = useState<QuizSet | null>(null);
   const [loading, setLoading] = useState(false);
   const [emptyMsg, setEmptyMsg] = useState<string | null>(null);
 
-  const weakKinds = useMemo(() => {
-    const m = new Map<string, { c: number; t: number }>();
-    for (const q of doc.quizzes.slice(0, 30)) {
-      const cur = m.get(q.kind) ?? { c: 0, t: 0 };
-      cur.c += q.correct; cur.t += q.total; m.set(q.kind, cur);
-    }
-    return [...m.entries()].filter(([, v]) => v.t >= 8 && v.c / v.t < 0.7).map(([k]) => k);
-  }, [doc.quizzes]);
+  /* Home болон Progress-той ижил нэг тооцоо (`stats.weakKinds`). */
+  const weakKinds = useMemo(
+    () => weakKindStats(doc.quizzes, { limit: 3 }).map((r) => r.kind),
+    [doc.quizzes],
+  );
 
   const start = async (m: QuizMode) => {
     setLoading(true);
@@ -67,13 +65,18 @@ export default function Quiz() {
       <div className="space-y-5">
         <div className="flex flex-wrap items-center gap-3">
           <Button variant="ghost" size="sm" onClick={() => { setSet(null); set({ mode: "" }); }}>{t.backToKinds}</Button>
-          <Chip tone="ai">{(() => { const m2 = QUIZ_MODES.find((q) => q.id === set_.mode); return m2 ? (language === "en" ? m2.labelEn : m2.label) : set_.mode; })()}</Chip>
+          <Chip tone="ai">{quizModeLabel(set_.mode, language)}</Chip>
           <LevelBadge level={set_.level} size="sm" />
           <span className="text-[12px] text-sumi-400">{t.questionsN(set_.questions.length)}</span>
         </div>
         <QuizRunner
           questions={set_.questions}
-          options={{ title: (() => { const m2 = QUIZ_MODES.find((q) => q.id === set_.mode); return m2 ? (language === "en" ? m2.labelEn : m2.label) : t.drillBtn; })(), reveal: true }}
+          options={{
+            title: quizModeLabel(set_.mode, language),
+            reveal: true,
+            /* Дасгалын үр дүнг тогтвортой төрлийн id-аар бичнэ. */
+            log: { kind: set_.mode, level: set_.level },
+          }}
           onClose={() => { setSet(null); set({ mode: "" }); }}
         />
       </div>
@@ -92,7 +95,7 @@ export default function Quiz() {
         </div>
         <div className="flex flex-wrap items-center gap-2">
           <Select value={level} onChange={(v) => set({ level: v })} options={LEVELS.map((l) => ({ id: l, label: l }))} />
-          <Select value={String(count)} onChange={(v) => setCount(Number(v))}
+          <Select value={String(count)} onChange={(v) => actions.patchProfile({ quiz: { count: Number(v) } })}
             options={[10, 15, 20, 30, 50].map((n) => ({ id: String(n), label: t.questionsN(n) }))} />
         </div>
       </div>
@@ -104,7 +107,7 @@ export default function Quiz() {
             <div className="min-w-0 flex-1">
               <p className="text-[13.5px] font-extrabold text-kin-700">{t.weakDetected}</p>
               <p className="mt-0.5 text-[12.5px] text-sumi-600">
-                {t.weakDetectedSub(weakKinds.slice(0, 3).map((k) => { const m2 = QUIZ_MODES.find((q) => q.id === k); return m2 ? (language === "en" ? m2.labelEn : m2.label) : k; }).join(", "))}
+                {t.weakDetectedSub(weakKinds.map((k) => quizModeLabel(k, language)).join(", "))}
               </p>
             </div>
             <Button onClick={() => start("weak")}>{t.drillWeakBtn}</Button>

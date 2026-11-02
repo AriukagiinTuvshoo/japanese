@@ -9,10 +9,11 @@
  *  3. React-гүй. Бүх функц `KV` интерфэйсээр ажиллах тул Node дээр тестлэгдэнэ.
  */
 import {
-  DEFAULT_PROFILE, SCHEMA_VERSION, emptyDay, freshDoc,
+  DEFAULT_PROFILE, QUIZ_COUNTS, SCHEMA_VERSION, emptyDay, freshDoc,
   type ActivityDay, type CurriculumState, type Doc, type ExamRecord, type Mistake, type Profile,
   type QuizRecord,
 } from "./doc";
+import { quizKindOf } from "./quizKind";
 import type { Card } from "./srs";
 import type { Level } from "./types";
 
@@ -120,7 +121,19 @@ function normalizeProfile(raw: unknown): Profile {
     romaji: bool(raw.romaji, DEFAULT_PROFILE.romaji),
     language: raw.language === "en" ? "en" : "mn",
     session: normalizeSession(raw.session),
+    quiz: normalizeQuizPrefs(raw.quiz),
   };
+}
+
+/** Quiz тохиргоо — санал болгож буй тоонд хамгийн ойрыг сонгоно. */
+function normalizeQuizPrefs(raw: unknown): Profile["quiz"] {
+  if (!isRecord(raw)) return { ...DEFAULT_PROFILE.quiz };
+  const value = int(raw.count, DEFAULT_PROFILE.quiz.count);
+  const count = QUIZ_COUNTS.reduce(
+    (best, option) => (Math.abs(option - value) < Math.abs(best - value) ? option : best),
+    QUIZ_COUNTS[0],
+  );
+  return { count };
 }
 
 /** Flashcard сессийн тохиргоо — танихгүй утгыг анхны утгаар солино. */
@@ -234,7 +247,7 @@ function normalizeQuizzes(raw: unknown): QuizRecord[] {
     if (!isRecord(q) || !isLevel(q.level)) continue;
     out.push({
       at: num(q.at, 0),
-      kind: str(q.kind, "quiz").slice(0, 40),
+      kind: quizKindOf(q.kind),
       level: q.level,
       correct: Math.max(0, int(q.correct, 0)),
       total: Math.max(0, int(q.total, 0)),

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { ActivityDay, ExamRecord, QuizRecord } from "./doc";
-import { accuracy, dayAccuracy, examSectionAccuracy, kindAccuracy, weakestAreas } from "./stats";
+import { WEAK_MIN_QUESTIONS, WEAK_WINDOW, accuracy, dayAccuracy, examSectionAccuracy, kindAccuracy, weakKinds, weakestAreas } from "./stats";
 
 const quiz = (kind: string, correct: number, total: number): QuizRecord => ({
   at: 1, kind, level: "N5", correct, total, minutes: 2,
@@ -90,7 +90,66 @@ describe("weakestAreas", () => {
   });
 
   it("skips groups with too few answers to be meaningful", () => {
-    const rows = weakestAreas([quiz("rare", 0, 2), quiz("common", 5, 10)], [], 3);
+    const rows = weakestAreas([quiz("rare", 0, 2), quiz("common", 5, 10)], [], { minQuestions: 3 });
     expect(rows.map((r) => r.kind)).toEqual(["common"]);
+  });
+
+  it("counts each exam section exactly once", () => {
+    const rows = weakestAreas([], [exam([{ name: "Уншлага", correct: 3, total: 12 }])], { minQuestions: 1 });
+    expect(rows).toHaveLength(1);
+    expect(rows[0]).toMatchObject({ kind: "Уншлага", correct: 3, total: 12 });
+  });
+
+  it("uses one shared window and threshold for every caller", () => {
+    expect(WEAK_WINDOW).toBe(30);
+    expect(WEAK_MIN_QUESTIONS).toBe(5);
+    const old = quiz("kanji-read", 1, 20);
+    const recent = quiz("vocab-jp-mn", 18, 20);
+    // 31 дэхь (хамгийн хуучин) бичлэг цонхноос гарна — бараг бүх бичлэг "recent" байна.
+    const quizzes = [recent, ...Array.from({ length: 29 }, () => quiz("vocab-jp-mn", 9, 10)), old];
+    const rows = weakestAreas(quizzes, []);
+    expect(rows.every((r) => r.total >= WEAK_MIN_QUESTIONS)).toBe(true);
+    expect(rows.map((r) => r.kind)).toEqual(["vocab-jp-mn"]);
+  });
+});
+
+describe("weakKinds", () => {
+  it("returns drillable practice kinds, weakest first", () => {
+    const rows = weakKinds([
+      quiz("vocab-jp-mn", 6, 10),
+      quiz("kanji-read", 1, 10),
+      quiz("reading", 4, 10),
+    ]);
+    expect(rows.map((r) => r.kind)).toEqual(["kanji-read", "reading", "vocab-jp-mn"]);
+  });
+
+  it("excludes kinds at or above the weak threshold", () => {
+    expect(weakKinds([quiz("kanji-read", 7, 10)])).toEqual([]);
+    expect(weakKinds([quiz("kanji-read", 6, 10)])).toHaveLength(1);
+    expect(weakKinds([quiz("kanji-read", 9, 10)], { maxAccuracy: 1 })).toHaveLength(1);
+  });
+
+  it("ignores aggregate modes so the weak drill cannot recurse", () => {
+    const rows = weakKinds([
+      quiz("weak", 1, 10),
+      quiz("mixed", 1, 10),
+      quiz("mistakes", 1, 10),
+      quiz("grammar-mn", 5, 10),
+    ]);
+    expect(rows.map((r) => r.kind)).toEqual(["grammar-mn"]);
+  });
+
+  it("ignores legacy labels that were never normalized", () => {
+    const rows = weakKinds([quiz("N5 жишиг шалгалт · Сонсгол", 0, 20), quiz("kanji-mn", 4, 10)]);
+    expect(rows.map((r) => r.kind)).toEqual(["kanji-mn"]);
+  });
+
+  it("applies the sample threshold and the limit", () => {
+    expect(weakKinds([quiz("kanji-read", 0, 2)])).toEqual([]);
+    const rows = weakKinds(
+      [quiz("kanji-read", 0, 10), quiz("kanji-mn", 1, 10), quiz("grammar-mn", 2, 10)],
+      { limit: 2 },
+    );
+    expect(rows.map((r) => r.kind)).toEqual(["kanji-read", "kanji-mn"]);
   });
 });

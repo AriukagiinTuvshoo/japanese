@@ -26,6 +26,14 @@ export interface SessionPrefs {
   onlyDue: boolean;
 }
 
+/** Quiz-ийн санал болгох асуултын тоонууд — UI болон хадгалалт хамт ашиглана. */
+export const QUIZ_COUNTS = [10, 15, 20, 30, 50] as const;
+
+/** Quiz тохиргоо — reload/буцаалтын дараа хэвээр үлдэнэ. */
+export interface QuizPrefs {
+  count: number;
+}
+
 export interface ExamRecord {
   id: string;
   level: Level;
@@ -75,6 +83,8 @@ export interface Profile {
   language: Language;
   /** Flashcard сессийн тохиргоо (чиглэл, тоо, зөвхөн хугацаа дууссан, үнэлгээний горим). */
   session: SessionPrefs;
+  /** Quiz-ийн тохиргоо (асуултын тоо). */
+  quiz: QuizPrefs;
 }
 
 export interface ActivityDay {
@@ -135,6 +145,7 @@ export const DEFAULT_PROFILE: Profile = {
   romaji: false,
   language: "mn",
   session: { grading: "srs", direction: "jp-mn", count: 20, onlyDue: false },
+  quiz: { count: 15 },
 };
 
 export const emptyDay = (): ActivityDay => ({
@@ -144,7 +155,12 @@ export const emptyDay = (): ActivityDay => ({
 export function freshDoc(name = ""): Doc {
   return {
     v: SCHEMA_VERSION,
-    profile: { ...DEFAULT_PROFILE, name, session: { ...DEFAULT_PROFILE.session } },
+    profile: {
+      ...DEFAULT_PROFILE,
+      name,
+      session: { ...DEFAULT_PROFILE.session },
+      quiz: { ...DEFAULT_PROFILE.quiz },
+    },
     srs: {},
     writing: {},
     mnemonics: {},

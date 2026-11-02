@@ -3,6 +3,8 @@ import { cn } from "../utils/cn";
 import { href, navigate } from "../lib/router";
 import { useStore } from "../lib/store";
 import type { Question } from "../lib/study";
+import type { Level } from "../lib/types";
+import { quizLogTarget } from "../lib/quizKind";
 import { Bar, Button, Chip, Furigana, LevelBadge, Ring } from "./ui";
 import { speak } from "./ui";
 import { relTime } from "../lib/text";
@@ -29,6 +31,11 @@ export interface RunnerOptions {
   /** Дараагийн хэсэг рүү шилжих. */
   nextLabel?: string;
   onNext?: () => void;
+  /**
+   * Дасгалын түрүүнд бичих төрөл ба түвшин. ӨГӨӨГҮЙ бол quiz түүхэнд
+   * бичихгүй — жишиг шалгалт зөвхөн `recordExam`-ээр нэг удаа бүртгэгдэнэ.
+   */
+  log?: { kind: string; level: Level };
 }
 
 export function QuizRunner({
@@ -67,13 +74,8 @@ export function QuizRunner({
     const wrong = questions.filter((qq, i) => finalAnswers[i] !== qq.answer);
     wrongRef.current = wrong;
 
-    actions.logQuiz({
-      kind: options.title ?? q?.kind ?? "quiz",
-      level: q?.level ?? "N5",
-      correct,
-      total,
-      minutes,
-    });
+    const target = quizLogTarget(options.log);
+    if (target) actions.logQuiz({ ...target, correct, total, minutes });
 
     // Алдааны дэвтэрт бүртгэх
     const mistakes = wrong
@@ -98,7 +100,7 @@ export function QuizRunner({
 
     setDone(true);
     options.onFinish?.({ correct, total, minutes, wrong });
-  }, [questions, actions, options, q, total]);
+  }, [questions, actions, options, total]);
 
   const choose = (i: number) => {
     if (picked !== null || done) return;

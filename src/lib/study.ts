@@ -84,6 +84,13 @@ export const QUIZ_MODES: { id: QuizMode; label: string; desc: string; labelEn: s
   { id: "mistakes", label: "Алдааны дэвтэр", desc: "Алдсан асуултуудаа", labelEn: "Mistake log", descEn: "The ones you got wrong", icon: "誤", tone: "kin" },
 ];
 
+/** Тогтвортой төрлийн id-аас тухайн хэлний харуулах шошго. */
+export function quizModeLabel(id: string, language: Language): string {
+  const mode = QUIZ_MODES.find((m) => m.id === id);
+  if (!mode) return id;
+  return language === "en" ? mode.labelEn : mode.label;
+}
+
 const opt = (v: Vocab) => v.mn?.[0] ?? v.en[0];
 const rnd = Math.random;
 

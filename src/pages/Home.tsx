@@ -6,6 +6,8 @@ import { loadFullData, CURRICULUM, LISTENING, READING } from "../lib/data";
 import type { DataMeta, Level } from "../lib/types";
 import { LEVEL_LABEL, todayKey, dayOffset } from "../lib/text";
 import { dueCards, memoryStats, reviewHistory, type Card as SrsCard } from "../lib/srs";
+import { weakKinds } from "../lib/stats";
+import { quizModeLabel } from "../lib/study";
 import { Bar, Button, Card, Chip, LevelBadge, Ring, SectionTitle, Spinner, Stat } from "../components/ui";
 import { ui, type Language } from "../lib/i18n";
 
@@ -42,20 +44,8 @@ export default function Home() {
   const missionDone = mission.reduce((a, m) => a + Math.min(m.target, m.done), 0);
   const estimated = Math.max(8, Math.round(goal * (1 - missionDone / Math.max(1, missionTotal))));
 
-  /* ── сул тал ── */
-  const weak = useMemo(() => {
-    const byKind = new Map<string, { correct: number; total: number }>();
-    for (const q of doc.quizzes.slice(0, 20)) {
-      const cur = byKind.get(q.kind) ?? { correct: 0, total: 0 };
-      cur.correct += q.correct;
-      cur.total += q.total;
-      byKind.set(q.kind, cur);
-    }
-    const rows = [...byKind.entries()]
-      .filter(([, v]) => v.total >= 5)
-      .map(([k, v]) => ({ kind: k, pct: v.correct / v.total, total: v.total }));
-    return rows.sort((a, b) => a.pct - b.pct).slice(0, 3);
-  }, [doc.quizzes]);
+  /* ── сул тал — Quiz/Progress-той ижил нэг тооцоо ── */
+  const weak = useMemo(() => weakKinds(doc.quizzes, { limit: 3 }), [doc.quizzes]);
 
   const heat = useMemo(() => {
     // 20 долоо хоног × 7 өдөр
@@ -327,11 +317,11 @@ export default function Home() {
           <div className="grid gap-3 sm:grid-cols-3">
             {weak.map((w) => (
               <div key={w.kind} className="card-flat p-4">
-                <p className="truncate text-[13px] font-bold text-sumi-800">{w.kind}</p>
-                <p className="mt-1.5 font-mono text-[1.5rem] font-extrabold tabnum leading-none" style={{ color: w.pct < 0.5 ? "#cc4630" : w.pct < 0.7 ? "#b88a2d" : "#688c45" }}>
-                  {Math.round(w.pct * 100)}%
+                <p className="truncate text-[13px] font-bold text-sumi-800">{quizModeLabel(w.kind, language)}</p>
+                <p className="mt-1.5 font-mono text-[1.5rem] font-extrabold tabnum leading-none" style={{ color: w.accuracy < 0.5 ? "#cc4630" : w.accuracy < 0.7 ? "#b88a2d" : "#688c45" }}>
+                  {Math.round(w.accuracy * 100)}%
                 </p>
-                <Bar value={w.pct} tone={w.pct < 0.5 ? "shu" : w.pct < 0.7 ? "kin" : "matcha"} className="mt-2.5" height={5} />
+                <Bar value={w.accuracy} tone={w.accuracy < 0.5 ? "shu" : w.accuracy < 0.7 ? "kin" : "matcha"} className="mt-2.5" height={5} />
                 <Button size="sm" variant="outline" className="mt-3 w-full" onClick={() => navigate("quiz?mode=weak")}>{t.drillBtn}</Button>
               </div>
             ))}

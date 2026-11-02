@@ -280,3 +280,97 @@ describe("mergeDocs", () => {
     expect(m.exams).toEqual(mergeDocs(b, a).exams);
   });
 });
+
+/* ─────────────── Phase 2.2: quiz төрөл ба тохиргоо ─────────────── */
+
+describe("quiz kind normalization", () => {
+  it("maps legacy Mongolian and English labels to stable ids", () => {
+    const raw = {
+      ...makeDoc(),
+      quizzes: [
+        { at: 3, kind: "Япон → Монгол", level: "N5", correct: 8, total: 10, minutes: 2 },
+        { at: 2, kind: "Japanese → English", level: "N5", correct: 7, total: 10, minutes: 2 },
+        { at: 1, kind: "Ханзны уншлага", level: "N4", correct: 5, total: 10, minutes: 2 },
+      ],
+    };
+    const res = decodeDoc(JSON.stringify(raw));
+    expect(res.ok).toBe(true);
+    if (!res.ok) return;
+    expect(res.doc.quizzes.map((q) => q.kind)).toEqual(["vocab-jp-mn", "vocab-jp-mn", "kanji-read"]);
+  });
+
+  it("is idempotent — loading a normalized document changes nothing", () => {
+    const raw = {
+      ...makeDoc(),
+      quizzes: [{ at: 1, kind: "Сонсгол", level: "N5", correct: 1, total: 4, minutes: 1 }],
+    };
+    const first = decodeDoc(JSON.stringify(raw));
+    expect(first.ok).toBe(true);
+    if (!first.ok) return;
+    const second = decodeDoc(JSON.stringify(first.doc));
+    expect(second.ok).toBe(true);
+    if (!second.ok) return;
+    expect(second.doc.quizzes).toEqual(first.doc.quizzes);
+  });
+
+  it("keeps an unknown legacy exam title verbatim instead of guessing", () => {
+    const raw = {
+      ...makeDoc(),
+      quizzes: [{ at: 1, kind: "N5 жишиг шалгалт · Сонсгол", level: "N5", correct: 1, total: 4, minutes: 1 }],
+    };
+    const res = decodeDoc(JSON.stringify(raw));
+    expect(res.ok).toBe(true);
+    if (!res.ok) return;
+    expect(res.doc.quizzes[0].kind).toBe("N5 жишиг шалгалт · Сонсгол");
+  });
+});
+
+describe("quiz count preference", () => {
+  it("fills the default for an older profile without a schema bump", () => {
+    const doc = makeDoc();
+    const profile = { ...doc.profile } as Record<string, unknown>;
+    delete profile.quiz;
+    const res = decodeDoc(JSON.stringify({ ...doc, profile }));
+    expect(res.ok).toBe(true);
+    if (!res.ok) return;
+    expect(res.migrated).toBe(false);
+    expect(res.doc.v).toBe(SCHEMA_VERSION);
+    expect(res.doc.profile.quiz).toEqual(DEFAULT_PROFILE.quiz);
+  });
+
+  it("keeps srs, xp, activity and mistakes untouched while adding the preference", () => {
+    const doc = makeDoc({
+      srs: { "日": card(7, 1000) },
+      xp: 4242,
+      activity: { "2026-01-01": { xp: 10, min: 5, newCards: 1, reviews: 4, correct: 3, total: 4 } },
+      mistakes: [
+        { id: "v-1", kind: "vocab", level: "N5", prompt: "水", answer: "ус", given: "гал", at: 5, count: 2 },
+      ],
+    });
+    const profile = { ...doc.profile } as Record<string, unknown>;
+    delete profile.quiz;
+    const before = JSON.parse(JSON.stringify(doc)) as Doc;
+    const res = decodeDoc(JSON.stringify({ ...before, profile }));
+    expect(res.ok).toBe(true);
+    if (!res.ok) return;
+    expect(res.doc.srs).toEqual(before.srs);
+    expect(res.doc.xp).toBe(4242);
+    expect(res.doc.activity).toEqual(before.activity);
+    expect(res.doc.mistakes).toEqual(before.mistakes);
+    expect(res.doc.profile.quiz).toEqual(DEFAULT_PROFILE.quiz);
+  });
+
+  it("round-trips a stored count and snaps an unsupported one to an offered option", () => {
+    const stored = { ...makeDoc(), profile: { ...DEFAULT_PROFILE, quiz: { count: 30 } } };
+    const ok = decodeDoc(JSON.stringify(stored));
+    expect(ok.ok).toBe(true);
+    if (!ok.ok) return;
+    expect(ok.doc.profile.quiz.count).toBe(30);
+
+    const odd = { ...makeDoc(), profile: { ...DEFAULT_PROFILE, quiz: { count: 17 } } };
+    const snapped = decodeDoc(JSON.stringify(odd));
+    expect(snapped.ok).toBe(true);
+    if (!snapped.ok) return;
+    expect(snapped.doc.profile.quiz.count).toBe(15);
+  });
+});
