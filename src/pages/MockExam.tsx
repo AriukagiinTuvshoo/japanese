@@ -1,16 +1,18 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { cn } from "../utils/cn";
 import { navigate, useQuery } from "../lib/router";
 import { useStore } from "../lib/store";
 import { READING, loadFullData } from "../lib/data";
-import { EXAM_BLUEPRINTS, buildExam, scoreExam, sectionPassMark, type ExamSection } from "../lib/study";
-import type { Question } from "../lib/study";
+import { EXAM_BLUEPRINTS, buildExam, scoreExam, sectionPassMark } from "../lib/study";
+import {
+  DRAFT_VERSION, clearExamDraft, readExamDraft, saveExamDraft, type DraftResult, type DraftSection,
+} from "../lib/examSession";
 import type { Level } from "../lib/types";
 import { LEVELS } from "../lib/types";
 import { LEVEL_LABEL } from "../lib/text";
 import { LEVEL_META } from "../data/levels";
 import { Button, Card, Chip, LevelBadge, Ring, SectionTitle, Spinner } from "../components/ui";
-import { QuizRunner } from "../components/QuizRunner";
+import { QuizRunner, type QuizResult } from "../components/QuizRunner";
 import { ui } from "../lib/i18n";
 
 type Stage = "pick" | "running" | "sectionResult" | "final";
@@ -23,34 +25,92 @@ export default function MockExam() {
   const [level, setLevel] = useState<Level>((query.level as Level) || (doc.profile.current === "zero" ? doc.profile.target : doc.profile.current));
   const [stage, setStage] = useState<Stage>("pick");
   const [secIdx, setSecIdx] = useState(0);
-  const [sections, setSections] = useState<{ section: ExamSection; questions: Question[] }[]>([]);
-  const [results, setResults] = useState<{ section: ExamSection; correct: number; total: number }[]>([]);
-  const [, setAnswers] = useState<(number | null)[]>([]);
+  const [sections, setSections] = useState<DraftSection[]>([]);
+  const [results, setResults] = useState<DraftResult[]>([]);
+  const [answersBySec, setAnswersBySec] = useState<(number | null)[][]>([]);
+  const [idxBySec, setIdxBySec] = useState<number[]>([]);
+  const [resumed, setResumed] = useState(false);
   const [loading, setLoading] = useState(false);
   const [finishedMinutes, setFinishedMinutes] = useState<number | null>(null);
-  const startAt = useMemo(() => Date.now(), [sections]);
+  const [startedAt, setStartedAt] = useState(() => Date.now());
+  const mountedRef = useRef(false);
+  /** Зурваснаас сэргээсний дараагийн түвшний эффектийг алгасах. */
+  const restoredRef = useRef(false);
+  /** Шалгалтын үр дүнг нэг л удаа бүртгэх. */
+  const recordedRef = useRef(false);
 
   const bp = EXAM_BLUEPRINTS[level];
   const meta = LEVEL_META[level];
 
-  useEffect(() => { setStage("pick"); setSecIdx(0); setResults([]); setAnswers([]); }, [level]);
+  /* `#/mock?level=N2` гүн холбоос нь аль хэдийн нээлттэй байсан ч түвшинг сольж өгнө. */
+  useEffect(() => {
+    const wanted = query.level as Level | undefined;
+    if (!wanted || !(LEVELS as string[]).includes(wanted)) return;
+    if (stage !== "pick") return;
+    setLevel((cur) => (cur === wanted ? cur : wanted));
+  }, [query.level, stage]);
+
+  /* Түвшин солиход өмнөх шалгалтын зурвас хүчингүй болно. */
+  useEffect(() => {
+    if (!mountedRef.current) { mountedRef.current = true; return; }
+    if (restoredRef.current) { restoredRef.current = false; return; }
+    setStage("pick");
+    setSecIdx(0);
+    setResults([]);
+    setAnswersBySec([]);
+    setIdxBySec([]);
+    setResumed(false);
+    clearExamDraft(sessionStorage);
+  }, [level]);
+
+  /* Refresh хийсэн бол дуусаагүй шалгалтыг (хариулт, хэсэг, цаг) сэргээнэ. */
+  useEffect(() => {
+    const draft = readExamDraft(sessionStorage);
+    if (!draft) return;
+    restoredRef.current = true;
+    setLevel(draft.level);
+    setStage(draft.stage);
+    setSecIdx(draft.secIdx);
+    setSections(draft.sections);
+    setResults(draft.results);
+    setAnswersBySec(draft.answers);
+    setIdxBySec(draft.index);
+    setStartedAt(draft.startedAt);
+    setResumed(true);
+  }, []);
+
+  /* Шалгалтын явцыг тогтмол хадгална — refresh хийхэд алдагдахгүй. */
+  useEffect(() => {
+    if (stage === "pick" || stage === "final" || !sections.length) return;
+    saveExamDraft(sessionStorage, {
+      v: DRAFT_VERSION, level, stage: stage as "running" | "sectionResult", secIdx, startedAt,
+      updatedAt: Date.now(), sections, results, answers: answersBySec, index: idxBySec,
+    });
+  }, [stage, level, secIdx, startedAt, sections, results, answersBySec, idxBySec]);
 
   const start = async () => {
     setLoading(true);
     const data = await loadFullData();
     const built = buildExam(bp, { vocab: data.vocab, kanji: data.kanji, grammar: data.grammar, reading: READING }, language);
+    clearExamDraft(sessionStorage);
     setSections(built);
     setSecIdx(0);
     setResults([]);
+    setAnswersBySec(built.map((s) => s.questions.map(() => null)));
+    setIdxBySec(built.map(() => 0));
+    setStartedAt(Date.now());
     setFinishedMinutes(null);
+    setResumed(false);
+    recordedRef.current = false;
     setStage("running");
     setLoading(false);
   };
 
   const current = sections[secIdx];
 
-  const onFinishSection = (r: { correct: number; total: number }) => {
-    const next = [...results, { section: current.section, correct: r.correct, total: r.total }];
+  const onFinishSection = (r: QuizResult) => {
+    if (!current) return;
+    const next = [...results, { section: current.section, correct: r.correct, total: r.total, timedOut: r.timedOut }];
     setResults(next);
 
     if (next.length < sections.length) {
@@ -58,8 +118,11 @@ export default function MockExam() {
       return;
     }
 
-    /* Бүх хэсэг дууссан үед л түүхэнд бүртгэнэ — хагас шалгалт дүн гэж хадгалахгүй. */
-    const minutes = Math.max(1, Math.round((Date.now() - startAt) / 60000));
+    /* Бүх хэсэг дууссан үед л түүхэнд бүртгэнэ — хагас шалгалт дүн гэж хадгалахгүй.
+       Таймер ба товч зэрэг дуудсан ч давхар бүртгэхгүй. */
+    if (recordedRef.current) return;
+    recordedRef.current = true;
+    const minutes = Math.max(1, Math.round((Date.now() - startedAt) / 60000));
     const scored = scoreExam(bp, next, minutes);
     setFinishedMinutes(minutes);
     actions.recordExam({
@@ -73,12 +136,13 @@ export default function MockExam() {
       minutes,
       mock: true,
     });
+    clearExamDraft(sessionStorage);
     setStage("final");
   };
 
   /* ── эцсийн үр дүн ── */
   if (stage === "final") {
-    const minutesTaken = finishedMinutes ?? Math.max(1, Math.round((Date.now() - startAt) / 60000));
+    const minutesTaken = finishedMinutes ?? Math.max(1, Math.round((Date.now() - startedAt) / 60000));
     const scored = scoreExam(bp, results, minutesTaken);
     const weakest = [...scored.sections].sort((a, b) => a.score / a.max - b.score / b.max)[0];
     const verdict = scored.total >= bp.passTotal
@@ -98,10 +162,14 @@ export default function MockExam() {
               <div className="text-center">
                 <p className="font-mono text-[1.7rem] font-extrabold leading-none tabnum">{scored.total}</p>
                 <p className="mt-0.5 text-[10px] font-bold text-sumi-400">/ {scored.max}</p>
+                <p className="mt-1 text-[9.5px] font-bold leading-tight text-sumi-400">{t.examEstLabel}</p>
               </div>
             </Ring>
             <div className="min-w-0 flex-1">
               <Chip tone={scored.passed ? "matcha" : "shu"}>{verdict}</Chip>
+              <p className="mt-2 font-mono text-[12.5px] font-bold tabnum text-sumi-700">
+                {t.examRaw(scored.raw.correct, scored.raw.total, Math.round(scored.raw.accuracy * 100))}
+              </p>
               <p className="mt-3 text-[13.5px] leading-relaxed text-sumi-600">
                 {t.examNote}
               </p>
@@ -127,7 +195,7 @@ export default function MockExam() {
                 <div className="flex items-baseline justify-between">
                   <span className="text-[13.5px] font-bold text-sumi-800">{s.name}</span>
                   <span className="font-mono text-[12.5px] font-bold tabnum text-sumi-500">
-                    {s.correct}/{s.total} · {s.score}/{s.max}
+                    {s.correct}/{s.total} · {s.score}/{s.max} ({t.examEstShort})
                   </span>
                 </div>
                 <div className="mt-1.5 h-2 w-full overflow-hidden rounded-full bg-sumi-900/8">
@@ -137,6 +205,7 @@ export default function MockExam() {
               </div>
             ))}
           </div>
+          <p className="mt-3 text-[11.5px] leading-relaxed text-sumi-400">{t.examEstNote}</p>
 
           <div className="mt-6 rounded-2xl border border-kin-200 bg-kin-50 p-4">
             <p className="text-[13.5px] font-extrabold text-kin-700">{t.weakestPre}{weakest.name}</p>
@@ -150,7 +219,7 @@ export default function MockExam() {
           </div>
 
           <div className="mt-5 flex flex-wrap gap-2">
-            <Button onClick={() => { setStage("pick"); setResults([]); setSecIdx(0); }}>{t.retakeBtn}</Button>
+            <Button onClick={() => { clearExamDraft(sessionStorage); setStage("pick"); setResults([]); setSecIdx(0); setAnswersBySec([]); setIdxBySec([]); setResumed(false); }}>{t.retakeBtn}</Button>
             <Button variant="ghost" onClick={() => navigate("progress")}>{t.analysisLink}</Button>
           </div>
         </Card>
@@ -188,6 +257,11 @@ export default function MockExam() {
           <p className="mt-4 rounded-xl bg-sumi-900/[0.045] px-4 py-3 text-[12.5px] leading-relaxed text-sumi-500">
             {t.afterExamNote}
           </p>
+          {last.timedOut && (
+            <p className="mt-2 rounded-xl border border-kin-200 bg-kin-50 px-4 py-2 text-[12px] font-bold text-kin-700">
+              {t.examAutoSubmitted}
+            </p>
+          )}
           <div className="mt-5 flex flex-wrap justify-center gap-2">
             <Button onClick={() => { setSecIdx(secIdx + 1); setStage("running"); }}>
               {t.nextSection(sections[secIdx + 1] ? (language === "en" ? sections[secIdx + 1].section.nameEn ?? sections[secIdx + 1].section.name : sections[secIdx + 1].section.name) : "")}
@@ -209,7 +283,7 @@ export default function MockExam() {
             {t.sectionN(secIdx + 1, sections.length, language === "en" ? current.section.nameEn ?? current.section.name : current.section.name, current.section.jp)}
           </span>
           <span className="ml-auto text-[12px] text-sumi-400">
-            {t.spentN(Math.round((Date.now() - startAt) / 60000))}
+            {t.spentN(Math.round((Date.now() - startedAt) / 60000))}
           </span>
         </div>
         <QuizRunner
@@ -220,9 +294,21 @@ export default function MockExam() {
             reveal: false,
             title: `${language === "en" ? bp.titleEn : bp.title} · ${language === "en" ? current.section.nameEn ?? current.section.name : current.section.name}`,
             sectionLabel: () => (language === "en" ? current.section.nameEn ?? current.section.name : current.section.name),
+            initialAnswers: answersBySec[secIdx],
+            initialIndex: idxBySec[secIdx],
+            onProgress: (p) => {
+              setAnswersBySec((prev) => { const next = prev.slice(); next[secIdx] = p.answers; return next; });
+              setIdxBySec((prev) => { const next = prev.slice(); next[secIdx] = p.index; return next; });
+            },
             onFinish: (r) => onFinishSection(r),
           }}
-          onClose={() => setStage("pick")}
+          onClose={() => {
+            clearExamDraft(sessionStorage);
+            setStage("pick");
+            setResults([]);
+            setSecIdx(0);
+            setResumed(false);
+          }}
         />
       </div>
     );
@@ -240,6 +326,12 @@ export default function MockExam() {
         <p className="mt-3 rounded-xl bg-kin-50 px-4 py-3 text-[12.5px] leading-relaxed text-kin-700">
           {t.mockWarn}
         </p>
+        <p className="mt-2 text-[12px] leading-relaxed text-sumi-500">{t.examListeningTts}</p>
+        {resumed && (
+          <p className="mt-3 rounded-xl border border-ai-200 bg-ai-50 px-4 py-3 text-[12.5px] font-bold text-ai-700">
+            {t.examResumed}
+          </p>
+        )}
       </div>
 
       <div className="grid gap-3 sm:grid-cols-5">

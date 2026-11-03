@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { DEFAULT_PROFILE, SCHEMA_VERSION, freshDoc, type Doc } from "./doc";
-import { applyGrade, binaryToGrade, makeOnce, reviewXP } from "./flashcard";
+import { GRADE_REPEAT_WINDOW_MS, applyGrade, binaryToGrade, isRepeatGrade, makeOnce, reviewXP } from "./flashcard";
 import { XP } from "./gamification";
 import { schedule, type Card } from "./srs";
 import { backupKeyOf, decodeDoc, docKeyOf, readDoc, type KV } from "./storage";
@@ -135,6 +135,41 @@ describe("one grade per card", () => {
     if (once("日")) doc = applyGrade(doc, "日", 2, { isNew: true, now: NOW });
     expect(doc.xp).toBe(XP.reviewGood + XP.newCard);
     expect(Object.values(doc.activity)[0].newCards).toBe(1);
+  });
+});
+
+/* ─────────────── Давхар үнэлгээний domain хамгаалалт ─────────────── */
+
+describe("repeated grading is blocked in the domain layer", () => {
+  it("ignores a second grade of the same card inside the repeat window", () => {
+    const first = applyGrade(freshDoc(), "日", 2, { now: NOW });
+    const again = applyGrade(first, "日", 2, { now: NOW + 120 });
+    expect(again).toBe(first);
+    expect(again.xp).toBe(first.xp);
+    expect(again.srs["日"]).toEqual(first.srs["日"]);
+    expect(Object.values(again.activity)[0].reviews).toBe(1);
+  });
+
+  it("still records a deliberate later review of the same card", () => {
+    const first = applyGrade(freshDoc(), "日", 2, { now: NOW });
+    const later = applyGrade(first, "日", 2, { now: NOW + GRADE_REPEAT_WINDOW_MS + 1 });
+    expect(later.xp).toBeGreaterThan(first.xp);
+    expect(later.srs["日"].n).toBe(2);
+    expect(Object.values(later.activity)[0].reviews).toBe(2);
+  });
+
+  it("does not block a different card graded at the same moment", () => {
+    const first = applyGrade(freshDoc(), "日", 2, { now: NOW });
+    const other = applyGrade(first, "本", 2, { now: NOW });
+    expect(other.srs["本"]).toBeTruthy();
+    expect(Object.values(other.activity)[0].reviews).toBe(2);
+  });
+
+  it("detects a repeat from the stored card alone", () => {
+    const card = applyGrade(freshDoc(), "日", 2, { now: NOW }).srs["日"];
+    expect(isRepeatGrade(card, NOW + 50)).toBe(true);
+    expect(isRepeatGrade(card, NOW + GRADE_REPEAT_WINDOW_MS + 50)).toBe(false);
+    expect(isRepeatGrade(undefined, NOW)).toBe(false);
   });
 });
 

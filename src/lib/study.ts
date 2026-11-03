@@ -120,7 +120,12 @@ function vocabQuestion(v: Vocab, pool: Vocab[], mode: QuizMode, language: Langua
   const meaning = (x: Vocab) => (language === "en" ? x.en.join("; ") : x.mn?.length ? x.mn.join(", ") : MN_PENDING);
   const sect = (m: string) => SECTION_LABEL[language][m] ?? m;
   const sub = (m: string) => PROMPT_SUB[language][m] ?? m;
-  const others = distractors(pool, (x) => x.id === v.id, 3, opt);
+  /* Монгол горимд орчуулгагүй үгийн англи утгыг сонголт болгож
+     харуулахгүй — өмнө нь «new era» гэх мэт англи сонголт холилддог байв. */
+  const needsMn = language === "mn" && (mode === "vocab-jp-mn" || mode === "vocab-mn-jp" || mode === "vocab-listen");
+  if (needsMn && !v.mn?.length) return null;
+  const meaningPool = language === "mn" ? pool.filter((x) => x.mn?.length) : pool;
+  const others = distractors(meaningPool, (x) => x.id === v.id, 3, opt);
   if (others.length < 3) return null;
   const opts = shuffle([v, ...others], rnd);
 
@@ -202,11 +207,14 @@ function kanjiQuestion(k: Kanji, pool: Kanji[], mode: QuizMode, language: Langua
     };
   }
 
+  const isRead = mode === "kanji-read";
+  /* Утгын горимд монгол утга байхгүй ханзыг MN горимд ашиглахгүй. */
+  if (language === "mn" && !isRead && !k.mn.length) return null;
   const kMeaning = (x: Kanji) => (language === "en" ? (x.en[0] ?? x.mn[0] ?? x.k) : (x.mn[0] ?? x.en[0] ?? x.k));
-  const others = distractors(pool, (x) => x.k === k.k, 3, (x) => mode === "kanji-read" ? (x.on[0] ?? x.kun[0] ?? x.k) : kMeaning(x));
+  const meaningPool = language === "mn" && !isRead ? pool.filter((x) => x.mn.length > 0) : pool;
+  const others = distractors(meaningPool, (x) => x.k === k.k, 3, (x) => isRead ? (x.on[0] ?? x.kun[0] ?? x.k) : kMeaning(x));
   if (others.length < 3) return null;
   const opts = shuffle([k, ...others], rnd);
-  const isRead = mode === "kanji-read";
 
   return {
     id: `k-${isRead ? "rd" : "mn"}-${k.k}`, kind: "kanji", level: k.lvl, section: SECTION_LABEL[language]["Ханз"] ?? "Ханз",
@@ -318,8 +326,12 @@ export function buildQuiz(
 
   const push = (q: Question | null) => { if (q) out.push(q); };
 
-  const pickVocab = (n: number) => {
-    const source = req.restrictIds?.length ? vPool.filter((v) => req.restrictIds!.includes(v.id)) : vPool;
+  const pickVocab = (n: number, requireMn = false) => {
+    let source = req.restrictIds?.length ? vPool.filter((v) => req.restrictIds!.includes(v.id)) : vPool;
+    if (requireMn) {
+      const translated = source.filter((v) => v.mn?.length);
+      if (translated.length) source = translated;
+    }
     return pick(source.length ? source : vPool, n);
   };
 
@@ -336,15 +348,17 @@ export function buildQuiz(
       case "vocab-jp-mn":
       case "vocab-mn-jp":
       case "vocab-read":
-      case "vocab-listen":
-        for (const v of pickVocab(per * 2)) {
-          if (out.filter((q) => q.kind === "vocab").length >= per + out.length - out.filter((q) => q.kind === "vocab").length) break;
+      case "vocab-listen": {
+        const start = out.length;
+        const needMn = language === "mn" && m !== "vocab-read";
+        for (const v of pickVocab(per * 3, needMn)) {
+          if (out.length - start >= per) break;
           push(vocabQuestion(v, vPool, m, language));
-          if (out.length >= per) break;
         }
         break;
+      }
       case "vocab-fill": {
-        const withEx = vPool.filter((v) => v.ex.length && v.w.length > 1);
+        const withEx = vPool.filter((v) => v.ex.length && v.w.length > 1 && (language === "en" || !!v.mn?.length));
         for (const v of pick(withEx, per * 3)) {
           if (out.length >= per) break;
           const q = fillBlank(v, language);
@@ -355,12 +369,15 @@ export function buildQuiz(
       }
       case "kanji-mn":
       case "kanji-read":
-      case "kanji-stroke":
-        for (const k of pick(kPool, per * 2)) {
-          if (out.length >= per) break;
+      case "kanji-stroke": {
+        const start = out.length;
+        const source = language === "mn" && m === "kanji-mn" ? kPool.filter((x) => x.mn.length > 0) : kPool;
+        for (const k of pick(source, per * 3)) {
+          if (out.length - start >= per) break;
           push(kanjiQuestion(k, kPool, m, language));
         }
         break;
+      }
       case "grammar-mn":
       case "grammar-use":
         for (const g of pick(gPool, per * 2)) {
@@ -538,8 +555,14 @@ export function scoreExam(
   minutes: number,
 ): {
   sections: { name: string; correct: number; total: number; score: number; max: number }[];
+  /** Жишгийн хөрвүүлсэн оноо (албан ёсны оноо БИШ). */
   total: number;
   max: number;
+  /** `total`/`max` нь ХЭЗЭЭ Ч албан ёсны оноо биш гэдгийг илэрхийлнэ. */
+  kind: "estimated";
+  /** Бодит зөв хариултын тоо — онооноос тусдаа, хуурахгүй үзүүлэлт. */
+  raw: { correct: number; total: number; accuracy: number };
+  estimated: { score: number; max: number };
   passed: boolean;
   /** Доод оноонд хүрээгүй хэсгүүд. */
   failed: { name: string; score: number; mark: number }[];
@@ -557,8 +580,19 @@ export function scoreExam(
     .filter((s) => s.score < sectionPassMark(s.max))
     .map((s) => ({ name: s.name, score: s.score, mark: sectionPassMark(s.max) }));
   const passed = total >= bp.passTotal && failed.length === 0;
+  const rawCorrect = sections.reduce((a, s) => a + s.correct, 0);
+  const rawTotal = sections.reduce((a, s) => a + s.total, 0);
   void minutes;
-  return { sections, total, max, passed, failed };
+  return {
+    sections,
+    total,
+    max,
+    kind: "estimated",
+    raw: { correct: rawCorrect, total: rawTotal, accuracy: rawTotal ? rawCorrect / rawTotal : 0 },
+    estimated: { score: total, max },
+    passed,
+    failed,
+  };
 }
 
 /** Шалгалтын асуултын тоо (оноо биш) — өдрийн статистик үүгээр бодогдоно. */

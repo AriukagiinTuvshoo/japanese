@@ -15,6 +15,8 @@ export interface QuizResult {
   total: number;
   minutes: number;
   wrong: Question[];
+  /** Хугацаа дууссан тул автоматаар илгээгдсэн эсэх. */
+  timedOut?: boolean;
 }
 
 /** Дуудагчийн тохиргоо. */
@@ -36,6 +38,12 @@ export interface RunnerOptions {
    * бичихгүй — жишиг шалгалт зөвхөн `recordExam`-ээр нэг удаа бүртгэгдэнэ.
    */
   log?: { kind: string; level: Level };
+  /** Refresh-ийн дараа сэргээх хариултууд (шалгалт). */
+  initialAnswers?: (number | null)[];
+  /** Сэргээх асуултын байрлал. */
+  initialIndex?: number;
+  /** Хариулт эсвэл байрлал өөрчлөгдөх бүрд дуудагдана — шалгалтын зурваст. */
+  onProgress?: (p: { index: number; answers: (number | null)[] }) => void;
 }
 
 export function QuizRunner({
@@ -48,27 +56,32 @@ export function QuizRunner({
   const { actions, doc } = useStore();
   const language = doc.profile.language ?? "mn";
   const t = ui[language];
-  const [idx, setIdx] = useState(0);
+  const [idx, setIdx] = useState(() => Math.min(Math.max(0, options.initialIndex ?? 0), Math.max(0, questions.length - 1)));
   const [picked, setPicked] = useState<number | null>(null);
-  const [answers, setAnswers] = useState<(number | null)[]>(() => questions.map(() => null));
+  const [answers, setAnswers] = useState<(number | null)[]>(() => questions.map((_, i) => options.initialAnswers?.[i] ?? null));
   const [done, setDone] = useState(false);
   const startRef = useRef(Date.now());
   const [left, setLeft] = useState<number | null>(options.timed ? options.timed * 60 : null);
   const wrongRef = useRef<Question[]>([]);
+  const answersRef = useRef<(number | null)[]>(answers);
+  const finishedRef = useRef(false);
+  const progressRef = useRef(options.onProgress);
+  progressRef.current = options.onProgress;
+
+  /* Хариулт/байрлал өөрчлөгдөх бүрд эцэг компонентод мэдэгдэнэ (зурвас). */
+  useEffect(() => {
+    answersRef.current = answers;
+    progressRef.current?.({ index: idx, answers });
+  }, [answers, idx]);
 
   const q = questions[idx];
   const total = questions.length;
 
-  /* ── таймер ── */
-  useEffect(() => {
-    if (left === null || done) return;
-    if (left <= 0) { setDone(true); return; }
-    const t = setTimeout(() => setLeft((l) => (l === null ? null : l - 1)), 1000);
-    return () => clearTimeout(t);
-  }, [left, done]);
-
   /* ── дуусгах ── */
-  const finish = useCallback((finalAnswers: (number | null)[]) => {
+  const finish = useCallback((finalAnswers: (number | null)[], timedOut = false) => {
+    // Нэг л удаа илгээнэ: таймер ба товч зэрэг дуудсан ч давхар бүртгэхгүй.
+    if (finishedRef.current) return;
+    finishedRef.current = true;
     const correct = questions.reduce((a, qq, i) => a + (finalAnswers[i] === qq.answer ? 1 : 0), 0);
     const minutes = Math.max(1, Math.round((Date.now() - startRef.current) / 60000));
     const wrong = questions.filter((qq, i) => finalAnswers[i] !== qq.answer);
@@ -99,8 +112,18 @@ export function QuizRunner({
     });
 
     setDone(true);
-    options.onFinish?.({ correct, total, minutes, wrong });
+    options.onFinish?.({ correct, total, minutes, wrong, timedOut });
   }, [questions, actions, options, total]);
+
+  /* ── таймер ── */
+  useEffect(() => {
+    if (left === null || done) return;
+    // Хугацаа дуусахад хэсгийг АВТОМАТААР илгээнэ — өмнө нь `done` болгоод
+    // л гардаг байсан тул хэсгийн үр дүн бүртгэгдэхгүй, шалгалт гацах байв.
+    if (left <= 0) { finish(answersRef.current.slice(), true); return; }
+    const t = setTimeout(() => setLeft((l) => (l === null ? null : l - 1)), 1000);
+    return () => clearTimeout(t);
+  }, [left, done, finish]);
 
   const choose = (i: number) => {
     if (picked !== null || done) return;
@@ -169,6 +192,7 @@ export function QuizRunner({
         answers={answers}
         minutes={Math.max(1, Math.round((Date.now() - startRef.current) / 60000))}
         onRetry={() => {
+          finishedRef.current = false;
           setIdx(0); setPicked(null); setAnswers(questions.map(() => null)); setDone(false);
           startRef.current = Date.now();
           if (options.timed) setLeft(options.timed * 60);

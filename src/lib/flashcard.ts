@@ -10,7 +10,7 @@
  */
 import { emptyDay, type ActivityDay, type Doc } from "./doc";
 import { XP } from "./gamification";
-import { schedule, type Grade } from "./srs";
+import { schedule, type Card, type Grade } from "./srs";
 import { todayKey } from "./text";
 
 /** Хоёр товчны утга — Again (0) ба Good (2). */
@@ -33,11 +33,32 @@ export interface GradeOptions {
 }
 
 /**
+ * Давхар үнэлгээг таних цонх (мс).
+ * Дэлгэрэнгүй хуудас, нүүр хуудасны товчийг давхар дарахад нэг карт
+ * хоёр удаа үнэлэгдэж, SRS интервал ба XP хоёулаа буруу өсдөг байв.
+ * `Session` дээр `makeOnce()` байсан ч бусад урсгал хамгаалалтгүй байсан тул
+ * хамгаалалтыг домэйн түвшинд (энэ функц) төвлөрүүлэв.
+ */
+export const GRADE_REPEAT_WINDOW_MS = 1000;
+
+/**
+ * Энэ карт саяхан (цонх дотор) үнэлэгдсэн үү — өөрөөр хэлбэл дараагийн
+ * дуудалт нь давхар даралт уу. Хадгалсан картын `last`-аас л шийднэ.
+ */
+export function isRepeatGrade(card: Card | undefined, now = Date.now()): boolean {
+  if (!card || !card.n || !card.last) return false;
+  const delta = now - card.last;
+  return delta >= 0 && delta < GRADE_REPEAT_WINDOW_MS;
+}
+
+/**
  * Нэг картын үнэлгээг бүртгэнэ: SRS төлөв, нийт XP, өдрийн үзүүлэлт.
- * Функц нь цэвэр — ижил оролтод ижил гаралт буцаана.
+ * Функц нь цэвэр — ижил оролтод ижил гаралт буцаана. Давхар даралтыг
+ * `isRepeatGrade`-ээр шүүж, ижил баримтыг буцаана (юу ч нэмэгдэхгүй).
  */
 export function applyGrade(doc: Doc, id: string, g: Grade, opts: GradeOptions = {}): Doc {
   const now = opts.now ?? Date.now();
+  if (isRepeatGrade(doc.srs[id], now)) return doc;
   const gain = reviewXP(g, opts.isNew);
   const day = todayKey(new Date(now));
   const cur = doc.activity[day] ?? emptyDay();
@@ -58,9 +79,10 @@ export function applyGrade(doc: Doc, id: string, g: Grade, opts: GradeOptions = 
 }
 
 /**
- * Нэг картыг нэг л удаа үнэлэх хамгаалалт.
+ * Нэг картыг нэг л удаа үнэлэх session-ийн хамгаалалт.
  * Товчийг давхар дарах эсвэл `Z`/`X`-ийг давтан хүргэхэд SRS ба XP
- * давхар бүртгэгдэхээс сэргийлнэ.
+ * давхар бүртгэгдэхээс сэргийлнэ. Домэйн тал дээр `isRepeatGrade`
+ * нэмэлт хамгаалалт болно.
  */
 export function makeOnce() {
   const seen = new Set<string>();

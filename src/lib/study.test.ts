@@ -73,6 +73,47 @@ describe("reading (読解) questions", () => {
   });
 });
 
+describe("answer options stay in the active language", () => {
+  /* Монгол орчуулгагүй үгсийн англи утга — MN горимд сонголт болж гарах ёсгүй. */
+  const enOnly = new Set(data.vocab.filter((v) => !v.mn?.length).map((v) => v.en[0]));
+  const enOnlyKanji = new Set(data.kanji.filter((k) => !k.mn.length).map((k) => k.en[0] ?? k.k));
+
+  it("never fills Mongolian options from untranslated vocabulary", () => {
+    for (const level of ["N5", "N4", "N3", "N2", "N1"] as const) {
+      for (const mode of ["vocab-jp-mn", "vocab-listen"] as const) {
+        const set = buildQuiz({ mode, level, count: 12, lang: "mn" }, data);
+        for (const q of set.questions) {
+          for (const o of q.options) expect(enOnly.has(o), `${level} ${mode}: «${o}»`).toBe(false);
+        }
+      }
+    }
+  });
+
+  it("never fills Mongolian kanji options from untranslated kanji", () => {
+    for (const level of ["N5", "N4", "N3", "N2", "N1"] as const) {
+      const set = buildQuiz({ mode: "kanji-mn", level, count: 12, lang: "mn" }, data);
+      for (const q of set.questions) {
+        for (const o of q.options) expect(enOnlyKanji.has(o), `${level}: «${o}»`).toBe(false);
+      }
+    }
+  });
+
+  it("still fills the plan whenever translated content exists", () => {
+    for (const level of ["N5", "N4", "N3", "N2", "N1"] as const) {
+      const available = data.vocab.filter((v) => v.lvl === level && !!v.mn?.length).length;
+      const set = buildQuiz({ mode: "vocab-jp-mn", level, count: 20, lang: "mn" }, data);
+      expect(set.questions, level).toHaveLength(Math.min(20, available));
+    }
+  });
+
+  it("reports the N1 kanji translation gap instead of inventing meanings", () => {
+    // N1 ханз бүрэн орчуулагдаагүй — англи утгыг монгол сонголт болгож ХАРУУЛАХГҮЙ.
+    const translated = data.kanji.filter((k) => k.lvl === "N1" && k.mn.length > 0).length;
+    const set = buildQuiz({ mode: "kanji-mn", level: "N1", count: 10, lang: "mn" }, data);
+    expect(set.questions).toHaveLength(Math.min(10, translated));
+  });
+});
+
 describe("mock exam blueprint", () => {
   it("fills the reading section of N2/N1 with real passage questions", () => {
     for (const level of ["N2", "N1"] as const) {
@@ -184,6 +225,46 @@ describe("exam scoring", () => {
     ], 80);
     expect(res.passed).toBe(true);
     expect(res.failed).toHaveLength(0);
+  });
+
+  it("reports raw counts separately from the estimated scaled score", () => {
+    const res = scoreExam(bp, [
+      { section: sec("lang"), correct: 15, total: 20 },
+      { section: sec("read"), correct: 6, total: 12 },
+      { section: sec("listen"), correct: 9, total: 12 },
+    ], 80);
+    // Raw — бодит зөв хариултын тоо (оноо биш).
+    expect(res.raw).toEqual({ correct: 30, total: 44, accuracy: 30 / 44 });
+    // Estimated — зөвхөн жишгийн тооцоо; албан ёсны оноо гэж нэрлэгдэхгүй.
+    expect(res.kind).toBe("estimated");
+    expect(res.estimated.score).toBe(res.total);
+    expect(res.estimated.max).toBe(res.max);
+    // Хэсэг тус бүрээр хөрвүүлсэн онооны нийлбэр — глобал дугуйруулгаас
+    // бага зэрэг зөрж болно (жинхэнэ шалгалтад ч хэсэг тус бүрээр оноодог).
+    expect(res.estimated.score).toBe(res.sections.reduce((a, s2) => a + s2.score, 0));
+    expect(Math.abs(res.estimated.score - res.raw.accuracy * res.max)).toBeLessThanOrEqual(res.sections.length);
+    // Raw хариултын тоо нь оноо биш — шууд дамжуулагдахгүй.
+    expect(res.total).not.toBe(res.raw.correct);
+  });
+
+  it("keeps the estimated score at the extremes of accuracy", () => {
+    const none = scoreExam(bp, [
+      { section: sec("lang"), correct: 0, total: 20 },
+      { section: sec("read"), correct: 0, total: 12 },
+      { section: sec("listen"), correct: 0, total: 12 },
+    ], 80);
+    expect(none.raw.accuracy).toBe(0);
+    expect(none.total).toBe(0);
+    expect(none.passed).toBe(false);
+
+    const all = scoreExam(bp, [
+      { section: sec("lang"), correct: 20, total: 20 },
+      { section: sec("read"), correct: 12, total: 12 },
+      { section: sec("listen"), correct: 12, total: 12 },
+    ], 80);
+    expect(all.raw.accuracy).toBe(1);
+    expect(all.total).toBe(all.max);
+    expect(all.passed).toBe(true);
   });
 
   it("counts exam questions (not points) for the activity log", () => {
