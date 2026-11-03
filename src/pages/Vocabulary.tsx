@@ -8,6 +8,7 @@ import { LEVELS } from "../lib/types";
 import { LEVEL_LABEL, MQ_LABEL, TYPE_LABEL, toRomaji } from "../lib/text";
 import { topicLabel, ui, vocabMeaning, vocabTopic, type VocabTopic } from "../lib/i18n";
 import { cardStage, dueCards, retrievability } from "../lib/srs";
+import { matchesExplorerState, type ExplorerState } from "../lib/explorer";
 import {
   Bar, Button, Card, Chip, Empty, Input, Pager, Select, SpeakButton, Spinner, Tabs,
 } from "../components/ui";
@@ -28,7 +29,7 @@ export default function Vocabulary() {
   const [q, setQ] = useState("");
   const [type, setType] = useState<PosType | "all">("all");
   const [topic, setTopic] = useState<VocabTopic | "all">("all");
-  const [state, setState] = useState<"all" | "new" | "learning" | "review" | "mastered" | "fav">("all");
+  const [state, setState] = useState<ExplorerState>("all");
   const [sort, setSort] = useState<"level" | "freq" | "kana" | "random">("level");
   const [page, setPage] = useState(1);
 
@@ -54,14 +55,7 @@ export default function Vocabulary() {
     if (type !== "all") out = out.filter((v) => v.t === type);
     if (topic !== "all") out = out.filter((v) => vocabTopic(v) === topic);
     if (state !== "all") {
-      out = out.filter((v) => {
-        if (state === "fav") return doc.favorites.includes(v.id);
-        const c = doc.srs[v.id];
-        if (state === "new") return !c || c.ph === "new";
-        if (state === "learning") return c && (c.ph === "learning" || c.ph === "relearn");
-        if (state === "review") return c && c.ph === "review";
-        return c && c.st >= 21;
-      });
+      out = out.filter((v) => matchesExplorerState(v.id, doc.srs, doc.favorites, state));
     }
     if (sort === "random") out = out.slice().sort(() => Math.random() - 0.5);
     else if (sort === "kana") out = out.slice().sort((a, b) => a.r.localeCompare(b.r, "ja"));
@@ -278,10 +272,12 @@ function LevelStats({ words }: { words: Vocab[] }) {
       if (v.mq === "curated") mnCurated++;
       else if (v.mq === "none") mnNone++;
       else mnAuto++;
-      if (!c || c.ph === "new") fresh++;
-      else if (c.ph === "learning" || c.ph === "relearn") learning++;
-      else if (c.st >= 21) { mastered++; mature++; }
+      const stage = cardStage(c).id;
+      if (stage === "new") fresh++;
+      else if (stage === "learning") learning++;
+      else if (stage === "mastered") mastered++;
       else review++;
+      if (c && c.st >= 21) mature++;
       if (c && c.n > 0) { retSum += retrievability(c); retN++; }
     }
     return { fresh, learning, review, mastered, mature, mnCurated, mnAuto, mnNone, retention: retN ? retSum / retN : 0 };

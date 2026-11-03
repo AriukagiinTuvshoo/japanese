@@ -1,6 +1,9 @@
 import { describe, expect, it } from "vitest";
 import {
   MAX_INTERVAL_DAYS,
+  cardStage,
+  isMastered,
+  memoryStats,
   newCard,
   previewIntervals,
   schedule,
@@ -146,5 +149,31 @@ describe("schedule — interval cap and determinism", () => {
     expect(second).toEqual(first);
     // The Again preview must advertise minutes, not days.
     expect(first[0].label).toMatch(/мин/);
+  });
+});
+
+describe("isMastered — the single mastery predicate", () => {
+  it("requires both stability ≥ 21 and streak ≥ 3", () => {
+    expect(isMastered(mature({ st: 25, streak: 2 }))).toBe(false);
+    expect(isMastered(mature({ st: 21, streak: 3 }))).toBe(true);
+    expect(isMastered(mature({ st: 25, streak: 3 }))).toBe(true);
+    expect(isMastered(mature({ st: 20, streak: 3 }))).toBe(false);
+  });
+
+  it("treats a missing card as not mastered", () => {
+    expect(isMastered(undefined)).toBe(false);
+  });
+
+  it("keeps memoryStats.mastered and cardStage in agreement with isMastered", () => {
+    const srs: Record<string, Card> = {
+      a: mature({ st: 25, streak: 2 }),
+      b: mature({ st: 21, streak: 3 }),
+      c: mature({ st: 25, streak: 3 }),
+      d: mature({ st: 20, streak: 3 }),
+    };
+    expect(memoryStats(srs).mastered).toBe(2);
+    for (const c of Object.values(srs)) {
+      expect(cardStage(c).id === "mastered").toBe(isMastered(c));
+    }
   });
 });

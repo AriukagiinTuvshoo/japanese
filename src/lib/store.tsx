@@ -16,7 +16,7 @@ import {
 } from "./doc";
 import { ACHIEVEMENTS, XP, xpLevel, type AchievementInput } from "./gamification";
 import { applyGrade } from "./flashcard";
-import { schedule, type Grade } from "./srs";
+import { isMastered, schedule, type Grade } from "./srs";
 import { examTotals } from "./study";
 import { backupKeyOf, decodeDoc, docKeyOf, mergeDocs, normalizeDocValue, readDoc, writeDoc } from "./storage";
 import { dayOffset, todayKey } from "./text";
@@ -229,7 +229,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   /* ── амжилт шалгах ── */
   const inputs = useMemo<AchievementInput>(() => {
     const cards = Object.values(doc.srs);
-    const mastered = cards.filter((c) => c.st >= 21 && c.streak >= 3).length;
+    const mastered = cards.filter(isMastered).length;
     const minutes = Object.values(doc.activity).reduce((a, d) => a + d.min, 0);
     return {
       vocabLearned: cards.filter((c) => c.n > 0).length,

@@ -153,3 +153,29 @@ describe("weakKinds", () => {
     expect(rows.map((r) => r.kind)).toEqual(["kanji-read", "kanji-mn"]);
   });
 });
+
+/* ─────────────── Хуучин MockExam-ийн quiz мөр ─────────────── */
+
+describe("legacy mock-exam quiz rows", () => {
+  it("never double-count a section that also has a legacy quiz row", () => {
+    const rows = weakestAreas(
+      [quiz("N5 жишиг шалгалт · Сонсгол", 2, 10)],
+      [exam([{ name: "Сонсгол", correct: 2, total: 10 }])],
+    );
+    expect(rows).toHaveLength(1);
+    expect(rows[0]).toMatchObject({ kind: "Сонсгол", correct: 2, total: 10 });
+  });
+
+  it("keeps real drill rows next to exam sections", () => {
+    const rows = weakestAreas(
+      [quiz("kanji-read", 1, 10), quiz("N5 жишиг шалгалт · Хэлний мэдлэг · Уншла", 5, 20)],
+      [exam([{ name: "Сонсгол", correct: 2, total: 10 }])],
+    );
+    expect(rows.map((r) => r.kind)).toEqual(["kanji-read", "Сонсгол"]);
+  });
+
+  it("keeps legacy rows out of the section ranking even without an exam record", () => {
+    expect(weakestAreas([quiz("N5 жишиг шалгалт · Сонсгол", 2, 10)], [])).toEqual([]);
+    expect(weakestAreas([quiz("N5 mock exam · Listening", 2, 10)], [])).toEqual([]);
+  });
+});

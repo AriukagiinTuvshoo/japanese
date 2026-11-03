@@ -6,6 +6,7 @@ import { loadKanji, loadStrokes } from "../lib/data";
 import type { Kanji, Level, StrokeMap } from "../lib/types";
 import { LEVEL_LABEL, MQ_LABEL } from "../lib/text";
 import { cardStage } from "../lib/srs";
+import { matchesExplorerState, type ExplorerState } from "../lib/explorer";
 import { Button, Card, Empty, Input, LevelBadge, Pager, Select, Spinner, Tabs } from "../components/ui";
 import { ui } from "../lib/i18n";
 import { KanjiStudy } from "../components/KanjiStudy";
@@ -24,6 +25,7 @@ export default function KanjiList() {
   const [strokes, setStrokes] = useState<StrokeMap | null>(null);
   const [q, setQ] = useState("");
   const [rad, setRad] = useState<string>("all");
+  const [state, setState] = useState<ExplorerState>("all");
   const [sort, setSort] = useState<"freq" | "stroke" | "grade" | "level">("freq");
   const [page, setPage] = useState(1);
 
@@ -48,11 +50,12 @@ export default function KanjiList() {
     if (n) out = out.filter((k) => k.k === n || k.on.some((r) => r.includes(n)) || k.kun.some((r) => r.includes(n)) ||
       k.en.some((e) => e.toLowerCase().includes(n)) || k.mn.some((m) => m.toLowerCase().includes(n)));
     if (rad !== "all") out = out.filter((k) => k.rad === rad);
+    if (state !== "all") out = out.filter((k) => matchesExplorerState(k.k, doc.srs, doc.favorites, state));
     if (sort === "stroke") out = out.slice().sort((a, b) => (a.s ?? 99) - (b.s ?? 99));
     else if (sort === "grade") out = out.slice().sort((a, b) => (a.g ?? 99) - (b.g ?? 99));
     else if (sort === "level") out = out.slice().sort((a, b) => (b.f ?? 9999) - (a.f ?? 9999));
     return out;
-  }, [items, q, rad, sort]);
+  }, [items, q, rad, sort, state, doc.srs, doc.favorites]);
 
   const pages = Math.ceil(filtered.length / PER_PAGE);
   const pageItems = filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE);
@@ -106,6 +109,15 @@ export default function KanjiList() {
               <Input value={q} onChange={(v) => { setQ(v); setPage(1); }} placeholder={t.kanjiSearchPh} icon="🔎" className="min-w-[200px] flex-1" />
               <Select value={sort} onChange={setSort}
                 options={[{ id: "freq", label: "Давтамжаар" }, { id: "stroke", label: "Зурлагаар" }, { id: "grade", label: "Ангиар" }, { id: "level", label: "Түвшнээр" }]} />
+              <Select value={state} onChange={(v) => { setState(v); setPage(1); }}
+                options={[
+                  { id: "all", label: t.stateAll },
+                  { id: "new", label: t.stateNew },
+                  { id: "learning", label: t.stateLearning },
+                  { id: "review", label: t.stateReview },
+                  { id: "mastered", label: t.stateMastered },
+                  { id: "fav", label: t.stateFav },
+                ]} />
             </div>
             {radicals.length > 0 && (
               <div className="no-scrollbar mt-3 flex gap-1.5 overflow-x-auto">

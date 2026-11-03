@@ -99,6 +99,15 @@ export const newCard = (): Card => ({
 /** Хугацаа дууссан эсэх. */
 export const isDue = (c: Card) => c.due <= Date.now();
 
+/**
+ * «Эзэмшсэн» — SRS-ийн ЦОРЫН НЭГ тодорхойлолт.
+ * Тогтвортой байдал (st ≥ 21) ба дараалсан зөв хариулт (streak ≥ 3) хоёулаа шаардлагатай.
+ * cardStage, memoryStats, store-ийн амжилт, Vocabulary/Kanji шүүлт бүгд үүнийг ашиглана.
+ */
+export function isMastered(c: Card | undefined): boolean {
+  return !!c && c.st >= 21 && c.streak >= 3;
+}
+
 /** Хугацаа дууссан картууд, хамгийн яаралтай нь эхэндээ. */
 export function dueCards(srs: Record<string, Card>) {
   return Object.entries(srs)
@@ -219,7 +228,7 @@ export function memoryStats(srs: Record<string, Card>): MemoryStats {
   const retention = seen.length ? seen.reduce((a, c) => a + retrievability(c), 0) / seen.length : 0;
   const recentLapses = cards.reduce((a, c) => a + c.h.filter((x) => x === 0).length, 0);
 
-  const mastered = cards.filter((c) => c.st >= 21 && c.streak >= 3).length;
+  const mastered = cards.filter(isMastered).length;
   const mature = cards.filter((c) => c.st >= 21).length;
   const learning = cards.filter((c) => c.ph === "learning" || c.ph === "relearn").length;
   const fresh = cards.filter((c) => c.ph === "new").length;
@@ -246,7 +255,7 @@ export function memoryStats(srs: Record<string, Card>): MemoryStats {
 export function cardStage(c: Card | undefined): { id: string; mn: string; en: string; tone: string; pct: number } {
   if (!c || c.ph === "new") return { id: "new", mn: "Шинэ", en: "New", tone: "sumi", pct: 8 };
   if (c.ph === "learning" || c.ph === "relearn") return { id: "learning", mn: "Суралцаж байна", en: "Learning", tone: "kin", pct: 35 };
-  if (c.st >= 21 && c.streak >= 3) return { id: "mastered", mn: "Эзэмшсэн", en: "Mastered", tone: "matcha", pct: 100 };
+  if (isMastered(c)) return { id: "mastered", mn: "Эзэмшсэн", en: "Mastered", tone: "matcha", pct: 100 };
   return { id: "review", mn: "Давталт", en: "Review", tone: "ai", pct: 68 };
 }
 

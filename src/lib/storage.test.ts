@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { DEFAULT_PROFILE, SCHEMA_VERSION, type Doc } from "./doc";
+import { DEFAULT_PROFILE, SCHEMA_VERSION, type Doc, type ExamRecord, type QuizRecord } from "./doc";
 import { backupKeyOf, decodeDoc, docKeyOf, mergeDocs, readDoc, writeDoc, type KV } from "./storage";
 
 /* ─────────────── туслах ─────────────── */
@@ -372,5 +372,57 @@ describe("quiz count preference", () => {
     expect(snapped.ok).toBe(true);
     if (!snapped.ok) return;
     expect(snapped.doc.profile.quiz.count).toBe(15);
+  });
+});
+
+/* ─────────────── Merge: шинэ→хуучин дараалал ба legаци мөр ─────────────── */
+
+describe("mergeDocs — newest-first order", () => {
+  const q = (kind: string, at: number, total = 10): QuizRecord => ({ at, kind, level: "N5", correct: 1, total, minutes: 1 });
+  const e = (id: string, at: number): ExamRecord => ({
+    id, level: "N5", at, sections: [], total: 0, max: 0, passed: false, minutes: 1, mock: true,
+  });
+
+  it("returns quizzes newest-first regardless of argument order", () => {
+    const a = makeDoc({ quizzes: [q("kanji-read", 1000)] });
+    const b = makeDoc({ quizzes: [q("vocab-jp-mn", 9000)] });
+    expect(mergeDocs(a, b).quizzes.map((x) => x.at)).toEqual([9000, 1000]);
+    expect(mergeDocs(b, a).quizzes.map((x) => x.at)).toEqual([9000, 1000]);
+  });
+
+  it("breaks equal timestamps deterministically, not by argument order", () => {
+    const a = makeDoc({ quizzes: [q("kanji-read", 500), q("reading", 500)] });
+    const b = makeDoc({ quizzes: [q("reading", 500), q("kanji-read", 500)] });
+    expect(mergeDocs(a, b).quizzes.map((x) => x.kind)).toEqual(["kanji-read", "reading"]);
+    expect(mergeDocs(a, b).quizzes).toEqual(mergeDocs(b, a).quizzes);
+  });
+
+  it("returns exams newest-first too", () => {
+    const a = makeDoc({ exams: [e("a", 100)] });
+    const b = makeDoc({ exams: [e("b", 200)] });
+    expect(mergeDocs(a, b).exams.map((x) => x.id)).toEqual(["b", "a"]);
+    expect(mergeDocs(b, a).exams.map((x) => x.id)).toEqual(["b", "a"]);
+  });
+
+  it("collapses a legacy label and a stable id of one attempt", () => {
+    const a = decodeDoc(JSON.stringify({ ...makeDoc(), quizzes: [q("kanji-read", 1000)] }));
+    const b = decodeDoc(JSON.stringify({ ...makeDoc(), quizzes: [q("Ханзны уншлага", 1000)] }));
+    expect(a.ok && b.ok).toBe(true);
+    if (!a.ok || !b.ok) return;
+    expect(a.doc.quizzes[0].kind).toBe("kanji-read");
+    expect(mergeDocs(a.doc, b.doc).quizzes).toHaveLength(1);
+  });
+
+  it("keeps legacy exam records without doubling xp or activity", () => {
+    const day = { xp: 30, min: 5, newCards: 1, reviews: 20, correct: 1, total: 20 };
+    const legacy = makeDoc({ quizzes: [q("N5 жишиг шалгалт · Сонсгол", 42, 20)], xp: 30, activity: { "2026-01-01": day } });
+    const other = makeDoc({ quizzes: [q("N5 жишиг шалгалт · Сонсгол", 42, 20)], xp: 30, activity: { "2026-01-01": day } });
+    const once = mergeDocs(legacy, other);
+    expect(once.quizzes).toHaveLength(1);
+    expect(once.quizzes[0].kind).toBe("N5 жишиг шалгалт · Сонсгол");
+    expect(once.xp).toBe(30);
+    expect(once.activity["2026-01-01"]).toEqual(day);
+    expect(mergeDocs(once, other)).toEqual(once);
+    expect(mergeDocs(once, once)).toEqual(once);
   });
 });

@@ -94,6 +94,28 @@ export function quizKindOf(raw: unknown): string {
   return id.slice(0, MAX_KIND_LENGTH);
 }
 
+/**
+ * Хуучин MockExam-ийн quiz бичлэг мөн эсэх.
+ * ------------------------------------------------------------------
+ * Phase 2.2-оос өмнө шалгалтын хэсэг бүр дуусах бүрд `QuizRunner` нь
+ * `"N5 жишиг шалгалт · Сонсгол"` хэлбэрийн гарчгийг `kind`-д бичдэг байсан.
+ * Эдгээр нь дасгал биш, `doc.exams`-д бий шалгалтын гүйцэтгэлийн хуулбар тул
+ * дасгалын статистикт давхар орох ёсгүй. Утгыг нь ХӨНДӨХГҮЙ, зөвхөн
+ * детерминик байдлаар танина (таамаглалгүй).
+ */
+const LEGACY_EXAM_TITLE = /^(N[1-5]) (?:жишиг шалгалт|mock exam) · /;
+
+/** Хуучин шалгалтын гарчигтай `kind` мөн эсэх. */
+export function isLegacyExamKind(kind: string): boolean {
+  return LEGACY_EXAM_TITLE.test(kind);
+}
+
+/** Хуучин шалгалтын гарчгаас түвшинг гаргана; танихгүй бол `null`. */
+export function legacyExamLevel(kind: string): Level | null {
+  const m = LEGACY_EXAM_TITLE.exec(kind);
+  return m ? (m[1] as Level) : null;
+}
+
 /** Ямар нэг зүйл quiz түүхэнд бичигдэх эсэх — зөвхөн тодорхой заасан үед. */
 export function quizLogTarget(
   log: { kind: string; level: Level } | undefined,

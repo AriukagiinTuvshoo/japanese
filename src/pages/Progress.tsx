@@ -8,6 +8,7 @@ import { dayOffset, todayKey, LEVEL_LABEL } from "../lib/text";
 import { cardStage, memoryStats, retrievability } from "../lib/srs";
 import { dayAccuracy, weakestAreas } from "../lib/stats";
 import { quizModeLabel } from "../lib/study";
+import { isLegacyExamKind, legacyExamLevel } from "../lib/quizKind";
 import { Bar, Button, Card, Chip, LevelBadge, Ring, SectionTitle, Spinner, Stat, Tabs } from "../components/ui";
 import { ui } from "../lib/i18n";
 
@@ -317,7 +318,11 @@ export default function Progress() {
                 {doc.quizzes.slice(0, 20).map((q) => (
                   <div key={`${q.at}-${q.kind}-${q.total}`} className="flex flex-wrap items-center gap-3 rounded-xl border border-sumi-900/8 bg-white/60 px-4 py-3">
                     <LevelBadge level={q.level} size="sm" />
-                    <span className="text-[13px] font-bold text-sumi-800">{quizModeLabel(q.kind, language)}</span>
+                    <span className="text-[13px] font-bold text-sumi-800">
+                      {isLegacyExamKind(q.kind)
+                        ? t.legacyExamRecord(legacyExamLevel(q.kind) ?? "")
+                        : quizModeLabel(q.kind, language)}
+                    </span>
                     <span className="font-mono text-[13px] font-bold tabnum">{t.correctN(q.correct, q.total)}</span>
                     <span className="text-[11.5px] text-sumi-400">{q.minutes} {t.minutes}</span>
                     <span className="ml-auto text-[11.5px] text-sumi-400">

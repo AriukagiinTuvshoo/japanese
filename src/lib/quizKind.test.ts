@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { isDrillKind, quizKindOf, quizLogTarget } from "./quizKind";
+import { QUIZ_KIND_IDS, isDrillKind, isLegacyExamKind, isQuizKindId, legacyExamLevel, quizKindOf, quizLogTarget } from "./quizKind";
 import { QUIZ_MODES } from "./study";
 
 /* ─────────────── Тогтвортой төрлийн id ─────────────── */
@@ -67,5 +67,44 @@ describe("quizLogTarget — exams never log a practice quiz", () => {
 
   it("normalizes a legacy label target instead of storing the label", () => {
     expect(quizLogTarget({ kind: "Ханзны уншлага", level: "N5" })).toEqual({ kind: "kanji-read", level: "N5" });
+  });
+});
+
+/* ─────────────── Хуучин MockExam-ийн гарчиг ─────────────── */
+
+describe("isLegacyExamKind — old mock-exam titles", () => {
+  it("recognises Mongolian titles at every level, including already-truncated ones", () => {
+    expect(isLegacyExamKind("N5 жишиг шалгалт · Сонсгол")).toBe(true);
+    expect(isLegacyExamKind("N1 жишиг шалгалт · Уншлага")).toBe(true);
+    // 42 тэмдэгт байсан гарчиг диск дээр 40 болж тасарсан — префикс бүтэн.
+    expect(isLegacyExamKind("N5 жишиг шалгалт · Хэлний мэдлэг · Уншла")).toBe(true);
+  });
+
+  it("recognises English titles", () => {
+    expect(isLegacyExamKind("N5 mock exam · Listening")).toBe(true);
+    expect(isLegacyExamKind("N4 mock exam · Language Knowledge · Read")).toBe(true);
+  });
+
+  it("never claims stable ids, aggregate modes, section labels or junk", () => {
+    for (const k of QUIZ_KIND_IDS) expect(isLegacyExamKind(k), k).toBe(false);
+    for (const k of ["weak", "mixed", "mistakes"]) expect(isLegacyExamKind(k), k).toBe(false);
+    expect(isLegacyExamKind("N6 жишиг шалгалт · Сонсгол")).toBe(false);
+    expect(isLegacyExamKind("Шалгалтын хэсэг · N5")).toBe(false);
+    expect(isLegacyExamKind("")).toBe(false);
+    expect(isLegacyExamKind("quiz")).toBe(false);
+  });
+
+  it("extracts the level without inventing a section id", () => {
+    expect(legacyExamLevel("N5 жишиг шалгалт · Сонсгол")).toBe("N5");
+    expect(legacyExamLevel("N3 mock exam · Reading")).toBe("N3");
+    expect(legacyExamLevel("kanji-read")).toBeNull();
+    expect(legacyExamLevel("N7 жишиг шалгалт · Сонсгол")).toBeNull();
+  });
+
+  it("never turns a legacy title into a quiz mode id", () => {
+    for (const k of ["N5 жишиг шалгалт · Сонсгол", "N5 mock exam · Listening", "N5 жишиг шалгалт · Хэлний мэдлэг · Уншла"]) {
+      expect(isQuizKindId(quizKindOf(k))).toBe(false);
+      expect(quizKindOf(k)).not.toBe("quiz");
+    }
   });
 });

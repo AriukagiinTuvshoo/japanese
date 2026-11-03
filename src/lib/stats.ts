@@ -5,7 +5,7 @@
  * үүсгэхээс сэргийлж, бүх тооцоог энд цуглуулав. Бүгд цэвэр функц.
  */
 import type { ActivityDay, ExamRecord, QuizRecord } from "./doc";
-import { isDrillKind } from "./quizKind";
+import { isDrillKind, isLegacyExamKind } from "./quizKind";
 
 /** «Сул тал» бодох нэгдсэн цонх — бүх дуудагч ижил дүрэм ашиглана. */
 export const WEAK_WINDOW = 30;
@@ -99,8 +99,10 @@ export function weakestAreas(
   const window = opts.window ?? WEAK_WINDOW;
   const minQuestions = opts.minQuestions ?? WEAK_MIN_QUESTIONS;
   const recent = window > 0 ? quizzes.slice(0, window) : quizzes;
+  // Хуучин MockExam-ийн quiz мөр нь `doc.exams`-ийн хэсгийн хуулбар — давхар бүү тоол.
+  const drillRows = kindAccuracy(recent).filter((g) => !isLegacyExamKind(g.kind));
   const merged = new Map<string, { correct: number; total: number }>();
-  for (const g of [...kindAccuracy(recent), ...examSectionAccuracy(exams)]) {
+  for (const g of [...drillRows, ...examSectionAccuracy(exams)]) {
     const cur = merged.get(g.kind) ?? { correct: 0, total: 0 };
     cur.correct += g.correct;
     cur.total += g.total;

@@ -464,7 +464,8 @@ export function writeDoc(
  *   · activity       → өдөр бүрээр талбар тус бүрийн max
  *   · xp, kanaBest   → max (нэг талын ахиц бүү алдагдаарай)
  *   · favorites, grammarDone, readingDone, listeningDone → нэгдэл
- *   · exams, quizzes → нэгдэл (давхардалгүй)
+ *   · exams, quizzes → нэгдэл (давхардалгүй), `at`-аар буурах дараалалтай
+ *                       (тэнцвэл тогтвортой tie-break — аргументын дарааллаас хамаарахгүй)
  *   · mistakes       → id-аар нэгтгэж, count/at-ийн max
  *   · achievements   → түлхүүр бүрээр хамгийн эрт нээлт (min at)
  *   · profile, placement, curriculum, mnemonics, createdAt
@@ -503,12 +504,16 @@ export function mergeDocs(a: Doc, b: Doc): Doc {
     listeningDone: union(a.listeningDone, b.listeningDone),
     kanaBest: Math.max(a.kanaBest, b.kanaBest),
     xp: Math.max(a.xp, b.xp),
-    exams: unionBy(a.exams, b.exams, (e) => e.id, (x, y) => (JSON.stringify(x) >= JSON.stringify(y) ? x : y)),
-    quizzes: unionBy(
-      a.quizzes,
-      b.quizzes,
-      (q) => `${q.at}|${q.kind}|${q.level}|${q.total}`,
-      (x, y) => (JSON.stringify(x) >= JSON.stringify(y) ? x : y),
+    exams: sortNewestFirst(
+      unionBy(a.exams, b.exams, (e) => e.id, (x, y) => (JSON.stringify(x) >= JSON.stringify(y) ? x : y)),
+    ),
+    quizzes: sortNewestFirst(
+      unionBy(
+        a.quizzes,
+        b.quizzes,
+        (q) => `${q.at}|${q.kind}|${q.level}|${q.total}`,
+        (x, y) => (JSON.stringify(x) >= JSON.stringify(y) ? x : y),
+      ),
     ),
     mistakes: unionBy(
       a.mistakes,
@@ -561,4 +566,18 @@ function unionBy<T>(a: T[], b: T[], key: (x: T) => string, pick: (x: T, y: T) =>
     map.set(k, existing === undefined ? item : pick(existing, item));
   }
   return [...map.values()];
+}
+
+/**
+ * `at`-аар буурах эрэмбэ; тэнцвэл агуулгын JSON-оор тогтвортой эрэмбэлнэ.
+ * Ингэснээр merge-ийн үр дүн аргументын дарааллаас хамаарахгүй бөгөөд
+ * «сүүлийн N» цонх (`stats.WEAK_WINDOW`, Progress-ийн түүх) зөв ажиллана.
+ */
+function sortNewestFirst<T extends { at: number }>(items: T[]): T[] {
+  return [...items].sort((x, y) => {
+    if (y.at !== x.at) return y.at - x.at;
+    const jx = JSON.stringify(x);
+    const jy = JSON.stringify(y);
+    return jx < jy ? -1 : jx > jy ? 1 : 0;
+  });
 }

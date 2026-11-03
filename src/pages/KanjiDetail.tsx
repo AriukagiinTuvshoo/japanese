@@ -59,6 +59,18 @@ export default function KanjiDetail({ char }: { char: string }) {
         <Button size="sm" variant="ghost" onClick={() => navigate(`kanji?level=${k.lvl}`)}>← {t.kanji}</Button>
         <span className="text-[12px] text-sumi-400">{LEVEL_LABEL[language][k.lvl]} ({k.lvl})</span>
         <div className="ml-auto flex gap-2">
+          <button
+            onClick={() => actions.toggleFavorite(char)}
+            aria-pressed={doc.favorites.includes(char)}
+            aria-label={t.favAdd}
+            title={t.favAdd}
+            className={cn("rounded-xl border px-3 py-1.5 text-[15px] leading-none transition",
+              doc.favorites.includes(char)
+                ? "border-kin-200 bg-kin-50 text-kin-500"
+                : "border-sumi-900/12 bg-white/70 text-sumi-300 hover:text-kin-500")}
+          >
+            ★
+          </button>
           <Button size="sm" variant="outline" onClick={() => setTab("write")}>{t.writeBtn}</Button>
           <Button size="sm" onClick={() => actions.grade(char, 2, { isNew: !card, level: k.lvl })}>
             {card ? t.reviewKanjiBtn : t.addSrsBtn}
