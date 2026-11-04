@@ -32,6 +32,9 @@ export function StrokePad({
   const [hint, setHint] = useState(0);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const drawing = useRef(false);
+  /** Татсан цэгүүдийг ref-д хадгална: state updater дотор event объектыг
+   *  уншихад React 19 үед `currentTarget` null болж хуудсыг унагадаг байв. */
+  const liveRef = useRef<[number, number][]>([]);
 
   const t = useMemo(() => scaleFor(size), [size]);
 
@@ -122,7 +125,11 @@ export function StrokePad({
   }, [size, t]);
 
   const down = (e: React.PointerEvent<HTMLCanvasElement>) => {
-    e.currentTarget.setPointerCapture(e.pointerId);
+    try {
+      e.currentTarget.setPointerCapture(e.pointerId);
+    } catch {
+      /* Синтетик pointer (тест, зарим браузер) дэмжигдэхгүй — зурахад саадгүй. */
+    }
     if (tool === "erase") {
       setUserStrokes((s) => s.slice(0, -1));
       setResult(null);
@@ -130,24 +137,29 @@ export function StrokePad({
     }
     drawing.current = true;
     setResult(null);
-    setLive([pos(e)]);
+    liveRef.current = [pos(e)];
+    setLive(liveRef.current);
   };
 
   const move = (e: React.PointerEvent<HTMLCanvasElement>) => {
     if (!drawing.current) return;
-    setLive((l) => (l.length > 90 ? l : [...l, pos(e)]));
+    if (liveRef.current.length > 90) return;
+    liveRef.current = [...liveRef.current, pos(e)];
+    setLive(liveRef.current);
   };
 
   const up = () => {
     if (!drawing.current) return;
     drawing.current = false;
-    const l = live;
+    const l = liveRef.current;
+    liveRef.current = [];
     setLive([]);
     const s = makeUserStroke(l);
     if (s) setUserStrokes((prev) => [...prev, s]);
   };
 
   const resetPad = () => {
+    liveRef.current = [];
     setUserStrokes([]);
     setLive([]);
     setResult(null);
@@ -161,6 +173,7 @@ export function StrokePad({
   };
 
   const tone = result ? VERDICT_MN[result.verdict].tone : "sumi";
+  const hasTarget = target.length > 0;
 
   return (
     <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
@@ -213,12 +226,19 @@ export function StrokePad({
             className="mt-2.5"
           />
           <div className="mt-3 flex flex-wrap gap-2">
-            <Button size="sm" onClick={check} disabled={userStrokes.length === 0}>✓ Шалгах</Button>
+            <Button size="sm" onClick={check} disabled={userStrokes.length === 0 || !hasTarget}>✓ Шалгах</Button>
             <Button size="sm" variant="outline" onClick={() => setHint((h) => Math.min(target.length, h + 1))} disabled={hint >= target.length}>
               💡 Дараагийн зурлага
             </Button>
           </div>
         </div>
+
+        {!hasTarget && (
+          <p className="rounded-xl border border-kin-200 bg-kin-50 px-3.5 py-2.5 text-[12px] font-bold leading-relaxed text-kin-700">
+            Энэ ханзны зурлагын өгөгдөл олдсонгүй — бичих дасгал одоогоор боломжгүй.
+            Доорх жагсаалтаас өөр ханз сонгоно уу.
+          </p>
+        )}
 
         {result && (
           <div className={cn("animate-pop rounded-2xl border p-4", `border-${tone}-200 bg-${tone}-50`)}>
@@ -245,6 +265,10 @@ export function StrokePad({
                 {result.matches.length > 0 && <>Зөв таарсан {result.matches.length}.</>}
               </p>
             )}
+            <div className="mt-3 flex flex-wrap gap-2">
+              <Button size="sm" variant="outline" onClick={resetPad}>↺ Дахин бичих</Button>
+              {!trace && <Button size="sm" variant="ghost" onClick={() => setTrace(true)}>👁 Хариуг харуулах</Button>}
+            </div>
           </div>
         )}
 

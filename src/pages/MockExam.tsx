@@ -3,7 +3,7 @@ import { cn } from "../utils/cn";
 import { navigate, useQuery } from "../lib/router";
 import { useStore } from "../lib/store";
 import { READING, loadFullData } from "../lib/data";
-import { EXAM_BLUEPRINTS, buildExam, scoreExam, sectionPassMark } from "../lib/study";
+import { EXAM_BLUEPRINTS, buildExam, scoreExam, sectionPassMark, type Question } from "../lib/study";
 import {
   DRAFT_VERSION, clearExamDraft, readExamDraft, saveExamDraft, type DraftResult, type DraftSection,
 } from "../lib/examSession";
@@ -13,9 +13,10 @@ import { LEVEL_LABEL } from "../lib/text";
 import { LEVEL_META } from "../data/levels";
 import { Button, Card, Chip, LevelBadge, Ring, SectionTitle, Spinner } from "../components/ui";
 import { QuizRunner, type QuizResult } from "../components/QuizRunner";
+import { AiExamPanel } from "../components/AiExamPanel";
 import { ui } from "../lib/i18n";
 
-type Stage = "pick" | "running" | "sectionResult" | "final";
+type Stage = "pick" | "running" | "sectionResult" | "final" | "ai";
 
 export default function MockExam() {
   const { doc, actions } = useStore();
@@ -33,6 +34,8 @@ export default function MockExam() {
   const [loading, setLoading] = useState(false);
   const [finishedMinutes, setFinishedMinutes] = useState<number | null>(null);
   const [startedAt, setStartedAt] = useState(() => Date.now());
+  /** AI-аар үүсгэсэн дасгалын асуултууд (шалгалтын түүхэнд орохгүй). */
+  const [aiQuestions, setAiQuestions] = useState<Question[]>([]);
   const mountedRef = useRef(false);
   /** Зурваснаас сэргээсний дараагийн түвшний эффектийг алгасах. */
   const restoredRef = useRef(false);
@@ -81,7 +84,8 @@ export default function MockExam() {
 
   /* Шалгалтын явцыг тогтмол хадгална — refresh хийхэд алдагдахгүй. */
   useEffect(() => {
-    if (stage === "pick" || stage === "final" || !sections.length) return;
+    if (stage !== "running" && stage !== "sectionResult") return;
+    if (!sections.length) return;
     saveExamDraft(sessionStorage, {
       v: DRAFT_VERSION, level, stage: stage as "running" | "sectionResult", secIdx, startedAt,
       updatedAt: Date.now(), sections, results, answers: answersBySec, index: idxBySec,
@@ -273,6 +277,28 @@ export default function MockExam() {
     );
   }
 
+  /* ── AI дасгал (шалгалтын оноонд орохгүй, тайлбартай сургалтын горим) ── */
+  if (stage === "ai" && aiQuestions.length) {
+    return (
+      <div className="space-y-5">
+        <div className="flex flex-wrap items-center gap-3">
+          <LevelBadge level={level} size="sm" />
+          <Chip tone="ai">AI</Chip>
+          <span className="text-[12.5px] text-sumi-500">
+            {language === "en"
+              ? "AI-generated practice — not an official JLPT exam"
+              : "AI үүсгэсэн дасгал — албан ёсны JLPT шалгалт биш"}
+          </span>
+        </div>
+        <QuizRunner
+          questions={aiQuestions}
+          options={{ reveal: true, title: `${level} · AI`, sectionLabel: (q) => q.section }}
+          onClose={() => { setStage("pick"); setAiQuestions([]); }}
+        />
+      </div>
+    );
+  }
+
   if (stage === "running" && current) {
     return (
       <div className="space-y-5">
@@ -374,6 +400,13 @@ export default function MockExam() {
           <Button variant="outline" size="lg" onClick={() => navigate(`quiz?level=${level}`)}>{t.practiceFirst}</Button>
         </div>
       </Card>
+
+      <AiExamPanel
+        level={level}
+        language={language}
+        mistakes={doc.mistakes.slice(0, 10).map((m) => m.prompt)}
+        onStart={(qs) => { setAiQuestions(qs); setStage("ai"); }}
+      />
 
       {doc.exams.length > 0 && (
         <Card>

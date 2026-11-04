@@ -7,6 +7,7 @@ import type { Kanji, Level, StrokeMap } from "../lib/types";
 import { LEVEL_LABEL } from "../lib/text";
 import { Bar, Button, Card, Empty, Input, LevelBadge, SectionTitle, Spinner, Tabs } from "../components/ui";
 import { StrokePad } from "../components/StrokePad";
+import { normalizeKanjiChar } from "../lib/stroke";
 import { ui } from "../lib/i18n";
 
 type Mode = "guided" | "practice" | "free" | "browse";
@@ -38,8 +39,10 @@ export default function Writing({ char }: { char?: string }) {
     return items.filter((k) => strokes[k.k]);
   }, [items, strokes, mode]);
 
-  const current: Kanji | undefined = char
-    ? items?.find((k) => k.k === char)
+  /* URL-аас ирсэн тэмдэгтийг NFKC-ээр хэвийн болгож харьцуулна (ｶ → カ). */
+  const wantedChar = char ? normalizeKanjiChar(char) : "";
+  const current: Kanji | undefined = wantedChar
+    ? items?.find((k) => k.k === wantedChar)
     : sequence[idx];
 
   const done = Object.keys(doc.writing).length;
@@ -92,8 +95,8 @@ export default function Writing({ char }: { char?: string }) {
                     </p>
                   </div>
                   <div className="ml-auto flex gap-2">
-                    <Button size="sm" variant="outline" onClick={() => setIdx((i) => Math.max(0, i - 1))} disabled={!!char || idx === 0}>{t.prevBtn}</Button>
-                    <Button size="sm" variant="outline" onClick={() => setIdx((i) => Math.min(sequence.length - 1, i + 1))} disabled={!!char || idx >= sequence.length - 1}>{t.nextBtn}</Button>
+                    <Button size="sm" variant="outline" onClick={() => setIdx((i) => Math.max(0, i - 1))}                    disabled={!!wantedChar || idx === 0}>{t.prevBtn}</Button>
+                    <Button size="sm" variant="outline" onClick={() => setIdx((i) => Math.min(sequence.length - 1, i + 1))}                    disabled={!!wantedChar || idx >= sequence.length - 1}>{t.nextBtn}</Button>
                   </div>
                 </div>
                 <div className="mt-5">

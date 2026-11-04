@@ -21,6 +21,7 @@
     "server": "node server/index.mjs"
   },
   "dependencies": {
+    "@google/genai": "^2.32.0",
     "clsx": "2.1.1",
     "react": "19.2.6",
     "react-dom": "19.2.6",

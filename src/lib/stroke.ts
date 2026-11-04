@@ -13,6 +13,16 @@
  */
 export const KANJI_BOX = 109;
 
+/**
+ * Хэрэглэгчийн оруулсан/URL-аас ирсэн тэмдэгтийг KanjiVG түлхүүртэй
+ * харьцуулах хэлбэрт оруулна. NFKC нь бүтэн өргөн (ﾊ / 日) хувилбарыг
+ * хэвийн болгож, харагдахгүй тэмдэгтүүдийг арилгана.
+ */
+export function normalizeKanjiChar(input: string): string {
+  const s = (input ?? "").normalize("NFKC").replace(/[\u200B-\u200D\uFEFF]/g, "").trim();
+  return Array.from(s)[0] ?? "";
+}
+
 export interface Stroke {
   d: string;
   /** Эхлэлийн цэг (KanjiVG координат). */
@@ -163,9 +173,12 @@ export function compareKanji(target: Stroke[], user: UserStroke[]): CompareResul
   for (let i = 1; i < chosen.length; i++) {
     if (chosen[i].userIndex > chosen[i - 1].userIndex) orderHits++;
   }
-  const orderScore = chosen.length <= 1
-    ? (chosen.length === target.length && target.length === 1 ? 100 : 60)
-    : (orderHits / (chosen.length - 1)) * 100;
+  /* Зурлага огт таараагүй бол дарааллын оноо 0 — хоосон талбай 15% болж харагдахгүй. */
+  const orderScore = chosen.length === 0
+    ? 0
+    : chosen.length === 1
+      ? (target.length === 1 ? 100 : 60)
+      : (orderHits / (chosen.length - 1)) * 100;
 
   const missing = target.map((_, i) => i).filter((i) => !usedT.has(i));
   const extra = user.map((_, i) => i).filter((i) => !usedU.has(i));
