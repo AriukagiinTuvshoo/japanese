@@ -11,6 +11,7 @@ const API_TARGET = process.env.API_TARGET ?? "http://127.0.0.1:8787";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: process.env.BASE_PATH ?? "/",
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: { "@": path.resolve(__dirname, "src") },

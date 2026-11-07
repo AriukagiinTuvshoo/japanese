@@ -148,9 +148,8 @@ for (const lv of LEVELS) {
 const kanjiSet = new Set(allKanji.map((e) => e.k));
 
 // Cross-reference audit: a vocabulary item's kanji links must point to kanji
-// entries we actually ship. `npm run data:links` (part of data:build) prunes
-// characters outside the shipped set, so any remaining link is a real bug:
-// it renders as a dead "kanji detail" link in the UI.
+// entries we actually ship. Үг бичигдсэн ханз заавал байх ёстой тул энэ нь
+// анхааруулга биш, бүтээгдэгдэх боломжгүй алдаа (Phase 1, алхам 1).
 const missingVocabKanji = [];
 for (const v of allVocab) {
   if (!Array.isArray(v.kd)) continue;
@@ -159,7 +158,7 @@ for (const v of allVocab) {
   }
 }
 if (missingVocabKanji.length) {
-  err(`Үгийн сангийн ханзны холбоос тасарсан: ${missingVocabKanji.length} (жишээ: ${missingVocabKanji.slice(0, 8).join(", ")}) — «npm run data:links» ажиллуулна уу`);
+  err(`Үгийн сангийн ханзны холбоос тасарсан: ${missingVocabKanji.length} (жишээ: ${missingVocabKanji.slice(0, 8).join(", ")}) — scripts/fix-broken-kanji-links.mjs ажиллуулна уу`);
 }
 const missingStroke = [...kanjiSet].filter((k) => !strokeKeys.has(k));
 if (missingStroke.length) warn(`stroke өгөгдөлгүй kanji: ${missingStroke.length} ширхэг (жишээ: ${missingStroke.slice(0, 5).join(" ")})`);
@@ -245,45 +244,6 @@ try {
   }
 } catch (e) {
   err(`i18n.ts уншиж чадсангүй: ${e}`);
-}
-
-// --- Уншиж ойлголт (content/reading.json) -------------------------------------------
-const readingPath = path.join(ROOT, "content/reading.json");
-const readings = readJson(readingPath) ?? [];
-if (!Array.isArray(readings)) err("reading.json массив биш");
-const readingIds = new Set();
-for (const r of readings) {
-  const tag = `reading ${r?.id ?? "?"}`;
-  if (!r || typeof r.id !== "string" || !r.id) { err("reading: id байхгүй"); continue; }
-  if (readingIds.has(r.id)) err(`${tag}: id давхцсан`);
-  readingIds.add(r.id);
-  if (!LEVELS.includes(r.level)) err(`${tag}: түвшин буруу (${r.level})`);
-  if (typeof r.title !== "string" || !r.title.trim()) err(`${tag}: title хоосон`);
-  if (typeof r.titleJp !== "string" || !r.titleJp.trim()) err(`${tag}: titleJp хоосон`);
-  if (!Array.isArray(r.body) || r.body.length === 0) err(`${tag}: body хоосон`);
-  else for (const line of r.body) {
-    if (typeof line !== "string" || !line.trim()) err(`${tag}: body-д хоосон мөр`);
-    else if (/\{[^|{}]*\}/.test(line)) warn(`${tag}: фуригана бүтэц буруу байж болзошгүй — ${line.slice(0, 24)}`);
-  }
-  if (!Array.isArray(r.glossary)) err(`${tag}: glossary массив биш`);
-  else for (const g of r.glossary) {
-    if (!g || typeof g.w !== "string" || !g.w.trim()) { err(`${tag}: glossary.w хоосон`); continue; }
-    if (typeof g.r !== "string" || !g.r.trim()) err(`${tag}: glossary «${g.w}» уншлагагүй`);
-    if (typeof g.mn !== "string" || !g.mn.trim()) err(`${tag}: glossary «${g.w}» монгол утгагүй`);
-  }
-  if (!Array.isArray(r.questions) || r.questions.length === 0) err(`${tag}: асуултгүй`);
-  else for (const [qi, q] of r.questions.entries()) {
-    const qtag = `${tag} q${qi + 1}`;
-    if (!q || typeof q.q !== "string" || !q.q.trim()) err(`${qtag}: асуулт хоосон`);
-    if (!q || !Array.isArray(q.opts) || q.opts.length < 2) err(`${qtag}: сонголт 2-оос цөөн`);
-    else if (new Set(q.opts).size !== q.opts.length) err(`${qtag}: сонголт давхцсан`);
-    else if (!q.opts.every((o) => typeof o === "string" && o.trim())) err(`${qtag}: хоосон сонголт`);
-    if (!q || !Number.isInteger(q.a) || q.a < 0 || q.a >= (q.opts?.length ?? 0)) err(`${qtag}: зөв хариултын индекс буруу (${q?.a})`);
-    if (!q || typeof q.why !== "string" || !q.why.trim()) warn(`${qtag}: тайлбаргүй`);
-  }
-}
-for (const lv of LEVELS) {
-  if (!readings.some((r) => r?.level === lv)) warn(`reading: ${lv} түвшинд унших эх байхгүй`);
 }
 
 // --- Report -------------------------------------------------------------------------

@@ -10,12 +10,13 @@ import type {
 } from "./types";
 import { LEVELS } from "./types";
 
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
 const cache = new Map<string, Promise<unknown>>();
 
 function get<T>(url: string): Promise<T> {
   let p = cache.get(url) as Promise<T> | undefined;
   if (!p) {
-    p = fetch(url)
+    p = fetch(BASE + url)
       .then((r) => {
         if (!r.ok) throw new Error(`${url} → HTTP ${r.status}`);
         return r.json() as Promise<T>;

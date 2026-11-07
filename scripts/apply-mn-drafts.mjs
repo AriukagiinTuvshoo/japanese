@@ -142,7 +142,10 @@ if (meta?.counts) {
   meta.counts.vocabDraft = counts.vocabDraft;
   meta.counts.kanjiDraft = counts.kanjiDraft;
   meta.counts.vocabMnCurated = counts.vocabMn;
-  writeJson(metaPath, meta);
+  // meta.json хүн унших файлаар үлдэх ёстой: 2-тэйц, төгсгөлд шинэ мөр үгүй
+  // (build-data.mj-ийн хэвтэй тааруулна — үгүй бол бүх файл 1 мөр болж хувиран,
+  //  үнэн засвар (ж.нь vocabDraft) форматын дууны дунд алдагдана).
+  fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2), "utf8");
 }
 
 console.log("Драфт нэгтгэл:", report);
