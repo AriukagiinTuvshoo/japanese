@@ -18,7 +18,8 @@
     "test:watch": "vitest",
     "test:smoke": "node scripts/test-app.mjs",
     "test:routes": "node scripts/test-routes.mjs",
-    "server": "node server/index.mjs"
+    "server": "node server/index.mjs",
+    "verify:ai": "node scripts/verify-ai.mjs"
   },
   "dependencies": {
     "@google/genai": "^2.32.0",

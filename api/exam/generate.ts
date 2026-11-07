@@ -5,6 +5,8 @@
  * · Хүсэлтийн хэмжээ, тоо, төрөл хатуу хязгаарлагдсан.
  * · IP тус бүрээр rate limit — хэтрэхэд 429.
  * · Алдааны мессежээр key/дотоод стек задруулахгүй.
+ * · IP нь зөвхөн найдвартай proxy-оос ирсэн header-ээс уншина
+ *   (`TRUSTED_PROXY_HOPS`, анхдагч 0 = XFF-д итгэхгүй).
  *
  * Vercel-ийн Node runtime (req, res) болон локал dev сервер хоёулаа
  * ижил signature-аар ажиллана.
@@ -12,7 +14,8 @@
 
 import { AI_LIMITS, normalizeAiRequest } from "../../src/lib/aiExam.ts";
 import { generateAiExam } from "../../server/generate.ts";
-import { pruneHits, rateLimit } from "../../server/rateLimit.ts";
+import { clientIp } from "../../server/clientIp.ts";
+import { createRateStore } from "../../server/rateLimitStore.ts";
 import { sameOrigin } from "../../server/origin.ts";
 
 /** Vercel/Node-ийн хамгийн бага хэрэгтэй интерфейс. */
@@ -29,18 +32,23 @@ interface ApiRes {
 }
 
 const RULE = { limit: 8, windowMs: 10 * 60 * 1000 } as const;
-const buckets = new Map<string, number[]>();
+
+/* Олон instance-тэй үед shared store, эс бөгөөс instance-local memory. */
+const store = createRateStore();
 
 function header(req: ApiReq, name: string): string {
   const v = req.headers[name] ?? req.headers[name.toLowerCase()];
   return Array.isArray(v) ? (v[0] ?? "") : (v ?? "");
 }
 
-function clientIp(req: ApiReq): string {
-  const fwd = header(req, "x-forwarded-for").split(",")[0]?.trim();
-  return fwd || header(req, "x-real-ip") || req.socket?.remoteAddress || "unknown";
+function requestIp(req: ApiReq): string {
+  return clientIp({
+    forwardedFor: req.headers["x-forwarded-for"] ?? req.headers["X-Forwarded-For"],
+    realIp: req.headers["x-real-ip"] ?? req.headers["X-Real-IP"],
+    remoteAddress: req.socket?.remoteAddress,
+    trustedProxyHops: Number(process.env.TRUSTED_PROXY_HOPS ?? 0),
+  });
 }
-
 
 function send(res: ApiRes, status: number, payload: unknown, extra: Record<string, string> = {}) {
   res.statusCode = status;
@@ -59,23 +67,12 @@ export default async function handler(req: ApiReq, res: ApiRes) {
     return send(res, 403, { error: "Өөр эх сурвалжаас хийсэн хүсэлт хориотой." });
   }
 
-  const now = Date.now();
-  const ip = clientIp(req);
-  const verdict = rateLimit(buckets.get(ip) ?? [], now, RULE);
-  buckets.set(ip, verdict.hits);
-  /* Санах ойг хязгаарлах: хуучирсан түлхүүрүүдийг үе үе цэвэрлэнэ. */
-  if (buckets.size > 500) {
-    for (const [key, hits] of buckets) {
-      const kept = pruneHits(hits, now, RULE.windowMs);
-      if (kept.length) buckets.set(key, kept);
-      else buckets.delete(key);
-    }
-  }
+  const verdict = await store.hit(requestIp(req), Date.now(), RULE);
   if (!verdict.allowed) {
     return send(
       res,
       429,
-      { error: `Хэт олон хүсэлт. ${verdict.retryAfterSec} секундын дараа дахин оролдоно уу.` },
+      { error: `Хэт олон хүсэлт. ${verdict.retryAfterSec} секундын дараа дахин оролдоно уу.`, code: "rate_limited" },
       { "Retry-After": String(verdict.retryAfterSec) },
     );
   }
@@ -111,9 +108,8 @@ export default async function handler(req: ApiReq, res: ApiRes) {
       attempts: out.attempts,
       note: "AI үүсгэсэн асуулт — албан ёсны JLPT асуулт биш.",
     });
-  } catch (err) {
-    /* Ямар ч тохиолдолд дотоод деталь задруулахгүй. */
-    const msg = err instanceof Error ? err.message.slice(0, 120) : "Тодорхойгүй алдаа";
-    return send(res, 500, { error: `Серверийн алдаа: ${msg}` });
+  } catch {
+    /* Дотоод деталь, URL, key хэзээ ч клиент рүү гарахгүй. */
+    return send(res, 500, { error: "Серверийн алдаа гарлаа. Дараа дахин оролдоно уу.", code: "internal" });
   }
 }

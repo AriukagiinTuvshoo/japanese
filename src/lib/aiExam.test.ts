@@ -3,6 +3,8 @@ import {
   AI_LIMITS,
   aiToQuestion,
   extractJson,
+  listeningPassage,
+  listeningScript,
   normText,
   normalizeAiRequest,
   validateAiBatch,
@@ -225,5 +227,209 @@ describe("normalizeAiRequest", () => {
   it("limits the avoid list", () => {
     const avoid = Array.from({ length: 100 }, (_, i) => `q${i}`);
     expect(normalizeAiRequest({ level: "N2", section: "grammar", count: 5, avoid })?.avoid).toHaveLength(AI_LIMITS.maxAvoid);
+  });
+});
+
+describe("passage requirements", () => {
+  const reading = { level: "N2", section: "reading" } as const;
+  const listening = { level: "N2", section: "listening" } as const;
+
+  it("rejects a reading question without a passage", () => {
+    const r = validateQuestion(good({ section: "reading", question: "この文章の内容と合っているものを選びなさい。", passage: null }), reading);
+    expect(r.ok).toBe(false);
+    expect(r.issues.map((i) => i.code)).toContain("passage_missing");
+  });
+
+  it("rejects a listening question without a passage", () => {
+    const r = validateQuestion(good({ section: "listening", question: "男の人は何をしますか。", passage: "   " }), listening);
+    expect(r.ok).toBe(false);
+    expect(r.issues.map((i) => i.code)).toContain("passage_missing");
+  });
+
+  it("rejects a passage that is too short to answer from", () => {
+    const r = validateQuestion(good({ section: "reading", question: "この文章の内容と合っているものを選びなさい。", passage: "短い。" }), reading);
+    expect(r.ok).toBe(false);
+    expect(r.issues.map((i) => i.code)).toContain("passage_short");
+  });
+
+  it("accepts a reading question with a real passage and keeps it in the runner", () => {
+    const r = validateQuestion(
+      good({
+        section: "reading",
+        question: "この文章の内容と合っているものを選びなさい。",
+        passage: "田中さんは毎朝六時に起きて、近くの公園を散歩する。雨の日は家で本を読む。",
+      }),
+      reading,
+    );
+    expect(r.ok).toBe(true);
+    expect(aiToQuestion(r.accepted!.question).passage).toHaveLength(1);
+  });
+
+  it("still accepts vocabulary questions without a passage", () => {
+    expect(validateQuestion(good(), expected).ok).toBe(true);
+  });
+});
+
+const aiq = (over: Partial<AiQuestion> = {}): AiQuestion => ({
+  level: "N2",
+  section: "listening",
+  questionType: "課題理解",
+  question: "男の人はこの後まず何をしなければなりませんか。",
+  passage: [
+    "会社で男の人と女の人が話しています。",
+    "男の人はこの後まず何をしなければなりませんか。",
+    "男：明日の会議の資料ですが、印刷が終わりました。",
+    "女：まず山田さんに電話して確認してくれる?",
+  ].join("\n"),
+  options: [
+    { id: "A", text: "資料を印刷する" },
+    { id: "B", text: "山田さんに電話する" },
+    { id: "C", text: "会議室を準備する" },
+    { id: "D", text: "資料を確認する" },
+  ],
+  correctAnswer: "B",
+  explanationMn: "女性が「まず山田さんに電話して」と指示しているため、Bが正しい。",
+  explanationJa: "女性の指示が根拠です。",
+  vocabulary: [],
+  grammarPoints: [],
+  sourceType: "ai_generated",
+  qualityStatus: "validated",
+  ...over,
+});
+
+describe("listeningScript", () => {
+  it("removes speaker labels but keeps the sentences", () => {
+    const script = listeningScript("男：こんにちは。\n女性: よろしくお願いします。\n女：失礼します。", null);
+    expect(script).not.toMatch(/男|女/);
+    expect(script).toContain("こんにちは");
+    expect(script).toContain("よろしくお願いします");
+    expect(script).toContain("失礼します");
+  });
+
+  it("is safe for null, undefined and empty input", () => {
+    expect(listeningScript(null)).toBe("");
+    expect(listeningScript(undefined)).toBe("");
+    expect(listeningScript("")).toBe("");
+    expect(listeningScript("   \n\n ", "質問")).toBe("");
+  });
+
+  it("joins lines without producing a double full stop", () => {
+    const script = listeningScript("男：はい。\n女：わかりました。", null);
+    expect(script).toBe("はい。わかりました。");
+    expect(script).not.toContain("。。");
+  });
+
+  it("keeps an exactly duplicated question sentence only once", () => {
+    const q = "男の人はこの後まず何をしなければなりませんか。";
+    const script = listeningScript(`男：${q}\n女：${q}\n男：すぐ行きます。`, q);
+    expect(script.split(q).length - 1).toBe(1);
+    expect(script).toContain("すぐ行きます");
+  });
+
+  it("does not drop a similar but not identical sentence", () => {
+    const q = "男の人はこの後まず何をしなければなりませんか。";
+    const similar = "男の人はこの後まず何をしますか。";
+    const script = listeningScript(`女：${similar}\n男：はい。`, q);
+    expect(script).toContain(similar);
+  });
+});
+
+describe("listeningPassage (UI display)", () => {
+  it("never shows a raw speaker label on screen", () => {
+    const lines = listeningPassage("男：こんにちは。\n女: よろしく。\n男性：はい。\n女性：どうぞ。", null);
+    const joined = lines.join("\n");
+    expect(joined).not.toMatch(/^男[:：]/m);
+    expect(joined).not.toMatch(/^女[:：]/m);
+    expect(joined).toContain("男性：こんにちは。");
+    expect(joined).toContain("女性：よろしく。");
+    expect(joined).toContain("男性：はい。");
+    expect(joined).toContain("女性：どうぞ。");
+  });
+
+  it("keeps the speaker order and every sentence", () => {
+    const lines = listeningPassage("女：先に席を取ります。\n男：すぐ行きます。\n女：お願いします。", null);
+    expect(lines).toEqual(["女性：先に席を取ります。", "男性：すぐ行きます。", "女性：お願いします。"]);
+  });
+
+  it("drops an exact duplicate question sentence and keeps the rest", () => {
+    const q = "男の人はこの後まず何をしなければなりませんか。";
+    const lines = listeningPassage(`男：${q}\n女：まず山田さんに電話して。`, q);
+    expect(lines.join("")).not.toContain(q);
+    expect(lines.join("")).toContain("山田さんに電話");
+  });
+
+  it("is safe for empty input", () => {
+    expect(listeningPassage(null)).toEqual([]);
+    expect(listeningPassage(undefined)).toEqual([]);
+    expect(listeningPassage(" \n ")).toEqual([]);
+  });
+});
+
+describe("explanation – answer consistency", () => {
+  it("does not flag an explanation that names the correct option", () => {
+    const r = validateQuestion(good(), expected);
+    expect(r.accepted!.issues.map((i) => i.code)).not.toContain("explanation_no_answer");
+    expect(r.accepted!.question.qualityStatus).toBe("validated");
+  });
+
+  it("flags an explanation that calls another option correct", () => {
+    const r = validateQuestion(good({ explanationMn: "Зөв хариулт нь B. 「訓練」 нь энэ өгүүлбэрт тохирно." }), expected);
+    expect(r.ok).toBe(true);
+    expect(r.accepted!.issues.map((i) => i.code)).toContain("explanation_wrong_answer");
+    expect(r.accepted!.question.qualityStatus).toBe("needs_review");
+  });
+});
+
+describe("aiToQuestion listening audio", () => {
+  it("gives listening questions a TTS script and a cleaned display passage", () => {
+    const ai = aiq();
+    const q = aiToQuestion(ai);
+    expect(typeof q.audio).toBe("string");
+    expect(q.audio!.length).toBeGreaterThan(0);
+    expect(q.audio).not.toMatch(/^男[:：]/m);
+    expect(q.audio).toContain("山田さんに電話");
+    /* Дэлгэцэн дээр түүхий шошго, давхардсан асуулт байхгүй. */
+    expect(q.passage!.join("\n")).not.toMatch(/^男[:：]/m);
+    expect(q.passage!.join("\n")).toContain("男性：");
+    expect(q.passage).not.toContain(ai.question);
+    expect(ai.passage).toContain("男："); /* эх өгөгдөл хөндөгдөөгүй */
+  });
+
+  it("drops an exact duplicate of the question but keeps a similar sentence", () => {
+    const q = aiq({ question: "男の人は何をしますか。" });
+    q.passage = ["男：男の人は何をしますか。", "女：男の人は何をしますか。", "男：まず電話します。"].join("\n");
+    const out = aiToQuestion(q);
+    expect((out.passage!.join("").match(/男の人は何をしますか。/g) || []).length).toBe(0);
+    expect(out.passage!.join("")).toContain("まず電話します");
+  });
+
+  it("keeps reading passages exactly as before", () => {
+    const passage = "本文の一行目です。\n二行目です。";
+    expect(aiToQuestion(aiq({ section: "reading", passage })).passage).toEqual(passage.split(/\n{2,}|\r?\n/));
+  });
+
+  it("adds no audio outside the listening section", () => {
+    for (const section of ["vocabulary", "grammar", "reading", "kanji"] as const) {
+      expect(aiToQuestion(aiq({ section, passage: section === "reading" ? "短い本文です。" : null })).audio).toBeUndefined();
+    }
+  });
+});
+
+describe("quality labels", () => {
+  it("does not call a needs_review question reviewed", () => {
+    /* Тайлбар нь зөв хариултыг дурдаагүй → warn → needs_review. */
+    const r = validateQuestion(
+      good({ explanationMn: "Энэ өгүүлбэрт тохирох үйл үгийг сонгоно уу гэсэн утгатай." }),
+      expected,
+    );
+    expect(r.ok).toBe(true);
+    expect(r.accepted!.question.qualityStatus).toBe("needs_review");
+    expect(aiToQuestion(r.accepted!.question).promptSub).toContain("хяналт шаардлагатай");
+  });
+
+  it("marks a clean question as validated and labelled reviewed", () => {
+    const r = validateQuestion(good(), expected);
+    expect(r.accepted!.question.qualityStatus).toBe("validated");
+    expect(aiToQuestion(r.accepted!.question).promptSub).toContain("хянасан");
   });
 });

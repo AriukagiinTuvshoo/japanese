@@ -165,6 +165,15 @@ export function validateQuestion(
   if (!JP.test(question) && !(maybePassage && JP.test(maybePassage))) {
     issues.push(reject("not_japanese", "Асуулт эсвэл эх текст япон хэл дээр байх ёстой."));
   }
+
+  /* Уншлага/сонсгол нь эх текстгүйгээр хариулагдахгүй — хоосон асуулт харуулахгүй. */
+  if (expected.section === "reading" || expected.section === "listening") {
+    if (!maybePassage) {
+      issues.push(reject("passage_missing", "Уншлага/сонсголын асуултад эх текст заавал байх ёстой."));
+    } else if (maybePassage.length < 20) {
+      issues.push(reject("passage_short", "Эх текст хэт богино байна (20+ тэмдэгт шаардлагатай)."));
+    }
+  }
   if (PLACEHOLDERS.test(question)) issues.push(reject("placeholder", "Асуултад орлуулагч/хоосон текст байна."));
 
   const options = readOptions(rec.options);
@@ -198,6 +207,13 @@ export function validateQuestion(
   }
   if (explanationMn && !JP.test(explanationMn) && !JP.test(question)) {
     issues.push(warn("explanation_no_japanese", "Тайлбарт япон текст байхгүй."));
+  }
+  /* Тайлбар өөр сонголтыг «зөв» гэж бичсэн бол итгэх боломжгүй — хяналтад. */
+  if (explanationMn && correctOption) {
+    const claimed = /(?:зөв\s*хариулт\s*нь|正解は)\s*([A-D])\b/i.exec(explanationMn)?.[1];
+    if (claimed && claimed.toUpperCase() !== correctAnswer.toUpperCase()) {
+      issues.push(warn("explanation_wrong_answer", "Тайлбар өөр сонголтыг зөв гэж заасан — хянах."));
+    }
   }
 
   const hasReject = issues.some((i) => i.severity === "reject");
@@ -259,20 +275,97 @@ export function validateAiBatch(
   return { accepted, rejected };
 }
 
+/** Яригчийн шошго (`男:` / `女：` / `男性:` / `女性:`) — мөрний эхэнд. */
+const SPEAKER_LABEL = /^\s*(男性|女性|男|女)\s*[:：]\s*/;
+
+/** `男:`/`女:`-г UI-д япон хэлбэрээр (`男性：`/`女性：`) харуулна. */
+function speakerLabel(who: string): string {
+  return who.startsWith("男") ? "男性：" : "女性：";
+}
+
+/**
+ * Сонсголын passage-ыг UI-д бэлдэнэ.
+ * · түүхий `男:`/`女:` шошгыг `男性：`/`女性：` болгоно,
+ * · асуултын өгүүлбэрийг хасна (prompt-д аль хэдийн харагдана),
+ * · яригчийн ээлж, бусад мөрийг хэвээр үлдээнэ.
+ */
+export function listeningPassage(passage: string | null | undefined, question?: string | null): string[] {
+  if (!passage) return [];
+  const q = normText(question ?? "");
+  const lines: string[] = [];
+  for (const raw of passage.split(/\r?\n/)) {
+    const match = SPEAKER_LABEL.exec(raw);
+    const text = (match ? raw.slice(match[0].length) : raw).trim();
+    if (!text) continue;
+    if (q && normText(text) === q) continue;
+    lines.push(match?.[1] ? `${speakerLabel(match[1])}${text}` : text);
+  }
+  return lines;
+}
+
+/**
+ * Сонсголын script-ийг Browser TTS-д бэлдэнэ.
+ * · яригчийн шошгыг хасна (TTS «おとこ/おんな» гэж уншихгүй),
+ * · хоосон мөрийг хаяж, мөрүүдийг «。»-ээр залгана (давхар «。。» үүсгэхгүй),
+ * · асуултын өгүүлбэр яг давхардсан бол нэг л удаа үлдээнэ.
+ * `passage`-ыг өөрчлөхгүй — энэ нь зөвхөн аудио текст.
+ */
+export function listeningScript(passage: string | null | undefined, question?: string | null): string {
+  if (!passage) return "";
+  const q = normText(question ?? "");
+  let questionKept = false;
+  const lines: string[] = [];
+
+  for (const raw of passage.split(/\r?\n/)) {
+    const line = raw.replace(SPEAKER_LABEL, "").trim();
+    if (!line) continue;
+    /* Яг ижил өгүүлбэрийг л давхарлана; төстэй мөрийг хөндөхгүй. */
+    if (q && normText(line) === q) {
+      if (questionKept) continue;
+      questionKept = true;
+    }
+    lines.push(line);
+  }
+
+  let out = "";
+  for (const line of lines) {
+    if (!out) out = line;
+    else if (/[。．.!！?？]$/.test(out)) out += line;
+    else out += `。${line}`;
+  }
+  return out.replace(/。{2,}/g, "。").trim();
+}
+
 /** AI асуултыг QuizRunner-ийн `Question` болгон хөрвүүлнэ. */
 export function aiToQuestion(ai: AiQuestion, index = 0): Question {
   const answerIdx = Math.max(0, ai.options.findIndex((o) => o.id === ai.correctAnswer));
   const explain = [ai.explanationMn, ai.explanationJa].filter(Boolean).join("\n\n");
+  /* Зөвхөн сонсголд аудио — бусад хэсэгт TTS товч гарахгүй. */
+  const audio = ai.section === "listening" ? listeningScript(ai.passage, ai.question) : "";
+  /* Сонсголын passage-д шошгыг цэвэрлэж, давхардсан асуултыг хасна. */
+  const passageLines = ai.section === "listening" ? listeningPassage(ai.passage, ai.question) : [];
   return {
     id: `ai-${ai.section}-${index}-${hash(ai.question)}`,
     kind: `ai-${ai.section}`,
     level: ai.level as Level,
     prompt: ai.question,
-    promptSub: ai.passage ? undefined : "AI үүсгэсэн · хянасан",
+    /* Хяналт шаардлагатай асуултыг «хянасан» гэж шошголохгүй. */
+    promptSub: ai.passage
+      ? undefined
+      : ai.qualityStatus === "validated"
+        ? "AI үүсгэсэн · хянасан"
+        : "AI үүсгэсэн · хяналт шаардлагатай",
+    /* Passage байгаа эсэхээс үл хамааран UI-д анхааруулга харуулна. */
+    needsReview: ai.qualityStatus === "needs_review" || undefined,
     options: ai.options.map((o) => o.text),
     answer: answerIdx,
-    passage: ai.passage ? ai.passage.split(/\n{2,}|\r?\n/).filter(Boolean) : undefined,
+    passage: ai.passage
+      ? ai.section === "listening"
+        ? (passageLines.length ? passageLines : undefined)
+        : ai.passage.split(/\n{2,}|\r?\n/).filter(Boolean)
+      : undefined,
     explain,
+    audio: audio || undefined,
     section: SECTION_MN[ai.section],
   };
 }

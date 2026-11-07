@@ -19,6 +19,8 @@ export interface Question {
   /** Асуултын толгой хэсэг (япон). */
   prompt: string;
   promptSub?: string;
+  /** AI үүсгэсэн асуулт хяналт шаарддаг бол QuizRunner анхааруулга харуулна. */
+  needsReview?: boolean;
   /** Толь бичгийн popover-д. */
   refId?: string;
   refKanji?: string;

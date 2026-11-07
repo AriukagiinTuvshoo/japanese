@@ -36,6 +36,8 @@ export default function MockExam() {
   const [startedAt, setStartedAt] = useState(() => Date.now());
   /** AI-аар үүсгэсэн дасгалын асуултууд (шалгалтын түүхэнд орохгүй). */
   const [aiQuestions, setAiQuestions] = useState<Question[]>([]);
+  /** Өмнө үүсгэсэн асуултууд — дараагийн AI дасгал эдгээрийг давтахгүй. */
+  const aiSeenRef = useRef<string[]>([]);
   const mountedRef = useRef(false);
   /** Зурваснаас сэргээсний дараагийн түвшний эффектийг алгасах. */
   const restoredRef = useRef(false);
@@ -405,7 +407,12 @@ export default function MockExam() {
         level={level}
         language={language}
         mistakes={doc.mistakes.slice(0, 10).map((m) => m.prompt)}
-        onStart={(qs) => { setAiQuestions(qs); setStage("ai"); }}
+        avoid={aiSeenRef.current}
+        onStart={(qs) => {
+          aiSeenRef.current = [...aiSeenRef.current, ...qs.map((q) => q.prompt)].slice(-40);
+          setAiQuestions(qs);
+          setStage("ai");
+        }}
       />
 
       {doc.exams.length > 0 && (

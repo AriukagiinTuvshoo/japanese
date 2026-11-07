@@ -123,7 +123,7 @@ Browser (AiExamPanel)
 
 | Шалгалт | Үр дүн |
 |---|---|
-| `npm test` | 222 passed / 14 файл |
+| `npm test` | 251 passed / 15 файл |
 | `npm run typecheck` | exit 0 (server, api орсон) |
 | `npm run build` | exit 0 |
 | `npm run test:smoke` | pass |
@@ -137,7 +137,7 @@ Browser (AiExamPanel)
 | API: rate limit | 8 → 429 |
 | Browser: бичих | зурлага бүртгэгдэж, crash байхгүй, «Шалгах» хүртэл оноо гарахгүй |
 | Browser: AI панель | 503 үед тохиргооны мессеж; stub хариултаар 4 сонголттой AI дасгал ачаалсан |
-| Gemini live дуудлага | **шалгагдаагүй** — `GEMINI_API_KEY` байхгүй |
+| Gemini live дуудлага (түлхүүргүй) | **шалгагдаагүй** — `GEMINI_API_KEY` байхгүй. 2026-11-05-нд зөвхөн *transport* батлагдсан: хуурамч түлхүүрээр бодит Gemini API руу дуудахад 400 `API_KEY_INVALID` ирж, бид 502 `bad_key` + монгол мессеж буцаасан, түлхүүр хариултад гараагүй. Жинхэнэ асуулт үүсгэлт хараахан батлагдаагүй (`npm run verify:ai`). |
 
 ---
 

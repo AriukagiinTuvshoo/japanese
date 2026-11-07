@@ -234,7 +234,7 @@ export function QuizRunner({
       <div key={q.id} className="card mt-5 animate-rise p-6 sm:p-7">
         {q.passage && q.passage.length > 0 && (
           <div className="mb-5 rounded-xl border border-sumi-900/8 bg-sumi-900/[0.03] p-4">
-            <p className="mb-2 text-[11px] font-bold uppercase tracking-wide text-sumi-400">{t.readingPassageLabel}</p>
+            <p className="mb-2 text-[11px] font-bold uppercase tracking-wide text-sumi-400">{q.kind === "ai-listening" ? t.scriptLabel : t.readingPassageLabel}</p>
             {q.passage.map((line, li) => (
               <p key={li} className="mt-2 first:mt-0">
                 <Furigana text={line} show={doc.profile.furigana} className="text-[15.5px] leading-[1.95] text-sumi-900" />
@@ -262,6 +262,11 @@ export function QuizRunner({
               {q.prompt}
             </p>
             {q.promptSub && <p className="mt-1.5 text-[13px] font-bold text-sumi-500">{q.promptSub}</p>}
+            {q.needsReview && (
+              <p className="mt-2 inline-flex items-center gap-1.5 rounded-lg bg-ai-50 px-2.5 py-1 text-[12px] font-bold text-ai-600">
+                ⚠ {t.aiNeedsReview}
+              </p>
+            )}
           </div>
           {q.audio && (
             <Button size="sm" variant="ghost" onClick={() => speak(q.audio!, Math.max(0.6, doc.profile.rate - 0.25))}>{t.slowBtn}</Button>
