@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useStore } from "../lib/store";
 import { Card, PageHeader, Tabs } from "../components/ui";
 import { AuthForm, Profile, Settings, SyncPanel } from "../components/AccountModal";
+import { ACCOUNT_BACKEND_AVAILABLE } from "../lib/api";
 import { ui } from "../lib/i18n";
 
 type Tab = "account" | "settings" | "sync";
@@ -17,7 +18,7 @@ export default function Account() {
       <PageHeader
         jp="人 · アカウント"
         title={t.accountPageTitle}
-        sub={t.accountPageSub}
+        sub={ACCOUNT_BACKEND_AVAILABLE ? t.accountPageSub : t.localOnlyPageSub}
       />
       <Card className="p-0">
         <div className="border-b border-sumi-900/10 px-5 py-3">
@@ -25,19 +26,23 @@ export default function Account() {
             value={tab}
             onChange={setTab}
             items={[
-              { id: "account", label: account ? t.profileTab : t.loginSignupTab, icon: "人" },
+              {
+                id: "account",
+                label: ACCOUNT_BACKEND_AVAILABLE ? (account ? t.profileTab : t.loginSignupTab) : t.localOnlyTab,
+                icon: "人",
+              },
               { id: "settings", label: t.studySettingsTab, icon: "設" },
-              { id: "sync", label: t.syncTab, icon: "雲" },
+              { id: "sync", label: ACCOUNT_BACKEND_AVAILABLE ? t.syncTab : t.fileBackup, icon: "雲" },
             ]}
           />
         </div>
         <div className="px-5 py-6 sm:px-7">
-          {!serverAvailable && tab !== "settings" && (
+          {ACCOUNT_BACKEND_AVAILABLE && !serverAvailable && tab !== "settings" && (
             <p className="mb-5 rounded-xl bg-kin-50 px-4 py-3 text-[12.5px] font-semibold text-kin-600">
               {t.serverOfflineNote}
             </p>
           )}
-          {tab === "account" && (account ? <Profile account={account} /> : <AuthForm />)}
+          {tab === "account" && (ACCOUNT_BACKEND_AVAILABLE && account ? <Profile account={account} /> : <AuthForm />)}
           {tab === "settings" && <Settings />}
           {tab === "sync" && <SyncPanel />}
         </div>

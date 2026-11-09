@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { cn } from "../utils/cn";
 import { useStore } from "../lib/store";
-import { api } from "../lib/api";
+import { ACCOUNT_BACKEND_AVAILABLE, api } from "../lib/api";
 import { Button, Chip, Modal, Tabs } from "./ui";
 import { fmtDate } from "../lib/text";
 import { ui } from "../lib/i18n";
+import { mistakeCounts } from "../lib/deletions";
 
 type Tab = "account" | "settings" | "sync";
 
@@ -20,14 +21,14 @@ export function AccountModal({ onClose }: { onClose: () => void }) {
           value={tab}
           onChange={setTab}
           items={[
-            { id: "account", label: account ? t.profileTab : t.loginTab, icon: "人" },
+            { id: "account", label: ACCOUNT_BACKEND_AVAILABLE ? (account ? t.profileTab : t.loginTab) : t.localOnlyTab, icon: "人" },
             { id: "settings", label: t.studySettingsTab, icon: "設" },
             { id: "sync", label: t.syncTab, icon: "雲" },
           ]}
         />
       </div>
       <div className="px-6 py-6">
-        {tab === "account" && (account ? <Profile account={account} /> : <AuthForm />)}
+        {tab === "account" && (ACCOUNT_BACKEND_AVAILABLE && account ? <Profile account={account} /> : <AuthForm />)}
         {tab === "settings" && <Settings />}
         {tab === "sync" && <SyncPanel />}
       </div>
@@ -38,10 +39,10 @@ export function AccountModal({ onClose }: { onClose: () => void }) {
         <span>·</span>
         <span>{streak} {t.days}</span>
         <span className="ml-auto flex items-center gap-2">
-          <Chip tone={serverAvailable ? "matcha" : "sumi"}>
-            {serverAvailable ? t.serverConnected : t.offlineMode}
+          <Chip tone={ACCOUNT_BACKEND_AVAILABLE && serverAvailable ? "matcha" : "sumi"}>
+            {!ACCOUNT_BACKEND_AVAILABLE ? t.localOnlyChip : serverAvailable ? t.serverConnected : t.offlineMode}
           </Chip>
-          {account && (
+          {account && ACCOUNT_BACKEND_AVAILABLE && (
             <Chip tone={syncing === "error" ? "shu" : syncing === "syncing" ? "kin" : "matcha"}>
               {syncing === "syncing" ? t.syncingNow : syncing === "error" ? t.syncError : lastSync ? t.lastSyncAt(new Date(lastSync).toLocaleTimeString(language === "en" ? "en-US" : "mn-MN", { hour: "2-digit", minute: "2-digit" })) : t.syncReady}
             </Chip>
@@ -110,6 +111,18 @@ export function AuthForm() {
   const [name, setName] = useState("");
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState("");
+
+  if (!ACCOUNT_BACKEND_AVAILABLE) {
+    return (
+      <div className="space-y-4">
+        <div className="rounded-2xl border border-kin-100 bg-kin-50/60 p-4">
+          <p className="text-[13.5px] font-extrabold text-kin-700">{t.localOnlyTitle}</p>
+          <p className="mt-1 text-[12.5px] leading-relaxed text-kin-600">{t.localOnlyBody}</p>
+        </div>
+        <Button variant="outline" size="lg" onClick={() => actions.guestMode()}>{t.asGuest}</Button>
+      </div>
+    );
+  }
 
   const submit = async () => {
     setMsg("");
@@ -260,6 +273,7 @@ export function SyncPanel() {
   const [msg, setMsg] = useState("");
   const [code, setCode] = useState("");
   const [busy, setBusy] = useState(false);
+  const mistakeTally = mistakeCounts(doc.mistakes);
 
   useEffect(() => { if (!msg) return; const t = setTimeout(() => setMsg(""), 5000); return () => clearTimeout(t); }, [msg]);
 
@@ -300,44 +314,56 @@ export function SyncPanel() {
 
   return (
     <div className="space-y-5">
-      <div className="rounded-2xl border border-sumi-900/10 bg-white/60 p-4">
-        <div className="flex items-center justify-between">
-          <div>
-            <p className="text-[13.5px] font-bold">{t.cloudSync}</p>
-            <p className="mt-1 text-[12px] text-sumi-500">
-              {account
-                ? `${t.serverConnected} · ${account.email}`
-                : serverAvailable ? t.cloudStatusGuest : t.cloudStatusOffline}
-            </p>
+      {ACCOUNT_BACKEND_AVAILABLE ? (
+        <>
+          <div className="rounded-2xl border border-sumi-900/10 bg-white/60 p-4">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-[13.5px] font-bold">{t.cloudSync}</p>
+                <p className="mt-1 text-[12px] text-sumi-500">
+                  {account
+                    ? `${t.serverConnected} · ${account.email}`
+                    : serverAvailable ? t.cloudStatusGuest : t.cloudStatusOffline}
+                </p>
+              </div>
+              <Chip tone={account ? "matcha" : "sumi"}>{account ? t.activeChip : t.offChip}</Chip>
+            </div>
+            {account && (
+              <div className="mt-3 flex flex-wrap items-center gap-2">
+                <Button size="sm" variant="outline" disabled={syncing === "syncing"} onClick={() => actions.syncNow()}>
+                  {syncing === "syncing" ? t.syncingNow : t.syncNowBtn}
+                </Button>
+                {lastSync && <span className="text-[11.5px] text-sumi-400">{t.lastSyncLabel} {new Date(lastSync).toLocaleString(language === "en" ? "en-US" : "mn-MN")}</span>}
+              </div>
+            )}
           </div>
-          <Chip tone={account ? "matcha" : "sumi"}>{account ? t.activeChip : t.offChip}</Chip>
-        </div>
-        {account && (
-          <div className="mt-3 flex flex-wrap items-center gap-2">
-            <Button size="sm" variant="outline" disabled={syncing === "syncing"} onClick={() => actions.syncNow()}>
-              {syncing === "syncing" ? t.syncingNow : t.syncNowBtn}
-            </Button>
-            {lastSync && <span className="text-[11.5px] text-sumi-400">{t.lastSyncLabel} {new Date(lastSync).toLocaleString(language === "en" ? "en-US" : "mn-MN")}</span>}
-          </div>
-        )}
-      </div>
 
-      {account && (
-        <div className="rounded-2xl border border-ai-100 bg-ai-50/50 p-4">
-          <p className="text-[13.5px] font-bold text-ai-700">{t.linkDevice}</p>
-          <p className="mt-1 text-[12px] leading-relaxed text-ai-600">
-            {t.linkDeviceBody}
-          </p>
-          <div className="mt-3 flex flex-wrap gap-2">
-            <Button size="sm" variant="outline" disabled={busy || !serverAvailable} onClick={makeCode}>{t.makeCodeBtn}</Button>
-            <input
-              value={code}
-              onChange={(e) => setCode(e.target.value.toUpperCase())}
-              placeholder="ABC123"
-              className="h-8 w-32 rounded-lg border border-sumi-900/15 bg-white px-3 font-mono text-[13px] font-bold tracking-widest outline-none focus:border-shu-500"
-            />
-            <Button size="sm" disabled={busy || code.length < 4} onClick={redeem}>{t.linkBtn}</Button>
+          {account && (
+            <div className="rounded-2xl border border-ai-100 bg-ai-50/50 p-4">
+              <p className="text-[13.5px] font-bold text-ai-700">{t.linkDevice}</p>
+              <p className="mt-1 text-[12px] leading-relaxed text-ai-600">
+                {t.linkDeviceBody}
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                <Button size="sm" variant="outline" disabled={busy || !serverAvailable} onClick={makeCode}>{t.makeCodeBtn}</Button>
+                <input
+                  value={code}
+                  onChange={(e) => setCode(e.target.value.toUpperCase())}
+                  placeholder="ABC123"
+                  className="h-8 w-32 rounded-lg border border-sumi-900/15 bg-white px-3 font-mono text-[13px] font-bold tracking-widest outline-none focus:border-shu-500"
+                />
+                <Button size="sm" disabled={busy || code.length < 4} onClick={redeem}>{t.linkBtn}</Button>
+              </div>
+            </div>
+          )}
+        </>
+      ) : (
+        <div className="rounded-2xl border border-kin-100 bg-kin-50/60 p-4">
+          <div className="flex items-center justify-between gap-3">
+            <p className="text-[13.5px] font-extrabold text-kin-700">{t.localOnlyTitle}</p>
+            <Chip tone="sumi">{t.localOnlyChip}</Chip>
           </div>
+          <p className="mt-1 text-[12.5px] leading-relaxed text-kin-600">{t.localOnlyBody}</p>
         </div>
       )}
 
@@ -364,7 +390,7 @@ export function SyncPanel() {
         <div className="mt-3 flex flex-wrap gap-3 text-[11.5px] text-sumi-400">
           <span className="tabnum">{t.srsCardsRow} {Object.keys(doc.srs).length.toLocaleString()}</span>
           <span className="tabnum">{t.reviewsRow} {Object.values(doc.srs).reduce((a, c) => a + c.n, 0).toLocaleString()}</span>
-          <span className="tabnum">{t.mistakesRow} {doc.mistakes.length}</span>
+          <span className="tabnum">{t.mistakesRow} {t.mistakeCountsLabel(mistakeTally.records, mistakeTally.remaining)}</span>
         </div>
       </div>
 

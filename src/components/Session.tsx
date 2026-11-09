@@ -8,6 +8,7 @@ import { binaryToGrade, makeOnce } from "../lib/flashcard";
 import type { Direction, GradingMode } from "../lib/doc";
 import { MQ_LABEL, TYPE_LABEL, stripFurigana } from "../lib/text";
 import { MN_PENDING, ui, type Language } from "../lib/i18n";
+import { mistakeCounts } from "../lib/deletions";
 import type { Kanji, Level, Vocab } from "../lib/types";
 import {
   Bar, Button, Card, Chip, Furigana, LevelBadge, Ring, SectionTitle, SpeakButton, speak,
@@ -543,7 +544,7 @@ export function MemoryPanel() {
         ))}
       </div>
       <p className="mt-4 rounded-xl bg-sumi-900/4 px-3.5 py-3 text-[12.5px] leading-relaxed text-sumi-600">
-        {t.mistakesNote(doc.mistakes.length)}
+        {t.mistakesNote(mistakeCounts(doc.mistakes).records, mistakeCounts(doc.mistakes).remaining)}
       </p>
     </Card>
   );

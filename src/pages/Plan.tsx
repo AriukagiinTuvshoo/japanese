@@ -7,63 +7,125 @@ import type { Level } from "../lib/types";
 import { LEVELS } from "../lib/types";
 import { LEVEL_LABEL, todayKey } from "../lib/text";
 import { LEVEL_META } from "../data/levels";
+import {
+  DEFAULT_PLAN_DAYS,
+  clampPlanDays,
+  completedPlanDays,
+  currentPlanDay,
+  dailyQuota,
+  estimateMinutes,
+  planCoverage,
+  planLag,
+  planMission,
+  planSchedule,
+  suggestPlanDays,
+  todayFromActivity,
+  zeroQuota,
+  type PlanContent,
+  type PlanIds,
+} from "../lib/plan";
 import { Bar, Button, Card, Chip, LevelBadge, ProgressRow, SectionTitle, Select, Spinner } from "../components/ui";
 import { ui } from "../lib/i18n";
+import { buildTodayTasks, readSkipped, skippedCount } from "../lib/today";
+import { dueCards } from "../lib/srs";
 
 export default function Plan() {
-  const { doc, actions } = useStore();
+  const { doc, uid, actions, today } = useStore();
   const language = doc.profile.language ?? "mn";
   const t = ui[language];
-  const [level, setLevel] = useState<Level>(doc.profile.target);
-  const [days, setDays] = useState(120);
+  const cur = doc.curriculum;
+  const [level, setLevel] = useState<Level>(cur?.level ?? doc.profile.target);
+  const [days, setDays] = useState(() => clampPlanDays(cur?.days ?? DEFAULT_PLAN_DAYS));
   const [goal, setGoal] = useState(doc.profile.dailyGoal);
-  const [counts, setCounts] = useState<{ vocab: number; kanji: number; grammar: number } | null>(null);
+  const [data, setData] = useState<{ content: PlanContent; ids: PlanIds } | null>(null);
 
+  /* Контентын хэмжээ ба ID-ууд — зөвхөн сонгосон түвшинээс. */
   useEffect(() => {
-    loadFullData().then((d) => setCounts({
-      vocab: d.vocabByLevel[level].length,
-      kanji: d.kanjiByLevel[level].length,
-      grammar: d.grammarByLevel[level].length,
-    }));
+    let alive = true;
+    loadFullData().then((d) => {
+      if (!alive) return;
+      const passages = READING.filter((r) => r.level === level);
+      const lessons = LISTENING.filter((l) => l.level === level && (!l.status || l.status === "approved"));
+      setData({
+        content: {
+          vocab: d.vocabByLevel[level].length,
+          kanji: d.kanjiByLevel[level].length,
+          grammar: d.grammarByLevel[level].length,
+          reading: passages.length,
+          listening: lessons.length,
+        },
+        ids: {
+          vocab: d.vocabByLevel[level].map((v) => v.id),
+          kanji: d.kanjiByLevel[level].map((k) => k.k),
+          grammar: d.grammarByLevel[level].map((g) => g.id),
+          reading: passages.map((p) => p.id),
+          listening: lessons.map((l) => l.id),
+        },
+      });
+    });
+    return () => { alive = false; };
   }, [level]);
 
-  const cur = doc.curriculum;
-  const plan = CURRICULUM[level];
   const meta = LEVEL_META[level];
+  const activeDays = cur ? clampPlanDays(cur.days) : 0;
+  const previewDays = clampPlanDays(days);
 
-  const daily = useMemo(() => {
-    if (!counts) return null;
-    return {
-      vocab: Math.ceil(counts.vocab / days),
-      kanji: Math.ceil(counts.kanji / days),
-      grammar: Math.ceil(counts.grammar / days),
-      reading: Math.max(1, Math.round(READING.length / Math.max(1, Math.floor(days / 14)))),
-      listening: Math.max(1, Math.round(LISTENING.length / Math.max(1, Math.floor(days / 14)))),
-    };
-  }, [counts, days]);
+  /* Шалгалтын огноо байвал түүн рүү, эс бөгөөс цаг + ALP-ийн тооцоогоор санал болгоно. */
+  const examDays = useMemo(() => {
+    const at = doc.profile.examDate ? new Date(doc.profile.examDate).getTime() : Number.NaN;
+    return Number.isFinite(at) ? Math.ceil((at - Date.now()) / 86_400_000) : 0;
+  }, [doc.profile.examDate]);
 
-  const curDay = cur ? Math.min(cur.days, Math.floor((Date.now() - cur.startedAt) / 86_400_000) + 1) : 0;
-  const curDone = cur ? Object.keys(cur.done).length : 0;
-  const behind = cur ? Math.max(0, curDay - curDone) : 0;
+  useEffect(() => {
+    if (!cur) setDays(examDays > 0 ? clampPlanDays(examDays) : suggestPlanDays(goal, meta.hours));
+  }, [level, goal, cur, meta.hours, examDays]);
 
-  const schedule = useMemo(() => {
-    if (!cur || !counts) return [];
-    const out: { day: number; vocab: number; kanji: number; grammar: number; reading: number; listening: number; done: boolean }[] = [];
-    const v = Math.ceil(counts.vocab / cur.days);
-    const k = Math.ceil(counts.kanji / cur.days);
-    const g = Math.ceil(counts.grammar / cur.days);
-    for (let d = 1; d <= Math.min(cur.days, curDay + 6); d++) {
-      out.push({
-        day: d,
-        vocab: v, kanji: k,
-        grammar: g * 2,
-        reading: d % 3 === 0 ? 1 : 0,
-        listening: d % 2 === 0 ? 1 : 0,
-        done: !!cur.done[d],
-      });
-    }
-    return out.slice(-8);
-  }, [cur, counts, curDay]);
+  const activeQuota = useMemo(() => (data && cur ? dailyQuota(data.content, activeDays) : null), [data, cur, activeDays]);
+  const previewQuota = useMemo(() => (data ? dailyQuota(data.content, previewDays) : null), [data, previewDays]);
+  const coverage = useMemo(() => (data ? planCoverage(doc, data.ids) : zeroQuota()), [doc, data]);
+  const day = cur ? currentPlanDay(cur.startedAt, activeDays) : 0;
+  const doneDays = activeQuota ? Math.min(activeDays, completedPlanDays(coverage, activeQuota)) : 0;
+  const behind = cur ? planLag(day, doneDays) : 0;
+  const writingToday = useMemo(
+    () => Object.values(doc.writing).filter((w) => todayKey(new Date(w.at)) === todayKey()).length,
+    [doc.writing],
+  );
+  /* Хойшлуулсан даалгавар — Today-той ижил бодит даалгаврын жагсаалтаас. */
+  const done = useMemo(() => todayFromActivity(today, writingToday, cur?.level), [today, writingToday, cur?.level]);
+  const mission = useMemo(
+    () => (cur && data && activeQuota ? planMission({ quota: activeQuota, content: data.content, coverage, done, level: cur.level }) : []),
+    [cur, data, activeQuota, coverage, done],
+  );
+  const skippedToday = useMemo(() => (cur
+    ? skippedCount(buildTodayTasks({
+      mission,
+      level: cur.level,
+      due: dueCards(doc.srs).length,
+      reviews: today.reviews,
+      newCards: today.newCards,
+      started: [],
+      skipped: readSkipped(localStorage, todayKey(), uid),
+    }))
+    : 0), [cur, mission, doc.srs, today.reviews, today.newCards, uid]);
+  const schedule = useMemo(
+    () => (cur && data && activeQuota ? planSchedule({ quota: activeQuota, content: data.content, coverage, day, days: activeDays }) : []),
+    [cur, data, activeQuota, coverage, day, activeDays],
+  );
+
+  const minutes = activeQuota ? estimateMinutes(activeQuota) : 0;
+  const previewMinutes = previewQuota ? estimateMinutes(previewQuota) : 0;
+  const planMeta = cur ? CURRICULUM[cur.level] : undefined;
+  const labels: Record<string, string> = {
+    vocab: t.vocab, kanji: t.kanji, grammar: t.grammar, reading: t.reading, listening: t.listening,
+  };
+  const icons: Record<string, string> = { vocab: "語", kanji: "漢", grammar: "文", reading: "読", listening: "聴" };
+  const contentByType: { id: keyof PlanContent; label: string; tone: "shu" | "ai" | "murasaki" | "matcha" | "kin" }[] = [
+    { id: "vocab", label: t.vocab, tone: "shu" },
+    { id: "kanji", label: t.kanji, tone: "ai" },
+    { id: "grammar", label: t.grammar, tone: "murasaki" },
+    { id: "reading", label: t.reading, tone: "matcha" },
+    { id: "listening", label: t.listening, tone: "kin" },
+  ];
 
   return (
     <div className="space-y-6">
@@ -71,26 +133,36 @@ export default function Plan() {
         <div>
           <p className="font-jp text-[11.5px] tracking-[0.3em] text-shu-500">学習計画</p>
           <h1 className="mt-1 text-[1.7rem] font-extrabold leading-tight tracking-tight sm:text-[2rem]">{t.planHero}</h1>
-          <p className="mt-1.5 text-[13.5px] text-sumi-500">
-            {t.planHeroSub}
-          </p>
+          <p className="mt-1.5 text-[13.5px] text-sumi-500">{t.planHeroSub}</p>
         </div>
       </div>
 
-      {cur && plan ? (
+      {cur ? (
         <Card>
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div>
               <Chip tone="shu">{t.activePlan}</Chip>
-              <h2 className="mt-2.5 text-[1.35rem] font-extrabold">{t.planDaysN(cur.level, cur.days)}</h2>
+              <h2 className="mt-2.5 text-[1.35rem] font-extrabold">{t.planDaysN(cur.level, activeDays)}</h2>
               <p className="mt-1 text-[13px] text-sumi-500">
-                {t.startedAt} {new Date(cur.startedAt).toLocaleDateString(language === "en" ? "en-US" : "mn-MN")} · {t.daysDone(curDone, cur.days)}
+                {t.startedAt} {new Date(cur.startedAt).toLocaleDateString(language === "en" ? "en-US" : "mn-MN")} · {t.daysDone(doneDays, activeDays)}
               </p>
+              {planMeta?.summary && <p className="mt-1.5 max-w-2xl text-[12.5px] text-sumi-500">{planMeta.summary}</p>}
             </div>
             <div className="flex flex-wrap gap-2">
+              <Button size="sm" onClick={() => navigate("today")}>{t.todayOpenFlow}</Button>
+              {skippedToday > 0 && (
+                <a href={href("today")}>
+                  <Chip tone="shu">{t.todaySkippedCount(skippedToday)}</Chip>
+                </a>
+              )}
               <Button variant="outline" size="sm" onClick={() => navigate(`mock?level=${cur.level}`)}>{t.mockExamBtn}</Button>
-              <Button variant="danger" size="sm" onClick={() => { if (confirm(t.deletePlanQ)) actions.startCurriculum(cur.level, 0); }}>
+              <Button variant="outline" size="sm" onClick={() => {
+                if (confirm(t.deletePlanQ)) actions.startCurriculum(cur.level, activeDays);
+              }}>
                 {t.restartPlan}
+              </Button>
+              <Button variant="danger" size="sm" onClick={() => { if (confirm(t.deletePlanQ)) actions.cancelCurriculum(); }}>
+                {t.planDelete}
               </Button>
             </div>
           </div>
@@ -98,7 +170,7 @@ export default function Plan() {
           <div className="mt-5 grid gap-4 sm:grid-cols-3">
             <div className="card-flat px-4 py-3">
               <p className="text-[11px] font-bold uppercase tracking-wide text-sumi-400">{t.currentDayRow}</p>
-              <p className="mt-1 font-mono text-[1.5rem] font-extrabold tabnum leading-none">{curDay}</p>
+              <p className="mt-1 font-mono text-[1.5rem] font-extrabold tabnum leading-none">{day}</p>
             </div>
             <div className="card-flat px-4 py-3">
               <p className="text-[11px] font-bold uppercase tracking-wide text-sumi-400">{t.lagRow}</p>
@@ -108,45 +180,64 @@ export default function Plan() {
             </div>
             <div className="card-flat px-4 py-3">
               <p className="text-[11px] font-bold uppercase tracking-wide text-sumi-400">{t.adjustedTime}</p>
-              <p className="mt-1 font-mono text-[1.5rem] font-extrabold tabnum leading-none">
-                {Math.min(180, (daily?.vocab ?? 20) + 20 + behind * 12)} {t.minutes}
-              </p>
+              <p className="mt-1 font-mono text-[1.5rem] font-extrabold tabnum leading-none">{minutes} {t.minutes}</p>
             </div>
           </div>
 
-          <Bar value={curDone / Math.max(1, cur.days)} tone="shu" className="mt-5" height={8} />
+          <Bar value={doneDays / Math.max(1, activeDays)} tone="shu" className="mt-5" height={8} />
 
           {behind > 0 && (
             <p className="mt-3 rounded-xl bg-shu-50 px-4 py-3 text-[12.5px] font-bold text-shu-700">
-              {t.catchUp(behind, Math.round((1 + behind * 0.25) * 100))}
+              {t.catchUp(behind, Math.min(200, Math.round(((day + 1) / Math.max(1, doneDays + 1)) * 100)))}
             </p>
           )}
+
+          <SectionTitle jp="今日の仕事" title={t.planTodayTitle} sub={t.planAutoNote} />
+          <div className="space-y-2">
+            {mission.map((m) => {
+              const pct = m.target > 0 ? Math.min(1, m.done / m.target) : 0;
+              return (
+                <a key={m.id} href={href(`today?focus=${m.id}`)} className="flex flex-wrap items-center gap-3 rounded-xl border border-sumi-900/8 bg-white/60 px-4 py-3 transition hover:border-shu-300">
+                  <span className={cn("grid h-8 w-8 shrink-0 place-items-center rounded-lg font-mincho text-[14px] font-bold",
+                    pct >= 1 ? "bg-matcha-500 text-white" : "bg-sumi-900/6 text-sumi-600")}>
+                    {pct >= 1 ? "✓" : icons[m.id]}
+                  </span>
+                  <span className="min-w-0 flex-1">
+                    <span className="block text-[13px] font-bold text-sumi-800">{labels[m.id]}</span>
+                    <Bar value={pct} tone={pct >= 1 ? "matcha" : "shu"} className="mt-1.5" height={4} />
+                  </span>
+                  <span className="shrink-0 font-mono text-[12.5px] font-bold tabnum text-sumi-500">
+                    {m.done}/{m.target}
+                  </span>
+                </a>
+              );
+            })}
+            {mission.length === 0 && (
+              <p className="rounded-xl bg-matcha-50 px-4 py-3 text-[12.5px] font-bold text-matcha-700">{t.planDoneForNow}</p>
+            )}
+            {data && data.content.listening === 0 && (
+              <p className="text-[11.5px] text-sumi-400">{t.planNoListening}</p>
+            )}
+          </div>
 
           <SectionTitle jp="今週の予定" title={t.upcomingDays} />
           <div className="space-y-2">
             {schedule.map((s) => (
               <div key={s.day} className={cn("flex flex-wrap items-center gap-3 rounded-xl border px-4 py-3",
-                s.done ? "border-matcha-200 bg-matcha-50/50" : s.day === curDay ? "border-shu-300 bg-shu-50/50" : "border-sumi-900/8 bg-white/60")}>
+                s.done ? "border-matcha-200 bg-matcha-50/50" : s.current ? "border-shu-300 bg-shu-50/50" : "border-sumi-900/8 bg-white/60")}>
                 <span className={cn("grid h-8 w-8 shrink-0 place-items-center rounded-lg font-mono text-[12px] font-bold",
-                  s.done ? "bg-matcha-500 text-white" : s.day === curDay ? "bg-shu-500 text-white" : "bg-sumi-900/6 text-sumi-600")}>
+                  s.done ? "bg-matcha-500 text-white" : s.current ? "bg-shu-500 text-white" : "bg-sumi-900/6 text-sumi-600")}>
                   {s.done ? "✓" : s.day}
                 </span>
                 <div className="flex flex-wrap gap-x-3.5 gap-y-1 text-[12.5px] text-sumi-600">
-                  <span>{t.dayVocab(s.vocab)}</span>
-                  <span>{t.dayKanji(s.kanji)}</span>
-                  <span>{t.dayGrammar(s.grammar)}</span>
-                  {s.reading > 0 && <span>{t.dayReading(s.reading)}</span>}
-                  {s.listening > 0 && <span>{t.dayListening(s.listening)}</span>}
+                  {s.target.vocab > 0 && <span>{t.dayVocab(s.target.vocab)}</span>}
+                  {s.target.kanji > 0 && <span>{t.dayKanji(s.target.kanji)}</span>}
+                  {s.target.grammar > 0 && <span>{t.dayGrammar(s.target.grammar)}</span>}
+                  {s.target.reading > 0 && <span>{t.dayReading(s.target.reading)}</span>}
+                  {s.target.listening > 0 && <span>{t.dayListening(s.target.listening)}</span>}
                 </div>
-                <div className="ml-auto flex gap-2">
-                  {s.day === curDay && !s.done && (
-                    <Button size="sm" onClick={() => {
-                      actions.completeCurriculumDay(s.day, { vocab: s.vocab, kanji: s.kanji, grammar: s.grammar });
-                      navigate(`vocab?level=${cur.level}&tab=learn`);
-                    }}>
-                      {t.startTodayWork}
-                    </Button>
-                  )}
+                <div className="ml-auto flex items-center gap-2">
+                  {s.current && !s.done && <Chip tone="shu">{t.today}</Chip>}
                   {s.done && <Chip tone="matcha">{t.doneChip}</Chip>}
                 </div>
               </div>
@@ -155,8 +246,7 @@ export default function Plan() {
         </Card>
       ) : (
         <Card>
-          <SectionTitle jp="計画を作る" title={t.newPlanTitle}
-            sub={t.newPlanSub} />
+          <SectionTitle jp="計画を作る" title={t.newPlanTitle} sub={t.newPlanSub} />
 
           <div className="grid gap-5 sm:grid-cols-2">
             <div>
@@ -176,7 +266,7 @@ export default function Plan() {
             <div className="space-y-4">
               <label className="block">
                 <span className="text-[12.5px] font-bold text-sumi-700">{t.daysLabel(days, Math.round(days / 30))}</span>
-                <input type="range" min={30} max={365} step={15} value={days} onChange={(e) => setDays(Number(e.target.value))} className="mt-2 w-full" />
+                <input type="range" min={14} max={365} step={7} value={days} onChange={(e) => setDays(clampPlanDays(Number(e.target.value)))} className="mt-2 w-full" />
               </label>
               <label className="block">
                 <span className="text-[12.5px] font-bold text-sumi-700">{t.freeTimeLabel(goal)}</span>
@@ -185,24 +275,23 @@ export default function Plan() {
             </div>
           </div>
 
-          {!counts && <Spinner label={t.calcContent} lang={language} />}
+          {!data && <Spinner label={t.calcContent} lang={language} />}
 
-          {counts && daily && (
+          {data && previewQuota && (
             <div className="mt-6">
-              <p className="text-[13px] font-extrabold">{t.dailyPlanTitle}</p>
+              <div className="flex flex-wrap items-baseline justify-between gap-2">
+                <p className="text-[13px] font-extrabold">{t.dailyPlanTitle}</p>
+                <p className="font-mono text-[12px] font-bold text-sumi-500">{t.planMinutes(previewMinutes)}</p>
+              </div>
               <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                {[
-                  { l: t.vocab, v: daily.vocab, t: counts.vocab, tone: "shu" as const },
-                  { l: t.kanji, v: daily.kanji, t: counts.kanji, tone: "ai" as const },
-                  { l: t.grammar, v: daily.grammar, t: counts.grammar, tone: "murasaki" as const },
-                  { l: t.reading, v: daily.reading, t: READING.length, tone: "matcha" as const },
-                  { l: t.listening, v: daily.listening, t: LISTENING.length, tone: "kin" as const },
-                ].map((x) => (
-                  <div key={x.l} className="card-flat px-4 py-3">
-                    <ProgressRow label={x.l} value={x.v} max={Math.max(x.v, 1)} tone={x.tone} hint={t.totalHint(x.t)} />
+                {contentByType.filter((c) => data.content[c.id] > 0).map((c) => (
+                  <div key={c.id} className="card-flat px-4 py-3">
+                    <ProgressRow label={c.label} value={previewQuota[c.id]} max={Math.max(previewQuota[c.id], 1)} tone={c.tone} hint={t.totalHint(data.content[c.id])} />
                   </div>
                 ))}
               </div>
+              <p className="mt-3 text-[11.5px] text-sumi-400">{t.planDerived}</p>
+              {data.content.listening === 0 && <p className="mt-1 text-[11.5px] text-sumi-400">{t.planNoListening}</p>}
             </div>
           )}
 
@@ -214,7 +303,7 @@ export default function Plan() {
           </div>
 
           <div className="mt-5 flex flex-wrap gap-2">
-            <Button size="lg" onClick={() => {
+            <Button size="lg" disabled={!data} onClick={() => {
               actions.patchProfile({ target: level, dailyGoal: goal });
               actions.startCurriculum(level, days);
               navigate("home");
@@ -250,18 +339,16 @@ export default function Plan() {
         </p>
       </Card>
 
-      {doc.exams.length > 0 && (
-        <Card>
-          <SectionTitle jp="試験日" title={t.examDateRow}
-            sub={doc.profile.examDate ? t.untilDays(doc.profile.examDate, Math.max(0, Math.ceil((new Date(doc.profile.examDate).getTime() - Date.now()) / 86400000))) : t.noDate} />
-          <Select value={doc.profile.target} onChange={(v) => actions.patchProfile({ target: v })}
-            options={LEVELS.map((l) => ({ id: l, label: `${l} — ${LEVEL_LABEL[language][l]}` }))} />
-          <p className="mt-3 text-[12px] text-sumi-500">
-            {t.setDateIn}<a href={href("account")} className="font-bold text-ai-600 underline underline-offset-4">{t.accountSettingsLink}</a>{t.setDateInPost}
-            {t.todayLabel} {todayKey()}
-          </p>
-        </Card>
-      )}
+      <Card>
+        <SectionTitle jp="試験日" title={t.examDateRow}
+          sub={doc.profile.examDate ? t.untilDays(doc.profile.examDate, Math.max(0, Math.ceil((new Date(doc.profile.examDate).getTime() - Date.now()) / 86400000))) : t.noDate} />
+        <Select value={doc.profile.target} onChange={(v) => actions.patchProfile({ target: v })}
+          options={LEVELS.map((l) => ({ id: l, label: `${l} — ${LEVEL_LABEL[language][l]}` }))} />
+        <p className="mt-3 text-[12px] text-sumi-500">
+          {t.setDateIn}<a href={href("account")} className="font-bold text-ai-600 underline underline-offset-4">{t.accountSettingsLink}</a>{t.setDateInPost}
+          {" "}{t.todayLabel} {todayKey()}
+        </p>
+      </Card>
     </div>
   );
 }

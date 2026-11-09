@@ -50,6 +50,39 @@ const card = (n: number, last: number) => ({
 
 /* ─────────────── P0-5: schema version ─────────────── */
 
+describe("decode contract", () => {
+  it("is idempotent — decoding twice gives the same document", () => {
+    const doc = makeDoc({
+      xp: 120,
+      activity: { "2026-01-01": { xp: 10, min: 5, newCards: 2, reviews: 3, correct: 2, total: 3, grammar: 1, reading: 0, listening: 0, newByLevel: { N5: 2 } } },
+      srs: { w1: card(3, 500) },
+      grammarDone: ["g1"],
+    });
+    const once = decodeDoc(JSON.stringify(doc));
+    expect(once.ok).toBe(true);
+    if (!once.ok) return;
+    const twice = decodeDoc(JSON.stringify(once.doc));
+    expect(twice.ok).toBe(true);
+    if (!twice.ok) return;
+    expect(twice.doc).toEqual(once.doc);
+  });
+
+  it("rejects corrupt JSON without throwing", () => {
+    expect(decodeDoc("not-json").ok).toBe(false);
+    expect(decodeDoc("[]").ok).toBe(false);
+    expect(decodeDoc(JSON.stringify({ hello: "world" })).ok).toBe(false);
+  });
+
+  it("drops fields outside the schema (documented contract)", () => {
+    const doc = { ...makeDoc({ xp: 10 }), unknownTop: { a: 1 } } as unknown as Doc;
+    const res = decodeDoc(JSON.stringify(doc));
+    expect(res.ok).toBe(true);
+    if (!res.ok) return;
+    expect((res.doc as unknown as Record<string, unknown>).unknownTop).toBeUndefined();
+    expect(res.doc.xp).toBe(10);
+  });
+});
+
 describe("schema versioning", () => {
   it("upgrades a v3 document (saved before profile.language existed) to the current version", () => {
     const legacy = { ...makeDoc(), v: 3, profile: { ...DEFAULT_PROFILE, name: "Төвшин" } as Record<string, unknown> };
@@ -235,14 +268,14 @@ describe("mergeDocs", () => {
     const a = makeDoc({
       srs: { w1: card(2, 100) },
       grammarDone: ["g1"],
-      activity: { "2026-01-01": { xp: 10, min: 5, newCards: 2, reviews: 3, correct: 2, total: 3 } },
+      activity: { "2026-01-01": { xp: 10, min: 5, newCards: 2, reviews: 3, correct: 2, total: 3, grammar: 0, reading: 0, listening: 0 } },
       achievements: { first: 10 },
       mistakes: [{ id: "m1", kind: "vocab", level: "N5", prompt: "p", answer: "a", given: "g", at: 5, count: 2 }],
     });
     const b = makeDoc({
       srs: { w2: card(5, 500) },
       grammarDone: ["g2"],
-      activity: { "2026-01-01": { xp: 4, min: 9, newCards: 0, reviews: 7, correct: 5, total: 5 } },
+      activity: { "2026-01-01": { xp: 4, min: 9, newCards: 0, reviews: 7, correct: 5, total: 5, grammar: 0, reading: 0, listening: 0 } },
       achievements: { first: 7 },
       mistakes: [{ id: "m1", kind: "vocab", level: "N5", prompt: "p", answer: "a", given: "g", at: 9, count: 3 }],
     });
@@ -252,9 +285,41 @@ describe("mergeDocs", () => {
     expect(mergeDocs(once, b)).toEqual(once);
     expect(mergeDocs(once, once)).toEqual(once);
 
-    expect(once.activity["2026-01-01"]).toEqual({ xp: 10, min: 9, newCards: 2, reviews: 7, correct: 5, total: 5 });
+    expect(once.activity["2026-01-01"]).toEqual({ xp: 10, min: 9, newCards: 2, reviews: 7, correct: 5, total: 5, grammar: 0, reading: 0, listening: 0 });
     expect(once.mistakes[0].count).toBe(3);
     expect(once.achievements.first).toBe(7);
+  });
+
+  it("keeps newCards consistent with the per-level breakdown", () => {
+    const a = makeDoc({
+      activity: { "2026-01-01": { xp: 5, min: 1, newCards: 1, reviews: 1, correct: 1, total: 1, grammar: 0, reading: 0, listening: 0, newByLevel: { N5: 1 } } },
+    });
+    const b = makeDoc({
+      activity: { "2026-01-01": { xp: 5, min: 1, newCards: 1, reviews: 1, correct: 1, total: 1, grammar: 0, reading: 0, listening: 0, newByLevel: { N2: 1 } } },
+    });
+    const merged = mergeDocs(a, b).activity["2026-01-01"];
+    expect(merged.newByLevel).toEqual({ N5: 1, N2: 1 });
+    expect(merged.newCards).toBe(2);
+  });
+
+  it("never lowers xp or a card's review count during merge", () => {
+    const a = makeDoc({ xp: 90, srs: { w1: card(2, 100) } });
+    const b = makeDoc({ xp: 40, srs: { w1: card(7, 900) } });
+    const merged = mergeDocs(a, b);
+    expect(merged.xp).toBe(90);
+    expect(merged.srs.w1.n).toBe(7);
+    expect(Object.keys(merged.srs)).toEqual(["w1"]);
+  });
+
+  it("merges per-level new card counters with max", () => {
+    const day = (newByLevel: Record<string, number>) => ({
+      ...{ xp: 10, min: 5, newCards: 3, reviews: 4, correct: 3, total: 4, grammar: 0, reading: 0, listening: 0 },
+      newByLevel,
+    });
+    const a = makeDoc({ activity: { "2026-01-01": day({ N5: 2, N2: 1 }) } });
+    const b = makeDoc({ activity: { "2026-01-01": day({ N5: 1, N2: 4 }) } });
+    expect(mergeDocs(a, b).activity["2026-01-01"].newByLevel).toEqual({ N5: 2, N2: 4 });
+    expect(mergeDocs(b, a).activity["2026-01-01"].newByLevel).toEqual({ N5: 2, N2: 4 });
   });
 
   it("prefers the newer profile and keeps the newest updatedAt", () => {
@@ -325,6 +390,52 @@ describe("quiz kind normalization", () => {
   });
 });
 
+describe("per-level new card counters in stored activity", () => {
+  it("keeps only known levels and non-negative counts", () => {
+    const doc = makeDoc({
+      activity: {
+        "2026-11-07": {
+          xp: 5, min: 1, newCards: 3, reviews: 0, correct: 0, total: 0, grammar: 0, reading: 0, listening: 0,
+          newByLevel: { N2: 2, N9: 5, N5: "x", N1: -3 } as never,
+        },
+      },
+    });
+    const res = decodeDoc(JSON.stringify(doc));
+    expect(res.ok).toBe(true);
+    if (!res.ok) return;
+    expect(res.doc.activity["2026-11-07"].newByLevel).toEqual({ N2: 2 });
+    expect(res.doc.activity["2026-11-07"].newCards).toBe(3);
+  });
+
+  it("raises a newCards total that is below its per-level sum", () => {
+    const doc = makeDoc({
+      activity: {
+        "2026-11-07": {
+          xp: 5, min: 1, newCards: 1, reviews: 2, correct: 1, total: 2, grammar: 0, reading: 0, listening: 0,
+          newByLevel: { N5: 1, N2: 1 },
+        },
+      },
+    });
+    const res = decodeDoc(JSON.stringify(doc));
+    expect(res.ok).toBe(true);
+    if (!res.ok) return;
+    expect(res.doc.activity["2026-11-07"].newCards).toBe(2);
+    expect(res.doc.activity["2026-11-07"].newByLevel).toEqual({ N5: 1, N2: 1 });
+  });
+
+  it("leaves legacy activity without a breakdown unchanged", () => {
+    const doc = makeDoc({
+      activity: {
+        "2026-11-07": { xp: 5, min: 1, newCards: 3, reviews: 0, correct: 0, total: 0, grammar: 0, reading: 0, listening: 0 },
+      },
+    });
+    const res = decodeDoc(JSON.stringify(doc));
+    expect(res.ok).toBe(true);
+    if (!res.ok) return;
+    expect(res.doc.activity["2026-11-07"].newByLevel).toBeUndefined();
+  });
+});
+
 describe("quiz count preference", () => {
   it("fills the default for an older profile without a schema bump", () => {
     const doc = makeDoc();
@@ -342,7 +453,7 @@ describe("quiz count preference", () => {
     const doc = makeDoc({
       srs: { "日": card(7, 1000) },
       xp: 4242,
-      activity: { "2026-01-01": { xp: 10, min: 5, newCards: 1, reviews: 4, correct: 3, total: 4 } },
+      activity: { "2026-01-01": { xp: 10, min: 5, newCards: 1, reviews: 4, correct: 3, total: 4, grammar: 0, reading: 0, listening: 0 } },
       mistakes: [
         { id: "v-1", kind: "vocab", level: "N5", prompt: "水", answer: "ус", given: "гал", at: 5, count: 2 },
       ],
@@ -414,7 +525,7 @@ describe("mergeDocs — newest-first order", () => {
   });
 
   it("keeps legacy exam records without doubling xp or activity", () => {
-    const day = { xp: 30, min: 5, newCards: 1, reviews: 20, correct: 1, total: 20 };
+    const day = { xp: 30, min: 5, newCards: 1, reviews: 20, correct: 1, total: 20, grammar: 0, reading: 0, listening: 0 };
     const legacy = makeDoc({ quizzes: [q("N5 жишиг шалгалт · Сонсгол", 42, 20)], xp: 30, activity: { "2026-01-01": day } });
     const other = makeDoc({ quizzes: [q("N5 жишиг шалгалт · Сонсгол", 42, 20)], xp: 30, activity: { "2026-01-01": day } });
     const once = mergeDocs(legacy, other);

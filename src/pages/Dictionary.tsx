@@ -3,7 +3,7 @@ import { cn } from "../utils/cn";
 import { href, useQuery } from "../lib/router";
 import { useStore } from "../lib/store";
 import { loadSearchIndex, loadGrammar } from "../lib/data";
-import type { Grammar, SearchIndex } from "../lib/types";
+import type { Grammar, Level, SearchIndex } from "../lib/types";
 import { romajiToKana, toHiragana, toRomaji, TYPE_LABEL } from "../lib/text";
 import { Button, Card, Chip, Empty, Furigana, Input, LevelBadge, SpeakButton, Spinner, Tabs } from "../components/ui";
 import { MN_PENDING, ui } from "../lib/i18n";
@@ -151,7 +151,7 @@ export default function Dictionary({ q: initial }: { q?: string }) {
                       </a>
                       <LevelBadge level={v.lvl as never} size="sm" />
                       <SpeakButton text={v.w} className="!h-7 !w-7" />
-                      <button onClick={() => actions.grade(v.id, 2, { isNew: !has })}
+                      <button onClick={() => actions.grade(v.id, 2, { isNew: !has, level: v.lvl as Level })}
                         className={cn("grid h-7 w-7 place-items-center rounded-lg border text-[13px] transition",
                           has ? "border-matcha-200 bg-matcha-50 text-matcha-600" : "border-sumi-900/10 bg-white/70 text-sumi-400 hover:border-matcha-400")}
                         title={has ? t.srsHas : t.srsAdd}>

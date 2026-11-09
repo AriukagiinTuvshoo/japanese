@@ -197,6 +197,34 @@ describe("kanji and vocabulary share one SRS core", () => {
 
 /* ─────────────── Тохиргоо хадгалах ─────────────── */
 
+describe("new cards are counted per level", () => {
+  it("records the level of each new card and never guesses", () => {
+    let doc = freshDoc();
+    doc = applyGrade(doc, "v-n5", 2, { isNew: true, level: "N5", now: NOW });
+    doc = applyGrade(doc, "v-n2", 2, { isNew: true, level: "N2", now: NOW });
+    doc = applyGrade(doc, "v-unknown", 2, { isNew: true, now: NOW });
+    const day = Object.values(doc.activity)[0];
+    expect(day.newCards).toBe(3);
+    expect(day.newByLevel).toEqual({ N5: 1, N2: 1 });
+    expect(day.newByLevel?.N3).toBeUndefined();
+  });
+
+  it("reviews do not change the per-level new counts", () => {
+    let doc = freshDoc();
+    doc = applyGrade(doc, "v-n2", 2, { isNew: true, level: "N2", now: NOW });
+    doc = applyGrade(doc, "v-n2", 2, { level: "N2", now: NOW + 5_000 });
+    const day = Object.values(doc.activity)[0];
+    expect(day.newCards).toBe(1);
+    expect(day.newByLevel).toEqual({ N2: 1 });
+  });
+
+  it("keeps the legacy shape when no level is supplied", () => {
+    const doc = applyGrade(freshDoc(), "v1", 2, { isNew: true, now: NOW });
+    const day = Object.values(doc.activity)[0];
+    expect(day.newByLevel).toBeUndefined();
+  });
+});
+
 describe("session preferences persist", () => {
   it("round-trips through storage after a reload", () => {
     const doc = freshDoc();
@@ -219,18 +247,20 @@ describe("session preferences persist", () => {
 /* ─────────────── Хуучин өгөгдлийн нийцтэй байдал ─────────────── */
 
 describe("v4 documents keep every existing progress field", () => {
-  it("loads without a migration and fills the new session default", () => {
+  it("upgrades to v5, fills the new session default and keeps progress", () => {
     const res = decodeDoc(JSON.stringify(legacyV4()));
     expect(res.ok).toBe(true);
     if (!res.ok) return;
     expect(res.fromVersion).toBe(4);
-    expect(res.migrated).toBe(false);
+    expect(res.migrated).toBe(true);
     expect(res.doc.v).toBe(SCHEMA_VERSION);
+    expect(res.doc.deleted).toBeUndefined();
+    expect(res.doc.marked).toBeUndefined();
     expect(res.doc.profile.session).toEqual(DEFAULT_PROFILE.session);
     expect(res.doc.profile.name).toBe("Төвшин");
     expect(res.doc.srs["日"]).toEqual(matureCard());
     expect(res.doc.xp).toBe(120);
-    expect(res.doc.activity["2026-10-31"]).toEqual({ xp: 30, min: 12, newCards: 3, reviews: 9, correct: 7, total: 9 });
+    expect(res.doc.activity["2026-10-31"]).toEqual({ xp: 30, min: 12, newCards: 3, reviews: 9, correct: 7, total: 9, grammar: 0, reading: 0, listening: 0 });
     expect(res.doc.mistakes).toEqual([
       { id: "q1", kind: "kanji-read", level: "N4", prompt: "日", answer: "にち", given: "ひ", at: NOW, count: 2 },
     ]);

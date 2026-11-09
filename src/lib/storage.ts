@@ -14,6 +14,7 @@ import {
   type QuizRecord,
 } from "./doc";
 import { quizKindOf } from "./quizKind";
+import { FAVORITE_PREFIX, GRAMMAR_PREFIX, mistakeDeleted, mistakeRemaining } from "./deletions";
 import type { Card } from "./srs";
 import type { Level } from "./types";
 
@@ -100,6 +101,12 @@ const MIGRATIONS: Record<number, (d: Record<string, unknown>) => Record<string, 
       },
     };
   },
+  /* v4 → v5: `deleted`/`marked` tombstone талбарууд нэмэгдсэн.
+     Өгөгдлийн хэлбэр өөрчлөгдөхгүй — normalize хоосон бол undefined болгоно. */
+  4: (d) => d,
+  /* v5 → v6: `mistake.resolved` (monotonic «Ойлголоо» counter) нэмэгдсэн.
+     Хуучин бичлэгт байхгүй → 0; ямар ч талбар устгахгүй. */
+  5: (d) => d,
 };
 
 /* ─────────────── Хэвийн болгох ─────────────── */
@@ -170,22 +177,135 @@ function normalizeCard(raw: unknown): Card | null {
   };
 }
 
+const ACTIVITY_LEVELS: Level[] = ["N5", "N4", "N3", "N2", "N1"];
+
+/** Түвшин тус бүрийн шинэ картын тоо — зөвхөн мэдэгдэж буй түвшинг хүлээн авна. */
+function normalizeNewByLevel(raw: unknown): Partial<Record<Level, number>> | undefined {
+  if (!isRecord(raw)) return undefined;
+  const out: Partial<Record<Level, number>> = {};
+  for (const level of ACTIVITY_LEVELS) {
+    const n = int(raw[level], 0);
+    if (n > 0) out[level] = n;
+  }
+  return Object.keys(out).length ? out : undefined;
+}
+
+function levelSum(levels: Partial<Record<Level, number>> | undefined): number {
+  return levels ? Object.values(levels).reduce((a, n) => a + (n ?? 0), 0) : 0;
+}
+
+function mergeNewByLevel(
+  a: Partial<Record<Level, number>> | undefined,
+  b: Partial<Record<Level, number>> | undefined,
+): Partial<Record<Level, number>> | undefined {
+  if (!a && !b) return undefined;
+  const out: Partial<Record<Level, number>> = { ...a };
+  for (const level of ACTIVITY_LEVELS) {
+    const n = Math.max(a?.[level] ?? 0, b?.[level] ?? 0);
+    if (n > 0) out[level] = n;
+  }
+  return Object.keys(out).length ? out : undefined;
+}
+
 function normalizeActivity(raw: unknown): Record<string, ActivityDay> {
   if (!isRecord(raw)) return {};
   const out: Record<string, ActivityDay> = {};
   for (const [day, v] of Object.entries(raw)) {
     if (!/^\d{4}-\d{2}-\d{2}$/.test(day) || !isRecord(v)) continue;
     const base = emptyDay();
+    const newByLevel = normalizeNewByLevel(v.newByLevel);
+    /* Invariant: нийт шинэ карт нь түвшний задаргааны нийлбэрээс багагүй.
+       Зөрчил зөвхөн merge-ээс үүсдэг тул хэзээ ч бууруулахгүй, өсгөнө. */
+    const newCards = Math.max(0, int(v.newCards, base.newCards), levelSum(newByLevel));
     out[day] = {
       xp: Math.max(0, int(v.xp, base.xp)),
       min: Math.max(0, num(v.min, base.min)),
-      newCards: Math.max(0, int(v.newCards, base.newCards)),
+      newCards,
       reviews: Math.max(0, int(v.reviews, base.reviews)),
       correct: Math.max(0, int(v.correct, base.correct)),
       total: Math.max(0, int(v.total, base.total)),
+      grammar: Math.max(0, int(v.grammar, base.grammar)),
+      reading: Math.max(0, int(v.reading, base.reading)),
+      listening: Math.max(0, int(v.listening, base.listening)),
+      ...(newByLevel ? { newByLevel } : {}),
     };
   }
   return out;
+}
+
+/*
+ * Tombstone/тэмдэглэлийн map — зөвхөн эерэг бүхэл тоо.
+ *
+ * ЧУХАЛ: hard limit/автомат цэвэрлэгээ ХИЙХГҮЙ. Ямар ч хязгаар тавьж бичлэг
+ * хасвал яг тэр ID-г хуучин (offline) tab-ийн snapshot дахин сэргээж чадна.
+ * Хэмжээ нь контентын ID (f:/g:/m: prefix)-ээр хязгаарлагддаг бөгөөд
+ * localStorage quota-д хүрвэл бичилт амжилтгүй болж хэрэглэгчид мэдэгдэнэ —
+ * өгөгдөл чимээгүй устахгүй. Цаг хугацаагаар ч устгахгүй.
+ */
+function normalizeTimeMap(raw: unknown): Record<string, number> | undefined {
+  if (!isRecord(raw)) return undefined;
+  const out: Record<string, number> = {};
+  for (const [k, v] of Object.entries(raw)) {
+    if (!k || k.length > 160 || typeof v !== "number" || !Number.isFinite(v) || v <= 0) continue;
+    out[k] = Math.floor(v);
+  }
+  return Object.keys(out).length ? out : undefined;
+}
+
+function mergeTimeMaps(
+  a: Record<string, number> | undefined,
+  b: Record<string, number> | undefined,
+): Record<string, number> | undefined {
+  if (!a && !b) return undefined;
+  const out: Record<string, number> = { ...a };
+  for (const [k, v] of Object.entries(b ?? {})) out[k] = Math.max(out[k] ?? 0, v);
+  return Object.keys(out).length ? out : undefined;
+}
+
+/**
+ * ID жагсаалтыг tombstone-той нэгтгэнэ: дараа нь нэмэгдсэн бол л байна.
+ * `marked` байхгүй хуучин бичлэг (addAt = 0) нь 0 < delAt тул устана.
+ */
+function mergeMarkedIds(
+  a: string[],
+  b: string[],
+  marked: Record<string, number> | undefined,
+  deleted: Record<string, number> | undefined,
+  prefix: string,
+): string[] {
+  const ids = new Set([...a, ...b]);
+  const out: string[] = [];
+  for (const id of ids) {
+    const key = prefix + id;
+    const delAt = deleted?.[key] ?? 0;
+    const addAt = marked?.[key] ?? 0;
+    if (delAt === 0 || addAt > delAt) out.push(id);
+  }
+  return out.sort();
+}
+
+function mergeMistakes(a: Mistake[], b: Mistake[], deleted: Record<string, number> | undefined): Mistake[] {
+  const map = new Map<string, Mistake>();
+  for (const item of [...a, ...b]) {
+    const prev = map.get(item.id);
+    if (!prev) {
+      map.set(item.id, item);
+      continue;
+    }
+    /* count = нийт алдсан, resolved = хуримтлагдсан «Ойлголоо» — хоёулаа
+       monotonic тул max авна. Ингэснээр хуучин snapshot count бууралтыг
+       (resolved-ыг) буцааж чадахгүй. */
+    const resolved = Math.max(prev.resolved ?? 0, item.resolved ?? 0);
+    const next: Mistake = {
+      ...(item.at >= prev.at ? item : prev),
+      count: Math.max(prev.count, item.count),
+      at: Math.max(prev.at, item.at),
+    };
+    if (resolved > 0) next.resolved = resolved;
+    else delete next.resolved;
+    map.set(item.id, next);
+  }
+  return sortNewestFirst([...map.values()].filter((m) => !mistakeDeleted(m, deleted) && mistakeRemaining(m) > 0));
 }
 
 function normalizeWriting(raw: unknown): Doc["writing"] {
@@ -262,6 +382,8 @@ function normalizeMistakes(raw: unknown): Mistake[] {
   const out: Mistake[] = [];
   for (const m of raw) {
     if (!isRecord(m) || typeof m.id !== "string" || !isLevel(m.level)) continue;
+    const count = Math.max(1, int(m.count, 1));
+    const resolved = clamp(int(m.resolved, 0), 0, count);
     out.push({
       id: m.id.slice(0, 120),
       kind: str(m.kind, "quiz").slice(0, 40),
@@ -271,7 +393,8 @@ function normalizeMistakes(raw: unknown): Mistake[] {
       given: str(m.given, "").slice(0, 500),
       note: typeof m.note === "string" ? m.note.slice(0, 500) : undefined,
       at: num(m.at, 0),
-      count: Math.max(1, int(m.count, 1)),
+      count,
+      ...(resolved > 0 ? { resolved } : {}),
     });
   }
   return out;
@@ -334,6 +457,8 @@ function normalizeDoc(raw: Record<string, unknown>): Doc {
     activity: normalizeActivity(raw.activity),
     xp: Math.max(0, int(raw.xp, 0)),
     achievements: normalizeNumberMap(raw.achievements),
+    deleted: normalizeTimeMap(raw.deleted),
+    marked: normalizeTimeMap(raw.marked),
     curriculum: normalizeCurriculum(raw.curriculum),
     createdAt: num(raw.createdAt, base.createdAt),
     updatedAt: num(raw.updatedAt, base.updatedAt),
@@ -437,6 +562,21 @@ function classifyWriteError(err: unknown): WriteFailReason {
  * Баримтыг бичнэ. Диск дээр гэмтсэн эсвэл шинэ хувилбарын өгөгдөл байвал
  * `allowOverwrite: true` (хэрэглэгчийн зөвшөөрөл) хүртэл бичихгүй.
  */
+/** Түлхүүрийн дарааллаас үл хамаарах гүнзгий харьцуулалт (merge-ийн тогтвортой байдал). */
+function canonical(value: unknown): unknown {
+  if (Array.isArray(value)) return value.map(canonical);
+  if (isRecord(value)) {
+    const out: Record<string, unknown> = {};
+    for (const k of Object.keys(value).sort()) out[k] = canonical(value[k]);
+    return out;
+  }
+  return value;
+}
+
+export function docsEqual(a: Doc, b: Doc): boolean {
+  return JSON.stringify(canonical(a)) === JSON.stringify(canonical(b));
+}
+
 export function writeDoc(
   kv: KV,
   uid: string,
@@ -463,10 +603,16 @@ export function writeDoc(
  *   · srs            → сүүлд давтсан (`last`) карт ялна; тэнцвэл илүү `n`
  *   · activity       → өдөр бүрээр талбар тус бүрийн max
  *   · xp, kanaBest   → max (нэг талын ахиц бүү алдагдаарай)
- *   · favorites, grammarDone, readingDone, listeningDone → нэгдэл
+ *   · favorites, grammarDone → нэгдэл, гэхдээ tombstone-той харьцуулна:
+ *                       `deleted[key] >= marked[key]` бол устсан (дахин нэмэлт
+ *                       дараа нь болвол `marked` шинэ тул үлдэнэ)
+ *   · readingDone, listeningDone → нэгдэл (устгах UI байхгүй)
  *   · exams, quizzes → нэгдэл (давхардалгүй), `at`-аар буурах дараалалтай
  *                       (тэнцвэл тогтвортой tie-break — аргументын дарааллаас хамаарахгүй)
- *   · mistakes       → id-аар нэгтгэж, count/at-ийн max
+ *   · mistakes       → id-аар нэгтгэж, count/resolved/at-ийн max; tombstone-оос
+ *                       хойш дахин алдсан (`at` шинэ) бол л үлдэнэ. `resolved`
+ *                       monotonic тул хуучин snapshot count-ыг буцааж өсгөхгүй.
+ *   · deleted, marked → түлхүүр бүрээр max timestamp
  *   · achievements   → түлхүүр бүрээр хамгийн эрт нээлт (min at)
  *   · profile, placement, curriculum, mnemonics, createdAt
  *                    → `updatedAt` шинэ тал ялна (тэнцвэл тогтвортой tie-break)
@@ -475,6 +621,8 @@ export function writeDoc(
  */
 export function mergeDocs(a: Doc, b: Doc): Doc {
   const winner = pickNewer(a, b);
+  const deleted = mergeTimeMaps(a.deleted, b.deleted);
+  const marked = mergeTimeMaps(a.marked, b.marked);
   return {
     v: SCHEMA_VERSION,
     profile: { ...winner.profile },
@@ -489,19 +637,30 @@ export function mergeDocs(a: Doc, b: Doc): Doc {
       tries: Math.max(x.tries, y.tries),
       at: Math.max(x.at, y.at),
     })),
-    activity: mergeRecords(a.activity, b.activity, (x, y) => ({
-      xp: Math.max(x.xp, y.xp),
-      min: Math.max(x.min, y.min),
-      newCards: Math.max(x.newCards, y.newCards),
-      reviews: Math.max(x.reviews, y.reviews),
-      correct: Math.max(x.correct, y.correct),
-      total: Math.max(x.total, y.total),
-    })),
+    activity: mergeRecords(a.activity, b.activity, (x, y) => {
+      const newByLevel = mergeNewByLevel(x.newByLevel, y.newByLevel);
+      return {
+        xp: Math.max(x.xp, y.xp),
+        min: Math.max(x.min, y.min),
+        /* Хоёр таб өөр түвшний карт нэмсэн бол max нь нэгийг алддаг тул
+           түвшний нийлбэрийг доод хязгаар болгоно. */
+        newCards: Math.max(x.newCards, y.newCards, levelSum(newByLevel)),
+        reviews: Math.max(x.reviews, y.reviews),
+        correct: Math.max(x.correct, y.correct),
+        total: Math.max(x.total, y.total),
+        grammar: Math.max(x.grammar ?? 0, y.grammar ?? 0),
+        reading: Math.max(x.reading ?? 0, y.reading ?? 0),
+        listening: Math.max(x.listening ?? 0, y.listening ?? 0),
+        newByLevel,
+      };
+    }),
     achievements: mergeRecords(a.achievements, b.achievements, (x, y) => Math.min(x, y)),
-    favorites: union(a.favorites, b.favorites),
-    grammarDone: union(a.grammarDone, b.grammarDone),
+    favorites: mergeMarkedIds(a.favorites, b.favorites, marked, deleted, FAVORITE_PREFIX),
+    grammarDone: mergeMarkedIds(a.grammarDone, b.grammarDone, marked, deleted, GRAMMAR_PREFIX),
     readingDone: union(a.readingDone, b.readingDone),
     listeningDone: union(a.listeningDone, b.listeningDone),
+    deleted,
+    marked,
     kanaBest: Math.max(a.kanaBest, b.kanaBest),
     xp: Math.max(a.xp, b.xp),
     exams: sortNewestFirst(
@@ -515,16 +674,7 @@ export function mergeDocs(a: Doc, b: Doc): Doc {
         (x, y) => (JSON.stringify(x) >= JSON.stringify(y) ? x : y),
       ),
     ),
-    mistakes: unionBy(
-      a.mistakes,
-      b.mistakes,
-      (m) => m.id,
-      (x, y) => ({
-        ...(x.at >= y.at ? x : y),
-        count: Math.max(x.count, y.count),
-        at: Math.max(x.at, y.at),
-      }),
-    ),
+    mistakes: mergeMistakes(a.mistakes, b.mistakes, deleted),
   };
 }
 

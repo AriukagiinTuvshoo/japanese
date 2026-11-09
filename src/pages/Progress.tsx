@@ -9,6 +9,7 @@ import { cardStage, memoryStats, retrievability } from "../lib/srs";
 import { dayAccuracy, weakestAreas } from "../lib/stats";
 import { quizModeLabel } from "../lib/study";
 import { isLegacyExamKind, legacyExamLevel } from "../lib/quizKind";
+import { mistakeCounts } from "../lib/deletions";
 import { Bar, Button, Card, Chip, LevelBadge, Ring, SectionTitle, Spinner, Stat, Tabs } from "../components/ui";
 import { ui } from "../lib/i18n";
 
@@ -23,6 +24,7 @@ export default function Progress() {
 
   const mem = useMemo(() => memoryStats(doc.srs), [doc.srs]);
   const best = useMemo(() => longestStreak(doc.activity), [doc.activity]);
+  const mistakeTally = useMemo(() => mistakeCounts(doc.mistakes), [doc.mistakes]);
 
   const perLevel = useMemo(() => {
     if (!meta) return [];
@@ -269,7 +271,7 @@ export default function Progress() {
             )}
             <div className="mt-5 space-y-2 border-t border-sumi-900/8 pt-4">
               <a href={href("quiz")} className="block text-[12.5px] font-bold text-ai-600 underline underline-offset-4">{t.drillWeakLink}</a>
-              <a href={href("mistakes")} className="block text-[12.5px] font-bold text-ai-600 underline underline-offset-4">{t.mistakesLink(doc.mistakes.length)}</a>
+              <a href={href("mistakes")} className="block text-[12.5px] font-bold text-ai-600 underline underline-offset-4">{t.mistakesLink(mistakeTally.records, mistakeTally.remaining)}</a>
             </div>
           </Card>
         </div>

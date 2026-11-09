@@ -8,6 +8,13 @@
  * (vite.config.ts). Тиймээс хөтөч зөвхөн өөрийн origin-той харилцана.
  */
 
+/**
+ * Энэ build-ийн backend (`server/index.mjs`) нь зөвхөн health болон AI exam
+ * endpoint-той; auth/sync endpoint байхгүй. UI нь хуурамч амжилт харуулахгүй
+ * байхын тулд энэ туг идэвхжих хүртэл локал-only горимд ажиллана.
+ */
+export const ACCOUNT_BACKEND_AVAILABLE = false;
+
 export interface Account {
   id: string;
   email: string;

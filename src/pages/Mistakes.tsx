@@ -5,6 +5,7 @@ import { LEVEL_LABEL, stripFurigana } from "../lib/text";
 import { navigate } from "../lib/router";
 import { Button, Card, Chip, Empty, LevelBadge, PageHeader, Select } from "../components/ui";
 import { XRayText } from "../components/XRayText";
+import { mistakeCounts, mistakeRemaining } from "../lib/deletions";
 import { ui } from "../lib/i18n";
 
 export default function Mistakes() {
@@ -20,6 +21,7 @@ export default function Mistakes() {
   const list = all
     .filter((m) => (lv === "all" || m.level === lv) && (kind === "all" || m.kind === kind))
     .sort((a, b) => b.at - a.at);
+  const counts = mistakeCounts(list);
 
   return (
     <div className="mx-auto max-w-4xl">
@@ -52,7 +54,7 @@ export default function Mistakes() {
               onChange={setKind}
               options={[{ id: "all", label: t.allKinds }, ...kinds.map((k) => ({ id: k, label: k }))]}
             />
-            <span className="ml-auto text-[12.5px] text-sumi-500 tabnum">{t.recordsN(list.length)}</span>
+            <span className="ml-auto text-[12.5px] text-sumi-500 tabnum">{t.mistakeCountsLabel(counts.records, counts.remaining)}</span>
           </div>
 
           <div className="space-y-3">
@@ -63,7 +65,7 @@ export default function Mistakes() {
                   <div className="flex flex-wrap items-center gap-2">
                     <LevelBadge level={m.level} size="sm" />
                     <Chip tone="sumi">{m.kind}</Chip>
-                    {m.count > 1 && <Chip tone="shu">{t.timesN(m.count)}</Chip>}
+                    {mistakeRemaining(m) > 1 && <Chip tone="shu">{t.timesN(mistakeRemaining(m))}</Chip>}
                     <span className="ml-auto font-mono text-[11.5px] text-sumi-400 tabnum">{new Date(m.at).toLocaleDateString(language === "en" ? "en-US" : "mn-MN")}</span>
                   </div>
                   <div className="mt-3 text-[15px] font-bold text-sumi-900">

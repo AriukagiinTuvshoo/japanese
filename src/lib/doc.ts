@@ -10,7 +10,7 @@ import type { Language } from "./i18n";
 import type { Level } from "./types";
 
 /** Хадгалагдсан баримтын одоогийн схем хувилбар. */
-export const SCHEMA_VERSION = 4;
+export const SCHEMA_VERSION = 6;
 
 /** Картын урд талын чиглэл. */
 export type Direction = "jp-mn" | "mn-jp" | "listen" | "write";
@@ -64,7 +64,11 @@ export interface Mistake {
   given: string;
   note?: string;
   at: number;
+  /** Нийт хэдэн удаа буруу хариулсан — зөвхөн өснө (merge-д max). */
   count: number;
+  /** Хэдэн удаа «Ойлголоо» дарсан — monotonic counter, merge-д max.
+   *  Үлдсэн давталт = `count - resolved`. Хуучин өгөгдөлд байхгүй (0). */
+  resolved?: number;
 }
 
 export interface Profile {
@@ -90,10 +94,18 @@ export interface Profile {
 export interface ActivityDay {
   xp: number;
   min: number;
+  /** Шинэ карт (SRS-ийн давталт биш). */
   newCards: number;
+  /** Шинэ картын тоо түвшин тус бүрээр — plan-ийн өдрийн явцыг түвшинд хязгаарлана.
+   *  Хуучин өгөгдөлд байхгүй; байхгүй бол ямар ч түвшинд таамаглаж хамааруулахгүй. */
+  newByLevel?: Partial<Record<Level, number>>;
   reviews: number;
   correct: number;
   total: number;
+  /** Өнөөдөр дуусгасан дүрэм/уншлага/сонсгол — зорилгын явцыг бодитоор харуулна. */
+  grammar: number;
+  reading: number;
+  listening: number;
 }
 
 export interface CurriculumState {
@@ -126,6 +138,14 @@ export interface Doc {
   activity: Record<string, ActivityDay>;
   xp: number;
   achievements: Record<string, number>;
+  /**
+   * Устгалын tombstone: түлхүүр (`f:<id>` / `g:<id>` / `m:<id>`) → устгасан цаг.
+   * Merge-д хуучин snapshot устгасан мэдээллийг буцааж сэргээхээс хамгаална.
+   * Хуучин өгөгдөлд байхгүй — normalize үед хоосон бол undefined.
+   */
+  deleted?: Record<string, number>;
+  /** Дахин нэмэлтийн цаг (зөвхөн favorites/grammar): tombstone-той харьцуулна. */
+  marked?: Record<string, number>;
   curriculum?: CurriculumState;
   createdAt: number;
   updatedAt: number;
@@ -150,6 +170,7 @@ export const DEFAULT_PROFILE: Profile = {
 
 export const emptyDay = (): ActivityDay => ({
   xp: 0, min: 0, newCards: 0, reviews: 0, correct: 0, total: 0,
+  grammar: 0, reading: 0, listening: 0,
 });
 
 export function freshDoc(name = ""): Doc {

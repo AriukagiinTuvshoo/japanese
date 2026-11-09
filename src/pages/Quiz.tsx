@@ -10,6 +10,7 @@ import { LEVELS } from "../lib/types";
 import { Button, Card, Chip, LevelBadge, SectionTitle, Select, Spinner } from "../components/ui";
 import { QuizRunner } from "../components/QuizRunner";
 import { ui } from "../lib/i18n";
+import { mistakeCounts, mistakeRemaining } from "../lib/deletions";
 
 const TONES: Record<string, string> = {
   shu: "bg-shu-50 text-shu-600", ai: "bg-ai-50 text-ai-600",
@@ -27,6 +28,7 @@ export default function Quiz() {
   const [set_, setSet] = useState<QuizSet | null>(null);
   const [loading, setLoading] = useState(false);
   const [emptyMsg, setEmptyMsg] = useState<string | null>(null);
+  const mistakeTally = useMemo(() => mistakeCounts(doc.mistakes), [doc.mistakes]);
 
   /* Home болон Progress-той ижил нэг тооцоо (`stats.weakKinds`). */
   const weakKinds = useMemo(
@@ -118,12 +120,12 @@ export default function Quiz() {
       {doc.mistakes.length > 0 && (
         <Card>
           <SectionTitle jp="間違い" title={t.mistakesTitle2}
-            sub={t.mistakesCountSub(doc.mistakes.length)}
+            sub={t.mistakesCountSub(mistakeTally.records, mistakeTally.remaining)}
             right={<Button size="sm" variant="outline" onClick={() => navigate("mistakes")}>{t.detailsLink2}</Button>} />
           <div className="flex flex-wrap gap-2">
             {doc.mistakes.slice(0, 8).map((m) => (
-              <Chip key={m.id} tone={m.count > 2 ? "shu" : "kin"}>
-                <span className="font-jp">{m.prompt}</span> ×{m.count}
+              <Chip key={m.id} tone={mistakeRemaining(m) > 2 ? "shu" : "kin"}>
+                <span className="font-jp">{m.prompt}</span> ×{mistakeRemaining(m)}
               </Chip>
             ))}
           </div>

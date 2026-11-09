@@ -25,6 +25,7 @@ const MockExam = lazy(() => import("./pages/MockExam"));
 const Placement = lazy(() => import("./pages/Placement"));
 const Dictionary = lazy(() => import("./pages/Dictionary"));
 const Plan = lazy(() => import("./pages/Plan"));
+const Today = lazy(() => import("./pages/Today"));
 const Progress = lazy(() => import("./pages/Progress"));
 const Achievements = lazy(() => import("./pages/Achievements"));
 const Account = lazy(() => import("./pages/Account"));
@@ -55,6 +56,7 @@ function Router() {
       case "placement": return <Placement />;
       case "dict": return <Dictionary q={route.query.q} />;
       case "plan": return <Plan />;
+      case "today": return <Today />;
       case "progress": return <Progress />;
       case "achievements": return <Achievements />;
       case "account": return <Account />;

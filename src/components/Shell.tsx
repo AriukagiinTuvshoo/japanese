@@ -55,6 +55,7 @@ export default function Shell({ children }: { children: ReactNode }) {
 
   const nav: NavItem[] = [
     { id: "home", to: "home", k: "家", label: t.home, group: t.start },
+    { id: "today", to: "today", k: "今", label: t.todayNav, group: t.start },
     { id: "plan", to: "plan", k: "計", label: t.plan, group: t.start },
     { id: "progress", to: "progress", k: "統", label: t.progress, group: t.start },
     { id: "vocab", to: `vocab?level=${level}`, k: "語", label: t.vocab, group: t.library, badge: due },
@@ -260,6 +261,14 @@ export default function Shell({ children }: { children: ReactNode }) {
       <main className="lg:pl-[268px]">
         <div key={route.hash.split("?")[0]} className="mx-auto max-w-[1240px] animate-rise px-4 pb-32 pt-6 sm:px-6 sm:pt-8 lg:pb-16">
           <StorageNotice />
+          {route.name !== "today" && route.query.from === "today" && (
+            <a
+              href={href("today")}
+              className="mb-4 inline-flex items-center gap-1.5 rounded-lg bg-shu-50 px-3 py-1.5 text-[12px] font-bold text-shu-700 transition hover:bg-shu-100"
+            >
+              ← {t.todayBackFlow}
+            </a>
+          )}
           {children}
         </div>
       </main>

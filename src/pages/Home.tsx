@@ -8,19 +8,47 @@ import { LEVEL_LABEL, todayKey, dayOffset } from "../lib/text";
 import { dueCards, memoryStats, reviewHistory, type Card as SrsCard } from "../lib/srs";
 import { weakKinds } from "../lib/stats";
 import { quizModeLabel } from "../lib/study";
+import {
+  completedPlanDays, currentPlanDay, dailyQuota, estimateMinutes, planCoverage, planLag, planMission,
+  todayFromActivity, type PlanContent, type PlanIds,
+} from "../lib/plan";
+import { buildTodayTasks, readSkipped, reviewProgress, skippedCount } from "../lib/today";
 import { Bar, Button, Card, Chip, LevelBadge, Ring, SectionTitle, Spinner, Stat } from "../components/ui";
 import { ui, type Language } from "../lib/i18n";
 
 export default function Home() {
-  const { doc, today, streak, levelInfo, nextAchievement } = useStore();
+  const { doc, uid, today, streak, levelInfo, nextAchievement } = useStore();
   const language: Language = doc.profile.language ?? "mn";
   const t = ui[language];
   const [data, setData] = useState<DataMeta | null>(null);
+  const [planData, setPlanData] = useState<{ content: PlanContent; ids: PlanIds } | null>(null);
   const level: Level = doc.profile.current === "zero" ? doc.profile.target : doc.profile.current;
+  /* Төлөвлөгөөний тоо нь планы түвшнээр байх ёстой — профайлын түвшин өөр байж болно. */
+  const planLevel: Level = doc.curriculum?.level ?? level;
 
   useEffect(() => {
-    loadFullData().then((d) => setData(d.meta));
-  }, []);
+    loadFullData().then((d) => {
+      setData(d.meta);
+      const passages = READING.filter((r) => r.level === planLevel);
+      const lessons = LISTENING.filter((l) => l.level === planLevel && (!l.status || l.status === "approved"));
+      setPlanData({
+        content: {
+          vocab: d.vocabByLevel[planLevel].length,
+          kanji: d.kanjiByLevel[planLevel].length,
+          grammar: d.grammarByLevel[planLevel].length,
+          reading: passages.length,
+          listening: lessons.length,
+        },
+        ids: {
+          vocab: d.vocabByLevel[planLevel].map((v) => v.id),
+          kanji: d.kanjiByLevel[planLevel].map((k) => k.k),
+          grammar: d.grammarByLevel[planLevel].map((g) => g.id),
+          reading: passages.map((p) => p.id),
+          listening: lessons.map((l) => l.id),
+        },
+      });
+    });
+  }, [level, planLevel]);
 
   const due = useMemo(() => dueCards(doc.srs), [doc.srs]);
   const mem = useMemo(() => memoryStats(doc.srs), [doc.srs]);
@@ -28,17 +56,53 @@ export default function Home() {
 
   /* ── өнөөдрийн даалгавар ── */
   const goal = doc.profile.dailyGoal;
-  const mission = useMemo(() => {
+  const plan = doc.curriculum;
+  const writingToday = useMemo(
+    () => Object.values(doc.writing).filter((w) => todayKey(new Date(w.at)) === todayKey()).length,
+    [doc.writing],
+  );
+  const planItems = useMemo(() => (plan && planData
+    ? planMission({
+      quota: dailyQuota(planData.content, plan.days),
+      content: planData.content,
+      coverage: planCoverage(doc, planData.ids),
+      done: todayFromActivity(today, writingToday, plan.level),
+      level: plan.level,
+    })
+    : []), [plan, planData, doc, today, writingToday]);
+  const mission = useMemo<MissionItem[]>(() => {
     const scale = goal / 30;
+    /* Шинэ картын үнэлгээг давталтаас хасна — давхар тооцохгүй. */
+    const rp = reviewProgress({ reviews: today.reviews, newCards: today.newCards }, due.length);
+    const review = {
+      id: "review", icon: "復", label: t.reviewN, jp: "復習",
+      target: Math.max(5, Math.round(15 * scale), rp.target), unit: t.cardUnit,
+      done: rp.done, to: "review", urgent: due.length,
+    };
+
+    /* Төлөвлөгөөтэй бол өдрийн даалгавар нь тухайн түвшний бодит контентоос бодогдоно. */
+    if (plan && planData) {
+      const icon: Record<string, string> = { vocab: "語", kanji: "漢", grammar: "文", reading: "読", listening: "聴" };
+      const label: Record<string, string> = { vocab: t.wordSg, kanji: t.kanji, grammar: t.grammar, reading: t.reading, listening: t.listening };
+      const jp: Record<string, string> = { vocab: "単語", kanji: "漢字", grammar: "文法", reading: "読解", listening: "聴解" };
+      return [
+        ...planItems.map((it) => ({ id: it.id, icon: icon[it.id], label: label[it.id], jp: jp[it.id], target: it.target, unit: "", done: it.done, to: `today?focus=${it.id}` })),
+        review,
+      ];
+    }
+
+    const hasListening = LISTENING.length > 0;
     return [
       { id: "vocab", icon: "語", label: t.wordSg, jp: "単語", target: Math.max(5, Math.round(20 * scale)), unit: t.wordSg.toLowerCase(), done: today.newCards, to: `vocab?level=${level}&tab=learn` },
-      { id: "review", icon: "復", label: t.reviewN, jp: "復習", target: Math.max(5, Math.round(15 * scale)), unit: t.cardUnit, done: today.reviews, to: "review", urgent: due.length },
-      { id: "kanji", icon: "漢", label: t.kanji, jp: "漢字", target: Math.max(3, Math.round(10 * scale)), unit: t.kanji.toLowerCase(), done: Object.values(doc.writing).filter((w) => todayKey(new Date(w.at)) === todayKey()).length, to: `kanji?level=${level}` },
-      { id: "grammar", icon: "文", label: t.grammar, jp: "文法", target: Math.max(2, Math.round(4 * scale)), unit: t.grammar.toLowerCase(), done: doc.grammarDone.length, to: `grammar?level=${level}` },
-      { id: "reading", icon: "読", label: t.reading, jp: "読解", target: 1, unit: t.lessonUnit, done: doc.readingDone.length, to: `reading?level=${level}` },
-      { id: "listening", icon: "聴", label: t.listening, jp: "聴解", target: 1, unit: t.lessonUnit, done: doc.listeningDone.length, to: `listening?level=${level}` },
+      review,
+      { id: "kanji", icon: "漢", label: t.kanji, jp: "漢字", target: Math.max(3, Math.round(10 * scale)), unit: t.kanji.toLowerCase(), done: writingToday, to: `kanji?level=${level}` },
+      { id: "grammar", icon: "文", label: t.grammar, jp: "文法", target: Math.max(2, Math.round(4 * scale)), unit: t.grammar.toLowerCase(), done: today.grammar, to: `grammar?level=${level}` },
+      { id: "reading", icon: "読", label: t.reading, jp: "読解", target: 1, unit: t.lessonUnit, done: today.reading, to: `reading?level=${level}` },
+      ...(hasListening
+        ? [{ id: "listening", icon: "聴", label: t.listening, jp: "聴解", target: 1, unit: t.lessonUnit, done: today.listening, to: `listening?level=${level}` }]
+        : []),
     ];
-  }, [goal, today, due.length, doc.writing, doc.grammarDone, doc.readingDone, doc.listeningDone, level, language]);
+  }, [goal, today, due.length, doc, level, language, writingToday, plan, planData, planItems, t]);
 
   const missionTotal = mission.reduce((a, m) => a + m.target, 0);
   const missionDone = mission.reduce((a, m) => a + Math.min(m.target, m.done), 0);
@@ -86,9 +150,24 @@ export default function Home() {
 
   const cur = doc.curriculum;
   const curPlan = cur ? CURRICULUM[cur.level] : null;
-  const curDay = cur ? Math.min(cur.days, Math.floor((Date.now() - cur.startedAt) / 86_400_000) + 1) : 0;
-  const curDone = cur ? Object.keys(cur.done).length : 0;
-  const behind = cur ? Math.max(0, curDay - curDone) : 0;
+  const curDay = cur ? currentPlanDay(cur.startedAt, cur.days) : 0;
+  const curQuota = cur && planData ? dailyQuota(planData.content, cur.days) : null;
+  const curCoverage = cur && planData ? planCoverage(doc, planData.ids) : null;
+  const curDone = cur && curQuota && curCoverage ? Math.min(cur.days, completedPlanDays(curCoverage, curQuota)) : 0;
+  const behind = cur ? planLag(curDay, curDone) : 0;
+  const curMinutes = curQuota ? estimateMinutes(curQuota) : 0;
+  /* Хойшлуулсан даалгавар — Today-той ижил бодит даалгаврын жагсаалтаас. */
+  const skippedToday = useMemo(() => (plan && planData
+    ? skippedCount(buildTodayTasks({
+      mission: planItems,
+      level: plan.level,
+      due: due.length,
+      reviews: today.reviews,
+      newCards: today.newCards,
+      started: [],
+      skipped: readSkipped(localStorage, todayKey(), uid),
+    }))
+    : 0), [plan, planData, planItems, due.length, today.reviews, today.newCards, uid]);
 
   return (
     <div className="space-y-7">
@@ -152,9 +231,19 @@ export default function Home() {
                 <p className="font-jp text-[10.5px] tracking-[0.28em] text-sumi-400">今日のミッション</p>
                 <h2 className="mt-0.5 text-[1.25rem] font-extrabold">{t.missionTitle}</h2>
               </div>
-              <Chip tone={missionDone >= missionTotal ? "matcha" : "kin"}>
-                {missionDone >= missionTotal ? t.missionDone : t.missionLeft(estimated)}
-              </Chip>
+              <div className="flex flex-wrap items-center gap-2">
+                {plan && (
+                  <Button size="sm" variant="outline" onClick={() => navigate("today")}>{t.todayOpenFlow}</Button>
+                )}
+                {plan && skippedToday > 0 && (
+                  <a href={href("today")}>
+                    <Chip tone="shu">{t.todaySkippedCount(skippedToday)}</Chip>
+                  </a>
+                )}
+                <Chip tone={missionDone >= missionTotal ? "matcha" : "kin"}>
+                  {missionDone >= missionTotal ? t.missionDone : t.missionLeft(estimated)}
+                </Chip>
+              </div>
             </div>
 
             <div className="mt-5 space-y-3.5">
@@ -330,23 +419,23 @@ export default function Home() {
       )}
 
       {/* ── төлөвлөгөө ── */}
-      {cur && curPlan ? (
+      {cur ? (
         <Card>
           <SectionTitle
             jp="学習計画"
             title={t.planTitle(cur.level, cur.days)}
-            sub={curPlan.summary}
+            sub={curPlan?.summary ?? t.planDerived}
             right={<a href={href("plan")} className="text-[12.5px] font-bold text-ai-600 underline underline-offset-4">{t.planLink}</a>}
           />
           <div className="grid gap-4 sm:grid-cols-3">
             <Stat label={t.today} value={t.dayN(curDay)} sub={`/ ${cur.days}`} icon="日" />
-            <Stat label={t.doneStat} value={curDone} sub={`${Math.round((curDone / cur.days) * 100)}%`} icon="✓" tone="matcha" />
+            <Stat label={t.doneStat} value={curDone} sub={`${Math.min(100, Math.round((curDone / Math.max(1, cur.days)) * 100))}%`} icon="✓" tone="matcha" />
             <Stat label={t.behindStat} value={behind > 0 ? `${behind} ${t.days}` : t.none2} sub={behind > 0 ? t.replanSub : t.onTrackSub} icon="⚡" tone={behind > 0 ? "shu" : "matcha"} />
           </div>
-          <Bar value={curDone / cur.days} tone="shu" className="mt-4" height={8} />
+          <Bar value={curDone / Math.max(1, cur.days)} tone="shu" className="mt-4" height={8} />
           {behind > 0 && (
             <p className="mt-3 rounded-xl bg-shu-50 px-3.5 py-2.5 text-[12.5px] font-bold text-shu-700">
-              {t.behindWarnPre(behind, Math.min(180, 30 + behind * 12))}
+              {t.behindWarnPre(behind, curMinutes || Math.min(180, 30 + behind * 12))}
               <a href={href("plan")} className="underline underline-offset-4">{t.behindWarnLink}</a>.
             </p>
           )}
@@ -414,6 +503,18 @@ export default function Home() {
       {!data && <Spinner label={t.dataLoading} lang={language} />}
     </div>
   );
+}
+
+interface MissionItem {
+  id: string;
+  icon: string;
+  label: string;
+  jp: string;
+  target: number;
+  unit: string;
+  done: number;
+  to: string;
+  urgent?: number;
 }
 
 const LEVEL_JP_LABEL = (l: Level) => ({ N5: "入門", N4: "基礎", N3: "中級", N2: "上級", N1: "最上級" })[l];

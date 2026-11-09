@@ -10,15 +10,21 @@ import {
   createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode,
 } from "react";
 import { api, setToken, type Account } from "./api";
+import { clampPlanDays } from "./plan";
 import {
   SCHEMA_VERSION, emptyDay, freshDoc,
   type ActivityDay, type Doc, type ExamRecord, type Mistake, type Profile, type QuizRecord,
 } from "./doc";
 import { ACHIEVEMENTS, XP, xpLevel, type AchievementInput } from "./gamification";
 import { applyGrade } from "./flashcard";
+import { recordWritingResult } from "./writing";
 import { isMastered, schedule, type Grade } from "./srs";
 import { examTotals } from "./study";
-import { backupKeyOf, decodeDoc, docKeyOf, mergeDocs, normalizeDocValue, readDoc, writeDoc } from "./storage";
+import {
+  backupKeyOf, decodeDoc, docKeyOf, docsEqual, mergeDocs, normalizeDocValue, readDoc, writeDoc, type WriteResult,
+} from "./storage";
+import { clearTodayState } from "./today";
+import { addMistakes as addMistakesToDoc, dropAllMistakes, resolveMistake as resolveMistakeDoc, setFavorite, toggleGrammarDone } from "./deletions";
 import { dayOffset, todayKey } from "./text";
 import type { Level } from "./types";
 
@@ -55,6 +61,8 @@ function loadInitial(uid: string): { doc: Doc; issue: StorageIssue | null } {
 
 interface Ctx {
   doc: Doc;
+  /** Одоогийн хадгалалтын uid (`local` = зочин) — өдрийн UI төлөвийг тусгаарлана. */
+  uid: string;
   account: Account | null;
   offline: boolean;
   syncing: "idle" | "syncing" | "error" | "ok";
@@ -95,6 +103,7 @@ export interface Actions {
 
   setPlacement: (level: Level | "zero", detail: Record<string, Level>) => void;
   startCurriculum: (level: Level, days: number) => void;
+  cancelCurriculum: () => void;
   completeCurriculumDay: (day: number, counts: Partial<{ vocab: number; kanji: number; grammar: number; reading: number; listening: number }>) => void;
 
   /* аккаунт */
@@ -171,11 +180,40 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     return () => { alive = false; window.clearInterval(t); };
   }, []);
 
+  /*
+   * Бичих: диск дээр илүү шинэ баримт байвал дарахгүй — оронд нь нэгтгэж,
+   * дараагийн эффект нэгтгэсэн төлөвийг бичнэ. Ингэснээр хуучин табын
+   * state өөр табын шинэ ахицыг (XP, SRS, plan) устгахаас сэргийлнэ.
+   */
+  const persist = useCallback((next: Doc): WriteResult | null => {
+    let raw: string | null = null;
+    try {
+      raw = localStorage.getItem(docKeyOf(uid));
+    } catch {
+      raw = null;
+    }
+    if (raw) {
+      const disk = decodeDoc(raw);
+      if (disk.ok && disk.doc && disk.doc.updatedAt > next.updatedAt) {
+        const merged = mergeDocs(next, disk.doc);
+        setDoc((prev) => (docsEqual(merged, prev) ? prev : merged));
+        /* Диск дээрх хуучин snapshot merge-ийн дараа ч tombstone-гүй байж
+           болно (жишээ нь хуучин tab устгалыг мэдэхгүй бичсэн) — reload-д
+           устсан бичлэг сэргэхээс сэргийлж, зөв нэгтгэлээр засна. */
+        if (!docsEqual(merged, disk.doc)) writeDoc(localStorage, uid, merged);
+        return null;
+      }
+    }
+    return writeDoc(localStorage, uid, next);
+  }, [uid]);
+
   /* ── localStorage-д хадгалах (debounce) ── */
   useEffect(() => {
     dirty.current = true;
     const t = window.setTimeout(() => {
-      const res = writeDoc(localStorage, uid, doc);
+      const res = persist(doc);
+      // null = диск дээрх шинэ өгөгдөлтэй нэгтгэж байна — дараагийн бичилт.
+      if (!res) return;
       if (res.ok) {
         setStorageIssue((cur) => (cur && (cur.kind === "quota" || cur.kind === "error") ? null : cur));
         return;
@@ -186,7 +224,19 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       setStorageIssue({ kind: res.reason === "quota" ? "quota" : "error", detail: res.message });
     }, 350);
     return () => window.clearTimeout(t);
-  }, [doc, uid]);
+  }, [doc, uid, persist]);
+
+  /* ── tab хаагдах/нуугдахын өмнө хүлээгдэж буй бичилтийг албадан хийх ── */
+  useEffect(() => {
+    const flush = () => { persist(docRef.current); };
+    const onHidden = () => { if (document.visibilityState === "hidden") flush(); };
+    window.addEventListener("pagehide", flush);
+    document.addEventListener("visibilitychange", onHidden);
+    return () => {
+      window.removeEventListener("pagehide", flush);
+      document.removeEventListener("visibilitychange", onHidden);
+    };
+  }, [persist]);
 
   /* ── бусад таб өгөгдөл бичсэн бол нэгтгэх (одоогийн табыг хэзээ ч дарж бичихгүй) ── */
   useEffect(() => {
@@ -201,10 +251,11 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         );
         return;
       }
-      setDoc((prev) => {
-        const merged = mergeDocs(prev, res.doc);
-        return JSON.stringify(merged) === JSON.stringify(prev) ? prev : merged;
-      });
+      const merged = mergeDocs(docRef.current, res.doc);
+      /* Диск дээр tombstone-гүй хуучин snapshot үлдсэн бол заавал засна —
+         эс бөгөөс reload хийхэд устсан бичлэг буцаж сэргэнэ. */
+      if (!docsEqual(merged, res.doc)) writeDoc(localStorage, uid, merged);
+      if (!docsEqual(merged, docRef.current)) setDoc(merged);
     };
     window.addEventListener("storage", onStorage);
     return () => window.removeEventListener("storage", onStorage);
@@ -333,7 +384,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     patchProfile: (p) => patch((d) => ({ ...d, profile: { ...d.profile, ...p } })),
 
     grade: (id, g, meta) => patch((d) => {
-      return applyGrade(d, id, g, { isNew: meta?.isNew });
+      return applyGrade(d, id, g, { isNew: meta?.isNew, level: meta?.level });
     }),
 
     gradeMany: (items) => patch((d) => {
@@ -371,66 +422,38 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     },
 
     toggleGrammar: (id, _level, on) => patch((d) => {
-      const has = d.grammarDone.includes(id);
-      const want = on ?? !has;
-      if (want === has) return d;
-      return {
-        ...d,
-        grammarDone: want ? [...d.grammarDone, id] : d.grammarDone.filter((x) => x !== id),
-        ...(want ? bumpDayInto(d, { xp: XP.grammarDone }) : {}),
-      };
+      const res = toggleGrammarDone(d, id, on);
+      if (res.doc === d) return d;
+      return res.awarded
+        ? { ...res.doc, ...bumpDayInto(res.doc, { xp: XP.grammarDone, grammar: 1 }) }
+        : res.doc;
     }),
 
     markReading: (id) => patch((d) => (d.readingDone.includes(id) ? d : {
       ...d,
       readingDone: [...d.readingDone, id],
-      ...bumpDayInto(d, { xp: XP.readingDone }),
+      ...bumpDayInto(d, { xp: XP.readingDone, reading: 1 }),
     })),
 
     markListening: (id) => patch((d) => (d.listeningDone.includes(id) ? d : {
       ...d,
       listeningDone: [...d.listeningDone, id],
-      ...bumpDayInto(d, { xp: XP.listeningDone }),
+      ...bumpDayInto(d, { xp: XP.listeningDone, listening: 1 }),
     })),
 
-    recordWriting: (kanji, score) => patch((d) => {
-      const prev = d.writing[kanji];
-      const best = Math.max(prev?.best ?? 0, score);
-      return {
-        ...d,
-        writing: { ...d.writing, [kanji]: { best, tries: (prev?.tries ?? 0) + 1, at: Date.now() } },
-        ...bumpDayInto(d, { xp: XP.writing }),
-      };
-    }),
+    recordWriting: (kanji, score) => patch((d) => recordWritingResult(d, kanji, score)),
 
     setMnemonic: (kanji, text) => patch((d) => ({ ...d, mnemonics: { ...d.mnemonics, [kanji]: text } })),
 
-    toggleFavorite: (id) => patch((d) => ({
-      ...d,
-      favorites: d.favorites.includes(id) ? d.favorites.filter((x) => x !== id) : [...d.favorites, id],
-    })),
+    toggleFavorite: (id) => patch((d) => setFavorite(d, id, !d.favorites.includes(id))),
 
     setKanaBest: (n) => patch((d) => ({ ...d, kanaBest: Math.max(d.kanaBest, n) })),
 
-    addMistakes: (list) => patch((d) => {
-      const map = new Map(d.mistakes.map((m) => [m.id, m]));
-      for (const m of list) {
-        const prev = map.get(m.id);
-        map.set(m.id, { ...m, at: Date.now(), count: (prev?.count ?? 0) + 1 });
-      }
-      return {
-        ...d,
-        mistakes: [...map.values()].filter((m) => m.count > 0).sort((a, b) => b.at - a.at).slice(0, 400),
-      };
-    }),
+    addMistakes: (list) => patch((d) => addMistakesToDoc(d, list)),
 
-    resolveMistake: (id) => patch((d) => ({
-      ...d,
-      mistakes: d.mistakes
-        .map((m) => (m.id === id ? { ...m, count: m.count - 1 } : m))
-        .filter((m) => m.count > 0),
-    })),
-    clearMistakes: () => patch((d) => ({ ...d, mistakes: [] })),
+    /* `resolved` monotonic — хуучин snapshot count-ыг буцааж өсгөхгүй. */
+    resolveMistake: (id) => patch((d) => resolveMistakeDoc(d, id)),
+    clearMistakes: () => patch((d) => dropAllMistakes(d)),
 
     setPlacement: (level, detail) => patch((d) => ({
       ...d,
@@ -441,9 +464,15 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
     startCurriculum: (level, days) => patch((d) => ({
       ...d,
-      curriculum: { level, days, startedAt: Date.now(), done: {} },
+      curriculum: { level, days: clampPlanDays(days), startedAt: Date.now(), done: {} },
       profile: { ...d.profile, target: level },
     })),
+
+    /** Төлөвлөгөөг бүрэн устгана — 0 хоногийн «хоосон» план үлдээхгүй. */
+    cancelCurriculum: () => patch((d) => {
+      const { curriculum: _drop, ...rest } = d;
+      return rest;
+    }),
 
     completeCurriculumDay: (day, counts) => patch((d) => {
       if (!d.curriculum) return d;
@@ -521,6 +550,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     reset: () => {
       const next = freshDoc(docRef.current.profile.name);
       writeDoc(localStorage, uid, next, { allowOverwrite: true });
+      /* Өдрийн эхэлсэн/хойшлуулсан UI төлөв ч хамт цэвэрлэгдэнэ. */
+      clearTodayState(localStorage, todayKey(), uid);
       setDoc(next);
       setStorageIssue(null);
     },
@@ -544,6 +575,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         setStorageIssue({ kind: res.reason === "quota" ? "quota" : "error", detail: res.message });
         return;
       }
+      clearTodayState(localStorage, todayKey(), uid);
       setDoc(next);
       setStorageIssue(null);
     },
@@ -566,7 +598,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   }, [inputs, doc.achievements]);
 
   const value: Ctx = {
-    doc, account, offline, syncing, lastSync, serverAvailable,
+    doc, uid, account, offline, syncing, lastSync, serverAvailable,
     today, streak, levelInfo, inputs,
     unlocked: Object.entries(doc.achievements).map(([id, at]) => ({ id, at })).sort((a, b) => b.at - a.at),
     nextAchievement,
@@ -586,7 +618,8 @@ export function useStore() {
 /* ─────────────── туслах ─────────────── */
 
 function bumpDay(d: Doc, delta: Partial<ActivityDay>): Doc {
-  return { ...d, ...bumpDayInto(d, delta) };
+  /* `updatedAt`-ыг ч шинэчилнэ — минут тутмын ахиц ч merge/шинэ эсэхэд тооцогдоно. */
+  return { ...d, ...bumpDayInto(d, delta), updatedAt: Date.now() };
 }
 
 function bumpDayInto(d: Doc, delta: Partial<ActivityDay>): Partial<Doc> {
@@ -604,6 +637,9 @@ function bumpDayInto(d: Doc, delta: Partial<ActivityDay>): Partial<Doc> {
         reviews: cur.reviews + (delta.reviews ?? 0),
         correct: cur.correct + (delta.correct ?? 0),
         total: cur.total + (delta.total ?? 0),
+        grammar: cur.grammar + (delta.grammar ?? 0),
+        reading: cur.reading + (delta.reading ?? 0),
+        listening: cur.listening + (delta.listening ?? 0),
       },
     },
   };

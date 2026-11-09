@@ -4,14 +4,14 @@ import { href } from "../lib/router";
 import { useStore } from "../lib/store";
 import { loadSearchIndex } from "../lib/data";
 import { isKana, isKanji, parseFurigana, toHiragana } from "../lib/text";
-import type { SearchIndex } from "../lib/types";
+import type { Level, SearchIndex } from "../lib/types";
 import { Button, Chip, LevelBadge, SpeakButton } from "./ui";
 
 interface Token {
   text: string;
   ruby?: string;
   kind: "word" | "kana" | "punct";
-  hit?: { mn: string; lvl: string; id: string; reading: string; kind: "v" | "k" };
+  hit?: { mn: string; lvl: Level; id: string; reading: string; kind: "v" | "k" };
 }
 
 /**
@@ -140,7 +140,7 @@ export function XRayText({ text, showFurigana = true }: { text: string; showFuri
           </p>
 
           <div className="mt-3 flex flex-wrap gap-2">
-            <Button size="sm" variant={added ? "soft" : "primary"} onClick={() => actions.grade(active.hit!.id, 2, { isNew: !added })}>
+            <Button size="sm" variant={added ? "soft" : "primary"} onClick={() => actions.grade(active.hit!.id, 2, { isNew: !added, level: active.hit!.lvl })}>
               {added ? "✓ SRS-д бий" : "+ SRS-д нэмэх"}
             </Button>
             <Button size="sm" variant="outline" onClick={() => { window.location.hash = href(active.hit!.kind === "k" ? "kanji" : "vocab", active.hit!.id).slice(1); setActive(null); }}>

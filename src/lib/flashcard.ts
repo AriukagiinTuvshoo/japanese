@@ -12,6 +12,7 @@ import { emptyDay, type ActivityDay, type Doc } from "./doc";
 import { XP } from "./gamification";
 import { schedule, type Card, type Grade } from "./srs";
 import { todayKey } from "./text";
+import type { Level } from "./types";
 
 /** Хоёр товчны утга — Again (0) ба Good (2). */
 export const BINARY_GRADE = { unknown: 0, know: 2 } as const;
@@ -28,6 +29,8 @@ export function reviewXP(g: Grade, isNew = false): number {
 export interface GradeOptions {
   /** Энэ карт өмнө нь хийгдээгүй бол `true`. */
   isNew?: boolean;
+  /** Картын түвшин — шинэ картыг өдрийн түвшний тоололтод хамааруулна. */
+  level?: Level;
   /** Тестэд цагийг тогтмол болгох. */
   now?: number;
 }
@@ -62,6 +65,12 @@ export function applyGrade(doc: Doc, id: string, g: Grade, opts: GradeOptions = 
   const gain = reviewXP(g, opts.isNew);
   const day = todayKey(new Date(now));
   const cur = doc.activity[day] ?? emptyDay();
+  /* Зөвхөн тухайн түвшин мэдэгдэж байгаа шинэ картыг тэр түвшинд бүртгэнэ —
+     тодорхойгүй картыг таамаглаж хамааруулахгүй. */
+  const knownLevel = opts.isNew && opts.level ? opts.level : null;
+  const newByLevel = knownLevel
+    ? { ...cur.newByLevel, [knownLevel]: (cur.newByLevel?.[knownLevel] ?? 0) + 1 }
+    : cur.newByLevel;
   const next: ActivityDay = {
     xp: cur.xp + gain,
     min: cur.min,
@@ -69,6 +78,10 @@ export function applyGrade(doc: Doc, id: string, g: Grade, opts: GradeOptions = 
     reviews: cur.reviews + 1,
     correct: cur.correct + (g > 0 ? 1 : 0),
     total: cur.total + 1,
+    grammar: cur.grammar,
+    reading: cur.reading,
+    listening: cur.listening,
+    ...(newByLevel ? { newByLevel } : {}),
   };
   return {
     ...doc,

@@ -240,7 +240,7 @@ export function WordRow({ v }: { v: Vocab }) {
         </button>
         {!card && (
           <button
-            onClick={() => actions.grade(v.id, 2, { isNew: true })}
+            onClick={() => actions.grade(v.id, 2, { isNew: true, level: v.lvl })}
             className="grid h-7 w-7 place-items-center rounded-lg border border-sumi-900/10 bg-white/70 text-[13px] text-sumi-400 transition hover:border-matcha-400 hover:text-matcha-600"
             title={t.srsAdd}
           >
@@ -350,7 +350,7 @@ export function BulkAdd({ words, level }: { words: Vocab[]; level: Level }) {
       disabled={!missing.length}
       onClick={() => {
         const first = missing.slice(0, doc.profile.newPerDay * 3);
-        first.forEach((w) => actions.grade(w.id, 2, { isNew: true }));
+        first.forEach((w) => actions.grade(w.id, 2, { isNew: true, level: w.lvl }));
         navigate(`review?level=${level}`);
       }}
     >

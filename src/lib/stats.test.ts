@@ -19,7 +19,8 @@ const exam = (sections: { name: string; correct: number; total: number }[]): Exa
 });
 
 const day = (over: Partial<ActivityDay> = {}): ActivityDay => ({
-  xp: 0, min: 0, newCards: 0, reviews: 0, correct: 0, total: 0, ...over,
+  xp: 0, min: 0, newCards: 0, reviews: 0, correct: 0, total: 0,
+  grammar: 0, reading: 0, listening: 0, ...over,
 });
 
 describe("accuracy", () => {

@@ -6,21 +6,16 @@ import { loadFullData } from "../lib/data";
 import type { Level } from "../lib/types";
 import { LEVELS } from "../lib/types";
 import { LEVEL_LABEL, TYPE_LABEL } from "../lib/text";
-import { shuffle } from "../lib/data";
+import { buildPlacementQuestions, type PlacementQuestion } from "../lib/placement";
 import { Bar, Button, Card, Chip, LevelBadge, Ring, SectionTitle, Spinner } from "../components/ui";
-import { grammarEn, ui } from "../lib/i18n";
-
-interface PQ {
-  id: string; level: Level; prompt: string; kind: "vocab" | "kanji" | "grammar";
-  options: string[]; answer: number; explain: string;
-}
+import { ui } from "../lib/i18n";
 
 export default function Placement() {
   const { actions, doc } = useStore();
   const language = doc.profile.language ?? "mn";
   const t = ui[language];
   const [stage, setStage] = useState<"intro" | "run" | "result">("intro");
-  const [qs, setQs] = useState<PQ[]>([]);
+  const [qs, setQs] = useState<PlacementQuestion[]>([]);
   const [idx, setIdx] = useState(0);
   const [picked, setPicked] = useState<number | null>(null);
   const [answers, setAnswers] = useState<(number | null)[]>([]);
@@ -29,43 +24,11 @@ export default function Placement() {
   const start = async () => {
     setLoading(true);
     const data = await loadFullData();
-    const out: PQ[] = [];
-    // Түвшин бүрээс жигд дээж авна
-    for (const l of LEVELS) {
-      const v = shuffle(data.vocabByLevel[l].filter((x) => x.mn?.length || x.en.length)).slice(0, 8);
-      const k = shuffle(data.kanjiByLevel[l]).slice(0, 5);
-      const g = shuffle(data.grammarByLevel[l].filter((x) => language === "en" ? !!grammarEn(x) : !!x.mn)).slice(0, 4);
-      for (const w of v) {
-        const others = shuffle(data.vocabByLevel[l].filter((x) => x.id !== w.id && (x.mn?.length || x.en.length))).slice(0, 3);
-        const opts = shuffle([w, ...others]);
-        out.push({
-          id: w.id, level: l, kind: "vocab", prompt: w.w, options: opts.map((o) => language === "en" ? (o.en[0] ?? o.mn?.[0] ?? "") : (o.mn?.[0] ?? o.en[0])),
-          answer: opts.indexOf(w), explain: `${w.w}（${w.r}） = ${language === "en" ? w.en.join("; ") : (w.mn?.join(", ") ?? w.en.join("; "))}`,
-        });
-      }
-      for (const c of k) {
-        const others = shuffle(data.kanjiByLevel[l].filter((x) => x.k !== c.k)).slice(0, 3);
-        const opts = shuffle([c, ...others]);
-        out.push({
-          id: c.k, level: l, kind: "kanji", prompt: c.k, options: opts.map((o) => (language === "en" ? (o.en[0] ?? o.mn[0] ?? o.k) : (o.mn[0] ?? o.en[0] ?? o.k))),
-          answer: opts.indexOf(c), explain: `${c.k} = ${language === "en" ? (c.en.join(", ") || c.mn.join(", ")) : (c.mn.join(", ") || c.en.join(", "))}`,
-        });
-      }
-      for (const gr of g) {
-        // In MN mode, only use items with MN translations; in EN mode, use any
-        const hasTranslation = (x: typeof gr) => language === "en" ? !!grammarEn(x) : !!x.mn;
-        if (!hasTranslation(gr)) continue;
-        const others = shuffle(data.grammarByLevel[l].filter((x) => x.id !== gr.id && hasTranslation(x))).slice(0, 3);
-        if (others.length < 3) continue;
-        const opts = shuffle([gr, ...others]);
-        const meaningOf = (x: typeof gr) => language === "en" ? grammarEn(x) : (x.mn ?? "");
-        out.push({
-          id: gr.id, level: l, kind: "grammar", prompt: gr.p, options: opts.map(meaningOf),
-          answer: opts.indexOf(gr), explain: `${gr.p} — ${meaningOf(gr)}`,
-        });
-      }
-    }
-    const ordered = shuffle(out).slice(0, 45);
+    const ordered = buildPlacementQuestions({
+      vocabByLevel: data.vocabByLevel,
+      kanjiByLevel: data.kanjiByLevel,
+      grammarByLevel: data.grammarByLevel,
+    }, language);
     setQs(ordered);
     setAnswers(ordered.map(() => null));
     setIdx(0); setPicked(null); setStage("run"); setLoading(false);
